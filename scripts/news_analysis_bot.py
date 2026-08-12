@@ -2,18 +2,19 @@
 ربات روزانه‌ی اخبار و تحلیل بازار جوش شیرین/پتروشیمی.
 
 منطق کار:
-  1. با استفاده از ابزار web_search داخل Claude API، آخرین اخبار/تحلیل‌های
-     منابع معتبر تجاری-پتروشیمی رو جست‌وجو می‌کنه (فقط عنوان/خلاصه رو می‌بینه،
-     نه متن کامل مقالات پولی).
-  2. از Claude می‌خواد یک یادداشت تحلیلی کوتاه (فارسی) بنویسه که:
+  1. با استفاده از ابزار Grounding with Google Search داخل Gemini API، آخرین
+     اخبار/تحلیل‌های منابع معتبر تجاری-پتروشیمی رو جست‌وجو می‌کنه (فقط
+     عنوان/خلاصه رو می‌بینه، نه متن کامل مقالات پولی).
+  2. از مدل می‌خواد یک یادداشت تحلیلی کوتاه (فارسی) بنویسه که:
        - خلاصه‌ی خبر رو به زبان خودش بیان کنه (نه کپی مستقیم از متن اصلی)
        - ربطش به وضعیت شرکت (قیمت پایه‌ی FOB ۲۵۰ دلار، رقیب اصلی ترکیه) رو توضیح بده
        - منبع هر نکته رو ذکر کنه (نام رسانه + لینک)
   3. خروجی رو به‌صورت یک رکورد در یک فایل JSON ذخیره می‌کنه تا سایت ازش بخونه.
 
 نیازمندی‌ها:
-  - یک ANTHROPIC_API_KEY معتبر (به‌صورت متغیر محیطی تنظیم کن، هرگز داخل کد ننویس)
-  - pip install anthropic
+  - یک GEMINI_API_KEY معتبر (به‌صورت متغیر محیطی تنظیم کن، هرگز داخل کد ننویس —
+    از aistudio.google.com رایگان و بدون کارت اعتباری بگیر)
+  - pip install google-genai
 
 نکته‌ی حق‌نشر: این اسکریپت عمداً طوری پرامپت شده که فقط خلاصه/تحلیل تولید کنه،
 نه بازتولید کامل متن خبر؛ همیشه لینک منبع رو نگه‌دار تا کاربر نهایی بتونه
@@ -24,7 +25,9 @@ import os
 import json
 from datetime import datetime, timezone
 
-from anthropic import Anthropic
+from google import genai
+
+GEMINI_MODEL = "gemini-3.6-flash"
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 OUTPUT_FILE = os.path.join(DATA_DIR, "news_analysis_log.json")
@@ -76,22 +79,17 @@ SYSTEM_PROMPT = f"""
 """
 
 
-def run_daily_analysis(client: Anthropic):
+def run_daily_analysis(client: genai.Client) -> str:
     query_text = "خلاصه و تحلیل امروز را بر اساس این موضوعات جست‌وجو کن: " + "، ".join(SEARCH_TOPICS)
 
-    response = client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=1500,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": query_text}],
-        tools=[{"type": "web_search_20250305", "name": "web_search"}],
+    interaction = client.interactions.create(
+        model=GEMINI_MODEL,
+        system_instruction=SYSTEM_PROMPT,
+        input=query_text,
+        tools=[{"type": "google_search"}],
     )
 
-    raw_text = "\n".join(
-        block.text for block in response.content if getattr(block, "type", None) == "text"
-    )
-
-    return raw_text
+    return interaction.output_text
 
 
 def parse_output(raw_text: str) -> dict:
@@ -123,11 +121,11 @@ def append_to_log(record: dict):
 
 
 def main():
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not api_key:
-        raise SystemExit("ANTHROPIC_API_KEY تنظیم نشده است.")
+        raise SystemExit("GEMINI_API_KEY تنظیم نشده است.")
 
-    client = Anthropic(api_key=api_key)
+    client = genai.Client(api_key=api_key)
     raw_text = run_daily_analysis(client)
     parsed = parse_output(raw_text)
 

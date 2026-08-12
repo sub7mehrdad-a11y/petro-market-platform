@@ -6,7 +6,8 @@
 #   - سایت مستقیم از همین فایل‌های JSON (پوشه‌ی data/) می‌خونه.
 #
 # قبل از استفاده باید:
-#   1. کلید ANTHROPIC_API_KEY رو در Settings > Secrets and variables > Actions ثبت کنی.
+#   1. کلید رایگان GEMINI_API_KEY (از aistudio.google.com، بدون کارت اعتباری) رو
+#      در Settings > Secrets and variables > Actions ثبت کنی.
 #   2. از تب Actions می‌تونی با "Run workflow" (workflow_dispatch) دستی تستش کنی.
 
 name: Daily Market Agents
@@ -31,16 +32,16 @@ jobs:
           python-version: "3.11"
 
       - name: Install dependencies
-        run: pip install anthropic
+        run: pip install -r scripts/requirements.txt
 
       - name: Run price intelligence bot
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/price_intelligence_bot.py
 
       - name: Run news analysis bot
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/news_analysis_bot.py
 
       - name: Commit updated data files

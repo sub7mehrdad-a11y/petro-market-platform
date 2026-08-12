@@ -8,8 +8,8 @@
 ```
 .
 ├── scripts/
-│   ├── price_intelligence_bot.py   # ایجنت روزانه‌ی قیمت (Claude API + web_search)
-│   └── news_analysis_bot.py        # ایجنت روزانه‌ی اخبار/تحلیل (Claude API + web_search)
+│   ├── price_intelligence_bot.py   # ایجنت روزانه‌ی قیمت (Gemini API + Grounding with Google Search)
+│   └── news_analysis_bot.py        # ایجنت روزانه‌ی اخبار/تحلیل (Gemini API + Grounding with Google Search)
 ├── data/
 │   ├── price_history.json          # خروجی تجمعی price_intelligence_bot.py
 │   └── news_analysis_log.json      # خروجی تجمعی news_analysis_bot.py
@@ -29,10 +29,16 @@
 - سایت‌هایی مثل ECHEMI زیرساخت ضد-اسکرپینگ/فینگرپرینتینگ دارن؛ یک regex شکننده در برابرشون
   مقاوم نیست.
 
-به همین دلیل، هر دو اسکریپت به‌جای selectors ثابت، از **Claude API + ابزار `web_search`** استفاده
-می‌کنن — دقیقاً همون روشی که وقتی مستقیم از Claude گزارش بازار می‌خوای اتفاق می‌افته: هر روز چند
-منبع رو هم‌زمان جست‌وجو می‌کنه، عدد/خبر رو با نوع و منبعش استخراج می‌کنه، و چون به ساختار HTML یک
-صفحه‌ی خاص وابسته نیست، در برابر تغییر سایت‌ها مقاوم‌تره.
+به همین دلیل، هر دو اسکریپت به‌جای selectors ثابت، از **Gemini API + ابزار Grounding with Google
+Search** استفاده می‌کنن — هر روز چند منبع رو هم‌زمان جست‌وجو می‌کنه، عدد/خبر رو با نوع و منبعش
+استخراج می‌کنه، و چون به ساختار HTML یک صفحه‌ی خاص وابسته نیست، در برابر تغییر سایت‌ها مقاوم‌تره.
+
+**چرا Gemini و نه Claude/OpenAI:** چون این پلتفرم قراره کاملاً رایگان اجرا بشه. طبق مستندات رسمی
+Google (بررسی‌شده در تاریخ نگارش این پروژه)، ابزار Grounding with Google Search تا **۵۰۰ درخواست
+رایگان در روز** (خانواده‌ی Gemini 2.5) یا **۵۰۰۰ درخواست رایگان در ماه** (خانواده‌ی Gemini 3.x) داره،
+بدون نیاز به ثبت کارت اعتباری. این پلتفرم روزی فقط ۲ بار (یک‌بار برای قیمت، یک‌بار برای اخبار) این
+ابزار رو صدا می‌زنه، یعنی کاملاً داخل سهمیه‌ی رایگان می‌مونه. کلید رایگانش از
+[aistudio.google.com](https://aistudio.google.com) قابل دریافته.
 
 **محدودیت شناخته‌شده:** برای قیمت روزانه‌ی FOB ترکیه هیچ منبع رایگانی وجود نداره. اسکریپت این مورد
 رو با `value: null` و توضیح در `note` ثبت می‌کنه؛ به‌عنوان جایگزین، سیگنال قیمت سود اش (ماده‌ی اولیه‌ی
@@ -44,8 +50,8 @@
 
 ### اسکریپت‌های پایتون
 ```bash
-pip install anthropic
-cp .env.example .env   # و ANTHROPIC_API_KEY واقعی رو داخلش بذار
+pip install -r scripts/requirements.txt
+cp .env.example .env   # و GEMINI_API_KEY رایگان (از aistudio.google.com) رو داخلش بذار
 python scripts/price_intelligence_bot.py
 python scripts/news_analysis_bot.py
 ```
@@ -61,7 +67,8 @@ npm run dev
 ## اجرای خودکار روزانه (GitHub Actions)
 
 1. این ریپازیتوری رو به گیت‌هاب push کنید.
-2. در Settings > Secrets and variables > Actions، یک secret به اسم `ANTHROPIC_API_KEY` بسازید.
+2. در Settings > Secrets and variables > Actions، یک secret به اسم `GEMINI_API_KEY` بسازید
+   (همون کلید رایگان aistudio.google.com).
 3. از تب Actions می‌تونید workflow «Daily Market Agents» رو دستی (`Run workflow`) هم تست کنید؛
    وگرنه هر روز ساعت 05:30 UTC (تابستان ایران ≈ 09:00) خودکار اجرا می‌شه و نتایج رو commit می‌کنه.
 
@@ -87,9 +94,12 @@ npm run dev
 ## وضعیت فعلی / کارهای باقی‌مانده
 
 - ✅ اعتبارسنجی منابع (فاز ۱)، نوشتن و تست منطق اسکریپت‌ها بدون کلید واقعی (فاز ۲)، وب‌سایت پایه (فاز ۳)
-- ⏳ **تست با کلید API واقعی:** در این محیط `ANTHROPIC_API_KEY` در دسترس نبود؛ منطق parsing/ذخیره‌سازی
-  با پاسخ‌های شبیه‌سازی‌شده تست شد، ولی اجرای واقعی با `web_search` رو باید با کلید خودتون (محلی یا
-  از طریق `workflow_dispatch` در GitHub Actions) امتحان کنید.
+- ✅ مهاجرت از Claude/Anthropic (پولی) به Gemini (رایگان، بدون کارت اعتباری) چون امکان پرداخت نبود.
+- ⏳ **تست با کلید API واقعی:** هیچ کلید Gemini در این محیط در دسترس نبود؛ منطق parsing/ذخیره‌سازی
+  با پاسخ‌های شبیه‌سازی‌شده تست شد، ولی اجرای واقعی با Grounding with Google Search رو باید با کلید
+  خودتون (محلی یا از طریق `workflow_dispatch` در GitHub Actions) امتحان کنید. همچنین نام دقیق مدل
+  (`gemini-3.6-flash`) و متد `client.interactions.create()` از مستندات رسمی گوگل در تاریخ نگارش
+  گرفته شده — اگر گوگل تا زمان اجرای شما این API رو عوض کرده باشه، ممکنه نیاز به تنظیم جزئی داشته باشه.
 - ⏳ **آپلود گزارش‌های واقعی برزیل/ترکیه:** مخزن گزارش‌ها آماده و تست‌شده‌ست ولی خالیه — از صفحه‌ی
   «گزارش‌های بازار» فایل‌های واقعی‌تون رو آپلود کنید.
 - ⏳ **گزارش‌های زنده (فاز ۴):** بازتولید خودکار بخش تحلیلی گزارش‌ها بر اساس تغییر قیمت FOB/کرایه‌ی

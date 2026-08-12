@@ -4,10 +4,17 @@
 چرا این‌طوری طراحی شده (به‌جای اسکرپینگ مستقیم HTML با regex):
   اسکرپینگ regex روی یک صفحه‌ی ثابت شکننده‌ست — هر بار سایت ظاهرش رو عوض کنه
   اسکریپت می‌شکنه، و برای هر کشور/منبع جدید باید دستی regex نوشت. به‌جاش از
-  Claude API + ابزار web_search استفاده می‌کنیم: همون کاری که وقتی مستقیم از
-  Claude گزارش بازار می‌خوای انجام می‌ده — چند منبع رو هم‌زمان جست‌وجو می‌کنه،
-  عدد قیمت رو با نوع (FOB/CIF/داخلی) و منبعش استخراج می‌کنه، و چون بر پایه‌ی
-  جست‌وجوی زنده‌ست نه selectors ثابت، در برابر تغییر ساختار سایت‌ها مقاوم‌تره.
+  Gemini API + ابزار Grounding with Google Search استفاده می‌کنیم: همون کاری
+  که وقتی مستقیم از یک ایجنت هوش مصنوعی گزارش بازار می‌خوای انجام می‌ده —
+  چند منبع رو هم‌زمان جست‌وجو می‌کنه، عدد قیمت رو با نوع (FOB/CIF/داخلی) و
+  منبعش استخراج می‌کنه، و چون بر پایه‌ی جست‌وجوی زنده‌ست نه selectors ثابت،
+  در برابر تغییر ساختار سایت‌ها مقاوم‌تره.
+
+چرا Gemini و نه Claude: چون این پلتفرم قراره کاملاً رایگان اجرا بشه. ابزار
+جست‌وجوی وب Gemini («Grounding with Google Search») تا ۵۰۰ درخواست رایگان در
+روز (مدل‌های Gemini 2.5) یا ۵۰۰۰ درخواست رایگان در ماه (مدل‌های Gemini 3.x)
+داره و نیازی به کارت اعتباری نداره — برای این ایجنت که روزی فقط یک‌بار اجرا
+می‌شه، کاملاً کافیه.
 
 قوانین سخت (این‌ها توی پرامپت هم تکرار شده‌ن تا مدل رعایت کنه):
   - فقط از سایت‌هایی که بدون لاگین/پولی در دسترسن استفاده کن.
@@ -15,8 +22,9 @@
   - هر عدد باید دقیقاً به یک URL منبع وصل باشه؛ عدد بدون منبع رد می‌شه.
 
 نیازمندی‌ها:
-  - ANTHROPIC_API_KEY (متغیر محیطی، هرگز داخل کد یا کامیت ننویس)
-  - pip install anthropic
+  - GEMINI_API_KEY (متغیر محیطی، هرگز داخل کد یا کامیت ننویس — از
+    aistudio.google.com رایگان و بدون کارت اعتباری بگیر)
+  - pip install google-genai
 
 خروجی: data/price_history.json — هر اجرا یک batch جدید (تاریخ + لیست رکوردها) اضافه می‌کنه.
 """
@@ -26,7 +34,9 @@ import re
 import json
 from datetime import datetime, timezone
 
-from anthropic import Anthropic
+from google import genai
+
+GEMINI_MODEL = "gemini-3.6-flash"
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 HISTORY_FILE = os.path.join(DATA_DIR, "price_history.json")
@@ -87,17 +97,14 @@ def build_user_prompt() -> str:
 """
 
 
-def call_agent(client: Anthropic) -> str:
-    response = client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=2000,
-        system=SYSTEM_PROMPT,
-        messages=[{"role": "user", "content": build_user_prompt()}],
-        tools=[{"type": "web_search_20250305", "name": "web_search"}],
+def call_agent(client: genai.Client) -> str:
+    interaction = client.interactions.create(
+        model=GEMINI_MODEL,
+        system_instruction=SYSTEM_PROMPT,
+        input=build_user_prompt(),
+        tools=[{"type": "google_search"}],
     )
-    return "\n".join(
-        block.text for block in response.content if getattr(block, "type", None) == "text"
-    )
+    return interaction.output_text
 
 
 def extract_json_array(text: str):
@@ -126,11 +133,11 @@ def save_history(history):
 
 
 def main():
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not api_key:
-        raise SystemExit("ANTHROPIC_API_KEY تنظیم نشده است.")
+        raise SystemExit("GEMINI_API_KEY تنظیم نشده است.")
 
-    client = Anthropic(api_key=api_key)
+    client = genai.Client(api_key=api_key)
     raw_text = call_agent(client)
 
     try:
