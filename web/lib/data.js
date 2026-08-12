@@ -48,3 +48,36 @@ export function getReportsDir() {
 export function getManifestFile() {
   return MANIFEST_FILE;
 }
+
+export function getCompanies() {
+  return readJsonSafe(path.join(DATA_DIR, "companies.json"), []);
+}
+
+export function getExhibitions() {
+  return readJsonSafe(path.join(DATA_DIR, "exhibitions.json"), []);
+}
+
+export function getParsedReport(id) {
+  const manifest = getReportsManifest();
+  const entry = manifest.find((r) => r.id === id);
+  if (!entry || !entry.parsed_path) return null;
+  const parsed = readJsonSafe(path.join(REPORTS_DIR, entry.parsed_path), null);
+  return parsed ? { ...parsed, manifest: entry } : null;
+}
+
+// فهرست همه‌ی کشورهایی که حداقل توی یکی از منابع (شرکت/نمایشگاه/گزارش/قیمت) هستن.
+export function getCountries() {
+  const set = new Set();
+  for (const c of getCompanies()) if (c.country) set.add(c.country);
+  for (const e of getExhibitions()) if (e.country) set.add(e.country);
+  for (const r of getReportsManifest()) if (r.country) set.add(r.country);
+  return Array.from(set).sort();
+}
+
+export function getCountrySummary(country) {
+  const companies = getCompanies().filter((c) => c.country === country);
+  const exhibitions = getExhibitions().filter((e) => e.country === country);
+  const reports = getReportsManifest().filter((r) => r.country === country);
+  const prices = getFlatPriceRecords().filter((p) => p.country_or_region === country);
+  return { companies, exhibitions, reports, prices };
+}

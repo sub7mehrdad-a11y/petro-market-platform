@@ -23,7 +23,10 @@ export default function RootLayout({ children }) {
             </Link>
             <nav className="flex gap-6 text-sm">
               <Link href="/" className="hover:text-emerald-700">داشبورد</Link>
+              <Link href="/countries" className="hover:text-emerald-700">کشورها</Link>
               <Link href="/reports" className="hover:text-emerald-700">گزارش‌های بازار</Link>
+              <Link href="/companies" className="hover:text-emerald-700">شرکت‌ها</Link>
+              <Link href="/exhibitions" className="hover:text-emerald-700">نمایشگاه‌ها</Link>
             </nav>
           </div>
         </header>

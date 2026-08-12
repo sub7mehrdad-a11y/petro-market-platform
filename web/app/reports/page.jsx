@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
-const COUNTRIES = ["برزیل", "ترکیه", "چین", "هند", "کنیا", "سایر"];
+const COUNTRIES = ["برزیل", "ترکیه", "چین", "هند", "کنیا", "اردن", "عراق", "سایر"];
 const PRODUCTS = ["جوش شیرین", "سود پرک", "آمونیوم سولفات", "سایر"];
+const REPORT_TYPE_FA = { detailed: "گزارش مفصل", summary: "گزارش مدیریتی (خلاصه)" };
 
 function formatSize(bytes) {
   if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)} KB`;
@@ -16,6 +18,7 @@ export default function ReportsPage() {
   const [query, setQuery] = useState("");
   const [countryFilter, setCountryFilter] = useState("همه");
   const [productFilter, setProductFilter] = useState("همه");
+  const [typeFilter, setTypeFilter] = useState("همه");
 
   const [form, setForm] = useState({ country: COUNTRIES[0], product: PRODUCTS[0], title: "" });
   const [file, setFile] = useState(null);
@@ -38,6 +41,7 @@ export default function ReportsPage() {
     return reports
       .filter((r) => countryFilter === "همه" || r.country === countryFilter)
       .filter((r) => productFilter === "همه" || r.product === productFilter)
+      .filter((r) => typeFilter === "همه" || r.report_type === typeFilter)
       .filter((r) => {
         const q = query.trim().toLowerCase();
         if (!q) return true;
@@ -48,7 +52,7 @@ export default function ReportsPage() {
         );
       })
       .sort((a, b) => (a.uploaded_at < b.uploaded_at ? 1 : -1));
-  }, [reports, query, countryFilter, productFilter]);
+  }, [reports, query, countryFilter, productFilter, typeFilter]);
 
   async function handleUpload(e) {
     e.preventDefault();
@@ -170,6 +174,15 @@ export default function ReportsPage() {
                 <option key={p} value={p}>{p}</option>
               ))}
             </select>
+            <select
+              value={typeFilter}
+              onChange={(e) => setTypeFilter(e.target.value)}
+              className="border border-slate-300 rounded-md px-2 py-1.5 text-sm"
+            >
+              <option value="همه">همه‌ی انواع</option>
+              <option value="summary">گزارش مدیریتی (خلاصه)</option>
+              <option value="detailed">گزارش مفصل</option>
+            </select>
           </div>
         </div>
 
@@ -182,12 +195,14 @@ export default function ReportsPage() {
             {filtered.map((r) => (
               <li key={r.id} className="py-3 flex items-center justify-between gap-3">
                 <div>
-                  <a
-                    href={`/api/reports/download?id=${r.id}`}
-                    className="font-medium text-emerald-700 hover:underline"
-                  >
+                  <Link href={`/reports/${r.id}`} className="font-medium text-emerald-700 hover:underline">
                     {r.title}
-                  </a>
+                  </Link>
+                  {r.report_type && (
+                    <span className="ms-2 inline-block rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-600">
+                      {REPORT_TYPE_FA[r.report_type]}
+                    </span>
+                  )}
                   <p className="text-xs text-slate-500 mt-0.5">
                     {r.country} · {r.product} · {formatSize(r.size_bytes)} · {new Date(r.uploaded_at).toLocaleDateString("fa-IR")}
                   </p>

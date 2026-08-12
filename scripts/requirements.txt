@@ -1,2 +1,5 @@
 google-genai
 certifi
+openpyxl
+python-docx
+pdfplumber

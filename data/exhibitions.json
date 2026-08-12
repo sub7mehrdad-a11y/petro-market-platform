@@ -1,0 +1,223 @@
+[
+  {
+    "country": "کنیا",
+    "source_file": "نمایشگاه های کنیا.xlsx",
+    "name": "AFMASS Food Expo",
+    "date": "۱۵ تا ۱۷ جولای ۲۰۲۶",
+    "location": "نایروبی، کنیا",
+    "focus": "بزرگترین نمایشگاه تولید مواد غذایی و فرآوری تخصصی خوراک دام در شرق آفریقا.",
+    "id": "exhibition-1"
+  },
+  {
+    "country": "کنیا",
+    "source_file": "نمایشگاه های کنیا.xlsx",
+    "name": "Foodagro Kenya",
+    "date": "جولای ۲۰۲۶",
+    "location": "نایروبی، کنیا",
+    "focus": "تمرکز ویژه بر مواد اولیه غذایی (Food Ingredients) و همچنین خوراک حیوانات.",
+    "id": "exhibition-2"
+  },
+  {
+    "country": "کنیا",
+    "source_file": "نمایشگاه های کنیا.xlsx",
+    "name": "Agro & Poultry Africa",
+    "date": "۲۰ تا ۲۲ آگوست ۲۰۲۶",
+    "location": "نایروبی، کنیا",
+    "focus": "گردهمایی تخصصی کارخانجات دام، طیور، مکمل‌های دامپزشکی و مواد شیمیایی.",
+    "id": "exhibition-3"
+  },
+  {
+    "country": "کنیا",
+    "source_file": "نمایشگاه های کنیا.xlsx",
+    "name": "Africa Food Show",
+    "date": "۱۹ تا ۲۱ آگوست ۲۰۲۶",
+    "location": "نایروبی، کنیا",
+    "focus": "پلتفرم تخصصی زنجیره تامین غذا، پردازش‌کنندگان و تولیدکنندگان کارخانه‌ای.",
+    "id": "exhibition-4"
+  },
+  {
+    "country": "کنیا",
+    "source_file": "نمایشگاه های کنیا.xlsx",
+    "name": "VIV Africa",
+    "date": "۷ و ۸ اکتبر ۲۰۲۶",
+    "location": "کیگالی، رواندا",
+    "focus": "معتبرترین رویداد دام و طیور جنوب صحرای آفریقا با حضور تجار کنیایی تامین‌کننده افزودنی‌های خوراک دام.",
+    "id": "exhibition-5"
+  },
+  {
+    "country": "کنیا",
+    "source_file": "نمایشگاه های کنیا.xlsx",
+    "name": "Food Africa",
+    "date": "۷ تا ۱۰ دسامبر ۲۰۲۶",
+    "location": "قاهره، مصر",
+    "focus": "بزرگترین پلتفرم تجارت مواد اولیه صنایع غذایی برای کل قاره آفریقا و خاورمیانه.",
+    "id": "exhibition-6"
+  },
+  {
+    "country": "برزیل",
+    "source_file": "لیست نمایشگاه های کشور برزیل.docx",
+    "name": "Fi South America (Food Ingredients)",
+    "organizer": "Informa Markets",
+    "location": "São Paulo Expo",
+    "date": "اوت (۴–۶ اوت ۲۰۲۶)",
+    "target_grade": "غذایی",
+    "focus": "بزرگ‌ترین رویداد مواد اولیه غذایی آمریکای جنوبی؛ >۱۰٬۰۰۰ بازدیدکننده، ~۲۹۰+ غرفه‌دار، ۵۰+ کشور؛ خریداران تصمیم‌گیر",
+    "id": "exhibition-7"
+  },
+  {
+    "country": "برزیل",
+    "source_file": "لیست نمایشگاه های کشور برزیل.docx",
+    "name": "SIAVS (Salão Internacional de Proteína Animal)",
+    "organizer": "ABPA",
+    "location": "Distrito Anhembi, São Paulo",
+    "date": "اوت (۴–۶ اوت ۲۰۲۶)",
+    "target_grade": "خوراک دام",
+    "focus": "~۴۵٬۰۰۰ m² (۶۵٪ بزرگ‌تر از دوره قبل)، ~۴۰ شرکت تغذیه دام، نمایندگان ۶۵ کشور",
+    "id": "exhibition-8"
+  },
+  {
+    "country": "برزیل",
+    "source_file": "لیست نمایشگاه های کشور برزیل.docx",
+    "name": "CBNA — Reunião Anual (Colégio Brasileiro de Nutrição Animal)",
+    "organizer": "CBNA/Sindirações",
+    "location": "Anhembi, São Paulo",
+    "date": "مه (۱۲–۱۴ مه ۲۰۲۶)",
+    "target_grade": "خوراک دام",
+    "focus": "رویداد فنی تخصصی تغذیه دام (طیور/خوک/گاو)",
+    "id": "exhibition-9"
+  },
+  {
+    "country": "برزیل",
+    "source_file": "لیست نمایشگاه های کشور برزیل.docx",
+    "name": "Agrishow",
+    "organizer": "ABIMAQ و شرکا",
+    "location": "Ribeirão Preto (SP)",
+    "date": "آوریل/مه (۲۷ آوریل–۱ مه ۲۰۲۶)",
+    "target_grade": "خوراک دام/کشاورزی",
+    "focus": "بزرگ‌ترین نمایشگاه کشاورزی آمریکای لاتین؛ ~۱۹۷ هزار بازدیدکننده، >۸۰۰ برند (۲۰۲۶)",
+    "id": "exhibition-10"
+  },
+  {
+    "country": "برزیل",
+    "source_file": "لیست نمایشگاه های کشور برزیل.docx",
+    "name": "FCE Pharma / FCE Cosmetique",
+    "organizer": "NürnbergMesse Brasil",
+    "location": "São Paulo Expo",
+    "date": "ژوئن (۱–۳ ژوئن ۲۰۲۶)",
+    "target_grade": "دارویی/آرایشی",
+    "focus": "بزرگ‌ترین رویداد دارویی آمریکای لاتین؛ مواد اولیه، هم‌زمان با Analitica Latin America",
+    "id": "exhibition-11"
+  },
+  {
+    "country": "برزیل",
+    "source_file": "لیست نمایشگاه های کشور برزیل.docx",
+    "name": "Fenasan (Feira Nac. de Saneamento)",
+    "organizer": "AESabesp",
+    "location": "Expo Center Norte, São Paulo",
+    "date": "اکتبر (۲۰–۲۲ اکتبر ۲۰۲۶)",
+    "target_grade": "صنعتی/تصفیه آب",
+    "focus": "بزرگ‌ترین رویداد بهداشت محیط/تصفیه آب آمریکا؛ ~۳۴–۳۷ هزار بازدیدکننده",
+    "id": "exhibition-12"
+  },
+  {
+    "country": "برزیل",
+    "source_file": "لیست نمایشگاه های کشور برزیل.docx",
+    "name": "FISPAL Tecnologia (+ TecnoCarne)",
+    "organizer": "Informa Markets",
+    "location": "São Paulo Expo",
+    "date": "ژوئن/ژوئیه",
+    "target_grade": "غذایی/فرآوری",
+    "focus": "+۴۸٬۰۰۰ بازدیدکننده، +۵۰۰ غرفه‌دار (۲۰۲۶)",
+    "id": "exhibition-13"
+  },
+  {
+    "name": "KHIMIA",
+    "country": "روسیه",
+    "location": "مسکو، اکسپوسنتر",
+    "date": "۹ تا ۱۲ نوامبر ۲۰۲۶",
+    "focus": "رویداد اصلی صنایع شیمیایی در منطقه اوراسیا که بستری عالی برای صادرات محصولات پایه مانند سود پرک و سدیم بیکربنات به کشورهای بلوک شرق فراهم می‌سازد.",
+    "website": "khimia-expo.ru",
+    "source_file": "گزارش تفصیلی اطلس نمایشگاه‌های بین‌المللی تخصصی (۲۰۲۶ - ۲۰۲۷).docx",
+    "id": "exhibition-14"
+  },
+  {
+    "name": "Interclean",
+    "country": "هلند",
+    "location": "آمستردام (RAI Amsterdam، Europaplein 24, 1078 GZ)",
+    "date": "۱۴ تا ۱۷ آوریل ۲۰۲۶ (ساعات بازدید: ۱۰:۰۰ تا ۱۷:۳۰)",
+    "focus": "بزرگ‌ترین نمایشگاه صنعت نظافت و شوینده‌ها که درگاهی کلیدی برای عرضه مستقیم سود سوزآور به تولیدکنندگان شوینده‌های صنعتی در اروپا محسوب می‌شود.",
+    "website": "intercleanshow.com/amsterdam",
+    "source_file": "گزارش تفصیلی اطلس نمایشگاه‌های بین‌المللی تخصصی (۲۰۲۶ - ۲۰۲۷).docx",
+    "id": "exhibition-15"
+  },
+  {
+    "name": "ChemExpo India",
+    "country": "هند",
+    "location": "بمبئی (Bombay Exhibition Centre - سالن‌های ۲، ۳، ۴ و ۶)",
+    "date": "۲۸ و ۲۹ آوریل ۲۰۲۷",
+    "focus": "نمایشگاهی تخصصی برای پاسخگویی به نیازهای گسترده بازار هند به مواد شیمیایی فله، حلال‌ها و مواد پایه صنعتی.",
+    "website": "chemexpoindia.com",
+    "source_file": "گزارش تفصیلی اطلس نمایشگاه‌های بین‌المللی تخصصی (۲۰۲۶ - ۲۰۲۷).docx",
+    "id": "exhibition-16"
+  },
+  {
+    "name": "VIV Asia",
+    "country": "تایلند",
+    "location": "بانکوک (IMPACT Exhibition Center)",
+    "date": "۱۰ تا ۱۲ مارس ۲۰۲۷",
+    "focus": "معتبرترین نمایشگاه خوراک دام و آبزیان در آسیا که فرصتی استثنایی جهت عرضه جوش شیرین به‌عنوان تنظیم‌کننده pH و مکمل خوراکی ارائه می‌دهد.",
+    "website": "vivasia.nl / viv.net",
+    "source_file": "گزارش تفصیلی اطلس نمایشگاه‌های بین‌المللی تخصصی (۲۰۲۶ - ۲۰۲۷).docx",
+    "id": "exhibition-17"
+  },
+  {
+    "name": "AGRENA",
+    "country": "مصر",
+    "location": "قاهره (مرکز نمایشگاهی بین‌المللی مصر - EIEC)",
+    "date": "رویداد سالانه (اواسط تابستان)",
+    "focus": "بزرگ‌ترین رویداد دام و طیور منطقه منا که به دلیل نیاز گله‌ها به کاهش استرس گرمایی، بازاری عالی برای فروش سدیم بیکربنات است.",
+    "website": "agrena.net",
+    "source_file": "گزارش تفصیلی اطلس نمایشگاه‌های بین‌المللی تخصصی (۲۰۲۶ - ۲۰۲۷).docx",
+    "id": "exhibition-18"
+  },
+  {
+    "name": "VIV MEA",
+    "country": "امارات",
+    "location": "ابوظبی",
+    "date": "۲۳ تا ۲۵ نوامبر ۲۰۲۷",
+    "focus": "پلتفرم ارتباطی متخصصان و تجار حوزه خلیج فارس برای بازاریابی و توزیع افزودنی‌های خوراک دام مانند جوش شیرین.",
+    "website": "vivmea.nl",
+    "source_file": "گزارش تفصیلی اطلس نمایشگاه‌های بین‌المللی تخصصی (۲۰۲۶ - ۲۰۲۷).docx",
+    "id": "exhibition-19"
+  },
+  {
+    "name": "Gulfood Manufacturing",
+    "country": "امارات",
+    "location": "دبی (مرکز تجارت جهانی دبی DWTC)",
+    "date": "۳ تا ۵ نوامبر ۲۰۲۶",
+    "focus": "مهم‌ترین نمایشگاه مواد اولیه غذایی منطقه که بستری مناسب برای تامین جوش شیرین خوراکی صنایع پخت‌وپز و قنادی فراهم می‌کند.",
+    "website": "gulfoodmanufacturing.com",
+    "source_file": "گزارش تفصیلی اطلس نمایشگاه‌های بین‌المللی تخصصی (۲۰۲۶ - ۲۰۲۷).docx",
+    "id": "exhibition-20"
+  },
+  {
+    "name": "Fi India",
+    "country": "هند",
+    "location": "بمبئی",
+    "date": "۲۶ تا ۲۸ آگوست ۲۰۲۶",
+    "focus": "رویداد تخصصی مواد اولیه غذایی در هند که فرصت مناسبی برای معرفی جوش شیرین به عنوان تنظیم‌کننده اسیدیته و ماده حجم‌دهنده پخت است.",
+    "website": null,
+    "source_file": "گزارش تفصیلی اطلس نمایشگاه‌های بین‌المللی تخصصی (۲۰۲۶ - ۲۰۲۷).docx",
+    "id": "exhibition-21"
+  },
+  {
+    "name": "iba",
+    "country": "آلمان",
+    "location": "مونیخ",
+    "date": "۲۴ تا ۲۸ اکتبر ۲۰۲۷",
+    "focus": "برجسته‌ترین نمایشگاه جهانی صنعت نانوایی و قنادی که گزینه‌ای ممتاز برای عرضه جوش شیرین گرید خوراکی به بازار اروپاست.",
+    "website": null,
+    "source_file": "گزارش تفصیلی اطلس نمایشگاه‌های بین‌المللی تخصصی (۲۰۲۶ - ۲۰۲۷).docx",
+    "id": "exhibition-22"
+  }
+]
