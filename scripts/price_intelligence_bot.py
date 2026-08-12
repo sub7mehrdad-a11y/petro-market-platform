@@ -3,18 +3,16 @@
 
 چرا این‌طوری طراحی شده (به‌جای اسکرپینگ مستقیم HTML با regex):
   اسکرپینگ regex روی یک صفحه‌ی ثابت شکننده‌ست — هر بار سایت ظاهرش رو عوض کنه
-  اسکریپت می‌شکنه، و برای هر کشور/منبع جدید باید دستی regex نوشت. به‌جاش از
-  Gemini API + ابزار Grounding with Google Search استفاده می‌کنیم: همون کاری
-  که وقتی مستقیم از یک ایجنت هوش مصنوعی گزارش بازار می‌خوای انجام می‌ده —
-  چند منبع رو هم‌زمان جست‌وجو می‌کنه، عدد قیمت رو با نوع (FOB/CIF/داخلی) و
-  منبعش استخراج می‌کنه، و چون بر پایه‌ی جست‌وجوی زنده‌ست نه selectors ثابت،
-  در برابر تغییر ساختار سایت‌ها مقاوم‌تره.
+  اسکریپت می‌شکنه. به‌جاش خودمون (با یک درخواست HTTP ساده) متن صفحات منابع
+  تأییدشده رو می‌گیریم و به Gemini می‌دیم تا عدد قیمت رو با نوع (FOB/CIF/داخلی)
+  و منبعش تشخیص بده — چون تشخیص متن با هوش مصنوعیه نه selector ثابت، در برابر
+  تغییر جزئی ظاهر سایت‌ها مقاوم‌تره.
 
-چرا Gemini و نه Claude: چون این پلتفرم قراره کاملاً رایگان اجرا بشه. ابزار
-جست‌وجوی وب Gemini («Grounding with Google Search») تا ۵۰۰ درخواست رایگان در
-روز (مدل‌های Gemini 2.5) یا ۵۰۰۰ درخواست رایگان در ماه (مدل‌های Gemini 3.x)
-داره و نیازی به کارت اعتباری نداره — برای این ایجنت که روزی فقط یک‌بار اجرا
-می‌شه، کاملاً کافیه.
+چرا خودمون fetch می‌کنیم و از ابزار Grounding with Google Search گوگل استفاده
+نمی‌کنیم: چون اون ابزار برای کلیدهای رایگان تازه‌ساز با خطای quota (۴۲۹) مواجه
+می‌شه (مشکل شناخته‌شده و گزارش‌شده در فروم رسمی گوگل، نه چیزی که با تنظیمات ما
+حل بشه). در عوض، فراخوانی ساده‌ی تولید متن Gemini (بدون ابزار) با کلید رایگان
+تست و تأیید شد که کاملاً کار می‌کنه.
 
 قوانین سخت (این‌ها توی پرامپت هم تکرار شده‌ن تا مدل رعایت کنه):
   - فقط از سایت‌هایی که بدون لاگین/پولی در دسترسن استفاده کن.
@@ -24,25 +22,33 @@
 نیازمندی‌ها:
   - GEMINI_API_KEY (متغیر محیطی، هرگز داخل کد یا کامیت ننویس — از
     aistudio.google.com رایگان و بدون کارت اعتباری بگیر)
-  - pip install google-genai
+  - pip install -r requirements.txt
 
 خروجی: data/price_history.json — هر اجرا یک batch جدید (تاریخ + لیست رکوردها) اضافه می‌کنه.
 """
 
 import os
 import re
+import sys
 import json
 from datetime import datetime, timezone
 
 from google import genai
+
+from fetch_utils import fetch_sources, build_sources_block
+
+# کنسول ویندوز پیش‌فرضش cp1252 هست که فارسی رو نمی‌تونه چاپ کنه؛ لینوکس/گیت‌هاب
+# اکشنز این مشکل رو نداره ولی این خط بی‌ضرره و روی هر پلتفرمی امنه.
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
 
 GEMINI_MODEL = "gemini-3.6-flash"
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 HISTORY_FILE = os.path.join(DATA_DIR, "price_history.json")
 
-# منابع seed — نقطه‌ی شروع جست‌وجو، نه فهرست بسته. مدل اجازه داره منبع معتبر
-# رایگان دیگه‌ای هم که پیدا کرد اضافه کنه، به شرط ذکر URL.
+# منابع seed — نقطه‌ی شروع، نه فهرست بسته. هر منبع جدیدی که پیدا کردید همین‌جا
+# اضافه کنید (بدون نیاز به نوشتن selector/regex).
 SEED_SOURCES = [
     "https://www.echemi.com/productsInformation/pd20150901033-sodium-bicarbonate.html",  # چین - قیمت داخلی یوان/تن
     "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",  # snapshot منطقه‌ای رایگان (FAQ)
@@ -54,17 +60,18 @@ PRODUCTS = ["sodium bicarbonate", "soda ash"]
 PRIORITY_COUNTRIES = ["China", "India", "Turkey"]
 
 SYSTEM_PROMPT = """
-تو یک تحلیلگر داده‌ی قیمت محصولات پتروشیمی هستی. وظیفه‌ات جمع‌آوری قیمت روز
-جوش شیرین (سدیم بی‌کربنات) از منابع عمومیِ رایگانِ وب (بدون لاگین، بدون پرداخت) است.
+تو یک تحلیلگر داده‌ی قیمت محصولات پتروشیمی هستی. من متن خام چند صفحه‌ی وب (بعد از
+حذف تگ HTML) رو در اختیارت می‌ذارم؛ وظیفه‌ات پیدا کردن قیمت جوش شیرین (سدیم
+بی‌کربنات) و سود اش از داخل همین متن‌هاست — نه جست‌وجوی وب.
 
 قوانین اجباری:
-1. فقط از صفحاتی استفاده کن که واقعاً بدون لاگین/اشتراک قابل مشاهده‌ن.
+1. فقط از همون متن‌هایی که در اختیارت گذاشته می‌شه استفاده کن؛ چیزی رو حدس نزن
+   یا از دانش قبلی خودت اضافه نکن.
 2. هرگز قیمت داخلی (ارز محلی مثل یوان) رو با قیمت FOB/CIF دلاری قاطی نکن؛
    هر رکورد باید یکی از این برچسب‌ها رو داشته باشه: "domestic" یا "FOB" یا "CIF".
-3. هر رکورد باید یک source_url مشخص و واقعی داشته باشه (لینکی که واقعاً در نتایج
-   جست‌وجو دیدی، نه حدس زده).
-4. اگر برای کشوری (مثلاً ترکیه) هیچ عدد رایگانی پیدا نشد، به‌جای حدس زدن، اون کشور
-   رو با "value": null و یک یادداشت کوتاه در "note" ثبت کن.
+3. هر رکورد باید دقیقاً همون source_url که متنش زیرش اومده رو داشته باشه.
+4. اگر توی متن‌ها برای کشوری (مثلاً ترکیه) هیچ عدد قیمتی نبود، به‌جای حدس زدن،
+   اون کشور رو با "value": null و یک یادداشت کوتاه در "note" ثبت کن.
 5. خروجی نهایی باید *فقط* یک JSON array باشه (بدون توضیح اضافه، بدون markdown fence)
    با این ساختار برای هر عنصر:
    {
@@ -82,27 +89,24 @@ SYSTEM_PROMPT = """
 """
 
 
-def build_user_prompt() -> str:
-    sources_block = "\n".join(f"- {s}" for s in SEED_SOURCES)
+def build_user_prompt(sources_block: str) -> str:
     return f"""
-امروز {datetime.now(timezone.utc).date().isoformat()} است. با استفاده از web_search
-قیمت امروز/آخرین قیمت منتشرشده‌ی محصولات {", ".join(PRODUCTS)} رو برای کشورهای
-{", ".join(PRIORITY_COUNTRIES)} (اولویت با چین، هند، ترکیه) پیدا کن.
+امروز {datetime.now(timezone.utc).date().isoformat()} است. محصولات مورد نظر:
+{", ".join(PRODUCTS)}. کشورهای اولویت‌دار: {", ".join(PRIORITY_COUNTRIES)}.
 
-این منابع رو حتماً به‌عنوان نقطه‌ی شروع بررسی کن (ولی اگه منبع رایگان معتبر دیگه‌ای
-هم پیدا کردی، اضافه‌ش کن):
+متن خام صفحات منابع:
+
 {sources_block}
 
 طبق قوانین بالا، فقط یک JSON array خروجی بده.
 """
 
 
-def call_agent(client: genai.Client) -> str:
+def call_agent(client: genai.Client, sources_block: str) -> str:
     interaction = client.interactions.create(
         model=GEMINI_MODEL,
         system_instruction=SYSTEM_PROMPT,
-        input=build_user_prompt(),
-        tools=[{"type": "google_search"}],
+        input=build_user_prompt(sources_block),
     )
     return interaction.output_text
 
@@ -137,8 +141,11 @@ def main():
     if not api_key:
         raise SystemExit("GEMINI_API_KEY تنظیم نشده است.")
 
+    fetched = fetch_sources(SEED_SOURCES)
+    sources_block = build_sources_block(fetched)
+
     client = genai.Client(api_key=api_key)
-    raw_text = call_agent(client)
+    raw_text = call_agent(client, sources_block)
 
     try:
         records = extract_json_array(raw_text)

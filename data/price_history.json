@@ -1,20 +1,19 @@
 [
   {
-    "collected_at": "2026-08-12T10:00:00+00:00",
+    "collected_at": "2026-08-12T10:54:10.007352+00:00",
     "date": "2026-08-12",
-    "collection_method": "manual seed (Claude web research, verified by direct fetch — not yet an automated agent run)",
     "records": [
       {
         "product": "sodium bicarbonate",
         "country_or_region": "China",
-        "price_type": "domestic",
-        "value": 1197.5,
-        "currency": "CNY",
+        "price_type": "FOB",
+        "value": 180.85,
+        "currency": "USD",
         "unit": "mt",
-        "source_name": "ECHEMI",
-        "source_url": "https://www.echemi.com/productsInformation/pd20150901033-sodium-bicarbonate.html",
-        "source_reported_date": "Aug 11, 2026",
-        "note": "قیمت داخلی چین (یوان/تن)، نه FOB دلاری. برای مقایسه با قیمت پایه‌ی ۲۵۰ دلاری باید تبدیل نرخ ارز + حاشیه‌ی صادراتی جداگانه اعمال بشه."
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "June 2026",
+        "note": "Latest reported FOB price for China"
       },
       {
         "product": "sodium bicarbonate",
@@ -23,22 +22,22 @@
         "value": 268.39,
         "currency": "USD",
         "unit": "mt",
-        "source_name": "ProcurementResource",
+        "source_name": "Procurement Resource",
         "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
         "source_reported_date": "June 2026",
-        "note": "این عدد CIF است نه FOB (شامل هزینه‌ی حمل تا مقصد می‌شه)؛ مستقیم با قیمت پایه‌ی FOB ۲۵۰ دلاری شرکت قابل مقایسه نیست. تاریخچه و جزئیات بیشتر پشت اشتراک پولی است."
+        "note": "Latest reported CIF price for India"
       },
       {
         "product": "sodium bicarbonate",
         "country_or_region": "Turkey",
-        "price_type": "FOB",
+        "price_type": "domestic",
         "value": null,
         "currency": "USD",
         "unit": "mt",
-        "source_name": null,
-        "source_url": null,
-        "source_reported_date": null,
-        "note": "هیچ منبع رایگان و بدون‌لاگینی برای قیمت روزانه‌ی FOB جوش شیرین ترکیه پیدا نشد. برای سیگنال غیرمستقیم به قیمت سود اش (soda ash) ترکیه در همین batch نگاه کن."
+        "source_name": "ChemAnalyst",
+        "source_url": "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",
+        "source_reported_date": "Q2 2026",
+        "note": "Price index movement mentioned (+10.34%), but no numerical price value provided in the source text."
       },
       {
         "product": "soda ash",
@@ -47,10 +46,82 @@
         "value": 1030,
         "currency": "CNY",
         "unit": "mt",
-        "source_name": "TradingEconomics",
+        "source_name": "Trading Economics",
         "source_url": "https://tradingeconomics.com/commodity/soda-ash",
-        "source_reported_date": "Aug 7, 2026",
-        "note": "قیمت داخلی چین برای سود اش (ماده‌ی اولیه‌ی مرتبط با جوش شیرین)، به‌عنوان سیگنال روند، نه معادل مستقیم قیمت جوش شیرین."
+        "source_reported_date": "2026-08-12",
+        "note": "Benchmark spot market trading price in China"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Germany",
+        "price_type": "CIF",
+        "value": 302.33,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "June 2026",
+        "note": "Latest reported CIF price for Germany"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Australia",
+        "price_type": "CIF",
+        "value": 246.93,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "June 2026",
+        "note": "Latest reported CIF price for Australia"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Brazil",
+        "price_type": "CIF",
+        "value": 352.45,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "June 2026",
+        "note": "Latest reported CIF price for Brazil"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "USA",
+        "price_type": "CIF",
+        "value": 406.0,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "ChemAnalyst",
+        "source_url": "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",
+        "source_reported_date": "Q2 2026",
+        "note": "Average quarterly price based on CFR New York import assessments"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Singapore",
+        "price_type": "FOB",
+        "value": 247.67,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "ChemAnalyst",
+        "source_url": "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",
+        "source_reported_date": "Q2 2026",
+        "note": "Average quarterly price based on FOB Jurong assessment"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Germany",
+        "price_type": "CIF",
+        "value": 341.33,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "ChemAnalyst",
+        "source_url": "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",
+        "source_reported_date": "Q2 2026",
+        "note": "Average quarterly price for Germany based on import flows"
       }
     ]
   }
