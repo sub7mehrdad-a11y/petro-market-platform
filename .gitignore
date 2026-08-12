@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# اسرار — هرگز نباید کامیت بشن
+.env
+.env.local
+
+# سیستم
+.DS_Store
+Thumbs.db

@@ -1,0 +1,52 @@
+# اجرای روزانه‌ی ایجنت‌های قیمت و اخبار بازار.
+#
+# چطور کار می‌کنه:
+#   - گیت‌هاب هر روز ساعت 05:30 UTC (تابستان ایران ≈ 09:00) این دو اسکریپت رو اجرا می‌کنه.
+#   - نتایج (data/price_history.json و data/news_analysis_log.json) رو خودش commit و push می‌کنه.
+#   - سایت مستقیم از همین فایل‌های JSON (پوشه‌ی data/) می‌خونه.
+#
+# قبل از استفاده باید:
+#   1. کلید ANTHROPIC_API_KEY رو در Settings > Secrets and variables > Actions ثبت کنی.
+#   2. از تب Actions می‌تونی با "Run workflow" (workflow_dispatch) دستی تستش کنی.
+
+name: Daily Market Agents
+
+on:
+  schedule:
+    - cron: "30 5 * * *"   # هر روز، 05:30 UTC
+  workflow_dispatch: {}     # اجرای دستی برای تست
+
+jobs:
+  run-agents:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Run price intelligence bot
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/price_intelligence_bot.py
+
+      - name: Run news analysis bot
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/news_analysis_bot.py
+
+      - name: Commit updated data files
+        run: |
+          git config user.name "market-data-bot"
+          git config user.email "actions@github.com"
+          git add data/price_history.json data/news_analysis_log.json
+          git diff --quiet --cached || git commit -m "به‌روزرسانی داده‌های روزانه‌ی بازار"
+          git push
