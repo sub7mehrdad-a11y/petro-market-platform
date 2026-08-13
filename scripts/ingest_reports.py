@@ -63,6 +63,11 @@ REPORTS = [
         "country": "کنیا",
         "type": "summary",
     },
+    {
+        "file": "گزارش_خلاصه_بازار_جوش_شیرین_برزیل.docx",
+        "country": "برزیل",
+        "type": "summary",
+    },
 ]
 
 PRODUCT = "جوش شیرین"
