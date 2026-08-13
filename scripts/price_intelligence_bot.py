@@ -51,9 +51,11 @@ HISTORY_FILE = os.path.join(DATA_DIR, "price_history.json")
 # اضافه کنید (بدون نیاز به نوشتن selector/regex).
 SEED_SOURCES = [
     "https://www.echemi.com/productsInformation/pd20150901033-sodium-bicarbonate.html",  # چین - قیمت داخلی یوان/تن
-    "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",  # snapshot منطقه‌ای رایگان (FAQ)
-    "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",  # هند - CIF دلار/تن
-    "https://tradingeconomics.com/commodity/soda-ash",  # سیگنال سود اش چین (ماده‌ی اولیه‌ی مرتبط)
+    "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",  # جوش شیرین - snapshot منطقه‌ای رایگان (FAQ)
+    "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",  # جوش شیرین - FOB/CIF چند کشور
+    "https://tradingeconomics.com/commodity/soda-ash",  # سودا اش - قیمت داخلی چین + روند
+    "https://www.chemanalyst.com/Pricing-data/soda-ash-76",  # سودا اش - snapshot منطقه‌ای رایگان (FAQ)
+    "https://www.procurementresource.com/resource-center/soda-ash-price-trends",  # سودا اش - FOB چین + CIF هند/آمریکا/برزیل/کانادا
 ]
 
 PRODUCTS = ["sodium bicarbonate", "soda ash"]
@@ -62,7 +64,7 @@ PRIORITY_COUNTRIES = ["China", "India", "Turkey"]
 SYSTEM_PROMPT = """
 تو یک تحلیلگر داده‌ی قیمت محصولات پتروشیمی هستی. من متن خام چند صفحه‌ی وب (بعد از
 حذف تگ HTML) رو در اختیارت می‌ذارم؛ وظیفه‌ات پیدا کردن قیمت جوش شیرین (سدیم
-بی‌کربنات) و سود اش از داخل همین متن‌هاست — نه جست‌وجوی وب.
+بی‌کربنات) و سودا اش از داخل همین متن‌هاست — نه جست‌وجوی وب.
 
 قوانین اجباری:
 1. فقط از همون متن‌هایی که در اختیارت گذاشته می‌شه استفاده کن؛ چیزی رو حدس نزن

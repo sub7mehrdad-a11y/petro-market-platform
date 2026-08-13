@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
               <Link href="/reports" className="hover:text-emerald-700">گزارش‌های بازار</Link>
               <Link href="/companies" className="hover:text-emerald-700">شرکت‌ها</Link>
               <Link href="/exhibitions" className="hover:text-emerald-700">نمایشگاه‌ها</Link>
+              <Link href="/news" className="hover:text-emerald-700">اخبار تحلیلی</Link>
             </nav>
           </div>
         </header>
