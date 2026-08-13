@@ -84,7 +84,7 @@ export default function ArchivePage() {
 
   return (
     <div className="space-y-8">
-      <section className="bg-white border border-slate-200 rounded-xl p-5">
+      <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
         <h1 className="text-xl font-bold mb-4">آپلود گزارش بازار</h1>
         <form onSubmit={handleUpload} className="grid gap-3 sm:grid-cols-2">
           <div>
@@ -135,7 +135,7 @@ export default function ArchivePage() {
             <button
               type="submit"
               disabled={uploading}
-              className="bg-emerald-700 text-white text-sm rounded-md px-4 py-2 disabled:opacity-50"
+              className="bg-sky-700 text-white text-sm font-medium rounded-lg px-4 py-2.5 shadow-sm hover:bg-sky-800 hover:shadow-md transition-all disabled:opacity-50 cursor-pointer"
             >
               {uploading ? "در حال آپلود..." : "آپلود"}
             </button>
@@ -143,7 +143,7 @@ export default function ArchivePage() {
         </form>
       </section>
 
-      <section className="bg-white border border-slate-200 rounded-xl p-5">
+      <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <div>
             <h2 className="text-lg font-bold">آرشیو گزارش‌ها</h2>
@@ -198,7 +198,7 @@ export default function ArchivePage() {
             {filtered.map((r) => (
               <li key={r.id} className="py-3 flex items-center justify-between gap-3">
                 <div>
-                  <Link href={`/reports/${r.id}`} className="font-medium text-emerald-700 hover:underline">
+                  <Link href={`/reports/${r.id}`} className="font-medium text-sky-700 hover:underline">
                     {r.title}
                   </Link>
                   {r.report_type && (

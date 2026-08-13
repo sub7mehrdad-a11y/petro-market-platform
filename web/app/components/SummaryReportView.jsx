@@ -36,7 +36,7 @@ export default function SummaryReportView({ report, livePrices = [], countryProf
           {key_stats.map((s, i) => (
             <div key={i} className="border border-slate-200 rounded-lg p-4 bg-slate-50">
               <div className="text-xs text-slate-500 mb-1">{s.label}</div>
-              <div className="text-lg font-bold text-emerald-800">
+              <div className="text-lg font-bold text-sky-800 font-tabular">
                 {s.value} <span className="text-sm font-normal text-slate-500">{s.unit}</span>
               </div>
             </div>

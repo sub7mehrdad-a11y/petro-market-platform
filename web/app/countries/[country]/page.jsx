@@ -69,7 +69,7 @@ export default async function CountryPage({ params }) {
       </div>
 
       {profile?.port && (
-        <section className="bg-white border border-slate-200 rounded-xl p-5">
+        <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
           <h2 className="text-lg font-bold mb-3">نقشه‌ی مسیر و اطلاعات بازار</h2>
           <WorldRouteMap destPort={profile.port} destCountry={profile.country} distances={profile.distances_km || {}} />
 
@@ -77,7 +77,7 @@ export default async function CountryPage({ params }) {
             {profile.total_import_volume?.value != null && (
               <div className="border border-slate-200 rounded-lg p-3 bg-slate-50">
                 <div className="text-xs text-slate-500 mb-1">کل واردات ({profile.total_import_volume.period})</div>
-                <div className="font-bold text-emerald-800">
+                <div className="font-bold text-sky-800 font-tabular">
                   {profile.total_import_volume.value.toLocaleString("fa-IR")} {profile.total_import_volume.unit}
                 </div>
               </div>
@@ -97,7 +97,7 @@ export default async function CountryPage({ params }) {
         <div>
           <Link
             href={`/reports/${smartReport.id}`}
-            className="inline-block bg-emerald-700 text-white text-sm rounded-md px-4 py-2 hover:bg-emerald-800"
+            className="inline-block bg-sky-700 text-white text-sm font-medium rounded-lg px-4 py-2.5 shadow-sm hover:bg-sky-800 hover:shadow-md transition-all"
           >
             مشاهده‌ی گزارش هوشمند کامل ({country}) ←
           </Link>
@@ -105,14 +105,14 @@ export default async function CountryPage({ params }) {
       )}
 
       {reports.length > 0 && (
-        <section className="bg-white border border-slate-200 rounded-xl p-5">
+        <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
           <h2 className="text-lg font-bold mb-3">گزارش‌ها</h2>
           <ul className="grid gap-2 sm:grid-cols-2">
             {reports.map((r) => (
               <li key={r.id}>
                 <Link
                   href={`/reports/${r.id}`}
-                  className="block border border-slate-200 rounded-lg p-3 hover:border-emerald-600 transition"
+                  className="block border border-slate-200 rounded-lg p-3 hover:border-sky-600 transition"
                 >
                   <div className="font-medium">{r.title}</div>
                   <div className="text-xs text-slate-500 mt-1">
@@ -126,7 +126,7 @@ export default async function CountryPage({ params }) {
       )}
 
       {prices.length > 0 && (
-        <section className="bg-white border border-slate-200 rounded-xl p-5">
+        <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
           <h2 className="text-lg font-bold mb-3">قیمت‌ها</h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -150,7 +150,7 @@ export default async function CountryPage({ params }) {
                     <td className="py-2 pe-4 text-slate-500">{p.source_reported_date}</td>
                     <td className="py-2">
                       {p.source_url ? (
-                        <a href={p.source_url} target="_blank" rel="noopener noreferrer" className="text-emerald-700 hover:underline">
+                        <a href={p.source_url} target="_blank" rel="noopener noreferrer" className="text-sky-700 hover:underline">
                           {p.source_name}
                         </a>
                       ) : "—"}
@@ -163,12 +163,12 @@ export default async function CountryPage({ params }) {
         </section>
       )}
 
-      <section className="bg-white border border-slate-200 rounded-xl p-5">
+      <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
         <h2 className="text-lg font-bold mb-3">شرکت‌ها ({companies.length})</h2>
         <CompanyTable companies={companies} />
       </section>
 
-      <section className="bg-white border border-slate-200 rounded-xl p-5">
+      <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
         <h2 className="text-lg font-bold mb-3">نمایشگاه‌ها ({sortedExhibitions.length}) — به ترتیب نزدیک‌ترین تاریخ</h2>
         <ExhibitionTable exhibitions={sortedExhibitions} />
       </section>

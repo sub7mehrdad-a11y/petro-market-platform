@@ -25,7 +25,7 @@ export default function ExhibitionsClient({ exhibitions }) {
   }, [exhibitions, query, country]);
 
   return (
-    <section className="bg-white border border-slate-200 rounded-xl p-5">
+    <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
       <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
         <h1 className="text-xl font-bold">بانک نمایشگاه‌ها ({filtered.length})</h1>
         <div className="flex flex-wrap gap-2">

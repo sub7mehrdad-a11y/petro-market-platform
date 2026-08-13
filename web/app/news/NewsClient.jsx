@@ -20,7 +20,7 @@ export default function NewsClient({ entries }) {
   }, [entries, query]);
 
   return (
-    <section className="bg-white border border-slate-200 rounded-xl p-5">
+    <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
       <div className="flex flex-wrap items-center justify-between gap-3 mb-2">
         <h1 className="text-xl font-bold">اخبار تحلیلی ({filtered.length})</h1>
         <input
@@ -37,7 +37,7 @@ export default function NewsClient({ entries }) {
           <button
             key={k}
             onClick={() => setQuery(k)}
-            className="text-xs border border-slate-200 rounded-full px-3 py-1 hover:border-emerald-600 hover:text-emerald-700"
+            className="text-xs border border-slate-200 rounded-full px-3 py-1 hover:border-sky-600 hover:text-sky-700"
           >
             {k}
           </button>

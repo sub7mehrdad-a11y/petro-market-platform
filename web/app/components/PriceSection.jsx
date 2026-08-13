@@ -30,7 +30,7 @@ export default function PriceSection({ title, note, product, highlightSpecs, all
   const chartRows = highlights.filter((h) => h.record?.value != null).map((h) => h.record);
 
   return (
-    <section className="bg-white border border-slate-200 rounded-xl p-5">
+    <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
       <div className="flex flex-wrap items-baseline justify-between gap-2 mb-3">
         <h2 className="text-lg font-bold">{title}</h2>
         {note && <p className="text-xs text-slate-500">{note}</p>}
@@ -48,7 +48,7 @@ export default function PriceSection({ title, note, product, highlightSpecs, all
         <div className="mt-4">
           <button
             onClick={() => setShowMore((v) => !v)}
-            className="text-sm text-emerald-700 hover:underline"
+            className="text-sm text-sky-700 hover:underline"
           >
             {showMore ? "بستن جزئیات ▲" : `نمایش ${restRows.length} قیمت دیگر ▼`}
           </button>
@@ -81,7 +81,7 @@ export default function PriceSection({ title, note, product, highlightSpecs, all
                       <td className="py-2 pe-4 whitespace-nowrap text-slate-500">{r.source_reported_date || "—"}</td>
                       <td className="py-2 pe-4 whitespace-nowrap">
                         {r.source_url ? (
-                          <a href={r.source_url} target="_blank" rel="noopener noreferrer" className="text-emerald-700 hover:underline">
+                          <a href={r.source_url} target="_blank" rel="noopener noreferrer" className="text-sky-700 hover:underline">
                             {r.source_name}
                           </a>
                         ) : (
