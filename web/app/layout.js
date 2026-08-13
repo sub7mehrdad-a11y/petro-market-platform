@@ -40,6 +40,7 @@ export default function RootLayout({ children }) {
             </Link>
             <nav className="flex flex-wrap gap-x-5 gap-y-1 text-sm text-petrol-100">
               <Link href="/" className="hover:text-copper-300 transition-colors">داشبورد</Link>
+              <Link href="/competitors" className="hover:text-copper-300 transition-colors">تحلیل رقبا</Link>
               <Link href="/countries" className="hover:text-copper-300 transition-colors">کشورها</Link>
               <Link href="/reports" className="hover:text-copper-300 transition-colors">گزارش‌های هوشمند</Link>
               <Link href="/archive" className="hover:text-copper-300 transition-colors">آرشیو گزارش‌ها</Link>

@@ -44,10 +44,15 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/news_analysis_bot.py
 
+      - name: Run Turkey competitor watch bot
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/turkey_watch_bot.py
+
       - name: Commit updated data files
         run: |
           git config user.name "market-data-bot"
           git config user.email "actions@github.com"
-          git add data/price_history.json data/news_analysis_log.json
+          git add data/price_history.json data/news_analysis_log.json data/turkey_watch_log.json
           git diff --quiet --cached || git commit -m "به‌روزرسانی داده‌های روزانه‌ی بازار"
           git push

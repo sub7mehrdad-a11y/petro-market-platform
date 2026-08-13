@@ -57,6 +57,32 @@ TABLE_SOURCES = [
     },
 ]
 
+# --- نمایشگاه‌هایی که در فایل‌های ورودی نبودن و با تحقیق وب اضافه شدن ---
+# هر کدوم مستقیماً از سایت رسمی خود نمایشگاه تأیید شده (تاریخ و محل نقل مستقیم از
+# همون صفحه). اگه نمایشگاه جدیدی پیدا کردید، همین‌جا اضافه کنید.
+MANUAL_SOURCES = [
+    {
+        "name": "TURKCHEM Eurasia",
+        "country": "ترکیه",
+        "location": "استانبول، Istanbul Expo Center",
+        "date": "۲۵ تا ۲۷ نوامبر ۲۰۲۶",
+        "organizer": "Artkim Fuarcılık",
+        "focus": "بزرگ‌ترین نمایشگاه صنعت شیمی ترکیه و اوراسیا؛ شامل مواد شیمیایی پایه، پتروشیمی و شیمی مواد غذایی — محل حضور مستقیم رقبای ترک و شناسایی توزیع‌کنندگان منطقه‌ای.",
+        "website": "https://turkchem.com.tr/en",
+        "source_file": "تحقیق وب (سایت رسمی نمایشگاه)",
+    },
+    {
+        "name": "FNI — Food & Nutritional Ingredients",
+        "country": "ترکیه",
+        "location": "استانبول، Istanbul Expo Center (IFM)",
+        "date": "۹ تا ۱۱ ژوئن ۲۰۲۷",
+        "organizer": "Istanbul Expo Center",
+        "focus": "نمایشگاه تخصصی مواد اولیه‌ی غذایی ترکیه — بازار هدف گرید خوراکی جوش شیرین (E500) و نقطه‌ی تماس با صنایع نانوایی و فرآوری غذایی منطقه.",
+        "website": "https://fningredients.com/en",
+        "source_file": "تحقیق وب (سایت رسمی نمایشگاه)",
+    },
+]
+
 # --- منبع روایی (نیازمند Gemini) ---
 NARRATIVE_SOURCES = [
     {
@@ -172,6 +198,10 @@ def main():
         records = loader(src)
         print(f"[OK] {src['file']}: {len(records)} نمایشگاه")
         all_exhibitions.extend(records)
+
+    if MANUAL_SOURCES:
+        print(f"[OK] تحقیق وب: {len(MANUAL_SOURCES)} نمایشگاه")
+        all_exhibitions.extend(MANUAL_SOURCES)
 
     if NARRATIVE_SOURCES:
         api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")

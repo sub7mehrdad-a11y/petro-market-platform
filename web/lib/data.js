@@ -82,6 +82,20 @@ export function getCountrySummary(country) {
   return { companies, exhibitions, reports, prices };
 }
 
+export function getCompetitors() {
+  return readJsonSafe(path.join(DATA_DIR, "competitors.json"), {});
+}
+
+export function getCompetitor(id) {
+  return getCompetitors()[id] || null;
+}
+
+// خروجی ایجنت رصد اختصاصی ترکیه (scripts/turkey_watch_bot.py) — جدیدترین اول.
+export function getTurkeyWatchLog() {
+  const log = readJsonSafe(path.join(DATA_DIR, "turkey_watch_log.json"), []);
+  return [...log].sort((a, b) => (a.generated_at < b.generated_at ? 1 : -1));
+}
+
 export function getCountryProfile(country) {
   const profiles = readJsonSafe(path.join(DATA_DIR, "country_profiles.json"), {});
   return profiles[country] || null;
