@@ -48,7 +48,14 @@ SEED_NEWS_SOURCES = [
     "https://www.dailysabah.com/business",  # اقتصاد/صادرات ترکیه
     "https://tradingeconomics.com/commodity/soda-ash",  # سیگنال قیمت + تحلیل کوتاه
     "https://chemxplore.com/countries/turkey",  # اخبار صنعت شیمیایی ترکیه
+    "https://www.chemeurope.com/en/news/",  # اخبار عمومی صنعت شیمی (رایگان، تست‌شده)
+    "https://oilprice.com/Latest-Energy-News/World-News/",  # انرژی/کشتیرانی/ژئوپلیتیک جهانی (خیلی فعال، رایگان)
 ]
+
+# آرگوس (argusmedia.com) عمداً اینجا نیست: صفحه‌ی اخبارش کاملاً با جاوااسکریپت
+# رندر می‌شه (fetch مستقیم فقط منوی ناوبری رو برمی‌گردونه، نه مقاله)، RSS هم نداره،
+# و پشت همون سیستم ضدربات Incapsula هست که ICIS رو هم بلاک کرده — یعنی واقعاً غیرقابل‌
+# دسترسیه با fetch ساده، نه فقط یک محدودیت فرضی.
 
 COMPANY_CONTEXT = """
 شرکت ما تولیدکننده‌ی جوش شیرین (سدیم بی‌کربنات، برند "جوش شیرین پارس"، کد تعرفه HS 283630)،

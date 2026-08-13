@@ -24,7 +24,7 @@ export default function CompanyTable({ companies }) {
                 {c.arabic_name && <div className="text-xs text-slate-400">{c.arabic_name}</div>}
                 {c.address && <div className="text-xs text-slate-400 max-w-xs">{c.address}</div>}
                 {c.action_plan && (
-                  <div className="text-xs text-sky-700 mt-1">برنامه اقدام: {c.action_plan}</div>
+                  <div className="text-xs text-copper-700 mt-1">برنامه اقدام: {c.action_plan}</div>
                 )}
               </td>
               <td className="py-2 pe-4 whitespace-nowrap">{c.country}</td>
@@ -39,7 +39,7 @@ export default function CompanyTable({ companies }) {
                     href={c.website.startsWith("http") ? c.website : `https://${c.website}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-sky-700 hover:underline"
+                    className="text-copper-700 hover:underline"
                   >
                     {c.website}
                   </a>

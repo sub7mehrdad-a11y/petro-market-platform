@@ -1,5 +1,30 @@
 @import "tailwindcss";
 
+/* رنگ‌های «کوره» — نفتی تیره + مسی گرم؛ هویت بصری منتخب برای تحقیق و توسعه سپهران شیمی */
+@theme {
+  --color-petrol-50: #EAF1F2;
+  --color-petrol-100: #D7E2E4;
+  --color-petrol-200: #AFC5C9;
+  --color-petrol-300: #7FA3A9;
+  --color-petrol-400: #4C7B83;
+  --color-petrol-500: #2A5860;
+  --color-petrol-600: #17414A;
+  --color-petrol-700: #123742;
+  --color-petrol-800: #0D2830;
+  --color-petrol-900: #0B2027;
+
+  --color-copper-50: #FDF3E7;
+  --color-copper-100: #FAE4C7;
+  --color-copper-200: #F3C68C;
+  --color-copper-300: #EAA659;
+  --color-copper-400: #DA8C42;
+  --color-copper-500: #C9762E;
+  --color-copper-600: #AD5F22;
+  --color-copper-700: #8B4A1C;
+  --color-copper-800: #6B3916;
+  --color-copper-900: #4A2810;
+}
+
 @theme inline {
   --font-sans: var(--font-vazirmatn);
   --font-tabular: var(--font-fira-code);
@@ -14,4 +39,9 @@ body {
   font-family: var(--font-fira-code), ui-monospace, monospace;
   font-feature-settings: "tnum" 1, "zero" 1;
   font-variant-numeric: tabular-nums;
+}
+
+/* پس‌زمینه‌ی هدر/بخش‌های تیره‌ی سایت — گرادیان نفتی مورب مسیر «کوره» */
+.bg-petrol-gradient {
+  background: linear-gradient(135deg, var(--color-petrol-900) 0%, var(--color-petrol-700) 100%);
 }

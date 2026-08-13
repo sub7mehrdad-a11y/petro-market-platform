@@ -4,7 +4,11 @@ export default function PriceHighlightCard({ label, record }) {
   const hasValue = record && record.value != null;
 
   return (
-    <div className="border border-slate-200 rounded-xl p-4 bg-white shadow-sm hover:shadow-md transition-shadow">
+    <div
+      className={`border border-slate-200 rounded-xl p-4 bg-white shadow-sm hover:shadow-md transition-shadow border-s-4 ${
+        hasValue ? "border-s-copper-500" : "border-s-slate-200"
+      }`}
+    >
       <div className="flex items-center justify-between mb-1.5">
         <span className="text-xs text-slate-500">{label}</span>
         {record && (
@@ -20,7 +24,7 @@ export default function PriceHighlightCard({ label, record }) {
           </div>
           <div className="text-xs text-slate-400 mt-1">
             {record.source_url ? (
-              <a href={record.source_url} target="_blank" rel="noopener noreferrer" className="hover:underline text-sky-700">
+              <a href={record.source_url} target="_blank" rel="noopener noreferrer" className="hover:underline text-copper-700">
                 {record.source_name}
               </a>
             ) : record.source_name}

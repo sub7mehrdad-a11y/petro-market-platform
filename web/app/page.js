@@ -29,7 +29,7 @@ export default function DashboardPage() {
       <div className="flex flex-wrap items-baseline justify-between gap-2">
         <h1 className="text-xl font-bold">داشبورد قیمت جهانی</h1>
         <p className="text-sm text-slate-500">
-          قیمت پایه‌ی مرجع FOB شرکت: <span className="font-semibold text-sky-700">{BASE_FOB_USD} دلار/تن</span> ·
+          قیمت پایه‌ی مرجع FOB شرکت: <span className="font-semibold text-copper-700">{BASE_FOB_USD} دلار/تن</span> ·
           رقیب اصلی: <span className="font-semibold">{MAIN_COMPETITOR}</span>
         </p>
       </div>
@@ -63,7 +63,7 @@ export default function DashboardPage() {
             ))}
           </div>
         )}
-        <Link href="/news" className="inline-block mt-4 text-sm text-sky-700 hover:underline">
+        <Link href="/news" className="inline-block mt-4 text-sm text-copper-700 hover:underline">
           مشاهده‌ی همه‌ی اخبار تحلیلی ←
         </Link>
       </section>

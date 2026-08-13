@@ -26,7 +26,7 @@ export default function ExhibitionTable({ exhibitions }) {
                     href={e.website.startsWith("http") ? e.website : `https://${e.website}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-xs text-sky-700 hover:underline"
+                    className="text-xs text-copper-700 hover:underline"
                   >
                     {e.website}
                   </a>

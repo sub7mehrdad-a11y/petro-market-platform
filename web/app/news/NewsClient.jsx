@@ -37,7 +37,7 @@ export default function NewsClient({ entries }) {
           <button
             key={k}
             onClick={() => setQuery(k)}
-            className="text-xs border border-slate-200 rounded-full px-3 py-1 hover:border-sky-600 hover:text-sky-700"
+            className="text-xs border border-slate-200 rounded-full px-3 py-1 hover:border-copper-600 hover:text-copper-700"
           >
             {k}
           </button>

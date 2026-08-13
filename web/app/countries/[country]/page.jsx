@@ -75,15 +75,15 @@ export default async function CountryPage({ params }) {
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 mt-4">
             {profile.total_import_volume?.value != null && (
-              <div className="border border-slate-200 rounded-lg p-3 bg-slate-50">
+              <div className="border border-slate-200 border-s-4 border-s-copper-500 rounded-lg p-3 bg-white shadow-sm">
                 <div className="text-xs text-slate-500 mb-1">کل واردات ({profile.total_import_volume.period})</div>
-                <div className="font-bold text-sky-800 font-tabular">
+                <div className="font-bold text-copper-800 font-tabular">
                   {profile.total_import_volume.value.toLocaleString("fa-IR")} {profile.total_import_volume.unit}
                 </div>
               </div>
             )}
             {profile.top_trade_partners?.map((p, i) => (
-              <div key={i} className="border border-slate-200 rounded-lg p-3 bg-slate-50">
+              <div key={i} className="border border-slate-200 border-s-4 border-s-copper-500 rounded-lg p-3 bg-white shadow-sm">
                 <div className="text-xs text-slate-500 mb-1">شریک تجاری #{i + 1}</div>
                 <div className="font-bold">{p.country}</div>
                 <div className="text-xs text-slate-500 mt-1">{p.note}</div>
@@ -97,7 +97,7 @@ export default async function CountryPage({ params }) {
         <div>
           <Link
             href={`/reports/${smartReport.id}`}
-            className="inline-block bg-sky-700 text-white text-sm font-medium rounded-lg px-4 py-2.5 shadow-sm hover:bg-sky-800 hover:shadow-md transition-all"
+            className="inline-block bg-copper-700 text-white text-sm font-medium rounded-lg px-4 py-2.5 shadow-sm hover:bg-copper-800 hover:shadow-md transition-all"
           >
             مشاهده‌ی گزارش هوشمند کامل ({country}) ←
           </Link>
@@ -112,7 +112,7 @@ export default async function CountryPage({ params }) {
               <li key={r.id}>
                 <Link
                   href={`/reports/${r.id}`}
-                  className="block border border-slate-200 rounded-lg p-3 hover:border-sky-600 transition"
+                  className="block border border-slate-200 rounded-lg p-3 hover:border-copper-600 transition"
                 >
                   <div className="font-medium">{r.title}</div>
                   <div className="text-xs text-slate-500 mt-1">
@@ -150,7 +150,7 @@ export default async function CountryPage({ params }) {
                     <td className="py-2 pe-4 text-slate-500">{p.source_reported_date}</td>
                     <td className="py-2">
                       {p.source_url ? (
-                        <a href={p.source_url} target="_blank" rel="noopener noreferrer" className="text-sky-700 hover:underline">
+                        <a href={p.source_url} target="_blank" rel="noopener noreferrer" className="text-copper-700 hover:underline">
                           {p.source_name}
                         </a>
                       ) : "—"}

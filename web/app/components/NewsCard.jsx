@@ -11,7 +11,7 @@ export default function NewsCard({ entry, compact = false }) {
     <article className="border-b border-slate-100 last:border-0 py-4 first:pt-0">
       <div className="flex items-baseline justify-between gap-2 mb-1">
         <h3 className="font-semibold leading-6">
-          {primarySource && <span className="text-sky-700">{primarySource}</span>}
+          {primarySource && <span className="text-copper-700">{primarySource}</span>}
           {primarySource && " — "}
           {headline}
         </h3>
@@ -26,7 +26,7 @@ export default function NewsCard({ entry, compact = false }) {
         <div className="text-xs text-slate-500 flex flex-wrap gap-x-3 gap-y-1 mt-2">
           <span>منابع:</span>
           {entry.sources.map((s, i) => (
-            <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="text-sky-700 hover:underline">
+            <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="text-copper-700 hover:underline">
               {s.name}
             </a>
           ))}

@@ -48,7 +48,7 @@ export default function PriceSection({ title, note, product, highlightSpecs, all
         <div className="mt-4">
           <button
             onClick={() => setShowMore((v) => !v)}
-            className="text-sm text-sky-700 hover:underline"
+            className="text-sm text-copper-700 hover:underline"
           >
             {showMore ? "بستن جزئیات ▲" : `نمایش ${restRows.length} قیمت دیگر ▼`}
           </button>
@@ -81,7 +81,7 @@ export default function PriceSection({ title, note, product, highlightSpecs, all
                       <td className="py-2 pe-4 whitespace-nowrap text-slate-500">{r.source_reported_date || "—"}</td>
                       <td className="py-2 pe-4 whitespace-nowrap">
                         {r.source_url ? (
-                          <a href={r.source_url} target="_blank" rel="noopener noreferrer" className="text-sky-700 hover:underline">
+                          <a href={r.source_url} target="_blank" rel="noopener noreferrer" className="text-copper-700 hover:underline">
                             {r.source_name}
                           </a>
                         ) : (

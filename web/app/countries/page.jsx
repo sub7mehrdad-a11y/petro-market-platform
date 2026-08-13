@@ -17,7 +17,7 @@ export default function CountriesPage() {
               <Link
                 key={country}
                 href={`/countries/${encodeURIComponent(country)}`}
-                className="block border border-slate-200 rounded-lg p-4 hover:border-sky-600 hover:shadow-sm transition"
+                className="block border border-slate-200 rounded-lg p-4 hover:border-copper-600 hover:shadow-sm transition"
               >
                 <div className="font-bold mb-2">{country}</div>
                 <div className="text-xs text-slate-500 space-y-0.5">
