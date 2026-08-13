@@ -81,3 +81,25 @@ export function getCountrySummary(country) {
   const prices = getFlatPriceRecords().filter((p) => p.country_or_region === country);
   return { companies, exhibitions, reports, prices };
 }
+
+export function getCountryProfile(country) {
+  const profiles = readJsonSafe(path.join(DATA_DIR, "country_profiles.json"), {});
+  return profiles[country] || null;
+}
+
+// برای «زنده‌سازی» گزارش‌های هوشمند: جدیدترین قیمت واقعی این کشور رو از
+// price_history.json برمی‌گردونه (همیشه تازه، چون هر بار از روی داده‌ی فعلی
+// محاسبه می‌شه، نه یک عدد ثابت که موقع ساخت گزارش ذخیره شده باشه).
+export function getLatestPricesForCountry(country) {
+  const rows = getFlatPriceRecords().filter((r) => r.country_or_region === country && r.value != null);
+  const newestFirst = [...rows].reverse();
+  const seen = new Set();
+  const latest = [];
+  for (const r of newestFirst) {
+    const key = `${r.product}|${r.price_type}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    latest.push(r);
+  }
+  return latest;
+}

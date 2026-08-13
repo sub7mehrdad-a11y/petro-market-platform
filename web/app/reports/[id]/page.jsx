@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getParsedReport, getReportsManifest } from "@/lib/data";
+import { getParsedReport, getReportsManifest, getCountryProfile, getLatestPricesForCountry } from "@/lib/data";
 import DetailedReportView from "../../components/DetailedReportView";
 import SummaryReportView from "../../components/SummaryReportView";
 
@@ -21,12 +21,17 @@ export default async function ReportDetailPage({ params }) {
   }
 
   const parsed = getParsedReport(id);
+  const isSummary = parsed?.report_type === "summary";
+  const countryProfile = isSummary ? getCountryProfile(entry.country) : null;
+  const livePrices = isSummary ? getLatestPricesForCountry(entry.country) : [];
+  const backHref = entry.report_type === "detailed" ? "/archive" : "/reports";
+  const backLabel = entry.report_type === "detailed" ? "← بایگانی گزارش‌ها" : "← گزارش‌های هوشمند";
 
   return (
     <div className="space-y-6">
       <div>
-        <Link href="/reports" className="text-sm text-slate-500 hover:underline">
-          ← همه‌ی گزارش‌ها
+        <Link href={backHref} className="text-sm text-slate-500 hover:underline">
+          {backLabel}
         </Link>
       </div>
 
@@ -51,8 +56,8 @@ export default async function ReportDetailPage({ params }) {
           <p className="text-sm text-slate-500">
             نسخه‌ی وب هوشمند برای این فایل ساخته نشده؛ فقط فایل اصلی رو دانلود کنید.
           </p>
-        ) : parsed.report_type === "summary" ? (
-          <SummaryReportView report={parsed} />
+        ) : isSummary ? (
+          <SummaryReportView report={parsed} livePrices={livePrices} countryProfile={countryProfile} />
         ) : (
           <DetailedReportView blocks={parsed.blocks || []} />
         )}
