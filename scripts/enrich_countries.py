@@ -90,13 +90,17 @@ def build_profile(country: str, client: genai.Client) -> dict:
     distances = {}
     if country in PORTS:
         for ref in ALWAYS_SHOW_DISTANCE_TO:
+            # فاصله‌ی یک کشور تا خودش (۰ کیلومتر) بی‌معنیه — مثلاً وقتی خود ترکیه
+            # به‌عنوان کشور پروفایل بیاد، نباید «ترکیه: ۰ کیلومتر» نمایش داده بشه.
+            if ref == country:
+                continue
             km = distance_between(country, ref)
             if km is not None:
                 distances[ref] = km
 
         partner_names = {p.get("country") for p in extracted.get("top_trade_partners", [])}
         for ref in CONDITIONAL_DISTANCE_TO:
-            if ref in partner_names:
+            if ref != country and ref in partner_names:
                 km = distance_between(country, ref)
                 if km is not None:
                     distances[ref] = km

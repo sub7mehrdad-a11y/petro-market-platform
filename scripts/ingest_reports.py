@@ -68,6 +68,16 @@ REPORTS = [
         "country": "برزیل",
         "type": "summary",
     },
+    {
+        "file": "turkey-baking-soda-market-v2.docx",
+        "country": "ترکیه",
+        "type": "summary",
+    },
+    {
+        "file": "گزراش کامل ترکیه جمینای.docx",
+        "country": "ترکیه",
+        "type": "detailed",
+    },
 ]
 
 PRODUCT = "جوش شیرین"
@@ -135,6 +145,10 @@ def build_detailed_report(path: str) -> dict:
     blocks = extract_blocks(path)
     title = None
     if blocks and blocks[0]["type"] == "heading":
+        title = blocks.pop(0)["text"]
+    elif blocks and blocks[0]["type"] == "paragraph" and len(blocks[0]["text"]) <= 160:
+        # بعضی اسناد با یک پاراگراف عنوان‌گونه شروع می‌شن نه heading واقعی؛
+        # اگه کوتاه بود همون رو عنوان بگیر تا اسم فایل به‌عنوان عنوان نیفته.
         title = blocks.pop(0)["text"]
     return {"title": title, "blocks": blocks}
 
