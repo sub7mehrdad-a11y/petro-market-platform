@@ -52,5 +52,54 @@
         "url": "https://www.hurriyetdailynews.com/index/economy"
       }
     ]
+  },
+  {
+    "date": "2026-08-15",
+    "generated_at": "2026-08-15T05:50:24.722095+00:00",
+    "headline_fa": "ثبات در تحرکات رقبای ترک و تعلیق موقت مالیات دیزل در ترکیه",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "برگزاری همایش سالانه لوجستیک ترکیه ۲۰۲۵",
+        "summary": "انجمن لوجستیک ترکیه (UTIKAD) همایش صنعت لوجستیک را با هدف ارتقای این بخش به بازار ۲۰۰ میلیارد دلاری و تبدیل ترکیه به هاب منطقه‌ای برگزار کرد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "headline": "تعلیق موقت مالیات بر مصرف سوخت دیزل در ترکیه",
+        "summary": "دولت ترکیه مالیات ویژه بر مصرف سوخت دیزل را تا اول سپتامبر به منظور کاهش فشارهای هزینه‌ای انرژی تعلیق کرده است.",
+        "source_url": "https://www.dailysabah.com/business"
+      }
+    ],
+    "market_note": "امروز هیچ خبر یا اطلاعیه‌ی جدیدی درباره‌ی تغییر ظرفیت، قیمت‌گذاری یا عملکرد مالی رقبای اصلی ترک (اتی‌سودا و کازان‌سودا) در متن‌های بررسی‌شده یافت نشد و صفحات این شرکت‌ها صرفاً شامل اطلاعات عمومی معرفی بودند. تنها تحول مهم در بخش لوجستیک، تعلیق موقت مالیات بر مصرف دیزل در ترکیه است که می‌تواند هزینه‌های حمل زمینی رقبای ترک به مقاصد صادراتی همجوار (به ویژه عراق از طریق مرز هابور) را موقتاً کاهش دهد. برای سپهران شیمی با قیمت مرجع ۲۵۰ دلار FOB، ثبات در سمت رقیب نشان‌دهنده‌ی عدم تغییر شرایط بازار در کوتاه‌مدت است، اما کاهش هزینه‌ی سوخت در ترکیه نیازمند رصد دقیق‌تر نرخ‌های حمل زمینی آن‌ها به عراق است.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda Official Website",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda Official Website",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTIKAD Logistics Association",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hurriyet Daily News Economy",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
