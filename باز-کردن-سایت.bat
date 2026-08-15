@@ -1,7 +1,7 @@
 @echo off
 chcp 65001 >nul
 title سایت تحقیق و توسعه سپهران شیمی
-cd /d "%~dp0web"
+cd /d "%~dp0"
 
 echo.
 echo   ┌────────────────────────────────────────────────┐
@@ -12,9 +12,29 @@ echo   در حال آماده‌سازی... چند لحظه صبر کنید.
 echo   ^(پنجره را نبندید — تا وقتی باز است سایت کار می‌کند^)
 echo.
 
-rem اگر نسخه‌ی ساخته‌شده وجود ندارد، اول بساز. دفعات بعد مستقیم اجرا می‌شود و سریع بالا می‌آید.
-if not exist ".next\BUILD_ID" (
-    echo   [اولین اجرا] در حال ساخت سایت — این مرحله فقط یک‌بار طول می‌کشد...
+rem ایجنت‌های روزانه هر روز قیمت/خبر جدید را روی گیت‌هاب ثبت می‌کنند. اینجا همان
+rem تغییرات را می‌گیریم تا سایت روی همین سیستم هم به‌روز باشد. اگر اینترنت نباشد یا
+rem تغییری نباشد، این مرحله بی‌سروصدا رد می‌شود و سایت با داده‌ی موجود بالا می‌آید.
+echo   در حال دریافت آخرین داده‌ها از گیت‌هاب...
+for /f "delims=" %%i in ('git rev-parse HEAD 2^>nul') do set "OLDHASH=%%i"
+git pull --ff-only >nul 2>&1
+for /f "delims=" %%i in ('git rev-parse HEAD 2^>nul') do set "NEWHASH=%%i"
+
+set "NEEDS_BUILD=0"
+if not "%OLDHASH%"=="%NEWHASH%" (
+    echo   داده‌های جدید دریافت شد.
+    git diff --name-only %OLDHASH% %NEWHASH% > "%TEMP%\sepehran_changed.txt" 2>nul
+    findstr /b /c:"web/" /c:"data/" /c:"reports/" "%TEMP%\sepehran_changed.txt" >nul 2>&1
+    if not errorlevel 1 set "NEEDS_BUILD=1"
+)
+
+cd /d "%~dp0web"
+
+rem اگر نسخه‌ی ساخته‌شده اصلاً وجود ندارد (اولین اجرا)، حتماً باید بسازیم.
+if not exist ".next\BUILD_ID" set "NEEDS_BUILD=1"
+
+if "%NEEDS_BUILD%"=="1" (
+    echo   در حال به‌روزرسانی سایت با آخرین اطلاعات — چند لحظه طول می‌کشد...
     call npm run build >nul 2>&1
     if errorlevel 1 (
         echo.
@@ -24,7 +44,7 @@ if not exist ".next\BUILD_ID" (
         pause
         exit /b 1
     )
-    echo   ساخت سایت انجام شد.
+    echo   به‌روزرسانی انجام شد.
     echo.
 )
 
