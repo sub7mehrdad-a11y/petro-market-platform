@@ -13,7 +13,9 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const COLORS = ["#047857", "#b45309", "#1d4ed8", "#be123c", "#6d28d9"];
+// همون پالت دسته‌ای اعتبارسنجی‌شده‌ی PriceChart.jsx (مسی → قرمز → آبی → سبز)،
+// برای یکدستی بصری بین نمودار قیمت‌ها و نمودارهای گزارش‌ها.
+const COLORS = ["#C9762E", "#9C2B2B", "#0C7DA6", "#4C7A3D"];
 
 // چارت‌های گزارش با {categories, series:[{name, values}]} میان؛ recharts آرایه‌ای
 // از آبجکت به شکل {category, seriesName: value, ...} می‌خواد.

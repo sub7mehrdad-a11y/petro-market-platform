@@ -27,7 +27,12 @@ export default function PriceSection({ title, note, product, highlightSpecs, all
   const highlightKeys = new Set(highlightSpecs.map((s) => `${s.country}|${s.priceType}`));
   const restRows = productRows.filter((r) => !highlightKeys.has(`${r.country_or_region}|${r.price_type}`));
 
-  const chartRows = highlights.filter((h) => h.record?.value != null).map((h) => h.record);
+  // نمودار باید کل تاریخچه‌ی هر سری هایلایت‌شده رو نشون بده (روند)، نه فقط
+  // آخرین عدد — قبلاً فقط h.record (تک‌رکورد جدیدترین) پاس داده می‌شد که باعث
+  // می‌شد نمودار عملاً یک نقطه‌ی تنها برای هر سری بکشه (خط قابل‌رسم نبود).
+  const chartRows = productRows.filter(
+    (r) => r.value != null && highlightKeys.has(`${r.country_or_region}|${r.price_type}`)
+  );
 
   return (
     <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
