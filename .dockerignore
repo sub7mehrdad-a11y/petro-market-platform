@@ -1,0 +1,11 @@
+.git
+.github
+node_modules
+web/node_modules
+web/.next
+گزارش
+.env
+.env.local
+web/.env.local
+*.bat
+README.md
