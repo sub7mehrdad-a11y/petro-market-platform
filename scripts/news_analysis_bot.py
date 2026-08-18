@@ -50,7 +50,15 @@ SEED_NEWS_SOURCES = [
     "https://chemxplore.com/countries/turkey",  # اخبار صنعت شیمیایی ترکیه
     "https://www.chemeurope.com/en/news/",  # اخبار عمومی صنعت شیمی (رایگان، تست‌شده)
     "https://oilprice.com/Latest-Energy-News/World-News/",  # انرژی/کشتیرانی/ژئوپلیتیک جهانی (خیلی فعال، رایگان)
+    "https://www.freightos.com/freight-index/",  # شاخص Freightos Baltic (FBX) - سیگنال کرایه‌ی کانتینری، صفحه‌ی عمومی رایگان
+    "https://www.drewry.co.uk/world-container-index",  # Drewry WCI - عدد هفتگی کرایه‌ی کانتینر ۴۰ فوت، صفحه‌ی عمومی رایگان
 ]
+
+# بررسی شد و عمداً اضافه نشد: UN Comtrade / WITS / ITC MacMap. این‌ها API/جدول
+# داده‌ی ساختاریافته‌ن (حجم تجارت، تعرفه)، نه صفحه‌ی متنی/خبری قابل «خلاصه‌سازی
+# روایی» — با معماری این ربات (fetch متن + تحلیل روایی Gemini) هم‌خوان نیستن.
+# اگه بعداً خواستید، این‌ها باید یک اسکریپت جدا (شبیه enrich_countries.py، با
+# فراخوانی API ساختاریافته به‌جای fetch متن) بشن، نه یک URL دیگه توی همین لیست.
 
 # آرگوس (argusmedia.com) عمداً اینجا نیست: صفحه‌ی اخبارش کاملاً با جاوااسکریپت
 # رندر می‌شه (fetch مستقیم فقط منوی ناوبری رو برمی‌گردونه، نه مقاله)، RSS هم نداره،
