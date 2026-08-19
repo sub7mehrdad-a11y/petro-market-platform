@@ -32,11 +32,11 @@ function UpdateItem({ item, badge }) {
   );
 }
 
-export default function TurkeyWatchFeed({ entries }) {
+export default function CompetitorWatchFeed({ entries, scriptPath }) {
   if (!entries || entries.length === 0) {
     return (
       <p className="text-sm text-slate-500">
-        هنوز اجرای رصدی ثبت نشده. اسکریپت <code className="text-xs">scripts/turkey_watch_bot.py</code> را اجرا کنید.
+        هنوز اجرای رصدی ثبت نشده. اسکریپت <code className="text-xs">{scriptPath}</code> را اجرا کنید.
       </p>
     );
   }

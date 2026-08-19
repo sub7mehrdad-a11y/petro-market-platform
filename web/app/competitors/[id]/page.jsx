@@ -1,11 +1,17 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  getCompetitors, getCompetitor, getTurkeyWatchLog,
+  getCompetitors, getCompetitor, COMPETITOR_WATCH_LOG_GETTERS,
   getExhibitions, getNewsAnalysis, getFlatPriceRecords,
 } from "@/lib/data";
 import TurkeyMap from "../../components/TurkeyMap";
-import TurkeyWatchFeed from "../../components/TurkeyWatchFeed";
+import CompetitorWatchFeed from "../../components/CompetitorWatchFeed";
+
+// مسیر اسکریپت رصد روزانه‌ی هر رقیب — برای پیام «هنوز اجرا نشده» و برای گیرنده‌ی لاگ.
+const WATCH_SCRIPT_PATHS = {
+  turkey: "scripts/turkey_watch_bot.py",
+  china: "scripts/china_watch_bot.py",
+};
 import NewsCard from "../../components/NewsCard";
 import ExhibitionTable from "../../components/ExhibitionTable";
 import {
@@ -43,7 +49,9 @@ export default async function CompetitorPage({ params }) {
   if (!c) notFound();
 
   const isTurkey = c.id === "turkey";
-  const watchLog = isTurkey ? getTurkeyWatchLog() : [];
+  const watchLogGetter = COMPETITOR_WATCH_LOG_GETTERS[c.id];
+  const hasWatch = !!watchLogGetter;
+  const watchLog = hasWatch ? watchLogGetter() : [];
 
   // نمایشگاه‌ها و اخبار مرتبط با همین کشور رقیب، از همون بانک‌های موجود سایت
   const exhibitions = getExhibitions().filter((e) => e.country === c.name);
@@ -92,13 +100,13 @@ export default async function CompetitorPage({ params }) {
         </div>
       </section>
 
-      {/* رصد زنده — فقط ترکیه */}
-      {isTurkey && (
+      {/* رصد زنده — هر رقیبی که ایجنت اختصاصی روزانه داره (ترکیه، چین) */}
+      {hasWatch && (
         <Section
-          title="رصد زنده‌ی ترکیه"
-          subtitle="خروجی ایجنت اختصاصی روزانه: سایت شرکت‌های رقیب + منابع حمل‌ونقل و اقتصاد ترکیه"
+          title={`رصد زنده‌ی ${c.name}`}
+          subtitle="خروجی ایجنت اختصاصی روزانه: سایت شرکت‌های رقیب + منابع حمل‌ونقل و اقتصاد صادراتی"
         >
-          <TurkeyWatchFeed entries={watchLog} />
+          <CompetitorWatchFeed entries={watchLog} scriptPath={WATCH_SCRIPT_PATHS[c.id]} />
         </Section>
       )}
 

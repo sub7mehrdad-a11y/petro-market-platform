@@ -90,11 +90,25 @@ export function getCompetitor(id) {
   return getCompetitors()[id] || null;
 }
 
-// خروجی ایجنت رصد اختصاصی ترکیه (scripts/turkey_watch_bot.py) — جدیدترین اول.
-export function getTurkeyWatchLog() {
-  const log = readJsonSafe(path.join(DATA_DIR, "turkey_watch_log.json"), []);
+// خروجی ایجنت‌های رصد اختصاصی رقبا (scripts/turkey_watch_bot.py, scripts/china_watch_bot.py) — جدیدترین اول.
+function readWatchLog(fileName) {
+  const log = readJsonSafe(path.join(DATA_DIR, fileName), []);
   return [...log].sort((a, b) => (a.generated_at < b.generated_at ? 1 : -1));
 }
+
+export function getTurkeyWatchLog() {
+  return readWatchLog("turkey_watch_log.json");
+}
+
+export function getChinaWatchLog() {
+  return readWatchLog("china_watch_log.json");
+}
+
+// نگاشت شناسه‌ی رقیب → گیرنده‌ی لاگ رصد روزانه‌اش (برای صفحه‌ی [id] و ایندکس جست‌وجو).
+export const COMPETITOR_WATCH_LOG_GETTERS = {
+  turkey: getTurkeyWatchLog,
+  china: getChinaWatchLog,
+};
 
 export function getCountryProfile(country) {
   const profiles = readJsonSafe(path.join(DATA_DIR, "country_profiles.json"), {});

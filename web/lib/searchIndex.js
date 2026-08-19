@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import {
   getCompanies, getExhibitions, getNewsAnalysis, getCompetitors,
-  getReportsManifest, getFlatPriceRecords, getTurkeyWatchLog,
+  getReportsManifest, getFlatPriceRecords, getTurkeyWatchLog, getChinaWatchLog,
 } from "./data";
 
 const ROOT = path.join(process.cwd(), "..");
@@ -166,6 +166,22 @@ export function buildSearchIndex() {
       subtitle: w.date,
       body: parts.filter(Boolean).join("\n"),
       url: `/competitors/turkey`,
+    });
+  });
+
+  // --- رصد روزانه‌ی چین ---
+  getChinaWatchLog().slice(0, 30).forEach((w) => {
+    const parts = [w.market_note];
+    for (const u of w.company_updates || []) parts.push(`${u.company}: ${u.headline} — ${u.summary}`);
+    for (const u of w.logistics_updates || []) parts.push(`${u.headline} — ${u.summary}`);
+    items.push({
+      id: `chinawatch:${w.generated_at}`,
+      type: "chinawatch",
+      typeLabel: "رصد چین",
+      title: w.headline_fa || "رصد روزانه‌ی چین",
+      subtitle: w.date,
+      body: parts.filter(Boolean).join("\n"),
+      url: `/competitors/china`,
     });
   });
 
