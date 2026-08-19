@@ -1,7 +1,14 @@
 @echo off
 chcp 65001 >nul
 title سایت تحقیق و توسعه سپهران شیمی
-cd /d "%~dp0"
+
+rem مسیر پوشه‌ی پروژه رو به شکل کوتاه (بدون حرف فارسی) تبدیل می‌کنیم — چون روی
+rem بعضی سیستم‌ها cmd.exe مسیر فارسی رو درست نمی‌خونه (حتی با chcp 65001) و
+rem باعث می‌شه npm بگه package.json پیدا نشد. شکل کوتاه همیشه فقط ASCII/انگلیسیه.
+for %%I in ("%~dp0.") do set "PROJDIR=%%~sI"
+if "%PROJDIR%"=="" set "PROJDIR=%~dp0"
+
+cd /d "%PROJDIR%"
 
 echo.
 echo   ┌────────────────────────────────────────────────┐
@@ -28,7 +35,7 @@ if not "%OLDHASH%"=="%NEWHASH%" (
     if not errorlevel 1 set "NEEDS_BUILD=1"
 )
 
-cd /d "%~dp0web"
+cd /d "%PROJDIR%\web"
 
 rem اگر نسخه‌ی ساخته‌شده اصلاً وجود ندارد (اولین اجرا)، حتماً باید بسازیم.
 if not exist ".next\BUILD_ID" set "NEEDS_BUILD=1"

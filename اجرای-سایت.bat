@@ -1,7 +1,14 @@
 @echo off
 chcp 65001 >nul
 title پلتفرم تحقیق و توسعه سپهران شیمی
-cd /d "%~dp0web"
+
+rem مسیر پوشه‌ی پروژه رو به شکل کوتاه (بدون حرف فارسی) تبدیل می‌کنیم — چون روی
+rem بعضی سیستم‌ها cmd.exe مسیر فارسی رو درست نمی‌خونه (حتی با chcp 65001) و
+rem باعث می‌شه npm بگه package.json پیدا نشد. شکل کوتاه همیشه فقط ASCII/انگلیسیه.
+for %%I in ("%~dp0.") do set "PROJDIR=%%~sI"
+if "%PROJDIR%"=="" set "PROJDIR=%~dp0"
+
+cd /d "%PROJDIR%\web"
 
 echo ==========================================================
 echo    پلتفرم تحقیق و توسعه سپهران شیمی
@@ -22,14 +29,14 @@ if not exist ".env.local" (
 )
 
 echo [1/3] دریافت آخرین داده‌ها از گیت‌هاب...
-cd /d "%~dp0"
+cd /d "%PROJDIR%"
 git pull --ff-only 2>nul
 if errorlevel 1 (
     echo     [!] دریافت ناموفق بود - با داده‌های فعلی ادامه می‌دهیم.
 ) else (
     echo     انجام شد.
 )
-cd /d "%~dp0web"
+cd /d "%PROJDIR%\web"
 echo.
 
 echo [2/3] ساخت نسخه‌ی نهایی سایت ^(چند دقیقه طول می‌کشد^)...
