@@ -6,10 +6,12 @@ import PriceHighlightCard from "./PriceHighlightCard";
 
 const PRICE_TYPE_FA = { domestic: "داخلی", FOB: "FOB", CIF: "CIF" };
 
-// برای هر spec، جدیدترین رکورد منطبق رو پیدا می‌کنه (batch جدیدتر اولویت داره).
+// برای هر spec، جدیدترین رکورد منطبق رو پیدا می‌کنه — ولی رکوردی که value ندارد
+// (استخراج آن روز شکست خورده) رد می‌شود تا آخرین عدد واقعی موجود برگردد، نه یک
+// خط «داده‌ای در دسترس نیست» به‌جای عددی که همین دیروز داشتیم.
 function findLatest(rowsNewestFirst, product, country, priceType) {
   return rowsNewestFirst.find(
-    (r) => r.product === product && r.country_or_region === country && r.price_type === priceType
+    (r) => r.product === product && r.country_or_region === country && r.price_type === priceType && r.value != null
   );
 }
 
@@ -19,10 +21,21 @@ export default function PriceSection({ title, note, product, highlightSpecs, all
   const productRows = allRows.filter((r) => r.product === product);
   const rowsNewestFirst = [...productRows].reverse();
 
-  const highlights = highlightSpecs.map((spec) => ({
-    label: `${spec.country} · ${PRICE_TYPE_FA[spec.priceType] || spec.priceType}`,
-    record: findLatest(rowsNewestFirst, product, spec.country, spec.priceType),
-  }));
+  // جدیدترین تاریخ جمع‌آوری‌شده برای این محصول — برای تشخیص این‌که یک رکورد
+  // هایلایت‌شده واقعاً مال «امروز» است یا یک روز عقب‌تره (fallback).
+  const latestBatchDate = productRows.reduce(
+    (max, r) => (r.batch_date && r.batch_date > max ? r.batch_date : max),
+    ""
+  );
+
+  const highlights = highlightSpecs.map((spec) => {
+    const record = findLatest(rowsNewestFirst, product, spec.country, spec.priceType);
+    return {
+      label: `${spec.country} · ${PRICE_TYPE_FA[spec.priceType] || spec.priceType}`,
+      record,
+      isStale: !!(record && latestBatchDate && record.batch_date !== latestBatchDate),
+    };
+  });
 
   const highlightKeys = new Set(highlightSpecs.map((s) => `${s.country}|${s.priceType}`));
   const restRows = productRows.filter((r) => !highlightKeys.has(`${r.country_or_region}|${r.price_type}`));
@@ -43,7 +56,7 @@ export default function PriceSection({ title, note, product, highlightSpecs, all
 
       <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 mb-4">
         {highlights.map((h, i) => (
-          <PriceHighlightCard key={i} label={h.label} record={h.record} />
+          <PriceHighlightCard key={i} label={h.label} record={h.record} isStale={h.isStale} />
         ))}
       </div>
 

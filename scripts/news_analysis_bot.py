@@ -79,9 +79,10 @@ SYSTEM_PROMPT = f"""
 زمینه‌ی شرکت:
 {COMPANY_CONTEXT}
 
-من متن خام چند صفحه‌ی خبری/تجاری (بعد از حذف تگ HTML) رو در اختیارت می‌ذارم.
-فقط بر اساس همین متن‌ها (نه دانش قبلی خودت)، یک یادداشت تحلیلی کوتاه (حداکثر
-۲۵۰ کلمه) به فارسی بنویس که:
+من متن خام چند صفحه‌ی خبری/تجاری (بعد از حذف تگ HTML) رو در اختیارت می‌ذارم، به‌همراه
+تیتر و خلاصه‌ی چند تحلیل روزهای اخیر (برای جلوگیری از تکرار). فقط بر اساس همین
+متن‌های خام (نه دانش قبلی خودت)، یک یادداشت تحلیلی کوتاه (حداکثر ۲۵۰ کلمه) به فارسی
+بنویس که:
 - مهم‌ترین نکته‌ی خبری/قیمتی مرتبط با جوش شیرین/سودا اش/ترکیه رو با زبان خودت
   خلاصه کنه (هرگز جمله‌ی کامل از منبع کپی نکن؛ نقل‌قول مستقیم فقط اگر ضروریه
   و زیر ۱۵ کلمه باشه)
@@ -94,8 +95,16 @@ SYSTEM_PROMPT = f"""
 - یک تیتر کوتاه (حداکثر ۱۲ کلمه) و خبری برای همین تحلیل هم بساز؛ این تیتر جدا
   از analysis_fa ذخیره می‌شه و توی لیست خبرهای سایت نشون داده می‌شه
 
+قانون مهم درباره‌ی تکرار: اگر همون عدد/رویداد اصلی که در تحلیل‌های چندروز اخیر
+(که پایین‌تر می‌بینی) گزارش شده، هنوز عوض نشده — یعنی منبع هیچ عدد یا رویداد
+واقعاً جدیدی نداره، فقط داره همون آمار قبلی رو دوباره نشون می‌ده — به‌جای بازنویسی
+همون خبر با کلمات دیگه، این‌ها رو برگردون: "has_new_content": false و
+headline_fa/analysis_fa/sources رو خالی بذار. فقط وقتی has_new_content: true بذار
+که واقعاً یک عدد تازه، رویداد تازه، یا منبع تازه (نسبت به تحلیل‌های اخیر) پیدا کردی.
+
 خروجی رو دقیقاً به این شکل JSON بده (بدون markdown fence، بدون توضیح اضافه):
 {{
+  "has_new_content": true | false,
   "headline_fa": "تیتر کوتاه...",
   "analysis_fa": "...",
   "sources": [{{"name": "...", "url": "..."}}]
@@ -103,8 +112,28 @@ SYSTEM_PROMPT = f"""
 """
 
 
-def run_daily_analysis(client: genai.Client, sources_block: str) -> str:
-    query_text = f"بر اساس متن‌های زیر تحلیل امروز رو بنویس:\n\n{sources_block}"
+def load_recent_entries(n: int = 4) -> list[dict]:
+    if not os.path.exists(OUTPUT_FILE):
+        return []
+    with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+        log = json.load(f)
+    return log[-n:]
+
+
+def build_recent_block(recent_entries: list[dict]) -> str:
+    if not recent_entries:
+        return "(هنوز تحلیل قبلی‌ای ثبت نشده.)"
+    parts = []
+    for e in recent_entries:
+        parts.append(f"- {e.get('date')}: {e.get('headline_fa')} — {e.get('analysis_fa', '')[:200]}")
+    return "\n".join(parts)
+
+
+def run_daily_analysis(client: genai.Client, sources_block: str, recent_block: str) -> str:
+    query_text = (
+        f"تحلیل‌های چندروز اخیر (برای جلوگیری از تکرار، از این‌ها کپی نکن):\n{recent_block}\n\n"
+        f"بر اساس متن‌های زیر تحلیل امروز رو بنویس:\n\n{sources_block}"
+    )
 
     interaction = client.interactions.create(
         model=GEMINI_MODEL,
@@ -148,10 +177,19 @@ def main():
 
     fetched = fetch_sources(SEED_NEWS_SOURCES)
     sources_block = build_sources_block(fetched)
+    recent_block = build_recent_block(load_recent_entries())
 
     client = genai.Client(api_key=api_key)
-    raw_text = run_daily_analysis(client, sources_block)
+    raw_text = run_daily_analysis(client, sources_block, recent_block)
     parsed = parse_output(raw_text)
+
+    # اگه مدل تشخیص داد خبر/عددی نسبت به تحلیل‌های اخیر عوض نشده، رکورد تکراری
+    # ثبت نمی‌کنیم — نبود کلید یعنی مدل به این قانون توجه نکرده، پس برای عقب‌گرد
+    # ایمن پیش‌فرض رو true می‌ذاریم (رفتار قبلی: همیشه ثبت کن).
+    has_new_content = parsed.get("has_new_content", True)
+    if not has_new_content:
+        print("[SKIP] نسبت به تحلیل‌های اخیر خبر/عدد تازه‌ای نبود؛ رکورد تکراری ثبت نشد.")
+        return
 
     record = {
         "date": datetime.now(timezone.utc).date().isoformat(),
