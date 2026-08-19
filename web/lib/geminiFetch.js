@@ -5,17 +5,24 @@ import { ProxyAgent, fetch as undiciFetch } from "undici";
 const BASE = "https://generativelanguage.googleapis.com/v1beta";
 
 /**
- * کلید API را پیدا می‌کند. اول از متغیرهای محیطی، و اگر نبود از فایل .env ریشه‌ی
- * پروژه (همان فایلی که اسکریپت‌های پایتون استفاده می‌کنند) — تا کلید فقط در یک
- * جا نگه‌داری شود و لازم نباشد در web/.env.local هم تکرارش کنید.
+ * کلید API را پیدا می‌کند — مخصوص بخش «پاسخ هوشمند» توی /ask، عمداً از یک توکن
+ * جدا (GEMINI_API_KEY_ASK) استفاده می‌کند تا سؤال‌های کاربران سهمیه‌ی روزانه‌ی
+ * ایجنت‌های خودکار (scripts/*.py، که با GEMINI_API_KEY کار می‌کنند) را نخوابانَد.
+ * اگر توکن جدا تنظیم نشده باشد، به همان توکن مشترک قدیمی برمی‌گردد (سازگار با
+ * قبل). اول از متغیرهای محیطی، و اگر نبود از فایل .env ریشه‌ی پروژه.
  */
 export function resolveApiKey() {
-  const fromEnv = process.env.GEMINI_API_KEY || process.env.GOOGLE_API_KEY;
+  const fromEnv =
+    process.env.GEMINI_API_KEY_ASK ||
+    process.env.GEMINI_API_KEY ||
+    process.env.GOOGLE_API_KEY;
   if (fromEnv) return fromEnv;
 
   try {
     const raw = fs.readFileSync(path.join(process.cwd(), "..", ".env"), "utf-8");
-    const match = raw.match(/^\s*(?:GEMINI_API_KEY|GOOGLE_API_KEY)\s*=\s*(.+?)\s*$/m);
+    const match =
+      raw.match(/^\s*GEMINI_API_KEY_ASK\s*=\s*(.+?)\s*$/m) ||
+      raw.match(/^\s*(?:GEMINI_API_KEY|GOOGLE_API_KEY)\s*=\s*(.+?)\s*$/m);
     return match ? match[1].replace(/^["']|["']$/g, "") : null;
   } catch {
     return null;
