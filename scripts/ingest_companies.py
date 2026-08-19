@@ -24,6 +24,7 @@ SOURCES = [
     {"file": "Jordan_Companies.xlsx", "country": "اردن"},
     {"file": "kenya_Companies.xlsx", "country": "کنیا"},
     {"file": "شرکت های عراقی.xlsx", "country": "عراق"},
+    {"file": "Syria_companies.xlsx", "country": "سوریه"},
 ]
 
 # چون سرستون‌ها بین فایل‌ها فرق می‌کنن (مثلاً "آدرس" در فارسی یا "Address" در

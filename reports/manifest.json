@@ -82,5 +82,17 @@
     "size_bytes": 39834,
     "uploaded_at": "2026-08-14T10:58:47.833178+00:00",
     "parsed_path": "parsed/report-گزراش-کامل-ترکیه-جمینای.json"
+  },
+  {
+    "id": "report-گزارش-تحقیق-بازار-سوریه",
+    "title": "گزارش پژوهشی بازار: بررسی بازار جوش شیرین (بی‌کربنات سدیم) در سوریه",
+    "country": "سوریه",
+    "product": "جوش شیرین",
+    "report_type": "summary",
+    "original_filename": "گزارش تحقیق بازار سوریه.docx",
+    "relative_path": "سوریه/گزارش تحقیق بازار سوریه.docx",
+    "size_bytes": 786998,
+    "uploaded_at": "2026-08-19T19:23:55.400521+00:00",
+    "parsed_path": "parsed/report-گزارش-تحقیق-بازار-سوریه.json"
   }
 ]

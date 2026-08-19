@@ -78,6 +78,11 @@ REPORTS = [
         "country": "ترکیه",
         "type": "detailed",
     },
+    {
+        "file": "گزارش تحقیق بازار سوریه.docx",
+        "country": "سوریه",
+        "type": "summary",
+    },
 ]
 
 PRODUCT = "جوش شیرین"
