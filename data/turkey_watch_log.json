@@ -267,5 +267,49 @@
         "url": "https://www.kazansoda.com/"
       }
     ]
+  },
+  {
+    "date": "2026-08-20",
+    "generated_at": "2026-08-20T05:56:48.623592+00:00",
+    "headline_fa": "هدف‌گذاری ترکیه برای دستیابی به صنعت لجستیک ۲۰۰ میلیارد دلاری",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "برگزاری همایش لجستیک ۲۰۲۵ ترکیه و چشم‌انداز توسعه صادراتی",
+        "summary": "انجمن خدمات حمل‌ونقل و لجستیک ترکیه (UTIKAD) در همایش لجستیک ۲۰۲۵ اعلام کرد که هدف این کشور ارتقای ارزش صنعت لجستیک به ۲۰۰ میلیارد دلار و قرار گرفتن در جمع ۱۰ کشور برتر جهان است.",
+        "source_url": "https://www.utikad.org.tr/en"
+      }
+    ],
+    "market_note": "در متن‌های بررسی‌شده امروز، هیچ خبر یا اطلاعیه تجاری و عملیاتی جدیدی (نظیر تغییر ظرفیت، قیمت‌گذاری یا گزارش مالی) از سوی شرکت‌های رقیب ترک (اتی سودا، کازان سودا و وی‌سودا) منتشر نشده است. با این حال، برنامه‌ریزی کلان ترکیه برای توسعه زیرساخت‌های لجستیکی و دستیابی به بازار ۲۰۰ میلیارد دلاری، نشان‌دهنده تلاش مداوم این کشور برای حفظ و تقویت مزیت حمل‌ونقل صادراتی است. برای شرکت سپهران شیمی با قیمت پایه ۲۵۰ دلار، رصد زیرساخت‌ها و هزینه‌های حمل‌ونقل ترکیه جهت حفظ سهم بازار در منطقه‌ (به‌ویژه عراق) اهمیت بالایی دارد.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda Official",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda Official",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTIKAD Logistics Association",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hurriyet Daily News Economy",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
