@@ -57,6 +57,16 @@ export function getExhibitions() {
   return readJsonSafe(path.join(DATA_DIR, "exhibitions.json"), []);
 }
 
+export function getExhibition(id) {
+  return getExhibitions().find((e) => e.id === id) || null;
+}
+
+// خروجی scripts/enrich_exhibitions.py — صنایع حاضر + خلاصه‌ی عملکرد دوره‌های قبل.
+export function getExhibitionReport(id) {
+  const reports = readJsonSafe(path.join(DATA_DIR, "exhibition_reports.json"), {});
+  return reports[id] || null;
+}
+
 export function getParsedReport(id) {
   const manifest = getReportsManifest();
   const entry = manifest.find((r) => r.id === id);

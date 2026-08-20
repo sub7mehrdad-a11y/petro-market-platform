@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import {
-  getCompanies, getExhibitions, getNewsAnalysis, getCompetitors,
+  getCompanies, getExhibitions, getExhibitionReport, getNewsAnalysis, getCompetitors,
   getReportsManifest, getFlatPriceRecords, getTurkeyWatchLog, getChinaWatchLog,
 } from "./data";
 
@@ -94,14 +94,25 @@ export function buildSearchIndex() {
 
   // --- نمایشگاه‌ها ---
   for (const e of getExhibitions()) {
+    const report = getExhibitionReport(e.id);
+    const reportParts =
+      report && report.data_availability !== "none"
+        ? [
+            (report.industries_present || []).join("، "),
+            report.past_editions_summary,
+            report.exhibitor_notes,
+          ]
+        : [];
     items.push({
       id: `exhibition:${e.id}`,
       type: "exhibition",
       typeLabel: "نمایشگاه",
       title: e.name,
       subtitle: [e.country, e.date].filter(Boolean).join(" · "),
-      body: [e.location, e.organizer, e.focus, e.target_grade].filter(Boolean).join(" \n"),
-      url: `/exhibitions`,
+      body: [e.location, e.organizer, e.focus, e.target_grade, ...reportParts]
+        .filter(Boolean)
+        .join(" \n"),
+      url: `/exhibitions/${e.id}`,
     });
   }
 

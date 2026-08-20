@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function ExhibitionTable({ exhibitions }) {
   if (exhibitions.length === 0) {
     return <p className="text-sm text-slate-500">نمایشگاهی پیدا نشد.</p>;
@@ -19,7 +21,9 @@ export default function ExhibitionTable({ exhibitions }) {
           {exhibitions.map((e) => (
             <tr key={e.id} className="border-b border-slate-100 align-top">
               <td className="py-2 pe-4">
-                <div className="font-medium">{e.name}</div>
+                <Link href={`/exhibitions/${e.id}`} className="font-medium text-copper-700 hover:underline">
+                  {e.name}
+                </Link>
                 {e.organizer && <div className="text-xs text-slate-400">{e.organizer}</div>}
                 {e.website && (
                   <a
