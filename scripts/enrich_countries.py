@@ -98,7 +98,11 @@ def build_profile(country: str, client: genai.Client) -> dict:
             if km is not None:
                 distances[ref] = km
 
-        partner_names = {p.get("country") for p in extracted.get("top_trade_partners", [])}
+        # .get(..., []) فقط وقتی کلید غایب باشه پیش‌فرض می‌ده؛ اگه Gemini
+        # صریحاً "top_trade_partners": null برگردونه (که همین امروز دیده شد)،
+        # مقدار None می‌مونه و حلقه‌ی زیر crash می‌کنه — پس عمداً با or [] هم
+        # پوشش می‌دیم.
+        partner_names = {p.get("country") for p in (extracted.get("top_trade_partners") or [])}
         for ref in CONDITIONAL_DISTANCE_TO:
             if ref != country and ref in partner_names:
                 km = distance_between(country, ref)
@@ -111,7 +115,7 @@ def build_profile(country: str, client: genai.Client) -> dict:
         "country": country,
         "port": {"name": port_info[2], "lat": port_info[0], "lon": port_info[1]} if port_info else None,
         "total_import_volume": extracted.get("total_import_volume"),
-        "top_trade_partners": extracted.get("top_trade_partners", []),
+        "top_trade_partners": extracted.get("top_trade_partners") or [],
         "distances_km": distances,
     }
 
@@ -123,14 +127,28 @@ def main():
 
     client = genai.Client(api_key=api_key)
 
+    # «جهانی» یک کشور واقعی نیست (گزارش‌های پس‌زمینه‌ی سراسری مثل بازار جهانی
+    # سودا اش) — پروفایل کشور/فاصله/بندر براش بی‌معنیه.
     countries = sorted({
         json.load(open(p, encoding="utf-8")).get("country")
         for p in glob.glob(os.path.join(PARSED_DIR, "*.json"))
-    })
+    } - {"جهانی"})
 
+    # مثل ingest_reports.py: استخراج با Gemini غیرقطعی‌ست، پس اگه پروفایل یک
+    # کشور از قبل ساخته شده، دوباره لمسش نمی‌کنیم — وگرنه هر اجرای دوباره
+    # (حتی برای اضافه‌کردن فقط یک کشور جدید) عددهای درست قبلی رو با بازنویسیِ
+    # هم‌معنی ولی متفاوت جایگزین می‌کنه. برای بازسازی عمدی یک کشور، کلیدش رو
+    # دستی از data/country_profiles.json حذف کنید.
     profiles = {}
+    if os.path.exists(OUTPUT_FILE):
+        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+            profiles = json.load(f)
+
     for country in countries:
         if not country:
+            continue
+        if country in profiles:
+            print(f"[SKIP] {country}: قبلاً پروفایل داره")
             continue
         profile = build_profile(country, client)
         if profile:

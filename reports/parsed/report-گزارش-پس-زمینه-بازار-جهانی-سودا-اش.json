@@ -1,0 +1,486 @@
+{
+  "id": "report-گزارش-پس-زمینه-بازار-جهانی-سودا-اش",
+  "title": "تحلیل جامع منابع باز اینترنتی برای رصد، تخمین و پیش‌بینی قیمت‌های جهانی سودا اش، جوش شیرین و شاخص‌های لجستیک بین‌المللی",
+  "country": "جهانی",
+  "product": "جوش شیرین",
+  "report_type": "detailed",
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "مقدمه بر پویایی‌شناسی بازار کربنات سدیم و اهمیت اطلاعات باز"
+    },
+    {
+      "type": "paragraph",
+      "text": "کربنات سدیم که در ادبیات صنعتی و تجاری با نام «سودا اش» (Soda Ash) شناخته می‌شود، به همراه مشتق کلیدی آن یعنی بی‌کربنات سدیم (جوش شیرین)، از ارکان بنیادین و غیرقابل جایگزین در صنایع شیمیایی، تولید شیشه، تصفیه آب و تولید مواد شوینده در مقیاس جهانی به شمار می‌روند. سودا اش در دو گرید اصلی «سبک» (Light) و «سنگین» (Dense/Heavy) تولید و عرضه می‌گردد. گرید سنگین به عنوان اصلی‌ترین ماده گدازآور (Flux) در کوره‌های ذوب شیشه کاربرد دارد؛ به طوری که حدود ۱۵ تا ۱۸ درصد از وزن کل بار کوره (به عنوان مثال ۷۵ تا ۹۰ تن در روز برای یک کوره ۵۰۰ تنی) را به خود اختصاص داده و با کاهش دمای ذوب سیلیس، مصرف انرژی را به شدت کاهش می‌دهد1. گرید سبک نیز به دلیل انحلال‌پذیری سریع‌تر، در فرمولاسیون پودرهای شوینده، صنایع غذایی، دارویی و همچنین استخراج و تولید کربنات لیتیم کاربرد فراوانی دارد1."
+    },
+    {
+      "type": "paragraph",
+      "text": "بازار جهانی این محصولات به دلیل وابستگی شدید به فرآیندهای استخراج طبیعی (سنگ معدن ترونا در ایالات متحده) و فرآیندهای پیچیده شیمیایی (روش سولوای یا آمونیاک-سودا در اروپا و چین)، همواره تحت تأثیر نوسانات قیمت انرژی، سیاست‌های کربن‌زدایی و چرخه‌های اقتصاد کلان قرار دارد3. علاوه بر این، به دلیل حجم عظیم جابجایی فیزیکی این کالاها در سطح قاره‌ها، هزینه‌های زنجیره تأمین و شاخص‌های حمل‌ونقل بین‌المللی اعم از فله خشک، کانتینری و ریلی، نقش تعیین‌کننده‌ای در قیمت تمام‌شده تحویل در مقصد (CIF) ایفا می‌کنند6."
+    },
+    {
+      "type": "paragraph",
+      "text": "در اقتصاد مدرن، دسترسی به «هوش بازار» (Market Intelligence) دیگر در انحصار ابرشرکت‌ها نیست. پلتفرم‌ها و پایگاه‌های داده متعددی در اینترنت وجود دارند که به صورت باز و با دسترسی عمومی (Public Access)، اطلاعات حیاتی مربوط به قیمت‌های نقدی، قراردادهای آتی، تحلیل‌های تکنیکال، آمار ظرفیت تولید و شاخص‌های ترانزیت را منتشر می‌کنند. گزارش تحلیلی پیش رو، با بررسی موشکافانه و یکپارچه‌سازی تمامی این منابع، یک نقشه راه جامع برای رصد، تخمین و تحلیل قیمت‌های جهانی سودا اش، جوش شیرین و شبکه‌های لجستیک مرتبط با آن‌ها ارائه می‌دهد."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "پایگاه‌های داده مرجع در بازار آسیا و چین"
+    },
+    {
+      "type": "paragraph",
+      "text": "جمهوری خلق چین با در اختیار داشتن ظرفیت تولیدی بالغ بر ۴۵ تا ۴۷.۵ میلیون تن در سال، بزرگترین تولیدکننده و همزمان بزرگترین مصرف‌کننده سودا اش در جهان است3. از این رو، پلتفرم‌های اطلاعاتی مستقر در چین، نبض بازار جهانی را به نمایش می‌گذارند و نوسانات ثبت شده در این درگاه‌ها، بلافاصله به بازارهای هند، خاورمیانه و اروپا سرریز می‌شود."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "پلتفرم سان‌سیرز (SunSirs) و تحلیل قیمت‌های پایه"
+    },
+    {
+      "type": "paragraph",
+      "text": "پایگاه داده SunSirs (زیرمجموعه گروه داده‌های کالایی چین)، یکی از معتبرترین، دقیق‌ترین و جامع‌ترین پلتفرم‌های باز برای دسترسی به متغیرهای قیمتی کالاها است. این پلتفرم با رصد بیش از ۲۰۰ کالای پایه، اطلاعات ارزشمندی را به صورت روزانه، هفتگی و ماهانه برای تحلیلگران فراهم می‌آورد9."
+    },
+    {
+      "type": "paragraph",
+      "text": "تحلیل داده‌های استخراج شده از این پلتفرم نشان می‌دهد که بازار سودا اش در سال‌های ۲۰۲۵ و ۲۰۲۶ در یک فاز رکود و تعدیل چرخه‌ای قرار داشته است3. بر اساس گزارش‌های SunSirs، متوسط قیمت سودا اش در ابتدای سال ۲۰۲۵ حدود ۱۵۲۸ یوآن بر تن (RMB/ton) بود که با یک افت ۱۸.۱۹ درصدی، در پایان سال به ۱۲۵۰ یوآن بر تن رسید8. این پلتفرم به دقت عوامل فاندامنتال این افت را رصد و منتشر کرده است: فشار سه‌گانه «عرضه بالا، تقاضای ضعیف و موجودی انبار بالا»8."
+    },
+    {
+      "type": "paragraph",
+      "text": "از نظر ظرفیت‌سازی، SunSirs گزارش می‌دهد که در سال ۲۰۲۵، پروژه‌های عظیمی نظیر فازهای جدید Lianyungang Alkali Industry، Lianyungang Debang و Hubei Shuanghuan با تزریق ۵.۵ میلیون تن ظرفیت جدید به مدار تولید پیوستند و کل ظرفیت چین را به ۴۵ میلیون تن رساندند8. این روند در سال ۲۰۲۶ با راه‌اندازی فاز دوم پروژه Yuanxing Energy و پروژه‌های Jinshan Hubei، ظرفیت را به بیش از ۴۷.۵ میلیون تن افزایش داد8. نتیجه این مازاد عرضه، افزایش موجودی انبارها به بیش از ۱.۴ تا ۲ میلیون تن بود که به عنوان یک اهرم فشار تاریخی بر قیمت‌ها عمل کرد3."
+    },
+    {
+      "type": "paragraph",
+      "text": "علاوه بر قیمت‌های نقدی (Spot)، SunSirs امکان رصد بازار آتی (Futures) را نیز فراهم می‌کند. به عنوان مثال، قراردادهای آتی غالب (مانند قرارداد ۱۰۹۰) با قیمت‌های نوسانی بین ۹۸۷ تا ۱۰۴۳ یوآن معامله می‌شدند که نشان‌دهنده انتظارات بدبینانه معامله‌گران نسبت به بهبود قیمت‌ها در کوتاه‌مدت است11."
+    },
+    {
+      "type": "paragraph",
+      "text": "در بخش مشتقات و محصولات مرتبط، این سایت قیمت بی‌کربنات سدیم (جوش شیرین) را نیز پوشش می‌دهد که در مقاطع ثبات بازار، رقمی در حدود ۱۱۹۷.۵۰ یوآن بر تن را ثبت کرده است9. بازرگانان با استفاده از فرمول‌های قیمت‌گذاری این سایت (قیمت معامله = قیمت SunSirs + حاشیه سود توافقی) می‌توانند قراردادهای بلندمدت خود را تنظیم کنند3."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "طبقه‌بندی هزینه‌های تولید در چین (بر اساس داده‌های SunSirs)",
+        "هزینه برآورد شده (RMB/ton)",
+        "وضعیت حاشیه سود"
+      ],
+      "rows": [
+        [
+          "سودا اش طبیعی (Natural Soda Ash)",
+          "کمتر از ۱۰۰۰",
+          "سودآور، دارای مزیت صادراتی"
+        ],
+        [
+          "فرآیند ترکیبی (Combined Soda Process)",
+          "۱۰۵۰ تا ۱۲۰۰",
+          "تحت فشار، حاشیه سود شکننده"
+        ],
+        [
+          "فرآیند آمونیاک-سودا (Ammonia-Soda Process)",
+          "بیش از ۱۳۰۰",
+          "زیان‌ده در شرایط مازاد عرضه"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "این تفاوت در ساختار هزینه‌ها که به وضوح در SunSirs تحلیل شده است، نشان می‌دهد که چرا تولیدکنندگان دارای دسترسی به معادن طبیعی، توانسته‌اند در بازارهای صادراتی به شدت تهاجمی عمل کنند؛ به طوری که صادرات چین با ۸۸.۸۳ درصد افزایش به ۱.۹۶ میلیون تن رسید، در حالی که واردات با ۹۷.۷۶ درصد سقوط، عملاً متوقف گردید8."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "پلتفرم ای‌کمی (Echemi) و سیگنال‌های تکنیکال بازار"
+    },
+    {
+      "type": "paragraph",
+      "text": "وب‌سایت Echemi یک درگاه تجارت الکترونیک B2B و پایگاه تحلیلی است که شکاف میان داده‌های خام و تحلیل‌های تکنیکال را پر می‌کند12. این سایت به طور خاص برای رصد قیمت‌های داخلی تفکیک‌شده بر اساس مناطق جغرافیایی و بنگاه‌های تولیدی طراحی شده است12."
+    },
+    {
+      "type": "paragraph",
+      "text": "یکی از ارزشمندترین ویژگی‌های Echemi، ارائه تحلیل‌های مبتنی بر میانگین متحرک (Moving Averages) و تفاوت‌های میانگین (Mean Difference) است. در بازارهای کالایی، تحلیلگران از اندیکاتورهای D5 (میانگین ۵ روزه)، D10 (میانگین ۱۰ روزه) و D20 (میانگین ۲۰ روزه) برای پیش‌بینی تغییرات روند استفاده می‌کنند13. گزارش‌های Echemi نشان می‌دهند که در مقاطعی که قیمت سودا اش سنگین در سطح ۱۰۹۰ یوآن تثبیت شده بود، شاخص D5 و D10 عدد صفر (بدون تغییر) را نشان می‌دادند، در حالی که شاخص D20 با تغییر از منفی ۱۰.۰۷ به منفی ۷.۳۶، یک روند صعودی و همگرایی را ثبت کرد15. در ادبیات تحلیل تکنیکال بازار کالا، عدم تطابق کامل جهت این سه میانگین، سیگنالی مبنی بر «مقاومت در برابر کاهش بیشتر» (Resilience Warning Signal / Bullish Bias) صادر می‌کند15. این امر به تحلیلگران اطلاع می‌دهد که قیمت به کف چرخه‌ای خود در بازه‌های ۶۰ روزه، ۳ ماهه و ۱ ساله رسیده است و فضای کمی برای ریزش بیشتر وجود دارد13."
+    },
+    {
+      "type": "paragraph",
+      "text": "علاوه بر این، Echemi لیست کاملی از قیمت‌های شرکتی (Enterprise Price) ارائه می‌دهد. به عنوان مثال، در حالی که قیمت بازار داخلی در شرق چین ۹۷۰ یوآن گزارش شده بود، شرکت‌های بزرگی نظیر Shandong Haihua قیمت سودا اش سنگین خود را ۱۱۳۰ یوآن و گرید سبک را ۱۰۵۰ یوآن قیمت‌گذاری کردند، یا شرکت Tangshan Sanyou قیمت ۱۱۵۰ یوآن را برای گرید سبک پیشنهاد داد12. دسترسی به این تنوع قیمتی، امکان محاسبه حاشیه سود آربیتراژ (Arbitrage) بین مناطق مختلف (مانند شمال غرب با قیمت ۸۳۰ یوآن و شمال شرق با قیمت ۱۱۸۰ یوآن) را برای بازرگانان فراهم می‌کند12."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "پایگاه‌های داده در بازارهای غربی و ساختارهای کلان بین‌المللی"
+    },
+    {
+      "type": "paragraph",
+      "text": "در حالی که پلتفرم‌های چینی بر پویایی‌های نقدی تمرکز دارند، تحلیلگران برای درک جریان‌های تجارت جهانی و مقایسه ساختار هزینه‌های بین‌قاره‌ای، به منابع غربی و سازمان‌های دولتی رجوع می‌کنند."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "سازمان زمین‌شناسی ایالات متحده (USGS)"
+    },
+    {
+      "type": "paragraph",
+      "text": "گزارش‌های دوره‌ای و سالانه USGS، به ویژه نشریه Mineral Commodity Summaries، استاندارد طلایی برای تحلیل‌های ساختاری به شمار می‌روند4. داده‌های باز این سازمان که اکنون در پلتفرم ScienceBase نیز ادغام شده‌اند، آمار دقیقی از تولیدات جهانی ارائه می‌دهند17."
+    },
+    {
+      "type": "paragraph",
+      "text": "بر اساس گزارش‌های USGS، ایالات متحده امریکا صنعت سودا اش خود را بر پایه استخراج سنگ معدن ترونا بنا نهاده است که عمدتاً در ایالت وایومینگ (دارای بزرگترین ذخایر شناسایی‌شده ترونا در جهان) متمرکز است1. در سال ۲۰۲۳، تولید داخلی آمریکا حدود ۱۱ میلیون تن با ارزش تقریبی ۱.۹ میلیارد دلار برآورد شد که توسط ۵ کارخانه در وایومینگ و یک کارخانه در کالیفرنیا (Searles Valley Minerals) با ظرفیت اسمی ترکیبی ۱۳.۹ میلیون تن در سال تولید گردید4."
+    },
+    {
+      "type": "paragraph",
+      "text": "داده‌های مصرفی این سازمان نشان می‌دهد که در بازار آمریکا، حدود ۴.۵ میلیون تن سودا اش مصرف می‌شود که ۴۷ درصد آن به صنعت شیشه، ۲۹ درصد به صنایع شیمیایی و مابقی به شوینده‌ها و تصفیه آب اختصاص دارد4. مزیت استثنایی آمریکا در تولید سودا اش طبیعی باعث شده است که این کشور با صادرات ۶.۶ میلیون تن، یکی از هژمون‌های اصلی بازار باشد، در حالی که واردات آن تنها در حد ۸ هزار تن (عمدتاً از ترکیه) محدود مانده است4. USGS همچنین ردیابی می‌کند که چگونه اختلالات ترانزیتی در کانال پاناما و سوئز باعث شد قیمت پایه (FOB) کارخانجات آمریکا از ۱۳۳ دلار بر تن در سال ۲۰۲۱ به حدود ۱۸۰ دلار در سال ۲۰۲۳ جهش یابد4."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "شاخص تولید و تجارت آمریکا (داده‌های USGS)",
+        "مقادیر (میلیون تن - Mt)"
+      ],
+      "rows": [
+        [
+          "تولید داخلی (سال ۲۰۲۳)",
+          "۱۱.۰"
+        ],
+        [
+          "ظرفیت اسمی (Nameplate Capacity)",
+          "۱۳.۹"
+        ],
+        [
+          "مصرف داخلی",
+          "۴.۵"
+        ],
+        [
+          "حجم صادرات",
+          "۶.۶"
+        ],
+        [
+          "حجم واردات",
+          "۰.۰۰۸ (۸ هزار تن)"
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "(نکته تحلیلی: گزارش‌های USGS به دلیل جامعیت، علاوه بر مواد شیمیایی پایه، بازارهای استراتژیک مواد نیمه‌هادی نظیر گالیم و سیلیکون با خلوص بالا برای ریزتراشه‌ها را نیز پوشش می‌دهند که نشان‌دهنده عمق اطلاعاتی این منبع برای استراتژیست‌های صنعتی است19.)"
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "تحلیلگران بین‌المللی قیمت‌گذاری (ChemAnalyst و Procurement Resource)"
+    },
+    {
+      "type": "paragraph",
+      "text": "برای دسترسی به قیمت‌های تحویلی بین‌المللی و مقایسه کراس-کانتری (Cross-Country)، پلتفرم‌هایی نظیر ChemAnalyst داده‌های باز و مفیدی ارائه می‌دهند6. مقایسه قیمت‌ها در این پلتفرم‌ها پرده از یک شکاف ساختاری برمی‌دارد. به عنوان مثال، در اوایل سال ۲۰۲۶، قیمت FOB کینگ‌دائو (چین) برای سودا اش سبک بین ۱۵۵ تا ۱۸۰ دلار نوسان داشت6. در همین زمان، قیمت درب کارخانه (Ex-Works) در وایومینگ آمریکا بین ۱۸۰ تا ۱۸۸ دلار بود6. قیمت FOB ترکیه (به عنوان یک بازیگر نوظهور و قدرتمند با دسترسی به ترونا) در بازه ۱۹۵ تا ۲۰۰ دلار قرار داشت و قیمت CIF تحویل هند (احمدآباد) بین ۲۷۰ تا ۲۸۳ دلار گزارش شده بود6."
+    },
+    {
+      "type": "paragraph",
+      "text": "تفاوت بنیادین در مکانیسم انتقال هزینه‌ها (Feedstock-to-Price Pass-Through) نهفته است. در بازارهای متکی به قراردادهای نقدی مانند چین، تغییرات هزینه انرژی ظرف ۴ تا ۸ هفته در قیمت‌ها نمایان می‌شود6. اما در بازارهایی نظیر اروپا که مبتنی بر قراردادهای فصلی هستند، شوک‌های انرژی با تأخیر اعمال می‌گردند6. در زمان بحران انرژی و قطع ۴۰ درصد از گاز خط لوله روسیه در سال‌های ۲۰۲۱ و ۲۰۲۲، قیمت‌های تحویلی تولیدکنندگان سنتزی در آلمان به بالای ۴۰۰ دلار بر تن جهش یافت6. این پدیده اثبات می‌کند که کف قیمتی ۱۸۰ تا ۱۸۸ دلاری آمریکا که ۵۰ تا ۵۵ درصد پایین‌تر از سطوح FOB آلمان است، صرفاً ناشی از تفاوت ارزش ارز یا لجستیک نیست، بلکه به دلیل یک برتری بنیادین در ساختار هزینه‌های استخراج ترونا است6."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "انجمن تولیدکنندگان سودا اش اروپا (ESAPA)"
+    },
+    {
+      "type": "paragraph",
+      "text": "بازار اروپا با تقاضای سالانه حدود ۸.۷ میلیون تن (که ۶۰ درصد آن در صنعت شیشه مصرف می‌شود)، یکی از بازارهای کلیدی است5. انجمن ESAPA که زیرمجموعه شورای صنعت شیمیایی اروپا (Cefic) است، اطلاعات استانداردی از ۱۲ کارخانه فعال در ۶ کشور عضو اتحادیه اروپا به علاوه ترکیه ارائه می‌دهد که مجموعاً ظرفیتی بالغ بر ۱۰ میلیون تن (۱۵ درصد ظرفیت جهانی) را مدیریت می‌کنند21."
+    },
+    {
+      "type": "paragraph",
+      "text": "اسناد باز منتشر شده توسط این انجمن، به ویژه سند BREF (Best Available Techniques Reference Document)، جزئیات فنی دقیقی از ردپای کربن فرآیندهای تولید ارائه می‌دهد5. فرآیند مونوهیدرات نیازمند ۶.۱ گیگاژول انرژی به ازای هر تن تولید است و انتشار دی‌اکسید کربنی معادل ۰.۶ تن به ازای هر تن محصول دارد5. در مقابل، واحدهای سنتی آمونیاک-سودا تا ۱.۰ تن CO2 به ازای هر تن محصول منتشر می‌کردند5. البته با سرمایه‌گذاری شرکت‌هایی نظیر Brunner Mond در سیستم‌های تولید همزمان برق و حرارت (CHP)، این میزان آلایندگی به ۰.۵ تن CO2 کاهش یافته است5."
+    },
+    {
+      "type": "paragraph",
+      "text": "یکی از بینش‌های آینده‌نگرانه که در متون علمی مرتبط با بازار اروپا یافت می‌شود، توسعه فرآیند جایگزینی به نام CODA (Carbon-negative Soda Ash) است23. این تکنیک با تلفیق الکترولیز کلر-آلکالی و جذب مستقیم دی‌اکسید کربن از هوا، هزینه‌های سرمایه‌ای (CAPEX) را برای طرح‌های مبتنی بر جاذب‌های بستر پرشده (Cross-flow packed absorber) به ۱۹۵ تا ۲۰۹ دلار بر تن و هزینه‌های عملیاتی (OPEX) را در استراتژی تبلور دومرحله‌ای به ۱۵۰ دلار بر تن کاهش می‌دهد23. این فناوری قادر است به ازای هر تن سودا اش، ۰.۱۵ تن CO2 را از جو جذب کرده و از طریق فروش محصولات جانبی مانند هیدروژن و کلر، نزدیک به ۲۰۰ دلار سودآوری مازاد خلق کند که می‌تواند انقلابی در ساختار هزینه‌های تولیدکنندگان اروپایی ایجاد نماید23."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "رصد شاخص‌های ترانزیت و لجستیک بین‌المللی"
+    },
+    {
+      "type": "paragraph",
+      "text": "مهم‌ترین عامل متغیر در قیمت تمام‌شده محصولات فله و کانتینری در کشورهای واردکننده، نرخ حمل‌ونقل است. برای رصد این متغیرها، پلتفرم‌های اینترنتی قدرتمندی وجود دارند که اطلاعات خود را به صورت عمومی منتشر می‌کنند."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "۱. حمل‌ونقل دریایی فله خشک (Ocean Freight - Dry Bulk)"
+    },
+    {
+      "type": "paragraph",
+      "text": "صادرات سودا اش گرید سنگین به دلیل حجم بالا، عمدتاً توسط ناوگان فله خشک انجام می‌پذیرد1. برای تحلیل این بازار، هیچ ابزاری دقیق‌تر از شاخص فله خشک بالتیک (Baltic Dry Index - BDI) نیست7."
+    },
+    {
+      "type": "paragraph",
+      "text": "شاخص BDI که روزانه توسط صرافی بالتیک در لندن محاسبه می‌شود، وضعیت هزینه حمل مواد خام را در ۲۳ مسیر شریانی دریایی ارزیابی می‌کند7. وب‌سایت‌هایی نظیر Trading Economics و Investing.com نوسانات این شاخص را به صورت لحظه‌ای و رایگان در اختیار عموم قرار می‌دهند7. این شاخص یک ترکیب وزن‌دار از سه کلاس اصلی کشتی‌ها است:"
+    },
+    {
+      "type": "paragraph",
+      "text": "کشتی‌های کیپ‌سایز (Capesize): با ظرفیت حدود ۱۵۰ هزار تن (۴۰ درصد وزن شاخص BDI)7."
+    },
+    {
+      "type": "paragraph",
+      "text": "کشتی‌های پاناماکس (Panamax): با ظرفیت ۶۰ تا ۷۰ هزار تن (۳۰ درصد وزن شاخص)7."
+    },
+    {
+      "type": "paragraph",
+      "text": "کشتی‌های سوپراماکس (Supramax): با ظرفیت ۴۸ تا ۶۰ هزار تن (۳۰ درصد وزن شاخص)7. (در ارزیابی‌های تکمیلی، شاخص کشتی‌های هندیسایز (Handysize) با ظرفیت ۳۸ هزار تن نیز محاسبه می‌شود24)."
+    },
+    {
+      "type": "paragraph",
+      "text": "تغییرات این شاخص یک دماسنج دقیق برای سنجش رکود یا رونق اقتصادی است25. به عنوان مثال، در بازه زمانی آگوست ۲۰۲۶، نوسانات روزانه این شاخص با ثبت اعدادی نظیر ۲۷۹۱ واحد، ۲۷۷۶ واحد (کمترین میزان از اواخر جولای) و ۲۸۱۵ واحد، نشان‌دهنده یک بازار به شدت پرنوسان بود7. برای یک تحلیلگر بازار سودا اش، پیگیری شاخص‌های زیرمجموعه نظیر پاناماکس و سوپراماکس اهمیت بیشتری دارد. زمانی که نرخ‌های پاناماکس به دلیل محدودیت‌های شدید آبخور (Draft Restrictions) در کانال پاناما (کاهش سطح آب به ۱۴.۴۸ متر در سپتامبر) افزایش می‌یابد، خطوط کشتیرانی نظیر MSC، ONE و CMA CGM هزینه‌های مازادی بین ۱۰۰ تا ۵۰۰ دلار بر هر TEU کانتینر اعمال می‌کنند که مستقیماً قیمت رقابتی محصولات صادراتی آمریکا را تهدید می‌کند28. از سوی دیگر، افت تاریخی شاخص BDI به معنای در دسترس بودن کشتی‌های خالی فراوان است که می‌تواند صادرات سودا اش طبیعی ارزان‌قیمت از مقاصد دوردست به اروپا را تسهیل کرده و شرکت‌های داخلی اروپایی را زمین‌گیر کند27."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "۲. حمل‌ونقل کانتینری (Containerized Ocean Freight)"
+    },
+    {
+      "type": "paragraph",
+      "text": "بی‌کربنات سدیم (جوش شیرین) و سودا اش سبک عمدتاً در کیسه‌های بسته‌بندی شده و درون کانتینرها حمل می‌شوند1. برای این بخش، دو مرجع معتبر بین‌المللی وجود دارد:"
+    },
+    {
+      "type": "paragraph",
+      "text": "شاخص کانتینر جهانی دروری (Drewry World Container Index - WCI): شرکت مشاوره Drewry هر هفته شاخص WCI را به‌روز می‌کند که نمایانگر هزینه حمل یک کانتینر ۴۰ فوتی (FEU) در هشت مسیر اصلی میان شرق و غرب (مانند شانگهای-روتردام، لس‌آنجلس-شانگهای و نیویورک-روتردام) است29. گزارش‌های عمومی این سایت، نوسانات شدیدی را نشان می‌دهند؛ به گونه‌ای که این شاخص در آگوست ۲۰۲۶ با رشد ۴ درصدی به ۴۵۲۶ دلار بر هر کانتینر ۴۰ فوتی رسید که عمده آن ناشی از افزایش کرایه در مسیرهای ترانس‌پاسیفیک (نظیر شانگهای به نیویورک با ۹۵۰۷ دلار) بود31. همچنین شاخص درون‌آسیایی این پلتفرم (IACI) نوساناتی بین ۹۶۰ تا ۱۰۹۱ دلار را ثبت کرد29."
+    },
+    {
+      "type": "paragraph",
+      "text": "شاخص فریتوس بالتیک (Freightos Baltic Index - FBX): این پلتفرم علاوه بر ارائه داده‌های بازار، سیستمی طراحی کرده است که نوسانات کرایه کانتینر در مسیرهای کلیدی (نظیر چین به آمریکا) را در صورتی که تغییرات بیش از ۷ درصد باشد، به صورت رایگان از طریق ایمیل هشدار می‌دهد34."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "۳. حمل‌ونقل ریلی اوراسیا و شاخص ERAI"
+    },
+    {
+      "type": "paragraph",
+      "text": "در دوران پسا-کرونا و همزمان با اختلالات ژئوپلیتیکی (جنگ اوکراین و بحران دریای سرخ)، مسیر ریلی ترانس‌اوراسیا اهمیت استراتژیکی برای حمل محصولات پتروشیمی و شیمیایی پیدا کرده است. وب‌سایت Index1520.com و شاخص ERAI (Eurasian Rail Alliance Index) بی‌رقیب‌ترین مرجع باز در این زمینه هستند35."
+    },
+    {
+      "type": "paragraph",
+      "text": "این شاخص بر اساس یک روش‌شناسی (Methodology) پیچیده و ترکیب ۹ عامل کلیدی محاسبه می‌شود: ۱) تعرفه‌های حمل کالا در خاک قزاقستان، روسیه و بلاروس، ۲) هزینه اجاره پلتفرم‌های فیتینگ، ۳) زمان و سرعت ترانزیت، ۴) هزینه‌های فورواردری، ترمینال و گمرک، ۵) سطح بارگیری قطارها، ۶) تراز بودن محموله‌ها در مسیرهای رفت و برگشت، ۷) درصد کانتینرهای خالی، ۸) هزینه خدمات اسکورت و امنیت، و ۹) نسبت کانتینرهای ۲۰ فوتی به ۴۰ فوتی38."
+    },
+    {
+      "type": "paragraph",
+      "text": "آمارهای این پلتفرم حاکی از آن است که در سال ۲۰۲۲ تحت تأثیر جنگ اوکراین، حجم کل ترانزیت کانتینری ریلی با ۲۳.۳ درصد کاهش به ۵۷۲,۳۰۰ TEU رسید و ترافیک در بخش چین-اروپا-چین افت ۱۸.۲ درصدی (از ۳۸۰,۶۰۰ به ۳۱۱,۲۰۰ TEU) را تجربه کرد39. با این حال، پویایی‌های جالبی در خطوط فرعی مشاهده شد؛ به عنوان مثال مسیر چین-لهستان با ۱۷۸,۵۲۰ TEU و چین-آلمان با ۶۴,۴۰۴ TEU افت داشتند، اما ترافیک مسیر چین به مجارستان با یک رشد خیره‌کننده ۲۹۸۷ درصدی به ۶,۱۷۴ TEU جهش یافت37. در مسیر بازگشت نیز، مسیر آلمان به چین با ثبت ۱۰۷,۳۰۰ TEU اهمیت بنیادین روابط تجاری دو کشور را نشان داد37."
+    },
+    {
+      "type": "paragraph",
+      "text": "مزیت اصلی پلتفرم Index1520، مقایسه گرافیکی و لحظه‌ای بین شاخص‌های ریلی (ERAI) و دریایی (WCI) است39. داده‌های تاریخی این سایت نشان می‌دهد که در سال ۲۰۲۵، در حالی که شاخص دریایی WCI نوسانات دیوانه‌واری را از کف ۱۶۵۰ دلار تا سقف ۳۹۸۶ دلار تجربه می‌کرد، شاخص ERAI برای کرایه یک کانتینر ۴۰ فوتی (FEU) همواره با یک ثبات مثال‌زدنی در محدوده ۳۲۰۰ تا ۳۳۰۰ دلار در نوسان بود39. این پایداری، مسیر ریلی اوراسیا را به یک سپر دفاعی بی‌نظیر برای صادرکنندگان تبدیل کرده است."
+    },
+    {
+      "type": "heading",
+      "level": 3,
+      "text": "۴. حمل‌ونقل جاده‌ای داخلی (Trucking)"
+    },
+    {
+      "type": "paragraph",
+      "text": "پس از تخلیه محموله در بنادر، حمل‌ونقل جاده‌ای تعیین‌کننده قیمت نهایی است. در ایالات متحده (بزرگترین صادرکننده جهانی)، پلتفرم DAT Trendlines بهترین مرجع باز است41. این وب‌سایت گزارش‌های رایگانی از نرخ حمل‌ونقل کامیون‌های ون (Van)، کفی (Flatbed) و یخچالی (Reefer) و همچنین نسبت بار به کامیون (Load-to-Truck Ratio) ارائه می‌دهد41. به عنوان مثال، در یک بازه زمانی در جولای ۲۰۲۶، در حالی که نرخ حمل‌ونقل ون‌ها (مورد استفاده برای سودا اش کیسه‌ای) در بازار نقدی (Spot) افزایشی ۴.۸ درصدی داشت، نسبت بار به کامیون افت ۹.۸ درصدی را ثبت کرد که نشان‌دهنده یک تغییر رفتار در ظرفیت ناوگان داخلی است42."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "تلفیق کلان و نتیجه‌گیری ساختاری (Macro-Level Synthesis)"
+    },
+    {
+      "type": "paragraph",
+      "text": "تحلیل حرفه‌ای بازار جهانی جوش شیرین و سودا اش صرفاً محدود به استخراج اعداد از سایت‌های مذکور نیست، بلکه هنر تحلیلگر در کشف روابط پنهان میان این پایگاه‌های داده نهفته است."
+    },
+    {
+      "type": "paragraph",
+      "text": "اثر پروانه‌ای BDI و WCI بر رقابت‌پذیری قاره‌ای: بررسی همزمان داده‌های Echemi (ظرفیت‌سازی در چین)، USGS (مزیت هزینه ترونا در آمریکا) و BDI (هزینه ترانزیت فله) یک الگوی تجاری واضح را ترسیم می‌کند3. زمانی که شاخص BDI پایین است، مزیت لجستیکی تولیدکنندگان اروپایی در بازارهای داخلی‌شان از بین می‌رود، زیرا هزینه رسیدن محموله‌های ارزان‌قیمت آمریکایی یا محموله‌های مازاد چینی به اروپا و خاورمیانه به شدت کاهش می‌یابد25."
+    },
+    {
+      "type": "paragraph",
+      "text": "پارادوکس ظرفیت در برابر تقاضا: پایش مستمر بخش اخبار در SunSirs نشان می‌دهد که چگونه کاهش نرخ فعالیت در صنایع پایین‌دستی مانند ساخت‌وساز (شیشه تخت) و پنل‌های خورشیدی، مستقیماً اثر خود را بر انباشت موجودی انبارها (بیش از ۲ میلیون تن در چین) می‌گذارد2. در این شرایط، قیمت‌ها تنها به دلایلی نظیر تعمیر و نگهداری دوره‌ای کارخانه‌ها یا اخبار مربوط به یارانه‌های دولتی (نظیر تسهیلات MLF بانک مرکزی چین) می‌توانند رشد مقطعی داشته باشند8."
+    },
+    {
+      "type": "paragraph",
+      "text": "تغییر فاز استراتژیک به لجستیک ریلی: مقایسه داده‌های Drewry و ERAI ثابت می‌کند که در زمان بروز شوک‌های ژئوپلیتیک دریایی، تولیدکنندگانی که بتوانند سریعاً مسیر ترانزیتی خود را برای محمولات باارزش (نظیر جوش شیرین دارویی) به سمت شبکه‌های ریلی تغییر دهند، از نوسانات شدید نرخ بیمه و کرایه‌های متغیر در امان خواهند ماند29."
+    },
+    {
+      "type": "paragraph",
+      "text": "در نهایت، استفاده یکپارچه از این شبکه گسترده از منابع باز اینترنتی، ابزاری قدرتمند برای پیش‌بینی چرخه‌های تجاری، مدیریت ریسک نوسانات قیمت انرژی و بهینه‌سازی زنجیره تأمین در اختیار بازرگانان، تولیدکنندگان و سیاست‌گذاران صنعتی قرار می‌دهد."
+    },
+    {
+      "type": "paragraph",
+      "text": "این گزارش صرفاً جهت اهداف اطلاعاتی، تحلیل بازار و بررسی‌های اقتصادی تهیه شده است. برای دریافت توصیه‌های پزشکی، تشخیص یا ارزیابی درمان‌های مرتبط با کاربردهای دارویی و انسانی بی‌کربنات سدیم (جوش شیرین)، اکیداً توصیه می‌شود با یک پزشک یا متخصص واجد شرایط مشورت نمایید."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Works cited"
+    },
+    {
+      "type": "paragraph",
+      "text": "Soda Ash (Sodium Carbonate) — Uses, Grades & Buying Guide | PlaxRaw, https://www.plaxraw.com/en/products/industrial-minerals/soda-ash/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Soda Ash: High Supply, Weakening Demand, and Inventory Pressure Keep the Market Range-Bound - SunSirs, https://www.sunsirs.com/uk/detail_news-33756.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "Soda Ash: Transitioning from Price Competition to Value Enhancement - SunSirs, https://www.sunsirs.com/uk/detail_news-28765.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "SODA ASH - Mining Engineering Online - Official Publication of SME, https://me.smenet.org/soda-ash/"
+    },
+    {
+      "type": "paragraph",
+      "text": "House of Lords - European Union - Written Evidence - Parliament UK, https://publications.parliament.uk/pa/ld200708/ldselect/ldeucom/197/197we05.htm"
+    },
+    {
+      "type": "paragraph",
+      "text": "Soda Ash Light Price Index 2026: Glass Industry Demand and Procurement Strategy, https://www.chemtradeasia.com/market-insights/soda-ash-light-price-index-2026-glass-demand-energy-costs"
+    },
+    {
+      "type": "paragraph",
+      "text": "Baltic Exchange Dry Index - Price - Chart - Historical Data - News - Trading Economics, https://tradingeconomics.com/commodity/baltic"
+    },
+    {
+      "type": "paragraph",
+      "text": "Soda Ash Prices Fluctuated Downwards in 2025, and the Market Situation Is Unlikely to Improve in 2026 - SunSirs, https://www.sunsirs.com/uk/detail_news-29512.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "China Commodity Spot Price provided by SunSirs, China Commodity Data Group, https://www.sunsirs.com/uk/sdetail.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "Domestic Soda Ash Market Trended Downward in May - SunSirs, https://www.sunsirs.com/uk/detail_news-33404.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "China Soda ash futures price, China Soda ash Daily prices provided by SunSirs, China Commodity Data Group, https://www.sunsirs.com/uk/frodetail-737.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sodium carbonate Price and Market Analysis - ECHEMI, https://www.echemi.com/productsInformation/pd20150901042-Soda-Ash.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "Business Society's Market Outlook for Soda Ash on August 20, 2026: Volatile - ECHEMI.com, https://www.echemi.com/cms/3192987.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "Sodium carbonate Price Database - Echemi, https://www.echemi.com/price-database/Soda-Ash-pd20150901042.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "Business Society's Market Outlook for Soda Ash on August 18, 2026: Volatile - ECHEMI.com, https://www.echemi.com/cms/3187814.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "Business Society August 11, 2026 Soda Ash Market View: Fluctuating and Consolidating, https://www.echemi.com/cms/3175800.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "Soda Ash Statistics and Information | U.S. Geological Survey - USGS.gov, https://www.usgs.gov/centers/national-minerals-information-center/soda-ash-statistics-and-information"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mineral Commodity Summaries 2026 - USGS Publications Warehouse, https://pubs.usgs.gov/periodicals/mcs2026/mcs2026.pdf?utm_source=nextinvestors.beehiiv.com&utm_medium=newsletter&utm_campaign=sgq-155-increase-higher-grade-now-for-the-share-price-to-catch-up-to-its-bigger-peers&_bhlid=6459402a7d774046ca48c16a81260803a30359a2"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mineral Commodity Summaries 2024 - Stanford, http://large.stanford.edu/courses/2024/ph240/yuan1/docs/usgs-mcs-2024.pdf"
+    },
+    {
+      "type": "paragraph",
+      "text": "Soda Ash Price Index, Trend, News and Forecast Q2 2026 - ChemAnalyst, https://www.chemanalyst.com/Pricing-data/soda-ash-76"
+    },
+    {
+      "type": "paragraph",
+      "text": "Home - ESAPA - CEFIC, https://www.esapa.eu/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Soda Ash Production Process Overview | PDF | Sodium Carbonate - Scribd, https://www.scribd.com/document/403042559/ESAPA-Soda-Ash-Process-BREF3-pdf"
+    },
+    {
+      "type": "paragraph",
+      "text": "Carbon-Negative Production of Soda Ash: Process Development and Feasibility Evaluation, https://pubs.acs.org/doi/10.1021/acs.iecr.5c00483"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dry - Baltic Exchange, https://www.balticexchange.com/en/data-services/market-information0/dry-services.html"
+    },
+    {
+      "type": "paragraph",
+      "text": "(PDF) Baltic Dry Index as a Major Economic Policy Indicator: The Relationship with Economic Growth - ResearchGate, https://www.researchgate.net/publication/286541275_Baltic_Dry_Index_as_a_Major_Economic_Policy_Indicator_The_Relationship_with_Economic_Growth"
+    },
+    {
+      "type": "paragraph",
+      "text": "Baltic Dry Index Index Today (BADI) - Investing.com, https://www.investing.com/indices/baltic-dry"
+    },
+    {
+      "type": "paragraph",
+      "text": "Baltic Dry Index is falling : r/investing - Reddit, https://www.reddit.com/r/investing/comments/1ks9zdj/baltic_dry_index_is_falling/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Container lines under fire over Panama Canal surcharge lack of transparency, https://www.seatrade-maritime.com/containers/container-lines-under-fire-over-panama-canal-surcharge-lack-of-transparency"
+    },
+    {
+      "type": "paragraph",
+      "text": "Latest Trackers and Indices - Port Throughput Indices - Drewry, https://www.drewry.co.uk/trackers-and-indices/latest-trackers-and-indices/port-throughput-indices"
+    },
+    {
+      "type": "paragraph",
+      "text": "The ERAI index as an indicator of the state of transit railway container traffic in the EAEU space, https://index1520.com/en/analytics/indeks-erai-kak-indikator-sostoyaniya-tranzitnykh-zh-d-konteynernykh-perevozok-na-prostranstve-eaes/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Latest Trackers and Indices - World Container Index - 20 Aug - Drewry, https://www.drewry.co.uk/trackers-and-indices/latest-trackers-and-indices/world-container-index-assessed-by-drewry"
+    },
+    {
+      "type": "paragraph",
+      "text": "Drewry WCI surges 4% for 3rd week on higher Transpacific freight - Fibre2Fashion, https://www.fibre2fashion.com/news/textile-news/drewry-wci-surges-4-for-3rd-week-on-higher-transpacific-freight-312849-newsdetails.htm"
+    },
+    {
+      "type": "paragraph",
+      "text": "Drewry - Maritime Research, Consulting and Financial Advisory Services, https://www.drewry.co.uk/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ocean Freight Peak Season Tracker - Free Alerts - Freightos, https://www.freightos.com/freight-resources/ocean-freight-peak-season-tracker-free-alerts/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Eurasian Rail Alliance Index portal – a unified information resource, https://www.itandi.ru/en/digital/305-edinyj-informacionno-analiticheskij-resurs-eurasian-rail-alliance-index/"
+    },
+    {
+      "type": "paragraph",
+      "text": "FAQ - Eurasian Rail Alliance Index, https://index1520.com/en/index/faq/"
+    },
+    {
+      "type": "paragraph",
+      "text": "ERAI data shows decline in rail freight between China and Europe in 2022, https://www.newsilkroaddiscovery.com/erai-data-shows-decline-in-rail-freight-between-china-and-europe-in-2022/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Methodology - Eurasian Rail Alliance Index, https://index1520.com/en/index/methodology/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Rail container transportation in the Eurasian space in 2025, https://index1520.com/en/analytics/konteynernye-zheleznodorozhnye-perevozki-na-evraziyskom-prostranstve-v-2025-godu/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Eurasian Rail Alliance Index, https://index1520.com/en/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Trucking Rates Per Mile - DAT, https://www.dat.com/solutions/trucking-rates-per-mile"
+    },
+    {
+      "type": "paragraph",
+      "text": "Current Freight Rates - Scale Funding, https://getscalefunding.com/resources/current-freight-rates/"
+    },
+    {
+      "type": "paragraph",
+      "text": "Soda ash Price provided by SunSirs, China Commodity Data Group, https://www.sunsirs.com/uk/news-533-1.html"
+    }
+  ]
+}

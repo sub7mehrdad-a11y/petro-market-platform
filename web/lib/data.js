@@ -76,11 +76,17 @@ export function getParsedReport(id) {
 }
 
 // فهرست همه‌ی کشورهایی که حداقل توی یکی از منابع (شرکت/نمایشگاه/گزارش/قیمت) هستن.
+// «جهانی» یک کشور واقعی نیست — برچسب گزارش‌های پس‌زمینه‌ی سراسری (مثل بازار
+// جهانی سودا اش) که به هیچ کشور خاصی مربوط نمی‌شن؛ نباید توی صفحه‌ی
+// /countries یا محاسبات فاصله/شریک‌تجاری ظاهر بشه.
+const NON_COUNTRY_LABELS = new Set(["جهانی"]);
+
 export function getCountries() {
   const set = new Set();
   for (const c of getCompanies()) if (c.country) set.add(c.country);
   for (const e of getExhibitions()) if (e.country) set.add(e.country);
   for (const r of getReportsManifest()) if (r.country) set.add(r.country);
+  for (const label of NON_COUNTRY_LABELS) set.delete(label);
   return Array.from(set).sort();
 }
 

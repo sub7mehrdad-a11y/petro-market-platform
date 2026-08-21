@@ -83,6 +83,15 @@ REPORTS = [
         "country": "سوریه",
         "type": "summary",
     },
+    {
+        # گزارش پس‌زمینه‌ی جهانی (نه یک کشور خاص) — منابع باز اینترنتی برای
+        # رصد قیمت سودا اش/جوش شیرین و شاخص‌های ترانزیت. country="جهانی"
+        # عمداً از getCountries()/enrich_countries.py مستثنا شده چون یک
+        # کشور واقعی نیست.
+        "file": "گزارش پس‌زمینه بازار جهانی سودا اش.docx",
+        "country": "جهانی",
+        "type": "detailed",
+    },
 ]
 
 PRODUCT = "جوش شیرین"
@@ -201,13 +210,25 @@ def main():
 
         report_id = slugify_id(entry["file"], "report")
         is_pdf = entry["file"].lower().endswith(".pdf")
+        parsed_path = os.path.join(PARSED_DIR, f"{report_id}.json")
 
         if entry["type"] == "detailed":
             if is_pdf:
                 print(f"[WARN] {entry['file']}: نوع 'detailed' برای PDF پشتیبانی نمی‌شه، رد شد.")
                 continue
+            # قطعی و بدون AI‌ست، پس همیشه امن برای اجرای دوباره‌ست (فقط اگه
+            # خود فایل docx عوض بشه چیزی تغییر می‌کنه).
             parsed = build_detailed_report(src_path)
             title = parsed["title"] or entry["file"]
+        elif os.path.exists(parsed_path):
+            # گزارش‌های خلاصه با Gemini غیرقطعی‌ان — اجرای دوباره ممکنه محتوای
+            # قبلاً درست رو با یک خروجی متفاوت (یا در صورت خطای سهمیه، بدتر)
+            # جایگزین کنه. اگه قبلاً ساخته شده، دوباره لمسش نمی‌کنیم؛ برای
+            # بازسازی عمدی، فایل parsed را دستی حذف کنید.
+            with open(parsed_path, "r", encoding="utf-8") as f:
+                parsed = json.load(f)
+            title = parsed.get("title") or entry["file"]
+            print(f"[SKIP] {entry['country']} / {entry['file']}: قبلاً ساخته شده (خلاصه، غیرقطعی)")
         else:
             parsed = build_summary_report(src_path, is_pdf, client)
             title = parsed.get("title") or entry["file"]
@@ -220,7 +241,6 @@ def main():
             "report_type": entry["type"],
             **parsed,
         }
-        parsed_path = os.path.join(PARSED_DIR, f"{report_id}.json")
         with open(parsed_path, "w", encoding="utf-8") as f:
             json.dump(parsed_record, f, ensure_ascii=False, indent=2)
 
