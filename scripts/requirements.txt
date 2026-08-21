@@ -4,3 +4,4 @@ certifi
 openpyxl
 python-docx
 pdfplumber
+beautifulsoup4

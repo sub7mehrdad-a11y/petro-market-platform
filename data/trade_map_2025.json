@@ -1,0 +1,4463 @@
+{
+  "سومالی": {
+    "name_en": "Somalia",
+    "iso2": "so",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 69.0,
+      "trade_balance_usd_k": -69.0,
+      "quantity": 84.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 821.0,
+      "growth_value_5y_pct": 78.0,
+      "growth_qty_5y_pct": 42.0,
+      "growth_value_1y_pct": 100.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.46
+    }
+  },
+  "یمن": {
+    "name_en": "Yemen",
+    "iso2": "ye",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 325.0,
+      "trade_balance_usd_k": -325.0,
+      "quantity": 1186.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 274.0,
+      "growth_value_5y_pct": 0.0,
+      "growth_qty_5y_pct": 2.0,
+      "growth_value_1y_pct": -39.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.41
+    }
+  },
+  "مصر": {
+    "name_en": "Egypt",
+    "iso2": "eg",
+    "exports_2025": {
+      "value_usd_k": 2254.0,
+      "trade_balance_usd_k": -17305.0,
+      "quantity": 3957.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 570.0,
+      "growth_value_5y_pct": 75.0,
+      "growth_qty_5y_pct": 59.0,
+      "growth_value_1y_pct": 12.0,
+      "share_world_pct": 0.2
+    },
+    "imports_2025": {
+      "value_usd_k": 19559.0,
+      "trade_balance_usd_k": -17305.0,
+      "quantity": 39042.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 501.0,
+      "growth_value_5y_pct": 9.0,
+      "growth_qty_5y_pct": 4.0,
+      "growth_value_1y_pct": 30.0,
+      "share_world_pct": 1.5,
+      "avg_tariff_pct": 0.4
+    }
+  },
+  "مجارستان": {
+    "name_en": "Hungary",
+    "iso2": "hu",
+    "exports_2025": {
+      "value_usd_k": 3074.0,
+      "trade_balance_usd_k": -5691.0,
+      "quantity": 2174.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1414.0,
+      "growth_value_5y_pct": 7.0,
+      "growth_qty_5y_pct": -14.0,
+      "growth_value_1y_pct": -4.0,
+      "share_world_pct": 0.3
+    },
+    "imports_2025": {
+      "value_usd_k": 8765.0,
+      "trade_balance_usd_k": -5691.0,
+      "quantity": 20144.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 435.0,
+      "growth_value_5y_pct": 4.0,
+      "growth_qty_5y_pct": -3.0,
+      "growth_value_1y_pct": 3.0,
+      "share_world_pct": 0.7,
+      "avg_tariff_pct": 0.41
+    }
+  },
+  "اردن": {
+    "name_en": "Jordan",
+    "iso2": "jo",
+    "exports_2025": {
+      "value_usd_k": 5.0,
+      "trade_balance_usd_k": -2702.0,
+      "quantity": 1.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 5000.0,
+      "growth_value_5y_pct": 4.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 2707.0,
+      "trade_balance_usd_k": -2702.0,
+      "quantity": 10725.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 252.0,
+      "growth_value_5y_pct": 11.0,
+      "growth_qty_5y_pct": 15.0,
+      "growth_value_1y_pct": 72.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.39
+    }
+  },
+  "آرژانتین": {
+    "name_en": "Argentina",
+    "iso2": "ar",
+    "exports_2025": {
+      "value_usd_k": 13.0,
+      "trade_balance_usd_k": -6681.0,
+      "quantity": 17.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 765.0,
+      "growth_value_5y_pct": -29.0,
+      "growth_qty_5y_pct": -61.0,
+      "growth_value_1y_pct": -64.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 6694.0,
+      "trade_balance_usd_k": -6681.0,
+      "quantity": 14649.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 457.0,
+      "growth_value_5y_pct": 6.0,
+      "growth_qty_5y_pct": 1.0,
+      "growth_value_1y_pct": -20.0,
+      "share_world_pct": 0.5,
+      "avg_tariff_pct": 0.19
+    }
+  },
+  "جزایر ویرجین بریتانیا": {
+    "name_en": "British Virgin Islands",
+    "iso2": "vg",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 8.0,
+      "trade_balance_usd_k": -8.0,
+      "quantity": 8.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1000.0,
+      "growth_value_5y_pct": 78.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": -26.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "نیکاراگوئه": {
+    "name_en": "Nicaragua",
+    "iso2": "ni",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 589.0,
+      "trade_balance_usd_k": -589.0,
+      "quantity": 1077.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 547.0,
+      "growth_value_5y_pct": -5.0,
+      "growth_qty_5y_pct": -6.0,
+      "growth_value_1y_pct": -43.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.73
+    }
+  },
+  "برزیل": {
+    "name_en": "Brazil",
+    "iso2": "br",
+    "exports_2025": {
+      "value_usd_k": 1030.0,
+      "trade_balance_usd_k": -19351.0,
+      "quantity": 1445.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 713.0,
+      "growth_value_5y_pct": -1.0,
+      "growth_qty_5y_pct": -10.0,
+      "growth_value_1y_pct": -31.0,
+      "share_world_pct": 0.1
+    },
+    "imports_2025": {
+      "value_usd_k": 20381.0,
+      "trade_balance_usd_k": -19351.0,
+      "quantity": 68313.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 298.0,
+      "growth_value_5y_pct": 38.0,
+      "growth_qty_5y_pct": 48.0,
+      "growth_value_1y_pct": -6.0,
+      "share_world_pct": 1.6,
+      "avg_tariff_pct": 0.23
+    }
+  },
+  "سودان جنوبی": {
+    "name_en": "South Sudan",
+    "iso2": "ss",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 2.0,
+      "trade_balance_usd_k": -2.0,
+      "quantity": 1.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2000.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "جزایر سلیمان": {
+    "name_en": "Solomon Islands",
+    "iso2": "sb",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 23.0,
+      "trade_balance_usd_k": -23.0,
+      "quantity": 13.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1769.0,
+      "growth_value_5y_pct": -14.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 61.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.36
+    }
+  },
+  "نیوزیلند": {
+    "name_en": "New Zealand",
+    "iso2": "nz",
+    "exports_2025": {
+      "value_usd_k": 93.0,
+      "trade_balance_usd_k": -1931.0,
+      "quantity": 111.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 838.0,
+      "growth_value_5y_pct": -13.0,
+      "growth_qty_5y_pct": 10.0,
+      "growth_value_1y_pct": 22.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 2024.0,
+      "trade_balance_usd_k": -1931.0,
+      "quantity": 5143.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 394.0,
+      "growth_value_5y_pct": -15.0,
+      "growth_qty_5y_pct": -7.0,
+      "growth_value_1y_pct": -32.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.44
+    }
+  },
+  "اسرائیل": {
+    "name_en": "Israel",
+    "iso2": "il",
+    "exports_2025": {
+      "value_usd_k": 39.0,
+      "trade_balance_usd_k": -8232.0,
+      "quantity": 68.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 574.0,
+      "growth_value_5y_pct": 21.0,
+      "growth_qty_5y_pct": 11.0,
+      "growth_value_1y_pct": -7.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 8271.0,
+      "trade_balance_usd_k": -8232.0,
+      "quantity": 16510.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 501.0,
+      "growth_value_5y_pct": 7.0,
+      "growth_qty_5y_pct": 2.0,
+      "growth_value_1y_pct": -35.0,
+      "share_world_pct": 0.6,
+      "avg_tariff_pct": 0.2
+    }
+  },
+  "گواتمالا": {
+    "name_en": "Guatemala",
+    "iso2": "gt",
+    "exports_2025": {
+      "value_usd_k": 292.0,
+      "trade_balance_usd_k": -4155.0,
+      "quantity": 380.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 768.0,
+      "growth_value_5y_pct": -1.0,
+      "growth_qty_5y_pct": 3.0,
+      "growth_value_1y_pct": -15.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 4447.0,
+      "trade_balance_usd_k": -4155.0,
+      "quantity": 8620.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 516.0,
+      "growth_value_5y_pct": 1.0,
+      "growth_qty_5y_pct": 6.0,
+      "growth_value_1y_pct": 8.0,
+      "share_world_pct": 0.3,
+      "avg_tariff_pct": 0.34
+    }
+  },
+  "لتونی": {
+    "name_en": "Latvia",
+    "iso2": "lv",
+    "exports_2025": {
+      "value_usd_k": 1256.0,
+      "trade_balance_usd_k": -1902.0,
+      "quantity": 2600.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 483.0,
+      "growth_value_5y_pct": 41.0,
+      "growth_qty_5y_pct": 39.0,
+      "growth_value_1y_pct": 184.0,
+      "share_world_pct": 0.1
+    },
+    "imports_2025": {
+      "value_usd_k": 3158.0,
+      "trade_balance_usd_k": -1902.0,
+      "quantity": 7555.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 418.0,
+      "growth_value_5y_pct": 15.0,
+      "growth_qty_5y_pct": 9.0,
+      "growth_value_1y_pct": 74.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.32
+    }
+  },
+  "آلمان": {
+    "name_en": "Germany",
+    "iso2": "de",
+    "exports_2025": {
+      "value_usd_k": 86177.0,
+      "trade_balance_usd_k": 3590.0,
+      "quantity": 138379.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 623.0,
+      "growth_value_5y_pct": -11.0,
+      "growth_qty_5y_pct": -20.0,
+      "growth_value_1y_pct": 10.0,
+      "share_world_pct": 8.5
+    },
+    "imports_2025": {
+      "value_usd_k": 82587.0,
+      "trade_balance_usd_k": 3590.0,
+      "quantity": 164744.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 501.0,
+      "growth_value_5y_pct": 14.0,
+      "growth_qty_5y_pct": 6.0,
+      "growth_value_1y_pct": 29.0,
+      "share_world_pct": 6.3,
+      "avg_tariff_pct": 0.18
+    }
+  },
+  "اتریش": {
+    "name_en": "Austria",
+    "iso2": "at",
+    "exports_2025": {
+      "value_usd_k": 545.0,
+      "trade_balance_usd_k": -11311.0,
+      "quantity": 489.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1115.0,
+      "growth_value_5y_pct": 12.0,
+      "growth_qty_5y_pct": -11.0,
+      "growth_value_1y_pct": 17.0,
+      "share_world_pct": 0.1
+    },
+    "imports_2025": {
+      "value_usd_k": 11856.0,
+      "trade_balance_usd_k": -11311.0,
+      "quantity": 20278.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 585.0,
+      "growth_value_5y_pct": 2.0,
+      "growth_qty_5y_pct": -11.0,
+      "growth_value_1y_pct": 20.0,
+      "share_world_pct": 0.9,
+      "avg_tariff_pct": 0.26
+    }
+  },
+  "ایسلند": {
+    "name_en": "Iceland",
+    "iso2": "is",
+    "exports_2025": {
+      "value_usd_k": 78.0,
+      "trade_balance_usd_k": -540.0,
+      "quantity": 23.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 3391.0,
+      "growth_value_5y_pct": 130.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 618.0,
+      "trade_balance_usd_k": -540.0,
+      "quantity": 483.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1280.0,
+      "growth_value_5y_pct": 15.0,
+      "growth_qty_5y_pct": 7.0,
+      "growth_value_1y_pct": 19.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.19
+    }
+  },
+  "برونئی دارالسلام": {
+    "name_en": "Brunei Darussalam",
+    "iso2": "bn",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 19.0,
+      "trade_balance_usd_k": -19.0,
+      "quantity": 32.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 594.0,
+      "growth_value_5y_pct": -25.0,
+      "growth_qty_5y_pct": -31.0,
+      "growth_value_1y_pct": -77.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.41
+    }
+  },
+  "سوئیس": {
+    "name_en": "Switzerland",
+    "iso2": "ch",
+    "exports_2025": {
+      "value_usd_k": 478.0,
+      "trade_balance_usd_k": -15412.0,
+      "quantity": 42.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 11381.0,
+      "growth_value_5y_pct": -2.0,
+      "growth_qty_5y_pct": -18.0,
+      "growth_value_1y_pct": 33.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 15890.0,
+      "trade_balance_usd_k": -15412.0,
+      "quantity": 23342.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 681.0,
+      "growth_value_5y_pct": 15.0,
+      "growth_qty_5y_pct": 8.0,
+      "growth_value_1y_pct": 19.0,
+      "share_world_pct": 1.2,
+      "avg_tariff_pct": 0.3
+    }
+  },
+  "گامبیا": {
+    "name_en": "Gambia",
+    "iso2": "gm",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 101.0,
+      "trade_balance_usd_k": -101.0,
+      "quantity": 102.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 990.0,
+      "growth_value_5y_pct": 54.0,
+      "growth_qty_5y_pct": 30.0,
+      "growth_value_1y_pct": 54.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.73
+    }
+  },
+  "گابن": {
+    "name_en": "Gabon",
+    "iso2": "ga",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 44.0,
+      "trade_balance_usd_k": -44.0,
+      "quantity": 32.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1375.0,
+      "growth_value_5y_pct": -21.0,
+      "growth_qty_5y_pct": -4.0,
+      "growth_value_1y_pct": 126.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.49
+    }
+  },
+  "جزایر تورکس و کایکوس": {
+    "name_en": "Turks and Caicos Islands",
+    "iso2": "tc",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 6.0,
+      "trade_balance_usd_k": -6.0,
+      "quantity": 2.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 3000.0,
+      "growth_value_5y_pct": 151.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.56
+    }
+  },
+  "بلاروس": {
+    "name_en": "Belarus",
+    "iso2": "by",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 636.0,
+      "trade_balance_usd_k": -636.0,
+      "quantity": 3303.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 193.0,
+      "growth_value_5y_pct": 42.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 789.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.95
+    }
+  },
+  "آمریکا": {
+    "name_en": "United States of America",
+    "iso2": "us",
+    "exports_2025": {
+      "value_usd_k": 98374.0,
+      "trade_balance_usd_k": 49790.0,
+      "quantity": 156060.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 630.0,
+      "growth_value_5y_pct": 4.0,
+      "growth_qty_5y_pct": 4.0,
+      "growth_value_1y_pct": 10.0,
+      "share_world_pct": 9.7
+    },
+    "imports_2025": {
+      "value_usd_k": 48584.0,
+      "trade_balance_usd_k": 49790.0,
+      "quantity": 35176.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1381.0,
+      "growth_value_5y_pct": 8.0,
+      "growth_qty_5y_pct": 5.0,
+      "growth_value_1y_pct": 15.0,
+      "share_world_pct": 3.7,
+      "avg_tariff_pct": 0.35
+    }
+  },
+  "لبنان": {
+    "name_en": "Lebanon",
+    "iso2": "lb",
+    "exports_2025": {
+      "value_usd_k": 23.0,
+      "trade_balance_usd_k": -952.0,
+      "quantity": 15.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1533.0,
+      "growth_value_5y_pct": 6.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": -24.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 975.0,
+      "trade_balance_usd_k": -952.0,
+      "quantity": 3599.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 271.0,
+      "growth_value_5y_pct": 20.0,
+      "growth_qty_5y_pct": 25.0,
+      "growth_value_1y_pct": 29.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.4
+    }
+  },
+  "بحرین": {
+    "name_en": "Bahrain",
+    "iso2": "bh",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 197.0,
+      "trade_balance_usd_k": -197.0,
+      "quantity": 477.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 413.0,
+      "growth_value_5y_pct": -2.0,
+      "growth_qty_5y_pct": 24.0,
+      "growth_value_1y_pct": -12.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.28
+    }
+  },
+  "کانادا": {
+    "name_en": "Canada",
+    "iso2": "ca",
+    "exports_2025": {
+      "value_usd_k": 3115.0,
+      "trade_balance_usd_k": -48475.0,
+      "quantity": 5067.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 615.0,
+      "growth_value_5y_pct": 7.0,
+      "growth_qty_5y_pct": -5.0,
+      "growth_value_1y_pct": -37.0,
+      "share_world_pct": 0.3
+    },
+    "imports_2025": {
+      "value_usd_k": 51590.0,
+      "trade_balance_usd_k": -48475.0,
+      "quantity": 80480.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 641.0,
+      "growth_value_5y_pct": 7.0,
+      "growth_qty_5y_pct": 0.0,
+      "growth_value_1y_pct": 6.0,
+      "share_world_pct": 3.9,
+      "avg_tariff_pct": 0.72
+    }
+  },
+  "ترینیداد و توباگو": {
+    "name_en": "Trinidad and Tobago",
+    "iso2": "tt",
+    "exports_2025": {
+      "value_usd_k": 92.0,
+      "trade_balance_usd_k": -1058.0,
+      "quantity": 58.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1586.0,
+      "growth_value_5y_pct": 19.0,
+      "growth_qty_5y_pct": 17.0,
+      "growth_value_1y_pct": 105.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 1150.0,
+      "trade_balance_usd_k": -1058.0,
+      "quantity": 894.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1286.0,
+      "growth_value_5y_pct": 5.0,
+      "growth_qty_5y_pct": -4.0,
+      "growth_value_1y_pct": 2.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.39
+    }
+  },
+  "سن کیتس و نویس": {
+    "name_en": "Saint Kitts and Nevis",
+    "iso2": "kn",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 13.0,
+      "trade_balance_usd_k": -13.0,
+      "quantity": 6.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2167.0,
+      "growth_value_5y_pct": 216.0,
+      "growth_qty_5y_pct": 23.0,
+      "growth_value_1y_pct": 13.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "استرالیا": {
+    "name_en": "Australia",
+    "iso2": "au",
+    "exports_2025": {
+      "value_usd_k": 131.0,
+      "trade_balance_usd_k": -15392.0,
+      "quantity": 44.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2977.0,
+      "growth_value_5y_pct": -17.0,
+      "growth_qty_5y_pct": -25.0,
+      "growth_value_1y_pct": -35.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 15523.0,
+      "trade_balance_usd_k": -15392.0,
+      "quantity": 51888.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 299.0,
+      "growth_value_5y_pct": -3.0,
+      "growth_qty_5y_pct": 3.0,
+      "growth_value_1y_pct": -15.0,
+      "share_world_pct": 1.2,
+      "avg_tariff_pct": 0.38
+    }
+  },
+  "موریس": {
+    "name_en": "Mauritius",
+    "iso2": "mu",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 231.0,
+      "trade_balance_usd_k": -231.0,
+      "quantity": 665.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 347.0,
+      "growth_value_5y_pct": 2.0,
+      "growth_qty_5y_pct": 16.0,
+      "growth_value_1y_pct": -18.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.62
+    }
+  },
+  "کامبوج": {
+    "name_en": "Cambodia",
+    "iso2": "kh",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 802.0,
+      "trade_balance_usd_k": -802.0,
+      "quantity": 2310.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 347.0,
+      "growth_value_5y_pct": 28.0,
+      "growth_qty_5y_pct": 33.0,
+      "growth_value_1y_pct": 67.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.57
+    }
+  },
+  "سنگاپور": {
+    "name_en": "Singapore",
+    "iso2": "sg",
+    "exports_2025": {
+      "value_usd_k": 31437.0,
+      "trade_balance_usd_k": 27220.0,
+      "quantity": 49980.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 629.0,
+      "growth_value_5y_pct": 12.0,
+      "growth_qty_5y_pct": 2.0,
+      "growth_value_1y_pct": 16.0,
+      "share_world_pct": 3.1
+    },
+    "imports_2025": {
+      "value_usd_k": 4217.0,
+      "trade_balance_usd_k": 27220.0,
+      "quantity": 4326.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 975.0,
+      "growth_value_5y_pct": -8.0,
+      "growth_qty_5y_pct": -18.0,
+      "growth_value_1y_pct": 18.0,
+      "share_world_pct": 0.3,
+      "avg_tariff_pct": 0.2
+    }
+  },
+  "بلیز": {
+    "name_en": "Belize",
+    "iso2": "bz",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 128.0,
+      "trade_balance_usd_k": -128.0,
+      "quantity": 93.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1376.0,
+      "growth_value_5y_pct": 13.0,
+      "growth_qty_5y_pct": -7.0,
+      "growth_value_1y_pct": 84.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.67
+    }
+  },
+  "آلبانی": {
+    "name_en": "Albania",
+    "iso2": "al",
+    "exports_2025": {
+      "value_usd_k": 916.0,
+      "trade_balance_usd_k": 579.0,
+      "quantity": 1858.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 493.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 272.0,
+      "share_world_pct": 0.1
+    },
+    "imports_2025": {
+      "value_usd_k": 337.0,
+      "trade_balance_usd_k": 579.0,
+      "quantity": 871.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 387.0,
+      "growth_value_5y_pct": 21.0,
+      "growth_qty_5y_pct": 24.0,
+      "growth_value_1y_pct": 8.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.34
+    }
+  },
+  "جزایر مارشال": {
+    "name_en": "Marshall Islands",
+    "iso2": "mh",
+    "exports_2025": {
+      "value_usd_k": 3.0,
+      "trade_balance_usd_k": 1.0,
+      "quantity": 7.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 429.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 2.0,
+      "trade_balance_usd_k": 1.0,
+      "quantity": 0.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": 9.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "موزامبیق": {
+    "name_en": "Mozambique",
+    "iso2": "mz",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 266.0,
+      "trade_balance_usd_k": -266.0,
+      "quantity": 3059.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 87.0,
+      "growth_value_5y_pct": -11.0,
+      "growth_qty_5y_pct": -11.0,
+      "growth_value_1y_pct": -73.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.35
+    }
+  },
+  "لوکزامبورگ": {
+    "name_en": "Luxembourg",
+    "iso2": "lu",
+    "exports_2025": {
+      "value_usd_k": 37.0,
+      "trade_balance_usd_k": -2772.0,
+      "quantity": 56.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 661.0,
+      "growth_value_5y_pct": 39.0,
+      "growth_qty_5y_pct": 25.0,
+      "growth_value_1y_pct": 6.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 2809.0,
+      "trade_balance_usd_k": -2772.0,
+      "quantity": 4623.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 608.0,
+      "growth_value_5y_pct": 20.0,
+      "growth_qty_5y_pct": 7.0,
+      "growth_value_1y_pct": -2.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.57
+    }
+  },
+  "کنیا": {
+    "name_en": "Kenya",
+    "iso2": "ke",
+    "exports_2025": {
+      "value_usd_k": 62.0,
+      "trade_balance_usd_k": -3076.0,
+      "quantity": 89.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 697.0,
+      "growth_value_5y_pct": -31.0,
+      "growth_qty_5y_pct": -37.0,
+      "growth_value_1y_pct": 0.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 3138.0,
+      "trade_balance_usd_k": -3076.0,
+      "quantity": 9805.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 320.0,
+      "growth_value_5y_pct": 1.0,
+      "growth_qty_5y_pct": 7.0,
+      "growth_value_1y_pct": -25.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.42
+    }
+  },
+  "جامائیکا": {
+    "name_en": "Jamaica",
+    "iso2": "jm",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 900.0,
+      "trade_balance_usd_k": -900.0,
+      "quantity": 876.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1027.0,
+      "growth_value_5y_pct": 16.0,
+      "growth_qty_5y_pct": 4.0,
+      "growth_value_1y_pct": 10.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.46
+    }
+  },
+  "بولیوی": {
+    "name_en": "Bolivia, Plurinational State of",
+    "iso2": "bo",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 1713.0,
+      "trade_balance_usd_k": -1713.0,
+      "quantity": 2246.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 763.0,
+      "growth_value_5y_pct": -10.0,
+      "growth_qty_5y_pct": -9.0,
+      "growth_value_1y_pct": 18.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.14
+    }
+  },
+  "کیپ‌ورد": {
+    "name_en": "Cabo Verde",
+    "iso2": "cv",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 383.0,
+      "trade_balance_usd_k": -383.0,
+      "quantity": 80.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 4788.0,
+      "growth_value_5y_pct": 22.0,
+      "growth_qty_5y_pct": 4.0,
+      "growth_value_1y_pct": 21.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.94
+    }
+  },
+  "کلمبیا": {
+    "name_en": "Colombia",
+    "iso2": "co",
+    "exports_2025": {
+      "value_usd_k": 342.0,
+      "trade_balance_usd_k": -4995.0,
+      "quantity": 392.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 872.0,
+      "growth_value_5y_pct": -16.0,
+      "growth_qty_5y_pct": -25.0,
+      "growth_value_1y_pct": 6.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 5337.0,
+      "trade_balance_usd_k": -4995.0,
+      "quantity": 16569.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 322.0,
+      "growth_value_5y_pct": 3.0,
+      "growth_qty_5y_pct": 10.0,
+      "growth_value_1y_pct": 4.0,
+      "share_world_pct": 0.4,
+      "avg_tariff_pct": 0.58
+    }
+  },
+  "هلند": {
+    "name_en": "Netherlands",
+    "iso2": "nl",
+    "exports_2025": {
+      "value_usd_k": 43399.0,
+      "trade_balance_usd_k": -21389.0,
+      "quantity": 77098.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 563.0,
+      "growth_value_5y_pct": 43.0,
+      "growth_qty_5y_pct": 54.0,
+      "growth_value_1y_pct": 50.0,
+      "share_world_pct": 4.3
+    },
+    "imports_2025": {
+      "value_usd_k": 64788.0,
+      "trade_balance_usd_k": -21389.0,
+      "quantity": 149426.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 434.0,
+      "growth_value_5y_pct": 8.0,
+      "growth_qty_5y_pct": 7.0,
+      "growth_value_1y_pct": 26.0,
+      "share_world_pct": 5.0,
+      "avg_tariff_pct": 0.19
+    }
+  },
+  "بنگلادش": {
+    "name_en": "Bangladesh",
+    "iso2": "bd",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 7534.0,
+      "trade_balance_usd_k": -7534.0,
+      "quantity": 33804.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 223.0,
+      "growth_value_5y_pct": 2.0,
+      "growth_qty_5y_pct": 12.0,
+      "growth_value_1y_pct": -18.0,
+      "share_world_pct": 0.6,
+      "avg_tariff_pct": 0.55
+    }
+  },
+  "آذربایجان": {
+    "name_en": "Azerbaijan",
+    "iso2": "az",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 1716.0,
+      "trade_balance_usd_k": -1716.0,
+      "quantity": 4026.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 426.0,
+      "growth_value_5y_pct": 10.0,
+      "growth_qty_5y_pct": 10.0,
+      "growth_value_1y_pct": 7.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.39
+    }
+  },
+  "تانزانیا": {
+    "name_en": "Tanzania, United Republic of",
+    "iso2": "tz",
+    "exports_2025": {
+      "value_usd_k": 165.0,
+      "trade_balance_usd_k": -560.0,
+      "quantity": 98.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1684.0,
+      "growth_value_5y_pct": 3.0,
+      "growth_qty_5y_pct": -2.0,
+      "growth_value_1y_pct": -2.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 725.0,
+      "trade_balance_usd_k": -560.0,
+      "quantity": 2180.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 333.0,
+      "growth_value_5y_pct": -10.0,
+      "growth_qty_5y_pct": -4.0,
+      "growth_value_1y_pct": -11.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.63
+    }
+  },
+  "کوراسائو": {
+    "name_en": "Curaçao",
+    "iso2": "cw",
+    "exports_2025": {
+      "value_usd_k": 3.0,
+      "trade_balance_usd_k": -85.0,
+      "quantity": 4.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 750.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 88.0,
+      "trade_balance_usd_k": -85.0,
+      "quantity": 65.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1354.0,
+      "growth_value_5y_pct": 8.0,
+      "growth_qty_5y_pct": 25.0,
+      "growth_value_1y_pct": 112.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "گرنادا": {
+    "name_en": "Grenada",
+    "iso2": "gd",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 18.0,
+      "trade_balance_usd_k": -18.0,
+      "quantity": 8.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2250.0,
+      "growth_value_5y_pct": 17.0,
+      "growth_qty_5y_pct": -1.0,
+      "growth_value_1y_pct": -57.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.65
+    }
+  },
+  "مولداوی": {
+    "name_en": "Moldova, Republic of",
+    "iso2": "md",
+    "exports_2025": {
+      "value_usd_k": 7.0,
+      "trade_balance_usd_k": -954.0,
+      "quantity": 5.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1400.0,
+      "growth_value_5y_pct": 30.0,
+      "growth_qty_5y_pct": 20.0,
+      "growth_value_1y_pct": -56.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 961.0,
+      "trade_balance_usd_k": -954.0,
+      "quantity": 1408.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 683.0,
+      "growth_value_5y_pct": 6.0,
+      "growth_qty_5y_pct": 5.0,
+      "growth_value_1y_pct": -4.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.39
+    }
+  },
+  "پاناما": {
+    "name_en": "Panama",
+    "iso2": "pa",
+    "exports_2025": {
+      "value_usd_k": 137.0,
+      "trade_balance_usd_k": -1384.0,
+      "quantity": 71.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1930.0,
+      "growth_value_5y_pct": -9.0,
+      "growth_qty_5y_pct": -1.0,
+      "growth_value_1y_pct": 288.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 1521.0,
+      "trade_balance_usd_k": -1384.0,
+      "quantity": 2392.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 636.0,
+      "growth_value_5y_pct": 2.0,
+      "growth_qty_5y_pct": 9.0,
+      "growth_value_1y_pct": 23.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.23
+    }
+  },
+  "اوگاندا": {
+    "name_en": "Uganda",
+    "iso2": "ug",
+    "exports_2025": {
+      "value_usd_k": 14.0,
+      "trade_balance_usd_k": -528.0,
+      "quantity": 46.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 304.0,
+      "growth_value_5y_pct": -20.0,
+      "growth_qty_5y_pct": 36.0,
+      "growth_value_1y_pct": -37.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 542.0,
+      "trade_balance_usd_k": -528.0,
+      "quantity": 1668.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 325.0,
+      "growth_value_5y_pct": 10.0,
+      "growth_qty_5y_pct": 15.0,
+      "growth_value_1y_pct": -15.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.49
+    }
+  },
+  "گینیا": {
+    "name_en": "Guinea",
+    "iso2": "gn",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 285.0,
+      "trade_balance_usd_k": -285.0,
+      "quantity": 826.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 345.0,
+      "growth_value_5y_pct": 22.0,
+      "growth_qty_5y_pct": 32.0,
+      "growth_value_1y_pct": -28.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.37
+    }
+  },
+  "ترکمنستان": {
+    "name_en": "Turkmenistan",
+    "iso2": "tm",
+    "exports_2025": {
+      "value_usd_k": 26.0,
+      "trade_balance_usd_k": -25.0,
+      "quantity": 59.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 441.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 51.0,
+      "trade_balance_usd_k": -25.0,
+      "quantity": 154.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 331.0,
+      "growth_value_5y_pct": -10.0,
+      "growth_qty_5y_pct": -10.0,
+      "growth_value_1y_pct": -34.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.47
+    }
+  },
+  "تونس": {
+    "name_en": "Tunisia",
+    "iso2": "tn",
+    "exports_2025": {
+      "value_usd_k": 13.0,
+      "trade_balance_usd_k": -3214.0,
+      "quantity": 25.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 520.0,
+      "growth_value_5y_pct": -9.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": -73.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 3227.0,
+      "trade_balance_usd_k": -3214.0,
+      "quantity": 10258.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 315.0,
+      "growth_value_5y_pct": 37.0,
+      "growth_qty_5y_pct": 33.0,
+      "growth_value_1y_pct": 78.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.36
+    }
+  },
+  "نروژ": {
+    "name_en": "Norway",
+    "iso2": "no",
+    "exports_2025": {
+      "value_usd_k": 41.0,
+      "trade_balance_usd_k": -8922.0,
+      "quantity": 119.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 345.0,
+      "growth_value_5y_pct": -32.0,
+      "growth_qty_5y_pct": -38.0,
+      "growth_value_1y_pct": -46.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 8963.0,
+      "trade_balance_usd_k": -8922.0,
+      "quantity": 13045.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 687.0,
+      "growth_value_5y_pct": 20.0,
+      "growth_qty_5y_pct": 7.0,
+      "growth_value_1y_pct": 15.0,
+      "share_world_pct": 0.7,
+      "avg_tariff_pct": 0.15
+    }
+  },
+  "بریتانیا": {
+    "name_en": "United Kingdom",
+    "iso2": "gb",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 23593.0,
+      "trade_balance_usd_k": -23593.0,
+      "quantity": 41447.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 569.0,
+      "growth_value_5y_pct": 29.0,
+      "growth_qty_5y_pct": 53.0,
+      "growth_value_1y_pct": 41.0,
+      "share_world_pct": 1.8,
+      "avg_tariff_pct": 0.19
+    }
+  },
+  "اروگوئه": {
+    "name_en": "Uruguay",
+    "iso2": "uy",
+    "exports_2025": {
+      "value_usd_k": 10.0,
+      "trade_balance_usd_k": -1686.0,
+      "quantity": 11.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 909.0,
+      "growth_value_5y_pct": 60.0,
+      "growth_qty_5y_pct": 41.0,
+      "growth_value_1y_pct": 295.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 1696.0,
+      "trade_balance_usd_k": -1686.0,
+      "quantity": 3736.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 454.0,
+      "growth_value_5y_pct": 3.0,
+      "growth_qty_5y_pct": 4.0,
+      "growth_value_1y_pct": 29.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.24
+    }
+  },
+  "مغولستان": {
+    "name_en": "Mongolia",
+    "iso2": "mn",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 353.0,
+      "trade_balance_usd_k": -353.0,
+      "quantity": 651.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 542.0,
+      "growth_value_5y_pct": -1.0,
+      "growth_qty_5y_pct": -6.0,
+      "growth_value_1y_pct": 13.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.71
+    }
+  },
+  "لیتوانی": {
+    "name_en": "Lithuania",
+    "iso2": "lt",
+    "exports_2025": {
+      "value_usd_k": 1545.0,
+      "trade_balance_usd_k": -3170.0,
+      "quantity": 2927.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 528.0,
+      "growth_value_5y_pct": 17.0,
+      "growth_qty_5y_pct": 14.0,
+      "growth_value_1y_pct": -1.0,
+      "share_world_pct": 0.2
+    },
+    "imports_2025": {
+      "value_usd_k": 4715.0,
+      "trade_balance_usd_k": -3170.0,
+      "quantity": 10717.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 440.0,
+      "growth_value_5y_pct": 13.0,
+      "growth_qty_5y_pct": 9.0,
+      "growth_value_1y_pct": 9.0,
+      "share_world_pct": 0.4,
+      "avg_tariff_pct": 0.24
+    }
+  },
+  "گویانا": {
+    "name_en": "Guyana",
+    "iso2": "gy",
+    "exports_2025": {
+      "value_usd_k": 13.0,
+      "trade_balance_usd_k": -260.0,
+      "quantity": 12.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1083.0,
+      "growth_value_5y_pct": 158.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 273.0,
+      "trade_balance_usd_k": -260.0,
+      "quantity": 211.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1294.0,
+      "growth_value_5y_pct": 34.0,
+      "growth_qty_5y_pct": 33.0,
+      "growth_value_1y_pct": 88.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.5
+    }
+  },
+  "بورکینافاسو": {
+    "name_en": "Burkina Faso",
+    "iso2": "bf",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 840.0,
+      "trade_balance_usd_k": -840.0,
+      "quantity": 785.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1070.0,
+      "growth_value_5y_pct": 35.0,
+      "growth_qty_5y_pct": -1.0,
+      "growth_value_1y_pct": 16.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.44
+    }
+  },
+  "میانمار": {
+    "name_en": "Myanmar",
+    "iso2": "mm",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 1427.0,
+      "trade_balance_usd_k": -1427.0,
+      "quantity": 4337.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 329.0,
+      "growth_value_5y_pct": 15.0,
+      "growth_qty_5y_pct": 49.0,
+      "growth_value_1y_pct": 54.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.35
+    }
+  },
+  "برمودا": {
+    "name_en": "Bermuda",
+    "iso2": "bm",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 22.0,
+      "trade_balance_usd_k": -22.0,
+      "quantity": 4.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 5500.0,
+      "growth_value_5y_pct": -43.0,
+      "growth_qty_5y_pct": -35.0,
+      "growth_value_1y_pct": 21.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "روسیه": {
+    "name_en": "Russian Federation",
+    "iso2": "ru",
+    "exports_2025": {
+      "value_usd_k": 12662.0,
+      "trade_balance_usd_k": 11077.0,
+      "quantity": 34553.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 366.0,
+      "growth_value_5y_pct": -18.0,
+      "growth_qty_5y_pct": 24.0,
+      "growth_value_1y_pct": -14.0,
+      "share_world_pct": 1.3
+    },
+    "imports_2025": {
+      "value_usd_k": 1585.0,
+      "trade_balance_usd_k": 11077.0,
+      "quantity": 4489.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 353.0,
+      "growth_value_5y_pct": -20.0,
+      "growth_qty_5y_pct": 2.0,
+      "growth_value_1y_pct": 59.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.42
+    }
+  },
+  "کنگو (برازاویل)": {
+    "name_en": "Congo",
+    "iso2": "cg",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 70.0,
+      "trade_balance_usd_k": -70.0,
+      "quantity": 192.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 365.0,
+      "growth_value_5y_pct": 24.0,
+      "growth_qty_5y_pct": 8.0,
+      "growth_value_1y_pct": -32.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.3
+    }
+  },
+  "آندورا": {
+    "name_en": "Andorra",
+    "iso2": "ad",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 5.0,
+      "trade_balance_usd_k": -5.0,
+      "quantity": 2.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2500.0,
+      "growth_value_5y_pct": -27.0,
+      "growth_qty_5y_pct": -45.0,
+      "growth_value_1y_pct": -76.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.68
+    }
+  },
+  "تایوان": {
+    "name_en": "Chinese Taipei",
+    "iso2": "tw",
+    "exports_2025": {
+      "value_usd_k": 494.0,
+      "trade_balance_usd_k": -14149.0,
+      "quantity": 1304.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 379.0,
+      "growth_value_5y_pct": 43.0,
+      "growth_qty_5y_pct": 62.0,
+      "growth_value_1y_pct": -26.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 14643.0,
+      "trade_balance_usd_k": -14149.0,
+      "quantity": 46386.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 316.0,
+      "growth_value_5y_pct": 1.0,
+      "growth_qty_5y_pct": 12.0,
+      "growth_value_1y_pct": -17.0,
+      "share_world_pct": 1.1,
+      "avg_tariff_pct": 0.22
+    }
+  },
+  "هندوراس": {
+    "name_en": "Honduras",
+    "iso2": "hn",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 634.0,
+      "trade_balance_usd_k": -634.0,
+      "quantity": 2013.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 315.0,
+      "growth_value_5y_pct": 14.0,
+      "growth_qty_5y_pct": 39.0,
+      "growth_value_1y_pct": 36.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.26
+    }
+  },
+  "آنتیگوا و باربودا": {
+    "name_en": "Antigua and Barbuda",
+    "iso2": "ag",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 24.0,
+      "trade_balance_usd_k": -24.0,
+      "quantity": 9.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2667.0,
+      "growth_value_5y_pct": 33.0,
+      "growth_qty_5y_pct": 25.0,
+      "growth_value_1y_pct": 3.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "لیبی": {
+    "name_en": "Libya, State of",
+    "iso2": "ly",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 300.0,
+      "trade_balance_usd_k": -300.0,
+      "quantity": 423.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 709.0,
+      "growth_value_5y_pct": -8.0,
+      "growth_qty_5y_pct": 53.0,
+      "growth_value_1y_pct": 3.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.73
+    }
+  },
+  "جمهوری دومینیکن": {
+    "name_en": "Dominican Republic",
+    "iso2": "do",
+    "exports_2025": {
+      "value_usd_k": 95.0,
+      "trade_balance_usd_k": -3751.0,
+      "quantity": 152.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 625.0,
+      "growth_value_5y_pct": -15.0,
+      "growth_qty_5y_pct": -22.0,
+      "growth_value_1y_pct": 552.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 3846.0,
+      "trade_balance_usd_k": -3751.0,
+      "quantity": 9517.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 404.0,
+      "growth_value_5y_pct": 2.0,
+      "growth_qty_5y_pct": 11.0,
+      "growth_value_1y_pct": 10.0,
+      "share_world_pct": 0.3,
+      "avg_tariff_pct": 0.37
+    }
+  },
+  "ترکیه": {
+    "name_en": "Türkiye",
+    "iso2": "tr",
+    "exports_2025": {
+      "value_usd_k": 170855.0,
+      "trade_balance_usd_k": 161523.0,
+      "quantity": 536299.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 319.0,
+      "growth_value_5y_pct": 10.0,
+      "growth_qty_5y_pct": 3.0,
+      "growth_value_1y_pct": 12.0,
+      "share_world_pct": 16.9
+    },
+    "imports_2025": {
+      "value_usd_k": 9332.0,
+      "trade_balance_usd_k": 161523.0,
+      "quantity": 13990.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 667.0,
+      "growth_value_5y_pct": 23.0,
+      "growth_qty_5y_pct": 28.0,
+      "growth_value_1y_pct": -1.0,
+      "share_world_pct": 0.7,
+      "avg_tariff_pct": 0.28
+    }
+  },
+  "مالدیو": {
+    "name_en": "Maldives",
+    "iso2": "mv",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 127.0,
+      "trade_balance_usd_k": -127.0,
+      "quantity": 107.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1187.0,
+      "growth_value_5y_pct": 52.0,
+      "growth_qty_5y_pct": 104.0,
+      "growth_value_1y_pct": -44.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.56
+    }
+  },
+  "بنین": {
+    "name_en": "Benin",
+    "iso2": "bj",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 230.0,
+      "trade_balance_usd_k": -230.0,
+      "quantity": 590.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 390.0,
+      "growth_value_5y_pct": 3.0,
+      "growth_qty_5y_pct": 15.0,
+      "growth_value_1y_pct": 86.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.44
+    }
+  },
+  "والیس و فوتونا": {
+    "name_en": "Wallis and Futuna Islands",
+    "iso2": "wf",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 3.0,
+      "trade_balance_usd_k": -3.0,
+      "quantity": 1.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 3000.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "کامرون": {
+    "name_en": "Cameroon",
+    "iso2": "cm",
+    "exports_2025": {
+      "value_usd_k": 1.0,
+      "trade_balance_usd_k": -689.0,
+      "quantity": 1.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1000.0,
+      "growth_value_5y_pct": 90.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 690.0,
+      "trade_balance_usd_k": -689.0,
+      "quantity": 2357.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 293.0,
+      "growth_value_5y_pct": 11.0,
+      "growth_qty_5y_pct": 43.0,
+      "growth_value_1y_pct": 43.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.39
+    }
+  },
+  "سورینام": {
+    "name_en": "Suriname",
+    "iso2": "sr",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 95.0,
+      "trade_balance_usd_k": -95.0,
+      "quantity": 87.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1092.0,
+      "growth_value_5y_pct": 13.0,
+      "growth_qty_5y_pct": 6.0,
+      "growth_value_1y_pct": 171.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.29
+    }
+  },
+  "جمهوری آفریقای مرکزی": {
+    "name_en": "Central African Republic",
+    "iso2": "cf",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 1.0,
+      "trade_balance_usd_k": -1.0,
+      "quantity": 0.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": null
+    }
+  },
+  "قطر": {
+    "name_en": "Qatar",
+    "iso2": "qa",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 427.0,
+      "trade_balance_usd_k": -427.0,
+      "quantity": 1098.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 389.0,
+      "growth_value_5y_pct": -14.0,
+      "growth_qty_5y_pct": -12.0,
+      "growth_value_1y_pct": -26.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.24
+    }
+  },
+  "نیجر": {
+    "name_en": "Niger",
+    "iso2": "ne",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 13.0,
+      "trade_balance_usd_k": -13.0,
+      "quantity": 4.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 3250.0,
+      "growth_value_5y_pct": -72.0,
+      "growth_qty_5y_pct": -69.0,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "هاییتی": {
+    "name_en": "Haiti",
+    "iso2": "ht",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 383.0,
+      "trade_balance_usd_k": -383.0,
+      "quantity": 1413.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 271.0,
+      "growth_value_5y_pct": 18.0,
+      "growth_qty_5y_pct": 29.0,
+      "growth_value_1y_pct": 4.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.52
+    }
+  },
+  "قزاقستان": {
+    "name_en": "Kazakhstan",
+    "iso2": "kz",
+    "exports_2025": {
+      "value_usd_k": 121.0,
+      "trade_balance_usd_k": -6052.0,
+      "quantity": 287.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 422.0,
+      "growth_value_5y_pct": 160.0,
+      "growth_qty_5y_pct": 312.0,
+      "growth_value_1y_pct": 5669.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 6173.0,
+      "trade_balance_usd_k": -6052.0,
+      "quantity": 10676.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 578.0,
+      "growth_value_5y_pct": 15.0,
+      "growth_qty_5y_pct": 13.0,
+      "growth_value_1y_pct": 56.0,
+      "share_world_pct": 0.5,
+      "avg_tariff_pct": 0.6
+    }
+  },
+  "بوروندی": {
+    "name_en": "Burundi",
+    "iso2": "bi",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 43.0,
+      "trade_balance_usd_k": -43.0,
+      "quantity": 86.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 500.0,
+      "growth_value_5y_pct": -1.0,
+      "growth_qty_5y_pct": -4.0,
+      "growth_value_1y_pct": -19.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.43
+    }
+  },
+  "دانمارک": {
+    "name_en": "Denmark",
+    "iso2": "dk",
+    "exports_2025": {
+      "value_usd_k": 2498.0,
+      "trade_balance_usd_k": -13280.0,
+      "quantity": 1817.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1375.0,
+      "growth_value_5y_pct": 18.0,
+      "growth_qty_5y_pct": 11.0,
+      "growth_value_1y_pct": 45.0,
+      "share_world_pct": 0.2
+    },
+    "imports_2025": {
+      "value_usd_k": 15778.0,
+      "trade_balance_usd_k": -13280.0,
+      "quantity": 28067.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 562.0,
+      "growth_value_5y_pct": 13.0,
+      "growth_qty_5y_pct": 6.0,
+      "growth_value_1y_pct": 14.0,
+      "share_world_pct": 1.2,
+      "avg_tariff_pct": 0.33
+    }
+  },
+  "مونته‌نگرو": {
+    "name_en": "Montenegro",
+    "iso2": "me",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 180.0,
+      "trade_balance_usd_k": -180.0,
+      "quantity": 181.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 994.0,
+      "growth_value_5y_pct": 12.0,
+      "growth_qty_5y_pct": 1.0,
+      "growth_value_1y_pct": -6.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.76
+    }
+  },
+  "کیریباتی": {
+    "name_en": "Kiribati",
+    "iso2": "ki",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 7.0,
+      "trade_balance_usd_k": -7.0,
+      "quantity": 6.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1167.0,
+      "growth_value_5y_pct": 31.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 65.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.39
+    }
+  },
+  "عربستان سعودی": {
+    "name_en": "Saudi Arabia",
+    "iso2": "sa",
+    "exports_2025": {
+      "value_usd_k": 287.0,
+      "trade_balance_usd_k": -12515.0,
+      "quantity": 182.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1577.0,
+      "growth_value_5y_pct": 26.0,
+      "growth_qty_5y_pct": 29.0,
+      "growth_value_1y_pct": 448.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 12802.0,
+      "trade_balance_usd_k": -12515.0,
+      "quantity": 31360.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 408.0,
+      "growth_value_5y_pct": 7.0,
+      "growth_qty_5y_pct": 9.0,
+      "growth_value_1y_pct": -3.0,
+      "share_world_pct": 1.0,
+      "avg_tariff_pct": 0.2
+    }
+  },
+  "ایتالیا": {
+    "name_en": "Italy",
+    "iso2": "it",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 66644.0,
+      "trade_balance_usd_k": -66644.0,
+      "quantity": 148545.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 449.0,
+      "growth_value_5y_pct": 13.0,
+      "growth_qty_5y_pct": 5.0,
+      "growth_value_1y_pct": 11.0,
+      "share_world_pct": 5.1,
+      "avg_tariff_pct": 0.2
+    }
+  },
+  "باربادوس": {
+    "name_en": "Barbados",
+    "iso2": "bb",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 317.0,
+      "trade_balance_usd_k": -317.0,
+      "quantity": 247.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1283.0,
+      "growth_value_5y_pct": 19.0,
+      "growth_qty_5y_pct": 21.0,
+      "growth_value_1y_pct": -22.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.41
+    }
+  },
+  "سوریه": {
+    "name_en": "Syrian Arab Republic",
+    "iso2": "sy",
+    "exports_2025": {
+      "value_usd_k": 2.0,
+      "trade_balance_usd_k": -1350.0,
+      "quantity": 0.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": 67.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 1352.0,
+      "trade_balance_usd_k": -1350.0,
+      "quantity": 2655.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 509.0,
+      "growth_value_5y_pct": 30.0,
+      "growth_qty_5y_pct": 41.0,
+      "growth_value_1y_pct": 89.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.94
+    }
+  },
+  "دومینیکا": {
+    "name_en": "Dominica",
+    "iso2": "dm",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 35.0,
+      "trade_balance_usd_k": -35.0,
+      "quantity": 189.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 185.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 238.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.89
+    }
+  },
+  "سنت لوسیا": {
+    "name_en": "Saint Lucia",
+    "iso2": "lc",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 19.0,
+      "trade_balance_usd_k": -19.0,
+      "quantity": 3.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 6333.0,
+      "growth_value_5y_pct": 48.0,
+      "growth_qty_5y_pct": -16.0,
+      "growth_value_1y_pct": -44.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "نامیبیا": {
+    "name_en": "Namibia",
+    "iso2": "na",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 6551.0,
+      "trade_balance_usd_k": -6551.0,
+      "quantity": 15904.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 412.0,
+      "growth_value_5y_pct": 108.0,
+      "growth_qty_5y_pct": 119.0,
+      "growth_value_1y_pct": -10.0,
+      "share_world_pct": 0.5,
+      "avg_tariff_pct": 0.28
+    }
+  },
+  "تونگا": {
+    "name_en": "Tonga",
+    "iso2": "to",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 10.0,
+      "trade_balance_usd_k": -10.0,
+      "quantity": 25.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 400.0,
+      "growth_value_5y_pct": 19.0,
+      "growth_qty_5y_pct": 7.0,
+      "growth_value_1y_pct": -27.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.58
+    }
+  },
+  "بلژیک": {
+    "name_en": "Belgium",
+    "iso2": "be",
+    "exports_2025": {
+      "value_usd_k": 29340.0,
+      "trade_balance_usd_k": -30157.0,
+      "quantity": 53912.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 544.0,
+      "growth_value_5y_pct": -11.0,
+      "growth_qty_5y_pct": -17.0,
+      "growth_value_1y_pct": 26.0,
+      "share_world_pct": 2.9
+    },
+    "imports_2025": {
+      "value_usd_k": 59497.0,
+      "trade_balance_usd_k": -30157.0,
+      "quantity": 169471.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 351.0,
+      "growth_value_5y_pct": 2.0,
+      "growth_qty_5y_pct": 2.0,
+      "growth_value_1y_pct": 20.0,
+      "share_world_pct": 4.6,
+      "avg_tariff_pct": 0.26
+    }
+  },
+  "اسپانیا": {
+    "name_en": "Spain",
+    "iso2": "es",
+    "exports_2025": {
+      "value_usd_k": 81405.0,
+      "trade_balance_usd_k": 44846.0,
+      "quantity": 0.0,
+      "quantity_unit": "No quantity",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": -3.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 12.0,
+      "share_world_pct": 8.1
+    },
+    "imports_2025": {
+      "value_usd_k": 36559.0,
+      "trade_balance_usd_k": 44846.0,
+      "quantity": 0.0,
+      "quantity_unit": "No quantity",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": 11.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 6.0,
+      "share_world_pct": 2.8,
+      "avg_tariff_pct": 0.34
+    }
+  },
+  "کرواسی": {
+    "name_en": "Croatia",
+    "iso2": "hr",
+    "exports_2025": {
+      "value_usd_k": 2553.0,
+      "trade_balance_usd_k": -1740.0,
+      "quantity": 6170.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 414.0,
+      "growth_value_5y_pct": 74.0,
+      "growth_qty_5y_pct": 135.0,
+      "growth_value_1y_pct": 8.0,
+      "share_world_pct": 0.3
+    },
+    "imports_2025": {
+      "value_usd_k": 4293.0,
+      "trade_balance_usd_k": -1740.0,
+      "quantity": 8144.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 527.0,
+      "growth_value_5y_pct": 14.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": -1.0,
+      "share_world_pct": 0.3,
+      "avg_tariff_pct": 0.2
+    }
+  },
+  "کره جنوبی": {
+    "name_en": "Korea, Republic of",
+    "iso2": "kr",
+    "exports_2025": {
+      "value_usd_k": 494.0,
+      "trade_balance_usd_k": -62663.0,
+      "quantity": 567.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 871.0,
+      "growth_value_5y_pct": 22.0,
+      "growth_qty_5y_pct": 63.0,
+      "growth_value_1y_pct": 12.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 63157.0,
+      "trade_balance_usd_k": -62663.0,
+      "quantity": 282329.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 224.0,
+      "growth_value_5y_pct": -3.0,
+      "growth_qty_5y_pct": 6.0,
+      "growth_value_1y_pct": -12.0,
+      "share_world_pct": 4.8,
+      "avg_tariff_pct": 0.73
+    }
+  },
+  "گینه استوایی": {
+    "name_en": "Equatorial Guinea",
+    "iso2": "gq",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 38.0,
+      "trade_balance_usd_k": -38.0,
+      "quantity": 12.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 3167.0,
+      "growth_value_5y_pct": -24.0,
+      "growth_qty_5y_pct": -14.0,
+      "growth_value_1y_pct": -41.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.59
+    }
+  },
+  "امارات": {
+    "name_en": "United Arab Emirates",
+    "iso2": "ae",
+    "exports_2025": {
+      "value_usd_k": 1204.0,
+      "trade_balance_usd_k": -3808.0,
+      "quantity": 3342.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 360.0,
+      "growth_value_5y_pct": -1.0,
+      "growth_qty_5y_pct": 15.0,
+      "growth_value_1y_pct": -17.0,
+      "share_world_pct": 0.1
+    },
+    "imports_2025": {
+      "value_usd_k": 5012.0,
+      "trade_balance_usd_k": -3808.0,
+      "quantity": 11736.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 427.0,
+      "growth_value_5y_pct": 9.0,
+      "growth_qty_5y_pct": 7.0,
+      "growth_value_1y_pct": 59.0,
+      "share_world_pct": 0.4,
+      "avg_tariff_pct": 0.22
+    }
+  },
+  "اوکراین": {
+    "name_en": "Ukraine",
+    "iso2": "ua",
+    "exports_2025": {
+      "value_usd_k": 283.0,
+      "trade_balance_usd_k": -7845.0,
+      "quantity": 263.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1076.0,
+      "growth_value_5y_pct": 61.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 14.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 8128.0,
+      "trade_balance_usd_k": -7845.0,
+      "quantity": 27285.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 298.0,
+      "growth_value_5y_pct": 0.0,
+      "growth_qty_5y_pct": 4.0,
+      "growth_value_1y_pct": 20.0,
+      "share_world_pct": 0.6,
+      "avg_tariff_pct": 0.36
+    }
+  },
+  "لهستان": {
+    "name_en": "Poland",
+    "iso2": "pl",
+    "exports_2025": {
+      "value_usd_k": 3553.0,
+      "trade_balance_usd_k": -24584.0,
+      "quantity": 4574.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 777.0,
+      "growth_value_5y_pct": -16.0,
+      "growth_qty_5y_pct": -13.0,
+      "growth_value_1y_pct": -8.0,
+      "share_world_pct": 0.4
+    },
+    "imports_2025": {
+      "value_usd_k": 28137.0,
+      "trade_balance_usd_k": -24584.0,
+      "quantity": 54732.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 514.0,
+      "growth_value_5y_pct": 18.0,
+      "growth_qty_5y_pct": 8.0,
+      "growth_value_1y_pct": 50.0,
+      "share_world_pct": 2.2,
+      "avg_tariff_pct": 0.23
+    }
+  },
+  "چاد": {
+    "name_en": "Chad",
+    "iso2": "td",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 18.0,
+      "trade_balance_usd_k": -18.0,
+      "quantity": 12.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1500.0,
+      "growth_value_5y_pct": -1.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": -76.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.5
+    }
+  },
+  "پاکستان": {
+    "name_en": "Pakistan",
+    "iso2": "pk",
+    "exports_2025": {
+      "value_usd_k": 824.0,
+      "trade_balance_usd_k": -1629.0,
+      "quantity": 2781.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 296.0,
+      "growth_value_5y_pct": 0.0,
+      "growth_qty_5y_pct": 1.0,
+      "growth_value_1y_pct": 9.0,
+      "share_world_pct": 0.1
+    },
+    "imports_2025": {
+      "value_usd_k": 2453.0,
+      "trade_balance_usd_k": -1629.0,
+      "quantity": 3042.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 806.0,
+      "growth_value_5y_pct": 8.0,
+      "growth_qty_5y_pct": 57.0,
+      "growth_value_1y_pct": 28.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.27
+    }
+  },
+  "مالاوی": {
+    "name_en": "Malawi",
+    "iso2": "mw",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 2107.0,
+      "trade_balance_usd_k": -2107.0,
+      "quantity": 4672.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 451.0,
+      "growth_value_5y_pct": 7.0,
+      "growth_qty_5y_pct": 15.0,
+      "growth_value_1y_pct": 33.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.96
+    }
+  },
+  "بوتسوانا": {
+    "name_en": "Botswana",
+    "iso2": "bw",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 347.0,
+      "trade_balance_usd_k": -347.0,
+      "quantity": 237.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1464.0,
+      "growth_value_5y_pct": -18.0,
+      "growth_qty_5y_pct": -38.0,
+      "growth_value_1y_pct": 100.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.94
+    }
+  },
+  "اکوادور": {
+    "name_en": "Ecuador",
+    "iso2": "ec",
+    "exports_2025": {
+      "value_usd_k": 16.0,
+      "trade_balance_usd_k": -3721.0,
+      "quantity": 4.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 4000.0,
+      "growth_value_5y_pct": -16.0,
+      "growth_qty_5y_pct": -20.0,
+      "growth_value_1y_pct": 332.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 3737.0,
+      "trade_balance_usd_k": -3721.0,
+      "quantity": 4931.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 758.0,
+      "growth_value_5y_pct": 3.0,
+      "growth_qty_5y_pct": 7.0,
+      "growth_value_1y_pct": 3.0,
+      "share_world_pct": 0.3,
+      "avg_tariff_pct": 0.15
+    }
+  },
+  "بوسنی و هرزگوین": {
+    "name_en": "Bosnia and Herzegovina",
+    "iso2": "ba",
+    "exports_2025": {
+      "value_usd_k": 41119.0,
+      "trade_balance_usd_k": 40542.0,
+      "quantity": 110637.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 372.0,
+      "growth_value_5y_pct": 9.0,
+      "growth_qty_5y_pct": 1.0,
+      "growth_value_1y_pct": 3.0,
+      "share_world_pct": 4.1
+    },
+    "imports_2025": {
+      "value_usd_k": 577.0,
+      "trade_balance_usd_k": 40542.0,
+      "quantity": 341.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1692.0,
+      "growth_value_5y_pct": 8.0,
+      "growth_qty_5y_pct": 3.0,
+      "growth_value_1y_pct": 57.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.17
+    }
+  },
+  "اندونزی": {
+    "name_en": "Indonesia",
+    "iso2": "id",
+    "exports_2025": {
+      "value_usd_k": 67.0,
+      "trade_balance_usd_k": -30552.0,
+      "quantity": 25.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2680.0,
+      "growth_value_5y_pct": 3.0,
+      "growth_qty_5y_pct": -21.0,
+      "growth_value_1y_pct": -36.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 30619.0,
+      "trade_balance_usd_k": -30552.0,
+      "quantity": 110619.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 277.0,
+      "growth_value_5y_pct": -8.0,
+      "growth_qty_5y_pct": -2.0,
+      "growth_value_1y_pct": -5.0,
+      "share_world_pct": 2.3,
+      "avg_tariff_pct": 0.5
+    }
+  },
+  "عمان": {
+    "name_en": "Oman",
+    "iso2": "om",
+    "exports_2025": {
+      "value_usd_k": 65.0,
+      "trade_balance_usd_k": -1879.0,
+      "quantity": 32.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2031.0,
+      "growth_value_5y_pct": 158.0,
+      "growth_qty_5y_pct": 68.0,
+      "growth_value_1y_pct": 419.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 1944.0,
+      "trade_balance_usd_k": -1879.0,
+      "quantity": 3835.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 507.0,
+      "growth_value_5y_pct": 31.0,
+      "growth_qty_5y_pct": 29.0,
+      "growth_value_1y_pct": 168.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.31
+    }
+  },
+  "گینه بیسائو": {
+    "name_en": "Guinea-Bissau",
+    "iso2": "gw",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 24.0,
+      "trade_balance_usd_k": -24.0,
+      "quantity": 41.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 585.0,
+      "growth_value_5y_pct": 359.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": -55.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.92
+    }
+  },
+  "لائوس": {
+    "name_en": "Lao People's Democratic Republic",
+    "iso2": "la",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 183.0,
+      "trade_balance_usd_k": -183.0,
+      "quantity": 408.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 449.0,
+      "growth_value_5y_pct": -7.0,
+      "growth_qty_5y_pct": 0.0,
+      "growth_value_1y_pct": 51.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "قبرس": {
+    "name_en": "Cyprus",
+    "iso2": "cy",
+    "exports_2025": {
+      "value_usd_k": 428.0,
+      "trade_balance_usd_k": -958.0,
+      "quantity": 13.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 32923.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 14167.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 1386.0,
+      "trade_balance_usd_k": -958.0,
+      "quantity": 2490.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 557.0,
+      "growth_value_5y_pct": 16.0,
+      "growth_qty_5y_pct": 6.0,
+      "growth_value_1y_pct": 12.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.38
+    }
+  },
+  "ازبکستان": {
+    "name_en": "Uzbekistan",
+    "iso2": "uz",
+    "exports_2025": {
+      "value_usd_k": 651.0,
+      "trade_balance_usd_k": 445.0,
+      "quantity": 695.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 937.0,
+      "growth_value_5y_pct": 188.0,
+      "growth_qty_5y_pct": 64.0,
+      "growth_value_1y_pct": -3.0,
+      "share_world_pct": 0.1
+    },
+    "imports_2025": {
+      "value_usd_k": 206.0,
+      "trade_balance_usd_k": 445.0,
+      "quantity": 783.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 263.0,
+      "growth_value_5y_pct": 43.0,
+      "growth_qty_5y_pct": 80.0,
+      "growth_value_1y_pct": 266.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.38
+    }
+  },
+  "ایران": {
+    "name_en": "Iran, Islamic Republic of",
+    "iso2": "ir",
+    "exports_2025": {
+      "value_usd_k": 1704.0,
+      "trade_balance_usd_k": -109.0,
+      "quantity": 5320.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 320.0,
+      "growth_value_5y_pct": -1.0,
+      "growth_qty_5y_pct": 26.0,
+      "growth_value_1y_pct": 4.0,
+      "share_world_pct": 0.2
+    },
+    "imports_2025": {
+      "value_usd_k": 1813.0,
+      "trade_balance_usd_k": -109.0,
+      "quantity": 2738.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 662.0,
+      "growth_value_5y_pct": 9.0,
+      "growth_qty_5y_pct": 3.0,
+      "growth_value_1y_pct": -6.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.99
+    }
+  },
+  "فلسطین": {
+    "name_en": "Palestine, State of",
+    "iso2": "ps",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 20.0,
+      "trade_balance_usd_k": -20.0,
+      "quantity": 27.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 741.0,
+      "growth_value_5y_pct": 18.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": -88.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "سری‌لانکا": {
+    "name_en": "Sri Lanka",
+    "iso2": "lk",
+    "exports_2025": {
+      "value_usd_k": 15.0,
+      "trade_balance_usd_k": -1796.0,
+      "quantity": 27.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 556.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": -68.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 1811.0,
+      "trade_balance_usd_k": -1796.0,
+      "quantity": 3616.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 501.0,
+      "growth_value_5y_pct": -4.0,
+      "growth_qty_5y_pct": 1.0,
+      "growth_value_1y_pct": -2.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.29
+    }
+  },
+  "تاجیکستان": {
+    "name_en": "Tajikistan",
+    "iso2": "tj",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 40.0,
+      "trade_balance_usd_k": -40.0,
+      "quantity": 178.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 225.0,
+      "growth_value_5y_pct": 74.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 393.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.51
+    }
+  },
+  "فیجی": {
+    "name_en": "Fiji",
+    "iso2": "fj",
+    "exports_2025": {
+      "value_usd_k": 7.0,
+      "trade_balance_usd_k": -205.0,
+      "quantity": 3.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2333.0,
+      "growth_value_5y_pct": 68.0,
+      "growth_qty_5y_pct": 11.0,
+      "growth_value_1y_pct": 73.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 212.0,
+      "trade_balance_usd_k": -205.0,
+      "quantity": 314.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 675.0,
+      "growth_value_5y_pct": 16.0,
+      "growth_qty_5y_pct": 18.0,
+      "growth_value_1y_pct": 45.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.28
+    }
+  },
+  "قرقیزستان": {
+    "name_en": "Kyrgyzstan",
+    "iso2": "kg",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 1312.0,
+      "trade_balance_usd_k": -1312.0,
+      "quantity": 0.0,
+      "quantity_unit": "No quantity",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": 19.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 10.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.26
+    }
+  },
+  "چین": {
+    "name_en": "China",
+    "iso2": "cn",
+    "exports_2025": {
+      "value_usd_k": 188743.0,
+      "trade_balance_usd_k": 156211.0,
+      "quantity": 1006063.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 188.0,
+      "growth_value_5y_pct": 7.0,
+      "growth_qty_5y_pct": 19.0,
+      "growth_value_1y_pct": 5.0,
+      "share_world_pct": 18.7
+    },
+    "imports_2025": {
+      "value_usd_k": 32532.0,
+      "trade_balance_usd_k": 156211.0,
+      "quantity": 74200.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 438.0,
+      "growth_value_5y_pct": -6.0,
+      "growth_qty_5y_pct": -7.0,
+      "growth_value_1y_pct": -20.0,
+      "share_world_pct": 2.5,
+      "avg_tariff_pct": 0.4
+    }
+  },
+  "یونان": {
+    "name_en": "Greece",
+    "iso2": "gr",
+    "exports_2025": {
+      "value_usd_k": 505.0,
+      "trade_balance_usd_k": -5540.0,
+      "quantity": 1270.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 398.0,
+      "growth_value_5y_pct": 4.0,
+      "growth_qty_5y_pct": 9.0,
+      "growth_value_1y_pct": -5.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 6045.0,
+      "trade_balance_usd_k": -5540.0,
+      "quantity": 13937.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 434.0,
+      "growth_value_5y_pct": -1.0,
+      "growth_qty_5y_pct": 0.0,
+      "growth_value_1y_pct": 5.0,
+      "share_world_pct": 0.5,
+      "avg_tariff_pct": 0.17
+    }
+  },
+  "جبل‌الطارق": {
+    "name_en": "Gibraltar",
+    "iso2": "gi",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 115.0,
+      "trade_balance_usd_k": -115.0,
+      "quantity": 109.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1055.0,
+      "growth_value_5y_pct": -7.0,
+      "growth_qty_5y_pct": 1.0,
+      "growth_value_1y_pct": 6.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "کوبا": {
+    "name_en": "Cuba",
+    "iso2": "cu",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 838.0,
+      "trade_balance_usd_k": -838.0,
+      "quantity": 643.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1303.0,
+      "growth_value_5y_pct": 22.0,
+      "growth_qty_5y_pct": 33.0,
+      "growth_value_1y_pct": 111.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.74
+    }
+  },
+  "زامبیا": {
+    "name_en": "Zambia",
+    "iso2": "zm",
+    "exports_2025": {
+      "value_usd_k": 8.0,
+      "trade_balance_usd_k": -913.0,
+      "quantity": 7.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1143.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": -57.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 921.0,
+      "trade_balance_usd_k": -913.0,
+      "quantity": 1698.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 542.0,
+      "growth_value_5y_pct": 4.0,
+      "growth_qty_5y_pct": 10.0,
+      "growth_value_1y_pct": 12.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.47
+    }
+  },
+  "افغانستان": {
+    "name_en": "Afghanistan",
+    "iso2": "af",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 547.0,
+      "trade_balance_usd_k": -547.0,
+      "quantity": 1828.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 299.0,
+      "growth_value_5y_pct": 19.0,
+      "growth_qty_5y_pct": 9.0,
+      "growth_value_1y_pct": 9.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.99
+    }
+  },
+  "تیمور-لست": {
+    "name_en": "Timor-Leste",
+    "iso2": "tl",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 1.0,
+      "trade_balance_usd_k": -1.0,
+      "quantity": 0.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": -64.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "تایلند": {
+    "name_en": "Thailand",
+    "iso2": "th",
+    "exports_2025": {
+      "value_usd_k": 38635.0,
+      "trade_balance_usd_k": 23801.0,
+      "quantity": 85374.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 453.0,
+      "growth_value_5y_pct": 8.0,
+      "growth_qty_5y_pct": 4.0,
+      "growth_value_1y_pct": 29.0,
+      "share_world_pct": 3.8
+    },
+    "imports_2025": {
+      "value_usd_k": 14834.0,
+      "trade_balance_usd_k": 23801.0,
+      "quantity": 55255.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 268.0,
+      "growth_value_5y_pct": -5.0,
+      "growth_qty_5y_pct": 1.0,
+      "growth_value_1y_pct": -3.0,
+      "share_world_pct": 1.1,
+      "avg_tariff_pct": 0.49
+    }
+  },
+  "پولینزی فرانسه": {
+    "name_en": "French Polynesia",
+    "iso2": "pf",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 81.0,
+      "trade_balance_usd_k": -81.0,
+      "quantity": 27.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 3000.0,
+      "growth_value_5y_pct": -24.0,
+      "growth_qty_5y_pct": -40.0,
+      "growth_value_1y_pct": 103.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.57
+    }
+  },
+  "گرجستان": {
+    "name_en": "Georgia",
+    "iso2": "ge",
+    "exports_2025": {
+      "value_usd_k": 21.0,
+      "trade_balance_usd_k": -1420.0,
+      "quantity": 10.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2100.0,
+      "growth_value_5y_pct": 47.0,
+      "growth_qty_5y_pct": 8.0,
+      "growth_value_1y_pct": -61.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 1441.0,
+      "trade_balance_usd_k": -1420.0,
+      "quantity": 1745.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 826.0,
+      "growth_value_5y_pct": 4.0,
+      "growth_qty_5y_pct": 3.0,
+      "growth_value_1y_pct": -5.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.35
+    }
+  },
+  "سنگال": {
+    "name_en": "Senegal",
+    "iso2": "sn",
+    "exports_2025": {
+      "value_usd_k": 319.0,
+      "trade_balance_usd_k": -846.0,
+      "quantity": 339.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 941.0,
+      "growth_value_5y_pct": 1.0,
+      "growth_qty_5y_pct": -4.0,
+      "growth_value_1y_pct": 37.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 1165.0,
+      "trade_balance_usd_k": -846.0,
+      "quantity": 2263.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 515.0,
+      "growth_value_5y_pct": 12.0,
+      "growth_qty_5y_pct": 6.0,
+      "growth_value_1y_pct": 0.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.36
+    }
+  },
+  "اسواتینی": {
+    "name_en": "Eswatini",
+    "iso2": "sz",
+    "exports_2025": {
+      "value_usd_k": 3421.0,
+      "trade_balance_usd_k": 3292.0,
+      "quantity": 68.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 50309.0,
+      "growth_value_5y_pct": 0.0,
+      "growth_qty_5y_pct": 1.0,
+      "growth_value_1y_pct": -4.0,
+      "share_world_pct": 0.3
+    },
+    "imports_2025": {
+      "value_usd_k": 129.0,
+      "trade_balance_usd_k": 3292.0,
+      "quantity": 154.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 838.0,
+      "growth_value_5y_pct": 8.0,
+      "growth_qty_5y_pct": 14.0,
+      "growth_value_1y_pct": 26.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.75
+    }
+  },
+  "رومانی": {
+    "name_en": "Romania",
+    "iso2": "ro",
+    "exports_2025": {
+      "value_usd_k": 526.0,
+      "trade_balance_usd_k": -7497.0,
+      "quantity": 188.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2798.0,
+      "growth_value_5y_pct": -8.0,
+      "growth_qty_5y_pct": -16.0,
+      "growth_value_1y_pct": 12.0,
+      "share_world_pct": 0.1
+    },
+    "imports_2025": {
+      "value_usd_k": 8023.0,
+      "trade_balance_usd_k": -7497.0,
+      "quantity": 0.0,
+      "quantity_unit": "No quantity",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": 15.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 33.0,
+      "share_world_pct": 0.6,
+      "avg_tariff_pct": 0.16
+    }
+  },
+  "پاراگوئه": {
+    "name_en": "Paraguay",
+    "iso2": "py",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 1106.0,
+      "trade_balance_usd_k": -1106.0,
+      "quantity": 2840.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 389.0,
+      "growth_value_5y_pct": 7.0,
+      "growth_qty_5y_pct": 9.0,
+      "growth_value_1y_pct": -18.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.19
+    }
+  },
+  "جزایر فارو": {
+    "name_en": "Faroe Islands",
+    "iso2": "fo",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 169.0,
+      "trade_balance_usd_k": -169.0,
+      "quantity": 214.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 790.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.25
+    }
+  },
+  "پرتغال": {
+    "name_en": "Portugal",
+    "iso2": "pt",
+    "exports_2025": {
+      "value_usd_k": 14403.0,
+      "trade_balance_usd_k": 1066.0,
+      "quantity": 22020.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 654.0,
+      "growth_value_5y_pct": 10.0,
+      "growth_qty_5y_pct": 6.0,
+      "growth_value_1y_pct": 23.0,
+      "share_world_pct": 1.4
+    },
+    "imports_2025": {
+      "value_usd_k": 13337.0,
+      "trade_balance_usd_k": 1066.0,
+      "quantity": 39258.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 340.0,
+      "growth_value_5y_pct": 1.0,
+      "growth_qty_5y_pct": 2.0,
+      "growth_value_1y_pct": 3.0,
+      "share_world_pct": 1.0,
+      "avg_tariff_pct": 0.64
+    }
+  },
+  "گرینلند": {
+    "name_en": "Greenland",
+    "iso2": "gl",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 65.0,
+      "trade_balance_usd_k": -65.0,
+      "quantity": 32.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2031.0,
+      "growth_value_5y_pct": 146.0,
+      "growth_qty_5y_pct": 174.0,
+      "growth_value_1y_pct": 54.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "بلغارستان": {
+    "name_en": "Bulgaria",
+    "iso2": "bg",
+    "exports_2025": {
+      "value_usd_k": 32216.0,
+      "trade_balance_usd_k": 30984.0,
+      "quantity": 136233.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 236.0,
+      "growth_value_5y_pct": 53.0,
+      "growth_qty_5y_pct": 53.0,
+      "growth_value_1y_pct": -26.0,
+      "share_world_pct": 3.2
+    },
+    "imports_2025": {
+      "value_usd_k": 1232.0,
+      "trade_balance_usd_k": 30984.0,
+      "quantity": 2496.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 494.0,
+      "growth_value_5y_pct": 10.0,
+      "growth_qty_5y_pct": 4.0,
+      "growth_value_1y_pct": 2.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.27
+    }
+  },
+  "کره شمالی": {
+    "name_en": "Korea, Democratic People's Republic of",
+    "iso2": "kp",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 27.0,
+      "trade_balance_usd_k": -27.0,
+      "quantity": 67.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 403.0,
+      "growth_value_5y_pct": 52.0,
+      "growth_qty_5y_pct": 55.0,
+      "growth_value_1y_pct": -29.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "چیلی": {
+    "name_en": "Chile",
+    "iso2": "cl",
+    "exports_2025": {
+      "value_usd_k": 144.0,
+      "trade_balance_usd_k": -7369.0,
+      "quantity": 482.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 299.0,
+      "growth_value_5y_pct": 26.0,
+      "growth_qty_5y_pct": 134.0,
+      "growth_value_1y_pct": 4290.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 7513.0,
+      "trade_balance_usd_k": -7369.0,
+      "quantity": 13096.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 574.0,
+      "growth_value_5y_pct": -20.0,
+      "growth_qty_5y_pct": -13.0,
+      "growth_value_1y_pct": -20.0,
+      "share_world_pct": 0.6,
+      "avg_tariff_pct": 0.23
+    }
+  },
+  "مکزیک": {
+    "name_en": "Mexico",
+    "iso2": "mx",
+    "exports_2025": {
+      "value_usd_k": 1501.0,
+      "trade_balance_usd_k": -26007.0,
+      "quantity": 1910.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 786.0,
+      "growth_value_5y_pct": 31.0,
+      "growth_qty_5y_pct": 14.0,
+      "growth_value_1y_pct": 43.0,
+      "share_world_pct": 0.1
+    },
+    "imports_2025": {
+      "value_usd_k": 27508.0,
+      "trade_balance_usd_k": -26007.0,
+      "quantity": 54107.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 508.0,
+      "growth_value_5y_pct": 25.0,
+      "growth_qty_5y_pct": 21.0,
+      "growth_value_1y_pct": 15.0,
+      "share_world_pct": 2.1,
+      "avg_tariff_pct": 0.93
+    }
+  },
+  "سنت پیر و میکلن": {
+    "name_en": "Saint Pierre and Miquelon",
+    "iso2": "pm",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 2.0,
+      "trade_balance_usd_k": -2.0,
+      "quantity": 0.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": 54.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "استونی": {
+    "name_en": "Estonia",
+    "iso2": "ee",
+    "exports_2025": {
+      "value_usd_k": 11.0,
+      "trade_balance_usd_k": -1608.0,
+      "quantity": 26.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 423.0,
+      "growth_value_5y_pct": -64.0,
+      "growth_qty_5y_pct": -33.0,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 1619.0,
+      "trade_balance_usd_k": -1608.0,
+      "quantity": 4103.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 395.0,
+      "growth_value_5y_pct": 8.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 82.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.33
+    }
+  },
+  "اسلوونی": {
+    "name_en": "Slovenia",
+    "iso2": "si",
+    "exports_2025": {
+      "value_usd_k": 195.0,
+      "trade_balance_usd_k": -3222.0,
+      "quantity": 376.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 519.0,
+      "growth_value_5y_pct": 37.0,
+      "growth_qty_5y_pct": 43.0,
+      "growth_value_1y_pct": 40.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 3417.0,
+      "trade_balance_usd_k": -3222.0,
+      "quantity": 6280.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 544.0,
+      "growth_value_5y_pct": 14.0,
+      "growth_qty_5y_pct": 6.0,
+      "growth_value_1y_pct": 20.0,
+      "share_world_pct": 0.3,
+      "avg_tariff_pct": 0.22
+    }
+  },
+  "هند": {
+    "name_en": "India",
+    "iso2": "in",
+    "exports_2025": {
+      "value_usd_k": 15191.0,
+      "trade_balance_usd_k": 1311.0,
+      "quantity": 39920.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 381.0,
+      "growth_value_5y_pct": 24.0,
+      "growth_qty_5y_pct": 26.0,
+      "growth_value_1y_pct": 20.0,
+      "share_world_pct": 1.5
+    },
+    "imports_2025": {
+      "value_usd_k": 13880.0,
+      "trade_balance_usd_k": 1311.0,
+      "quantity": 42455.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 327.0,
+      "growth_value_5y_pct": 22.0,
+      "growth_qty_5y_pct": 29.0,
+      "growth_value_1y_pct": -3.0,
+      "share_world_pct": 1.1,
+      "avg_tariff_pct": 0.22
+    }
+  },
+  "مقدونیه شمالی": {
+    "name_en": "Macedonia, North",
+    "iso2": "mk",
+    "exports_2025": {
+      "value_usd_k": 8.0,
+      "trade_balance_usd_k": -532.0,
+      "quantity": 3.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2667.0,
+      "growth_value_5y_pct": 26.0,
+      "growth_qty_5y_pct": 27.0,
+      "growth_value_1y_pct": -37.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 540.0,
+      "trade_balance_usd_k": -532.0,
+      "quantity": 1390.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 388.0,
+      "growth_value_5y_pct": 7.0,
+      "growth_qty_5y_pct": 3.0,
+      "growth_value_1y_pct": 45.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.28
+    }
+  },
+  "جمهوری دموکراتیک کنگو (کینشاسا)": {
+    "name_en": "Congo, Democratic Republic of the",
+    "iso2": "cd",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 186.0,
+      "trade_balance_usd_k": -186.0,
+      "quantity": 325.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 572.0,
+      "growth_value_5y_pct": -9.0,
+      "growth_qty_5y_pct": -21.0,
+      "growth_value_1y_pct": -20.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.57
+    }
+  },
+  "جیبوتی": {
+    "name_en": "Djibouti",
+    "iso2": "dj",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 178.0,
+      "trade_balance_usd_k": -178.0,
+      "quantity": 880.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 202.0,
+      "growth_value_5y_pct": -2.0,
+      "growth_qty_5y_pct": 29.0,
+      "growth_value_1y_pct": -10.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.66
+    }
+  },
+  "کویت": {
+    "name_en": "Kuwait",
+    "iso2": "kw",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 449.0,
+      "trade_balance_usd_k": -449.0,
+      "quantity": 1234.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 364.0,
+      "growth_value_5y_pct": 10.0,
+      "growth_qty_5y_pct": 15.0,
+      "growth_value_1y_pct": 30.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.16
+    }
+  },
+  "لیبریا": {
+    "name_en": "Liberia",
+    "iso2": "lr",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 224.0,
+      "trade_balance_usd_k": -224.0,
+      "quantity": 539.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 416.0,
+      "growth_value_5y_pct": -9.0,
+      "growth_qty_5y_pct": 2.0,
+      "growth_value_1y_pct": 11.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.51
+    }
+  },
+  "عراق": {
+    "name_en": "Iraq",
+    "iso2": "iq",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 3000.0,
+      "trade_balance_usd_k": -3000.0,
+      "quantity": 6995.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 429.0,
+      "growth_value_5y_pct": 4.0,
+      "growth_qty_5y_pct": 3.0,
+      "growth_value_1y_pct": 16.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.92
+    }
+  },
+  "جزایر کوک": {
+    "name_en": "Cook Islands",
+    "iso2": "ck",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 8.0,
+      "trade_balance_usd_k": -8.0,
+      "quantity": 7.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1143.0,
+      "growth_value_5y_pct": 24.0,
+      "growth_qty_5y_pct": 12.0,
+      "growth_value_1y_pct": -17.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "جزایر کِیمن": {
+    "name_en": "Cayman Islands",
+    "iso2": "ky",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 62.0,
+      "trade_balance_usd_k": -62.0,
+      "quantity": 7.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 8857.0,
+      "growth_value_5y_pct": 1.0,
+      "growth_qty_5y_pct": 12.0,
+      "growth_value_1y_pct": 60.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "ماکائو": {
+    "name_en": "Macao, China",
+    "iso2": "mo",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 416.0,
+      "trade_balance_usd_k": -416.0,
+      "quantity": 1449.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 287.0,
+      "growth_value_5y_pct": 31.0,
+      "growth_qty_5y_pct": 67.0,
+      "growth_value_1y_pct": 59.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.53
+    }
+  },
+  "نیجریه": {
+    "name_en": "Nigeria",
+    "iso2": "ng",
+    "exports_2025": {
+      "value_usd_k": 39.0,
+      "trade_balance_usd_k": -2067.0,
+      "quantity": 153.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 255.0,
+      "growth_value_5y_pct": 14.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 25.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 2106.0,
+      "trade_balance_usd_k": -2067.0,
+      "quantity": 10437.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 202.0,
+      "growth_value_5y_pct": 7.0,
+      "growth_qty_5y_pct": 19.0,
+      "growth_value_1y_pct": 33.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.82
+    }
+  },
+  "السالوادور": {
+    "name_en": "El Salvador",
+    "iso2": "sv",
+    "exports_2025": {
+      "value_usd_k": 49.0,
+      "trade_balance_usd_k": -2209.0,
+      "quantity": 25.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1960.0,
+      "growth_value_5y_pct": -16.0,
+      "growth_qty_5y_pct": -19.0,
+      "growth_value_1y_pct": 588.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 2258.0,
+      "trade_balance_usd_k": -2209.0,
+      "quantity": 3040.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 743.0,
+      "growth_value_5y_pct": 6.0,
+      "growth_qty_5y_pct": 4.0,
+      "growth_value_1y_pct": 24.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.27
+    }
+  },
+  "موریتانی": {
+    "name_en": "Mauritania",
+    "iso2": "mr",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 655.0,
+      "trade_balance_usd_k": -655.0,
+      "quantity": 1280.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 512.0,
+      "growth_value_5y_pct": 23.0,
+      "growth_qty_5y_pct": 50.0,
+      "growth_value_1y_pct": 50.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.34
+    }
+  },
+  "ایرلند": {
+    "name_en": "Ireland",
+    "iso2": "ie",
+    "exports_2025": {
+      "value_usd_k": 7414.0,
+      "trade_balance_usd_k": -8789.0,
+      "quantity": 0.0,
+      "quantity_unit": "No quantity",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": 15.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": -8.0,
+      "share_world_pct": 0.7
+    },
+    "imports_2025": {
+      "value_usd_k": 16203.0,
+      "trade_balance_usd_k": -8789.0,
+      "quantity": 11098.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1460.0,
+      "growth_value_5y_pct": 30.0,
+      "growth_qty_5y_pct": 6.0,
+      "growth_value_1y_pct": 15.0,
+      "share_world_pct": 1.2,
+      "avg_tariff_pct": 0.22
+    }
+  },
+  "هنگ‌کنگ": {
+    "name_en": "Hong Kong, China",
+    "iso2": "hk",
+    "exports_2025": {
+      "value_usd_k": 119.0,
+      "trade_balance_usd_k": -9298.0,
+      "quantity": 132.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 902.0,
+      "growth_value_5y_pct": -18.0,
+      "growth_qty_5y_pct": -7.0,
+      "growth_value_1y_pct": -2.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 9417.0,
+      "trade_balance_usd_k": -9298.0,
+      "quantity": 16594.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 567.0,
+      "growth_value_5y_pct": -5.0,
+      "growth_qty_5y_pct": -2.0,
+      "growth_value_1y_pct": -1.0,
+      "share_world_pct": 0.7,
+      "avg_tariff_pct": 0.94
+    }
+  },
+  "ارمنستان": {
+    "name_en": "Armenia",
+    "iso2": "am",
+    "exports_2025": {
+      "value_usd_k": 16.0,
+      "trade_balance_usd_k": -419.0,
+      "quantity": 14.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1143.0,
+      "growth_value_5y_pct": -67.0,
+      "growth_qty_5y_pct": -43.0,
+      "growth_value_1y_pct": 32.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 435.0,
+      "trade_balance_usd_k": -419.0,
+      "quantity": 1180.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 369.0,
+      "growth_value_5y_pct": -18.0,
+      "growth_qty_5y_pct": 0.0,
+      "growth_value_1y_pct": 9.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.38
+    }
+  },
+  "آروبا": {
+    "name_en": "Aruba",
+    "iso2": "aw",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 36.0,
+      "trade_balance_usd_k": -36.0,
+      "quantity": 34.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1059.0,
+      "growth_value_5y_pct": 89.0,
+      "growth_qty_5y_pct": 88.0,
+      "growth_value_1y_pct": -94.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.95
+    }
+  },
+  "رواندا": {
+    "name_en": "Rwanda",
+    "iso2": "rw",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 318.0,
+      "trade_balance_usd_k": -318.0,
+      "quantity": 252.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1262.0,
+      "growth_value_5y_pct": 36.0,
+      "growth_qty_5y_pct": 34.0,
+      "growth_value_1y_pct": 17.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.21
+    }
+  },
+  "مالزی": {
+    "name_en": "Malaysia",
+    "iso2": "my",
+    "exports_2025": {
+      "value_usd_k": 1655.0,
+      "trade_balance_usd_k": -9442.0,
+      "quantity": 2429.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 681.0,
+      "growth_value_5y_pct": 37.0,
+      "growth_qty_5y_pct": 38.0,
+      "growth_value_1y_pct": -4.0,
+      "share_world_pct": 0.2
+    },
+    "imports_2025": {
+      "value_usd_k": 11097.0,
+      "trade_balance_usd_k": -9442.0,
+      "quantity": 27310.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 406.0,
+      "growth_value_5y_pct": 1.0,
+      "growth_qty_5y_pct": 2.0,
+      "growth_value_1y_pct": -8.0,
+      "share_world_pct": 0.8,
+      "avg_tariff_pct": 0.24
+    }
+  },
+  "ساموا": {
+    "name_en": "Samoa",
+    "iso2": "ws",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 4.0,
+      "trade_balance_usd_k": -4.0,
+      "quantity": 7.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 571.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 210.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.38
+    }
+  },
+  "ونزوئلا": {
+    "name_en": "Venezuela, Bolivarian Republic of",
+    "iso2": "ve",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 491.0,
+      "trade_balance_usd_k": -491.0,
+      "quantity": 2103.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 233.0,
+      "growth_value_5y_pct": 0.0,
+      "growth_qty_5y_pct": 24.0,
+      "growth_value_1y_pct": 69.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.61
+    }
+  },
+  "نپال": {
+    "name_en": "Nepal",
+    "iso2": "np",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 1098.0,
+      "trade_balance_usd_k": -1098.0,
+      "quantity": 3854.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 285.0,
+      "growth_value_5y_pct": 3.0,
+      "growth_qty_5y_pct": 6.0,
+      "growth_value_1y_pct": 23.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.62
+    }
+  },
+  "وانواتو": {
+    "name_en": "Vanuatu",
+    "iso2": "vu",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 4.0,
+      "trade_balance_usd_k": -4.0,
+      "quantity": 4.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1000.0,
+      "growth_value_5y_pct": 50.0,
+      "growth_qty_5y_pct": 75.0,
+      "growth_value_1y_pct": 53.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.44
+    }
+  },
+  "ساحل عاج": {
+    "name_en": "Côte d'Ivoire",
+    "iso2": "ci",
+    "exports_2025": {
+      "value_usd_k": 21.0,
+      "trade_balance_usd_k": -1326.0,
+      "quantity": 132.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 159.0,
+      "growth_value_5y_pct": -18.0,
+      "growth_qty_5y_pct": -18.0,
+      "growth_value_1y_pct": -24.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 1347.0,
+      "trade_balance_usd_k": -1326.0,
+      "quantity": 1928.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 699.0,
+      "growth_value_5y_pct": 10.0,
+      "growth_qty_5y_pct": 12.0,
+      "growth_value_1y_pct": 59.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.4
+    }
+  },
+  "کاستاریکا": {
+    "name_en": "Costa Rica",
+    "iso2": "cr",
+    "exports_2025": {
+      "value_usd_k": 28.0,
+      "trade_balance_usd_k": -2323.0,
+      "quantity": 57.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 491.0,
+      "growth_value_5y_pct": 67.0,
+      "growth_qty_5y_pct": 84.0,
+      "growth_value_1y_pct": 116.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 2351.0,
+      "trade_balance_usd_k": -2323.0,
+      "quantity": 5463.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 430.0,
+      "growth_value_5y_pct": 13.0,
+      "growth_qty_5y_pct": 15.0,
+      "growth_value_1y_pct": 44.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.38
+    }
+  },
+  "آنگولا": {
+    "name_en": "Angola",
+    "iso2": "ao",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 7362.0,
+      "trade_balance_usd_k": -7362.0,
+      "quantity": 1858.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 3962.0,
+      "growth_value_5y_pct": 15.0,
+      "growth_qty_5y_pct": 38.0,
+      "growth_value_1y_pct": 26.0,
+      "share_world_pct": 0.6,
+      "avg_tariff_pct": 0.81
+    }
+  },
+  "باهاما": {
+    "name_en": "Bahamas",
+    "iso2": "bs",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 253.0,
+      "trade_balance_usd_k": -253.0,
+      "quantity": 37.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 6838.0,
+      "growth_value_5y_pct": 17.0,
+      "growth_qty_5y_pct": 11.0,
+      "growth_value_1y_pct": 10.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "پرو": {
+    "name_en": "Peru",
+    "iso2": "pe",
+    "exports_2025": {
+      "value_usd_k": 444.0,
+      "trade_balance_usd_k": -7995.0,
+      "quantity": 523.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 849.0,
+      "growth_value_5y_pct": -6.0,
+      "growth_qty_5y_pct": -11.0,
+      "growth_value_1y_pct": 33.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 8439.0,
+      "trade_balance_usd_k": -7995.0,
+      "quantity": 22280.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 379.0,
+      "growth_value_5y_pct": 8.0,
+      "growth_qty_5y_pct": 11.0,
+      "growth_value_1y_pct": -7.0,
+      "share_world_pct": 0.6,
+      "avg_tariff_pct": 0.37
+    }
+  },
+  "سوئد": {
+    "name_en": "Sweden",
+    "iso2": "se",
+    "exports_2025": {
+      "value_usd_k": 2707.0,
+      "trade_balance_usd_k": -4182.0,
+      "quantity": 1098.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2465.0,
+      "growth_value_5y_pct": -31.0,
+      "growth_qty_5y_pct": -35.0,
+      "growth_value_1y_pct": 22.0,
+      "share_world_pct": 0.3
+    },
+    "imports_2025": {
+      "value_usd_k": 6889.0,
+      "trade_balance_usd_k": -4182.0,
+      "quantity": 11019.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 625.0,
+      "growth_value_5y_pct": -4.0,
+      "growth_qty_5y_pct": -11.0,
+      "growth_value_1y_pct": 7.0,
+      "share_world_pct": 0.5,
+      "avg_tariff_pct": 0.16
+    }
+  },
+  "فرانسه": {
+    "name_en": "France",
+    "iso2": "fr",
+    "exports_2025": {
+      "value_usd_k": 64982.0,
+      "trade_balance_usd_k": -69740.0,
+      "quantity": 110922.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 586.0,
+      "growth_value_5y_pct": 5.0,
+      "growth_qty_5y_pct": -3.0,
+      "growth_value_1y_pct": 10.0,
+      "share_world_pct": 6.4
+    },
+    "imports_2025": {
+      "value_usd_k": 134722.0,
+      "trade_balance_usd_k": -69740.0,
+      "quantity": 229617.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 587.0,
+      "growth_value_5y_pct": 15.0,
+      "growth_qty_5y_pct": 2.0,
+      "growth_value_1y_pct": 11.0,
+      "share_world_pct": 10.3,
+      "avg_tariff_pct": 0.33
+    }
+  },
+  "اسلواکی": {
+    "name_en": "Slovakia",
+    "iso2": "sk",
+    "exports_2025": {
+      "value_usd_k": 201.0,
+      "trade_balance_usd_k": -15754.0,
+      "quantity": 150.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1340.0,
+      "growth_value_5y_pct": 0.0,
+      "growth_qty_5y_pct": 0.0,
+      "growth_value_1y_pct": -60.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 15955.0,
+      "trade_balance_usd_k": -15754.0,
+      "quantity": 0.0,
+      "quantity_unit": "No quantity",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": 19.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 55.0,
+      "share_world_pct": 1.2,
+      "avg_tariff_pct": 0.31
+    }
+  },
+  "آفریقای جنوبی": {
+    "name_en": "South Africa",
+    "iso2": "za",
+    "exports_2025": {
+      "value_usd_k": 1988.0,
+      "trade_balance_usd_k": -16128.0,
+      "quantity": 3355.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 593.0,
+      "growth_value_5y_pct": 0.0,
+      "growth_qty_5y_pct": 2.0,
+      "growth_value_1y_pct": 13.0,
+      "share_world_pct": 0.2
+    },
+    "imports_2025": {
+      "value_usd_k": 18116.0,
+      "trade_balance_usd_k": -16128.0,
+      "quantity": 35664.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 508.0,
+      "growth_value_5y_pct": 9.0,
+      "growth_qty_5y_pct": -2.0,
+      "growth_value_1y_pct": -16.0,
+      "share_world_pct": 1.4,
+      "avg_tariff_pct": 0.16
+    }
+  },
+  "مراکش": {
+    "name_en": "Morocco",
+    "iso2": "ma",
+    "exports_2025": {
+      "value_usd_k": 31.0,
+      "trade_balance_usd_k": -9273.0,
+      "quantity": 45.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 689.0,
+      "growth_value_5y_pct": 30.0,
+      "growth_qty_5y_pct": 15.0,
+      "growth_value_1y_pct": -68.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 9304.0,
+      "trade_balance_usd_k": -9273.0,
+      "quantity": 20977.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 444.0,
+      "growth_value_5y_pct": 7.0,
+      "growth_qty_5y_pct": 4.0,
+      "growth_value_1y_pct": 37.0,
+      "share_world_pct": 0.7,
+      "avg_tariff_pct": 0.21
+    }
+  },
+  "توگو": {
+    "name_en": "Togo",
+    "iso2": "tg",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 252.0,
+      "trade_balance_usd_k": -252.0,
+      "quantity": 483.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 522.0,
+      "growth_value_5y_pct": 72.0,
+      "growth_qty_5y_pct": 90.0,
+      "growth_value_1y_pct": 29.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.34
+    }
+  },
+  "جزایر دورافتادهٔ ایالات متحده": {
+    "name_en": "United States Minor Outlying Islands",
+    "iso2": "um",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 1.0,
+      "trade_balance_usd_k": -1.0,
+      "quantity": 1.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1000.0,
+      "growth_value_5y_pct": null,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "لسوتو": {
+    "name_en": "Lesotho",
+    "iso2": "ls",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 38.0,
+      "trade_balance_usd_k": -38.0,
+      "quantity": 47.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 809.0,
+      "growth_value_5y_pct": 52.0,
+      "growth_qty_5y_pct": 94.0,
+      "growth_value_1y_pct": 26.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "سیشل": {
+    "name_en": "Seychelles",
+    "iso2": "sc",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 26.0,
+      "trade_balance_usd_k": -26.0,
+      "quantity": 18.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1444.0,
+      "growth_value_5y_pct": 21.0,
+      "growth_qty_5y_pct": 11.0,
+      "growth_value_1y_pct": -89.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.56
+    }
+  },
+  "سیرالئون": {
+    "name_en": "Sierra Leone",
+    "iso2": "sl",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 6.0,
+      "trade_balance_usd_k": -6.0,
+      "quantity": 13.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 462.0,
+      "growth_value_5y_pct": -11.0,
+      "growth_qty_5y_pct": -8.0,
+      "growth_value_1y_pct": 42.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "سنت وینسنت و گرنادین‌ها": {
+    "name_en": "Saint Vincent and the Grenadines",
+    "iso2": "vc",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 2.0,
+      "trade_balance_usd_k": -2.0,
+      "quantity": 4.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 500.0,
+      "growth_value_5y_pct": -8.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": 67.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.5
+    }
+  },
+  "چک": {
+    "name_en": "Czech Republic",
+    "iso2": "cz",
+    "exports_2025": {
+      "value_usd_k": 3943.0,
+      "trade_balance_usd_k": -7306.0,
+      "quantity": 2624.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1503.0,
+      "growth_value_5y_pct": -3.0,
+      "growth_qty_5y_pct": 1.0,
+      "growth_value_1y_pct": 17.0,
+      "share_world_pct": 0.4
+    },
+    "imports_2025": {
+      "value_usd_k": 11249.0,
+      "trade_balance_usd_k": -7306.0,
+      "quantity": 0.0,
+      "quantity_unit": "No quantity",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": 7.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": -2.0,
+      "share_world_pct": 0.9,
+      "avg_tariff_pct": 0.19
+    }
+  },
+  "ویتنام": {
+    "name_en": "Viet Nam",
+    "iso2": "vn",
+    "exports_2025": {
+      "value_usd_k": 265.0,
+      "trade_balance_usd_k": -15518.0,
+      "quantity": 470.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 564.0,
+      "growth_value_5y_pct": 25.0,
+      "growth_qty_5y_pct": 63.0,
+      "growth_value_1y_pct": -5.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 15783.0,
+      "trade_balance_usd_k": -15518.0,
+      "quantity": 65114.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 242.0,
+      "growth_value_5y_pct": 0.0,
+      "growth_qty_5y_pct": 9.0,
+      "growth_value_1y_pct": -1.0,
+      "share_world_pct": 1.2,
+      "avg_tariff_pct": 0.36
+    }
+  },
+  "کومور": {
+    "name_en": "Comoros",
+    "iso2": "km",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 6.0,
+      "trade_balance_usd_k": -6.0,
+      "quantity": 5.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 1200.0,
+      "growth_value_5y_pct": 31.0,
+      "growth_qty_5y_pct": 27.0,
+      "growth_value_1y_pct": 61.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.72
+    }
+  },
+  "مالی": {
+    "name_en": "Mali",
+    "iso2": "ml",
+    "exports_2025": {
+      "value_usd_k": 48.0,
+      "trade_balance_usd_k": -31.0,
+      "quantity": 55.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 873.0,
+      "growth_value_5y_pct": 0.0,
+      "growth_qty_5y_pct": -8.0,
+      "growth_value_1y_pct": 15.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 79.0,
+      "trade_balance_usd_k": -31.0,
+      "quantity": 90.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 878.0,
+      "growth_value_5y_pct": -20.0,
+      "growth_qty_5y_pct": 1.0,
+      "growth_value_1y_pct": -42.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.57
+    }
+  },
+  "ماداگاسکار": {
+    "name_en": "Madagascar",
+    "iso2": "mg",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 1409.0,
+      "trade_balance_usd_k": -1409.0,
+      "quantity": 2940.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 479.0,
+      "growth_value_5y_pct": 18.0,
+      "growth_qty_5y_pct": 18.0,
+      "growth_value_1y_pct": -16.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.91
+    }
+  },
+  "اتیوپی": {
+    "name_en": "Ethiopia",
+    "iso2": "et",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 183.0,
+      "trade_balance_usd_k": -183.0,
+      "quantity": 759.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 241.0,
+      "growth_value_5y_pct": 1.0,
+      "growth_qty_5y_pct": 24.0,
+      "growth_value_1y_pct": 119.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.62
+    }
+  },
+  "سائوتومه و پرینسیپ": {
+    "name_en": "Sao Tome and Principe",
+    "iso2": "st",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 153.0,
+      "trade_balance_usd_k": -153.0,
+      "quantity": 52.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 2942.0,
+      "growth_value_5y_pct": 153.0,
+      "growth_qty_5y_pct": 136.0,
+      "growth_value_1y_pct": 1615.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.92
+    }
+  },
+  "فیلیپین": {
+    "name_en": "Philippines",
+    "iso2": "ph",
+    "exports_2025": {
+      "value_usd_k": 15.0,
+      "trade_balance_usd_k": -11345.0,
+      "quantity": 21.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 714.0,
+      "growth_value_5y_pct": 59.0,
+      "growth_qty_5y_pct": 24.0,
+      "growth_value_1y_pct": 260.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 11360.0,
+      "trade_balance_usd_k": -11345.0,
+      "quantity": 31312.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 363.0,
+      "growth_value_5y_pct": 5.0,
+      "growth_qty_5y_pct": 10.0,
+      "growth_value_1y_pct": 26.0,
+      "share_world_pct": 0.9,
+      "avg_tariff_pct": 0.29
+    }
+  },
+  "فنلاند": {
+    "name_en": "Finland",
+    "iso2": "fi",
+    "exports_2025": {
+      "value_usd_k": 253.0,
+      "trade_balance_usd_k": -3275.0,
+      "quantity": 322.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 786.0,
+      "growth_value_5y_pct": -17.0,
+      "growth_qty_5y_pct": -27.0,
+      "growth_value_1y_pct": -64.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 3528.0,
+      "trade_balance_usd_k": -3275.0,
+      "quantity": 6967.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 506.0,
+      "growth_value_5y_pct": 0.0,
+      "growth_qty_5y_pct": -6.0,
+      "growth_value_1y_pct": -5.0,
+      "share_world_pct": 0.3,
+      "avg_tariff_pct": 0.34
+    }
+  },
+  "صربستان": {
+    "name_en": "Serbia",
+    "iso2": "rs",
+    "exports_2025": {
+      "value_usd_k": 503.0,
+      "trade_balance_usd_k": -2044.0,
+      "quantity": 518.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 971.0,
+      "growth_value_5y_pct": 19.0,
+      "growth_qty_5y_pct": 9.0,
+      "growth_value_1y_pct": 8.0,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 2547.0,
+      "trade_balance_usd_k": -2044.0,
+      "quantity": 5260.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 484.0,
+      "growth_value_5y_pct": -5.0,
+      "growth_qty_5y_pct": -14.0,
+      "growth_value_1y_pct": 0.0,
+      "share_world_pct": 0.2,
+      "avg_tariff_pct": 0.3
+    }
+  },
+  "مالت": {
+    "name_en": "Malta",
+    "iso2": "mt",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 1156.0,
+      "trade_balance_usd_k": -1156.0,
+      "quantity": 1569.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 737.0,
+      "growth_value_5y_pct": 19.0,
+      "growth_qty_5y_pct": 4.0,
+      "growth_value_1y_pct": 21.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.54
+    }
+  },
+  "غنا": {
+    "name_en": "Ghana",
+    "iso2": "gh",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 530.0,
+      "trade_balance_usd_k": -530.0,
+      "quantity": 1677.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 316.0,
+      "growth_value_5y_pct": 5.0,
+      "growth_qty_5y_pct": 6.0,
+      "growth_value_1y_pct": -5.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.38
+    }
+  },
+  "ژاپن": {
+    "name_en": "Japan",
+    "iso2": "jp",
+    "exports_2025": {
+      "value_usd_k": 4163.0,
+      "trade_balance_usd_k": -10999.0,
+      "quantity": 6670.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 624.0,
+      "growth_value_5y_pct": -2.0,
+      "growth_qty_5y_pct": -5.0,
+      "growth_value_1y_pct": -2.0,
+      "share_world_pct": 0.4
+    },
+    "imports_2025": {
+      "value_usd_k": 15162.0,
+      "trade_balance_usd_k": -10999.0,
+      "quantity": 37361.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 406.0,
+      "growth_value_5y_pct": 0.0,
+      "growth_qty_5y_pct": 1.0,
+      "growth_value_1y_pct": 3.0,
+      "share_world_pct": 1.2,
+      "avg_tariff_pct": 0.3
+    }
+  },
+  "بوتان": {
+    "name_en": "Bhutan",
+    "iso2": "bt",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 44.0,
+      "trade_balance_usd_k": -44.0,
+      "quantity": 87.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 506.0,
+      "growth_value_5y_pct": 1.0,
+      "growth_qty_5y_pct": 8.0,
+      "growth_value_1y_pct": 54.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 1.0
+    }
+  },
+  "سودان": {
+    "name_en": "Sudan",
+    "iso2": "sd",
+    "exports_2025": {
+      "value_usd_k": 23.0,
+      "trade_balance_usd_k": -929.0,
+      "quantity": 5.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 4600.0,
+      "growth_value_5y_pct": 58.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 952.0,
+      "trade_balance_usd_k": -929.0,
+      "quantity": 1659.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 574.0,
+      "growth_value_5y_pct": -10.0,
+      "growth_qty_5y_pct": -29.0,
+      "growth_value_1y_pct": 39.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.47
+    }
+  },
+  "پاپوا نیو گینیا": {
+    "name_en": "Papua New Guinea",
+    "iso2": "pg",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 103.0,
+      "trade_balance_usd_k": -103.0,
+      "quantity": 316.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 326.0,
+      "growth_value_5y_pct": -8.0,
+      "growth_qty_5y_pct": -3.0,
+      "growth_value_1y_pct": -33.0,
+      "share_world_pct": 0.0,
+      "avg_tariff_pct": 0.52
+    }
+  },
+  "زیمبابوه": {
+    "name_en": "Zimbabwe",
+    "iso2": "zw",
+    "exports_2025": null,
+    "imports_2025": {
+      "value_usd_k": 1086.0,
+      "trade_balance_usd_k": -1086.0,
+      "quantity": 2229.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 487.0,
+      "growth_value_5y_pct": 2.0,
+      "growth_qty_5y_pct": 13.0,
+      "growth_value_1y_pct": -16.0,
+      "share_world_pct": 0.1,
+      "avg_tariff_pct": 0.28
+    }
+  },
+  "الجزایر": {
+    "name_en": "Algeria",
+    "iso2": "dz",
+    "exports_2025": {
+      "value_usd_k": 1.0,
+      "trade_balance_usd_k": -4264.0,
+      "quantity": 0.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": null,
+      "growth_value_5y_pct": -30.0,
+      "growth_qty_5y_pct": null,
+      "growth_value_1y_pct": null,
+      "share_world_pct": 0.0
+    },
+    "imports_2025": {
+      "value_usd_k": 4265.0,
+      "trade_balance_usd_k": -4264.0,
+      "quantity": 11749.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 363.0,
+      "growth_value_5y_pct": 19.0,
+      "growth_qty_5y_pct": 24.0,
+      "growth_value_1y_pct": 17.0,
+      "share_world_pct": 0.3,
+      "avg_tariff_pct": 0.32
+    }
+  }
+}

@@ -86,8 +86,20 @@ export function getCountries() {
   for (const c of getCompanies()) if (c.country) set.add(c.country);
   for (const e of getExhibitions()) if (e.country) set.add(e.country);
   for (const r of getReportsManifest()) if (r.country) set.add(r.country);
+  for (const name of Object.keys(getTradeMap())) set.add(name);
   for (const label of NON_COUNTRY_LABELS) set.delete(label);
   return Array.from(set).sort();
+}
+
+// خروجی scripts/ingest_trade_map.py — آمار جهانی صادرات/واردات محصول (ITC
+// Trade Map، ۲۰۲۵) به تفکیک کشور. توجه: این داده دوطرفه نیست (نمی‌گه کدام
+// کشور از کدام کشور می‌خره)، فقط رتبه‌بندی کلی جهانی هر کشوره.
+export function getTradeMap() {
+  return readJsonSafe(path.join(DATA_DIR, "trade_map_2025.json"), {});
+}
+
+export function getTradeMapForCountry(country) {
+  return getTradeMap()[country] || null;
 }
 
 export function getCountrySummary(country) {

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getCountries, getCountrySummary, getCountryProfile } from "@/lib/data";
+import { getCountries, getCountrySummary, getCountryProfile, getTradeMapForCountry } from "@/lib/data";
 import CompanyTable from "../../components/CompanyTable";
 import ExhibitionTable from "../../components/ExhibitionTable";
 import WorldRouteMap from "../../components/WorldRouteMap";
@@ -56,6 +56,7 @@ export default async function CountryPage({ params }) {
 
   const { companies, exhibitions, reports, prices } = getCountrySummary(country);
   const profile = getCountryProfile(country);
+  const trade = getTradeMapForCountry(country);
   const sortedExhibitions = sortExhibitionsByDate(exhibitions);
   const smartReport = reports.find((r) => r.report_type === "summary");
 
@@ -67,6 +68,109 @@ export default async function CountryPage({ params }) {
         </Link>
         <h1 className="text-2xl font-bold mt-1">{country}</h1>
       </div>
+
+      {trade && (trade.exports_2025 || trade.imports_2025) && (
+        <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+          <h2 className="text-lg font-bold mb-1">آمار تجارت جهانی محصول (۲۰۲۵)</h2>
+          <p className="text-xs text-slate-500 mb-4">
+            منبع: ITC Trade Map — رتبه‌بندی کلی جهانی این کشور، نه لزوماً رابطه‌ی تجاری با ایران.
+          </p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {trade.exports_2025 && (
+              <div className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 p-4">
+                <div className="text-xs font-bold text-copper-800 mb-2">صادرات</div>
+                <dl className="text-sm space-y-1.5">
+                  <div className="flex justify-between gap-2">
+                    <dt className="text-slate-500">ارزش کل</dt>
+                    <dd className="font-tabular font-medium">
+                      {(trade.exports_2025.value_usd_k * 1000).toLocaleString("fa-IR")} دلار
+                    </dd>
+                  </div>
+                  {trade.exports_2025.quantity != null && (
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-slate-500">حجم</dt>
+                      <dd className="font-tabular font-medium">
+                        {trade.exports_2025.quantity.toLocaleString("fa-IR")} {trade.exports_2025.quantity_unit}
+                      </dd>
+                    </div>
+                  )}
+                  {trade.exports_2025.unit_value_usd != null && (
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-slate-500">قیمت میانگین</dt>
+                      <dd className="font-tabular font-bold text-copper-800">
+                        {trade.exports_2025.unit_value_usd.toLocaleString("fa-IR")} دلار/تن
+                      </dd>
+                    </div>
+                  )}
+                  {trade.exports_2025.share_world_pct != null && (
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-slate-500">سهم از صادرات جهانی</dt>
+                      <dd className="font-tabular font-medium">
+                        {trade.exports_2025.share_world_pct.toLocaleString("fa-IR")}٪
+                      </dd>
+                    </div>
+                  )}
+                  {trade.exports_2025.growth_value_1y_pct != null && (
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-slate-500">رشد ارزش (۱ ساله)</dt>
+                      <dd className="font-tabular font-medium">
+                        {trade.exports_2025.growth_value_1y_pct > 0 ? "+" : ""}
+                        {trade.exports_2025.growth_value_1y_pct.toLocaleString("fa-IR")}٪
+                      </dd>
+                    </div>
+                  )}
+                </dl>
+              </div>
+            )}
+            {trade.imports_2025 && (
+              <div className="rounded-lg border border-slate-200 border-s-4 border-s-petrol-400 p-4">
+                <div className="text-xs font-bold text-petrol-800 mb-2">واردات</div>
+                <dl className="text-sm space-y-1.5">
+                  <div className="flex justify-between gap-2">
+                    <dt className="text-slate-500">ارزش کل</dt>
+                    <dd className="font-tabular font-medium">
+                      {(trade.imports_2025.value_usd_k * 1000).toLocaleString("fa-IR")} دلار
+                    </dd>
+                  </div>
+                  {trade.imports_2025.quantity != null && (
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-slate-500">حجم</dt>
+                      <dd className="font-tabular font-medium">
+                        {trade.imports_2025.quantity.toLocaleString("fa-IR")} {trade.imports_2025.quantity_unit}
+                      </dd>
+                    </div>
+                  )}
+                  {trade.imports_2025.unit_value_usd != null && (
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-slate-500">قیمت میانگین</dt>
+                      <dd className="font-tabular font-bold text-petrol-800">
+                        {trade.imports_2025.unit_value_usd.toLocaleString("fa-IR")} دلار/تن
+                      </dd>
+                    </div>
+                  )}
+                  {trade.imports_2025.avg_tariff_pct != null && (
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-slate-500">تعرفه‌ی گمرکی میانگین</dt>
+                      <dd className="font-tabular font-medium">
+                        {trade.imports_2025.avg_tariff_pct.toLocaleString("fa-IR")}٪
+                      </dd>
+                    </div>
+                  )}
+                  {trade.imports_2025.growth_value_1y_pct != null && (
+                    <div className="flex justify-between gap-2">
+                      <dt className="text-slate-500">رشد ارزش (۱ ساله)</dt>
+                      <dd className="font-tabular font-medium">
+                        {trade.imports_2025.growth_value_1y_pct > 0 ? "+" : ""}
+                        {trade.imports_2025.growth_value_1y_pct.toLocaleString("fa-IR")}٪
+                      </dd>
+                    </div>
+                  )}
+                </dl>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {profile?.port && (
         <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
