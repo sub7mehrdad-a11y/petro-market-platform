@@ -1,8 +1,11 @@
 import { NextResponse } from "next/server";
 import { buildSearchIndex, searchIndex } from "@/lib/searchIndex";
-import { generateContent, resolveApiKey } from "@/lib/geminiFetch";
+import { generateGroqContent, resolveGroqApiKey } from "@/lib/groqFetch";
 
-const GEMINI_MODEL = "gemini-3.6-flash";
+// «پاسخ هوشمند» عمداً از Groq استفاده می‌کنه، نه Gemini — چون Groq یک شرکت
+// کاملاً جداست و سهمیه‌ی مستقل داره؛ این‌طوری مصرف انسانی این بخش هیچ‌وقت
+// سهمیه‌ی روزانه‌ی Gemini (که ایجنت‌های خودکار قیمت/خبر/رصد باهاش کار می‌کنن)
+// رو نمی‌خوابونه. تصمیم ۲۰۲۶-۰۸-۲۱.
 
 const SYSTEM_PROMPT = `
 تو دستیار پژوهشی بخش تحقیق و توسعه‌ی بازرگانی شرکت سپهران شیمی هستی (تولیدکننده‌ی
@@ -37,12 +40,12 @@ export async function POST(request) {
     return NextResponse.json({ error: "سؤالی وارد نشده." }, { status: 400 });
   }
 
-  const apiKey = resolveApiKey();
+  const apiKey = resolveGroqApiKey();
   if (!apiKey) {
     return NextResponse.json(
       {
         error:
-          "کلید GEMINI_API_KEY پیدا نشد، پس «پاسخ هوشمند» در دسترس نیست. " +
+          "کلید GROQ_API_KEY پیدا نشد، پس «پاسخ هوشمند» در دسترس نیست. " +
           "کلید را در فایل .env ریشه‌ی پروژه بگذارید. " +
           "جست‌وجوی کلیدواژه‌ای پایین‌تر بدون کلید هم کار می‌کند.",
       },
@@ -69,9 +72,8 @@ export async function POST(request) {
     .join("\n\n");
 
   try {
-    const answer = await generateContent({
+    const answer = await generateGroqContent({
       apiKey,
-      model: GEMINI_MODEL,
       systemInstruction: SYSTEM_PROMPT,
       input: `سؤال کاربر: ${question}\n\n---\n\n${context}`,
     });
@@ -89,12 +91,12 @@ export async function POST(request) {
     const msg = String(err?.message || err);
 
     // خطاهای رایج را به پیام فارسی قابل‌فهم تبدیل می‌کنیم، چون کاربر نهایی
-    // متن انگلیسی خام گوگل برایش معنایی ندارد.
+    // متن انگلیسی خام Groq برایش معنایی ندارد.
     if (msg.includes("429")) {
       return NextResponse.json(
         {
           error:
-            "سهمیه‌ی رایگان روزانه‌ی Gemini تمام شده است. سهمیه هر روز از نو شارژ می‌شود، " +
+            "سهمیه‌ی رایگان روزانه‌ی Groq تمام شده است. سهمیه هر روز از نو شارژ می‌شود، " +
             "پس فردا دوباره کار می‌کند. تا آن موقع از جست‌وجوی کلیدواژه‌ای پایین‌تر استفاده کنید " +
             "— آن محدودیتی ندارد و کاملاً محلی کار می‌کند.",
         },
@@ -106,7 +108,7 @@ export async function POST(request) {
       return NextResponse.json(
         {
           error:
-            "دسترسی به سرویس هوش مصنوعی مسدود شد (۴۰۳). معمولاً یعنی سرور به گوگل دسترسی " +
+            "دسترسی به سرویس هوش مصنوعی مسدود شد (۴۰۳). معمولاً یعنی سرور به Groq دسترسی " +
             "مستقیم ندارد. اگر از پراکسی/VPN استفاده می‌کنید، مطمئن شوید متغیر HTTPS_PROXY " +
             "برای همین سروری که سایت را اجرا می‌کند هم تنظیم شده باشد.",
         },
