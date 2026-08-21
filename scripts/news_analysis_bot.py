@@ -50,8 +50,11 @@ SEED_NEWS_SOURCES = [
     "https://chemxplore.com/countries/turkey",  # اخبار صنعت شیمیایی ترکیه
     "https://www.chemeurope.com/en/news/",  # اخبار عمومی صنعت شیمی (رایگان، تست‌شده)
     "https://oilprice.com/Latest-Energy-News/World-News/",  # انرژی/کشتیرانی/ژئوپلیتیک جهانی (خیلی فعال، رایگان)
-    "https://www.freightos.com/freight-index/",  # شاخص Freightos Baltic (FBX) - سیگنال کرایه‌ی کانتینری، صفحه‌ی عمومی رایگان
-    "https://www.drewry.co.uk/world-container-index",  # Drewry WCI - عدد هفتگی کرایه‌ی کانتینر ۴۰ فوت، صفحه‌ی عمومی رایگان
+    # نکته‌ی ۲۰۲۶-۰۸-۲۱: آدرس قدیمی freightos.com/freight-index/ به ۴۰۴ خورده بود
+    # (تازه کشف‌شده — قبلاً fetch مستقیمش تست نشده بود چون پراکسی این جلسه
+    # دسترسی خروجی رو می‌بست). آدرس درست رو مستقیم از منوی سایت پیدا کردم.
+    "https://www.freightos.com/freightos-baltic-index/",  # FBX - شاخص جهانی کرایه‌ی کانتینری، صفحه‌ی عمومی رایگان (تأیید مستقیم: عدد واقعی $3,562.75 آورد)
+    "https://www.drewry.co.uk/world-container-index",  # Drewry WCI - گزارش هفتگی با نرخ مسیرهای اصلی (Shanghai-LA/NY/Rotterdam/Genoa)، رایگان (تأیید مستقیم ۲۰۲۶-۰۸-۲۱)
 ]
 
 # بررسی شد و عمداً اضافه نشد: UN Comtrade / WITS / ITC MacMap. این‌ها API/جدول
