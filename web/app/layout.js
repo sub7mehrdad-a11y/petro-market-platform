@@ -46,6 +46,7 @@ export default function RootLayout({ children }) {
               <Link href="/archive" className="hover:text-copper-300 transition-colors">آرشیو گزارش‌ها</Link>
               <Link href="/companies" className="hover:text-copper-300 transition-colors">شرکت‌ها</Link>
               <Link href="/exhibitions" className="hover:text-copper-300 transition-colors">نمایشگاه‌ها</Link>
+              <Link href="/transit" className="hover:text-copper-300 transition-colors">تحلیل ترانزیت</Link>
               <Link href="/news" className="hover:text-copper-300 transition-colors">اخبار تحلیلی</Link>
               <Link href="/ask" className="hover:text-copper-300 transition-colors font-semibold text-copper-300">جست‌وجو و پرسش</Link>
             </nav>

@@ -1,4 +1,5 @@
 google-genai
+httpx
 certifi
 openpyxl
 python-docx

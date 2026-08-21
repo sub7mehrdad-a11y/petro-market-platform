@@ -120,6 +120,20 @@ export const COMPETITOR_WATCH_LOG_GETTERS = {
   china: getChinaWatchLog,
 };
 
+// خروجی scripts/transit_watch_bot.py — پست‌های اعلام‌بار/کرایه از کانال‌های
+// تلگرامی، برای بخش «تحلیل ترانزیت».
+export function getTransitLog() {
+  return readWatchLog("transit_log.json");
+}
+
+// همه‌ی پست‌های همه‌ی روزها را مسطح می‌کند (نه دسته‌بندی‌شده بر اساس روز اجرا)
+// چون برای نمایش/تحلیل، خود پست‌ها مهم‌ان نه دسته‌ی روزانه‌شان.
+export function getTransitEntries() {
+  return getTransitLog().flatMap((batch) =>
+    (batch.entries || []).map((e) => ({ ...e, batch_date: batch.date }))
+  );
+}
+
 export function getCountryProfile(country) {
   const profiles = readJsonSafe(path.join(DATA_DIR, "country_profiles.json"), {});
   return profiles[country] || null;

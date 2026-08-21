@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import {
   getCompanies, getExhibitions, getExhibitionReport, getNewsAnalysis, getCompetitors,
-  getReportsManifest, getFlatPriceRecords, getTurkeyWatchLog, getChinaWatchLog,
+  getReportsManifest, getFlatPriceRecords, getTurkeyWatchLog, getChinaWatchLog, getTransitEntries,
 } from "./data";
 
 const ROOT = path.join(process.cwd(), "..");
@@ -213,6 +213,19 @@ export function buildSearchIndex() {
       url: `/`,
     });
   }
+
+  // --- ترانزیت/باربری ---
+  getTransitEntries().forEach((e, i) => {
+    items.push({
+      id: `transit:${i}`,
+      type: "transit",
+      typeLabel: "ترانزیت/باربری",
+      title: `${e.origin} ← ${e.destination}`,
+      subtitle: [e.cargo_type, e.vehicle_type, e.batch_date].filter(Boolean).join(" · "),
+      body: [e.note, e.source_channel_name].filter(Boolean).join(" \n"),
+      url: `/transit`,
+    });
+  });
 
   return items.map((it) => ({
     ...it,

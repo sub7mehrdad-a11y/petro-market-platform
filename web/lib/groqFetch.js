@@ -29,7 +29,7 @@ function getDispatcher() {
   return proxy ? new ProxyAgent(proxy) : undefined;
 }
 
-export async function generateGroqContent({ apiKey, model = DEFAULT_MODEL, systemInstruction, input }) {
+export async function generateGroqContent({ apiKey, model = DEFAULT_MODEL, systemInstruction, input, maxTokens = 4000 }) {
   const dispatcher = getDispatcher();
   const messages = [];
   if (systemInstruction) messages.push({ role: "system", content: systemInstruction });
@@ -41,7 +41,8 @@ export async function generateGroqContent({ apiKey, model = DEFAULT_MODEL, syste
       "Content-Type": "application/json",
       Authorization: `Bearer ${apiKey}`,
     },
-    body: JSON.stringify({ model, messages }),
+    // max_tokens صریح چون پیش‌فرض Groq برای خروجی‌های طولانی کافی نیست.
+    body: JSON.stringify({ model, messages, max_tokens: maxTokens }),
     ...(dispatcher ? { dispatcher } : {}),
   });
 

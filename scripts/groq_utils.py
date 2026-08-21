@@ -21,7 +21,10 @@ BASE_URL = "https://api.groq.com/openai/v1/chat/completions"
 DEFAULT_MODEL = "openai/gpt-oss-120b"
 
 
-def groq_generate(system_instruction: str, input: str, model: str = DEFAULT_MODEL, timeout: int = 30) -> str:
+def groq_generate(
+    system_instruction: str, input: str, model: str = DEFAULT_MODEL,
+    timeout: int = 30, max_tokens: int = 4000,
+) -> str:
     api_key = os.environ.get("GROQ_API_KEY")
     if not api_key:
         raise SystemExit("GROQ_API_KEY تنظیم نشده است.")
@@ -34,7 +37,9 @@ def groq_generate(system_instruction: str, input: str, model: str = DEFAULT_MODE
     resp = httpx.post(
         BASE_URL,
         headers={"Authorization": f"Bearer {api_key}"},
-        json={"model": model, "messages": messages},
+        # max_tokens صریح چون پیش‌فرض Groq برای خروجی‌های JSON بلند (لیست چند
+        # پستی) کافی نیست و پاسخ رو وسط راه، قبل از بسته شدن آرایه، قطع می‌کنه.
+        json={"model": model, "messages": messages, "max_tokens": max_tokens},
         timeout=timeout,
     )
     resp.raise_for_status()
