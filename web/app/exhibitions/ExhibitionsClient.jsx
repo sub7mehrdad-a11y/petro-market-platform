@@ -1,7 +1,22 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import ExhibitionTable from "../components/ExhibitionTable";
+import { parseExhibitionStartDate, daysUntil } from "@/lib/exhibitionDate";
+
+// نزدیک‌ترین نمایشگاه‌های آینده اول؛ گذشته‌ها آخر؛ تاریخ نامشخص همیشه ته لیست.
+function sortByUpcoming(list) {
+  return [...list].sort((a, b) => {
+    const da = daysUntil(parseExhibitionStartDate(a.date));
+    const db = daysUntil(parseExhibitionStartDate(b.date));
+    if (da == null && db == null) return 0;
+    if (da == null) return 1;
+    if (db == null) return -1;
+    if (da < 0 && db >= 0) return 1;
+    if (db < 0 && da >= 0) return -1;
+    return da - db;
+  });
+}
 
 export default function ExhibitionsClient({ exhibitions }) {
   const countries = useMemo(
@@ -11,9 +26,16 @@ export default function ExhibitionsClient({ exhibitions }) {
   const [query, setQuery] = useState("");
   const [country, setCountry] = useState("همه");
 
+  // مرتب‌سازی بر اساس «امروز» فقط بعد از mount انجام می‌شه — قبلش (رندر سرور
+  // موقع build) با همون ترتیب خام دیتا نمایش داده می‌شه، وگرنه بین HTML سرور
+  // و هیدریشن کلاینت (که روزها بعد از build با تاریخ واقعی اجرا می‌شه) تفاوت
+  // می‌افته.
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
-    return exhibitions.filter((e) => {
+    const matched = exhibitions.filter((e) => {
       if (country !== "همه" && e.country !== country) return false;
       if (!q) return true;
       return (
@@ -22,7 +44,8 @@ export default function ExhibitionsClient({ exhibitions }) {
         e.focus?.toLowerCase().includes(q)
       );
     });
-  }, [exhibitions, query, country]);
+    return mounted ? sortByUpcoming(matched) : matched;
+  }, [exhibitions, query, country, mounted]);
 
   return (
     <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">

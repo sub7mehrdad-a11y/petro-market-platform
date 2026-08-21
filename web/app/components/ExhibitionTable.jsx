@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ExhibitionCountdownBadge from "./ExhibitionCountdownBadge";
 
 export default function ExhibitionTable({ exhibitions }) {
   if (exhibitions.length === 0) {
@@ -38,7 +39,10 @@ export default function ExhibitionTable({ exhibitions }) {
               </td>
               <td className="py-2 pe-4 whitespace-nowrap">{e.country}</td>
               <td className="py-2 pe-4">{e.location}</td>
-              <td className="py-2 pe-4 whitespace-nowrap">{e.date}</td>
+              <td className="py-2 pe-4 whitespace-nowrap">
+                <div>{e.date}</div>
+                <div className="mt-1"><ExhibitionCountdownBadge dateStr={e.date} /></div>
+              </td>
               <td className="py-2 pe-4 max-w-sm text-slate-600">
                 {e.focus || e.target_grade}
               </td>
