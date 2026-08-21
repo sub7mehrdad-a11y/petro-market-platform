@@ -55,6 +55,7 @@ SEED_NEWS_SOURCES = [
     # دسترسی خروجی رو می‌بست). آدرس درست رو مستقیم از منوی سایت پیدا کردم.
     "https://www.freightos.com/freightos-baltic-index/",  # FBX - شاخص جهانی کرایه‌ی کانتینری، صفحه‌ی عمومی رایگان (تأیید مستقیم: عدد واقعی $3,562.75 آورد)
     "https://www.drewry.co.uk/world-container-index",  # Drewry WCI - گزارش هفتگی با نرخ مسیرهای اصلی (Shanghai-LA/NY/Rotterdam/Genoa)، رایگان (تأیید مستقیم ۲۰۲۶-۰۸-۲۱)
+    "https://tradingeconomics.com/commodity/baltic",  # Baltic Dry Index (BDI) - کرایه‌ی حمل فله خشک (مرتبط با گرید سنگین سودا اش)، رایگان (تأیید مستقیم ۲۰۲۶-۰۸-۲۱، سایت رسمی Baltic Exchange خودش پشت چالش امنیتیه)
 ]
 
 # بررسی شد و عمداً اضافه نشد: UN Comtrade / WITS / ITC MacMap. این‌ها API/جدول
