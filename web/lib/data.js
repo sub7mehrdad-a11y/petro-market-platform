@@ -159,6 +159,22 @@ export function getTransitEntries() {
   );
 }
 
+// مختصات شهرها/مرزهایی که مسیرشون توی داده‌ی رصدشده دیده شده — منبع مشترک
+// با scripts/transit_geo.py (همون فایل، دو مصرف‌کننده) تا دِریفت نکنن.
+export function getTransitPlaces() {
+  return readJsonSafe(path.join(DATA_DIR, "transit_places.json"), {});
+}
+
+// میانگین نرخ مشاهده‌شده (تومان به ازای تن-کیلومتر) از پست‌هایی که هم کرایه
+// (به تومان)، هم تناژ، هم مبدأ/مقصدِ قابل‌محاسبه داشتن — برای برآوردگر ترانزیت.
+export function getTransitRateEstimate() {
+  const entries = getTransitEntries();
+  const withRate = entries.filter((e) => e.rate_per_ton_km != null && e.price_currency === "IRR");
+  if (withRate.length === 0) return { avgRate: null, sampleSize: 0 };
+  const avgRate = withRate.reduce((s, e) => s + e.rate_per_ton_km, 0) / withRate.length;
+  return { avgRate, sampleSize: withRate.length };
+}
+
 export function getCountryProfile(country) {
   const profiles = readJsonSafe(path.join(DATA_DIR, "country_profiles.json"), {});
   return profiles[country] || null;
