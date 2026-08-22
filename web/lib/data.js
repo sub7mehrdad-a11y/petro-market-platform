@@ -21,6 +21,13 @@ export function getPriceHistory() {
   return readJsonSafe(path.join(DATA_DIR, "price_history.json"), []);
 }
 
+// خروجی روتین ماهانه‌ی بررسی Intratec (نمونه‌ی رایگان محدود) — همون ارقام
+// توی price_history.json هم منعکس شده (برای دیده‌شدن توی داشبورد اصلی)،
+// این تابع فقط برای دسترسی مستقیم به تاریخچه‌ی کامل رکوردهاست.
+export function getIntratecMonthly() {
+  return readJsonSafe(path.join(DATA_DIR, "intratec_monthly.json"), []);
+}
+
 export function getFlatPriceRecords() {
   const batches = getPriceHistory();
   const rows = [];

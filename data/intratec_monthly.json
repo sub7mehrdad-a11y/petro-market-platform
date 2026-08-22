@@ -1,0 +1,19 @@
+[
+  {
+    "checked_at": "2026-08-22T00:00:00Z",
+    "source_url": "https://www.intratec.us/solutions/primary-commodity-prices/commodity/sodium-bicarbonate-prices",
+    "reported_month": "November 2025",
+    "prices_usd_per_mt": {
+      "us_fob_export": 674,
+      "europe_germany_fob_export": 577,
+      "china_food_grade_domestic_spot_exw": 171,
+      "middle_east_turkey_fob_export": 315
+    },
+    "mom_change_pct": {
+      "us_fob_export": -9,
+      "europe_germany_fob_export": 1,
+      "china_food_grade_domestic_spot_exw": -1,
+      "middle_east_turkey_fob_export": -2
+    }
+  }
+]
