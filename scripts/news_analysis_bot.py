@@ -42,7 +42,9 @@ from datetime import datetime, timezone, date
 
 from google import genai
 
-from fetch_utils import fetch_sources, build_sources_block
+from fetch_utils import (
+    fetch_sources, build_sources_block, fetch_rss_sources, build_rss_block,
+)
 
 # کنسول ویندوز پیش‌فرضش cp1252 هست که فارسی رو نمی‌تونه چاپ کنه؛ لینوکس/گیت‌هاب
 # اکشنز این مشکل رو نداره ولی این خط بی‌ضرره و روی هر پلتفرمی امنه.
@@ -81,6 +83,40 @@ SEED_NEWS_SOURCES = [
     "https://www.freightos.com/freightos-baltic-index/",  # FBX - شاخص جهانی کرایه‌ی کانتینری، صفحه‌ی عمومی رایگان (تأیید مستقیم: عدد واقعی $3,562.75 آورد)
     "https://www.drewry.co.uk/world-container-index",  # Drewry WCI - گزارش هفتگی با نرخ مسیرهای اصلی (Shanghai-LA/NY/Rotterdam/Genoa)، رایگان (تأیید مستقیم ۲۰۲۶-۰۸-۲۱)
     "https://tradingeconomics.com/commodity/baltic",  # Baltic Dry Index (BDI) - کرایه‌ی حمل فله خشک (مرتبط با گرید سنگین سودا اش)، رایگان (تأیید مستقیم ۲۰۲۶-۰۸-۲۱، سایت رسمی Baltic Exchange خودش پشت چالش امنیتیه)
+]
+
+# --- فیدهای RSS تخصصی حمل‌ونقل دریایی/لجستیک ---
+#
+# هر پنج فید در ۲۰۲۶-۰۸-۲۳ مستقیم تست شدند: همه HTTP 200، XML سالم، بدون نیاز به
+# لاگین یا اشتراک، و همه با خلاصه‌ی واقعی (نه فقط تیتر). این‌ها منبع «رویداد» هستند
+# (بستن کانال، تحریم، ازدحام بندر، لغو سفر)، در حالی که منابع HTML بالا منبع «عدد»
+# هستند (FBX، WCI، BDI) — این دو مکمل هم‌اند، نه جایگزین.
+RSS_NEWS_SOURCES = [
+    # تازه‌ترین و پرحجم‌ترین فید در تست؛ تخصصی کانتینر و ترمینال — نزدیک‌ترین
+    # فید به کاری که ما می‌کنیم (صادرات کیسه‌ای/کانتینری).
+    {"name": "Container News", "url": "https://container-news.com/feed/"},
+    # اخبار جامع لجستیک و تعرفه‌های تجاری؛ بلندترین خلاصه‌ها (میانه ~۵۹۰ کاراکتر).
+    {"name": "The Loadstar", "url": "https://theloadstar.com/feed/"},
+    # دریایی/بنادر؛ در همان تست خبر کانال پاناما و جابه‌جایی جریان تانکرها را داشت.
+    {"name": "Splash247", "url": "https://splash247.com/feed/"},
+    # شاخص‌محور: گزارش هفتگی Xeneta و اخبار کشتیرانی — مکمل عددهای FBX/WCI.
+    {"name": "Hellenic Shipping News", "url": "https://www.hellenicshippingnews.com/feed/"},
+    # دریانوردی عمومی؛ نسبت نویزش از بقیه بیشتر است (خبرهای نجات دریایی و نظامی)،
+    # ولی برای رویدادهای ژئوپلیتیک مسیرها ارزش دارد — به همین دلیل غربال کلیدواژه‌ای
+    # روی همه‌ی فیدها اعمال می‌شود.
+    {"name": "gCaptain", "url": "https://gcaptain.com/feed/"},
+]
+
+# غربال اولیه‌ی ربط. عمداً سخاوتمند است (نام کشورها/تنگه‌ها/شاخص‌ها + واژگان کرایه)
+# و اگر برای یک فید کمتر از سه آیتم بماند، سه خبر تازه‌ی همان فید بدون فیلتر
+# فرستاده می‌شود — قضاوت نهایی با مدل است.
+RSS_RELEVANCE_KEYWORDS = [
+    "freight", "container", "rate", "tariff", "port", "terminal", "congestion",
+    "canal", "suez", "hormuz", "red sea", "panama", "strait", "tanker", "bulk",
+    "chemical", "soda", "bicarbonate", "sanction", "blank sailing", "teu",
+    "index", "shipping line", "carrier", "rail", "corridor", "transit",
+    "iran", "turkey", "türkiye", "russia", "china", "caspian", "black sea",
+    "georgia", "armenia", "gulf", "middle east",
 ]
 
 # بررسی شد و عمداً اضافه نشد: UN Comtrade / WITS / ITC MacMap. این‌ها API/جدول
@@ -151,6 +187,8 @@ SYSTEM_PROMPT = f"""
   (مثل "سودا اش ۱۰۳۰ یوآن بر تن"، "FBX معادل ۳۵۶۲ دلار"). این فیلد برای تشخیص
   خودکار تکرار استفاده می‌شه، پس اعداد رو دقیق بنویس.
 - فقط منابعی که واقعاً ازشون استفاده کردی رو در sources فهرست کن (نام رسانه + لینک).
+  برای خبرهایی که از فیدها برداشتی، **لینک مستقیم همان مقاله** رو بذار (که کنار هر
+  آیتم آمده)، نه آدرس خود فید. خلاصه‌ی فیدها متن شخص ثالثه — بازنویسی کن، کپی نکن.
 
 اصطلاحات فنی (ترجمه‌ی تحت‌اللفظی نکن):
 - «40-foot container» یعنی «کانتینر ۴۰ فوتی» — فوت واحد طول است، هرگز «۴۰ قدمی» ننویس.
@@ -338,10 +376,16 @@ def main():
     recent = load_recent_entries(log)
 
     fetched = fetch_sources(SEED_NEWS_SOURCES)
-    if not any(f["ok"] for f in fetched):
+    feeds = fetch_rss_sources(RSS_NEWS_SOURCES, keywords=RSS_RELEVANCE_KEYWORDS)
+
+    if not any(f["ok"] for f in fetched) and not any(f["ok"] for f in feeds):
         raise SystemExit("[ERROR] هیچ‌کدام از منابع خبری در دسترس نبودند؛ اجرا متوقف شد.")
 
-    sources_block = build_sources_block(fetched)
+    sources_block = (
+        build_sources_block(fetched)
+        + "\n\n=== فیدهای خبری تخصصی حمل‌ونقل (تیتر + تاریخ + خلاصه + لینک) ===\n"
+        + build_rss_block(feeds)
+    )
     recent_block = build_recent_block(recent)
 
     client = genai.Client(api_key=api_key)

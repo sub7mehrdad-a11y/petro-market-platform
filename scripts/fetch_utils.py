@@ -13,7 +13,9 @@
 
 import re
 import ssl
+import html
 import http.client
+import xml.etree.ElementTree as ET
 import urllib.request
 import urllib.error
 
@@ -36,9 +38,11 @@ def fetch_page_text(url: str, max_chars: int = 6000, timeout: int = 20) -> str:
     """HTML رو می‌گیره، تگ/اسکریپت/استایل رو حذف می‌کنه، و به یک متن ساده و کوتاه تبدیل می‌کنه."""
     req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=timeout, context=SSL_CONTEXT) as resp:
-        html = resp.read().decode("utf-8", errors="ignore")
+        # نام raw_html (نه html) چون ماژول html بالا import شده و سایه‌انداختن
+        # روی اسمش، اولین کسی که این تابع رو گسترش بده گیج می‌کنه.
+        raw_html = resp.read().decode("utf-8", errors="ignore")
 
-    text = re.sub(r"(?is)<(script|style|noscript)[^>]*>.*?</\1>", " ", html)
+    text = re.sub(r"(?is)<(script|style|noscript)[^>]*>.*?</\1>", " ", raw_html)
     text = re.sub(r"(?s)<[^>]+>", "\n", text)
 
     # خطوطی که بعد از حذف تگ فقط فاصله/خالی موندن (مثل آیتم‌های خالی منوی ناوبری)
@@ -92,4 +96,136 @@ def build_sources_block(fetched: list[dict]) -> str:
             parts.append(f"--- منبع: {item['url']} ---\n{item['text']}\n")
         else:
             parts.append(f"--- منبع: {item['url']} (در دسترس نبود: {item.get('error')}) ---\n")
+    return "\n".join(parts)
+
+
+# ----------------------------------------------------------------- فیدهای RSS
+#
+# چرا RSS جدا از fetch_page_text: صفحه‌ی HTML یک سایت خبری بعد از حذف تگ، عمدتاً
+# منو و فوتر و تبلیغه و فقط تیتر خام می‌ده. فید RSS همون محتوا رو ساختاریافته
+# می‌ده — تیتر + تاریخ انتشار + خلاصه + لینک مستقیم مقاله. لینک مستقیم مهمه چون
+# پرامپت ما موظفه منبع هر نکته رو با لینک ذکر کنه.
+
+_TAG_RE = re.compile(r"<[^>]+>")
+_WS_RE = re.compile(r"\s+")
+
+
+def _clean_html_fragment(text: str) -> str:
+    text = _TAG_RE.sub(" ", text or "")
+    text = html.unescape(text)
+    return _WS_RE.sub(" ", text).strip()
+
+
+def fetch_rss(url: str, max_items: int = 12, timeout: int = 20) -> list[dict]:
+    """
+    یک فید RSS/Atom رو می‌گیره و به فهرست {title, date, summary, link} تبدیل می‌کنه.
+    خطا رو بالا می‌ده؛ مدیریت خطا با فراخوان (مثل fetch_sources) است.
+    """
+    req = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=timeout, context=SSL_CONTEXT) as resp:
+        raw = resp.read()
+
+    root = ET.fromstring(raw)
+    nodes = root.findall(".//item")
+    atom_ns = "{http://www.w3.org/2005/Atom}"
+    if not nodes:
+        nodes = root.findall(f".//{atom_ns}entry")
+
+    items = []
+    for node in nodes[:max_items]:
+        title = node.findtext("title") or node.findtext(f"{atom_ns}title") or ""
+        summary = (
+            node.findtext("description")
+            or node.findtext(f"{atom_ns}summary")
+            or node.findtext(f"{atom_ns}content")
+            or ""
+        )
+        link = node.findtext("link") or ""
+        if not link:
+            link_node = node.find(f"{atom_ns}link")
+            link = link_node.get("href", "") if link_node is not None else ""
+        date = node.findtext("pubDate") or node.findtext(f"{atom_ns}updated") or ""
+
+        items.append({
+            "title": _clean_html_fragment(title),
+            "summary": _clean_html_fragment(summary),
+            "link": link.strip(),
+            "date": date.strip(),
+        })
+    return items
+
+
+def _compile_keyword_patterns(keywords: list[str]) -> list[re.Pattern]:
+    """
+    تطبیق با مرز کلمه، نه زیررشته. بدون این کار «port» داخل «opportunity» و
+    «important»، و «rate» داخل «corporate» می‌افتاد و خبرهای بی‌ربط از غربال
+    رد می‌شدند (در تست ۲۳ اوت، خبر ساخت کشتی تفریحی همین‌طور رد شده بود).
+    حالت جمع ساده (s/es) هم پوشش داده می‌شود تا «ports» و «rates» جا نمانند.
+    """
+    patterns = []
+    for kw in keywords:
+        escaped = re.escape(kw.lower())
+        suffix = r"(?:e?s)?" if " " not in kw else ""
+        patterns.append(re.compile(rf"\b{escaped}{suffix}\b"))
+    return patterns
+
+
+def fetch_rss_sources(
+    feeds: list[dict], keywords: list[str] | None = None,
+    max_items_per_feed: int = 5, summary_chars: int = 320,
+) -> list[dict]:
+    """
+    چند فید رو می‌گیره و اگر keywords داده بشه، فقط آیتم‌های مرتبط رو نگه می‌داره.
+
+    چرا فیلتر: این فیدها اخبار عمومی دریانوردی‌ان و کنارِ خبر مهمِ کرایه و بندر،
+    خبرهای کاملاً بی‌ربط هم دارن (کشتی تفریحی، نجات پرنده در دریا). بدون فیلتر،
+    بخش زیادی از بودجه‌ی پرامپت صرف نویز می‌شه.
+
+    اگر فیلتر برای یک فید کمتر از سه آیتم بذاره، سه آیتم تازه‌ی همون فید بدون
+    فیلتر برگردونده می‌شه — تصمیم نهایی درباره‌ی ربط داشتن با خود مدله، این فقط
+    یک غربال اولیه‌ست، نه سانسور منبع.
+    """
+    results = []
+    for feed in feeds:
+        try:
+            items = fetch_rss(feed["url"])
+        except (OSError, http.client.HTTPException, ET.ParseError) as e:
+            results.append({**feed, "ok": False, "items": [], "error": str(e)})
+            print(f"[WARN] failed to fetch RSS {feed['url']}: {e}")
+            continue
+
+        chosen = items
+        if keywords:
+            patterns = _compile_keyword_patterns(keywords)
+            matched = [
+                i for i in items
+                if any(p.search(f"{i['title']} {i['summary']}".lower()) for p in patterns)
+            ]
+            chosen = matched if len(matched) >= 3 else items[:3]
+
+        for item in chosen[:max_items_per_feed]:
+            item["summary"] = item["summary"][:summary_chars]
+
+        results.append({**feed, "ok": True, "items": chosen[:max_items_per_feed]})
+        print(f"[OK] RSS {feed['name']}: {len(items)} آیتم خوانده شد، {len(chosen[:max_items_per_feed])} آیتم مرتبط")
+    return results
+
+
+def build_rss_block(fetched_feeds: list[dict]) -> str:
+    """خروجی fetch_rss_sources رو به یک بلوک متنی فشرده برای پرامپت تبدیل می‌کنه."""
+    parts = []
+    for feed in fetched_feeds:
+        if not feed.get("ok"):
+            parts.append(f"--- فید {feed['name']} (در دسترس نبود: {feed.get('error')}) ---\n")
+            continue
+        lines = [f"--- فید {feed['name']} ({feed['url']}) ---"]
+        for item in feed["items"]:
+            lines.append(f"• {item['title']}")
+            if item["date"]:
+                lines.append(f"  تاریخ: {item['date']}")
+            if item["summary"]:
+                lines.append(f"  خلاصه: {item['summary']}")
+            if item["link"]:
+                lines.append(f"  لینک: {item['link']}")
+        parts.append("\n".join(lines) + "\n")
     return "\n".join(parts)
