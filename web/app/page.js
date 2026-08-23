@@ -4,7 +4,9 @@ import PriceSection from "./components/PriceSection";
 import NewsCard from "./components/NewsCard";
 
 const BASE_FOB_USD = 250;
-const MAIN_COMPETITOR = "ترکیه";
+// رقبای تحت رصد — هرکدام ایجنت روزانه‌ی اختصاصی خودشان را دارند. روسیه به‌زودی
+// اضافه می‌شود و همین‌جا باید به فهرست بیاید.
+const MAIN_COMPETITORS = "ترکیه و چین";
 
 const BICARBONATE_HIGHLIGHTS = [
   { country: "China", priceType: "FOB" },
@@ -30,7 +32,7 @@ export default function DashboardPage() {
         <h1 className="text-xl font-bold">داشبورد قیمت جهانی</h1>
         <p className="text-sm text-slate-500">
           قیمت پایه‌ی مرجع FOB شرکت: <span className="font-semibold text-copper-700">{BASE_FOB_USD} دلار/تن</span> ·
-          رقیب اصلی: <span className="font-semibold">{MAIN_COMPETITOR}</span>
+          رقبای تحت رصد: <span className="font-semibold">{MAIN_COMPETITORS}</span>
         </p>
       </div>
       <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-md px-3 py-2 -mt-4 inline-block">
