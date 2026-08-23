@@ -24,7 +24,14 @@ const TRANSIT_KEYWORDS = [
   "shipping",
 ];
 
+// موضوع «ترانزیت» رو خود ربات خبر از ۲۰۲۶-۰۸-۲۳ روی رکورد می‌ذاره؛ برای رکوردهای
+// قدیمی‌تر (که topic ندارن) همچنان به جست‌وجوی کلیدواژه در متن برمی‌گردیم.
+const TRANSIT_TOPIC = "ترانزیت، کرایه‌ی حمل و لجستیک";
+
 function isTransitRelated(entry) {
+  if (entry.topic === TRANSIT_TOPIC) return true;
+  // خبرهای موضوع‌های دیگر هم اگر واقعاً درباره‌ی حمل‌ونقل حرف بزنند (مثل بسته‌شدن
+  // یک مسیر در خبر ژئوپلیتیک) اینجا می‌مانند — پس کلیدواژه‌ها حذف نشدند.
   const text = `${entry.headline_fa || ""} ${entry.analysis_fa || ""}`;
   return TRANSIT_KEYWORDS.some((kw) => text.includes(kw));
 }

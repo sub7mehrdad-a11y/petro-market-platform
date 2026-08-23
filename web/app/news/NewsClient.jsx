@@ -12,12 +12,24 @@ export default function NewsClient({ entries }) {
     const q = query.trim().toLowerCase();
     if (!q) return entries;
     return entries.filter((e) => {
-      const haystack = [e.headline_fa, e.analysis_fa, ...(e.sources || []).map((s) => s.name)]
+      const haystack = [
+        e.headline_fa,
+        e.analysis_fa,
+        e.topic,
+        ...(e.key_facts || []),
+        ...(e.sources || []).map((s) => s.name),
+      ]
         .join(" ")
         .toLowerCase();
       return haystack.includes(q);
     });
   }, [entries, query]);
+
+  // موضوع‌هایی که واقعاً در داده هست — دکمه‌ی فیلتر فقط برای همان‌ها ساخته می‌شود.
+  const topics = useMemo(
+    () => [...new Set(entries.map((e) => e.topic).filter(Boolean))],
+    [entries]
+  );
 
   return (
     <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
@@ -33,6 +45,15 @@ export default function NewsClient({ entries }) {
       </div>
 
       <div className="flex flex-wrap gap-2 mb-4">
+        {topics.map((t) => (
+          <button
+            key={t}
+            onClick={() => setQuery(t)}
+            className="text-xs border border-petrol-100 bg-petrol-50 text-petrol-700 rounded-full px-3 py-1 hover:border-petrol-400"
+          >
+            {t}
+          </button>
+        ))}
         {QUICK_KEYWORDS.map((k) => (
           <button
             key={k}

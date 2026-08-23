@@ -13,6 +13,7 @@
 
 import re
 import ssl
+import http.client
 import urllib.request
 import urllib.error
 
@@ -49,15 +50,35 @@ def fetch_page_text(url: str, max_chars: int = 6000, timeout: int = 20) -> str:
     return text[:max_chars]
 
 
-def fetch_sources(urls: list[str], max_chars: int = 6000) -> list[dict]:
-    """چند URL رو می‌گیره؛ اگه یکی fail بشه بقیه رو متوقف نمی‌کنه، فقط با خطا ثبت می‌شه."""
+def fetch_sources(urls: list[str], max_chars: int = 6000, retries: int = 1) -> list[dict]:
+    """
+    چند URL رو می‌گیره؛ اگه یکی fail بشه بقیه رو متوقف نمی‌کنه، فقط با خطا ثبت می‌شه.
+
+    یک‌بار تلاش مجدد با مهلت بلندتر انجام می‌شه: تجربه‌ی ۲۰۲۶-۰۸-۲۳ نشون داد بعضی
+    منابع (chemeurope، drewry) گاهی کندتر از ۲۰ ثانیه جواب می‌دن و بی‌دلیل از سبد
+    تحلیل روز حذف می‌شدن.
+    """
     results = []
     for url in urls:
         try:
-            text = fetch_page_text(url, max_chars=max_chars)
+            text = None
+            for attempt in range(retries + 1):
+                try:
+                    text = fetch_page_text(url, max_chars=max_chars, timeout=20 + attempt * 20)
+                    break
+                except urllib.error.HTTPError:
+                    raise  # ۴۰۴/۴۰۳ با تلاش مجدد درست نمی‌شه؛ فقط وقت تلف می‌کنه
+                except (OSError, http.client.HTTPException):
+                    if attempt == retries:
+                        raise
+                    print(f"[RETRY] {url}")
             results.append({"url": url, "ok": True, "text": text})
             print(f"[OK] fetched {url} ({len(text)} chars)")
-        except (urllib.error.URLError, urllib.error.HTTPError, TimeoutError) as e:
+        # چرا OSError و HTTPException (نه فقط URLError): اگر یک منبع وسط پاسخ
+        # اتصال رو ببنده، پایتون RemoteDisconnected/ConnectionResetError می‌ده که
+        # زیرمجموعه‌ی URLError نیست — قبلاً همین باعث می‌شد کل ربات خبر با یک
+        # منبع بدقلق crash کنه و هیچ خبری ثبت نشه.
+        except (OSError, http.client.HTTPException) as e:
             results.append({"url": url, "ok": False, "text": "", "error": str(e)})
             print(f"[WARN] failed to fetch {url}: {e}")
     return results

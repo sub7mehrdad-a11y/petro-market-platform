@@ -18,6 +18,13 @@ export default function NewsCard({ entry, compact = false }) {
         <span className="text-xs text-slate-400 shrink-0">{entry.date}</span>
       </div>
 
+      {/* موضوع فقط روی رکوردهای بعد از ۲۰۲۶-۰۸-۲۳ وجود داره (نسخه‌ی چندموضوعی ربات خبر) */}
+      {entry.topic && (
+        <span className="inline-block text-[11px] text-petrol-700 bg-petrol-50 border border-petrol-100 rounded-full px-2 py-0.5 mb-2">
+          {entry.topic}
+        </span>
+      )}
+
       <p className={`text-sm text-slate-600 leading-7 whitespace-pre-line ${compact ? "line-clamp-3" : ""}`}>
         {entry.analysis_fa}
       </p>

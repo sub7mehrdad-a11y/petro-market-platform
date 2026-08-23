@@ -6,11 +6,23 @@
      درخواست HTTP ساده می‌گیره (نه از طریق ابزار جست‌وجوی گوگل — دلیلش رو
      توی price_intelligence_bot.py بخون: آزمایش شد و روی کلیدهای رایگان تازه‌ساز
      با خطای quota مواجه می‌شه).
-  2. از Gemini می‌خواد بر اساس همون متن‌ها یک یادداشت تحلیلی کوتاه (فارسی) بنویسه که:
+  2. از Gemini می‌خواد بر اساس همون متن‌ها **چند آیتم خبری کوتاه (فارسی)** بنویسه —
+     هر آیتم در یک «موضوع» متفاوت (بازار سودا اش / صنعت و رقبا / ترانزیت و کرایه /
+     انرژی و ژئوپلیتیک) — که:
        - خلاصه‌ی خبر رو به زبان خودش بیان کنه (نه کپی مستقیم از متن اصلی)
        - ربطش به وضعیت شرکت (قیمت پایه‌ی FOB ۲۵۰ دلار، رقیب اصلی ترکیه) رو توضیح بده
        - منبع هر نکته رو ذکر کنه (نام رسانه + لینک)
-  3. خروجی رو به‌صورت یک رکورد در یک فایل JSON ذخیره می‌کنه تا سایت ازش بخونه.
+  3. تکراری‌ها **در همین اسکریپت (نه توسط مدل)** حذف می‌شن، و بقیه به‌صورت رکوردهای
+     جداگانه توی فایل JSON ذخیره می‌شن تا سایت ازشون بخونه.
+
+تاریخچه‌ی یک باگ مهم (۲۰۲۶-۰۸-۲۳):
+  نسخه‌ی قبلی روزی فقط **یک** تحلیل تولید می‌کرد و تصمیم «تکراری‌بودن» رو کامل به
+  خود مدل سپرده بود (فیلد has_new_content). چون شاخص سودا اش TradingEconomics چند
+  روز روی همون عدد ثابت مونده بود، مدل هر روز کل روز رو تکراری اعلام می‌کرد و
+  خروجی صفر می‌شد — یعنی خبرهای واقعاً تازه‌ی حمل‌ونقل/انرژی/صنعت هم قربانی
+  ثابت‌موندن یک عدد می‌شدن. از ۱۹ تا ۲۳ اوت هیچ خبری ثبت نشد و صفحه‌ی اخبار و
+  صفحه‌ی ترانزیت (که از همین فایل فیلتر می‌شه) هر دو یخ زدن.
+  راه‌حل: تشخیص تکرار «به‌ازای هر آیتم» و با اثرانگشت عددی، داخل پایتون.
 
 نیازمندی‌ها:
   - یک GEMINI_API_KEY معتبر (به‌صورت متغیر محیطی تنظیم کن، هرگز داخل کد ننویس —
@@ -26,7 +38,7 @@ import os
 import re
 import sys
 import json
-from datetime import datetime, timezone
+from datetime import datetime, timezone, date
 
 from google import genai
 
@@ -41,6 +53,19 @@ GEMINI_MODEL = "gemini-3.6-flash"
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data")
 OUTPUT_FILE = os.path.join(DATA_DIR, "news_analysis_log.json")
+
+# موضوع‌های خبری. هدف این تفکیک فقط دسته‌بندی نیست — تضمین می‌کنه ثابت‌موندن یک
+# موضوع (مثلاً شاخص سودا اش) بقیه‌ی موضوع‌ها رو خفه نکنه، و صفحه‌ی /transit هم
+# مستقیم از روی topic فیلتر بشه (نه فقط با جست‌وجوی کلیدواژه در متن).
+TOPICS = [
+    "بازار سودا اش و کربنات سدیم",
+    "صنعت جوش شیرین و رقبا",
+    "ترانزیت، کرایه‌ی حمل و لجستیک",
+    "انرژی، ارز و ژئوپلیتیک",
+]
+
+MAX_ITEMS_PER_RUN = 4          # حداکثر یک آیتم به‌ازای هر موضوع
+DEDUP_LOOKBACK_DAYS = 12       # پنجره‌ی مقایسه برای تشخیص تکرار
 
 # منابع seed برای اخبار/تحلیل — نقطه‌ی شروع، نه فهرست بسته. هر منبع جدید معتبر
 # و بدون‌لاگینی که پیدا کردید همین‌جا اضافه کنید.
@@ -76,6 +101,8 @@ COMPANY_CONTEXT = """
 مهم‌ترین رقیب صادراتی، ترکیه است.
 """
 
+_TOPICS_BLOCK = "\n".join("  - " + t for t in TOPICS)
+
 SYSTEM_PROMPT = f"""
 تو یک تحلیلگر بازار محصولات پتروشیمی/شیمیایی برای بخش تحقیق و توسعه‌ی بازرگانی یک
 شرکت تولیدکننده‌ی جوش شیرین هستی.
@@ -84,59 +111,159 @@ SYSTEM_PROMPT = f"""
 {COMPANY_CONTEXT}
 
 من متن خام چند صفحه‌ی خبری/تجاری (بعد از حذف تگ HTML) رو در اختیارت می‌ذارم، به‌همراه
-تیتر و خلاصه‌ی چند تحلیل روزهای اخیر (برای جلوگیری از تکرار). فقط بر اساس همین
-متن‌های خام (نه دانش قبلی خودت)، یک یادداشت تحلیلی کوتاه (حداکثر ۲۵۰ کلمه) به فارسی
-بنویس که:
-- مهم‌ترین نکته‌ی خبری/قیمتی مرتبط با جوش شیرین/سودا اش/ترکیه رو با زبان خودت
-  خلاصه کنه (هرگز جمله‌ی کامل از منبع کپی نکن؛ نقل‌قول مستقیم فقط اگر ضروریه
-  و زیر ۱۵ کلمه باشه)
-- تاثیر احتمالیش روی استراتژی صادراتی شرکت (نسبت به قیمت پایه‌ی ۲۵۰ دلار و رقابت
-  با ترکیه) رو توضیح بده
-- اگر توی متن‌ها هیچ خبر مرتبطی نبود، صادقانه همین رو در analysis_fa بگو؛ چیزی
-  از خودت اختراع نکن
-- در انتها، فقط منابعی که واقعاً ازشون استفاده کردی رو به‌صورت یک آرایه‌ی جدا
-  (نه توی متن) با نام رسانه و لینک فهرست کن
-- یک تیتر کوتاه (حداکثر ۱۲ کلمه) و خبری برای همین تحلیل هم بساز؛ این تیتر جدا
-  از analysis_fa ذخیره می‌شه و توی لیست خبرهای سایت نشون داده می‌شه
+تیتر خبرهای چند روز اخیر (فقط برای اینکه بدونی چی قبلاً پوشش داده شده).
 
-قانون مهم درباره‌ی تکرار: اگر همون عدد/رویداد اصلی که در تحلیل‌های چندروز اخیر
-(که پایین‌تر می‌بینی) گزارش شده، هنوز عوض نشده — یعنی منبع هیچ عدد یا رویداد
-واقعاً جدیدی نداره، فقط داره همون آمار قبلی رو دوباره نشون می‌ده — به‌جای بازنویسی
-همون خبر با کلمات دیگه، این‌ها رو برگردون: "has_new_content": false و
-headline_fa/analysis_fa/sources رو خالی بذار. فقط وقتی has_new_content: true بذار
-که واقعاً یک عدد تازه، رویداد تازه، یا منبع تازه (نسبت به تحلیل‌های اخیر) پیدا کردی.
+وظیفه‌ات: بین ۱ تا {MAX_ITEMS_PER_RUN} **آیتم خبری مجزا** به فارسی بنویس. هر آیتم باید
+دقیقاً یکی از این موضوع‌ها باشه و از هر موضوع حداکثر یک آیتم بیار:
+{_TOPICS_BLOCK}
+
+قواعد هر آیتم:
+- فقط بر اساس متن‌های خام داده‌شده (نه دانش قبلی خودت). چیزی اختراع نکن.
+- خلاصه با زبان خودت (هرگز جمله‌ی کامل از منبع کپی نکن؛ نقل‌قول مستقیم فقط اگر
+  ضروریه و زیر ۱۵ کلمه باشه).
+- حداکثر ۱۲۰ کلمه، و حتماً یک جمله درباره‌ی تاثیرش بر استراتژی صادراتی شرکت
+  (نسبت به قیمت پایه‌ی ۲۵۰ دلار و رقابت با ترکیه).
+- یک تیتر کوتاه (حداکثر ۱۲ کلمه).
+- فیلد key_facts: فهرست کوتاه اعداد/رویدادهای کلیدی که آیتم روشون بنا شده
+  (مثل "سودا اش ۱۰۳۰ یوآن بر تن"، "FBX معادل ۳۵۶۲ دلار"). این فیلد برای تشخیص
+  خودکار تکرار استفاده می‌شه، پس اعداد رو دقیق بنویس.
+- فقط منابعی که واقعاً ازشون استفاده کردی رو در sources فهرست کن (نام رسانه + لینک).
+
+قواعد کل خروجی:
+- اگر برای یک موضوع خبر تازه‌ای در متن‌ها نبود، **فقط همون موضوع رو حذف کن** —
+  نه اینکه کل خروجی رو خالی برگردونی. حتی یک آیتم تازه هم ارزش ثبت داره.
+- اگر عدد/رویداد یک موضوع دقیقاً همون چیزیه که در تیترهای اخیر پایین می‌بینی و
+  هیچ تغییری نکرده، اون موضوع رو نیار و سراغ موضوع‌های دیگه برو.
+- اگر در هیچ موضوعی چیز تازه‌ای نبود، آرایه‌ی items رو خالی برگردون.
 
 خروجی رو دقیقاً به این شکل JSON بده (بدون markdown fence، بدون توضیح اضافه):
 {{
-  "has_new_content": true | false,
-  "headline_fa": "تیتر کوتاه...",
-  "analysis_fa": "...",
-  "sources": [{{"name": "...", "url": "..."}}]
+  "items": [
+    {{
+      "topic": "یکی از موضوع‌های بالا، عیناً",
+      "headline_fa": "تیتر کوتاه...",
+      "analysis_fa": "...",
+      "key_facts": ["...", "..."],
+      "sources": [{{"name": "...", "url": "..."}}]
+    }}
+  ]
 }}
 """
 
+# ------------------------------------------------------------------ ورودی/خروجی
 
-def load_recent_entries(n: int = 4) -> list[dict]:
+
+def load_log() -> list[dict]:
     if not os.path.exists(OUTPUT_FILE):
         return []
     with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
-        log = json.load(f)
-    return log[-n:]
+        return json.load(f)
+
+
+def load_recent_entries(log: list[dict], days: int = DEDUP_LOOKBACK_DAYS) -> list[dict]:
+    """رکوردهای پنجره‌ی اخیر — مبنای هم پرامپت و هم تشخیص تکرار."""
+    today = date.today()
+    recent = []
+    for e in log:
+        try:
+            d = date.fromisoformat(e.get("date", ""))
+        except ValueError:
+            continue
+        if (today - d).days <= days:
+            recent.append(e)
+    return recent
 
 
 def build_recent_block(recent_entries: list[dict]) -> str:
     if not recent_entries:
-        return "(هنوز تحلیل قبلی‌ای ثبت نشده.)"
+        return "(هنوز خبری ثبت نشده.)"
     parts = []
-    for e in recent_entries:
-        parts.append(f"- {e.get('date')}: {e.get('headline_fa')} — {e.get('analysis_fa', '')[:200]}")
+    for e in recent_entries[-12:]:
+        topic = e.get("topic", "—")
+        parts.append(f"- {e.get('date')} [{topic}]: {e.get('headline_fa')}")
     return "\n".join(parts)
+
+
+def save_log(log: list[dict]):
+    os.makedirs(DATA_DIR, exist_ok=True)
+    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+        json.dump(log, f, ensure_ascii=False, indent=2)
+
+
+# ------------------------------------------------------------- تشخیص تکرار
+
+PERSIAN_DIGITS = str.maketrans("۰۱۲۳۴۵۶۷۸۹٠١٢٣٤٥٦٧٨٩", "01234567890123456789")
+
+# کلمه‌های پرتکرار فارسی که در سنجش شباهت تیتر نویز ایجاد می‌کنن.
+STOPWORDS = {
+    "قیمت", "بازار", "جهانی", "برای", "بر", "به", "از", "با", "در", "که", "این",
+    "روی", "شرکت", "صادرات", "صادراتی", "کاهش", "افزایش", "چالش", "چالش‌های",
+    "تحلیل", "خبر", "روند", "نرخ", "تن", "دلار", "و",
+}
+
+
+def _normalize(text: str) -> str:
+    return (text or "").translate(PERSIAN_DIGITS)
+
+
+def extract_numbers(*texts: str) -> set[str]:
+    """همه‌ی اعداد متن (با ارقام فارسی نرمال‌شده) — اثرانگشت واقعی یک خبر."""
+    nums = set()
+    for t in texts:
+        for raw in re.findall(r"\d+(?:[.,٫]\d+)?", _normalize(t)):
+            nums.add(raw.replace(",", "").replace("٫", ".").rstrip("."))
+    # عددهای تک‌رقمی تمایزی ایجاد نمی‌کنن (شماره‌ی بند، تاریخ کوتاه و…)
+    return {n for n in nums if len(n) >= 2}
+
+
+def headline_tokens(headline: str) -> set[str]:
+    words = re.findall(r"[^\s،؛؟.,:;!?()«»\-–—]+", _normalize(headline))
+    return {w for w in words if len(w) > 2 and w not in STOPWORDS}
+
+
+def _jaccard(a: set, b: set) -> float:
+    if not a or not b:
+        return 0.0
+    return len(a & b) / len(a | b)
+
+
+def is_duplicate(item: dict, recent_entries: list[dict]) -> bool:
+    """
+    یک آیتم وقتی تکراریه که در همون موضوع، هم اعدادش تازه نباشن و هم تیترش شبیه
+    یکی از خبرهای اخیر باشه. اگر آیتم اصلاً عدد نداره (خبر رویدادی)، فقط شباهت
+    تیتر با آستانه‌ی سخت‌گیرانه‌تر ملاکه.
+    """
+    topic = item.get("topic", "")
+    facts = " ".join(item.get("key_facts") or [])
+    item_nums = extract_numbers(item.get("headline_fa", ""), facts, item.get("analysis_fa", ""))
+    item_tokens = headline_tokens(item.get("headline_fa", ""))
+
+    for e in recent_entries:
+        # رکوردهای قدیمی topic ندارن؛ عمداً از مقایسه کنارشون نمی‌ذاریم.
+        if e.get("topic") and e.get("topic") != topic:
+            continue
+        e_facts = " ".join(e.get("key_facts") or [])
+        e_nums = extract_numbers(e.get("headline_fa", ""), e_facts, e.get("analysis_fa", ""))
+        e_tokens = headline_tokens(e.get("headline_fa", ""))
+        title_sim = _jaccard(item_tokens, e_tokens)
+
+        if item_nums:
+            fresh = item_nums - e_nums
+            # هیچ عدد تازه‌ای نسبت به این رکورد نداره و تیتر هم هم‌خانواده‌ست
+            if not fresh and title_sim >= 0.30:
+                return True
+        elif title_sim >= 0.55:
+            return True
+    return False
+
+
+# ------------------------------------------------------------------- اجرا
 
 
 def run_daily_analysis(client: genai.Client, sources_block: str, recent_block: str) -> str:
     query_text = (
-        f"تحلیل‌های چندروز اخیر (برای جلوگیری از تکرار، از این‌ها کپی نکن):\n{recent_block}\n\n"
-        f"بر اساس متن‌های زیر تحلیل امروز رو بنویس:\n\n{sources_block}"
+        f"تیتر خبرهای چند روز اخیر (قبلاً پوشش داده شده — تکرارشون نکن):\n{recent_block}\n\n"
+        f"بر اساس متن‌های زیر آیتم‌های خبری امروز رو بنویس:\n\n{sources_block}"
     )
 
     interaction = client.interactions.create(
@@ -148,30 +275,29 @@ def run_daily_analysis(client: genai.Client, sources_block: str, recent_block: s
     return interaction.output_text
 
 
-def parse_output(raw_text: str) -> dict:
+def parse_output(raw_text: str) -> list[dict]:
     fence_match = re.search(r"```(?:json)?\s*(\{.*?\})\s*```", raw_text, re.DOTALL)
     raw = fence_match.group(1) if fence_match else raw_text
 
     obj_match = re.search(r"\{.*\}", raw, re.DOTALL)
     if not obj_match:
-        # اگه parsing شکست خورد، لااقل متن خام رو گم نکن
-        return {"analysis_fa": raw_text.strip(), "sources": []}
+        print("[WARN] خروجی مدل JSON نبود؛ چیزی ثبت نشد.")
+        return []
 
     try:
-        return json.loads(obj_match.group(0))
+        parsed = json.loads(obj_match.group(0))
     except json.JSONDecodeError:
-        return {"analysis_fa": raw_text.strip(), "sources": []}
+        print("[WARN] JSON خروجی مدل قابل تجزیه نبود؛ چیزی ثبت نشد.")
+        return []
 
+    items = parsed.get("items")
+    if isinstance(items, list):
+        return [i for i in items if isinstance(i, dict) and i.get("analysis_fa")]
 
-def append_to_log(record: dict):
-    os.makedirs(DATA_DIR, exist_ok=True)
-    log = []
-    if os.path.exists(OUTPUT_FILE):
-        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
-            log = json.load(f)
-    log.append(record)
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
-        json.dump(log, f, ensure_ascii=False, indent=2)
+    # عقب‌گرد سازگاری: اگه مدل به فرمت قدیمی (تک‌آیتم) جواب داد، دورش نریز.
+    if parsed.get("analysis_fa"):
+        return [parsed]
+    return []
 
 
 def main():
@@ -179,32 +305,55 @@ def main():
     if not api_key:
         raise SystemExit("GEMINI_API_KEY تنظیم نشده است.")
 
+    log = load_log()
+    recent = load_recent_entries(log)
+
     fetched = fetch_sources(SEED_NEWS_SOURCES)
+    if not any(f["ok"] for f in fetched):
+        raise SystemExit("[ERROR] هیچ‌کدام از منابع خبری در دسترس نبودند؛ اجرا متوقف شد.")
+
     sources_block = build_sources_block(fetched)
-    recent_block = build_recent_block(load_recent_entries())
+    recent_block = build_recent_block(recent)
 
     client = genai.Client(api_key=api_key)
     raw_text = run_daily_analysis(client, sources_block, recent_block)
-    parsed = parse_output(raw_text)
+    items = parse_output(raw_text)
+    print(f"[INFO] مدل {len(items)} آیتم برگرداند.")
 
-    # اگه مدل تشخیص داد خبر/عددی نسبت به تحلیل‌های اخیر عوض نشده، رکورد تکراری
-    # ثبت نمی‌کنیم — نبود کلید یعنی مدل به این قانون توجه نکرده، پس برای عقب‌گرد
-    # ایمن پیش‌فرض رو true می‌ذاریم (رفتار قبلی: همیشه ثبت کن).
-    has_new_content = parsed.get("has_new_content", True)
-    if not has_new_content:
-        print("[SKIP] نسبت به تحلیل‌های اخیر خبر/عدد تازه‌ای نبود؛ رکورد تکراری ثبت نشد.")
-        return
+    now = datetime.now(timezone.utc)
+    today_iso = now.date().isoformat()
+    seen_topics = set()
+    added = 0
 
-    record = {
-        "date": datetime.now(timezone.utc).date().isoformat(),
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "headline_fa": parsed.get("headline_fa", ""),
-        "analysis_fa": parsed.get("analysis_fa", ""),
-        "sources": parsed.get("sources", []),
-    }
+    for item in items:
+        topic = (item.get("topic") or "").strip() or TOPICS[0]
+        if topic in seen_topics:
+            print(f"[SKIP] بیش از یک آیتم برای موضوع «{topic}» — دومی ثبت نشد.")
+            continue
+        if is_duplicate(item, recent):
+            print(f"[SKIP] تکراری نسبت به {DEDUP_LOOKBACK_DAYS} روز اخیر: {item.get('headline_fa')}")
+            continue
 
-    append_to_log(record)
-    print(f"[OK] تحلیل {record['date']} ذخیره شد.")
+        record = {
+            "date": today_iso,
+            "generated_at": now.isoformat(),
+            "topic": topic,
+            "headline_fa": item.get("headline_fa", ""),
+            "analysis_fa": item.get("analysis_fa", ""),
+            "key_facts": item.get("key_facts", []),
+            "sources": item.get("sources", []),
+        }
+        log.append(record)
+        recent.append(record)   # تا آیتم بعدی همین اجرا هم با این مقایسه بشه
+        seen_topics.add(topic)
+        added += 1
+        print(f"[OK] ثبت شد [{topic}]: {record['headline_fa']}")
+
+    if added:
+        save_log(log)
+        print(f"[OK] مجموعاً {added} خبر تازه‌ی {today_iso} ذخیره شد.")
+    else:
+        print("[SKIP] هیچ خبر تازه‌ای نسبت به روزهای اخیر پیدا نشد؛ فایل دست‌نخورده ماند.")
 
 
 if __name__ == "__main__":
