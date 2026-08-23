@@ -43,6 +43,20 @@ TABLE_SOURCES = [
         },
     },
     {
+        "file": "Armenia_Exhibitions_SepehranChemical.xlsx",
+        "type": "xlsx",
+        "country": "ارمنستان",
+        "header_row": 2,   # سطر ۱ عنوان فارسی، سطر ۲ خالی، سرستون‌ها در سطر ۳
+        "column_map": {
+            "نام نمایشگاه": "name",
+            "حوزه تخصصی": "focus",
+            "گرید هدف جوش شیرین": "target_grade",
+            "خریداران و غرفه‌داران بالقوه": "audience",
+            "تاریخ برگزاری بعدی": "date",
+            "محل برگزاری": "location",
+        },
+    },
+    {
         "file": "لیست نمایشگاه های کشور برزیل.docx",
         "type": "docx_table",
         "country": "برزیل",
@@ -124,10 +138,14 @@ def load_xlsx_table(src):
     wb = openpyxl.load_workbook(path, data_only=True)
     ws = wb.worksheets[0]
     rows = list(ws.iter_rows(values_only=True))
-    header = [str(h).strip() if h else None for h in rows[0]]
+
+    # بعضی فایل‌ها (مثل نمایشگاه‌های ارمنستان) یک عنوان و یک سطر خالی بالای جدول
+    # دارند؛ header_row (اندیس صفرمبنا) می‌گوید سرستون‌ها کجاست. پیش‌فرض سطر اول.
+    header_idx = src.get("header_row", 0)
+    header = [str(h).strip() if h else None for h in rows[header_idx]]
 
     records = []
-    for row in rows[1:]:
+    for row in rows[header_idx + 1:]:
         if not any(row):
             continue
         record = {"country": src["country"], "source_file": src["file"]}

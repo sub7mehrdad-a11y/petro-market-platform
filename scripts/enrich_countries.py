@@ -17,7 +17,7 @@ import glob
 
 from google import genai
 
-from geo_data import PORTS, distance_between
+from geo_data import PORTS, LAND_ENTRY_POINTS, distance_between
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -109,11 +109,19 @@ def build_profile(country: str, client: genai.Client) -> dict:
                 if km is not None:
                     distances[ref] = km
 
+    # کشور محصور در خشکی؟ به‌جای بندر، نقطه‌ی ورود زمینی را نشان بده (بدون فاصله‌ی
+    # هوایی — توضیحش در geo_data.LAND_ENTRY_POINTS).
     port_info = PORTS.get(country)
+    entry_point = port_info or LAND_ENTRY_POINTS.get(country)
+    entry_kind = "sea" if port_info else "land"
 
     return {
         "country": country,
-        "port": {"name": port_info[2], "lat": port_info[0], "lon": port_info[1]} if port_info else None,
+        "port": (
+            {"name": entry_point[2], "lat": entry_point[0], "lon": entry_point[1], "kind": entry_kind}
+            if entry_point
+            else None
+        ),
         "total_import_volume": extracted.get("total_import_volume"),
         "top_trade_partners": extracted.get("top_trade_partners") or [],
         "distances_km": distances,

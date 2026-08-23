@@ -8,7 +8,7 @@
     "original_filename": "گزارش_مدیریتی_بازار_برزیل_بروزرسانی_۲۰۲۵.docx",
     "relative_path": "برزیل/گزارش_مدیریتی_بازار_برزیل_بروزرسانی_۲۰۲۵.docx",
     "size_bytes": 35141,
-    "uploaded_at": "2026-08-21T13:08:54.822592+00:00",
+    "uploaded_at": "2026-08-23T07:07:10.075830+00:00",
     "parsed_path": "parsed/report-گزارش_مدیریتی_بازار_برزیل_بروزرسانی_۲۰۲۵.json"
   },
   {
@@ -20,7 +20,7 @@
     "original_filename": "گزارش استراتژِی بازایابی عراق.docx",
     "relative_path": "عراق/گزارش استراتژِی بازایابی عراق.docx",
     "size_bytes": 26587,
-    "uploaded_at": "2026-08-21T13:08:54.933466+00:00",
+    "uploaded_at": "2026-08-23T07:07:10.148656+00:00",
     "parsed_path": "parsed/report-گزارش-استراتژِی-بازایابی-عراق.json"
   },
   {
@@ -32,7 +32,7 @@
     "original_filename": "گزارش مدیریتی اردن.docx",
     "relative_path": "اردن/گزارش مدیریتی اردن.docx",
     "size_bytes": 17017,
-    "uploaded_at": "2026-08-21T13:08:54.998793+00:00",
+    "uploaded_at": "2026-08-23T07:07:10.149918+00:00",
     "parsed_path": "parsed/report-گزارش-مدیریتی-اردن.json"
   },
   {
@@ -44,7 +44,7 @@
     "original_filename": "گزارش تحلیلی بازار واردات جوش شیرین کنیا (HS 283630).docx.pdf",
     "relative_path": "کنیا/گزارش تحلیلی بازار واردات جوش شیرین کنیا (HS 283630).docx.pdf",
     "size_bytes": 179738,
-    "uploaded_at": "2026-08-21T13:08:55.357865+00:00",
+    "uploaded_at": "2026-08-23T07:07:10.163786+00:00",
     "parsed_path": "parsed/report-گزارش-تحلیلی-بازار-واردات-جوش-شیرین-کنیا-HS-283630.json"
   },
   {
@@ -56,7 +56,7 @@
     "original_filename": "گزارش_خلاصه_بازار_جوش_شیرین_برزیل.docx",
     "relative_path": "برزیل/گزارش_خلاصه_بازار_جوش_شیرین_برزیل.docx",
     "size_bytes": 17839,
-    "uploaded_at": "2026-08-21T13:08:55.393957+00:00",
+    "uploaded_at": "2026-08-23T07:07:10.175168+00:00",
     "parsed_path": "parsed/report-گزارش_خلاصه_بازار_جوش_شیرین_برزیل.json"
   },
   {
@@ -68,7 +68,7 @@
     "original_filename": "turkey-baking-soda-market-v2.docx",
     "relative_path": "ترکیه/turkey-baking-soda-market-v2.docx",
     "size_bytes": 23088,
-    "uploaded_at": "2026-08-21T13:08:55.559608+00:00",
+    "uploaded_at": "2026-08-23T07:07:10.177146+00:00",
     "parsed_path": "parsed/report-turkey-baking-soda-market-v2.json"
   },
   {
@@ -80,7 +80,7 @@
     "original_filename": "گزراش کامل ترکیه جمینای.docx",
     "relative_path": "ترکیه/گزراش کامل ترکیه جمینای.docx",
     "size_bytes": 39834,
-    "uploaded_at": "2026-08-21T13:08:55.764821+00:00",
+    "uploaded_at": "2026-08-23T07:07:10.276135+00:00",
     "parsed_path": "parsed/report-گزراش-کامل-ترکیه-جمینای.json"
   },
   {
@@ -92,8 +92,32 @@
     "original_filename": "گزارش تحقیق بازار سوریه.docx",
     "relative_path": "سوریه/گزارش تحقیق بازار سوریه.docx",
     "size_bytes": 786998,
-    "uploaded_at": "2026-08-21T13:08:55.996378+00:00",
+    "uploaded_at": "2026-08-23T07:07:10.301763+00:00",
     "parsed_path": "parsed/report-گزارش-تحقیق-بازار-سوریه.json"
+  },
+  {
+    "id": "report-گزارش_خلاصه_بازار_جوش_شیرین_ارمنستان",
+    "title": "گزارش خلاصه بازار جوش شیرین — ارمنستان",
+    "country": "ارمنستان",
+    "product": "جوش شیرین",
+    "report_type": "summary",
+    "original_filename": "گزارش_خلاصه_بازار_جوش_شیرین_ارمنستان.docx",
+    "relative_path": "ارمنستان/گزارش_خلاصه_بازار_جوش_شیرین_ارمنستان.docx",
+    "size_bytes": 17497,
+    "uploaded_at": "2026-08-23T07:07:45.256326+00:00",
+    "parsed_path": "parsed/report-گزارش_خلاصه_بازار_جوش_شیرین_ارمنستان.json"
+  },
+  {
+    "id": "report-گزارش_تحلیلی_بازار_جوش_شیرین_ارمنستان",
+    "title": "گزارش جامع تحلیلی بازار واردات جوش شیرین کشور ارمنستان",
+    "country": "ارمنستان",
+    "product": "جوش شیرین",
+    "report_type": "detailed",
+    "original_filename": "گزارش_تحلیلی_بازار_جوش_شیرین_ارمنستان.docx",
+    "relative_path": "ارمنستان/گزارش_تحلیلی_بازار_جوش_شیرین_ارمنستان.docx",
+    "size_bytes": 27213,
+    "uploaded_at": "2026-08-23T07:07:45.340297+00:00",
+    "parsed_path": "parsed/report-گزارش_تحلیلی_بازار_جوش_شیرین_ارمنستان.json"
   },
   {
     "id": "report-گزارش-پس-زمینه-بازار-جهانی-سودا-اش",
@@ -104,7 +128,7 @@
     "original_filename": "گزارش پس‌زمینه بازار جهانی سودا اش.docx",
     "relative_path": "جهانی/گزارش پس‌زمینه بازار جهانی سودا اش.docx",
     "size_bytes": 48743,
-    "uploaded_at": "2026-08-21T13:08:56.680672+00:00",
+    "uploaded_at": "2026-08-23T07:07:45.992029+00:00",
     "parsed_path": "parsed/report-گزارش-پس-زمینه-بازار-جهانی-سودا-اش.json"
   }
 ]

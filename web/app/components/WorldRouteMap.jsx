@@ -14,8 +14,13 @@ export default function WorldRouteMap({ destPort, destCountry, distances }) {
   const mapSrc = `https://maps.google.com/maps?q=${destPort.lat},${destPort.lon}&z=6&output=embed`;
   const refs = Object.entries(distances || {});
 
+  // کشورهای محصور در خشکی (مثل ارمنستان) بندر ندارن؛ نقطه‌ی مرجعشون گمرک/شهر
+  // ورودی زمینیه و فاصله‌ی هوایی تا بنادر هم براشون محاسبه نمی‌شه (عدد گمراه‌کننده
+  // می‌داد، چون مسیر واقعی جاده‌ایه). پس ستون کنار نقشه اصلاً نمایش داده نمی‌شه.
+  const isLand = destPort.kind === "land";
+
   return (
-    <div className="grid gap-3 md:grid-cols-[1fr_220px]">
+    <div className={refs.length > 0 ? "grid gap-3 md:grid-cols-[1fr_220px]" : "grid gap-3"}>
       <div className="rounded-lg overflow-hidden border border-slate-200">
         <iframe
           src={mapSrc}
@@ -25,10 +30,18 @@ export default function WorldRouteMap({ destPort, destCountry, distances }) {
           referrerPolicy="no-referrer-when-downgrade"
         />
         <div className="bg-slate-50 border-t border-slate-200 px-3 py-2 text-xs text-slate-600">
-          بندر ورودی: <span className="font-semibold">{destPort.name}</span> ({destCountry})
+          {isLand ? "نقطه‌ی ورود زمینی" : "بندر ورودی"}:{" "}
+          <span className="font-semibold">{destPort.name}</span> ({destCountry})
+          {isLand && (
+            <span className="text-slate-400">
+              {" "}
+              — کشور محصور در خشکی؛ فاصله‌ی هوایی تا بنادر مرجع برای این بازار معنا ندارد.
+            </span>
+          )}
         </div>
       </div>
 
+      {refs.length > 0 && (
       <div className="flex flex-col gap-2">
         <div className="text-xs text-slate-500 font-medium">فاصله‌ی هوایی تا بنادر مرجع</div>
         {refs.map(([name, km]) => (
@@ -45,6 +58,7 @@ export default function WorldRouteMap({ destPort, destCountry, distances }) {
           فاصله‌ها خط‌مستقیم هوایی‌ان (نه لزوماً مسیر واقعی کشتی‌رانی)، برای مقایسه‌ی نسبی بین مبادی تأمین.
         </p>
       </div>
+      )}
     </div>
   );
 }

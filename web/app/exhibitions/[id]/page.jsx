@@ -83,6 +83,14 @@ export default async function ExhibitionDetailPage({ params }) {
               {e.focus || e.target_grade}
             </p>
           )}
+
+          {/* خریداران/غرفه‌داران بالقوه — فعلاً فقط فایل ارمنستان این ستون را دارد */}
+          {e.audience && (
+            <p className="text-sm leading-7 text-petrol-100 max-w-3xl mt-2">
+              <span className="text-petrol-300">خریداران و غرفه‌داران بالقوه: </span>
+              {e.audience}
+            </p>
+          )}
         </div>
       </section>
 
