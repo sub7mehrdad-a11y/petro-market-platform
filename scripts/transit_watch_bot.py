@@ -74,9 +74,25 @@ def extract_json_array(text: str) -> list:
     fence = re.search(r"```(?:json)?\s*(\[.*?\])\s*```", text, re.DOTALL)
     raw = fence.group(1) if fence else text
     arr = re.search(r"\[.*\]", raw, re.DOTALL)
-    if not arr:
-        raise ValueError("پاسخ مدل شامل JSON array نبود:\n" + text[:500])
-    return json.loads(arr.group(0))
+    if arr:
+        return json.loads(arr.group(0))
+
+    # آرایه‌ی ناقص (پاسخ وسط راه قطع شده): به‌جای دورریختن کل کانال، هر شیء
+    # کاملی که تا لحظه‌ی قطع‌شدن ساخته شده رو نجات بده. این حالت وقتی پیش میاد
+    # که کانال پست زیاد داشته باشه و خروجی از سقف max_tokens بگذره.
+    start = raw.find("[")
+    if start != -1:
+        last_obj_end = raw.rfind("}")
+        if last_obj_end > start:
+            salvaged = raw[start:last_obj_end + 1] + "]"
+            try:
+                items = json.loads(salvaged)
+                print(f"[WARN] پاسخ مدل ناقص بود؛ {len(items)} پست کامل نجات داده شد.")
+                return items
+            except json.JSONDecodeError:
+                pass
+
+    raise ValueError("پاسخ مدل شامل JSON array نبود:\n" + text[:500])
 
 
 def enrich_with_distance(entry: dict) -> dict:
@@ -86,6 +102,15 @@ def enrich_with_distance(entry: dict) -> dict:
         entry["rate_per_ton_km"] = round(entry["price_amount"] / entry["tonnage"] / km, 4)
     else:
         entry["rate_per_ton_km"] = None
+
+    # نرخ «هر کامیون-کیلومتر»: بیشتر پست‌های اعلام‌بار کرایه‌ی کل یک ماشین رو
+    # می‌گن و اصلاً تناژ نمی‌نویسن. اگر فقط به rate_per_ton_km تکیه کنیم، عملاً
+    # ۹۰٪ پست‌های قیمت‌دار دور ریخته می‌شن (۲۳ اوت ۲۰۲۶: ۹ پست قیمت‌دار، فقط ۱ تا
+    # با تناژ). این نرخ بدون هیچ حدسی درباره‌ی وزن بار محاسبه می‌شه.
+    if km and entry.get("price_amount"):
+        entry["rate_per_km"] = round(entry["price_amount"] / km, 2)
+    else:
+        entry["rate_per_km"] = None
     return entry
 
 
@@ -113,7 +138,14 @@ def main():
             continue
 
         try:
-            raw = groq_generate(system_instruction=SYSTEM_PROMPT, input=text, max_tokens=8000)
+            # ۳۰۰۰ توکن برای ۱۵ پست JSON کاملاً کافیه. عدد قبلی (۸۰۰۰) دقیقاً
+            # برابر کل سقف TPM سرویس رایگان Groq بود و چون Groq «پرامپت +
+            # max_tokens» رو با سقف می‌سنجه، هر اجرا خطای ۴۱۳ می‌گرفت و این ربات
+            # از ۲۲ اوت ۲۰۲۶ هر روز صفر پست ثبت می‌کرد.
+            raw = groq_generate(
+                system_instruction=SYSTEM_PROMPT, input=text,
+                max_tokens=5000, reasoning_effort="low",
+            )
             entries = extract_json_array(raw)
         except Exception as e:
             print(f"[WARN] {ch['handle']}: خطا در استخراج: {e}")
@@ -126,6 +158,14 @@ def main():
             all_entries.append(e)
 
         print(f"[OK] {ch['handle']}: {len(entries)} پست استخراج شد")
+
+    # رکورد خالی ثبت نکن: قبلاً وقتی همه‌ی کانال‌ها خطا می‌دادن، یک رکورد با
+    # entries=[] ذخیره می‌شد و از بیرون شبیه «امروز باری اعلام نشده» به‌نظر
+    # می‌رسید، در حالی که واقعیت این بود که ربات کار نکرده.
+    if not all_entries:
+        print("[ERROR] هیچ پستی استخراج نشد (هر دو کانال خطا دادند یا خالی بودند)؛ "
+              "رکورد خالی ثبت نشد. لاگ بالا را بررسی کن.")
+        return
 
     record = {
         "date": datetime.now(timezone.utc).date().isoformat(),

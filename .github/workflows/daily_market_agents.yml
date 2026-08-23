@@ -34,27 +34,35 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
 
+      # continue-on-error روی همه‌ی ربات‌ها: قبلاً اگر یک ربات خطا می‌داد، کل job
+      # fail می‌شد و مرحله‌ی commit اجرا نمی‌شد — یعنی داده‌ی سالم بقیه‌ی ربات‌ها هم
+      # همان روز از دست می‌رفت. حالا هر ربات مستقل است و هرچه جمع شد commit می‌شود.
       - name: Run price intelligence bot
+        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/price_intelligence_bot.py
 
       - name: Run news analysis bot
+        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/news_analysis_bot.py
 
       - name: Run Turkey competitor watch bot
+        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/turkey_watch_bot.py
 
       - name: Run China competitor watch bot
+        continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
         run: python scripts/china_watch_bot.py
 
       - name: Run transit/freight rate watch bot
+        continue-on-error: true
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python scripts/transit_watch_bot.py

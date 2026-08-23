@@ -29,11 +29,13 @@ function formatToman(n) {
   return `${Math.round(n).toLocaleString("fa-IR")} تومان`;
 }
 
-export default function TransitEstimator({ places, avgRate, sampleSize }) {
+export default function TransitEstimator({ places, rates }) {
   const [origin, setOrigin] = useState("");
   const [destination, setDestination] = useState("");
 
   const placeNames = useMemo(() => Object.keys(places), [places]);
+  const perKm = rates?.perKm ?? { median: null, sampleSize: 0 };
+  const perTonKm = rates?.perTonKm ?? { median: null, sampleSize: 0 };
 
   const result = useMemo(() => {
     if (!origin.trim() || !destination.trim()) return { status: "empty" };
@@ -42,18 +44,23 @@ export default function TransitEstimator({ places, avgRate, sampleSize }) {
     if (!o || !d) {
       return { status: "unknown", unresolvedOrigin: !o, unresolvedDest: !d };
     }
-    if (avgRate == null) return { status: "no-rate" };
+    if (perKm.median == null) return { status: "no-rate" };
     const distanceKm = haversineKm(o.coords[0], o.coords[1], d.coords[0], d.coords[1]);
-    const totalCost = avgRate * distanceKm * SHIPMENT_TONS;
+    if (distanceKm === 0) return { status: "same-place" };
+
     return {
       status: "ok",
       originMatch: o.name,
       destMatch: d.name,
       distanceKm,
-      totalCost,
-      perTon: totalCost / SHIPMENT_TONS,
+      // کرایه‌ی یک کامیون: نرخ میانه‌ی مشاهده‌شده × فاصله
+      truckCost: perKm.median * distanceKm,
+      truckLow: perKm.min != null ? perKm.min * distanceKm : null,
+      truckHigh: perKm.max != null ? perKm.max * distanceKm : null,
+      // فقط اگر نمونه‌ی تناژدار داشتیم؛ وگرنه چیزی از خودمان نمی‌سازیم
+      perTonCost: perTonKm.median != null ? perTonKm.median * distanceKm : null,
     };
-  }, [origin, destination, places, avgRate]);
+  }, [origin, destination, places, perKm, perTonKm]);
 
   return (
     <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
@@ -118,6 +125,10 @@ export default function TransitEstimator({ places, avgRate, sampleSize }) {
           </p>
         )}
 
+        {result.status === "same-place" && (
+          <p className="text-xs text-slate-500">مبدأ و مقصد یکی هستند.</p>
+        )}
+
         {result.status === "ok" && (
           <div className="rounded-lg bg-petrol-50 border border-petrol-100 p-4">
             <div className="flex items-baseline justify-between flex-wrap gap-2">
@@ -125,28 +136,50 @@ export default function TransitEstimator({ places, avgRate, sampleSize }) {
                 {result.originMatch} ← {result.destMatch} · حدود{" "}
                 <b className="font-tabular">{result.distanceKm.toLocaleString("fa-IR")}</b> کیلومتر
               </span>
-              <span className="text-xs text-slate-400">محموله‌ی ۲۴ تنی</span>
+              <span className="text-xs text-slate-400">کرایه‌ی یک کامیون</span>
             </div>
             <div className="mt-2 text-2xl font-bold text-petrol-900 font-tabular">
-              {formatToman(result.totalCost)}
+              {formatToman(result.truckCost)}
             </div>
-            <div className="text-xs text-slate-500 mt-1">
-              معادل {formatToman(result.perTon)} به ازای هر تن
-            </div>
+
+            {result.truckLow != null && (
+              <div className="text-xs text-slate-500 mt-1">
+                بازه‌ی مشاهده‌شده در نمونه: {formatToman(result.truckLow)} تا{" "}
+                {formatToman(result.truckHigh)}
+              </div>
+            )}
+
+            {result.perTonCost != null && (
+              <div className="text-xs text-slate-500 mt-1">
+                بر پایه‌ی {perTonKm.sampleSize.toLocaleString("fa-IR")} پست تناژدار:{" "}
+                {formatToman(result.perTonCost)} به ازای هر تن — یعنی{" "}
+                {formatToman(result.perTonCost * SHIPMENT_TONS)} برای یک محموله‌ی{" "}
+                {SHIPMENT_TONS.toLocaleString("fa-IR")} تنی
+              </div>
+            )}
           </div>
         )}
       </div>
 
       <p className="text-xs text-slate-400 mt-3 leading-6">
-        روش محاسبه: نرخ پایه‌ی مشاهده‌شده (میانگین{" "}
-        {avgRate != null && (
-          <b className="font-tabular text-slate-600">{Math.round(avgRate).toLocaleString("fa-IR")}</b>
+        روش محاسبه: نرخ <b>میانه</b>ی مشاهده‌شده (
+        {perKm.median != null && (
+          <b className="font-tabular text-slate-600">
+            {Math.round(perKm.median).toLocaleString("fa-IR")}
+          </b>
         )}{" "}
-        تومان به ازای تن-کیلومتر، از روی{" "}
-        <b className="font-tabular">{sampleSize.toLocaleString("fa-IR")}</b> مشاهده‌ی واقعی) ×
-        فاصله‌ی هوایی مبدأ-مقصد × ۲۴ تن. این فقط یک <b>تخمین</b> است، نه استعلام مستقیم همان مسیر —
-        هرچه نمونه‌ی بیشتری از کانال‌های اعلام‌بار جمع شود، دقیق‌تر می‌شود. این ارقام به{" "}
-        <b>تومان</b> (ارز داخلی) هستند و با قیمت‌های FOB/CIF دلاری مستقیماً قابل‌مقایسه نیستند.
+        تومان به ازای هر کیلومتر برای یک کامیون، از روی{" "}
+        <b className="font-tabular">{perKm.sampleSize.toLocaleString("fa-IR")}</b> پست واقعی
+        {perTonKm.sampleSize > 0 && (
+          <>
+            ؛ و {perTonKm.sampleSize.toLocaleString("fa-IR")} پست که تناژ هم داشتند
+          </>
+        )}
+        ) × فاصله‌ی هوایی مبدأ-مقصد. چون نمونه کوچک است از میانه استفاده می‌شود، نه میانگین.
+        این فقط یک <b>تخمین</b> است، نه استعلام مستقیم همان مسیر: مسیرهای کوتاه معمولاً
+        گران‌تر از این عدد و مسیرهای خیلی بلند ارزان‌تر درمی‌آیند، و فاصله‌ی واقعی جاده‌ای هم
+        از فاصله‌ی هوایی بیشتر است. این ارقام به <b>تومان</b> (ارز داخلی) هستند و با قیمت‌های
+        FOB/CIF دلاری مستقیماً قابل‌مقایسه نیستند.
       </p>
     </section>
   );

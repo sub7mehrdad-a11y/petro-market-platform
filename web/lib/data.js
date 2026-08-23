@@ -153,10 +153,26 @@ export function getTransitLog() {
 
 // همه‌ی پست‌های همه‌ی روزها را مسطح می‌کند (نه دسته‌بندی‌شده بر اساس روز اجرا)
 // چون برای نمایش/تحلیل، خود پست‌ها مهم‌ان نه دسته‌ی روزانه‌شان.
+//
+// حذف تکراری‌ها ضروری است: یک پست اعلام‌بار چند روز روی کانال می‌ماند و در هر
+// اجرای روزانه دوباره برداشت می‌شود. بدون این کار، یک محموله‌ی واحد چند بار در
+// میانگین نرخ شمرده می‌شد و نمونه را بزرگ‌تر از چیزی که هست نشان می‌داد.
 export function getTransitEntries() {
-  return getTransitLog().flatMap((batch) =>
-    (batch.entries || []).map((e) => ({ ...e, batch_date: batch.date }))
-  );
+  const seen = new Set();
+  const out = [];
+  for (const batch of getTransitLog()) {
+    for (const e of batch.entries || []) {
+      // عمداً بدون note: مدل هر روز همان پست را با جمله‌بندی متفاوت خلاصه می‌کند،
+      // پس note پایدار نیست. مسیر + تناژ + مبلغ، اثرانگشت پایدار یک محموله است.
+      const key = [e.origin, e.destination, e.tonnage, e.price_amount]
+        .map((v) => String(v ?? ""))
+        .join("|");
+      if (seen.has(key)) continue;
+      seen.add(key);
+      out.push({ ...e, batch_date: batch.date });
+    }
+  }
+  return out;
 }
 
 // مختصات شهرها/مرزهایی که مسیرشون توی داده‌ی رصدشده دیده شده — منبع مشترک
@@ -165,14 +181,39 @@ export function getTransitPlaces() {
   return readJsonSafe(path.join(DATA_DIR, "transit_places.json"), {});
 }
 
-// میانگین نرخ مشاهده‌شده (تومان به ازای تن-کیلومتر) از پست‌هایی که هم کرایه
-// (به تومان)، هم تناژ، هم مبدأ/مقصدِ قابل‌محاسبه داشتن — برای برآوردگر ترانزیت.
+// میانه (نه میانگین) — چون نمونه کوچک است و یک پست پرت (مثل یک مسیر خیلی کوتاه
+// با کرایه‌ی مقطوع) میانگین را کاملاً جابه‌جا می‌کند.
+function median(nums) {
+  if (nums.length === 0) return null;
+  const s = [...nums].sort((a, b) => a - b);
+  const mid = Math.floor(s.length / 2);
+  return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2;
+}
+
+function summarize(values) {
+  if (values.length === 0) return { median: null, sampleSize: 0, min: null, max: null };
+  return {
+    median: median(values),
+    sampleSize: values.length,
+    min: Math.min(...values),
+    max: Math.max(...values),
+  };
+}
+
+// نرخ‌های مشاهده‌شده از پست‌های واقعی اعلام‌بار (فقط ریالی/تومانی).
+//
+// دو نرخ جدا برمی‌گردد چون بیشتر پست‌ها تناژ نمی‌نویسند و فقط کرایه‌ی کل ماشین
+// را اعلام می‌کنند:
+//   perKm    — تومان به ازای هر کیلومتر برای یک کامیون (نمونه‌ی بزرگ‌تر)
+//   perTonKm — تومان به ازای هر تن-کیلومتر (فقط پست‌هایی که تناژ هم داشتند)
 export function getTransitRateEstimate() {
-  const entries = getTransitEntries();
-  const withRate = entries.filter((e) => e.rate_per_ton_km != null && e.price_currency === "IRR");
-  if (withRate.length === 0) return { avgRate: null, sampleSize: 0 };
-  const avgRate = withRate.reduce((s, e) => s + e.rate_per_ton_km, 0) / withRate.length;
-  return { avgRate, sampleSize: withRate.length };
+  const entries = getTransitEntries().filter((e) => e.price_currency === "IRR");
+  return {
+    perKm: summarize(entries.filter((e) => e.rate_per_km != null).map((e) => e.rate_per_km)),
+    perTonKm: summarize(
+      entries.filter((e) => e.rate_per_ton_km != null).map((e) => e.rate_per_ton_km)
+    ),
+  };
 }
 
 export function getCountryProfile(country) {

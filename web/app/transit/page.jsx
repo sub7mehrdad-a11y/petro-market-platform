@@ -38,7 +38,7 @@ function isTransitRelated(entry) {
 
 export default function TransitPage() {
   const places = getTransitPlaces();
-  const { avgRate, sampleSize } = getTransitRateEstimate();
+  const rates = getTransitRateEstimate();
   const transitNews = getNewsAnalysis().filter(isTransitRelated);
 
   return (
@@ -51,7 +51,7 @@ export default function TransitPage() {
         </p>
       </section>
 
-      <TransitEstimator places={places} avgRate={avgRate} sampleSize={sampleSize} />
+      <TransitEstimator places={places} rates={rates} />
 
       <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
         <div className="flex items-baseline justify-between gap-2 mb-2">

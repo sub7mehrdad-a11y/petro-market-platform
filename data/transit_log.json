@@ -14,8 +14,9 @@
         "note": "عبدالهی 09153149040",
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
-        "distance_km": null,
-        "rate_per_ton_km": null
+        "distance_km": 599,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "ازبکستان سمرقند",
@@ -29,7 +30,8 @@
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
         "distance_km": 1957,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "قزاقستان خارگوس",
@@ -43,7 +45,8 @@
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
         "distance_km": 1967,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "خارگوس قزاقستان",
@@ -57,7 +60,8 @@
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
         "distance_km": 1967,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": 2.44
       },
       {
         "origin": "ایران اصفهان",
@@ -70,8 +74,9 @@
         "note": "عبدالهی 09153149040",
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
-        "distance_km": null,
-        "rate_per_ton_km": null
+        "distance_km": 1307,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "ریمدان",
@@ -85,7 +90,8 @@
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
         "distance_km": null,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "ریمدان",
@@ -99,7 +105,8 @@
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
         "distance_km": null,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "تاشکند",
@@ -113,7 +120,8 @@
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
         "distance_km": 1670,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "ریمدان",
@@ -127,7 +135,8 @@
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
         "distance_km": null,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "خارگوس قزاقستان",
@@ -141,7 +150,8 @@
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
         "distance_km": 1834,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "آستارا",
@@ -155,7 +165,8 @@
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
         "distance_km": null,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "لطف آباد",
@@ -168,8 +179,9 @@
         "note": "عبدالهی 09153149040",
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
-        "distance_km": 1509,
-        "rate_per_ton_km": null
+        "distance_km": 1424,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "سرخس",
@@ -183,7 +195,8 @@
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
         "distance_km": 459,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "ریمدان ایران",
@@ -197,7 +210,8 @@
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
         "distance_km": null,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "ریمدان ایران",
@@ -211,7 +225,8 @@
         "source_channel": "amintara50",
         "source_channel_name": "اعلام بار آسیای میانه و روسیه",
         "distance_km": null,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "آذرشهر",
@@ -225,7 +240,8 @@
         "source_channel": "jadeh_app",
         "source_channel_name": "اعلام بار سراسری جاده",
         "distance_km": null,
-        "rate_per_ton_km": null
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "آستارا",
@@ -239,7 +255,8 @@
         "source_channel": "jadeh_app",
         "source_channel_name": "اعلام بار سراسری جاده",
         "distance_km": 525,
-        "rate_per_ton_km": 4190.4762
+        "rate_per_ton_km": 4190.4762,
+        "rate_per_km": 104761.9
       },
       {
         "origin": "بهار",
@@ -252,8 +269,9 @@
         "note": "با سیب زمینی",
         "source_channel": "jadeh_app",
         "source_channel_name": "اعلام بار سراسری جاده",
-        "distance_km": null,
-        "rate_per_ton_km": null
+        "distance_km": 1427,
+        "rate_per_ton_km": null,
+        "rate_per_km": 10161.18
       },
       {
         "origin": "بهار",
@@ -266,8 +284,9 @@
         "note": "انبار به انبار 16500بار",
         "source_channel": "jadeh_app",
         "source_channel_name": "اعلام بار سراسری جاده",
-        "distance_km": null,
-        "rate_per_ton_km": null
+        "distance_km": 1413,
+        "rate_per_ton_km": null,
+        "rate_per_km": 9200.28
       },
       {
         "origin": "همدان",
@@ -280,8 +299,9 @@
         "note": "سلام دوست گل اقاحدود1500بلوک ازنرسیده به رزن بیاری همدان روستای ایوک دوست عزیز سوال بودتماس بگیرد",
         "source_channel": "jadeh_app",
         "source_channel_name": "اعلام بار سراسری جاده",
-        "distance_km": null,
-        "rate_per_ton_km": null
+        "distance_km": 81,
+        "rate_per_ton_km": null,
+        "rate_per_km": 30864.2
       },
       {
         "origin": "همدان",
@@ -294,8 +314,9 @@
         "note": "سیب زمینی  تخلیه در میدان بار",
         "source_channel": "jadeh_app",
         "source_channel_name": "اعلام بار سراسری جاده",
-        "distance_km": null,
-        "rate_per_ton_km": null
+        "distance_km": 212,
+        "rate_per_ton_km": null,
+        "rate_per_km": 33018.87
       },
       {
         "origin": "کبودر آهنگ",
@@ -308,8 +329,9 @@
         "note": "محموله فوق تیرچه از کبودرآهنگ به روستای حصار",
         "source_channel": "jadeh_app",
         "source_channel_name": "اعلام بار سراسری جاده",
-        "distance_km": null,
-        "rate_per_ton_km": null
+        "distance_km": 0,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
       },
       {
         "origin": "فامنین",
@@ -322,8 +344,9 @@
         "note": "درجا خالی",
         "source_channel": "jadeh_app",
         "source_channel_name": "اعلام بار سراسری جاده",
-        "distance_km": null,
-        "rate_per_ton_km": null
+        "distance_km": 314,
+        "rate_per_ton_km": null,
+        "rate_per_km": 25477.71
       }
     ]
   },
@@ -331,5 +354,356 @@
     "date": "2026-08-22",
     "generated_at": "2026-08-22T05:55:34.820947+00:00",
     "entries": []
+  },
+  {
+    "date": "2026-08-23",
+    "generated_at": "2026-08-23T05:35:14.208786+00:00",
+    "entries": [
+      {
+        "origin": "ازبکستان سمرقند",
+        "destination": "ایران لطف آباد",
+        "cargo_type": null,
+        "vehicle_type": "کامیون چادری",
+        "tonnage": 23,
+        "price_amount": null,
+        "price_currency": null,
+        "note": "بارگیری کامیون چادری",
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": 599,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "ازبکستان سمرقند",
+        "destination": "ایران بازرگان",
+        "cargo_type": null,
+        "vehicle_type": "کامیون چادری",
+        "tonnage": 23,
+        "price_amount": null,
+        "price_currency": null,
+        "note": "بارگیری کامیون چادری",
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": 1957,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "قزاقستان خارگوس",
+        "destination": "ایران مشهد",
+        "cargo_type": null,
+        "vehicle_type": "کامیون چادری",
+        "tonnage": null,
+        "price_amount": null,
+        "price_currency": null,
+        "note": "آماده بارگیری بالاترین کرایه، سبک بار ۱۰ تن",
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": 1967,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "خارگوس قزاقستان",
+        "destination": "مشهد ایران",
+        "cargo_type": null,
+        "vehicle_type": "تریلی چادری یا کانتینر ۲ دستگاه",
+        "tonnage": null,
+        "price_amount": 4800,
+        "price_currency": "USD",
+        "note": "کرایه ۴۸۰۰ دلار، فردا صبح بارگیری",
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": 1967,
+        "rate_per_ton_km": null,
+        "rate_per_km": 2.44
+      },
+      {
+        "origin": "روسیه ولادی قفقاز",
+        "destination": "ایران اصفهان",
+        "cargo_type": "سنگ بصورت پالت",
+        "vehicle_type": "کامیون چادری",
+        "tonnage": 23,
+        "price_amount": null,
+        "price_currency": null,
+        "note": "بارگیری کامیون چادری",
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": 1307,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "قزاقستان تاشکند",
+        "destination": "ایران مشهد",
+        "cargo_type": null,
+        "vehicle_type": "کانتینر ۴۰ فوت",
+        "tonnage": 10,
+        "price_amount": null,
+        "price_currency": null,
+        "note": "ریمدان به تاشکند",
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": 1004,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "آستارا ایران",
+        "destination": "ریمدان",
+        "cargo_type": null,
+        "vehicle_type": "کامیون چادری",
+        "tonnage": 23,
+        "price_amount": null,
+        "price_currency": null,
+        "note": "بار آماده بارگیری",
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": null,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "تاشکند",
+        "destination": "تهران",
+        "cargo_type": null,
+        "vehicle_type": null,
+        "tonnage": 24,
+        "price_amount": null,
+        "price_currency": null,
+        "note": "بصورت پالتی",
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": 1670,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "ریمدان",
+        "destination": "باکو",
+        "cargo_type": null,
+        "vehicle_type": "کامیون چادری",
+        "tonnage": 24,
+        "price_amount": null,
+        "price_currency": null,
+        "note": "بار آماده بارگیری",
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": null,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "آستارا ایران",
+        "destination": "آشیام بای روسیه",
+        "cargo_type": "کیسه جامبو",
+        "vehicle_type": null,
+        "tonnage": 25,
+        "price_amount": null,
+        "price_currency": null,
+        "note": null,
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": null,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "لطف آباد",
+        "destination": "ایروان",
+        "cargo_type": "باطری",
+        "vehicle_type": "تریلی چادری",
+        "tonnage": 22,
+        "price_amount": null,
+        "price_currency": null,
+        "note": null,
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": 1424,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "سرخس",
+        "destination": "بخارا",
+        "cargo_type": "متفرقه",
+        "vehicle_type": "تریلی چادری",
+        "tonnage": 24,
+        "price_amount": null,
+        "price_currency": null,
+        "note": null,
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": 459,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "ایران",
+        "destination": "تاشکند",
+        "cargo_type": "لوازم یدکی ماشین",
+        "vehicle_type": null,
+        "tonnage": 10,
+        "price_amount": null,
+        "price_currency": null,
+        "note": null,
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": null,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "ریمدان ایران",
+        "destination": "مرز لطف آباد",
+        "cargo_type": null,
+        "vehicle_type": "کامیون چادری",
+        "tonnage": 26,
+        "price_amount": null,
+        "price_currency": null,
+        "note": "بارگیری از بغل",
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": null,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "تاشکند (آنگرین)",
+        "destination": "یزد",
+        "cargo_type": "بسته بندی جامبو بگ",
+        "vehicle_type": null,
+        "tonnage": null,
+        "price_amount": null,
+        "price_currency": null,
+        "note": "آماده بارگیری",
+        "source_channel": "amintara50",
+        "source_channel_name": "اعلام بار آسیای میانه و روسیه",
+        "distance_km": 1686,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "آذربایجان شرقی",
+        "destination": "مازندران",
+        "cargo_type": "پوست نخود",
+        "vehicle_type": "اتاق دار باری",
+        "tonnage": null,
+        "price_amount": 7300000,
+        "price_currency": "IRR",
+        "note": "صافی کل: 7,300,000 تومان",
+        "source_channel": "jadeh_app",
+        "source_channel_name": "اعلام بار سراسری جاده",
+        "distance_km": 622,
+        "rate_per_ton_km": null,
+        "rate_per_km": 11736.33
+      },
+      {
+        "origin": "آستارا",
+        "destination": "مرز خسروی",
+        "cargo_type": "بار تخته روسی",
+        "vehicle_type": "تریلی",
+        "tonnage": 25,
+        "price_amount": 55000000,
+        "price_currency": "IRR",
+        "note": "4 دستگاه چادری. ترانزیت، داشتن CMR الزامیست، بارگیری فوری، پرداخت کرایه آنی",
+        "source_channel": "jadeh_app",
+        "source_channel_name": "اعلام بار سراسری جاده",
+        "distance_km": 525,
+        "rate_per_ton_km": 4190.4762,
+        "rate_per_km": 104761.9
+      },
+      {
+        "origin": "بهار (همدان)",
+        "destination": "گنبد کاووس (گلستان)",
+        "cargo_type": "سیب زمینی",
+        "vehicle_type": "اتاق دار باری تک",
+        "tonnage": null,
+        "price_amount": 14500000,
+        "price_currency": "IRR",
+        "note": "صافی کل: 14,500,000 تومان",
+        "source_channel": "jadeh_app",
+        "source_channel_name": "اعلام بار سراسری جاده",
+        "distance_km": 657,
+        "rate_per_ton_km": null,
+        "rate_per_km": 22070.02
+      },
+      {
+        "origin": "بهار (همدان)",
+        "destination": "گرگان (گلستان)",
+        "cargo_type": "انبار به انبار 16500بار",
+        "vehicle_type": "جفت",
+        "tonnage": null,
+        "price_amount": 13000000,
+        "price_currency": "IRR",
+        "note": "صافی کل: 13,000,000 تومان",
+        "source_channel": "jadeh_app",
+        "source_channel_name": "اعلام بار سراسری جاده",
+        "distance_km": 581,
+        "rate_per_ton_km": null,
+        "rate_per_km": 22375.22
+      },
+      {
+        "origin": "همدان",
+        "destination": "رزن (همدان)",
+        "cargo_type": "نامشخص",
+        "vehicle_type": "جفت",
+        "tonnage": null,
+        "price_amount": 2500000,
+        "price_currency": "IRR",
+        "note": "صافی کل: 2,500,000 تومان",
+        "source_channel": "jadeh_app",
+        "source_channel_name": "اعلام بار سراسری جاده",
+        "distance_km": 0,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "همدان",
+        "destination": "قزوین",
+        "cargo_type": "سیب زمینی",
+        "vehicle_type": "اتاق دار باری تک",
+        "tonnage": null,
+        "price_amount": 7000000,
+        "price_currency": "IRR",
+        "note": "صافی کل: 7,000,000 تومان",
+        "source_channel": "jadeh_app",
+        "source_channel_name": "اعلام بار سراسری جاده",
+        "distance_km": 212,
+        "rate_per_ton_km": null,
+        "rate_per_km": 33018.87
+      },
+      {
+        "origin": "کبودر آهنگ (همدان)",
+        "destination": "کبودر آهنگ (همدان)",
+        "cargo_type": "محموله فوق تیرچه",
+        "vehicle_type": "اتاق دار باری تک",
+        "tonnage": null,
+        "price_amount": 1700000,
+        "price_currency": "IRR",
+        "note": "صافی کل: 1,700,000 تومان",
+        "source_channel": "jadeh_app",
+        "source_channel_name": "اعلام بار سراسری جاده",
+        "distance_km": 0,
+        "rate_per_ton_km": null,
+        "rate_per_km": null
+      },
+      {
+        "origin": "فامنین (همدان)",
+        "destination": "هشترود (آذربایجان شرقی)",
+        "cargo_type": "درجا خالی",
+        "vehicle_type": "اتاق دار باری تک",
+        "tonnage": null,
+        "price_amount": 8000000,
+        "price_currency": "IRR",
+        "note": "صافی کل: 8,000,000 تومان",
+        "source_channel": "jadeh_app",
+        "source_channel_name": "اعلام بار سراسری جاده",
+        "distance_km": 326,
+        "rate_per_ton_km": null,
+        "rate_per_km": 24539.88
+      }
+    ]
   }
 ]
