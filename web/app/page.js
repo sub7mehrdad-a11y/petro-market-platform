@@ -1,13 +1,14 @@
 import Link from "next/link";
-import { getFlatPriceRecords, getNewsAnalysis } from "@/lib/data";
+import { getFlatPriceRecords, getNewsAnalysis, getTradeMapForCountry } from "@/lib/data";
 import PriceSection from "./components/PriceSection";
 import NewsCard from "./components/NewsCard";
+import KpiRow from "./components/KpiRow";
 
 const BASE_FOB_USD = 250;
-// رقبای تحت رصد — هرکدام ایجنت روزانه‌ی اختصاصی خودشان را دارند. روسیه به‌زودی
-// اضافه می‌شود و همین‌جا باید به فهرست بیاید.
-const MAIN_COMPETITORS = "ترکیه و چین";
 
+// ارقام لاتین سال را فارسی می‌کند؛ toLocaleString برای سال جداکننده‌ی
+// هزارگان می‌گذارد (۲٬۰۲۱) که برای سال غلط است.
+const faDigits = (n) => String(n).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
 const BICARBONATE_HIGHLIGHTS = [
   { country: "China", priceType: "FOB" },
   { country: "Turkey", priceType: "FOB" },
@@ -26,16 +27,61 @@ export default function DashboardPage() {
   const news = getNewsAnalysis();
   const latestNews = news.slice(0, 5);
 
+  // آمار کلیدی — همه از داده‌ی واقعی؛ اگر منبعی نبود، کارتش ساخته نمی‌شود.
+  const turkey = getTradeMapForCountry("ترکیه");
+  const china = getTradeMapForCountry("چین");
+  const iran = getTradeMapForCountry("ایران");
+
+  const kpiCards = [
+    {
+      label: "قیمت پایه‌ی مرجع FOB ما",
+      value: BASE_FOB_USD.toLocaleString("fa-IR"),
+      unit: "دلار/تن",
+      hint: "مبنای هزینه‌یابی صادراتی جوش شیرین پارس",
+      accent: true,
+    },
+    turkey?.export_trend?.cagr_pct != null && {
+      label: "رشد سالانه‌ی صادرات ترکیه",
+      value: `${turkey.export_trend.cagr_pct > 0 ? "+" : ""}${turkey.export_trend.cagr_pct.toLocaleString("fa-IR")}٪`,
+      hint: `${(turkey.exports_2025.value_usd_k / 1000).toLocaleString("fa-IR", {
+        maximumFractionDigits: 1,
+      })} میلیون دلار در ۲۰۲۵ · رقیب نزدیک لجستیکی`,
+      href: "/competitors/turkey",
+      tone: turkey.export_trend.cagr_pct >= 0 ? "up" : "down",
+    },
+    china?.export_trend?.cagr_pct != null && {
+      label: "رشد سالانه‌ی صادرات چین",
+      value: `${china.export_trend.cagr_pct > 0 ? "+" : ""}${china.export_trend.cagr_pct.toLocaleString("fa-IR")}٪`,
+      hint: `${(china.exports_2025.value_usd_k / 1000).toLocaleString("fa-IR", {
+        maximumFractionDigits: 1,
+      })} میلیون دلار در ۲۰۲۵ · بزرگ‌ترین تولیدکننده‌ی جهان`,
+      href: "/competitors/china",
+      tone: china.export_trend.cagr_pct >= 0 ? "up" : "down",
+    },
+    iran?.export_trend?.cagr_pct != null && {
+      label: "رشد سالانه‌ی صادرات ایران",
+      value: `${iran.export_trend.cagr_pct > 0 ? "+" : ""}${iran.export_trend.cagr_pct.toLocaleString("fa-IR")}٪`,
+      hint: `${(iran.exports_2025.value_usd_k / 1000).toLocaleString("fa-IR", {
+        maximumFractionDigits: 2,
+      })} میلیون دلار در ۲۰۲۵ · ${faDigits(iran.export_trend.first_year)}–${faDigits(iran.export_trend.last_year)}`,
+      href: "/countries/ایران",
+      tone: iran.export_trend.cagr_pct >= 0 ? "up" : "down",
+    },
+  ].filter(Boolean);
+
   return (
     <div className="space-y-8">
-      <div className="flex flex-wrap items-baseline justify-between gap-2">
-        <h1 className="text-xl font-bold">داشبورد قیمت جهانی</h1>
-        <p className="text-sm text-slate-500">
-          قیمت پایه‌ی مرجع FOB شرکت: <span className="font-semibold text-copper-700">{BASE_FOB_USD} دلار/تن</span> ·
-          رقبای تحت رصد: <span className="font-semibold">{MAIN_COMPETITORS}</span>
+      {/* سربرگ داشبورد */}
+      <div>
+        <h1 className="text-2xl font-black text-petrol-900">داشبورد بازار</h1>
+        <p className="text-sm text-slate-500 mt-1">
+          وضعیت قیمت جهانی، رقبا و روند بازار جوش شیرین — به‌روزرسانی خودکار روزانه
         </p>
       </div>
-      <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-md px-3 py-2 -mt-4 inline-block">
+
+      <KpiRow cards={kpiCards} />
+
+      <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-md px-3 py-2 inline-block">
         توجه: قیمت‌های «داخلی» (ارز محلی) و «CIF» با «FOB» دلاری قابل مقایسه‌ی مستقیم نیستن — نوع هر قیمت کنارش برچسب‌گذاری شده.
       </p>
 
