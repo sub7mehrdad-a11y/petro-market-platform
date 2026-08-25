@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { buildSearchIndex, searchIndex } from "@/lib/searchIndex";
 import { generateGroqContent, resolveGroqApiKey } from "@/lib/groqFetch";
+// موتور پشتیبان: اگر سهمیه‌ی روزانه‌ی Groq تمام شود، «پاسخ هوشمند» خاموش نمی‌شود.
+import { generateContent as generateGeminiContent, resolveApiKey as resolveGeminiApiKey } from "@/lib/geminiFetch";
 
 // «پاسخ هوشمند» عمداً از Groq استفاده می‌کنه، نه Gemini — چون Groq یک شرکت
 // کاملاً جداست و سهمیه‌ی مستقل داره؛ این‌طوری مصرف انسانی این بخش هیچ‌وقت
@@ -69,24 +71,66 @@ export async function POST(request) {
     });
   }
 
-  const context = hits
-    .map((h, i) => `### قطعه [${i + 1}] — ${h.typeLabel}: ${h.title}\n(${h.subtitle})\n${h.body.slice(0, 3500)}`)
-    .join("\n\n");
+  // بودجه‌بندی متن ارسالی به مدل.
+  //
+  // چرا لازم است: سرویس رایگان Groq سقف ۸۰۰۰ توکن در دقیقه دارد و «توکن پرامپت +
+  // max_tokens» را پیش از اجرا با همان سقف می‌سنجد. نسخه‌ی قبلی تا ۸ قطعه × ۳۵۰۰
+  // کاراکتر (~۲۸٬۰۰۰ کاراکتر ≈ بیش از ۱۱٬۰۰۰ توکن) می‌فرستاد، پس هر سؤالی که به
+  // متن گزارش‌های بلند می‌خورد با خطای ۴۱۳ شکست می‌خورد — فقط سؤال‌هایی جواب
+  // می‌گرفتند که قطعه‌های کوتاه (مثل یک شرکت) پیدا می‌کردند.
+  const CONTEXT_CHAR_BUDGET = 10000; // ≈ ۴۰۰۰ توکن فارسی
+  const PER_CHUNK_CHARS = 1600;
+
+  const picked = [];
+  let usedChars = 0;
+  for (const h of hits) {
+    const piece =
+      `### قطعه [${picked.length + 1}] — ${h.typeLabel}: ${h.title}\n` +
+      `(${h.subtitle})\n${(h.body || "").slice(0, PER_CHUNK_CHARS)}`;
+    if (usedChars + piece.length > CONTEXT_CHAR_BUDGET && picked.length > 0) break;
+    picked.push({ hit: h, piece });
+    usedChars += piece.length;
+  }
+
+  const context = picked.map((p) => p.piece).join("\n\n");
+
+  const userInput = `سؤال کاربر: ${question}\n\n---\n\n${context}`;
 
   try {
-    const answer = await generateGroqContent({
-      apiKey,
-      systemInstruction: SYSTEM_PROMPT,
-      input: `سؤال کاربر: ${question}\n\n---\n\n${context}`,
-    });
+    let answer;
+    try {
+      answer = await generateGroqContent({
+        apiKey,
+        systemInstruction: SYSTEM_PROMPT,
+        input: userInput,
+        maxTokens: 1500,
+      });
+    } catch (groqErr) {
+      // اگر سهمیه‌ی روزانه‌ی Groq تمام شده باشد، به‌جای پیام خطا با کلید جداگانه‌ی
+      // Gemini جواب می‌دهیم. این کلید مخصوص «پاسخ هوشمند» است و سهمیه‌اش از
+      // ایجنت‌های روزانه جداست (تصمیم ۲۰۲۶-۰۸-۲۱)، پس رصد روزانه را نمی‌خواباند.
+      const msg = String(groqErr?.message || groqErr);
+      const geminiKey = resolveGeminiApiKey();
+      if (!/429|rate.?limit|quota/i.test(msg) || !geminiKey) throw groqErr;
+
+      console.warn("[ask] سهمیه‌ی Groq تمام شد؛ پاسخ با Gemini داده می‌شود.");
+      answer = await generateGeminiContent({
+        apiKey: geminiKey,
+        model: "gemini-3.6-flash",
+        systemInstruction: SYSTEM_PROMPT,
+        input: userInput,
+      });
+    }
 
     return NextResponse.json({
       answer,
-      sources: hits.map((h, i) => ({
+      // فقط قطعه‌هایی که واقعاً به مدل داده شدند به‌عنوان منبع اعلام می‌شوند،
+      // وگرنه شماره‌ی ارجاع‌های داخل جواب با فهرست منابع نمی‌خواند.
+      sources: picked.map((p, i) => ({
         n: i + 1,
-        title: h.title,
-        typeLabel: h.typeLabel,
-        url: h.url,
+        title: p.hit.title,
+        typeLabel: p.hit.typeLabel,
+        url: p.hit.url,
       })),
     });
   } catch (err) {
@@ -103,6 +147,20 @@ export async function POST(request) {
             "— آن محدودیتی ندارد و کاملاً محلی کار می‌کند.",
         },
         { status: 429 }
+      );
+    }
+
+    // ۴۱۳ = حجم درخواست از سقف توکن‌در‌دقیقه‌ی Groq بیشتر بوده. با بودجه‌بندی متن
+    // بالا نباید رخ بدهد، ولی اگر سؤال خیلی طولانی باشد باز ممکن است.
+    if (msg.includes("413") || msg.includes("Request too large")) {
+      return NextResponse.json(
+        {
+          error:
+            "سؤال یا متن‌های مرتبط با آن، از سقف یک درخواست سرویس رایگان بزرگ‌تر شد. " +
+            "سؤال را کوتاه‌تر و مشخص‌تر بپرسید (مثلاً نام یک کشور یا یک شرکت). " +
+            "جست‌وجوی کلیدواژه‌ای پایین‌تر هم بدون هیچ محدودیتی کار می‌کند.",
+        },
+        { status: 413 }
       );
     }
 

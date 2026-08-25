@@ -1,5 +1,18 @@
 import Link from "next/link";
-import { getCompetitors } from "@/lib/data";
+import { getCompetitors, getTradeMapForCountry } from "@/lib/data";
+
+// کد دوحرفی کشور برای پرچم از همان جایی می‌آید که صفحه‌ی کشورها استفاده می‌کند
+// (data/trade_map_2025.json) — تا اگر روزی اصلاح شد، هر دو صفحه با هم درست بمانند.
+function flagStyle(countryName) {
+  const iso2 = getTradeMapForCountry(countryName)?.iso2;
+  return {
+    backgroundImage: iso2
+      ? `linear-gradient(to top, rgba(11,32,39,.92), rgba(11,32,39,.35)), url(https://flagcdn.com/w640/${iso2}.png)`
+      : "linear-gradient(135deg, #123742, #0B2027)",
+    backgroundSize: "cover",
+    backgroundPosition: "center",
+  };
+}
 
 export default function CompetitorsPage() {
   const competitors = Object.values(getCompetitors());
@@ -20,13 +33,19 @@ export default function CompetitorsPage() {
           <Link
             key={c.id}
             href={`/competitors/${c.id}`}
-            className="block bg-white border border-slate-200 rounded-xl shadow-sm p-5 hover:border-copper-500 hover:shadow-md transition-all"
+            className="group block bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:border-copper-500 hover:shadow-md transition-all"
           >
-            <div className="flex items-baseline justify-between gap-2 mb-1">
-              <h2 className="text-lg font-black text-petrol-900">{c.name}</h2>
-              <span className="text-xs text-slate-400">{c.name_en}</span>
+            <div className="relative h-28 flex items-end p-4" style={flagStyle(c.name)}>
+              <div className="relative z-10">
+                <div className="flex items-baseline gap-2 flex-wrap">
+                  <h2 className="text-lg font-black text-white drop-shadow">{c.name}</h2>
+                  <span className="text-xs text-petrol-200">{c.name_en}</span>
+                </div>
+                <p className="text-xs text-copper-300 font-medium mt-0.5">{c.rank_note}</p>
+              </div>
             </div>
-            <p className="text-xs text-copper-700 font-medium mb-3">{c.rank_note}</p>
+
+            <div className="p-5">
             <p className="text-sm text-slate-600 leading-7 line-clamp-3">{c.summary}</p>
 
             <div className="flex flex-wrap gap-2 mt-4">
@@ -42,6 +61,7 @@ export default function CompetitorsPage() {
             <span className="inline-block mt-4 text-sm text-copper-700 font-medium">
               مشاهده‌ی تحلیل کامل ←
             </span>
+            </div>
           </Link>
         ))}
       </div>

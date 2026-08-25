@@ -29,11 +29,32 @@ function getDispatcher() {
   return proxy ? new ProxyAgent(proxy) : undefined;
 }
 
+// سقف سرویس رایگان Groq: ۸۰۰۰ توکن در دقیقه. نکته‌ی حیاتی این است که Groq مجموع
+// «توکن پرامپت + max_tokens درخواستی» را *پیش از اجرا* با این سقف می‌سنجد، نه مصرف
+// واقعی را. پس اگر پرامپت بزرگ باشد یا max_tokens سخاوتمندانه، همیشه خطای ۴۱۳
+// می‌گیریم. همان درسی که در scripts/groq_utils.py گرفتیم، این‌جا هم لازم است.
+const TPM_LIMIT = 8000;
+const TPM_MARGIN = 500;
+
+/** تخمین محافظه‌کارانه‌ی توکن؛ فارسی حدود ۲.۵ کاراکتر به‌ازای هر توکن است. */
+function estimateTokens(text) {
+  return Math.ceil((text || "").length / 2.5) + 1;
+}
+
 export async function generateGroqContent({ apiKey, model = DEFAULT_MODEL, systemInstruction, input, maxTokens = 4000 }) {
   const dispatcher = getDispatcher();
   const messages = [];
   if (systemInstruction) messages.push({ role: "system", content: systemInstruction });
   messages.push({ role: "user", content: input });
+
+  const promptTokens = estimateTokens(systemInstruction) + estimateTokens(input);
+  const budget = TPM_LIMIT - TPM_MARGIN - promptTokens;
+  if (budget < 400) {
+    throw new Error(
+      `پرامپت بزرگ‌تر از سهمیه‌ی Groq است (تخمین ${promptTokens} توکن). متن ورودی باید کوتاه‌تر شود.`
+    );
+  }
+  if (maxTokens > budget) maxTokens = budget;
 
   const res = await undiciFetch(BASE, {
     method: "POST",

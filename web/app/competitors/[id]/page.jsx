@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   getCompetitors, getCompetitor, COMPETITOR_WATCH_LOG_GETTERS,
-  getExhibitions, getNewsAnalysis, getFlatPriceRecords,
+  getExhibitions, getNewsAnalysis, getFlatPriceRecords, getTradeMapForCountry,
 } from "@/lib/data";
 import TurkeyMap from "../../components/TurkeyMap";
 import CompetitorWatchFeed from "../../components/CompetitorWatchFeed";
@@ -49,6 +49,8 @@ export default async function CompetitorPage({ params }) {
   if (!c) notFound();
 
   const isTurkey = c.id === "turkey";
+  // کد پرچم از همان منبع صفحه‌ی کشورها (trade_map_2025.json)
+  const flagIso2 = getTradeMapForCountry(c.name)?.iso2;
   const watchLogGetter = COMPETITOR_WATCH_LOG_GETTERS[c.id];
   const hasWatch = !!watchLogGetter;
   const watchLog = hasWatch ? watchLogGetter() : [];
@@ -73,8 +75,19 @@ export default async function CompetitorPage({ params }) {
         </Link>
       </div>
 
-      {/* سربرگ */}
-      <section className="bg-petrol-gradient text-white rounded-xl overflow-hidden relative">
+      {/* سربرگ — پرچم کشور رقیب به‌عنوان پس‌زمینه، هم‌شکل با کارت‌های صفحه‌ی کشورها */}
+      <section
+        className="bg-petrol-gradient text-white rounded-xl overflow-hidden relative"
+        style={
+          flagIso2
+            ? {
+                backgroundImage: `linear-gradient(to top, rgba(11,32,39,.95), rgba(11,32,39,.78)), url(https://flagcdn.com/w1280/${flagIso2}.png)`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }
+            : undefined
+        }
+      >
         <div
           className="pointer-events-none absolute -top-20 -start-20 h-64 w-64 rounded-full opacity-50"
           style={{ background: "radial-gradient(circle, rgba(201,118,46,.4), transparent 70%)" }}
