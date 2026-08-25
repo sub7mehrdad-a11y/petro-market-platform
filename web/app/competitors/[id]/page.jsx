@@ -6,6 +6,7 @@ import {
 } from "@/lib/data";
 import TurkeyMap from "../../components/TurkeyMap";
 import CompetitorWatchFeed from "../../components/CompetitorWatchFeed";
+import ExportTrend from "../../components/ExportTrend";
 
 // مسیر اسکریپت رصد روزانه‌ی هر رقیب — برای پیام «هنوز اجرا نشده» و برای گیرنده‌ی لاگ.
 const WATCH_SCRIPT_PATHS = {
@@ -137,7 +138,7 @@ export default async function CompetitorPage({ params }) {
               خالی در گرید چهارستونی می‌ماند و کارت‌ها بی‌دلیل کج به نظر می‌رسند. */}
           <div
             className={`grid gap-3 sm:grid-cols-2 mt-5 ${
-              headlineStats.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-5"
+              headlineStats.length + 1 <= 4 ? "lg:grid-cols-4" : "lg:grid-cols-3"
             }`}
           >
             {headlineStats.map((s, i) => (
@@ -148,6 +149,8 @@ export default async function CompetitorPage({ params }) {
                 </div>
               </div>
             ))}
+            {/* روند چندساله — مهم‌تر از عدد یک سال: می‌گوید رقیب دارد بزرگ می‌شود یا کوچک */}
+            <ExportTrend trend={trade?.export_trend} variant="hero" />
           </div>
 
           {tradeStats.length > 0 && (

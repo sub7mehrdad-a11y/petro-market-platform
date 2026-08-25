@@ -22,6 +22,7 @@ null باشه (مثل "Other Asia, nes"، "Free Zones") یک کشور واقعی
 """
 
 import os
+import re
 import json
 
 from bs4 import BeautifulSoup
@@ -33,6 +34,11 @@ OUTPUT_FILE = os.path.join(BASE_DIR, "data", "trade_map_2025.json")
 
 EXPORTERS_FILE = "Trade_Map_-_List_of_exporters_for_the_selected_product_in_2025_(Sodium_hydrogencarbonate__sodium_bicarbonate_).xls"
 IMPORTERS_FILE = "Trade_Map_-_List_of_importers_for_the_selected_product_in_2025_(Sodium_hydrogencarbonate__sodium_bicarbonate_).xls"
+
+# فایل سری زمانی: ارزش صادرات هر کشور در ۲۰۲۱ تا ۲۰۲۵ (هزار دلار). برخلاف دو فایل
+# بالا که یک عکس لحظه‌ای از ۲۰۲۵ هستند، این یکی روند چندساله می‌دهد — مبنای محاسبه‌ی
+# «رشد سالانه‌ی مرکب» که در صفحه‌ی کشورها و رقبا نشان داده می‌شود.
+TREND_FILE = "Trade_Map_-_List_of_exporters_for_the_selected_product_(Sodium_hydrogencarbonate__sodium_bicarbonate_).xls"
 
 # ردیف‌هایی که واقعاً یک کشور نیستن (سرجمع جهانی، یا خط خراب/هدر که موقع
 # پارس قبلی به‌اشتباه توی لیست کشورها افتاده بود).
@@ -54,6 +60,82 @@ def parse_trade_table(path):
     return data
 
 
+def parse_trend_table(path):
+    """
+    فایل سری زمانی را می‌خواند و برای هر کشور {سال: ارزش} برمی‌گرداند.
+
+    ساختارش با دو فایل دیگر فرق دارد (جدول ششم، و سرستون‌هایش «Exported value in
+    YYYY» است)، پس پارسر جدا دارد. سال‌ها از خود سرستون خوانده می‌شوند تا اگر
+    سال بعد یک ستون اضافه شد، اسکریپت بدون تغییر کار کند.
+    """
+    with open(path, "r", encoding="utf-8", errors="replace") as f:
+        soup = BeautifulSoup(f.read(), "html.parser")
+
+    table = soup.find_all("table")[6]
+    rows = table.find_all("tr")
+    header = [c.get_text(strip=True) for c in rows[0].find_all(["td", "th"])]
+
+    years = []
+    for cell in header[1:]:
+        match = re.search(r"(\d{4})", cell)
+        years.append(int(match.group(1)) if match else None)
+
+    data = {}
+    for row in rows[1:]:
+        cells = [c.get_text(strip=True) for c in row.find_all(["td", "th"])]
+        if not cells or not cells[0]:
+            continue
+        series = {}
+        for year, raw in zip(years, cells[1:]):
+            if year is None:
+                continue
+            value = to_number(raw)
+            if value is not None:
+                series[year] = value
+        if series:
+            data[cells[0]] = series
+    return data
+
+
+def build_trend(series):
+    """
+    از سری {سال: ارزش} یک خلاصه‌ی قابل‌نمایش می‌سازد: سال‌ها، مقادیر، و نرخ رشد
+    سالانه‌ی مرکب (CAGR) بین اولین و آخرین سال.
+
+    چرا CAGR و نه «درصد تغییر کل»: بازار این محصول نوسانی است و مقایسه‌ی صرفِ
+    اولین و آخرین سال، جهش‌های میانی را پنهان می‌کند. نرخ سالانه‌ی مرکب، رشد را
+    به زبان «سالی چند درصد» می‌گوید که برای مقایسه‌ی کشورها با هم معنادار است.
+
+    اگر سال پایه صفر یا منفی باشد CAGR بی‌معنی می‌شود؛ در آن حالت null می‌دهیم
+    و چیزی از خودمان نمی‌سازیم.
+    """
+    if not series or len(series) < 2:
+        return None
+
+    years = sorted(series)
+    first_year, last_year = years[0], years[-1]
+    first_value, last_value = series[first_year], series[last_year]
+
+    cagr = None
+    if first_value and first_value > 0 and last_value > 0:
+        span = last_year - first_year
+        if span > 0:
+            cagr = round(((last_value / first_value) ** (1 / span) - 1) * 100, 1)
+
+    total_change = None
+    if first_value and first_value > 0:
+        total_change = round((last_value / first_value - 1) * 100, 1)
+
+    return {
+        "years": years,
+        "values_usd_k": [series[y] for y in years],
+        "first_year": first_year,
+        "last_year": last_year,
+        "cagr_pct": cagr,
+        "total_change_pct": total_change,
+    }
+
+
 def to_number(s):
     s = (s or "").strip()
     if not s or s.lower() in ("no quantity", "n/a", "-"):
@@ -70,8 +152,9 @@ def main():
 
     exp_rows = parse_trade_table(os.path.join(SRC_DIR, EXPORTERS_FILE))
     imp_rows = parse_trade_table(os.path.join(SRC_DIR, IMPORTERS_FILE))
+    trend_rows = parse_trend_table(os.path.join(SRC_DIR, TREND_FILE))
 
-    print(f"[OK] {len(exp_rows)} صادرکننده، {len(imp_rows)} واردکننده از فایل‌ها خونده شد")
+    print(f"[OK] {len(exp_rows)} صادرکننده، {len(imp_rows)} واردکننده، {len(trend_rows)} سری زمانی از فایل‌ها خونده شد")
 
     profiles = {}
     skipped_no_map = []
@@ -92,6 +175,7 @@ def main():
             "iso2": mapping["iso2"],
             "exports_2025": None,
             "imports_2025": None,
+            "export_trend": build_trend(trend_rows.get(eng_name)),
         }
 
         er = exp_rows.get(eng_name)

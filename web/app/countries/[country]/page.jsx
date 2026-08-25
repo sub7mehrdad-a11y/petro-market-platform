@@ -4,6 +4,7 @@ import { getCountries, getCountrySummary, getCountryProfile, getTradeMapForCount
 import CompanyTable from "../../components/CompanyTable";
 import ExhibitionTable from "../../components/ExhibitionTable";
 import WorldRouteMap from "../../components/WorldRouteMap";
+import ExportTrend from "../../components/ExportTrend";
 
 const REPORT_TYPE_FA = { detailed: "گزارش مفصل", summary: "گزارش مدیریتی (خلاصه)" };
 
@@ -169,6 +170,18 @@ export default async function CountryPage({ params }) {
               </div>
             )}
           </div>
+
+          {/* روند چندساله‌ی صادرات — یک عدد سالانه مهم‌تر از عدد یک سال است:
+              نشان می‌دهد این مبدأ دارد سهم می‌گیرد یا از دست می‌دهد. */}
+          {trade.export_trend?.cagr_pct != null && (
+            <div className="mt-4 pt-4 border-t border-slate-100">
+              <ExportTrend trend={trade.export_trend} />
+              <p className="text-[11px] text-slate-400 mt-2">
+                میانگین رشد سالانه‌ی مرکب ارزش صادرات بین {String(trade.export_trend.first_year).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d])} و{" "}
+                {String(trade.export_trend.last_year).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d])} (ارقام هزار دلار، منبع ITC).
+              </p>
+            </div>
+          )}
         </section>
       )}
 

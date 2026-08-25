@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import ExportTrend from "../components/ExportTrend";
 import { useMemo, useState } from "react";
 
 function formatUsdK(valueK) {
@@ -45,6 +46,11 @@ function TradeBox({ trade }) {
         </div>
       )}
       {!exp && !imp && <p className="text-xs text-slate-400">داده‌ی تجاری ثبت‌نشده</p>}
+      {trade.export_trend && (
+        <div className="pt-1.5 border-t border-slate-100">
+          <ExportTrend trend={trade.export_trend} />
+        </div>
+      )}
     </div>
   );
 }
