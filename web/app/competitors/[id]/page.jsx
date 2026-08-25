@@ -100,7 +100,13 @@ export default async function CompetitorPage({ params }) {
           <p className="text-copper-300 text-sm font-medium mb-4">{c.rank_note}</p>
           <p className="text-sm leading-7 text-petrol-50 max-w-3xl">{c.summary}</p>
 
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 mt-5">
+          {/* تعداد ستون‌ها با تعداد آمار هماهنگ می‌شود؛ وگرنه با ۳ آمار، یک خانه‌ی
+              خالی در گرید چهارستونی می‌ماند و کارت‌ها بی‌دلیل کج به نظر می‌رسند. */}
+          <div
+            className={`grid gap-3 sm:grid-cols-2 mt-5 ${
+              (c.headline_stats || []).length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"
+            }`}
+          >
             {(c.headline_stats || []).map((s, i) => (
               <div key={i} className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
                 <div className="text-[11px] text-petrol-200 mb-1">{s.label}</div>
