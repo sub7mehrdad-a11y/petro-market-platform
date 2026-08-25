@@ -53,7 +53,7 @@ export default function TransitPage() {
 
       <TransitEstimator places={places} rates={rates} />
 
-      <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+      <section className="card p-5">
         <div className="flex items-baseline justify-between gap-2 mb-2">
           <h2 className="text-lg font-bold">آخرین اخبار و تحلیل‌های ترانزیت</h2>
           <span className="text-xs text-slate-400">ایران و بازارهای جهانی · با ذکر منبع</span>

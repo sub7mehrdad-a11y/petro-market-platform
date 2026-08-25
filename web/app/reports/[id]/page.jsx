@@ -35,7 +35,7 @@ export default async function ReportDetailPage({ params }) {
         </Link>
       </div>
 
-      <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+      <section className="card p-5">
         <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
           <div>
             <h1 className="text-xl font-bold">{entry.title}</h1>

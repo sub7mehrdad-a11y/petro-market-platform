@@ -41,33 +41,27 @@ export default function DashboardPage() {
       hint: "مبنای هزینه‌یابی صادراتی جوش شیرین پارس",
       accent: true,
     },
-    turkey?.export_trend?.cagr_pct != null && {
-      label: "رشد سالانه‌ی صادرات ترکیه",
-      value: `${turkey.export_trend.cagr_pct > 0 ? "+" : ""}${turkey.export_trend.cagr_pct.toLocaleString("fa-IR")}٪`,
-      hint: `${(turkey.exports_2025.value_usd_k / 1000).toLocaleString("fa-IR", {
-        maximumFractionDigits: 1,
-      })} میلیون دلار در ۲۰۲۵ · رقیب نزدیک لجستیکی`,
-      href: "/competitors/turkey",
-      tone: turkey.export_trend.cagr_pct >= 0 ? "up" : "down",
-    },
-    china?.export_trend?.cagr_pct != null && {
-      label: "رشد سالانه‌ی صادرات چین",
-      value: `${china.export_trend.cagr_pct > 0 ? "+" : ""}${china.export_trend.cagr_pct.toLocaleString("fa-IR")}٪`,
-      hint: `${(china.exports_2025.value_usd_k / 1000).toLocaleString("fa-IR", {
-        maximumFractionDigits: 1,
-      })} میلیون دلار در ۲۰۲۵ · بزرگ‌ترین تولیدکننده‌ی جهان`,
-      href: "/competitors/china",
-      tone: china.export_trend.cagr_pct >= 0 ? "up" : "down",
-    },
-    iran?.export_trend?.cagr_pct != null && {
-      label: "رشد سالانه‌ی صادرات ایران",
-      value: `${iran.export_trend.cagr_pct > 0 ? "+" : ""}${iran.export_trend.cagr_pct.toLocaleString("fa-IR")}٪`,
-      hint: `${(iran.exports_2025.value_usd_k / 1000).toLocaleString("fa-IR", {
-        maximumFractionDigits: 2,
-      })} میلیون دلار در ۲۰۲۵ · ${faDigits(iran.export_trend.first_year)}–${faDigits(iran.export_trend.last_year)}`,
-      href: "/countries/ایران",
-      tone: iran.export_trend.cagr_pct >= 0 ? "up" : "down",
-    },
+    ...[
+      { c: turkey, name: "ترکیه", href: "/competitors/turkey", note: "رقیب نزدیک لجستیکی" },
+      { c: china, name: "چین", href: "/competitors/china", note: "بزرگ‌ترین تولیدکننده‌ی جهان" },
+      { c: iran, name: "ایران", href: "/countries/ایران", note: "جایگاه ما در بازار جهانی" },
+    ]
+      .filter(({ c }) => c?.export_trend?.cagr_pct != null && c?.exports_2025?.value_usd_k != null)
+      .map(({ c, name, href, note }) => ({
+        label: `صادرات ${name} (۲۰۲۵)`,
+        // عدد اصلی: ارزش صادرات. درصد رشد به نشان بالای کارت می‌رود تا عدد
+        // دوبار تکرار نشود (ایراد پاس قبلی).
+        value: (c.exports_2025.value_usd_k / 1000).toLocaleString("fa-IR", {
+          maximumFractionDigits: c.exports_2025.value_usd_k < 10000 ? 2 : 1,
+        }),
+        unit: "میلیون دلار",
+        deltaPct: c.export_trend.cagr_pct,
+        spark: c.export_trend.values_usd_k,
+        hint: `${note} · رشد سالانه‌ی ${faDigits(c.export_trend.first_year)}–${faDigits(
+          c.export_trend.last_year
+        )}`,
+        href,
+      })),
   ].filter(Boolean);
 
   return (
@@ -98,7 +92,7 @@ export default function DashboardPage() {
         allRows={rows}
       />
 
-      <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+      <section className="card p-5">
         <h2 className="text-lg font-bold mb-3">مهم‌ترین تحلیل‌های خبری</h2>
         {latestNews.length === 0 ? (
           <p className="text-sm text-slate-500">هنوز تحلیلی ثبت نشده.</p>

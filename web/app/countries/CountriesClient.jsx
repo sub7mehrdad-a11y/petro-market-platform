@@ -87,7 +87,7 @@ export default function CountriesClient({ countries }) {
   }, [countries, query, sort]);
 
   return (
-    <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+    <section className="card p-5">
       <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
         <h1 className="text-xl font-bold">کشورها ({filtered.length})</h1>
         <div className="flex flex-wrap gap-2">

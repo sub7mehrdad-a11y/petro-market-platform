@@ -84,7 +84,7 @@ export default function ArchivePage() {
 
   return (
     <div className="space-y-8">
-      <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+      <section className="card p-5">
         <h1 className="text-xl font-bold mb-4">آپلود گزارش بازار</h1>
         <form onSubmit={handleUpload} className="grid gap-3 sm:grid-cols-2">
           <div>
@@ -143,7 +143,7 @@ export default function ArchivePage() {
         </form>
       </section>
 
-      <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+      <section className="card p-5">
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <div>
             <h2 className="text-lg font-bold">آرشیو گزارش‌ها</h2>

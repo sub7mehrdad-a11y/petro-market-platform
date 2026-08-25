@@ -32,7 +32,7 @@ export function generateStaticParams() {
 
 function Section({ title, subtitle, children }) {
   return (
-    <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+    <section className="card p-5">
       <div className="mb-4">
         <h2 className="text-lg font-bold text-petrol-900">{title}</h2>
         {subtitle && <p className="text-xs text-slate-500 mt-0.5">{subtitle}</p>}
@@ -188,7 +188,7 @@ export default async function CompetitorPage({ params }) {
           {c.producers.map((p, i) => (
             <div
               key={i}
-              className={`rounded-xl border border-slate-200 bg-white shadow-sm p-4 border-s-4 ${
+              className={`card p-4 border-s-4 ${
                 p.tech_type === "solution" ? "border-s-copper-500" : "border-s-petrol-400"
               }`}
             >

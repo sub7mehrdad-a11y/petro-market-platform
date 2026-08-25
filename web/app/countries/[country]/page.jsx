@@ -75,7 +75,7 @@ export default async function CountryPage({ params }) {
       />
 
       {trade && (trade.exports_2025 || trade.imports_2025) && (
-        <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+        <section className="card p-5">
           <h2 className="text-lg font-bold mb-1">آمار تجارت جهانی محصول (۲۰۲۵)</h2>
           <p className="text-xs text-slate-500 mb-4">
             منبع: ITC Trade Map — رتبه‌بندی کلی جهانی این کشور، نه لزوماً رابطه‌ی تجاری با ایران.
@@ -190,7 +190,7 @@ export default async function CountryPage({ params }) {
       )}
 
       {profile?.port && (
-        <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+        <section className="card p-5">
           <h2 className="text-lg font-bold mb-3">نقشه‌ی مسیر و اطلاعات بازار</h2>
           <WorldRouteMap destPort={profile.port} destCountry={profile.country} distances={profile.distances_km || {}} />
 
@@ -226,7 +226,7 @@ export default async function CountryPage({ params }) {
       )}
 
       {reports.length > 0 && (
-        <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+        <section className="card p-5">
           <h2 className="text-lg font-bold mb-3">گزارش‌ها</h2>
           <ul className="grid gap-2 sm:grid-cols-2">
             {reports.map((r) => (
@@ -247,7 +247,7 @@ export default async function CountryPage({ params }) {
       )}
 
       {prices.length > 0 && (
-        <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+        <section className="card p-5">
           <h2 className="text-lg font-bold mb-3">قیمت‌ها</h2>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
@@ -284,12 +284,12 @@ export default async function CountryPage({ params }) {
         </section>
       )}
 
-      <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+      <section className="card p-5">
         <h2 className="text-lg font-bold mb-3">شرکت‌ها ({companies.length})</h2>
         <CompanyTable companies={companies} />
       </section>
 
-      <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+      <section className="card p-5">
         <h2 className="text-lg font-bold mb-3">نمایشگاه‌ها ({sortedExhibitions.length}) — به ترتیب نزدیک‌ترین تاریخ</h2>
         <ExhibitionTable exhibitions={sortedExhibitions} />
       </section>

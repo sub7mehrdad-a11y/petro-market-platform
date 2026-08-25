@@ -48,7 +48,7 @@ export default function PriceSection({ title, note, product, highlightSpecs, all
   );
 
   return (
-    <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+    <section className="card p-5">
       <div className="flex flex-wrap items-baseline justify-between gap-2 mb-3">
         <h2 className="text-lg font-bold">{title}</h2>
         {note && <p className="text-xs text-slate-500">{note}</p>}

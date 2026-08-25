@@ -50,7 +50,7 @@ export default function CompetitorsPage() {
           <Link
             key={c.id}
             href={`/competitors/${c.id}`}
-            className="group block bg-white border border-slate-200 rounded-xl overflow-hidden shadow-sm hover:border-copper-500 hover:shadow-md transition-all"
+            className="group block card overflow-hidden hover:border-copper-500 hover:shadow-md transition-all"
           >
             <div className="relative h-28 flex items-end p-4" style={flagStyle(c.name)}>
               <div className="relative z-10">

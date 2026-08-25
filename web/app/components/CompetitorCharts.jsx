@@ -29,7 +29,7 @@ const axisProps = { fontSize: 12, tick: { fill: "#5B7B82" } };
 
 function ChartFrame({ title, note, children, height = 300 }) {
   return (
-    <div className="rounded-xl border border-slate-200 bg-white shadow-sm p-4">
+    <div className="card p-4">
       <h4 className="text-sm font-bold text-petrol-900 mb-1">{title}</h4>
       {note && <p className="text-xs text-slate-500 mb-3">{note}</p>}
       <ResponsiveContainer width="100%" height={height}>

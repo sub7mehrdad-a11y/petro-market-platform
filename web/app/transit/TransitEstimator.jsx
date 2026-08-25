@@ -63,7 +63,7 @@ export default function TransitEstimator({ places, rates }) {
   }, [origin, destination, places, perKm, perTonKm]);
 
   return (
-    <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+    <section className="card p-5">
       <h2 className="text-lg font-bold mb-1">جست‌وجوی هوشمند کرایه</h2>
       <p className="text-sm text-slate-500 mb-4">
         مبدأ و مقصد را انتخاب کنید یا تایپ کنید — سیستم بر اساس نرخ‌های واقعی مشاهده‌شده، هزینه‌ی

@@ -14,7 +14,7 @@ export function generateStaticParams() {
 
 function Section({ title, subtitle, children }) {
   return (
-    <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+    <section className="card p-5">
       <div className="mb-4">
         <h2 className="text-lg font-bold text-petrol-900">{title}</h2>
         {subtitle && <p className="text-xs text-slate-500 mt-0.5">{subtitle}</p>}

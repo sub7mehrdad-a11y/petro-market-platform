@@ -118,7 +118,7 @@ export default function AskClient({ index }) {
         subtitle="همه‌ی محتوای سایت (گزارش‌ها، شرکت‌ها، نمایشگاه‌ها، اخبار تحلیلی، تحلیل رقبا و قیمت‌ها) یکجا جست‌وجو می‌شود. نتایج فوری بدون نیاز به اینترنت کار می‌کنند؛ برای «پاسخ هوشمند» سؤالتان به هوش مصنوعی داده می‌شود که فقط از همین محتوا جواب بسازد."
       />
 
-      <form onSubmit={handleAsk} className="bg-white border border-slate-200 rounded-xl shadow-sm p-4">
+      <form onSubmit={handleAsk} className="card p-4">
         <div className="flex flex-col sm:flex-row gap-2">
           <input
             type="text"
@@ -159,7 +159,7 @@ export default function AskClient({ index }) {
       )}
 
       {answer && (
-        <section className="bg-white border border-copper-200 rounded-xl shadow-sm p-5">
+        <section className="card border-copper-200 p-5">
           <div className="flex items-center gap-2 mb-3">
             <span className="inline-block w-2 h-2 rounded-full bg-copper-500" />
             <h2 className="text-sm font-bold text-petrol-900">پاسخ هوشمند</h2>
@@ -183,7 +183,7 @@ export default function AskClient({ index }) {
         </section>
       )}
 
-      <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+      <section className="card p-5">
         <h2 className="text-sm font-bold text-petrol-900 mb-3">
           {query ? `نتایج جست‌وجو (${results.length})` : "برای شروع، چیزی بنویسید"}
         </h2>

@@ -23,7 +23,7 @@ export default function SmartReportsPage() {
       />
 
       {smartReports.length === 0 ? (
-        <div className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">
+        <div className="card p-5">
           <p className="text-sm text-slate-500">هنوز گزارش هوشمندی ثبت نشده.</p>
         </div>
       ) : (
@@ -35,7 +35,7 @@ export default function SmartReportsPage() {
               <Link
                 key={r.id}
                 href={`/reports/${r.id}`}
-                className="block bg-white border border-slate-200 rounded-xl shadow-sm p-5 hover:border-copper-600 hover:shadow-sm transition"
+                className="block card p-5 hover:border-copper-600 hover:shadow-sm transition"
               >
                 <div className="text-xs text-slate-500 mb-1">{r.country} · {r.product}</div>
                 <h2 className="font-bold mb-3 leading-6">{r.title}</h2>
