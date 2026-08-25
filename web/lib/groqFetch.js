@@ -6,16 +6,26 @@ const BASE = "https://api.groq.com/openai/v1/chat/completions";
 const DEFAULT_MODEL = "openai/gpt-oss-120b";
 
 /**
- * موتور پشتیبان Gemini — یک شرکت کاملاً جدا (Groq)، سهمیه‌ی کاملاً مستقل.
- * برای وقتی هر دو توکن Gemini (اصلی + /ask) به سهمیه‌ی روزانه خوردن.
+ * کلید Groq برای «پاسخ هوشمند» سایت.
+ *
+ * ترتیب: اول GROQ_API_KEY_ASK، بعد GROQ_API_KEY (سازگاری با قبل).
+ *
+ * چرا کلید جدا (همان منطق GEMINI_API_KEY_ASK): کلید مشترک بین ربات ترانزیت
+ * (scripts/transit_watch_bot.py که هر روز ده‌ها پست را پردازش می‌کند) و سؤال‌های
+ * کاربران تقسیم می‌شد؛ چند سؤال پشت‌سرهم می‌توانست سهمیه‌ی همان روزِ رصد ترانزیت
+ * را تمام کند. با کلید جدا، این دو کاملاً از هم مستقل‌اند.
+ *
+ * اگر کلید دوم تعریف نشده باشد، همان کلید قبلی استفاده می‌شود و چیزی خراب نمی‌شود.
  */
 export function resolveGroqApiKey() {
-  const fromEnv = process.env.GROQ_API_KEY;
+  const fromEnv = process.env.GROQ_API_KEY_ASK || process.env.GROQ_API_KEY;
   if (fromEnv) return fromEnv;
 
   try {
     const raw = fs.readFileSync(path.join(process.cwd(), "..", ".env"), "utf-8");
-    const match = raw.match(/^\s*GROQ_API_KEY\s*=\s*(.+?)\s*$/m);
+    const match =
+      raw.match(/^\s*GROQ_API_KEY_ASK\s*=\s*(.+?)\s*$/m) ||
+      raw.match(/^\s*GROQ_API_KEY\s*=\s*(.+?)\s*$/m);
     return match ? match[1].replace(/^["']|["']$/g, "") : null;
   } catch {
     return null;
