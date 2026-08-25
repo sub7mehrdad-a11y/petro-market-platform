@@ -9,7 +9,21 @@ const COPPER = "#C9762E";
 const COPPER_LIGHT = "#EAA659";
 const PETROL = "#123742";
 const PETROL_LIGHT = "#4C7B83";
-const DANGER = "#9C2B2B";
+
+/**
+ * رنگ روش تولید — در همه‌ی نمودارهای این صفحه یکسان است.
+ *
+ * چرا این ثابت وجود دارد: قبلاً نمودار ظرفیت، «استخراج محلول» را مسی نشان می‌داد
+ * ولی نمودار هزینه همان روش را قرمز می‌کشید. نتیجه دو ایراد بود:
+ *   ۱. یک دسته‌ی واحد، در دو نمودار کنار هم، دو رنگ متفاوت داشت.
+ *   ۲. قرمز در عرف نمودار یعنی «خطر/بد»، در حالی که استخراج محلول ارزان‌ترین
+ *      روش و نقطه‌ی قوت رقیب است — یعنی رنگ، پیام را وارونه می‌رساند.
+ * حالا رنگ فقط «روش تولید» را کد می‌کند و قضاوت در متن زیر نمودار می‌آید.
+ */
+const METHOD_COLOR = {
+  solution: COPPER, // استخراج محلول ترونای طبیعی — اتی سودا و کازان سودا
+  synthetic: PETROL_LIGHT, // فرآیند سنتتیک سُلوِه — سودا سانایی (شیشه‌جام)
+};
 
 const axisProps = { fontSize: 12, tick: { fill: "#5B7B82" } };
 
@@ -76,28 +90,37 @@ export function FobTrendChart({ trend }) {
 
 /** مقایسه‌ی هزینه‌ی تولید: استخراج محلول در برابر سنتتیک */
 export function CostComparisonChart() {
+  // ستونی (نه نواری افقی): در چیدمان راست‌به‌چپ، برچسب‌های بلندِ محور عمودی روی
+  // خود میله‌ها می‌افتادند و بریده می‌شدند. ستونی، هم‌شکل نمودار ظرفیت کناری است.
   const data = [
-    { label: "استخراج محلول ترونا (اتی/کازان)", cost: 83.2, kind: "solution" },
-    { label: "سنتتیک سُلوِه — کف برآورد", cost: 150, kind: "synthetic" },
-    { label: "سنتتیک سُلوِه — سقف برآورد", cost: 190, kind: "synthetic" },
+    { label: "استخراج محلول ترونا", sub: "اتی سودا + کازان سودا", cost: 83.2, kind: "solution" },
+    { label: "سنتتیک سُلوِه — کف", sub: "سودا سانایی (شیشه‌جام)", cost: 150, kind: "synthetic" },
+    { label: "سنتتیک سُلوِه — سقف", sub: "سودا سانایی (شیشه‌جام)", cost: 190, kind: "synthetic" },
   ];
 
   return (
     <ChartFrame
       title="شکاف ساختاری هزینه‌ی تولید در ترکیه"
-      note="دلار بر تن — عدد ۸۳.۲ از گزارش مالی رسمی WE Soda (۲۰۲۴)؛ ارقام سنتتیک برآورد صنعتی غیررسمی است"
+      note="دلار بر تن — استخراج محلول (اتی سودا و کازان سودا) حدود نصف تا کمتر از نصفِ روش سنتتیک سُلوِه (شیشه‌جام) تمام می‌شود. عدد ۸۳.۲ از گزارش مالی رسمی WE Soda (۲۰۲۴)؛ ارقام سنتتیک برآورد صنعتی غیررسمی است."
       height={260}
     >
-      <BarChart data={data} layout="vertical" margin={{ top: 8, right: 40, left: 8, bottom: 8 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" horizontal={false} />
-        <XAxis type="number" {...axisProps} domain={[0, 220]} />
-        <YAxis type="category" dataKey="label" {...axisProps} width={190} />
-        <Tooltip formatter={(v) => [`${v} دلار/تن`, "هزینه"]} contentStyle={{ fontSize: 12, direction: "rtl" }} />
-        <Bar dataKey="cost" radius={[0, 4, 4, 0]}>
+      <BarChart data={data} margin={{ top: 16, right: 16, left: 8, bottom: 8 }}>
+        <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" vertical={false} />
+        <XAxis dataKey="label" {...axisProps} interval={0} height={46} />
+        <YAxis {...axisProps} domain={[0, 220]} />
+        <Tooltip
+          formatter={(v) => [`${v} دلار/تن`, "هزینه‌ی تولید"]}
+          labelFormatter={(l) => {
+            const row = data.find((d) => d.label === l);
+            return row ? `${l} — ${row.sub}` : l;
+          }}
+          contentStyle={{ fontSize: 12, direction: "rtl" }}
+        />
+        <Bar dataKey="cost" radius={[4, 4, 0, 0]}>
           {data.map((d, i) => (
-            <Cell key={i} fill={d.kind === "solution" ? DANGER : PETROL_LIGHT} />
+            <Cell key={i} fill={METHOD_COLOR[d.kind]} />
           ))}
-          <LabelList dataKey="cost" position="right" style={{ fontSize: 11, fill: "#334155" }} />
+          <LabelList dataKey="cost" position="top" style={{ fontSize: 11, fill: "#334155" }} />
         </Bar>
       </BarChart>
     </ChartFrame>
@@ -117,7 +140,7 @@ export function CapacityChart({ producers }) {
   return (
     <ChartFrame
       title="ظرفیت تولید جوش شیرین به تفکیک تولیدکننده"
-      note="تن در سال — رنگ مسی: استخراج محلول (کم‌هزینه) · رنگ نفتی: سنتتیک سُلوِه"
+      note="تن در سال — رنگ مسی: استخراج محلول ترونای طبیعی (اتی سودا و کازان سودا؛ روش کم‌هزینه‌تر) · رنگ نفتی: فرآیند سنتتیک سُلوِه (سودا سانایی/شیشه‌جام؛ پرهزینه‌تر)"
       height={250}
     >
       <BarChart data={data} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
@@ -127,7 +150,7 @@ export function CapacityChart({ producers }) {
         <Tooltip formatter={(v) => [`${v.toLocaleString("fa-IR")} تن/سال`, "ظرفیت"]} contentStyle={{ fontSize: 12, direction: "rtl" }} />
         <Bar dataKey="capacity" radius={[4, 4, 0, 0]}>
           {data.map((d, i) => (
-            <Cell key={i} fill={d.kind === "solution" ? COPPER : PETROL_LIGHT} />
+            <Cell key={i} fill={METHOD_COLOR[d.kind] || PETROL_LIGHT} />
           ))}
         </Bar>
       </BarChart>
