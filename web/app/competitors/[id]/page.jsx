@@ -49,8 +49,41 @@ export default async function CompetitorPage({ params }) {
   if (!c) notFound();
 
   const isTurkey = c.id === "turkey";
+  const trade = getTradeMapForCountry(c.name);
   // کد پرچم از همان منبع صفحه‌ی کشورها (trade_map_2025.json)
-  const flagIso2 = getTradeMapForCountry(c.name)?.iso2;
+  const flagIso2 = trade?.iso2;
+
+  // آمار تجاری سربرگ از داده‌ی ITC ساخته می‌شود، نه از متن دستی competitors.json.
+  // دلیل: ارقام دستی روی سال ۲۰۲۴ منجمد مانده بودند و با هر سال جدید باید دستی
+  // عوض می‌شدند. حالا با هر بار اجرای ingest_trade_map.py خودکار به‌روز می‌شوند.
+  // فقط آمارهایی که در ITC نیستند (هزینه‌ی تولید، زمان حمل) در JSON می‌مانند.
+  const ex = trade?.exports_2025;
+  const tradeStats = ex
+    ? [
+        ex.quantity != null && {
+          label: "حجم صادرات (۲۰۲۵)",
+          value: ex.quantity.toLocaleString("fa-IR"),
+          unit: "تن",
+        },
+        ex.value_usd_k != null && {
+          label: "ارزش صادرات (۲۰۲۵)",
+          value: (ex.value_usd_k / 1000).toLocaleString("fa-IR", { maximumFractionDigits: 1 }),
+          unit: "میلیون دلار",
+        },
+        ex.share_world_pct != null && {
+          label: "سهم بازار جهانی (۲۰۲۵)",
+          value: ex.share_world_pct.toLocaleString("fa-IR"),
+          unit: "درصد",
+        },
+        ex.unit_value_usd != null && {
+          label: "قیمت متوسط صادراتی (۲۰۲۵)",
+          value: ex.unit_value_usd.toLocaleString("fa-IR"),
+          unit: "دلار/تن",
+        },
+      ].filter(Boolean)
+    : [];
+
+  const headlineStats = [...tradeStats, ...(c.headline_stats || [])];
   const watchLogGetter = COMPETITOR_WATCH_LOG_GETTERS[c.id];
   const hasWatch = !!watchLogGetter;
   const watchLog = hasWatch ? watchLogGetter() : [];
@@ -104,10 +137,10 @@ export default async function CompetitorPage({ params }) {
               خالی در گرید چهارستونی می‌ماند و کارت‌ها بی‌دلیل کج به نظر می‌رسند. */}
           <div
             className={`grid gap-3 sm:grid-cols-2 mt-5 ${
-              (c.headline_stats || []).length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4"
+              headlineStats.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-5"
             }`}
           >
-            {(c.headline_stats || []).map((s, i) => (
+            {headlineStats.map((s, i) => (
               <div key={i} className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
                 <div className="text-[11px] text-petrol-200 mb-1">{s.label}</div>
                 <div className="font-black font-tabular text-lg">
@@ -116,6 +149,13 @@ export default async function CompetitorPage({ params }) {
               </div>
             ))}
           </div>
+
+          {tradeStats.length > 0 && (
+            <p className="text-[11px] text-petrol-300 mt-3">
+              ارقام تجاری از ITC Trade Map (جدیدترین سال موجود: ۲۰۲۵)؛ ارقام هزینه و لجستیک از
+              گزارش‌های تحلیلی همین پلتفرم با ذکر سالشان.
+            </p>
+          )}
         </div>
       </section>
 

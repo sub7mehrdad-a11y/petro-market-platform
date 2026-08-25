@@ -14,6 +14,26 @@ function flagStyle(countryName) {
   };
 }
 
+// دو آمار روی کارت: ارزش و حجم صادرات از داده‌ی ITC (۲۰۲۵) — همان منبعی که
+// صفحه‌ی جزئیات رقیب استفاده می‌کند، تا اعداد دو صفحه با هم نخوانند نشود.
+// اگر کشوری در ITC نبود، به آمار دستی competitors.json برمی‌گردیم.
+function cardStats(c) {
+  const ex = getTradeMapForCountry(c.name)?.exports_2025;
+  if (!ex) return (c.headline_stats || []).slice(0, 2);
+  return [
+    ex.value_usd_k != null && {
+      label: "ارزش صادرات (۲۰۲۵)",
+      value: (ex.value_usd_k / 1000).toLocaleString("fa-IR", { maximumFractionDigits: 1 }),
+      unit: "میلیون دلار",
+    },
+    ex.quantity != null && {
+      label: "حجم (۲۰۲۵)",
+      value: ex.quantity.toLocaleString("fa-IR"),
+      unit: "تن",
+    },
+  ].filter(Boolean);
+}
+
 export default function CompetitorsPage() {
   const competitors = Object.values(getCompetitors());
 
@@ -49,7 +69,7 @@ export default function CompetitorsPage() {
             <p className="text-sm text-slate-600 leading-7 line-clamp-3">{c.summary}</p>
 
             <div className="flex flex-wrap gap-2 mt-4">
-              {(c.headline_stats || []).slice(0, 2).map((s, i) => (
+              {cardStats(c).map((s, i) => (
                 <span key={i} className="text-xs bg-slate-50 border border-slate-200 rounded-md px-2 py-1">
                   <span className="text-slate-500">{s.label}: </span>
                   <span className="font-bold text-petrol-900 font-tabular">{s.value}</span>
