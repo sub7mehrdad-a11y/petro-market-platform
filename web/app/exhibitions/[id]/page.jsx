@@ -37,7 +37,7 @@ export default async function ExhibitionDetailPage({ params }) {
   return (
     <div className="space-y-6">
       <div>
-        <Link href="/exhibitions" className="text-sm text-slate-500 hover:underline">
+        <Link href="/exhibitions" className="text-sm text-petrol-300 hover:text-copper-300 transition-colors">
           ← بانک نمایشگاه‌ها
         </Link>
       </div>

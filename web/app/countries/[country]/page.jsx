@@ -4,6 +4,7 @@ import { getCountries, getCountrySummary, getCountryProfile, getTradeMapForCount
 import CompanyTable from "../../components/CompanyTable";
 import ExhibitionTable from "../../components/ExhibitionTable";
 import WorldRouteMap from "../../components/WorldRouteMap";
+import PageHeader from "../../components/PageHeader";
 import ExportTrend from "../../components/ExportTrend";
 
 const REPORT_TYPE_FA = { detailed: "گزارش مفصل", summary: "گزارش مدیریتی (خلاصه)" };
@@ -63,12 +64,15 @@ export default async function CountryPage({ params }) {
 
   return (
     <div className="space-y-8">
-      <div>
-        <Link href="/countries" className="text-sm text-slate-500 hover:underline">
-          ← همه‌ی کشورها
-        </Link>
-        <h1 className="text-2xl font-bold mt-1">{country}</h1>
-      </div>
+      <PageHeader
+        breadcrumb={[
+          { label: "داشبورد", href: "/" },
+          { label: "کشورها", href: "/countries" },
+          { label: country },
+        ]}
+        title={country}
+        subtitle="پرونده‌ی کشور — آمار تجارت جهانی، شرکای تأمین، شرکت‌ها، نمایشگاه‌ها و گزارش‌های مرتبط."
+      />
 
       {trade && (trade.exports_2025 || trade.imports_2025) && (
         <section className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">

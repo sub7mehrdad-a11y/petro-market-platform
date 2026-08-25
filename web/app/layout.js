@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         چیدمان: سایدبار ثابت سمت راست + ستون محتوا.
         در موبایل سایدبار به نوار بالا تبدیل می‌شود (منطقش داخل خود Sidebar).
       */}
-      <body className="min-h-full font-[family-name:var(--font-vazirmatn)] bg-petrol-50/40 text-slate-900">
+      <body className="min-h-full font-[family-name:var(--font-vazirmatn)] bg-petrol-900 text-slate-900">
         <div className="min-h-screen flex flex-col lg:flex-row">
           <Sidebar />
 
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
             <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-6 lg:px-8 lg:py-8">
               {children}
             </main>
-            <footer className="border-t border-petrol-100 bg-white text-center text-xs text-slate-400 py-4 px-4">
+            <footer className="border-t border-white/10 text-center text-xs text-petrol-400 py-5 px-4">
               سپهران شیمی — داده‌ها روزی یک‌بار از منابع عمومی وب به‌صورت خودکار به‌روزرسانی می‌شن؛ هر عدد به منبع خودش لینک شده.
             </footer>
           </div>

@@ -104,7 +104,7 @@ export default async function CompetitorPage({ params }) {
   return (
     <div className="space-y-6">
       <div>
-        <Link href="/competitors" className="text-sm text-slate-500 hover:underline">
+        <Link href="/competitors" className="text-sm text-petrol-300 hover:text-copper-300 transition-colors">
           ← تحلیل رقبا
         </Link>
       </div>

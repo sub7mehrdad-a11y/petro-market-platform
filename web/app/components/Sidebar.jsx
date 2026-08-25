@@ -59,17 +59,16 @@ function NavLink({ item, pathname, onNavigate }) {
       href={item.href}
       onClick={onNavigate}
       aria-current={active ? "page" : undefined}
-      className={`group flex items-center gap-2.5 rounded-lg px-3 py-2 text-sm transition-colors ${
+      className={`group relative flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm transition-colors ${
         active
-          ? "bg-copper-500/15 text-copper-200 font-semibold"
+          ? "bg-petrol-500/60 text-white font-semibold"
           : "text-petrol-100 hover:bg-white/5 hover:text-white"
       }`}
     >
-      <span
-        className={`h-1.5 w-1.5 rounded-full shrink-0 transition-colors ${
-          active ? "bg-copper-400" : "bg-transparent group-hover:bg-petrol-300"
-        }`}
-      />
+      {/* نوار مسی لبه‌ی راست برای آیتم فعال — همان نشانگر طرح */}
+      {active && (
+        <span className="absolute -end-4 top-1/2 -translate-y-1/2 h-6 w-1 rounded-s bg-copper-400" />
+      )}
       <Icon className={active ? "text-copper-300" : "text-petrol-300"} />
       <span className="truncate">{item.label}</span>
     </Link>
@@ -124,7 +123,7 @@ export default function Sidebar() {
   return (
     <>
       {/* دسکتاپ — ستون ثابت سمت راست */}
-      <aside className="hidden lg:flex lg:flex-col w-64 shrink-0 bg-petrol-900 relative overflow-hidden">
+      <aside className="hidden lg:flex lg:flex-col w-64 shrink-0 bg-petrol-700 relative overflow-hidden">
         <div
           className="pointer-events-none absolute -top-20 -start-20 h-56 w-56 rounded-full opacity-40"
           style={{ background: "radial-gradient(circle, rgba(201,118,46,.35), transparent 70%)" }}
@@ -137,7 +136,7 @@ export default function Sidebar() {
       </aside>
 
       {/* موبایل/تبلت — نوار بالا و کشوی بازشونده */}
-      <div className="lg:hidden bg-petrol-900 sticky top-0 z-30">
+      <div className="lg:hidden bg-petrol-700 sticky top-0 z-30">
         <div className="flex items-center justify-between gap-3 px-4 py-3">
           <Brand compact />
           <button

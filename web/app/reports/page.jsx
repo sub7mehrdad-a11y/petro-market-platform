@@ -1,19 +1,26 @@
 import Link from "next/link";
 import { getReportsManifest, getParsedReport } from "@/lib/data";
+import PageHeader from "../components/PageHeader";
 
 export default function SmartReportsPage() {
   const smartReports = getReportsManifest().filter((r) => r.report_type === "summary");
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-xl font-bold">گزارش‌های هوشمند</h1>
-        <p className="text-sm text-slate-500 mt-1">
-          همون گزارش‌های مدیریتی که به مدیران ارائه می‌شه — با فرمت مصوب، و همیشه بر اساس آخرین قیمت‌های
-          جمع‌آوری‌شده به‌روز می‌مونه (به بخش «قیمت‌های زنده» داخل هر گزارش نگاه کنید). گزارش‌های مفصل و
-          آرشیو کامل رو توی <Link href="/archive" className="text-copper-700 hover:underline">آرشیو گزارش‌ها</Link> پیدا کنید.
-        </p>
-      </div>
+      <PageHeader
+        title="گزارش‌های هوشمند"
+        subtitle={
+          <>
+            همون گزارش‌های مدیریتی که به مدیران ارائه می‌شه — با فرمت مصوب، و همیشه بر اساس آخرین
+            قیمت‌های جمع‌آوری‌شده به‌روز می‌مونه (به بخش «قیمت‌های زنده» داخل هر گزارش نگاه کنید).
+            گزارش‌های مفصل و آرشیو کامل رو توی{" "}
+            <Link href="/archive" className="text-copper-300 hover:underline">
+              آرشیو گزارش‌ها
+            </Link>{" "}
+            پیدا کنید.
+          </>
+        }
+      />
 
       {smartReports.length === 0 ? (
         <div className="bg-white border border-slate-200 rounded-xl shadow-sm p-5">

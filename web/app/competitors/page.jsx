@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getCompetitors, getTradeMapForCountry } from "@/lib/data";
+import PageHeader from "../components/PageHeader";
 
 // کد دوحرفی کشور برای پرچم از همان جایی می‌آید که صفحه‌ی کشورها استفاده می‌کند
 // (data/trade_map_2025.json) — تا اگر روزی اصلاح شد، هر دو صفحه با هم درست بمانند.
@@ -39,14 +40,10 @@ export default function CompetitorsPage() {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-xl font-bold">تحلیل رقبا</h1>
-        <p className="text-sm text-slate-500 mt-1">
-          رصد مستمر رقبای صادراتی اصلی در بازار جوش شیرین. ترکیه (رقیب نزدیک لجستیکی) و چین
-          (بزرگ‌ترین تولیدکننده‌ی جهان) هرکدام با یک ایجنت اختصاصی روزانه رصد می‌شوند؛ روسیه
-          به‌زودی به این فهرست اضافه می‌شود.
-        </p>
-      </div>
+      <PageHeader
+        title="تحلیل رقبا"
+        subtitle="رصد مستمر رقبای صادراتی اصلی در بازار جوش شیرین. ترکیه (رقیب نزدیک لجستیکی) و چین (بزرگ‌ترین تولیدکننده‌ی جهان) هرکدام با یک ایجنت اختصاصی روزانه رصد می‌شوند؛ روسیه به‌زودی به این فهرست اضافه می‌شود."
+      />
 
       <div className="grid gap-4 sm:grid-cols-2">
         {competitors.map((c) => (

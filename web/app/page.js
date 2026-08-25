@@ -3,6 +3,7 @@ import { getFlatPriceRecords, getNewsAnalysis, getTradeMapForCountry } from "@/l
 import PriceSection from "./components/PriceSection";
 import NewsCard from "./components/NewsCard";
 import KpiRow from "./components/KpiRow";
+import PageHeader from "./components/PageHeader";
 
 const BASE_FOB_USD = 250;
 
@@ -71,13 +72,10 @@ export default function DashboardPage() {
 
   return (
     <div className="space-y-8">
-      {/* سربرگ داشبورد */}
-      <div>
-        <h1 className="text-2xl font-black text-petrol-900">داشبورد بازار</h1>
-        <p className="text-sm text-slate-500 mt-1">
-          وضعیت قیمت جهانی، رقبا و روند بازار جوش شیرین — به‌روزرسانی خودکار روزانه
-        </p>
-      </div>
+      <PageHeader
+        title="داشبورد بازار"
+        subtitle="وضعیت قیمت جهانی، رقبا و روند بازار جوش شیرین — به‌روزرسانی خودکار روزانه"
+      />
 
       <KpiRow cards={kpiCards} />
 

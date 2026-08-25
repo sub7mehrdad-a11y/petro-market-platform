@@ -30,7 +30,7 @@ export default async function ReportDetailPage({ params }) {
   return (
     <div className="space-y-6">
       <div>
-        <Link href={backHref} className="text-sm text-slate-500 hover:underline">
+        <Link href={backHref} className="text-sm text-petrol-300 hover:text-copper-300 transition-colors">
           {backLabel}
         </Link>
       </div>

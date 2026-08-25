@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import PageHeader from "../components/PageHeader";
 
 const TYPE_STYLE = {
   report: "bg-copper-50 text-copper-800",
@@ -112,14 +113,10 @@ export default function AskClient({ index }) {
 
   return (
     <div className="space-y-6">
-      <div>
-        <h1 className="text-xl font-bold">جست‌وجو و پرسش از پلتفرم</h1>
-        <p className="text-sm text-slate-500 mt-1">
-          همه‌ی محتوای سایت (گزارش‌ها، شرکت‌ها، نمایشگاه‌ها، اخبار تحلیلی، تحلیل رقبا و قیمت‌ها)
-          یکجا جست‌وجو می‌شود. نتایج فوری بدون نیاز به اینترنت کار می‌کنند؛ برای «پاسخ هوشمند»
-          سؤالتان به هوش مصنوعی داده می‌شود که فقط از همین محتوا جواب بسازد.
-        </p>
-      </div>
+      <PageHeader
+        title="جست‌وجو و پرسش از پلتفرم"
+        subtitle="همه‌ی محتوای سایت (گزارش‌ها، شرکت‌ها، نمایشگاه‌ها، اخبار تحلیلی، تحلیل رقبا و قیمت‌ها) یکجا جست‌وجو می‌شود. نتایج فوری بدون نیاز به اینترنت کار می‌کنند؛ برای «پاسخ هوشمند» سؤالتان به هوش مصنوعی داده می‌شود که فقط از همین محتوا جواب بسازد."
+      />
 
       <form onSubmit={handleAsk} className="bg-white border border-slate-200 rounded-xl shadow-sm p-4">
         <div className="flex flex-col sm:flex-row gap-2">
