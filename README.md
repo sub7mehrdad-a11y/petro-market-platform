@@ -21,13 +21,15 @@
 │   ├── ingest_exhibitions.py       # ETL پوشه‌ی «لیست نمایشگاه ها» → data/exhibitions.json
 │   ├── ingest_reports.py           # ورود گزارش‌های Word/PDF پوشه‌ی «گزارش» به reports/
 │   ├── geo_data.py                 # مختصات بنادر مرجع + محاسبه‌ی فاصله‌ی هوایی (haversine)
-│   └── enrich_countries.py         # استخراج واردات/شرکای تجاری از گزارش‌ها → data/country_profiles.json
+│   ├── enrich_countries.py         # استخراج واردات/شرکای تجاری از گزارش‌ها → data/country_profiles.json
+│   └── ingest_import_suppliers.py  # واردات هر کشور به تفکیک مبدأ (ITC) → data/import_suppliers.json
 ├── data/
 │   ├── price_history.json          # خروجی تجمعی price_intelligence_bot.py
 │   ├── news_analysis_log.json      # خروجی تجمعی news_analysis_bot.py
 │   ├── companies.json              # بانک یکدست‌شده‌ی شرکت‌ها (خروجی ingest_companies.py)
 │   ├── exhibitions.json            # بانک یکدست‌شده‌ی نمایشگاه‌ها (خروجی ingest_exhibitions.py)
 │   ├── country_profiles.json       # واردات/شرکای تجاری/فاصله‌ی هر کشور (خروجی enrich_countries.py)
+│   ├── import_suppliers.json       # تفکیک مبدأ‌به‌مبدأ واردات هر کشور، با سهم/قیمت واحد/تعرفه (ITC)
 │   ├── competitors.json            # پروفایل ساختاریافته‌ی رقبا (ترکیه، چین) — دستی از اسناد تحلیلی
 │   └── turkey_watch_log.json       # خروجی تجمعی turkey_watch_bot.py
 ├── reports/

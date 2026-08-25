@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getCountries, getCountrySummary, getCountryProfile, getTradeMapForCountry } from "@/lib/data";
+import {
+  getCountries, getCountrySummary, getCountryProfile, getTradeMapForCountry, getImportSuppliers,
+} from "@/lib/data";
 import CompanyTable from "../../components/CompanyTable";
 import ExhibitionTable from "../../components/ExhibitionTable";
 import WorldRouteMap from "../../components/WorldRouteMap";
 import PageHeader from "../../components/PageHeader";
 import CountryStatStrip from "../../components/CountryStatStrip";
+import SupplierBreakdown from "../../components/SupplierBreakdown";
 import ExportTrend from "../../components/ExportTrend";
 
 const REPORT_TYPE_FA = { detailed: "گزارش مفصل", summary: "گزارش مدیریتی (خلاصه)" };
@@ -60,6 +63,7 @@ export default async function CountryPage({ params }) {
   const { companies, exhibitions, reports, prices } = getCountrySummary(country);
   const profile = getCountryProfile(country);
   const trade = getTradeMapForCountry(country);
+  const suppliers = getImportSuppliers(country);
   const sortedExhibitions = sortExhibitionsByDate(exhibitions);
   const smartReport = reports.find((r) => r.report_type === "summary");
 
@@ -117,6 +121,8 @@ export default async function CountryPage({ params }) {
           },
         ].filter(Boolean)}
       />
+
+      {suppliers && <SupplierBreakdown data={suppliers} />}
 
       {trade && (trade.exports_2025 || trade.imports_2025) && (
         <section className="card p-5">

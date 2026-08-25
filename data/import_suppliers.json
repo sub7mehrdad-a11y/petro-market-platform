@@ -1,0 +1,118 @@
+{
+  "ارمنستان": {
+    "importer_en": "Armenia",
+    "year": 2025,
+    "total": {
+      "value_usd_k": 435.0,
+      "quantity": 1180.0,
+      "quantity_unit": "Tons",
+      "unit_value_usd": 369.0
+    },
+    "suppliers": [
+      {
+        "name_en": "Iran, Islamic Republic of",
+        "country": "ایران",
+        "iso2": "ir",
+        "value_usd_k": 232.0,
+        "share_pct": 53.3,
+        "quantity": 696.0,
+        "quantity_unit": "Tons",
+        "unit_value_usd": 333.0,
+        "growth_value_5y_pct": 14.0,
+        "growth_value_1y_pct": 15.0,
+        "tariff_pct": 5.0
+      },
+      {
+        "name_en": "Russian Federation",
+        "country": "روسیه",
+        "iso2": "ru",
+        "value_usd_k": 125.0,
+        "share_pct": 28.7,
+        "quantity": 400.0,
+        "quantity_unit": "Tons",
+        "unit_value_usd": 313.0,
+        "growth_value_5y_pct": -13.0,
+        "growth_value_1y_pct": 0.0,
+        "tariff_pct": 0.0
+      },
+      {
+        "name_en": "Türkiye",
+        "country": "ترکیه",
+        "iso2": "tr",
+        "value_usd_k": 31.0,
+        "share_pct": 7.1,
+        "quantity": 13.0,
+        "quantity_unit": "Tons",
+        "unit_value_usd": 2385.0,
+        "growth_value_5y_pct": 238.0,
+        "growth_value_1y_pct": -32.0,
+        "tariff_pct": 5.0
+      },
+      {
+        "name_en": "China",
+        "country": "چین",
+        "iso2": "cn",
+        "value_usd_k": 21.0,
+        "share_pct": 4.8,
+        "quantity": 54.0,
+        "quantity_unit": "Tons",
+        "unit_value_usd": 389.0,
+        "growth_value_5y_pct": 9.0,
+        "growth_value_1y_pct": null,
+        "tariff_pct": 5.0
+      },
+      {
+        "name_en": "Germany",
+        "country": "آلمان",
+        "iso2": "de",
+        "value_usd_k": 20.0,
+        "share_pct": 4.6,
+        "quantity": 12.0,
+        "quantity_unit": "Tons",
+        "unit_value_usd": 1667.0,
+        "growth_value_5y_pct": -59.0,
+        "growth_value_1y_pct": -13.0,
+        "tariff_pct": 5.0
+      },
+      {
+        "name_en": "Curaçao",
+        "country": "کوراسائو",
+        "iso2": "cw",
+        "value_usd_k": 3.0,
+        "share_pct": 0.7,
+        "quantity": 4.0,
+        "quantity_unit": "Tons",
+        "unit_value_usd": 750.0,
+        "growth_value_5y_pct": null,
+        "growth_value_1y_pct": null,
+        "tariff_pct": null
+      },
+      {
+        "name_en": "Poland",
+        "country": "لهستان",
+        "iso2": "pl",
+        "value_usd_k": 2.0,
+        "share_pct": 0.5,
+        "quantity": 1.0,
+        "quantity_unit": "Tons",
+        "unit_value_usd": 2000.0,
+        "growth_value_5y_pct": 8.0,
+        "growth_value_1y_pct": 97.0,
+        "tariff_pct": 5.0
+      },
+      {
+        "name_en": "Spain",
+        "country": "اسپانیا",
+        "iso2": "es",
+        "value_usd_k": 1.0,
+        "share_pct": 0.2,
+        "quantity": 1.0,
+        "quantity_unit": "Tons",
+        "unit_value_usd": 1000.0,
+        "growth_value_5y_pct": -62.0,
+        "growth_value_1y_pct": null,
+        "tariff_pct": 5.0
+      }
+    ]
+  }
+}

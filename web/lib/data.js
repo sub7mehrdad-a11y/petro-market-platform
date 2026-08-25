@@ -216,6 +216,14 @@ export function getTransitRateEstimate() {
   };
 }
 
+// خروجی scripts/ingest_import_suppliers.py — واردات یک کشور به تفکیک مبدأ.
+// برخلاف top_trade_partners در country_profiles.json (که هوش مصنوعی از متن
+// گزارش‌ها بیرون کشیده)، این داده مستقیم از ITC می‌آید و عدد دقیق دارد.
+export function getImportSuppliers(country) {
+  const all = readJsonSafe(path.join(DATA_DIR, "import_suppliers.json"), {});
+  return all[country] || null;
+}
+
 export function getCountryProfile(country) {
   const profiles = readJsonSafe(path.join(DATA_DIR, "country_profiles.json"), {});
   return profiles[country] || null;
