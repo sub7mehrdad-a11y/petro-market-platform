@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { ProxyAgent, fetch as undiciFetch } from "undici";
+import { resolveProxyUrl } from "./groqFetch";
 
 const BASE = "https://generativelanguage.googleapis.com/v1beta";
 
@@ -43,10 +44,10 @@ export function resolveApiKey() {
  * اگر پراکسی تنظیم نشده باشد (مثلاً روی سرور شرکت با دسترسی مستقیم)، همان fetch
  * معمولی استفاده می‌شود و چیزی خراب نمی‌شود.
  */
+// آدرس پراکسی از همان جایی خوانده می‌شود که groqFetch می‌خواند — متغیر محیطی و
+// اگر نبود، خط HTTPS_PROXY در فایل .env ریشه‌ی پروژه. دلیلش آن‌جا توضیح داده شده.
 function getDispatcher() {
-  const proxy =
-    process.env.HTTPS_PROXY || process.env.https_proxy ||
-    process.env.HTTP_PROXY || process.env.http_proxy;
+  const proxy = resolveProxyUrl();
   return proxy ? new ProxyAgent(proxy) : undefined;
 }
 

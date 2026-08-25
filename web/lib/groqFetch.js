@@ -22,10 +22,33 @@ export function resolveGroqApiKey() {
   }
 }
 
-function getDispatcher() {
-  const proxy =
+/**
+ * آدرس پراکسی — اول از متغیر محیطی، بعد از فایل .env ریشه‌ی پروژه.
+ *
+ * چرا خواندن از .env هم لازم شد (۲۰۲۶-۰۸-۲۵): سرویس‌های Groq و Gemini از ایران
+ * مستقیم در دسترس نیستند و خطای ۴۰۳ می‌دهند. پراکسی محلی روی سیستم فعال بود، ولی
+ * فقط داخل ترمینال تنظیم شده بود — نه در متغیرهای محیطی ویندوز. برای همین وقتی
+ * سایت با «اجرای-سایت.bat» بالا می‌آمد، پروسه‌ی Node هیچ پراکسی‌ای نمی‌دید و
+ * «پاسخ هوشمند» با ۴۰۳ شکست می‌خورد، در حالی که همان درخواست از ترمینال کار می‌کرد.
+ * حالا کافی است یک خط HTTPS_PROXY در همان .env کنار کلیدها باشد.
+ */
+export function resolveProxyUrl() {
+  const fromEnv =
     process.env.HTTPS_PROXY || process.env.https_proxy ||
     process.env.HTTP_PROXY || process.env.http_proxy;
+  if (fromEnv) return fromEnv;
+
+  try {
+    const raw = fs.readFileSync(path.join(process.cwd(), "..", ".env"), "utf-8");
+    const match = raw.match(/^\s*(?:HTTPS_PROXY|HTTP_PROXY)\s*=\s*(.+?)\s*$/im);
+    return match ? match[1].replace(/^["']|["']$/g, "") : null;
+  } catch {
+    return null;
+  }
+}
+
+function getDispatcher() {
+  const proxy = resolveProxyUrl();
   return proxy ? new ProxyAgent(proxy) : undefined;
 }
 

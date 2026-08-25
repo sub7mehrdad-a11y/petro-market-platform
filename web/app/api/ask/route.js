@@ -109,11 +109,16 @@ export async function POST(request) {
       // اگر سهمیه‌ی روزانه‌ی Groq تمام شده باشد، به‌جای پیام خطا با کلید جداگانه‌ی
       // Gemini جواب می‌دهیم. این کلید مخصوص «پاسخ هوشمند» است و سهمیه‌اش از
       // ایجنت‌های روزانه جداست (تصمیم ۲۰۲۶-۰۸-۲۱)، پس رصد روزانه را نمی‌خواباند.
+      // ۴۲۹ = سهمیه تمام شده، ۴۰۳ = دسترسی از این شبکه بسته است، ۵xx = خودِ سرویس
+      // بالا نیست. هر سه یعنی «Groq الان در دسترس نیست»، پس سراغ موتور دوم می‌رویم.
+      // فقط خطاهای مربوط به خود درخواست (مثل ۴۱۳) نباید fallback بگیرند، چون با
+      // موتور دیگر هم همان مشکل تکرار می‌شود.
       const msg = String(groqErr?.message || groqErr);
       const geminiKey = resolveGeminiApiKey();
-      if (!/429|rate.?limit|quota/i.test(msg) || !geminiKey) throw groqErr;
+      const retryable = /\b(429|403|500|502|503|504)\b|rate.?limit|quota|forbidden/i.test(msg);
+      if (!retryable || !geminiKey) throw groqErr;
 
-      console.warn("[ask] سهمیه‌ی Groq تمام شد؛ پاسخ با Gemini داده می‌شود.");
+      console.warn(`[ask] Groq در دسترس نبود (${msg.slice(0, 80)})؛ پاسخ با Gemini داده می‌شود.`);
       answer = await generateGeminiContent({
         apiKey: geminiKey,
         model: "gemini-3.6-flash",
