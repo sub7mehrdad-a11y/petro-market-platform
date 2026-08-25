@@ -3,6 +3,7 @@
 import Link from "next/link";
 import ExportTrend from "../components/ExportTrend";
 import { useMemo, useState } from "react";
+import PageHeader from "../components/PageHeader";
 
 function formatUsdK(valueK) {
   if (valueK == null) return null;
@@ -87,31 +88,34 @@ export default function CountriesClient({ countries }) {
   }, [countries, query, sort]);
 
   return (
-    <section className="card p-5">
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-        <h1 className="text-xl font-bold">کشورها ({filtered.length})</h1>
-        <div className="flex flex-wrap gap-2">
-          <input
-            type="text"
-            placeholder="جست‌وجوی کشور..."
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            className="border border-slate-300 rounded-md px-3 py-1.5 text-sm"
-          />
-          <select
-            value={sort}
-            onChange={(e) => setSort(e.target.value)}
-            className="border border-slate-300 rounded-md px-2 py-1.5 text-sm"
-          >
-            <option value="relevance">مرتبط‌ترین اول</option>
-            <option value="imports">بیشترین واردات</option>
-            <option value="exports">بیشترین صادرات</option>
-            <option value="alpha">الفبایی</option>
-          </select>
-        </div>
-      </div>
+    <div>
+      <PageHeader
+        title={`کشورها (${filtered.length.toLocaleString("fa-IR")})`}
+        subtitle="پرونده‌ی بازارهای جهانی محصول — آمار تجارت، روند صادرات و محتوای اختصاصی هر کشور."
+        actions={
+          <>
+            <input
+              type="text"
+              placeholder="جست‌وجوی کشور…"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              className="bg-petrol-700 border border-white/10 text-sm text-white placeholder:text-petrol-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-copper-500"
+            />
+            <select
+              value={sort}
+              onChange={(e) => setSort(e.target.value)}
+              className="bg-petrol-700 border border-white/10 text-sm text-white rounded-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-copper-500"
+            >
+              <option value="relevance">مرتبط‌ترین اول</option>
+              <option value="imports">بیشترین واردات</option>
+              <option value="exports">بیشترین صادرات</option>
+              <option value="alpha">الفبایی</option>
+            </select>
+          </>
+        }
+      />
 
-      <p className="text-xs text-slate-500 mb-4">
+      <p className="text-xs text-petrol-300 mb-4 leading-6">
         آمار تراز/قیمت از ITC Trade Map (۲۰۲۵) — یک رتبه‌بندی جهانی کلی، نه لزوماً رابطه‌ی
         تجاری با ایران. «شریک تجاری» فقط برای کشورهایی که گزارش اختصاصی دارن (نشان کوچک
         روی کارت) واقعی و موجوده.
@@ -122,7 +126,7 @@ export default function CountriesClient({ countries }) {
           <Link
             key={c.name}
             href={`/countries/${encodeURIComponent(c.name)}`}
-            className="group block rounded-xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-md transition-shadow bg-white"
+            className="group block card card-hover overflow-hidden"
           >
             <div
               className="relative h-24 flex items-end p-3"
@@ -169,6 +173,6 @@ export default function CountriesClient({ countries }) {
           </Link>
         ))}
       </div>
-    </section>
+    </div>
   );
 }

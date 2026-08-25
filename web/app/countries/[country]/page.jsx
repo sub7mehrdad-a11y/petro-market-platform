@@ -5,6 +5,7 @@ import CompanyTable from "../../components/CompanyTable";
 import ExhibitionTable from "../../components/ExhibitionTable";
 import WorldRouteMap from "../../components/WorldRouteMap";
 import PageHeader from "../../components/PageHeader";
+import CountryStatStrip from "../../components/CountryStatStrip";
 import ExportTrend from "../../components/ExportTrend";
 
 const REPORT_TYPE_FA = { detailed: "گزارش مفصل", summary: "گزارش مدیریتی (خلاصه)" };
@@ -72,6 +73,49 @@ export default async function CountryPage({ params }) {
         ]}
         title={country}
         subtitle="پرونده‌ی کشور — آمار تجارت جهانی، شرکای تأمین، شرکت‌ها، نمایشگاه‌ها و گزارش‌های مرتبط."
+      />
+
+      {/* شناسنامه‌ی کشور — نوار تیره با مهم‌ترین اعداد، طبق طرح مرجع */}
+      <CountryStatStrip
+        country={country}
+        iso2={trade?.iso2}
+        note={trade?.name_en}
+        stats={[
+          trade?.imports_2025?.value_usd_k != null && {
+            label: "ارزش واردات (۲۰۲۵)",
+            value: (trade.imports_2025.value_usd_k / 1000).toLocaleString("fa-IR", {
+              maximumFractionDigits: 2,
+            }),
+            unit: "میلیون دلار",
+          },
+          trade?.imports_2025?.quantity != null && {
+            label: "حجم واردات (۲۰۲۵)",
+            value: trade.imports_2025.quantity.toLocaleString("fa-IR"),
+            unit: "تن",
+          },
+          trade?.imports_2025?.unit_value_usd != null && {
+            label: "قیمت میانگین واردات",
+            value: trade.imports_2025.unit_value_usd.toLocaleString("fa-IR"),
+            unit: "دلار/تن",
+          },
+          trade?.export_trend?.cagr_pct != null && {
+            label: `رشد سالانه‌ی صادرات (${String(trade.export_trend.first_year).replace(
+              /\d/g,
+              (d) => "۰۱۲۳۴۵۶۷۸۹"[d]
+            )}–${String(trade.export_trend.last_year).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d])})`,
+            value: `${trade.export_trend.cagr_pct > 0 ? "+" : ""}${trade.export_trend.cagr_pct.toLocaleString("fa-IR")}٪`,
+          },
+          companies.length > 0 && {
+            label: "شرکت‌های شناسایی‌شده",
+            value: companies.length.toLocaleString("fa-IR"),
+            unit: "شرکت",
+          },
+          exhibitions.length > 0 && {
+            label: "نمایشگاه‌های مرتبط",
+            value: exhibitions.length.toLocaleString("fa-IR"),
+            unit: "رویداد",
+          },
+        ].filter(Boolean)}
       />
 
       {trade && (trade.exports_2025 || trade.imports_2025) && (
