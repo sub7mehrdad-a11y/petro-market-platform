@@ -551,5 +551,54 @@
         "url": "https://www.dailysabah.com/business"
       }
     ]
+  },
+  {
+    "date": "2026-08-27",
+    "generated_at": "2026-08-27T16:41:58.699031+00:00",
+    "headline_fa": "هدف‌گذاری ۲۰۰ میلیارد دلاری لوجستیک ترکیه و پیگیری پروژه مسیر توسعه عراق",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "هدف‌گذاری صنعت لوجستیک ترکیه برای دست‌یابی به بازار ۲۰۰ میلیارد دلاری",
+        "summary": "انجمن خدمات لوجستیک و حمل‌ونقل بین‌المللی ترکیه (UTIKAD) برنامه‌ریزی خود را برای ارتقای ارزش صنعت لوجستیک ترکیه به ۲۰۰ میلیارد دلار و قرار گرفتن در جمع ۱۰ کشور برتر جهان اعلام کرد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "headline": "تاکید نخست‌وزیر عراق بر تسریع پروژه مسیر توسعه با ترکیه",
+        "summary": "نخست‌وزیر عراق خواستار سرعت‌بخشی به پیشبرد پروژه «مسیر توسعه» جهت تقویت اتصال ترانزیتی و تجاری میان عراق و ترکیه شده است.",
+        "source_url": "https://www.hurriyetdailynews.com/index/economy"
+      }
+    ],
+    "market_note": "در متن‌های بررسی‌شده امروز، اطلاعیه یا خبر جدیدی درباره ظرفیت تولید، قیمت‌گذاری یا نتایج مالی رقبای اصلی ترک (اتی‌سودا و کازان‌سودا) وجود نداشت. با این حال، تحولات بخش لوجستیک نشان‌دهنده تلاش ترکیه برای ارتقای زیرساخت‌ها و پیگیری عراق برای تسریع پروژه «مسیر توسعه» است. بهبود خطوط ترانزیتی ترکیه به عراق می‌تواند مزیت زمانی و هزینه‌ای رقبای ترک را در بازار عراق افزایش دهد. برای شرکت سپهران شیمی (با قیمت مرجع صادراتی ۲۵۰ دلار FOB)، رقابت با جوش شیرین ترکیه مستلزم مدیریت دقیق هزینه‌های حمل زمینی مرزی و حفظ مشتریان عراقی پیش از به ثمر نشستن طرح‌های زیربنایی جدید ترکیه است.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda Official",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda Official",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTIKAD Association",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hürriyet Daily News - Economy",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah - Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
