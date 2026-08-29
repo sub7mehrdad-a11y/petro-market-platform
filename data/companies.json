@@ -2592,32 +2592,6 @@
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "AMPERE INDUSTRIE",
-    "industry": "Unclear — likely industrial chemical distribution based on Trade Map HS listing",
-    "target_grade": "Industrial (estimate)",
-    "purchasing_potential": "Low",
-    "address": "SEREZIN DU RHONE, France",
-    "phone": "+33 4 78 02 32 00",
-    "email": "marie@ampere.com",
-    "website": "https://www.ampere.com",
-    "country": "فرانسه",
-    "id": "company-209"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "AMPERE INDUSTRIE",
-    "industry": "Unclear — likely industrial chemical distribution based on Trade Map HS listing",
-    "target_grade": "Industrial (estimate)",
-    "purchasing_potential": "Low",
-    "address": "SAINT OUEN L'AUMONE, France",
-    "phone": "+33 1 34 32 38 00",
-    "email": "marie@ampere.com",
-    "website": "https://www.ampere.com",
-    "country": "فرانسه",
-    "id": "company-210"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
     "english_name": "AVANTOR PERFORMANCE MATERIALS POLAND SPÓLKA AKCYJNA",
     "industry": "Lab and industrial chemicals — POCH brand, part of Avantor (global life-science/lab materials company)",
     "target_grade": "Laboratory / Industrial",
@@ -2627,7 +2601,7 @@
     "email": "avantor.pl@avantormaterials.com",
     "website": "https://www.poch.com.pl",
     "country": "لهستان",
-    "id": "company-211"
+    "id": "company-209"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2640,7 +2614,7 @@
     "email": "karmegam@avrtradings.com",
     "website": "https://www.avrtradings.com",
     "country": "هند",
-    "id": "company-212"
+    "id": "company-210"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2653,7 +2627,7 @@
     "email": "info@barkmans.se",
     "website": "https://barkmans.se",
     "country": "سوئد",
-    "id": "company-213"
+    "id": "company-211"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2666,7 +2640,7 @@
     "email": "investor-relations@azelis.com",
     "website": "https://www.azelis.com",
     "country": "دانمارک",
-    "id": "company-214"
+    "id": "company-212"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2679,7 +2653,7 @@
     "email": "azelis@azelis.fr",
     "website": "https://www.azelis.com",
     "country": "فرانسه",
-    "id": "company-215"
+    "id": "company-213"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2692,7 +2666,7 @@
     "email": "info@azelis.ro",
     "website": "https://www.azelis.com",
     "country": "رومانی",
-    "id": "company-216"
+    "id": "company-214"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2705,7 +2679,7 @@
     "email": "biuro@foodwell.pl",
     "website": "https://foodwell.pl",
     "country": "لهستان",
-    "id": "company-217"
+    "id": "company-215"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2718,7 +2692,7 @@
     "email": "office@bangbonsomer.com",
     "website": "https://www.bangbonsomer.com",
     "country": "فنلاند",
-    "id": "company-218"
+    "id": "company-216"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2731,7 +2705,7 @@
     "email": "barcelonesa@barcelonesa.com",
     "website": "https://www.barcelonesa.com",
     "country": "اسپانیا",
-    "id": "company-219"
+    "id": "company-217"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2744,7 +2718,7 @@
     "email": "ghpl@ghpl.pl",
     "website": "https://ghpl.pl",
     "country": "لهستان",
-    "id": "company-220"
+    "id": "company-218"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2757,7 +2731,7 @@
     "email": "office@beofon.ro",
     "website": "http://www.beofon.ro",
     "country": "رومانی",
-    "id": "company-221"
+    "id": "company-219"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2770,7 +2744,7 @@
     "email": "info@brpkimya.com",
     "website": "https://brpkimya.com",
     "country": "ترکیه",
-    "id": "company-222"
+    "id": "company-220"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2783,7 +2757,7 @@
     "email": "main.se@brenntag-nordic.com",
     "website": "https://www.brenntag.com/en-se/",
     "country": "سوئد",
-    "id": "company-223"
+    "id": "company-221"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2796,7 +2770,7 @@
     "email": "reliant.nordic@brenntag.com",
     "website": "https://www.brenntag.com/en-no/",
     "country": "نروژ",
-    "id": "company-224"
+    "id": "company-222"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2809,7 +2783,7 @@
     "email": "info.fi@brenntag.com",
     "website": "https://www.brenntag.com/en-fi/",
     "country": "فنلاند",
-    "id": "company-225"
+    "id": "company-223"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2822,7 +2796,7 @@
     "email": "biuro@brenntag.pl",
     "website": "https://www.brenntag.com/pl-pl/",
     "country": "لهستان",
-    "id": "company-226"
+    "id": "company-224"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2835,7 +2809,7 @@
     "email": "biuro@brenntag.pl",
     "website": "https://www.brenntag.com/pl-pl/",
     "country": "لهستان",
-    "id": "company-227"
+    "id": "company-225"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2848,7 +2822,7 @@
     "email": "biuro@brenntag.pl",
     "website": "https://www.brenntag.com/pl-pl/",
     "country": "لهستان",
-    "id": "company-228"
+    "id": "company-226"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2861,7 +2835,7 @@
     "email": "biuro@brenntag.pl",
     "website": "https://www.brenntag.com/pl-pl/",
     "country": "لهستان",
-    "id": "company-229"
+    "id": "company-227"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2874,7 +2848,7 @@
     "email": "info@brenntag.it",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-230"
+    "id": "company-228"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2887,7 +2861,7 @@
     "email": "info@brenntag.it",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-231"
+    "id": "company-229"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2900,7 +2874,7 @@
     "email": "info@brenntag.it",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-232"
+    "id": "company-230"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2913,7 +2887,7 @@
     "email": "info@brenntag.it",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-233"
+    "id": "company-231"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2926,7 +2900,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-234"
+    "id": "company-232"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2939,7 +2913,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-235"
+    "id": "company-233"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2952,7 +2926,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-236"
+    "id": "company-234"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2965,7 +2939,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-237"
+    "id": "company-235"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2978,7 +2952,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-238"
+    "id": "company-236"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2991,7 +2965,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-239"
+    "id": "company-237"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3004,7 +2978,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-240"
+    "id": "company-238"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3017,7 +2991,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-241"
+    "id": "company-239"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3030,7 +3004,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-242"
+    "id": "company-240"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3043,7 +3017,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-243"
+    "id": "company-241"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3056,7 +3030,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-244"
+    "id": "company-242"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3069,7 +3043,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-245"
+    "id": "company-243"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3082,7 +3056,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-246"
+    "id": "company-244"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3095,7 +3069,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-247"
+    "id": "company-245"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3108,7 +3082,7 @@
     "email": "contactro@brenntag.com",
     "website": "https://www.brenntag.com/en-ro/",
     "country": "رومانی",
-    "id": "company-248"
+    "id": "company-246"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3121,7 +3095,7 @@
     "email": "sales-tcel@tatachemicals.com",
     "website": "https://tatachemicalseurope.com/",
     "country": "هلند",
-    "id": "company-249"
+    "id": "company-247"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3134,7 +3108,7 @@
     "email": "info@ctc-sweets.com",
     "website": "http://www.ctc-sweets.com",
     "country": "مصر",
-    "id": "company-250"
+    "id": "company-248"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3147,20 +3121,7 @@
     "email": "info@caldic.be",
     "website": "https://www.caldic.com",
     "country": "بلژیک",
-    "id": "company-251"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "Cargill",
-    "industry": "⭐ Food and agribusiness — one of the world's largest food/agriculture companies",
-    "target_grade": "Food (high confidence)",
-    "purchasing_potential": "High",
-    "address": "Martorell, Spain",
-    "phone": "+34 93 773 38 00",
-    "email": "Not found",
-    "website": "https://www.cargill.es",
-    "country": "اسپانیا",
-    "id": "company-252"
+    "id": "company-249"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3173,7 +3134,7 @@
     "email": "info@cbc-europe.com",
     "website": "https://cbc-europe.com",
     "country": "آلمان",
-    "id": "company-253"
+    "id": "company-250"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3186,7 +3147,7 @@
     "email": "chemap@chemap.cz",
     "website": "https://www.chemap.cz",
     "country": "چک",
-    "id": "company-254"
+    "id": "company-251"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3199,7 +3160,7 @@
     "email": "info@chemia.ch",
     "website": "https://www.chemia.ch",
     "country": "سوئیس",
-    "id": "company-255"
+    "id": "company-252"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3212,7 +3173,7 @@
     "email": "chimab@chimab.it",
     "website": "https://www.brenntag.com/en-de/industries/food-and-nutrition/",
     "country": "ایتالیا",
-    "id": "company-256"
+    "id": "company-253"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3225,7 +3186,7 @@
     "email": "chimab@chimab.it",
     "website": "https://www.brenntag.com/en-de/industries/food-and-nutrition/",
     "country": "ایتالیا",
-    "id": "company-257"
+    "id": "company-254"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3238,7 +3199,7 @@
     "email": "chimab@chimab.it",
     "website": "https://www.brenntag.com/en-de/industries/food-and-nutrition/",
     "country": "ایتالیا",
-    "id": "company-258"
+    "id": "company-255"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3251,7 +3212,7 @@
     "email": "info@chimitex.it",
     "website": "https://www.chimitex.it",
     "country": "ایتالیا",
-    "id": "company-259"
+    "id": "company-256"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3264,7 +3225,7 @@
     "email": "info@chimitex.it",
     "website": "https://www.chimitex.it",
     "country": "ایتالیا",
-    "id": "company-260"
+    "id": "company-257"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3277,7 +3238,7 @@
     "email": "ciechtrading@ciechgroup.com",
     "website": "https://www.qemetica.com",
     "country": "لهستان",
-    "id": "company-261"
+    "id": "company-258"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3290,7 +3251,7 @@
     "email": "coger@coger.fr",
     "website": "https://www.cogershop.com",
     "country": "فرانسه",
-    "id": "company-262"
+    "id": "company-259"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3303,20 +3264,7 @@
     "email": "info@comercialgodo.com",
     "website": "https://comercialgodo.com",
     "country": "اسپانیا",
-    "id": "company-263"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "Comor SA",
-    "industry": "Unclear",
-    "target_grade": "Unclear",
-    "purchasing_potential": "Low",
-    "address": "Niederanven, Luxembourg",
-    "phone": "+352 26 34 71 1",
-    "email": "contact@comor.lu",
-    "website": "https://www.comor.lu",
-    "country": "لوکزامبورگ",
-    "id": "company-264"
+    "id": "company-260"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3329,7 +3277,7 @@
     "email": "office@cio.ro",
     "website": "http://www.cio.ro",
     "country": "رومانی",
-    "id": "company-265"
+    "id": "company-261"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3342,7 +3290,7 @@
     "email": "office@cosal.ro",
     "website": "https://www.cosal.ro",
     "country": "رومانی",
-    "id": "company-266"
+    "id": "company-262"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3355,7 +3303,7 @@
     "email": "info@credin.dk",
     "website": "https://www.credin.dk",
     "country": "دانمارک",
-    "id": "company-267"
+    "id": "company-263"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3368,7 +3316,7 @@
     "email": "cristian@cristiangrup.ro",
     "website": "http://www.cristiangrup.ro",
     "country": "رومانی",
-    "id": "company-268"
+    "id": "company-264"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3381,7 +3329,7 @@
     "email": "disachim@disachim.com",
     "website": "https://www.disachim.com",
     "country": "فرانسه",
-    "id": "company-269"
+    "id": "company-265"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3394,7 +3342,7 @@
     "email": "info@distrimspa.com",
     "website": "https://www.distrimspa.com",
     "country": "الجزایر",
-    "id": "company-270"
+    "id": "company-266"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3407,7 +3355,7 @@
     "email": "kontakt@oetker.dk",
     "website": "https://www.oetker.dk",
     "country": "دانمارک",
-    "id": "company-271"
+    "id": "company-267"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3420,7 +3368,7 @@
     "email": "office@oetker.at",
     "website": "https://www.oetker.at",
     "country": "اتریش",
-    "id": "company-272"
+    "id": "company-268"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3433,7 +3381,7 @@
     "email": "info@zahrangroup.com",
     "website": "https://www.zahrangroup.com",
     "country": "مصر",
-    "id": "company-273"
+    "id": "company-269"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3446,20 +3394,7 @@
     "email": "ekoprom@zg.t-com.hr",
     "website": "https://www.ekoprom.hr",
     "country": "کرواسی",
-    "id": "company-274"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "Emix Przedsiebiorstwo Produkcyjno-Handlowe; Stanislaw Pacek",
-    "industry": "Unclear",
-    "target_grade": "Unclear",
-    "purchasing_potential": "Low",
-    "address": "Rypin, Poland",
-    "phone": "+48 54 280 20 13",
-    "email": "biuro@emix.com.pl",
-    "website": "https://www.emix.com.pl",
-    "country": "لهستان",
-    "id": "company-275"
+    "id": "company-270"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3472,7 +3407,7 @@
     "email": "engelhardt@engelhardt.se",
     "website": "https://www.engelhardt.se",
     "country": "سوئد",
-    "id": "company-276"
+    "id": "company-271"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3485,7 +3420,7 @@
     "email": "salg@engelhardt.dk",
     "website": "https://engelhardt.dk",
     "country": "دانمارک",
-    "id": "company-277"
+    "id": "company-272"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3498,20 +3433,7 @@
     "email": "contact@adetis-ingredients.fr",
     "website": "https://adetis-ingredients.fr",
     "country": "فرانسه",
-    "id": "company-278"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "French for Edible Industries",
-    "industry": "Food industry — domain royalpack.net (food packaging)",
-    "target_grade": "Food (strong estimate)",
-    "purchasing_potential": "Medium",
-    "address": "6th of October,6th of October, Egypt",
-    "phone": "Not found",
-    "email": "Not found",
-    "website": "http://www.royalpack.net",
-    "country": "مصر",
-    "id": "company-279"
+    "id": "company-273"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3524,7 +3446,7 @@
     "email": "foodsystems@tateandlyle.com",
     "website": "https://www.tateandlyle.com",
     "country": "فرانسه",
-    "id": "company-280"
+    "id": "company-274"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3537,7 +3459,7 @@
     "email": "info@gecotrap.com.tn",
     "website": "http://www.gecotrap.com.tn",
     "country": "تونس",
-    "id": "company-281"
+    "id": "company-275"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3550,7 +3472,7 @@
     "email": "info@faravelli.it",
     "website": "https://www.faravelli.it",
     "country": "ایتالیا",
-    "id": "company-282"
+    "id": "company-276"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3563,7 +3485,7 @@
     "email": "office@govcrest.ro",
     "website": "https://www.govcrest.ro",
     "country": "رومانی",
-    "id": "company-283"
+    "id": "company-277"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3576,7 +3498,7 @@
     "email": "info@gremount.com.cn",
     "website": "https://www.gremountint.com",
     "country": "چین",
-    "id": "company-284"
+    "id": "company-278"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3589,7 +3511,7 @@
     "email": "media@griffithfoods.com",
     "website": "https://griffithfoods.com",
     "country": "بلژیک",
-    "id": "company-285"
+    "id": "company-279"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3602,7 +3524,7 @@
     "email": "handlowy@chemia.opole.pl",
     "website": "http://www.chemia.opole.pl",
     "country": "لهستان",
-    "id": "company-286"
+    "id": "company-280"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3615,7 +3537,7 @@
     "email": "export@ghtech.com",
     "website": "https://www.ghtech.com",
     "country": "چین",
-    "id": "company-287"
+    "id": "company-281"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3628,7 +3550,7 @@
     "email": "info@haedener.ch",
     "website": "https://www.haedener.ch",
     "country": "سوئیس",
-    "id": "company-288"
+    "id": "company-282"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3641,7 +3563,7 @@
     "email": "post@hl-solberg.no",
     "website": "https://www.hl-solberg.no",
     "country": "نروژ",
-    "id": "company-289"
+    "id": "company-283"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3654,7 +3576,7 @@
     "email": "info@helmag.com",
     "website": "https://www.helmag.com",
     "country": "آلمان",
-    "id": "company-290"
+    "id": "company-284"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3667,20 +3589,7 @@
     "email": "info@himfarminvest.com.ua",
     "website": "https://himfarminvest.com.ua",
     "country": "اوکراین",
-    "id": "company-291"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "HOTEY Trading House, Private Business",
-    "industry": "Unclear",
-    "target_grade": "Unclear",
-    "purchasing_potential": "Medium",
-    "address": "Kyiv, Ukraine",
-    "phone": "+380 44 331 5415",
-    "email": "Not found",
-    "website": "http://hotey.in.ua",
-    "country": "اوکراین",
-    "id": "company-292"
+    "id": "company-285"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3693,7 +3602,7 @@
     "email": "info@ihc-chempharm.com",
     "website": "https://www.ihc-chempharm.com/",
     "country": "آلمان",
-    "id": "company-293"
+    "id": "company-286"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3706,7 +3615,7 @@
     "email": "info@imcdgroup.com",
     "website": "https://www.imcdgroup.com/",
     "country": "هلند",
-    "id": "company-294"
+    "id": "company-287"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3719,7 +3628,7 @@
     "email": "office@industrialchim.ro",
     "website": "https://www.industrialchim.ro/",
     "country": "رومانی",
-    "id": "company-295"
+    "id": "company-288"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3732,7 +3641,7 @@
     "email": "sphongburut@ashland.com",
     "website": "https://www.ashland.com/",
     "country": "تایلند",
-    "id": "company-296"
+    "id": "company-289"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3745,20 +3654,7 @@
     "email": "info@janus-services.com",
     "website": "https://janus-services.com/",
     "country": "هلند",
-    "id": "company-297"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "Kareva Marketing GmbH",
-    "industry": "Unclear — likely raw material trading/agency",
-    "target_grade": "Unclear",
-    "purchasing_potential": "Medium",
-    "address": "Hamburg, Germany",
-    "phone": "+49 40 3690010",
-    "email": "Not found",
-    "website": "http://www.kareva.de",
-    "country": "آلمان",
-    "id": "company-298"
+    "id": "company-290"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3771,33 +3667,7 @@
     "email": "kratoska@kratoska.cz",
     "website": "https://www.kratoska.cz/",
     "country": "چک",
-    "id": "company-299"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "LA PATISSIERE",
-    "industry": "Pastry industry (explicit in name)",
-    "target_grade": "Food (high confidence)",
-    "purchasing_potential": "Medium",
-    "address": "Ariana, Tunisia",
-    "phone": "+216 71 787 800",
-    "email": "Not found",
-    "website": "http://www.lapatissiere.com/",
-    "country": "تونس",
-    "id": "company-300"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "LA PATISSIERE",
-    "industry": "Pastry industry (explicit in name)",
-    "target_grade": "Food (high confidence)",
-    "purchasing_potential": "Medium",
-    "address": "Ariana, Tunisia",
-    "phone": "+216 71 787 800",
-    "email": "Not found",
-    "website": "https://www.facebook.com/La-Patissi%C3%A9re-732923270132613/",
-    "country": "تونس",
-    "id": "company-301"
+    "id": "company-291"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3810,7 +3680,7 @@
     "email": "biuro@labomix.com.pl",
     "website": "http://www.labomix.com.pl",
     "country": "لهستان",
-    "id": "company-302"
+    "id": "company-292"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3823,7 +3693,7 @@
     "email": "contact@riadhpharm.dz",
     "website": "https://riadhpharm.dz/",
     "country": "الجزایر",
-    "id": "company-303"
+    "id": "company-293"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3836,7 +3706,7 @@
     "email": "mailbox@aprochimide.it",
     "website": "https://aprochimide.it/",
     "country": "ایتالیا",
-    "id": "company-304"
+    "id": "company-294"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3849,7 +3719,7 @@
     "email": "mailbox@aprochimide.it",
     "website": "https://aprochimide.it/",
     "country": "ایتالیا",
-    "id": "company-305"
+    "id": "company-295"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3862,7 +3732,7 @@
     "email": "mailbox@aprochimide.it",
     "website": "https://aprochimide.it/",
     "country": "ایتالیا",
-    "id": "company-306"
+    "id": "company-296"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3875,7 +3745,7 @@
     "email": "info@linegal.pl",
     "website": "https://linegal.pl/",
     "country": "لهستان",
-    "id": "company-307"
+    "id": "company-297"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3888,20 +3758,7 @@
     "email": "info@lirpasilicones.com",
     "website": "https://lirpasilicones.com/",
     "country": "اسپانیا",
-    "id": "company-308"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "LOMBARDI S.R.L.",
-    "industry": "Unclear",
-    "target_grade": "Unclear",
-    "purchasing_potential": "Low",
-    "address": "BIENTINA, Italy",
-    "phone": "+39 0587 354365",
-    "email": "info@lombardisrl.eu",
-    "website": "https://www.lombardisrl.eu/",
-    "country": "ایتالیا",
-    "id": "company-309"
+    "id": "company-298"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3914,7 +3771,7 @@
     "email": "contact@manuchar.com",
     "website": "https://www.manuchar.com/",
     "country": "بلژیک",
-    "id": "company-310"
+    "id": "company-299"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3927,7 +3784,7 @@
     "email": "info@merck.ch",
     "website": "https://www.merckgroup.com/ch-en",
     "country": "سوئیس",
-    "id": "company-311"
+    "id": "company-300"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3940,7 +3797,7 @@
     "email": "CS.Merck@merckgroup.com",
     "website": "https://www.merckgroup.com/fi-fi",
     "country": "فنلاند",
-    "id": "company-312"
+    "id": "company-301"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3953,7 +3810,7 @@
     "email": "rodo@pgd.biz.pl",
     "website": "http://www.merkur.com.pl",
     "country": "لهستان",
-    "id": "company-313"
+    "id": "company-302"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3966,20 +3823,7 @@
     "email": "support@mido.com.eg",
     "website": "http://www.mido.com.eg",
     "country": "مصر",
-    "id": "company-314"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "NAFTA-UKRAINA Ltd Ukrainian-Lithuanian JV",
-    "industry": "Petroleum & chemical trading ('Nafta' = oil)",
-    "target_grade": "Industrial (estimate)",
-    "purchasing_potential": "Medium",
-    "address": "Kyiv, Ukraine",
-    "phone": "+380 44 510 4950",
-    "email": "Not found",
-    "website": "http://www.naftaukr.com",
-    "country": "اوکراین",
-    "id": "company-315"
+    "id": "company-303"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3992,20 +3836,7 @@
     "email": "nanosoda.ua@gmail.com",
     "website": "https://nano-soda.com.ua/",
     "country": "اوکراین",
-    "id": "company-316"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "Nippon Solvay K.K.",
-    "industry": "Industrial chemicals — Japanese subsidiary of Solvay Group (global inorganic chemical producer)",
-    "target_grade": "Industrial",
-    "purchasing_potential": "Medium",
-    "address": "Minato-Ku, Tokyo, Japan",
-    "phone": "Not found",
-    "email": "Not found",
-    "website": "https://www.solvay.com/",
-    "country": "ژاپن",
-    "id": "company-317"
+    "id": "company-304"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4018,20 +3849,7 @@
     "email": "info@nordiskaunipol.se",
     "website": "https://nordiskaunipol.se/",
     "country": "سوئد",
-    "id": "company-318"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "NOVACHIM ROMANIA SRL",
-    "industry": "Chemical distribution (explicit in name)",
-    "target_grade": "Industrial (estimate)",
-    "purchasing_potential": "Medium",
-    "address": "BUCURESTI, SECTOR 1, Romania",
-    "phone": "Not found",
-    "email": "Not found",
-    "website": "http://www.novachimromania.ro",
-    "country": "رومانی",
-    "id": "company-319"
+    "id": "company-305"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4044,7 +3862,7 @@
     "email": "office@crisfood.ro",
     "website": "https://www.crisfoods.ro/",
     "country": "رومانی",
-    "id": "company-320"
+    "id": "company-306"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4057,7 +3875,7 @@
     "email": "agro.ch@omya.com",
     "website": "https://www.omya.com",
     "country": "سوئیس",
-    "id": "company-321"
+    "id": "company-307"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4070,7 +3888,7 @@
     "email": "biuro@orchem.com.pl",
     "website": "https://orchem.com.pl",
     "country": "لهستان",
-    "id": "company-322"
+    "id": "company-308"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4083,7 +3901,7 @@
     "email": "office@permakem.no",
     "website": "https://www.permakem.no",
     "country": "نروژ",
-    "id": "company-323"
+    "id": "company-309"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4096,7 +3914,7 @@
     "email": "biuro@pharma-cosmetic.com.pl",
     "website": "http://www.pharma-cosmetic.com.pl",
     "country": "لهستان",
-    "id": "company-324"
+    "id": "company-310"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4109,7 +3927,7 @@
     "email": "info@policontract.md",
     "website": "https://policontract.md",
     "country": "مولداوی",
-    "id": "company-325"
+    "id": "company-311"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4122,7 +3940,7 @@
     "email": "biuro@polmarkus.com.pl",
     "website": "https://polmarkus.com.pl",
     "country": "لهستان",
-    "id": "company-326"
+    "id": "company-312"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4135,7 +3953,7 @@
     "email": "biuro@galfarm.com.pl",
     "website": "https://galfarm.pl",
     "country": "لهستان",
-    "id": "company-327"
+    "id": "company-313"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4148,20 +3966,7 @@
     "email": "chemia@standard.pl",
     "website": "https://www.standard.pl",
     "country": "لهستان",
-    "id": "company-328"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "Quality Target",
-    "industry": "Unclear — possibly food quality/trading related",
-    "target_grade": "Unclear",
-    "purchasing_potential": "Low",
-    "address": "Borg El-Arab,Alexandria, Egypt",
-    "phone": "+20 3 459 5857",
-    "email": "info@qualitytarget-eg.com",
-    "website": "http://www.qualitytarget-eg.com",
-    "country": "مصر",
-    "id": "company-329"
+    "id": "company-314"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4174,7 +3979,7 @@
     "email": "industrial-minerals@lehvoss.de",
     "website": "http://www.remy-group.com",
     "country": "آلمان",
-    "id": "company-330"
+    "id": "company-315"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4187,7 +3992,7 @@
     "email": "receptie_antwerpen@hanos.be",
     "website": "https://www.hanos.be",
     "country": "بلژیک",
-    "id": "company-331"
+    "id": "company-316"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4200,7 +4005,7 @@
     "email": "info@riverchimica.com",
     "website": "http://www.riverchimica.com",
     "country": "ایتالیا",
-    "id": "company-332"
+    "id": "company-317"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4213,7 +4018,7 @@
     "email": "info@riverchimica.com",
     "website": "http://www.riverchimica.com",
     "country": "ایتالیا",
-    "id": "company-333"
+    "id": "company-318"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4226,7 +4031,7 @@
     "email": "info@riverchimica.com",
     "website": "http://www.riverchimica.com",
     "country": "ایتالیا",
-    "id": "company-334"
+    "id": "company-319"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4239,7 +4044,7 @@
     "email": "info@rodals.md",
     "website": "http://www.rodals.md",
     "country": "مولداوی",
-    "id": "company-335"
+    "id": "company-320"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4252,7 +4057,7 @@
     "email": "info@simpo.it",
     "website": "https://www.simpo.it",
     "country": "ایتالیا",
-    "id": "company-336"
+    "id": "company-321"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4265,7 +4070,7 @@
     "email": "a.s@sahastraa.com",
     "website": "https://www.sahastraa.com",
     "country": "هند",
-    "id": "company-337"
+    "id": "company-322"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4278,20 +4083,7 @@
     "email": "salt@salt.no",
     "website": "https://www.salt.no",
     "country": "نروژ",
-    "id": "company-338"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "Shin Sanso Kagaku Co., Ltd.",
-    "industry": "Manufacture/distribution of industrial chemicals ('Kagaku' = chemistry in Japanese)",
-    "target_grade": "Industrial",
-    "purchasing_potential": "Medium",
-    "address": "Tomakomai, Hokkaido, Japan",
-    "phone": "+81 144-55-7337",
-    "email": "Not found",
-    "website": "http://www.sskc.co.jp",
-    "country": "ژاپن",
-    "id": "company-339"
+    "id": "company-323"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4304,7 +4096,7 @@
     "email": "info@snick.be",
     "website": "https://www.snick.be",
     "country": "بلژیک",
-    "id": "company-340"
+    "id": "company-324"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4317,7 +4109,7 @@
     "email": "firmapost@solbergindustri.no",
     "website": "https://www.solbergindustri.no",
     "country": "نروژ",
-    "id": "company-341"
+    "id": "company-325"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4330,7 +4122,7 @@
     "email": "contact@solvay.com",
     "website": "https://www.solvay.com",
     "country": "دانمارک",
-    "id": "company-342"
+    "id": "company-326"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4343,7 +4135,7 @@
     "email": "contact@solvay.com",
     "website": "https://www.solvay.com",
     "country": "سوئد",
-    "id": "company-343"
+    "id": "company-327"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4356,7 +4148,7 @@
     "email": "info@specialkemi.se",
     "website": "http://www.specialkemi.se",
     "country": "سوئد",
-    "id": "company-344"
+    "id": "company-328"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4369,20 +4161,7 @@
     "email": "office@spottrading.ro",
     "website": "https://www.spottrading.ro",
     "country": "رومانی",
-    "id": "company-345"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "SPT-CITRON Ltd",
-    "industry": "Unclear",
-    "target_grade": "Unclear",
-    "purchasing_potential": "Low",
-    "address": "Kharkiv, Ukraine",
-    "phone": "+380 57 712 14 62",
-    "email": "info@citron.kharkov.ua",
-    "website": "http://www.citron.kharkov.ua",
-    "country": "اوکراین",
-    "id": "company-346"
+    "id": "company-329"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4395,7 +4174,7 @@
     "email": "office@stanchem.pl",
     "website": "https://www.stanchem.pl",
     "country": "لهستان",
-    "id": "company-347"
+    "id": "company-330"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4408,7 +4187,7 @@
     "email": "firmapost@storms.no",
     "website": "https://storms.no",
     "country": "نروژ",
-    "id": "company-348"
+    "id": "company-331"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4421,7 +4200,7 @@
     "email": "hello@ncc.ie",
     "website": "https://www.ncc.ie",
     "country": "ایرلند",
-    "id": "company-349"
+    "id": "company-332"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4434,7 +4213,7 @@
     "email": "info@torchiani.com",
     "website": "https://www.torchiani.com/",
     "country": "ایتالیا",
-    "id": "company-350"
+    "id": "company-333"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4447,7 +4226,7 @@
     "email": "mail@toscochimica.com",
     "website": "https://toscochimica.com/",
     "country": "ایتالیا",
-    "id": "company-351"
+    "id": "company-334"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4460,7 +4239,7 @@
     "email": "msd@tycoon-global.com",
     "website": "https://www.tycoon-global.com/",
     "country": "چین",
-    "id": "company-352"
+    "id": "company-335"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4473,7 +4252,7 @@
     "email": "ranairan@uetcindia.com",
     "website": "http://www.uetcindia.com",
     "country": "هند",
-    "id": "company-353"
+    "id": "company-336"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4486,7 +4265,7 @@
     "email": "contact@univarsolutions.com",
     "website": "https://www.univarsolutions.com",
     "country": "فرانسه",
-    "id": "company-354"
+    "id": "company-337"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4499,7 +4278,7 @@
     "email": "info-pt@univarsolutions.com",
     "website": "https://www.univarsolutions.com",
     "country": "پرتغال",
-    "id": "company-355"
+    "id": "company-338"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4512,7 +4291,7 @@
     "email": "Univar.dk@univarsolutions.com",
     "website": "https://www.univarsolutions.com",
     "country": "دانمارک",
-    "id": "company-356"
+    "id": "company-339"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4525,7 +4304,7 @@
     "email": "Order.se@univarsolutions.com",
     "website": "https://www.univarsolutions.se",
     "country": "سوئد",
-    "id": "company-357"
+    "id": "company-340"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4538,7 +4317,7 @@
     "email": "Ordre.no@univarsolutions.com",
     "website": "https://www.univarsolutions.no",
     "country": "نروژ",
-    "id": "company-358"
+    "id": "company-341"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4551,7 +4330,7 @@
     "email": "Order.fi@univarsolutions.com",
     "website": "https://www.univarsolutions.fi",
     "country": "فنلاند",
-    "id": "company-359"
+    "id": "company-342"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4564,7 +4343,7 @@
     "email": "vutstb@gmail.com",
     "website": "https://utstd.com.ua",
     "country": "اوکراین",
-    "id": "company-360"
+    "id": "company-343"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4577,7 +4356,7 @@
     "email": "office@vega.ro",
     "website": "https://vega.ro",
     "country": "رومانی",
-    "id": "company-361"
+    "id": "company-344"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4590,7 +4369,7 @@
     "email": "info@vhumana.com",
     "website": "https://www.vhumana.com",
     "country": "پرتغال",
-    "id": "company-362"
+    "id": "company-345"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4603,7 +4382,7 @@
     "email": "info@whitegroup.co.th",
     "website": "http://www.whitegroup.co.th",
     "country": "تایلند",
-    "id": "company-363"
+    "id": "company-346"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4616,7 +4395,7 @@
     "email": "info@whitegroup.co.th",
     "website": "http://www.whitegroup.co.th",
     "country": "تایلند",
-    "id": "company-364"
+    "id": "company-347"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4629,7 +4408,7 @@
     "email": "biuro@wibial.pl",
     "website": "https://wibial.pl/",
     "country": "لهستان",
-    "id": "company-365"
+    "id": "company-348"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4642,7 +4421,7 @@
     "email": "info@zeelandia.be",
     "website": "https://www.zeelandia.be/",
     "country": "بلژیک",
-    "id": "company-366"
+    "id": "company-349"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4655,20 +4434,7 @@
     "email": "ziarnex.warszawa@apc.com.pl",
     "website": "https://ziarnex.pl/",
     "country": "لهستان",
-    "id": "company-367"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "ZK",
-    "industry": "Unclear — domain zundel-kohler.com",
-    "target_grade": "Unclear",
-    "purchasing_potential": "Low",
-    "address": "ILLZACH, France",
-    "phone": "+33 3 89 45 49 12",
-    "email": "contact@zundel-kohler.pro",
-    "website": "https://www.zundel-kohler.pro/",
-    "country": "فرانسه",
-    "id": "company-368"
+    "id": "company-350"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4681,20 +4447,7 @@
     "email": "info@arista.com.ua",
     "website": "https://arista.com.ua/",
     "country": "اوکراین",
-    "id": "company-369"
-  },
-  {
-    "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
-    "english_name": "Реахімтранس, ТОВ",
-    "industry": "Chemical transport and distribution ('Reachem'+'Trans' in name)",
-    "target_grade": "Industrial (estimate)",
-    "purchasing_potential": "Medium",
-    "address": "Kyiv, Ukraine",
-    "phone": "Not found",
-    "email": "Not found",
-    "website": "https://reahimtrans.agrobiz.net/",
-    "country": "اوکراین",
-    "id": "company-370"
+    "id": "company-351"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4707,6 +4460,6 @@
     "email": "wzcg@fxhr.cn",
     "website": "http://www.sxfx.com.cn",
     "country": "چین",
-    "id": "company-371"
+    "id": "company-352"
   }
 ]
