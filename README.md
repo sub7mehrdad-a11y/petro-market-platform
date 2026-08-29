@@ -18,6 +18,8 @@
 │   ├── news_analysis_bot.py        # ایجنت روزانه‌ی اخبار/تحلیل (fetch + تحلیل با Gemini API)
 │   ├── turkey_watch_bot.py         # ایجنت روزانه‌ی رصد اختصاصی ترکیه (رقیب اصلی)
 │   ├── ingest_companies.py         # ETL پوشه‌ی «لیست شرکتها» → data/companies.json
+│   │                                # (فایل‌های تک‌کشوری + فایل‌های جهانی Volza/Trade Map
+│   │                                #  که کشور از ستون آدرس هر ردیف استخراج می‌شه)
 │   ├── ingest_exhibitions.py       # ETL پوشه‌ی «لیست نمایشگاه ها» → data/exhibitions.json
 │   ├── ingest_reports.py           # ورود گزارش‌های Word/PDF پوشه‌ی «گزارش» به reports/
 │   ├── geo_data.py                 # مختصات بنادر مرجع + محاسبه‌ی فاصله‌ی هوایی (haversine)
