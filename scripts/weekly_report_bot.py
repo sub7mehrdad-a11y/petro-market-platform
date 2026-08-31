@@ -39,16 +39,17 @@ def build_caption(data: dict) -> str:
     lines = [
         "📊 <b>گزارش هفتگی بازار جوش شیرین — سپهران شیمی</b>",
         f"تاریخ: {data['generated_date']}",
-        f"سری‌های قیمتی رصدشده: {data['series_count']}",
     ]
-    lowest = data.get("lowest_fob")
-    if lowest:
-        lines.append(f"کمترین FOB جهانی: {lowest['country']} با {lowest['value']:,.0f}$ (مبنای ما: {data['base_fob_usd']}$)")
+    for kp in data.get("key_prices", []):
+        if kp.get("available"):
+            lines.append(f"{kp['country']}: {kp['value']:,.0f} {kp['currency']}/{kp['unit']} ({kp['price_type_fa']})")
+        else:
+            lines.append(f"{kp['country']}: به‌زودی")
     biggest = data.get("biggest_mover")
     if biggest and biggest["pct_change"]:
         sign = "+" if biggest["pct_change"] > 0 else ""
         lines.append(f"بیشترین تغییر هفته: {biggest['country']} ({sign}{biggest['pct_change']}%)")
-    lines.append(f"تعداد خبر تحلیلی این هفته: {len(data['news'])}")
+    lines.append(f"اخبار: {len(data['general_news'])} مورد · ترانزیت: {len(data['transit_news'])} مورد")
     return "\n".join(lines)
 
 
@@ -60,7 +61,9 @@ def main():
 
     print("[INFO] در حال آماده‌سازی داده‌ی گزارش از data/*.json ...")
     data = build_report_data()
-    print(f"[OK] {data['series_count']} سری قیمتی، {len(data['news'])} خبر این هفته پیدا شد.")
+    total_series = len(data["usd_table"]) + len(data["local_table"])
+    total_news = len(data["general_news"]) + len(data["transit_news"])
+    print(f"[OK] {total_series} سری قیمتی، {total_news} خبر این هفته پیدا شد.")
 
     print(f"[INFO] در حال ساخت PDF ...")
     pdf_path = build_pdf(data, args.out)

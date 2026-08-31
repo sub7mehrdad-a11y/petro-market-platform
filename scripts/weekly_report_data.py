@@ -24,6 +24,14 @@ BASE_FOB_USD = 250
 PRODUCT_FA = {"sodium bicarbonate": "جوش شیرین", "soda ash": "سودا اش"}
 PRICE_TYPE_FA = {"domestic": "داخلی", "FOB": "FOB", "CIF": "CIF"}
 
+# کشورهای کلیدی گزارش — رقبای تحت رصد (ترکیه، چین، روسیه) + بزرگ‌ترین بازار
+# هدفی که گزارش کامل داریم (برزیل). روسیه هنوز در price_intelligence_bot.py
+# منبع قیمت نداره؛ به‌جای حذف سطرش، با یادداشت «به‌زودی» نشون داده می‌شه تا
+# معلوم باشه عمداً جا نیفتاده، نه فراموش شده.
+KEY_COUNTRIES = ["China", "Turkey", "Brazil", "Russia"]
+
+TRANSIT_TOPIC = "ترانزیت، کرایه‌ی حمل و لجستیک"
+
 
 def _load(name: str, fallback):
     path = os.path.join(DATA_DIR, name)
@@ -101,14 +109,23 @@ def biggest_mover(usd_table: list[dict]) -> dict | None:
     return max(candidates, key=lambda r: abs(r["pct_change"]))
 
 
-def lowest_fob(usd_table: list[dict]) -> dict | None:
-    fob_rows = [
-        r for r in usd_table
-        if r["price_type_fa"] == "FOB" and r["product"] == "sodium bicarbonate"
-    ]
-    if not fob_rows:
-        return None
-    return min(fob_rows, key=lambda r: r["value"])
+def key_country_prices(usd_table: list[dict]) -> list[dict]:
+    """
+    قیمت جوش شیرین برای کشورهای کلیدی (KEY_COUNTRIES) — نه «مبنای خودمون»،
+    چون گزارش قراره روی قیمت رقبا/بازار تمرکز کنه، نه تکرار عدد ثابتی که خودِ
+    مدیرها از قبل حفظن. ترجیح با FOB (قابل‌مقایسه‌ترین با صادرات ما)؛ اگه FOB
+    نبود، هر نوع قیمتی که موجوده.
+    """
+    bicarb = [r for r in usd_table if r["product"] == "sodium bicarbonate"]
+    result = []
+    for country in KEY_COUNTRIES:
+        rows = [r for r in bicarb if r["country"] == country]
+        if not rows:
+            result.append({"country": country, "available": False})
+            continue
+        row = next((r for r in rows if r["price_type_fa"] == "FOB"), rows[0])
+        result.append({"country": country, "available": True, **row})
+    return result
 
 
 def recent_news(days: int = 7) -> list[dict]:
@@ -119,24 +136,25 @@ def recent_news(days: int = 7) -> list[dict]:
     return items
 
 
-def latest_watch(filename: str) -> dict | None:
-    log = _load(filename, [])
-    if not log:
-        return None
-    return sorted(log, key=lambda w: w.get("generated_at", ""), reverse=True)[0]
+def split_news(news_items: list[dict]) -> tuple[list[dict], list[dict]]:
+    """اخبار رو به دو دسته جدا می‌کنه: عمومی (بازار/رقبا/انرژی) و ترانزیت — چون
+    گزارش عمداً این دو رو در دو بخش پشت‌سرهم و جدا می‌خواد، نه قاطی."""
+    transit = [n for n in news_items if n.get("topic") == TRANSIT_TOPIC]
+    general = [n for n in news_items if n.get("topic") != TRANSIT_TOPIC]
+    return general, transit
 
 
 def build_report_data() -> dict:
     usd_table, local_table = build_price_tables()
+    news = recent_news()
+    general_news, transit_news = split_news(news)
     return {
         "generated_date": date.today().isoformat(),
         "base_fob_usd": BASE_FOB_USD,
+        "key_prices": key_country_prices(usd_table),
         "usd_table": usd_table,
         "local_table": local_table,
         "biggest_mover": biggest_mover(usd_table),
-        "lowest_fob": lowest_fob(usd_table),
-        "series_count": len(usd_table) + len(local_table),
-        "news": recent_news(),
-        "turkey_watch": latest_watch("turkey_watch_log.json"),
-        "china_watch": latest_watch("china_watch_log.json"),
+        "general_news": general_news,
+        "transit_news": transit_news,
     }

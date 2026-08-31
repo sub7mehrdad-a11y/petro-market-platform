@@ -39,9 +39,6 @@ PETROL_500 = HexColor("#2A5860")
 PETROL_100 = HexColor("#D7E2E4")
 PETROL_50 = HexColor("#EAF1F2")
 COPPER_500 = HexColor("#C9762E")
-COPPER_400 = HexColor("#DA8C42")
-COPPER_100 = HexColor("#FAE4C7")
-COPPER_50 = HexColor("#FDF3E7")
 SLATE_500 = HexColor("#64748B")
 DANGER = HexColor("#9C2B2B")
 SUCCESS = HexColor("#2E7D4F")
@@ -100,18 +97,6 @@ def styles():
         "small": ParagraphStyle(
             "small", fontName="Vazirmatn", fontSize=8, leading=12,
             textColor=SLATE_500, alignment=TA_RIGHT,
-        ),
-        "kpi_label": ParagraphStyle(
-            "kpi_label", fontName="Vazirmatn", fontSize=8.5, leading=12,
-            textColor=PETROL_100, alignment=TA_RIGHT,
-        ),
-        "kpi_value": ParagraphStyle(
-            "kpi_value", fontName="Vazirmatn-Bold", fontSize=15, leading=19,
-            textColor=white, alignment=TA_RIGHT,
-        ),
-        "kpi_hint": ParagraphStyle(
-            "kpi_hint", fontName="Vazirmatn", fontSize=7.5, leading=11,
-            textColor=COPPER_100, alignment=TA_RIGHT,
         ),
         "table_cell": ParagraphStyle(
             "table_cell", fontName="Vazirmatn", fontSize=8.5, leading=12,
@@ -173,6 +158,48 @@ def _price_table(rows, s):
         if i % 2 == 0:
             style_cmds.append(("BACKGROUND", (0, i), (-1, i), PETROL_50))
         style_cmds.append(("TEXTCOLOR", (1, i), (1, i), _pct_color(r["pct_change"])))
+    t.setStyle(TableStyle(style_cmds))
+    return t
+
+
+def _key_prices_table(key_prices, s):
+    """جدول «قیمت کشورهای کلیدی» — رقبا (ترکیه، چین، روسیه) + بازار هدف اصلی
+    (برزیل). عمداً قیمت پایه‌ی خودمون اینجا تکرار نمی‌شه — مدیرها از قبل
+    می‌دونن مبناشون چیه؛ این بخش قراره روی رقبا/بازار تمرکز کنه."""
+    header = [fa(h) for h in ["منبع", "نوع", "قیمت فعلی", "کشور"]]
+    data = [header]
+    for kp in key_prices:
+        if not kp.get("available"):
+            data.append([
+                Paragraph("—", s["small"]),
+                Paragraph("—", s["table_cell_num"]),
+                Paragraph(fa("به‌زودی"), s["table_cell_num"]),
+                Paragraph(fa(kp["country"]), s["table_cell"]),
+            ])
+            continue
+        value_txt = f"{kp['value']:,.2f} {kp['currency']}/{kp['unit']}"
+        data.append([
+            Paragraph(fa(kp["source_name"] or "—"), s["small"]),
+            Paragraph(fa(kp["price_type_fa"]), s["table_cell_num"]),
+            Paragraph(value_txt, s["table_cell_num"]),
+            Paragraph(fa(kp["country"]), s["table_cell"]),
+        ])
+
+    t = Table(data, colWidths=[36 * mm, 20 * mm, 38 * mm, 34 * mm], repeatRows=1)
+    style_cmds = [
+        ("BACKGROUND", (0, 0), (-1, 0), PETROL_700),
+        ("TEXTCOLOR", (0, 0), (-1, 0), white),
+        ("FONTNAME", (0, 0), (-1, 0), "Vazirmatn-Bold"),
+        ("FONTSIZE", (0, 0), (-1, 0), 9),
+        ("ALIGN", (0, 0), (-1, 0), "RIGHT"),
+        ("VALIGN", (0, 0), (-1, -1), "MIDDLE"),
+        ("GRID", (0, 0), (-1, -1), 0.4, PETROL_100),
+        ("TOPPADDING", (0, 0), (-1, -1), 6),
+        ("BOTTOMPADDING", (0, 0), (-1, -1), 6),
+    ]
+    for i in range(1, len(data)):
+        if i % 2 == 0:
+            style_cmds.append(("BACKGROUND", (0, i), (-1, i), PETROL_50))
     t.setStyle(TableStyle(style_cmds))
     return t
 
@@ -256,70 +283,12 @@ def _trend_chart(usd_table, s):
     return drawing
 
 
-def _kpi_cards(data, s):
-    biggest = data.get("biggest_mover")
-    lowest = data.get("lowest_fob")
-
-    def card(label, value, hint, accent=False):
-        bg = COPPER_500 if accent else PETROL_700
-        inner = Table(
-            [[Paragraph(fa(label), s["kpi_label"])],
-             [Paragraph(value, s["kpi_value"])],
-             [Paragraph(fa(hint), s["kpi_hint"])]],
-            colWidths=[52 * mm],
-        )
-        inner.setStyle(TableStyle([
-            ("BACKGROUND", (0, 0), (-1, -1), bg),
-            ("TOPPADDING", (0, 0), (-1, 0), 10),
-            ("LEFTPADDING", (0, 0), (-1, -1), 10),
-            ("RIGHTPADDING", (0, 0), (-1, -1), 10),
-            ("BOTTOMPADDING", (0, -1), (-1, -1), 10),
-            ("TOPPADDING", (0, 1), (-1, 1), 2),
-            ("BOTTOMPADDING", (0, 1), (-1, 1), 2),
-        ]))
-        return inner
-
-    cards = [
-        card(
-            "قیمت پایه‌ی مرجع FOB ما",
-            f"${data['base_fob_usd']}",
-            "دلار بر تن — مبنای هزینه‌یابی صادراتی",
-            accent=True,
-        ),
-        card(
-            "سری‌های قیمتی رصدشده",
-            str(data["series_count"]),
-            "ترکیب محصول/کشور/نوع قیمت، این هفته",
-        ),
-    ]
-    if lowest:
-        cards.append(card(
-            "کمترین FOB جهانی جوش شیرین",
-            f"${lowest['value']:,.0f}",
-            f"{lowest['country']} — در برابر {data['base_fob_usd']}$ ما",
-        ))
-    if biggest and biggest["pct_change"] not in (None, 0):
-        cards.append(card(
-            "بیشترین تغییر هفته",
-            _pct_text(biggest["pct_change"]),
-            f"{biggest['country']} · {biggest['product_fa']} ({biggest['price_type_fa']})",
-        ))
-
-    row = Table([cards], colWidths=[56 * mm] * len(cards), hAlign="RIGHT")
-    row.setStyle(TableStyle([
-        ("LEFTPADDING", (0, 0), (-1, -1), 3),
-        ("RIGHTPADDING", (0, 0), (-1, -1), 3),
-        ("VALIGN", (0, 0), (-1, -1), "TOP"),
-    ]))
-    return row
-
-
-def _news_block(news_items, s):
+def _news_block(news_items, s, empty_text="این هفته خبر تازه‌ای در این بخش ثبت نشده.", limit=5):
     if not news_items:
-        return [Paragraph(fa("این هفته خبر تحلیلی تازه‌ای ثبت نشده."), s["small"])]
+        return [Paragraph(fa(empty_text), s["small"])]
 
     blocks = []
-    for n in news_items[:6]:
+    for n in news_items[:limit]:
         sources = "، ".join(src.get("name", "") for src in (n.get("sources") or []) if src.get("name"))
         head = Paragraph(f"<b>{fa(n.get('headline_fa', ''))}</b>", s["body"])
         topic = Paragraph(fa(f"[{n.get('topic', '')}] — {n.get('date', '')}"), s["small"])
@@ -327,28 +296,6 @@ def _news_block(news_items, s):
         src_line = Paragraph(fa(f"منبع: {sources}") if sources else "", s["small"])
         blocks.append(KeepTogether([topic, head, Spacer(1, 2), body, src_line, Spacer(1, 8)]))
     return blocks
-
-
-def _watch_block(watch, label, s):
-    if not watch:
-        return [Paragraph(fa(f"داده‌ی رصد {label} برای این هفته موجود نیست."), s["small"])]
-
-    lines = [
-        Paragraph(f"<b>{fa(watch.get('headline_fa', ''))}</b>", s["body"]),
-        Paragraph(fa(watch.get("date", "")), s["small"]),
-        Spacer(1, 3),
-    ]
-    if watch.get("market_note"):
-        lines.append(Paragraph(fa(watch["market_note"]), s["table_cell"]))
-        lines.append(Spacer(1, 4))
-    for u in (watch.get("company_updates") or [])[:2]:
-        lines.append(Paragraph(
-            f"<b>{fa(u.get('company', ''))}</b>: {fa(u.get('headline', ''))}", s["table_cell"]
-        ))
-        if u.get("summary"):
-            lines.append(Paragraph(fa(u["summary"]), s["small"]))
-        lines.append(Spacer(1, 3))
-    return lines
 
 
 def _header_footer(canvas, doc, report_date: str):
@@ -397,11 +344,15 @@ def build_pdf(data: dict, output_path: str) -> str:
     ]))
 
     story.append(header_table)
-    story.append(Spacer(1, 10))
-    story.append(_kpi_cards(data, s))
-    story.append(Spacer(1, 6))
+    story.append(Spacer(1, 12))
 
-    story.append(Paragraph(fa("تغییرات قیمت جهانی (دلاری)"), s["h2"]))
+    # ۱. قیمت کشورهای کلیدی — عمداً بدون تکرار قیمت خودمون؛ روی رقبا/بازار تمرکز داره.
+    story.append(Paragraph(fa("قیمت جوش شیرین در کشورهای کلیدی"), s["h2"]))
+    story.append(_key_prices_table(data["key_prices"], s))
+
+    # ۲. تغییرات قیمت هفته
+    story.append(Spacer(1, 10))
+    story.append(Paragraph(fa("تغییرات قیمت جهانی هفته (دلاری)"), s["h2"]))
     usd_tbl = _price_table(data["usd_table"], s)
     if usd_tbl:
         story.append(usd_tbl)
@@ -420,16 +371,15 @@ def build_pdf(data: dict, output_path: str) -> str:
         story.append(_price_table(data["local_table"], s))
 
     story.append(PageBreak())
-    story.append(Paragraph(fa("اخبار و تحلیل هفته"), s["h2"]))
-    story.extend(_news_block(data["news"], s))
 
-    story.append(Spacer(1, 6))
-    story.append(Paragraph(fa("رصد رقبا — ترکیه"), s["h2"]))
-    story.extend(_watch_block(data["turkey_watch"], "ترکیه", s))
+    # ۳. مهم‌ترین اخبار و تحلیل‌ها (بدون ترانزیت — اون تو بخش بعدی جداست)
+    story.append(Paragraph(fa("مهم‌ترین اخبار و تحلیل هفته"), s["h2"]))
+    story.extend(_news_block(data["general_news"], s, empty_text="این هفته خبر تحلیلی تازه‌ای ثبت نشده."))
 
+    # ۴. مهم‌ترین اخبار ترانزیت و حمل‌ونقل — بخش جدای بعدی
     story.append(Spacer(1, 6))
-    story.append(Paragraph(fa("رصد رقبا — چین"), s["h2"]))
-    story.extend(_watch_block(data["china_watch"], "چین", s))
+    story.append(Paragraph(fa("مهم‌ترین اخبار ترانزیت و حمل‌ونقل"), s["h2"]))
+    story.extend(_news_block(data["transit_news"], s, empty_text="این هفته خبر ترانزیتی تازه‌ای ثبت نشده."))
 
     doc.build(
         story,
