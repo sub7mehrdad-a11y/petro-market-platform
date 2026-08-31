@@ -11,3 +11,8 @@ venv/
 # سیستم
 .DS_Store
 Thumbs.db
+
+# خروجی محلی گزارش هفتگی تلگرام — تولیدشده، نه سورس
+scripts/weekly_report_latest.pdf
+scripts/weekly_report_test.pdf
+scripts/*.pdf

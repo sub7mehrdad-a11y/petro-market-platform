@@ -5,3 +5,8 @@ openpyxl
 python-docx
 pdfplumber
 beautifulsoup4
+
+# فقط برای scripts/weekly_report_bot.py (گزارش هفتگی مدیران):
+reportlab
+arabic-reshaper
+python-bidi

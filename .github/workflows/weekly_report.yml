@@ -1,0 +1,50 @@
+# ارسال هفتگی گزارش PDF بازار به تلگرام مدیران.
+#
+# چرا یک ورک‌فلوی جدا از daily_market_agents.yml: این اسکریپت هیچ کلید هوش
+# مصنوعی لازم نداره و هیچ سایتی رو fetch نمی‌کنه — فقط data/*.json (که همون
+# ایجنت‌های روزانه تولید کرده‌ن) رو می‌خونه. یعنی حتی اگه یکی از ایجنت‌های
+# روزانه همون هفته خراب شده باشه یا سهمیه‌ش تموم شده باشه، گزارش مدیران باز هم
+# با آخرین داده‌ی معتبر موجود سالم ارسال می‌شه.
+#
+# قبل از استفاده باید:
+#   1. TELEGRAM_BOT_TOKEN و TELEGRAM_CHAT_IDS رو در Settings > Secrets and
+#      variables > Actions ثبت کنی (برای TELEGRAM_CHAT_IDS، اول هر مدیر باید
+#      یک‌بار به ربات /start بزنه، بعد scripts/telegram_setup.py رو محلی اجرا کن).
+#   2. از تب Actions می‌تونی با "Run workflow" (workflow_dispatch) دستی تستش کنی.
+
+name: Weekly Manager Report
+
+on:
+  schedule:
+    - cron: "30 5 * * 6"   # هر شنبه، 05:30 UTC (تابستان ایران ≈ 09:00)
+  workflow_dispatch: {}     # اجرای دستی برای تست
+
+jobs:
+  send-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Build and send weekly report
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_IDS: ${{ secrets.TELEGRAM_CHAT_IDS }}
+        run: python scripts/weekly_report_bot.py
+
+      - name: Upload PDF as artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: weekly-report-${{ github.run_id }}
+          path: scripts/weekly_report_latest.pdf
+          retention-days: 90
+          if-no-files-found: ignore

@@ -24,7 +24,14 @@
 │   ├── ingest_reports.py           # ورود گزارش‌های Word/PDF پوشه‌ی «گزارش» به reports/
 │   ├── geo_data.py                 # مختصات بنادر مرجع + محاسبه‌ی فاصله‌ی هوایی (haversine)
 │   ├── enrich_countries.py         # استخراج واردات/شرکای تجاری از گزارش‌ها → data/country_profiles.json
-│   └── ingest_import_suppliers.py  # واردات هر کشور به تفکیک مبدأ (ITC) → data/import_suppliers.json
+│   ├── ingest_import_suppliers.py  # واردات هر کشور به تفکیک مبدأ (ITC) → data/import_suppliers.json
+│   ├── env_utils.py                 # لودر سبک .env (بدون وابستگی)، برای اجرای محلی اسکریپت‌ها
+│   ├── telegram_utils.py           # ارسال پیام/PDF به تلگرام (httpx، پراکسی‌آگاه، بدون نشت توکن در خطا)
+│   ├── weekly_report_data.py       # آماده‌سازی داده‌ی گزارش هفتگی از data/*.json (بدون AI)
+│   ├── weekly_report_pdf.py        # ساخت PDF فارسی گزارش هفتگی (reportlab + Vazirmatn)
+│   ├── weekly_report_bot.py        # ارکستراتور: داده → PDF → ارسال تلگرام (هر شنبه)
+│   ├── telegram_setup.py           # پیدا کردن شناسه‌ی چت مدیرها برای TELEGRAM_CHAT_IDS
+│   └── fonts/                      # فونت Vazirmatn (OFL) برای رندر PDF فارسی
 ├── data/
 │   ├── price_history.json          # خروجی تجمعی price_intelligence_bot.py
 │   ├── news_analysis_log.json      # خروجی تجمعی news_analysis_bot.py
@@ -39,7 +46,9 @@
 │   ├── parsed/<id>.json            # نسخه‌ی ساختاریافته برای رندر هوشمند وب‌سایت
 │   └── <کشور>/<فایل>.pdf|docx      # فایل‌های اصلی، برای دانلود
 ├── web/                             # سایت Next.js (داشبورد، کشورها، گزارش‌ها، شرکت‌ها، نمایشگاه‌ها)
-└── .github/workflows/daily_market_agents.yml   # اجرای خودکار روزانه (فقط دو ایجنت قیمت/اخبار)
+└── .github/workflows/
+    ├── daily_market_agents.yml      # اجرای خودکار روزانه‌ی ایجنت‌های قیمت/اخبار/رصد رقبا
+    └── weekly_report.yml            # ارسال PDF گزارش هفتگی به تلگرام مدیران، هر شنبه
 ```
 
 ## چرا معماری «fetch + تحلیل با هوش مصنوعی» به‌جای اسکرپر ثابت یا ابزار جست‌وجوی گوگل؟
@@ -301,6 +310,33 @@ SDK رسمی جاوااسکریپت گوگل روی این سیستم با خط�
    (همون کلید رایگان aistudio.google.com).
 3. از تب Actions می‌تونید workflow «Daily Market Agents» رو دستی (`Run workflow`) هم تست کنید؛
    وگرنه هر روز ساعت 05:30 UTC (تابستان ایران ≈ 09:00) خودکار اجرا می‌شه و نتایج رو commit می‌کنه.
+
+## گزارش هفتگی مدیران (تلگرام)
+
+هر شنبه ساعت ۰۵:۳۰ UTC (≈ ۹ صبح ایران)، workflow جدا («Weekly Manager Report») یک PDF فارسی
+از وضعیت بازار می‌سازه و به تلگرام مدیران می‌فرسته: خلاصه‌ی KPI، جدول تغییرات قیمت جهانی
+(دلاری، جدا از قیمت‌های ارز محلی)، نمودار روند FOB، اخبار تحلیلی هفته، و آخرین یادداشت رصد
+ترکیه/چین.
+
+**چرا بدون هوش مصنوعی:** [`scripts/weekly_report_bot.py`](scripts/weekly_report_bot.py) هیچ
+کلید Gemini/Groq لازم نداره و هیچ سایتی fetch نمی‌کنه — فقط `data/*.json` (خروجی همون
+ایجنت‌های روزانه) رو می‌خونه. یعنی حتی اگه سهمیه‌ی هوش مصنوعی همون هفته تموم شده باشه، گزارش
+مدیران باز هم سالم می‌رسه.
+
+**راه‌اندازی:**
+1. توکن ربات رو از [@BotFather](https://t.me/BotFather) بگیر و در `.env` (محلی) و
+   GitHub Secrets (به اسم `TELEGRAM_BOT_TOKEN`) بذار.
+2. هر مدیری که باید گزارش رو بگیره، یک‌بار توی تلگرام به ربات پیام `/start` بده (ربات نمی‌تونه
+   اول خودش به کسی پیام بده).
+3. اجرا کن: `python scripts/telegram_setup.py` — شناسه‌ی چت‌ها رو پیدا و یک خط آماده‌ی
+   `TELEGRAM_CHAT_IDS=...` چاپ می‌کنه؛ همون رو در `.env` و GitHub Secrets بذار.
+4. تست محلی بدون ارسال واقعی: `python scripts/weekly_report_bot.py --dry-run` — فقط PDF رو
+   کنار همین اسکریپت می‌سازه.
+5. از تب Actions با «Run workflow» دستی تست کن، یا صبر کن تا شنبه‌ی بعد خودکار اجرا بشه.
+
+فونت فارسی (Vazirmatn، مجوز OFL) توی `scripts/fonts/` کنار خود ریپو نگه‌داری می‌شه — دلیلش
+اینه که reportlab برخلاف سایت (که از next/font/google در زمان build دانلود می‌کنه) به فایل
+فونت واقعی روی دیسک نیاز داره.
 
 ## اضافه‌کردن کشور/منبع/محصول جدید
 
