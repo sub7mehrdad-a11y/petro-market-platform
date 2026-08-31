@@ -125,6 +125,91 @@ def extract_json_array(text: str):
     return json.loads(array_match.group(0))
 
 
+# --- رفع باگ ۲۰۲۶-۰۸-۳۱: هم‌پوشانی رکوردها داخل یک اجرا ---
+#
+# صفحه‌ی یک منبع (مثلاً Procurement Resource) گاهی چند دوره رو با هم نشون
+# می‌ده (هم قیمت ماه گذشته هم دو ماه پیش)، و مدل هر دو رو وفادارانه به‌عنوان
+# رکورد جدا استخراج می‌کنه. بدون حذف تکراری، دو یا سه رکورد برای یک ترکیب
+# (محصول، کشور، نوع قیمت) توی همون batch می‌مونه و هر مصرف‌کننده‌ی داده
+# (نمودار داشبورد، کارت‌های هایلایت، صفحه‌ی گزارش‌ها) بسته به ترتیب آرایه —
+# نه واقعیت — یکی رو انتخاب می‌کنه؛ نتیجه نوسان قیمت جعلی روی چارته (تأیید
+# مستقیم روی data/price_history.json: قیمت CIF آلمان بین ۳۰۲ و ۳۴۱ دلار
+# جابه‌جا می‌شد چون دو منبع/دوره‌ی متفاوت رو به‌جای هم می‌نشوندن).
+MONTHS_EN = {
+    "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6,
+    "july": 7, "august": 8, "september": 9, "october": 10, "november": 11, "december": 12,
+}
+QUARTER_END_MONTH = {1: 3, 2: 6, 3: 9, 4: 12}
+
+
+def parse_reported_period(text: str):
+    """
+    'source_reported_date' رو به عددی قابل‌مقایسه (سال×۱۲+ماه) تبدیل می‌کنه تا
+    بشه فهمید کدوم رکورد واقعاً دوره‌ی جدیدتری داره — نه صرفاً کدوم دیرتر توی
+    خروجی مدل اومده. اگه قابل‌تجزیه نبود None برمی‌گردونه (رشته‌هایی مثل
+    "May 2026"، "Q2 2026"، "Q2 ending June 2026" پوشش داده می‌شن).
+    """
+    if not text:
+        return None
+    t = text.strip().lower()
+
+    m = re.search(r"q([1-4])\s*(?:ending\s+(\w+)\s+)?(\d{4})", t)
+    if m:
+        quarter, end_month_name, year = m.groups()
+        year = int(year)
+        if end_month_name and end_month_name in MONTHS_EN:
+            return year * 12 + MONTHS_EN[end_month_name]
+        return year * 12 + QUARTER_END_MONTH[int(quarter)]
+
+    m = re.search(r"\b(" + "|".join(MONTHS_EN) + r")\s+(\d{4})", t)
+    if m:
+        month_name, year = m.groups()
+        return int(year) * 12 + MONTHS_EN[month_name]
+
+    m = re.search(r"\b(\d{4})\b", t)
+    if m:
+        return int(m.group(1)) * 12  # فقط سال، بدون ماه — کمترین اولویت در همون سال
+
+    return None
+
+
+def dedupe_records(records: list[dict]) -> list[dict]:
+    """برای هر (محصول، کشور، نوع قیمت) فقط رکورد با جدیدترین دوره‌ی قابل‌تشخیص رو نگه می‌داره."""
+    groups: dict[tuple, list[dict]] = {}
+    order = []
+    for r in records:
+        key = (r.get("product"), r.get("country_or_region"), r.get("price_type"))
+        if key not in groups:
+            groups[key] = []
+            order.append(key)
+        groups[key].append(r)
+
+    deduped = []
+    dropped = 0
+    for key in order:
+        candidates = groups[key]
+        if len(candidates) == 1:
+            deduped.append(candidates[0])
+            continue
+        # جدیدترین دوره برنده می‌شه. اگه دو منبع برای همون دوره عدد متفاوت گزارش
+        # کرده باشن (اختلاف نظر واقعی، نه تکرار)، تساوی با نام منبع (الفبایی)
+        # شکسته می‌شه، نه با ترتیب آرایه — چون مدل هر روز ترتیب خروجی رو عوض
+        # می‌کنه و اگه معیار «اولین توی آرایه» باشه، همون منبع برنده هر روز عوض
+        # می‌شه و دقیقاً همون نوسان جعلی که داریم حذفش می‌کنیم برمی‌گرده (کشف
+        # شد وقتی سری آلمان/CIF رو بعد از حذف تکراری دوباره چک کردم: هنوز هر
+        # روز بین Procurement Resource و ChemAnalyst در نوسان بود).
+        scored = [(parse_reported_period(r.get("source_reported_date")), r.get("source_name") or "", i, r) for i, r in enumerate(candidates)]
+        scored.sort(key=lambda x: (x[0] is None, -(x[0] or 0), x[1], x[2]))
+        best = scored[0][3]
+        deduped.append(best)
+        dropped += len(candidates) - 1
+        print(f"[DEDUP] {key}: {len(candidates)} رکورد هم‌پوشان → نگه‌داشتن {best.get('source_name')} ({best.get('source_reported_date')})")
+
+    if dropped:
+        print(f"[INFO] {dropped} رکورد هم‌پوشان در همین اجرا حذف شد.")
+    return deduped
+
+
 def load_history():
     if os.path.exists(HISTORY_FILE):
         with open(HISTORY_FILE, "r", encoding="utf-8") as f:
@@ -154,6 +239,8 @@ def main():
     except ValueError as e:
         print(f"[ERROR] {e}")
         raise SystemExit(1)
+
+    records = dedupe_records(records)
 
     batch = {
         "collected_at": datetime.now(timezone.utc).isoformat(),
