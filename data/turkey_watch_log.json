@@ -827,5 +827,54 @@
         "url": "https://www.hurriyetdailynews.com/index/economy"
       }
     ]
+  },
+  {
+    "date": "2026-09-02",
+    "generated_at": "2026-09-02T09:49:41.143068+00:00",
+    "headline_fa": "هدف‌گذاری ۲۰۰ میلیارد دلاری لجستیک ترکیه و پیگیری پروژه جاده توسعه عراق",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "هدف‌گذاری ۲۰۰ میلیارد دلاری ترکیه در صنعت لجستیک و ترانزیت",
+        "summary": "انجمن خدمات حمل‌ونقل و لجستیک ترکیه (UTIKAD) در همایش لجستیک ۲۰۲۵ اعلام کرد که این کشور در صدد دستیابی به بازار ۲۰۰ میلیارد دلاری لجستیک و ورود به ۱۰ کشور برتر جهان در این حوزه است.",
+        "source_url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "headline": "درخواست عراق برای شتاب‌بخشی به پروژه لجستیکی جاده توسعه",
+        "summary": "نخست‌وزیر عراق خواستار تسریع در روند ساخت و اجرای پروژه «جاده توسعه» شد که مسیر ترانزیتی و لجستیکی میان عراق و ترکیه را تقویت می‌کند.",
+        "source_url": "https://www.hurriyetdailynews.com/index/economy"
+      }
+    ],
+    "market_note": "در اطلاعات امروز، اطلاعیه یا خبر جدیدی مبنی بر تغییر ظرفیت، قیمت‌گذاری یا صورت‌های مالی از رقبای اصلی ترک (اتی‌سودا و کازان‌سودا) مشاهده نشد. با این حال، اخبار بخش لجستیک حائز اهمیت است: هدف‌گذاری ترکیه برای ارتقای صنعت لجستیک خود به بازار ۲۰۰ میلیارد دلاری و تأکید عراق بر تسریع پروژه ترانزیتی «جاده توسعه»، به معنای تقویت بیشتر زنجیره تأمین و مرزهای حمل زمینی ترکیه خواهد بود. این زیرساخت‌ها می‌تواند مزیت لجستیکی ترکیه در بازار عراق (که هم‌اکنون سهم عمده آن را در دست دارد) را تثبیت کرده و رقابت‌پذیری قیمتی ما را با نرخ مرجع ۲۵۰ دلار FOB به چالش بکشد.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda Official Site",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda Official Site",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTİKAD",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hürriyet Daily News",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
