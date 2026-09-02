@@ -1,0 +1,171 @@
+{
+  "hs_code": "28363090",
+  "hs_description_fa": "سایر هیدروژن کربنات سدیم (بی‌کربنات سدیم)، بجز بی‌کربنات غیرتزریقی گرید دارویی",
+  "source": "گمرک جمهوری اسلامی ایران (irica.ir)",
+  "annual_totals": [
+    {
+      "year_fa": "1402",
+      "is_partial_year": true,
+      "tons": 23666.9,
+      "value_rial": 2069000180157,
+      "value_usd": 5385324
+    },
+    {
+      "year_fa": "1403",
+      "is_partial_year": true,
+      "tons": 35493.8,
+      "value_rial": 3422011322623,
+      "value_usd": 6615546
+    },
+    {
+      "year_fa": "1404",
+      "is_partial_year": true,
+      "months_covered": 10,
+      "tons": 53095.8,
+      "value_usd": 9607434,
+      "value_rial": null
+    }
+  ],
+  "destinations_1404_10m": [
+    {
+      "country_fa": "روسیه",
+      "iso2": "ru",
+      "tons": 26945.5,
+      "value_usd": 4853654,
+      "unit_price_usd_per_ton": 180.1
+    },
+    {
+      "country_fa": "عراق",
+      "iso2": "iq",
+      "tons": 11662.7,
+      "value_usd": 2137005,
+      "unit_price_usd_per_ton": 183.2
+    },
+    {
+      "country_fa": "افغانستان",
+      "iso2": "af",
+      "tons": 3474.9,
+      "value_usd": 627939,
+      "unit_price_usd_per_ton": 180.7
+    },
+    {
+      "country_fa": "ازبکستان",
+      "iso2": "uz",
+      "tons": 3432.3,
+      "value_usd": 616621,
+      "unit_price_usd_per_ton": 179.7
+    },
+    {
+      "country_fa": "آذربایجان",
+      "iso2": "az",
+      "tons": 2620.1,
+      "value_usd": 475097,
+      "unit_price_usd_per_ton": 181.3
+    },
+    {
+      "country_fa": "بلاروس",
+      "iso2": "by",
+      "tons": 1414.5,
+      "value_usd": 254871,
+      "unit_price_usd_per_ton": 180.2
+    },
+    {
+      "country_fa": "امارات",
+      "iso2": "ae",
+      "tons": 800.0,
+      "value_usd": 143899,
+      "unit_price_usd_per_ton": 179.9
+    },
+    {
+      "country_fa": "اوکراین",
+      "iso2": "ua",
+      "tons": 553.2,
+      "value_usd": 99577,
+      "unit_price_usd_per_ton": 180.0
+    },
+    {
+      "country_fa": "ارمنستان",
+      "iso2": "am",
+      "tons": 493.5,
+      "value_usd": 88709,
+      "unit_price_usd_per_ton": 179.8
+    },
+    {
+      "country_fa": "گرجستان",
+      "iso2": "ge",
+      "tons": 420.2,
+      "value_usd": 75638,
+      "unit_price_usd_per_ton": 180.0
+    },
+    {
+      "country_fa": "تاجیکستان",
+      "iso2": "tj",
+      "tons": 388.8,
+      "value_usd": 73774,
+      "unit_price_usd_per_ton": 189.7
+    },
+    {
+      "country_fa": "کرواسی",
+      "iso2": "hr",
+      "tons": 300.0,
+      "value_usd": 54430,
+      "unit_price_usd_per_ton": 181.4
+    },
+    {
+      "country_fa": "ترکمنستان",
+      "iso2": "tm",
+      "tons": 229.1,
+      "value_usd": 41161,
+      "unit_price_usd_per_ton": 179.7
+    },
+    {
+      "country_fa": "ترکیه",
+      "iso2": "tr",
+      "tons": 100.0,
+      "value_usd": 18000,
+      "unit_price_usd_per_ton": 180.0
+    },
+    {
+      "country_fa": "اردن",
+      "iso2": "jo",
+      "tons": 75.0,
+      "value_usd": 13500,
+      "unit_price_usd_per_ton": 180.0
+    },
+    {
+      "country_fa": "قرقیزستان",
+      "iso2": "kg",
+      "tons": 65.0,
+      "value_usd": 11674,
+      "unit_price_usd_per_ton": 179.6
+    },
+    {
+      "country_fa": "یمن",
+      "iso2": "ye",
+      "tons": 50.0,
+      "value_usd": 8987,
+      "unit_price_usd_per_ton": 179.7
+    },
+    {
+      "country_fa": "ایتالیا",
+      "iso2": "it",
+      "tons": 46.0,
+      "value_usd": 8278,
+      "unit_price_usd_per_ton": 180.0
+    },
+    {
+      "country_fa": "نیجریه",
+      "iso2": "ng",
+      "tons": 25.0,
+      "value_usd": 4500,
+      "unit_price_usd_per_ton": 180.0
+    },
+    {
+      "country_fa": "آلمان",
+      "iso2": "de",
+      "tons": 0.0,
+      "value_usd": 120,
+      "unit_price_usd_per_ton": null
+    }
+  ]
+}

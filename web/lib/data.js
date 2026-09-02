@@ -224,6 +224,14 @@ export function getImportSuppliers(country) {
   return all[country] || null;
 }
 
+// خروجی scripts/ingest_iran_exports.py — صادرات واقعی ایران (نه واردات جهانی)
+// به تفکیک کشور مقصد، مستقیم از آمار رسمی گمرک جمهوری اسلامی ایران (IRICA).
+// فقط برای صفحه‌ی خودِ ایران معنا داره؛ برخلاف بقیه‌ی داده‌های تجاری سایت که
+// از ITC Trade Map میان (دیدگاه واردکننده)، این یکی دیدگاه خودِ صادرکننده‌ست.
+export function getIranExports() {
+  return readJsonSafe(path.join(DATA_DIR, "iran_exports.json"), null);
+}
+
 export function getCountryProfile(country) {
   const profiles = readJsonSafe(path.join(DATA_DIR, "country_profiles.json"), {});
   return profiles[country] || null;

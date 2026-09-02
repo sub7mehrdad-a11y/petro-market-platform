@@ -10,7 +10,8 @@
 ├── گزارش/                            # فایل‌های خام ورودی شما (Word/Excel) — منبع اصلی، دستی مدیریت می‌شه
 │   ├── *.docx                        # گزارش‌های مفصل/مدیریتی
 │   ├── لیست شرکتها/*.xlsx
-│   └── لیست نمایشگاه ها/*.xlsx,docx
+│   ├── لیست نمایشگاه ها/*.xlsx,docx
+│   └── گمرک ایران/*.xlsx             # آمار رسمی صادرات ایران (IRICA) — منبع ingest_iran_exports.py
 ├── scripts/
 │   ├── fetch_utils.py               # گرفتن صفحات وب و تبدیل HTML به متن ساده (مشترک بین دو ایجنت روزانه)
 │   ├── docx_blocks.py               # تبدیل docx به بلوک‌های ترتیبی heading/paragraph/table
@@ -25,6 +26,7 @@
 │   ├── geo_data.py                 # مختصات بنادر مرجع + محاسبه‌ی فاصله‌ی هوایی (haversine)
 │   ├── enrich_countries.py         # استخراج واردات/شرکای تجاری از گزارش‌ها → data/country_profiles.json
 │   ├── ingest_import_suppliers.py  # واردات هر کشور به تفکیک مبدأ (ITC) → data/import_suppliers.json
+│   ├── ingest_iran_exports.py      # صادرات ایران به تفکیک مقصد (گمرک ایران/IRICA) → data/iran_exports.json
 │   ├── env_utils.py                 # لودر سبک .env (بدون وابستگی)، برای اجرای محلی اسکریپت‌ها
 │   ├── telegram_utils.py           # ارسال پیام/PDF به تلگرام (httpx، پراکسی‌آگاه، بدون نشت توکن در خطا)
 │   ├── weekly_report_data.py       # آماده‌سازی داده‌ی گزارش هفتگی از data/*.json (بدون AI)
@@ -39,6 +41,7 @@
 │   ├── exhibitions.json            # بانک یکدست‌شده‌ی نمایشگاه‌ها (خروجی ingest_exhibitions.py)
 │   ├── country_profiles.json       # واردات/شرکای تجاری/فاصله‌ی هر کشور (خروجی enrich_countries.py)
 │   ├── import_suppliers.json       # تفکیک مبدأ‌به‌مبدأ واردات هر کشور، با سهم/قیمت واحد/تعرفه (ITC)
+│   ├── iran_exports.json           # صادرات جوش شیرین ایران به تفکیک مقصد — آمار رسمی گمرک ایران، نه ITC
 │   ├── competitors.json            # پروفایل ساختاریافته‌ی رقبا (ترکیه، چین) — دستی از اسناد تحلیلی
 │   └── turkey_watch_log.json       # خروجی تجمعی turkey_watch_bot.py
 ├── reports/
