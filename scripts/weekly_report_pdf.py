@@ -64,15 +64,54 @@ def _register_fonts():
 # ایزوله‌کردن (LRE...PDF) هر بلوک عددی چندبخشی قبل از reshape/bidi، این باگ
 # رفع می‌شه؛ کشف شد موقع تست PDF واقعی (فوتر «۳۱-۰۸-۲۰۲۶» به‌جای «۲۰۲۶-۰۸-۳۱»).
 _LRE, _PDF = "‪", "‬"
-_MULTI_PART_NUMBER_RE = re.compile(r"\d[\d./:-]*\d")
+_MULTI_PART_NUMBER_RE = re.compile(r"\d[\d.,/:-]*\d")
 
 
 def fa(text) -> str:
-    """متن فارسی رو برای رسم درست در reportlab آماده می‌کنه (شکل‌دهی حروف + ترتیب RTL)."""
+    """متن فارسی رو برای رسم درست در reportlab آماده می‌کنه (شکل‌دهی حروف + ترتیب RTL).
+
+    فقط برای متنی که مطمئنیم توی یک خط جا می‌شه (تیتر بخش، برچسب، عدد) امنه.
+    برای متن بلند که ممکنه چند خط بشه، به‌جاش fa_wrapped رو ببین — دلیلش زیرشه."""
     if text is None:
         return ""
     text = _MULTI_PART_NUMBER_RE.sub(lambda m: _LRE + m.group(0) + _PDF, str(text))
     return get_display(arabic_reshaper.reshape(text))
+
+
+def fa_wrapped(text, font_name: str, font_size: float, max_width_pt: float) -> str:
+    """
+    برای متن بلندی که قراره داخل Paragraph چند خط بشه (خبر، تحلیل، هر سلول
+    جدولی که ممکنه سرریز کنه).
+
+    چرا fa() ساده برای این‌ها کافی نیست (باگ واقعی، توی گزارش واقعی دیده شد —
+    کاربر: «جملات جابجا هستند»): fa() کل رشته رو یک‌جا با get_display() به
+    «ترتیب دیداری» (visual order) تبدیل می‌کنه. این ترتیب فقط وقتی درسته که
+    کل رشته توی یک خط رسم بشه. وقتی Paragraph مجبور می‌شه اون رشته‌ی از‌قبل
+    بازچیده‌شده رو خودش (با شکستن ساده‌ی چپ‌به‌راست بر اساس فاصله) به چند خط
+    بشکنه، ترتیبِ *خط‌ها* به‌هم می‌ریزه — مثلاً جمله‌ی اول پاراگراف می‌تونه
+    آخرین خط چاپ‌شده باشه. این باگ فقط با متن کوتاه (که هیچ‌وقت لازم نیست
+    بشکنه) خودش رو نشون نمی‌ده، برای همین توی تست‌های اول (تیترها، اعداد) دیده
+    نشده بود.
+
+    راه‌حل: خودمون متن *منطقی* (قبل از بیدی) رو بر اساس عرض واقعی رندر می‌شکنیم،
+    بعد fa() رو روی هر خط جداگانه اعمال می‌کنیم — این‌طوری ترتیب خط‌ها دست‌نخورده
+    می‌مونه و فقط ترتیب کلمات *داخل* هر خط درست می‌شه (که کار fa() است).
+    """
+    if not text:
+        return ""
+    words = str(text).split(" ")
+    lines: list[str] = []
+    current = ""
+    for w in words:
+        candidate = f"{current} {w}".strip()
+        if not current or pdfmetrics.stringWidth(candidate, font_name, font_size) <= max_width_pt:
+            current = candidate
+        else:
+            lines.append(current)
+            current = w
+    if current:
+        lines.append(current)
+    return "<br/>".join(fa(line) for line in lines)
 
 
 def styles():
@@ -122,25 +161,35 @@ def _pct_color(pct):
     return SUCCESS if pct < 0 else DANGER  # کاهش قیمت جهانی برای ما به‌عنوان صادرکننده معمولاً خبر بد است، نه خوب — رنگ را عمداً برعکسِ حس معمول «سبز=خوب» نمی‌گذاریم چون بستگی به جهت دارد؛ اینجا خنثی (فقط جهت را نشان می‌دهد)
 
 
+_CELL_PAD_PT = 8  # حاشیه‌ی امن برای padding واقعی سلول، تا خط‌شکنی دستی زودتر از حد لازم اتفاق نیفته
+
+
+def _cell(text, style, col_width_pt):
+    """یک سلول جدول امن در برابر باگ خط‌شکنی (توضیح کامل بالای fa_wrapped)."""
+    return Paragraph(
+        fa_wrapped(text, style.fontName, style.fontSize, col_width_pt - _CELL_PAD_PT),
+        style,
+    )
+
+
 def _price_table(rows, s):
     if not rows:
         return None
+    col_widths = [28 * mm, 22 * mm, 32 * mm, 16 * mm, 28 * mm, 26 * mm]
     header = ["منبع", "تغییر (~۷ روز)", "قیمت فعلی", "نوع", "کشور/منطقه", "محصول"]
     header = [fa(h) for h in header]
     data = [header]
     for r in rows:
         value_txt = f"{r['value']:,.2f} {r['currency']}/{r['unit']}"
-        pct_txt = fa(_pct_text(r["pct_change"]))
         data.append([
-            Paragraph(fa(r["source_name"] or "—"), s["small"]),
-            Paragraph(pct_txt, s["table_cell_num"]),
-            Paragraph(value_txt, s["table_cell_num"]),
-            Paragraph(fa(r["price_type_fa"]), s["table_cell_num"]),
-            Paragraph(fa(r["country"]), s["table_cell"]),
-            Paragraph(fa(r["product_fa"]), s["table_cell"]),
+            _cell(r["source_name"] or "—", s["small"], col_widths[0]),
+            _cell(_pct_text(r["pct_change"]), s["table_cell_num"], col_widths[1]),
+            _cell(value_txt, s["table_cell_num"], col_widths[2]),
+            _cell(r["price_type_fa"], s["table_cell_num"], col_widths[3]),
+            _cell(r["country"], s["table_cell"], col_widths[4]),
+            _cell(r["product_fa"], s["table_cell"], col_widths[5]),
         ])
 
-    col_widths = [28 * mm, 22 * mm, 32 * mm, 16 * mm, 28 * mm, 26 * mm]
     t = Table(data, colWidths=col_widths, repeatRows=1)
 
     style_cmds = [
@@ -166,6 +215,7 @@ def _key_prices_table(key_prices, s):
     """جدول «قیمت کشورهای کلیدی» — رقبا (ترکیه، چین، روسیه) + بازار هدف اصلی
     (برزیل). عمداً قیمت پایه‌ی خودمون اینجا تکرار نمی‌شه — مدیرها از قبل
     می‌دونن مبناشون چیه؛ این بخش قراره روی رقبا/بازار تمرکز کنه."""
+    col_widths = [36 * mm, 20 * mm, 38 * mm, 34 * mm]
     header = [fa(h) for h in ["منبع", "نوع", "قیمت فعلی", "کشور"]]
     data = [header]
     for kp in key_prices:
@@ -173,19 +223,19 @@ def _key_prices_table(key_prices, s):
             data.append([
                 Paragraph("—", s["small"]),
                 Paragraph("—", s["table_cell_num"]),
-                Paragraph(fa("به‌زودی"), s["table_cell_num"]),
-                Paragraph(fa(kp["country"]), s["table_cell"]),
+                _cell("به‌زودی", s["table_cell_num"], col_widths[2]),
+                _cell(kp["country"], s["table_cell"], col_widths[3]),
             ])
             continue
         value_txt = f"{kp['value']:,.2f} {kp['currency']}/{kp['unit']}"
         data.append([
-            Paragraph(fa(kp["source_name"] or "—"), s["small"]),
-            Paragraph(fa(kp["price_type_fa"]), s["table_cell_num"]),
-            Paragraph(value_txt, s["table_cell_num"]),
-            Paragraph(fa(kp["country"]), s["table_cell"]),
+            _cell(kp["source_name"] or "—", s["small"], col_widths[0]),
+            _cell(kp["price_type_fa"], s["table_cell_num"], col_widths[1]),
+            _cell(value_txt, s["table_cell_num"], col_widths[2]),
+            _cell(kp["country"], s["table_cell"], col_widths[3]),
         ])
 
-    t = Table(data, colWidths=[36 * mm, 20 * mm, 38 * mm, 34 * mm], repeatRows=1)
+    t = Table(data, colWidths=col_widths, repeatRows=1)
     style_cmds = [
         ("BACKGROUND", (0, 0), (-1, 0), PETROL_700),
         ("TEXTCOLOR", (0, 0), (-1, 0), white),
@@ -283,17 +333,31 @@ def _trend_chart(usd_table, s):
     return drawing
 
 
+_CONTENT_WIDTH_PT = 180 * mm  # عرض کل متن (A4 منهای حاشیه‌های چپ/راست ۱۵ میلی‌متری)
+
+
 def _news_block(news_items, s, empty_text="این هفته خبر تازه‌ای در این بخش ثبت نشده.", limit=5):
     if not news_items:
         return [Paragraph(fa(empty_text), s["small"])]
 
+    body_style, small_style = s["table_cell"], s["small"]
     blocks = []
     for n in news_items[:limit]:
         sources = "، ".join(src.get("name", "") for src in (n.get("sources") or []) if src.get("name"))
-        head = Paragraph(f"<b>{fa(n.get('headline_fa', ''))}</b>", s["body"])
-        topic = Paragraph(fa(f"[{n.get('topic', '')}] — {n.get('date', '')}"), s["small"])
-        body = Paragraph(fa(n.get("analysis_fa", "")), s["table_cell"])
-        src_line = Paragraph(fa(f"منبع: {sources}") if sources else "", s["small"])
+        headline_wrapped = fa_wrapped(n.get("headline_fa", ""), s["body"].fontName, s["body"].fontSize, _CONTENT_WIDTH_PT)
+        head = Paragraph(f"<b>{headline_wrapped}</b>", s["body"])
+        topic = Paragraph(
+            fa_wrapped(f"[{n.get('topic', '')}] — {n.get('date', '')}", small_style.fontName, small_style.fontSize, _CONTENT_WIDTH_PT),
+            small_style,
+        )
+        body = Paragraph(
+            fa_wrapped(n.get("analysis_fa", ""), body_style.fontName, body_style.fontSize, _CONTENT_WIDTH_PT),
+            body_style,
+        )
+        src_line = Paragraph(
+            fa_wrapped(f"منبع: {sources}", small_style.fontName, small_style.fontSize, _CONTENT_WIDTH_PT) if sources else "",
+            small_style,
+        )
         blocks.append(KeepTogether([topic, head, Spacer(1, 2), body, src_line, Spacer(1, 8)]))
     return blocks
 
@@ -367,7 +431,7 @@ def build_pdf(data: dict, output_path: str) -> str:
 
     if data["local_table"]:
         story.append(Spacer(1, 10))
-        story.append(Paragraph(fa("قیمت‌های داخلی (ارز محلی — جدا از دلاری، طبق قانون پروژه قاطی نمی‌شود)"), s["h2"]))
+        story.append(Paragraph(fa("قیمت‌های داخلی (ارز محلی)"), s["h2"]))
         story.append(_price_table(data["local_table"], s))
 
     story.append(PageBreak())
