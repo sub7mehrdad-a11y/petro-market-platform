@@ -232,6 +232,24 @@ export function getIranExports() {
   return readJsonSafe(path.join(DATA_DIR, "iran_exports.json"), null);
 }
 
+// برای نمایش «صادرات ایران به این کشور» بالای صفحه‌ی هر کشور مقصد (نه فقط
+// صفحه‌ی خودِ ایران) — همون دیتای iran_exports.json، فقط یک ردیف پیدا می‌شه.
+export function getIranExportToCountry(country) {
+  const data = getIranExports();
+  if (!data) return null;
+  return data.destinations_1404_10m.find((d) => d.country_fa === country) || null;
+}
+
+// خروجی دستی از جدول مصرف سرانه‌ی گزارش «مصرف جهانی جوش شیرین» — فقط برای
+// کشورهایی که رقم واقعی/برآوردی مستقیم داشتن (نه هر ۲۰۰ کشور؛ برون‌یابی برای
+// بقیه‌ی کشورها عمداً انجام نشده چون بدون داده‌ی جمعیتی/سطح توسعه‌ی مشخص،
+// عددسازی گمراه‌کننده می‌شه).
+export function getPerCapitaConsumption(country) {
+  const data = readJsonSafe(path.join(DATA_DIR, "per_capita_consumption.json"), null);
+  if (!data) return null;
+  return data.countries.find((c) => c.country_fa === country) || null;
+}
+
 export function getCountryProfile(country) {
   const profiles = readJsonSafe(path.join(DATA_DIR, "country_profiles.json"), {});
   return profiles[country] || null;

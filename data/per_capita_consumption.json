@@ -1,0 +1,18 @@
+{
+  "source": "گزارش «مصرف جهانی جوش شیرین» — عمدتاً بر پایه‌ی IndexBox (Global Baking Soda Market Report 2026)",
+  "note": "این ارقام کل مصرف کشور (صنعتی + غذایی + دارویی + خوراک دام) تقسیم بر جمعیت است، نه صرفاً مصرف خانگی. برای چین و هند رقم مستقیم منتشرشده در دسترس نبود و از فرمول «مصرف ملی ÷ جمعیت» برآورد شده.",
+  "world_average_kg_per_capita": 0.84,
+  "countries": [
+    { "country_fa": "آلمان", "kg_per_capita": 6.5, "is_estimated": false },
+    { "country_fa": "ایتالیا", "kg_per_capita": 5.7, "is_estimated": false },
+    { "country_fa": "فرانسه", "kg_per_capita": 5.4, "kg_per_capita_range": [5.1, 5.7], "is_estimated": false },
+    { "country_fa": "بریتانیا", "kg_per_capita": 5.4, "is_estimated": false },
+    { "country_fa": "آمریکا", "kg_per_capita": 4.6, "kg_per_capita_range": [4.4, 4.8], "is_estimated": false },
+    { "country_fa": "برزیل", "kg_per_capita": 1.9, "is_estimated": false },
+    { "country_fa": "چین", "kg_per_capita": 1.84, "is_estimated": true, "estimate_basis": "۲.۶ میلیون تن مصرف ÷ ۱.۴۱ میلیارد نفر جمعیت" },
+    { "country_fa": "شیلی", "kg_per_capita": 0.87, "is_estimated": false },
+    { "country_fa": "هند", "kg_per_capita": 0.69, "is_estimated": true, "estimate_basis": "۱.۰ میلیون تن مصرف ÷ ۱.۴۵ میلیارد نفر جمعیت" },
+    { "country_fa": "کلمبیا", "kg_per_capita": 0.37, "is_estimated": false },
+    { "country_fa": "پرو", "kg_per_capita": 0.36, "is_estimated": false }
+  ]
+}

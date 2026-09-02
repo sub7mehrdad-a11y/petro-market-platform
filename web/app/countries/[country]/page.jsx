@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   getCountries, getCountrySummary, getCountryProfile, getTradeMapForCountry, getImportSuppliers,
-  getIranExports,
+  getIranExports, getIranExportToCountry, getPerCapitaConsumption,
 } from "@/lib/data";
 import CompanyTable from "../../components/CompanyTable";
 import ExhibitionTable from "../../components/ExhibitionTable";
@@ -67,6 +67,8 @@ export default async function CountryPage({ params }) {
   const trade = getTradeMapForCountry(country);
   const suppliers = getImportSuppliers(country);
   const iranExports = country === "ایران" ? getIranExports() : null;
+  const iranExportToHere = country !== "ایران" ? getIranExportToCountry(country) : null;
+  const perCapita = getPerCapitaConsumption(country);
   const sortedExhibitions = sortExhibitionsByDate(exhibitions);
   const smartReport = reports.find((r) => r.report_type === "summary");
 
@@ -88,6 +90,11 @@ export default async function CountryPage({ params }) {
         iso2={trade?.iso2}
         note={trade?.name_en}
         stats={[
+          iranExportToHere && {
+            label: "صادرات ایران به این کشور (۱۴۰۴، ۱۰ ماهه)",
+            value: iranExportToHere.tons.toLocaleString("fa-IR"),
+            unit: "تن",
+          },
           trade?.imports_2025?.value_usd_k != null && {
             label: "ارزش واردات (۲۰۲۵)",
             value: (trade.imports_2025.value_usd_k / 1000).toLocaleString("fa-IR", {
@@ -116,6 +123,11 @@ export default async function CountryPage({ params }) {
             label: "شرکت‌های شناسایی‌شده",
             value: companies.length.toLocaleString("fa-IR"),
             unit: "شرکت",
+          },
+          perCapita && {
+            label: `مصرف سرانه‌ی جهانی${perCapita.is_estimated ? " (برآوردی)" : ""}`,
+            value: perCapita.kg_per_capita.toLocaleString("fa-IR"),
+            unit: "کیلوگرم/نفر",
           },
           exhibitions.length > 0 && {
             label: "نمایشگاه‌های مرتبط",
