@@ -1,6 +1,6 @@
 /**
- * صادرات جوش شیرین ایران به تفکیک کشور مقصد — مستقیم از آمار رسمی گمرک
- * جمهوری اسلامی ایران (IRICA)، نه ITC Trade Map.
+ * صادرات جوش شیرین ایران به تفکیک کشور مقصد و گمرک صادرکننده — مستقیم از
+ * آمار رسمی گمرک جمهوری اسلامی ایران (IRICA)، نه ITC Trade Map.
  *
  * چرا این بخش با SupplierBreakdown فرق داره: اون یکی «واردات یک کشور از
  * مبادی مختلف» رو نشون می‌ده (دیدگاه واردکننده، از داده‌ی ITC). این‌جا برعکسه:
@@ -97,9 +97,47 @@ export default function IranExportSection({ data }) {
         ))}
       </ul>
 
+      {data.customs_offices_1404_10m?.length > 0 && (
+        <>
+          <h3 className="text-sm font-bold text-slate-700 mt-6 mb-2">
+            گمرک‌های صادرکننده — مسیرهای اصلی خروج از کشور
+          </h3>
+          <ul className="divide-y divide-slate-100">
+            {data.customs_offices_1404_10m.slice(0, 8).map((o, i) => (
+              <li key={i} className="py-2">
+                <div className="flex items-center gap-3">
+                  <span className="text-sm font-medium shrink-0 w-32 truncate">{o.office_fa}</span>
+                  <span className="text-xs font-tabular text-slate-600 shrink-0">{tons(o.tons)}</span>
+                  <span className="flex-1 h-1.5 rounded-full bg-slate-100 overflow-hidden min-w-8">
+                    <span
+                      className="block h-full rounded-full bg-petrol-400"
+                      style={{ width: `${Math.max(4, (o.tons / data.customs_offices_1404_10m[0].tons) * 100)}%` }}
+                    />
+                  </span>
+                  <span className="text-[11px] font-tabular text-slate-400 shrink-0">{usdK(o.value_usd)}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+          {data.customs_offices_1404_10m.length > 8 && (
+            <p className="text-[11px] text-slate-400 mt-2">
+              و {faDigits(data.customs_offices_1404_10m.length - 8)} گمرک دیگر با حجم کوچک‌تر.
+            </p>
+          )}
+        </>
+      )}
+
+      {data.pharma_grade_1404_10m?.tons > 0 && (
+        <p className="text-xs text-slate-500 bg-copper-50 border border-copper-100 rounded-lg px-3 py-2 mt-4">
+          علاوه بر این، در همین دوره <b className="font-tabular">{tons(data.pharma_grade_1404_10m.tons)}</b> (
+          {usdK(data.pharma_grade_1404_10m.value_usd)}) جوش شیرین <b>گرید دارویی</b> (غیرتزریقی) هم صادر شده — جدا از
+          ارقام بالا، چون گرید و بازار متفاوتی دارد.
+        </p>
+      )}
+
       <p className="text-[11px] text-slate-400 mt-4 leading-6">
-        داده‌ی تفکیک‌شده به کشور فقط برای دوره‌ی ده‌ماهه‌ی ۱۴۰۴ در دسترس است؛ ارقام سال‌های ۱۴۰۲
-        و ۱۴۰۳ بالا، جمع کل کشوری‌اند (بدون تفکیک مقصد).
+        داده‌ی تفکیک‌شده به کشور و گمرک فقط برای دوره‌ی ده‌ماهه‌ی ۱۴۰۴ در دسترس است؛ ارقام سال‌های
+        ۱۴۰۲ و ۱۴۰۳ بالا، جمع کل کشوری‌اند (بدون تفکیک مقصد یا گمرک).
       </p>
     </section>
   );

@@ -167,5 +167,121 @@
       "value_usd": 120,
       "unit_price_usd_per_ton": null
     }
-  ]
+  ],
+  "customs_offices_1404_10m": [
+    {
+      "office_fa": "مشهد",
+      "tons": 29088.4,
+      "value_usd": 5248018
+    },
+    {
+      "office_fa": "شلمچه",
+      "tons": 9385.8,
+      "value_usd": 1689120
+    },
+    {
+      "office_fa": "منطقه آزاد تجاري انزلي",
+      "tons": 6060.0,
+      "value_usd": 1088589
+    },
+    {
+      "office_fa": "منطقه ويژه اقتصادي شيراز",
+      "tons": 4269.0,
+      "value_usd": 771333
+    },
+    {
+      "office_fa": "مراغه",
+      "tons": 3068.6,
+      "value_usd": 552282
+    },
+    {
+      "office_fa": "پرويز خان",
+      "tons": 325.4,
+      "value_usd": 94137
+    },
+    {
+      "office_fa": "منطقه ويژه اقتصادي پيام",
+      "tons": 299.1,
+      "value_usd": 52573
+    },
+    {
+      "office_fa": "ماهيرود",
+      "tons": 153.8,
+      "value_usd": 26635
+    },
+    {
+      "office_fa": "بيله سوار",
+      "tons": 134.7,
+      "value_usd": 26845
+    },
+    {
+      "office_fa": "آستارا",
+      "tons": 94.7,
+      "value_usd": 17023
+    },
+    {
+      "office_fa": "خسروي",
+      "tons": 49.6,
+      "value_usd": 8991
+    },
+    {
+      "office_fa": "باشماق",
+      "tons": 48.2,
+      "value_usd": 8678
+    },
+    {
+      "office_fa": "اروميه",
+      "tons": 46.0,
+      "value_usd": 8278
+    },
+    {
+      "office_fa": "دوغارون",
+      "tons": 35.5,
+      "value_usd": 6378
+    },
+    {
+      "office_fa": "مهران",
+      "tons": 10.2,
+      "value_usd": 1833
+    },
+    {
+      "office_fa": "منطقه ويژه اقتصادي گرمسار",
+      "tons": 10.0,
+      "value_usd": 1799
+    },
+    {
+      "office_fa": "منطقه ويژه اقتصادي سرخس",
+      "tons": 10.0,
+      "value_usd": 1794
+    },
+    {
+      "office_fa": "پلدشت",
+      "tons": 2.0,
+      "value_usd": 480
+    },
+    {
+      "office_fa": "منطقه ويژه دوغارون",
+      "tons": 2.0,
+      "value_usd": 358
+    },
+    {
+      "office_fa": "لطف آباد",
+      "tons": 1.1,
+      "value_usd": 198
+    },
+    {
+      "office_fa": "قزوين",
+      "tons": 1.0,
+      "value_usd": 280
+    },
+    {
+      "office_fa": "تمرچين پيرانشهر",
+      "tons": 0.8,
+      "value_usd": 1812
+    }
+  ],
+  "pharma_grade_1404_10m": {
+    "tons": 520.9,
+    "value_usd": 111121
+  }
 }

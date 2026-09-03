@@ -11,6 +11,11 @@ ETL آمار رسمی گمرک جمهوری اسلامی ایران (IRICA) بر
   - export-by-country-1404-10m-partial.xlsx: زیرمجموعه‌ی همون export-detail (بدون
     ارزش دلاری) که کاربر اول فرستاد — عمداً اینجا استفاده نمی‌شه چون export-detail
     همون داده رو کامل‌تر داره (با قیمت). فقط برای مرجع/شفافیت نگه داشته شده.
+  - export-by-customs-office-1404-10m.xlsx: همون بازه‌ی ده‌ماهه‌ی ۱۴۰۴ (مجموع کلش
+    دقیقاً با export-detail یکسانه — تأیید متقاطع)، ولی از قبل به تفکیک گمرک
+    صادرکننده + گرید (اصلی/دارویی) آماده شده؛ اینجا فقط برای بخش «گمرک صادرکننده»
+    و رقم مکمل «گرید دارویی» استفاده می‌شه، نه برای تفکیک کشور (که از export-detail
+    میاد و قبلاً اعتبارسنجی شده).
 
 اعداد این اسکریپت با ارقام رسمی‌ای که کاربر مستقیماً از گمرک نقل کرد اعتبارسنجی شد:
   ۱۴۰۲ = ۲۳٬۷۰۰ تن، ۱۴۰۳ = ۳۵٬۵۰۰ تن (خروجی اینجا: ۲۳٬۶۶۷ و ۳۵٬۴۹۴ — تطابق کامل).
@@ -29,6 +34,8 @@ TARGET_HS = "28363090"
 HS_DESCRIPTION_FA = "سایر هیدروژن کربنات سدیم (بی‌کربنات سدیم)، بجز بی‌کربنات غیرتزریقی گرید دارویی"
 
 DETAIL_FILE = os.path.join(SRC_DIR, "export-detail-1404-10m.xlsx")
+CUSTOMS_OFFICE_FILE = os.path.join(SRC_DIR, "export-by-customs-office-1404-10m.xlsx")
+PHARMA_HS = "28363010"  # گرید دارویی (غیر تزریقی) — عمداً از آمار اصلی جدا نگه داشته می‌شه
 TARIFF_FILES = [
     (os.path.join(SRC_DIR, "export-by-tariff-1402.xlsx"), "1402", True),
     (os.path.join(SRC_DIR, "export-by-tariff-1403.xlsx"), "1403", True),
@@ -99,6 +106,45 @@ def parse_detail_by_country(path: str) -> list[dict]:
     return rows
 
 
+def parse_by_customs_office(path: str) -> tuple[list[dict], dict]:
+    """
+    گمرک صادرکننده‌ی هر محموله رو تجمیع می‌کنه — سؤال «کدوم مرز/بندر ایران
+    بیشترین صادرات جوش شیرین رو داره»، که هیچ‌جای دیگه‌ی سایت جواب داده نمی‌شه.
+
+    فقط HS اصلی (TARGET_HS) رو حساب می‌کنه تا با بقیه‌ی آمار سایت (که همون
+    محدوده رو داره) هم‌راستا بمونه؛ گرید دارویی (PHARMA_HS) جدا و به‌عنوان یک
+    رقم مکمل کوچیک برمی‌گرده، نه قاطی‌شده با تناژ اصلی.
+    """
+    wb = openpyxl.load_workbook(path, data_only=True)
+    ws = wb.active
+    offices: dict[str, list] = {}
+    pharma = [0.0, 0.0]
+
+    for row in ws.iter_rows(min_row=2, max_row=ws.max_row, values_only=True):
+        if not row or row[0] is None:
+            continue
+        office, _country, tariff, _grade, _desc, kg, _tons, usd, _rial, _rate, _share = row
+        tariff = str(int(tariff)) if tariff is not None else ""
+        if tariff == PHARMA_HS:
+            pharma[0] += (kg or 0) / 1000
+            pharma[1] += usd or 0
+            continue
+        if tariff != TARGET_HS:
+            continue
+        bucket = offices.setdefault(office, [0.0, 0.0])
+        bucket[0] += (kg or 0) / 1000
+        bucket[1] += usd or 0
+
+    result = [
+        {"office_fa": office, "tons": round(tons, 1), "value_usd": round(usd)}
+        for office, (tons, usd) in offices.items()
+    ]
+    result.sort(key=lambda r: -r["tons"])
+
+    pharma_summary = {"tons": round(pharma[0], 1), "value_usd": round(pharma[1])}
+    return result, pharma_summary
+
+
 def parse_tariff_total(path: str) -> dict | None:
     wb = openpyxl.load_workbook(path, data_only=True)
     ws = wb[wb.sheetnames[0]]
@@ -137,12 +183,18 @@ def main():
     })
     print(f"[OK] 1404 (10 ماهه): {total_1404_tons:,.1f} تن، {total_1404_usd:,.0f} دلار")
 
+    customs_offices, pharma_summary = parse_by_customs_office(CUSTOMS_OFFICE_FILE)
+    print(f"[OK] {len(customs_offices)} گمرک صادرکننده؛ گرید دارویی: "
+          f"{pharma_summary['tons']:,.1f} تن، {pharma_summary['value_usd']:,.0f} دلار")
+
     output = {
         "hs_code": TARGET_HS,
         "hs_description_fa": HS_DESCRIPTION_FA,
         "source": "گمرک جمهوری اسلامی ایران (irica.ir)",
         "annual_totals": annual_totals,
         "destinations_1404_10m": destinations,
+        "customs_offices_1404_10m": customs_offices,
+        "pharma_grade_1404_10m": pharma_summary,
     }
 
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
