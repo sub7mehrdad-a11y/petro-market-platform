@@ -16,3 +16,6 @@ Thumbs.db
 scripts/weekly_report_latest.pdf
 scripts/weekly_report_test.pdf
 scripts/*.pdf
+
+# لاگ اجرای محلی exhibitor_lead_finder.py — موقتی، نه سورس
+scripts/_*.log

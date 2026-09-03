@@ -1,0 +1,78 @@
+# استخراج و طبقه‌بندی خودکار لیست شرکت‌کنندگان نمایشگاه‌ها (scripts/exhibitor_lead_finder.py)
+# — مستقل از روشن بودن سیستم کاربر.
+#
+# چطور کار می‌کنه:
+#   - هر اجرا حداکثر تا سقف زمانی CI (کمی قبلش، با --deadline-minutes) کار می‌کنه،
+#     پیشرفت رو در data/exhibition_leads/*.progress.json و *.json ذخیره و
+#     commit/push می‌کنه، و اگه کامل نشده بود همون‌جا متوقف می‌شه.
+#   - اجرای زمان‌بندی‌شده (هر ۳ ساعت) خودش دوباره از همون progress ادامه می‌ده تا
+#     کامل بشه؛ وقتی همه چیز پردازش شد، اجراهای بعدی تقریباً آنی تموم می‌شن.
+#   - فایل اکسل نهایی (یکی به‌ازای هر نمایشگاه) هم در مخزن commit می‌شه، هم
+#     به‌عنوان ضمیمه‌ی این اجرا (Artifact) قابل دانلود مستقیمه — از تب Actions،
+#     روی اجرای مربوطه، پایین صفحه بخش Artifacts.
+#
+# قبل از استفاده باید:
+#   1. GEMINI_API_KEY از قبل به‌عنوان Secret ثبت شده (چون بقیه‌ی ربات‌های روزانه
+#      هم ازش استفاده می‌کنن) — نیازی به کار اضافه نیست.
+#   2. برای نمایشگاه جدید: از تب Actions با "Run workflow" آدرس/نام نمایشگاه رو
+#      عوض کن، یا مقادیر پیش‌فرض زیر رو ویرایش کن.
+
+name: Exhibitor Leads
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: "آدرس صفحه‌ی Exhibitor List نمایشگاه"
+        required: true
+        default: "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor"
+      event_name:
+        description: "نام نمایشگاه (برای نام فایل خروجی)"
+        required: true
+        default: "Gulfood 2026"
+  schedule:
+    - cron: "0 */3 * * *"   # هر ۳ ساعت، تا کامل شدن ادامه می‌ده
+
+jobs:
+  extract-leads:
+    runs-on: ubuntu-latest
+    timeout-minutes: 340
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run exhibitor lead finder
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          EXHIBITOR_XLSX_DIR: data/exhibition_leads/xlsx
+        run: |
+          python scripts/exhibitor_lead_finder.py \
+            "${{ github.event.inputs.url || 'https://exhibitors.gulfood.com/gulfood-2026/Exhibitor' }}" \
+            --event-name "${{ github.event.inputs.event_name || 'Gulfood 2026' }}" \
+            --engine gemini \
+            --deadline-minutes 320
+
+      - name: Commit updated data files
+        run: |
+          git config user.name "exhibitor-leads-bot"
+          git config user.email "actions@github.com"
+          git add data/exhibition_leads/
+          git diff --quiet --cached || git commit -m "به‌روزرسانی لیست شرکت‌های نمایشگاهی"
+          git push
+
+      - name: Upload xlsx as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: exhibitor-leads-xlsx
+          path: data/exhibition_leads/xlsx/*.xlsx
+          retention-days: 30

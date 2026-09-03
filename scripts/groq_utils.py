@@ -38,14 +38,19 @@ def estimate_tokens(text: str) -> int:
 def groq_generate(
     system_instruction: str, input: str, model: str = DEFAULT_MODEL,
     timeout: int = 30, max_tokens: int = 4000, reasoning_effort: str | None = None,
+    api_key: str | None = None,
 ) -> str:
     """
     reasoning_effort: مدل‌های gpt-oss قبل از جواب، «توکن استدلال» تولید می‌کنن که
     از همون max_tokens کم می‌شه. برای کارهای استخراج ساختاریافته (که استدلال
     عمیق لازم ندارن) مقدار "low" بده، وگرنه ممکنه کل بودجه صرف استدلال بشه و
     خروجی JSON وسط راه قطع بشه — دقیقاً بلایی که سر کانال amintara50 اومد.
+
+    api_key: برای فراخوان‌هایی که باید از کلید اختصاصی خودشون استفاده کنن (نه
+    GROQ_API_KEY مشترک)، مثل scripts/exhibitor_lead_finder.py — تا سهمیه‌ی
+    روزانه‌شون با بقیه‌ی ربات‌ها قاطی نشه.
     """
-    api_key = os.environ.get("GROQ_API_KEY")
+    api_key = api_key or os.environ.get("GROQ_API_KEY")
     if not api_key:
         raise SystemExit("GROQ_API_KEY تنظیم نشده است.")
 
