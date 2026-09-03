@@ -11,10 +11,16 @@
 #     به‌عنوان ضمیمه‌ی این اجرا (Artifact) قابل دانلود مستقیمه — از تب Actions،
 #     روی اجرای مربوطه، پایین صفحه بخش Artifacts.
 #
+# موتور مدل: اول کلید اختصاصی GROQ_API_KEY_EXHIBITOR کامل مصرف می‌شه (طبق
+# خواسته‌ی کاربر که این کلید فقط برای همین پروژه‌ست)، و همین که به سقف سهمیه‌ی
+# رایگان روزانه‌اش خورد، خودکار سوییچ به Gemini می‌کنه تا کار متوقف نشه.
+#
 # قبل از استفاده باید:
 #   1. GEMINI_API_KEY از قبل به‌عنوان Secret ثبت شده (چون بقیه‌ی ربات‌های روزانه
 #      هم ازش استفاده می‌کنن) — نیازی به کار اضافه نیست.
-#   2. برای نمایشگاه جدید: از تب Actions با "Run workflow" آدرس/نام نمایشگاه رو
+#   2. GROQ_API_KEY_EXHIBITOR رو یک‌بار در Settings > Secrets and variables >
+#      Actions اضافه کن (مقدارش همون کلید اختصاصی که برای این پروژه گرفتی).
+#   3. برای نمایشگاه جدید: از تب Actions با "Run workflow" آدرس/نام نمایشگاه رو
 #      عوض کن، یا مقادیر پیش‌فرض زیر رو ویرایش کن.
 
 name: Exhibitor Leads
@@ -54,12 +60,13 @@ jobs:
       - name: Run exhibitor lead finder
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GROQ_API_KEY_EXHIBITOR: ${{ secrets.GROQ_API_KEY_EXHIBITOR }}
           EXHIBITOR_XLSX_DIR: data/exhibition_leads/xlsx
         run: |
           python scripts/exhibitor_lead_finder.py \
             "${{ github.event.inputs.url || 'https://exhibitors.gulfood.com/gulfood-2026/Exhibitor' }}" \
             --event-name "${{ github.event.inputs.event_name || 'Gulfood 2026' }}" \
-            --engine gemini \
+            --engine auto \
             --deadline-minutes 320
 
       - name: Commit updated data files

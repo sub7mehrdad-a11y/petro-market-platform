@@ -50,12 +50,15 @@ dropdownContent) را می‌فهمد. اگر نمایشگاه بعدی از ی�
 (چه تأییدشده چه ردشده) دوباره به مدل نمی‌فرسته — یعنی هر بار قطع بشه، دفعه‌ی
 بعد از همون‌جا ادامه پیدا می‌کنه، نه از صفر.
 
-چرا Gemini پیش‌فرضه نه Groq: توی اولین اجرای کامل روی ۲۵۳۲ کاندید، فقط با ۲۴۹
-شرکت (کمتر از ۱۰٪ کار)، کل سهمیه‌ی روزانه‌ی Groq (۲۰۰٬۰۰۰ توکن/روز، مشترک با
-کل حساب) تموم شد. این حساب رو بخش «پاسخ هوشمند» زنده‌ی سایت (web/app/api/ask)
-هم استفاده می‌کنه، پس مصرف سنگین این‌جا می‌تونست اون قابلیت رو برای بازدیدکننده‌های
-واقعی سایت امروز از کار بندازه. Gemini سهمیه‌ی جدا داره (همونی که بقیه‌ی
-ربات‌های روزانه‌ی پروژه ازش استفاده می‌کنن)، پس برای این‌جور کار حجیم امن‌تره.
+چرا engine="auto" پیش‌فرضه: کلید مشترک GROQ_API_KEY رو نباید استفاده کرد، چون
+همون حسابیه که بخش «پاسخ هوشمند» زنده‌ی سایت (web/app/api/ask) هم ازش استفاده
+می‌کنه — یک اجرای سنگین این‌جا می‌تونست اون قابلیت رو برای بازدیدکننده‌های واقعی
+از کار بندازه (دقیقاً همین اتفاق نزدیک بود بیفته). کاربر یک کلید Groq اختصاصی
+فقط برای همین پروژه داد (GROQ_API_KEY_EXHIBITOR) تا هدر نره، ولی سقف رایگان
+روزانه‌ی آن (۲۰۰٬۰۰۰ توکن) برای ۲۵۳۲ کاندید کافی نیست. راه‌حل: اول این کلید
+اختصاصی کامل مصرف می‌شه (نه بی‌استفاده می‌مونه)، و همین که به سقف روزانه‌اش
+خورد، خودکار سوییچ به Gemini می‌کنه (سهمیه‌ی جدا، همونی که بقیه‌ی ربات‌های
+روزانه‌ی پروژه استفاده می‌کنن) تا کار بدون وقفه تا آخر ادامه پیدا کنه.
 """
 
 import os
@@ -151,20 +154,23 @@ LLM_BATCH_SIZE = 15
 GEMINI_MODEL = "gemini-3.6-flash"
 
 
-def make_generate_fn(engine: str):
-    """generate_fn(system_instruction, input_text) -> raw_text، مستقل از موتور زیرین."""
-    if engine == "groq":
-        # کلید اختصاصی این اسکریپت — تا سهمیه‌ی روزانه‌اش با ربات ترانزیت یا
-        # بخش /ask زنده‌ی سایت قاطی نشه (۲۰۲۶-۰۹-۰۲: اولین اجرا با کلید مشترک
-        # کل سهمیه‌ی روزانه‌ی حساب رو با کمتر از ۱۰٪ کار مصرف کرد).
-        api_key = os.environ.get("GROQ_API_KEY_EXHIBITOR")
-        if not api_key:
-            raise SystemExit("GROQ_API_KEY_EXHIBITOR تنظیم نشده است.")
-        return lambda sys_p, inp: groq_generate(
-            system_instruction=sys_p, input=inp, reasoning_effort="low", max_tokens=2500,
-            api_key=api_key,
-        )
+DAILY_QUOTA_MARKERS = ("tokens per day", "tpd")
 
+
+def _build_groq_fn():
+    # کلید اختصاصی این اسکریپت — تا سهمیه‌ی روزانه‌اش با ربات ترانزیت یا بخش
+    # /ask زنده‌ی سایت قاطی نشه (۲۰۲۶-۰۹-۰۲: اولین اجرا با کلید مشترک کل
+    # سهمیه‌ی روزانه‌ی حساب رو با کمتر از ۱۰٪ کار مصرف کرد).
+    api_key = os.environ.get("GROQ_API_KEY_EXHIBITOR")
+    if not api_key:
+        raise SystemExit("GROQ_API_KEY_EXHIBITOR تنظیم نشده است.")
+    return lambda sys_p, inp: groq_generate(
+        system_instruction=sys_p, input=inp, reasoning_effort="low", max_tokens=2500,
+        api_key=api_key,
+    )
+
+
+def _build_gemini_fn():
     api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
     if not api_key:
         raise SystemExit("GEMINI_API_KEY تنظیم نشده است.")
@@ -173,6 +179,45 @@ def make_generate_fn(engine: str):
     def _generate(sys_p, inp):
         interaction = client.interactions.create(model=GEMINI_MODEL, system_instruction=sys_p, input=inp)
         return interaction.output_text
+
+    return _generate
+
+
+def make_generate_fn(engine: str):
+    """
+    generate_fn(system_instruction, input_text) -> raw_text، مستقل از موتور زیرین.
+
+    engine="auto" (پیش‌فرض): اول کلید اختصاصی Groq رو کامل مصرف می‌کنه (طبق
+    خواسته‌ی کاربر که این کلید فقط برای همین پروژه‌ست و نباید هدر بره)، و
+    همین که به سقف سهمیه‌ی روزانه‌اش خورد (پیام خطای Groq شامل "tokens per
+    day"/"TPD")، خودکار و برای همیشه‌ی همین اجرا سوییچ می‌کنه روی Gemini —
+    نه فقط رد کردن اون بچ، بلکه همون درخواست رو فوری با Gemini دوباره امتحان
+    می‌کنه تا چیزی از دست نره.
+    """
+    if engine == "groq":
+        return _build_groq_fn()
+    if engine == "gemini":
+        return _build_gemini_fn()
+
+    # engine == "auto" — اگه کلید اختصاصی Groq اصلاً تنظیم نشده (هنوز به‌عنوان
+    # Secret اضافه نشده)، مستقیم می‌ریم سراغ Gemini؛ کرش نمی‌کنیم.
+    if not os.environ.get("GROQ_API_KEY_EXHIBITOR"):
+        print("  [INFO] GROQ_API_KEY_EXHIBITOR تنظیم نشده؛ مستقیم از Gemini استفاده می‌شه.")
+        return _build_gemini_fn()
+
+    state = {"use_gemini": False, "groq_fn": _build_groq_fn(), "gemini_fn": None}
+
+    def _generate(sys_p, inp):
+        if not state["use_gemini"]:
+            try:
+                return state["groq_fn"](sys_p, inp)
+            except Exception as e:  # noqa: BLE001
+                if not any(m in str(e).lower() for m in DAILY_QUOTA_MARKERS):
+                    raise  # خطای دیگه‌ای بود (مثلاً پارس JSON) — به llm_refine بسپار، بچ رو رد کنه
+                print("  [INFO] سهمیه‌ی روزانه‌ی Groq تمام شد؛ برای بقیه‌ی این اجرا سوییچ به Gemini.")
+                state["use_gemini"] = True
+                state["gemini_fn"] = state["gemini_fn"] or _build_gemini_fn()
+        return state["gemini_fn"](sys_p, inp)
 
     return _generate
 
@@ -676,8 +721,9 @@ def main():
     parser.add_argument("--max", type=int, default=None, help="حداکثر تعداد شرکت برای دریافت (برای تست)")
     parser.add_argument("--event-name", default=None, help="نام نمایشگاه برای درج در خروجی (پیش‌فرض: اسلاگ URL)")
     parser.add_argument("--no-llm", action="store_true", help="پاس نهایی مدل زبانی را رد کن (فقط فیلتر قانون‌محور)")
-    parser.add_argument("--engine", choices=["gemini", "groq"], default="gemini",
-                         help="موتور پاس نهایی (پیش‌فرض Gemini — Groq سهمیه‌ی مشترک با بخش /ask زنده‌ی سایت داره)")
+    parser.add_argument("--engine", choices=["auto", "gemini", "groq"], default="auto",
+                         help="موتور پاس نهایی — پیش‌فرض auto: اول کلید اختصاصی Groq تا ته سهمیه‌ی "
+                              "روزانه‌اش مصرف می‌شه، بعد خودکار سوییچ به Gemini می‌کنه")
     parser.add_argument("--no-enrich", action="store_true",
                          help="استخراج ایمیل/وب‌سایت/واتساپ از سایت هر شرکت را رد کن")
     parser.add_argument("--deadline-minutes", type=float, default=None,

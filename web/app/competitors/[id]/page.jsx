@@ -259,34 +259,38 @@ export default async function CompetitorPage({ params }) {
         </div>
       )}
 
-      {/* ساختار هزینه */}
+      {/* ساختار هزینه — جدول سالانه اختیاریه (فقط وقتی داده‌ی رسمی دوره‌ای هست، مثل ترکیه/WE Soda) */}
       {c.cost_structure && (
         <Section title="ساختار هزینه‌ی تولید" subtitle={c.cost_structure.note}>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="text-right text-slate-500 border-b border-slate-200">
-                  <th className="py-2 pe-4">شاخص</th>
-                  <th className="py-2 pe-4">۲۰۲۳</th>
-                  <th className="py-2 pe-4">۲۰۲۴</th>
-                  <th className="py-2">۲۰۲۵</th>
-                </tr>
-              </thead>
-              <tbody>
-                {c.cost_structure.rows.map((r, i) => (
-                  <tr key={i} className="border-b border-slate-100 align-top">
-                    <td className="py-2 pe-4 font-medium">{r.metric}</td>
-                    <td className="py-2 pe-4 font-tabular text-slate-600">{r.y2023}</td>
-                    <td className="py-2 pe-4 font-tabular font-bold text-copper-800">{r.y2024}</td>
-                    <td className="py-2 font-tabular text-slate-600">{r.y2025}</td>
+          {c.cost_structure.rows?.length > 0 && (
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-right text-slate-500 border-b border-slate-200">
+                    <th className="py-2 pe-4">شاخص</th>
+                    <th className="py-2 pe-4">۲۰۲۳</th>
+                    <th className="py-2 pe-4">۲۰۲۴</th>
+                    <th className="py-2">۲۰۲۵</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs text-slate-500 leading-6 mt-3 bg-slate-50 border border-slate-200 rounded-md p-3">
-            {c.cost_structure.synthetic_estimate}
-          </p>
+                </thead>
+                <tbody>
+                  {c.cost_structure.rows.map((r, i) => (
+                    <tr key={i} className="border-b border-slate-100 align-top">
+                      <td className="py-2 pe-4 font-medium">{r.metric}</td>
+                      <td className="py-2 pe-4 font-tabular text-slate-600">{r.y2023}</td>
+                      <td className="py-2 pe-4 font-tabular font-bold text-copper-800">{r.y2024}</td>
+                      <td className="py-2 font-tabular text-slate-600">{r.y2025}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+          {c.cost_structure.synthetic_estimate && (
+            <p className="text-xs text-slate-500 leading-6 mt-3 bg-slate-50 border border-slate-200 rounded-md p-3">
+              {c.cost_structure.synthetic_estimate}
+            </p>
+          )}
         </Section>
       )}
 
