@@ -27,6 +27,7 @@
 │   ├── enrich_countries.py         # استخراج واردات/شرکای تجاری از گزارش‌ها → data/country_profiles.json
 │   ├── ingest_import_suppliers.py  # واردات هر کشور به تفکیک مبدأ (ITC) → data/import_suppliers.json
 │   ├── ingest_iran_exports.py      # صادرات ایران به تفکیک مقصد (گمرک ایران/IRICA) → data/iran_exports.json
+│   ├── ingest_country_population.py # جمعیت هر کشور (World Bank API) → data/country_population.json
 │   ├── env_utils.py                 # لودر سبک .env (بدون وابستگی)، برای اجرای محلی اسکریپت‌ها
 │   ├── telegram_utils.py           # ارسال پیام/PDF به تلگرام (httpx، پراکسی‌آگاه، بدون نشت توکن در خطا)
 │   ├── weekly_report_data.py       # آماده‌سازی داده‌ی گزارش هفتگی از data/*.json (بدون AI)
@@ -43,6 +44,7 @@
 │   ├── import_suppliers.json       # تفکیک مبدأ‌به‌مبدأ واردات هر کشور، با سهم/قیمت واحد/تعرفه (ITC)
 │   ├── iran_exports.json           # صادرات جوش شیرین ایران به تفکیک مقصد — آمار رسمی گمرک ایران، نه ITC
 │   ├── per_capita_consumption.json # مصرف سرانه‌ی جهانی جوش شیرین (کیلوگرم/نفر) — دستی از گزارش «مصرف جهانی»، فقط کشورهای دارای رقم واقعی/برآوردی
+│   ├── country_population.json     # جمعیت هر کشور (World Bank) — برای برآورد بازار مصرف کشورهای بدون رقم سرانه‌ی مستقیم
 │   ├── competitors.json            # پروفایل ساختاریافته‌ی رقبا (ترکیه، چین) — دستی از اسناد تحلیلی
 │   └── turkey_watch_log.json       # خروجی تجمعی turkey_watch_bot.py
 ├── reports/

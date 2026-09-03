@@ -240,14 +240,47 @@ export function getIranExportToCountry(country) {
   return data.destinations_1404_10m.find((d) => d.country_fa === country) || null;
 }
 
-// خروجی دستی از جدول مصرف سرانه‌ی گزارش «مصرف جهانی جوش شیرین» — فقط برای
-// کشورهایی که رقم واقعی/برآوردی مستقیم داشتن (نه هر ۲۰۰ کشور؛ برون‌یابی برای
-// بقیه‌ی کشورها عمداً انجام نشده چون بدون داده‌ی جمعیتی/سطح توسعه‌ی مشخص،
-// عددسازی گمراه‌کننده می‌شه).
+// خروجی scripts/ingest_country_population.py (World Bank Open Data، آخرین سال موجود هر کشور).
+export function getCountryPopulation(country) {
+  const data = readJsonSafe(path.join(DATA_DIR, "country_population.json"), {});
+  return data[country] || null;
+}
+
+// مصرف سرانه + برآورد بازار مصرف هر کشور (تن در سال).
+//
+// برای ۱۱ کشوری که رقم سرانه‌ی واقعی/برآوردی مستقیم دارن (از گزارش «مصرف
+// جهانی جوش شیرین»)، همون رقم استفاده می‌شه. برای بقیه‌ی کشورها، به‌درخواست
+// صریح کاربر (۲۰۲۶-۰۹-۰۲)، از میانگین جهانی (۰.۸۴ کیلوگرم/نفر) × جمعیت کشور
+// برآورد می‌زنیم — و همیشه با is_population_based=true مشخص می‌شه که این یک
+// تخمین خیلی کلی‌ست، نه رقم گزارش‌شده‌ی واقعی آن کشور.
 export function getPerCapitaConsumption(country) {
   const data = readJsonSafe(path.join(DATA_DIR, "per_capita_consumption.json"), null);
   if (!data) return null;
-  return data.countries.find((c) => c.country_fa === country) || null;
+
+  const explicit = data.countries.find((c) => c.country_fa === country);
+  const population = getCountryPopulation(country)?.population ?? null;
+
+  if (explicit) {
+    return {
+      ...explicit,
+      is_population_based: false,
+      population,
+      estimated_tons: population != null ? Math.round((population * explicit.kg_per_capita) / 1000) : null,
+    };
+  }
+
+  // بدون رقم مستقیم: فقط اگه جمعیت داشته باشیم برآورد می‌سازیم؛ وگرنه چیزی
+  // نداریم که نشون بدیم (نه یک عدد بی‌پایه).
+  if (population == null) return null;
+
+  return {
+    country_fa: country,
+    kg_per_capita: data.world_average_kg_per_capita,
+    is_estimated: true,
+    is_population_based: true,
+    population,
+    estimated_tons: Math.round((population * data.world_average_kg_per_capita) / 1000),
+  };
 }
 
 export function getCountryProfile(country) {

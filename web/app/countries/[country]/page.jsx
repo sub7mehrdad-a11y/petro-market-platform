@@ -124,8 +124,15 @@ export default async function CountryPage({ params }) {
             value: companies.length.toLocaleString("fa-IR"),
             unit: "شرکت",
           },
+          perCapita?.estimated_tons != null && {
+            label: perCapita.is_population_based
+              ? "برآورد بازار مصرف (بر پایه‌ی جمعیت)"
+              : "برآورد بازار مصرف سالانه",
+            value: perCapita.estimated_tons.toLocaleString("fa-IR"),
+            unit: "تن/سال",
+          },
           perCapita && {
-            label: `مصرف سرانه‌ی جهانی${perCapita.is_estimated ? " (برآوردی)" : ""}`,
+            label: `مصرف سرانه${perCapita.is_population_based ? " (میانگین جهانی)" : perCapita.is_estimated ? " (برآوردی)" : ""}`,
             value: perCapita.kg_per_capita.toLocaleString("fa-IR"),
             unit: "کیلوگرم/نفر",
           },
