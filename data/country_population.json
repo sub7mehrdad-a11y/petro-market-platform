@@ -1,794 +1,1190 @@
 {
   "افغانستان": {
     "population": 43844111,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "آلبانی": {
     "population": 2349580,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "الجزایر": {
     "population": 47435312,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "آندورا": {
     "population": 82904,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "آنگولا": {
     "population": 39040039,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "آنتیگوا و باربودا": {
     "population": 94209,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "آرژانتین": {
     "population": 45851378,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "ارمنستان": {
     "population": 3086700,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "آروبا": {
     "population": 108785,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "استرالیا": {
     "population": 27614411,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "اتریش": {
     "population": 9208163,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "آذربایجان": {
     "population": 10246996,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "باهاما": {
     "population": 403033,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "بحرین": {
     "population": 1600366,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "بنگلادش": {
     "population": 175686899,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "باربادوس": {
     "population": 282623,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "بلاروس": {
     "population": 9085991,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "بلژیک": {
     "population": 11941781,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "بلیز": {
     "population": 422924,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "بنین": {
     "population": 14814460,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "برمودا": {
     "population": 64555,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "بوتان": {
     "population": 796682,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "بولیوی": {
     "population": 12581843,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "بوسنی و هرزگوین": {
     "population": 3140095,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "بوتسوانا": {
     "population": 2562122,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "برزیل": {
     "population": 212812405,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "جزایر ویرجین بریتانیا": {
     "population": 39732,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "برونئی دارالسلام": {
     "population": 466330,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "بلغارستان": {
     "population": 6433302,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "بورکینافاسو": {
     "population": 24074580,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "بوروندی": {
     "population": 14390003,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "کیپ‌ورد": {
     "population": 527326,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "کامبوج": {
     "population": 17847982,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "کامرون": {
     "population": 29879337,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "کانادا": {
     "population": 41651653,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "جزایر کِیمن": {
     "population": 75844,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "جمهوری آفریقای مرکزی": {
     "population": 5513282,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "چاد": {
     "population": 21003705,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "چیلی": {
     "population": 19859921,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "چین": {
     "population": 1406585000,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "کلمبیا": {
     "population": 53425635,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "کومور": {
     "population": 882847,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "جمهوری دموکراتیک کنگو (کینشاسا)": {
     "population": 112832473,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "کنگو (برازاویل)": {
     "population": 6484437,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "کاستاریکا": {
     "population": 5152950,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "ساحل عاج": {
     "population": 32711547,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "کرواسی": {
     "population": 3876200,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "کوبا": {
     "population": 10937203,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "کوراسائو": {
     "population": 156263,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "قبرس": {
     "population": 1370754,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "چک": {
     "population": 10886878,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "دانمارک": {
     "population": 6009169,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "جیبوتی": {
     "population": 1184076,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "دومینیکا": {
     "population": 65871,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "جمهوری دومینیکن": {
     "population": 11520487,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "اکوادور": {
     "population": 18289896,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "مصر": {
     "population": 118365995,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "السالوادور": {
     "population": 6365503,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "گینه استوایی": {
     "population": 1938431,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "استونی": {
     "population": 1366475,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "اسواتینی": {
     "population": 1256174,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "اتیوپی": {
     "population": 135472051,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "جزایر فارو": {
     "population": 54900,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "فیجی": {
     "population": 933154,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "فنلاند": {
     "population": 5646436,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "فرانسه": {
     "population": 68720337,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "پولینزی فرانسه": {
     "population": 282465,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "گابن": {
     "population": 2593130,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "گامبیا": {
     "population": 2822093,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "گرجستان": {
     "population": 3935766,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "آلمان": {
     "population": 83491249,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "غنا": {
     "population": 35064272,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "جبل‌الطارق": {
     "population": 40126,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "یونان": {
     "population": 10413962,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "گرینلند": {
     "population": 56831,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "گرنادا": {
     "population": 117303,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "گواتمالا": {
     "population": 18687881,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "گینیا": {
     "population": 15099727,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "گینه بیسائو": {
     "population": 2249515,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "گویانا": {
     "population": 835986,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "هاییتی": {
     "population": 11906095,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "هندوراس": {
     "population": 11005850,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "هنگ‌کنگ": {
     "population": 7498900,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "مجارستان": {
     "population": 9514251,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "ایسلند": {
     "population": 392404,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "هند": {
     "population": 1463865525,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "اندونزی": {
     "population": 285721236,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "ایران": {
     "population": 92417681,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "عراق": {
     "population": 47020774,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "ایرلند": {
     "population": 5484367,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "اسرائیل": {
     "population": 10122800,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "ایتالیا": {
     "population": 58915656,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "جامائیکا": {
     "population": 2837077,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "ژاپن": {
     "population": 123366734,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "اردن": {
     "population": 11520684,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "قزاقستان": {
     "population": 20843754,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "کنیا": {
     "population": 57532493,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "کیریباتی": {
     "population": 136488,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "کره شمالی": {
     "population": 26571036,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "کره جنوبی": {
     "population": 51684564,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "کویت": {
     "population": 4865298,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "قرقیزستان": {
     "population": 7343064,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "لائوس": {
     "population": 7873046,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "لتونی": {
     "population": 1847785,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "لبنان": {
     "population": 5849421,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "لسوتو": {
     "population": 2363325,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "لیبریا": {
     "population": 5731206,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "لیبی": {
     "population": 7458555,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "لیتوانی": {
     "population": 2888774,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "لوکزامبورگ": {
     "population": 686970,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "ماکائو": {
     "population": 685900,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "ماداگاسکار": {
     "population": 32740678,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "مالاوی": {
     "population": 22216120,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "مالزی": {
     "population": 35977838,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "مالدیو": {
     "population": 529676,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "مالی": {
     "population": 25198821,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "مالت": {
     "population": 579704,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "جزایر مارشال": {
     "population": 36282,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "موریتانی": {
     "population": 5315065,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "موریس": {
     "population": 1243741,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "مکزیک": {
     "population": 131946900,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "مولداوی": {
     "population": 2360527,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "مغولستان": {
     "population": 3568978,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "مونته‌نگرو": {
     "population": 623129,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "مراکش": {
     "population": 38430770,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "موزامبیق": {
     "population": 35631653,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "میانمار": {
     "population": 54850648,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "نامیبیا": {
     "population": 3092816,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "نپال": {
     "population": 29618118,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "هلند": {
     "population": 18087633,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "نیوزیلند": {
     "population": 5324700,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "نیکاراگوئه": {
     "population": 7007502,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "نیجر": {
     "population": 27917831,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "نیجریه": {
     "population": 237527782,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "مقدونیه شمالی": {
     "population": 1820909,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "نروژ": {
     "population": 5610870,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "عمان": {
     "population": 5494691,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "پاکستان": {
     "population": 255219554,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "پاناما": {
     "population": 4571189,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "پاپوا نیو گینیا": {
     "population": 10762817,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "پاراگوئه": {
     "population": 7013078,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "پرو": {
     "population": 34576665,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "فیلیپین": {
     "population": 116786962,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "لهستان": {
     "population": 36435861,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "پرتغال": {
     "population": 10804871,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "قطر": {
     "population": 2972215,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "رومانی": {
     "population": 19020271,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "روسیه": {
     "population": 143513328,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "رواندا": {
     "population": 14569341,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "ساموا": {
     "population": 219306,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "سائوتومه و پرینسیپ": {
     "population": 240254,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "عربستان سعودی": {
     "population": 36973555,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "سنگال": {
     "population": 18931966,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "صربستان": {
     "population": 6549143,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "سیشل": {
     "population": 122730,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "سیرالئون": {
     "population": 8819794,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "سنگاپور": {
     "population": 6111175,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "اسلواکی": {
     "population": 5413813,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "اسلوونی": {
     "population": 2130986,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "جزایر سلیمان": {
     "population": 838645,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "سومالی": {
     "population": 19654739,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "آفریقای جنوبی": {
     "population": 64747319,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "سودان جنوبی": {
     "population": 12188788,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "اسپانیا": {
     "population": 49355143,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "سری‌لانکا": {
     "population": 21756000,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "سن کیتس و نویس": {
     "population": 46922,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "سنت لوسیا": {
     "population": 180149,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "سنت وینسنت و گرنادین‌ها": {
     "population": 99924,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "سودان": {
     "population": 51662147,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "سورینام": {
     "population": 639850,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "سوئد": {
     "population": 10596620,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "سوئیس": {
     "population": 9092436,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "سوریه": {
     "population": 25620427,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "تاجیکستان": {
     "population": 10786734,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "تانزانیا": {
     "population": 70545865,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "تایلند": {
     "population": 71619863,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "تیمور-لست": {
     "population": 1418517,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "توگو": {
     "population": 8591626,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "تونگا": {
     "population": 103742,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "ترینیداد و توباگو": {
     "population": 1367764,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "تونس": {
     "population": 12348573,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "ترکیه": {
     "population": 85878556,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "ترکمنستان": {
     "population": 7618847,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "جزایر تورکس و کایکوس": {
     "population": 46855,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "اوگاندا": {
     "population": 51384894,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "اوکراین": {
     "population": 38980376,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "امارات": {
     "population": 11513149,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "بریتانیا": {
     "population": 69487000,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "آمریکا": {
     "population": 341784857,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "اروگوئه": {
     "population": 3384688,
-    "year": 2025
+    "year": 2025,
+    "income_level": "High income",
+    "tier": "developed"
   },
   "ازبکستان": {
     "population": 37053428,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "وانواتو": {
     "population": 335169,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "ونزوئلا": {
     "population": 28516896,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "ویتنام": {
     "population": 101598527,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Upper middle income",
+    "tier": "developing"
   },
   "فلسطین": {
     "population": 5413596,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "یمن": {
     "population": 41773878,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Low income",
+    "tier": "least_developed"
   },
   "زامبیا": {
     "population": 21913874,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   },
   "زیمبابوه": {
     "population": 16950795,
-    "year": 2025
+    "year": 2025,
+    "income_level": "Lower middle income",
+    "tier": "developing"
   }
 }

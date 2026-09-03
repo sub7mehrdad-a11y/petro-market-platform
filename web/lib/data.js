@@ -249,16 +249,23 @@ export function getCountryPopulation(country) {
 // مصرف سرانه + برآورد بازار مصرف هر کشور (تن در سال).
 //
 // برای ۱۱ کشوری که رقم سرانه‌ی واقعی/برآوردی مستقیم دارن (از گزارش «مصرف
-// جهانی جوش شیرین»)، همون رقم استفاده می‌شه. برای بقیه‌ی کشورها، به‌درخواست
-// صریح کاربر (۲۰۲۶-۰۹-۰۲)، از میانگین جهانی (۰.۸۴ کیلوگرم/نفر) × جمعیت کشور
-// برآورد می‌زنیم — و همیشه با is_population_based=true مشخص می‌شه که این یک
-// تخمین خیلی کلی‌ست، نه رقم گزارش‌شده‌ی واقعی آن کشور.
+// جهانی جوش شیرین»)، همون رقم استفاده می‌شه. برای بقیه‌ی کشورها، به‌جای یک
+// میانگین جهانی ثابت (که کاربر درست گفت تلورانسش خیلی زیاده — یک کشور اروپایی
+// و یک کشور کم‌درآمد آفریقایی نباید عدد یکسان بگیرن)، بر اساس سطح توسعه‌ی
+// کشور (developed / developing / least_developed — از سطح درآمد World Bank،
+// در ingest_country_population.py) یکی از سه میانگین tier_averages استفاده
+// می‌شه. اگه تیر کشور نامشخص بود (چند مورد خیلی کوچیک/بدون طبقه‌بندی)، به
+// میانگین جهانی برمی‌گردیم — نه اینکه چیزی نشون ندیم.
+//
+// همیشه با is_population_based=true مشخص می‌شه که این یک برآورده، نه رقم
+// گزارش‌شده‌ی واقعی آن کشور.
 export function getPerCapitaConsumption(country) {
   const data = readJsonSafe(path.join(DATA_DIR, "per_capita_consumption.json"), null);
   if (!data) return null;
 
   const explicit = data.countries.find((c) => c.country_fa === country);
-  const population = getCountryPopulation(country)?.population ?? null;
+  const popInfo = getCountryPopulation(country);
+  const population = popInfo?.population ?? null;
 
   if (explicit) {
     return {
@@ -273,13 +280,17 @@ export function getPerCapitaConsumption(country) {
   // نداریم که نشون بدیم (نه یک عدد بی‌پایه).
   if (population == null) return null;
 
+  const tierInfo = popInfo?.tier ? data.tier_averages?.[popInfo.tier] : null;
+  const kgPerCapita = tierInfo?.kg_per_capita ?? data.world_average_kg_per_capita;
+
   return {
     country_fa: country,
-    kg_per_capita: data.world_average_kg_per_capita,
+    kg_per_capita: kgPerCapita,
+    tier: popInfo?.tier || null,
     is_estimated: true,
     is_population_based: true,
     population,
-    estimated_tons: Math.round((population * data.world_average_kg_per_capita) / 1000),
+    estimated_tons: Math.round((population * kgPerCapita) / 1000),
   };
 }
 

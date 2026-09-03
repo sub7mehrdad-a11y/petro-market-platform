@@ -1,6 +1,13 @@
 """
-جمعیت کشورها از World Bank Open Data API (رایگان، بدون کلید) — برای برآورد
-«بازار مصرف تخمینی» هر کشور (جمعیت × مصرف سرانه‌ی جهانی، در web/lib/data.js).
+جمعیت + سطح درآمد کشورها از World Bank Open Data API (رایگان، بدون کلید) —
+برای برآورد «بازار مصرف تخمینی» هر کشور در web/lib/data.js.
+
+چرا سطح درآمد هم لازم شد (نه فقط جمعیت): نسخه‌ی اول فقط با میانگین جهانی
+(۰.۸۴ کیلوگرم/نفر) برای همه‌ی کشورهای بدون رقم مستقیم ضرب می‌شد؛ کاربر درست
+گفت تلورانسش زیاده — یک کشور اروپایی و یک کشور کم‌درآمد آفریقایی نباید عدد
+یکسان بگیرن. طبقه‌بندی رسمی درآمد World Bank (High/Upper-middle/Lower-middle/
+Low income) دقیقاً همون سه‌سطحی رو می‌ده که کاربر خواست: توسعه‌یافته (HIC)،
+در حال توسعه (UMC+LMC)، کم‌درآمد/عمدتاً آفریقا (LIC).
 
 چرا World Bank (نه REST Countries که قبلاً امتحان شد): نسخه‌ی رایگان
 restcountries.com منسوخ شده و به کلید/نسخه‌ی جدید نیاز داره؛ World Bank API
@@ -27,6 +34,14 @@ OUTPUT_FILE = os.path.join(BASE_DIR, "data", "country_population.json")
 
 COUNTRY_LIST_URL = "https://api.worldbank.org/v2/country?format=json&per_page=400"
 POP_URL = "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?mrv=1&format=json&per_page=400"
+
+# HIC=High income, UMC/LMC=Upper/Lower-middle income, LIC=Low income (طبقه‌بندی رسمی World Bank)
+INCOME_TO_TIER = {
+    "HIC": "developed",
+    "UMC": "developing",
+    "LMC": "developing",
+    "LIC": "least_developed",
+}
 
 
 def fetch_json(url):
@@ -55,12 +70,19 @@ def main():
         iso3 = row.get("countryiso3code")
         if not iso3 or iso3 not in real_countries or row.get("value") is None:
             continue
-        iso2 = real_countries[iso3]["iso2Code"].lower()
+        meta = real_countries[iso3]
+        iso2 = meta["iso2Code"].lower()
         fa = iso2_to_fa.get(iso2)
         if not fa:
-            unmapped.append((real_countries[iso3]["name"], iso2))
+            unmapped.append((meta["name"], iso2))
             continue
-        result[fa] = {"population": row["value"], "year": int(row["date"])}
+        income_id = meta.get("incomeLevel", {}).get("id")
+        result[fa] = {
+            "population": row["value"],
+            "year": int(row["date"]),
+            "income_level": meta.get("incomeLevel", {}).get("value"),
+            "tier": INCOME_TO_TIER.get(income_id),  # developed | developing | least_developed | None (نامشخص)
+        }
 
     if unmapped:
         print(f"[WARN] {len(unmapped)} کشور بدون نگاشت فارسی (رد شدند): {unmapped[:10]}...")

@@ -14,6 +14,7 @@ import ExportTrend from "../../components/ExportTrend";
 import IranExportSection from "../../components/IranExportSection";
 
 const REPORT_TYPE_FA = { detailed: "گزارش مفصل", summary: "گزارش مدیریتی (خلاصه)" };
+const TIER_FA = { developed: "میانگین کشورهای توسعه‌یافته", developing: "میانگین در حال توسعه", least_developed: "میانگین کم‌درآمد" };
 
 const PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
 function toAsciiDigits(str) {
@@ -126,13 +127,13 @@ export default async function CountryPage({ params }) {
           },
           perCapita?.estimated_tons != null && {
             label: perCapita.is_population_based
-              ? "برآورد بازار مصرف (بر پایه‌ی جمعیت)"
+              ? `برآورد بازار مصرف (${TIER_FA[perCapita.tier] || "بر پایه‌ی جمعیت"})`
               : "برآورد بازار مصرف سالانه",
             value: perCapita.estimated_tons.toLocaleString("fa-IR"),
             unit: "تن/سال",
           },
           perCapita && {
-            label: `مصرف سرانه${perCapita.is_population_based ? " (میانگین جهانی)" : perCapita.is_estimated ? " (برآوردی)" : ""}`,
+            label: `مصرف سرانه${perCapita.is_population_based ? ` (${TIER_FA[perCapita.tier] || "میانگین جهانی"})` : perCapita.is_estimated ? " (برآوردی)" : ""}`,
             value: perCapita.kg_per_capita.toLocaleString("fa-IR"),
             unit: "کیلوگرم/نفر",
           },
