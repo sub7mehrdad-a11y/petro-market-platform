@@ -1,10 +1,10 @@
 {
   "event_name": "Gulfood 2026",
   "source_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor",
-  "fetched_at": "2026-09-04T18:09:21.615954+00:00",
+  "fetched_at": "2026-09-04T22:54:49.355507+00:00",
   "total_candidates_after_rules": 2532,
-  "total_relevant": 1458,
-  "total_processed": 1621,
+  "total_relevant": 1472,
+  "total_processed": 1636,
   "companies": [
     {
       "name": "Al-Dua Food Processing Pvt. Limited",
@@ -37354,6 +37354,382 @@
       "id": "gulfood-2026-1414"
     },
     {
+      "name": "Modern Bakery L.L.C",
+      "stand": "Stand No- 831, Hall 8",
+      "country": "United Arab Emirates",
+      "description": "Modern Bakery opened in 1975 as a relatively small scale family run bakery. With 80 employees and many of the products being manually produced. Modern Bakery began business by supplying the region with Arabic breads, pastries, Ara ...",
+      "categories": [
+        "Bakery, Cakes & Desserts",
+        "Frozen Food",
+        "Free-From Products",
+        "Dry Goods",
+        "Dairy",
+        "Frozen Fruit & Vegetables",
+        "Frozen Dairy Products",
+        "Frozen Baked Goods",
+        "Gluten-Free Products",
+        "Dairy-free Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/modern-bakery-l-l-c",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و شیرینی‌پزی",
+      "llm_reason": "تولیدکننده نان، کیک و شیرینی که از جوش شیرین به عنوان عامل ورآورنده استفاده می‌کند.",
+      "website": "https://www.modernbakery.com/",
+      "email": "info@modernbakery.com",
+      "whatsapp": "+97143059999",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1415"
+    },
+    {
+      "name": "Modern Food Factory For Food Industries",
+      "stand": "Stand No- 36-13, South Hall 6",
+      "country": "Saudi Arabia",
+      "description": "The factory was established in 2009 in Sudair Industrial and Business City, specializing in food manufacturing for the HORECA and retail sectors, offering a wide range of products and exporting to more than five countries worldwid ...",
+      "categories": [
+        "Bakery, Cakes & Desserts",
+        "Beverages",
+        "Smoothies",
+        "Iced Tea",
+        "Baking Supplies"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/modern-food-factory-for-food-industries",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و نوشیدنی",
+      "llm_reason": "تولیدکننده محصولات غذایی، نانوایی و نوشیدنی برای بخش خرده‌فروشی و هورکا.",
+      "website": "https://mff.sa",
+      "email": "info@domainname.com",
+      "whatsapp": "00966553445044",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1416"
+    },
+    {
+      "name": "Mohammad Hashim Tajir Surma / Hashmi",
+      "stand": "Stand No- N1-C123, North Hall 1",
+      "country": "Pakistan",
+      "description": "Mohammad Hashim Tajir Surma embarked on its journey over two centuries ago. In 1794, we introduced Kohl (Surma) and Kajal to the subcontinent. Today, we are recognized globally as the Hashmi brand, emerging as leaders in the produ ...",
+      "categories": [
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Health & Wellness Products",
+        "Spices & Seasonings",
+        "Dried Fruits"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/mohammad-hashim-tajir-surma-hashmi",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی و دارویی – مکمل و سلامت",
+      "llm_reason": "توزیع‌کننده و بازرگان محصولات غنی‌شده، سلامت و مواد غذایی خشک.",
+      "website": "https://hashmisurma.com",
+      "email": "info@fashionshop.com",
+      "whatsapp": "923394274640",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1417"
+    },
+    {
+      "name": "Mohammed Riaz & Partner LLC",
+      "stand": "Stand No- 30-105, South Hall 5",
+      "country": "Oman",
+      "description": "Mohammed Riaz & Partner LLC proudly aligns with Oman Vision 2040, serving as a catalyst for economic growth. Through strategic initiatives like job creation, microfinance loans, and advocacy for sustainable practices in food ...",
+      "categories": [
+        "Vegetable & Animal Oils & Fats",
+        "Professional Services",
+        "Private Label",
+        "Frozen Food",
+        "Free-From Products",
+        "Dry Goods",
+        "Dairy",
+        "Chilled & Fresh Food",
+        "Beverages",
+        "Olive Oil"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/mohammed-riaz-partner-llc",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – عمومی",
+      "llm_reason": "شرکت بازرگانی و توزیع‌کننده محصولات غذایی و روغن‌ها در عمان.",
+      "website": "https://www.mohammedriaz.com",
+      "email": "info@m-riaz.net",
+      "whatsapp": "1015000200",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1418"
+    },
+    {
+      "name": "MOI International (Singapore) Pte Ltd",
+      "stand": "Stand No- Z1-C40, Za'abeel Hall 1",
+      "country": "Singapore",
+      "description": "Mewah Group began in Singapore’s markets and became a trusted global food and agribusiness. With 15 modern facilities and expertise in oils, dairy, biodiesel, and rice, it launched MOI International in 2000. MOI serves global fo ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Vegetable & Animal Oils & Fats",
+        "Private Label",
+        "Bakery, Cakes & Desserts",
+        "Dairy",
+        "Olive Oil",
+        "Oil",
+        "Ghee",
+        "Agri-oil",
+        "Rice"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/moi-international-singapore-pte-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – لبنیات و نانوایی",
+      "llm_reason": "تولیدکننده بزرگ محصولات غذایی، فرآورده‌های آردی و لبنیات.",
+      "website": "https://WWW.MOIGROUP.COM",
+      "email": "krispi.benin@mewahgroup.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1419"
+    },
+    {
+      "name": "Mojtaba Bonab Co",
+      "stand": "Stand No- SH-R30, South Hall 12",
+      "country": "Iran",
+      "description": "Mojtaba Bonab Co. is family owned company which has been founded in 2004. Our main goal is to being first in customer responsiveness, top quality offer and on time delivery. We believe that creating value for our customers,  ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Snacks",
+        "Professional Services",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Dry Goods",
+        "Nuts",
+        "Dates & Date Palm Products",
+        "Cereals / Fruit Bars",
+        "Oats"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/mojtaba-bonab-co",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – اسنک و نانوایی",
+      "llm_reason": "تولیدکننده و صادرکننده فرآورده‌های آردی، اسنک و محصولات غذایی.",
+      "website": "https://www.mojtababonab.com",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
+      "contact_checked": true,
+      "id": "gulfood-2026-1420"
+    },
+    {
+      "name": "MOLINI DEL PONTE",
+      "stand": "Stand No- 17-80, South Hall 3",
+      "country": "Italy",
+      "description": "Molini del Ponte is an Italian family-owned milling company based in Sicily, specialized in the processing of ancient Sicilian grains. We work in close collaboration with local farmers, selecting raw materials and ensuring f ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Vegetable & Animal Oils & Fats",
+        "Specialty Food",
+        "Private Label",
+        "Organic Products",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Olive Oil",
+        "Artisanal"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/molini-del-ponte",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – مخلوط‌های آردی و نانوایی",
+      "llm_reason": "کارخانه آردسازی که در فرآوری غلات و تولید مخلوط‌های آردی نانوایی فعال است.",
+      "website": "https://www.molinidelponte.it/",
+      "email": "info@molinidelponte.it",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1421"
+    },
+    {
+      "name": "Molino Nicoli",
+      "stand": "Stand No- 18-62, South Hall 3",
+      "country": "Italy",
+      "description": "An Italian company with 150-year family legacy, Molino Nicoli is internationally recognized as a leading partner for Better for You and Free From cereal-based products. Our success is built on a commitment to goodness and q ...",
+      "categories": [
+        "Specialty Food",
+        "Snacks",
+        "Private Label",
+        "Organic Products",
+        "Bakery, Cakes & Desserts",
+        "Free-From Products",
+        "Fair Trade",
+        "Savoury snacks",
+        "Salty Snacks",
+        "Healthy snacks"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/molino-nicoli",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – اسنک و محصولات رژیمی",
+      "llm_reason": "تولیدکننده غلات صبحانه، اسنک و محصولات نانوایی بدون گلوتن.",
+      "website": "https://www.molinonicoli.it",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1422"
+    },
+    {
+      "name": "Molino Pasini S.P.A",
+      "stand": "Stand No- 19-8, South Hall 3",
+      "country": "Italy",
+      "description": "Four generations, 100 years of history, the art of flour ingrained in the company's DNA. Molino Pasini is a leader in the production of artisan flours distinguished by long lasting, top-quality.",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Fortified Foods & Health Products",
+        "Free-From Products",
+        "Wheat",
+        "Vegan / Vegetarian Products",
+        "Baked Goods",
+        "Gluten-Free Products",
+        "Gluten-free Baked Goods"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/molino-pasini-s-p-a",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و پودرهای آماده",
+      "llm_reason": "تولیدکننده آردهای تخصصی و مخلوط‌های آردی برای نانوایی و قنادی.",
+      "website": "https://www.molinopasini.com/",
+      "email": "info@molinopasini.com",
+      "whatsapp": "+39 0376 969015",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1423"
+    },
+    {
+      "name": "Molino Peila S.p.A",
+      "stand": "Stand No- 19-21, South Hall 3",
+      "country": "Italy",
+      "description": "Molino Peila produces gluten-free flours, semolinas and grits from corn, rice, legumes and superfoods, as well as a a wide range of rice for all kitchen and industrial uses. All the products are available from both conventional an ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Private Label",
+        "Organic Products",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Free-From Products",
+        "Sorghum",
+        "Rice",
+        "Quinoa",
+        "Pulses"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/molino-peila-s-p-a",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – محصولات بدون گلوتن",
+      "llm_reason": "تولیدکننده آردها و فرآورده‌های غلات برای صنایع غذایی و نانوایی.",
+      "website": "https://www.molinopeila.it",
+      "email": "amministrazionemolinopeila@gigapec.it",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1424"
+    },
+    {
+      "name": "Molino Pordenone",
+      "stand": "Stand No- 19-16, South Hall 3",
+      "country": "Italy",
+      "description": "﻿Since 1923 Molino Pordenone has been producing wheat flour in Italy, and distributing it in several countries of the European Union to bakery, pastry and pizza professionals, as well as to the food industry, milling 70,000 tons ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Bakery, Cakes & Desserts",
+        "Wheat",
+        "Baking Supplies"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/molino-pordenone",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و شیرینی‌پزی",
+      "llm_reason": "تولیدکننده و توزیع‌کننده آرد و مواد اولیه صنایع نانوایی و پیتزا.",
+      "website": "https://www.molinopordenone.it/en/",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1425"
+    },
+    {
+      "name": "Molino Rossetto",
+      "stand": "Stand No- N9-B66, North Hall 9",
+      "country": "Italy",
+      "description": "Molino Rossetto, established in 1760, blends family tradition with innovation in the Italian milling sector. We offer diverse, high-quality products, including classic, organic, and specialty flours (like gluten-free) and prepared ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Specialty Food",
+        "Private Label",
+        "Bakery, Cakes & Desserts",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Condiments & Sauces",
+        "Baking Supplies",
+        "Instant Noodles"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/molino-rossetto",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – پودر کیک و نانوایی",
+      "llm_reason": "تولیدکننده مخلوط‌های آماده نانوایی، پودر کیک و آردهای تخصصی.",
+      "website": "https://www.molinorossetto.com",
+      "email": "contact@prestashop.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1426"
+    },
+    {
+      "name": "MOLINO SIMA",
+      "stand": "Stand No- 16-80, South Hall 3",
+      "country": "Italy",
+      "description": "MOLINO SIMA  over 120 years of experience in the milling industry and  part of Italy's largest agricultural cooperative, COOP GIULIO BELLINI. It produces and sells only organic and gluten-free flours of Italian origin. Being owner ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Private Label",
+        "Organic Products",
+        "Halal and Kosher Food",
+        "Fortified Foods & Health Products",
+        "Health & Wellness Products",
+        "Wheat",
+        "Spelt",
+        "Rye",
+        "Rice"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/molino-sima",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع آردی",
+      "llm_reason": "تولیدکننده آرد و فرآورده‌های غلات برای صنایع غذایی.",
+      "website": "https://www.molinosima.it",
+      "email": "coopgiuliobellinipec@mailsicura.info",
+      "whatsapp": "+390532804524",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1427"
+    },
+    {
+      "name": "Molino Spadoni S.p.A",
+      "stand": "Stand No- 19-94, South Hall 3",
+      "country": "Italy",
+      "description": "Molino Spadoni, flour specialist since 1921, began in the 1990s to leverage its extensive expertise in the art of milling, its strong ability to select and process the finest raw materials, and its keen awareness of ma ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Specialty Food",
+        "Bakery, Cakes & Desserts",
+        "Frozen Food",
+        "Free-From Products",
+        "Ready-to-Eat",
+        "Wheat",
+        "Frozen Baked Goods",
+        "Gluten-Free Products",
+        "Specialty Breads"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/molino-spadoni-s-p-a",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و غذای منجمد",
+      "llm_reason": "تولیدکننده انواع فرآورده‌های آردی، نان، کیک و محصولات منجمد نانوایی.",
+      "website": "https://www.molinospadoni.it/?lang=en",
+      "email": "info@molinospadoni.it",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1428"
+    },
+    {
       "name": "Onego Bio",
       "stand": "Stand No- PD21, PD40, The Pavilion",
       "country": "Finland",
@@ -37379,7 +37755,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1415"
+      "id": "gulfood-2026-1429"
     },
     {
       "name": "ONEST GLOBAL FOODS LIMITED",
@@ -37405,7 +37781,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1416"
+      "id": "gulfood-2026-1430"
     },
     {
       "name": "ONLY EARTH",
@@ -37433,7 +37809,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1417"
+      "id": "gulfood-2026-1431"
     },
     {
       "name": "ONWO",
@@ -37461,7 +37837,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1418"
+      "id": "gulfood-2026-1432"
     },
     {
       "name": "Open Country Dairy Ltd",
@@ -37485,7 +37861,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1419"
+      "id": "gulfood-2026-1433"
     },
     {
       "name": "Openway Food Co",
@@ -37513,7 +37889,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1420"
+      "id": "gulfood-2026-1434"
     },
     {
       "name": "OPHELLIA GHEE VEGETABLES AND OIL TRADING LLC",
@@ -37541,7 +37917,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1421"
+      "id": "gulfood-2026-1435"
     },
     {
       "name": "Optimum Consumer Goods Inc",
@@ -37569,7 +37945,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1422"
+      "id": "gulfood-2026-1436"
     },
     {
       "name": "Orange Cheese Company",
@@ -37592,7 +37968,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1423"
+      "id": "gulfood-2026-1437"
     },
     {
       "name": "Orange Food International Co.,Limited",
@@ -37620,7 +37996,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1424"
+      "id": "gulfood-2026-1438"
     },
     {
       "name": "Orange Mountain Foods",
@@ -37648,7 +38024,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1425"
+      "id": "gulfood-2026-1439"
     },
     {
       "name": "Orasure Organic Foods LLP",
@@ -37676,7 +38052,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1426"
+      "id": "gulfood-2026-1440"
     },
     {
       "name": "Orencio Hoyo, S.L. Pimentón",
@@ -37704,7 +38080,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1427"
+      "id": "gulfood-2026-1441"
     },
     {
       "name": "Organic Valley",
@@ -37730,7 +38106,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1428"
+      "id": "gulfood-2026-1442"
     },
     {
       "name": "Orient Group for Food Industry",
@@ -37753,7 +38129,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1429"
+      "id": "gulfood-2026-1443"
     },
     {
       "name": "Oviganic Ibérica S.L",
@@ -37781,7 +38157,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1430"
+      "id": "gulfood-2026-1444"
     },
     {
       "name": "Ovijat Food and Beverage Industries Ltd.",
@@ -37804,7 +38180,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1431"
+      "id": "gulfood-2026-1445"
     },
     {
       "name": "Oylum Sinai Yatirimlar A.S",
@@ -37828,7 +38204,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1432"
+      "id": "gulfood-2026-1446"
     },
     {
       "name": "Ozgazi Dairy Foods B.V",
@@ -37848,7 +38224,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1433"
+      "id": "gulfood-2026-1447"
     },
     {
       "name": "Ozmer Pastacilik Ve Icecek Urunleri San. Paz. Turizm Ve Dis Tic. A.S.",
@@ -37876,7 +38252,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1434"
+      "id": "gulfood-2026-1448"
     },
     {
       "name": "Ozmermer Flour Mills",
@@ -37901,7 +38277,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1435"
+      "id": "gulfood-2026-1449"
     },
     {
       "name": "Ozone Naturals",
@@ -37929,7 +38305,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1436"
+      "id": "gulfood-2026-1450"
     },
     {
       "name": "OZTURK QUEBAP PRODUCCION",
@@ -37955,7 +38331,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1437"
+      "id": "gulfood-2026-1451"
     },
     {
       "name": "P.R.NETTO - INDUSTRIA E COMERCIO DE ALIMENTOS LTDA",
@@ -37983,7 +38359,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1438"
+      "id": "gulfood-2026-1452"
     },
     {
       "name": "PAAWAK FOOD PRODUCTS PRIVATE LIMITED",
@@ -38003,7 +38379,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1439"
+      "id": "gulfood-2026-1453"
     },
     {
       "name": "PACHA DRINK",
@@ -38026,7 +38402,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1440"
+      "id": "gulfood-2026-1454"
     },
     {
       "name": "Pacific Nuts and Dried Fruits",
@@ -38054,7 +38430,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1441"
+      "id": "gulfood-2026-1455"
     },
     {
       "name": "Pacific Synergy Food and Beverage Corp",
@@ -38078,7 +38454,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1442"
+      "id": "gulfood-2026-1456"
     },
     {
       "name": "Pagariya Exports Private Limited",
@@ -38106,7 +38482,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1443"
+      "id": "gulfood-2026-1457"
     },
     {
       "name": "PEP Cocotine",
@@ -38134,7 +38510,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1444"
+      "id": "gulfood-2026-1458"
     },
     {
       "name": "PERAK DUCK FOOD INDUSTRIES SDN BHD",
@@ -38155,7 +38531,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1445"
+      "id": "gulfood-2026-1459"
     },
     {
       "name": "Petra Food",
@@ -38183,7 +38559,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1446"
+      "id": "gulfood-2026-1460"
     },
     {
       "name": "Petra Molino Quaglia",
@@ -38211,7 +38587,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1447"
+      "id": "gulfood-2026-1461"
     },
     {
       "name": "Petros Tsaglis S.A",
@@ -38238,7 +38614,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1448"
+      "id": "gulfood-2026-1462"
     },
     {
       "name": "Petrou Bros Dairy Products Ltd",
@@ -38260,7 +38636,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1449"
+      "id": "gulfood-2026-1463"
     },
     {
       "name": "PG LEAN HWA TRADING SDN BHD",
@@ -38287,7 +38663,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1450"
+      "id": "gulfood-2026-1464"
     },
     {
       "name": "Philippine Grocers Food Exports, Inc",
@@ -38315,7 +38691,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1451"
+      "id": "gulfood-2026-1465"
     },
     {
       "name": "Philpot Dairy Products Ltd",
@@ -38339,7 +38715,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1452"
+      "id": "gulfood-2026-1466"
     },
     {
       "name": "Phoenix Afrique Distribution Suarl",
@@ -38361,7 +38737,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1453"
+      "id": "gulfood-2026-1467"
     },
     {
       "name": "Phytokana Ingredients Inc",
@@ -38389,7 +38765,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1454"
+      "id": "gulfood-2026-1468"
     },
     {
       "name": "Piedmont Cookies",
@@ -38409,7 +38785,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1455"
+      "id": "gulfood-2026-1469"
     },
     {
       "name": "Pieno Zvaigzdes, SC",
@@ -38434,7 +38810,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1456"
+      "id": "gulfood-2026-1470"
     },
     {
       "name": "PINAR",
@@ -38462,7 +38838,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1457"
+      "id": "gulfood-2026-1471"
     },
     {
       "name": "PINGYI HONGRUI INTERNATIONAL TRADE CO., LTD",
@@ -38487,7 +38863,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1458"
+      "id": "gulfood-2026-1472"
     }
   ]
 }
