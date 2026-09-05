@@ -966,5 +966,54 @@
         "url": "https://www.dailysabah.com/business"
       }
     ]
+  },
+  {
+    "date": "2026-09-05",
+    "generated_at": "2026-09-05T09:13:55.874122+00:00",
+    "headline_fa": "ثبات در اخبار رقبای ترک و تاکید بر توسعه مسیرهای لجستیکی ترکیه",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "هدف‌گذاری ترکیه برای دستیابی به بازار لجستیک ۲۰۰ میلیارد دلاری",
+        "summary": "انجمن خدمات لجستیک ترکیه (UTİKAD) در اجلاس اخیر خود هدف ارتقای بازار لجستیک این کشور به ۲۰۰ میلیارد دلار و قرار گرفتن در بین ۱۰ کشور برتر جهان را مطرح کرد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "headline": "درخواست عراق برای تسریع در اجرای پروژه ترانزیتی جاده توسعه با ترکیه",
+        "summary": "نخست‌وزیر عراق خواستار شتاب‌بخشی به اقدامات مربوط به پروژه «جاده توسعه» جهت تقویت همکاری‌های تجاری و ترانزیتی با ترکیه شد.",
+        "source_url": "https://www.hurriyetdailynews.com/index/economy"
+      }
+    ],
+    "market_note": "در متن‌های بررسی‌شده امروز، هیچ خبر یا اطلاعیه جدیدی درباره تغییر ظرفیت تولید، تغییرات قیمت یا گزارش‌های مالی شرکت‌های رقیب (اتی سودا و کازان سودا) یافت نشد. با این حال، پیگیری پروژه «جاده توسعه» توسط عراق و برنامه‌های توسعه لجستیکی ترکیه نشان‌دهنده تلاش مداوم دو کشور برای تقویت زیرساخت‌های حمل‌ونقل زمینی است. با توجه به تسلط بیش از ۹۰ درصدی ترکیه بر بازار جوش شیرین عراق و مزیت هزینه نقدی پایین آن‌ها، تسهیل بیشتر در لجستیک مرزی می‌تواند رقابت قیمتی را در بازار عراق برای جوش شیرین پارس (با قیمت مرجع ۲۵۰ دلار FOB) دشوارتر کند.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTİKAD",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hürriyet Daily News",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
