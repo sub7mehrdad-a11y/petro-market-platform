@@ -1,5 +1,13 @@
 import { TURKEY_VIEWBOX, TURKEY_PATHS, projectTurkey } from "@/lib/turkeyGeo";
+import { CHINA_VIEWBOX, CHINA_PATHS, projectChina } from "@/lib/chinaGeo";
 import { GENERIC_VIEWBOX, computeAutoBounds, projectGeneric } from "@/lib/genericGeo";
+
+// کشورهایی که مرز واقعی از‌قبل‌ترسیم‌شده دارن (نه fallback عمومی). برای اضافه
+// کردن کشور بعدی: مثل web/lib/chinaGeo.js یک فایل geo جدید بساز و اینجا اضافه‌ش کن.
+const REAL_BORDER_GEO = {
+  turkey: { viewBox: TURKEY_VIEWBOX, paths: TURKEY_PATHS, project: projectTurkey },
+  china: { viewBox: CHINA_VIEWBOX, paths: CHINA_PATHS, project: projectChina },
+};
 
 const LAYERS = [
   { key: "facilities", label: "کارخانه‌ها", color: "#C9762E", shape: "square" },
@@ -31,18 +39,18 @@ function Marker({ x, y, color, shape, emphasized }) {
 export default function TurkeyMap({ map, countryId }) {
   if (!map) return null;
 
-  // مرز SVG واقعی فقط برای ترکیه از قبل ترسیم شده. برای بقیه‌ی کشورها (مثل
-  // روسیه) به‌جای پروجکشن با محدوده‌ی ثابت ترکیه (که نقطه‌ها رو کاملاً بیرون
-  // از viewBox می‌انداخت و نقشه خالی به نظر می‌رسید)، محدوده رو خودکار از روی
-  // خودِ نقطه‌ها می‌سازیم و به‌جای مرز واقعی، یک زمینه‌ی ساده رسم می‌کنیم.
-  const isTurkey = countryId === "turkey";
+  // مرز SVG واقعی فقط برای کشورهای فهرست‌شده در REAL_BORDER_GEO از قبل ترسیم
+  // شده. برای بقیه (مثل روسیه) به‌جای پروجکشن با محدوده‌ی ثابت ترکیه (که نقطه‌ها
+  // رو کاملاً بیرون از viewBox می‌انداخت و نقشه خالی به نظر می‌رسید)، محدوده رو
+  // خودکار از روی خودِ نقطه‌ها می‌سازیم و به‌جای مرز واقعی، یک زمینه‌ی ساده رسم می‌کنیم.
+  const geo = REAL_BORDER_GEO[countryId] || null;
   const allRawPoints = LAYERS.flatMap((layer) => map[layer.key] || []);
-  const bounds = !isTurkey ? computeAutoBounds(allRawPoints) : null;
-  const viewBox = isTurkey ? TURKEY_VIEWBOX : GENERIC_VIEWBOX;
+  const bounds = !geo ? computeAutoBounds(allRawPoints) : null;
+  const viewBox = geo ? geo.viewBox : GENERIC_VIEWBOX;
 
   const points = LAYERS.flatMap((layer) =>
     (map[layer.key] || []).map((item) => {
-      const [x, y] = isTurkey ? projectTurkey(item.lat, item.lon) : projectGeneric(item.lat, item.lon, bounds);
+      const [x, y] = geo ? geo.project(item.lat, item.lon) : projectGeneric(item.lat, item.lon, bounds);
       return { ...item, x, y, color: layer.color, shape: layer.shape, layerKey: layer.key };
     })
   );
@@ -52,8 +60,8 @@ export default function TurkeyMap({ map, countryId }) {
       <div className="rounded-xl border border-petrol-100 bg-petrol-50/60 overflow-hidden">
         <svg viewBox={viewBox} className="w-full h-auto" role="img"
              aria-label="نقشه‌ی شماتیک با موقعیت کارخانه‌های جوش شیرین، بنادر خروجی و گذرگاه‌های مرزی صادراتی">
-          {isTurkey
-            ? TURKEY_PATHS.map((d, i) => (
+          {geo
+            ? geo.paths.map((d, i) => (
                 <path key={i} d={d} fill="#ffffff" stroke="#7FA3A9" strokeWidth="1.5"
                       strokeLinejoin="round" />
               ))
@@ -118,8 +126,8 @@ export default function TurkeyMap({ map, countryId }) {
       </div>
 
       <p className="text-[11px] text-slate-400 mt-2">
-        {isTurkey
-          ? "مرز ترکیه از یک GeoJSON عمومی ساده‌شده رسم شده و موقعیت هر نشانگر بر پایه‌ی مختصات جغرافیایی واقعی آن است؛ محل دقیق کارخانه‌ها در سطح شهرستان تقریبی است، نه پلاک صنعتی."
+        {geo
+          ? "مرز کشور از یک GeoJSON عمومی ساده‌شده رسم شده و موقعیت هر نشانگر بر پایه‌ی مختصات جغرافیایی واقعی آن است؛ محل دقیق کارخانه‌ها در سطح شهرستان تقریبی است، نه پلاک صنعتی."
           : "این نقشه مرز واقعی کشور رو نداره — فقط موقعیت نسبی نشانگرها نسبت به هم، بر پایه‌ی مختصات جغرافیایی واقعی‌شونه؛ محل دقیق کارخانه‌ها در سطح شهر تقریبی است، نه پلاک صنعتی."}
       </p>
     </div>

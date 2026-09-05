@@ -1,10 +1,9 @@
 import Link from "next/link";
-import { getFlatPriceRecords, getNewsAnalysis, getTradeMapForCountry, getIranExports } from "@/lib/data";
+import { getFlatPriceRecords, getNewsAnalysis, getTradeMapForCountry } from "@/lib/data";
 import PriceSection from "./components/PriceSection";
 import NewsCard from "./components/NewsCard";
 import KpiRow from "./components/KpiRow";
 import PageHeader from "./components/PageHeader";
-import IranExportSection from "./components/IranExportSection";
 
 const BASE_FOB_USD = 250;
 
@@ -33,7 +32,6 @@ export default function DashboardPage() {
   const turkey = getTradeMapForCountry("ترکیه");
   const china = getTradeMapForCountry("چین");
   const iran = getTradeMapForCountry("ایران");
-  const iranExports = getIranExports();
 
   const kpiCards = [
     {
@@ -93,8 +91,6 @@ export default function DashboardPage() {
         highlightSpecs={SODA_ASH_HIGHLIGHTS}
         allRows={rows}
       />
-
-      {iranExports && <IranExportSection data={iranExports} />}
 
       <section className="card p-5">
         <h2 className="text-lg font-bold mb-3">مهم‌ترین تحلیل‌های خبری</h2>
