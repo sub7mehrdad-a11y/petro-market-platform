@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   getCountries, getCountrySummary, getCountryProfile, getTradeMapForCountry, getImportSuppliers,
-  getIranExports, getIranExportToCountry, getPerCapitaConsumption,
+  getIranExports, getIranExportToCountry, getPerCapitaConsumption, getCompetitorForCountry,
 } from "@/lib/data";
 import CompanyTable from "../../components/CompanyTable";
 import ExhibitionTable from "../../components/ExhibitionTable";
@@ -70,6 +70,11 @@ export default async function CountryPage({ params }) {
   const iranExports = country === "ایران" ? getIranExports() : null;
   const iranExportToHere = country !== "ایران" ? getIranExportToCountry(country) : null;
   const perCapita = getPerCapitaConsumption(country);
+  // وقتی گزارش تحلیلی مفصل ما رقم واردات واقعی و دقیق‌تری از آمار آینه‌ی (Mirror)
+  // ITC Trade Map داره (مثل روسیه — که از ۲۰۲۲ گزارش‌دهی گمرکی خودش رو متوقف کرده
+  // و ITC فقط ۴٬۴۸۹ تن به‌جای واردات واقعی ۲۰٬۴۰۰ تنی رو نشون می‌ده)، همین رقم
+  // درست جایگزین آمار ناقص ترید مپ می‌شه.
+  const realTrade = getCompetitorForCountry(country)?.real_trade_stats || null;
   const sortedExhibitions = sortExhibitionsByDate(exhibitions);
   const smartReport = reports.find((r) => r.report_type === "summary");
 
@@ -96,22 +101,39 @@ export default async function CountryPage({ params }) {
             value: iranExportToHere.tons.toLocaleString("fa-IR"),
             unit: "تن",
           },
-          trade?.imports_2025?.value_usd_k != null && {
+          // اگه گزارش تحلیلی مفصل رقم واردات واقعی و دقیق‌تری داره (مثل روسیه)،
+          // به‌جای آمار آینه‌ی ناقص ITC همون رو نشون می‌دیم — نه هر دو با هم.
+          !realTrade && trade?.imports_2025?.value_usd_k != null && {
             label: "ارزش واردات (۲۰۲۵)",
             value: (trade.imports_2025.value_usd_k / 1000).toLocaleString("fa-IR", {
               maximumFractionDigits: 2,
             }),
             unit: "میلیون دلار",
           },
-          trade?.imports_2025?.quantity != null && {
+          !realTrade && trade?.imports_2025?.quantity != null && {
             label: "حجم واردات (۲۰۲۵)",
             value: trade.imports_2025.quantity.toLocaleString("fa-IR"),
             unit: "تن",
           },
-          trade?.imports_2025?.unit_value_usd != null && {
+          !realTrade && trade?.imports_2025?.unit_value_usd != null && {
             label: "قیمت میانگین واردات",
             value: trade.imports_2025.unit_value_usd.toLocaleString("fa-IR"),
             unit: "دلار/تن",
+          },
+          realTrade && {
+            label: "حجم واردات واقعی (۲۰۲۵، نه رقم ناقص ITC)",
+            value: realTrade.imports_tons.toLocaleString("fa-IR"),
+            unit: "تن",
+          },
+          realTrade?.domestic_production_tons != null && {
+            label: "تولید داخلی سالانه",
+            value: realTrade.domestic_production_tons.toLocaleString("fa-IR"),
+            unit: "تن",
+          },
+          realTrade?.apparent_consumption_min_tons != null && {
+            label: "برآورد مصرف ظاهری داخلی",
+            value: `${realTrade.apparent_consumption_min_tons.toLocaleString("fa-IR")}–${realTrade.apparent_consumption_max_tons.toLocaleString("fa-IR")}`,
+            unit: "تن/سال",
           },
           trade?.export_trend?.cagr_pct != null && {
             label: `رشد سالانه‌ی صادرات (${String(trade.export_trend.first_year).replace(
@@ -155,6 +177,14 @@ export default async function CountryPage({ params }) {
           <p className="text-xs text-slate-500 mb-4">
             منبع: ITC Trade Map — رتبه‌بندی کلی جهانی این کشور، نه لزوماً رابطه‌ی تجاری با ایران.
           </p>
+          {realTrade && trade?.imports_2025?.quantity != null && (
+            <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-md px-3 py-2 mb-4">
+              ⚠ رقم «واردات» زیر از آمار آینه‌ی (Mirror) ITC Trade Map است و برای {country} ناقصه —
+              فقط {trade.imports_2025.quantity.toLocaleString("fa-IR")} تن رو نشون می‌ده، درحالی‌که
+              واردات واقعی حدود {realTrade.imports_tons.toLocaleString("fa-IR")} تنه (بالای همین صفحه، از
+              گزارش تحلیلی مفصل).
+            </p>
+          )}
           <div className="grid gap-4 sm:grid-cols-2">
             {trade.exports_2025 && (
               <div className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 p-4">
