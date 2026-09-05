@@ -178,7 +178,7 @@ export default async function CompetitorPage({ params }) {
           title="نقشه‌ی صنعتی و مسیرهای صادراتی"
           subtitle="موقعیت کارخانه‌های جوش شیرین، بنادر خروجی و گذرگاه‌های مرزی صادراتی"
         >
-          <TurkeyMap map={c.map} />
+          <TurkeyMap map={c.map} countryId={c.id} />
         </Section>
       )}
 

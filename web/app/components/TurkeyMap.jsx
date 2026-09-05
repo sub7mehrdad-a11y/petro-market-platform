@@ -1,4 +1,5 @@
 import { TURKEY_VIEWBOX, TURKEY_PATHS, projectTurkey } from "@/lib/turkeyGeo";
+import { GENERIC_VIEWBOX, computeAutoBounds, projectGeneric } from "@/lib/genericGeo";
 
 const LAYERS = [
   { key: "facilities", label: "کارخانه‌ها", color: "#C9762E", shape: "square" },
@@ -27,12 +28,21 @@ function Marker({ x, y, color, shape, emphasized }) {
   return <circle cx={x} cy={y} r={r} fill={color} stroke="#fff" strokeWidth="1.5" />;
 }
 
-export default function TurkeyMap({ map }) {
+export default function TurkeyMap({ map, countryId }) {
   if (!map) return null;
+
+  // مرز SVG واقعی فقط برای ترکیه از قبل ترسیم شده. برای بقیه‌ی کشورها (مثل
+  // روسیه) به‌جای پروجکشن با محدوده‌ی ثابت ترکیه (که نقطه‌ها رو کاملاً بیرون
+  // از viewBox می‌انداخت و نقشه خالی به نظر می‌رسید)، محدوده رو خودکار از روی
+  // خودِ نقطه‌ها می‌سازیم و به‌جای مرز واقعی، یک زمینه‌ی ساده رسم می‌کنیم.
+  const isTurkey = countryId === "turkey";
+  const allRawPoints = LAYERS.flatMap((layer) => map[layer.key] || []);
+  const bounds = !isTurkey ? computeAutoBounds(allRawPoints) : null;
+  const viewBox = isTurkey ? TURKEY_VIEWBOX : GENERIC_VIEWBOX;
 
   const points = LAYERS.flatMap((layer) =>
     (map[layer.key] || []).map((item) => {
-      const [x, y] = projectTurkey(item.lat, item.lon);
+      const [x, y] = isTurkey ? projectTurkey(item.lat, item.lon) : projectGeneric(item.lat, item.lon, bounds);
       return { ...item, x, y, color: layer.color, shape: layer.shape, layerKey: layer.key };
     })
   );
@@ -40,12 +50,17 @@ export default function TurkeyMap({ map }) {
   return (
     <div>
       <div className="rounded-xl border border-petrol-100 bg-petrol-50/60 overflow-hidden">
-        <svg viewBox={TURKEY_VIEWBOX} className="w-full h-auto" role="img"
-             aria-label="نقشه‌ی شماتیک ترکیه با موقعیت کارخانه‌های جوش شیرین، بنادر خروجی و گذرگاه‌های مرزی صادراتی">
-          {TURKEY_PATHS.map((d, i) => (
-            <path key={i} d={d} fill="#ffffff" stroke="#7FA3A9" strokeWidth="1.5"
-                  strokeLinejoin="round" />
-          ))}
+        <svg viewBox={viewBox} className="w-full h-auto" role="img"
+             aria-label="نقشه‌ی شماتیک با موقعیت کارخانه‌های جوش شیرین، بنادر خروجی و گذرگاه‌های مرزی صادراتی">
+          {isTurkey
+            ? TURKEY_PATHS.map((d, i) => (
+                <path key={i} d={d} fill="#ffffff" stroke="#7FA3A9" strokeWidth="1.5"
+                      strokeLinejoin="round" />
+              ))
+            : (
+                <rect x="0" y="0" width="1000" height="560" fill="#ffffff" stroke="#7FA3A9"
+                      strokeWidth="1.5" strokeDasharray="6 6" rx="12" />
+              )}
 
           {points.map((p, i) => (
             <g key={i}>
@@ -103,8 +118,9 @@ export default function TurkeyMap({ map }) {
       </div>
 
       <p className="text-[11px] text-slate-400 mt-2">
-        مرز ترکیه از یک GeoJSON عمومی ساده‌شده رسم شده و موقعیت هر نشانگر بر پایه‌ی مختصات جغرافیایی
-        واقعی آن است؛ محل دقیق کارخانه‌ها در سطح شهرستان تقریبی است، نه پلاک صنعتی.
+        {isTurkey
+          ? "مرز ترکیه از یک GeoJSON عمومی ساده‌شده رسم شده و موقعیت هر نشانگر بر پایه‌ی مختصات جغرافیایی واقعی آن است؛ محل دقیق کارخانه‌ها در سطح شهرستان تقریبی است، نه پلاک صنعتی."
+          : "این نقشه مرز واقعی کشور رو نداره — فقط موقعیت نسبی نشانگرها نسبت به هم، بر پایه‌ی مختصات جغرافیایی واقعی‌شونه؛ محل دقیق کارخانه‌ها در سطح شهر تقریبی است، نه پلاک صنعتی."}
       </p>
     </div>
   );
