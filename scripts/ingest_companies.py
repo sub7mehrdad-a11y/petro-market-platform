@@ -35,7 +35,9 @@ SOURCES = [
     {"file": "شرکت های عراقی.xlsx", "country": "عراق"},
     {"file": "Syria_companies.xlsx", "country": "سوریه"},
     {"file": "Armenia_Companies_1.xlsx", "country": "ارمنستان"},
-    {"file": "Russia_Companies.xlsx", "country": "روسیه"},
+    # نسخه‌ی اول (Russia_Companies.xlsx) فقط ۵ شرکت داشت؛ این فایل کامل‌تر (۵۵ شرکت،
+    # با نقش/گرید/تماس مجزا) جایگزینش شد — فایل قدیمی فقط برای مرجع نگه داشته شده.
+    {"file": "Russia_Companies_Full.xlsx", "country": "روسیه"},
 ]
 
 # فایل‌های جهانی — کشور هر شرکت از ستون آدرس همان ردیف استخراج می‌شود، نه از
@@ -48,12 +50,12 @@ GLOBAL_SOURCES = [
 # چون سرستون‌ها بین فایل‌ها فرق می‌کنن (مثلاً "آدرس" در فارسی یا "Address" در
 # انگلیسی، یا با توضیح فارسی داخل پرانتز)، با کلیدواژه تشخیص می‌دیم نه تطابق دقیق.
 FIELD_KEYWORDS = {
-    "english_name": ["english name", "نام شرکت"],
+    "english_name": ["english name", "نام شرکت", "نام کمپانی"],
     "arabic_name": ["arabic name"],
-    "industry": ["industry", "صنعت", "حوزه فعالیت"],
-    "target_grade": ["target grade", "گرید هدف"],
+    "industry": ["industry", "صنعت", "حوزه فعالیت", "نوع فعالیت"],
+    "target_grade": ["target grade", "گرید هدف", "گرید و کاربرد"],
     "purchasing_potential": ["purchasing potential", "پتانسیل خرید"],
-    "action_plan": ["action plan", "برنامه اقدام"],
+    "action_plan": ["action plan", "برنامه اقدام", "جزئیات فعالیت"],
     "address": ["address", "آدرس", "شهر"],
     "phone": ["phone", "شماره تماس", "تلفن"],
     "email": ["email", "ایمیل"],

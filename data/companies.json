@@ -2384,38 +2384,663 @@
   },
   {
     "country": "روسیه",
-    "english_name": "ООО «ХИМПЭК» (Химпэк)",
-    "industry": "توزیع‌کننده مواد شیمیایی و افزودنی‌های غذایی — در حال حاضر بی‌کربنات سدیم خوراکی E500(ii) را عرضه می‌کند",
-    "address": "مسکو",
+    "english_name": "JSC Rushimset",
+    "industry": "واردکننده و توزیع‌کننده سراسری",
+    "target_grade": "خوراکی (E500ii)، صنعتی، تصفیه آب و شوینده",
+    "address": "129090, Moscow, Olimpiyskiy Prospekt, 14",
+    "website": "https://www.rushimset.ru",
+    "email": "central@rushimset.ru",
+    "phone": "+7 (495) 730-12-12 / +7 (495) 221-12-01",
+    "action_plan": "بزرگترین شبکه توزیع مواد شیمیایی روسیه با ۲۰+ انبار منطقه‌ای؛ تأمین تناژ بالا",
     "id": "company-193"
   },
   {
     "country": "روسیه",
-    "english_name": "ГК ЕТС (گروه ЕТС)",
-    "industry": "توزیع‌کننده مواد شیمیایی و مواد اولیه غذایی — خود را رهبر بازار توزیع معرفی می‌کند",
-    "address": "روسیه (سراسری)",
+    "english_name": "LLC Chimpack (Chempack)",
+    "industry": "واردکننده و توزیع‌کننده اصلی",
+    "target_grade": "خوراکی (E500ii / GOST)، صنعتی، دارویی",
+    "address": "125424, Moscow, Volokolamskoye Shosse, 75, bldg. 1",
+    "website": "https://www.chempack.ru",
+    "email": "chempack@chempack.ru",
+    "phone": "+7 (495) 234-37-99 / +7 (495) 125-18-35",
+    "action_plan": "واردکننده و عمده‌فروش پیشرو با انبارهای مرکزی در مسکو، سنت‌پترزبورگ، کازان و سورگوت",
     "id": "company-194"
   },
   {
     "country": "روسیه",
-    "english_name": "ООО «Русский Торговый Холдинг» (РТХ)",
-    "industry": "واردکننده و توزیع‌کننده مواد شیمیایی صنعتی (از جمله پرکربنات سدیم، اسید سیتریک) در سراسر روسیه و CIS",
-    "address": "سن‌پترزبورگ (سراسری)",
+    "english_name": "VitaChem Group",
+    "industry": "توزیع‌کننده فدرال و واردکننده",
+    "target_grade": "خوراکی (E500)، خوراک دام، صنعتی",
+    "address": "606000, Dzerzhinsk, Pobedy Blvd, 8 (Branches in Moscow, SPb, Perm)",
+    "website": "https://vitahim.ru",
+    "email": "info@vitahim.ru",
+    "phone": "+7 (8313) 25-33-47 / 8 (800) 551-22-70",
+    "action_plan": "هاب لجستیک بزرگ در دزرژینسک و مسکو؛ تأمین‌کننده صنایع غذایی، پتروشیمی و دامپروری",
     "id": "company-195"
   },
   {
     "country": "روسیه",
-    "english_name": "Мега-хим (مگا-هیم)",
-    "industry": "عمده‌فروش مواد اولیه شیمیایی برای صنایع غذایی، کشاورزی و شیمیایی",
-    "address": "مسکو",
+    "english_name": "LLC NevaReaktiv",
+    "industry": "واردکننده و تأمین‌کننده تخصصی",
+    "target_grade": "دارویی، آزمایشگاهی (ч/хч)، خوراکی و صنعتی",
+    "address": "195043, Saint Petersburg, Kapsyulnoye Shosse, 45, lit. A",
+    "website": "https://www.nevareaktiv.ru",
+    "email": "office@nevareaktiv.ru",
+    "phone": "+7 (812) 325-40-65 / +7 (812) 577-76-01",
+    "action_plan": "بیش از ۳۴ سال سابقه در گرید دارویی، خلوص بالا، سنتز شیمیایی و بسته‌بندی‌های صنعتی",
     "id": "company-196"
   },
   {
     "country": "روسیه",
-    "english_name": "ООО «Руссоль-Северозапад»",
-    "industry": "توزیع‌کننده منطقه‌ای بی‌کربنات سدیم و سودای کلسینه (در حال حاضر محصول باشقیرستان را می‌فروشد)",
-    "address": "سن‌پترزبورگ",
+    "english_name": "CJSC Soyuzchimprom",
+    "industry": "عمده‌فروش و توزیع‌کننده منطقه‌ای",
+    "target_grade": "خوراکی (E500ii)، صنعتی، متالورژی",
+    "address": "630015, Novosibirsk, Korolyova St., 40, bldg. 87",
+    "website": "https://shp-shop.ru",
+    "email": "info.shp@yandex.ru",
+    "phone": "+7 (383) 289-98-08 / +7 (383) 289-98-09",
+    "action_plan": "هاب اصلی توزیع در منطقه سیبری و اورال از سال ۱۹۴۷؛ تأمین صنایع غذایی و معدنی",
     "id": "company-197"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "SpektrChem Group",
+    "industry": "واردکننده و تأمین‌کننده مواد شیمیایی",
+    "target_grade": "صنعتی، خوراکی (E500)، اطفا حریق",
+    "address": "129085, Moscow, Prospekt Mira, 95, BC Hill 8",
+    "website": "https://www.spektrchem.ru",
+    "email": "info@spektrchem.ru",
+    "phone": "+7 (495) 249-88-05",
+    "action_plan": "تأمین پیوسته جوش شیرین صنعتی و خوراکی برای صنایع رنگ، مواد شوینده و پودر آتش‌نشانی",
+    "id": "company-198"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "LLC BSK-SALT (BSK Group)",
+    "industry": "واردکننده مستقیم و پخش سراسری",
+    "target_grade": "خوراکی (E500ii)، خوراک دام، صنعتی",
+    "address": "308006, Belgorod, Mikhailovskoye Shosse, 2-14",
+    "website": "https://bsksalt.ru",
+    "email": "555@bsk1.ru / belbsk@yandex.ru",
+    "phone": "+7 (4722) 20-52-31 / +7 (980) 386-31-31 (WhatsApp)",
+    "action_plan": "واردکننده مستقیم جوش شیرین در کیسه ۲۵ کیلویی و جامبوبگ ۱ تنی؛ دارای خط واتساپ فعال",
+    "id": "company-199"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "LLC Alliance-Energy",
+    "industry": "واردکننده و توزیع‌کننده فدرال",
+    "target_grade": "خوراکی (E500ii)، صنعتی، تصفیه گاز و چرم",
+    "address": "123112, Moscow, Presnenskaya Nab., 12 (Federation Tower)",
+    "website": "https://allianceenergy.ru",
+    "email": "request@alliance777.com",
+    "phone": "+7 (800) 500-38-77 / +7 (351) 217-70-07",
+    "action_plan": "تأمین‌کننده باسابقه با انبارهای مسکو، سن‌پترزبورگ، چلیابینسک و نووسیبیرسک",
+    "id": "company-200"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "JSC LenReaktiv",
+    "industry": "واردکننده و تأمین‌کننده خلوص بالا",
+    "target_grade": "آزمایشگاهی، دارویی، خوراکی و صنعتی",
+    "address": "196240, Saint Petersburg, 6-y Predportoviy Proyezd, 8",
+    "website": "https://lenreactiv.ru",
+    "email": "info@lenreactiv.ru",
+    "phone": "+7 (812) 441-38-80 / 8 (800) 775-23-57",
+    "action_plan": "تأمین‌کننده گرید خلوص بالا با پاسپورت آنالیز معتبر برای شرکت‌های داروسازی و آزمایشگاهی",
+    "id": "company-201"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "LLC Polychem",
+    "industry": "توزیع‌کننده مواد اولیه شیمیایی",
+    "target_grade": "صنعتی و خوراکی",
+    "address": "107143, Moscow, Irtyshskiy 2-y Proyezd, 6",
+    "website": "https://poly-chem.ru",
+    "email": "info@poly-chem.ru",
+    "phone": "+7 (800) 300-60-34",
+    "action_plan": "شبکه فروش و تحویل پالت‌های ۲۵ کیلویی جوش شیرین به صنایع غذایی و تصفیه آب",
+    "id": "company-202"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "GC SOYUZSNAB",
+    "industry": "بزرگترین واردکننده و تولیدکننده افزودنی‌های غذایی",
+    "target_grade": "خوراکی (E500ii) - بهبوددهنده‌ها و بیکینگ پودر",
+    "address": "143406, Moscow Obl., Krasnogorsk, Ilyinskiy Tupik, 6",
+    "website": "https://ssnab.ru",
+    "email": "mail@ssnab.ru",
+    "phone": "+7 (495) 937-87-37 / 8 (800) 707-15-15",
+    "action_plan": "بزرگترین تأمین‌کننده افزودنی‌های صنایع غذایی و شیرینی‌پزی در روسیه و CIS",
+    "id": "company-203"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "JSC Baltic Group",
+    "industry": "واردکننده و توزیع‌کننده مواد اولیه غذایی",
+    "target_grade": "خوراکی (E500ii) - تنظیم‌کننده اسیدیته و هوادهی",
+    "address": "192007, Saint Petersburg, Nab. Obvodnogo Kanala, 24",
+    "website": "https://www.balticgroup.ru",
+    "email": "ingredients@balticgroup.ru",
+    "phone": "+7 (812) 320-76-77 / +7 (812) 325-18-00",
+    "action_plan": "واردکننده تخصصی انواع استابیلایزرها، اسیدهای آلی و جوش شیرین برای کارخانجات شیرینی",
+    "id": "company-204"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "LLC NEOS Ingredients",
+    "industry": "واردکننده و تأمین‌کننده تخصصی قنادی",
+    "target_grade": "خوراکی (E500ii) - بیکینگ پودر، بیسکویت، ویفر",
+    "address": "109147, Moscow, Privolnaya St., 70, Office 901",
+    "website": "https://neos-ingredients.ru",
+    "email": "info@neos-ingredients.ru",
+    "phone": "+7 (495) 229-28-79 / 8 (800) 500-06-50",
+    "action_plan": "واردات مستقیم مواد اولیه و تولید فرمولاسیون‌های بیکینگ‌پودر و بهبوددهنده‌های خمیر",
+    "id": "company-205"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Berta Group",
+    "industry": "تولیدکننده پرمیکس و مصرف‌کننده عمده",
+    "target_grade": "خوراکی (E500ii) - پرمیکس‌های قنادی و نان",
+    "address": "355035, Stavropol, Grizodubovoy St., 24a",
+    "website": "https://modernbakery.gefera.ru/catalog/eed9eb5b-2b87-6b1b-ba8c-25d2948c6526/",
+    "email": "berta@berta.ru / kuh@berta.com",
+    "phone": "+7 (8652) 95-01-20 / +7 (8652) 28-35-15",
+    "action_plan": "تولیدکننده پیشرو انواع پودر کیک، مافین و بهبوددهنده نان با مصرف تناژ بالای جوش شیرین",
+    "id": "company-206"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "LLC Ingredients.Development",
+    "industry": "واردکننده و عمده‌فروش مواد افزودنی غذایی",
+    "target_grade": "خوراکی (E500ii) - بسته‌بندی‌های ۲۵ کیلویی",
+    "address": "198184, Saint Petersburg, Kanonersky Ostrov, 3, Bld. 1",
+    "website": "https://ingredienty-razvitie.ru",
+    "email": "info@ingredienty-razvitie.ru",
+    "phone": "+7 (812) 320-83-60",
+    "action_plan": "واردات مستقیم و تأمین پایدار مواد شیمیایی غذایی برای کارخانجات فراوری مواد غذایی",
+    "id": "company-207"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "LLC NovaProdukt AG",
+    "industry": "واردکننده، توزیع‌کننده و تولیدکننده",
+    "target_grade": "خوراکی (E500ii) - قرص‌های جوشان، محصولات رژیمی",
+    "address": "108841, Moscow (Troitsk), Solnechnaya St., 20",
+    "website": "https://novaprodukt.ru",
+    "email": "ingredients@novaprodukt.ru",
+    "phone": "+7 (495) 225-56-55 / +7 (916) 683-98-19",
+    "action_plan": "تولیدکننده محصولات Bionova و Novasweet و واردکننده مواد اولیه رژیمی و نوشیدنی‌های جوشان",
+    "id": "company-208"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "JSC ECO RESOURCE",
+    "industry": "تولیدکننده و واردکننده افزودنی‌های ترکیبی",
+    "target_grade": "خوراکی (E500ii) - بافر pH و تثبیت‌کننده",
+    "address": "198205, Saint Petersburg / LO, Lagolovo, Sovetskaya 1",
+    "website": "https://eco-resource.com",
+    "email": "eco@eco-resource.com",
+    "phone": "+7 (499) 7000-703 / +7 (812) 327-02-02",
+    "action_plan": "فرمولاتور رنگ‌های خوراکی و افزودنی‌های غذایی با مصرف بی کربنات سدیم به عنوان کریر و بافر",
+    "id": "company-209"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Holding United Confectioners (Uniconf)",
+    "industry": "بزرگترین هلدینگ شیرینی و شکلات (مصرف‌کننده)",
+    "target_grade": "خوراکی (E500ii) - تولید بیسکویت، کلوچه، ویفر",
+    "address": "115184, Moscow, 2nd Novokuznetskiy Per., 13/15",
+    "website": "https://www.uniconf.ru",
+    "email": "rotfront@rotfront.ru / uniconf@uniconf.ru",
+    "phone": "+7 (495) 730-69-46 / +7 (495) 951-23-74",
+    "action_plan": "مالک ۱۹ کارخانه بزرگ (از جمله روت فرانت، کراسنی اکتیابر) با مصرف سالانه صدها تن جوش شیرین",
+    "id": "company-210"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "LLC KDV Group (Yashkino)",
+    "industry": "بزرگترین تولیدکننده بیسکویت و اسنک (مصرف‌کننده)",
+    "target_grade": "خوراکی (E500ii) - خطوط تولید کیک، ویفر، بیسکویت",
+    "address": "634057, Tomsk, Prospekt Mira, 20",
+    "website": "https://kdvonline.ru",
+    "email": "contact@kdvonline.ru / info@kdvgroup.com",
+    "phone": "+7 (3822) 70-55-55 / 8 (800) 250-55-55",
+    "action_plan": "غول صنایع غذایی روسیه با بیش از ۱۰ کارخانه عظیم و خرید پیوسته واگنی و کامیونی جوش شیرین",
+    "id": "company-211"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "OJSC Khlebprom (Mirel / Dr. Körner)",
+    "industry": "تولیدکننده بزرگ کیک و شیرینی صنعتی (مصرف‌کننده)",
+    "target_grade": "خوراکی (E500ii) - پوک‌کننده کیک‌های اسفنجی و رول",
+    "address": "454014, Chelyabinsk / Moscow, Rustaveli St., 14",
+    "website": "https://www.hlebprom.ru",
+    "email": "hotline@hlebprom.ru",
+    "phone": "+7 (495) 662-58-88 / 8 (800) 333-65-66",
+    "action_plan": "تولیدکننده سراسری کیک‌های تر و محصولات آردی با مصرف مداوم جوش شیرین در خطوط پخت",
+    "id": "company-212"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Megamix Group",
+    "industry": "بزرگترین تولیدکننده پرمیکس و خوراک دام و طیور روسیه",
+    "target_grade": "خوراک دام (Feed Grade) - بافر شکمبه گاو شیری و تعادل DCAD",
+    "address": "400123, Volgograd, Khrustalnaya, 107 (Hub: Moscow, Lipetsk)",
+    "website": "https://www.megamix.ru",
+    "email": "info@megamix.ru / mmk@megamix.ru",
+    "phone": "+7 (8442) 97-97-97 / +7 (495) 122-23-70",
+    "action_plan": "بزرگترین مصرف‌کننده و واردکننده جوش شیرین دامی برای تولید پرمیکس‌های MEGAKORM و خوراک گله‌های شیری",
+    "id": "company-213"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Mustang Feeding Technologies",
+    "industry": "تولیدکننده پرمیکس، کنسانتره و بافر دام",
+    "target_grade": "خوراک دام - بافر ضد اسیدوز (РУМЕНБУФФЕР™ / КАУФИТ™)",
+    "address": "117513, Moscow, Leninskiy Prospekt, 137 (Plants: Stupino, Gagarin)",
+    "website": "https://mustangtk.ru",
+    "email": "mtk@mustangtk.ru / faztdinova@mustangtk.ru",
+    "phone": "+7 (495) 931-91-90 / +7 (916) 970-27-89 (WA/TG)",
+    "action_plan": "خرید تناژ بالای جوش شیرین دامی برای تولید مکمل‌های کنترل اسیدوز شکمبه و تعادل الکترولیت",
+    "id": "company-214"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Koudijs MKorma (Royal De Heus JV)",
+    "industry": "تولیدکننده بین‌المللی پرمیکس و پیش‌استارتر",
+    "target_grade": "خوراک دام و طیور - تنظیم‌کننده اسیدیته شکمبه و استرس گرمایی",
+    "address": "108803, Moscow (Plant: Vladimir Obl., Lakinsk, Lenina 42)",
+    "website": "https://www.kmkorma.ru",
+    "email": "info@kmkorma.ru / info@de-heus.ru",
+    "phone": "+7 (495) 645-21-59 / +7 (49242) 4-12-24",
+    "action_plan": "کارخانه تمام اتوماتیک تولید پرمیکس در ولادیمیر؛ مصرف بالای بی کربنات سدیم در جیره گاو و مرغداری",
+    "id": "company-215"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "AgroVitEx LLC",
+    "industry": "تولیدکننده پرمیکس‌ها و مکمل‌های معدنی دام",
+    "target_grade": "خوراک دام - مجتمع‌های ضد اسیدوز و بافر شکمبه",
+    "address": "141009, Moscow Obl., Mytishchi, Olimpiyskiy Pr., 10",
+    "website": "https://agrovitex.ru",
+    "email": "info@agrovitex.ru",
+    "phone": "+7 (495) 926-07-56",
+    "action_plan": "تولید مکمل‌های تخصصی دامداری‌های صنعتی پربازده شیری با کاربرد وسیع جوش شیرین",
+    "id": "company-216"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "VitOMEK LLC",
+    "industry": "تولیدکننده پرمیکس و خوراک کامل دام و طیور",
+    "target_grade": "خوراک دام و طیور - بافر pH شکمبه و استحکام پوسته تخم‌مرغ",
+    "address": "127495, Moscow / Plant: Tver Obl., Likhoslavl, Severnaya 5",
+    "website": "https://vitomek.com",
+    "email": "info@vitomek.com / zavod@vitomek.com",
+    "phone": "+7 (495) 902-03-32",
+    "action_plan": "مصرف بی کربنات سدیم در کنسانتره‌های پروتئینی-معدنی (BVMC) برای کنترل اسیدوز و تعادل سدیم",
+    "id": "company-217"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "VIC Group",
+    "industry": "بزرگترین هلدینگ دارویی و افزودنی دامی CIS",
+    "target_grade": "خوراک دام - بافر تک‌جزیی و مکمل‌های الکترولیت",
+    "address": "140125, Moscow Obl., Lyubertsy, Ostrovtsy (Plants: Belgorod)",
+    "website": "https://vicgroup.ru",
+    "email": "info@vicgroup.ru",
+    "phone": "+7 (495) 777-67-67",
+    "action_plan": "توزیع‌کننده و واردکننده گسترده بی کربنات سدیم دامی و مکمل‌های آبرسانی و بافری به دامداری‌های سراسر روسیه",
+    "id": "company-218"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "NPK Bioenergiya",
+    "industry": "تولیدکننده پرمیکس، کنسانتره و خوراک پیش‌استارتر",
+    "target_grade": "خوراک دام - بافرهای تخصصی گاو شیری (Acid'stop)",
+    "address": "125167, Moscow / Plant: Saratov, Industrial Hub Zorinskiy",
+    "website": "https://bioenergia.ru",
+    "email": "mail@bioenergia.ru",
+    "phone": "+7 (8452) 39-93-99",
+    "action_plan": "تولید مکمل‌های بافری «ПВМ 60 Acid'stop» با جوش شیرین به عنوان ماده مؤثره اصلی ضد اسیدوز",
+    "id": "company-219"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Provimi (Cargill Animal Nutrition)",
+    "industry": "تولیدکننده بین‌المللی خوراک و پرمیکس",
+    "target_grade": "خوراک دام و طیور - برنامه‌های تغذیه‌ای DairyMax و کاهش استرس",
+    "address": "125167, Moscow (Plants: Tula-Efremov, SPb-Volosovo, Azov)",
+    "website": "https://www.provimi.ru",
+    "email": "Provimi_moscow@cargill.ru",
+    "phone": "+7 (495) 213-34-12",
+    "action_plan": "مصرف کلان جوش شیرین دامی در ۳ کارخانه تولید پرمیکس و خوراک صنعتی در غرب و جنوب روسیه",
+    "id": "company-220"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Feedland Group",
+    "industry": "واردکننده تخصصی و توزیع‌کننده افزودنی‌های دامی",
+    "target_grade": "خوراک دام و طیور - بی کربنات سدیم خالص دامی در کیسه و بیگ‌بگ",
+    "address": "125047, Moscow, 1st Tverskaya-Yamskaya St., 23",
+    "website": "https://feedland.ru",
+    "email": "info@feedland.ru / e.akbarova@feedland.ru",
+    "phone": "+7 (495) 663-71-56",
+    "action_plan": "واردات مستقیم انواع افزودنی‌های معدنی و ویتامینی و توزیع در تناژ بالا بین کارخانجات خوراک دام",
+    "id": "company-221"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "AgroBalt Trade Group",
+    "industry": "تولیدکننده پرمیکس و مکمل‌های معدنی شمال‌غرب",
+    "target_grade": "خوراک دام - مکمل‌های معدنی МИНВИТ و بافر شکمبه",
+    "address": "196158, SPb / Plant: Leningrad Obl., Gatchina, Novy Svet 112",
+    "website": "https://agrobalt.com",
+    "email": "info@agrobalt.com",
+    "phone": "+7 (812) 462-84-00 / +7 (812) 462-85-95",
+    "action_plan": "تولیدکننده پیشرو در شمال‌غرب روسیه با مصرف جوش شیرین جهت افزایش چربی شیر و سلامت شکمبه",
+    "id": "company-222"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "AO Polyex",
+    "industry": "تأمین‌کننده مواد شیمیایی حفاری نفت و گاز",
+    "target_grade": "صنعتی (Technical) - سیالات حفاری، حذف کلسیم، تنظیم pH",
+    "address": "614113, Perm Krai, Perm, Galperina St., 8",
+    "website": "https://www.polyex.ru",
+    "email": "polyex@polyex.perm.ru / info@polyex.ru",
+    "phone": "+7 (342) 250-70-00",
+    "action_plan": "مصرف جوش شیرین صنعتی برای رسوب کلسیم و کنترل قلیائیت گل حفاری در پروژه‌های نفتی سیبری",
+    "id": "company-223"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Mirrico Group",
+    "industry": "ارائه‌دهنده خدمات تخصصی سیالات حفاری و شیمی نفت",
+    "target_grade": "صنعتی - اصلاح آلودگی سیمان در گل حفاری و بافرینگ",
+    "address": "420107, Republic of Tatarstan, Kazan, Ostrovskogo St., 84",
+    "website": "https://mirrico.ru",
+    "email": "info@mirrico.com",
+    "phone": "+7 (843) 537-23-93",
+    "action_plan": "خرید مداوم بی کربنات سدیم صنعتی برای بخش سیالات حفاری در میادین نفت و گاز اورال و سیبری",
+    "id": "company-224"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "JSC Istochnik Plus",
+    "industry": "تولیدکننده تجهیزات و پودرهای آتش‌نشانی",
+    "target_grade": "صنعتی - ماده مؤثره اصلی پودر خاموش‌کننده حریق کلاس B/C/E",
+    "address": "659322, Altai Krai, Biysk, Sotsialisticheskaya St., 1",
+    "website": "https://antifire.org",
+    "email": "mpp-tungus@mail.ru / info@antifire.org",
+    "phone": "+7 (3854) 30-29-79",
+    "action_plan": "مصرف کلان جوش شیرین میکرونیزه به عنوان ماده اصلی پودرهای اطفا حریق در سیستم‌های «تونگوس»",
+    "id": "company-225"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Epotos Group",
+    "industry": "تولیدکننده سامانه‌های خودکار اطفای حریق",
+    "target_grade": "صنعتی - پودرهای خاموش‌کننده ماژول‌های بوران و OSP",
+    "address": "127410, Moscow, Altufyevskoye Shosse, 44 (Plant: SPb)",
+    "website": "https://epotos.ru",
+    "email": "info@epotos.ru / zakupki@epotos.ru",
+    "phone": "+7 (495) 916-61-16 / 8 (800) 550-61-16",
+    "action_plan": "تولیدکننده بزرگ کپسول‌ها و ماژول‌های پودری خودکار با مصرف بالای فرمولاسیون‌های بی کربنات سدیم",
+    "id": "company-226"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "OJSC Pozhtechnika (Torzhok)",
+    "industry": "بزرگترین کارخانه کپسول‌های آتش‌نشانی روسیه",
+    "target_grade": "صنعتی - شارژ کپسول‌های پودری سری OP (ОП-1 تا ОП-100)",
+    "address": "172003, Tver Oblast, Torzhok, Zagorodnaya St., 1",
+    "website": "http://www.pozhtechnika.ru",
+    "email": "sbyt@pozhtechnika.ru / torzhok@pozhtechnika.ru",
+    "phone": "+7 (48251) 9-22-30 / +7 (48251) 9-11-00",
+    "action_plan": "کارخانه باسابقه در تورژوک با مصرف سالانه صدها تن جوش شیرین صنعتی برای شارژ کپسول‌های آتش‌نشانی",
+    "id": "company-227"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "PJSC Biosintez (Sun Pharma)",
+    "industry": "کارخانه بزرگ داروسازی و محلول‌های تزریقی",
+    "target_grade": "دارویی (Pharma API) - سرم‌های تزریقی ۴٪ و ۵٪ بی کربنات سدیم",
+    "address": "440033, Penza Oblast, Penza, Druzhby St., 4",
+    "website": "https://biosintez.com",
+    "email": "Biosintez.Info@sunpharma.com",
+    "phone": "+7 (8412) 57-72-72 / 8 (800) 100-40-05",
+    "action_plan": "تولیدکننده عمده سرم‌های استریل تزریقی هیدروکربنات سدیم برای رفع اسیدوز متابولیک بیمارستانی",
+    "id": "company-228"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Grotex LLC (Solopharm)",
+    "industry": "کارخانه فوق پیشرفته داروسازی و بیوتکنولوژی",
+    "target_grade": "دارویی - محلول‌های تزریقی، بافر همودیالیز و شستشوی ENT",
+    "address": "195176, Saint Petersburg, Lvovskaya St., 27 (Industrialny 71)",
+    "website": "https://solopharm.com",
+    "email": "grtx@grotexmed.com / purchase4@grotexmed.com",
+    "phone": "+7 (812) 385-47-87",
+    "action_plan": "مصرف گرید فارماکوپه‌ای با اندوتوکسین فوق‌العاده پایین برای دیالیز خونی و سرم‌های تزریقی",
+    "id": "company-229"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Pharmstandard JSC",
+    "industry": "بزرگترین هلدینگ داروسازی روسیه",
+    "target_grade": "دارویی - قرص‌های جوشان، آنتی‌اسیدها، او آر اس (ORS)",
+    "address": "141701, Moscow Obl., Dolgoprudny (Plant: Kursk, Ufa)",
+    "website": "https://pharmstd.ru",
+    "email": "info@pharmstd.ru",
+    "phone": "+7 (495) 970-00-30 / 8 (800) 333-20-40",
+    "action_plan": "مصرف بی کربنات سدیم دارویی به عنوان اکسپیانت فعال در تولید قرص‌های جوشان و ساشه‌های دارویی",
+    "id": "company-230"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Nefis Cosmetics JSC",
+    "industry": "بزرگترین تولیدکننده شوینده و محصولات خانگی",
+    "target_grade": "صنعتی - پودرهای شوینده، پودرهای پاک‌کننده، قرص ظرفشویی",
+    "address": "420021, Republic of Tatarstan, Kazan, Gabdully Tukaya 152",
+    "website": "https://nefco.ru",
+    "email": "office@nefco.ru / gensec@nefco.ru",
+    "phone": "+7 (843) 570-41-91 / 8 (800) 100-08-89",
+    "action_plan": "تولیدکننده برندهای معروف Sorti و Biolan با مصرف تناژ بسیار بالای جوش شیرین به عنوان ساینده و بافر pH",
+    "id": "company-231"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "TD Grass LLC",
+    "industry": "تولیدکننده پیشرو شوینده‌های صنعتی و خودرویی",
+    "target_grade": "صنعتی - پاک‌کننده‌های تخصصی، فوم فرش و خنثی‌کننده‌ها",
+    "address": "404143, Volgograd Obl., Srednyaya Akhtuba, Promyshlennaya 12",
+    "website": "https://grass.su",
+    "email": "gs@grass.su / info@grass.su",
+    "phone": "+7 (8443) 58-48-48 / 8 (800) 505-75-77",
+    "action_plan": "مصرف تناژ بالای جوش شیرین در فرمولاسیون شوینده‌های خانگی، قالیشویی و دیتِیلینگ خودرو",
+    "id": "company-232"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "UTS Group",
+    "industry": "واردکننده و توزیع‌کننده سراسری مواد شیمیایی و غذایی",
+    "target_grade": "خوراکی (E500ii)، دامی، صنعتی و دارویی",
+    "address": "119021, Moscow, Rossolimo St., 7 (SPb: +7 812 389-55-55)",
+    "website": "https://utsgroup.ru",
+    "email": "info@utsgroup.ru",
+    "phone": "+7 (499) 255-36-00 / +7 (812) 389-55-55",
+    "action_plan": "از بزرگترین هلدینگ‌های توزیع مواد شیمیایی و غذایی روسیه و CIS؛ تأمین‌کننده صنایع نان، لبنیات، گوشت و نوشیدنی",
+    "id": "company-233"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "AB-Market Group",
+    "industry": "واردکننده و توزیع‌کننده تخصصی قنادی و نانوایی",
+    "target_grade": "خوراکی (E500ii) - نانوایی، کیک و کراکر",
+    "address": "115184, Moscow, Sredniy Ovchinnikovskiy Per., 12",
+    "website": "https://ab-market.ru",
+    "email": "info@ab-mt.ru / info@ab-market.ru",
+    "phone": "+7 (495) 120-33-06 / +7 (900) 197-11-14",
+    "action_plan": "تأمین‌کننده فدرال مواد اولیه صنایع قنادی و نانوایی با انبارهای فعال در مسکو، سن‌پترزبورگ، یکاترینبورگ و نووسیبیرسک",
+    "id": "company-234"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Sell-Service Ltd.",
+    "industry": "توزیع‌کننده بورسی و واردکننده افزودنی‌های غذایی",
+    "target_grade": "خوراکی (E500ii) و صنعتی",
+    "address": "630005, Novosibirsk, Pisareva St., 38/2 (Moscow: Vernadskogo 41)",
+    "website": "https://sell-service.ru",
+    "email": "info@sell-service.ru / nop@sell-service.ru",
+    "phone": "+7 (499) 495-46-15 / +7 (383) 227-84-15",
+    "action_plan": "شبکه فروش و توزیع سراسری مواد پف‌دهنده، تنظیم‌کننده اسیدیته و نگهدارنده‌ها به کارخانجات غذایی در روسیه و اوراسیا",
+    "id": "company-235"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Revada Group",
+    "industry": "هلدینگ بزرگ توزیع مواد شیمیایی و غذایی",
+    "target_grade": "خوراکی، دامی (بافر شکمبه)، دارویی و آرایشی",
+    "address": "142712, Moscow Obl., Gorki Leninskie / Moscow, Nauchny Pr. 19",
+    "website": "https://revada-group.com",
+    "email": "info@revada-group.com / Stanislav.Yakshin@revada-group.com",
+    "phone": "+7 (495) 955-24-42 / +7 (915) 432-45-54 (WA)",
+    "action_plan": "هلدینگ چندمنظوره با دپارتمان‌های فعال در حوزه غذا، خوراک دام و دارویی؛ خریدار تناژ بالای جوش شیرین دامی و غذایی",
+    "id": "company-236"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "JSC Chembroker",
+    "industry": "کارگزاری و واردکننده مستقیم مواد شیمیایی",
+    "target_grade": "خوراکی، دامی و صنعتی",
+    "address": "125504, Moscow, Dmitrovskoe Shosse, 85, Office 219",
+    "website": "https://chembroker.ru",
+    "email": "info@chembroker.ru",
+    "phone": "+7 (499) 110-00-61 / +7 (499) 472-14-60",
+    "action_plan": "واردکننده مستقیم کانتینری نمک‌های شیمیایی، بافرها و افزودنی‌های غذایی از بازارهای بین‌المللی با انبار اختصاصی در کراسنوگورسک",
+    "id": "company-237"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "UD Chemie Russia",
+    "industry": "واردکننده و توزیع‌کننده اسیدهای آلی و بافرها",
+    "target_grade": "خوراکی (E500ii) و دارویی",
+    "address": "109451, Moscow, Verkhnie Polya St., 28",
+    "website": "https://www.ud-chemie.ru",
+    "email": "info@ud-chemie.ru / evgenia.chirva@ud-chemie.ru",
+    "phone": "+7 (495) 662-38-98 / +7 (495) 724-41-12",
+    "action_plan": "بیش از ۲۰ سال سابقه در تأمین اسید سیتریک، نمک‌های بافری و بیکربنات سدیم برای صنایع شیرینی، لبنیات و داروسازی",
+    "id": "company-238"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Leko Style TPC",
+    "industry": "توزیع‌کننده مواد اولیه غذایی، دارویی و آرایشی",
+    "target_grade": "خوراکی، دارویی و آرایشی",
+    "address": "194292, Saint Petersburg, 3-y Verkhniy Per., 3 (Moscow branch)",
+    "website": "https://lekostyle.com",
+    "email": "info@lekostyle.com",
+    "phone": "+7 (812) 347-73-57 / 8 (800) 333-30-06",
+    "action_plan": "تأمین‌کننده مواد اولیه شیمیایی، اسانس‌ها، مواد مؤثره دارویی و گرید غذایی با شبکه پخش در سراسر روسیه",
+    "id": "company-239"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Ochakovo Factory of Food Ingredients (OKPI)",
+    "industry": "تولیدکننده فرمولاسیون و پیش‌مخلوط‌های غذایی",
+    "target_grade": "خوراکی (E500ii) - بهبوددهنده‌ها و پودر کیک",
+    "address": "119530, Moscow, Ochakovskoye Shosse, 34 / Ryabinovaya St., 44",
+    "website": "https://ochakovo-food.ru",
+    "email": "zakaz@okpi.ru / sales@okpi.ru / info@okpi.ru",
+    "phone": "+7 (495) 269-10-10 / 8 (800) 250-36-63",
+    "action_plan": "تولیدکننده پیشرو در فرمولاسیون سیستم‌های خمیر و پودرهای پخت نانوایی و نوشیدنی؛ مصرف‌کننده مستقیم جوش شیرین خوراکی",
+    "id": "company-240"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Ecos Group",
+    "industry": "تولیدکننده افزودنی‌های ترکیبی گوشت و پروتئین",
+    "target_grade": "خوراکی (E500ii) - بافر و استابیلایزر",
+    "address": "141401, Moscow Obl., Khimki, Zavodskaya St., 2 (Office: Moscow)",
+    "website": "https://ecosgp.com",
+    "email": "hello@ecosgp.com",
+    "phone": "+7 (499) 940-56-86 / +7 (968) 719-29-77 (WA/TG)",
+    "action_plan": "کارخانه تولید افزودنی‌های ترکیبی گوشتی، لبنی و قنادی با ظرفیت بیش از ۱۵ تن در هر شیفت کاری؛ مصرف در بافرهای فسفاته و pH",
+    "id": "company-241"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Formula Food",
+    "industry": "تأمین‌کننده و واردکننده افزودنی‌های غذایی",
+    "target_grade": "خوراکی (E500ii) - کیسه‌های ۲۵ کیلوگرمی",
+    "address": "117630, Moscow, Starokaluzhskoye Shosse, 62",
+    "website": "https://formulafood.ru",
+    "email": "postavka@FormulaFood.ru / info@formulafood.ru",
+    "phone": "+7 (495) 297-66-62",
+    "action_plan": "تأمین عمده اسیدهای خوراکی و بیکربنات سدیم خوراکی برای کارخانجات نان، کلوچه و شیرینی",
+    "id": "company-242"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Yarprodsnabservice LLC",
+    "industry": "توزیع‌کننده منطقه‌ای مواد اولیه قنادی و نان",
+    "target_grade": "خوراکی (E500ii و E503ii)",
+    "address": "150040, Yaroslavl, Prospekt Lenina, 25",
+    "website": "https://yarpss.ru",
+    "email": "info@yarpss.ru / sales.yarpss@mail.ru",
+    "phone": "+7 (4852) 77-88-77 / +7 (4852) 73-31-44",
+    "action_plan": "بیش از ۲۵ سال سابقه در توزیع افزودنی‌ها و عوامل پوک‌کننده (سدیم و آمونیوم بیکربنات) در منطقه مرکزی روسیه",
+    "id": "company-243"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Miratorg Agribusiness Holding",
+    "industry": "بزرگترین هلدینگ کشاورزی و خوراک دام روسیه",
+    "target_grade": "خوراک دام (Feed Grade) - بافر ضد اسیدوز و گوشتی",
+    "address": "142000, Moscow Obl., Domodedovo (Plants: Belgorod, Bryansk)",
+    "website": "https://miratorg.ru",
+    "email": "info@agrohold.ru / export@agrohold.ru",
+    "phone": "+7 (495) 651-92-52 / 8 (800) 100-80-87",
+    "action_plan": "بزرگترین تولیدکننده پروتئین و کارخانجات پرمیکس و خوراک دام روسیه با مصرف تناژ بسیار بالا جهت تنظیم اسیدیته شکمبه گله‌های شیری",
+    "id": "company-244"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Academy-T LLC",
+    "industry": "تولیدکننده مکمل‌های ورزشی و دارویی",
+    "target_grade": "دارویی (Pharma) و خوراکی - قرص‌های جوشان",
+    "address": "109029, Moscow, 1-ya Dubrovskaya St., 1, Bldg. 2",
+    "website": "https://act-ingredients.ru",
+    "email": "info@ac-t.ru",
+    "phone": "+7 (495) 139-89-93 (ext 219/220) / +7 (929) 630-39-78",
+    "action_plan": "تولیدکننده محصولات تغذیه بالینی، مکمل‌های جوشان و الکترولیت با مصرف مستقیم بی کربنات سدیم گرید دارویی",
+    "id": "company-245"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "Alliance Service LLC",
+    "industry": "توزیع‌کننده مواد اولیه دارویی و دامی",
+    "target_grade": "دارویی (Pharma API) و گرید دامی",
+    "address": "Moscow, Promyshlennaya St.",
+    "website": "https://pharmsubstance.ru",
+    "email": "asc.allserv@gmail.com",
+    "phone": "+7 (499) 703-31-76",
+    "action_plan": "واردکننده تخصصی مواد مؤثره دارویی (APIs)، مکمل‌های دامپزشکی و مواد اولیه آرایشی",
+    "id": "company-246"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "COFCO Biotechnology Russia",
+    "industry": "تأمین‌کننده نشاسته، اسید سیتریک و افزودنی‌ها",
+    "target_grade": "خوراکی (E500ii) - نانوایی و امولسیون گوشت",
+    "address": "Moscow, Crocus Expo Pavilion 2, Stand A223",
+    "website": "https://new.ingred.ru/en-GB/about/exhibitor-list.aspx",
+    "email": "ingred@mvk.ru",
+    "phone": "+7 (495) 648-64-42",
+    "action_plan": "تأمین‌کننده اسید سیتریک، استابیلایزرها و مواد اولیه صنایع نانوایی و فرآورده‌های امولسیونی گوشت",
+    "id": "company-247"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -2428,7 +3053,7 @@
     "email": "CorporateAffairs.Department@suntorypepsico.vn",
     "website": "https://www.suntorypepsico.vn",
     "country": "ویتنام",
-    "id": "company-198"
+    "id": "company-248"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -2441,7 +3066,7 @@
     "email": "info@kienvuong.com",
     "website": "https://www.kienvuong.com",
     "country": "ویتنام",
-    "id": "company-199"
+    "id": "company-249"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -2454,7 +3079,7 @@
     "email": "jenny19820902@hungfuleather.com",
     "website": "https://www.hungfuleather.net",
     "country": "ویتنام",
-    "id": "company-200"
+    "id": "company-250"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -2467,7 +3092,7 @@
     "email": "info@tolaram.com)",
     "website": "https://www.tolaram.com",
     "country": "سنگاپور",
-    "id": "company-201"
+    "id": "company-251"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -2480,7 +3105,7 @@
     "email": "cs@parle.biz",
     "website": "https://www.parleproducts.com/",
     "country": "نیجریه",
-    "id": "company-202"
+    "id": "company-252"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -2493,7 +3118,7 @@
     "email": "unichem@unitedchemicals.com",
     "website": "https://unitedchemicals.com",
     "country": "اندونزی",
-    "id": "company-203"
+    "id": "company-253"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -2506,7 +3131,7 @@
     "email": "info@leaderchem.net",
     "website": "https://leaderchem.net",
     "country": "امارات",
-    "id": "company-204"
+    "id": "company-254"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -2519,7 +3144,7 @@
     "email": "info@logotranschem.ae",
     "website": "https://www.logotranschem.ae",
     "country": "امارات",
-    "id": "company-205"
+    "id": "company-255"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -2532,7 +3157,7 @@
     "email": "k.baltag@alqithara.ae",
     "website": "https://www.alqithara.ae/",
     "country": "امارات",
-    "id": "company-206"
+    "id": "company-256"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -2545,7 +3170,7 @@
     "email": "info@intersac.com",
     "website": "https://intersac.com",
     "country": "کانادا",
-    "id": "company-207"
+    "id": "company-257"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -2558,7 +3183,7 @@
     "email": "lulu@lumix-industry.com",
     "website": "https://lumix-industry.com",
     "country": "بنگلادش",
-    "id": "company-208"
+    "id": "company-258"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -2571,7 +3196,7 @@
     "email": "barakatalyamin@gmail.com",
     "website": "https://www.barakatalyamin.com/#",
     "country": "عراق",
-    "id": "company-209"
+    "id": "company-259"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2584,7 +3209,7 @@
     "email": "info@agchemigroup.com",
     "website": "https://www.agchemigroup.com",
     "country": "چک",
-    "id": "company-210"
+    "id": "company-260"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2597,7 +3222,7 @@
     "email": "alcachimica@alcachimica.com",
     "website": "https://alcachimica.it",
     "country": "ایتالیا",
-    "id": "company-211"
+    "id": "company-261"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2610,7 +3235,7 @@
     "email": "tilaukset@algol.fi",
     "website": "https://www.algolchemicals.com",
     "country": "فنلاند",
-    "id": "company-212"
+    "id": "company-262"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2623,7 +3248,7 @@
     "email": "info@amcan.fr",
     "website": "https://dempseyeurope.com",
     "country": "فرانسه",
-    "id": "company-213"
+    "id": "company-263"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2636,7 +3261,7 @@
     "email": "avantor.pl@avantormaterials.com",
     "website": "https://www.poch.com.pl",
     "country": "لهستان",
-    "id": "company-214"
+    "id": "company-264"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2649,7 +3274,7 @@
     "email": "karmegam@avrtradings.com",
     "website": "https://www.avrtradings.com",
     "country": "هند",
-    "id": "company-215"
+    "id": "company-265"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2662,7 +3287,7 @@
     "email": "info@barkmans.se",
     "website": "https://barkmans.se",
     "country": "سوئد",
-    "id": "company-216"
+    "id": "company-266"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2675,7 +3300,7 @@
     "email": "investor-relations@azelis.com",
     "website": "https://www.azelis.com",
     "country": "دانمارک",
-    "id": "company-217"
+    "id": "company-267"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2688,7 +3313,7 @@
     "email": "azelis@azelis.fr",
     "website": "https://www.azelis.com",
     "country": "فرانسه",
-    "id": "company-218"
+    "id": "company-268"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2701,7 +3326,7 @@
     "email": "info@azelis.ro",
     "website": "https://www.azelis.com",
     "country": "رومانی",
-    "id": "company-219"
+    "id": "company-269"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2714,7 +3339,7 @@
     "email": "biuro@foodwell.pl",
     "website": "https://foodwell.pl",
     "country": "لهستان",
-    "id": "company-220"
+    "id": "company-270"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2727,7 +3352,7 @@
     "email": "office@bangbonsomer.com",
     "website": "https://www.bangbonsomer.com",
     "country": "فنلاند",
-    "id": "company-221"
+    "id": "company-271"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2740,7 +3365,7 @@
     "email": "barcelonesa@barcelonesa.com",
     "website": "https://www.barcelonesa.com",
     "country": "اسپانیا",
-    "id": "company-222"
+    "id": "company-272"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2753,7 +3378,7 @@
     "email": "ghpl@ghpl.pl",
     "website": "https://ghpl.pl",
     "country": "لهستان",
-    "id": "company-223"
+    "id": "company-273"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2766,7 +3391,7 @@
     "email": "office@beofon.ro",
     "website": "http://www.beofon.ro",
     "country": "رومانی",
-    "id": "company-224"
+    "id": "company-274"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2779,7 +3404,7 @@
     "email": "info@brpkimya.com",
     "website": "https://brpkimya.com",
     "country": "ترکیه",
-    "id": "company-225"
+    "id": "company-275"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2792,7 +3417,7 @@
     "email": "main.se@brenntag-nordic.com",
     "website": "https://www.brenntag.com/en-se/",
     "country": "سوئد",
-    "id": "company-226"
+    "id": "company-276"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2805,7 +3430,7 @@
     "email": "reliant.nordic@brenntag.com",
     "website": "https://www.brenntag.com/en-no/",
     "country": "نروژ",
-    "id": "company-227"
+    "id": "company-277"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2818,7 +3443,7 @@
     "email": "info.fi@brenntag.com",
     "website": "https://www.brenntag.com/en-fi/",
     "country": "فنلاند",
-    "id": "company-228"
+    "id": "company-278"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2831,7 +3456,7 @@
     "email": "biuro@brenntag.pl",
     "website": "https://www.brenntag.com/pl-pl/",
     "country": "لهستان",
-    "id": "company-229"
+    "id": "company-279"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2844,7 +3469,7 @@
     "email": "biuro@brenntag.pl",
     "website": "https://www.brenntag.com/pl-pl/",
     "country": "لهستان",
-    "id": "company-230"
+    "id": "company-280"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2857,7 +3482,7 @@
     "email": "biuro@brenntag.pl",
     "website": "https://www.brenntag.com/pl-pl/",
     "country": "لهستان",
-    "id": "company-231"
+    "id": "company-281"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2870,7 +3495,7 @@
     "email": "biuro@brenntag.pl",
     "website": "https://www.brenntag.com/pl-pl/",
     "country": "لهستان",
-    "id": "company-232"
+    "id": "company-282"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2883,7 +3508,7 @@
     "email": "info@brenntag.it",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-233"
+    "id": "company-283"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2896,7 +3521,7 @@
     "email": "info@brenntag.it",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-234"
+    "id": "company-284"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2909,7 +3534,7 @@
     "email": "info@brenntag.it",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-235"
+    "id": "company-285"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2922,7 +3547,7 @@
     "email": "info@brenntag.it",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-236"
+    "id": "company-286"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2935,7 +3560,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-237"
+    "id": "company-287"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2948,7 +3573,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-238"
+    "id": "company-288"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2961,7 +3586,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-239"
+    "id": "company-289"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2974,7 +3599,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-240"
+    "id": "company-290"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -2987,7 +3612,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-241"
+    "id": "company-291"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3000,7 +3625,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-242"
+    "id": "company-292"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3013,7 +3638,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-243"
+    "id": "company-293"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3026,7 +3651,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-244"
+    "id": "company-294"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3039,7 +3664,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-245"
+    "id": "company-295"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3052,7 +3677,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-246"
+    "id": "company-296"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3065,7 +3690,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-247"
+    "id": "company-297"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3078,7 +3703,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-248"
+    "id": "company-298"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3091,7 +3716,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-249"
+    "id": "company-299"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3104,7 +3729,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-250"
+    "id": "company-300"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3117,7 +3742,7 @@
     "email": "contactro@brenntag.com",
     "website": "https://www.brenntag.com/en-ro/",
     "country": "رومانی",
-    "id": "company-251"
+    "id": "company-301"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3130,7 +3755,7 @@
     "email": "sales-tcel@tatachemicals.com",
     "website": "https://tatachemicalseurope.com/",
     "country": "هلند",
-    "id": "company-252"
+    "id": "company-302"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3143,7 +3768,7 @@
     "email": "info@ctc-sweets.com",
     "website": "http://www.ctc-sweets.com",
     "country": "مصر",
-    "id": "company-253"
+    "id": "company-303"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3156,7 +3781,7 @@
     "email": "info@caldic.be",
     "website": "https://www.caldic.com",
     "country": "بلژیک",
-    "id": "company-254"
+    "id": "company-304"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3169,7 +3794,7 @@
     "email": "info@cbc-europe.com",
     "website": "https://cbc-europe.com",
     "country": "آلمان",
-    "id": "company-255"
+    "id": "company-305"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3182,7 +3807,7 @@
     "email": "chemap@chemap.cz",
     "website": "https://www.chemap.cz",
     "country": "چک",
-    "id": "company-256"
+    "id": "company-306"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3195,7 +3820,7 @@
     "email": "info@chemia.ch",
     "website": "https://www.chemia.ch",
     "country": "سوئیس",
-    "id": "company-257"
+    "id": "company-307"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3208,7 +3833,7 @@
     "email": "chimab@chimab.it",
     "website": "https://www.brenntag.com/en-de/industries/food-and-nutrition/",
     "country": "ایتالیا",
-    "id": "company-258"
+    "id": "company-308"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3221,7 +3846,7 @@
     "email": "chimab@chimab.it",
     "website": "https://www.brenntag.com/en-de/industries/food-and-nutrition/",
     "country": "ایتالیا",
-    "id": "company-259"
+    "id": "company-309"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3234,7 +3859,7 @@
     "email": "chimab@chimab.it",
     "website": "https://www.brenntag.com/en-de/industries/food-and-nutrition/",
     "country": "ایتالیا",
-    "id": "company-260"
+    "id": "company-310"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3247,7 +3872,7 @@
     "email": "info@chimitex.it",
     "website": "https://www.chimitex.it",
     "country": "ایتالیا",
-    "id": "company-261"
+    "id": "company-311"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3260,7 +3885,7 @@
     "email": "info@chimitex.it",
     "website": "https://www.chimitex.it",
     "country": "ایتالیا",
-    "id": "company-262"
+    "id": "company-312"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3273,7 +3898,7 @@
     "email": "ciechtrading@ciechgroup.com",
     "website": "https://www.qemetica.com",
     "country": "لهستان",
-    "id": "company-263"
+    "id": "company-313"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3286,7 +3911,7 @@
     "email": "coger@coger.fr",
     "website": "https://www.cogershop.com",
     "country": "فرانسه",
-    "id": "company-264"
+    "id": "company-314"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3299,7 +3924,7 @@
     "email": "info@comercialgodo.com",
     "website": "https://comercialgodo.com",
     "country": "اسپانیا",
-    "id": "company-265"
+    "id": "company-315"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3312,7 +3937,7 @@
     "email": "office@cio.ro",
     "website": "http://www.cio.ro",
     "country": "رومانی",
-    "id": "company-266"
+    "id": "company-316"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3325,7 +3950,7 @@
     "email": "office@cosal.ro",
     "website": "https://www.cosal.ro",
     "country": "رومانی",
-    "id": "company-267"
+    "id": "company-317"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3338,7 +3963,7 @@
     "email": "info@credin.dk",
     "website": "https://www.credin.dk",
     "country": "دانمارک",
-    "id": "company-268"
+    "id": "company-318"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3351,7 +3976,7 @@
     "email": "cristian@cristiangrup.ro",
     "website": "http://www.cristiangrup.ro",
     "country": "رومانی",
-    "id": "company-269"
+    "id": "company-319"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3364,7 +3989,7 @@
     "email": "disachim@disachim.com",
     "website": "https://www.disachim.com",
     "country": "فرانسه",
-    "id": "company-270"
+    "id": "company-320"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3377,7 +4002,7 @@
     "email": "info@distrimspa.com",
     "website": "https://www.distrimspa.com",
     "country": "الجزایر",
-    "id": "company-271"
+    "id": "company-321"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3390,7 +4015,7 @@
     "email": "kontakt@oetker.dk",
     "website": "https://www.oetker.dk",
     "country": "دانمارک",
-    "id": "company-272"
+    "id": "company-322"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3403,7 +4028,7 @@
     "email": "office@oetker.at",
     "website": "https://www.oetker.at",
     "country": "اتریش",
-    "id": "company-273"
+    "id": "company-323"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3416,7 +4041,7 @@
     "email": "info@zahrangroup.com",
     "website": "https://www.zahrangroup.com",
     "country": "مصر",
-    "id": "company-274"
+    "id": "company-324"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3429,7 +4054,7 @@
     "email": "ekoprom@zg.t-com.hr",
     "website": "https://www.ekoprom.hr",
     "country": "کرواسی",
-    "id": "company-275"
+    "id": "company-325"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3442,7 +4067,7 @@
     "email": "engelhardt@engelhardt.se",
     "website": "https://www.engelhardt.se",
     "country": "سوئد",
-    "id": "company-276"
+    "id": "company-326"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3455,7 +4080,7 @@
     "email": "salg@engelhardt.dk",
     "website": "https://engelhardt.dk",
     "country": "دانمارک",
-    "id": "company-277"
+    "id": "company-327"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3468,7 +4093,7 @@
     "email": "contact@adetis-ingredients.fr",
     "website": "https://adetis-ingredients.fr",
     "country": "فرانسه",
-    "id": "company-278"
+    "id": "company-328"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3481,7 +4106,7 @@
     "email": "foodsystems@tateandlyle.com",
     "website": "https://www.tateandlyle.com",
     "country": "فرانسه",
-    "id": "company-279"
+    "id": "company-329"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3494,7 +4119,7 @@
     "email": "info@gecotrap.com.tn",
     "website": "http://www.gecotrap.com.tn",
     "country": "تونس",
-    "id": "company-280"
+    "id": "company-330"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3507,7 +4132,7 @@
     "email": "info@faravelli.it",
     "website": "https://www.faravelli.it",
     "country": "ایتالیا",
-    "id": "company-281"
+    "id": "company-331"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3520,7 +4145,7 @@
     "email": "office@govcrest.ro",
     "website": "https://www.govcrest.ro",
     "country": "رومانی",
-    "id": "company-282"
+    "id": "company-332"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3533,7 +4158,7 @@
     "email": "info@gremount.com.cn",
     "website": "https://www.gremountint.com",
     "country": "چین",
-    "id": "company-283"
+    "id": "company-333"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3546,7 +4171,7 @@
     "email": "media@griffithfoods.com",
     "website": "https://griffithfoods.com",
     "country": "بلژیک",
-    "id": "company-284"
+    "id": "company-334"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3559,7 +4184,7 @@
     "email": "handlowy@chemia.opole.pl",
     "website": "http://www.chemia.opole.pl",
     "country": "لهستان",
-    "id": "company-285"
+    "id": "company-335"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3572,7 +4197,7 @@
     "email": "export@ghtech.com",
     "website": "https://www.ghtech.com",
     "country": "چین",
-    "id": "company-286"
+    "id": "company-336"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3585,7 +4210,7 @@
     "email": "info@haedener.ch",
     "website": "https://www.haedener.ch",
     "country": "سوئیس",
-    "id": "company-287"
+    "id": "company-337"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3598,7 +4223,7 @@
     "email": "post@hl-solberg.no",
     "website": "https://www.hl-solberg.no",
     "country": "نروژ",
-    "id": "company-288"
+    "id": "company-338"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3611,7 +4236,7 @@
     "email": "info@helmag.com",
     "website": "https://www.helmag.com",
     "country": "آلمان",
-    "id": "company-289"
+    "id": "company-339"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3624,7 +4249,7 @@
     "email": "info@himfarminvest.com.ua",
     "website": "https://himfarminvest.com.ua",
     "country": "اوکراین",
-    "id": "company-290"
+    "id": "company-340"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3637,7 +4262,7 @@
     "email": "info@ihc-chempharm.com",
     "website": "https://www.ihc-chempharm.com/",
     "country": "آلمان",
-    "id": "company-291"
+    "id": "company-341"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3650,7 +4275,7 @@
     "email": "info@imcdgroup.com",
     "website": "https://www.imcdgroup.com/",
     "country": "هلند",
-    "id": "company-292"
+    "id": "company-342"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3663,7 +4288,7 @@
     "email": "office@industrialchim.ro",
     "website": "https://www.industrialchim.ro/",
     "country": "رومانی",
-    "id": "company-293"
+    "id": "company-343"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3676,7 +4301,7 @@
     "email": "sphongburut@ashland.com",
     "website": "https://www.ashland.com/",
     "country": "تایلند",
-    "id": "company-294"
+    "id": "company-344"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3689,7 +4314,7 @@
     "email": "info@janus-services.com",
     "website": "https://janus-services.com/",
     "country": "هلند",
-    "id": "company-295"
+    "id": "company-345"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3702,7 +4327,7 @@
     "email": "kratoska@kratoska.cz",
     "website": "https://www.kratoska.cz/",
     "country": "چک",
-    "id": "company-296"
+    "id": "company-346"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3715,7 +4340,7 @@
     "email": "biuro@labomix.com.pl",
     "website": "http://www.labomix.com.pl",
     "country": "لهستان",
-    "id": "company-297"
+    "id": "company-347"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3728,7 +4353,7 @@
     "email": "contact@riadhpharm.dz",
     "website": "https://riadhpharm.dz/",
     "country": "الجزایر",
-    "id": "company-298"
+    "id": "company-348"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3741,7 +4366,7 @@
     "email": "mailbox@aprochimide.it",
     "website": "https://aprochimide.it/",
     "country": "ایتالیا",
-    "id": "company-299"
+    "id": "company-349"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3754,7 +4379,7 @@
     "email": "mailbox@aprochimide.it",
     "website": "https://aprochimide.it/",
     "country": "ایتالیا",
-    "id": "company-300"
+    "id": "company-350"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3767,7 +4392,7 @@
     "email": "mailbox@aprochimide.it",
     "website": "https://aprochimide.it/",
     "country": "ایتالیا",
-    "id": "company-301"
+    "id": "company-351"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3780,7 +4405,7 @@
     "email": "info@linegal.pl",
     "website": "https://linegal.pl/",
     "country": "لهستان",
-    "id": "company-302"
+    "id": "company-352"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3793,7 +4418,7 @@
     "email": "info@lirpasilicones.com",
     "website": "https://lirpasilicones.com/",
     "country": "اسپانیا",
-    "id": "company-303"
+    "id": "company-353"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3806,7 +4431,7 @@
     "email": "contact@manuchar.com",
     "website": "https://www.manuchar.com/",
     "country": "بلژیک",
-    "id": "company-304"
+    "id": "company-354"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3819,7 +4444,7 @@
     "email": "info@merck.ch",
     "website": "https://www.merckgroup.com/ch-en",
     "country": "سوئیس",
-    "id": "company-305"
+    "id": "company-355"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3832,7 +4457,7 @@
     "email": "CS.Merck@merckgroup.com",
     "website": "https://www.merckgroup.com/fi-fi",
     "country": "فنلاند",
-    "id": "company-306"
+    "id": "company-356"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3845,7 +4470,7 @@
     "email": "rodo@pgd.biz.pl",
     "website": "http://www.merkur.com.pl",
     "country": "لهستان",
-    "id": "company-307"
+    "id": "company-357"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3858,7 +4483,7 @@
     "email": "support@mido.com.eg",
     "website": "http://www.mido.com.eg",
     "country": "مصر",
-    "id": "company-308"
+    "id": "company-358"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3871,7 +4496,7 @@
     "email": "nanosoda.ua@gmail.com",
     "website": "https://nano-soda.com.ua/",
     "country": "اوکراین",
-    "id": "company-309"
+    "id": "company-359"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3884,7 +4509,7 @@
     "email": "info@nordiskaunipol.se",
     "website": "https://nordiskaunipol.se/",
     "country": "سوئد",
-    "id": "company-310"
+    "id": "company-360"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3897,7 +4522,7 @@
     "email": "office@crisfood.ro",
     "website": "https://www.crisfoods.ro/",
     "country": "رومانی",
-    "id": "company-311"
+    "id": "company-361"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3910,7 +4535,7 @@
     "email": "agro.ch@omya.com",
     "website": "https://www.omya.com",
     "country": "سوئیس",
-    "id": "company-312"
+    "id": "company-362"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3923,7 +4548,7 @@
     "email": "biuro@orchem.com.pl",
     "website": "https://orchem.com.pl",
     "country": "لهستان",
-    "id": "company-313"
+    "id": "company-363"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3936,7 +4561,7 @@
     "email": "office@permakem.no",
     "website": "https://www.permakem.no",
     "country": "نروژ",
-    "id": "company-314"
+    "id": "company-364"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3949,7 +4574,7 @@
     "email": "biuro@pharma-cosmetic.com.pl",
     "website": "http://www.pharma-cosmetic.com.pl",
     "country": "لهستان",
-    "id": "company-315"
+    "id": "company-365"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3962,7 +4587,7 @@
     "email": "info@policontract.md",
     "website": "https://policontract.md",
     "country": "مولداوی",
-    "id": "company-316"
+    "id": "company-366"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3975,7 +4600,7 @@
     "email": "biuro@polmarkus.com.pl",
     "website": "https://polmarkus.com.pl",
     "country": "لهستان",
-    "id": "company-317"
+    "id": "company-367"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3988,7 +4613,7 @@
     "email": "biuro@galfarm.com.pl",
     "website": "https://galfarm.pl",
     "country": "لهستان",
-    "id": "company-318"
+    "id": "company-368"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4001,7 +4626,7 @@
     "email": "chemia@standard.pl",
     "website": "https://www.standard.pl",
     "country": "لهستان",
-    "id": "company-319"
+    "id": "company-369"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4014,7 +4639,7 @@
     "email": "industrial-minerals@lehvoss.de",
     "website": "http://www.remy-group.com",
     "country": "آلمان",
-    "id": "company-320"
+    "id": "company-370"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4027,7 +4652,7 @@
     "email": "receptie_antwerpen@hanos.be",
     "website": "https://www.hanos.be",
     "country": "بلژیک",
-    "id": "company-321"
+    "id": "company-371"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4040,7 +4665,7 @@
     "email": "info@riverchimica.com",
     "website": "http://www.riverchimica.com",
     "country": "ایتالیا",
-    "id": "company-322"
+    "id": "company-372"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4053,7 +4678,7 @@
     "email": "info@riverchimica.com",
     "website": "http://www.riverchimica.com",
     "country": "ایتالیا",
-    "id": "company-323"
+    "id": "company-373"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4066,7 +4691,7 @@
     "email": "info@riverchimica.com",
     "website": "http://www.riverchimica.com",
     "country": "ایتالیا",
-    "id": "company-324"
+    "id": "company-374"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4079,7 +4704,7 @@
     "email": "info@rodals.md",
     "website": "http://www.rodals.md",
     "country": "مولداوی",
-    "id": "company-325"
+    "id": "company-375"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4092,7 +4717,7 @@
     "email": "info@simpo.it",
     "website": "https://www.simpo.it",
     "country": "ایتالیا",
-    "id": "company-326"
+    "id": "company-376"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4105,7 +4730,7 @@
     "email": "a.s@sahastraa.com",
     "website": "https://www.sahastraa.com",
     "country": "هند",
-    "id": "company-327"
+    "id": "company-377"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4118,7 +4743,7 @@
     "email": "salt@salt.no",
     "website": "https://www.salt.no",
     "country": "نروژ",
-    "id": "company-328"
+    "id": "company-378"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4131,7 +4756,7 @@
     "email": "info@snick.be",
     "website": "https://www.snick.be",
     "country": "بلژیک",
-    "id": "company-329"
+    "id": "company-379"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4144,7 +4769,7 @@
     "email": "firmapost@solbergindustri.no",
     "website": "https://www.solbergindustri.no",
     "country": "نروژ",
-    "id": "company-330"
+    "id": "company-380"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4157,7 +4782,7 @@
     "email": "contact@solvay.com",
     "website": "https://www.solvay.com",
     "country": "دانمارک",
-    "id": "company-331"
+    "id": "company-381"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4170,7 +4795,7 @@
     "email": "contact@solvay.com",
     "website": "https://www.solvay.com",
     "country": "سوئد",
-    "id": "company-332"
+    "id": "company-382"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4183,7 +4808,7 @@
     "email": "info@specialkemi.se",
     "website": "http://www.specialkemi.se",
     "country": "سوئد",
-    "id": "company-333"
+    "id": "company-383"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4196,7 +4821,7 @@
     "email": "office@spottrading.ro",
     "website": "https://www.spottrading.ro",
     "country": "رومانی",
-    "id": "company-334"
+    "id": "company-384"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4209,7 +4834,7 @@
     "email": "office@stanchem.pl",
     "website": "https://www.stanchem.pl",
     "country": "لهستان",
-    "id": "company-335"
+    "id": "company-385"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4222,7 +4847,7 @@
     "email": "firmapost@storms.no",
     "website": "https://storms.no",
     "country": "نروژ",
-    "id": "company-336"
+    "id": "company-386"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4235,7 +4860,7 @@
     "email": "hello@ncc.ie",
     "website": "https://www.ncc.ie",
     "country": "ایرلند",
-    "id": "company-337"
+    "id": "company-387"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4248,7 +4873,7 @@
     "email": "info@torchiani.com",
     "website": "https://www.torchiani.com/",
     "country": "ایتالیا",
-    "id": "company-338"
+    "id": "company-388"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4261,7 +4886,7 @@
     "email": "mail@toscochimica.com",
     "website": "https://toscochimica.com/",
     "country": "ایتالیا",
-    "id": "company-339"
+    "id": "company-389"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4274,7 +4899,7 @@
     "email": "msd@tycoon-global.com",
     "website": "https://www.tycoon-global.com/",
     "country": "چین",
-    "id": "company-340"
+    "id": "company-390"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4287,7 +4912,7 @@
     "email": "ranairan@uetcindia.com",
     "website": "http://www.uetcindia.com",
     "country": "هند",
-    "id": "company-341"
+    "id": "company-391"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4300,7 +4925,7 @@
     "email": "contact@univarsolutions.com",
     "website": "https://www.univarsolutions.com",
     "country": "فرانسه",
-    "id": "company-342"
+    "id": "company-392"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4313,7 +4938,7 @@
     "email": "info-pt@univarsolutions.com",
     "website": "https://www.univarsolutions.com",
     "country": "پرتغال",
-    "id": "company-343"
+    "id": "company-393"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4326,7 +4951,7 @@
     "email": "Univar.dk@univarsolutions.com",
     "website": "https://www.univarsolutions.com",
     "country": "دانمارک",
-    "id": "company-344"
+    "id": "company-394"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4339,7 +4964,7 @@
     "email": "Order.se@univarsolutions.com",
     "website": "https://www.univarsolutions.se",
     "country": "سوئد",
-    "id": "company-345"
+    "id": "company-395"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4352,7 +4977,7 @@
     "email": "Ordre.no@univarsolutions.com",
     "website": "https://www.univarsolutions.no",
     "country": "نروژ",
-    "id": "company-346"
+    "id": "company-396"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4365,7 +4990,7 @@
     "email": "Order.fi@univarsolutions.com",
     "website": "https://www.univarsolutions.fi",
     "country": "فنلاند",
-    "id": "company-347"
+    "id": "company-397"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4378,7 +5003,7 @@
     "email": "vutstb@gmail.com",
     "website": "https://utstd.com.ua",
     "country": "اوکراین",
-    "id": "company-348"
+    "id": "company-398"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4391,7 +5016,7 @@
     "email": "office@vega.ro",
     "website": "https://vega.ro",
     "country": "رومانی",
-    "id": "company-349"
+    "id": "company-399"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4404,7 +5029,7 @@
     "email": "info@vhumana.com",
     "website": "https://www.vhumana.com",
     "country": "پرتغال",
-    "id": "company-350"
+    "id": "company-400"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4417,7 +5042,7 @@
     "email": "info@whitegroup.co.th",
     "website": "http://www.whitegroup.co.th",
     "country": "تایلند",
-    "id": "company-351"
+    "id": "company-401"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4430,7 +5055,7 @@
     "email": "info@whitegroup.co.th",
     "website": "http://www.whitegroup.co.th",
     "country": "تایلند",
-    "id": "company-352"
+    "id": "company-402"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4443,7 +5068,7 @@
     "email": "biuro@wibial.pl",
     "website": "https://wibial.pl/",
     "country": "لهستان",
-    "id": "company-353"
+    "id": "company-403"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4456,7 +5081,7 @@
     "email": "info@zeelandia.be",
     "website": "https://www.zeelandia.be/",
     "country": "بلژیک",
-    "id": "company-354"
+    "id": "company-404"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4469,7 +5094,7 @@
     "email": "ziarnex.warszawa@apc.com.pl",
     "website": "https://ziarnex.pl/",
     "country": "لهستان",
-    "id": "company-355"
+    "id": "company-405"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4482,7 +5107,7 @@
     "email": "info@arista.com.ua",
     "website": "https://arista.com.ua/",
     "country": "اوکراین",
-    "id": "company-356"
+    "id": "company-406"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4495,6 +5120,6 @@
     "email": "wzcg@fxhr.cn",
     "website": "http://www.sxfx.com.cn",
     "country": "چین",
-    "id": "company-357"
+    "id": "company-407"
   }
 ]

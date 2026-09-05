@@ -28,12 +28,27 @@ export function getIntratecMonthly() {
   return readJsonSafe(path.join(DATA_DIR, "intratec_monthly.json"), []);
 }
 
+// price_history.json کشورها رو به انگلیسی ساده ثبت می‌کنه ("Turkey"، "China")،
+// نه اسم رسمی country_name_map.json ("Türkiye") و نه فارسی سایت ("ترکیه"). دو
+// جا (قیمت‌های زنده‌ی گزارش‌های هوشمند و جدول قیمت صفحه‌ی هر کشور) با اسم فارسی
+// جست‌وجو می‌کردن و همیشه، برای همه‌ی کشورها، خالی برمی‌گشتن — این alias همون
+// چندتا استثنا رو به نام رسمی country_name_map.json وصل می‌کنه.
+const PRICE_COUNTRY_EN_ALIASES = { Turkey: "Türkiye", USA: "United States of America" };
+
+function priceCountryToFa(enName, nameMap) {
+  if (!enName) return null;
+  const base = enName.replace(/\s*\(.*?\)\s*$/, "").trim(); // "Turkey (Intratec)" -> "Turkey"
+  const key = PRICE_COUNTRY_EN_ALIASES[base] || base;
+  return nameMap[key]?.fa || null;
+}
+
 export function getFlatPriceRecords() {
   const batches = getPriceHistory();
+  const nameMap = readJsonSafe(path.join(ROOT, "scripts", "country_name_map.json"), {});
   const rows = [];
   for (const batch of batches) {
     for (const r of batch.records || []) {
-      rows.push({ ...r, batch_date: batch.date });
+      rows.push({ ...r, batch_date: batch.date, country_fa: priceCountryToFa(r.country_or_region, nameMap) });
     }
   }
   return rows;
@@ -113,7 +128,7 @@ export function getCountrySummary(country) {
   const companies = getCompanies().filter((c) => c.country === country);
   const exhibitions = getExhibitions().filter((e) => e.country === country);
   const reports = getReportsManifest().filter((r) => r.country === country);
-  const prices = getFlatPriceRecords().filter((p) => p.country_or_region === country);
+  const prices = getFlatPriceRecords().filter((p) => p.country_fa === country);
   return { companies, exhibitions, reports, prices };
 }
 
@@ -123,6 +138,15 @@ export function getCompetitors() {
 
 export function getCompetitor(id) {
   return getCompetitors()[id] || null;
+}
+
+// آیا این کشور یک پروفایل رقیب اختصاصی داره (ترکیه/چین/روسیه)؟ برای نشان
+// «گزارش اختصاصی» روی کارت صفحه‌ی کشورها — قبلاً فقط country_profiles.json
+// (داده‌ی جغرافیایی/فاصله، بی‌ربط به عمق تحقیق) رو چک می‌کرد و چین/روسیه رو
+// جا می‌نداخت با اینکه پروفایل رقیب کامل دارن.
+export function getCompetitorForCountry(country) {
+  const competitors = getCompetitors();
+  return Object.values(competitors).find((c) => c.name === country) || null;
 }
 
 // خروجی ایجنت‌های رصد اختصاصی رقبا (scripts/turkey_watch_bot.py, scripts/china_watch_bot.py) — جدیدترین اول.
@@ -303,7 +327,7 @@ export function getCountryProfile(country) {
 // price_history.json برمی‌گردونه (همیشه تازه، چون هر بار از روی داده‌ی فعلی
 // محاسبه می‌شه، نه یک عدد ثابت که موقع ساخت گزارش ذخیره شده باشه).
 export function getLatestPricesForCountry(country) {
-  const rows = getFlatPriceRecords().filter((r) => r.country_or_region === country && r.value != null);
+  const rows = getFlatPriceRecords().filter((r) => r.country_fa === country && r.value != null);
   const newestFirst = [...rows].reverse();
   const seen = new Set();
   const latest = [];
