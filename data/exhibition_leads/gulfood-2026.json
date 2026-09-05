@@ -1,10 +1,10 @@
 {
   "event_name": "Gulfood 2026",
   "source_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor",
-  "fetched_at": "2026-09-05T17:15:34.249688+00:00",
+  "fetched_at": "2026-09-05T20:06:03.284906+00:00",
   "total_candidates_after_rules": 2532,
-  "total_relevant": 1541,
-  "total_processed": 1711,
+  "total_relevant": 1584,
+  "total_processed": 1756,
   "companies": [
     {
       "name": "Al-Dua Food Processing Pvt. Limited",
@@ -38876,6 +38876,28 @@
       "id": "gulfood-2026-1471"
     },
     {
+      "name": "National Biscuits and Confectionery Co Ltd (NBCC",
+      "stand": "Stand No- B6-2, Hall 6",
+      "country": "Saudi Arabia",
+      "description": "Established in 1988 in Jeddah, NBCC is a major Middle Eastern manufacturer of biscuits and snacks. Its brands include Teashop, Memories, and Al-Batal. Certified with ISO 22000 and SASO, NBCC exports to over 25 international market ...",
+      "categories": [
+        "Bakery, Cakes & Desserts",
+        "Gluten-free Baked Goods",
+        "Crisp Bread",
+        "Baked Goods"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/national-biscuits-and-confectionery-co-ltd-nbcc",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع نانوایی و بیسکویت",
+      "llm_reason": "تولیدکننده بزرگ بیسکویت و اسنک که از جوش شیرین به عنوان ماده پوک‌کننده و ورآورنده استفاده می‌کند.",
+      "website": "https://www.nbcc.com.sa",
+      "email": "info@nbcc.com.sa",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1472"
+    },
+    {
       "name": "Neeraj Foods",
       "stand": "Stand No- N1-C30, North Hall 1",
       "country": "India",
@@ -38901,7 +38923,35 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1472"
+      "id": "gulfood-2026-1473"
+    },
+    {
+      "name": "National Dairy LLC",
+      "stand": "Stand No- B5-43, Hall 5",
+      "country": "United Arab Emirates",
+      "description": "Hayatna is committed to providing the most exceptional dairy and food products which meet the nutritional expectations of the diverse community of the UAE. Our commitment will continue to be innovative and conscious of the needs o ...",
+      "categories": [
+        "Organic Products",
+        "Halal and Kosher Food",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dairy",
+        "Beverages",
+        "Sugar-free Products",
+        "Lactose-free Products",
+        "Fat-free Products",
+        "Health & Wellness Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/national-dairy-llc",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع لبنیات",
+      "llm_reason": "تولیدکننده محصولات لبنی که از جوش شیرین برای تنظیم pH و فرآوری محصولات استفاده می‌کند.",
+      "website": "https://hayatna.ae/",
+      "email": "info@hayatna.ae",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1474"
     },
     {
       "name": "NEF BUSINESS EXPORT",
@@ -38929,7 +38979,30 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1473"
+      "id": "gulfood-2026-1475"
+    },
+    {
+      "name": "National Factory for foods",
+      "stand": "Stand No- 38-50, South Hall 6",
+      "country": "Saudi Arabia",
+      "description": "National factory for foods we are specialized in the hot sauce and ketchup and tomato paste we own very famous brands such as Gloria and lena",
+      "categories": [
+        "Private Label",
+        "Dairy",
+        "Dry Goods",
+        "Canned Products",
+        "Cheese"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/national-factory-for-foods",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع سس و فرآوری گوجه‌فرنگی",
+      "llm_reason": "تولیدکننده سس، کچاپ و رب گوجه‌فرنگی که برای تعدیل اسیدیته به جوش شیرین نیاز دارد.",
+      "website": "https://www.nfffc.com",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
+      "contact_checked": true,
+      "id": "gulfood-2026-1476"
     },
     {
       "name": "Negin Naderi Ind. Group",
@@ -38957,7 +39030,35 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1474"
+      "id": "gulfood-2026-1477"
+    },
+    {
+      "name": "National Food Industries Co Ltd (NFIC",
+      "stand": "Stand No- B6-2, Hall 6",
+      "country": "Saudi Arabia",
+      "description": "National Food Industries Company Limited was established in Jeddah, Saudi Arabia in 1993. The factory is the largest integrated food industry in the Middle East with ultra-modern facilities, involved in the processing and packing of a wide variety of canned products such as Foul Medames, Peas & Beans, Evaporated Milk, Milk Powder, Sterilized Crea, Tomato Paste in Cans & Tetra pack, Sweetened Condensed Milk & UHT Milk in Tetra packs in various size and flavors under LUNA brand.",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Spreads, Honey & Jams",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Dairy",
+        "Beverages",
+        "Pulses",
+        "Gluten-Free Products",
+        "Fortified & Functional Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/national-food-industries-co-ltd-nfic",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع فرآوری مواد غذایی",
+      "llm_reason": "مجتمع صنعتی بزرگ مواد غذایی و کنسروجات که در فرآیندهای تولید خود از جوش شیرین بهره می‌برد.",
+      "website": "https://www.luna.com.sa",
+      "email": "info@nfic.com.sa",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1478"
     },
     {
       "name": "Negin Shahd Shahran",
@@ -38981,7 +39082,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1475"
+      "id": "gulfood-2026-1479"
     },
     {
       "name": "Nehashi International Exporter",
@@ -39009,7 +39110,35 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1476"
+      "id": "gulfood-2026-1480"
+    },
+    {
+      "name": "National poultry company",
+      "stand": "Stand No- S-151, Trade Centre Arena",
+      "country": "Jordan",
+      "description": "National Poultry Company is a vertically integrated company that controls its production from breeder chicks and feed supply all the way up to the distribution of broiler chicken in the Jordanian market and to neighboring Arab cou ...",
+      "categories": [
+        "Halal and Kosher Food",
+        "Meat, Poultry & Seafood",
+        "Chilled & Fresh Food",
+        "Dry Goods",
+        "Frozen Food",
+        "Unprocessed Meat",
+        "Processed Meat",
+        "Poultry & Feathered Game",
+        "Frozen Ready Meals",
+        "Frozen Meat"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/national-poultry-company",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید دامی و غذایی – فرآوری گوشت و خوراک طیور",
+      "llm_reason": "تولیدکننده یکپارچه طیور و خوراک که از جوش شیرین در خوراک طیور و فرآوری گوشت استفاده می‌کند.",
+      "website": "https://www.nationalpoultry.com/",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1481"
     },
     {
       "name": "Nekutli",
@@ -39037,7 +39166,34 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1477"
+      "id": "gulfood-2026-1482"
+    },
+    {
+      "name": "Nature One Dairy | SPC Global",
+      "stand": "Stand No- 29-80, South Hall 5",
+      "country": "Australia",
+      "description": "SPC Global (ASX:SPG) is one of Australia’s leading agrifood businesses, proudly delivering high-quality, nourishing products to consumers for more than 100 years. Our group comprises four companies—SPC, Nature One, The Origina ...",
+      "categories": [
+        "Fortified Foods & Health Products",
+        "Beverages",
+        "Dairy",
+        "Dry Goods",
+        "Health & Wellness Products",
+        "Fortified & Functional Products",
+        "Canned Products",
+        "Dried Milk Products",
+        "Juices & Nectars"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nature-one-dairy-spc-global",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی و مکمل – صنایع لبنی و نوشیدنی",
+      "llm_reason": "تولیدکننده محصولات لبنی، مکمل‌ها و نوشیدنی‌ها که مصرف‌کننده جوش شیرین گرید غذایی است.",
+      "website": "https://spcglobalgroup.com/",
+      "email": "customercare@spc.com.au",
+      "whatsapp": "1800805168",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1483"
     },
     {
       "name": "NELLARA FOODS",
@@ -39065,7 +39221,35 @@
       "whatsapp": "971561553344",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1478"
+      "id": "gulfood-2026-1484"
+    },
+    {
+      "name": "NATURZ GROUP SDN BHD",
+      "stand": "Stand No- Z1-A3, Za'abeel Hall 1",
+      "country": "Malaysia",
+      "description": "​Naturz Group Sdn. Bhd., incorporated in Malaysia since 2017, is a leading manufacturer engaged across the upstream and downstream segments of palm-based edible oils and fats. With a deep understanding of global market needs and ...",
+      "categories": [
+        "Private Label",
+        "Snacks",
+        "Vegetable & Animal Oils & Fats",
+        "Bakery, Cakes & Desserts",
+        "Dairy",
+        "Oil",
+        "Ghee",
+        "Agri-oil",
+        "Crackers",
+        "Salty Snacks"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/naturz-group-sdn-bhd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع روغن و شیرینی‌پزی",
+      "llm_reason": "تولیدکننده فرآورده‌های روغنی و محصولات شیرینی‌پزی که به جوش شیرین نیاز دارد.",
+      "website": "https://www.naturzgroup.com",
+      "email": "Yourmail@your.mail.com",
+      "whatsapp": "(035) 757-3321",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1485"
     },
     {
       "name": "Neoking Foods",
@@ -39092,7 +39276,35 @@
       "whatsapp": "555120421188",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1479"
+      "id": "gulfood-2026-1486"
+    },
+    {
+      "name": "NAURUS PVT. LTD. – LAZZAT FOODS",
+      "stand": "Stand No- DG-136, North Hall 13",
+      "country": "Pakistan",
+      "description": "At LAZZAT FOODS we are proud to offer you “TRUE TASTE” of over 150 products that we process. These include SPICES, BASMATI RICE, PICKLES, SAUCES & CHUTNEYS, GINGER & GARLIC PASTES, RTE, ROASTED VERMICELLI, FRUIT-FULL JAMS and  ...",
+      "categories": [
+        "Spreads, Honey & Jams",
+        "Specialty Food",
+        "Private Label",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Dry Goods",
+        "Condiments & Sauces",
+        "Beverages",
+        "Ethnic Food",
+        "Spices & Seasonings"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/naurus-pvt-ltd-lazzat-foods",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع فرآوری غذا و دسر",
+      "llm_reason": "تولیدکننده ادویه، سس و دسرهای آماده که از جوش شیرین در ترکیبات خود استفاده می‌کند.",
+      "website": "https://lazzatfoods.com/",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1487"
     },
     {
       "name": "NEOS GLOBAL FOOD SUPPLEMENTS TRADING L.L.C",
@@ -39119,7 +39331,57 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1480"
+      "id": "gulfood-2026-1488"
+    },
+    {
+      "name": "Naveed Enterprises",
+      "stand": "Stand No- DG-192, North Hall 13",
+      "country": "Pakistan",
+      "description": "Manufacturer & Exporter of Confectionery Products",
+      "categories": [
+        "Bakery, Cakes & Desserts",
+        "Beverages",
+        "Coffee",
+        "Cakes / Dessert"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/naveed-enterprises",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع شیرینی و شکلات",
+      "llm_reason": "تولیدکننده و صادرکننده محصولات شیرینی و قنادی که جوش شیرین از مواد اولیه اصلی آن است.",
+      "website": "https://www.naveedenterprises.com",
+      "email": "info@naveedenterprises.com",
+      "whatsapp": "0092412638416",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1489"
+    },
+    {
+      "name": "NAVIGATOR POLSKA",
+      "stand": "Stand No- 13-72, South Hall 2",
+      "country": "Poland",
+      "description": "Founded in 2012, Navigator has strived from the outset to distinguish itself through the quality of its services, competitive offerings, and flexible approach to trade. Relocating to a new location, expanding its export department, and establishing a division dedicated to exclusive import and brand building in Poland are just some recent milestones. With continuous access to a wide range of products, operating its own customs and tax warehouse, and combining it with an experienced sales team, Navigator Polska delivers the best trade offerings worldwide.",
+      "categories": [
+        "Snacks",
+        "Bakery, Cakes & Desserts",
+        "Dry Goods",
+        "Beverages",
+        "Salty Snacks",
+        "Finger Food",
+        "Crackers",
+        "Pasta",
+        "Canned Products",
+        "Energy Drinks"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/navigator-polska",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – توزیع و بازرگانی مواد غذایی",
+      "llm_reason": "شرکت بازرگانی و توزیع‌کننده محصولات غذایی که می‌تواند جوش شیرین را به سبد توزیع خود اضافه کند.",
+      "website": "https://www.navigator-polska.com",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1490"
     },
     {
       "name": "Neutral Stock",
@@ -39147,7 +39409,35 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1481"
+      "id": "gulfood-2026-1491"
+    },
+    {
+      "name": "Navimarfood Gida Iml.Ve Gida Mad.Yat.Urt.Ins.Paz.San.Ve.Tcc.Ltd.Sti. (Mersinfoods",
+      "stand": "Stand No- E8-10, Hall 8",
+      "country": "Türkiye",
+      "description": "Mersin Foods has started its journey within awareness that success comes with walking into consumers’ life and being permanent by appealing to their magnificent taste. Therefore, in 2003, Mersin Foods was founded to presen ...",
+      "categories": [
+        "Bakery, Cakes & Desserts",
+        "Beverages",
+        "Dairy",
+        "Free-From Products",
+        "Vegan / Vegetarian Products",
+        "Dairy-free Products",
+        "Yoghurt (Regular, Flavoured, Fruit, etc.)",
+        "Milk",
+        "Dried Milk Products",
+        "Cream & Cream Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/navimarfood-gida-iml-ve-gida-mad-yat-urt-ins-paz-san-ve-tcc-ltd-sti-mersinfoods",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع کیک و شیرینی و نوشیدنی",
+      "llm_reason": "تولیدکننده محصولات غذایی، کیک و نوشیدنی که خریدار جوش شیرین گرید غذایی است.",
+      "website": "https://www.mersinfoods.com/",
+      "email": "mersin@mersinfoods.com",
+      "whatsapp": "+90 324 237 44 88",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1492"
     },
     {
       "name": "New Country Healthcare LLC",
@@ -39175,7 +39465,62 @@
       "whatsapp": "+971026733330",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1482"
+      "id": "gulfood-2026-1493"
+    },
+    {
+      "name": "Navsa International",
+      "stand": "Stand No- 3-95, South Hall 1",
+      "country": "United Kingdom",
+      "description": "NAVSA International Limited is a UK-based, Kings Award–winning FMCG export and wholesale company, offering a comprehensive range of premium British FMCG products to global markets. Our portfolio includes confectionery, beverages ...",
+      "categories": [
+        "Private Label",
+        "Organic Products",
+        "Bakery, Cakes & Desserts",
+        "Frozen Food",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Dairy",
+        "Condiments & Sauces",
+        "Beverages"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/navsa-international",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – عمده‌فروشی و صادرات",
+      "llm_reason": "شرکت عمده‌فروش و صادرکننده کالاهای مصرفی غذایی که کاندیدای مناسبی برای توزیع جوش شیرین است.",
+      "website": "https://www.navsainternational.com",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1494"
+    },
+    {
+      "name": "Nawon Food and Beverage Company Limited",
+      "stand": "Stand No- Z6-H12, Za'abeel Hall 6",
+      "country": "Vietnam",
+      "description": "Nawon is a Vietnam-based beverage manufacturer specializing in tropical fruit juices and healthy drinks. With over 7 years of industry experience, we support global brands with private label and OEM/ODM solutions tailored to diffe ...",
+      "categories": [
+        "Beverages",
+        "Smoothies",
+        "Carbonated Soft Drinks",
+        "Tea",
+        "Non-alcoholic Beverages",
+        "Juices & Nectars",
+        "Iced Tea",
+        "Energy Drinks",
+        "Coffee"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nawon-food-and-beverage-company-limited",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع نوشیدنی‌های گازدار",
+      "llm_reason": "تولیدکننده نوشیدنی‌های گازدار و آبمیوه که از جوش شیرین برای گازدار کردن و تنظیم pH استفاده می‌کند.",
+      "website": "https://nawon.com.vn/",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1495"
     },
     {
       "name": "New Lanka Cinnamon Pvt Ltd",
@@ -39201,7 +39546,421 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1483"
+      "id": "gulfood-2026-1496"
+    },
+    {
+      "name": "NCFI Food Industries Co",
+      "stand": "Stand No- M-C55, Shk Maktoum Hall",
+      "country": "Egypt",
+      "description": "NCFI Food industries co. Is an Egyptian joint stock company that started Establishing its factory in the city of new Cairo According to the latest international technologies In 2012 and started its activity ...",
+      "categories": [
+        "Vegetable & Animal Oils & Fats",
+        "Private Label",
+        "Dairy",
+        "Ghee",
+        "Cheese"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/ncfi-food-industries-co",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع لبنیات و پنیرسازی",
+      "llm_reason": "تولیدکننده فرآورده‌های لبنی و پنیر که از جوش شیرین در فرآیند فرآوری استفاده می‌کند.",
+      "website": "https://www.ncfifood.com",
+      "email": "export@ncfifood.com",
+      "whatsapp": "2001044232126",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1497"
+    },
+    {
+      "name": "New Park Food Industries",
+      "stand": "Stand No- M-F72, Shk Maktoum Hall",
+      "country": "Syria",
+      "description": "New Park, an international dairy product manufacturer with deep family business roots. With a strong presence across the Middle East, we operate through an extensive network of distribution companies and regional agents.",
+      "categories": [
+        "Private Label",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Dry Goods",
+        "Dairy",
+        "Condiments & Sauces",
+        "Beverages",
+        "Yoghurt (Regular, Flavoured, Fruit, etc.)",
+        "Milk",
+        "Cream & Cream Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/new-park-food-industries",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و لبنیات",
+      "llm_reason": "تولیدکننده محصولات لبنی، کیک و شیرینی است و به جوش شیرین به عنوان ماده اولیه نیاز دارد.",
+      "website": "https://www.newpark.co",
+      "email": "info@newpark.co",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1498"
+    },
+    {
+      "name": "New Princes S.p.A",
+      "stand": "Stand No- R-C58, Shk Rashid Hall",
+      "country": "Italy",
+      "description": "New Princes S.p.A., we are an Italian food & beverage group with 32 advanced production sites and presence in Europe and Mauritius. Market leader in 10 categories, listed on Borsa Italiana STAR since 2019. We select authentic, hig ...",
+      "categories": [
+        "Private Label",
+        "Organic Products",
+        "Meat, Poultry & Seafood",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Dairy",
+        "Beverages"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/new-princes-s-p-a",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و فرآوری گوشت",
+      "llm_reason": "گروه بزرگ صنایع غذایی تولیدکننده انواع نان، شیرینی و محصولات گوشتی است.",
+      "website": "https://www.newprinces.it/it",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1499"
+    },
+    {
+      "name": "NEW PRODUCTS GROUP",
+      "stand": "Stand No- Z6-5, Za'abeel Hall 6",
+      "country": "Cyprus",
+      "description": "New Products Group is one of the biggest producers of beverages and snacks in Europe and India. New Products Group releases more than 220 assortment products under 17 brands. The company focuses on ongoing experiments with natural ...",
+      "categories": [
+        "Snacks",
+        "Beverages",
+        "Healthy snacks",
+        "Cereals / Fruit Bars",
+        "Smoothies",
+        "Non-alcoholic Beverages",
+        "Iced Tea",
+        "Flavoured Water",
+        "Energy Drinks",
+        "Carbonated Soft Drinks"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/new-products-group",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نوشیدنی و اسنک",
+      "llm_reason": "تولیدکننده بزرگ انواع نوشیدنی و اسنک در اروپا و هند است.",
+      "website": "https://newproducts.com",
+      "email": "info@newproducts.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1500"
+    },
+    {
+      "name": "New Zealand Dairy Products Bangladesh Limited",
+      "stand": "Stand No- SH-U33, South Hall 12",
+      "country": "Bangladesh",
+      "description": "We share the goodness of dairy nutrition with the nation through our brands. We are also snacks creator working to replenish the taste buds through our innovative thought on product development, combined with culinary. We’ll be  ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Vegetable & Animal Oils & Fats",
+        "Snacks",
+        "Private Label",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Dairy",
+        "Fortified & Functional Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/new-zealand-dairy-products-bangladesh-limited",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – اسنک و صنایع لبنی",
+      "llm_reason": "تولیدکننده فرآورده‌های لبنی و اسنک‌های متنوع است.",
+      "website": "https://www.newzealanddairybd.com",
+      "email": "info@newzealanddairybd.com",
+      "whatsapp": "09666733633 ",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1501"
+    },
+    {
+      "name": "Nexus",
+      "stand": "Stand No- 26-60, South Hall 4",
+      "country": "Argentina",
+      "description": "We are a company dedicated to international distribution of food products from South America to more than 20 markets.",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Vegetable & Animal Oils & Fats",
+        "Private Label",
+        "Meat, Poultry & Seafood",
+        "Frozen Food",
+        "Dry Goods",
+        "Dairy",
+        "Oil",
+        "Sorghum",
+        "Rice"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nexus",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – توزیع و بازرگانی",
+      "llm_reason": "شرکت توزیع‌کننده و بازرگان بین‌المللی مواد غذایی به بیش از ۲۰ بازار است.",
+      "website": "https://nexus.com.ar",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
+      "contact_checked": true,
+      "id": "gulfood-2026-1502"
+    },
+    {
+      "name": "NEYLA",
+      "stand": "Stand No- 11-2, South Hall 1",
+      "country": "Luxembourg",
+      "description": "NOVEA GROUP, à travers sa marque NEYLA, développe une gamme premium de petits pots pour bébés, alliant exigence nutritionnelle, certification halal et produits biologiques rigoureusement sélectionnés. Les recettes NEYL ...",
+      "categories": [
+        "Halal and Kosher Food",
+        "Organic Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Free-From Products",
+        "Nut-free Products",
+        "Health & Wellness Products",
+        "Fortified & Functional Products",
+        "Canned Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/neyla",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی و دارویی – غذای کودک و غنی‌شده",
+      "llm_reason": "تولیدکننده غذا و مکمل‌های غذایی کودک است و امکان مصرف جوش شیرین با خلوص بالا را دارد.",
+      "website": "https://www.neyla-halal.com",
+      "email": "contact@neyla-halal.com",
+      "whatsapp": "352621747627",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1503"
+    },
+    {
+      "name": "NG Trade LTDA",
+      "stand": "Stand No- N9-D67, North Hall 9",
+      "country": "Brazil",
+      "description": "NG Trade is a company based in the Brazilian Midwest, specialized in exporting special grains such as sesame, chia, and beans. With over 40 years of experience in grain production, it was founded on a commitment to innovation, tra ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Vegetable & Animal Oils & Fats",
+        "Private Label",
+        "Halal and Kosher Food",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Oil",
+        "Agri-product Seeds",
+        "Agri-oil",
+        "Pulses"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/ng-trade-ltda",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – توزیع و بازرگانی",
+      "llm_reason": "شرکت بازرگانی و صادرکننده غلات و مواد غذایی اولیه در برزیل است.",
+      "website": "https://www.ngtradebrazil.com",
+      "email": null,
+      "whatsapp": "5564936341278",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1504"
+    },
+    {
+      "name": "NGM International B.V",
+      "stand": "Stand No- 6-32, South Hall 1",
+      "country": "Netherlands",
+      "description": "With over 40 years of expertise, NGM International B.V., based in Rotterdam, connects global markets through the export of quality food products. We provide reliability and commercial support to our partners, ensuring safety ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Vegetable & Animal Oils & Fats",
+        "Spreads, Honey & Jams",
+        "Private Label",
+        "Meat, Poultry & Seafood",
+        "Halal and Kosher Food",
+        "Dry Goods",
+        "Dairy",
+        "Condiments & Sauces",
+        "Beverages"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/ngm-international-b-v",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – توزیع و بازرگانی",
+      "llm_reason": "توزیع‌کننده و صادرکننده بین‌المللی محصولات و مواد اولیه غذایی در هلند است.",
+      "website": "https://www.ngm-int.com",
+      "email": "info@ngm-international.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1505"
+    },
+    {
+      "name": "Ningxia Fuyang Food Co.,LTD",
+      "stand": "Stand No- DG-G8, North Hall 13",
+      "country": "China",
+      "description": "Fuyang Food is a modern dairy enterprise integrating R&D, deep processing, and sales, operating two factories (Ningxia & Jiangsu) covering 280 acres with nearly RMB 1 billion investment. Ningxia Fuyang (Yinchuan High-Tech Zone) pr ...",
+      "categories": [
+        "Bakery, Cakes & Desserts",
+        "Frozen Food",
+        "Dairy",
+        "Frozen Dairy Products",
+        "Milk",
+        "Dried Milk Products",
+        "Cream & Cream Products",
+        "Cheese",
+        "Butter",
+        "Baking Supplies"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/ningxia-fuyang-food-co-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – لبنیات و نانوایی",
+      "llm_reason": "تولیدکننده و فرآوری‌کننده محصولات لبنی و نانوایی با دو کارخانه بزرگ است.",
+      "website": "https://fuyang.com",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
+      "contact_checked": true,
+      "id": "gulfood-2026-1506"
+    },
+    {
+      "name": "NIRVANA FOODS & COMMERCE INTERNATIONAL CO., LTD",
+      "stand": "Stand No- Z4-H69, Za'abeel Hall 4",
+      "country": "Thailand",
+      "description": "Nirvana Foods & Commerce International Co., Ltd. is a Thailand-based manufacturer and exporter of premium coconut-based beverages and innovative food products under the brand Taste Nirvana. Building on our strong foun ...",
+      "categories": [
+        "Private Label",
+        "Halal and Kosher Food",
+        "Free-From Products",
+        "Chilled & Fresh Food",
+        "Beverages",
+        "Vegan / Vegetarian Products",
+        "Gluten-Free Products",
+        "Dairy-free Products",
+        "Fresh Fruits & Vegetables",
+        "Tea"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nirvana-foods-commerce-international-co-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نوشیدنی و فرآوری غذایی",
+      "llm_reason": "تولیدکننده و صادرکننده نوشیدنی‌های مبتنی بر نارگیل و فرآورده‌های غذایی است.",
+      "website": "https://www.tastenirvana.com",
+      "email": "info@tastenirvana.com",
+      "whatsapp": "+662265-6999",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1507"
+    },
+    {
+      "name": "Nobar Sabz",
+      "stand": "Stand No- SH-P30, South Hall 12",
+      "country": "Iran",
+      "description": "Nobar Sabz is an Iranian IQF frozen-food manufacturer producing premium vegetables, herbs, fruits, and semi-prepared potato products. Certified with ISO 22000, ISO 9001, and HACCP, we supply nationwide distribution and export acro ...",
+      "categories": [
+        "Specialty Food",
+        "Snacks",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Frozen Food",
+        "Beverages",
+        "Ready-to-Eat",
+        "Healthy snacks",
+        "Ice Cream / Sorbet / Gelato",
+        "Frozen Ready Meals"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nobar-sabz",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – فرآوری سبزیجات و محصولات نیمه‌آماده",
+      "llm_reason": "تولیدکننده غذاهای منجمد و محصولات سیب‌زمینی نیمه‌آماده است که در فرآوری به جوش شیرین نیاز دارد.",
+      "website": "https://nobarsabz.com/",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
+      "contact_checked": true,
+      "id": "gulfood-2026-1508"
+    },
+    {
+      "name": "NOKCHAWON CO. LTD",
+      "stand": "Stand No- 35-87, South Hall 6",
+      "country": "Republic Of Korea",
+      "description": "Nokchawon was established in 1992 with the mission of providing healthy Korean tea to people around the world. Since its founding, the company has focused on developing and supplying teas and beverage products that support a healt ...",
+      "categories": [
+        "Spreads, Honey & Jams",
+        "Snacks",
+        "Private Label",
+        "Organic Products",
+        "Halal and Kosher Food",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Beverages",
+        "Salty Snacks",
+        "Vegan / Vegetarian Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nokchawon-co-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – اسنک و نوشیدنی",
+      "llm_reason": "تولیدکننده انواع نوشیدنی، چای و اسنک‌های خوراکی است.",
+      "website": "https://nokchawon.co.kr",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
+      "contact_checked": true,
+      "id": "gulfood-2026-1509"
+    },
+    {
+      "name": "Nomad Agro LLC",
+      "stand": "Stand No- 35-14, South Hall 6",
+      "country": "Uzbekistan",
+      "description": "NOMAD AGRO LTD is a major producer and exporter of dried fruits and nuts in Uzbekistan. Today, the company is one of the leaders of the agro-industrial complex of the Republic of Uzbekistan in the production and sale of biological ...",
+      "categories": [
+        "Specialty Food",
+        "Snacks",
+        "Organic Products",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Dried Fruit & Vegetables",
+        "Vegan / Vegetarian Products",
+        "Gluten-Free Products",
+        "Health & Wellness Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nomad-agro-llc",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – فرآوری خشکبار و اسنک",
+      "llm_reason": "تولیدکننده و فرآوری‌کننده خشکبار، میوه خشک و اسنک است.",
+      "website": "https://en.nomadagro.uz/",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1510"
+    },
+    {
+      "name": "Noor Alarab For Foodstuff Trading CO LLC",
+      "stand": "Stand No- DG-320, North Hall 13",
+      "country": "United Arab Emirates",
+      "description": "Noor Al Arab is a Dubai-based FMCG brand supplying premium rice, pulses, spices, oils, and essential food commodities. We serve wholesalers, retailers, supermarkets, and HORECA clients across the UAE, GCC, and global markets with  ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Vegetable & Animal Oils & Fats",
+        "Frozen Food",
+        "Dry Goods",
+        "Dairy",
+        "Condiments & Sauces",
+        "Oil",
+        "Agri-oil",
+        "Wheat",
+        "Rice"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/noor-alarab-for-foodstuff-trading-co-llc",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – توزیع و بازرگانی",
+      "llm_reason": "شرکت بازرگانی و توزیع‌کننده عمده کالاهای اساسی و مواد غذایی در دبی است.",
+      "website": "https://nooralarabfoodstuff.com/",
+      "email": "purchase@nooralarabfoodstuffs.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1511"
     },
     {
       "name": "Onego Bio",
@@ -39229,7 +39988,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1484"
+      "id": "gulfood-2026-1512"
     },
     {
       "name": "ONEST GLOBAL FOODS LIMITED",
@@ -39255,7 +40014,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1485"
+      "id": "gulfood-2026-1513"
     },
     {
       "name": "ONLY EARTH",
@@ -39283,7 +40042,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1486"
+      "id": "gulfood-2026-1514"
     },
     {
       "name": "ONWO",
@@ -39311,7 +40070,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1487"
+      "id": "gulfood-2026-1515"
     },
     {
       "name": "Open Country Dairy Ltd",
@@ -39335,7 +40094,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1488"
+      "id": "gulfood-2026-1516"
     },
     {
       "name": "Openway Food Co",
@@ -39363,7 +40122,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1489"
+      "id": "gulfood-2026-1517"
     },
     {
       "name": "OPHELLIA GHEE VEGETABLES AND OIL TRADING LLC",
@@ -39391,7 +40150,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1490"
+      "id": "gulfood-2026-1518"
     },
     {
       "name": "Optimum Consumer Goods Inc",
@@ -39419,7 +40178,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1491"
+      "id": "gulfood-2026-1519"
     },
     {
       "name": "Orange Cheese Company",
@@ -39442,7 +40201,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1492"
+      "id": "gulfood-2026-1520"
     },
     {
       "name": "Orange Food International Co.,Limited",
@@ -39470,7 +40229,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1493"
+      "id": "gulfood-2026-1521"
     },
     {
       "name": "Orange Mountain Foods",
@@ -39498,7 +40257,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1494"
+      "id": "gulfood-2026-1522"
     },
     {
       "name": "Orasure Organic Foods LLP",
@@ -39526,7 +40285,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1495"
+      "id": "gulfood-2026-1523"
     },
     {
       "name": "Orencio Hoyo, S.L. Pimentón",
@@ -39554,7 +40313,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1496"
+      "id": "gulfood-2026-1524"
     },
     {
       "name": "Organic Valley",
@@ -39580,7 +40339,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1497"
+      "id": "gulfood-2026-1525"
     },
     {
       "name": "Orient Group for Food Industry",
@@ -39603,7 +40362,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1498"
+      "id": "gulfood-2026-1526"
     },
     {
       "name": "Oviganic Ibérica S.L",
@@ -39631,7 +40390,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1499"
+      "id": "gulfood-2026-1527"
     },
     {
       "name": "Ovijat Food and Beverage Industries Ltd.",
@@ -39654,7 +40413,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1500"
+      "id": "gulfood-2026-1528"
     },
     {
       "name": "Oylum Sinai Yatirimlar A.S",
@@ -39678,7 +40437,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1501"
+      "id": "gulfood-2026-1529"
     },
     {
       "name": "Ozgazi Dairy Foods B.V",
@@ -39698,7 +40457,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1502"
+      "id": "gulfood-2026-1530"
     },
     {
       "name": "Ozmer Pastacilik Ve Icecek Urunleri San. Paz. Turizm Ve Dis Tic. A.S.",
@@ -39726,7 +40485,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1503"
+      "id": "gulfood-2026-1531"
     },
     {
       "name": "Ozmermer Flour Mills",
@@ -39751,7 +40510,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1504"
+      "id": "gulfood-2026-1532"
     },
     {
       "name": "Ozone Naturals",
@@ -39779,7 +40538,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1505"
+      "id": "gulfood-2026-1533"
     },
     {
       "name": "OZTURK QUEBAP PRODUCCION",
@@ -39805,7 +40564,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1506"
+      "id": "gulfood-2026-1534"
     },
     {
       "name": "P.R.NETTO - INDUSTRIA E COMERCIO DE ALIMENTOS LTDA",
@@ -39833,7 +40592,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1507"
+      "id": "gulfood-2026-1535"
     },
     {
       "name": "PAAWAK FOOD PRODUCTS PRIVATE LIMITED",
@@ -39853,7 +40612,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1508"
+      "id": "gulfood-2026-1536"
     },
     {
       "name": "PACHA DRINK",
@@ -39876,7 +40635,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1509"
+      "id": "gulfood-2026-1537"
     },
     {
       "name": "Pacific Nuts and Dried Fruits",
@@ -39904,7 +40663,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1510"
+      "id": "gulfood-2026-1538"
     },
     {
       "name": "Pacific Synergy Food and Beverage Corp",
@@ -39928,7 +40687,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1511"
+      "id": "gulfood-2026-1539"
     },
     {
       "name": "Pagariya Exports Private Limited",
@@ -39956,7 +40715,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1512"
+      "id": "gulfood-2026-1540"
     },
     {
       "name": "PEP Cocotine",
@@ -39984,7 +40743,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1513"
+      "id": "gulfood-2026-1541"
     },
     {
       "name": "PERAK DUCK FOOD INDUSTRIES SDN BHD",
@@ -40005,7 +40764,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1514"
+      "id": "gulfood-2026-1542"
     },
     {
       "name": "Petra Food",
@@ -40033,7 +40792,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1515"
+      "id": "gulfood-2026-1543"
     },
     {
       "name": "Petra Molino Quaglia",
@@ -40061,7 +40820,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1516"
+      "id": "gulfood-2026-1544"
     },
     {
       "name": "Petros Tsaglis S.A",
@@ -40088,7 +40847,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1517"
+      "id": "gulfood-2026-1545"
     },
     {
       "name": "Petrou Bros Dairy Products Ltd",
@@ -40110,7 +40869,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1518"
+      "id": "gulfood-2026-1546"
     },
     {
       "name": "PG LEAN HWA TRADING SDN BHD",
@@ -40137,7 +40896,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1519"
+      "id": "gulfood-2026-1547"
     },
     {
       "name": "Philippine Grocers Food Exports, Inc",
@@ -40165,7 +40924,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1520"
+      "id": "gulfood-2026-1548"
     },
     {
       "name": "Philpot Dairy Products Ltd",
@@ -40189,7 +40948,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1521"
+      "id": "gulfood-2026-1549"
     },
     {
       "name": "Phoenix Afrique Distribution Suarl",
@@ -40211,7 +40970,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1522"
+      "id": "gulfood-2026-1550"
     },
     {
       "name": "Phytokana Ingredients Inc",
@@ -40239,7 +40998,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1523"
+      "id": "gulfood-2026-1551"
     },
     {
       "name": "Piedmont Cookies",
@@ -40259,7 +41018,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1524"
+      "id": "gulfood-2026-1552"
     },
     {
       "name": "Pieno Zvaigzdes, SC",
@@ -40284,7 +41043,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1525"
+      "id": "gulfood-2026-1553"
     },
     {
       "name": "PINAR",
@@ -40312,7 +41071,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1526"
+      "id": "gulfood-2026-1554"
     },
     {
       "name": "PINGYI HONGRUI INTERNATIONAL TRADE CO., LTD",
@@ -40337,7 +41096,399 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1527"
+      "id": "gulfood-2026-1555"
+    },
+    {
+      "name": "Shmoh AlMadi Company",
+      "stand": "Stand No- 36-9, South Hall 6",
+      "country": "Saudi Arabia",
+      "description": "is a Saudi joint-stock company listed on the Saudi Stock Exchange – Nomu(Parallel Market).Established in 2006,the company is headquartered in Riyadh. It is recognized as one of the leading national companies in the food manufact ...",
+      "categories": [
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Government/Associations",
+        "Frozen Food",
+        "Free-From Products",
+        "Dairy",
+        "Frozen Baked Goods",
+        "Gluten-Free Products",
+        "Dairy-free Products",
+        "Milk"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/shmoh-almadi-company",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و شیرینی‌پزی",
+      "llm_reason": "تولیدکننده محصولات نانوایی، کیک و شیرینی که از جوش شیرین به عنوان ماده ورآورنده استفاده می‌کند.",
+      "website": "https://WWW.PCANDLES.SA",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1556"
+    },
+    {
+      "name": "Showyou Co., Ltd",
+      "stand": "Stand No- 31-68, South Hall 5",
+      "country": "Japan",
+      "description": "Showyou is a company dedicated to expanding the global market for Japanese craftsmanship. We offer an entirely new form of support by seamlessly designing business models. Valuing the \"power of communication\" that conn ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Snacks",
+        "Bakery, Cakes & Desserts",
+        "Dry Goods",
+        "Condiments & Sauces",
+        "Beverages",
+        "Crackers",
+        "Rice",
+        "Spices & Seasonings",
+        "Iced Tea"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/showyou-co-ltd",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – بازرگانی و توزیع",
+      "llm_reason": "توزیع‌کننده و بازرگان محصولات غذایی از جمله شیرینی و تنقلات در بازارهای بین‌المللی.",
+      "website": "https://showyouhq.com/",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1557"
+    },
+    {
+      "name": "Shree Radhe Dairy Farm & Foods",
+      "stand": "Stand No- Z1-B17, Za'abeel Hall 1",
+      "country": "India",
+      "description": "Furthermore, we proudly operate Vastu Charitable Trust, an 80G certified NGO dedicated to various societal initiatives such as providing education kits for underprivileged children, distributing food to those in need, organizing b ...",
+      "categories": [
+        "Vegetable & Animal Oils & Fats",
+        "Dairy",
+        "Oil",
+        "Ghee",
+        "Yoghurt (Regular, Flavoured, Fruit, etc.)",
+        "Milk",
+        "Ice Cream",
+        "Dried Milk Products",
+        "Cream & Cream Products",
+        "Cheese"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/shree-radhe-dairy-farm-foods",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع لبنی",
+      "llm_reason": "تولیدکننده فرآورده‌های لبنی که از جوش شیرین برای تنظیم اسیدیته و pH شیر استفاده می‌کند.",
+      "website": "https://www.vastughee.com",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1558"
+    },
+    {
+      "name": "Shree Sai Trading Ltd",
+      "stand": "Stand No- 4-40, South Hall 1",
+      "country": "United Kingdom",
+      "description": "Shree Sai Trading Ltd has spent 14 years exporting, distributing, and promoting world-leading brands such as Nestlé, Mondel?z, Mars Wrigleys, Unilever, Heinz, and Kellogg’s in over 30 countries. In the UK, we supply major impor ...",
+      "categories": [
+        "Vegetable & Animal Oils & Fats",
+        "Spreads, Honey & Jams",
+        "Specialty Food",
+        "Snacks",
+        "Organic Products",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Condiments & Sauces",
+        "Beverages"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/shree-sai-trading-ltd",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – بازرگانی و توزیع",
+      "llm_reason": "بازرگان و توزیع‌کننده عمده برندهای معتبر مواد غذایی با پتانسیل افزودن جوش شیرین به سبد توزیع.",
+      "website": "https://sstrading.co.uk/",
+      "email": "enquiry@sstrading.co.uk",
+      "whatsapp": "447735459186",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1559"
+    },
+    {
+      "name": "Shri Global Foods",
+      "stand": "Stand No- N1-E58, North Hall 1",
+      "country": "India",
+      "description": "Shri Global Foods is a leading Indian exporter of frozen and shelf-stable food products. We specialize in wide range of Retail food products which Includes Frozen Samosa, Breads , Frozen Sweets, Bakery items Like Handmade Rusk & C ...",
+      "categories": [
+        "Vegetable & Animal Oils & Fats",
+        "Specialty Food",
+        "Snacks",
+        "Private Label",
+        "Bakery, Cakes & Desserts",
+        "Frozen Food",
+        "Free-From Products",
+        "Dry Goods",
+        "Condiments & Sauces",
+        "Beverages"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/shri-global-foods",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و غذاهای منجمد",
+      "llm_reason": "تولیدکننده و صادرکننده محصولات نانوایی، شیرینی و فرآورده‌های منجمد.",
+      "website": "https://shriglobalfoods.com/",
+      "email": "shriglobalfoods@gmail.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1560"
+    },
+    {
+      "name": "Shri Hari Industries",
+      "stand": "Stand No- N6-A16, North Hall 6",
+      "country": "India",
+      "description": "Manufacturer of Psyllium Husk/ Powder , Minor Millets , Desi Chickpeas . Hulled Sesame Seed , Indian Spices , Indian Herbs. Five manufacturing units , BRC certified.",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Vegetable & Animal Oils & Fats",
+        "Snacks",
+        "Halal and Kosher Food",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Fruit Seeds",
+        "Agri-product Seeds",
+        "Nuts"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/shri-hari-industries",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – فرآوری غلات و تنقلات",
+      "llm_reason": "تولیدکننده و فرآوری‌کننده غلات، ادویه و تنقلات.",
+      "website": "https://http;//www.krishnaindia.in",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
+      "contact_checked": true,
+      "id": "gulfood-2026-1561"
+    },
+    {
+      "name": "Siafa International Manufacturing Company",
+      "stand": "Stand No- D1-3, Hall 1",
+      "country": "Saudi Arabia",
+      "description": "SIAFA Dates proudly represents the rich heritage of Saudi Arabia by delivering premium-quality dates to global markets. With decades of expertise, we specialize in sourcing and processing the finest Saudi date varieties, complemen ...",
+      "categories": [
+        "Snacks",
+        "Private Label",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Frozen Food",
+        "Dry Goods",
+        "Dates & Date Palm Products",
+        "Frozen Fruit & Vegetables",
+        "Dried Fruits",
+        "Cakes / Dessert"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/siafa-international-manufacturing-company",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع شیرینی و نانوایی",
+      "llm_reason": "تولیدکننده خرما، فرآورده‌های خرمایی و محصولات شیرینی و نانوایی.",
+      "website": "https://www.siafadates.com",
+      "email": "ecommerce@siafadates.com",
+      "whatsapp": "+966535501210",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1562"
+    },
+    {
+      "name": "Sibonne Food Stuff IND LLC",
+      "stand": "Stand No- 809, Hall 8",
+      "country": "United Arab Emirates",
+      "description": "Sibonne, leading salt manufacturer with strong presence in UAE and GCC countries.",
+      "categories": [
+        "Private Label",
+        "Halal and Kosher Food",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Beverages",
+        "Carbonated Soft Drinks",
+        "Coffee",
+        "Energy Drinks",
+        "Iced Tea"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/sibonne-food-stuff-ind-llc",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – توزیع مواد اولیه و نمک",
+      "llm_reason": "تولیدکننده و توزیع‌کننده نمک و مواد خشک غذایی که کاندید مناسبی برای توزیع جوش شیرین است.",
+      "website": "https://sibonne-industry.com",
+      "email": "salt@sibonne-industry.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1563"
+    },
+    {
+      "name": "SICHUAN HUASHI TECHNOLOGY CO.,LTD",
+      "stand": "Stand No- SW-131, South Hall 11",
+      "country": "China",
+      "description": "The company was established in 2019, with its registered address in Jinjiang District, Chengdu. Businessfocuson Production,R&Dand salesof room-temperaturemicrowave dishand room-temperature rice. Vice director of CCFl ...",
+      "categories": [
+        "Halal and Kosher Food",
+        "Meat, Poultry & Seafood",
+        "Processed Meat"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/sichuan-huashi-technology-co-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – فرآوری گوشت",
+      "llm_reason": "تولیدکننده محصولات فرآوری‌شده گوشتی که از جوش شیرین برای تردسازی و تنظیم pH استفاده می‌کند.",
+      "website": "https://www.funanhe.com.cn",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
+      "contact_checked": true,
+      "id": "gulfood-2026-1564"
+    },
+    {
+      "name": "SICHUAN PROVINCE HUIQUAN CANNED FOOD CO.,LTD",
+      "stand": "Stand No- SW-B41, South Hall 11",
+      "country": "China",
+      "description": "Sichuan Province Huiquan Canned Food Co,. Ltd mainly export canned products for earningforeign exchange. The products are more than 30 different kinds, such as luncheon meat, stewedpork, mushrooms,ect.We take an active part in man ...",
+      "categories": [
+        "Meat, Poultry & Seafood",
+        "Processed Meat"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/sichuan-province-huiquan-canned-food-co-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع کنسرو و گوشت",
+      "llm_reason": "تولیدکننده کنسروجات و فرآورده‌های گوشتی که به تنظیم‌کننده‌های اسیدیته نیاز دارد.",
+      "website": "https://schuiquan.en.alibaba.com/",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1565"
+    },
+    {
+      "name": "Sichuan Yijiahe International Trade Co.,Ltd",
+      "stand": "Stand No- SH-245, South Hall 12",
+      "country": "China",
+      "description": "Founded in 1996, we are a leading healthy whole-grain company with over 30 years of expertise. We manage an integrated supply chain encompassing breeding, cultivation, R&D, manufacturing, and commercialization of nutritious grain  ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Specialty Food",
+        "Snacks",
+        "Private Label",
+        "Organic Products",
+        "Halal and Kosher Food",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Value-Added Food"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/sichuan-yijiahe-international-trade-co-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – فرآوری غلات و تنقلات",
+      "llm_reason": "تولیدکننده محصولات غذایی بر پایه غلات و تنقلات.",
+      "website": "https://www.mengqing.group",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1566"
+    },
+    {
+      "name": "Siciliani S.p.A",
+      "stand": "Stand No- S-M53, Trade Centre Arena",
+      "country": "Italy",
+      "description": "Siciliani is a highly regarded company specialising in the production of sheep, beef, and horse meat, which we market in Italy and abroad both under our own brands and our distributors' private labels. Thanks to our extensive expe ...",
+      "categories": [
+        "Halal and Kosher Food",
+        "Meat, Poultry & Seafood",
+        "Unprocessed Meat",
+        "Processed Meat",
+        "Organ Meats & Offal"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/siciliani-s-p-a",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – فرآوری گوشت",
+      "llm_reason": "تولیدکننده و فرآوری‌کننده گوشت که در عمل‌آوری فرآورده‌های گوشتی از جوش شیرین استفاده می‌کند.",
+      "website": "https://sicilianispa.com",
+      "email": "info@sicilianispa.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1567"
+    },
+    {
+      "name": "Sidco Foods Trading LLC",
+      "stand": "Stand No- S1-A64, Shk Saeed Hall 1",
+      "country": "United Arab Emirates",
+      "description": "Sidco Foods, based in the UAE, is a leading manufacturer and trader of 100% Halal food products. We provide high-quality products at competitive prices, serving both domestic and international customers. With years of experience,  ...",
+      "categories": [
+        "Vegetable & Animal Oils & Fats",
+        "Specialty Food",
+        "Private Label",
+        "Meat, Poultry & Seafood",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Frozen Food",
+        "Dairy",
+        "Condiments & Sauces",
+        "Beverages"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/sidco-foods-trading-llc",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – بازرگانی و توزیع",
+      "llm_reason": "تولیدکننده و بازرگان محصولات غذایی حلال در امارات با قابلیت توزیع مواد اولیه غذایی.",
+      "website": "https://www.sidcofoods.ae/",
+      "email": "customercare@sidcofoods.ae",
+      "whatsapp": "97142642247",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1568"
+    },
+    {
+      "name": "Siddhalepa Exports (Pvt) Ltd",
+      "stand": "Stand No- 57-48, South Hall 10",
+      "country": "Sri Lanka",
+      "description": "Siddhalepa is a leading Ayurvedic brand rooted in Sri Lanka’s indigenous system of medicine, originating from the Southern Province of Sri Lanka with a legacy of nearly 90 years. Siddhalepa is recognized for its authentic formul ...",
+      "categories": [
+        "Fortified Foods & Health Products",
+        "Health & Wellness Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/siddhalepa-exports-pvt-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید دارویی / مکمل – فرآورده‌های سلامت",
+      "llm_reason": "تولیدکننده مکمل‌های سلامت و داروهای گیاهی که از جوش شیرین در فرمولاسیون دارویی/مکمل استفاده می‌کند.",
+      "website": "https://siddhalepa.com/",
+      "email": "info@siddhalepa.com",
+      "whatsapp": "94777256373",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1569"
+    },
+    {
+      "name": "Sierolat S.P.A",
+      "stand": "Stand No- R-B58, Shk Rashid Hall",
+      "country": "Italy",
+      "description": "Sierolat is the first dairy ingredients and Base Powder manufacturing company in Italy. Our company, Sierolat SpA, is specialized in the manufacturing of dairy products: Fat Filled Milk Powder; Fat Filled Dairy Powder ...",
+      "categories": [
+        "Free-From Products",
+        "Dairy",
+        "Beverages",
+        "Yoghurt (Regular, Flavoured, Fruit, etc.)",
+        "Milk",
+        "Ice Cream",
+        "Dairy-free Products",
+        "Dried Milk Products",
+        "Cheese",
+        "Instant Beverages"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/sierolat-s-p-a",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع لبنی و پودرهای شیری",
+      "llm_reason": "تولیدکننده ترکیبات لبنی و پودر پایه که از جوش شیرین برای تثبیت پروتئین و تنظیم اسیدیته بهره می‌برد.",
+      "website": "https://www.sierolat.it",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1570"
     },
     {
       "name": "User Food And Products Company",
@@ -40365,7 +41516,7 @@
       "whatsapp": "+905368770045",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1528"
+      "id": "gulfood-2026-1571"
     },
     {
       "name": "UVR Natural Foods Pvt. Ltd",
@@ -40393,7 +41544,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1529"
+      "id": "gulfood-2026-1572"
     },
     {
       "name": "V&V Walsh",
@@ -40420,7 +41571,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1530"
+      "id": "gulfood-2026-1573"
     },
     {
       "name": "V.D.B. Frozen Food Production",
@@ -40447,7 +41598,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1531"
+      "id": "gulfood-2026-1574"
     },
     {
       "name": "Valio Eesti AS",
@@ -40467,7 +41618,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1532"
+      "id": "gulfood-2026-1575"
     },
     {
       "name": "Vamin Tatarstan",
@@ -40488,7 +41639,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1533"
+      "id": "gulfood-2026-1576"
     },
     {
       "name": "Van Breukelen Kaas B.V",
@@ -40510,7 +41661,7 @@
       "whatsapp": "+31348420139",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1534"
+      "id": "gulfood-2026-1577"
     },
     {
       "name": "van Dyk's by Nature",
@@ -40538,7 +41689,7 @@
       "whatsapp": "+1902-542-4405",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1535"
+      "id": "gulfood-2026-1578"
     },
     {
       "name": "Van Pur / Q-Bev",
@@ -40564,7 +41715,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1536"
+      "id": "gulfood-2026-1579"
     },
     {
       "name": "Vandemoortele Europe NV",
@@ -40587,7 +41738,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1537"
+      "id": "gulfood-2026-1580"
     },
     {
       "name": "Vandersterre Holland B.V",
@@ -40608,7 +41759,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1538"
+      "id": "gulfood-2026-1581"
     },
     {
       "name": "VanDrie Group",
@@ -40634,7 +41785,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1539"
+      "id": "gulfood-2026-1582"
     },
     {
       "name": "VARA FOOD & DRINK CO., LTD",
@@ -40659,7 +41810,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1540"
+      "id": "gulfood-2026-1583"
     },
     {
       "name": "VATSAK",
@@ -40682,7 +41833,7 @@
       "whatsapp": "+380673005752",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1541"
+      "id": "gulfood-2026-1584"
     }
   ]
 }
