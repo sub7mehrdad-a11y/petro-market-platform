@@ -66,8 +66,13 @@ export default function TurkeyMap({ map, countryId }) {
                       strokeLinejoin="round" />
               ))
             : (
-                <rect x="0" y="0" width="1000" height="560" fill="#ffffff" stroke="#7FA3A9"
-                      strokeWidth="1.5" strokeDasharray="6 6" rx="12" />
+                // برخلاف مسیر مرز واقعی (که فقط خودِ خشکی رو سفید می‌کنه و
+                // پس‌زمینه‌ی رنگی اطرافش معلوم می‌مونه)، این fallback رو یک
+                // مستطیل تمام‌قد می‌پوشونه — قبلاً این مستطیل سفید بود و کل
+                // پس‌زمینه‌ی رنگی نقشه رو زیرش قایم می‌کرد، پس عملاً یک جعبه‌ی
+                // خالی سفید دیده می‌شد، نه نقشه.
+                <rect x="0" y="0" width="1000" height="560" fill="#EAF4F4" stroke="#7FA3A9"
+                      strokeWidth="2" rx="12" />
               )}
 
           {points.map((p, i) => (
