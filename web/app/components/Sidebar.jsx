@@ -42,6 +42,10 @@ const NAV_GROUPS = [
       { href: "/exhibitions", label: "نمایشگاه‌ها", icon: IconCalendar },
     ],
   },
+  {
+    title: "ابزارها",
+    items: [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }],
+  },
 ];
 
 const ASK_ITEM = { href: "/ask", label: "جست‌وجو و پرسش", icon: IconSearch };
@@ -257,6 +261,15 @@ function IconCalendar({ className }) {
     <svg {...svgProps(className)}>
       <rect x="3" y="5" width="18" height="16" rx="2" />
       <path d="M3 10h18M8 3v4M16 3v4" />
+    </svg>
+  );
+}
+
+function IconMail({ className }) {
+  return (
+    <svg {...svgProps(className)}>
+      <rect x="3" y="5" width="18" height="14" rx="2" />
+      <path d="M3 7l9 6l9-6" />
     </svg>
   );
 }

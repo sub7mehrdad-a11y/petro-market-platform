@@ -75,6 +75,43 @@ export function getCompanies() {
   return readJsonSafe(path.join(DATA_DIR, "companies.json"), []);
 }
 
+// اسم رسمی ISO توی country_name_map.json برای بعضی کشورها توی یک ایمیل
+// فروش عجیب/رسمی به نظر می‌رسه ("Iran, Islamic Republic of")؛ این چندتا
+// استثنا رو به شکل متداول انگلیسی برمی‌گردونه، بقیه از همون نام رسمی می‌آد.
+const COUNTRY_EN_FRIENDLY_OVERRIDES = {
+  "Russian Federation": "Russia",
+  "Türkiye": "Turkey",
+  "Syrian Arab Republic": "Syria",
+  "Moldova, Republic of": "Moldova",
+  "Viet Nam": "Vietnam",
+  "Iran, Islamic Republic of": "Iran",
+  "Korea, Republic of": "South Korea",
+  "Tanzania, United Republic of": "Tanzania",
+  "Venezuela, Bolivarian Republic of": "Venezuela",
+  "Bolivia, Plurinational State of": "Bolivia",
+  "Lao People's Democratic Republic": "Laos",
+  "Brunei Darussalam": "Brunei",
+};
+
+// برای بخش «ایمیل معرفی» — تنها جایی که اسم انگلیسیِ روان (نه فارسی سایت، نه
+// نام رسمی ISO) کشور لازمه، چون متن ایمیل به مخاطب بین‌المللی به انگلیسیه.
+export function getCountryEnglishName(countryFa) {
+  const nameMap = readJsonSafe(path.join(ROOT, "scripts", "country_name_map.json"), {});
+  for (const [en, info] of Object.entries(nameMap)) {
+    if (info?.fa === countryFa) {
+      return COUNTRY_EN_FRIENDLY_OVERRIDES[en] || en;
+    }
+  }
+  return countryFa;
+}
+
+// از scripts/ingest_sent_emails.py (کمپین قدیمی) + هر ارسال واقعی جدید از
+// طریق صفحه‌ی «ایمیل معرفی». بر اساس خودِ آدرس ایمیل چک می‌شه، نه id شرکت —
+// چون آدرس‌های کمپین قدیمی همیشه با شرکت فعلی دیتابیس یک‌به‌یک نیستن.
+export function getEmailOutreachSent() {
+  return readJsonSafe(path.join(DATA_DIR, "email_outreach_sent.json"), []);
+}
+
 export function getExhibitions() {
   return readJsonSafe(path.join(DATA_DIR, "exhibitions.json"), []);
 }
