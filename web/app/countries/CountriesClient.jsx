@@ -128,26 +128,32 @@ export default function CountriesClient({ countries }) {
             href={`/countries/${encodeURIComponent(c.name)}`}
             className="group block card card-hover overflow-hidden"
           >
+            {/*
+              نسخه‌ی قبلی پرچم رو تمام‌قد پس‌زمینه‌ی کادر می‌کرد — برای پرچم‌های
+              راه‌راه‌افقی (مثل روسیه) یا برش می‌خورد (cover) یا توی یک فضای
+              تیره‌ی نیمه‌خالی شناور می‌موند (contain)، هیچ‌کدوم شیک نبود. حالا
+              پرچم فقط یک چیپ کوچیک با نسبت واقعی خودشه، کنار اسم؛ پس‌زمینه‌ی
+              کادر یک گرادیان ثابت و تمیزه که به‌جای هر کشور فرق نمی‌کنه.
+            */}
             <div
-              className="relative h-24 flex items-end p-3"
-              style={{
-                backgroundImage: c.trade?.iso2
-                  ? `linear-gradient(to top, rgba(11,32,39,.92), rgba(11,32,39,.35)), url(https://flagcdn.com/w640/${c.trade.iso2}.png)`
-                  : "linear-gradient(135deg, #123742, #0B2027)",
-                // "cover" برای هر دو لایه (گرادیان + پرچم) پرچم رو برای پرشدن این
-                // کادر کوتاه‌وپهن اسکیل می‌کرد و چون پرچم‌های راه‌راه‌افقی (مثل
-                // روسیه) کوتاه‌ان، فقط نوار وسطشون (مثلاً آبیِ روسیه) باقی
-                // می‌موند. "contain" روی لایه‌ی پرچم (نه گرادیان) کل پرچم رو
-                // بدون برش نشون می‌ده.
-                backgroundSize: "cover, contain",
-                backgroundPosition: "center",
-                backgroundRepeat: "no-repeat, no-repeat",
-              }}
+              className="relative h-20 flex items-center gap-2.5 p-3 overflow-hidden"
+              style={{ backgroundImage: "linear-gradient(135deg, #123742, #0B2027)" }}
             >
-              <div className="relative z-10 flex items-center gap-1.5 flex-wrap">
-                <h2 className="font-bold text-white text-sm drop-shadow">{c.name}</h2>
+              <div
+                className="pointer-events-none absolute -top-8 -start-8 h-24 w-24 rounded-full opacity-40"
+                style={{ background: "radial-gradient(circle, rgba(201,118,46,.35), transparent 70%)" }}
+              />
+              {c.trade?.iso2 && (
+                <img
+                  src={`https://flagcdn.com/w80/${c.trade.iso2}.png`}
+                  alt=""
+                  className="relative z-10 h-8 w-11 rounded-md object-cover ring-1 ring-white/25 shadow-md shrink-0"
+                />
+              )}
+              <div className="relative z-10 min-w-0 flex items-center gap-1.5 flex-wrap">
+                <h2 className="font-bold text-white text-sm drop-shadow truncate">{c.name}</h2>
                 {c.hasProfile && (
-                  <span className="text-[9px] bg-copper-500 text-white rounded-full px-1.5 py-0.5 font-bold">
+                  <span className="text-[9px] bg-copper-500 text-white rounded-full px-1.5 py-0.5 font-bold shrink-0">
                     گزارش اختصاصی
                   </span>
                 )}
