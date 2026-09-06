@@ -1,10 +1,10 @@
 {
   "event_name": "Gulfood 2026",
   "source_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor",
-  "fetched_at": "2026-09-06T20:02:24.401993+00:00",
+  "fetched_at": "2026-09-06T22:46:12.092318+00:00",
   "total_candidates_after_rules": 2532,
-  "total_relevant": 1656,
-  "total_processed": 1831,
+  "total_relevant": 1671,
+  "total_processed": 1846,
   "companies": [
     {
       "name": "Al-Dua Food Processing Pvt. Limited",
@@ -42657,6 +42657,389 @@
       "id": "gulfood-2026-1614"
     },
     {
+      "name": "Orient Products LLC",
+      "stand": "Stand No- 32-110, South Hall 5",
+      "country": "Russian Federation",
+      "description": "Orient Products LLC company was founded in 2005 — last year we celebrated our 20th anniversary. We produce baked crispbreads and snacks, brand «KRUAZETT». We are the only producer of baked crispbreads and snacks in Russia and  ...",
+      "categories": [
+        "Snacks",
+        "Bakery, Cakes & Desserts",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Health & Wellness Products",
+        "Crisp Bread",
+        "Healthy snacks",
+        "Vegan / Vegetarian Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/orient-products-llc",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و اسنک",
+      "llm_reason": "تولیدکننده نان‌های برشته و اسنک که از جوش شیرین به عنوان ماده ورآورنده استفاده می‌کند.",
+      "website": "https://kruazett.ru/hlebcy/",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
+      "contact_checked": true,
+      "id": "gulfood-2026-1615"
+    },
+    {
+      "name": "Oriental Food Industries Sdn. Bhd",
+      "stand": "Stand No- DG-152, North Hall 13",
+      "country": "Malaysia",
+      "description": "Oriental Food Industries Sdn. Bhd. was established since 1978 in Melaka and is one of the leading snack food and confectionery manufactures in Malaysia. Generally, Oriental Food products can be divided into 5 broad categories name ...",
+      "categories": [
+        "Halal and Kosher Food",
+        "Private Label",
+        "Snacks",
+        "Bakery, Cakes & Desserts",
+        "Savoury snacks",
+        "Savoury Baked Products",
+        "Salty Snacks",
+        "Cakes / Dessert",
+        "Crackers"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/oriental-food-industries-sdn-bhd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و شیرینی‌پزی",
+      "llm_reason": "تولیدکننده بزرگ اسنک و شیرینی‌جات در مالزی با نیاز مستقیم به جوش شیرین.",
+      "website": "https://www.ofih.com.my",
+      "email": "info@ofi.com.my",
+      "whatsapp": "+6062310333",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1616"
+    },
+    {
+      "name": "Orieshock s. r. o",
+      "stand": "Stand No- 9-80, South Hall 1",
+      "country": "Slovakia",
+      "description": "Orieshock: A Nutty Delight for Everyone Indulge in the rich, creamy goodness of Orieshock's premium nut creams. From classic peanut creams to exotic pistachio, our 100% pure nut creams are perfect for every taste. Craving a  ...",
+      "categories": [
+        "Spreads, Honey & Jams",
+        "Snacks",
+        "Private Label",
+        "Bakery, Cakes & Desserts",
+        "Healthy snacks",
+        "Baking Supplies",
+        "Nuts"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/orieshock-s-r-o",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – اسنک و محصولات نانوایی",
+      "llm_reason": "تولیدکننده اسنک‌های سالم، کرم‌های آجیلی و محصولات نانوایی.",
+      "website": "https://www.orieshock.eu",
+      "email": "INFO@ORIESHOCK.EU",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1617"
+    },
+    {
+      "name": "Orkla Latvija",
+      "stand": "Stand No- 13-10, South Hall 2",
+      "country": "Latvia",
+      "description": "Orkla Latvija is a leading manufacturer of branded food products in Latvia, offering high-quality and trusted brands enjoyed by consumers every day. The company operates across key food categories, including confectionery, snacks, ...",
+      "categories": [
+        "Private Label",
+        "Snacks",
+        "Bakery, Cakes & Desserts",
+        "Condiments & Sauces",
+        "Salty Snacks",
+        "Crackers",
+        "Crisp Bread",
+        "Baked Goods"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/orkla-latvija",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و اسنک",
+      "llm_reason": "تولیدکننده پیشرو انواع فرآورده‌های غذایی، اسنک و محصولات نانوایی در لتونی.",
+      "website": "https://www.orkla.lv",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1618"
+    },
+    {
+      "name": "Ornua",
+      "stand": "Stand No- R-G43, Shk Rashid Hall",
+      "country": "Republic of Ireland",
+      "description": "Ornua is an Irish dairy co-operative that markets and sells dairy products on behalf of its Members, Ireland’s dairy processors and, in turn, Irish dairy farmers. Ornua is Ireland’s largest exporter of Irish dairy products and ...",
+      "categories": [
+        "Dairy",
+        "Dry Goods",
+        "Canned Products",
+        "Cream & Cream Products",
+        "Cheese",
+        "Butter"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/ornua",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – صنایع لبنی",
+      "llm_reason": "تعاونی و توزیع‌کننده بین‌المللی فرآورده‌های لبنی که جوش شیرین در فرآوری آن کاربرد دارد.",
+      "website": "https://www.Ornua.com",
+      "email": "Consumerfoods.Europe@ornua.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1619"
+    },
+    {
+      "name": "Oshee Polska SA",
+      "stand": "Stand No- Z2-C4, Za'abeel Hall 2",
+      "country": "Poland",
+      "description": "A leader in functional drinks.",
+      "categories": [
+        "Beverages",
+        "Non-alcoholic Beverages",
+        "Flavoured Water",
+        "Energy Drinks",
+        "Carbonated Soft Drinks"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/oshee-polska-sa",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نوشیدنی‌های گازدار",
+      "llm_reason": "تولیدکننده اصلی نوشیدنی‌های گازدار و عملکردی که نیاز به تنظیم‌کننده اسیدیته دارد.",
+      "website": "https://osheeshop.eu/oshee",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1620"
+    },
+    {
+      "name": "Oshon Dolphin Foods India Ltd",
+      "stand": "Stand No- N1-H19, North Hall 1",
+      "country": "India",
+      "description": "We made our first foray into the confectionery products market.Now we have a  state of the art manufacturing plant situated in Hyderabad-INDIA, where we are manufacturing varied varities of Hard candies, Toffees, Jellies, Chocolat ...",
+      "categories": [
+        "Bakery, Cakes & Desserts",
+        "Baked Goods"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/oshon-dolphin-foods-india-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و شیرینی‌پزی",
+      "llm_reason": "تولیدکننده شیرینی و محصولات پخته‌شده نانوایی در هند.",
+      "website": "https://www.oshonindia.com",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
+      "contact_checked": true,
+      "id": "gulfood-2026-1621"
+    },
+    {
+      "name": "OSM Łowicz",
+      "stand": "Stand No- R-J9, Shk Rashid Hall",
+      "country": "Poland",
+      "description": "OSM ?owicz has been producing dairy products for generations. The company's offer includes UHT milk and creams, cheese, fermented products, milk powders. OSM ?owicz is a company with a strong market position and a reliable b ...",
+      "categories": [
+        "Private Label",
+        "Vegetable & Animal Oils & Fats",
+        "Dairy",
+        "Free-From Products",
+        "Animal Fats",
+        "Lactose-free Products",
+        "Yoghurt (Regular, Flavoured, Fruit, etc.)",
+        "Milk",
+        "Dried Milk Products",
+        "Cream & Cream Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/osm-owicz",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع لبنی",
+      "llm_reason": "تولیدکننده محصولات لبنی و پودر شیر که از جوش شیرین برای تنظیم pH استفاده می‌کند.",
+      "website": "https://mleczarnia.lowicz.pl/en",
+      "email": "andrzej.pagowski@mleczarnia.lowicz.pl",
+      "whatsapp": "46 830 36 00",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1622"
+    },
+    {
+      "name": "OSOL ALITQAN GENERAL TRADING",
+      "stand": "Stand No- 35-60, South Hall 6",
+      "country": "Wallis & Futuna",
+      "description": "We are a leading full-service company, providing a wide range of innovative and distinctive solutions in the fields of engineering and construction, real estate management, business management, pool agriculture,management, as well ...",
+      "categories": [
+        "Organic Products",
+        "Government/Associations",
+        "Dairy",
+        "Condiments & Sauces",
+        "Beverages",
+        "Yoghurt (Regular, Flavoured, Fruit, etc.)",
+        "Milk",
+        "Dried Milk Products",
+        "Cheese",
+        "Alternative Milk Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/osol-alitqan-general-trading",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – عمومی / بازرگانی",
+      "llm_reason": "شرکت بازرگانی عمومی فعال در توزیع مواد غذایی، لبنیات و نوشیدنی‌ها.",
+      "website": "https://www.itqan-pm.ae/",
+      "email": "info@itqan-pm.ae",
+      "whatsapp": "+971-503744931",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1623"
+    },
+    {
+      "name": "OSolemio inc- Meal Solutions",
+      "stand": "Stand No- 24-10, South Hall 4",
+      "country": "Canada",
+      "description": "Family owned cie since 25years with culinary experience for over 60years. Our mission is to bring tools for restaurants to be more efficient with our premium sauce and IQF precook pasta bulk or preportionned.  We want to bring res ...",
+      "categories": [
+        "Specialty Food",
+        "Private Label",
+        "Frozen Food",
+        "Fortified Foods & Health Products",
+        "Condiments & Sauces",
+        "Chilled & Fresh Food",
+        "Ethnic Food",
+        "Frozen Ready Meals",
+        "Health & Wellness Products",
+        "Fresh Ready Meals"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/osolemio-inc-meal-solutions",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – غذاهای منجمد و سس‌ها",
+      "llm_reason": "تولیدکننده غذاهای آماده، منجمد و سس برای رستوران‌ها و صنعت غذا.",
+      "website": "https://www.osolemio.ca",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1624"
+    },
+    {
+      "name": "OSTERBERG  FOOD SERVICE",
+      "stand": "Stand No- 5-40, South Hall 1",
+      "country": "Denmark",
+      "description": "Østerberg Quality is an international supplier of high-quality fruit based food service products. Østerberg Quality has found a place in the market worldwide, by supplying high quality fruit based fruit crush, glaze, poppi ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Spreads, Honey & Jams",
+        "Snacks",
+        "Private Label",
+        "Organic Products",
+        "Frozen Food",
+        "Dairy",
+        "Condiments & Sauces",
+        "Beverages",
+        "Dried Fruit & Vegetables"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/osterberg-food-service",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – فرآوری میوه و غلات",
+      "llm_reason": "تامین‌کننده و توزیع‌کننده بین‌المللی مواد اولیه غذایی، غلات و فرآورده‌های میوه‌ای.",
+      "website": "https://osterberg-quality.dk",
+      "email": "info@osterberg-quality.dk",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1625"
+    },
+    {
+      "name": "Ostrich Oasis Trading",
+      "stand": "Stand No- S1-145, Shk Saeed Hall 1",
+      "country": "United Arab Emirates",
+      "description": "Ostrich Oasis Farm is one of the largest ostrich farms in the GCC region, proudly located in the scenic Al Ain area. As the only farm in the GCC with over 2,000 ostrich birds raised on-site, we are committed to providing premium-q ...",
+      "categories": [
+        "Meat, Poultry & Seafood",
+        "Chilled & Fresh Food",
+        "Frozen Food",
+        "Processed Meat",
+        "Dried Meat",
+        "Frozen Meat",
+        "Fresh Ready Meals",
+        "Eggs & Egg Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/ostrich-oasis-trading",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – فرآوری گوشت",
+      "llm_reason": "تولیدکننده و فرآوری‌کننده محصولات گوشتی که از جوش شیرین برای عمل‌آوری و نرم‌کردن گوشت استفاده می‌کند.",
+      "website": "https://ostrichoasis.ae/",
+      "email": "sales@ostrichoasis.ae",
+      "whatsapp": "+971504724766",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1626"
+    },
+    {
+      "name": "Oun Drinks OU",
+      "stand": "Stand No- 23-77, South Hall 4",
+      "country": "Estonia",
+      "description": "The organic drink of choice for the health-conscious generation. Our story began in 2014 with a mission to rescue perfectly good apples that were piling up unused. What started as a simple act of reducing waste quickl ...",
+      "categories": [
+        "Organic Products",
+        "Private Label",
+        "Fortified Foods & Health Products",
+        "Beverages",
+        "Energy Drinks",
+        "Fortified & Functional Products",
+        "Tea",
+        "Non-alcoholic Beverages",
+        "Carbonated Soft Drinks"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/oun-drinks-ou",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نوشیدنی‌ها",
+      "llm_reason": "تولیدکننده نوشیدنی‌های ارگانیک که جهت تعدیل اسیدیته آبمیوه به جوش شیرین نیاز دارد.",
+      "website": "https://oundrinks.com/",
+      "email": "info@oundrinks.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1627"
+    },
+    {
+      "name": "Outeirinho Tur Industria SA",
+      "stand": "Stand No- Z5-H43, Za'abeel Hall 5",
+      "country": "Portugal",
+      "description": "Outeirinho Group is a Portuguese company recognized for bottling mineral and spring water and producing beverages. The launch of healsi, a premium mineral water in a diamond-shaped bottle, marked the start of its international exp ...",
+      "categories": [
+        "Beverages",
+        "Flavoured Water",
+        "Energy Drinks",
+        "Carbonated Soft Drinks",
+        "Bottled Water"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/outeirinho-tur-industria-sa",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نوشیدنی‌های گازدار",
+      "llm_reason": "تولیدکننده و بسته‌بندی‌کننده نوشیدنی‌های گازدار و طعم‌دار.",
+      "website": "https://www.healsi.eu",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1628"
+    },
+    {
+      "name": "OVERA - Alpha International Factory",
+      "stand": "Stand No- 38-22, South Hall 6",
+      "country": "Saudi Arabia",
+      "description": "Overa is the number one, premium-quality Saudi manufacturer of pasteurized liquid egg products, recognized as a trusted, well-reputed brand. Operating at large industrial scale, Overa serves Saudi Arabia, the GCC, and export marke ...",
+      "categories": [
+        "Halal and Kosher Food",
+        "Private Label",
+        "Fortified Foods & Health Products",
+        "Chilled & Fresh Food",
+        "Fortified & Functional Products",
+        "Eggs & Egg Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/overa-alpha-international-factory",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع غذایی و نانوایی",
+      "llm_reason": "تولیدکننده فرآورده‌های تخم‌مرغ پاستوریزه که ماده اولیه صنایع نانوایی و شیرینی‌پزی است.",
+      "website": "https://WWW.ALPHA-SA.COM",
+      "email": "Sales@alpha-sa.com",
+      "whatsapp": "+966550866636",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1629"
+    },
+    {
       "name": "Pooja Dehy Foods Pvt Ltd",
       "stand": "Stand No- N7-E53, North Hall 7",
       "country": "India",
@@ -42682,7 +43065,7 @@
       "whatsapp": "+919227979440",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1615"
+      "id": "gulfood-2026-1630"
     },
     {
       "name": "Pop Argentina",
@@ -42710,7 +43093,7 @@
       "whatsapp": "5492474665066",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1616"
+      "id": "gulfood-2026-1631"
     },
     {
       "name": "Popat Raja & Sons",
@@ -42736,7 +43119,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1617"
+      "id": "gulfood-2026-1632"
     },
     {
       "name": "Port Said Co. for food industries - Riyada",
@@ -42758,7 +43141,7 @@
       "whatsapp": "+20663772070",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1618"
+      "id": "gulfood-2026-1633"
     },
     {
       "name": "Posca Hydrate",
@@ -42779,7 +43162,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1619"
+      "id": "gulfood-2026-1634"
     },
     {
       "name": "POTUS Middle East DMCC",
@@ -42801,7 +43184,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1620"
+      "id": "gulfood-2026-1635"
     },
     {
       "name": "Prairie Halal Foods",
@@ -42829,7 +43212,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1621"
+      "id": "gulfood-2026-1636"
     },
     {
       "name": "Pran Beverages (India) Private Limited",
@@ -42857,7 +43240,7 @@
       "whatsapp": "1800-121-4899",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1622"
+      "id": "gulfood-2026-1637"
     },
     {
       "name": "PRAN FOODS LIMITED",
@@ -42885,7 +43268,7 @@
       "whatsapp": "+88-09613 090909",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1623"
+      "id": "gulfood-2026-1638"
     },
     {
       "name": "PRATO FOODSTUFF TRADING LLC",
@@ -42913,7 +43296,7 @@
       "whatsapp": "971582393228",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1624"
+      "id": "gulfood-2026-1639"
     },
     {
       "name": "PreGel S.p.a",
@@ -42941,7 +43324,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1625"
+      "id": "gulfood-2026-1640"
     },
     {
       "name": "Prestige 96 AD",
@@ -42967,7 +43350,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1626"
+      "id": "gulfood-2026-1641"
     },
     {
       "name": "Prestige Maple Products Inc",
@@ -42995,7 +43378,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1627"
+      "id": "gulfood-2026-1642"
     },
     {
       "name": "Shmoh AlMadi Company",
@@ -43023,7 +43406,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1628"
+      "id": "gulfood-2026-1643"
     },
     {
       "name": "Showyou Co., Ltd",
@@ -43051,7 +43434,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1629"
+      "id": "gulfood-2026-1644"
     },
     {
       "name": "Shree Radhe Dairy Farm & Foods",
@@ -43079,7 +43462,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1630"
+      "id": "gulfood-2026-1645"
     },
     {
       "name": "Shree Sai Trading Ltd",
@@ -43107,7 +43490,7 @@
       "whatsapp": "447735459186",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1631"
+      "id": "gulfood-2026-1646"
     },
     {
       "name": "Shri Global Foods",
@@ -43135,7 +43518,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1632"
+      "id": "gulfood-2026-1647"
     },
     {
       "name": "Shri Hari Industries",
@@ -43163,7 +43546,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1633"
+      "id": "gulfood-2026-1648"
     },
     {
       "name": "Siafa International Manufacturing Company",
@@ -43191,7 +43574,7 @@
       "whatsapp": "+966535501210",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1634"
+      "id": "gulfood-2026-1649"
     },
     {
       "name": "Sibonne Food Stuff IND LLC",
@@ -43219,7 +43602,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1635"
+      "id": "gulfood-2026-1650"
     },
     {
       "name": "SICHUAN HUASHI TECHNOLOGY CO.,LTD",
@@ -43240,7 +43623,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1636"
+      "id": "gulfood-2026-1651"
     },
     {
       "name": "SICHUAN PROVINCE HUIQUAN CANNED FOOD CO.,LTD",
@@ -43260,7 +43643,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1637"
+      "id": "gulfood-2026-1652"
     },
     {
       "name": "Sichuan Yijiahe International Trade Co.,Ltd",
@@ -43288,7 +43671,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1638"
+      "id": "gulfood-2026-1653"
     },
     {
       "name": "Siciliani S.p.A",
@@ -43311,7 +43694,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1639"
+      "id": "gulfood-2026-1654"
     },
     {
       "name": "Sidco Foods Trading LLC",
@@ -43339,7 +43722,7 @@
       "whatsapp": "97142642247",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1640"
+      "id": "gulfood-2026-1655"
     },
     {
       "name": "Siddhalepa Exports (Pvt) Ltd",
@@ -43359,7 +43742,7 @@
       "whatsapp": "94777256373",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1641"
+      "id": "gulfood-2026-1656"
     },
     {
       "name": "Sierolat S.P.A",
@@ -43387,7 +43770,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1642"
+      "id": "gulfood-2026-1657"
     },
     {
       "name": "User Food And Products Company",
@@ -43415,7 +43798,7 @@
       "whatsapp": "+905368770045",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1643"
+      "id": "gulfood-2026-1658"
     },
     {
       "name": "UVR Natural Foods Pvt. Ltd",
@@ -43443,7 +43826,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1644"
+      "id": "gulfood-2026-1659"
     },
     {
       "name": "V&V Walsh",
@@ -43470,7 +43853,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1645"
+      "id": "gulfood-2026-1660"
     },
     {
       "name": "V.D.B. Frozen Food Production",
@@ -43497,7 +43880,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1646"
+      "id": "gulfood-2026-1661"
     },
     {
       "name": "Valio Eesti AS",
@@ -43517,7 +43900,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1647"
+      "id": "gulfood-2026-1662"
     },
     {
       "name": "Vamin Tatarstan",
@@ -43538,7 +43921,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1648"
+      "id": "gulfood-2026-1663"
     },
     {
       "name": "Van Breukelen Kaas B.V",
@@ -43560,7 +43943,7 @@
       "whatsapp": "+31348420139",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1649"
+      "id": "gulfood-2026-1664"
     },
     {
       "name": "van Dyk's by Nature",
@@ -43588,7 +43971,7 @@
       "whatsapp": "+1902-542-4405",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1650"
+      "id": "gulfood-2026-1665"
     },
     {
       "name": "Van Pur / Q-Bev",
@@ -43614,7 +43997,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1651"
+      "id": "gulfood-2026-1666"
     },
     {
       "name": "Vandemoortele Europe NV",
@@ -43637,7 +44020,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1652"
+      "id": "gulfood-2026-1667"
     },
     {
       "name": "Vandersterre Holland B.V",
@@ -43658,7 +44041,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1653"
+      "id": "gulfood-2026-1668"
     },
     {
       "name": "VanDrie Group",
@@ -43684,7 +44067,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1654"
+      "id": "gulfood-2026-1669"
     },
     {
       "name": "VARA FOOD & DRINK CO., LTD",
@@ -43709,7 +44092,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1655"
+      "id": "gulfood-2026-1670"
     },
     {
       "name": "VATSAK",
@@ -43732,7 +44115,7 @@
       "whatsapp": "+380673005752",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1656"
+      "id": "gulfood-2026-1671"
     }
   ]
 }
