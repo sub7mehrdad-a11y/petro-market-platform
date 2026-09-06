@@ -1,3 +1,19 @@
+// وقتی block.runs موجوده (یعنی متن این بلوک حداقل یک لینک واقعی داره — مثل
+// لینک صفحه‌ی محصول یا عکس در گزارش‌های خرده‌فروشی)، همون تکه‌ها رو رندر
+// می‌کنیم تا لینک واقعاً کلیک‌پذیر بمونه؛ در غیر این صورت متن ساده.
+function RichText({ block }) {
+  if (!block.runs) return block.text;
+  return block.runs.map((r, i) =>
+    r.href ? (
+      <a key={i} href={r.href} target="_blank" rel="noopener noreferrer" className="text-copper-700 hover:underline">
+        {r.text}
+      </a>
+    ) : (
+      <span key={i}>{r.text}</span>
+    )
+  );
+}
+
 function Block({ block }) {
   if (block.type === "image") {
     // eslint-disable-next-line @next/next/no-img-element -- عکس‌های گزارش از
@@ -16,7 +32,11 @@ function Block({ block }) {
     return <Tag className={cls}>{block.text}</Tag>;
   }
   if (block.type === "list_item") {
-    return <li className="leading-7">{block.text}</li>;
+    return (
+      <li className="leading-7">
+        <RichText block={block} />
+      </li>
+    );
   }
   if (block.type === "table") {
     return (
@@ -42,7 +62,11 @@ function Block({ block }) {
       </div>
     );
   }
-  return <p className="leading-7">{block.text}</p>;
+  return (
+    <p className="leading-7">
+      <RichText block={block} />
+    </p>
+  );
 }
 
 export default function DetailedReportView({ blocks }) {

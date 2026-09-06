@@ -25,6 +25,7 @@ import json
 import shutil
 from datetime import datetime, timezone
 
+import httpx
 import pdfplumber
 from google import genai
 
@@ -52,6 +53,16 @@ CONTENT_TYPE_EXT = {
     "image/webp": "webp",
 }
 
+# برای پیدا کردن لینک‌هایی که مستقیم به یک فایل عکس اشاره می‌کنن (نه صفحه‌ی
+# محصول) — مثل لینک‌های «دانلود عکس محصول» توی گزارش‌های خرده‌فروشی.
+IMAGE_URL_RE = re.compile(r"\.(jpe?g|png|webp|gif|bmp)(?:[?#]|$)", re.IGNORECASE)
+DOWNLOAD_HEADERS = {
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
+        "(KHTML, like Gecko) Chrome/120.0 Safari/537.36"
+    )
+}
+
 GEMINI_MODEL = "gemini-3.6-flash"
 
 REPORTS = [
@@ -62,6 +73,13 @@ REPORTS = [
     },
     {
         "file": "گزارش استراتژِی بازایابی عراق.docx",
+        "country": "عراق",
+        "type": "detailed",
+    },
+    {
+        # بازار خرده‌فروشی و قیمت‌های واقعی جوش شیرین در سوپرمارکت‌ها و
+        # فروشگاه‌های آنلاین عراق — شامل لینک به صفحه‌ی محصول و عکس هر برند.
+        "file": "گزارش_جامع_بازار_خرده_فروشی_و_جوش_شیرین_در_عراق.docx",
         "country": "عراق",
         "type": "detailed",
     },
@@ -196,36 +214,68 @@ def slugify_id(filename: str, prefix: str) -> str:
     return f"{prefix}-{stem}"[:80]
 
 
-def _save_report_images(blocks: list[dict], report_id: str) -> None:
+def _save_embedded_images(blocks: list[dict], report_id: str, out_dir: str) -> None:
     """
-    بلوک‌های نوع «image» رو (که extract_blocks بایت خامشون رو برگردونده) به
-    فایل واقعی زیر web/public/report-images/<report_id>/ ذخیره می‌کنه و
-    بلوک رو به {"type": "image", "src": "/report-images/..."} تبدیل می‌کنه —
-    چون بایت خام قابل json.dump نیست و نباید توی parsed/*.json بمونه.
-
-    پوشه‌ی قبلی این گزارش پاک می‌شه تا اجرای دوباره (با تعداد عکس متفاوت)
-    فایل قدیمیِ یتیم به‌جا نذاره.
+    بلوک‌های نوع «image» که extract_blocks بایت خامشون رو برگردونده (عکس‌های
+    اینلاین واقعی داخل خودِ فایل Word) رو به فایل واقعی ذخیره می‌کنه و بلوک رو
+    به {"type": "image", "src": "/report-images/..."} تبدیل می‌کنه — چون بایت
+    خام قابل json.dump نیست. فقط بلوک‌هایی که هنوز "bytes" خام دارن دست می‌خوره
+    (بلوک‌های عکسِ از‌قبل‌دانلودشده توسط _download_linked_images رو نادیده
+    می‌گیره، چون اون‌ها از قبل به شکل نهایی src رسیدن).
     """
-    has_images = any(b["type"] == "image" for b in blocks)
-    out_dir = os.path.join(IMAGES_OUT_DIR, report_id)
-    if os.path.exists(out_dir):
-        shutil.rmtree(out_dir)
-    if not has_images:
-        return
-    os.makedirs(out_dir, exist_ok=True)
-
     counter = 0
     for b in blocks:
-        if b["type"] != "image":
+        if b.get("type") != "image" or "bytes" not in b:
             continue
         counter += 1
         ext = CONTENT_TYPE_EXT.get(b["content_type"], "png")
         filename = f"img-{counter}.{ext}"
+        os.makedirs(out_dir, exist_ok=True)
         with open(os.path.join(out_dir, filename), "wb") as f:
             f.write(b["bytes"])
         b.clear()
         b["type"] = "image"
         b["src"] = f"/report-images/{report_id}/{filename}"
+
+
+def _download_linked_images(blocks: list[dict], report_id: str, out_dir: str) -> list[dict]:
+    """
+    وقتی یک پاراگراف (توی runs، طبق docx_blocks._paragraph_runs) لینک مستقیم
+    به یک فایل عکس داره (مثل لینک «دانلود عکس محصول» در گزارش‌های خرده‌فروشی)،
+    عکس رو واقعاً دانلود و بلافاصله بعد از همون پاراگراف یک بلوک «image» جدید
+    تزریق می‌کنه — دقیقاً همون خواسته‌ی «عکس رو دانلود کن و توی متن بذار».
+
+    اگه دانلود شکست بخوره (سایت مسدود کنه، لینک از کار افتاده باشه، محتوا عکس
+    نباشه...)، هیچ اتفاقی نمی‌افته و فقط لاگ می‌شه — همون لینک متنیِ کاربردی
+    (توی runs، از قبل تنظیم‌شده) دست‌نخورده می‌مونه، که دقیقاً fallback
+    خواسته‌شده‌ست: «اگه نشد، همون لینک رو توی متن بذار».
+    """
+    result = []
+    counter = 0
+    with httpx.Client(follow_redirects=True, timeout=20.0, headers=DOWNLOAD_HEADERS) as client:
+        for block in blocks:
+            result.append(block)
+            for run in block.get("runs", []):
+                href = run.get("href")
+                if not href or not IMAGE_URL_RE.search(href):
+                    continue
+                try:
+                    resp = client.get(href)
+                    resp.raise_for_status()
+                    content_type = resp.headers.get("content-type", "").split(";")[0].strip().lower()
+                    ext = CONTENT_TYPE_EXT.get(content_type)
+                    if not ext:
+                        print(f"  [WARN] content-type ناشناخته ({content_type}) برای {href} — رد شد.")
+                        continue
+                    counter += 1
+                    os.makedirs(out_dir, exist_ok=True)
+                    filename = f"web-img-{counter}.{ext}"
+                    with open(os.path.join(out_dir, filename), "wb") as f:
+                        f.write(resp.content)
+                    result.append({"type": "image", "src": f"/report-images/{report_id}/{filename}"})
+                except Exception as e:
+                    print(f"  [WARN] دانلود عکس ناموفق ({href}): {e}")
+    return result
 
 
 def build_detailed_report(path: str, report_id: str) -> dict:
@@ -237,7 +287,14 @@ def build_detailed_report(path: str, report_id: str) -> dict:
         # بعضی اسناد با یک پاراگراف عنوان‌گونه شروع می‌شن نه heading واقعی؛
         # اگه کوتاه بود همون رو عنوان بگیر تا اسم فایل به‌عنوان عنوان نیفته.
         title = blocks.pop(0)["text"]
-    _save_report_images(blocks, report_id)
+
+    out_dir = os.path.join(IMAGES_OUT_DIR, report_id)
+    if os.path.exists(out_dir):
+        shutil.rmtree(out_dir)  # اجرای دوباره = بازسازی کامل، بدون فایل یتیم
+
+    blocks = _download_linked_images(blocks, report_id, out_dir)
+    _save_embedded_images(blocks, report_id, out_dir)
+
     return {"title": title, "blocks": blocks}
 
 

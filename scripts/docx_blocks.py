@@ -68,6 +68,40 @@ def _paragraph_images(paragraph: Paragraph, document) -> list[dict]:
     return images
 
 
+def _paragraph_runs(paragraph: Paragraph, document) -> list[dict]:
+    """
+    متن یک پاراگراف رو به ترتیب واقعی، به‌صورت لیستی از تکه‌ها برمی‌گردونه —
+    هر تکه یا متن ساده‌ست (href=None) یا متن یک هایپرلینک (href=آدرس واقعی).
+
+    چرا لازم بود: paragraph.text لینک‌ها رو به متن ساده تبدیل می‌کنه (آدرس
+    واقعی گم می‌شه). بعضی گزارش‌ها (مثل گزارش خرده‌فروشی عراق) پر از لینک به
+    صفحه‌ی محصول فروشگاه‌ها و عکس محصولن — این‌ها باید توی وب کلیک‌پذیر بمونن.
+    فقط وقتی حداقل یک لینک واقعی توی پاراگراف باشه یک لیست غیر خالی برمی‌گرده؛
+    برای پاراگراف‌های معمولی (اکثریت قریب‌به‌اتفاق گزارش‌ها) خروجی خالیه تا
+    parsed JSON بی‌جهت بزرگ نشه.
+    """
+    runs = []
+    has_link = False
+    for child in paragraph._element:
+        if child.tag == qn("w:r"):
+            text = "".join(t.text or "" for t in child.findall(".//" + qn("w:t")))
+            if text:
+                runs.append({"text": text, "href": None})
+        elif child.tag == qn("w:hyperlink"):
+            text = "".join(t.text or "" for t in child.findall(".//" + qn("w:t")))
+            r_id = child.get(qn("r:id"))
+            href = None
+            if r_id:
+                try:
+                    href = document.part.rels[r_id].target_ref
+                except KeyError:
+                    href = None
+            if text:
+                runs.append({"text": text, "href": href})
+                has_link = has_link or bool(href)
+    return runs if has_link else []
+
+
 def extract_blocks(path: str) -> list[dict]:
     document = docx.Document(path)
     blocks = []
@@ -85,7 +119,11 @@ def extract_blocks(path: str) -> list[dict]:
                 blocks.append({"type": "heading", "level": level, "text": text})
             else:
                 is_list = (item.style.name if item.style else "").startswith("List")
-                blocks.append({"type": "list_item" if is_list else "paragraph", "text": text})
+                block = {"type": "list_item" if is_list else "paragraph", "text": text}
+                runs = _paragraph_runs(item, document)
+                if runs:
+                    block["runs"] = runs
+                blocks.append(block)
         elif isinstance(item, Table):
             headers = [c.text.strip() for c in item.rows[0].cells] if item.rows else []
             rows = [[c.text.strip() for c in row.cells] for row in item.rows[1:]]
