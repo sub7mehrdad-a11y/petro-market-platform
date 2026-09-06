@@ -134,8 +134,14 @@ export default function CountriesClient({ countries }) {
                 backgroundImage: c.trade?.iso2
                   ? `linear-gradient(to top, rgba(11,32,39,.92), rgba(11,32,39,.35)), url(https://flagcdn.com/w640/${c.trade.iso2}.png)`
                   : "linear-gradient(135deg, #123742, #0B2027)",
-                backgroundSize: "cover",
+                // "cover" برای هر دو لایه (گرادیان + پرچم) پرچم رو برای پرشدن این
+                // کادر کوتاه‌وپهن اسکیل می‌کرد و چون پرچم‌های راه‌راه‌افقی (مثل
+                // روسیه) کوتاه‌ان، فقط نوار وسطشون (مثلاً آبیِ روسیه) باقی
+                // می‌موند. "contain" روی لایه‌ی پرچم (نه گرادیان) کل پرچم رو
+                // بدون برش نشون می‌ده.
+                backgroundSize: "cover, contain",
                 backgroundPosition: "center",
+                backgroundRepeat: "no-repeat, no-repeat",
               }}
             >
               <div className="relative z-10 flex items-center gap-1.5 flex-wrap">
