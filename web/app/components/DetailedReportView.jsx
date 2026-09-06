@@ -1,4 +1,15 @@
 function Block({ block }) {
+  if (block.type === "image") {
+    // eslint-disable-next-line @next/next/no-img-element -- عکس‌های گزارش از
+    // web/public/report-images میان، تعدادشون کمه و نیازی به next/image نیست.
+    return (
+      <img
+        src={block.src}
+        alt=""
+        className="max-w-full h-auto rounded-lg border border-slate-200 my-4 mx-auto"
+      />
+    );
+  }
   if (block.type === "heading") {
     const Tag = block.level <= 1 ? "h2" : "h3";
     const cls = block.level <= 1 ? "text-xl font-bold mt-6 mb-2" : "text-lg font-semibold mt-4 mb-2";

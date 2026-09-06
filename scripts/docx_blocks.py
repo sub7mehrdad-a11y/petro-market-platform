@@ -46,12 +46,37 @@ def _heading_level(paragraph: Paragraph):
     return None
 
 
+def _paragraph_images(paragraph: Paragraph, document) -> list[dict]:
+    """
+    عکس‌های اینلاین توی یک پاراگراف رو برمی‌گردونه (بایت خام + content-type).
+
+    چرا لازم بود: عکس‌ها به‌صورت <w:drawing> داخل یک <w:p> ذخیره می‌شن. قبلاً
+    فقط item.text یک پاراگراف خونده می‌شد — پاراگرافی که فقط عکس داره (بدون
+    متن) کاملاً نادیده گرفته می‌شد (چون text خالی بود و رد می‌شد)، برای همین
+    عکس‌های گزارش‌ها هیچ‌وقت به نسخه‌ی وب راه پیدا نمی‌کردن.
+    """
+    images = []
+    for blip in paragraph._element.findall(".//" + qn("a:blip")):
+        r_id = blip.get(qn("r:embed"))
+        if not r_id:
+            continue
+        try:
+            part = document.part.related_parts[r_id]
+        except KeyError:
+            continue
+        images.append({"bytes": part.blob, "content_type": part.content_type})
+    return images
+
+
 def extract_blocks(path: str) -> list[dict]:
     document = docx.Document(path)
     blocks = []
 
     for item in iter_block_items(document):
         if isinstance(item, Paragraph):
+            for img in _paragraph_images(item, document):
+                blocks.append({"type": "image", **img})
+
             text = item.text.strip()
             if not text:
                 continue
@@ -74,6 +99,8 @@ def extract_plain_text(path: str) -> str:
     blocks = extract_blocks(path)
     lines = []
     for b in blocks:
+        if b["type"] == "image":
+            continue  # مدل به بایت عکس نیازی نداره، فقط برای نسخه‌ی وب لازمه
         if b["type"] == "table":
             lines.append(" | ".join(b["headers"]))
             for row in b["rows"]:

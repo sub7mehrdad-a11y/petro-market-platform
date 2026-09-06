@@ -39,6 +39,18 @@ SRC_DIR = os.path.join(BASE_DIR, "گزارش")
 REPORTS_DIR = os.path.join(BASE_DIR, "reports")
 PARSED_DIR = os.path.join(REPORTS_DIR, "parsed")
 MANIFEST_FILE = os.path.join(REPORTS_DIR, "manifest.json")
+# داخل web/public چون Next.js هرچی اونجا باشه رو مستقیم و بدون هیچ API اضافه
+# از ریشه‌ی سایت سرو می‌کنه — همون کاری که برای عکس‌های داخل گزارش‌ها لازمه.
+IMAGES_OUT_DIR = os.path.join(BASE_DIR, "web", "public", "report-images")
+
+CONTENT_TYPE_EXT = {
+    "image/png": "png",
+    "image/jpeg": "jpg",
+    "image/jpg": "jpg",
+    "image/gif": "gif",
+    "image/bmp": "bmp",
+    "image/webp": "webp",
+}
 
 GEMINI_MODEL = "gemini-3.6-flash"
 
@@ -184,7 +196,39 @@ def slugify_id(filename: str, prefix: str) -> str:
     return f"{prefix}-{stem}"[:80]
 
 
-def build_detailed_report(path: str) -> dict:
+def _save_report_images(blocks: list[dict], report_id: str) -> None:
+    """
+    بلوک‌های نوع «image» رو (که extract_blocks بایت خامشون رو برگردونده) به
+    فایل واقعی زیر web/public/report-images/<report_id>/ ذخیره می‌کنه و
+    بلوک رو به {"type": "image", "src": "/report-images/..."} تبدیل می‌کنه —
+    چون بایت خام قابل json.dump نیست و نباید توی parsed/*.json بمونه.
+
+    پوشه‌ی قبلی این گزارش پاک می‌شه تا اجرای دوباره (با تعداد عکس متفاوت)
+    فایل قدیمیِ یتیم به‌جا نذاره.
+    """
+    has_images = any(b["type"] == "image" for b in blocks)
+    out_dir = os.path.join(IMAGES_OUT_DIR, report_id)
+    if os.path.exists(out_dir):
+        shutil.rmtree(out_dir)
+    if not has_images:
+        return
+    os.makedirs(out_dir, exist_ok=True)
+
+    counter = 0
+    for b in blocks:
+        if b["type"] != "image":
+            continue
+        counter += 1
+        ext = CONTENT_TYPE_EXT.get(b["content_type"], "png")
+        filename = f"img-{counter}.{ext}"
+        with open(os.path.join(out_dir, filename), "wb") as f:
+            f.write(b["bytes"])
+        b.clear()
+        b["type"] = "image"
+        b["src"] = f"/report-images/{report_id}/{filename}"
+
+
+def build_detailed_report(path: str, report_id: str) -> dict:
     blocks = extract_blocks(path)
     title = None
     if blocks and blocks[0]["type"] == "heading":
@@ -193,6 +237,7 @@ def build_detailed_report(path: str) -> dict:
         # بعضی اسناد با یک پاراگراف عنوان‌گونه شروع می‌شن نه heading واقعی؛
         # اگه کوتاه بود همون رو عنوان بگیر تا اسم فایل به‌عنوان عنوان نیفته.
         title = blocks.pop(0)["text"]
+    _save_report_images(blocks, report_id)
     return {"title": title, "blocks": blocks}
 
 
@@ -247,7 +292,7 @@ def main():
                 continue
             # قطعی و بدون AI‌ست، پس همیشه امن برای اجرای دوباره‌ست (فقط اگه
             # خود فایل docx عوض بشه چیزی تغییر می‌کنه).
-            parsed = build_detailed_report(src_path)
+            parsed = build_detailed_report(src_path, report_id)
             title = parsed["title"] or entry["file"]
         elif os.path.exists(parsed_path):
             # گزارش‌های خلاصه با Gemini غیرقطعی‌ان — اجرای دوباره ممکنه محتوای
