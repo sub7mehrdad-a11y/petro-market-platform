@@ -15,12 +15,26 @@
 # خواسته‌ی کاربر که این کلید فقط برای همین پروژه‌ست)، و همین که به سقف سهمیه‌ی
 # رایگان روزانه‌اش خورد، خودکار سوییچ به Gemini می‌کنه تا کار متوقف نشه.
 #
+# ۲۰۲۶-۰۹-۰۶: چون این وظیفه هر ۳ ساعت صدها درخواست به Gemini می‌زنه، ممکنه
+# سهمیه‌ی رایگان روزانه‌ی کلید مشترک GEMINI_API_KEY (که بقیه‌ی ربات‌های روزانه
+# هم بهش وابسته‌ن) رو تموم کنه — دقیقاً همون اتفاقی که برای Groq افتاد. اگه
+# GEMINI_API_KEY_EXHIBITOR (یک کلید رایگان دیگه از aistudio.google.com، فقط
+# برای همین وظیفه) رو هم اضافه کنی، اسکریپت خودش اون رو به کلید مشترک ترجیح
+# می‌ده. اگه اضافه نکنی، از همون کلید مشترک استفاده می‌شه (کار می‌کنه، فقط
+# ریسک اشتراک سهمیه داره).
+#
+# اگه همه‌ی موتورها هم‌زمان سهمیه‌شون تموم بشه، اسکریپت با کد خطا خارج می‌شه
+# (به‌جای این‌که ساکت هیچ‌کاری نکنه) تا این job در تب Actions با ✗ قرمز دیده
+# بشه، نه ✓ سبز گمراه‌کننده.
+#
 # قبل از استفاده باید:
 #   1. GEMINI_API_KEY از قبل به‌عنوان Secret ثبت شده (چون بقیه‌ی ربات‌های روزانه
 #      هم ازش استفاده می‌کنن) — نیازی به کار اضافه نیست.
 #   2. GROQ_API_KEY_EXHIBITOR رو یک‌بار در Settings > Secrets and variables >
 #      Actions اضافه کن (مقدارش همون کلید اختصاصی که برای این پروژه گرفتی).
-#   3. برای نمایشگاه جدید: از تب Actions با "Run workflow" آدرس/نام نمایشگاه رو
+#   3. (پیشنهادی) GEMINI_API_KEY_EXHIBITOR رو هم به همون شکل اضافه کن — یک
+#      کلید رایگان جدید و جدا، فقط برای این وظیفه.
+#   4. برای نمایشگاه جدید: از تب Actions با "Run workflow" آدرس/نام نمایشگاه رو
 #      عوض کن، یا مقادیر پیش‌فرض زیر رو ویرایش کن.
 
 name: Exhibitor Leads
@@ -60,6 +74,7 @@ jobs:
       - name: Run exhibitor lead finder
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_API_KEY_EXHIBITOR: ${{ secrets.GEMINI_API_KEY_EXHIBITOR }}
           GROQ_API_KEY_EXHIBITOR: ${{ secrets.GROQ_API_KEY_EXHIBITOR }}
           EXHIBITOR_XLSX_DIR: data/exhibition_leads/xlsx
         run: |
@@ -69,13 +84,30 @@ jobs:
             --engine auto \
             --deadline-minutes 320
 
+      # ۲۰۲۶-۰۹-۰۶: یک اجرا (run 16) کل کارش رو از دست داد چون بین شروع job و
+      # این مرحله، یک commit دیگه (از یک نشست دیگه‌ی کاربر روی همین مخزن) به
+      # main پوش شده بود و git push ساده رد شد. حالا قبل از push، تغییرات
+      # جدید main rebase می‌شن؛ اگه باز هم push رد بشه (رقابت لحظه‌ای)، چند بار
+      # دیگه با یک مکث کوتاه دوباره امتحان می‌شه.
       - name: Commit updated data files
         run: |
           git config user.name "exhibitor-leads-bot"
           git config user.email "actions@github.com"
           git add data/exhibition_leads/
-          git diff --quiet --cached || git commit -m "به‌روزرسانی لیست شرکت‌های نمایشگاهی"
-          git push
+          if git diff --quiet --cached; then
+            echo "چیزی برای commit نبود."
+            exit 0
+          fi
+          git commit -m "به‌روزرسانی لیست شرکت‌های نمایشگاهی"
+          for i in 1 2 3 4 5; do
+            git fetch origin main
+            git rebase origin/main && git push && exit 0
+            echo "push رد شد (تلاش $i) — کمی صبر و تلاش دوباره..."
+            git rebase --abort 2>/dev/null || true
+            sleep $((RANDOM % 15 + 5))
+          done
+          echo "بعد از چند تلاش هم push نشد."
+          exit 1
 
       - name: Upload xlsx as artifact
         uses: actions/upload-artifact@v4

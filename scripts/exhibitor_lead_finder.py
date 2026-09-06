@@ -171,7 +171,13 @@ def _build_groq_fn():
 
 
 def _build_gemini_fn():
-    api_key = os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")
+    # ترجیح با کلید اختصاصی این اسکریپت (اگه تنظیم شده باشه) — چون این وظیفه
+    # صدها درخواست در روز می‌زنه و سهمیه‌ی رایگان روزانه‌ی کلید مشترک GEMINI_API_KEY
+    # رو که بقیه‌ی ربات‌های روزانه (اخبار/قیمت/رقبا/گزارش هفتگی) هم بهش وابسته‌ن،
+    # می‌تونه تموم کنه — دقیقاً همون اتفاقی که برای Groq افتاد (۲۰۲۶-۰۹-۰۶).
+    api_key = (os.environ.get("GEMINI_API_KEY_EXHIBITOR")
+               or os.environ.get("GEMINI_API_KEY")
+               or os.environ.get("GOOGLE_API_KEY"))
     if not api_key:
         raise SystemExit("GEMINI_API_KEY تنظیم نشده است.")
     client = genai.Client(api_key=api_key)
@@ -627,8 +633,11 @@ def write_output_from_progress(out_path: str, event_name: str, source_url: str,
     return len(companies)
 
 
+CONSECUTIVE_FAILURE_LIMIT = 8  # این‌قدر بچ پشت‌سرهم خراب = چیزی سیستمی خرابه (مثلاً سهمیه)، ادامه بی‌فایده‌ست
+
+
 def llm_refine(items: list[dict], progress: dict, progress_path: str,
-               on_batch_done, generate_fn, deadline: float | None = None) -> None:
+               on_batch_done, generate_fn, deadline: float | None = None) -> tuple[int, int]:
     """
     زیرمجموعه‌ی از قبل غربال‌شده را دسته‌دسته به مدل زبانی (generate_fn) می‌دهد تا
     واقعاً تولیدکننده/بازرگان بودن و گرید دقیق را تأیید کند. نتیجه مستقیم در
@@ -643,6 +652,12 @@ def llm_refine(items: list[dict], progress: dict, progress_path: str,
 
     deadline: زمان یونیکس (time.time()) که اگه از آن گذشتیم، به‌جای کرش/قطع‌شدن
     ناگهانی (مثلاً با هارد‌تایم‌اوت CI)، تمیز و با آخرین checkpoint متوقف می‌شیم.
+
+    خروجی: (تعداد بچ موفق، تعداد بچ ناموفق) — تا main() بتونه تشخیص بده که آیا
+    این اجرا واقعاً کار کرده یا (مثلاً به‌خاطر تمام‌شدن سهمیه‌ی هر دو موتور) هیچ
+    پیشرفتی نداشته، و در اون صورت با کد خروج غیرصفر تمومش کنه تا در GitHub
+    Actions به‌جای ✓ سبز گمراه‌کننده، ✗ قرمز دیده بشه (دقیقاً همون اتفاقی که
+    ۲۰۲۶-۰۹-۰۶ چند ساعت بی‌سروصدا افتاد و متوجه نشدیم).
     """
     todo = [it for it in items if candidate_key(it) not in progress]
     print(f"  {len(items) - len(todo)} شرکت از اجرای قبلی در progress موجوده و رد می‌شه.")
@@ -669,6 +684,7 @@ def llm_refine(items: list[dict], progress: dict, progress_path: str,
 
     total_batches = (len(with_desc) + LLM_BATCH_SIZE - 1) // LLM_BATCH_SIZE
     order_base = len(progress)
+    ok_count, fail_count, consecutive_fails = 0, 0, 0
 
     for b in range(total_batches):
         if deadline and time.time() > deadline:
@@ -691,9 +707,17 @@ def llm_refine(items: list[dict], progress: dict, progress_path: str,
             verdicts = extract_json_array(raw)
             by_index = {v.get("index"): v for v in verdicts if isinstance(v, dict)}
         except Exception as e:  # noqa: BLE001 — یک بچ خراب نباید کل اجرا را متوقف کند
+            fail_count += 1
+            consecutive_fails += 1
             print(f"  [WARN] بچ {b + 1}/{total_batches} با خطا رد شد (بعداً دوباره تلاش می‌شه): {e}")
+            if consecutive_fails >= CONSECUTIVE_FAILURE_LIMIT:
+                print(f"  [ERROR] {consecutive_fails} بچ پشت‌سرهم خراب شدن — احتمالاً سهمیه‌ی "
+                      "هر دو موتور تمام شده یا مشکل دیگه‌ای سیستمیه؛ ادامه‌دادن بی‌فایده‌ست.")
+                break
             continue
 
+        consecutive_fails = 0
+        ok_count += 1
         kept = 0
         for i, it in enumerate(batch):
             verdict = by_index.get(i) or {}
@@ -713,6 +737,8 @@ def llm_refine(items: list[dict], progress: dict, progress_path: str,
         total_so_far = on_batch_done()
         print(f"  [OK] بچ {b + 1}/{total_batches}: {kept}/{len(batch)} تأیید شد "
               f"(مجموع مرتبط تا الان: {total_so_far})")
+
+    return ok_count, fail_count
 
 
 def main():
@@ -785,8 +811,16 @@ def main():
     else:
         print(f"[4/5] تأیید نهایی با {args.engine} روی {len(candidates)} شرکت (دسته‌ای، هر دسته {LLM_BATCH_SIZE} تا)")
         generate_fn = make_generate_fn(args.engine)
-        llm_refine(candidates, progress, progress_path, on_batch_done=flush_output,
-                   generate_fn=generate_fn, deadline=deadline)
+        ok_batches, fail_batches = llm_refine(
+            candidates, progress, progress_path, on_batch_done=flush_output,
+            generate_fn=generate_fn, deadline=deadline,
+        )
+        if ok_batches == 0 and fail_batches > 0:
+            flush_output()
+            print(f"\n[FATAL] {fail_batches} بچ امتحان شد و همه رد شدن — احتمالاً سهمیه‌ی هر دو موتور "
+                  "(Groq اختصاصی + Gemini) تمام شده. با کد خطا خارج می‌شم تا در GitHub Actions "
+                  "به‌جای ✓ سبز گمراه‌کننده، ✗ قرمز دیده بشه.")
+            sys.exit(1)
 
     total_relevant = flush_output()
     print(f"  {total_relevant} شرکت مرتبط تا الان (از {len(progress)} پردازش‌شده از {len(candidates)})")
