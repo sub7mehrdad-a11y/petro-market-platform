@@ -1,10 +1,10 @@
 {
   "event_name": "Gulfood 2026",
   "source_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor",
-  "fetched_at": "2026-09-05T22:47:19.536079+00:00",
+  "fetched_at": "2026-09-06T02:47:31.032570+00:00",
   "total_candidates_after_rules": 2532,
-  "total_relevant": 1612,
-  "total_processed": 1786,
+  "total_relevant": 1627,
+  "total_processed": 1801,
   "companies": [
     {
       "name": "Al-Dua Food Processing Pvt. Limited",
@@ -41126,6 +41126,397 @@
       "id": "gulfood-2026-1555"
     },
     {
+      "name": "Nustar Global FZCO",
+      "stand": "Stand No- B6-40, Hall 6",
+      "country": "United Arab Emirates",
+      "description": "NuStar, a Dubai-based HSA subsidiary, distributes diverse FMCG products across global markets. Its portfolio includes biscuits, dairy, canned food, detergents, and more. Backed by certified factories and a skilled team, NuStar ens ...",
+      "categories": [
+        "Snacks",
+        "Bakery, Cakes & Desserts",
+        "Dry Goods",
+        "Dairy",
+        "Beverages",
+        "Savoury snacks",
+        "Salty Snacks",
+        "Finger Food",
+        "Coffee",
+        "Cakes / Dessert"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nustar-global-fzco",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – توزیع و بازرگانی (FMCG)",
+      "llm_reason": "توزیع‌کننده محصولات مختلف FMCG و مواد غذایی است و می‌تواند جوش شیرین را به سبد کالایی خود اضافه کند.",
+      "website": "https://nustarglobal.com",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1556"
+    },
+    {
+      "name": "NuTaste",
+      "stand": "Stand No- PD43, PD58, The Pavilion",
+      "country": "India",
+      "description": "NuTaste is an advanced food-tech company enabling brand owners with fully customized innovation solutions, including nutritional, functional and therapeutic foods, besides scalable food-service solutions. NuTaste bridges food scie ...",
+      "categories": [
+        "Specialty Food",
+        "Snacks",
+        "Professional Services",
+        "Bakery, Cakes & Desserts",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Dairy",
+        "Condiments & Sauces",
+        "Beverages"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nutaste",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی و دارویی – نانوایی و فرآورده‌های عملکردی",
+      "llm_reason": "توسعه‌دهنده و تولیدکننده فرمولاسیون‌های تخصصی غذایی، نانوایی و مکمل است.",
+      "website": "https://nutaste-group.com",
+      "email": "connect@nutaste-group.com",
+      "whatsapp": "+911242378550",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1557"
+    },
+    {
+      "name": "Nutricircle Limited",
+      "stand": "Stand No- N1-C14, North Hall 1",
+      "country": "India",
+      "description": "NutriCircle harnesses the power of Indian agriculture to address India’s protein and nutrition gap through science-led, sustainable plant proteins. By partnering closely with farmers and Farmer Producer Organization ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Fortified Foods & Health Products",
+        "Sorghum",
+        "Rice",
+        "Millet",
+        "Brown Rice",
+        "Health & Wellness Products",
+        "Fortified & Functional Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nutricircle-limited",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – پروتئین‌های گیاهی و فرآوری غلات",
+      "llm_reason": "تولیدکننده پروتئین‌های گیاهی و غلات غنی‌شده است که در فرآیند تولید به جوش شیرین نیاز دارد.",
+      "website": "https://www.nuticircle.in",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
+      "contact_checked": true,
+      "id": "gulfood-2026-1558"
+    },
+    {
+      "name": "Nutridar",
+      "stand": "Stand No- 53-100, South Hall 9",
+      "country": "Jordan",
+      "description": "Nutridar Company, established more than 30 years ago and headquartered in Amman, Jordan, is a leading player in the infant food market. Nutridar offers a wide portfolio of products, including infant and baby milks, in ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Private Label",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dairy",
+        "Dried Milk Products",
+        "Wheat",
+        "Rice",
+        "Oats",
+        "Sugar-free Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nutridar",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی و دارویی – غذای کودک و لبنیات",
+      "llm_reason": "تولیدکننده غذای کودک، محصولات لبنی و غذای غنی‌شده است.",
+      "website": "https://www.nutridar.com",
+      "email": "20Info@nutridar.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1559"
+    },
+    {
+      "name": "Nutrify Health Foods",
+      "stand": "Stand No- N1-D51, North Hall 1",
+      "country": "India",
+      "description": "We, \"Nutrify Health Foods,\" are a leading Manufacturer & Exporter of Peanut Butter & Peanuts located in Gujarat, India. We have invested in the latest technology & state-of-the-art facility to manufacture top-quality peanut butter ...",
+      "categories": [
+        "Private Label",
+        "Spreads, Honey & Jams",
+        "Fortified Foods & Health Products",
+        "Health & Wellness Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nutrify-health-foods",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع غذایی و اسنک",
+      "llm_reason": "تولیدکننده و صادرکننده کره بادام‌زمینی و محصولات غذایی سلامت‌محور است.",
+      "website": "https://www.nutrifyhealthfoods.com",
+      "email": "info@nutrifyhealthfoods.com",
+      "whatsapp": "919978114536",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1560"
+    },
+    {
+      "name": "NUTRILATINO ACAI LTDA",
+      "stand": "Stand No- 27-26, South Hall 4",
+      "country": "Brazil",
+      "description": "Nutrilatino is a premium açaí processor from Pará, Brazil, delivering 100% natural, organic, NON-GMO pulp and powders. Rooted in Amazon rainforest tradition, our products combine authentic flavor, nutrients, and food-safety sta ...",
+      "categories": [
+        "Specialty Food",
+        "Private Label",
+        "Organic Products",
+        "Halal and Kosher Food",
+        "Frozen Food",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Beverages",
+        "Ready-to-Eat"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nutrilatino-acai-ltda",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – فرآوری پودر و عصاره‌های میوه‌ای",
+      "llm_reason": "فرآوری‌کننده پودر و پوره آسا‌ئی برای صنایع غذایی و نوشیدنی است.",
+      "website": "https://nutrilatino.com.br/english/",
+      "email": "export@nutrilatino.com.br",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1561"
+    },
+    {
+      "name": "Nutririon from Water (NXW",
+      "stand": "Stand No- PD78, The Pavilion",
+      "country": "Portugal",
+      "description": "Nutrition from Water (NXW) is a global nutrition technology company in partnership with global food corporations to delivery affordable, complete, non GMO and future-proof nutrition. We use wild-type microalgae organisms fr ...",
+      "categories": [
+        "Technology",
+        "Private Label",
+        "Organic Products",
+        "Bakery, Cakes & Desserts",
+        "Government/Associations",
+        "Frozen Food",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dairy",
+        "Condiments & Sauces"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nutririon-from-water-nxw",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و محصولات غذایی غنی‌شده",
+      "llm_reason": "تولیدکننده و توسعه‌دهنده محصولات غذایی پایه آبی و نانوایی با فناوری‌های تغذیه‌ای است.",
+      "website": "https://www.nutritionfromwater.com",
+      "email": "user@domain.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1562"
+    },
+    {
+      "name": "Nutritius",
+      "stand": "Stand No- DG-130, North Hall 13",
+      "country": "India",
+      "description": "Nutritius brings India’s traditional peanut snacks to the world. With over 10 years of expertise, we craft premium Peanut Bars, and innovative Peanut Butter & Protein Bars. Blending authentic taste with global standards, Nutriti ...",
+      "categories": [
+        "Snacks",
+        "Fortified Foods & Health Products",
+        "Free-From Products",
+        "Healthy snacks",
+        "Sugar-free Products",
+        "Health & Wellness Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nutritius",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – اسنک و شیرینی‌جات",
+      "llm_reason": "تولیدکننده اسنک‌های سلامت‌محور و بارهای پروتئینی است.",
+      "website": "https://nutritius.com",
+      "email": "info@nutritius.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1563"
+    },
+    {
+      "name": "Nutriverse Organic Products Private Limited",
+      "stand": "Stand No- N1-G32, North Hall 1",
+      "country": "India",
+      "description": "Nutriverse is a healthy snacking company focused on building trust through ingredient integrity and transparency. We develop premium value added makhana  snacks and cookies, functional foods, and modern pantry essentials using tho ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Snacks",
+        "Private Label",
+        "Organic Products",
+        "Bakery, Cakes & Desserts",
+        "Free-From Products",
+        "Dry Goods",
+        "Beverages",
+        "Nuts",
+        "Healthy snacks"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nutriverse-organic-products-private-limited",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و اسنک",
+      "llm_reason": "تولیدکننده اسنک‌های ارزش‌افزوده و محصولات نانوایی است.",
+      "website": "https://thenutriverse.in",
+      "email": "contact@thenutriverse.in",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1564"
+    },
+    {
+      "name": "NUTTY POP",
+      "stand": "Stand No- 7-91, South Hall 1",
+      "country": "France",
+      "description": "Nutty Pop, c’est la rencontre entre le savoir-faire chocolatier français et une nouvelle vision du snacking gourmand. Fabriquée en Île-de-France, chaque recette est imaginée et réalisée dans notre atelier français,  ...",
+      "categories": [
+        "Spreads, Honey & Jams",
+        "Snacks",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Dry Goods",
+        "Popcorn",
+        "Nuts",
+        "Healthy snacks",
+        "Dried Fruit & Vegetables",
+        "Dried Fruits"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nutty-pop",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – شکلات و نانوایی/قنادی",
+      "llm_reason": "تولیدکننده شکلات، اسنک‌های حجیم‌شده و فرآورده‌های قنادی و نانوایی است.",
+      "website": "https://www.instagram.com/nuttypop_france/",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1565"
+    },
+    {
+      "name": "O's Bubble",
+      "stand": "Stand No- Z4-A36, Za'abeel Hall 4",
+      "country": "Taiwan Province, People’s Republic of China",
+      "description": "At O’s Bubble, we bring you the best of Taiwan’s bubble tea culture, offering a range of products that are as innovative as they are authentic. Whether you're enjoying our frozen boba or sipping our ready-to-drink bever ...",
+      "categories": [
+        "Halal and Kosher Food",
+        "Fortified Foods & Health Products",
+        "Beverages",
+        "Frozen Food",
+        "Frozen Ready Meals",
+        "Fortified & Functional Products",
+        "Tea",
+        "Non-alcoholic Beverages",
+        "Instant Beverages"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/os-bubble",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نوشیدنی‌ها و غذاهای منجمد",
+      "llm_reason": "تولیدکننده نوشیدنی‌های بابل‌تی و فرآورده‌های غذایی منجمد است.",
+      "website": "https://www.osbubble.com/",
+      "email": "aec31088a6fb4f6eafac028a91e1cf21@o769852.ingest.sentry.io",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1566"
+    },
+    {
+      "name": "Oakbridge B.V",
+      "stand": "Stand No- 6-72, South Hall 1",
+      "country": "Netherlands",
+      "description": "Oakbridge specialises in the export, marketing, and brand development of food and personal care products. We bring UK, USA, and EU brands to Middle Eastern and North African markets, offering a smooth process from production to ma ...",
+      "categories": [
+        "Private Label",
+        "Meat, Poultry & Seafood",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Frozen Food",
+        "Condiments & Sauces",
+        "Processed Meat",
+        "Frozen Meat",
+        "Baked Goods"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/oakbridge-b-v",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – توزیع و بازرگانی مواد غذایی",
+      "llm_reason": "شرکت بازرگانی و صادرکننده برندهای غذایی است که می‌تواند جوش شیرین را به خاورمیانه توزیع کند.",
+      "website": "https://oakbridge.nl/",
+      "email": "admin@oakbridgeuk.com",
+      "whatsapp": "0031882054000",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1567"
+    },
+    {
+      "name": "OBOLON",
+      "stand": "Stand No- 3-26, South Hall 1",
+      "country": "Ukraine",
+      "description": "PrJSC “OBOLON” is one of the largest and most well-known manufacturers and suppliers of beverages in Ukraine. Our company offers a wide variety of premium-quality products, including malt drinks, alcohol-free beer, energy drin ...",
+      "categories": [
+        "Beverages",
+        "Non-alcoholic Beverages",
+        "Flavoured Water",
+        "Energy Drinks",
+        "Carbonated Soft Drinks",
+        "Bottled Water"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/obolon",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نوشابه‌سازی و نوشیدنی‌های گازدار",
+      "llm_reason": "تولیدکننده بزرگ نوشیدنی‌های گازدار و غیرالکلی است که از جوش شیرین در فرمولاسیون استفاده می‌کند.",
+      "website": "https://obolon.ua/en",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
+      "contact_checked": true,
+      "id": "gulfood-2026-1568"
+    },
+    {
+      "name": "Obourland for food industries",
+      "stand": "Stand No- M-C14, Shk Maktoum Hall",
+      "country": "Egypt",
+      "description": "leading white cheese producer, a traditional and highly consumed staple good, offering 107 SKUs The Company operates 17 Tetra Pak production lines in addition to one plastic tub line with a combined production capacity of  ...",
+      "categories": [
+        "Beverages",
+        "Dairy",
+        "Milk",
+        "Cheese",
+        "Juices & Nectars"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/obourland-for-food-industries",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع لبنی و آبمیوه",
+      "llm_reason": "تولیدکننده فرآورده‌های لبنی و آبمیوه است که برای تنظیم pH و فرآوری به جوش شیرین نیاز دارد.",
+      "website": "https://WWW.OBOURLAND.COM",
+      "email": "HR@obourland.com",
+      "whatsapp": "+201211318889",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1569"
+    },
+    {
+      "name": "OCARD",
+      "stand": "Stand No- 35-10, South Hall 6",
+      "country": "Uzbekistan",
+      "description": "OCARD LLC is a company specializing in the production of high-quality natural drinking water under brands OCARD, BLANC BLEU, KARLOY VARY. A German engineering company worked on the project to develop a unique water bottling techno ...",
+      "categories": [
+        "Beverages",
+        "Non-alcoholic Beverages",
+        "Carbonated Soft Drinks",
+        "Bottled Water"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/ocard",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نوشیدنی و فرآوری آب",
+      "llm_reason": "تولیدکننده آب آشامیدنی و نوشیدنی‌های گازدار است که در فرآیند معدنی‌سازی و گازدار کردن از جوش شیرین استفاده می‌کند.",
+      "website": "https://ocard.eu/",
+      "email": "Info@ocard.eu",
+      "whatsapp": "+998 (71) 209-11-00",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1570"
+    },
+    {
       "name": "PEP Cocotine",
       "stand": "Stand No- 9-72, South Hall 1",
       "country": "France",
@@ -41151,7 +41542,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1556"
+      "id": "gulfood-2026-1571"
     },
     {
       "name": "PERAK DUCK FOOD INDUSTRIES SDN BHD",
@@ -41172,7 +41563,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1557"
+      "id": "gulfood-2026-1572"
     },
     {
       "name": "Petra Food",
@@ -41200,7 +41591,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1558"
+      "id": "gulfood-2026-1573"
     },
     {
       "name": "Petra Molino Quaglia",
@@ -41228,7 +41619,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1559"
+      "id": "gulfood-2026-1574"
     },
     {
       "name": "Petros Tsaglis S.A",
@@ -41255,7 +41646,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1560"
+      "id": "gulfood-2026-1575"
     },
     {
       "name": "Petrou Bros Dairy Products Ltd",
@@ -41277,7 +41668,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1561"
+      "id": "gulfood-2026-1576"
     },
     {
       "name": "PG LEAN HWA TRADING SDN BHD",
@@ -41304,7 +41695,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1562"
+      "id": "gulfood-2026-1577"
     },
     {
       "name": "Philippine Grocers Food Exports, Inc",
@@ -41332,7 +41723,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1563"
+      "id": "gulfood-2026-1578"
     },
     {
       "name": "Philpot Dairy Products Ltd",
@@ -41356,7 +41747,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1564"
+      "id": "gulfood-2026-1579"
     },
     {
       "name": "Phoenix Afrique Distribution Suarl",
@@ -41378,7 +41769,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1565"
+      "id": "gulfood-2026-1580"
     },
     {
       "name": "Phytokana Ingredients Inc",
@@ -41406,7 +41797,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1566"
+      "id": "gulfood-2026-1581"
     },
     {
       "name": "Piedmont Cookies",
@@ -41426,7 +41817,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1567"
+      "id": "gulfood-2026-1582"
     },
     {
       "name": "Pieno Zvaigzdes, SC",
@@ -41451,7 +41842,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1568"
+      "id": "gulfood-2026-1583"
     },
     {
       "name": "PINAR",
@@ -41479,7 +41870,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1569"
+      "id": "gulfood-2026-1584"
     },
     {
       "name": "PINGYI HONGRUI INTERNATIONAL TRADE CO., LTD",
@@ -41504,7 +41895,7 @@
       "whatsapp": null,
       "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1570"
+      "id": "gulfood-2026-1585"
     },
     {
       "name": "Pooja Dehy Foods Pvt Ltd",
@@ -41532,7 +41923,7 @@
       "whatsapp": "+919227979440",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1571"
+      "id": "gulfood-2026-1586"
     },
     {
       "name": "Pop Argentina",
@@ -41560,7 +41951,7 @@
       "whatsapp": "5492474665066",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1572"
+      "id": "gulfood-2026-1587"
     },
     {
       "name": "Popat Raja & Sons",
@@ -41586,7 +41977,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1573"
+      "id": "gulfood-2026-1588"
     },
     {
       "name": "Port Said Co. for food industries - Riyada",
@@ -41608,7 +41999,7 @@
       "whatsapp": "+20663772070",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1574"
+      "id": "gulfood-2026-1589"
     },
     {
       "name": "Posca Hydrate",
@@ -41629,7 +42020,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1575"
+      "id": "gulfood-2026-1590"
     },
     {
       "name": "POTUS Middle East DMCC",
@@ -41651,7 +42042,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1576"
+      "id": "gulfood-2026-1591"
     },
     {
       "name": "Prairie Halal Foods",
@@ -41679,7 +42070,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1577"
+      "id": "gulfood-2026-1592"
     },
     {
       "name": "Pran Beverages (India) Private Limited",
@@ -41707,7 +42098,7 @@
       "whatsapp": "1800-121-4899",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1578"
+      "id": "gulfood-2026-1593"
     },
     {
       "name": "PRAN FOODS LIMITED",
@@ -41735,7 +42126,7 @@
       "whatsapp": "+88-09613 090909",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1579"
+      "id": "gulfood-2026-1594"
     },
     {
       "name": "PRATO FOODSTUFF TRADING LLC",
@@ -41763,7 +42154,7 @@
       "whatsapp": "971582393228",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1580"
+      "id": "gulfood-2026-1595"
     },
     {
       "name": "PreGel S.p.a",
@@ -41791,7 +42182,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1581"
+      "id": "gulfood-2026-1596"
     },
     {
       "name": "Prestige 96 AD",
@@ -41817,7 +42208,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1582"
+      "id": "gulfood-2026-1597"
     },
     {
       "name": "Prestige Maple Products Inc",
@@ -41845,7 +42236,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1583"
+      "id": "gulfood-2026-1598"
     },
     {
       "name": "Shmoh AlMadi Company",
@@ -41873,7 +42264,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1584"
+      "id": "gulfood-2026-1599"
     },
     {
       "name": "Showyou Co., Ltd",
@@ -41901,7 +42292,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1585"
+      "id": "gulfood-2026-1600"
     },
     {
       "name": "Shree Radhe Dairy Farm & Foods",
@@ -41929,7 +42320,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1586"
+      "id": "gulfood-2026-1601"
     },
     {
       "name": "Shree Sai Trading Ltd",
@@ -41957,7 +42348,7 @@
       "whatsapp": "447735459186",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1587"
+      "id": "gulfood-2026-1602"
     },
     {
       "name": "Shri Global Foods",
@@ -41985,7 +42376,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1588"
+      "id": "gulfood-2026-1603"
     },
     {
       "name": "Shri Hari Industries",
@@ -42013,7 +42404,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1589"
+      "id": "gulfood-2026-1604"
     },
     {
       "name": "Siafa International Manufacturing Company",
@@ -42041,7 +42432,7 @@
       "whatsapp": "+966535501210",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1590"
+      "id": "gulfood-2026-1605"
     },
     {
       "name": "Sibonne Food Stuff IND LLC",
@@ -42069,7 +42460,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1591"
+      "id": "gulfood-2026-1606"
     },
     {
       "name": "SICHUAN HUASHI TECHNOLOGY CO.,LTD",
@@ -42090,7 +42481,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1592"
+      "id": "gulfood-2026-1607"
     },
     {
       "name": "SICHUAN PROVINCE HUIQUAN CANNED FOOD CO.,LTD",
@@ -42110,7 +42501,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1593"
+      "id": "gulfood-2026-1608"
     },
     {
       "name": "Sichuan Yijiahe International Trade Co.,Ltd",
@@ -42138,7 +42529,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1594"
+      "id": "gulfood-2026-1609"
     },
     {
       "name": "Siciliani S.p.A",
@@ -42161,7 +42552,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1595"
+      "id": "gulfood-2026-1610"
     },
     {
       "name": "Sidco Foods Trading LLC",
@@ -42189,7 +42580,7 @@
       "whatsapp": "97142642247",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1596"
+      "id": "gulfood-2026-1611"
     },
     {
       "name": "Siddhalepa Exports (Pvt) Ltd",
@@ -42209,7 +42600,7 @@
       "whatsapp": "94777256373",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1597"
+      "id": "gulfood-2026-1612"
     },
     {
       "name": "Sierolat S.P.A",
@@ -42237,7 +42628,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1598"
+      "id": "gulfood-2026-1613"
     },
     {
       "name": "User Food And Products Company",
@@ -42265,7 +42656,7 @@
       "whatsapp": "+905368770045",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1599"
+      "id": "gulfood-2026-1614"
     },
     {
       "name": "UVR Natural Foods Pvt. Ltd",
@@ -42293,7 +42684,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1600"
+      "id": "gulfood-2026-1615"
     },
     {
       "name": "V&V Walsh",
@@ -42320,7 +42711,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1601"
+      "id": "gulfood-2026-1616"
     },
     {
       "name": "V.D.B. Frozen Food Production",
@@ -42347,7 +42738,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1602"
+      "id": "gulfood-2026-1617"
     },
     {
       "name": "Valio Eesti AS",
@@ -42367,7 +42758,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1603"
+      "id": "gulfood-2026-1618"
     },
     {
       "name": "Vamin Tatarstan",
@@ -42388,7 +42779,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1604"
+      "id": "gulfood-2026-1619"
     },
     {
       "name": "Van Breukelen Kaas B.V",
@@ -42410,7 +42801,7 @@
       "whatsapp": "+31348420139",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1605"
+      "id": "gulfood-2026-1620"
     },
     {
       "name": "van Dyk's by Nature",
@@ -42438,7 +42829,7 @@
       "whatsapp": "+1902-542-4405",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1606"
+      "id": "gulfood-2026-1621"
     },
     {
       "name": "Van Pur / Q-Bev",
@@ -42464,7 +42855,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1607"
+      "id": "gulfood-2026-1622"
     },
     {
       "name": "Vandemoortele Europe NV",
@@ -42487,7 +42878,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1608"
+      "id": "gulfood-2026-1623"
     },
     {
       "name": "Vandersterre Holland B.V",
@@ -42508,7 +42899,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1609"
+      "id": "gulfood-2026-1624"
     },
     {
       "name": "VanDrie Group",
@@ -42534,7 +42925,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1610"
+      "id": "gulfood-2026-1625"
     },
     {
       "name": "VARA FOOD & DRINK CO., LTD",
@@ -42559,7 +42950,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1611"
+      "id": "gulfood-2026-1626"
     },
     {
       "name": "VATSAK",
@@ -42582,7 +42973,7 @@
       "whatsapp": "+380673005752",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1612"
+      "id": "gulfood-2026-1627"
     }
   ]
 }
