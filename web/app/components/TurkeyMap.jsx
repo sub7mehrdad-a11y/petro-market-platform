@@ -1,12 +1,17 @@
 import { TURKEY_VIEWBOX, TURKEY_PATHS, projectTurkey } from "@/lib/turkeyGeo";
 import { CHINA_VIEWBOX, CHINA_PATHS, projectChina } from "@/lib/chinaGeo";
+import { RUSSIA_VIEWBOX, RUSSIA_PATH, projectRussia } from "@/lib/russiaGeo";
 import { GENERIC_VIEWBOX, computeAutoBounds, projectGeneric } from "@/lib/genericGeo";
 
 // کشورهایی که مرز واقعی از‌قبل‌ترسیم‌شده دارن (نه fallback عمومی). برای اضافه
 // کردن کشور بعدی: مثل web/lib/chinaGeo.js یک فایل geo جدید بساز و اینجا اضافه‌ش کن.
+// روسیه چون تا خط تاریخ (۱۸۰ درجه) کشیده می‌شه، به‌جای یک چندضلعیِ بسته‌ی
+// کامل، فقط مرز غربی/جنوبی (همون بخشی که همه‌ی نشانگرها توش هستن) به‌صورت یک
+// خط باز (strokeOnly، بدون پرکردن داخلش) رسم می‌شه.
 const REAL_BORDER_GEO = {
   turkey: { viewBox: TURKEY_VIEWBOX, paths: TURKEY_PATHS, project: projectTurkey },
   china: { viewBox: CHINA_VIEWBOX, paths: CHINA_PATHS, project: projectChina },
+  russia: { viewBox: RUSSIA_VIEWBOX, paths: [RUSSIA_PATH], project: projectRussia, strokeOnly: true },
 };
 
 const LAYERS = [
@@ -55,25 +60,33 @@ export default function TurkeyMap({ map, countryId }) {
     })
   );
 
+  const [, , vbWidth, vbHeight] = viewBox.split(" ").map(Number);
+
   return (
     <div>
       <div className="rounded-xl border border-petrol-100 bg-petrol-50/60 overflow-hidden">
         <svg viewBox={viewBox} className="w-full h-auto" role="img"
              aria-label="نقشه‌ی شماتیک با موقعیت کارخانه‌های جوش شیرین، بنادر خروجی و گذرگاه‌های مرزی صادراتی">
-          {geo
-            ? geo.paths.map((d, i) => (
-                <path key={i} d={d} fill="#ffffff" stroke="#7FA3A9" strokeWidth="1.5"
-                      strokeLinejoin="round" />
-              ))
-            : (
-                // برخلاف مسیر مرز واقعی (که فقط خودِ خشکی رو سفید می‌کنه و
-                // پس‌زمینه‌ی رنگی اطرافش معلوم می‌مونه)، این fallback رو یک
-                // مستطیل تمام‌قد می‌پوشونه — قبلاً این مستطیل سفید بود و کل
-                // پس‌زمینه‌ی رنگی نقشه رو زیرش قایم می‌کرد، پس عملاً یک جعبه‌ی
-                // خالی سفید دیده می‌شد، نه نقشه.
-                <rect x="0" y="0" width="1000" height="560" fill="#EAF4F4" stroke="#7FA3A9"
-                      strokeWidth="2" rx="12" />
-              )}
+          {/* زمینه‌ی «دریا/بوم» همیشه اول رسم می‌شه — قبلاً برای کشورهای بدون
+              مرز واقعی، یک مستطیل تمام‌قدِ سفید همین نقش رو داشت و چون رنگش
+              با پس‌زمینه‌ی صفحه یکی بود، عملاً نامرئی می‌شد (اصل گزارش‌شده‌ی
+              «نقشه نمایش داده نمی‌شه»). یک رنگ روشن مشخص (#EAF4F4) این مشکل
+              رو حل می‌کنه، هم برای fallback عمومی هم زیر مرزهای واقعی/نیمه‌واقعی. */}
+          <rect x="0" y="0" width={vbWidth} height={vbHeight} fill="#EAF4F4" stroke="#7FA3A9"
+                strokeWidth="2" rx="12" />
+
+          {geo &&
+            geo.paths.map((d, i) => (
+              <path
+                key={i}
+                d={d}
+                fill={geo.strokeOnly ? "none" : "#ffffff"}
+                stroke="#7FA3A9"
+                strokeWidth={geo.strokeOnly ? 2.5 : 1.5}
+                strokeLinejoin="round"
+                strokeLinecap="round"
+              />
+            ))}
 
           {points.map((p, i) => (
             <g key={i}>
