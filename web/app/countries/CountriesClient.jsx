@@ -132,25 +132,19 @@ export default function CountriesClient({ countries }) {
               نسخه‌ی قبلی پرچم رو تمام‌قد پس‌زمینه‌ی کادر می‌کرد — برای پرچم‌های
               راه‌راه‌افقی (مثل روسیه) یا برش می‌خورد (cover) یا توی یک فضای
               تیره‌ی نیمه‌خالی شناور می‌موند (contain)، هیچ‌کدوم شیک نبود. حالا
-              پرچم فقط یک چیپ کوچیک با نسبت واقعی خودشه، کنار اسم؛ پس‌زمینه‌ی
-              کادر یک گرادیان ثابت و تمیزه که به‌جای هر کشور فرق نمی‌کنه.
+              پرچم یک چیپ با نسبت واقعی خودشه، ثابت روی سمت چپِ فیزیکیِ کادر
+              (نه سمت منطقی/start که توی RTL می‌شد راست) و روبه‌روی اسم؛
+              پس‌زمینه‌ی کادر یک گرادیان ثابت و تمیزه که به‌جای هر کشور فرق نمی‌کنه.
             */}
             <div
-              className="relative h-20 flex items-center gap-2.5 p-3 overflow-hidden"
+              className="relative h-20 flex items-center p-3 overflow-hidden"
               style={{ backgroundImage: "linear-gradient(135deg, #123742, #0B2027)" }}
             >
               <div
                 className="pointer-events-none absolute -top-8 -start-8 h-24 w-24 rounded-full opacity-40"
                 style={{ background: "radial-gradient(circle, rgba(201,118,46,.35), transparent 70%)" }}
               />
-              {c.trade?.iso2 && (
-                <img
-                  src={`https://flagcdn.com/w80/${c.trade.iso2}.png`}
-                  alt=""
-                  className="relative z-10 h-8 w-11 rounded-md object-cover ring-1 ring-white/25 shadow-md shrink-0"
-                />
-              )}
-              <div className="relative z-10 min-w-0 flex items-center gap-1.5 flex-wrap">
+              <div className="relative z-10 min-w-0 flex-1 flex items-center gap-1.5 flex-wrap pl-20">
                 <h2 className="font-bold text-white text-sm drop-shadow truncate">{c.name}</h2>
                 {c.hasProfile && (
                   <span className="text-[9px] bg-copper-500 text-white rounded-full px-1.5 py-0.5 font-bold shrink-0">
@@ -158,6 +152,13 @@ export default function CountriesClient({ countries }) {
                   </span>
                 )}
               </div>
+              {c.trade?.iso2 && (
+                <img
+                  src={`https://flagcdn.com/w160/${c.trade.iso2}.png`}
+                  alt=""
+                  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 h-14 w-20 rounded-md object-cover ring-1 ring-white/25 shadow-md shrink-0"
+                />
+              )}
             </div>
 
             <div className="p-3 space-y-3">
