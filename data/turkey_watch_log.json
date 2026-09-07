@@ -1015,5 +1015,49 @@
         "url": "https://www.dailysabah.com/business"
       }
     ]
+  },
+  {
+    "date": "2026-09-07",
+    "generated_at": "2026-09-07T10:37:02.625403+00:00",
+    "headline_fa": "هدف‌گذاری صنعت لوجستیک ترکیه برای بازار ۲۰۰ میلیارد دلاری و ثبات وضعیت رقبا",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "برنامه‌ریزی ترکیه برای ورود به ۱۰ کشور برتر لوجستیک جهان",
+        "summary": "انجمن حمل‌ونقل و خدمات لوجستیک ترکیه (UTİKAD) در همایش ۲۰۲۵ اعلام کرد که قصد دارد با استراتژی‌های مبتنی بر فناوری و نوآوری، حجم بازار لوجستیک کشور را به ۲۰۰ میلیارد دلار برساند.",
+        "source_url": "https://www.utikad.org.tr/en"
+      }
+    ],
+    "market_note": "امروز هیچ خبر یا اطلاعیه رسمی جدیدی مبنی بر تغییر ظرفیت، تغییر قیمت، سرمایه‌گذاری یا گزارش مالی از سوی تولیدکنندگان اصلی جوش شیرین ترکیه (اتی‌سودا، کازان‌سودا و سودا سانایی) در صفحات بررسی‌شده منتشر نشده است. تنها خبر مرتبط، برنامه‌های کلان ترکیه برای توسعه صنعت لوجستیک تا سقف ۲۰۰ میلیارد دلار است. با توجه به عدم بروز تغییرات در بازار رقیب، توصیه می‌شود شرکت سپهران شیمی قیمت مرجع ۲۵۰ دلار بر تن خود را حفظ کرده و بدون نیاز به اقدام شتاب‌زده، روی پایش مداوم هزینه‌های حمل‌ونقل مرزی با عراق تمرکز کند.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTİKAD",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hurriyet Daily News",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
