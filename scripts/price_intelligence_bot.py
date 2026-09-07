@@ -56,10 +56,21 @@ SEED_SOURCES = [
     "https://tradingeconomics.com/commodity/soda-ash",  # سودا اش - قیمت داخلی چین + روند
     "https://www.chemanalyst.com/Pricing-data/soda-ash-76",  # سودا اش - snapshot منطقه‌ای رایگان (FAQ)
     "https://www.procurementresource.com/resource-center/soda-ash-price-trends",  # سودا اش - FOB چین + CIF هند/آمریکا/برزیل/کانادا
+    # --- منابع قیمت روسیه (اضافه‌شده ۲۰۲۶-۰۹-۰۷) ---
+    # منابع عمومی قیمت جهانی (echemi/chemanalyst/procurementresource) بالا اصلاً
+    # قیمت داخلی روسیه رو پوشش نمی‌دن؛ این‌ها تابلوهای B2B واقعی روسیه‌ن که ممکنه
+    # آگهی خرید/فروش با قیمت داشته باشن. همه با fetch_page_text (بعد از رفع
+    # تشخیص انکودینگ در fetch_utils.py) تست و تأیید شدند. توجه: این‌ها هوم‌پیج/
+    # لیست عمومی‌ان نه لینک مستقیم دسته‌ی «سودا»، پس ممکنه بیشتر روزها هیچ آگهی
+    # مرتبطی توش نباشه — مدل باید طبق قانون ۴ (value: null وقتی چیزی پیدا نشد)
+    # رفتار کنه، نه حدس بزنه.
+    "http://board.himtrade.ru/",  # HimTrade - تابلوی اعلانات B2B شیمیایی روسیه از ۲۰۰۳ (Windows-1251، تأیید ۲۰۲۶-۰۹-۰۷)
+    "https://flagma.ru/",  # Flagma - آگهی‌های خرید/فروش عمده روسیه؛ رقبای ایرانی هم این‌جا فعالند (تأیید ۲۰۲۶-۰۹-۰۷)
+    "https://www.soda.ru/ru/",  # БСК - بزرگ‌ترین تولیدکننده‌ی داخلی جوش شیرین روسیه، برای قیمت/ظرفیت رسمی (تأیید ۲۰۲۶-۰۹-۰۷)
 ]
 
 PRODUCTS = ["sodium bicarbonate", "soda ash"]
-PRIORITY_COUNTRIES = ["China", "India", "Turkey"]
+PRIORITY_COUNTRIES = ["China", "India", "Turkey", "Russia"]
 
 SYSTEM_PROMPT = """
 تو یک تحلیلگر داده‌ی قیمت محصولات پتروشیمی هستی. من متن خام چند صفحه‌ی وب (بعد از

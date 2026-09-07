@@ -33,14 +33,49 @@ HEADERS = {
 # گیت‌هاب اکشنز) حل می‌کنه.
 SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
 
+_META_CHARSET_RE = re.compile(rb"charset=[\"']?\s*([\w-]+)", re.IGNORECASE)
+
+
+def _decode_html(raw: bytes, content_type_header: str | None) -> str:
+    """
+    تشخیص انکودینگ واقعی صفحه، نه فرض ثابت UTF-8. سایت‌های روسی قدیمی‌تر
+    (مثل himtrade.ru) با Windows-1251 سرو می‌شن؛ decode با UTF-8+ignore روی
+    این‌ها کل متن سیریلیک رو نامفهوم می‌کنه (بایت‌های نامعتبر UTF-8 حذف می‌شن)،
+    نه فقط چند کاراکتر خراب — یعنی صفحه‌ای که واقعاً محتوای مرتبط داره
+    (مثل تابلوی اعلانات B2B شیمیایی) عملاً خالی به مدل می‌رسه.
+
+    ترتیب اولویت: charset اعلام‌شده در هدر Content-Type، بعد <meta charset=...>
+    داخل ۲۰۴۸ بایت اول HTML، بعد UTF-8، و در نهایت Windows-1251 (رایج‌ترین
+    انکودینگ غیر-UTF8 در سایت‌های روسی/سیریلیک قدیمی).
+    """
+    candidates = []
+    if content_type_header:
+        m = re.search(r"charset=([\w-]+)", content_type_header, re.IGNORECASE)
+        if m:
+            candidates.append(m.group(1))
+    meta_match = _META_CHARSET_RE.search(raw[:2048])
+    if meta_match:
+        candidates.append(meta_match.group(1).decode("ascii", errors="ignore"))
+    candidates += ["utf-8", "windows-1251"]
+
+    for enc in candidates:
+        if not enc:
+            continue
+        try:
+            return raw.decode(enc)
+        except (UnicodeDecodeError, LookupError):
+            continue
+    return raw.decode("utf-8", errors="ignore")
+
 
 def fetch_page_text(url: str, max_chars: int = 6000, timeout: int = 20) -> str:
     """HTML رو می‌گیره، تگ/اسکریپت/استایل رو حذف می‌کنه، و به یک متن ساده و کوتاه تبدیل می‌کنه."""
     req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=timeout, context=SSL_CONTEXT) as resp:
+        raw_bytes = resp.read()
         # نام raw_html (نه html) چون ماژول html بالا import شده و سایه‌انداختن
         # روی اسمش، اولین کسی که این تابع رو گسترش بده گیج می‌کنه.
-        raw_html = resp.read().decode("utf-8", errors="ignore")
+        raw_html = _decode_html(raw_bytes, resp.headers.get("Content-Type"))
 
     text = re.sub(r"(?is)<(script|style|noscript)[^>]*>.*?</\1>", " ", raw_html)
     text = re.sub(r"(?s)<[^>]+>", "\n", text)
