@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "dev": "dotenv -e ../.env -- next dev",
+    "build": "dotenv -e ../.env -- next build",
+    "start": "dotenv -e ../.env -- next start"
   },
   "dependencies": {
     "next": "16.3.0",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
+    "dotenv-cli": "^11.0.0",
     "tailwindcss": "^4"
   }
 }
