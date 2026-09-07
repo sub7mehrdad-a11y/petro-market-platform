@@ -50,15 +50,18 @@ dropdownContent) را می‌فهمد. اگر نمایشگاه بعدی از ی�
 (چه تأییدشده چه ردشده) دوباره به مدل نمی‌فرسته — یعنی هر بار قطع بشه، دفعه‌ی
 بعد از همون‌جا ادامه پیدا می‌کنه، نه از صفر.
 
-چرا engine="auto" پیش‌فرضه: کلید مشترک GROQ_API_KEY رو نباید استفاده کرد، چون
-همون حسابیه که بخش «پاسخ هوشمند» زنده‌ی سایت (web/app/api/ask) هم ازش استفاده
-می‌کنه — یک اجرای سنگین این‌جا می‌تونست اون قابلیت رو برای بازدیدکننده‌های واقعی
-از کار بندازه (دقیقاً همین اتفاق نزدیک بود بیفته). کاربر یک کلید Groq اختصاصی
-فقط برای همین پروژه داد (GROQ_API_KEY_EXHIBITOR) تا هدر نره، ولی سقف رایگان
-روزانه‌ی آن (۲۰۰٬۰۰۰ توکن) برای ۲۵۳۲ کاندید کافی نیست. راه‌حل: اول این کلید
-اختصاصی کامل مصرف می‌شه (نه بی‌استفاده می‌مونه)، و همین که به سقف روزانه‌اش
-خورد، خودکار سوییچ به Gemini می‌کنه (سهمیه‌ی جدا، همونی که بقیه‌ی ربات‌های
-روزانه‌ی پروژه استفاده می‌کنن) تا کار بدون وقفه تا آخر ادامه پیدا کنه.
+چرا engine="groq" (فقط کلید اختصاصی) پیش‌فرضه: کلید مشترک GROQ_API_KEY رو
+نباید استفاده کرد، چون همون حسابیه که بخش «پاسخ هوشمند» زنده‌ی سایت
+(web/app/api/ask) هم ازش استفاده می‌کنه. کاربر یک کلید Groq اختصاصی فقط برای
+همین پروژه داد (GROQ_API_KEY_EXHIBITOR). سقف رایگان روزانه‌ی آن (۲۰۰٬۰۰۰
+توکن) برای کل ۲۵۳۲ کاندید در یک روز کافی نیست — قبلاً یک حالت auto ساخته
+شده بود که با تمام‌شدن سهمیه‌ی Groq خودکار سوییچ به Gemini می‌کرد، ولی چون
+Gemini هم با همه‌ی ربات‌های روزانه‌ی دیگه (اخبار/قیمت/رقبا/گزارش هفتگی) مشترکه،
+همین fallback خودش یک‌بار (۲۰۲۶-۰۹-۰۶) سهمیه‌ی Gemini رو هم تموم کرد و باعث
+مشکل شد. تصمیم صریح کاربر: فقط از کلید اختصاصی Groq استفاده بشه، حتی اگه کار
+چند روز طول بکشه — وقتی سهمیه‌ی روزانه تموم بشه، اجرا با پیام آرام (نه خطا)
+متوقف می‌شه و فردا که سهمیه ریست شد ادامه پیدا می‌کنه. engine=auto/gemini هنوز
+به‌عنوان گزینه (نه پیش‌فرض) موجودن، برای وقتی کاربر دوباره نظرش عوض بشه.
 """
 
 import os
@@ -637,7 +640,7 @@ CONSECUTIVE_FAILURE_LIMIT = 8  # این‌قدر بچ پشت‌سرهم خراب
 
 
 def llm_refine(items: list[dict], progress: dict, progress_path: str,
-               on_batch_done, generate_fn, deadline: float | None = None) -> tuple[int, int]:
+               on_batch_done, generate_fn, deadline: float | None = None) -> tuple[int, int, bool]:
     """
     زیرمجموعه‌ی از قبل غربال‌شده را دسته‌دسته به مدل زبانی (generate_fn) می‌دهد تا
     واقعاً تولیدکننده/بازرگان بودن و گرید دقیق را تأیید کند. نتیجه مستقیم در
@@ -653,11 +656,12 @@ def llm_refine(items: list[dict], progress: dict, progress_path: str,
     deadline: زمان یونیکس (time.time()) که اگه از آن گذشتیم، به‌جای کرش/قطع‌شدن
     ناگهانی (مثلاً با هارد‌تایم‌اوت CI)، تمیز و با آخرین checkpoint متوقف می‌شیم.
 
-    خروجی: (تعداد بچ موفق، تعداد بچ ناموفق) — تا main() بتونه تشخیص بده که آیا
-    این اجرا واقعاً کار کرده یا (مثلاً به‌خاطر تمام‌شدن سهمیه‌ی هر دو موتور) هیچ
-    پیشرفتی نداشته، و در اون صورت با کد خروج غیرصفر تمومش کنه تا در GitHub
-    Actions به‌جای ✓ سبز گمراه‌کننده، ✗ قرمز دیده بشه (دقیقاً همون اتفاقی که
-    ۲۰۲۶-۰۹-۰۶ چند ساعت بی‌سروصدا افتاد و متوجه نشدیم).
+    خروجی: (تعداد بچ موفق، تعداد بچ ناموفق، آیا علتِ توقف تمام‌شدن سهمیه‌ی روزانه
+    بود). تمام‌شدن سهمیه یک حالت عادیه (فردا ریست می‌شه، ادامه می‌ده) — نباید
+    مثل خرابی واقعی با کد خطا خارج بشیم. اما اگه صفر بچ موفق شد و علتش سهمیه
+    *نبود* (یعنی یک خطای غیرمنتظره‌ی دیگه‌ست)، main() باید با کد خروج غیرصفر
+    تمومش کنه تا در GitHub Actions به‌جای ✓ سبز گمراه‌کننده، ✗ قرمز دیده بشه
+    (دقیقاً همون اتفاقی که ۲۰۲۶-۰۹-۰۶ چند ساعت بی‌سروصدا افتاد و متوجه نشدیم).
     """
     todo = [it for it in items if candidate_key(it) not in progress]
     print(f"  {len(items) - len(todo)} شرکت از اجرای قبلی در progress موجوده و رد می‌شه.")
@@ -685,6 +689,7 @@ def llm_refine(items: list[dict], progress: dict, progress_path: str,
     total_batches = (len(with_desc) + LLM_BATCH_SIZE - 1) // LLM_BATCH_SIZE
     order_base = len(progress)
     ok_count, fail_count, consecutive_fails = 0, 0, 0
+    quota_exhausted = False
 
     for b in range(total_batches):
         if deadline and time.time() > deadline:
@@ -709,10 +714,18 @@ def llm_refine(items: list[dict], progress: dict, progress_path: str,
         except Exception as e:  # noqa: BLE001 — یک بچ خراب نباید کل اجرا را متوقف کند
             fail_count += 1
             consecutive_fails += 1
+            if any(m in str(e).lower() for m in DAILY_QUOTA_MARKERS):
+                # سهمیه‌ی روزانه تمام شده — این یک حالت عادی و منتظره‌ست (نه یک
+                # خرابی)، پس بلافاصله (بدون منتظرماندن برای CONSECUTIVE_FAILURE_LIMIT)
+                # با آرامش متوقف می‌شیم؛ اجرای بعدی (فردا که سهمیه ریست بشه) ادامه می‌ده.
+                quota_exhausted = True
+                print(f"  [INFO] سهمیه‌ی روزانه‌ی موتور تمام شد؛ همین‌جا متوقف می‌شیم "
+                      "(اجرای بعدی، وقتی سهمیه ریست بشه، ادامه می‌ده).")
+                break
             print(f"  [WARN] بچ {b + 1}/{total_batches} با خطا رد شد (بعداً دوباره تلاش می‌شه): {e}")
             if consecutive_fails >= CONSECUTIVE_FAILURE_LIMIT:
-                print(f"  [ERROR] {consecutive_fails} بچ پشت‌سرهم خراب شدن — احتمالاً سهمیه‌ی "
-                      "هر دو موتور تمام شده یا مشکل دیگه‌ای سیستمیه؛ ادامه‌دادن بی‌فایده‌ست.")
+                print(f"  [ERROR] {consecutive_fails} بچ پشت‌سرهم با خطاهای غیرمنتظره (نه سهمیه) "
+                      "خراب شدن — این یعنی یک مشکل واقعیه؛ ادامه‌دادن بی‌فایده‌ست.")
                 break
             continue
 
@@ -738,7 +751,7 @@ def llm_refine(items: list[dict], progress: dict, progress_path: str,
         print(f"  [OK] بچ {b + 1}/{total_batches}: {kept}/{len(batch)} تأیید شد "
               f"(مجموع مرتبط تا الان: {total_so_far})")
 
-    return ok_count, fail_count
+    return ok_count, fail_count, quota_exhausted
 
 
 def main():
@@ -747,9 +760,10 @@ def main():
     parser.add_argument("--max", type=int, default=None, help="حداکثر تعداد شرکت برای دریافت (برای تست)")
     parser.add_argument("--event-name", default=None, help="نام نمایشگاه برای درج در خروجی (پیش‌فرض: اسلاگ URL)")
     parser.add_argument("--no-llm", action="store_true", help="پاس نهایی مدل زبانی را رد کن (فقط فیلتر قانون‌محور)")
-    parser.add_argument("--engine", choices=["auto", "gemini", "groq"], default="auto",
-                         help="موتور پاس نهایی — پیش‌فرض auto: اول کلید اختصاصی Groq تا ته سهمیه‌ی "
-                              "روزانه‌اش مصرف می‌شه، بعد خودکار سوییچ به Gemini می‌کنه")
+    parser.add_argument("--engine", choices=["groq", "gemini", "auto"], default="groq",
+                         help="موتور پاس نهایی — پیش‌فرض فقط Groq اختصاصی (طبق تصمیم صریح کاربر: "
+                              "بدون fallback به سهمیه‌ی مشترک Gemini، حتی اگه کندتر تموم بشه). "
+                              "engine=auto در صورت تمام‌شدن سهمیه‌ی Groq خودکار به Gemini سوییچ می‌کنه.")
     parser.add_argument("--no-enrich", action="store_true",
                          help="استخراج ایمیل/وب‌سایت/واتساپ از سایت هر شرکت را رد کن")
     parser.add_argument("--deadline-minutes", type=float, default=None,
@@ -811,15 +825,16 @@ def main():
     else:
         print(f"[4/5] تأیید نهایی با {args.engine} روی {len(candidates)} شرکت (دسته‌ای، هر دسته {LLM_BATCH_SIZE} تا)")
         generate_fn = make_generate_fn(args.engine)
-        ok_batches, fail_batches = llm_refine(
+        ok_batches, fail_batches, quota_exhausted = llm_refine(
             candidates, progress, progress_path, on_batch_done=flush_output,
             generate_fn=generate_fn, deadline=deadline,
         )
-        if ok_batches == 0 and fail_batches > 0:
+        if quota_exhausted:
+            print(f"\n[INFO] سهمیه‌ی روزانه‌ی {args.engine} تمام شد — حالت عادیه، فردا/اجرای بعدی ادامه می‌ده.")
+        elif ok_batches == 0 and fail_batches > 0:
             flush_output()
-            print(f"\n[FATAL] {fail_batches} بچ امتحان شد و همه رد شدن — احتمالاً سهمیه‌ی هر دو موتور "
-                  "(Groq اختصاصی + Gemini) تمام شده. با کد خطا خارج می‌شم تا در GitHub Actions "
-                  "به‌جای ✓ سبز گمراه‌کننده، ✗ قرمز دیده بشه.")
+            print(f"\n[FATAL] {fail_batches} بچ امتحان شد و همه با خطای غیرمنتظره (نه سهمیه) رد شدن. "
+                  "با کد خطا خارج می‌شم تا در GitHub Actions به‌جای ✓ سبز گمراه‌کننده، ✗ قرمز دیده بشه.")
             sys.exit(1)
 
     total_relevant = flush_output()
