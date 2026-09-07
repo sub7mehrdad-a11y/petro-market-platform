@@ -59,7 +59,7 @@ soda.ru، sodaplant.ru، HimTrade، Flagma، RZD-Partner، Logirus، PortNews، 
 `گزارش/گزارش_تحلیلی_بازار_جوش_شیرین_روسیه.docx`، `reports/روسیه/...docx`، `reports/manifest.json`،
 `reports/parsed/report-گزارش_تحلیلی_بازار_جوش_شیرین_روسیه.json`
 
-**کامیت:** (بعد از پوش این‌جا درج می‌شود)
+**کامیت:** `339c509`
 
 ---
 
