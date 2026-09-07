@@ -32,6 +32,15 @@ function appendToSentLog(records) {
   fs.writeFileSync(SENT_LOG_FILE, JSON.stringify([...existing, ...records], null, 2), "utf-8");
 }
 
+// طبق درخواست صریح کاربر: این آدرس‌ها باید بدون استثنا روی CC همه‌ی ایمیل‌های
+// معرفی باشن — از env می‌خونیم (نه هاردکد) تا بدون تغییر کد قابل‌ویرایش باشه.
+function getCcList() {
+  return (process.env.OUTREACH_CC_EMAILS || "")
+    .split(",")
+    .map((e) => e.trim())
+    .filter(Boolean);
+}
+
 export async function POST(request) {
   // دروازه‌ی تأیید هیئت‌مدیره: تا وقتی این متغیر محیطی صراحتاً روی "true"
   // تنظیم نشده، ارسال واقعی امکان‌پذیر نیست — حتی اگه SMTP هم تنظیم شده باشه.
@@ -70,6 +79,7 @@ export async function POST(request) {
   const alreadySent = new Set(getEmailOutreachSent().map((r) => r.email));
   const fromAddress = process.env.SMTP_FROM || process.env.SMTP_USER;
   const fromName = process.env.SMTP_FROM_NAME || "Pars Baking Soda Group";
+  const ccList = getCcList();
 
   const results = [];
   const newSentRecords = [];
@@ -97,6 +107,7 @@ export async function POST(request) {
       await transporter.sendMail({
         from: `"${fromName}" <${fromAddress}>`,
         to: c.email,
+        ...(ccList.length > 0 ? { cc: ccList } : {}),
         subject: rendered.subject,
         text: rendered.body,
         attachments: rendered.attachments.map((filename) => ({

@@ -34,6 +34,7 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
   const [selected, setSelected] = useState(new Map()); // id -> {company, checked}
   const [previewIds, setPreviewIds] = useState([]);
   const [previews, setPreviews] = useState(null);
+  const [previewCc, setPreviewCc] = useState([]);
   const [previewLoading, setPreviewLoading] = useState(false);
   const [sendResult, setSendResult] = useState(null);
   const [sending, setSending] = useState(false);
@@ -94,6 +95,7 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
       });
       const data = await res.json();
       setPreviews(data.previews || []);
+      setPreviewCc(data.cc || []);
     } finally {
       setPreviewLoading(false);
     }
@@ -326,6 +328,17 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
       {previews && (
         <section className="card p-5 space-y-5">
           <h2 className="text-lg font-bold">پیش‌نمایش ({previews.length.toLocaleString("fa-IR")} نمونه)</h2>
+          <div
+            className={`text-xs rounded-md px-3 py-2 border ${
+              previewCc.length > 0
+                ? "bg-petrol-50 text-petrol-800 border-petrol-100"
+                : "bg-amber-50 text-amber-700 border-amber-200"
+            }`}
+          >
+            {previewCc.length > 0
+              ? `CC روی همه‌ی ایمیل‌ها: ${previewCc.join("، ")}`
+              : "⚠️ هیچ آدرس CC ای تنظیم نشده (OUTREACH_CC_EMAILS خالیه) — قبل از ارسال واقعی چک کن."}
+          </div>
           {previews.map((p) => (
             <div key={p.id} className="border border-slate-200 rounded-lg p-4">
               <div className="text-xs text-slate-500 mb-1">

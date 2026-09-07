@@ -36,5 +36,10 @@ export async function POST(request) {
     };
   });
 
-  return NextResponse.json({ previews, truncated: companyIds.length > 10 });
+  const cc = (process.env.OUTREACH_CC_EMAILS || "")
+    .split(",")
+    .map((e) => e.trim())
+    .filter(Boolean);
+
+  return NextResponse.json({ previews, truncated: companyIds.length > 10, cc });
 }
