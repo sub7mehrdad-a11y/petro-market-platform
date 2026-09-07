@@ -45,7 +45,7 @@ Sepehran Chemical" درست نمایش داده شد). سابجکت گم‌شد�
 **فایل‌ها:** `.env`, `.env.example`, `web/app/api/outreach/send/route.js`,
 `web/app/api/outreach/preview/route.js`, `web/app/outreach/OutreachClient.jsx`
 
-**کامیت:** (بعد از پوش این‌جا درج می‌شود)
+**کامیت:** `9470f9f`
 
 ---
 
