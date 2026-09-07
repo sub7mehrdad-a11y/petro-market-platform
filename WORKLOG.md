@@ -41,7 +41,7 @@
 
 **فایل‌ها:** `data/competitors.json`، `web/app/competitors/[id]/page.jsx`
 
-**کامیت:** (بعد از پوش این‌جا درج می‌شود)
+**کامیت:** `84fefdf`
 
 ---
 
