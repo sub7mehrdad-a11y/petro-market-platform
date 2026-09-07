@@ -1,0 +1,49 @@
+# رصد ماهانه‌ی نمونه‌ی قیمت Intratec برای سدیم بی‌کربنات (جوش شیرین).
+#
+# چطور کار می‌کنه:
+#   - گیت‌هاب هر ماه، روز سوم ساعت 06:00 UTC، اسکریپت scripts/intratec_watch_bot.py رو اجرا می‌کنه.
+#   - اسکریپت صفحه‌ی نمونه‌ی رایگان Intratec رو می‌خونه؛ اگه ماه گزارش‌شده تازه بود،
+#     یک رکورد جدید به data/intratec_monthly.json اضافه و commit/push می‌کنه.
+#   - اگه ماه گزارش هنوز همون قبلی بود (نمونه‌ی سایت هنوز به‌روز نشده)، هیچ تغییری
+#     ثبت نمی‌شه — این عادیه و خطا نیست.
+#
+# قبل از استفاده باید GEMINI_API_KEY (همون کلید مشترک بقیه‌ی ربات‌های روزانه) در
+# Settings > Secrets and variables > Actions ثبت شده باشه. از تب Actions می‌شه با
+# "Run workflow" (workflow_dispatch) دستی هم تستش کرد.
+
+name: Monthly Intratec Price Check
+
+on:
+  schedule:
+    - cron: "0 6 3 * *"   # هر ماه، روز سوم، ساعت 06:00 UTC
+  workflow_dispatch: {}     # اجرای دستی برای تست
+
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r scripts/requirements.txt
+
+      - name: Run Intratec watch bot
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python scripts/intratec_watch_bot.py
+
+      - name: Commit updated data file
+        run: |
+          git config user.name "market-data-bot"
+          git config user.email "actions@github.com"
+          git add data/intratec_monthly.json
+          git diff --quiet --cached || git commit -m "به‌روزرسانی ماهانه‌ی قیمت‌های نمونه‌ی Intratec"
+          git push
