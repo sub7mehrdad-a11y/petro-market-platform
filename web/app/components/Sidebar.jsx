@@ -15,38 +15,41 @@ import { usePathname } from "next/navigation";
  * زیر breakpoint لارج، سایدبار به یک نوار بالا + کشوی بازشونده تبدیل می‌شود.
  */
 
-const NAV_GROUPS = [
-  {
-    items: [{ href: "/", label: "داشبورد", icon: IconDashboard }],
-  },
-  {
-    title: "بازار",
-    items: [
-      { href: "/countries", label: "کشورها", icon: IconGlobe },
-      { href: "/competitors", label: "تحلیل رقبا", icon: IconTarget },
-      { href: "/transit", label: "تحلیل ترانزیت", icon: IconTruck },
-    ],
-  },
-  {
-    title: "محتوا",
-    items: [
-      { href: "/reports", label: "گزارش‌های هوشمند", icon: IconSpark },
-      { href: "/archive", label: "آرشیو گزارش‌ها", icon: IconArchive },
-      { href: "/news", label: "اخبار تحلیلی", icon: IconNews },
-    ],
-  },
-  {
-    title: "بانک اطلاعات",
-    items: [
-      { href: "/companies", label: "شرکت‌ها", icon: IconBuilding },
-      { href: "/exhibitions", label: "نمایشگاه‌ها", icon: IconCalendar },
-    ],
-  },
-  {
-    title: "ابزارها",
-    items: [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }],
-  },
-];
+function buildNavGroups(showOutreach) {
+  return [
+    {
+      items: [{ href: "/", label: "داشبورد", icon: IconDashboard }],
+    },
+    {
+      title: "بازار",
+      items: [
+        { href: "/countries", label: "کشورها", icon: IconGlobe },
+        { href: "/competitors", label: "تحلیل رقبا", icon: IconTarget },
+        { href: "/transit", label: "تحلیل ترانزیت", icon: IconTruck },
+      ],
+    },
+    {
+      title: "محتوا",
+      items: [
+        { href: "/reports", label: "گزارش‌های هوشمند", icon: IconSpark },
+        { href: "/archive", label: "آرشیو گزارش‌ها", icon: IconArchive },
+        { href: "/news", label: "اخبار تحلیلی", icon: IconNews },
+      ],
+    },
+    {
+      title: "بانک اطلاعات",
+      items: [
+        { href: "/companies", label: "شرکت‌ها", icon: IconBuilding },
+        { href: "/exhibitions", label: "نمایشگاه‌ها", icon: IconCalendar },
+      ],
+    },
+    // «ابزارها» فقط وقتی نشون داده می‌شه که showOutreach روشن باشه — طبق
+    // درخواست کاربر، تا تأیید هیئت‌مدیره، این بخش کلاً از سایت دیده نشه.
+    ...(showOutreach
+      ? [{ title: "ابزارها", items: [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }] }]
+      : []),
+  ];
+}
 
 const ASK_ITEM = { href: "/ask", label: "جست‌وجو و پرسش", icon: IconSearch };
 
@@ -97,10 +100,11 @@ function Brand({ compact = false }) {
   );
 }
 
-function NavContent({ pathname, onNavigate }) {
+function NavContent({ pathname, onNavigate, showOutreach }) {
+  const navGroups = buildNavGroups(showOutreach);
   return (
     <nav className="flex flex-col gap-5">
-      {NAV_GROUPS.map((group, gi) => (
+      {navGroups.map((group, gi) => (
         <div key={gi} className="flex flex-col gap-0.5">
           {group.title && (
             <div className="px-3 pb-1 text-[10px] font-bold tracking-wide text-petrol-400 uppercase">
@@ -120,7 +124,7 @@ function NavContent({ pathname, onNavigate }) {
   );
 }
 
-export default function Sidebar() {
+export default function Sidebar({ showOutreach = false }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
 
@@ -135,7 +139,7 @@ export default function Sidebar() {
         {/* sticky تا با اسکرول صفحات بلند (کشورها، شرکت‌ها) منو از دست نرود */}
         <div className="relative z-10 sticky top-0 flex flex-col gap-6 p-4 max-h-screen overflow-y-auto">
           <Brand />
-          <NavContent pathname={pathname} />
+          <NavContent pathname={pathname} showOutreach={showOutreach} />
         </div>
       </aside>
 
@@ -155,7 +159,7 @@ export default function Sidebar() {
         </div>
         {open && (
           <div className="px-4 pb-4 border-t border-white/10 pt-3">
-            <NavContent pathname={pathname} onNavigate={() => setOpen(false)} />
+            <NavContent pathname={pathname} onNavigate={() => setOpen(false)} showOutreach={showOutreach} />
           </div>
         )}
       </div>

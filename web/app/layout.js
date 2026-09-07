@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
       */}
       <body className="min-h-full font-[family-name:var(--font-vazirmatn)] bg-petrol-900 text-slate-900">
         <div className="min-h-screen flex flex-col lg:flex-row">
-          <Sidebar />
+          <Sidebar showOutreach={process.env.OUTREACH_UI_ENABLED === "true"} />
 
           <div className="flex-1 min-w-0 flex flex-col">
             <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-6 lg:px-8 lg:py-8">
