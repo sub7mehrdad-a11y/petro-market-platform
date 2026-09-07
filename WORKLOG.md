@@ -52,7 +52,7 @@ Node این فلگ خاص رو در `NODE_OPTIONS` مجاز نمی‌دونه، 
 
 **فایل‌ها:** `web/package.json`, `web/package-lock.json`, `.env.example`
 
-**کامیت:** (بعد از پوش این‌جا درج می‌شود)
+**کامیت:** `362c7ae`
 
 ---
 
