@@ -1,10 +1,10 @@
 {
   "event_name": "Gulfood 2026",
   "source_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor",
-  "fetched_at": "2026-09-06T22:46:12.092318+00:00",
+  "fetched_at": "2026-09-07T02:42:57.503573+00:00",
   "total_candidates_after_rules": 2532,
-  "total_relevant": 1671,
-  "total_processed": 1846,
+  "total_relevant": 1685,
+  "total_processed": 1861,
   "companies": [
     {
       "name": "Al-Dua Food Processing Pvt. Limited",
@@ -43040,6 +43040,363 @@
       "id": "gulfood-2026-1629"
     },
     {
+      "name": "Pagariya Food Products Pvt Ltd (Kwality",
+      "stand": "Stand No- N1-G64, North Hall 1",
+      "country": "India",
+      "description": "Pagariya Food Products Pvt. Ltd., proudly recognized under its flagship brand 'Kwality,' has been a trusted name in the food industry since 1998. As one of India's leading manufacturers of Breakfast Cereals, Masalas, and Instant M ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Specialty Food",
+        "Snacks",
+        "Private Label",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Condiments & Sauces"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/pagariya-food-products-pvt-ltd-kwality",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و اسنک",
+      "llm_reason": "تولیدکننده محصولات غذایی، اسنک و خمیرهای آماده که از جوش شیرین به عنوان پوک‌کننده استفاده می‌کند.",
+      "website": "https://www.kwalityfoods.in",
+      "email": "info@kwalityspices.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1630"
+    },
+    {
+      "name": "Pak Tarim Urunleri San. Ve Dis Tic. Ltd. Sti",
+      "stand": "Stand No- 55-29, South Hall 10",
+      "country": "Türkiye",
+      "description": "Pak Brand was founded in 1986 in Malatya, Turkey, a region famous for high-quality apricots. Company started by processing, packing, and exporting dried apricots. In 2002, due to customer demand, Pak Brand also began proces ...",
+      "categories": [
+        "Specialty Food",
+        "Private Label",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Dry Goods",
+        "Ethnic Food",
+        "Dried Fruits",
+        "Baking Supplies"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/pak-tarim-urunleri-san-ve-dis-tic-ltd-sti",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – صنایع غذایی و خشکبار",
+      "llm_reason": "بازرگان و صادرکننده فرآورده‌های غذایی و محصولات نانوایی و شیرینی.",
+      "website": "https://www.pakbrand.com.tr",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1631"
+    },
+    {
+      "name": "Pakmaya - Pak Ihracat A.S",
+      "stand": "Stand No- N5-A40, North Hall 5",
+      "country": "Türkiye",
+      "description": "Pakmaya is a global yeast producer and baking ingredients manufacturer with over 50 years of expertise, supplying customers in more than 130 countries. Our portfolio includes baker’s yeast, bread and flour improvers, and tailore ...",
+      "categories": [
+        "Bakery, Cakes & Desserts",
+        "Baking Supplies"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/pakmaya-pak-ihracat-a-s",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – پخت و نانوایی",
+      "llm_reason": "تولیدکننده مواد اولیه نانوایی و مخمرها که مستقیماً با مواد ورآورنده و بهبوددهنده‌ها در ارتباط است.",
+      "website": "https://www.pakmaya.com/en",
+      "email": "info@pakmaya.com",
+      "whatsapp": "+902122740761",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1632"
+    },
+    {
+      "name": "Paliria S.A",
+      "stand": "Stand No- A-70, South Hall 3",
+      "country": "Greece",
+      "description": "Founded in 1957 in Evia, Greece, Paliria is today the world’s No.1 dolmas producer in the world and a leading exporter of Greek and Mediterranean ready-to-eat meals. Its flagship product, handmade dolmas, are produced using care ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Vegetable & Animal Oils & Fats",
+        "Specialty Food",
+        "Snacks",
+        "Halal and Kosher Food",
+        "Bakery, Cakes & Desserts",
+        "Frozen Food",
+        "Dry Goods",
+        "Olive Oil",
+        "Ready-to-Eat"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/paliria-s-a",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – غذاهای آماده",
+      "llm_reason": "تولیدکننده بزرگ غذاهای آماده و کنسروی که از افزودنی‌های غذایی استفاده می‌کند.",
+      "website": "https://www.paliria.com/en/",
+      "email": "example@example.gr",
+      "whatsapp": "+30 214 4047390",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1633"
+    },
+    {
+      "name": "Pamir Cola Group of Companies",
+      "stand": "Stand No- Z5-21, Za'abeel Hall 5",
+      "country": "Afghanistan",
+      "description": "Pamir Cola Group of Companies was established in 2004 in Afghanistan and holds all the required licenses from the relevant authorities. The company operates a modern production facility on a 95,000 sqm site in Herat Industrial Tow ...",
+      "categories": [
+        "Snacks",
+        "Professional Services",
+        "Frozen Food",
+        "Free-From Products",
+        "Dry Goods",
+        "Dairy",
+        "Beverages",
+        "Savoury Baked Products",
+        "Salty Snacks",
+        "Crackers"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/pamir-cola-group-of-companies",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نوشیدنی و اسنک",
+      "llm_reason": "تولیدکننده نوشیدنی‌های گازدار (کولاتازی) و اسنک که از جوش شیرین جهت تنظیم pH و فرآوری استفاده می‌کند.",
+      "website": "https://www.pamircola-co.com/",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1634"
+    },
+    {
+      "name": "PampaFoods",
+      "stand": "Stand No- S1-F49, Shk Saeed Hall 1",
+      "country": "Brazil",
+      "description": "PampaFoods has nearly 40 years of experience in importing and exporting animal protein and frozen fries. Operating in over 50 countries, it ensures strong quality control, reliable logistics, and long-term partnerships, guided by  ...",
+      "categories": [
+        "Vegetable & Animal Oils & Fats",
+        "Spreads, Honey & Jams",
+        "Meat, Poultry & Seafood",
+        "Halal and Kosher Food",
+        "Frozen Food",
+        "Oil",
+        "Unprocessed Meat",
+        "Processed Meat",
+        "Poultry & Feathered Game",
+        "Organ Meats & Offal"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/pampafoods",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – توزیع و بازرگانی",
+      "llm_reason": "شرکت واردات و صادرات مواد غذایی که می‌تواند جوش شیرین را به سبد توزیع خود اضافه کند.",
+      "website": "https://www.pampafoods.com.br/",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1635"
+    },
+    {
+      "name": "Panelux S.A",
+      "stand": "Stand No- 11-2, South Hall 1",
+      "country": "Luxembourg",
+      "description": "Frozen bakery products including ready to bake and fully baked breads and pastries. Our main focus is made on the selection of best raw materials and ingredients for the production of rustic sourdough breads, sandwich breads (Flag ...",
+      "categories": [
+        "Frozen Food",
+        "Frozen Baked Goods"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/panelux-s-a",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و شیرینی منجمد",
+      "llm_reason": "تولیدکننده نان و شیرینی‌های منجمد که مصرف‌کننده مستقیم جوش شیرین است.",
+      "website": "https://www.panelux.com/fr/accueil",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1636"
+    },
+    {
+      "name": "Panfruit",
+      "stand": "Stand No- 1-13, South Hall 1",
+      "country": "Ukraine",
+      "description": "Panfruit is a Ukrainian family-owned company specialising in freeze-drying organic fruits, berries, and snacks. Founded in 2020 built on years of experience in beekeeping and berry farming, the company is dedicated to preserving t ...",
+      "categories": [
+        "Specialty Food",
+        "Snacks",
+        "Organic Products",
+        "Free-From Products",
+        "Fortified Foods & Health Products",
+        "Dairy",
+        "Value-Added Food",
+        "Ready-to-Eat",
+        "Gourmet & Fine Food",
+        "Healthy snacks"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/panfruit",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – اسنک و فرآوری میوه",
+      "llm_reason": "تولیدکننده اسنک‌ها و محصولات فرآوری‌شده غذایی.",
+      "website": "https://panfruit.ua/en",
+      "email": "crunchy@panfruit.ua",
+      "whatsapp": "+380674040505",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1637"
+    },
+    {
+      "name": "Pantziarou Bros Dairy Products Ltd",
+      "stand": "Stand No- R-F15, Shk Rashid Hall",
+      "country": "Cyprus",
+      "description": "Our family business is dedicated to producing the finest halloumi cheese in Cyprus, rooted in farming traditions and a deep respect for quality. From the beginning, we’ve valued freshness, using milk from farms that share our co ...",
+      "categories": [
+        "Halal and Kosher Food",
+        "Organic Products",
+        "Private Label",
+        "Specialty Food",
+        "Dairy",
+        "Free-From Products",
+        "Frozen Food",
+        "Value-Added Food",
+        "Frozen Dairy Products",
+        "Vegan / Vegetarian Products"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/pantziarou-bros-dairy-products-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع لبنی",
+      "llm_reason": "تولیدکننده محصولات لبنی و پنیر که از جوش شیرین برای تنظیم اسیدیته استفاده می‌کند.",
+      "website": "https://www.pantziaroudairies.com",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1638"
+    },
+    {
+      "name": "Papouis Dairies Ltd",
+      "stand": "Stand No- R-F23, Shk Rashid Hall",
+      "country": "Cyprus",
+      "description": "Papouis Dairies are producers of dairy products based in Cyprus. We specialise in supplying halloumi cheese PDO to our supermarket retail clients with their private label and under our brand. Papouis Dairies is one of the largest  ...",
+      "categories": [
+        "Dairy",
+        "Cheese"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/papouis-dairies-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع لبنی",
+      "llm_reason": "تولیدکننده پنیر و فرآورده‌های لبنی در قبرس.",
+      "website": "https://www.papouisdairies.com",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1639"
+    },
+    {
+      "name": "Parag Milk Foods Limited",
+      "stand": "Stand No- N1-J52, North Hall 1",
+      "country": "India",
+      "description": "Parag Milk Foods Ltd  is a  Leading  producer and marketer  of Dairy Products form India, with a total milk handling capacity of 2 million liters per day. We have established Asia’s largest Cheese plant with 80 MTs per day capac ...",
+      "categories": [
+        "Vegetable & Animal Oils & Fats",
+        "Spreads, Honey & Jams",
+        "Specialty Food",
+        "Halal and Kosher Food",
+        "Frozen Food",
+        "Dairy",
+        "Beverages",
+        "Ghee",
+        "Gourmet & Fine Food",
+        "Ethnic Food"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/parag-milk-foods-limited",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – صنایع لبنی",
+      "llm_reason": "یکی از بزرگترین تولیدکنندگان و بازاریابان محصولات لبنی در هند.",
+      "website": "https://www.parag.com",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1640"
+    },
+    {
+      "name": "Parayil Food Products Pvt Ltd",
+      "stand": "Stand No- N1-E23, North Hall 1",
+      "country": "India",
+      "description": "Daily Delight began its operations in the 1990s. Now the company owns internationally popular food brands like DAILY DELIGHT, DELICIOUS DELIGHT, SEAFOOD DELIGHT etc. It has a strong presence, in USA, Europe, UK, Australia, New Zea ...",
+      "categories": [
+        "Pulses/ Grains / Cereals / Flours",
+        "Spreads, Honey & Jams",
+        "Specialty Food",
+        "Snacks",
+        "Bakery, Cakes & Desserts",
+        "Frozen Food",
+        "Frozen Seafood",
+        "Frozen Ready Meals",
+        "Frozen Fruit & Vegetables",
+        "Cakes / Dessert"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/parayil-food-products-pvt-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – نانوایی و فرآورده‌های غذایی",
+      "llm_reason": "تولیدکننده محصولات غذایی آماده، اسنک و فرآورده‌های نانوایی.",
+      "website": "https://dailydelight.com",
+      "email": null,
+      "whatsapp": null,
+      "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
+      "contact_checked": true,
+      "id": "gulfood-2026-1641"
+    },
+    {
+      "name": "Parle Biscuits Pvt. Ltd",
+      "stand": "Stand No- N1-D40, North Hall 1",
+      "country": "India",
+      "description": "Parle, a company started in 1929 with a simple intent to spread cheer among people with its lip-smacking range of Biscuits & Confectioneries has now transformed into 2 billion dollar company and Boasting of a 40% share in the Indi ...",
+      "categories": [
+        "Bakery, Cakes & Desserts",
+        "Baked Goods"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/parle-biscuits-pvt-ltd",
+      "company_type": "manufacturer",
+      "suggested_grade": "گرید غذایی – بیسکویت و شیرینی‌سازی",
+      "llm_reason": "تولیدکننده بسیار بزرگ بیسکویت و شیرینی که مصرف‌کننده عمده جوش شیرین است.",
+      "website": "https://www.parleproducts.com",
+      "email": "cs@parle.biz",
+      "whatsapp": "02267130300",
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1642"
+    },
+    {
+      "name": "Pasha Inc",
+      "stand": "Stand No- 15-112, South Hall 2",
+      "country": "South Africa",
+      "description": "PASHA INC is a leading international trading house that specializes in the procurement, processing, and distribution of high-quality dried fruits and nuts. With a strong global presence and a commitment to excellence, we have esta ...",
+      "categories": [
+        "Halal and Kosher Food",
+        "Snacks",
+        "Fortified Foods & Health Products",
+        "Dry Goods",
+        "Free-From Products",
+        "Nuts",
+        "Vegan / Vegetarian Products",
+        "Health & Wellness Products",
+        "Dried Fruits"
+      ],
+      "profile_url": "https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/pasha-inc",
+      "company_type": "trader",
+      "suggested_grade": "گرید غذایی – توزیع و بازرگانی",
+      "llm_reason": "شرکت بازرگانی بین‌المللی تامین و توزیع مواد غذایی و خشکبار.",
+      "website": "https://www.pashadriedfruit.com",
+      "email": "nima@pashadriedfruit.com",
+      "whatsapp": null,
+      "contact_note": null,
+      "contact_checked": true,
+      "id": "gulfood-2026-1643"
+    },
+    {
       "name": "Pooja Dehy Foods Pvt Ltd",
       "stand": "Stand No- N7-E53, North Hall 7",
       "country": "India",
@@ -43065,7 +43422,7 @@
       "whatsapp": "+919227979440",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1630"
+      "id": "gulfood-2026-1644"
     },
     {
       "name": "Pop Argentina",
@@ -43093,7 +43450,7 @@
       "whatsapp": "5492474665066",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1631"
+      "id": "gulfood-2026-1645"
     },
     {
       "name": "Popat Raja & Sons",
@@ -43119,7 +43476,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1632"
+      "id": "gulfood-2026-1646"
     },
     {
       "name": "Port Said Co. for food industries - Riyada",
@@ -43141,7 +43498,7 @@
       "whatsapp": "+20663772070",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1633"
+      "id": "gulfood-2026-1647"
     },
     {
       "name": "Posca Hydrate",
@@ -43162,7 +43519,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1634"
+      "id": "gulfood-2026-1648"
     },
     {
       "name": "POTUS Middle East DMCC",
@@ -43184,7 +43541,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1635"
+      "id": "gulfood-2026-1649"
     },
     {
       "name": "Prairie Halal Foods",
@@ -43212,7 +43569,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1636"
+      "id": "gulfood-2026-1650"
     },
     {
       "name": "Pran Beverages (India) Private Limited",
@@ -43240,7 +43597,7 @@
       "whatsapp": "1800-121-4899",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1637"
+      "id": "gulfood-2026-1651"
     },
     {
       "name": "PRAN FOODS LIMITED",
@@ -43268,7 +43625,7 @@
       "whatsapp": "+88-09613 090909",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1638"
+      "id": "gulfood-2026-1652"
     },
     {
       "name": "PRATO FOODSTUFF TRADING LLC",
@@ -43296,7 +43653,7 @@
       "whatsapp": "971582393228",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1639"
+      "id": "gulfood-2026-1653"
     },
     {
       "name": "PreGel S.p.a",
@@ -43324,7 +43681,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1640"
+      "id": "gulfood-2026-1654"
     },
     {
       "name": "Prestige 96 AD",
@@ -43350,7 +43707,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1641"
+      "id": "gulfood-2026-1655"
     },
     {
       "name": "Prestige Maple Products Inc",
@@ -43378,7 +43735,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1642"
+      "id": "gulfood-2026-1656"
     },
     {
       "name": "Shmoh AlMadi Company",
@@ -43406,7 +43763,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1643"
+      "id": "gulfood-2026-1657"
     },
     {
       "name": "Showyou Co., Ltd",
@@ -43434,7 +43791,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1644"
+      "id": "gulfood-2026-1658"
     },
     {
       "name": "Shree Radhe Dairy Farm & Foods",
@@ -43462,7 +43819,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1645"
+      "id": "gulfood-2026-1659"
     },
     {
       "name": "Shree Sai Trading Ltd",
@@ -43490,7 +43847,7 @@
       "whatsapp": "447735459186",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1646"
+      "id": "gulfood-2026-1660"
     },
     {
       "name": "Shri Global Foods",
@@ -43518,7 +43875,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1647"
+      "id": "gulfood-2026-1661"
     },
     {
       "name": "Shri Hari Industries",
@@ -43546,7 +43903,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1648"
+      "id": "gulfood-2026-1662"
     },
     {
       "name": "Siafa International Manufacturing Company",
@@ -43574,7 +43931,7 @@
       "whatsapp": "+966535501210",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1649"
+      "id": "gulfood-2026-1663"
     },
     {
       "name": "Sibonne Food Stuff IND LLC",
@@ -43602,7 +43959,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1650"
+      "id": "gulfood-2026-1664"
     },
     {
       "name": "SICHUAN HUASHI TECHNOLOGY CO.,LTD",
@@ -43623,7 +43980,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1651"
+      "id": "gulfood-2026-1665"
     },
     {
       "name": "SICHUAN PROVINCE HUIQUAN CANNED FOOD CO.,LTD",
@@ -43643,7 +44000,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1652"
+      "id": "gulfood-2026-1666"
     },
     {
       "name": "Sichuan Yijiahe International Trade Co.,Ltd",
@@ -43671,7 +44028,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1653"
+      "id": "gulfood-2026-1667"
     },
     {
       "name": "Siciliani S.p.A",
@@ -43694,7 +44051,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1654"
+      "id": "gulfood-2026-1668"
     },
     {
       "name": "Sidco Foods Trading LLC",
@@ -43722,7 +44079,7 @@
       "whatsapp": "97142642247",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1655"
+      "id": "gulfood-2026-1669"
     },
     {
       "name": "Siddhalepa Exports (Pvt) Ltd",
@@ -43742,7 +44099,7 @@
       "whatsapp": "94777256373",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1656"
+      "id": "gulfood-2026-1670"
     },
     {
       "name": "Sierolat S.P.A",
@@ -43770,7 +44127,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1657"
+      "id": "gulfood-2026-1671"
     },
     {
       "name": "User Food And Products Company",
@@ -43798,7 +44155,7 @@
       "whatsapp": "+905368770045",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1658"
+      "id": "gulfood-2026-1672"
     },
     {
       "name": "UVR Natural Foods Pvt. Ltd",
@@ -43826,7 +44183,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1659"
+      "id": "gulfood-2026-1673"
     },
     {
       "name": "V&V Walsh",
@@ -43853,7 +44210,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1660"
+      "id": "gulfood-2026-1674"
     },
     {
       "name": "V.D.B. Frozen Food Production",
@@ -43880,7 +44237,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1661"
+      "id": "gulfood-2026-1675"
     },
     {
       "name": "Valio Eesti AS",
@@ -43900,7 +44257,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1662"
+      "id": "gulfood-2026-1676"
     },
     {
       "name": "Vamin Tatarstan",
@@ -43921,7 +44278,7 @@
       "whatsapp": null,
       "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
       "contact_checked": true,
-      "id": "gulfood-2026-1663"
+      "id": "gulfood-2026-1677"
     },
     {
       "name": "Van Breukelen Kaas B.V",
@@ -43943,7 +44300,7 @@
       "whatsapp": "+31348420139",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1664"
+      "id": "gulfood-2026-1678"
     },
     {
       "name": "van Dyk's by Nature",
@@ -43971,7 +44328,7 @@
       "whatsapp": "+1902-542-4405",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1665"
+      "id": "gulfood-2026-1679"
     },
     {
       "name": "Van Pur / Q-Bev",
@@ -43997,7 +44354,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1666"
+      "id": "gulfood-2026-1680"
     },
     {
       "name": "Vandemoortele Europe NV",
@@ -44020,7 +44377,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1667"
+      "id": "gulfood-2026-1681"
     },
     {
       "name": "Vandersterre Holland B.V",
@@ -44041,7 +44398,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1668"
+      "id": "gulfood-2026-1682"
     },
     {
       "name": "VanDrie Group",
@@ -44067,7 +44424,7 @@
       "whatsapp": null,
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1669"
+      "id": "gulfood-2026-1683"
     },
     {
       "name": "VARA FOOD & DRINK CO., LTD",
@@ -44092,7 +44449,7 @@
       "whatsapp": null,
       "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
       "contact_checked": true,
-      "id": "gulfood-2026-1670"
+      "id": "gulfood-2026-1684"
     },
     {
       "name": "VATSAK",
@@ -44115,7 +44472,7 @@
       "whatsapp": "+380673005752",
       "contact_note": null,
       "contact_checked": true,
-      "id": "gulfood-2026-1671"
+      "id": "gulfood-2026-1685"
     }
   ]
 }
