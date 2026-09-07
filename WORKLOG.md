@@ -43,7 +43,7 @@
 
 **فایل‌ها:** `.env.example`, `web/app/outreach/page.jsx`, `web/app/components/Sidebar.jsx`, `web/app/layout.js`
 
-**کامیت:** (بعد از پوش این‌جا درج می‌شود)
+**کامیت:** `ea10951`
 
 ---
 
