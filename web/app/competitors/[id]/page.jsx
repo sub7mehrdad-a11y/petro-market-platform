@@ -294,6 +294,83 @@ export default async function CompetitorPage({ params }) {
         </Section>
       )}
 
+      {/* منبع اولیه — معدن قلیای طبیعی (فقط برای رقبایی که این بخش را دارند، مثل بویان چین) */}
+      {c.resource_base && (
+        <Section title={c.resource_base.name} subtitle={c.resource_base.location_label}>
+          <p className="text-sm leading-7 text-slate-700 mb-4">{c.resource_base.summary}</p>
+
+          <div className="grid gap-4 lg:grid-cols-[1fr_320px]">
+            <div className="rounded-lg overflow-hidden border border-slate-200">
+              <iframe
+                src={`https://maps.google.com/maps?q=${c.resource_base.lat},${c.resource_base.lon}&z=9&output=embed`}
+                title={`نقشه‌ی ${c.resource_base.name}`}
+                className="w-full h-72 md:h-80"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+              <div className="bg-slate-50 border-t border-slate-200 px-3 py-2 text-xs text-slate-600">
+                مختصات مرکز محدوده‌ی معدن (تقریبی): {c.resource_base.lat}, {c.resource_base.lon}
+              </div>
+            </div>
+
+            <div className="space-y-3">
+              <dl className="text-xs space-y-1.5 rounded-lg border border-slate-200 p-3">
+                {c.resource_base.geology.map((g, i) => (
+                  <div key={i} className="flex justify-between gap-3">
+                    <dt className="text-slate-500 shrink-0">{g.label}</dt>
+                    <dd className="font-medium text-end">{g.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              {c.resource_base.operator && (
+                <p className="text-xs text-slate-500">
+                  <span className="font-semibold text-slate-600">بهره‌بردار: </span>
+                  {c.resource_base.operator}
+                </p>
+              )}
+            </div>
+          </div>
+
+          {c.resource_base.economics && (
+            <div className="grid gap-3 sm:grid-cols-3 mt-4">
+              {c.resource_base.economics.map((e, i) => (
+                <div key={i} className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 bg-white shadow-sm p-3">
+                  <div className="text-xs text-slate-500 mb-1">{e.label}</div>
+                  <div className="font-bold text-copper-800 text-sm leading-6">{e.value}</div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {c.resource_base.timeline && (
+            <div className="overflow-x-auto mt-4">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-right text-slate-500 border-b border-slate-200">
+                    <th className="py-2 pe-4">تاریخ</th>
+                    <th className="py-2">رویداد</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {c.resource_base.timeline.map((t, i) => (
+                    <tr key={i} className="border-b border-slate-100 align-top">
+                      <td className="py-2 pe-4 font-medium whitespace-nowrap">{t.date}</td>
+                      <td className="py-2 text-slate-600">{t.event}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+
+          {c.resource_base.notes && (
+            <p className="text-xs text-slate-500 leading-6 mt-4 bg-slate-50 border border-slate-200 rounded-md p-3">
+              {c.resource_base.notes}
+            </p>
+          )}
+        </Section>
+      )}
+
       {/* مقاصد صادراتی */}
       {c.export_destinations_2024 && (
         <Section title="مقاصد صادراتی (۲۰۲۴)" subtitle="۱۰ واردکننده‌ی اصلی جوش شیرین از این کشور">
