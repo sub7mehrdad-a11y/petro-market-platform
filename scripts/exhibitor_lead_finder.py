@@ -157,7 +157,14 @@ LLM_BATCH_SIZE = 15
 GEMINI_MODEL = "gemini-3.6-flash"
 
 
-DAILY_QUOTA_MARKERS = ("tokens per day", "tpd")
+# ۲۰۲۶-۰۹-۰۸: صرفاً «tokens per day/TPD» کافی نبود — Groq چند نوع سقف جدا داره
+# (TPD، RPD یعنی سقف تعداد درخواست روزانه، TPM/RPM دقیقه‌ای) و پیام خطای هرکدوم
+# فرق داره؛ محلی با همون کلید امتحان شد و مشکلی نداشت، ولی روی CI (که خیلی
+# متراکم‌تر درخواست می‌زنه) هر ۶ اجرا پشت‌سرهم با «خطای واقعی» (نه سهمیه) شکست
+# می‌خوردن — چون پیام واقعی احتمالاً RPD/RPM بوده، نه TPD. به‌جای تعقیب تک‌تک
+# متن‌های ممکن، الان هر پیام «Rate limit reached» از Groq (پیشوند ثابت همه‌ی
+# انواع سقفش) رو به‌عنوان سهمیه/نرخ در نظر می‌گیریم، نه یک باگ واقعی.
+DAILY_QUOTA_MARKERS = ("tokens per day", "tpd", "rate limit reached", "requests per day", "rpd")
 
 
 def _build_groq_fn():
