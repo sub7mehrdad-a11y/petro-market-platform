@@ -1059,5 +1059,49 @@
         "url": "https://www.dailysabah.com/business"
       }
     ]
+  },
+  {
+    "date": "2026-09-08",
+    "generated_at": "2026-09-08T09:59:35.146307+00:00",
+    "headline_fa": "عدم تغییر در اطلاعیه‌های رقبای ترک و هدف‌گذاری ۲۰۰ میلیارد دلاری لوجستیک ترکیه",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "هدف‌گذاری صنعت لوجستیک ترکیه برای دستیابی به بازار ۲۰۰ میلیارد دلاری",
+        "summary": "انجمن خدمات لوجستیک و حمل‌ونقل ترکیه (UTİKAD) در همایش ۲۰۲۵ استانبول اعلام کرد که هدف این کشور قرار گرفتن در جمع ۱۰ کشور برتر لوجستیک جهان و توسعه زیرساخت‌های پایدار است.",
+        "source_url": "https://www.utikad.org.tr/en"
+      }
+    ],
+    "market_note": "در داده‌های خام دریافتی امروز از سایت‌های رقبای اصلی (اتی‌سودا، کازان‌سودا و وی‌سودا)، هیچ خبر یا اطلاعیه جدیدی درباره تغییر ظرفیت تولید، تغییرات قیمت یا گزارش‌های مالی جدید منتشر نشده و متون صرفاً شامل توضیحات عمومی درباره فناوری استخراج محلول ترونا است. در بخش لوجستیک، برنامه‌ریزی ترکیه برای تقویت زیرساخت‌ها و رسیدن به بازار ۲۰۰ میلیارد دلاری نشان‌دهنده تداوم مزیت لوجستیکی این کشور در منطقه است. با توجه به قیمت مرجع ۲۵۰ دلاری ما، نبود نوسان یا خبر جدید از سوی رقبا نشان می‌دهد شرایط قیمتی فعلاً پایدار است و تمرکز ما باید بر پایش هزینه‌های حمل‌ونقل مرزی با عراق باقی بماند.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTİKAD Logistics Association",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hürriyet Daily News Economy",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
