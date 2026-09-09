@@ -41,7 +41,7 @@
 **فایل‌ها:** `scripts/ingest_exhibitions.py`, `data/exhibitions.json`, `data/exhibition_reports.json`,
 `گزارش/لیست نمایشگاه ها/گزارش_جامع_نمایشگاه_های_ازبکستان.docx`
 
-**کامیت:** (بعد از پوش این‌جا درج می‌شود)
+**کامیت:** `79561e5`
 
 ---
 
