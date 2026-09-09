@@ -1103,5 +1103,49 @@
         "url": "https://www.dailysabah.com/business"
       }
     ]
+  },
+  {
+    "date": "2026-09-09",
+    "generated_at": "2026-09-09T10:02:33.991235+00:00",
+    "headline_fa": "عدم تغییر در وضعیت رقبای ترک و هدف‌گذاری ۲۰۰ میلیارد دلاری لجستیک ترکیه",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "برگزاری اجلاس لجستیک ۲۰۲۵ ترکیه و هدف‌گذاری بازار ۲۰۰ میلیارد دلاری",
+        "summary": "انجمن خدمات حمل‌ونقل و لجستیک ترکیه (UTİKAD) در اجلاس ۲۰۲۵ لجستیک ترکیه، هدف ارتقای این صنعت به حجم بازار ۲۰۰ میلیارد دلاری و قرار گرفتن در بین ۱۰ کشور برتر لجستیک جهان را با تمرکز بر نوآوری و پایداری اعلام کرد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      }
+    ],
+    "market_note": "در منابع بررسی‌شده امروز، هیچ خبر عملیاتی، اطلاعیه قیمت‌گذاری، تغییر ظرفیت یا گزارش مالی جدیدی از رقبای اصلی ترک (اتی سودا، کازان سودا یا سودا سانایی) منتشر نشده است. متون موجود در سایت‌های این شرکت‌ها صرفاً توضیحات کلی درباره تولید کم‌کربن سدیم بی‌کربنات از معدن ترونا به روش استخراج محلول است. در بخش لجستیک نیز انجمن UTIKAD ترکیه برنامه‌های کلان خود را برای توسعه زیرساخت‌های لجستیکی مطرح کرده است. بنابراین امروز خبر مستقیم و مهمی که بر قیمت مرجع ۲۵۰ دلار FOB صادراتی ما یا بازار رقابتی عراق تأثیر بگذارد وجود ندارد و وضعیت رقابتی بدون تغییر باقی مانده است.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTİKAD",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hürriyet Daily News",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
