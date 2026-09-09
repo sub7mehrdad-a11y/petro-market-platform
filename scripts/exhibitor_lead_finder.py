@@ -784,21 +784,38 @@ def main():
     event_name = args.event_name or event_slug
 
     print(f"[1/5] گرفتن درخت دسته‌بندی از {args.url}")
-    with httpx.Client(follow_redirects=True) as client:
-        categories, _ = fetch_category_tree(client, base_url, event_slug, args.url)
-        top_ids, sub_ids = select_relevant_categories(categories)
-        print(f"  {len(categories)} دسته/زیردسته پیدا شد؛ {len(sub_ids)} زیردسته‌ی مشخص انتخاب شد "
-              f"(از {len(LEAF_CATEGORY_TO_GRADE)} مورد در فهرست).")
-        if not sub_ids:
-            print("  [WARN] هیچ‌کدام از زیردسته‌های فهرست LEAF_CATEGORY_TO_GRADE روی این سایت پیدا نشد؛ "
-                  "شاید تاکسونومی این نمایشگاه با Gulfood فرق دارد و باید فهرست را برایش تنظیم کرد.")
+    try:
+        with httpx.Client(follow_redirects=True) as client:
+            categories, _ = fetch_category_tree(client, base_url, event_slug, args.url)
+            top_ids, sub_ids = select_relevant_categories(categories)
+            print(f"  {len(categories)} دسته/زیردسته پیدا شد؛ {len(sub_ids)} زیردسته‌ی مشخص انتخاب شد "
+                  f"(از {len(LEAF_CATEGORY_TO_GRADE)} مورد در فهرست).")
+            if not sub_ids:
+                print("  [WARN] هیچ‌کدام از زیردسته‌های فهرست LEAF_CATEGORY_TO_GRADE روی این سایت پیدا نشد؛ "
+                      "شاید تاکسونومی این نمایشگاه با Gulfood فرق دارد و باید فهرست را برایش تنظیم کرد.")
 
-        print("[2/5] دریافت شرکت‌ها (فیلترشده روی زیردسته‌های مرتبط، سمت سرور)")
-        raw_items = fetch_all_exhibitors(
-            client, base_url, event_slug, args.url,
-            new_category=",".join(top_ids), new_sub_category=",".join(sub_ids),
-            max_items=args.max,
-        )
+            print("[2/5] دریافت شرکت‌ها (فیلترشده روی زیردسته‌های مرتبط، سمت سرور)")
+            raw_items = fetch_all_exhibitors(
+                client, base_url, event_slug, args.url,
+                new_category=",".join(top_ids), new_sub_category=",".join(sub_ids),
+                max_items=args.max,
+            )
+    except httpx.HTTPStatusError as e:
+        # ۲۰۲۶-۰۹-۰۹: چند اجرای CI پشت‌سرهم با خطای واقعی شکست خوردن، ولی محلی
+        # هیچ‌وقت تکرار نشد — فرضیه: سایت نمایشگاه (پشت Cloudflare) IPهای
+        # runner های GitHub Actions رو بعد از اسکرپ مکرر روزها پشت‌سرهم بلاک/
+        # چالش می‌کنه. قبلاً این استثنا کاملاً بدون‌مدیریت بود و فقط «Run
+        # exhibitor lead finder: failure» بدون هیچ توضیحی نشون می‌داد. الان
+        # جزئیات کامل چاپ می‌شه (کد وضعیت + ۵۰۰ کاراکتر اول پاسخ). عمداً هنوز
+        # با کد خطا (نه موفق) خارج می‌شیم — چون این فرضیه هنوز تأیید نشده؛ وقتی
+        # واقعاً تأیید شد، می‌شه مثل تمام‌شدن سهمیه‌ی Groq به یک توقف آرام تبدیلش کرد.
+        print(f"\n[BLOCKED] سایت نمایشگاه درخواست رو رد کرد — کد وضعیت: {e.response.status_code}")
+        print(f"  URL: {e.request.url}")
+        print(f"  ۵۰۰ کاراکتر اول پاسخ: {e.response.text[:500]!r}")
+        sys.exit(1)
+    except Exception as e:  # noqa: BLE001 — هر خطای دیگه‌ی شبکه/پارس هم باید تشخیص داده بشه، نه کرش خام
+        print(f"\n[BLOCKED] دریافت لیست نمایشگاه با خطا مواجه شد: {type(e).__name__}: {e}")
+        sys.exit(1)
 
     print(f"[3/5] حذف موارد تکراری از {len(raw_items)} مورد خام")
     unique_items = dedupe_by_profile(raw_items)
