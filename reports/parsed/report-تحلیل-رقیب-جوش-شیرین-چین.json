@@ -1,0 +1,891 @@
+{
+  "id": "report-تحلیل-رقیب-جوش-شیرین-چین",
+  "title": "ارزیابی جامع مزیت رقابتی، ساختار هزینه و شبکه صادراتی بی‌کربنات سدیم چین (HS 283630)",
+  "country": "چین",
+  "product": "جوش شیرین",
+  "report_type": "detailed",
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "صنعت تولید بی‌کربنات سدیم (جوش شیرین) چین طی سال‌های اخیر دستخوش تحولی بنیادین شده و از اتکای انحصاری به فرآیندهای شیمیایی سنتتیک، به سمت بهره‌برداری گسترده از ذخایر زیرزمینی قلیای طبیعی (ترونا) حرکت کرده است1. این دگرگونی ساختاری به رهبری شرکت شیمیایی بویان (Boyuan Chemical / با نام پیشین یوان‌شینگ انرژی، نماد 000683.SZ در بورس شنژن) رخ داده که با راه‌اندازی مگاپروژه‌ی استخراج ترونا در منطقه‌ی آلاشان استان مغولستان داخلی، معادلات بهای تمام‌شده و توازن عرضه در آسیا را بازتعریف نموده است1. در مقابل، تولیدکنندگان کهنه‌کار شرق چین نظیر شاندونگ های‌هوا (Shandong Haihua، نماد 000822.SZ) و هوبی شوانگ‌هوان (Hubei Shuanghuan، نماد 000707.SZ) کماکان از فرآیندهای سنتتیک سولوی و هو بهره می‌برند و فشارهای هزینه‌ای سنگینی را تحمل می‌کنند3. بررسی ابعاد مالی، جریان‌های تجاری، قیمت‌گذاری و زنجیره‌ی لجستیک چین تصویری دقیق از جایگاه رقبای این کشور در برابر تولیدکنندگان منطقه‌ای ارائه می‌دهد."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "۱. ساختار هزینه‌ی تولید و اقتصاد مقیاس چین"
+    },
+    {
+      "type": "paragraph",
+      "text": "بررسی صورت‌های مالی رسمی حسابرسی‌شده‌ی شرکت شیمیایی بویان در سامانه‌ی بورس شنژن نشان می‌دهد که بخش عمده‌ای از ظرفیت این مجموعه با بهره‌گیری از ذخایر عظیم ترونای حوضه‌ی تاموسو تغذیه می‌شود2. شرکت بویان در گزارش‌های شش‌ماهه‌ی منتهی به سال‌های ۲۰۲۴ و ۲۰۲۵، حاشیه‌ی سود ناخالص بخش بی‌کربنات سدیم (Baking Soda) را برابر با ۳۸٫۰۱ درصد اعلام کرده که با وجود کاهش قیمت‌های جهانی، تنها ۲٫۹ واحد درصد کاهش سالانه را نشان می‌دهد2. حاشیه‌ی سود ناخالص بخش کربنات سدیم این شرکت نیز در سطح ۳۲٫۴۱ درصد پایدار مانده است2. این مجموعه موفق شده در نیمه‌ی نخست سال بالغ بر ۸۰۱٬۳۰۰ تن بی‌کربنات سدیم و ۴٫۷۳ میلیون تن کربنات سدیم تولید کند و ظرفیت سالانه‌ی آلکالی خود را به مرز ۹٫۶ میلیون تن برساند5."
+    },
+    {
+      "type": "paragraph",
+      "text": "در سوی مقابل، شرکت‌های سنتتیک تحت فشارهای هزینه‌ای شدید ناشی از نوسان قیمت خوراک و زغال‌سنگ قرار دارند1. شرکت شاندونگ های‌هوا با ظرفیت سالانه ۱۵۰ هزار تن جوش شیرین بر پایه‌ی فرآیند آمونیاک-سودا (سولوی)، حاشیه‌ی سود ناخالصی بین ۱۴٫۵۵ درصد تا ۲۰٫۲۳ درصد گزارش کرده است3. شرکت هوبی شوانگ‌هوان نیز که بر فرآیند ترکیبی هو (تولید توأم کربنات سدیم و کود کلرید آمونیوم) تمرکز دارد، حاشیه‌ی سود ناخالصی معادل ۲۱٫۸۷ درصد ثبت کرده است؛ حاشیه‌ای که به شدت به بازار کودهای نیتروژنه و بهای گاز سنتز وابسته است4. بر اساس گزارش‌های تحلیلی مؤسسه‌ی سرمایه‌گذاری Cinda Securities و اعلامیه‌های رسمی، بهای تمام‌شده‌ی جامع (Full Cost) کربنات سدیم بویان کمتر از ۱٬۰۰۰ یوان در هر تن (حدود ۱۴۰ دلار) برآورد شده و هزینه‌ی نقدی استخراج و فرآوری ترونا در محدوده‌ی ۱٬۰۰۰ تا ۱٬۲۰۰ یوان در هر تن قرار دارد، در حالی که در فرآیندهای سنتتیک ترکیبی و سولوی، هزینه‌ها به ترتیب در بازه‌های ۱٬۴۰۰ تا ۱٬۶۰۰ یوان و ۱٬۵۰۰ تا ۱٬۷۵۰ یوان در هر تن نوسان می‌کند7."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "نماد بورسی و شرکت",
+        "فرآیند و پایگاه اصلی",
+        "محصولات و ظرفیت سالانه",
+        "حاشیه‌ی سود ناخالص رسمی",
+        "برآورد وضعیت هزینه‌ای",
+        "منبع داده‌های افشا شده"
+      ],
+      "rows": [
+        [
+          "Boyuan Chemical\n\n(000683.SZ)",
+          "قلیای طبیعی ترونا\n\n(تاموسو، آلاشان)",
+          "بی‌کربنات سدیم (>۱٫۲ م‌تن)\n\nکربنات سدیم (۹٫۶ م‌تن)",
+          "۳۸٫۰۱٪ (جوش شیرین)\n\n۳۲٫۴۱٪ (سودا اش)",
+          "بهای تمام‌شده‌ی کامل سودا اش کمتر از ۱٬۰۰۰ یوان/تن",
+          "صورت‌های مالی بورس شنژن2"
+        ],
+        [
+          "Shandong Haihua\n\n(000822.SZ)",
+          "سنتتیک سولوی\n\n(استان شاندونگ)",
+          "بی‌کربنات سدیم (۱۵۰ هزار تن)\n\nکربنات سدیم سنتتیک",
+          "۱۴٫۵۵٪ الی ۲۰٫۲۳٪",
+          "تحت تأثیر بهای سنگ‌آهک، نمک و بخار زغال‌سنگ",
+          "گزارش سالانه و اطلاعیه‌های بورس شنژن3"
+        ],
+        [
+          "Hubei Shuanghuan\n\n(000707.SZ)",
+          "سنتتیک ترکیبی هو\n\n(استان هوبی)",
+          "کربنات سدیم و مشتقات آلکالی\n\nکود کلرید آمونیوم",
+          "۲۱٫۸۷٪",
+          "متأثر از بهای آمونیاک و حاشیه‌ی کود کلرید آمونیوم",
+          "گزارش‌های دوره‌ای بورس شنژن4"
+        ]
+      ]
+    },
+    {
+      "type": "image",
+      "src": "/report-images/report-تحلیل-رقیب-جوش-شیرین-چین/img-1.png"
+    },
+    {
+      "type": "paragraph",
+      "text": "بررسی ترمودینامیکی و شیمیایی فرآیندها علت بنیادین شکاف هزینه‌ای میان دو روش را روشن می‌سازد. در روش قلیای طبیعی بویان، کانسار زیرزمینی ترونا () مستقیماً از طریق انحلال در آب گرم استخراج می‌شود و محلول حاصل با خالص‌سازی و کربناسیون مستقیم به بی‌کربنات سدیم کریستالی تبدیل می‌گردد1. این فرآیند مصرف سنگ‌آهک را به صفر رسانده، اتلاف آمونیاک ندارد و مصرف انرژی حرارتی را به حداقل می‌رساند1. در مقابل، فرآیند سولوی نیازمند کلسیناسیون پرمصرف سنگ‌آهک در کوره‌های آهک‌پزی، حل کردن نمک صنعتی، جذب آمونیاک و احیای پرهزینه‌ی کلرید آمونیوم به کمک شیر آهک است7."
+    },
+    {
+      "type": "paragraph",
+      "text": "بر این اساس، هزینه‌ی نقدی تحویل درب کارخانه‌ی بویان در محدوده‌ی ۱۰۵ تا ۱۲۵ دلار در هر تن قرار می‌گیرد که با در نظر گرفتن ۲۵ تا ۳۵ دلار هزینه‌ی حمل ریلی از بیابان‌های آلاشان تا بنادر صادراتی چینگ‌دائو یا تیانجین، کف قیمت نقدی سربه‌سر پای اسکله (FOB Break-even) برای بویان بین ۱۳۰ تا ۱۶۰ دلار در هر تن تمام می‌شود7. این در حالی است که در فرآیندهای سولوی، هزینه‌ی نقدی درب کارخانه بین ۲۱۰ تا ۲۴۵ دلار بوده و کف سربه‌سر فوب آن‌ها از ۲۱۸ تا ۲۶۰ دلار فراتر می‌رود7. موقعیت هزینه‌ای بویان بسیار نزدیک به مزیت ساختاری WE Soda ترکیه است که هزینه‌ی نقدی استخراج طبیعی ترونای خود را بین ۸۳ تا ۱۰۳ دلار در هر تن حفظ کرده است7."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "مؤلفه‌ی ساختار هزینه (دلار/تن نهایی)",
+        "روش قلیای طبیعی (بویان - آلاشان)",
+        "روش سنتتیک سولوی (شرق چین)",
+        "مفروضات فنی و محرک‌های عملیاتی"
+      ],
+      "rows": [
+        [
+          "مواد اولیه‌ی معدنی و شیمیایی",
+          "۲۰ – ۳۵",
+          "۸۵ – ۱۱۰",
+          "استخراج ترونا در برابر مصرف سنگ‌آهک، نمک صنعتی و اتلاف آمونیاک1"
+        ],
+        [
+          "انرژی، بخار فرآیندی و برق",
+          "۴۰ – ۵۵",
+          "۶۵ – ۸۵",
+          "اتکا به نیروگاه‌های زغال‌سنگی اختصاصی دهانه‌ی معدن با زغال‌سنگ ارزان محلی1"
+        ],
+        [
+          "دستمزد مستقیم و تعمیرات",
+          "۱۵ – ۲۰",
+          "۲۵ – ۳۵",
+          "اتوماسیون بالا در پلنت‌های مگامقیاس تاموسو در برابر پلنت‌های فرسوده5"
+        ],
+        [
+          "هزینه‌های بالاسری و استهلاک",
+          "۳۰ – ۳۵",
+          "۳۵ – ۴۵",
+          "خوردگی شدید تجهیزات و پساب‌های پرکلرید در فرآیند سنتتیک6"
+        ],
+        [
+          "هزینه‌ی نقدی درب کارخانه (EXW)",
+          "۱۰۵ – ۱۲۵",
+          "۲۱۰ – ۲۴۵",
+          "برابری تقریبی با مزیت نقدی کانسارهای ترونای ترکیه7"
+        ],
+        [
+          "لجستیک ریلی تا بنادر صادراتی",
+          "۲۵ – ۳۵",
+          "۸ – ۱۵",
+          "فاصله‌ی دورتر استان مغولستان داخلی نسبت به بنادر ساحلی شاندونگ7"
+        ],
+        [
+          "کف تمام‌شده‌ی نقدی پای کشتی (FOB)",
+          "۱۳۰ – ۱۶۰",
+          "۲۱۸ – ۲۶۰",
+          "تضمین حاشیه‌ی سود مثبت بویان حتی در رکود شدید قیمت‌ها6"
+        ]
+      ]
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "۲. مقاصد صادراتی بی‌کربنات سدیم چین (HS 283630)"
+    },
+    {
+      "type": "paragraph",
+      "text": "بر اساس آمار گمرک چین (GACC) و داده‌های ثبت‌شده در پایگاه‌های تجارت بین‌الملل نظیر ITC Trade Map و OEC، حجم سالانه‌ی صادرات بی‌کربنات سدیم چین بین ۷۵۰ تا ۸۰۰ هزار تن به ارزش ۱۷۶ الی ۲۲۴ میلیون دلار گزارش شده است10. بازارهای صادراتی چین ترکیبی متوازن از قطب‌های صنعتی همسایه در شرق آسیا، بازارهای مصرف کشاورزی در جنوب شرق آسیا و مصرف‌کنندگان صنعتی در بازارهای دوردست اقیانوسی را تشکیل می‌دهند11."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "رتبه",
+        "کشور مقصد وارداتی",
+        "حجم صادرات (تن)",
+        "ارزش (میلیون دلار)",
+        "تحلیل جایگاه راهبردی و دینامیک بازار"
+      ],
+      "rows": [
+        [
+          "۱",
+          "کره جنوبی",
+          "۲۴۷٬۰۰۰",
+          "۵۳٫۰۰ الی ۷۱٫۱۰",
+          "بزرگ‌ترین مقصد راهبردی چین با سهم بیش از ۳۰ درصد؛ مصرف گسترده در تصفیه‌ی گازهای دودکش (FGD)، صنایع غذایی و خوراک دام10."
+        ],
+        [
+          "۲",
+          "اندونزی",
+          "۷۴٬۰۰۰",
+          "۱۲٫۳۰",
+          "بزرگ‌ترین پایگاه مصرف در آسه‌آن؛ تقاضای پایدار در صنایع شوینده، صنایع دارویی و پالایش روغن نخل خوراکی11."
+        ],
+        [
+          "۳",
+          "تایلند",
+          "۴۸٬۰۰۰",
+          "۱۰٫۱۰",
+          "تقاضای سنگین در بخش آبزی‌پروری (پرورش میگو)، تنظیم اسیدیته‌ی استخرها و فرمولاسیون خوراک طیور12."
+        ],
+        [
+          "۴",
+          "ویتنام",
+          "۴۶٬۰۰۰",
+          "۹٫۰۶",
+          "بازار منطقه‌ای با دسترسی زمینی و دریایی آسان؛ مصرف متمرکز در بخش شیلات، رنگرزی و دباغی چرم11."
+        ],
+        [
+          "۵",
+          "استرالیا",
+          "۳۸٬۰۰۰",
+          "۸٫۹۳",
+          "تقاضای ساختاری برای گریدهای صنعتی و فنی در بخش‌های خنثی‌سازی پساب‌های اسیدی معادن و مکمل‌های دامی11."
+        ],
+        [
+          "۶",
+          "برزیل",
+          "۳۰٬۰۰۰",
+          "۶٫۸۱",
+          "مهم‌ترین هاب وارداتی چین در آمریکای لاتین؛ رقابت مستقیم تناژهای چینی با محموله‌های طبیعی ترکیه در صنایع دامداری برزیل12."
+        ],
+        [
+          "۷",
+          "ژاپن",
+          "۲۲٬۰۰۰",
+          "۵٫۷۶",
+          "بازار کیفی با استانداردهای فیزیکی سخت‌گیرانه؛ واردات گریدهای بسیار خالص دارویی و صنعتی با حاشیه‌ی ارزش بالا12."
+        ],
+        [
+          "۸",
+          "بنگلادش",
+          "۲۵٬۰۰۰",
+          "۵٫۲۳",
+          "کانون مصرف جنوب آسیا؛ تقاضای پایدار از سوی کارخانجات پرشمار نساجی، رنگرزی و فرآوری چرم برای خنثی‌سازی اسید12."
+        ],
+        [
+          "۹",
+          "هنگ‌کنگ",
+          "۱۸٬۰۰۰",
+          "۵٫۱۳",
+          "مرکز ترانزیت، بسته‌بندی مجدد و صادرات دوباره به مقاصد خرد در حوزه‌ی اقیانوسیه و جزایر آسیایی12."
+        ],
+        [
+          "۱۰",
+          "آفریقای جنوبی",
+          "۲۲٬۰۰۰",
+          "۴٫۹۲",
+          "دروازه‌ی ورود به قاره آفریقا؛ تقاضای دوگانه در بخش فرآوری مواد معدنی فلزی و افزودنی‌های غذایی صنعتی12."
+        ],
+        [
+          "۱۱",
+          "فیلیپین",
+          "۱۸٬۰۰۰",
+          "۴٫۲۰",
+          "بازار مصرف پایدار در صنایع بیکری، خمیرمایه، نوشابه‌سازی و تصفیه‌ی آب محلی11."
+        ],
+        [
+          "۱۲",
+          "هند",
+          "۱۷٬۰۰۰",
+          "۳٫۹۰",
+          "حضور گزینشی به علت تعرفه‌های وارداتی و قدرت رقابتی تولیدکنندگان محلی مانند تاتا کمیکالز؛ واردات محموله‌های مقطعی14."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "بررسی مقاصد صادراتی نشان می‌دهد که بازارهای دوردست مورد توجه سپهران شیمی در سبد تجاری چین نقشی فعال دارند. در آمریکای لاتین، کشور برزیل در جایگاه ششم مقاصد صادراتی چین ایستاده و سالانه حدود ۳۰ هزار تن محصول چینی را جذب می‌کند12. در جنوب آسیا، کشور بنگلادش به عنوان هشتمین واردکننده‌ی عمده از چین (با سهم ۲٫۹۵ درصدی) فعال است و بازار هند با وجود موانع تجاری، پذیرای محموله‌های منظم چینی در بنادر غربی ناوا شیوا و موندرا است12. در قاره‌ی آفریقا، آفریقای جنوبی مستقیماً در رتبه‌ی دهم جای دارد و بنادر شرق آفریقا نظیر مومباسا (کنیا) و شمال آفریقا نظیر اسکندریه (مصر) مقاصد مستمر خطوط کانتینری حامل جوش شیرین چین به شمار می‌روند11."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "۳. روند قیمت FOB صادراتی چین و تحلیل واگرایی داده‌های مراجع بین‌المللی"
+    },
+    {
+      "type": "paragraph",
+      "text": "بررسی داده‌های مراجع تخصصی بین‌المللی از اواسط سال ۲۰۲۵ تا اوایل سال ۲۰۲۶ نشان می‌دهد که بازار صادراتی بی‌کربنات سدیم چین تحت تأثیر مازاد عرضه‌ی ناشی از بهره‌برداری از فازهای تکمیلی پروژه‌ی آلاشان، روندی نزولی و سپس تثبیتی را در سطوح پایین تجربه کرده است1. مقایسه‌ی شاخص‌های قیمتی در پایگاه‌های SunSirs، ChemAnalyst و سامانه‌های تحلیلی تجاری نظیر Price-Watch نشان‌دهنده‌ی اختلاف‌های ساختاری در دامنه‌ی مظنه‌ها به دلیل تفاوت در مبانی ارزیابی است."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "دوره‌ی زمانی",
+        "شاخص SunSirs(بازار داخلی / فوب صادراتی)",
+        "شاخص ChemAnalyst(حوزه‌ی آسیا-پاسیفیک / FOB)",
+        "شاخص Price-Watch / مراجع B2B(FOB بنادر شرقی)",
+        "عوامل اثرگذار بر نوسانات و علل تغییرات دوره‌ای"
+      ],
+      "rows": [
+        [
+          "سه‌ماهه سوم ۲۰۲۵ (Q3 2025)",
+          "۲۱۵ – ۲۳۰ دلار/تن\n\n(معادل ۱٬۴۵۰–۱٬۵۵۰ یوان درب کارخانه)18",
+          "۲۴۰ – ۲۵۰ دلار/تن\n\n(میانگین شاخص منطقه‌ای ۲۴۷٫۶۷ دلار)19",
+          "۲۲۰ – ۲۴۵ دلار/تن\n\n(FOB چینگ‌دائو و تیانجین)20",
+          "تزریق عرضه‌ی جدید پروژه‌ی تاموسو و افزایش ذخایر انبارها در بنادر شرقی، کاهش قیمت داخلی را به بازار صادراتی سرایت داد1."
+        ],
+        [
+          "سه‌ماهه چهارم ۲۰۲۵ (Q4 2025)",
+          "۲۰۰ – ۲۱۵ دلار/تن\n\n(افت تدریجی مظنه‌ها به ۱٬۳۸۰ یوان)2",
+          "۲۳۰ – ۲۴۲ دلار/تن\n\n(فشار عرضه‌ی چین بر هاب‌های تجاری منطقه)19",
+          "۲۱۰ – ۲۳۰ دلار/تن\n\n(تثبیت قیمت محموله‌های بزرگ کانتینری)20",
+          "تعمیق افت تقاضای فصلی در صنایع شیشه‌سازی و شوینده؛ فشار ناشی از تولید کامل خطوط ترونا و آغاز رقابت منفی سود1."
+        ],
+        [
+          "دسامبر ۲۰۲۵ / ژانویه ۲۰۲۶",
+          "۱۹۵ – ۲۱۰ دلار/تن\n\n(کف‌های تاریخی ثبت‌شده در شمال غرب چین)2",
+          "۲۲۵ – ۲۳۵ دلار/تن\n\n(ثبات تقاضای صنایع غذایی و دارویی)19",
+          "۲۰۰ – ۲۲۰ دلار/تن\n\n(فروش‌های تهاجمی بازرگانان پیش از سال نو)20",
+          "کاهش تقاضای نقدی در پایان سال میلادی، تعطیلی زودهنگام کارگاه‌های پایین‌دستی در چین و تلاش کارخانجات برای تخلیه‌ی انبارها1."
+        ],
+        [
+          "سه‌ماهه اول ۲۰۲۶ (Q1 2026)",
+          "۲۰۵ – ۲۲۰ دلار/تن\n\n(تثبیت قیمت در ۱٬۴۲۰–۱٬۵۰۰ یوان)18",
+          "۲۳۲ – ۲۴۵ دلار/تن\n\n(افزایش جزئی هزینه‌های فرآوری و حمل)19",
+          "۲۱۵ – ۲۳۵ دلار/تن\n\n(قراردادهای بهاره کیسه‌بندی ۲۵ کیلوگرمی)19",
+          "کاهش نرخ فعالیت برخی خطوط سنتی سنتتیک به دلیل غیراقتصادی بودن، رشد نسبی بهای سوخت و آغاز بازتوانی تقاضای صنعتی1."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "علت واگرایی میان اعداد پایگاه‌های ارزیابی، تفاوت در حوزه‌ی تحت پوشش آن‌هاست. پایگاه SunSirs بر معاملات عمده‌ی بازار داخلی چین در استان‌هایی نظیر هنان و شاندونگ تمرکز دارد و داده‌های فوب آن بازتاب‌دهنده‌ی خالص قیمت درب کارخانه بدون احتساب مالیات بر ارزش افزوده (با کسر استرداد مالیات صادراتی VAT Rebate) است؛ بنابراین ارقام آن همواره در لایه‌های پایینی بازه (۲۰۰ تا ۲۲۰ دلار) جای می‌گیرد2. مؤسسه‌ی ChemAnalyst داده‌های خود را بر مبنای ارزیابی‌های منطقه‌ای هاب‌های تجاری مانند جورنگ یا قراردادهای بزرگ فرامرزی FOB/CFR تدوین می‌کند که هزینه‌های تجمیع در بنادر صادراتی، کارمزدهای شرکت‌های تجاری، هزینه‌ی آزمایش‌های بازرسی بین‌المللی (SGS) و بیمه به آن افزوده شده است و اعدادی بین ۲۳۰ تا ۲۵۰ دلار را گزارش می‌نماید19. مراجع B2B و سامانه‌های نظارتی تجاری نظیر ۲۱food و Price-Watch نیز بازتاب‌دهنده‌ی بسته‌های استاندارد صادراتی (کیسه‌های ۲۵ کیلوگرمی پالت‌شده با استر پلی‌اتیلن) برای سفارش‌های کانتینری متوسط هستند که حاشیه‌ای حدود ۱۰ تا ۱۵ دلار بالاتر از فروش‌های تناژ فله‌ی محض ایجاد می‌کند19."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "۴. کرایه‌ی حمل کانتینری دریایی از بنادر چین به بازارهای هدف مشترک"
+    },
+    {
+      "type": "paragraph",
+      "text": "رقابت اصلی میان محموله‌های صادراتی سپهران شیمی و صادرکنندگان چینی در بازارهای اقیانوسی دوردست نیازمند سنجش دقیق کرایه‌ی حمل دریایی است. جدول زیر با فرض استاندارد بارگیری خالص ۲۵ تن کیسه‌ی پلی‌پروپیلن در هر کانتینر ۲۰ فوت (FCL 20ft)، شاخص‌های نرخ باربری را بر مبنای داده‌های شاخص باربری کانتینری شانگهای (SCFI)، اعلامیه‌های خطوط کشتیرانی نظیر مرسک و CMA CGM و برآوردهای فورواردری معتبر نشان می‌دهد17."
+    },
+    {
+      "type": "table",
+      "headers": [
+        "بندر مبدأ بارگیری در چین",
+        "بندر مقصد وارداتی",
+        "زمان تقریبی ترانزیت",
+        "کرایه‌ی کانتینر ۲۰ فوت (USD/TEU)",
+        "هزینه‌ی حمل دریایی هر تن بار (USD/MT)",
+        "ویژگی‌های عملیاتی مسیر دریایی"
+      ],
+      "rows": [
+        [
+          "شانگهای / چینگ‌دائو",
+          "مومباسا (Mombasa, Kenya)",
+          "۲۷ الی ۳۵ روز17",
+          "۲٬۲۰۰ – ۲٬۷۵۰ دلار\n\n(با پیک سیزن: ۳٬۲۵۰+)17",
+          "۸۸ – ۱۱۰ دلار/تن\n\n(زمان اوج: ۱۳۰+)17",
+          "تحت تأثیر بحران امنیتی دریای سرخ و تغییر مسیر لاینرها؛ اعمال اضافه کرایه‌های سنگین فصلی (PSS)17."
+        ],
+        [
+          "چینگ‌دائو / شانگهای",
+          "اسکندریه (Alexandria, Egypt)",
+          "۳۲ الی ۴۲ روز",
+          "۳٬۲۰۰ – ۴٬۰۰۰ دلار",
+          "۱۲۸ – ۱۶۰ دلار/تن",
+          "الزام ناوگان تجاری به دور زدن دماغه امیدنیک به جای عبور از باب‌المندب که هزینه و مسافت را جهش داده است24."
+        ],
+        [
+          "شانگهای / نینگبو",
+          "ناوا شیوا (Nhava Sheva, India)",
+          "۱۴ الی ۲۰ روز28",
+          "۱٬۴۰۰ – ۲٬۱۰۰ دلار\n[cite: 29, 30]",
+          "۵۶ – ۸۴ دلار/تن\n[cite: 30]",
+          "مسیر دریایی پرتردد با ترافیک متوازن کانتینری؛ دارای نوسان وابسته به ازدحام اسکله‌های هند16."
+        ],
+        [
+          "شانگهای / چینگ‌دائو",
+          "چیتاگونگ (Chittagong, Bangladesh)",
+          "۱۸ الی ۲۵ روز",
+          "۱٬۶۰۰ – ۲٬۳۰۰ دلار",
+          "۶۴ – ۹۲ دلار/تن",
+          "نیازمند تخلیه و بارگیری فیدری در بنادر کلمبو، سنگاپور یا کلانگ همراه با خواب طولانی کشتی در لنگرگاه."
+        ],
+        [
+          "چینگ‌دائو / شانگهای",
+          "سانتوس (Santos, Brazil)",
+          "۳۵ الی ۴۵ روز28",
+          "۳٬۸۰۰ – ۵٬۲۰۰ دلار\n[cite: 24, 30]",
+          "۱۵۲ – ۲۰۸ دلار/تن\n[cite: 30]",
+          "طولانی‌ترین مسیر دریایی با نرخ‌های نوسانی شدید به دلیل تقاضای فصلی بالای واردات کالاهای صنعتی برزیل24."
+        ]
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "با تحلیل این متغیرهای لجستیکی، شکاف قیمتی فوب میان ایران و چین شفافیت بیشتری می‌یابد. سپهران شیمی با بهای پایه FOB معادل ۲۵۰ دلار در هر تن در مبدأ بندرعباس، در نگاه اول با مظنه‌های ۲۱۰ تا ۲۳۰ دلاری چینگ‌دائو فاصله‌ای ۲۰ تا ۴۰ دلاری دارد، اما ورود این محموله‌ها به بنادر هند (ناوا شیوا) با کرایه‌ی بسیار ارزان کانتینری از خلیج فارس (حدود ۱۵ تا ۲۵ دلار در هر تن) همراه است؛ در شرایطی که محموله‌ی چینی برای رسیدن به ناوا شیوا ۵۶ تا ۸۴ دلار در هر تن هزینه‌ی حمل متحمل می‌شود30. این اختلاف کرایه نه تنها شکاف قیمت فوب را پر می‌کند، بلکه قیمت نهایی تحویل در بندر مقصد (CFR) را به نفع تولیدکننده‌ی ایرانی تغییر می‌دهد. در بازار شرق آفریقا (مومباسا) نیز کرایه‌ی حمل کانتینری از بندرعباس معمولاً بین ۳۵ تا ۵۵ دلار در هر تن متغیر است، در حالی که بار چینی به دلیل طی مسافت اقیانوس آرام تا هند و اضافه کرایه‌های فصلی، با هزینه‌ی حمل ۸۸ تا ۱۱۰ دلاری مواجه می‌شود که مزیتی چشمگیر برای ترانزیت کالا از ایران پدید می‌آورد17."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "۵. شدت انتشار کربن و تحلیل شکاف استاندارد‌های زیست‌محیطی"
+    },
+    {
+      "type": "image",
+      "src": "/report-images/report-تحلیل-رقیب-جوش-شیرین-چین/img-2.png"
+    },
+    {
+      "type": "paragraph",
+      "text": "در بازارهای تجاری مدرن، پایش ردپای کربن محصولات نقشی فزاینده در تعیین قدرت رقابتی و دسترسی به تعرفه‌های ترجیحی ایفا می‌کند. مجموعه‌های طبیعی ترونا در ترکیه نظیر کازان‌سودا و اتی‌سودا متعلق به هلدینگ WE Soda گواهی رسمی و مستقل Intertek CarbonClear را اخذ کرده‌اند که طی آن شدت انتشار گازهای گلخانه‌ای از مرحله‌ی استخراج تا درب خروجی کارخانه (Cradle-to-Gate) برای کازان‌سودا ۰٫۲۶۱ و برای اتی‌سودا ۰٫۲۹۱ تن دی‌اکسید کربن معادل به ازای هر تن محصول ثبت و ممیزی شده است؛ رقمی که فاصله‌ی فاحشی با میانگین ۰٫۹۳۲ تن  در تأسیسات سنتتیک قاره اروپا دارد31."
+    },
+    {
+      "type": "paragraph",
+      "text": "بررسی مستندات زیست‌محیطی و سامانه‌های ممیزی بین‌المللی نشان می‌دهد که هیچ‌یک از شرکت‌های تولیدکننده‌ی کربنات و بی‌کربنات سدیم در چین، از جمله شرکت بویان، تاکنون موفق به اخذ گواهی ممیزی‌شده‌ی مستقلی از شرکت‌های بین‌المللی نظیر Intertek CarbonClear نشده‌اند31. گزارش‌های مسوولیت اجتماعی (CSR) و افشاگری‌های زیست‌محیطی (ESG) این شرکت‌ها عمدتاً بر اعلام تعهدات کلی ذیل اهداف ملی «کربن دوگانه» چین (پیک انتشار تا ۲۰۳۰ و کربن‌خنثی تا ۲۰۶۰) متمرکز بوده و فاقد ارقام تفکیکی ردپای کربن محصول (Product Carbon Footprint) منطبق بر استانداردهای ISO 14067 یا GHG Protocol هستند6."
+    },
+    {
+      "type": "image",
+      "src": "/report-images/report-تحلیل-رقیب-جوش-شیرین-چین/img-3.png"
+    },
+    {
+      "type": "image",
+      "src": "/report-images/report-تحلیل-رقیب-جوش-شیرین-چین/img-4.png"
+    },
+    {
+      "type": "paragraph",
+      "text": "با این وجود، ارزیابی‌های علمی چرخه‌ی حیات (LCA) که توسط دانشگاه‌ها و پایگاه‌های تخصصی بین‌المللی در خصوص زنجیره‌ی تأمین شیمیایی چین منتشر شده است، چشم‌انداز دقیقی از تفاوت فناوری‌ها ارائه می‌دهد33. در فرآیندهای سنتتیک سولوی و هو در چین، به علت احتراق حجم بالایی از زغال‌سنگ به منظور تأمین بخار دما و فشار بالا و همچنین تجزیه‌ی حرارتی سنگ‌آهک در کوره، ردپای کربن در محدوده‌ی ۱٫۲ تا ۱٫۸۵ تن  معادل به ازای هر تن محصول محاسبه می‌شود33. در پروژه‌ی قلیای طبیعی بویان در منطقه آلاشان، حذف کوره‌های کلسیناسیون آهک منجر به کاهش چشمگیر انتشار مستقیم فرآیندی شده است، اما تأمین برق و بخار این مجموعه متکی بر یک نیروگاه حرارتی اختصاصی با سوخت زغال‌سنگ است1. در نتیجه، ارزیابی‌های فنی شدت انتشار کربن بویان را در بازه‌ی ۰٫۵۵ تا ۰٫۸۵ تن  معادل به ازای هر تن محصول تخمین می‌زنند که هرچند نسبت به رقبای سنتتیک داخلی افتی چشمگیر را نشان می‌دهد، اما همچنان حدود دو برابر سطح انتشار گازهای گلخانه‌ای در فرآیندهای انحلال ترونای ترکیه است31."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "ارزیابی راهبردی برای بازاریابی صادراتی سپهران شیمی"
+    },
+    {
+      "type": "paragraph",
+      "text": "تلفیق اطلاعات به دست آمده از ساختار هزینه‌ی چین، جغرافیای صادرات و مسیرهای لجستیک دریایی، چند واقعیت راهبردی را برای حضور بین‌المللی سپهران شیمی معین می‌سازد:"
+    },
+    {
+      "type": "paragraph",
+      "text": "نخست آنکه مقایسه‌ی صرف قیمت پای کشتی (FOB پایه ۲۵۰ دلار ایران در برابر ۲۱۰ تا ۲۳۰ دلار بنادر شرق چین) گمراه‌کننده است. شرکت بویان با اتکا به ظرفیت‌های عظیم و حاشیه‌ی سود ناخالص ۳۸ درصدی می‌تواند در جنگ‌های فرسایشی قیمت تا سطوح ۱۵۰ دلار فوب نیز مقاومت کند6. بنابراین، ورود به رقابت تخفیف قیمتی مستقیم در بازارهای سنتی تحت نفوذ بنادر چین نظیر جنوب شرق آسیا (ویتنام، تایلند و اندونزی) که از نرخ‌های حمل دریایی کانتینری بسیار پایینی برخوردارند، برای محصول ایرانی توجیه اقتصادی نخواهد داشت11."
+    },
+    {
+      "type": "paragraph",
+      "text": "دوم، مزیت رقابتی پایدار سپهران شیمی در مناطقی شکوفا می‌شود که هزینه‌ی باربری دریایی، مزیت فوب پایین چین را خنثی سازد. در بازارهای هند، بنگلادش و شرق آفریقا، هزینه‌ی حمل کانتینری چینگ‌دائو به علت مسافت طولانی و بحران‌های امنیتی دریای سرخ در سطوح ۵۶ تا ۱۱۰ دلار در هر تن قرار دارد17. در مقابل، مجاورت بندرعباس با اقیانوس هند به سپهران شیمی این امکان را می‌دهد که با پرداخت هزینه‌ی حمل دریایی به مراتب کمتر، محصول خود را با نرخ سی‌اف‌آر (CFR) برابر یا حتی پایین‌تر از صادرکنندگان چینی به خریداران تحویل دهد."
+    },
+    {
+      "type": "paragraph",
+      "text": "سوم، در بازارهای دوردستی چون برزیل، کرایه‌ی باربری دریایی بیش از ۱۵۰ دلار در هر تن برای کانتینرهای اعزامی از هر دو کشور مانعی جدی در برابر صادرکنندگان ارزان‌تر حوزه‌ی مدیترانه (به‌ویژه ترکیه) است30. از این رو، تمرکز تیم صادراتی سپهران شیمی باید بر کشورهایی باشد که فاصله‌ی ترانزیتی از ایران کوتاه‌تر و هزینه‌ی لاینرهای کشتیرانی بهینه‌تر است."
+    },
+    {
+      "type": "paragraph",
+      "text": "چهارم، فقدان گواهی‌های معتبر زیست‌محیطی در میان صادرکنندگان چینی و اتکای عمیق پلنت‌های این کشور به منابع زغال‌سنگ حرارتی، بستری مناسب برای بازاریابی متمایز فراهم می‌کند1. در صورتی که سپهران شیمی با اصلاح سیستم‌های حرارتی و سنجش دقیق ردپای کربن، شدت انتشار خود را ذیل گواهی‌های مستقل بین‌المللی شفاف سازد، قادر خواهد بود در قراردادهای شرکتی با مصرف‌کنندگان چندملیتی و صنایعی که مشمول مقررات سخت‌گیرانه‌ی زیست‌محیطی هستند، بدون نیاز به ورود به جنگ قیمت، سهم بازار باثباتی را به دست آورد31."
+    },
+    {
+      "type": "heading",
+      "level": 4,
+      "text": "Works cited"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cinda Securities: Soda Ash Prices Continue to Bottom, Focus on the, https://www.webull.com/news/13491884758336512",
+      "runs": [
+        {
+          "text": "Cinda Securities: Soda Ash Prices Continue to Bottom, Focus on the, ",
+          "href": null
+        },
+        {
+          "text": "https://www.webull.com/news/13491884758336512",
+          "href": "https://www.webull.com/news/13491884758336512"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Lower prices and higher volumes for soda ash and baking soda, https://news.futunn.com/en/post/77065748/boyuan-chemical-000683-prices-of-soda-ash-and-baking-soda",
+      "runs": [
+        {
+          "text": "Lower prices and higher volumes for soda ash and baking soda, ",
+          "href": null
+        },
+        {
+          "text": "https://news.futunn.com/en/post/77065748/boyuan-chemical-000683-prices-of-soda-ash-and-baking-soda",
+          "href": "https://news.futunn.com/en/post/77065748/boyuan-chemical-000683-prices-of-soda-ash-and-baking-soda"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "山东海化：公司小苏打年产能约15万吨，产能利用率100% - 富途资讯, https://news.futunn.com/en/post/27304230",
+      "runs": [
+        {
+          "text": "山东海化：公司小苏打年产能约15万吨，产能利用率100% - 富途资讯, ",
+          "href": null
+        },
+        {
+          "text": "https://news.futunn.com/en/post/27304230",
+          "href": "https://news.futunn.com/en/post/27304230"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "双环科技（000707）1月17日主力资金净卖出732.19万元 - Moomoo, https://www.moomoo.com/ja/news/post/48261413",
+      "runs": [
+        {
+          "text": "双环科技（000707）1月17日主力资金净卖出732.19万元 - Moomoo, ",
+          "href": null
+        },
+        {
+          "text": "https://www.moomoo.com/ja/news/post/48261413",
+          "href": "https://www.moomoo.com/ja/news/post/48261413"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Soda Ash Capacity Jumps to 9.6 Million Tons - BigGo Finance, https://finance.biggo.com/news/4004e049-6f31-46f0-9e07-acc1c049c6f6",
+      "runs": [
+        {
+          "text": "Soda Ash Capacity Jumps to 9.6 Million Tons - BigGo Finance, ",
+          "href": null
+        },
+        {
+          "text": "https://finance.biggo.com/news/4004e049-6f31-46f0-9e07-acc1c049c6f6",
+          "href": "https://finance.biggo.com/news/4004e049-6f31-46f0-9e07-acc1c049c6f6"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Boyuan Chemical (000683): Sodium carbonate sales volume offsets, https://news.futunn.com/en/post/77739730/boyuan-chemical-000683-sodium-carbonate-sales-volume-offsets-price-declines",
+      "runs": [
+        {
+          "text": "Boyuan Chemical (000683): Sodium carbonate sales volume offsets, ",
+          "href": null
+        },
+        {
+          "text": "https://news.futunn.com/en/post/77739730/boyuan-chemical-000683-sodium-carbonate-sales-volume-offsets-price-declines",
+          "href": "https://news.futunn.com/en/post/77739730/boyuan-chemical-000683-sodium-carbonate-sales-volume-offsets-price-declines"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Cinda Securities: The price of soda ash continues to hit new lows, https://www.moomoo.com/news/post/58339631/cinda-securities-the-price-of-soda-ash-continues-to-hit",
+      "runs": [
+        {
+          "text": "Cinda Securities: The price of soda ash continues to hit new lows, ",
+          "href": null
+        },
+        {
+          "text": "https://www.moomoo.com/news/post/58339631/cinda-securities-the-price-of-soda-ash-continues-to-hit",
+          "href": "https://www.moomoo.com/news/post/58339631/cinda-securities-the-price-of-soda-ash-continues-to-hit"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "山东海化（000822）11月28日主力资金净卖出923.37万元 - Moomoo, https://www.moomoo.com/ja/news/post/46471534",
+      "runs": [
+        {
+          "text": "山东海化（000822）11月28日主力资金净卖出923.37万元 - Moomoo, ",
+          "href": null
+        },
+        {
+          "text": "https://www.moomoo.com/ja/news/post/46471534",
+          "href": "https://www.moomoo.com/ja/news/post/46471534"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Yuanxing Energy: at present, the complete cost of soda ash is less, https://www.moomoo.com/news/post/5868708/yuanxing-energy-at-present-the-complete-cost-of-soda-ash",
+      "runs": [
+        {
+          "text": "Yuanxing Energy: at present, the complete cost of soda ash is less, ",
+          "href": null
+        },
+        {
+          "text": "https://www.moomoo.com/news/post/5868708/yuanxing-energy-at-present-the-complete-cost-of-soda-ash",
+          "href": "https://www.moomoo.com/news/post/5868708/yuanxing-energy-at-present-the-complete-cost-of-soda-ash"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Sodium bicarbonate (HS: 283630) Product Trade, Exporters and, https://oec.world/en/profile/hs/sodium-bicarbonate",
+      "runs": [
+        {
+          "text": "Sodium bicarbonate (HS: 283630) Product Trade, Exporters and, ",
+          "href": null
+        },
+        {
+          "text": "https://oec.world/en/profile/hs/sodium-bicarbonate",
+          "href": "https://oec.world/en/profile/hs/sodium-bicarbonate"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Sodium Bicarbonate Market Size 2026 | Food & Pharmaceutical, https://prismaneconsulting.com/report-details/sodium-bicarbonate-market",
+      "runs": [
+        {
+          "text": "Sodium Bicarbonate Market Size 2026 | Food & Pharmaceutical, ",
+          "href": null
+        },
+        {
+          "text": "https://prismaneconsulting.com/report-details/sodium-bicarbonate-market",
+          "href": "https://prismaneconsulting.com/report-details/sodium-bicarbonate-market"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "China | Exports | Sodium hydrogencarbonate (sodium bicarbonate), https://trendeconomy.com/data/export_h2/China/283630",
+      "runs": [
+        {
+          "text": "China | Exports | Sodium hydrogencarbonate (sodium bicarbonate), ",
+          "href": null
+        },
+        {
+          "text": "https://trendeconomy.com/data/export_h2/China/283630",
+          "href": "https://trendeconomy.com/data/export_h2/China/283630"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Sodium hydrogencarbonate (sodium bicarbonate) exports to China, https://wits.worldbank.org/trade/comtrade/en/country/All/year/2024/tradeflow/Exports/partner/CHN/product/283630",
+      "runs": [
+        {
+          "text": "Sodium hydrogencarbonate (sodium bicarbonate) exports to China, ",
+          "href": null
+        },
+        {
+          "text": "https://wits.worldbank.org/trade/comtrade/en/country/All/year/2024/tradeflow/Exports/partner/CHN/product/283630",
+          "href": "https://wits.worldbank.org/trade/comtrade/en/country/All/year/2024/tradeflow/Exports/partner/CHN/product/283630"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "India Extends Anti-Dumping Duties on Aniline Imports from China for, https://www.echemi.com/cms/2513968.html",
+      "runs": [
+        {
+          "text": "India Extends Anti-Dumping Duties on Aniline Imports from China for, ",
+          "href": null
+        },
+        {
+          "text": "https://www.echemi.com/cms/2513968.html",
+          "href": "https://www.echemi.com/cms/2513968.html"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Trade Data Pro | Global Import Export Trade Data Saas Platform, https://tradedata.pro/trade-database-demo/turkey/export-data/product/expiration/",
+      "runs": [
+        {
+          "text": "Trade Data Pro | Global Import Export Trade Data Saas Platform, ",
+          "href": null
+        },
+        {
+          "text": "https://tradedata.pro/trade-database-demo/turkey/export-data/product/expiration/",
+          "href": "https://tradedata.pro/trade-database-demo/turkey/export-data/product/expiration/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Review of maritime transport 2025 - UNCTAD, https://unctad.org/system/files/official-document/rmt2025_en.pdf",
+      "runs": [
+        {
+          "text": "Review of maritime transport 2025 - UNCTAD, ",
+          "href": null
+        },
+        {
+          "text": "https://unctad.org/system/files/official-document/rmt2025_en.pdf",
+          "href": "https://unctad.org/system/files/official-document/rmt2025_en.pdf"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Cost of shipping 20ft container from China to Kenya - Dantful, https://www.dantful.com/cost-of-shipping-20ft-container-from-china-to-kenya/",
+      "runs": [
+        {
+          "text": "Cost of shipping 20ft container from China to Kenya - Dantful, ",
+          "href": null
+        },
+        {
+          "text": "https://www.dantful.com/cost-of-shipping-20ft-container-from-china-to-kenya/",
+          "href": "https://www.dantful.com/cost-of-shipping-20ft-container-from-china-to-kenya/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Sodium Bicarbonate Prices Were Consolidating This Week ... - SunSirs, https://www.sunsirs.com/uk/detail_news-23344.html",
+      "runs": [
+        {
+          "text": "Sodium Bicarbonate Prices Were Consolidating This Week ... - SunSirs, ",
+          "href": null
+        },
+        {
+          "text": "https://www.sunsirs.com/uk/detail_news-23344.html",
+          "href": "https://www.sunsirs.com/uk/detail_news-23344.html"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Sodium Bicarbonate Price Trend and Forecast - ChemAnalyst, https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",
+      "runs": [
+        {
+          "text": "Sodium Bicarbonate Price Trend and Forecast - ChemAnalyst, ",
+          "href": null
+        },
+        {
+          "text": "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",
+          "href": "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "bicarbonate of sodium suppliers,exporters on 21food.com, https://www.21food.com/show/bicarbonate-of-sodium.html",
+      "runs": [
+        {
+          "text": "bicarbonate of sodium suppliers,exporters on 21food.com, ",
+          "href": null
+        },
+        {
+          "text": "https://www.21food.com/show/bicarbonate-of-sodium.html",
+          "href": "https://www.21food.com/show/bicarbonate-of-sodium.html"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "SunSirs: China Wood Pulp Prices Show Mixed Trends, https://www.sunsirs.com/uk/detail_news-33654.html",
+      "runs": [
+        {
+          "text": "SunSirs: China Wood Pulp Prices Show Mixed Trends, ",
+          "href": null
+        },
+        {
+          "text": "https://www.sunsirs.com/uk/detail_news-33654.html",
+          "href": "https://www.sunsirs.com/uk/detail_news-33654.html"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "China's PTA Industry Expected to Face Tightening Supply ... - SunSirs, https://www.sunsirs.com/uk/detail_news-30720.html",
+      "runs": [
+        {
+          "text": "China's PTA Industry Expected to Face Tightening Supply ... - SunSirs, ",
+          "href": null
+        },
+        {
+          "text": "https://www.sunsirs.com/uk/detail_news-30720.html",
+          "href": "https://www.sunsirs.com/uk/detail_news-30720.html"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Caustic Soda Flakes Price 2026: $780–800/MT FOB (NaOH 98%), https://causticsodaco.com/caustic-soda-flakes-price/",
+      "runs": [
+        {
+          "text": "Caustic Soda Flakes Price 2026: $780–800/MT FOB (NaOH 98%), ",
+          "href": null
+        },
+        {
+          "text": "https://causticsodaco.com/caustic-soda-flakes-price/",
+          "href": "https://causticsodaco.com/caustic-soda-flakes-price/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "SCFI - Shanghai Shipping Exchange, https://en.sse.net.cn/indices/scfinew.jsp",
+      "runs": [
+        {
+          "text": "SCFI - Shanghai Shipping Exchange, ",
+          "href": null
+        },
+        {
+          "text": "https://en.sse.net.cn/indices/scfinew.jsp",
+          "href": "https://en.sse.net.cn/indices/scfinew.jsp"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Ocean Freight Rates from China to Kenya in 2025, https://www.topwayshipping.com/ocean-freight-rates-from-china-to-kenya-in-2025/",
+      "runs": [
+        {
+          "text": "Ocean Freight Rates from China to Kenya in 2025, ",
+          "href": null
+        },
+        {
+          "text": "https://www.topwayshipping.com/ocean-freight-rates-from-china-to-kenya-in-2025/",
+          "href": "https://www.topwayshipping.com/ocean-freight-rates-from-china-to-kenya-in-2025/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Shipping costs for 20ft and 40ft containers from China to Kenya, https://sz-junqing.com/news/how-much-does-it-cost-to-ship-from-china-to-kenya.html",
+      "runs": [
+        {
+          "text": "Shipping costs for 20ft and 40ft containers from China to Kenya, ",
+          "href": null
+        },
+        {
+          "text": "https://sz-junqing.com/news/how-much-does-it-cost-to-ship-from-china-to-kenya.html",
+          "href": "https://sz-junqing.com/news/how-much-does-it-cost-to-ship-from-china-to-kenya.html"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Commodity Intelligence Today (June 23, 2025) - SunSirs, https://www.sunsirs.com/uk/detail_news-24855.html",
+      "runs": [
+        {
+          "text": "Commodity Intelligence Today (June 23, 2025) - SunSirs, ",
+          "href": null
+        },
+        {
+          "text": "https://www.sunsirs.com/uk/detail_news-24855.html",
+          "href": "https://www.sunsirs.com/uk/detail_news-24855.html"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Focusea Maritime Broker Tools | Chartering, Laytime, Claims and, https://captainemo03.github.io/",
+      "runs": [
+        {
+          "text": "Focusea Maritime Broker Tools | Chartering, Laytime, Claims and, ",
+          "href": null
+        },
+        {
+          "text": "https://captainemo03.github.io/",
+          "href": "https://captainemo03.github.io/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Current Full container sea freight rates from China 2026, https://goodhopefreight.com/freight/2025fcl.html",
+      "runs": [
+        {
+          "text": "Current Full container sea freight rates from China 2026, ",
+          "href": null
+        },
+        {
+          "text": "https://goodhopefreight.com/freight/2025fcl.html",
+          "href": "https://goodhopefreight.com/freight/2025fcl.html"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "แแแแแแแแแแแแแแแแแแแแแแแแแแแแแแแแแ, https://tnsc.com/api/blog/attachments-1783591686038-244676514.pdf",
+      "runs": [
+        {
+          "text": "แแแแแแแแแแแแแแแแแแแแแแแแแแแแแแแแแ, ",
+          "href": null
+        },
+        {
+          "text": "https://tnsc.com/api/blog/attachments-1783591686038-244676514.pdf",
+          "href": "https://tnsc.com/api/blog/attachments-1783591686038-244676514.pdf"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Intertek Issues first Low Carbon Intensity Certification for Soda Ash, https://www.intertek.com/news/2024/intertek-issues-first-low-carbon-intensity-certification-for-soda-ash/",
+      "runs": [
+        {
+          "text": "Intertek Issues first Low Carbon Intensity Certification for Soda Ash, ",
+          "href": null
+        },
+        {
+          "text": "https://www.intertek.com/news/2024/intertek-issues-first-low-carbon-intensity-certification-for-soda-ash/",
+          "href": "https://www.intertek.com/news/2024/intertek-issues-first-low-carbon-intensity-certification-for-soda-ash/"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "博源化工(000683)_公司公告_远兴能源：2023年社会责任报告新浪财经, http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=000683&id=9973627",
+      "runs": [
+        {
+          "text": "博源化工(000683)_公司公告_远兴能源：2023年社会责任报告新浪财经, ",
+          "href": null
+        },
+        {
+          "text": "http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=000683&id=9973627",
+          "href": "http://money.finance.sina.com.cn/corp/view/vCB_AllBulletinDetail.php?stockid=000683&id=9973627"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "Carbon footprint and water inventory of the production of lithium in, https://www.researchgate.net/publication/382777826_Carbon_footprint_and_water_inventory_of_the_production_of_lithium_in_the_Atacama_Salt_Flat_Chile",
+      "runs": [
+        {
+          "text": "Carbon footprint and water inventory of the production of lithium in, ",
+          "href": null
+        },
+        {
+          "text": "https://www.researchgate.net/publication/382777826_Carbon_footprint_and_water_inventory_of_the_production_of_lithium_in_the_Atacama_Salt_Flat_Chile",
+          "href": "https://www.researchgate.net/publication/382777826_Carbon_footprint_and_water_inventory_of_the_production_of_lithium_in_the_Atacama_Salt_Flat_Chile"
+        }
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "CARBON FOOTPRINT AND TOXICITY INDICATORS OF, https://www.journals.uc.edu/index.php/JALCA/article/download/3610/2803",
+      "runs": [
+        {
+          "text": "CARBON FOOTPRINT AND TOXICITY INDICATORS OF, ",
+          "href": null
+        },
+        {
+          "text": "https://www.journals.uc.edu/index.php/JALCA/article/download/3610/2803",
+          "href": "https://www.journals.uc.edu/index.php/JALCA/article/download/3610/2803"
+        }
+      ]
+    }
+  ]
+}
