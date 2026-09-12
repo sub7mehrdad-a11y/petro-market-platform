@@ -53,7 +53,7 @@
 
 **فایل‌ها:** `web/app/countries/[country]/page.jsx`, `data/country_profiles.json`
 
-**کامیت:** (بعد از پوش این‌جا درج می‌شود)
+**کامیت:** `a325e91`
 
 ---
 
