@@ -35,7 +35,7 @@
 
 **فایل‌ها:** `scripts/ingest_companies.py`, `data/companies.json`, `گزارش/لیست شرکتها/Uzbekistan_Companies.xlsx`
 
-**کامیت:** (بعد از پوش این‌جا درج می‌شود)
+**کامیت:** `255861b`
 
 ---
 
