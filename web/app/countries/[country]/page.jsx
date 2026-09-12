@@ -73,8 +73,12 @@ export default async function CountryPage({ params }) {
   // وقتی گزارش تحلیلی مفصل ما رقم واردات واقعی و دقیق‌تری از آمار آینه‌ی (Mirror)
   // ITC Trade Map داره (مثل روسیه — که از ۲۰۲۲ گزارش‌دهی گمرکی خودش رو متوقف کرده
   // و ITC فقط ۴٬۴۸۹ تن به‌جای واردات واقعی ۲۰٬۴۰۰ تنی رو نشون می‌ده)، همین رقم
-  // درست جایگزین آمار ناقص ترید مپ می‌شه.
-  const realTrade = getCompetitorForCountry(country)?.real_trade_stats || null;
+  // درست جایگزین آمار ناقص ترید مپ می‌شه. منبع این رقم می‌تونه competitors.json
+  // باشه (کشورهای رقیب مثل روسیه/چین/ترکیه) یا country_profiles.json (بقیه‌ی
+  // کشورها، مثل ازبکستان) — قاعده‌ی کلی: هر کشوری گزارش تحلیلی مفصل داره که
+  // رقم واردات دقیق‌تری از ITC نتیجه گرفته، باید همین‌جا (در یکی از این دو
+  // فایل) real_trade_stats بگیره تا آمار صفحه‌اش خودکار به‌روز بشه.
+  const realTrade = getCompetitorForCountry(country)?.real_trade_stats || profile?.real_trade_stats || null;
   const sortedExhibitions = sortExhibitionsByDate(exhibitions);
   const smartReport = reports.find((r) => r.report_type === "summary");
 
