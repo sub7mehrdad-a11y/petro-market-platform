@@ -35,6 +35,7 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
   const [previewIds, setPreviewIds] = useState([]);
   const [previews, setPreviews] = useState(null);
   const [previewCc, setPreviewCc] = useState([]);
+  const [missingLinkEnvVars, setMissingLinkEnvVars] = useState([]);
   const [previewLoading, setPreviewLoading] = useState(false);
   const [sendResult, setSendResult] = useState(null);
   const [sending, setSending] = useState(false);
@@ -96,6 +97,7 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
       const data = await res.json();
       setPreviews(data.previews || []);
       setPreviewCc(data.cc || []);
+      setMissingLinkEnvVars(data.missingLinkEnvVars || []);
     } finally {
       setPreviewLoading(false);
     }
@@ -339,6 +341,13 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
               ? `CC روی همه‌ی ایمیل‌ها: ${previewCc.join("، ")}`
               : "⚠️ هیچ آدرس CC ای تنظیم نشده (OUTREACH_CC_EMAILS خالیه) — قبل از ارسال واقعی چک کن."}
           </div>
+          {missingLinkEnvVars.length > 0 && (
+            <div className="text-xs rounded-md px-3 py-2 border bg-amber-50 text-amber-700 border-amber-200">
+              ⚠️ لینک کاتالوگ‌ها هنوز روی سایت آپلود/تنظیم نشده (متغیرهای env گمشده:{" "}
+              {missingLinkEnvVars.join("، ")}) — پایین متن ایمیل به‌جاش «[LINK PENDING]» می‌بینی. تا
+              این تنظیم نشه، دکمه‌ی ارسال واقعی هم قفل می‌مونه.
+            </div>
+          )}
           {previews.map((p) => (
             <div key={p.id} className="border border-slate-200 rounded-lg p-4">
               <div className="text-xs text-slate-500 mb-1">
@@ -348,9 +357,6 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
               <pre className="text-xs whitespace-pre-wrap font-sans leading-6 text-slate-700 bg-slate-50 rounded-md p-3">
                 {p.body}
               </pre>
-              <div className="text-[11px] text-slate-400 mt-2">
-                پیوست‌ها: {p.attachments?.join("، ")}
-              </div>
             </div>
           ))}
         </section>

@@ -3,7 +3,7 @@ import path from "path";
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import { getCompanies, getCountryEnglishName, getEmailOutreachSent } from "@/lib/data";
-import { renderOutreachEmail, outreachAssetPath } from "@/lib/outreachTemplate";
+import { renderOutreachEmail } from "@/lib/outreachTemplate";
 
 const ROOT = path.join(process.cwd(), "..");
 const SENT_LOG_FILE = path.join(ROOT, "data", "email_outreach_sent.json");
@@ -75,6 +75,26 @@ export async function POST(request) {
     );
   }
 
+  // شبکه‌ی ایمنی: حتی اگه یک روز OUTREACH_SENDING_ENABLED زودتر از موعد true
+  // بشه، تا وقتی همه‌ی لینک‌های کاتالوگ (بسته‌بندی + هر سه گرید) روی سایت
+  // آپلود و توی env گذاشته نشدن، هیچ ایمیلی با لینک "[LINK PENDING]" واقعاً
+  // فرستاده نمی‌شه — چون از قبل نمی‌دونیم دسته‌ی انتخاب‌شده چه گریدهایی داره.
+  const requiredLinkEnvVars = [
+    "OUTREACH_CATALOG_URL_PACKING",
+    "OUTREACH_CATALOG_URL_FOOD",
+    "OUTREACH_CATALOG_URL_FEED",
+    "OUTREACH_CATALOG_URL_INDUSTRIAL",
+  ];
+  const missingLinkEnvVars = requiredLinkEnvVars.filter((key) => !process.env[key]);
+  if (missingLinkEnvVars.length > 0) {
+    return NextResponse.json(
+      {
+        error: `لینک‌های کاتالوگ هنوز روی سایت آپلود/تنظیم نشدن (متغیرهای env گمشده: ${missingLinkEnvVars.join(", ")}).`,
+      },
+      { status: 500 }
+    );
+  }
+
   const byId = new Map(getCompanies().map((c) => [c.id, c]));
   const alreadySent = new Set(getEmailOutreachSent().map((r) => r.email));
   const fromAddress = process.env.SMTP_FROM || process.env.SMTP_USER;
@@ -110,10 +130,9 @@ export async function POST(request) {
         ...(ccList.length > 0 ? { cc: ccList } : {}),
         subject: rendered.subject,
         text: rendered.body,
-        attachments: rendered.attachments.map((filename) => ({
-          filename,
-          path: outreachAssetPath(filename),
-        })),
+        // عمداً بدون attachments — کاتالوگ‌ها به‌صورت لینک داخل متن ایمیلن
+        // (نه فایل پیوست)، چون سرور SMTP شرکت روی پیوست‌های واقعی شکست
+        // می‌خورد. جزئیات کامل در web/lib/outreachTemplate.js.
       });
       results.push({ id, ok: true });
       newSentRecords.push({

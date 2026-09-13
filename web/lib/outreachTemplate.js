@@ -2,22 +2,27 @@
 // (همونی که قبلاً واقعاً برای عراق فرستاده شده)، فقط با سه محور شخصی‌سازی
 // (نام شرکت، کشور، گرید) طبق خواسته‌ی صریح کاربر. هیچ جمله‌ی دیگه‌ای از خودمون
 // اضافه/کم نشده تا متن تأییدشده دست‌نخورده بمونه.
+//
+// چرا لینک دانلود به‌جای پیوست واقعی (تصمیم ۲۰۲۶-۰۹-۱۳): سرور SMTP شرکت
+// (mail.parssoda.com) روی هر پیوست واقعی بالای ~۵۰-۱۰۰ کیلوبایت با
+// ECONNRESET/ETIMEDOUT شکست می‌خورد (با بیسکشن سیستماتیک تأیید شد — مشکل
+// زیرساخت سرور ایمیل، نه کد ما). به‌جاش کاتالوگ‌ها روی خودِ سایت میزبانی
+// می‌شن و فقط لینکشون توی متن ایمیل میاد.
 
-import path from "path";
+const CATALOG_URL_ENV_KEYS = {
+  packing: "OUTREACH_CATALOG_URL_PACKING",
+  food: "OUTREACH_CATALOG_URL_FOOD",
+  feed: "OUTREACH_CATALOG_URL_FEED",
+  industrial: "OUTREACH_CATALOG_URL_INDUSTRIAL",
+  // برای "unclear" از همون لینک فود گرید استفاده می‌شه (پیش‌فرض تصمیم کاربر).
+  unclear: "OUTREACH_CATALOG_URL_FOOD",
+};
 
-const ASSETS_DIR = path.join(process.cwd(), "..", "assets", "outreach");
-
-export const ALL_PACKING_FILE = "All Packing.pdf";
-
-// نگاشت گرید → کاتالوگ ضمیمه. برای "unclear" (گرید نامشخص/چندگانه در دیتابیس)
-// طبق تصمیم صریح کاربر، پیش‌فرض روی Food Grade می‌مونه — چون پرمصرف‌ترین
-// محصولمونه — ولی بر خلاف حالت‌های مطمئن، هیچ جمله‌ی «گرید موردنیازتون X است»
-// به متن اضافه نمی‌شه (چون واقعاً مطمئن نیستیم؛ ادعای نادرست بدتر از سکوته).
-const GRADE_CATALOG = {
-  food: "Food Grade Catalougue.pdf",
-  feed: "cattle catalog.pdf",
-  industrial: "INDUSTRIAL catalog.pdf",
-  unclear: "Food Grade Catalougue.pdf",
+const CATALOG_LABEL = {
+  food: "Food Grade Catalogue",
+  feed: "Cattle / Feed Grade Catalogue",
+  industrial: "Industrial Grade Catalogue",
+  unclear: "Food Grade Catalogue",
 };
 
 const GRADE_LABEL_FA = {
@@ -62,16 +67,26 @@ export function classifyGrade(targetGradeText) {
   return "industrial";
 }
 
-export function catalogForGrade(grade) {
-  return GRADE_CATALOG[grade] || GRADE_CATALOG.unclear;
-}
-
 export function gradeLabelFa(grade) {
   return GRADE_LABEL_FA[grade] || GRADE_LABEL_FA.unclear;
 }
 
-export function outreachAssetPath(filename) {
-  return path.join(ASSETS_DIR, filename);
+// لینک‌های واقعی رو از env می‌خونه (بعد از اینکه کاتالوگ‌ها روی سایت آپلود و
+// URLشون داده بشه، همین‌جا پر می‌شن — بدون نیاز به تغییر کد). تا وقتی خالی‌ان،
+// null برمی‌گرده و فراخوان (preview/send) باید به‌جای فرستادن لینک شکسته، هشدار
+// بده یا از ارسال جلوگیری کنه.
+export function getCatalogLinks(grade) {
+  const packingUrl = process.env.OUTREACH_CATALOG_URL_PACKING || null;
+  const gradeKey = CATALOG_URL_ENV_KEYS[grade] ? grade : "unclear";
+  const catalogUrl = process.env[CATALOG_URL_ENV_KEYS[gradeKey]] || null;
+  return {
+    packingUrl,
+    catalogUrl,
+    catalogLabel: CATALOG_LABEL[gradeKey] || CATALOG_LABEL.unclear,
+    missing: [!packingUrl && "OUTREACH_CATALOG_URL_PACKING", !catalogUrl && CATALOG_URL_ENV_KEYS[gradeKey]].filter(
+      Boolean
+    ),
+  };
 }
 
 const SUBJECT = "Sodium Bicarbonate (Food/Industrial Grade) from Iran — Sepehran Chemical";
@@ -98,8 +113,8 @@ We would be delighted to become your trusted business partner in {{COUNTRY_EN}}.
 
 To prepare our best quotation, kindly let us know your required product grade, specifications, packaging, and estimated quantity.
 
-For more information about our company and products, please find the attached documents.
-
+For more information about our company and products, please find our catalogues below:
+{{CATALOG_LINKS}}
 We would be pleased to discuss your requirements and provide a solution tailored to your business needs.
 
 We look forward to establishing a long-term and mutually beneficial business relationship with your esteemed company.
@@ -111,7 +126,7 @@ Pars Baking Soda Group`;
 
 /**
  * @param {{ english_name: string, country_en: string, target_grade?: string }} company
- * @returns {{ subject: string, body: string, grade: string, attachments: string[] }}
+ * @returns {{ subject: string, body: string, grade: string, catalogLinks: object, missingLinks: string[] }}
  */
 export function renderOutreachEmail(company) {
   const grade = classifyGrade(company.target_grade);
@@ -123,15 +138,26 @@ export function renderOutreachEmail(company) {
     ? gradeSentenceTpl.replace("{COMPANY}", companyName) + "\n"
     : "";
 
+  const catalogLinks = getCatalogLinks(grade);
+  // وقتی لینکی هنوز تنظیم نشده، به‌جای فرستادن یک URL خالی/شکسته توی متن،
+  // صراحتاً می‌نویسیم که لینک در دست تکمیله — تا هیچ ایمیل نیمه‌کاره‌ای
+  // (حتی توی حالت پیش‌نمایش) شبیه چیز نهایی به نظر نرسه.
+  const catalogLinksBlock = [
+    `All Packing Details: ${catalogLinks.packingUrl || "[LINK PENDING]"}`,
+    `${catalogLinks.catalogLabel}: ${catalogLinks.catalogUrl || "[LINK PENDING]"}`,
+  ].join("\n") + "\n";
+
   const body = BASE_TEMPLATE
     .replaceAll("{{COMPANY}}", companyName)
     .replaceAll("{{COUNTRY_EN}}", countryEn)
-    .replace("{{GRADE_SENTENCE}}", gradeSentence);
+    .replace("{{GRADE_SENTENCE}}", gradeSentence)
+    .replace("{{CATALOG_LINKS}}", catalogLinksBlock);
 
   return {
     subject: SUBJECT,
     body,
     grade,
-    attachments: [ALL_PACKING_FILE, catalogForGrade(grade)],
+    catalogLinks,
+    missingLinks: catalogLinks.missing,
   };
 }
