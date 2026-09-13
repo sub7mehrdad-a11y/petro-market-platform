@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import {
   getCountries, getCountrySummary, getCountryProfile, getTradeMapForCountry, getImportSuppliers,
   getIranExports, getIranExportToCountry, getPerCapitaConsumption, getCompetitorForCountry,
+  getMarketShareHistory,
 } from "@/lib/data";
 import CompanyTable from "../../components/CompanyTable";
 import ExhibitionTable from "../../components/ExhibitionTable";
@@ -10,6 +11,7 @@ import WorldRouteMap from "../../components/WorldRouteMap";
 import PageHeader from "../../components/PageHeader";
 import CountryStatStrip from "../../components/CountryStatStrip";
 import SupplierBreakdown from "../../components/SupplierBreakdown";
+import MarketShareTrend from "../../components/MarketShareTrend";
 import ExportTrend from "../../components/ExportTrend";
 import IranExportSection from "../../components/IranExportSection";
 
@@ -67,6 +69,7 @@ export default async function CountryPage({ params }) {
   const profile = getCountryProfile(country);
   const trade = getTradeMapForCountry(country);
   const suppliers = getImportSuppliers(country);
+  const shareHistory = getMarketShareHistory(country);
   const iranExports = country === "ایران" ? getIranExports() : null;
   const iranExportToHere = country !== "ایران" ? getIranExportToCountry(country) : null;
   const perCapita = getPerCapitaConsumption(country);
@@ -179,6 +182,8 @@ export default async function CountryPage({ params }) {
       {iranExports && <IranExportSection data={iranExports} />}
 
       {suppliers && <SupplierBreakdown data={suppliers} />}
+
+      {shareHistory && <MarketShareTrend data={shareHistory} />}
 
       {trade && (trade.exports_2025 || trade.imports_2025) && (
         <section className="card p-5">

@@ -285,6 +285,22 @@ export function getImportSuppliers(country) {
   return all[country] || null;
 }
 
+// خروجی scripts/ingest_market_share_history.py — سهم چندسالهٔ هر کشور مبدأ از
+// بازار یک مقصد (یا از صادرات جهانی)، نه فقط یک سال. سؤالی که SupplierBreakdown
+// جواب نمی‌دهد: سهم چه کسی دارد رشد/افت می‌کند، و آن سهمِ ازدست‌رفته را چه کسی
+// می‌گیرد. منبع: WITS (آینه‌ی عمومی UN Comtrade)، نه ITC Trade Map.
+export function getMarketShareHistory(country) {
+  const all = readJsonSafe(path.join(DATA_DIR, "market_share_history.json"), { markets: {} });
+  return Object.values(all.markets || {}).find((m) => m.importer_fa === country) || null;
+}
+
+// نسخه‌ی جهانی همان فایل — سهم بزرگ‌ترین صادرکنندگان از «سبد هسته‌ی قابل
+// مقایسه» (نه کل صادرات جهانی؛ توضیح در data.markets.global.note_fa).
+export function getGlobalMarketShareHistory() {
+  const all = readJsonSafe(path.join(DATA_DIR, "market_share_history.json"), { markets: {} });
+  return all.markets?.global || null;
+}
+
 // خروجی scripts/ingest_iran_exports.py — صادرات واقعی ایران (نه واردات جهانی)
 // به تفکیک کشور مقصد، مستقیم از آمار رسمی گمرک جمهوری اسلامی ایران (IRICA).
 // فقط برای صفحه‌ی خودِ ایران معنا داره؛ برخلاف بقیه‌ی داده‌های تجاری سایت که
