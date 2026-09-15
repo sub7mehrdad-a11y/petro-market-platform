@@ -1363,5 +1363,49 @@
         "url": "https://www.dailysabah.com/business"
       }
     ]
+  },
+  {
+    "date": "2026-09-15",
+    "generated_at": "2026-09-15T10:17:38.932160+00:00",
+    "headline_fa": "عدم تغییر در وضعیت رقبای ترک و برنامه‌ریزی توسعه لوجستیک ترکیه",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "هدف‌گذاری ترکیه برای دستیابی به بازار لوجستیک ۲۰۰ میلیارد دلاری",
+        "summary": "انجمن حمل‌ونقل و خدمات لوجستیک ترکیه (UTIKAD) در اجلاس لوجستیک ۲۰۲۵ اعلام کرد که قصد دارد صنعت لوجستیک این کشور را به حجم ۲۰۰ میلیارد دلار رسانده و ترکیه را در جمع ۱۰ کشور برتر لوجستیک جهان قرار دهد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      }
+    ],
+    "market_note": "در متن‌های رصدشده امروز، هیچ اطلاعیه یا خبر جدیدی مبنی بر تغییر قیمت، توسعه ظرفیت، سرمایه‌گذاری یا گزارش مالی از سوی شرکت‌های رقیب ترک (اتی‌سودا، کازان‌سودا و وی‌سودا) یافت نشد و صفحات آن‌ها صرفاً حاوی اطلاعات عمومی معرفی تولید جوش شیرین از ترونا است. تنها یافته‌ی مرتبط، هدف‌گذاری ترکیه برای تقویت زیرساخت‌های لوجستیکی خود در قالب اجلاس ۲۰۲۵ است. بنابراین امروز تحرک قیمتی یا عملیاتی خاصی از سوی رقیب ثبت نشده و قیمت پایه‌ی ۲۵0 دلار بر تن سپهران شیمی در شرایط ثبات نسبی رقابتی قرار دارد. پیشنهاد می‌شود تمرکز بر رصد کرایه‌های حمل زمینی تا مرزهای صادراتی عراق حفظ شود.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTİKAD",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hürriyet Daily News",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
