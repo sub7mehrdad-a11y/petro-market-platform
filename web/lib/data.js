@@ -371,6 +371,44 @@ export function getPerCapitaConsumption(country) {
   };
 }
 
+// خروجی برداشت دستی «پژوهش اتحادیه‌های اقتصادی جهان» (data/trade_unions.json)
+// — کدام کشورها عضو کدام اتحادیه/پیمان تجاری چندجانبه‌اند، وضعیت ایران در هر
+// کدام، و کاربردش برای صادرات جوش شیرین. برخلاف بقیه‌ی داده‌های تجاری سایت،
+// این فایل خروجی یک ایجنت خودکار نیست؛ یک سند تحقیقی ثابت است که فقط با
+// انتشار پژوهش جدید به‌روز می‌شود.
+export function getTradeUnions() {
+  const data = readJsonSafe(path.join(DATA_DIR, "trade_unions.json"), { unions: {} });
+  return data.unions || {};
+}
+
+export function getTradeUnion(id) {
+  return getTradeUnions()[id] || null;
+}
+
+// همه‌ی اتحادیه‌هایی که یک کشور در آن‌ها عضو/ناظر/شریک/وابسته است — برای بخش
+// «عضویت در پیمان‌های تجاری» در پروفایل هر کشور. یک کشور می‌تواند هم‌زمان در
+// چند اتحادیه باشد (مثلاً روسیه هم در EAEU هم در CIS و SCO و BRICS).
+const UNION_RELATION_FIELDS = [
+  ["members", "member"],
+  ["observers", "observer"],
+  ["partner_countries", "partner"],
+  ["associate_countries", "associate"],
+];
+
+export function getUnionsForCountry(countryFa) {
+  const unions = getTradeUnions();
+  const result = [];
+  for (const u of Object.values(unions)) {
+    for (const [field, relation] of UNION_RELATION_FIELDS) {
+      if (u[field]?.includes(countryFa)) {
+        result.push({ ...u, relation });
+        break;
+      }
+    }
+  }
+  return result;
+}
+
 export function getCountryProfile(country) {
   const profiles = readJsonSafe(path.join(DATA_DIR, "country_profiles.json"), {});
   return profiles[country] || null;

@@ -23,7 +23,7 @@ function buildNavGroups(showOutreach) {
     {
       title: "بازار",
       items: [
-        { href: "/countries", label: "کشورها", icon: IconGlobe },
+        { href: "/countries", label: "کشورها و اتحادیه‌ها", icon: IconGlobe, extraActivePrefixes: ["/unions"] },
         { href: "/competitors", label: "تحلیل رقبا", icon: IconTarget },
         { href: "/transit", label: "تحلیل ترانزیت", icon: IconTruck },
       ],
@@ -59,7 +59,12 @@ function isActive(pathname, href) {
 }
 
 function NavLink({ item, pathname, onNavigate }) {
-  const active = isActive(pathname, item.href);
+  // «کشورها و اتحادیه‌ها» باید موقع مرور /unions هم فعال به‌نظر برسه — دو
+  // مسیر جدا (/countries و /unions) پشت یک آیتم ناوبری‌ان تا هم لینک مستقیم
+  // به هر کدوم کار کنه هم بصری «یک بخش واحد» حس بشن.
+  const active =
+    isActive(pathname, item.href) ||
+    (item.extraActivePrefixes || []).some((p) => isActive(pathname, p));
   const Icon = item.icon;
   return (
     <Link

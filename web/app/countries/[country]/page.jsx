@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import {
   getCountries, getCountrySummary, getCountryProfile, getTradeMapForCountry, getImportSuppliers,
   getIranExports, getIranExportToCountry, getPerCapitaConsumption, getCompetitorForCountry,
-  getMarketShareHistory,
+  getMarketShareHistory, getUnionsForCountry,
 } from "@/lib/data";
 import CompanyTable from "../../components/CompanyTable";
 import ExhibitionTable from "../../components/ExhibitionTable";
@@ -82,6 +82,7 @@ export default async function CountryPage({ params }) {
   // رقم واردات دقیق‌تری از ITC نتیجه گرفته، باید همین‌جا (در یکی از این دو
   // فایل) real_trade_stats بگیره تا آمار صفحه‌اش خودکار به‌روز بشه.
   const realTrade = getCompetitorForCountry(country)?.real_trade_stats || profile?.real_trade_stats || null;
+  const unions = getUnionsForCountry(country);
   const sortedExhibitions = sortExhibitionsByDate(exhibitions);
   const smartReport = reports.find((r) => r.report_type === "summary");
 
@@ -90,7 +91,7 @@ export default async function CountryPage({ params }) {
       <PageHeader
         breadcrumb={[
           { label: "داشبورد", href: "/" },
-          { label: "کشورها", href: "/countries" },
+          { label: "کشورها و اتحادیه‌ها", href: "/countries" },
           { label: country },
         ]}
         title={country}
@@ -178,6 +179,40 @@ export default async function CountryPage({ params }) {
           },
         ].filter(Boolean)}
       />
+
+      {unions.length > 0 && (
+        <section className="card p-5">
+          <h2 className="text-lg font-bold mb-1">عضویت در پیمان‌های تجاری چندجانبه</h2>
+          <p className="text-xs text-slate-500 mb-4">
+            اتحادیه‌ها/پیمان‌هایی که {country} در آن‌ها عضو، ناظر یا شریک است — برای تعرفهٔ ترجیحی
+            احتمالی و شناخت رقبای منطقه‌ای، جزئیات هر پیمان را ببینید.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {unions.map((u) => (
+              <Link
+                key={u.id}
+                href={`/unions/${u.id}`}
+                className="block border border-slate-200 rounded-lg p-3 hover:border-copper-500 transition-colors"
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="font-medium text-sm text-petrol-900">{u.name_fa}</span>
+                  <span className="text-[10px] text-slate-400 shrink-0">{u.short_fa}</span>
+                </div>
+                <div className="text-xs text-slate-500 mt-1">
+                  {u.type_fa} ·{" "}
+                  {u.relation === "member"
+                    ? "عضو"
+                    : u.relation === "observer"
+                    ? "عضو ناظر"
+                    : u.relation === "partner"
+                    ? "کشور شریک"
+                    : "عضو وابسته"}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       {iranExports && <IranExportSection data={iranExports} />}
 

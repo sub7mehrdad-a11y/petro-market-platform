@@ -94,6 +94,12 @@ export default function CountriesClient({ countries }) {
         subtitle="پرونده‌ی بازارهای جهانی محصول — آمار تجارت، روند صادرات و محتوای اختصاصی هر کشور."
         actions={
           <>
+            <Link
+              href="/unions"
+              className="text-sm text-petrol-100 hover:text-white border border-white/15 hover:border-white/30 rounded-full px-4 py-2 transition-colors"
+            >
+              اتحادیه‌ها ←
+            </Link>
             <input
               type="text"
               placeholder="جست‌وجوی کشور…"
