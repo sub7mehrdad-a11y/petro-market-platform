@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getTradeUnions, getTradeUnion, getCountries, getTradeMapForCountry } from "@/lib/data";
+import {
+  getTradeUnions, getTradeUnion, getCountries, getTradeMapForCountry, getUnionTradeStats,
+} from "@/lib/data";
 import PageHeader from "../../components/PageHeader";
 
 const IRAN_STATUS_STYLE = {
@@ -14,8 +16,7 @@ const IRAN_STATUS_STYLE = {
 
 const CET_LABEL = { true: "بله", false: "خیر", null: "نامشخص" };
 
-const RELATION_GROUP = [
-  { field: "members", label: "کشورهای عضو" },
+const NON_MEMBER_RELATION_GROUP = [
   { field: "observers", label: "اعضای ناظر" },
   { field: "partner_countries", label: "کشورهای شریک" },
   { field: "associate_countries", label: "اعضای وابسته" },
@@ -25,10 +26,13 @@ export function generateStaticParams() {
   return Object.keys(getTradeUnions()).map((id) => ({ id }));
 }
 
-function Section({ title, children }) {
+function Section({ title, subtitle, children }) {
   return (
     <section className="card p-5">
-      <h2 className="text-lg font-bold text-petrol-900 mb-3">{title}</h2>
+      <div className="mb-3">
+        <h2 className="text-lg font-bold text-petrol-900">{title}</h2>
+        {subtitle && <p className="text-xs text-slate-500 mt-0.5">{subtitle}</p>}
+      </div>
       {children}
     </section>
   );
@@ -66,10 +70,85 @@ function CountryChip({ name }) {
   );
 }
 
+function formatUsdK(valueK) {
+  if (valueK == null) return "—";
+  const usd = valueK * 1000;
+  if (usd >= 1_000_000) return `${(usd / 1_000_000).toLocaleString("fa-IR", { maximumFractionDigits: 1 })} میلیون دلار`;
+  return `${Math.round(usd).toLocaleString("fa-IR")} دلار`;
+}
+
+const SOURCE_LABEL = { import_suppliers: "ITC Trade Map", market_share_history: "WITS" };
+
+function MemberTradeRow({ row }) {
+  const iso2 = getTradeMapForCountry(row.country)?.iso2;
+  const exists = getCountries().includes(row.country);
+  const nameCell = (
+    <span className="flex items-center gap-1.5">
+      {iso2 && <img src={`https://flagcdn.com/w40/${iso2}.png`} alt="" className="h-3.5 w-5 rounded-sm object-cover shrink-0" />}
+      <span className="truncate">{row.country}</span>
+    </span>
+  );
+
+  if (!row.hasData) {
+    return (
+      <tr className="border-b border-slate-100">
+        <td className="py-2 pe-4">
+          {exists ? (
+            <Link href={`/countries/${encodeURIComponent(row.country)}`} className="hover:text-copper-700">
+              {nameCell}
+            </Link>
+          ) : (
+            nameCell
+          )}
+        </td>
+        <td className="py-2 pe-4 text-slate-400" colSpan={3}>
+          هنوز تفکیک واردات‌به‌مبدأ برای این کشور تحقیق نشده
+        </td>
+      </tr>
+    );
+  }
+
+  return (
+    <tr className="border-b border-slate-100">
+      <td className="py-2 pe-4 font-medium">
+        {exists ? (
+          <Link href={`/countries/${encodeURIComponent(row.country)}`} className="hover:text-copper-700">
+            {nameCell}
+          </Link>
+        ) : (
+          nameCell
+        )}
+      </td>
+      <td className="py-2 pe-4 font-tabular">
+        {formatUsdK(row.total_usd_k)}
+        {row.total_tons != null && (
+          <span className="text-slate-400"> · {row.total_tons.toLocaleString("fa-IR")} تن</span>
+        )}
+      </td>
+      <td className="py-2 pe-4 font-tabular">
+        <span className={row.intra_share_pct >= 30 ? "font-bold text-emerald-700" : "text-slate-600"}>
+          {row.intra_share_pct != null ? `${row.intra_share_pct.toLocaleString("fa-IR")}٪` : "—"}
+        </span>
+      </td>
+      <td className="py-2 text-slate-500">
+        {row.top_external_supplier
+          ? `${row.top_external_supplier.country}${
+              row.top_external_supplier.share_pct != null
+                ? ` (${row.top_external_supplier.share_pct.toLocaleString("fa-IR")}٪)`
+                : ""
+            }`
+          : "—"}
+        <span className="text-[10px] text-slate-400"> · {SOURCE_LABEL[row.source]} {row.year}</span>
+      </td>
+    </tr>
+  );
+}
+
 export default async function UnionPage({ params }) {
   const { id } = await params;
   const u = getTradeUnion(id);
   if (!u) notFound();
+  const stats = getUnionTradeStats(id);
 
   return (
     <div className="space-y-6">
@@ -117,7 +196,69 @@ export default async function UnionPage({ params }) {
         </Section>
       )}
 
-      {RELATION_GROUP.map(({ field, label }) => {
+      {stats && (
+        <Section
+          title="حجم تجارت جوش شیرین اتحادیه (کد HS ۲۸۳۶۳۰)"
+          subtitle={
+            stats.members_with_data > 0
+              ? `محاسبه‌شده از روی داده‌ی واقعیِ ${stats.members_with_data.toLocaleString("fa-IR")} عضو از ${stats.members_total.toLocaleString(
+                  "fa-IR"
+                )} — نه یک رقم دستی؛ هر کشوری که تفکیک واردات‌به‌مبدأش تکمیل بشه، همین‌جا خودکار به‌روز می‌شه.`
+              : "هنوز برای هیچ‌کدام از اعضای این اتحادیه تفکیک واردات‌به‌مبدأ تحقیق نشده — با تکمیل تحقیق هر کشور، این بخش خودکار پر می‌شود."
+          }
+        >
+          {stats.total_usd_k ? (
+            <div className="grid gap-4 sm:grid-cols-3 mb-5">
+              <div className="rounded-lg border border-slate-200 border-s-4 border-s-petrol-400 p-4">
+                <div className="text-xs text-slate-500 mb-1">کل واردات شناخته‌شده (اعضای دارای داده)</div>
+                <div className="font-bold font-tabular text-petrol-900">{formatUsdK(stats.total_usd_k)}</div>
+              </div>
+              <div className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 p-4">
+                <div className="text-xs text-slate-500 mb-1">واردات از داخل خودِ اتحادیه</div>
+                <div className="font-bold font-tabular text-copper-800">
+                  {formatUsdK(stats.intra_usd_k)}
+                  {stats.intra_share_pct != null && (
+                    <span className="text-sm text-copper-700"> ({stats.intra_share_pct.toLocaleString("fa-IR")}٪)</span>
+                  )}
+                </div>
+              </div>
+              <div className="rounded-lg border border-slate-200 border-s-4 border-s-slate-300 p-4">
+                <div className="text-xs text-slate-500 mb-1">واردات از خارج اتحادیه</div>
+                <div className="font-bold font-tabular text-slate-700">
+                  {formatUsdK(stats.total_usd_k - (stats.intra_usd_k || 0))}
+                  {stats.intra_share_pct != null && (
+                    <span className="text-sm text-slate-500"> ({(100 - stats.intra_share_pct).toLocaleString("fa-IR")}٪)</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : (
+            stats.members_with_data === 0 && (
+              <p className="text-sm text-slate-400 mb-5">هیچ رقمی برای نمایش نیست.</p>
+            )
+          )}
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-right text-slate-500 border-b border-slate-200">
+                  <th className="py-2 pe-4">کشور عضو</th>
+                  <th className="py-2 pe-4">کل واردات</th>
+                  <th className="py-2 pe-4">سهم درون‌اتحادیه‌ای</th>
+                  <th className="py-2">بزرگ‌ترین تأمین‌کننده‌ی خارجی</th>
+                </tr>
+              </thead>
+              <tbody>
+                {stats.member_rows.map((row) => (
+                  <MemberTradeRow key={row.country} row={row} />
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Section>
+      )}
+
+      {NON_MEMBER_RELATION_GROUP.map(({ field, label }) => {
         const list = u[field];
         if (!list?.length) return null;
         return (

@@ -409,6 +409,121 @@ export function getUnionsForCountry(countryFa) {
   return result;
 }
 
+// یک شکل یکسان از «واردات این کشور به تفکیک مبدأ» — بدون توجه به این‌که کدام
+// اسکریپت آن را ساخته. اولویت با import_suppliers.json (مستقیم از ITC، سال
+// ۲۰۲۵)؛ اگر نبود، آخرین سالِ market_share_history.json (WITS). این دو تنها
+// منابعی روی سایت‌ان که واردات یک کشور را ردیف‌به‌ردیف به تفکیک مبدأ می‌دهند —
+// real_trade_stats و top_trade_partners فقط چند رقم دستی/روایی دارند، نه یک
+// جدول کامل قابل جمع‌بندی.
+export function getCountryImportBreakdown(country) {
+  const direct = getImportSuppliers(country);
+  if (direct?.suppliers?.length) {
+    return {
+      source: "import_suppliers",
+      year: direct.year,
+      total_usd_k: direct.total?.value_usd_k ?? null,
+      suppliers: direct.suppliers.map((s) => ({
+        country: s.country,
+        value_usd_k: s.value_usd_k ?? null,
+        tons: s.quantity_unit === "Tons" ? s.quantity ?? null : null,
+        share_pct: s.share_pct ?? null,
+      })),
+    };
+  }
+
+  const history = getMarketShareHistory(country);
+  const lastYear = history?.years?.[history.years.length - 1];
+  if (lastYear?.suppliers?.length) {
+    return {
+      source: "market_share_history",
+      year: lastYear.year,
+      total_usd_k: lastYear.total_usd_k ?? null,
+      suppliers: lastYear.suppliers.map((s) => ({
+        country: s.country_fa,
+        value_usd_k: s.value_usd_k ?? null,
+        tons: s.quantity_kg != null ? Math.round(s.quantity_kg / 1000) : null,
+        share_pct: s.share_pct ?? null,
+      })),
+    };
+  }
+
+  return null;
+}
+
+function round1(n) {
+  return n == null ? null : Math.round(n * 10) / 10;
+}
+
+// جمع‌بندی تجارت یک اتحادیه: از میان کشورهای عضو، هر کدام که تفکیک واردات
+// داشته باشند (getCountryImportBreakdown)، سهم تأمین‌کننده‌های «داخل همین
+// اتحادیه» در برابر «خارج از اتحادیه» را جدا می‌کند و در سطح کل اتحادیه جمع
+// می‌زند. عمداً یک رقم ذخیره‌شده/دستی نیست — هر بار از روی همان داده‌ی
+// کشورهایی که تا الان تحقیق شده‌اند محاسبه می‌شود؛ یعنی با هر کشور جدیدی که
+// import_suppliers.json یا market_share_history.json برایش تکمیل شود، رقم
+// اتحادیه‌اش هم خودکار به‌روزتر می‌شود، بدون این‌که کسی عددی را دستی ویرایش کند.
+//
+// چرا فقط بر پایه‌ی ارزش (USD)، نه تناژ: تناژ فقط برای بعضی ردیف‌ها موجود است؛
+// جمع‌زدن تناژ ردیف‌های ناقص در کنار هم عددی می‌سازد که به‌ظاهر دقیق ولی واقعاً
+// گمراه‌کننده است. کل اتحادیه فقط برحسب ارزش جمع می‌شود؛ تناژ فقط در سطح هر
+// عضو (که خودش کامل است) نشان داده می‌شود.
+export function getUnionTradeStats(unionId) {
+  const union = getTradeUnion(unionId);
+  if (!union?.members?.length) return null;
+
+  const memberSet = new Set(union.members);
+  let totalUsdK = 0;
+  let intraUsdK = 0;
+  let membersWithData = 0;
+
+  const memberRows = union.members.map((member) => {
+    const breakdown = getCountryImportBreakdown(member);
+    if (!breakdown) {
+      return { country: member, hasData: false };
+    }
+    membersWithData += 1;
+
+    const total = breakdown.total_usd_k ?? breakdown.suppliers.reduce((s, r) => s + (r.value_usd_k || 0), 0);
+    const intra = breakdown.suppliers
+      .filter((s) => s.country !== member && memberSet.has(s.country))
+      .reduce((s, r) => s + (r.value_usd_k || 0), 0);
+    const topExternal = [...breakdown.suppliers]
+      .filter((s) => !memberSet.has(s.country))
+      .sort((a, b) => (b.value_usd_k || 0) - (a.value_usd_k || 0))[0];
+    const totalTons = breakdown.suppliers.every((s) => s.tons != null)
+      ? breakdown.suppliers.reduce((s, r) => s + r.tons, 0)
+      : null;
+
+    if (total) {
+      totalUsdK += total;
+      intraUsdK += intra;
+    }
+
+    return {
+      country: member,
+      hasData: true,
+      source: breakdown.source,
+      year: breakdown.year,
+      total_usd_k: total || null,
+      total_tons: totalTons,
+      intra_usd_k: intra || null,
+      intra_share_pct: total ? round1((intra / total) * 100) : null,
+      top_external_supplier: topExternal
+        ? { country: topExternal.country, share_pct: topExternal.share_pct }
+        : null,
+    };
+  });
+
+  return {
+    union_id: unionId,
+    members_total: union.members.length,
+    members_with_data: membersWithData,
+    total_usd_k: totalUsdK || null,
+    intra_usd_k: intraUsdK || null,
+    intra_share_pct: totalUsdK ? round1((intraUsdK / totalUsdK) * 100) : null,
+    member_rows: memberRows,
+  };
+}
+
 export function getCountryProfile(country) {
   const profiles = readJsonSafe(path.join(DATA_DIR, "country_profiles.json"), {});
   return profiles[country] || null;

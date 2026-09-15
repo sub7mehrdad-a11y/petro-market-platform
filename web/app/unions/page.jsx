@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { getTradeUnions } from "@/lib/data";
+import { getTradeUnions, getUnionTradeStats } from "@/lib/data";
 import PageHeader from "../components/PageHeader";
 
 // وضعیت ایران در هر اتحادیه — یک برچسب کوتاه رنگی، برای اسکن سریع چشمی فهرست.
@@ -23,6 +23,26 @@ const IRAN_STATUS_LABEL = {
 
 function memberCount(u) {
   return (u.members || []).length;
+}
+
+// خلاصه‌ی یک‌خطی «چند درصد داده داریم و سهم تجارت درون‌اتحادیه‌ای چقدره» —
+// از getUnionTradeStats که خودش از روی داده‌ی کشورهای تحقیق‌شده محاسبه می‌شه،
+// نه یک رقم ذخیره‌شده.
+function TradeCoverageBadge({ unionId }) {
+  const stats = getUnionTradeStats(unionId);
+  if (!stats || stats.members_with_data === 0) {
+    return <p className="text-[10px] text-slate-400 border-t border-slate-100 pt-2">داده‌ی تجاری تفکیک‌شده هنوز ثبت نشده</p>;
+  }
+  return (
+    <p className="text-[10px] text-slate-500 border-t border-slate-100 pt-2">
+      داده‌ی تجاری: {stats.members_with_data.toLocaleString("fa-IR")} از {stats.members_total.toLocaleString("fa-IR")} عضو
+      {stats.intra_share_pct != null && (
+        <>
+          {" "}· <span className="font-medium text-copper-700">{stats.intra_share_pct.toLocaleString("fa-IR")}٪</span> تجارت درون‌اتحادیه‌ای
+        </>
+      )}
+    </p>
+  );
 }
 
 export default function UnionsPage() {
@@ -63,7 +83,7 @@ export default function UnionsPage() {
             </div>
             <p className="text-xs text-slate-500 mb-3">{u.type_fa}</p>
             <p className="text-xs text-slate-600 leading-6 line-clamp-2 mb-3">{u.summary_fa}</p>
-            <div className="flex items-center justify-between gap-2 flex-wrap">
+            <div className="flex items-center justify-between gap-2 flex-wrap mb-2">
               <span className="text-[11px] text-slate-500">
                 {memberCount(u).toLocaleString("fa-IR")} کشور عضو
               </span>
@@ -75,6 +95,7 @@ export default function UnionsPage() {
                 {IRAN_STATUS_LABEL[u.iran_status] || "نامشخص"}
               </span>
             </div>
+            <TradeCoverageBadge unionId={u.id} />
           </Link>
         ))}
       </div>
