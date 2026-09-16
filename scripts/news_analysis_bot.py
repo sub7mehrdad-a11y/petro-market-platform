@@ -112,6 +112,14 @@ SEED_NEWS_SOURCES = [
     "https://www.globaltimes.cn/",  # Global Times - رسانه‌ی دولتی چین؛ زاویه‌ی ژئوپلیتیک/جنگ تجاری (تأیید ۲۰۲۶-۰۹-۱۳؛ لحن تبلیغاتی دارد، با احتیاط بخوان)
     "http://www.news.cn/english/",  # Xinhua English - خبرگزاری رسمی چین (تأیید ۲۰۲۶-۰۹-۱۳)
     "http://english.customs.gov.cn/newsroom/news",  # GACC - اخبار رسمی گمرک چین (بخوانید در کنار Statistics/Trade Indices همون سایت برای آمار خام) (تأیید ۲۰۲۶-۰۹-۱۳)
+    # --- منبع اقتصادی رسمی ایران برای قزاقستان (کاربر، ۲۰۲۶-۰۹-۱۶) ---
+    # این آدرس خودش با urllib ساده (بدون کوکی‌جار) وارد یک حلقه‌ی بی‌نهایت
+    # ریدایرکت ۳۰۷ می‌شد؛ رفع شد با اضافه‌کردن کوکی‌جار مشترک به fetch_utils.py
+    # (opener سراسری _OPENER، بی‌ضرر برای بقیه‌ی منابع). همچنین منوی ناوبری این
+    # سایت (فهرست کامل کشورها) خیلی طولانیه — قبل از رسیدن به اخبار واقعی حدود
+    # ۶۵۰۰ کاراکتر منو میاد، پس max_chars این فراخوانِ خاص (نه پیش‌فرض سراسری
+    # fetch_utils) به ۱۲٬۰۰۰ افزایش یافت، وگرنه هیچ خبر واقعی‌ای به مدل نمی‌رسید.
+    "https://economic.mfa.ir/portal/newsagencyshow/357",  # معاونت دیپلماسی اقتصادی وزارت امور خارجه - فید اخبار اقتصادی قزاقستان (تأیید ۲۰۲۶-۰۹-۱۶)
 ]
 
 # بررسی شد و عمداً اضافه نشد: کارخانه‌ی سودای کریمه (sodaplant.ru، خطای CERTIFICATE_VERIFY_FAILED - گواهی SSL سایت ناقص/نامعتبره) و Logirus (logirus.ru، وسط پاسخ کانکشن رو می‌بندد - RemoteDisconnected)، هر دو تست ۲۰۲۶-۰۹-۰۷ با fetch_page_text.
@@ -434,7 +442,11 @@ def main():
     log = load_log()
     recent = load_recent_entries(log)
 
-    fetched = fetch_sources(SEED_NEWS_SOURCES)
+    # max_chars پیش‌فرض (۶۰۰۰) برای بیشتر منابع کافیه، ولی economic.mfa.ir حدود
+    # ۶۵۰۰ کاراکتر منوی ناوبری قبل از اخبار واقعی داره — با ۱۲٬۰۰۰ اینجا (فقط
+    # برای همین لیست، نه پیش‌فرض سراسری fetch_utils) مطمئن می‌شیم خبر واقعی به
+    # مدل می‌رسه.
+    fetched = fetch_sources(SEED_NEWS_SOURCES, max_chars=12000)
     feeds = fetch_rss_sources(RSS_NEWS_SOURCES, keywords=RSS_RELEVANCE_KEYWORDS)
 
     if not any(f["ok"] for f in fetched) and not any(f["ok"] for f in feeds):
