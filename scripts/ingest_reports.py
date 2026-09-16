@@ -195,6 +195,16 @@ REPORTS = [
         "country": "جهانی",
         "type": "detailed",
     },
+    {
+        "file": "گزارش_خلاصه_بازار_جوش_شیرین_قزاقستان.docx",
+        "country": "قزاقستان",
+        "type": "summary",
+    },
+    {
+        "file": "گزارش_تحلیلی_بازار_جوش_شیرین_قزاقستان.docx",
+        "country": "قزاقستان",
+        "type": "detailed",
+    },
 ]
 
 PRODUCT = "جوش شیرین"
