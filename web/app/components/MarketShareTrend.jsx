@@ -175,6 +175,7 @@ export default function MarketShareTrend({ data, title }) {
         </h2>
         <span className="text-xs text-slate-400">
           {faDigits(firstY)}–{faDigits(lastY)} · منبع: WITS
+          {data.manual_overrides && Object.keys(data.manual_overrides).length > 0 && " + آمار رسمی کشوری"}
         </span>
       </div>
       <p className="text-xs text-slate-500 mb-4">

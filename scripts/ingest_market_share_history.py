@@ -116,6 +116,52 @@ GLOBAL_CORE_COUNTRIES = {
 GLOBAL_GAP_WATCH = {"Russian Federation": "روسیه", "Iran, Islamic Rep.": "ایران"}
 GLOBAL_YEARS = [2015, 2017, 2019, 2020, 2021, 2022, 2023, 2024]
 
+# صادرات واقعی ایران از HS ۲۸۳۶۳۰۹۰ («سایر هیدروژن کربنات سدیم، بجز گرید
+# دارویی» — همون تعرفه‌ی اصلی/خوراکی که scripts/ingest_iran_exports.py توی کل
+# سایت به‌عنوان رقم رسمی صادرات ایران استفاده می‌کنه) — از data/iran_exports.json
+# خونده می‌شه، نه یک رقم دستی جداگانه، تا هیچ‌وقت با کارت «صادرات ایران» توی
+# داشبورد ناهم‌خوان نشه (گرید دارویی ۲۸۳۶۳۰۱۰ عمداً بیرونه، دقیقاً مثل اون
+# اسکریپت). چرا اینجا لازمه: طبق mirror_gaps پایین‌تر، ایران توی جدول
+# صادرکنندگان جهانی WITS محو می‌شه؛ و حتی برای سال‌هایی که WITS مقدار داشت،
+# مقدار واقعی‌ش هیچ‌وقت جایی ذخیره نمی‌شد (فقط سال‌های غایب لاگ می‌شدن) —
+# GLOBAL_CORE_COUNTRIES هیچ‌وقت ایران/روسیه رو شامل نمی‌شد.
+def _load_iran_customs_exports():
+    path = os.path.join(DATA_DIR, "iran_exports.json")
+    if not os.path.exists(path):
+        return {}
+    with open(path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    # سال شمسی ۱۴۰۲ عمدتاً روی ۲۰۲۳ میلادی و ۱۴۰۳ روی ۲۰۲۴ میلادی می‌افته.
+    fiscal_to_gregorian = {"1402": 2023, "1403": 2024}
+    out = {}
+    for entry in data.get("annual_totals", []):
+        greg = fiscal_to_gregorian.get(entry.get("year_fa"))
+        # فقط سال شمسیِ کامل (نه ۱۴۰۴ی ده‌ماهه که months_covered داره) — این
+        # نمودار سال‌های کامل رو با هم مقایسه می‌کنه.
+        if greg and "months_covered" not in entry:
+            out[greg] = {
+                "value_usd_k": entry["value_usd"] / 1000,
+                "quantity_kg": round(entry["tons"] * 1000),
+                "fiscal_year_fa": entry["year_fa"],
+            }
+    return out
+
+
+IRAN_CUSTOMS_EXPORTS = _load_iran_customs_exports()
+
+# صادرات روسیه — کاربر قراره داده‌ی چندساله بده؛ همین‌جا با همون ساختار بالا
+# ({year: {"value_usd_k": ..., "quantity_kg": ...}}) پر می‌شه. کلید انگلیسی
+# باید دقیقاً "Russian Federation" باشه (نه "Russia") چون GLOBAL_GAP_WATCH
+# بالا همین نام رو برای نگاشت فارسی/بازار جهانی استفاده می‌کنه.
+RUSSIA_CUSTOMS_EXPORTS = {}
+
+# نگاشت نام انگلیسیِ WITS ← منبع دستیِ سالانه؛ برای افزودن کشور دستیِ جدید به
+# «بازار جهانی» فقط یک ورودی این‌جا لازمه (کد build_global_market تغییر نمی‌کنه).
+MANUAL_GLOBAL_EXPORTS = {
+    "Iran, Islamic Rep.": IRAN_CUSTOMS_EXPORTS,
+    "Russian Federation": RUSSIA_CUSTOMS_EXPORTS,
+}
+
 DEST_SYSTEM_PROMPT = """
 تو یک استخراج‌کننده‌ی داده‌ی تجارت جهانی هستی. من متن ساده‌شده‌ی یک صفحه‌ی
 WITS (wits.worldbank.org) رو می‌دم که جدول «واردات محصول HS 283630 به تفکیک
@@ -281,6 +327,7 @@ def build_global_market():
     name_map = {**GLOBAL_CORE_COUNTRIES, **GLOBAL_GAP_WATCH}
     years_out = []
     gap_log = {}  # {country_en: [year, year, ...]} — سال‌هایی که کشور در جدول نبود
+    manual_overrides = {}  # {country_fa: [year, ...]} — سال‌هایی که از منبع دستی (نه WITS) پر شد
 
     for year in GLOBAL_YEARS:
         try:
@@ -295,12 +342,28 @@ def build_global_market():
             {"country_en": c, "value_usd_k": values.get(c)}
             for c in GLOBAL_CORE_COUNTRIES if values.get(c)
         ]
+
+        manual_used_this_year = []
+        for country_en, yearly in MANUAL_GLOBAL_EXPORTS.items():
+            manual = yearly.get(year)
+            if not manual:
+                continue
+            core_rows.append({
+                "country_en": country_en,
+                "value_usd_k": manual["value_usd_k"],
+                "quantity_kg": manual.get("quantity_kg"),
+            })
+            manual_used_this_year.append(country_en)
+            manual_overrides.setdefault(GLOBAL_GAP_WATCH[country_en], []).append(year)
+
         entry = to_year_entry(None, core_rows, name_map)
         entry["year"] = year
         years_out.append(entry)
 
         for c in GLOBAL_GAP_WATCH:
-            if not values.get(c):
+            # اگه امسال با منبع دستی پر شده، دیگه «غایب از WITS» حساب نمی‌شه —
+            # عدد واقعی داریم، فقط منبعش WITS نیست.
+            if not values.get(c) and c not in manual_used_this_year:
                 gap_log.setdefault(c, []).append(year)
 
         print(f"[OK] {year}: {len(entry['suppliers'])}/{len(GLOBAL_CORE_COUNTRIES)} کشورِ سبدِ هسته پیدا شد")
@@ -316,20 +379,44 @@ def build_global_market():
         "importer_en": "World exports (comparable core basket, not full world total)",
         "iso3": None,
         "note_fa": (
-            "این «سهم بازار جهانی» فقط ۸ صادرکننده‌ی بزرگی است که در تمام سال‌ها "
-            "در آمار WITS عدد کامل دارند — نه کل صادرات جهانی. ایران و روسیه عمداً "
-            "بیرون از این سبدند چون در سال‌های اخیر از جدول محو می‌شوند (توضیح در "
-            "mirror_gaps)، نه چون صادراتشان صفر شده."
+            "این «سهم بازار جهانی» ۸ صادرکننده‌ی بزرگی است که در تمام سال‌ها در "
+            "آمار WITS عدد کامل دارند، به‌علاوه‌ی ایران و (به‌محض دراختیاربودن "
+            "داده) روسیه از منابع دستیِ معتبرتر — نه کل صادرات جهانی. برای "
+            "سال/کشورهایی که هنوز هیچ عدد قابل‌اتکایی نداریم (نه از WITS، نه از "
+            "منبع دستی)، آن کشور در آن سال ساده حذف می‌شود؛ توضیح در mirror_gaps "
+            "و manual_overrides."
         ),
         "years": years_out,
         "movers": compute_movers(years_out),
         "mirror_gaps": {
             GLOBAL_GAP_WATCH[c]: {"missing_years": ys} for c, ys in gap_log.items()
         },
+        "manual_overrides": {
+            fa: {
+                "years": ys,
+                "source": (
+                    "آمار رسمی گمرک جمهوری اسلامی ایران (کد تعرفه ۲۸۳۶۳۰۱۰+۲۸۳۶۳۰۹۰)"
+                    if fa == "ایران" else "داده‌ی ارائه‌شده توسط کاربر"
+                ),
+            }
+            for fa, ys in manual_overrides.items()
+        },
     }
 
 
 def main():
+    import argparse
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--global-only", action="store_true",
+        help=(
+            "فقط بازار جهانی رو دوباره بساز (بدون WITS/Groq برای ۴ بازار مقصد) — "
+            "برای افزودن/به‌روزرسانی سریع منابع دستی ایران/روسیه بدون هدررفت "
+            "سهمیه‌ی Groq روی بازارهایی که چیزی توشون عوض نشده."
+        ),
+    )
+    args = parser.parse_args()
+
     name_map = {}
     name_map_path = os.path.join(os.path.dirname(__file__), "country_name_map.json")
     if os.path.exists(name_map_path):
@@ -354,10 +441,15 @@ def main():
     })
 
     markets = {}
-    for market in DESTINATION_MARKETS:
-        built = build_destination_market(market, name_map)
-        if built:
-            markets[market["key"]] = built
+    if args.global_only and os.path.exists(OUTPUT_FILE):
+        with open(OUTPUT_FILE, "r", encoding="utf-8") as f:
+            markets = json.load(f).get("markets", {})
+        print("[--global-only] بازارهای مقصد از فایل موجود نگه داشته شدن؛ فقط «جهانی» بازسازی می‌شه.")
+    else:
+        for market in DESTINATION_MARKETS:
+            built = build_destination_market(market, name_map)
+            if built:
+                markets[market["key"]] = built
 
     global_built = build_global_market()
     if global_built:
