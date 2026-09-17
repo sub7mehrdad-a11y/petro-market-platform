@@ -27,18 +27,24 @@ for /f "delims=" %%i in ('git rev-parse HEAD 2^>nul') do set "OLDHASH=%%i"
 git pull --ff-only >nul 2>&1
 for /f "delims=" %%i in ('git rev-parse HEAD 2^>nul') do set "NEWHASH=%%i"
 
-set "NEEDS_BUILD=0"
-if not "%OLDHASH%"=="%NEWHASH%" (
-    echo   داده‌های جدید دریافت شد.
-    git diff --name-only %OLDHASH% %NEWHASH% > "%TEMP%\sepehran_changed.txt" 2>nul
-    findstr /b /c:"web/" /c:"data/" /c:"reports/" "%TEMP%\sepehran_changed.txt" >nul 2>&1
-    if not errorlevel 1 set "NEEDS_BUILD=1"
-)
+if not "%OLDHASH%"=="%NEWHASH%" echo   داده‌های جدید دریافت شد.
 
 cd /d "%PROJDIR%\web"
 
-rem اگر نسخه‌ی ساخته‌شده اصلاً وجود ندارد (اولین اجرا)، حتماً باید بسازیم.
+rem تصمیم به rebuild رو با مقایسه‌ی HEAD فعلی با هشی که *واقعاً* آخرین‌بار
+rem build شده می‌گیریم (نه با اینکه همین اجرا چیزی pull کرد یا نه). چرا این
+rem فرق مهمه: اگه یک نشست دیگه (مثلاً کلود، مستقیم روی همین پوشه) قبلاً
+rem commit+push کرده باشه، HEAD محلی از قبل همون آخرین کامیته — یعنی git pull
+rem بالا هیچ تغییری نمی‌بینه (OLDHASH=NEWHASH) با اینکه کد از آخرین build خیلی
+rem جلوتر رفته؛ نسخه‌ی قبلی این اسکریپت دقیقاً همین حالت رو تشخیص نمی‌داد و
+rem سایت قدیمی رو بی‌صدا دوباره بالا می‌آورد.
+set "BUILD_MARKER=.next\.last_build_commit"
+set "BUILT_HASH="
+if exist "%BUILD_MARKER%" set /p BUILT_HASH=<"%BUILD_MARKER%"
+
+set "NEEDS_BUILD=0"
 if not exist ".next\BUILD_ID" set "NEEDS_BUILD=1"
+if not "%BUILT_HASH%"=="%NEWHASH%" set "NEEDS_BUILD=1"
 
 if "%NEEDS_BUILD%"=="1" (
     echo   در حال به‌روزرسانی سایت با آخرین اطلاعات — چند لحظه طول می‌کشد...
@@ -51,6 +57,7 @@ if "%NEEDS_BUILD%"=="1" (
         pause
         exit /b 1
     )
+    > "%BUILD_MARKER%" echo %NEWHASH%
     echo   به‌روزرسانی انجام شد.
     echo.
 )
