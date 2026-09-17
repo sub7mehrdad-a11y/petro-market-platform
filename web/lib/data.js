@@ -277,13 +277,33 @@ function median(nums) {
   return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2;
 }
 
+// صدکِ خطی (linear interpolation) روی آرایه‌ی مرتب‌شده — برای p10/p90.
+function percentile(sorted, p) {
+  if (sorted.length === 0) return null;
+  const idx = (sorted.length - 1) * p;
+  const lo = Math.floor(idx);
+  const hi = Math.min(lo + 1, sorted.length - 1);
+  const frac = idx - lo;
+  return sorted[lo] + (sorted[hi] - sorted[lo]) * frac;
+}
+
 function summarize(values) {
-  if (values.length === 0) return { median: null, sampleSize: 0, min: null, max: null };
+  if (values.length === 0) {
+    return { median: null, sampleSize: 0, min: null, max: null, p10: null, p90: null };
+  }
+  const sorted = [...values].sort((a, b) => a - b);
   return {
     median: median(values),
     sampleSize: values.length,
-    min: Math.min(...values),
-    max: Math.max(...values),
+    min: sorted[0],
+    max: sorted[sorted.length - 1],
+    // p10/p90 (نه min/max خام) برای بازه‌ی نمایشی — یک پست تک‌افتاده‌ی غلط‌خوانده‌شده
+    // (مثلاً یک پست که مدل قیمتش رو اشتباه استخراج کرده) می‌تونه min/max خام رو به
+    // شکل مضحکی جابه‌جا کنه (مثلاً بازه‌ای از ۱۸۹ تومان تا ۲۵۷ میلیون تومان برای
+    // یک کامیون)؛ صدکِ ۱۰ تا ۹۰ دقیقاً همون منطق «میانه به‌جای میانگین» بالا رو
+    // برای «بازه» هم اعمال می‌کنه — بدون حذف داده، فقط دو سر افراطی رو کم‌وزن می‌کنه.
+    p10: percentile(sorted, 0.1),
+    p90: percentile(sorted, 0.9),
   };
 }
 
