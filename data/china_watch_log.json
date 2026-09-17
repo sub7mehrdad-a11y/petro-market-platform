@@ -1228,5 +1228,69 @@
         "url": "https://www.container-news.com/"
       }
     ]
+  },
+  {
+    "date": "2026-09-17",
+    "generated_at": "2026-09-17T10:14:35.624112+00:00",
+    "headline_fa": "توسعه ۲۰۰ هزار تنی جوش شیرین شاندونگ های‌هوا و تغییرات کرایه کانتینری چین",
+    "company_updates": [
+      {
+        "company": "Shandong Haihua Group",
+        "headline": "پیشرفت پروژه جدید ۲۰۰ هزار تنی سدیم بی‌کربنات",
+        "summary": "پروژه ساخت واحد جدید تولید جوش شیرین این شرکت با ظرفیت ۲۰۰ هزار تن در سال و سرمایه‌گذاری ۱۱۸ میلیون یوان در حال اجراست و طبق برنامه در سپتامبر به بهره‌برداری آزمایشی می‌رسد.",
+        "source_url": "https://www.shandong-haihua.net/news.html"
+      },
+      {
+        "company": "Shandong Haihua Group",
+        "headline": "سرمایه‌گذاری ۴.۸ میلیارد یوانی برای بازسازی سبز خطوط تولید سودا اش",
+        "summary": "این شرکت برنامه‌ریزی کرده تا با جایگزینی تجهیزات قدیمی با واحد ۱ میلیون تنی فرآیند ترکیبی آلکالی، پساب تولید را صفر کرده، بهره‌وری نمک خام را به ۹۸٪ برساند و کلرید آمونیوم را به‌عنوان کود شیمیایی تولید کند.",
+        "source_url": "https://www.shandong-haihua.net/news.html"
+      },
+      {
+        "company": "Hengyang Aijie Technology (Yuhua Group)",
+        "headline": "وضعیت ظرفیت و صادرات گروه آیجی (یوهوا)",
+        "summary": "این مجموعه با ظرفیت سالانه ۳۰۰ هزار تن جوش شیرین (بزرگ‌ترین خط تک‌مسیره آسیا) با فرآیند تجزیه دوگانه، بیش از ۶۰ درصد محصول خود را به بیش از ۸۰ کشور صادر می‌کند.",
+        "source_url": "http://www.en.chinayuhuagroup.com/"
+      }
+    ],
+    "logistics_updates": [
+      {
+        "headline": "افتتاح کانال پینگ‌لو جهت تقویت مسیر صادراتی چین به آسهآن",
+        "summary": "چین با راه‌اندازی کانال پینگ‌لو (Pinglu Canal)، آبراه و مسیر جدیدی را برای تسهیل حمل‌ونقل دریایی و صادرات به کشورهای عضو آسهآن افتتاح کرد.",
+        "source_url": "https://www.container-news.com/"
+      },
+      {
+        "headline": "افزایش نرخ کرایه حمل کانتینری در مسیر ترانس‌پاسیفیک و کاهش نرخ‌های اروپا",
+        "summary": "نرخ‌های فوری حمل کانتینری در مسیر ترانس‌پاسیفیک به دلیل محدودیت ظرفیت خطوط افزایش یافته، در حالی که نرخ‌های کرایه حمل در مسیر آسیا به اروپا با کاهش مواجه شده است.",
+        "source_url": "https://gcaptain.com/tag/container-freight-rates/"
+      }
+    ],
+    "market_note": "افزایش ۲۰۰ هزار تنی ظرفیت جوش شیرین شاندونگ های‌هوا همراه با بهینه‌سازی هزینه‌ها از طریق ارتقای تکنولوژی سودا اش، حجم عرضه صادراتی چین را افزایش داده و قیمت تمام‌شده آن‌ها را رقابتی‌تر می‌کند. این مسئله می‌تواند فشار قیمتی بر «جوش شیرین پارس» (با قیمت پایه ۲۵۰ دلار FOB) را در بازارهای دوردست و حساس به قیمت مانند آسیای جنوبی و آفریقای شرقی افزایش دهد. از سوی دیگر، کاهش نرخ کرایه کانتینری چین به سمت اروپا هزینه حمل آن‌ها را پایین می‌آورد، اما افت سرعت لجستیک دریایی چین در مقایسه با ایران همچنان مزیت اصلی ما در بازارهای منطقه‌ای است. استراتژی ما باید بر حفظ بازارهای نزدیک و نظارت بر نرخ‌های حمل دریاپایه متمرکز باشد.",
+    "sources": [
+      {
+        "name": "Shandong Haihua Group News",
+        "url": "https://www.shandong-haihua.net/news.html"
+      },
+      {
+        "name": "Shandong Haihua Product Directory",
+        "url": "http://en.haihua.com.cn/product_1/4.html"
+      },
+      {
+        "name": "Hengyang Aijie Technology (Yuhua Group)",
+        "url": "http://www.en.chinayuhuagroup.com/"
+      },
+      {
+        "name": "Global Times Business",
+        "url": "https://www.globaltimes.cn/business/"
+      },
+      {
+        "name": "gCaptain Container Freight Rates",
+        "url": "https://gcaptain.com/tag/container-freight-rates/"
+      },
+      {
+        "name": "Container News",
+        "url": "https://www.container-news.com/"
+      }
+    ]
   }
 ]
