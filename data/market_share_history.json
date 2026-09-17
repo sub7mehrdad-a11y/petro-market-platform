@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T07:15:42.878120+00:00",
+  "generated_at": "2026-09-17T07:25:40.215166+00:00",
   "source": "WITS — World Integrated Trade Solution (wits.worldbank.org), آینه‌ی عمومی UN Comtrade",
   "note": "این فایل با scripts/ingest_market_share_history.py ساخته می‌شود؛ با اجرای دوباره‌ی اسکریپت کامل بازنویسی می‌شود.",
   "markets": {
@@ -2607,7 +2607,7 @@
       "importer_fa": null,
       "importer_en": "World exports (comparable core basket, not full world total)",
       "iso3": null,
-      "note_fa": "این «سهم بازار جهانی» ۸ صادرکننده‌ی بزرگی است که در تمام سال‌ها در آمار WITS عدد کامل دارند، به‌علاوه‌ی ایران و (به‌محض دراختیاربودن داده) روسیه از منابع دستیِ معتبرتر — نه کل صادرات جهانی. برای سال/کشورهایی که هنوز هیچ عدد قابل‌اتکایی نداریم (نه از WITS، نه از منبع دستی)، آن کشور در آن سال ساده حذف می‌شود؛ توضیح در mirror_gaps و manual_overrides.",
+      "note_fa": "این «سهم بازار جهانی» ۸ صادرکننده‌ی بزرگی است که در تمام سال‌ها در آمار WITS عدد کامل دارند، به‌علاوه‌ی ایران و روسیه برای سال‌هایی که منبع دستیِ دلاریِ دقیق و مستند دارن — نه کل صادرات جهانی. برای سال/کشورهایی که هنوز هیچ عدد قابل‌اتکایی نداریم (نه از WITS، نه از منبع دستی)، آن کشور در آن سال ساده حذف می‌شود؛ توضیح در mirror_gaps و manual_overrides.",
       "years": [
         {
           "total_usd_k": 375015.79,
@@ -2858,63 +2858,70 @@
           "year": 2020
         },
         {
-          "total_usd_k": 637999.1,
+          "total_usd_k": 672899.1,
           "suppliers": [
             {
               "country_en": "Germany",
               "country_fa": "آلمان",
               "value_usd_k": 151246.17,
               "quantity_kg": null,
-              "share_pct": 23.71
+              "share_pct": 22.48
             },
             {
               "country_en": "China",
               "country_fa": "چین",
               "value_usd_k": 127441.82,
               "quantity_kg": null,
-              "share_pct": 19.98
+              "share_pct": 18.94
             },
             {
               "country_en": "Turkey",
               "country_fa": "ترکیه",
               "value_usd_k": 103131.63,
               "quantity_kg": null,
-              "share_pct": 16.16
+              "share_pct": 15.33
             },
             {
               "country_en": "Spain",
               "country_fa": "اسپانیا",
               "value_usd_k": 99631.99,
               "quantity_kg": null,
-              "share_pct": 15.62
+              "share_pct": 14.81
             },
             {
               "country_en": "United States",
               "country_fa": "آمریکا",
               "value_usd_k": 74688.25,
               "quantity_kg": null,
-              "share_pct": 11.71
+              "share_pct": 11.1
             },
             {
               "country_en": "France",
               "country_fa": "فرانسه",
               "value_usd_k": 49562.86,
               "quantity_kg": null,
-              "share_pct": 7.77
+              "share_pct": 7.37
+            },
+            {
+              "country_en": "Russian Federation",
+              "country_fa": "روسیه",
+              "value_usd_k": 34900,
+              "quantity_kg": 157266000,
+              "share_pct": 5.19
             },
             {
               "country_en": "Bosnia and Herzegovina",
               "country_fa": "بوسنی و هرزگوین",
               "value_usd_k": 27438.71,
               "quantity_kg": null,
-              "share_pct": 4.3
+              "share_pct": 4.08
             },
             {
               "country_en": "Bulgaria",
               "country_fa": "بلغارستان",
               "value_usd_k": 4857.67,
               "quantity_kg": null,
-              "share_pct": 0.76
+              "share_pct": 0.72
             }
           ],
           "year": 2021
@@ -3195,12 +3202,18 @@
         }
       },
       "manual_overrides": {
+        "روسیه": {
+          "years": [
+            2021
+          ],
+          "source": "آمار رسمی نهایی گمرک روسیه (FTS / UN Comtrade)، ارائه‌شده توسط کاربر"
+        },
         "ایران": {
           "years": [
             2023,
             2024
           ],
-          "source": "آمار رسمی گمرک جمهوری اسلامی ایران (کد تعرفه ۲۸۳۶۳۰۱۰+۲۸۳۶۳۰۹۰)"
+          "source": "آمار رسمی گمرک جمهوری اسلامی ایران (کد تعرفه ۲۸۳۶۳۰۹۰، بدون گرید دارویی)"
         }
       }
     }
