@@ -258,6 +258,16 @@ export function getTransitPlaces() {
   return readJsonSafe(path.join(DATA_DIR, "transit_places.json"), {});
 }
 
+// کریدورهای بین‌المللی ترانزیت (ریلی/جاده‌ای/دریایی) — طول مسیر، زمان تخمینی
+// و هزینه‌ی هر TEU (وقتی منبع مستند داشت). برخلاف getTransitRateEstimate
+// (کرایه‌ی جاده‌ای داخلی ایران، از پست‌های روزانه‌ی اعلام‌بار)، این یک عکسِ
+// نسبتاً ایستای زیرساخت بین‌المللیه؛ عمدتاً از گزارش EDB «شبکه‌ی حمل‌ونقل
+// اوراسیا» + چند مسیر دریایی/مرزی که منبعشون هنوز «estimate-needs-verification»
+// علامت خورده (نه عدد جعلی).
+export function getTransitCorridors() {
+  return readJsonSafe(path.join(DATA_DIR, "transit_corridors.json"), null);
+}
+
 // میانه (نه میانگین) — چون نمونه کوچک است و یک پست پرت (مثل یک مسیر خیلی کوتاه
 // با کرایه‌ی مقطوع) میانگین را کاملاً جابه‌جا می‌کند.
 function median(nums) {

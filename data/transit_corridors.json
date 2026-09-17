@@ -1,0 +1,573 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-09-17",
+  "methodology_note_fa": "کریدورهای mode=rail/road با منبع EDB (2024) از گزارش «شبکه‌ی حمل‌ونقل اوراسیا» (Eurasian Development Bank) استخراج شده و طول مسیرشان نسبتاً قابل‌اتکاست. کریدورهای mode=sea با منبع estimate-needs-verification فاصله‌ی تقریبی‌اند (نه از یک API واقعی مسیر دریایی) و باید پیش از استفاده‌ی عملیاتی با ابزاری مثل پکیج پایتون searoute تأیید/به‌روزرسانی شوند. هیچ cost_usd_per_teu حدس زده نشده — هرجا null است یعنی داده‌ی معتبری در دسترس نبوده، دقیقاً همان انضباطی که در transit_watch_bot.py با price_amount=null رعایت شده.",
+  "corridors": [
+    {
+      "id": "instc-western",
+      "mode": "rail",
+      "name_fa": "INSTC — شاخه‌ی غربی (بندرعباس–تهران–رشت–آستارا–باکو–آستاراخان–مسکو)",
+      "waypoints": [
+        "بندرعباس",
+        "تهران",
+        "قزوین",
+        "رشت",
+        "آستارا (ایران)",
+        "آستارا (آذربایجان)",
+        "باکو",
+        "آستاراخان",
+        "مسکو"
+      ],
+      "countries_served": [
+        "ایران",
+        "آذربایجان",
+        "روسیه"
+      ],
+      "distance_km": 3200,
+      "transit_days_est": 12,
+      "gauge_break_points": [
+        "آستارا (تغییر گیج ۱۴۳۵↔۱۵۲۰ میلی‌متر)"
+      ],
+      "cost_usd_per_teu": null,
+      "source": "EDB (2024), Figure 20",
+      "updated_at": "2026-09-17",
+      "notes": "حلقه‌ی گمشده: بخش ریلی رشت-آستارا هنوز کامل نشده (وضعیت در سپتامبر ۲۰۲۶ نامشخص)؛ فعلاً این بخش با جاده پوشش داده می‌شود، نه ریل مستقیم."
+    },
+    {
+      "id": "instc-trans-caspian",
+      "mode": "sea",
+      "name_fa": "INSTC — شاخه‌ی ترانس‌خزری (بندر انزلی/امیرآباد–دریای خزر–آستاراخان/آکتائو)",
+      "waypoints": [
+        "بندر انزلی",
+        "بندر امیرآباد",
+        "دریای خزر",
+        "آستاراخان",
+        "آکتائو",
+        "باکو"
+      ],
+      "countries_served": [
+        "ایران",
+        "روسیه",
+        "قزاقستان",
+        "آذربایجان"
+      ],
+      "distance_km": 450,
+      "transit_days_est": 3,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": "فاصله‌ی دریای خزر کوتاه است ولی فرکانس/ظرفیت فری‌بوت محدود؛ زمان واقعی به‌شدت به برنامه‌ی حرکت کشتی بستگی دارد."
+    },
+    {
+      "id": "instc-eastern",
+      "mode": "rail",
+      "name_fa": "INSTC — شاخه‌ی شرقی (سرخس–ترکمنستان–قزاقستان–روسیه)",
+      "waypoints": [
+        "مشهد",
+        "سرخس",
+        "عشق‌آباد",
+        "بندر ترکمن‌باشی/دشوغوز",
+        "قزاقستان",
+        "روسیه"
+      ],
+      "countries_served": [
+        "ایران",
+        "ترکمنستان",
+        "قزاقستان",
+        "روسیه"
+      ],
+      "distance_km": 2800,
+      "transit_days_est": 12,
+      "gauge_break_points": [
+        "سرخس (تغییر گیج ۱۴۳۵↔۱۵۲۰ میلی‌متر)"
+      ],
+      "cost_usd_per_teu": null,
+      "source": "EDB (2024)",
+      "updated_at": "2026-09-17",
+      "notes": "قطار آزمایشی نوامبر ۲۰۲۵ این شاخه را در حدود ۱۲ روز طی کرد."
+    },
+    {
+      "id": "traceca-road",
+      "mode": "road",
+      "name_fa": "TRACECA — شاخه‌ی جاده‌ای ایران (بازرگان–تهران–سرخس/آستارا–آسیای میانه)",
+      "waypoints": [
+        "بازرگان",
+        "تهران",
+        "سرخس یا آستارا",
+        "ترکمنستان/آذربایجان",
+        "ازبکستان"
+      ],
+      "countries_served": [
+        "ترکیه",
+        "ایران",
+        "ترکمنستان",
+        "ازبکستان",
+        "آذربایجان"
+      ],
+      "distance_km": 4200,
+      "transit_days_est": 10,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "EDB (2024), Figure 14",
+      "updated_at": "2026-09-17",
+      "notes": "تنها شاخه‌ی TRACECA که ایران در آن نقش کانونی دارد؛ حجم واقعی کمتر از شاخه‌ی دریای خزر (TITR) است چون نرخ جاده‌ای رقیب داخلی بار را جذب می‌کند."
+    },
+    {
+      "id": "southern-eurasian",
+      "mode": "road",
+      "name_fa": "کریدور جنوبی اوراسیا (استانبول–تهران–زاهدان–کویته–اسلام‌آباد)",
+      "waypoints": [
+        "استانبول",
+        "تهران",
+        "مشهد",
+        "بافق",
+        "زاهدان",
+        "کویته",
+        "اسلام‌آباد"
+      ],
+      "countries_served": [
+        "ترکیه",
+        "ایران",
+        "پاکستان"
+      ],
+      "distance_km": 6200,
+      "transit_days_est": 14,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "EDB (2024), Figure 19",
+      "updated_at": "2026-09-17",
+      "notes": "تنها پل زمینی مستقیم ترکیه–پاکستان؛ ایران در کل طول مسیر نقش محوری و بدون رقیب مستقیم دارد."
+    },
+    {
+      "id": "titr-middle-corridor",
+      "mode": "rail",
+      "name_fa": "TITR / کریدور میانی (چین–قزاقستان–دریای خزر–قفقاز–ترکیه) — ایران را دور می‌زند",
+      "waypoints": [
+        "اورومچی",
+        "دوستیک",
+        "آکتوگای",
+        "آکتائو",
+        "باکو",
+        "تفلیس",
+        "پوتی/کارس"
+      ],
+      "countries_served": [
+        "چین",
+        "قزاقستان",
+        "آذربایجان",
+        "گرجستان",
+        "ترکیه"
+      ],
+      "distance_km": 4500,
+      "transit_days_est": 22,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": 5400,
+      "source": "EDB (2024), Figure 16؛ Jamestown Foundation (2024)",
+      "updated_at": "2026-09-17",
+      "notes": "رقیب اصلی مسیرهای ایرانی برای دسترسی چین/آسیای میانه به اروپا؛ هزینه‌اش تقریباً دو برابر کریدور شمالی روسیه (~۵۰۰۰ یورو در برابر ~۲۶۶۲ دلار هر TEU) است — برای مقایسه‌ی رقابتی نگه داشته شده، نه به‌عنوان مسیر شرکت."
+    },
+    {
+      "id": "northern-eurasian",
+      "mode": "rail",
+      "name_fa": "کریدور شمالی اوراسیا (چین/روسیه–بلاروس–اروپا) — ارزان‌ترین مسیر روسیه به اروپا",
+      "waypoints": [
+        "چین (منچوری/زابایکالسک)",
+        "مسکو",
+        "مینسک",
+        "ورشو",
+        "برلین"
+      ],
+      "countries_served": [
+        "چین",
+        "روسیه",
+        "بلاروس"
+      ],
+      "distance_km": 10500,
+      "transit_days_est": 6,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": 2662,
+      "source": "EDB (2024), Figure 4؛ Jamestown Foundation (2024)",
+      "updated_at": "2026-09-17",
+      "notes": "مسیر خانگی روسیه با تعرفه‌ی هماهنگ و بدون تغییر گیج تا مرز لهستان؛ برای درک رقابت هزینه‌ای در بازار روسیه/CIS نگه داشته شده، نه یک گزینه‌ی مستقیم شرکت."
+    },
+    {
+      "id": "trans-afghan",
+      "mode": "rail",
+      "name_fa": "کریدور ترانس‌افغان (ازبکستان–افغانستان–پاکستان) — پروژه‌ای، غیرفعال",
+      "waypoints": [
+        "ترمز (ازبکستان)",
+        "مزار شریف",
+        "لوگر",
+        "خرلاچی",
+        "تورخم",
+        "بندر کراچی/گوادر"
+      ],
+      "countries_served": [
+        "ازبکستان",
+        "افغانستان",
+        "پاکستان"
+      ],
+      "distance_km": 1550,
+      "transit_days_est": null,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "EDB (2024)",
+      "updated_at": "2026-09-17",
+      "notes": "به دلیل وضعیت امنیتی افغانستان (سپتامبر ۲۰۲۶) عملاً غیرفعال؛ فقط برای رصد آینده نگه داشته شده — status: inactive."
+    },
+    {
+      "id": "cpec-gwadar",
+      "mode": "road",
+      "name_fa": "CPEC — کاشغر–بزرگراه قراقروم–گوادر (چین به اقیانوس هند، بدون اتصال مستقیم به ایران)",
+      "waypoints": [
+        "کاشغر",
+        "اسلام‌آباد",
+        "کویته",
+        "گوادر"
+      ],
+      "countries_served": [
+        "چین",
+        "پاکستان"
+      ],
+      "distance_km": 2500,
+      "transit_days_est": null,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "EDB (2024)",
+      "updated_at": "2026-09-17",
+      "notes": "رقیب چابهار برای دسترسی چین/پاکستان به اقیانوس هند؛ صرفاً جهت مقایسه‌ی رقابتی نگه داشته شده."
+    },
+    {
+      "id": "sea-bab-jebelali",
+      "mode": "sea",
+      "name_fa": "بندرعباس–جبل‌علی (امارات) — کوتاه‌مسیر خلیج فارس",
+      "waypoints": [
+        "بندرعباس",
+        "تنگه‌ی هرمز",
+        "جبل‌علی"
+      ],
+      "countries_served": [
+        "ایران",
+        "امارات متحده عربی"
+      ],
+      "distance_km": 370,
+      "transit_days_est": 2,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": null
+    },
+    {
+      "id": "sea-bab-karachi",
+      "mode": "sea",
+      "name_fa": "بندرعباس–کراچی (پاکستان)",
+      "waypoints": [
+        "بندرعباس",
+        "دریای عمان",
+        "کراچی"
+      ],
+      "countries_served": [
+        "ایران",
+        "پاکستان"
+      ],
+      "distance_km": 1020,
+      "transit_days_est": 3,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": null
+    },
+    {
+      "id": "sea-bab-nhavasheva",
+      "mode": "sea",
+      "name_fa": "بندرعباس–نوا شوا/مومبای (هند)",
+      "waypoints": [
+        "بندرعباس",
+        "دریای عمان",
+        "دریای عرب",
+        "مومبای"
+      ],
+      "countries_served": [
+        "ایران",
+        "هند"
+      ],
+      "distance_km": 1950,
+      "transit_days_est": 6,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": null
+    },
+    {
+      "id": "sea-chabahar-mumbai",
+      "mode": "sea",
+      "name_fa": "چابهار–مومبای (هند) — بدون عبور از تنگه‌ی هرمز",
+      "waypoints": [
+        "چابهار",
+        "دریای عرب",
+        "مومبای"
+      ],
+      "countries_served": [
+        "ایران",
+        "هند"
+      ],
+      "distance_km": 1000,
+      "transit_days_est": 3,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": "مزیت راهبردی: کاملاً خارج از تنگه‌ی هرمز، اما وضعیت تحریمی این بندر متغیر است (نگاه کنید به فصل هشدار فوری گزارش ترانزیت اوراسیا)."
+    },
+    {
+      "id": "sea-bab-shanghai",
+      "mode": "sea",
+      "name_fa": "بندرعباس–شانگهای (چین) — از طریق تنگه‌ی مالاکا",
+      "waypoints": [
+        "بندرعباس",
+        "اقیانوس هند",
+        "تنگه‌ی مالاکا",
+        "دریای جنوبی چین",
+        "شانگهای"
+      ],
+      "countries_served": [
+        "ایران",
+        "چین"
+      ],
+      "distance_km": 10500,
+      "transit_days_est": 18,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": null
+    },
+    {
+      "id": "sea-bab-rotterdam",
+      "mode": "sea",
+      "name_fa": "بندرعباس–روتردام (اروپا) — از طریق کانال سوئز",
+      "waypoints": [
+        "بندرعباس",
+        "دریای عرب",
+        "دریای سرخ",
+        "کانال سوئز",
+        "مدیترانه",
+        "جبل‌الطارق",
+        "روتردام"
+      ],
+      "countries_served": [
+        "ایران",
+        "هلند/اروپای غربی"
+      ],
+      "distance_km": 11100,
+      "transit_days_est": 22,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": "ریسک فعال: هرگونه محدودیت در تنگه‌ی هرمز یا کانال سوئز مستقیماً این مسیر را مختل می‌کند."
+    },
+    {
+      "id": "sea-bab-mombasa",
+      "mode": "sea",
+      "name_fa": "بندرعباس–ممباسا (کنیا/شرق آفریقا)",
+      "waypoints": [
+        "بندرعباس",
+        "دریای عرب",
+        "اقیانوس هند",
+        "ممباسا"
+      ],
+      "countries_served": [
+        "ایران",
+        "کنیا"
+      ],
+      "distance_km": 4450,
+      "transit_days_est": 11,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": null
+    },
+    {
+      "id": "sea-bab-santos",
+      "mode": "sea",
+      "name_fa": "بندرعباس–سانتوس (برزیل) — از طریق سوئز و اقیانوس اطلس",
+      "waypoints": [
+        "بندرعباس",
+        "کانال سوئز",
+        "مدیترانه",
+        "اقیانوس اطلس",
+        "سانتوس"
+      ],
+      "countries_served": [
+        "ایران",
+        "برزیل"
+      ],
+      "distance_km": 21300,
+      "transit_days_est": 35,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": "طولانی‌ترین مسیر دریایی مرتبط با شرکت؛ عدد بسیار تقریبی است و باید با یک نقل‌قول واقعی از خط کشتیرانی جایگزین شود."
+    },
+    {
+      "id": "sea-caspian-anzali-astrakhan",
+      "mode": "sea",
+      "name_fa": "بندر انزلی–آستاراخان (روسیه) — دریای خزر",
+      "waypoints": [
+        "بندر انزلی",
+        "دریای خزر",
+        "آستاراخان"
+      ],
+      "countries_served": [
+        "ایران",
+        "روسیه"
+      ],
+      "distance_km": 450,
+      "transit_days_est": 2,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": null
+    },
+    {
+      "id": "sea-caspian-anzali-aktau",
+      "mode": "sea",
+      "name_fa": "بندر انزلی–آکتائو (قزاقستان) — دریای خزر",
+      "waypoints": [
+        "بندر انزلی",
+        "دریای خزر",
+        "آکتائو"
+      ],
+      "countries_served": [
+        "ایران",
+        "قزاقستان"
+      ],
+      "distance_km": 380,
+      "transit_days_est": 2,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": null
+    },
+    {
+      "id": "sea-caspian-anzali-baku",
+      "mode": "sea",
+      "name_fa": "بندر انزلی–باکو (آذربایجان) — دریای خزر",
+      "waypoints": [
+        "بندر انزلی",
+        "دریای خزر",
+        "باکو"
+      ],
+      "countries_served": [
+        "ایران",
+        "آذربایجان"
+      ],
+      "distance_km": 350,
+      "transit_days_est": 1,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": null
+    },
+    {
+      "id": "road-iran-armenia-norduz",
+      "mode": "road",
+      "name_fa": "جلفا/نوردوز — دروازه‌ی جاده‌ای ایران به ارمنستان و قفقاز",
+      "waypoints": [
+        "تبریز",
+        "جلفا",
+        "نوردوز",
+        "ایروان"
+      ],
+      "countries_served": [
+        "ایران",
+        "ارمنستان"
+      ],
+      "distance_km": 620,
+      "transit_days_est": 2,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": null
+    },
+    {
+      "id": "road-iran-uzbekistan-sarakhs",
+      "mode": "road",
+      "name_fa": "سرخس — دروازه‌ی جاده‌ای/ریلی ایران به ترکمنستان و ازبکستان",
+      "waypoints": [
+        "مشهد",
+        "سرخس",
+        "عشق‌آباد",
+        "بخارا",
+        "تاشکند"
+      ],
+      "countries_served": [
+        "ایران",
+        "ترکمنستان",
+        "ازبکستان"
+      ],
+      "distance_km": 1450,
+      "transit_days_est": 4,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": null
+    },
+    {
+      "id": "road-iran-iraq-shalamcheh",
+      "mode": "road",
+      "name_fa": "شلمچه — دروازه‌ی جاده‌ای ایران به عراق (بصره/بغداد)",
+      "waypoints": [
+        "اهواز",
+        "خرمشهر",
+        "شلمچه",
+        "بصره",
+        "بغداد"
+      ],
+      "countries_served": [
+        "ایران",
+        "عراق"
+      ],
+      "distance_km": 550,
+      "transit_days_est": 2,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": null
+    },
+    {
+      "id": "road-iran-azerbaijan-bilehsavar",
+      "mode": "road",
+      "name_fa": "بیله‌سوار/آستارا — دروازه‌ی جاده‌ای ایران به آذربایجان",
+      "waypoints": [
+        "اردبیل",
+        "بیله‌سوار یا آستارا",
+        "باکو"
+      ],
+      "countries_served": [
+        "ایران",
+        "آذربایجان"
+      ],
+      "distance_km": 600,
+      "transit_days_est": 2,
+      "gauge_break_points": [],
+      "cost_usd_per_teu": null,
+      "source": "estimate-needs-verification",
+      "updated_at": "2026-09-17",
+      "notes": null
+    }
+  ]
+}
