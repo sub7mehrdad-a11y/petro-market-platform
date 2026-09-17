@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  getTradeUnions, getTradeUnion, getCountries, getTradeMapForCountry, getUnionTradeStats,
+  getTradeUnions, getTradeUnion, getCountries, getTradeMapForCountry, getUnionTradeStats, getReportsForUnion,
 } from "@/lib/data";
 import PageHeader from "../../components/PageHeader";
 
@@ -15,6 +15,8 @@ const IRAN_STATUS_STYLE = {
 };
 
 const CET_LABEL = { true: "بله", false: "خیر", null: "نامشخص" };
+
+const REPORT_TYPE_FA = { detailed: "گزارش مفصل", summary: "گزارش مدیریتی (خلاصه)" };
 
 const NON_MEMBER_RELATION_GROUP = [
   { field: "observers", label: "اعضای ناظر" },
@@ -149,6 +151,7 @@ export default async function UnionPage({ params }) {
   const u = getTradeUnion(id);
   if (!u) notFound();
   const stats = getUnionTradeStats(id);
+  const reports = getReportsForUnion(id);
 
   return (
     <div className="space-y-6">
@@ -193,6 +196,26 @@ export default async function UnionPage({ params }) {
           <p className="text-sm text-copper-900 bg-copper-50 border border-copper-200 rounded-lg p-4 leading-7">
             {u.baking_soda_note_fa}
           </p>
+        </Section>
+      )}
+
+      {reports.length > 0 && (
+        <Section title="گزارش‌های تحلیلی">
+          <ul className="grid gap-2 sm:grid-cols-2">
+            {reports.map((r) => (
+              <li key={r.id}>
+                <Link
+                  href={`/reports/${r.id}`}
+                  className="block border border-slate-200 rounded-lg p-3 hover:border-copper-600 transition"
+                >
+                  <div className="font-medium">{r.title}</div>
+                  <div className="text-xs text-slate-500 mt-1">
+                    {REPORT_TYPE_FA[r.report_type] || "گزارش"}
+                  </div>
+                </Link>
+              </li>
+            ))}
+          </ul>
         </Section>
       )}
 

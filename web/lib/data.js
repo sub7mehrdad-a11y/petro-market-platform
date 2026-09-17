@@ -63,6 +63,15 @@ export function getReportsManifest() {
   return readJsonSafe(MANIFEST_FILE, []);
 }
 
+// گزارش‌های اختصاصیِ یک اتحادیه (فیلد country برابر با برچسبش توی
+// UNION_REPORT_LABELS) — برای صفحه‌ی /unions/[id]. اتحادیه‌ای که هنوز گزارش
+// اختصاصی نداره، آرایه‌ی خالی می‌گیره.
+export function getReportsForUnion(unionId) {
+  const label = UNION_REPORT_LABELS[unionId];
+  if (!label) return [];
+  return getReportsManifest().filter((r) => r.country === label);
+}
+
 export function getReportsDir() {
   return REPORTS_DIR;
 }
@@ -134,11 +143,18 @@ export function getParsedReport(id) {
   return parsed ? { ...parsed, manifest: entry } : null;
 }
 
+// نگاشت شناسه‌ی اتحادیه → برچسبی که گزارش‌های اختصاصی همون اتحادیه (توی
+// REPORTS اسکریپت ingest_reports.py) با فیلد country ثبت می‌شن — دقیقاً مثل
+// «جهانی» برای گزارش‌های پس‌زمینه، یک برچسب غیر-کشوریه. اتحادیه‌ی جدیدی که
+// گزارش اختصاصی گرفت، یک ورودی این‌جا اضافه می‌کنه.
+export const UNION_REPORT_LABELS = { eaeu: "اوراسیا" };
+
 // فهرست همه‌ی کشورهایی که حداقل توی یکی از منابع (شرکت/نمایشگاه/گزارش/قیمت) هستن.
 // «جهانی» یک کشور واقعی نیست — برچسب گزارش‌های پس‌زمینه‌ی سراسری (مثل بازار
-// جهانی سودا اش) که به هیچ کشور خاصی مربوط نمی‌شن؛ نباید توی صفحه‌ی
-// /countries یا محاسبات فاصله/شریک‌تجاری ظاهر بشه.
-const NON_COUNTRY_LABELS = new Set(["جهانی"]);
+// جهانی سودا اش) که به هیچ کشور خاصی مربوط نمی‌شن؛ برچسب‌های UNION_REPORT_LABELS
+// هم همین‌طور (مثلاً «اوراسیا» برچسب گزارش اختصاصی اتحادیه‌ست، نه کشور) — هیچ‌کدوم
+// نباید توی صفحه‌ی /countries یا محاسبات فاصله/شریک‌تجاری ظاهر بشن.
+const NON_COUNTRY_LABELS = new Set(["جهانی", ...Object.values(UNION_REPORT_LABELS)]);
 
 export function getCountries() {
   const set = new Set();
