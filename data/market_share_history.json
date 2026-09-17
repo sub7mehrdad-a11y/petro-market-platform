@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-17T07:25:40.215166+00:00",
+  "generated_at": "2026-09-17T07:44:32.128940+00:00",
   "source": "WITS — World Integrated Trade Solution (wits.worldbank.org), آینه‌ی عمومی UN Comtrade",
   "note": "این فایل با scripts/ingest_market_share_history.py ساخته می‌شود؛ با اجرای دوباره‌ی اسکریپت کامل بازنویسی می‌شود.",
   "markets": {
@@ -2858,7 +2858,7 @@
           "year": 2020
         },
         {
-          "total_usd_k": 672899.1,
+          "total_usd_k": 672903.1,
           "suppliers": [
             {
               "country_en": "Germany",
@@ -2905,8 +2905,8 @@
             {
               "country_en": "Russian Federation",
               "country_fa": "روسیه",
-              "value_usd_k": 34900,
-              "quantity_kg": 157266000,
+              "value_usd_k": 34904.0,
+              "quantity_kg": null,
               "share_pct": 5.19
             },
             {
@@ -2927,201 +2927,222 @@
           "year": 2021
         },
         {
-          "total_usd_k": 728758.19,
+          "total_usd_k": 759557.19,
           "suppliers": [
             {
               "country_en": "China",
               "country_fa": "چین",
               "value_usd_k": 195949.63,
               "quantity_kg": null,
-              "share_pct": 26.89
+              "share_pct": 25.8
             },
             {
               "country_en": "Turkey",
               "country_fa": "ترکیه",
               "value_usd_k": 155431.83,
               "quantity_kg": null,
-              "share_pct": 21.33
+              "share_pct": 20.46
             },
             {
               "country_en": "United States",
               "country_fa": "آمریکا",
               "value_usd_k": 103090.28,
               "quantity_kg": null,
-              "share_pct": 14.15
+              "share_pct": 13.57
             },
             {
               "country_en": "Germany",
               "country_fa": "آلمان",
               "value_usd_k": 83194.07,
               "quantity_kg": null,
-              "share_pct": 11.42
+              "share_pct": 10.95
             },
             {
               "country_en": "Spain",
               "country_fa": "اسپانیا",
               "value_usd_k": 66173.34,
               "quantity_kg": null,
-              "share_pct": 9.08
+              "share_pct": 8.71
             },
             {
               "country_en": "France",
               "country_fa": "فرانسه",
               "value_usd_k": 61786.83,
               "quantity_kg": null,
-              "share_pct": 8.48
+              "share_pct": 8.13
             },
             {
               "country_en": "Bosnia and Herzegovina",
               "country_fa": "بوسنی و هرزگوین",
               "value_usd_k": 36716.32,
               "quantity_kg": null,
-              "share_pct": 5.04
+              "share_pct": 4.83
+            },
+            {
+              "country_en": "Russian Federation",
+              "country_fa": "روسیه",
+              "value_usd_k": 30799.0,
+              "quantity_kg": null,
+              "share_pct": 4.05
             },
             {
               "country_en": "Bulgaria",
               "country_fa": "بلغارستان",
               "value_usd_k": 26415.89,
               "quantity_kg": null,
-              "share_pct": 3.62
+              "share_pct": 3.48
             }
           ],
           "year": 2022
         },
         {
-          "total_usd_k": 708752.12,
+          "total_usd_k": 723876.12,
           "suppliers": [
             {
               "country_en": "China",
               "country_fa": "چین",
               "value_usd_k": 176992.11,
               "quantity_kg": null,
-              "share_pct": 24.97
+              "share_pct": 24.45
             },
             {
               "country_en": "Turkey",
               "country_fa": "ترکیه",
               "value_usd_k": 157945.44,
               "quantity_kg": null,
-              "share_pct": 22.29
+              "share_pct": 21.82
             },
             {
               "country_en": "United States",
               "country_fa": "آمریکا",
               "value_usd_k": 81545.84,
               "quantity_kg": null,
-              "share_pct": 11.51
+              "share_pct": 11.27
             },
             {
               "country_en": "Germany",
               "country_fa": "آلمان",
               "value_usd_k": 79112.19,
               "quantity_kg": null,
-              "share_pct": 11.16
+              "share_pct": 10.93
             },
             {
               "country_en": "Spain",
               "country_fa": "اسپانیا",
               "value_usd_k": 66304.38,
               "quantity_kg": null,
-              "share_pct": 9.36
+              "share_pct": 9.16
             },
             {
               "country_en": "France",
               "country_fa": "فرانسه",
               "value_usd_k": 58724.73,
               "quantity_kg": null,
-              "share_pct": 8.29
+              "share_pct": 8.11
             },
             {
               "country_en": "Bosnia and Herzegovina",
               "country_fa": "بوسنی و هرزگوین",
               "value_usd_k": 44216.03,
               "quantity_kg": null,
-              "share_pct": 6.24
+              "share_pct": 6.11
             },
             {
               "country_en": "Bulgaria",
               "country_fa": "بلغارستان",
               "value_usd_k": 38526.08,
               "quantity_kg": null,
-              "share_pct": 5.44
+              "share_pct": 5.32
+            },
+            {
+              "country_en": "Russian Federation",
+              "country_fa": "روسیه",
+              "value_usd_k": 15124.0,
+              "quantity_kg": null,
+              "share_pct": 2.09
             },
             {
               "country_en": "Iran, Islamic Rep.",
               "country_fa": "ایران",
               "value_usd_k": 5385.324,
               "quantity_kg": 23666900,
-              "share_pct": 0.76
+              "share_pct": 0.74
             }
           ],
           "year": 2023
         },
         {
-          "total_usd_k": 718975.58,
+          "total_usd_k": 736045.58,
           "suppliers": [
             {
               "country_en": "China",
               "country_fa": "چین",
               "value_usd_k": 178972.86,
               "quantity_kg": null,
-              "share_pct": 24.89
+              "share_pct": 24.32
             },
             {
               "country_en": "Turkey",
               "country_fa": "ترکیه",
               "value_usd_k": 152768.8,
               "quantity_kg": null,
-              "share_pct": 21.25
+              "share_pct": 20.76
             },
             {
               "country_en": "United States",
               "country_fa": "آمریکا",
               "value_usd_k": 89707.14,
               "quantity_kg": null,
-              "share_pct": 12.48
+              "share_pct": 12.19
             },
             {
               "country_en": "Germany",
               "country_fa": "آلمان",
               "value_usd_k": 75727.08,
               "quantity_kg": null,
-              "share_pct": 10.53
+              "share_pct": 10.29
             },
             {
               "country_en": "Spain",
               "country_fa": "اسپانیا",
               "value_usd_k": 72526.26,
               "quantity_kg": null,
-              "share_pct": 10.09
+              "share_pct": 9.85
             },
             {
               "country_en": "France",
               "country_fa": "فرانسه",
               "value_usd_k": 59099.06,
               "quantity_kg": null,
-              "share_pct": 8.22
+              "share_pct": 8.03
             },
             {
               "country_en": "Bulgaria",
               "country_fa": "بلغارستان",
               "value_usd_k": 43580.5,
               "quantity_kg": null,
-              "share_pct": 6.06
+              "share_pct": 5.92
             },
             {
               "country_en": "Bosnia and Herzegovina",
               "country_fa": "بوسنی و هرزگوین",
               "value_usd_k": 39978.33,
               "quantity_kg": null,
-              "share_pct": 5.56
+              "share_pct": 5.43
+            },
+            {
+              "country_en": "Russian Federation",
+              "country_fa": "روسیه",
+              "value_usd_k": 17070.0,
+              "quantity_kg": null,
+              "share_pct": 2.32
             },
             {
               "country_en": "Iran, Islamic Rep.",
               "country_fa": "ایران",
               "value_usd_k": 6615.546,
               "quantity_kg": 35493800,
-              "share_pct": 0.92
+              "share_pct": 0.9
             }
           ],
           "year": 2024
@@ -3134,14 +3155,20 @@
           {
             "country_fa": "ترکیه",
             "share_first": 12.6,
-            "share_last": 21.2,
-            "delta_pct_points": 8.7
+            "share_last": 20.8,
+            "delta_pct_points": 8.2
           },
           {
             "country_fa": "بلغارستان",
             "share_first": 1.5,
-            "share_last": 6.1,
-            "delta_pct_points": 4.5
+            "share_last": 5.9,
+            "delta_pct_points": 4.4
+          },
+          {
+            "country_fa": "روسیه",
+            "share_first": 0,
+            "share_last": 2.3,
+            "delta_pct_points": 2.3
           },
           {
             "country_fa": "ایران",
@@ -3152,38 +3179,38 @@
           {
             "country_fa": "بوسنی و هرزگوین",
             "share_first": 4.8,
-            "share_last": 5.6,
-            "delta_pct_points": 0.8
+            "share_last": 5.4,
+            "delta_pct_points": 0.6
           },
           {
             "country_fa": "اسپانیا",
             "share_first": 10.0,
-            "share_last": 10.1,
-            "delta_pct_points": 0.1
+            "share_last": 9.8,
+            "delta_pct_points": -0.1
           },
           {
             "country_fa": "فرانسه",
             "share_first": 8.4,
-            "share_last": 8.2,
-            "delta_pct_points": -0.1
+            "share_last": 8.0,
+            "delta_pct_points": -0.3
           },
           {
             "country_fa": "آلمان",
             "share_first": 13.5,
-            "share_last": 10.5,
-            "delta_pct_points": -2.9
+            "share_last": 10.3,
+            "delta_pct_points": -3.2
           },
           {
             "country_fa": "آمریکا",
             "share_first": 16.5,
-            "share_last": 12.5,
-            "delta_pct_points": -4.0
+            "share_last": 12.2,
+            "delta_pct_points": -4.3
           },
           {
             "country_fa": "چین",
             "share_first": 32.8,
-            "share_last": 24.9,
-            "delta_pct_points": -7.9
+            "share_last": 24.3,
+            "delta_pct_points": -8.5
           }
         ]
       },
@@ -3192,21 +3219,17 @@
           "missing_years": [
             2017
           ]
-        },
-        "روسیه": {
-          "missing_years": [
-            2022,
-            2023,
-            2024
-          ]
         }
       },
       "manual_overrides": {
         "روسیه": {
           "years": [
-            2021
+            2021,
+            2022,
+            2023,
+            2024
           ],
-          "source": "آمار رسمی نهایی گمرک روسیه (FTS / UN Comtrade)، ارائه‌شده توسط کاربر"
+          "source": "ITC Trade Map (data/trade_map_2025.json) — هم‌راستا با رقم رسمی گمرک FTS/UN Comtrade که کاربر برای ۲۰۲۱ ارائه داد"
         },
         "ایران": {
           "years": [
