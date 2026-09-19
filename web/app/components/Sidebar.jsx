@@ -73,15 +73,15 @@ function NavLink({ item, pathname, onNavigate }) {
       aria-current={active ? "page" : undefined}
       className={`group relative flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm transition-colors ${
         active
-          ? "bg-petrol-500/60 text-white font-semibold"
-          : "text-petrol-100 hover:bg-white/5 hover:text-white"
+          ? "bg-petrol-500 text-white font-semibold"
+          : "text-petrol-700 hover:bg-petrol-100 hover:text-petrol-900"
       }`}
     >
       {/* نوار مسی لبه‌ی راست برای آیتم فعال — همان نشانگر طرح */}
       {active && (
         <span className="absolute -end-4 top-1/2 -translate-y-1/2 h-6 w-1 rounded-s bg-copper-400" />
       )}
-      <Icon className={active ? "text-copper-300" : "text-petrol-300"} />
+      <Icon className={active ? "text-copper-200" : "text-petrol-500"} />
       <span className="truncate">{item.label}</span>
     </Link>
   );
@@ -94,11 +94,11 @@ function Brand({ compact = false }) {
         سص
       </span>
       <span className="leading-tight min-w-0">
-        <span className="block font-black text-[15px] tracking-tight text-white truncate">
+        <span className="block font-black text-[15px] tracking-tight text-petrol-900 truncate">
           تحقیق و توسعه سپهران شیمی
         </span>
         {!compact && (
-          <span className="block text-[11px] text-petrol-300">هوش تجاری بازار جوش شیرین</span>
+          <span className="block text-[11px] text-petrol-600">هوش تجاری بازار جوش شیرین</span>
         )}
       </span>
     </Link>
@@ -112,7 +112,7 @@ function NavContent({ pathname, onNavigate, showOutreach }) {
       {navGroups.map((group, gi) => (
         <div key={gi} className="flex flex-col gap-0.5">
           {group.title && (
-            <div className="px-3 pb-1 text-[10px] font-bold tracking-wide text-petrol-400 uppercase">
+            <div className="px-3 pb-1 text-[10px] font-bold tracking-wide text-petrol-500 uppercase">
               {group.title}
             </div>
           )}
@@ -122,7 +122,7 @@ function NavContent({ pathname, onNavigate, showOutreach }) {
         </div>
       ))}
 
-      <div className="pt-1 mt-1 border-t border-white/10">
+      <div className="pt-1 mt-1 border-t border-petrol-200">
         <NavLink item={ASK_ITEM} pathname={pathname} onNavigate={onNavigate} />
       </div>
     </nav>
@@ -136,10 +136,10 @@ export default function Sidebar({ showOutreach = false }) {
   return (
     <>
       {/* دسکتاپ — ستون ثابت سمت راست */}
-      <aside className="hidden lg:flex lg:flex-col w-64 shrink-0 bg-petrol-700 relative overflow-hidden">
+      <aside className="hidden lg:flex lg:flex-col w-64 shrink-0 bg-petrol-50 border-e border-petrol-200 relative overflow-hidden">
         <div
-          className="pointer-events-none absolute -top-20 -start-20 h-56 w-56 rounded-full opacity-40"
-          style={{ background: "radial-gradient(circle, rgba(201,118,46,.35), transparent 70%)" }}
+          className="pointer-events-none absolute -top-20 -start-20 h-56 w-56 rounded-full opacity-30"
+          style={{ background: "radial-gradient(circle, rgba(201,118,46,.25), transparent 70%)" }}
         />
         {/* sticky تا با اسکرول صفحات بلند (کشورها، شرکت‌ها) منو از دست نرود */}
         <div className="relative z-10 sticky top-0 flex flex-col gap-6 p-4 max-h-screen overflow-y-auto">
@@ -149,7 +149,7 @@ export default function Sidebar({ showOutreach = false }) {
       </aside>
 
       {/* موبایل/تبلت — نوار بالا و کشوی بازشونده */}
-      <div className="lg:hidden bg-petrol-700 sticky top-0 z-30">
+      <div className="lg:hidden bg-petrol-50 border-b border-petrol-200 sticky top-0 z-30">
         <div className="flex items-center justify-between gap-3 px-4 py-3">
           <Brand compact />
           <button
@@ -157,13 +157,13 @@ export default function Sidebar({ showOutreach = false }) {
             onClick={() => setOpen((v) => !v)}
             aria-expanded={open}
             aria-label="منوی ناوبری"
-            className="rounded-lg p-2 text-petrol-100 hover:bg-white/10 transition-colors"
+            className="rounded-lg p-2 text-petrol-700 hover:bg-petrol-100 transition-colors"
           >
             {open ? <IconClose /> : <IconMenu />}
           </button>
         </div>
         {open && (
-          <div className="px-4 pb-4 border-t border-white/10 pt-3">
+          <div className="px-4 pb-4 border-t border-petrol-200 pt-3">
             <NavContent pathname={pathname} onNavigate={() => setOpen(false)} showOutreach={showOutreach} />
           </div>
         )}

@@ -57,14 +57,14 @@ export default function UnionsPage() {
         actions={
           <Link
             href="/countries"
-            className="text-sm text-petrol-100 hover:text-white border border-white/15 hover:border-white/30 rounded-full px-4 py-2 transition-colors"
+            className="text-sm text-petrol-700 hover:text-petrol-900 border border-petrol-300 hover:border-petrol-500 rounded-full px-4 py-2 transition-colors"
           >
             مشاهده‌ی کشورها ←
           </Link>
         }
       />
 
-      <p className="text-xs text-petrol-300 -mt-2 leading-6 max-w-3xl">
+      <p className="text-xs text-slate-500 -mt-2 leading-6 max-w-3xl">
         برگرفته از پژوهش «اتحادیه‌ها و پیمان‌های چندجانبه اقتصادی جهان» (شهریور ۱۴۰۵). ارقام تعرفه‌ای این
         صفحه میانگین‌های عمومی/نمونه‌اند، نه تعرفهٔ دقیق کد HS ۲۸۳۶۳۰ در هر کشور — پیش از هر تصمیم تجاری،
         رقم دقیق را از Trade Map (ITC)، Market Access Map یا گمرک کشور مقصد استعلام بگیرید.

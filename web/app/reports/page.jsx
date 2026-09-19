@@ -14,7 +14,7 @@ export default function SmartReportsPage() {
             همون گزارش‌های مدیریتی که به مدیران ارائه می‌شه — با فرمت مصوب، و همیشه بر اساس آخرین
             قیمت‌های جمع‌آوری‌شده به‌روز می‌مونه (به بخش «قیمت‌های زنده» داخل هر گزارش نگاه کنید).
             گزارش‌های مفصل و آرشیو کامل رو توی{" "}
-            <Link href="/archive" className="text-copper-300 hover:underline">
+            <Link href="/archive" className="text-copper-700 hover:underline">
               آرشیو گزارش‌ها
             </Link>{" "}
             پیدا کنید.
