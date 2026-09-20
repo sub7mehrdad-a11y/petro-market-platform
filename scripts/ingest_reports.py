@@ -43,6 +43,12 @@ MANIFEST_FILE = os.path.join(REPORTS_DIR, "manifest.json")
 # داخل web/public چون Next.js هرچی اونجا باشه رو مستقیم و بدون هیچ API اضافه
 # از ریشه‌ی سایت سرو می‌کنه — همون کاری که برای عکس‌های داخل گزارش‌ها لازمه.
 IMAGES_OUT_DIR = os.path.join(BASE_DIR, "web", "public", "report-images")
+# گزارش‌های مفصلی که خودشون یک فایل HTML مستقل (خودبسنده، با CSS/JS خودشون)
+# هستن -- عیناً همین‌جا کپی می‌شن تا توی صفحه‌ی گزارش داخل یک iframe لود بشن
+# (نه پارس‌شدن به بلوک مثل docx، چون طراحی/چارت‌های خودش رو داره و پارس‌کردن
+# نابودش می‌کنه).
+HTML_OUT_DIR = os.path.join(BASE_DIR, "web", "public", "report-html")
+HTML_TITLE_RE = re.compile(r"<title>(.*?)</title>", re.IGNORECASE | re.DOTALL)
 
 CONTENT_TYPE_EXT = {
     "image/png": "png",
@@ -201,7 +207,11 @@ REPORTS = [
         "type": "summary",
     },
     {
-        "file": "گزارش_تحلیلی_بازار_جوش_شیرین_قزاقستان.docx",
+        # از این گزارش به بعد قالب گزارش‌های مفصل HTML شد (خواناتر/جذاب‌تر از Word
+        # ساده) — نسخه‌ی Word قبلی این گزارش با این فایل جایگزین شد (طبق خواسته‌ی
+        # کاربر). به‌جای پارس‌شدن به بلوک (مثل docx)، عیناً به شکل صفحه‌ی HTML
+        # مستقل داخل iframe نمایش داده می‌شه — نگاه کن build_html_report().
+        "file": "گزارش_تحلیلی_بازار_جوش_شیرین_قزاقستان.html",
         "country": "قزاقستان",
         "type": "detailed",
     },
@@ -380,6 +390,24 @@ def build_detailed_report(path: str, report_id: str) -> dict:
     return {"title": title, "blocks": blocks}
 
 
+def build_html_report(path: str, report_id: str) -> dict:
+    # کپی بایت‌به‌بایت (نه متنی) تا هیچ تبدیل line-ending/encoding‌ای رخ نده —
+    # فایل دقیقاً همون چیزیه که سرو می‌شه. عنوان جدا از روی همون بایت‌ها
+    # (decode برای رجکس) استخراج می‌شه، بدون بازنویسی فایل.
+    with open(path, "rb") as f:
+        raw = f.read()
+
+    title_match = HTML_TITLE_RE.search(raw.decode("utf-8"))
+    title = title_match.group(1).strip() if title_match else None
+
+    os.makedirs(HTML_OUT_DIR, exist_ok=True)
+    dest = os.path.join(HTML_OUT_DIR, f"{report_id}.html")
+    with open(dest, "wb") as f:
+        f.write(raw)
+
+    return {"title": title, "format": "html", "html_path": f"/report-html/{report_id}.html"}
+
+
 def build_summary_report(path: str, is_pdf: bool, client: genai.Client) -> dict:
     text = extract_pdf_text(path) if is_pdf else extract_plain_text(path)
     interaction = client.interactions.create(
@@ -423,9 +451,14 @@ def main():
 
         report_id = slugify_id(entry["file"], "report")
         is_pdf = entry["file"].lower().endswith(".pdf")
+        is_html = entry["file"].lower().endswith(".html")
         parsed_path = os.path.join(PARSED_DIR, f"{report_id}.json")
 
-        if entry["type"] == "detailed":
+        if entry["type"] == "detailed" and is_html:
+            # خودبسنده و بدون AI‌ست، پس همیشه امن برای اجرای دوباره‌ست.
+            parsed = build_html_report(src_path, report_id)
+            title = parsed["title"] or entry["file"]
+        elif entry["type"] == "detailed":
             if is_pdf:
                 print(f"[WARN] {entry['file']}: نوع 'detailed' برای PDF پشتیبانی نمی‌شه، رد شد.")
                 continue

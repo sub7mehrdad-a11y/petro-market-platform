@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import { getParsedReport, getReportsManifest, getCountryProfile, getLatestPricesForCountry } from "@/lib/data";
 import DetailedReportView from "../../components/DetailedReportView";
 import SummaryReportView from "../../components/SummaryReportView";
+import HtmlReportFrame from "../../components/HtmlReportFrame";
 
 const REPORT_TYPE_FA = { detailed: "گزارش مفصل", summary: "گزارش مدیریتی (خلاصه)" };
 
@@ -56,6 +57,8 @@ export default async function ReportDetailPage({ params }) {
           <p className="text-sm text-slate-500">
             نسخه‌ی وب هوشمند برای این فایل ساخته نشده؛ فقط فایل اصلی رو دانلود کنید.
           </p>
+        ) : parsed.format === "html" ? (
+          <HtmlReportFrame src={parsed.html_path} title={entry.title} />
         ) : isSummary ? (
           <SummaryReportView report={parsed} livePrices={livePrices} countryProfile={countryProfile} />
         ) : (
