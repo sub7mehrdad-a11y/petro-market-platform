@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>خرده‌فروشی جوش شیرین عراق</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(26px,4vw,38px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 62ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(4, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:700px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
+  strong{ color: var(--ink); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  :root[data-theme="dark"] .card .tag, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag{ color: var(--copper-400); } }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:14.5px; color:var(--ink); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  .product-grid{ display:grid; grid-template-columns: repeat(2,1fr); gap:18px; margin: 18px 0; }
+  @media (max-width:760px){ .product-grid{ grid-template-columns: 1fr; } }
+  .product-card{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    overflow:hidden; box-shadow: var(--card-shadow);
+  }
+  .product-card img{ width:100%; height:200px; object-fit:contain; background:#fff; display:block; padding:12px; box-sizing:border-box; }
+  .product-card .body{ padding: 14px 16px 16px; }
+  .product-card h4{ margin:0 0 6px; font-size:15px; color:var(--ink); }
+  .product-card .price{ font-family:"Fira Code"; font-weight:700; color: var(--copper-600); font-size:14.5px; }
+  :root[data-theme="dark"] .product-card .price, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .product-card .price{ color: var(--copper-400); } }
+  .product-card p{ margin:6px 0 0; font-size:13.5px; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>گزارش جامع بازار خرده‌فروشی و جوش شیرین در عراق</h1>
+    <p class="lead">شناسایی فروشگاه‌های زنجیره‌ای، تحلیل برند و بسته‌بندی رقبا، قیمت‌های خرده‌فروشی و فرصت‌های ورود به بازار.</p>
+    <div class="meta">
+      <span>تاریخ تنظیم: سپتامبر ۲۰۲۶</span>
+      <span>کد HS: ۲۸۳۶۳۰</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۸</div><div class="l">برند شناسایی‌شده در قفسه</div></div>
+      <div class="kpi"><div class="v">۱,۲۵۰-۴,۲۵۰ <small>IQD</small></div><div class="l">بازه قیمت بسته‌های کوچک مصرفی</div></div>
+      <div class="kpi"><div class="v">۱.۰۰-۱.۲۰$</div><div class="l">قیمت فله هر کیلوگرم (کیسه ۲۵ کیلویی)</div></div>
+      <div class="kpi"><div class="v">۱۰۰-۱۵۰ <small>گرم</small></div><div class="l">پرفروش‌ترین رده وزنی</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">۱</span><h2>وضعیت کلی بخش خرده‌فروشی عراق</h2></div>
+    <p>بازار خرده‌فروشی عراق در دوران گذار از تجارت کاملاً سنتی به سمت سوپرمارکت‌های مدرن (Modern Trade) و فروشگاه‌های زنجیره‌ای قرار دارد. بخش عمده جریان نقدینگی کالاهای تندمصرف (FMCG) از طریق بازارهای عمده‌فروشی مرکزی بغداد نظیر «جمیله» و «الشورجة» مدیریت می‌شود؛ با این حال بغداد، اربیل، سلیمانیه و بصره شاهد استقرار سریع هایپرمارکت‌های مدرن، شبکه‌های توزیع زنجیره‌ای و اپلیکیشن‌های دلیوری آنلاین هستند.</p>
+    <div class="callout"><p>جوش شیرین در برچسب‌های استاندارد عراق «بیکربونات الصودیوم» یا «صودا الخبز» نامیده می‌شود؛ در عطاری‌های سنتی و مکالمات روزمره غالباً «کاربونة» یا «صودا للأکل» شناخته می‌شود.</p></div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">۲</span><h2>فروشگاه‌های زنجیره‌ای و پلتفرم‌های آنلاین</h2></div>
+    <div class="cards">
+      <div class="card"><h4>زنجیره‌های فیزیکی سراسری/منطقه‌ای</h4><p>Team Mart (بزرگ‌ترین شبکه، گروه Mustawfy)، Carrefour Iraq (لایسنس ماجد الفطیم)، Spinneys (بغداد المنصور)، Holland Bazar (اربیل)، Metro Market و Show Market (کردستان)، Dlly Las (گروه میران)، هایپرمارکت التعاون، سوپرمارکت‌های بغداد/رد اپل/الریان/النفیس.</p></div>
+      <div class="card"><h4>پلتفرم‌های آنلاین و Quick-Commerce</h4><p>Toters Fresh (بغداد/اربیل/بصره با دارک‌استور اختصاصی)، Talabat Mart، Alsaree3، Baly Mart، Miswag (بزرگ‌ترین مارکت‌پلیس عراق)، Lezzoo و TipTop (کردستان).</p></div>
+    </div>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">۳</span><h2>مقایسه برندها، بسته‌بندی و قیمت خرده‌فروشی</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>برند</th><th>مبدأ</th><th>بسته‌بندی</th><th>وزن</th><th>قیمت (IQD)</th><th>معادل دلار</th></tr></thead>
+        <tbody>
+          <tr><td>Foster Clark's</td><td>مالت/خلیج فارس</td><td>قوطی فلزی/کامپوزیت</td><td>۱۵۰ گرم</td><td class="num-cell">۱,۲۵۰-۱,۷۵۰</td><td class="num-cell">$۰.۸۵-۱.۲۰</td></tr>
+          <tr><td>Al Alali</td><td>عربستان/امارات</td><td>قوطی پلاستیکی فشرده</td><td>۱۵۰ گرم</td><td class="num-cell">۱,۲۵۰-۱,۵۰۰</td><td class="num-cell">$۰.۸۵-۱.۰۰</td></tr>
+          <tr><td>Arm &amp; Hammer</td><td>آمریکا</td><td>جعبه مقوایی زرد</td><td>۲۲۷ گرم</td><td class="num-cell">۲,۲۵۰-۲,۷۵۰</td><td class="num-cell">$۱.۵۰-۱.۸۵</td></tr>
+          <tr><td>Arm &amp; Hammer</td><td>آمریکا</td><td>جعبه مقوایی استاندارد</td><td>۴۵۴ گرم</td><td class="num-cell">۳,۵۰۰-۴,۲۵۰</td><td class="num-cell">$۲.۴۰-۲.۹۰</td></tr>
+          <tr><td>Arm &amp; Hammer</td><td>آمریکا</td><td>کیسه زیپ‌کیپ</td><td>۱.۸۱ کیلوگرم</td><td class="num-cell">۱۲,۵۰۰-۱۴,۰۰۰</td><td class="num-cell">$۸.۵۰-۹.۵۰</td></tr>
+          <tr><td>Pakmaya/Kent</td><td>ترکیه</td><td>ساشه (پک ۵تایی)</td><td>۵×۵-۱۰ گرم</td><td class="num-cell">۷۵۰-۱,۰۰۰</td><td class="num-cell">$۰.۵۰-۰.۷۰</td></tr>
+          <tr><td>Abido Spices</td><td>لبنان</td><td>قوطی شیکر ادویه</td><td>۱۰۰ گرم</td><td class="num-cell">۱,۵۰۰-۲,۲۵۰</td><td class="num-cell">$۱.۰۰-۱.۵۰</td></tr>
+          <tr><td>برندهای ایرانی</td><td>ایران</td><td>پاکت سلفونی پرسی</td><td>۱۰۰-۱۵۰ گرم</td><td class="num-cell">۷۵۰-۱,۲۵۰</td><td class="num-cell">$۰.۵۰-۰.۸۵</td></tr>
+          <tr><td>بسته‌بندی محلی عراقی</td><td>عراق</td><td>کیسه زیپ‌کیپ/قوطی ساده</td><td>۲۵۰-۵۰۰ گرم</td><td class="num-cell">۱,۰۰۰-۱,۷۵۰</td><td class="num-cell">$۰.۷۰-۱.۲۰</td></tr>
+          <tr><td>کیسه فله عمده</td><td>ایران/چین/ترکیه</td><td>کیسه پلی‌پروپیلن صنعتی</td><td>۲۵ کیلوگرم</td><td class="num-cell">۳۵,۰۰۰-۴۵,۰۰۰</td><td class="num-cell">$۲۵-۳۲</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:280px"><canvas id="chartPricePerKg"></canvas></div>
+      <div class="cap">معادل دلاری هر کیلوگرم به تفکیک بسته‌بندی — محاسبه‌شده از میانگین بازه قیمت/وزن جدول بالا</div>
+    </div>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">۴</span><h2>مشخصات تفصیلی محصولات</h2></div>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="/report-images/report-گزارش_جامع_بازار_خرده_فروشی_و_جوش_شیرین_در_عراق/web-img-1.jpg" alt="Foster Clark's Bicarbonate of Soda 150g">
+        <div class="body">
+          <h4>۱. Foster Clark's — ۱۵۰ گرم</h4>
+          <p class="price">۱,۲۵۰-۱,۷۵۰ IQD (~$۱.۰۰)</p>
+          <p>قوطی استوانه‌ای با درب پلاستیکی قابل پلمپ مجدد؛ شناخته‌شده‌ترین برند در قفسه مواد قنادی عراق.</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="/report-images/report-گزارش_جامع_بازار_خرده_فروشی_و_جوش_شیرین_در_عراق/web-img-2.jpg" alt="Al Alali Sodium Bicarbonate 150g">
+        <div class="body">
+          <h4>۲. Al Alali — ۱۵۰ گرم</h4>
+          <p class="price">۱,۲۵۰-۱,۵۰۰ IQD (~$۰.۹۰)</p>
+          <p>ظرف پلاستیکی استوانه‌ای با درب پیچ‌دار؛ حضور قوی در کارفور، اسپینیس و تیم مارت.</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="/report-images/report-گزارش_جامع_بازار_خرده_فروشی_و_جوش_شیرین_در_عراق/web-img-3.jpg" alt="Arm & Hammer Pure Baking Soda 454g">
+        <div class="body">
+          <h4>۳. Arm &amp; Hammer — ۴۵۴ گرم</h4>
+          <p class="price">۳,۵۰۰-۴,۲۵۰ IQD (~$۲.۶۰)</p>
+          <p>جعبه مقوایی کلاسیک زرد آمریکایی؛ مصرف خانگی چندمنظوره (پخت، نظافت، رفع بو، مراقبت فردی).</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="/report-images/report-گزارش_جامع_بازار_خرده_فروشی_و_جوش_شیرین_در_عراق/web-img-4.jpg" alt="Arm & Hammer Resealable Bag 1.81kg">
+        <div class="body">
+          <h4>۴. Arm &amp; Hammer — ۱.۸۱ کیلوگرم</h4>
+          <p class="price">۱۲,۵۰۰-۱۴,۰۰۰ IQD (~$۹.۰۰)</p>
+          <p>کیسه پلی‌اتیلن زیپ‌کیپ مقاوم رطوبت؛ ظرفیت بالا برای مصارف خانگی پرحجم و شست‌وشو.</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="/report-images/report-گزارش_جامع_بازار_خرده_فروشی_و_جوش_شیرین_در_عراق/web-img-5.png" alt="Abido Sodium Bicarbonate 100g">
+        <div class="body">
+          <h4>۵. Abido — ۱۰۰ گرم</h4>
+          <p class="price">۱,۵۰۰-۲,۲۵۰ IQD (~$۱.۲۰)</p>
+          <p>ظرف استوانه‌ای شفاف طرح ادویه‌دان با درب دوحالته؛ مناسب استند ادویه‌جات سوپرمارکت.</p>
+        </div>
+      </div>
+      <div class="product-card">
+        <img src="/report-images/report-گزارش_جامع_بازار_خرده_فروشی_و_جوش_شیرین_در_عراق/web-img-6.png" alt="Sodium Bicarbonate Food Grade 25kg bulk bag">
+        <div class="body">
+          <h4>۶. کیسه فله غذایی — ۲۵ کیلوگرم</h4>
+          <p class="price">۳۵,۰۰۰-۴۵,۰۰۰ IQD (~$۱.۰۰-۱.۲۰/کیلو)</p>
+          <p>کیسه پروپیلن لمینت با لاینر پلی‌اتیلن؛ شاکله اصلی واردات عمده بازار جمیله و شورجه.</p>
+        </div>
+      </div>
+    </div>
+    <p style="font-size:12.5px;font-style:italic">تصاویر عیناً از منبع اصلی تحقیق (صفحات فروش زنده فروشگاه‌های ذکرشده) استخراج شده‌اند.</p>
+  </section>
+
+  <section id="s5">
+    <div class="sec-head"><span class="sec-num">۵</span><h2>فرصت‌های ورود به بازار و توصیه‌های تجاری</h2></div>
+    <div class="cards">
+      <div class="card"><span class="tag">قیمت حساس</span><p>بخش بزرگی از سبد خرید خانوار عراقی به قیمت بسیار حساس است؛ بسته‌های ۱۰۰-۱۵۰ گرمی با قیمت فروش ~۱,۰۰۰ دینار بیشترین گردش مالی را در سوپرمارکت‌های محلی ایجاد می‌کنند.</p></div>
+      <div class="card"><span class="tag">جای خالی بازار</span><p>برندهای خلیجی عمدتاً از قوطی استوانه‌ای استفاده می‌کنند؛ پاکت ایستاده زیپ‌کیپ (Doypack) در حجم‌های ۲۵۰گ/۵۰۰گ/۱کیلو با چاپ چندزبانه، گزینه‌ای کم‌هزینه‌تر و جذاب‌تر برای مصرف چندمنظوره خانگی است.</p></div>
+      <div class="card"><span class="tag">الزامات قانونی</span><p>برچسب عربی/انگلیسی با جدول مشخصات، شماره پروانه بهداشت و تاریخ تولید/انقضای میلادی الزامی است؛ برای فروش به هایپرمارکت‌های زنجیره‌ای (تیم مارت، کارفور، اسپینیس) بارکد استاندارد EAN-13 لازم است.</p></div>
+      <div class="card"><span class="tag">کانال توزیع</span><p>همکاری مستقیم با واردکنندگان مستقر در سوق جمیله بغداد سریع‌ترین مسیر برای دسترسی هم‌زمان به سوپرمارکت‌های مستقل، فروشگاه‌های زنجیره‌ای و بنکداران استان‌های مختلف عراق است.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>منبع: بازدید مستقیم و بررسی صفحات فروش زنده فروشگاه‌های ذکرشده (Sinbad Supermarket، Carrefour، Ubuy Iraq، Halazoon، CarrefourSA، Abido، Al-Hamdan Store)، سپتامبر ۲۰۲۶.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){
+    return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US")); }
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  var charts = [];
+  function themeColors(){
+    return {
+      ink: cssVar('--ink-soft'),
+      grid: cssVar('--line-soft'),
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
+      copper: cssVar('--copper-500'),
+      copperDark: cssVar('--copper-600'),
+      bad: cssVar('--bad'),
+      good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+
+  function baseOptions(c){
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif";
+    Chart.defaults.color = c.ink;
+    Chart.defaults.borderColor = c.grid;
+  }
+
+  function buildAll(){
+    var c = themeColors();
+    baseOptions(c);
+    charts.forEach(function(ch){ ch.destroy(); });
+    charts = [];
+
+    // ---- Price per kg ----
+    charts.push(new Chart(document.getElementById('chartPricePerKg'), {
+      type: 'bar',
+      data: {
+        labels: ['فله ۲۵ کیلویی','A&H — کیسه ۱.۸۱کیلو','بسته‌بندی محلی عراقی','برندهای ایرانی','A&H — جعبه ۴۵۴گ','Al Alali — ۱۵۰گ','Foster Clark\'s — ۱۵۰گ','A&H — جعبه ۲۲۷گ','Abido — ۱۰۰گ','Pakmaya — ساشه'],
+        datasets: [{
+          data: [1.14, 4.97, 2.53, 5.40, 5.84, 6.17, 6.83, 7.38, 12.50, 24.00],
+          backgroundColor: function(ctx){ return ctx.dataIndex === 0 ? c.good : (ctx.dataIndex >= 8 ? c.bad : c.copper); },
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return fmt(ctx.parsed.x) + ' $/کیلوگرم'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11 } } }
+        }
+      }
+    }));
+  }
+
+  buildAll();
+  if (window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildAll);
+  }
+})();
+</script>
+
+</body>
+</html>
