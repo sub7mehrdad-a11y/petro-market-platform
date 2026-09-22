@@ -1578,5 +1578,49 @@
         "url": "https://www.dailysabah.com/business"
       }
     ]
+  },
+  {
+    "date": "2026-09-22",
+    "generated_at": "2026-09-22T10:14:50.440332+00:00",
+    "headline_fa": "تثبیت اخبار رقبای ترک و هدف‌گذاری ۲۰۰ میلیارد دلاری صنعت لجستیک ترکیه",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "هدف‌گذاری لجستیک ترکیه برای دست‌یابی به بازار ۲۰۰ میلیارد دلاری",
+        "summary": "انجمن بین‌المللی ارائه‌دهندگان خدمات حمل‌ونقل و لجستیک ترکیه (UTIKAD) در اجلاس لجستیک ۲۰۲۵ ترکیه، برنامه‌های استراتژیک خود را برای ارتقای صنعت لجستیک این کشور به حجم بازار ۲۰۰ میلیارد دلار و قرار گرفتن در جمع ۱۰ کشور برتر جهان اعلام کرد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      }
+    ],
+    "market_note": "در داده‌های رصدشده امروز از وب‌سایت‌های رسمی رقبای اصلی ترک (WE Soda، Eti Soda و Kazan Soda)، هیچ اطلاعیه تجاری، خبر تغییر ظرفیت یا گزارش مالی جدیدی ثبت نشده و متن‌ها صرفاً شامل اطلاعات معرفی عمومی فرآیند تولید سدیم بی‌کربنات از معدن ترونا هستند. در بخش حمل‌ونقل نیز تمرکز بر اهداف کلان انجمن UTIKAD برای توسعه زیرساخت‌های لجستیکی ترکیه است. برای سپهران شیمی با قیمت پایه صادراتی ۲۵۰ دلار بر تن، نبود اخبار جدید نشان‌دهنده پایداری شرایط فعلی بازار و عدم تغییر ناگهانی در ساختار عرضه رقبای ترک در کوتاه‌مدت است. با این حال، مزیت ساختاری هزینه‌ی پایین تولید ترونا در ترکیه و توسعه عمومی لجستیک این کشور همچنان به‌عنوان تهدید رقابتی بلندمدت باقی است.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTIKAD",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hurriyet Daily News Economy",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
