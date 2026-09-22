@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ترانزیت و حمل‌ونقل اوراسیا</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(24px,3.6vw,36px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 68ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(4, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:700px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 17px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  :root[data-theme="dark"] h3, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h3{ color: var(--petrol-100); } }
+  h4{ font-size: 15px; font-weight:700; margin:0 0 6px; color: var(--ink); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 76ch; }
+  strong{ color: var(--ink); font-weight:700; }
+  ul.plain{ margin:0 0 12px; padding-inline-start:0; list-style:none; }
+  ul.plain li{ position:relative; padding-inline-end:18px; margin-bottom:8px; color:var(--ink-soft); max-width:76ch; }
+  ul.plain li::before{ content:'•'; position:absolute; right:0; top:0; color:var(--copper-500); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout p + p{ margin-top:8px; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+  .callout.bad{ border-inline-start-color: var(--bad); background: var(--bad-bg); }
+  .callout.bad p{ color: var(--ink); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  :root[data-theme="dark"] .card .tag, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag{ color: var(--copper-400); } }
+  .card .tag.bad{ background: var(--bad-bg); color: var(--bad); }
+  .card .tag.good{ background: var(--good-bg); color: var(--good); }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:14.5px; color:var(--ink); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); vertical-align:top; }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); white-space:nowrap; }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  figure{ margin: 16px 0; }
+  figure img{ border-radius: 12px; border: 1px solid var(--line); display:block; box-shadow: var(--card-shadow); width:100%; }
+  figcaption{ font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+
+  .corr-meta{ display:flex; gap:8px; flex-wrap:wrap; margin:10px 0 12px; }
+  .corr-meta span{
+    font-family:"Fira Code"; font-size:12px; font-weight:600;
+    background: var(--petrol-50); color: var(--petrol-700);
+    border-radius:999px; padding:4px 12px;
+  }
+  :root[data-theme="dark"] .corr-meta span, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .corr-meta span{ color:var(--copper-400); } }
+  .corr-meta span.warn{ background: var(--bad-bg); color: var(--bad); }
+  .corridor{ border-top:1px solid var(--line-soft); padding-top:26px; margin-top:26px; }
+  .corridor:first-of-type{ border-top:none; padding-top:0; margin-top:0; }
+
+  .pill-row{ display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0; }
+  .pill{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 12px;
+    padding: 12px 20px; min-width: 120px; box-shadow: var(--card-shadow); flex:1;
+  }
+  .pill .p{ font-family:"Fira Code"; font-size:20px; font-weight:700; color:var(--petrol-700); }
+  :root[data-theme="dark"] .pill .p, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .pill .p{ color: var(--copper-400); } }
+  .pill .p.bad{ color: var(--bad); }
+  .pill .n{ font-size:12.5px; color:var(--muted); margin-top:2px; text-align:center; }
+
+  .timeline{ margin: 18px 0; }
+  .timeline-item{
+    position:relative; padding-inline-end:26px; padding-bottom:20px;
+    border-inline-end:2px solid var(--line);
+  }
+  .timeline-item:last-child{ border-inline-end:2px solid transparent; padding-bottom:0; }
+  .timeline-item::before{
+    content:''; position:absolute; inset-inline-end:-7px; top:2px;
+    width:12px; height:12px; border-radius:50%;
+    background: var(--copper-500); border:2px solid var(--bg-soft); box-shadow:0 0 0 1px var(--line);
+  }
+  .timeline-item.bad::before{ background: var(--bad); }
+  .timeline-item .td{ font-family:"Fira Code"; font-size:12.5px; font-weight:700; color:var(--copper-600); margin-bottom:4px; }
+  :root[data-theme="dark"] .timeline-item .td, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .timeline-item .td{ color:var(--copper-400); } }
+  .timeline-item h4{ margin:0 0 4px; }
+  .timeline-item p{ margin:0; font-size:13.5px; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0 0 8px; max-width:none; }
+  footer .src-group{ margin-bottom:14px; }
+  footer .src-title{ font-weight:700; color:var(--ink-soft); font-size:12.5px; margin-bottom:6px; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>ترانزیت و حمل‌ونقل در اوراسیا: فرصت‌ها و تهدیدها برای صادرات جوش شیرین پارس</h1>
+    <p class="lead">بر پایه‌ی بررسی کامل گزارش «شبکه‌ی حمل‌ونقل اوراسیا» بانک توسعه‌ی اوراسیا (EDB, 2024)، به‌علاوه‌ی رصد رویدادهای ژئوپلیتیک و امنیتی تا سپتامبر ۲۰۲۶.</p>
+    <div class="meta">
+      <span>تاریخ تنظیم: سپتامبر ۲۰۲۶ (شهریور ۱۴۰۵)</span>
+      <span>منبع ساختاری: EDB Report 24/6</span>
+      <span>واحد: راهبرد و بازار — جوش شیرین پارس</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۲ <small>از ۷</small></div><div class="l">عنصر شبکه‌ی اوراسیا که ایران نقش محوری دارد</div></div>
+      <div class="kpi"><div class="v">×۵</div><div class="l">رشد حجم کریدور میانی (TITR) در ۷ سال — رقیب اصلی ایران</div></div>
+      <div class="kpi"><div class="v">~×۲</div><div class="l">هزینه‌ی TITR نسبت به کریدور شمالی روسیه (هر TEU)</div></div>
+      <div class="kpi"><div class="v">-۲۲<small>٪</small></div><div class="l">افت ظرفیت فری‌بوت دریای خزر (خشک‌شدن تدریجی)</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">۱</span><h2>خلاصه‌ی مدیریتی</h2></div>
+    <p>این گزارش دو موضوع را در کنار هم می‌بیند که تا امروز جدا از هم پیگیری می‌شدند: (الف) ساختار بلندمدت شبکه‌ی حمل‌ونقل اوراسیا — کریدورها، گلوگاه‌ها، پروژه‌های سرمایه‌گذاری، طبق گزارش ۱۴۲صفحه‌ای بانک توسعه‌ی اوراسیا (EDB, 2024) و دو منبع تکمیلی؛ و (ب) بحران امنیتی و تحریمی حاد و در حال جریانی که از ژوئن ۲۰۲۵ تا امروز (سپتامبر ۲۰۲۶) نقشه‌ی ژئوپلیتیک ایران را عوض کرده. نتیجه این است که بسیاری از فرصت‌ها و اعداد گزارش EDB — که مبنای «حالت عادی» سال‌های ۲۰۱۹ تا ۲۰۲۳ را دارد — امروز باید با یک لایه‌ی ریسک امنیتی فعال بازخوانی شود.</p>
+    <ul class="plain">
+      <li>ایران در نقطه‌ی تلاقی چهار کریدور بزرگ اوراسیایی قرار دارد (TRACECA، کریدور جنوبی اوراسیا، INSTC، و از طریق مرزهای شرقی به شبکه‌ی آسیای مرکزی) — موقعیتی که هیچ رقیب منطقه‌ای دیگری این‌طور کامل ندارد.</li>
+      <li>اما این «مرکزیت جغرافیایی» تا حالا هیچ‌وقت به «مرکزیت واقعی در جریان کالا» تبدیل نشده: طبق جدول ۱۰ گزارش EDB، رشد تجارت خارجی ایران در مقایسه با همسایگانش در دوره‌ی ۲۰۰۰-۲۰۲۳ به‌روشنی عقب‌مانده؛ کریدور میانی (TITR) که رقیب اصلی نقش ترانزیتی ایران است، به‌صراحت طوری طراحی شده که ایران را دور بزند.</li>
+      <li>سپتامبر ۲۰۲۵: بازگشت کامل تحریم‌های سازمان ملل علیه ایران (اسنپ‌بک به ابتکار E3، پس از شکست مذاکرات هسته‌ای) — یعنی بار حقوقی-بانکی تحریم به سطح پیش از برجام برگشته.</li>
+      <li>۲۸ فوریه‌ی ۲۰۲۶ تا امروز: جنگ فعال ایران با ائتلافی به رهبری آمریکا و اسرائیل؛ آتش‌بس ژوئن به‌سرعت شکست و از سپتامبر ۲۰۲۶ درگیری کشتی‌ها و اعلام محدودیت‌های دریایی در تنگه‌ی هرمز ادامه دارد — یعنی مسیر دریایی اصلی صادرات شرکت (بندرعباس/خلیج فارس) در معرض ریسک مستقیم و در حال افزایش است.</li>
+      <li>چابهار — تنها پروژه‌ی بندری ایران با سرمایه‌گذاری خارجی فعال (هند) — عملاً متوقف شده: معافیت تحریمی آمریکا در سپتامبر ۲۰۲۵ لغو و پس از یک تمدید کوتاه در آوریل ۲۰۲۶ به‌طور کامل منقضی شد.</li>
+      <li>در مقابل، کریدور میانی (TITR/قزاقستان-آذربایجان-گرجستان-ترکیه) که ایران را کنار می‌زند، در هفت سال حجمش پنج برابر شده — اما خودش هم گلوگاه‌های ساختاری جدی دارد (کمبود سرمایه‌گذاری در بندر آنالیا در گرجستان، و خشک‌شدن دریای خزر که ظرفیت فری‌بوت را همین حالا ۲۲٪ کم کرده).</li>
+    </ul>
+    <div class="callout copper">
+      <p><strong>نتیجه‌ی عملی برای شرکت:</strong> در افق کوتاه‌مدت (۶ تا ۱۸ ماه)، مسیرهای زمینی/ریلی از طریق قفقاز و آسیای مرکزی (نه بندرعباس) باید به گزینه‌ی پیش‌فرض برای بازارهای نزدیک (ازبکستان، ارمنستان، عراق، افغانستان) تبدیل شوند؛ در افق میان‌مدت، هر گفت‌وگوی دیپلماتیک که احتمال از سرگیری توافق هسته‌ای را افزایش دهد، باید به‌عنوان سیگنال بازگشایی احتمالی چابهار و مسیر رشت-آستارا رصد شود.</p>
+    </div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">۲</span><h2>هشدار فوری: وضعیت امنیتی و تحریمی اوراسیا در سپتامبر ۲۰۲۶</h2></div>
+    <p>این فصل عمداً جلوتر از تحلیل ساختاری گزارش EDB آمده، چون آن گزارش داده‌های خودش را تا اوایل ۲۰۲۴ جمع کرده و هیچ‌کدام از رویدادهای زیر را نمی‌بیند. بدون این فصل، خواندن ادامه‌ی گزارش می‌تواند تصویر گمراه‌کننده‌ای از «کریدورهای در حال رشد پایدار» بدهد.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="td">ژوئن ۲۰۲۵</div>
+        <h4>جنگ دوازده‌روزه و بازگشت تحریم‌های سازمان ملل</h4>
+        <p>حملات هوایی اسرائیل و آمریکا به تأسیسات هسته‌ای ایران، با آتش‌بس متعاقب. در سپتامبر ۲۰۲۵، پس از شکست مذاکرات و بن‌بست دیپلماتیک، کشورهای E3 (بریتانیا، فرانسه، آلمان) مکانیزم اسنپ‌بک را فعال کردند و شورای امنیت سازمان ملل تحریم‌های پیشابرجامی را به‌طور کامل بازگرداند (۲۹ سپتامبر ۲۰۲۵).</p>
+      </div>
+      <div class="timeline-item">
+        <div class="td">سپتامبر ۲۰۲۵</div>
+        <h4>لغو معافیت تحریمی چابهار</h4>
+        <p>دولت آمریکا معافیت تحریمی پروژه‌ی بندر چابهار (که هند از ۲۰۱۸ زیر آن فعالیت می‌کرد) را لغو کرد؛ پروژه‌ی رشت-آستارا (حلقه‌ی گمشده‌ی INSTC) هم دوباره وارد فاز عدم‌قطعیت شد.</p>
+      </div>
+      <div class="timeline-item bad">
+        <div class="td">۲۸ فوریه‌ی ۲۰۲۶</div>
+        <h4>آغاز جنگ ایران ۲۰۲۶</h4>
+        <p>پس از حملات هوایی که به کشته‌شدن رهبر وقت ایران و چند مقام ارشد در جریان مذاکرات هسته‌ای انجامید، جنگ گسترده‌ای میان ایران (به همراه حزب‌الله، حوثی‌ها، شبه‌نظامیان مرتبط) و ائتلافی به رهبری آمریکا و اسرائیل (با مشارکت عربستان، امارات، کویت، بحرین) آغاز شد. جزیره‌ی خارک (~۹۰٪ صادرات نفت ایران) و میدان گازی پارس جنوبی هدف حمله قرار گرفتند.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="td">۱۷ ژوئن ۲۰۲۶</div>
+        <h4>آتش‌بس — و فروپاشی آن</h4>
+        <p>یک آتش‌بس امضا شد، اما تا ۸ ژوئیه فروپاشید؛ ایران حملات به کشتی‌های تجاری در تنگه‌ی هرمز را از سر گرفت.</p>
+      </div>
+      <div class="timeline-item bad">
+        <div class="td">۲۶ آوریل ۲۰۲۶</div>
+        <h4>انقضای کامل معافیت چابهار</h4>
+        <p>هند یک تمدید کوتاه گرفت و سرمایه‌گذاری ۱۲۰ میلیون دلاری موعودش را در فوریه‌ی ۲۰۲۶ تکمیل کرد، اما معافیت دیگر تمدید نشد؛ مسئولان India Ports Global Ltd پیش از اعمال تحریم استعفا دادند و در بودجه‌ی سالانه‌ی هند هیچ ردیفی برای چابهار دیده نشد.</p>
+      </div>
+      <div class="timeline-item bad">
+        <div class="td">سپتامبر ۲۰۲۶ (اکنون)</div>
+        <h4>«جنگ نفت‌کش‌ها» در تنگه‌ی هرمز</h4>
+        <p>کشتی‌های تجاری (از جمله در نزدیکی قشم، ۱۳ سپتامبر) مورد اصابت قرار گرفته‌اند؛ ایران از یک منطقه‌ی محدود/مسیر جایگزین کشتیرانی خبر داده و آمریکا رسماً می‌گوید تنگه «کاملاً باز» است — دو روایت متناقض هم‌زمان در جریان است. حجم تردد از تنگه‌ی هرمز به‌طور محسوس افت کرده.</p>
+      </div>
+    </div>
+    <div class="callout bad">
+      <p><strong>درس راهبردی چابهار:</strong> تکیه‌ی هر برنامه‌ی بلندمدت ترانزیتی ایران به یک شریک خارجی واحد (این‌جا هند)، در برابر تصمیم یک‌جانبه‌ی تحریمی آمریکا کاملاً شکننده است — همان الگو در مقیاس کوچک‌تر می‌تواند برای هر قرارداد لجستیکی/بندری دیگر شرکت هم پیش بیاید.</p>
+    </div>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">۳</span><h2>نقشه‌ی کلی شبکه‌ی حمل‌ونقل اوراسیا (ETN)</h2></div>
+    <p>گزارش EDB مفهوم «شبکه‌ی حمل‌ونقل اوراسیا» (ETN) را حول ۵ کریدور بین‌المللی + INSTC + یک مسیر جاده‌ای فرعی (EATL Route 9) تعریف می‌کند. در سال ۲۰۲۳ روی این شبکه ۲۶۰ میلیون تن کالا و ۳.۲ تا ۳.۶ میلیون TEU کانتینر جابه‌جا شده؛ بیش از ۵۰٬۰۰۰ کیلومتر خط‌آهن این شبکه را تشکیل می‌دهد.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کریدور</th><th>مسیر اصلی</th><th>جایگاه ایران</th><th>نکته‌ی کلیدی</th></tr></thead>
+        <tbody>
+          <tr><td>کریدور شمالی اوراسیا</td><td>روسیه (ترانس‌سیبری/BAM) — چین/اقیانوس آرام</td><td>خارج از مسیر</td><td>چین سهم &gt;۸۰٪ (۹۰٪ در زغال‌سنگ روسیه)</td></tr>
+          <tr><td>کریدور مرکزی اوراسیا</td><td>چین — قزاقستان — روسیه/اروپا</td><td>خارج از مسیر</td><td>چین سهم ~۱۰۰٪؛ رشد ۲۰۰برابری قطار کانتینری ۲۰۱۳-۲۰۲۳</td></tr>
+          <tr><td>TRACECA</td><td>چین/آسیای میانه — دریای خزر — قفقاز — ترکیه/اروپا</td><td>عضو رسمی (۱۴ عضو)، گلوگاه گیج ریلی در مرزها</td><td>TITR بخش عملیاتی غالب آن؛ ایران را دور می‌زند</td></tr>
+          <tr><td>TITR / کریدور میانی</td><td>چین — قزاقستان — دریای خزر (فری‌بوت) — آذربایجان/گرجستان — ترکیه یا اروپا</td><td>به‌طور کامل و عمدی دور زده می‌شود</td><td>رشد ۵برابری در ۷ سال؛ رقیب اصلی نقش ترانزیتی ایران</td></tr>
+          <tr><td>کریدور جنوبی اوراسیا</td><td>اروپا — ترکیه — ایران — پاکستان — هند/سنگاپور</td><td>محور مرکزی و تنها بخش عملیاتی کامل (استانبول-تهران-اسلام‌آباد)</td><td>بخش شرقی (پاکستان-هند-میانمار-تایلند-مالزی) عملاً غیرفعال</td></tr>
+          <tr><td>INSTC</td><td>روسیه/بالتیک — دریای خزر/ایران — خلیج فارس/هند</td><td>محور مرکزی؛ مسیر غربی (آستارا)، شرقی (ترکمنستان)، ترانس‌کاسپین (بنادر ایرانی)</td><td>۱۹ میلیون تن در ۲۰۲۳؛ حلقه‌ی گمشده‌ی رشت-آستارا هنوز تکمیل نشده</td></tr>
+          <tr><td>EATL Route 9</td><td>روسیه (نووسیبیرسک) — مغولستان — چین (اورومچی)</td><td>خارج از مسیر</td><td>می‌تواند در آینده به پاکستان/کراچی وصل شود (AH4)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <p>این جدول یک واقعیت کلیدی را نشان می‌دهد: از ۷ عنصر شبکه، ایران فقط در دو مورد (کریدور جنوبی اوراسیا و INSTC) نقش محوری دارد، و در یکی از مهم‌ترین و پررشدترین‌ها (TITR/کریدور میانی) به‌صراحت کنار گذاشته شده. این همان محور تحلیل فرصت/تهدید در فصل‌های بعدی است.</p>
+    </div>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">۴</span><h2>جایگاه ایران در هر کریدور — تحلیل مفصل</h2></div>
+
+    <h3>۴.۱. TRACECA — عضویت رسمی، اما با گلوگاه ساختاری در همان مرز ایران</h3>
+    <p>ایران از میان ۱۴ عضو TRACECA (تا مارس ۲۰۲۴) است؛ اما گلوگاه فیزیکی همیشگی این کریدور همان‌جایی است که ایران در آن قرار دارد: تفاوت گیج ریلی — ایران ۱۴۳۵ میلی‌متر (استاندارد)، همسایگانش آذربایجان و ترکمنستان ۱۵۲۰ میلی‌متر (گیج شوروی سابق) — یعنی هر محموله‌ی ریلی عبوری از مرزهای ایران به تعویض بوژی یا تخلیه/بارگیری مجدد نیاز دارد. گلوگاه دریاچه‌ی وان در مرز ترکیه-ایران باعث شده فقط حدود ۰.۳ میلیون تن از بخش ریلی این مسیر عبور کند، در برابر ۳ میلیون تن جاده‌ای از گذرگاه بازرگان-گوربولاک (در ۲۰۲۲: ۶۶٪ تجارت دوجانبه ایران-ترکیه، ۲۴٪ ترانزیت به ترکیه، ۱۰٪ ترانزیت به ایران).</p>
+    <div class="callout"><p>جدول ۱۰ گزارش EDB به‌روشنی نشان می‌دهد رشد تجارت خارجی ایران در سال‌های ۲۰۰۰-۲۰۲۳ در مقایسه با همسایگان منطقه‌ای‌اش عقب مانده — یعنی «مرکزیت جغرافیایی» ایران در TRACECA هنوز به سهم بازار واقعی تبدیل نشده. نکته‌ی مثبت: مسیر جاده‌ای ترکیه هنوز یک کانال فعال و قابل‌اتکا برای صادرات به بازار اروپا/قفقاز است، به شرط دورزدن گلوگاه ریلی.</p></div>
+
+    <h3>۴.۲. کریدور جنوبی اوراسیا — تنها بخش کاملاً عملیاتی، محور ایران است</h3>
+    <p>مسیر استانبول-تهران-اسلام‌آباد (ریل ۵٬۹۸۱ کیلومتر / جاده ۵٬۵۰۸ کیلومتر) تنها بخش کاملاً فعال این کریدور در کل طول آن تا سنگاپور است؛ بخش شرقی (پاکستان-هند-میانمار-تایلند-مالزی) به‌خاطر بسته‌بودن مرز هند-پاکستان و تفاوت گیج ریلی عملاً کار نمی‌کند. خط ریلی زاهدان-کرمان-بم-زاهدان (بهره‌برداری از ۲۰۰۹) نقطه‌ی تعویض گیج با پاکستان است، اما در ۲۰۱۱-۲۰۲۱ سرویس منظمش قطع بود. گذرگاه جاده‌ای تفتان/نیرجوا در ۲۰۲۲ حدود ۰.۶ میلیون تن جابه‌جا کرد (۷۷٪ تجارت دوجانبه ایران-پاکستان).</p>
+    <div class="callout copper"><p>در آگوست ۲۰۲۱ اولین محموله‌ی جاده‌ای انبه از پاکستان از طریق ایران و آذربایجان به روسیه رسید — نمونه‌ی عینی از این‌که کریدور جنوبی اوراسیا و INSTC در خاک ایران به هم متصل می‌شوند و می‌توانند یک مسیر ترکیبی صادرات به آسیای میانه/روسیه برای شرکت باشند.</p></div>
+
+    <h3>۴.۳. INSTC — پرچمدار نقش ترانزیتی ایران، اما با یک حلقه‌ی گمشده‌ی حیاتی</h3>
+    <p>در مسیر غربی (روسیه-آذربایجان-ایران)، در ۲۰۲۳ حدود ۱.۵ میلیون تن جاده‌ای و ۴۳٬۰۰۰ TEU کانتینر جابه‌جا شد؛ اما فقط ۳.۹٪ آن (کمتر از ۲٬۰۰۰ TEU) واقعاً به/از ایران بود — بیشتر ترافیک روسیه-آذربایجان یا روسیه-گرجستان/ترکیه است. بخش رشت-آستارا (حلقه‌ی گمشده) هنوز ساخته نشده؛ توافق مالی-فنی ایران-روسیه در می ۲۰۲۳ امضا شد (وام بین‌دولتی ۱.۳ میلیارد یورو از کل ۱.۶ میلیارد یورو)، شروع ساخت برای اوایل آوریل ۲۰۲۶ اعلام شده بود اما این با آغاز جنگ ایران در ۲۸ فوریه‌ی ۲۰۲۶ همزمان شد — وضعیت فعلی ساخت‌وساز نامشخص است. مسیر شرقی (ترکمنستان-سرخس) کاملاً عملیاتی اما با ظرفیت محدود (۱.۱ میلیون تن در ۲۰۲۳).</p>
+    <div class="callout"><p>پیش‌بینی EDB: ظرفیت کل INSTC می‌تواند تا ۲۰۳۰ به ۲۵ تا ۳۲ میلیون تن برسد — اما این پیش‌بینی، مثل بقیه‌ی گزارش، هیچ فرض جنگ یا تحریم فعال را در نظر نگرفته؛ باید به‌عنوان سقف خوش‌بینانه (نه پایه) خوانده شود.</p></div>
+  </section>
+
+  <section id="s5">
+    <div class="sec-head"><span class="sec-num">۵</span><h2>کریدورها با نقشه، مسیر، طول و مقایسه‌ی هزینه — آسیای میانه به‌عنوان میدان رقابت</h2></div>
+    <p>برای هر کریدور اصلی، نقشه‌ی واقعی مسیر (استخراج‌شده از گزارش EDB)، شرح مسیر، طول تقریبی، و مقایسه‌ی هزینه/زمان حمل آورده شده است. چارچوب تحلیلی این فصل: آسیای میانه (قزاقستان، ازبکستان، ترکمنستان، قرقیزستان، تاجیکستان) از هر طرف محصور است و بین چند قطب تولیدی/ژئوپلیتیک قرار گرفته — چین از شرق، روسیه از شمال، ایران و ترکیه از غرب/جنوب‌غرب، و هند از طریق دریا و ایران از جنوب. هرکدام از این قطب‌ها با مسیر و هزینه‌ی متفاوتی به این «میدان رقابت» دسترسی پیدا می‌کند.</p>
+
+    <figure>
+      <img src="/report-images/report-گزارش_ترانزیت_اوراسیا/img-1.jpg" alt="نقشه‌ی کلی شبکه‌ی حمل‌ونقل اوراسیا">
+      <figcaption>نقشه‌ی کلی شبکه‌ی حمل‌ونقل اوراسیا (Figure 3، گزارش EDB) — هفت عنصر اصلی: کریدور شمالی، کریدور مرکزی، TRACECA، TITR/کریدور میانی، INSTC، کریدور جنوبی، و EATL9، به‌علاوه‌ی مسیرهای دریایی. تقریباً همه‌ی کریدورهای شرق-غرب از قزاقستان عبور می‌کنند — یعنی قزاقستان، نه ایران، امروز واقعی‌ترین «گلوگاه جغرافیایی» عبور از آسیای میانه است.</figcaption>
+    </figure>
+
+    <div class="corridor">
+      <h3>۵.۱. کریدور شمالی اوراسیا — مسیر اصلی روسیه به اروپا</h3>
+      <figure>
+        <img src="/report-images/report-گزارش_ترانزیت_اوراسیا/img-2.jpg" alt="کریدور شمالی اوراسیا">
+        <figcaption>کریدور شمالی اوراسیا (Figure 4، گزارش EDB): مورمانسک/سن‌پترزبورگ—مسکو—یکاترینبورگ—نووسیبیرسک—اولان‌اوده—ولادی‌وستوک/چین، به‌علاوه‌ی شاخه‌ی غربی به برلین از طریق ورشو-مینسک.</figcaption>
+      </figure>
+      <div class="corr-meta"><span>طول: ~۱۰,۰۰۰-۱۱,۰۰۰ کیلومتر</span><span>هزینه: ~$۲,۶۶۲/TEU</span><span>زمان: ۵-۶ روز (بخش ریلی)</span></div>
+      <p>چین (داتونگ/منچوری/زابایکالسک) یا بنادر خاور دور روسیه → ترانس‌سیبری (مسکو) → بلاروس/لهستان → اروپای غربی. این کریدور «خانه‌ی روسیه» است — کاملاً روی زیرساخت ۱٬۵۲۰ میلی‌متری روسیه/قزاقستان/بلاروس می‌چرخد، با تخفیف تعرفه‌ای تا ۵۵٪ برای قطارهای کانتینری آسیا-اقیانوسیه و بدون تغییر گیج ریل تا مرز لهستان — ارزان‌ترین و سریع‌ترین مسیر زمینی چین به اروپا.</p>
+    </div>
+
+    <div class="corridor">
+      <h3>۵.۲. کریدور مرکزی اوراسیا — ستون فقرات ریلی China Railway Express</h3>
+      <figure>
+        <img src="/report-images/report-گزارش_ترانزیت_اوراسیا/img-3.jpg" alt="کریدور مرکزی اوراسیا">
+        <figcaption>کریدور مرکزی اوراسیا (Figure 11، گزارش EDB): شیان/ژنگژو/اورومچی—دوستیک—آستانا—یکاترینبورگ—مسکو—اروپا.</figcaption>
+      </figure>
+      <div class="corr-meta"><span>طول: ~۸,۵۰۰-۹,۵۰۰ کیلومتر</span><span>هزینه: ~$۲,۵۰۰-۳,۵۰۰/TEU</span></div>
+      <p>شرق و مرکز چین → اورومچی → دوستیک/آلاشانکو (مرز چین-قزاقستان) → آستانا → یکاترینبورگ (ورود به شبکه‌ی روسیه) → مسکو → اروپا. این همان مسیری است که بیشتر قطارهای «China Railway Express» معروف از آن استفاده می‌کنند — یعنی حجم غالب تجارت ریلی چین-اروپا هنوز از خاک روسیه عبور می‌کند، نه از کریدور میانی/قفقاز. هزینه در همان محدوده‌ی کریدور شمالی است، چون هر دو مسیر مشمول همان سوبسید و هماهنگی تعرفه‌ای چین-روسیه-قزاقستان هستند.</p>
+    </div>
+
+    <div class="corridor">
+      <h3>۵.۳. TRACECA — مسیر تاریخی اروپا-قفقاز-آسیای میانه</h3>
+      <figure>
+        <img src="/report-images/report-گزارش_ترانزیت_اوراسیا/img-4.jpg" alt="TRACECA">
+        <figcaption>TRACECA (Figure 14، گزارش EDB): بوداپست/کیف—اودسا/پوتی/باتومی—تفلیس/باکو—دریای خزر—آسیای میانه، با شاخه‌ی جاده‌ای بازرگان-ایران-ترکمنستان/ازبکستان.</figcaption>
+      </figure>
+      <div class="corr-meta"><span>طول: ~۴,۰۰۰-۵,۰۰۰ کیلومتر</span></div>
+      <p>اروپای شرقی → دریای سیاه (اودسا/پوتی) → قفقاز جنوبی (تفلیس-باکو) → عبور از دریای خزر یا از طریق ایران (بازرگان-تهران-سرخس) → ترکمنستان/ازبکستان → قزاقستان/قرقیزستان. ایران تنها کشوری در کل نقشه‌ی TRACECA است که مسیر جاده‌ای مستقیم و بدون تغییر گیج ریل (۱٬۴۳۵ میلی‌متر، نزدیک به استاندارد اروپایی) بین دریای سیاه/ترکیه و آسیای میانه فراهم می‌کند — اما حجم واقعی جابه‌جاشده از این شاخه به‌مراتب کمتر از شاخه‌ی دریای خزر (TITR) است.</p>
+    </div>
+
+    <div class="corridor">
+      <h3>۵.۴. TITR / کریدور میانی — رقیب اصلی مسیر روسیه، با هزینه‌ی تقریباً دو برابر</h3>
+      <figure>
+        <img src="/report-images/report-گزارش_ترانزیت_اوراسیا/img-5.jpg" alt="TITR — کریدور میانی">
+        <figcaption>مسیر ترانس‌خزری بین‌المللی حمل‌ونقل — TITR (Figure 16، گزارش EDB): پوتی/باتومی/کارس—تفلیس—باکو/آلیات—فری‌بوت دریای خزر—آکتائو/قوریق—بینو—شالکار—آکتوگای—دوستیک/آلاشانکو—اورومچی.</figcaption>
+      </figure>
+      <div class="corr-meta warn"><span class="warn">ایران را کاملاً دور می‌زند</span><span>طول: ~۴,۲۵۰-۴,۸۰۰ کیلومتر</span><span>هزینه: از ~$۵,۴۰۰/TEU (~€۵,۰۰۰)</span><span>زمان: ۲۰-۲۵ روز</span></div>
+      <p>چین (اورومچی) → دوستیک/آلاشانکو → قزاقستان (آکتوگای-شالکار-بینو) → آکتائو (بندر خزر) → فری‌بوت دریای خزر → باکو/آلیات (آذربایجان) → تفلیس (گرجستان) → پوتی/باتومی یا کارس (ترکیه) → اروپا. از نظر کیلومتر خشکی «کوتاه‌ترین» مسیر چین-اروپا محسوب می‌شود، اما همین کوتاهی با دو بار جابه‌جایی بین ریل و کشتی و عبور از دریای خزر جبران منفی می‌شود — هزینه تقریباً دو برابر (~۱۰۰٪ گران‌تر) کریدور شمالی و زمان ترانزیت هم به همان نسبت طولانی‌تر (۲۰-۲۵ روز در برابر ۵-۶ روز).</p>
+      <div class="callout copper"><p><strong>چرا با این حال رشد کرده؟</strong> چون این تنها مسیر زمینی چین-اروپا است که کاملاً از خاک روسیه/بلاروس عبور نمی‌کند — برای شرکت‌های غربی که به‌دنبال حذف ریسک روسیه (de-risking) از زنجیره‌ی تأمین خود هستند، حتی با هزینه‌ی دو برابر، از نظر ریسک تحریمی ارزش پرداخت پرمیوم را دارد. اتحادیه‌ی اروپا و بانک‌های توسعه (EBRD، ADB، World Bank) میلیاردها دلار در بهبود زیرساخت این کریدور — به‌ویژه بندر آنالیا در گرجستان و ظرفیت فری‌بوت خزر — سرمایه‌گذاری کرده‌اند.</p></div>
+    </div>
+
+    <div class="corridor">
+      <h3>۵.۵. کریدور جنوبی اوراسیا</h3>
+      <figure>
+        <img src="/report-images/report-گزارش_ترانزیت_اوراسیا/img-6.jpg" alt="کریدور جنوبی اوراسیا">
+        <figcaption>کریدور جنوبی اوراسیا (Figure 19، گزارش EDB): استانبول—تفلیس/ایروان—تهران/مشهد/بافق—زاهدان—کویته/اسلام‌آباد.</figcaption>
+      </figure>
+      <div class="corr-meta"><span>طول: ~۶,۰۰۰-۶,۵۰۰ کیلومتر</span></div>
+      <p>ترکیه (استانبول/کارس) → قفقاز جنوبی یا مستقیم به ایران → تهران—مشهد—بافق—زاهدان (ایران) → کویته—راولپندی—اسلام‌آباد (پاکستان) → شبه‌قاره‌ی هند. این کریدور عملاً «پل زمینی ترکیه-ایران-پاکستان» است و در نقشه‌ی EDB یکی از معدود مسیرهایی است که ایران در تمام طول آن نقش محوری و بدون رقیب مستقیم دارد — چون هیچ مسیر جایگزین دیگری ترکیه را مستقیماً به شبه‌قاره‌ی هند زمینی وصل نمی‌کند.</p>
+    </div>
+
+    <div class="corridor">
+      <h3>۵.۶. INSTC — پاسخ روسیه به دسترسی به آب‌های گرم</h3>
+      <figure>
+        <img src="/report-images/report-گزارش_ترانزیت_اوراسیا/img-7.jpg" alt="INSTC">
+        <figcaption>INSTC (Figure 20، گزارش EDB): مورمانسک/سن‌پترزبورگ—مسکو—آستراخان—(باکو/رشت/برکت)—تهران/بافق—بندرعباس/زاهدان، به‌علاوه‌ی بنادر ترانس‌خزری.</figcaption>
+      </figure>
+      <div class="corr-meta"><span>طول کل: ~۷,۲۰۰ کیلومتر (چندوجهی)</span><span>۲۰-۳۰٪ ارزان‌تر از سوئز</span><span>۱۵-۲۵ روز در برابر ۴۰-۶۰ روز سوئز</span></div>
+      <p>سه شاخه: <strong>غربی</strong> (روسیه-آستراخان → دریای خزر یا ریل باکو → آذربایجان → رشت، با حلقه‌ی گمشده‌ی رشت-آستارا → قزوین-تهران → بندرعباس)؛ <strong>ترانس‌کاسپین</strong> (روسیه-آستراخان → فری‌بوت مستقیم → بندر انزلی/امیرآباد → تهران → بندرعباس)؛ و <strong>شرقی</strong> (روسیه/قزاقستان → ترکمنستان-سرخس → مشهد-تهران، با ظرفیت محدود ۱.۱ میلیون تن در ۲۰۲۳؛ قطار آزمایشی نوامبر ۲۰۲۵ این شاخه را در ~۱۲ روز طی کرد). طبق منابع بازار، INSTC می‌تواند ۲۰ تا ۳۰٪ ارزان‌تر و تا ۴۰٪ سریع‌تر از مسیر سوئز باشد؛ برای بمبئی-سن‌پترزبورگ، ۱۵ تا ۲۵ روز در برابر ۴۰ تا ۶۰ روز از طریق سوئز.</p>
+      <div class="callout"><p>پس از تحریم‌های ۲۰۲۲ به بعد، دسترسی روسیه به بازارهای اروپایی از طریق بالتیک/دریای سیاه به‌شدت محدود شده. INSTC مسیری را باز می‌کند که روسیه را — بدون عبور از تنگه‌های تحت کنترل ناتو یا بنادر اروپایی تحریم‌کننده — به خلیج فارس و اقیانوس هند وصل می‌کند؛ به همین دلیل INSTC را می‌توان «کریدور دسترسی روسیه به آب‌های گرم بدون وابستگی به غرب» نامید.</p></div>
+    </div>
+
+    <div class="corridor">
+      <h3>۵.۷. EATL9 — کریدور جاده‌ای روسیه-مغولستان-چین</h3>
+      <figure>
+        <img src="/report-images/report-گزارش_ترانزیت_اوراسیا/img-8.jpg" alt="EATL Route 9">
+        <figcaption>مسیر جاده‌ای شماره‌ی ۹ اروپا-آسیا (EATL Road Route 9؛ Figure 28، گزارش EDB): نووسیبیرسک—دوستیک/اورومچی، با ارتباط به شبکه‌ی سراسری.</figcaption>
+      </figure>
+      <p>این کریدور نسبتاً کوچک (تنها بخش نووسیبیرسک تا مرز چین/قزاقستان) نمونه‌ای از مسیرهای درجه‌دوم روسیه-چین است که عمدتاً برای تجارت منطقه‌ای سیبری-شینجیانگ استفاده می‌شود، نه ترانزیت اروپا-آسیا؛ در آینده می‌تواند به پاکستان/کراچی از طریق AH4 وصل شود.</p>
+    </div>
+
+    <div class="corridor">
+      <h3>۵.۸. شبکه‌ی CAREC — رقابت پنج‌قطبی در آسیای میانه</h3>
+      <figure>
+        <img src="/report-images/report-گزارش_ترانزیت_اوراسیا/img-9.jpg" alt="شبکه CAREC">
+        <figcaption>کریدورهای ریلی CAREC در آسیای میانه (Figure 37، گزارش EDB) — شش کریدور رنگی که اروپا، روسیه، خاورمیانه، و جنوب آسیا را از طریق آسیای میانه به چین وصل می‌کنند.</figcaption>
+      </figure>
+      <p>این نقشه دقیقاً تصویر رقابت پنج‌قطبی را نشان می‌دهد: کریدور ۱ (اروپا-آسیای شرقی، آبی) از طریق روسیه — کوتاه‌ترین و ارزان‌ترین دسترسی شمالی؛ کریدور ۲ (مدیترانه-آسیای شرقی، قرمز) همان TITR با هزینه‌ی تقریباً دو برابر؛ کریدور ۳ (روسیه-خاورمیانه-جنوب آسیا، بنفش) همان INSTC؛ کریدور ۵ (جنوب آسیا-خاورمیانه-آسیای شرقی، نارنجی) مسیر پاکستان/افغانستان مستقل از ایران؛ و کریدور ۶ (اروپا-خاورمیانه-جنوب آسیا، سبز) همان کریدور جنوبی اوراسیا/ایران — تنها خط سبزی که از بندرعباس/چابهار عبور می‌کند.</p>
+    </div>
+
+    <div class="corridor">
+      <h3>۵.۹. شبکه‌ی اوراسیا به تفکیک گیج ریلی</h3>
+      <figure>
+        <img src="/report-images/report-گزارش_ترانزیت_اوراسیا/img-10.jpg" alt="نقشه گیج ریلی اوراسیا">
+        <figcaption>سیستم‌های راه‌آهن اوراسیا به تفکیک گیج (Figure 40، گزارش EDB) — سبز: ۱٬۴۳۵ میلی‌متر (چین/اروپا/ایران)؛ قرمز: ۱٬۵۲۰ میلی‌متر (روسیه/قزاقستان/آذربایجان/ترکمنستان)؛ نارنجی: ۱٬۶۷۶ میلی‌متر (هند/پاکستان)؛ آبی تیره: ۱٬۰۰۰ میلی‌متر (جنوب شرق آسیا).</figcaption>
+      </figure>
+      <p>این نقشه توضیح می‌دهد چرا هزینه‌ی هر کریدور فقط تابع کیلومتر نیست: هر عبور از مرز گیج (چین ↔ قزاقستان/روسیه، یا ایران ↔ ترکمنستان/آذربایجان، یا پاکستان/هند ↔ ایران) به معنی توقف اجباری برای تعویض بوژی یا تخلیه-بارگیری کانتینر است — هزینه‌ای در حدود $۵۰ تا $۱۵۰ به‌ازای هر TEU در هر نقطه، به‌علاوه‌ی چند ساعت تا دو روز تأخیر. روسیه و قزاقستان چون هر دو ۱٬۵۲۰ میلی‌متری‌اند، هیچ تعویض گیجی بین‌شان لازم نیست — یک مزیت ساختاری دیگر روسیه در برابر کریدورهایی مثل TITR که از چند مرز گیج عبور می‌کنند.</p>
+    </div>
+
+    <div class="corridor">
+      <h3>۵.۱۰. کریدورهای نوظهور/در دست ساخت</h3>
+      <figure>
+        <img src="/report-images/report-گزارش_ترانزیت_اوراسیا/img-11.jpg" alt="کریدورهای نوظهور اوراسیا">
+        <figcaption>پروژه‌های نوظهور شبکه‌ی حمل‌ونقل اوراسیا (Figure 30، گزارش EDB): آیاگوز-باختی، خط ریلی چین-قرقیزستان-ازبکستان، کریدور ترانس‌افغان، زاهدان-چابهار، CPEC، و چند پروژه‌ی دیگر.</figcaption>
+      </figure>
+      <ul class="plain">
+        <li><strong>چین-قرقیزستان-ازبکستان</strong> (۵۲۳ کیلومتر، توافق سه‌جانبه ژوئن ۲۰۲۴): کوتاه‌ترین مسیر مستقیم آینده‌ی چین به آسیای میانه بدون عبور از قزاقستان — رقیب بالقوه‌ی ارزان‌تر برای هر دو کریدور شمالی و مرکزی.</li>
+        <li><strong>کریدور ترانس‌افغان</strong> (ازبکستان-افغانستان-پاکستان): ~۶۰۰ کیلومتر خط جدید ریلی در افغانستان، هزینه‌ی برآوردی ۴.۸ میلیارد دلار؛ می‌تواند مسیر ازبکستان به آب‌های آزاد را از ~۲٬۵۰۰-۳٬۰۰۰ کیلومتر فعلی به ~۱٬۵۰۰-۱٬۶۰۰ کیلومتر کاهش دهد، اما وضعیت امنیتی افغانستان امروز این پروژه را عملاً غیرفعال نگه داشته.</li>
+        <li><strong>زاهدان-چابهار</strong>: تنها اتصال ریلی ایران به بندر چابهار — سرمایه‌گذاری هند در این مسیر عملاً متوقف شده (فصل ۲).</li>
+        <li><strong>CPEC/کاشغر-گوادر</strong>: ~۲٬۵۰۰ کیلومتر، در برابر ~۱۲٬۰۰۰-۱۳٬۰۰۰ کیلومتر مسیر دریایی فعلی چین از طریق تنگه‌ی مالاکا؛ گوادر به‌عنوان دومین گزینه‌ی «دسترسی چین به اقیانوس هند» رقیب چابهار است — با این تفاوت که گوادر از تحریم غربی مصون است و چابهار نیست.</li>
+      </ul>
+    </div>
+
+    <div class="corridor">
+      <h3>۵.۱۱. کریدورهای اتحادیه‌ی اقتصادی اوراسیا (EAEU)</h3>
+      <figure>
+        <img src="/report-images/report-گزارش_ترانزیت_اوراسیا/img-12.jpg" alt="کریدورهای EAEU">
+        <figcaption>کریدورهای حمل‌ونقل اوراسیا در چارچوب EAEU (Figure 38، گزارش EDB) — راه‌آهن (قرمز)، جاده (زرد)، مسیر چندوجهی (آبی)، و بزرگراه عوارضی «مریدیان» در حال مذاکره (سبز نقطه‌چین).</figcaption>
+      </figure>
+      <p>روسیه، جدا از کریدورهای بین‌قاره‌ای بزرگ، یک شبکه‌ی داخلی متراکم درون اتحادیه‌ی اقتصادی اوراسیا (روسیه، قزاقستان، بلاروس، ارمنستان، قرقیزستان) دارد که مستقل از تأیید هیچ بازیگر خارجی، دسترسی روسیه به آسیای میانه را تضمین می‌کند — این لایه‌ی «دسترسی نهادی/سیاسی» یک مزیت رقابتی دیگر روسیه در برابر چین، هند و ایران است که هرکدام باید هر بار برای عبور از آسیای میانه، مجوز/تعرفه‌ی دوجانبه مذاکره کنند.</p>
+    </div>
+
+    <h3>۵.۱۲. هزینه‌ی روسیه برای دسترسی به آب‌های گرم — مقایسه‌ی سه گزینه</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>گزینه</th><th>وضعیت دسترسی</th><th>هزینه‌ی نسبی</th><th>ریسک اصلی</th></tr></thead>
+        <tbody>
+          <tr><td>دریای بالتیک (سن‌پترزبورگ/کالینینگراد)</td><td>باز، اما بازار اروپایی عملاً بسته</td><td>پایین (زیرساخت کامل)</td><td>تحریم اروپا؛ یخ‌زدگی زمستانی؛ بدون دسترسی به آب‌های واقعاً «گرم»</td></tr>
+          <tr><td>دریای سیاه (نووروسیسک)</td><td>باز اما پرریسک</td><td>افزایش‌یافته — نرخ کرایه‌ی نفت روسیه در دریای سیاه به رکورد رسیده؛ جابه‌جایی غلات به بالتیک ~$۵۰/تن اضافه‌هزینه دارد</td><td>کنترل ترکیه بر بسفر/داردانل؛ ریسک بیمه‌ی جنگی؛ حملات پهپادی به بنادر</td></tr>
+          <tr><td>INSTC → بندرعباس/چابهار (از طریق ایران)</td><td>فعال ولی زیرساخت ناقص (حلقه‌ی رشت-آستارا)</td><td>۲۰-۳۰٪ ارزان‌تر و تا ۴۰٪ سریع‌تر از دور زدن کامل سوئز</td><td>ایران خود هدف تحریم و درگیر جنگ؛ تنگه‌ی هرمز صحنه‌ی درگیری کشتی‌هاست؛ تکمیل رشت-آستارا نامشخص</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout copper"><p>امروز هیچ‌کدام از سه مسیر روسیه به آب‌های گرم «ارزان و بدون‌ریسک» نیست. این وضعیت، ایران را — على‌رغم همه‌ی مشکلاتش — به یک متغیر تعیین‌کننده در معادله‌ی دسترسی روسیه به آب‌های گرم تبدیل می‌کند: اگر ریسک ایران کاهش یابد، INSTC به‌احتمال زیاد ارزان‌ترین گزینه‌ی روسیه باقی می‌ماند؛ اگر افزایش یابد، روسیه عملاً به دو گزینه‌ی گران‌تر و پرمحدودیت‌تر محدود می‌شود.</p></div>
+
+    <div class="chart-box">
+      <div class="chart-h" style="height:240px"><canvas id="chartCostPerTEU"></canvas></div>
+      <div class="cap">هزینه‌ی تقریبی حمل هر TEU از چین به اروپا، به تفکیک کریدور (دلار آمریکا) — منبع: Jamestown Foundation و تحلیل عمومی نرخ ریلی چین-اروپا (۲۰۲۴-۲۰۲۶)</div>
+    </div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:220px"><canvas id="chartTransitTime"></canvas></div>
+      <div class="cap">زمان ترانزیت تقریبی به تفکیک کریدور/مسیر (روز)</div>
+    </div>
+
+    <h3>۵.۱۳. جدول جمع‌بندی — آسیای میانه به‌عنوان میدان رقابت پنج‌قطبی</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>رقیب</th><th>کریدور اصلی</th><th>فاصله/تعویض مسیر</th><th>شاخص هزینه (روسیه=۱۰۰)</th><th>ریسک/یادداشت</th></tr></thead>
+        <tbody>
+          <tr><td>روسیه</td><td>کریدور شمالی/مرکزی + شبکه‌ی داخلی EAEU</td><td>۰ — همسایه‌ی مستقیم، بدون تغییر گیج</td><td class="num-cell">۱۰۰ (پایه)</td><td>تحریم غربی؛ اما دسترسی زمینی کاملاً باز و بدون واسطه</td></tr>
+          <tr><td>چین</td><td>کریدور مرکزی/شمالی یا خط جدید چین-قرقیزستان-ازبکستان</td><td>کوتاه — همسایه‌ی مستقیم شرقی</td><td class="num-cell">۹۵ تا ۱۱۰</td><td>کم‌ریسک‌ترین رقیب؛ در حال کاهش وابستگی به قزاقستان</td></tr>
+          <tr><td>ترکیه/اروپا</td><td>TITR / کریدور میانی</td><td>متوسط تا بلند (چند تعویض مودال)</td><td class="num-cell">۱۹۰ تا ۲۰۰</td><td>پرمیوم بالا برای حذف ریسک روسیه؛ سرمایه‌گذاری فعال غربی برای کاهش شکاف هزینه</td></tr>
+          <tr><td>ایران/خاورمیانه</td><td>کریدور جنوبی اوراسیا + شاخه‌ی جنوبی TRACECA</td><td>متوسط</td><td class="num-cell">نامشخص</td><td>حجم پایین، داده‌ی بازار محدود؛ تنها پل زمینی مستقیم ترکیه-پاکستان؛ زیر تحریم و جنگ فعال</td></tr>
+          <tr><td>هند</td><td>INSTC (با واسطه‌ی ایران) یا دریا/گوادر (با واسطه‌ی چین-پاکستان)</td><td>بلند (دریا) یا متوسط (زمینی با واسطه)</td><td class="num-cell">به‌شدت وابسته به مسیر</td><td>چابهار عملاً متوقف؛ بدون آن، مسیر مستقیم زمینی ندارد و به همکاری روسیه یا پاکستان وابسته است</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:190px"><canvas id="chartFivePoleCost"></canvas></div>
+      <div class="cap">شاخص هزینه‌ی نسبی دسترسی به آسیای میانه، با پایه‌ی روسیه=۱۰۰ (ایران/خاورمیانه و هند به‌خاطر داده‌ی ناکافی در نمودار نیامده‌اند — جدول بالا را ببینید)</div>
+    </div>
+    <div class="callout">
+      <p><strong>نکته‌ی پایانی برای تصمیم‌گیری شرکت:</strong> از میان این پنج رقیب، روسیه و چین به دلیل مجاورت جغرافیایی مستقیم و هماهنگی تعرفه‌ای، ساختاراً ارزان‌ترین و پایدارترین دسترسی به آسیای میانه را دارند — یعنی بازارهای آسیای میانه (به‌ویژه ازبکستان که در فهرست مقصدهای فعلی شرکت است) به‌احتمال زیاد در بلندمدت هم عمدتاً از طریق کالای روسی/چینی با قیمت رقابتی پوشش داده می‌شوند. صادرات ایرانی جوش شیرین به این بازارها، اگر بخواهد رقابتی بماند، باید یا از مزیت مجاورت مستقیم (مرز مشترک ایران-ترکمنستان) و هزینه‌ی حمل جاده‌ای کوتاه استفاده کند، یا روی تمایز کیفی/قیمتی تمرکز کند — چون رقابت صرف بر سر هزینه‌ی حمل ریلی/دریایی بلندمسافت با روسیه و چین عملاً غیرقابل‌برد است.</p>
+    </div>
+
+    <div class="chart-box">
+      <div class="chart-h" style="height:190px"><canvas id="chartCaspianImpact"></canvas></div>
+      <div class="cap">اثر خشک‌شدن تدریجی دریای خزر بر ظرفیت ترابری کریدور میانی (TITR) — تحلیل Carnegie Endowment، آوریل ۲۰۲۶</div>
+    </div>
+  </section>
+
+  <section id="s6">
+    <div class="sec-head"><span class="sec-num">۶</span><h2>کریدورهای رقیب و نوظهور که ایران را دور می‌زنند</h2></div>
+    <p>درک این فصل برای شرکت به همان اندازه‌ی درک نقاط قوت ایران مهم است — چون این مسیرها دقیقاً همان بازارهایی را هدف گرفته‌اند (آسیای میانه، قفقاز، اروپا) که صادرات جوش شیرین می‌تواند به آن‌ها برسد، و در حال حاضر پول و اولویت سیاسی بیشتری نسبت به مسیرهای ایرانی می‌گیرند.</p>
+    <div class="cards">
+      <div class="card">
+        <span class="tag bad">رقیب اصلی و درحال‌رشد</span>
+        <h4>TITR / کریدور میانی</h4>
+        <p>چین — قزاقستان (ریل) — دریای خزر (فری‌بوت) — آذربایجان/گرجستان (ریل) — بنادر دریای سیاه یا ترکیه؛ به‌طور کامل ایران را دور می‌زند. طبق گزارش‌های ۲۰۲۶ (Astana Times، Times of Central Asia)، حجم آن از عبور قزاقستان در هفت سال ۵ برابر شده. اما گلوگاه‌های واقعی این رقیب هم جدی است: دولت گرجستان بودجه‌ی بندر آنالیا را از ۱۵۰ به ۵۰ میلیون لاری کاهش داده، و سطح آب دریای خزر همین حالا ترابری فری‌بوت را ۲۲٪ و ترابری واگنی را ۱۰٪ کم کرده. تحلیل مستقل Carnegie Endowment: بدون سرمایه‌گذاری جدی گرجستان/ارمنستان، این کریدور بیشتر «پنجره‌ی فرصت موقت» است تا جایگزین دائمی.</p>
+      </div>
+      <div class="card">
+        <span class="tag">در مرحله‌ی اولیه</span>
+        <h4>کریدور ترانس‌افغان</h4>
+        <p>ترمز (ازبکستان) — مزار شریف — لوگر (افغانستان) — خرلاچی — تورخم (پاکستان) — بندر کراچی؛ هدف صریح: اتصال مستقیم آسیای میانه به بنادر پاکستان، رقیب مستقیم نقش سنتی ایران (بندرعباس/چابهار). هزینه‌ی برآوردی ۴.۸ میلیارد دلار؛ پروژه هنوز فقط در مرحله‌ی توافق مسیر است، نه مطالعه‌ی امکان‌سنجی — ریسک اجرایی بالا به‌خاطر ناهمواری افغانستان.</p>
+      </div>
+      <div class="card">
+        <span class="tag bad">متوقف / رقیب پایدار</span>
+        <h4>زاهدان-چابهار در برابر گوادر پاکستان</h4>
+        <p>چابهار برای هند تاریخاً مسیر دورزدن پاکستان بوده؛ اما به‌خاطر تحریم آمریکا عملاً متوقف شده. در همین حال گوادر پاکستان (بخشی از CPEC) با سرمایه‌گذاری پایدار چین در حال توسعه است — یعنی حتی اگر چابهار احیا شود، دیگر رقیب بدون‌رقیب منطقه نیست.</p>
+      </div>
+      <div class="card">
+        <span class="tag">ریسک رقابتی غیرمستقیم</span>
+        <h4>خط چین-قرقیزستان-ازبکستان و خط سوم مرزی قزاقستان-چین</h4>
+        <p>خط ریلی چین-قرقیزستان-ازبکستان (۵۲۳ کیلومتر، توافق ژوئن ۲۰۲۴) با TRACECA و INSTC در ترکمنستان تلاقی می‌کند و می‌تواند بخشی از ترافیک را که در غیر این صورت به مسیر ایرانی می‌رسید، به سمت قزاقستان/روسیه منحرف کند. پروژه‌ی خط سوم مرزی آیاگوز-باختی هم ظرفیت کریدور مرکزی اوراسیا را ۲۰ میلیون تن در سال افزایش می‌دهد — تقویت بیشتر مسیری که از ابتدا ایران را در خود ندارد.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="s7">
+    <div class="sec-head"><span class="sec-num">۷</span><h2>فرصت‌ها برای شرکت</h2></div>
+    <div class="cards">
+      <div class="card"><span class="tag good">تنوع مسیر صادراتی</span><p>داده‌ی سهم بازار پلتفرم (WITS) نشان می‌دهد ازبکستان و ارمنستان دو مقصد صادراتی با روند سهم قابل‌ردیابی هستند؛ هر دو از طریق مسیر غربی INSTC یا از طریق TRACECA/گذرگاه‌های جاده‌ای ایران-ترکیه-قفقاز به‌طور مستقیم قابل‌دسترسی‌اند — بدون عبور از تنگه‌ی هرمز. نرخ کرایه‌ی کریدورهای ریلی (شاخص ERAI) در بحران‌های دریایی گذشته حدود $۳,۰۰۰ در هر TEU باقی ماند، در حالی‌که نرخ‌های دریایی (WCI) تا $۱۰,۰۰۰ جهش کردند؛ با بحران فعال هرمز از ۲۰۲۶، همین الگو دوباره تکرار می‌شود.</p></div>
+      <div class="card"><span class="tag good">رشد ترانزیت منطقه‌ای</span><p>طبق گزارش EDB، ترانزیت بلاروس-ایران-عراق و مسیر شرقی INSTC (روسیه-ترکمنستان-ایران-افغانستان) از ۲۰۲۲ به‌طور پیوسته رشد کرده — یعنی بستری از تجارت منطقه‌ای در همان مسیرهایی جریان دارد که صادرات جوش شیرین شرکت هم بالقوه از آن‌ها عبور می‌کند؛ رشد این ترافیک عمومی می‌تواند هزینه‌ی نهایی حمل بر تن را برای شرکت هم پایین بیاورد.</p></div>
+      <div class="card"><span class="tag good">مقصدهای امن از نظر مسیر</span><p>عراق و افغانستان (از طریق گذرگاه‌های زمینی مستقیم ایران) و ارمنستان/گرجستان/آذربایجان (از طریق TRACECA و گذرگاه بازرگان-گوربولاک) بازارهایی هستند که اصلاً به تنگه‌ی هرمز یا چابهار وابسته نیستند — در شرایط فعلی جنگ، امن‌ترین مسیرهای فروش صادراتی شرکت محسوب می‌شوند.</p></div>
+      <div class="card"><span class="tag good">رصد دیپلماتیک به‌عنوان سیگنال</span><p>هر پیشرفت در مذاکرات هسته‌ای (پیش‌شرط مستقیم تکمیل رشت-آستارا و رفع فشار روی چابهار طبق تحلیل CEPA) باید سیگنال خرید زودهنگام دیده شود — شرکتی که زودتر از رقبا آماده‌ی استفاده از INSTC کامل باشد، دسترسی ارزان‌تری به بازار روسیه/اروپای شرقی پیدا می‌کند.</p></div>
+    </div>
+  </section>
+
+  <section id="s8">
+    <div class="sec-head"><span class="sec-num">۸</span><h2>تهدیدها برای شرکت</h2></div>
+    <div class="cards">
+      <div class="card"><span class="tag bad">امنیتی/ژئوپلیتیک — کوتاه‌مدت</span><p>ریسک مستقیم به صادرات دریایی از بندرعباس/بندر امام خمینی: حمله به کشتی‌ها، افزایش حق بیمه، احتمال امتناع بیمه‌گران بین‌المللی از پوشش‌دهی محموله‌های مبدأ ایران؛ ریسک تشدید تحریم بانکی (اسنپ‌بک کامل از سپتامبر ۲۰۲۵) و پیچیده‌ترشدن نقل‌وانتقال ارزی حتی برای بازارهای غیرغربی.</p></div>
+      <div class="card"><span class="tag bad">ساختاری — میان تا بلندمدت</span><p>گسست گیج ریلی در مرزهای ایران هزینه و زمان تعویض بوژی هر محموله‌ی ریلی صادراتی را افزایش می‌دهد و جوش شیرین را در رقابت با رقبایی که مسیر تک‌گیج دارند ضعیف‌تر می‌کند؛ تقریباً همه‌ی کریدورهای اوراسیایی هنوز عمدتاً با اسناد کاغذی کار می‌کنند و ایران در هیچ‌کدام از پروژه‌های آزمایشی e-CMR/e-TIR گزارش (بلاروس-روسیه، ازبکستان-آذربایجان) حضور مستقیم ندارد.</p></div>
+      <div class="card"><span class="tag bad">رقابتی</span><p>کریدور میانی (TITR) با رشد ۵برابری در ۷ سال، عملاً دارد گزینه‌ی پیش‌فرض چین و آسیای میانه برای رسیدن به اروپا می‌شود — بدون این‌که ایران سهمی از آن ترافیک ببرد؛ کریدور ترانس‌افغان و گوادر، اگر ساخته شوند، نقش تاریخی ایران به‌عنوان تنها دریچه‌ی دریایی نزدیک برای کشورهای محصور در خشکی آسیای میانه (از جمله ازبکستان، مقصد فعلی شرکت) را کاهش می‌دهند.</p></div>
+      <div class="card"><span class="tag bad">وابستگی به شرکای واحد</span><p>سرنوشت چابهار (وابسته به تصمیم یک‌جانبه‌ی آمریکا درباره‌ی هند) نشان می‌دهد قراردادهای لجستیکی/بندری متکی به یک شریک یا مسیر واحد، در معرض قطع ناگهانی هستند؛ شرکت باید از تکیه‌ی انحصاری به هر مسیر یا واسطه‌ی واحد پرهیز کند.</p></div>
+    </div>
+  </section>
+
+  <section id="s9">
+    <div class="sec-head"><span class="sec-num">۹</span><h2>پیامد مستقیم برای لجستیک صادرات جوش شیرین</h2></div>
+    <p>با ترکیب یافته‌های فصل‌های قبل، این‌ها اقلام مشخصی است که مستقیماً روی برنامه‌ریزی صادرات شرکت اثر می‌گذارد:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>مسیر صادراتی</th><th>وضعیت</th><th>ریسک/محدودیت</th><th>توصیه‌ی عملیاتی</th></tr></thead>
+        <tbody>
+          <tr><td>دریایی از بندرعباس/بندر امام (بازارهای دریایی دوردست)</td><td>فعال اما زیر ریسک جنگ/تنگه‌ی هرمز</td><td>حمله، توقیف، جهش حق بیمه</td><td>برای محموله‌های حساس، بیمه‌ی جنگی جداگانه و رصد روزانه‌ی وضعیت هرمز الزامی</td></tr>
+          <tr><td>زمینی/ریلی به ازبکستان و آسیای میانه (از طریق ترکمنستان)</td><td>عملیاتی، نیازمند تعویض بوژی در سرخس/آق‌یایله</td><td>ظرفیت محدود مسیر شرقی INSTC (۱.۱ میلیون تن در ۲۰۲۳)</td><td>بازار در حال رشد طبق داده‌ی سهم بازار پلتفرم — اولویت سرمایه‌گذاری تجاری</td></tr>
+          <tr><td>زمینی/ریلی به ارمنستان و قفقاز (از طریق آذربایجان/آستارا)</td><td>عملیاتی؛ حلقه‌ی رشت-آستارا هنوز ناقص</td><td>وابسته به تکمیل رشت-آستارا برای اتصال کامل به روسیه/اروپای شرقی</td><td>تا تکمیل رشت-آستارا، ترکیب جاده+ریل از آستارا را حفظ کنید</td></tr>
+          <tr><td>جاده‌ای به ترکیه (بازرگان-گوربولاک) برای دسترسی به بازار اروپا</td><td>فعال، حجم بالا (۳ میلیون تن در ۲۰۲۲)، بدون وابستگی به دریا</td><td>گلوگاه ریلی دریاچه‌ی وان (فقط برای بخش ریلی؛ جاده باز است)</td><td>مسیر جاده‌ای پایدارترین گزینه‌ی فعلی برای صادرات غرب‌گرا</td></tr>
+          <tr><td>چابهار / بازار هند و جنوب آسیا</td><td>عملاً متوقف از سپتامبر ۲۰۲۵ تا آوریل ۲۰۲۶</td><td>وابستگی کامل به تصمیم تحریمی آمریکا و حضور هند</td><td>کنار گذاشتن موقت این مسیر از برنامه‌ریزی؛ رصد فصلی برای علائم احیا</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="s10">
+    <div class="sec-head"><span class="sec-num">۱۰</span><h2>توصیه‌های راهبردی</h2></div>
+    <h3>۱۰.۱. کوتاه‌مدت (۰ تا ۶ ماه)</h3>
+    <ul class="plain">
+      <li>تمام محموله‌های صادراتی دریایی را زیر یک برنامه‌ی رصد روزانه‌ی وضعیت تنگه‌ی هرمز قرار دهید (منابع در فصل ۱۱).</li>
+      <li>سهم صادرات به مقصدهای زمینی/غیروابسته به هرمز (ازبکستان، ارمنستان، عراق، ترکیه) را به‌عنوان اولویت اول رشد فروش در نظر بگیرید — این‌ها هم از نظر امنیتی پایدارترند و هم روی پلتفرم داده‌ی روند سهم بازار موجود دارند.</li>
+      <li>بیمه‌ی جنگی (War Risk) را برای هر محموله‌ی خروجی از بنادر جنوبی به‌صورت جداگانه استعلام و در قیمت‌گذاری صادراتی لحاظ کنید.</li>
+    </ul>
+    <h3>۱۰.۲. میان‌مدت (۶ تا ۱۸ ماه)</h3>
+    <ul class="plain">
+      <li>مسیر جایگزین ریلی/جاده‌ای برای هر بازار کلیدی را از پیش شناسایی و آزمایش کنید (نه فقط وقتی مسیر اصلی مسدود شد) — طبق درس چابهار، وابستگی به یک مسیر واحد ریسک ساختاری است.</li>
+      <li>توافق‌های همکاری با شرکت‌های لجستیک فعال در مسیر غربی INSTC (آستارا) و TRACECA (بازرگان-گوربولاک) را برای دسترسی ترجیحی به ظرفیت محدود مسیرهای ریلی برقرار کنید.</li>
+    </ul>
+    <h3>۱۰.۳. بلندمدت (فراتر از ۱۸ ماه، مشروط به تحول دیپلماتیک)</h3>
+    <ul class="plain">
+      <li>در صورت از سرگیری مذاکرات هسته‌ای و برداشتن تحریم‌ها، آماده‌ی ورود سریع به بازار روسیه/اروپای شرقی از طریق INSTC کامل‌شده (پس از تکمیل رشت-آستارا) باشید — این پنجره‌ی فرصت احتمالاً برای شرکت‌هایی که زودتر آماده باشند بازتر است.</li>
+      <li>رشد کریدور میانی (TITR) را به‌عنوان تهدید ساختاری بلندمدت برای نقش ترانزیتی/صادراتی ایران در آسیای میانه/قفقاز جدی بگیرید — اگر گلوگاه‌های آن (بندر آنالیا، دریای خزر) در سال‌های آینده برطرف شود، مزیت نسبی مسیرهای ایرانی به بازار قفقاز/اروپا کم می‌شود.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <div class="src-group">
+    <div class="src-title">منبع اصلی ساختاری</div>
+    <p>Vinokurov, E. (ed.) et al. (2024) The Eurasian Transport Network. EDB Report 24/6. Almaty: Eurasian Development Bank &middot; Transport Geography — The Eurasian Land Bridge (transportgeography.org) &middot; Eurasian Development Bank — The Eurasian Transport Network (eabr.org)</p>
+  </div>
+  <div class="src-group">
+    <div class="src-title">منابع رویدادهای ۲۰۲۵-۲۰۲۶</div>
+    <p>UN News؛ Council of the EU؛ وزارت خارجه‌ی آمریکا (بازگشت تحریم‌ها، سپتامبر ۲۰۲۵) &middot; Wikipedia — Twelve-Day War؛ 2026 Iran war؛ 2026 Strait of Hormuz crisis &middot; Al Jazeera، CNN، CNBC، NBC News (پوشش بحران هرمز) &middot; Al Jazeera — Is India's Chabahar dream in Iran dead؟ (آوریل ۲۰۲۶) &middot; TV BRICS؛ PressTV (توافق ریلی رشت-آستارا) &middot; CEPA — Iran and Russia Seek New Sanctions Evasion Corridor &middot; Carnegie Endowment — The Much-Touted Middle Corridor Transport Route Could Prove a Dead End (آوریل ۲۰۲۶) &middot; Astana Times / Times of Central Asia (مارس ۲۰۲۶) &middot; Modern Diplomacy — Opportunities and Threats of the North-South Corridor (INSTC) for Iran</p>
+  </div>
+  <div class="src-group">
+    <div class="src-title">منابع فصل ۵ (نقشه‌ها، مسیرها و هزینه‌ها)</div>
+    <p>Jamestown Foundation — Middle Corridor: Potential Alternative to Russian Railways؟ (۲۰۲۴) &middot; RAND Corporation — The Middle Corridor: A Renaissance in Global Commerce (۲۰۲۴) &middot; ARTA Rail؛ GetTransport Blog؛ Sberbank Branch in India (زمان/هزینه‌ی INSTC) &middot; OilPrice.com؛ UkrAgroConsult (هزینه‌ی دسترسی روسیه به دریای سیاه/بالتیک) &middot; alichinafreight.com — 2026 China Europe Rail Freight Cost Guide &middot; EDB (۲۰۲۴)، Figures 3, 4, 11, 14, 16, 19, 20, 28, 30, 37, 38, 40 — منبع تمام نقشه‌های فصل ۵</p>
+  </div>
+  <p style="font-style:italic">یادداشت روش‌شناسی: ارقام فصل‌های ۳، ۴ و ۶ مستقیماً از گزارش EDB (۲۰۲۴) نقل شده و مبنای زمانی آن‌ها عمدتاً ۲۰۱۹-۲۰۲۳ است؛ ارقام هزینه/زمان فصل ۵ از منابع بازار مستقل (نه گزارش EDB) جمع‌آوری شده و باید شاخص تقریبی خوانده شود، نه نرخ قطعی یک محموله‌ی مشخص. طول مسیرها ترکیبی از داده‌ی EDB و برآورد عمومی مسافت شهر-به-شهر است.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){
+    return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US")); }
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  var charts = [];
+  function themeColors(){
+    return {
+      ink: cssVar('--ink-soft'),
+      grid: cssVar('--line-soft'),
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
+      copper: cssVar('--copper-500'),
+      copperDark: cssVar('--copper-600'),
+      bad: cssVar('--bad'),
+      good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+
+  function baseOptions(c){
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif";
+    Chart.defaults.color = c.ink;
+    Chart.defaults.borderColor = c.grid;
+  }
+
+  function buildAll(){
+    var c = themeColors();
+    baseOptions(c);
+    charts.forEach(function(ch){ ch.destroy(); });
+    charts = [];
+
+    // ---- Cost per TEU by corridor ($) ----
+    charts.push(new Chart(document.getElementById('chartCostPerTEU'), {
+      type: 'bar',
+      data: {
+        labels: ['کریدور شمالی (روسیه)', 'کریدور مرکزی (چین-قزاقستان-روسیه)', 'TITR / کریدور میانی (قفقاز-خزر)'],
+        datasets: [{
+          data: [2662, 3000, 5400],
+          backgroundColor: [c.good, c.petrol, c.bad],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return '~' + fmt(ctx.parsed.x) + ' $/TEU'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 12 } } }
+        }
+      }
+    }));
+
+    // ---- Transit time by corridor (days, range) ----
+    charts.push(new Chart(document.getElementById('chartTransitTime'), {
+      type: 'bar',
+      data: {
+        labels: ['کریدور شمالی (ریل)', 'INSTC (بمبئی-سن‌پترزبورگ)', 'TITR / کریدور میانی', 'مسیر دریایی سوئز'],
+        datasets: [{
+          data: [[5,6],[15,25],[20,25],[40,60]],
+          backgroundColor: [c.good, c.petrol, c.bad, c.muted || c.ink],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ var r = ctx.raw; return fmt(r[0]) + ' تا ' + fmt(r[1]) + ' روز'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } }, title: { display:true, text:'روز', color:c.ink } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 12 } } }
+        }
+      }
+    }));
+
+    // ---- Caspian Sea capacity impact ----
+    charts.push(new Chart(document.getElementById('chartCaspianImpact'), {
+      type: 'bar',
+      data: {
+        labels: ['ظرفیت فری‌بوت خزر', 'ظرفیت ترابری واگنی'],
+        datasets: [{
+          data: [-22, -10],
+          backgroundColor: [c.bad, c.copper],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return fmt(ctx.parsed.x) + '٪'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '٪'; } }, suggestedMin: -30, suggestedMax: 0 },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 12 } } }
+        }
+      }
+    }));
+
+    // ---- Five-pole relative cost index (Russia = 100) ----
+    charts.push(new Chart(document.getElementById('chartFivePoleCost'), {
+      type: 'bar',
+      data: {
+        labels: ['روسیه (پایه)', 'چین', 'ترکیه/اروپا (TITR)'],
+        datasets: [{
+          data: [[100,100],[95,110],[190,200]],
+          backgroundColor: [c.good, c.petrol, c.bad],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ var r = ctx.raw; return r[0] === r[1] ? fmt(r[0]) : fmt(r[0]) + ' تا ' + fmt(r[1]); } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } }, title: { display:true, text:'شاخص هزینه (روسیه=۱۰۰)', color:c.ink } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 12 } } }
+        }
+      }
+    }));
+  }
+
+  buildAll();
+  if (window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildAll);
+  }
+})();
+</script>
+
+</body>
+</html>

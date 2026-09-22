@@ -256,7 +256,8 @@ REPORTS = [
         # مثل "جهانی" یک برچسب غیر-کشوریه (نگاه کن NON_COUNTRY_LABELS و
         # UNION_REPORT_LABELS توی web/lib/data.js) و توی صفحه‌ی /unions/eaeu
         # نمایش داده می‌شه، نه توی /countries.
-        "file": "گزارش_ترانزیت_اوراسیا.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "گزارش_ترانزیت_اوراسیا.html",
         "country": "اوراسیا",
         "type": "detailed",
     },
