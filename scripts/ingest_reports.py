@@ -159,17 +159,20 @@ REPORTS = [
         # این‌ها پژوهش رقیب/صادرکننده‌ن، دقیقاً مثل گزارش‌های ترکیه که از قبل
         # این‌جا هستن. چین هم مثل ترکیه/روسیه هم‌زمان «کشور» (صفحه‌ی /countries)
         # و «رقیب» (صفحه‌ی /competitors) است.
-        "file": "تحلیل رقیب جوش شیرین چین.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "تحلیل رقیب جوش شیرین چین.html",
         "country": "چین",
         "type": "detailed",
     },
     {
-        "file": "China_Baking_Soda_Competitor_Research_v2.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "China_Baking_Soda_Competitor_Research_v2.html",
         "country": "چین",
         "type": "detailed",
     },
     {
-        "file": "منابع تجاری جوش شیرین چین.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "منابع تجاری جوش شیرین چین.html",
         "country": "چین",
         "type": "detailed",
     },
