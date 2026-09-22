@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تحلیل شرکت سودای باشقیرستان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(26px,4vw,38px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 62ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(6, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:900px){ .kpi-row{ grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width:520px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+  .kpi.good .v{ color: #8FE3BE; }
+  .kpi.bad .v{ color: #F0A98F; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
+  strong{ color: var(--ink); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+  .callout.bad{ border-inline-start-color: var(--bad); background: var(--bad-bg); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+  }
+  .card .tag.num{ background: var(--petrol-50); color: var(--petrol-700); }
+  :root[data-theme="dark"] .card .tag.num, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag.num{ color: var(--copper-400); } }
+  .card p{ margin:0; font-size: 14.5px; }
+
+  .stat-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:12px; margin: 16px 0 20px; }
+  @media (max-width:800px){ .stat-grid{ grid-template-columns: repeat(2,1fr); } }
+  .stat{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius:12px;
+    padding: 14px 16px; box-shadow: var(--card-shadow);
+  }
+  .stat .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-size:22px; font-weight:600; color: var(--petrol-700); }
+  :root[data-theme="dark"] .stat .v, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .stat .v{ color: var(--copper-400); } }
+  .stat .l{ font-size:12.5px; color: var(--muted); margin-top:3px; }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+  .two-col{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap:16px; align-items:stretch; }
+  @media (max-width:820px){ .two-col{ grid-template-columns: 1fr; } }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 14px; min-width: 480px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer h3{ color: var(--ink-soft); font-size:13px; margin: 0 0 10px; }
+  footer ol{ margin:0; padding-inline-start: 20px; }
+  footer li{ margin-bottom:6px; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>تحلیل جامع شرکت سودای باشقیرستان (BSK)</h1>
+    <p class="lead">بزرگ‌ترین تولیدکننده سودا و جوش شیرین روسیه و اروپا، ششمین تولیدکننده بزرگ سودا در جهان — پروفایل تک‌شرکتی برای مقایسه‌ی مستقیم با «جوش شیرین پارس».</p>
+    <div class="meta">
+      <span>تاریخ تنظیم: ۱۲ شهریور ۱۴۰۵ (۳ سپتامبر ۲۰۲۶)</span>
+      <span>محل: استرلیتامک، جمهوری باشقیرستان</span>
+      <span>منبع اصلی: soda.ru، TAdviser، Interfax، بورس مسکو</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۱۹۳٬۹۰۰ <small>تن</small></div><div class="l">تولید بی‌کربنات، ۲۰۲۴ (٪۲۰+)</div></div>
+      <div class="kpi"><div class="v">٪۷۶-۸۵</div><div class="l">پوشش نیاز بازار داخلی روسیه</div></div>
+      <div class="kpi"><div class="v">۸۰-۹۰ <small>هزار تن</small></div><div class="l">صادرات بی‌کربنات (بیش از ٪۴۰ تولید)</div></div>
+      <div class="kpi"><div class="v">۲۴۰-۲۸۵</div><div class="l">قیمت صادراتی خوراکی ($/تن FOB/DAP)</div></div>
+      <div class="kpi bad"><div class="v">٪۴.۵-</div><div class="l">افت درآمد کل شرکت، ۲۰۲۴←۲۰۲۵</div></div>
+      <div class="kpi"><div class="v">٪۵۷.۴۳</div><div class="l">سهم واگذارشده به روس‌خیم، ژوئن ۲۰۲۵</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">۱</span><h2>معرفی و ساختار مالکیت</h2></div>
+    <p>شرکت سودای باشقیرستان (АО «Башкирская содовая компания»، БСК/BSK) در شهر استرلیتاماک، جمهوری باشقیرستان روسیه مستقر است — بزرگ‌ترین تولیدکننده کربنات سدیم (سودای سبک/سنگین) و بی‌کربنات سدیم (جوش شیرین) در روسیه و قاره اروپا، و ششمین تولیدکننده بزرگ سودا در جهان.</p>
+    <div class="two-col">
+      <div class="table-wrap" style="margin:0">
+        <table>
+          <thead><tr><th>سهامدار</th><th>سهم</th><th>توضیح</th></tr></thead>
+          <tbody>
+            <tr><td>АО «Росхим» (روس‌خیم)</td><td class="num-cell">٪۵۷.۴۳</td><td>هلدینگ شیمیایی؛ سهام دولتی فدرال را در ژوئن ۲۰۲۵ خرید (پیش‌تر «هیدروژن روسیه»)</td></tr>
+            <tr><td>دولت محلی باشقیرستان</td><td class="num-cell">٪۳۸.۲۸</td><td>شامل ٪۱۱.۷ سهام در مدیریت امانی</td></tr>
+            <tr><td>سایر/اقلیت</td><td class="num-cell">~٪۲</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="chart-box" style="margin:0">
+        <div class="chart-h" style="height:240px"><canvas id="chartOwnership"></canvas></div>
+        <div class="cap">ساختار مالکیت پس از واگذاری ژوئن ۲۰۲۵</div>
+      </div>
+    </div>
+    <div class="callout"><p>این جابه‌جایی مالکیت اخیر است: در مارس ۲۰۲۵ شرکت از فهرست «بنگاه‌های راهبردی» روسیه خارج شد و به‌دنبال آن سهام دولتی فدرال (پیش‌تر تحت مدیریت امانی) رسماً به روس‌خیم فروخته شد.</p></div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">۲</span><h2>سایت‌های تولید و ظرفیت</h2></div>
+    <p>مجتمع سودا (تولید کربنات سدیم، بی‌کربنات خوراکی، کلرید کلسیم، دوده سفید)، مجتمع کاستیک (PVC، سود کاستیک، اسید کلریدریک) و مالکیت ٪۱۰۰ کارخانه سودای برژنیکی در استان پرم.</p>
+    <div class="chart-box">
+      <div class="chart-h" style="height:220px"><canvas id="chartCapacity"></canvas></div>
+      <div class="cap">ظرفیت/تولید سالانه محصولات با مقیاس قابل‌مقایسه (هزار تن)؛ کربنات سدیم به‌دلیل مقیاس بسیار بزرگ‌تر (۲.۳۷-۲.۴۴ میلیون تن) در جدول زیر آمده، نه این نمودار</div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>محصول</th><th>ظرفیت / تولید سالانه</th></tr></thead>
+        <tbody>
+          <tr><td>کربنات سدیم — فقط استرلیتامک</td><td>ظرفیت اسمی ۱.۸ تا ۲.۱ میلیون تن؛ تولید واقعی ۱.۷۸ تا ۱.۸۳ میلیون تن</td></tr>
+          <tr><td>کربنات سدیم — کل گروه (با برژنیکی)</td><td>۲.۳۷ تا ۲.۴۴ میلیون تن — معادل ٪۶۰-۶۵ کل تولید روسیه</td></tr>
+          <tr class="hl"><td>بی‌کربنات سدیم (جوش شیرین)</td><td>~۱۹۴٬۰۰۰ تن (رشد ٪۲۰ طی ۲۰۲۴-۲۰۲۵) — بیش از ٪۷۶-۸۵ نیاز بازار روسیه</td></tr>
+          <tr><td>PVC</td><td>~۲۴۰ تا ۲۷۰ هزار تن</td></tr>
+          <tr><td>سود سوزآور</td><td>~۲۰۰ تا ۲۲۰ هزار تن</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout copper"><p><strong>نکته کلیدی:</strong> با فرض اینکه تولید ۱۹۴٬۰۰۰ تنی BSK معادل ٪۷۶-۸۵ کل نیاز بازار روسیه باشد، اندازه کل بازار مصرف بی‌کربنات سدیم روسیه در محدوده <strong>۲۲۸٬۰۰۰ تا ۲۵۵٬۰۰۰ تن</strong> در سال قابل استنتاج است.</p></div>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">۳</span><h2>فناوری و فرآیند تولید</h2></div>
+    <p>تولید سودا در مجتمع استرلیتاماک بر پایه فرآیند سولوی (آمونیاک-سودا) انجام می‌شود: اشباع آب‌نمک با گاز آمونیاک ← کربناتاسیون در برج‌های کربناتور با دمیدن CO₂ (NaCl + NH₃ + CO₂ + H₂O → NaHCO₃↓ + NH₄Cl) ← کلسیناسیون و تولید کربنات سدیم سبک ← بازیابی آمونیاک با شیر آهک. گرید سنگین (Dense Grade A) از هیدراتاسیون مجدد سودای سبک تولید می‌شود.</p>
+    <div class="cards">
+      <div class="card"><span class="tag num">سنگ آهک</span><p>پیش‌تر از معدن روباز شاختائو؛ پس از توقف بهره‌برداری از کوهستان کوشتائو (۲۰۲۰، دلایل زیست‌محیطی)، اکنون از ذخایر زیرین شاختائو و پهنه‌های کاراتائو/گوماروو.</p></div>
+      <div class="card"><span class="tag num">آب‌نمک</span><p>از ذخایر نمک سنگی یار-بیشکاداک، از طریق انحلال زیرزمینی استخراج و با خط لوله مستقیماً به مجتمع منتقل می‌شود.</p></div>
+      <div class="card"><span class="tag num">آمونیاک</span><p>از پتروشیمی‌های تولیدکننده اوره/آمونیاک روسیه (تولیاتی‌آزوت، گازپروم نفت‌خیم سالاوات) با واگن ریلی تأمین می‌شود.</p></div>
+      <div class="card"><span class="tag num">محصول جانبی</span><p>مایع تقطیر حاوی کلرید کلسیم/سدیم به حوضچه‌های «دریاهای سفید» منتقل؛ بخشی بازیافت و به کلرید کلسیم صنعتی و ضدیخ جاده‌ای تبدیل می‌شود.</p></div>
+    </div>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">۴</span><h2>ساختار بهای تمام‌شده</h2></div>
+    <div class="stat-grid">
+      <div class="stat"><div class="v">۶۱.۰۱ ← ۵۸.۲۴</div><div class="l">درآمد فروش (میلیارد روبل، ۲۰۲۴←۲۰۲۵)</div></div>
+      <div class="stat"><div class="v">۳.۹۱ <span style="font-size:12px">میلیارد روبل</span></div><div class="l">سود خالص، ۲۰۲۵</div></div>
+      <div class="stat"><div class="v">۱۱٬۵۰۰-۱۳٬۵۰۰</div><div class="l">هزینه نقدی درب کارخانه (روبل/تن کربنات)</div></div>
+      <div class="stat"><div class="v">۱۷٬۹۰۰-۱۹٬۵۰۰</div><div class="l">قیمت عمده داخلی روسیه (روبل/تن)</div></div>
+    </div>
+    <div class="two-col">
+      <div class="chart-box" style="margin:0">
+        <div class="chart-h" style="height:230px"><canvas id="chartCostStructure"></canvas></div>
+        <div class="cap">ترکیب بهای تمام‌شده (میانگین بازه‌ی اعلامی)</div>
+      </div>
+      <div>
+        <p style="font-size:14.5px">مزیت رقابتی BSK مالکیت معادن اختصاصی سنگ آهک و سفره‌های نمکی مجاور است که هزینه نقدی آن را نسبت به کارخانه‌های سنتزی سولوی در اروپا پایین‌تر می‌کند؛ با این‌حال در مقایسه با تولیدکنندگان سودای طبیعی (Trona) آمریکا و ترکیه (کش‌کاست ۸۰ تا ۱۱۰ دلار)، هزینه بالاتری دارد.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="s5">
+    <div class="sec-head"><span class="sec-num">۵</span><h2>مشتریان و صنایع خریدار</h2></div>
+    <p>محصولات BSK از طریق خانه بازرگانی اختصاصی «ТД Башхим» و شرکت «АО ЕТК» توزیع می‌شود — این تفکیک عمدتاً مربوط به کسب‌وکار کلی سودای شرکت است، نه صرفاً بخش خوراکی/بی‌کربنات.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>صنعت</th><th>سهم</th><th>شرکت‌های خریدار نمونه</th></tr></thead>
+        <tbody>
+          <tr><td>شیشه‌سازی (بزرگ‌ترین)</td><td class="num-cell">٪۵۰-۵۵</td><td>Salavatsteklo، Saratovstroysteklo، Pilkington روسیه، Rusjam Steklotara، Sibsteklo</td></tr>
+          <tr><td>متالورژی و آلومینیوم</td><td class="num-cell">٪۱۸-۲۰</td><td>UC RUSAL (اورال، بوگوسلوفسک)، Nornickel</td></tr>
+          <tr><td>شوینده و شیمیایی</td><td class="num-cell">٪۱۲-۱۵</td><td>Lab Industries (Persil/Losk)، P&amp;G Novomoskovsk، Nefis Cosmetics، Ilim Group</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="s6">
+    <div class="sec-head"><span class="sec-num">۶</span><h2>آمار صادرات و قیمت‌های صادراتی</h2></div>
+
+    <h3>۶-۱. حجم و مقاصد صادرات</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>شاخص</th><th>مقدار</th></tr></thead>
+        <tbody>
+          <tr><td>کل صادرات کربنات سدیم روسیه (سالانه)</td><td>۴۵۰٬۰۰۰ تا ۵۲۰٬۰۰۰ تن (۲۰۲۵: ۵۰۱.۲ هزار تن)</td></tr>
+          <tr><td>سهم BSK از صادرات کربنات سدیم</td><td class="num-cell">٪۷۵-۸۰ (معادل ۳۵۰٬۰۰۰ تا ۴۲۰٬۰۰۰ تن)</td></tr>
+          <tr class="hl"><td>صادرات بی‌کربنات سدیم BSK</td><td>بیش از ٪۴۰ تولید — معادل ۸۰٬۰۰۰ تا ۹۰٬۰۰۰ تن در سال</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>کشورهای CIS/اوراسیا: قزاقستان (بزرگ‌ترین بازار خارجی، ۱۵۰-۲۰۰ هزار تن؛ آلومینیوم قزاقستان، کارخانه ترکیبات کروم آکتوبه)، بلاروس (۶۰-۹۰ هزار تن؛ Gomelglass)، ازبکستان (۴۰-۶۰ هزار تن؛ Kvars JSC)، آذربایجان، ارمنستان، تاجیکستان. بازارهای بین‌المللی: هند (مشمول پرونده بازبینی ضد دامپینگ DGTR)، خاورمیانه و شمال آفریقا (امارات، ترکیه، مصر، اردن)، و آمریکای لاتین — عمدتاً کوبا و <strong>برزیل</strong>.</p>
+    <div class="callout"><p>صادرات به برزیل قابل‌توجه است: این کشور در پروژه‌های تحقیقاتی پیشین همین بازرگانی نیز به‌عنوان بازار هدف بررسی شده بود — یعنی BSK در آن بازار نیز رقیب مستقیم پارس محسوب می‌شود، نه فقط در روسیه.</p></div>
+
+    <h3>۶-۲. قیمت‌های صادراتی بر مبنای شرایط تحویل</h3>
+    <div class="chart-box">
+      <div class="chart-h" style="height:260px"><canvas id="chartExportPrice"></canvas></div>
+      <div class="cap">میله‌ها: بازه قیمت صادراتی BSK به تفکیک شرایط تحویل &middot; نقطه مسی: FOB پایه پارس (۲۵۰ $/تن)</div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>شرایط تحویل</th><th>بازه قیمت ($/تن)</th><th>توضیح</th></tr></thead>
+        <tbody>
+          <tr><td>FOB بنادر — گرید سنگین A</td><td class="num-cell">۱۹۰-۲۲۵</td><td>کربنات سدیم سنگین، فله/جامبو</td></tr>
+          <tr><td>FOB بنادر — گرید سبک B</td><td class="num-cell">۱۸۰-۲۱۰</td><td>کربنات سدیم سبک، کیسه ۵۰ کیلو/جامبو</td></tr>
+          <tr><td>DAP/CPT مرزهای CIS</td><td class="num-cell">۲۲۰-۲۶۰</td><td>با احتساب حمل واگن مسقف ریلی РЖД</td></tr>
+          <tr><td>CFR/CIF هند و خاورمیانه</td><td class="num-cell">۲۳۰-۲۶۵</td><td>با احتساب کرایه کشتی کانتینری/فله‌بر</td></tr>
+          <tr class="hl"><td>بی‌کربنات سدیم خوراکی (FOB/DAP)</td><td class="num-cell">۲۴۰-۲۸۵</td><td>مقایسه مستقیم با FOB پارس</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13.5px;font-style:italic">تبدیل نرخ‌ها بر مبنای میانگین برابری حدود ۹۰ تا ۹۲ روبل به ازای هر دلار محاسبه شده است.</p>
+  </section>
+
+  <section id="s7">
+    <div class="sec-head"><span class="sec-num">۷</span><h2>جمع‌بندی: پیامدها برای جوش شیرین پارس</h2></div>
+    <div class="cards">
+      <div class="card"><span class="tag num">۱</span><p>قیمت صادراتی بی‌کربنات خوراکی BSK (۲۴۰-۲۸۵ $/تن FOB/DAP) بسیار نزدیک به پایه FOB پارس (۲۵۰ $/تن) است — پارس در سطح قیمت رقیب اصلی داخلی روسیه قرار دارد، نه پایین‌تر یا بالاتر از آن به‌طور غیرمنطقی.</p></div>
+      <div class="card"><span class="tag num">۲</span><p>با تخمین نیاز کل بازار روسیه (۲۲۸٬۰۰۰ تا ۲۵۵٬۰۰۰ تن)، حدود ٪۱۵-۲۴ بازار (۳۴٬۰۰۰ تا ۶۱٬۰۰۰ تن) خارج از تولید مستقیم BSK باقی می‌ماند — فضایی که واردات (عمدتاً ایران) و تولید Krymsoda آن را پر می‌کنند.</p></div>
+      <div class="card"><span class="tag num">۳</span><p>BSK هم‌زمان یک رقیب صادراتی در بازارهای سوم است — به‌ویژه برزیل و کوبا در آمریکای لاتین، و هند و خاورمیانه — مناطقی که می‌توانند با اهداف صادراتی آتی پارس همپوشانی داشته باشند.</p></div>
+      <div class="card"><span class="tag num">۴</span><p>تغییر مالکیت اخیر BSK (خروج از بنگاه‌های راهبردی مارس ۲۰۲۵، واگذاری به روس‌خیم ژوئن ۲۰۲۵) یک تحول ساختاری تازه است که می‌تواند بر استراتژی تجاری/صادراتی آینده این رقیب اثر بگذارد و باید پیگیری شود.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <h3>منابع</h3>
+  <ol>
+    <li>soda.ru — وب‌سایت رسمی شرکت سودای باشقیرستان</li>
+    <li>TAdviser.ru — پروفایل شرکتی و ساختار مالکیت</li>
+    <li>Interfax.ru — آمار تولید بی‌کربنات سدیم ۲۰۲۴-۲۰۲۵ و اخبار واگذاری سهام (ژوئن ۲۰۲۵)</li>
+    <li>RBC.ru، Kommersant.ru، Forbes.ru، Business-Gazeta.ru، Business-Vector.info — تأیید مستقل معامله واگذاری روس‌خیم</li>
+    <li>ارائه رسمی BSK در بورس مسکو (fs.moex.com) — صورت‌های مالی و ساختار بهای تمام‌شده</li>
+    <li>InfoMine Research Group (نسخه مه ۲۰۲۶) — آمار صادرات و قیمت‌های صادراتی</li>
+    <li>اداره کل درمان‌های تجاری هند (DGTR)، پرونده F.No. 6/31/2024-DGTR — صادرات به هند و بررسی ضد دامپینگ</li>
+    <li>Alto Consulting Group — قیمت عمده‌فروشی داخلی بازار روسیه</li>
+  </ol>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){
+    return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US")); }
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  var charts = [];
+  function themeColors(){
+    return {
+      ink: cssVar('--ink-soft'),
+      grid: cssVar('--line-soft'),
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
+      copper: cssVar('--copper-500'),
+      copperDark: cssVar('--copper-600'),
+      bad: cssVar('--bad'),
+      good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+
+  function baseOptions(c){
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif";
+    Chart.defaults.color = c.ink;
+    Chart.defaults.borderColor = c.grid;
+  }
+
+  function buildAll(){
+    var c = themeColors();
+    baseOptions(c);
+    charts.forEach(function(ch){ ch.destroy(); });
+    charts = [];
+
+    // ---- Ownership donut ----
+    charts.push(new Chart(document.getElementById('chartOwnership'), {
+      type: 'doughnut',
+      data: {
+        labels: ['روس‌خیم — ٪۵۷.۴۳', 'دولت باشقیرستان — ٪۳۸.۲۸', 'سایر/اقلیت — ~٪۲'],
+        datasets: [{ data: [57.43, 38.28, 2], backgroundColor: [c.copper, c.petrolDark, c.petrol + '55'], borderColor: c.bg, borderWidth: 3 }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, cutout: '60%',
+        plugins: {
+          legend: { position: 'bottom', rtl: true, labels: { color: c.ink, usePointStyle: true, boxWidth: 8, font: { size: 11.5 } } },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return ctx.label; } } }
+        }
+      }
+    }));
+
+    // ---- Capacity comparison (comparable-scale products) ----
+    charts.push(new Chart(document.getElementById('chartCapacity'), {
+      type: 'bar',
+      data: {
+        labels: ['بی‌کربنات سدیم (جوش شیرین)', 'PVC', 'سود سوزآور'],
+        datasets: [{
+          data: [[0,194],[240,270],[200,220]],
+          backgroundColor: [c.copper, c.petrolDark, c.petrol + 'aa'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ var d = ctx.raw; return d[0]===0 ? (fmt(d[1]) + ' هزار تن') : (fmt(d[0]) + ' تا ' + fmt(d[1]) + ' هزار تن'); } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } },
+          y: { grid: { display: false }, ticks: { color: c.ink } }
+        }
+      }
+    }));
+
+    // ---- Cost structure donut ----
+    charts.push(new Chart(document.getElementById('chartCostStructure'), {
+      type: 'doughnut',
+      data: {
+        labels: ['مواد اولیه — ٪۴۰-۴۵', 'انرژی/گاز طبیعی — ٪۳۰-۳۵', 'دستمزد — ٪۱۵-۱۸', 'استهلاک/تعمیرات — ٪۷-۱۰'],
+        datasets: [{ data: [42.5, 32.5, 16.5, 8.5], backgroundColor: [c.petrolDark, c.copper, c.petrol + '99', c.copper + '66'], borderColor: c.bg, borderWidth: 3 }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, cutout: '55%',
+        plugins: {
+          legend: { position: 'bottom', rtl: true, labels: { color: c.ink, usePointStyle: true, boxWidth: 8, font: { size: 11 } } }
+        }
+      }
+    }));
+
+    // ---- Export price by delivery term + Pars reference ----
+    charts.push(new Chart(document.getElementById('chartExportPrice'), {
+      type: 'bar',
+      data: {
+        labels: ['FOB — گرید سنگین A', 'FOB — گرید سبک B', 'DAP/CPT مرزهای CIS', 'CFR/CIF هند و خاورمیانه', 'بی‌کربنات خوراکی (FOB/DAP)'],
+        datasets: [
+          {
+            label: 'بازه قیمت صادراتی BSK ($/تن)',
+            data: [[190,225],[180,210],[220,260],[230,265],[240,285]],
+            backgroundColor: c.petrol + 'aa',
+            borderRadius: 6,
+            barThickness: 28
+          },
+          {
+            type: 'scatter',
+            label: 'FOB پایه پارس ($/تن)',
+            data: [ { x: 250, y: 'بی‌کربنات خوراکی (FOB/DAP)' } ],
+            backgroundColor: c.copperDark,
+            borderColor: c.copperDark,
+            pointStyle: 'rectRot',
+            pointRadius: 9,
+            pointHoverRadius: 11
+          }
+        ]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { rtl: true, labels: { color: c.ink, usePointStyle: true } },
+          tooltip: {
+            rtl: true, textDirection: 'rtl',
+            callbacks: {
+              label: function(ctx){
+                if (ctx.dataset.type === 'scatter') return ctx.dataset.label + ': ' + fmt(ctx.parsed.y) + '$';
+                var d = ctx.raw; return ctx.dataset.label + ': ' + fmt(d[0]) + ' تا ' + fmt(d[1]) + '$';
+              }
+            }
+          }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11.5 } } }
+        }
+      }
+    }));
+  }
+
+  buildAll();
+  if (window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildAll);
+  }
+})();
+</script>
+
+</body>
+</html>
