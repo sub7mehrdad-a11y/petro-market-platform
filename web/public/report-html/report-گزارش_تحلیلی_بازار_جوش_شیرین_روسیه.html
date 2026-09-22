@@ -1,0 +1,797 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بازار جوش شیرین روسیه</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(28px,4.2vw,42px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 62ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(6, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:900px){ .kpi-row{ grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width:520px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+  .kpi.good .v{ color: #8FE3BE; }
+  .kpi.bad .v{ color: #F0A98F; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
+  strong{ color: var(--ink); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+  .callout.bad{ border-inline-start-color: var(--bad); background: var(--bad-bg); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+  }
+  .card .tag.opp{ background: var(--good-bg); color: var(--good); }
+  .card .tag.risk{ background: var(--bad-bg); color: var(--bad); }
+  .card p{ margin:0; font-size: 14.5px; }
+
+  .stat-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:12px; margin: 16px 0 20px; }
+  @media (max-width:800px){ .stat-grid{ grid-template-columns: repeat(2,1fr); } }
+  .stat{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius:12px;
+    padding: 14px 16px; box-shadow: var(--card-shadow);
+  }
+  .stat .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-size:22px; font-weight:600; color: var(--petrol-700); }
+  :root[data-theme="dark"] .stat .v, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .stat .v{ color: var(--copper-400); } }
+  .stat .l{ font-size:12.5px; color: var(--muted); margin-top:3px; }
+  .stat .d{ font-size: 12px; margin-top:6px; font-weight:600; }
+  .stat .d.up{ color: var(--good); } .stat .d.down{ color: var(--bad); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+  .two-col{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap:16px; align-items:stretch; }
+  @media (max-width:820px){ .two-col{ grid-template-columns: 1fr; } }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+  caption{ caption-side: top; text-align: right; font-size: 12.5px; color: var(--muted); padding: 8px 12px 0; }
+
+  figure{ margin: 16px 0; }
+  figure img{ border-radius: 12px; border: 1px solid var(--line); display:block; box-shadow: var(--card-shadow); }
+  figcaption{ font-size: 12.5px; color: var(--muted); margin-top: 8px; text-align:center; }
+  .map-grid{ display:grid; grid-template-columns: 1fr 1fr; gap:14px; }
+  @media (max-width:760px){ .map-grid{ grid-template-columns: 1fr; } }
+
+  .pill-row{ display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0; }
+  .pill{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 12px;
+    padding: 12px 20px; min-width: 120px; box-shadow: var(--card-shadow);
+  }
+  .pill .p{ font-family:"Fira Code"; font-size:22px; font-weight:700; }
+  .pill .p.zero{ color: var(--good); } .pill .p.pos{ color: var(--copper-600); }
+  .pill .n{ font-size:12.5px; color:var(--muted); margin-top:2px; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer h3{ color: var(--ink-soft); font-size:13px; margin: 0 0 10px; }
+  footer ol{ margin:0; padding-inline-start: 20px; }
+  footer li{ margin-bottom:6px; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>گزارش جامع بازار جوش شیرین کشور روسیه</h1>
+    <p class="lead">واردات واقعی، تولید داخلی، مصرف ظاهری، مسیرهای لجستیکی و رقابت‌پذیری «جوش شیرین پارس» در بزرگ‌ترین بازار شناخته‌شده صادراتی شرکت.</p>
+    <div class="meta">
+      <span>تاریخ تنظیم: شهریور ۱۴۰۵ (سپتامبر ۲۰۲۶)</span>
+      <span>کد HS: ۲۸۳۶۳۰ (بی‌کربنات سدیم / جوش شیرین)</span>
+      <span>منبع اصلی: گمرک چین (GACC) و ترکیه (TÜİK) + ITC Trade Map + اطلاعات میدانی</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۲۰٬۴۰۰ <small>تن</small></div><div class="l">کل واردات شناخته‌شده ۲۰۲۵</div></div>
+      <div class="kpi good"><div class="v">٪۷۸.۴</div><div class="l">سهم ایران از واردات</div></div>
+      <div class="kpi good"><div class="v">۱۰٬۰۰۰ <small>تن</small></div><div class="l">جوش شیرین پارس به‌تنهایی (~٪۴۹ کل)</div></div>
+      <div class="kpi"><div class="v">۱۹۳٬۹۰۰ <small>تن</small></div><div class="l">تولید داخلی BSK، ۲۰۲۴</div></div>
+      <div class="kpi"><div class="v">۱۱۵-۱۶۰ <small>هزار تن</small></div><div class="l">مصرف ظاهری کل روسیه</div></div>
+      <div class="kpi"><div class="v">۳۲۰-۴۰۰</div><div class="l">CIF کریدور خزر، پارس ($/تن)</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">۱</span><h2>خلاصه مدیریتی</h2></div>
+    <p>این گزارش بازار جوش شیرین (بی‌کربنات سدیم، کد HS ۲۸۳۶۳۰) در فدراسیون روسیه را از چند زاویه بررسی می‌کند: واردات واقعی کشور (بر مبنای آمار رسمی گمرک هر کشور تأمین‌کننده به‌همراه اطلاعات میدانی)، تولید و مصرف ظاهری داخلی روسیه، مسیرهای لجستیکی رقبا و ایران، و جایگاه رقابتی «جوش شیرین پارس» (FOB پایه ۲۵۰ دلار بر تن از بنادر ایران).</p>
+
+    <div class="cards">
+      <div class="card"><span class="tag opp">فرصت</span><p><strong>تسلط موجود:</strong> ایران با ~۱۶٬۰۰۰ تن (~٪۷۸.۴ از کل واردات شناخته‌شده) تأمین‌کننده اصلی است؛ جوش شیرین پارس به‌تنهایی با ~۱۰٬۰۰۰ تن (~٪۴۹ از کل) بزرگ‌ترین بازیگر منفرد شناخته‌شده بازار است.</p></div>
+      <div class="card"><span class="tag opp">فرصت</span><p><strong>مزیت لجستیکی خزر:</strong> بندر انزلی کاملاً خارج از بحران تنگه هرمز است و در حال حاضر کوتاه‌ترین/ایمن‌ترین مسیر صادراتی ایران به روسیه محسوب می‌شود.</p></div>
+      <div class="card"><span class="tag opp">فرصت</span><p><strong>آسیب‌پذیری رقبا:</strong> رساندن محصول چین به مسکو نیازمند کانال ریلی گران (۳۵۰-۴۹۰$/تن) است؛ مسیر ترکیه از تابستان ۲۰۲۶ هدف حملات پهپادی مکرر در دریای سیاه قرار گرفته.</p></div>
+      <div class="card"><span class="tag risk">هشدار</span><p><strong>رقیب ایرانی دیگر:</strong> توزیع‌کننده «БСК Групп» با برند «БСК-Иран» محصول ایرانی را در بسته‌بندی‌های متنوع و با گواهی‌های EAC/HALAL کنار محصول داخلی BSK عرضه می‌کند — کانالی که باید رصد شود.</p></div>
+    </div>
+
+    <div class="callout"><p>با ترکیب تولید داخلی، صادرات و واردات واقعی، مصرف ظاهری داخلی روسیه در محدوده <strong>۱۱۵٬۰۰۰ تا ۱۶۰٬۰۰۰ تن</strong> در سال برآورد می‌شود؛ واردات (۲۰٬۴۰۰ تن) بخش کوچک اما نه ناچیز این بازار (~٪۱۳-۱۸) را تشکیل می‌دهد. جمع‌بندی راهبردی: اولویت پارس نه ورود به یک بازار ناشناخته، بلکه <strong>تثبیت و رشد سهم قابل‌توجه موجود</strong> است — با تکیه بر مزیت لجستیکی و ایمنی کریدور خزر نسبت به آسیب‌پذیری‌های فعلی رقبا.</p></div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">۲</span><h2>آمار واردات واقعی و سهم بازار مبادی تأمین</h2></div>
+
+    <h3>۲-۱. جدول تأمین‌کنندگان — سال ۲۰۲۵</h3>
+    <p>ارقام چین و ترکیه و ایران مستقیماً از پایگاه آمار رسمی گمرک هر کشور (به‌ترتیب GACC چین و TÜİK ترکیه، از طریق UN Comtrade) استخراج شده‌اند. سایر ارقام از ITC Trade Map (که خود از آمار خودگزارش‌شده کشورهای تأمین‌کننده تغذیه می‌شود) گرفته شده‌اند.</p>
+    <div class="two-col">
+      <div class="table-wrap" style="margin:0">
+        <table>
+          <thead><tr><th>مبدأ</th><th>حجم (تن)</th><th>سهم از کل</th><th>ارزش (هزار$)</th><th>قیمت واحد ($/تن)</th><th>منبع</th></tr></thead>
+          <tbody>
+            <tr><td>ایران (کل، همه صادرکنندگان)</td><td class="num-cell">~۱۶٬۰۰۰</td><td class="num-cell">~٪۷۸.۴</td><td>نامشخص دقیق</td><td class="num-cell">~۲۵۰ (پایه FOB)</td><td>اطلاعات میدانی</td></tr>
+            <tr><td>— که جوش شیرین پارس به‌تنهایی</td><td class="num-cell">~۱۰٬۰۰۰</td><td class="num-cell">~٪۴۹ از کل</td><td>—</td><td>—</td><td>داده داخلی شرکت</td></tr>
+            <tr><td>چین</td><td class="num-cell">۳٬۸۶۸</td><td class="num-cell">~٪۱۸.۹</td><td class="num-cell">۸۳۷.۴</td><td class="num-cell">۲۱۶.۵</td><td>GACC — رسمی</td></tr>
+            <tr><td>مالزی</td><td class="num-cell">۳۸۰</td><td class="num-cell">~٪۱.۹</td><td class="num-cell">۵۷۸</td><td class="num-cell">۱٬۵۲۱</td><td>ITC Trade Map</td></tr>
+            <tr><td>ترکیه</td><td class="num-cell">۵۲</td><td class="num-cell">~٪۰.۳</td><td class="num-cell">۶۴</td><td class="num-cell">۱٬۲۳۰.۸</td><td>TÜİK — رسمی</td></tr>
+            <tr><td>کره جنوبی</td><td class="num-cell">۲۸</td><td class="num-cell">~٪۰.۱</td><td class="num-cell">۴۹</td><td class="num-cell">۱٬۷۵۰</td><td>ITC Trade Map</td></tr>
+            <tr><td>آلمان</td><td class="num-cell">۴۲</td><td class="num-cell">~٪۰.۲</td><td class="num-cell">۴۲</td><td class="num-cell">۱٬۰۰۰</td><td>ITC Trade Map</td></tr>
+            <tr><td>مصر</td><td class="num-cell">۱۵</td><td class="num-cell">~٪۰.۱</td><td class="num-cell">۸</td><td class="num-cell">۵۳۳</td><td>ITC Trade Map</td></tr>
+            <tr><td>قزاقستان و ارمنستان</td><td class="num-cell">~۳</td><td class="num-cell">~٪۰.۰</td><td class="num-cell">~۳</td><td class="num-cell">~۱٬۰۰۰</td><td>ITC (تعرفه ٪۰، اوراسیا)</td></tr>
+            <tr class="hl"><td>جمع کل (شناخته‌شده)</td><td class="num-cell">~۲۰٬۴۰۰</td><td class="num-cell">٪۱۰۰</td><td class="num-cell">۶٬۳۶۴.۸</td><td class="num-cell">۳۱۲</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="chart-box" style="margin:0">
+        <div class="chart-h" style="height:280px"><canvas id="chartShare"></canvas></div>
+        <div class="cap">ترکیب واردات شناخته‌شده ۲۰۲۵، با تفکیک سهم پارس از کل ایران</div>
+      </div>
+    </div>
+
+    <h3>۲-۲. تحلیل جایگاه ایران</h3>
+    <p>ایران با فاصله زیاد، بزرگ‌ترین منبع تأمین جوش شیرین روسیه در میان همه کشورها است. جوش شیرین پارس با ~۱۰٬۰۰۰ تن (تقریباً برابر یا بیشتر از کل واردات ثبت‌شده از تمام کشورهای دیگر روی هم) به‌تنهایی بزرگ‌ترین تأمین‌کننده منفرد شناخته‌شده این بازار است — عمدتاً از طریق کانال‌های مرزی/دریایی خزر (بندر انزلی و گذرگاه ریلی/زمینی آستارا). چین با قیمت واحد ۲۱۶.۵ دلار بر تن رقیب اصلی از نظر قیمت خام است، اما محدود به بازار شرق روسیه (نزدیک ولادی‌وستوک) است.</p>
+    <div class="callout bad"><p><strong>هشدار رقابتی:</strong> یک توزیع‌کننده روسی («БСК Групп» — شرکتی متفاوت از تولیدکننده اصلی АО БСК، با نامی عمداً مشابه) از قبل محصولی با برند «БСК-Иран» می‌فروشد: جوش شیرین گرید غذایی با مبدأ ایران، در بسته‌بندی‌های ۲۵/۵۰/۶۵۰/۱۰۰۰/۱۳۰۰ کیلوگرمی و گواهی EAC/RST/ISO/HACCP/HALAL — دقیقاً کنار محصول داخلی АО БСК با همان بسته‌بندی‌ها. یعنی حداقل یک رقیب ایرانی دیگر پیش از این کانال توزیع فعالی در بازار خرده‌فروشی/عمده‌فروشی روسیه ایجاد کرده — نظارت بر این کانال برای حفظ سهم پارس ضروری است.</p></div>
+
+    <h3>۲-۳. زمینه بازار مصرف و صنایع مصرف‌کننده</h3>
+    <p>بر اساس اعلام رسمی شرکت سودای باشقیرستان (بزرگ‌ترین تولیدکننده داخلی)، اصلی‌ترین مصرف‌کنندگان بی‌کربنات سدیم در روسیه صنایع غذایی (افزودنی تنظیم‌کننده اسیدیته و عامل ورآورنده، E500(ii)) و صنعت دارویی/پزشکی هستند. همچنین این ماده در ترکیب خوراک دام (به‌ویژه به‌عنوان بافر شکمبه در تغذیه گاوهای شیری) و به میزان کمتر در صنایع شیمیایی و بهداشتی کاربرد دارد.</p>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">۳</span><h2>تولید داخلی و رقبای بومی</h2></div>
+    <p>روسیه دارای صنعت سودای داخلی توسعه‌یافته و قدیمی است. این مهم‌ترین عامل ساختاری تعیین‌کننده اندازه بازار قابل‌دسترس برای واردات محسوب می‌شود.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>شرکت</th><th>شهر / منطقه</th><th>محصول اصلی</th><th>ویژگی کلیدی</th></tr></thead>
+        <tbody>
+          <tr><td>АО «Башкирская содовая компания» (BSK)</td><td>استرلیتامک، باشقیرستان</td><td>سودای سبک/سنگین و بی‌کربنات سدیم تصفیه‌شده (پیشرو #۱ کشور)</td><td>تولید ۱۹۳٬۹۰۰ تن بی‌کربنات در ۲۰۲۴ (رشد ٪۲۰)؛ ظرفیت فعلی ~۲۱۷٬۰۰۰ تن، برنامه توسعه تا ۳۵۰٬۰۰۰ تن؛ بیش از ٪۴۰ تولید صادر می‌شود</td></tr>
+          <tr><td>АО «Крымский содовый завод» (کریمه)</td><td>کراسنوپرکوپسک، کریمه</td><td>سودای کلسینه فنی (اصلی)؛ بی‌کربنات سدیم به‌عنوان محصول جانبی</td><td>تمرکز اصلی بر سودای صنعتی، نه بی‌کربنات</td></tr>
+          <tr><td>АО «БСЗ» — کارخانه سودای برژنیکی</td><td>برژنیکی، استان پرم</td><td>سودای کلسینه (~۶۰۰-۶۵۰ هزار تن/سال) — قدیمی‌ترین کارخانه سودا در روسیه/CIS (۱۸۸۳)</td><td>تولید بی‌کربنات سدیم به‌روشنی تأیید نشد؛ محصول اصلی سودای کلسینه فنی است</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout"><p><strong>به‌روزرسانی (۷ سپتامبر ۲۰۲۶):</strong> در ژوئن ۲۰۲۵ دولت روسیه ٪۵۷.۴۳ سهام BSK را به هلدینگ Roskhim فروخت (٪۱۱.۷ نیز به امانت باشقیرستان رفت). با این حال، درآمد ۲۰۲۵ خود BSK با افت ٪۴.۵ به ۵۸.۲۴ میلیارد روبل رسید (از ۶۱.۰۱ میلیارد در ۲۰۲۴) — در حالی که تولید بی‌کربنات سدیم آن در ۲۰۲۴ رشد ٪۲۰ داشت. کارخانه سودای کریمه نیز راکد ماند: درآمد ۲۰۲۵ فقط ٪۰.۹ رشد کرد و ظرفیت جوش شیرین همچنان در همان سطح قدیمی (~۲۰ هزار تن/سال) باقی است.</p></div>
+    <p>نتیجه‌گیری: وجود یک تولیدکننده داخلی مسلط با دسترسی کامل به مواد اولیه بومی (سنگ آهک و نمک) به این معناست که هیچ کف قیمتی ناشی از وابستگی به واردات در روسیه وجود ندارد. با این حال، این خودکفایی مانع از وجود یک بازار واردات واقعی و قابل‌توجه (~۲۰٬۴۰۰ تن، عمدتاً ایرانی) در کنار تولید داخلی نشده است.</p>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">۴</span><h2>بررسی قیمت‌های FOB در بنادر مبدأ</h2></div>
+    <div class="two-col">
+      <div class="table-wrap" style="margin:0">
+        <table>
+          <thead><tr><th>مبدأ و بندر</th><th>گرید</th><th>محدوده FOB اسپات ($/تن)</th><th>قیمت واقعی ورود ($/تن)</th></tr></thead>
+          <tbody>
+            <tr><td>چین (شاندونگ/جیانگ‌سو)</td><td>صنعتی تا خوراکی</td><td class="num-cell">میانگین ۱۷۰-۲۳۰</td><td class="num-cell">۲۱۶.۵ (رسمی)</td></tr>
+            <tr><td>ترکیه (Kazan Soda Elektrik)</td><td>صنعتی و خوراکی</td><td class="num-cell">~۳۰۰-۳۲۰ (روند نزولی)</td><td class="num-cell">۱٬۲۳۰.۸ (حجم ناچیز، غیرقابل‌تعمیم به فله)</td></tr>
+            <tr><td>مالزی</td><td>ویژه/دارویی احتمالی</td><td>داده اسپات یافت نشد</td><td class="num-cell">۱٬۵۲۱</td></tr>
+            <tr class="hl"><td>ایران — جوش شیرین پارس</td><td>خوراکی/صنعتی</td><td class="num-cell">۲۵۰ (پایه ثابت شرکت)</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="chart-box" style="margin:0">
+        <div class="chart-h" style="height:260px"><canvas id="chartFOB"></canvas></div>
+        <div class="cap">بازه FOB اسپات مبدأ به تفکیک تأمین‌کننده</div>
+      </div>
+    </div>
+    <p style="font-size:13.5px;font-style:italic">قیمت واحد بالای ترکیه و مالزی در آمار رسمی با حجم بسیار کم همراه است و به گرید دارویی/آزمایشگاهی یا محموله‌های استعلامی مربوط می‌شود، نه رقیب فله.</p>
+  </section>
+
+  <section id="s5">
+    <div class="sec-head"><span class="sec-num">۵</span><h2>مسیرهای لجستیکی — ایران و رقبا</h2></div>
+    <p>روسیه سه منطقه ورودی دریایی/زمینی کاملاً متفاوت از نظر منطق لجستیکی دارد. این بخش مسیر واقعی هر تأمین‌کننده اصلی (ایران، چین، ترکیه، مالزی) را همراه با محاسبه قیمت تمام‌شده بررسی می‌کند.</p>
+    <div class="callout bad"><p><strong>هشدار لجستیکی حیاتی — بحران تنگه هرمز ۲۰۲۶:</strong> از ۲۸ فوریه ۲۰۲۶ تردد کشتیرانی تجاری از تنگه هرمز به‌شدت کاهش یافته (از ~۸۵-۱۳۰ عبور روزانه به تنها ۳ تا ۱۵ عبور در روز). این وضعیت بنادر خلیج فارس ایران (بندرعباس، بوشهر) را برای صادرات دریایی پرریسک می‌کند. بندر انزلی (خزر) و بندر چابهار (دریای عمان، خارج از تنگه هرمز) مبادی جایگزین امن هستند.</p></div>
+    <p><strong>به‌روزرسانی (۷ سپتامبر ۲۰۲۶):</strong> هزینه لجستیک داخلی روسیه در حال افزایش است: تعرفه حمل ریلی РЖД برای ۲۰۲۶ حدود ٪۱۰.۲ تا ٪۱۰.۴ بالا رفته، عوارض جاده‌ای Platon از مارس ۲۰۲۶ حدود ٪۶۳ گران‌تر شده، و حجم بار ریلی «مواد شیمیایی و سودا» روندی نزولی داشته. این روند مزیت نسبی کریدور دریایی خزر ایران (که به این هزینه‌های داخلی وابسته نیست) را تقویت می‌کند.</p>
+
+    <h3>۵-۱. کریدور خزر — نزدیک‌ترین و اصلی‌ترین مسیر ایران</h3>
+    <figure>
+      <img src="/report-images/report-گزارش_تحلیلی_بازار_جوش_شیرین_روسیه/img-1.png" alt="مسیرهای دریایی ایران به روسیه">
+      <figcaption>مسیرهای دریایی ایران به روسیه — کریدور خزر (انزلی)، و کریدورهای دریای سیاه/بالتیک از طریق چابهار (با دور زدن تنگه هرمز)</figcaption>
+    </figure>
+    <p><strong>به‌روزرسانی (۷ سپتامبر ۲۰۲۶):</strong> کریدور خزر در حال رشد سریع است — بندر آستاراخان در ۲۰۲۵ به ۵.۷ میلیون تن بار رسید که ~٪۹۰ آن مبدأ/مقصدش ایران بوده؛ فقط در چهار ماه اول ۲۰۲۶ حجم این بندر ٪۶۸ رشد کرد و به ۲.۲ میلیون تن رسید. خط کانتینری جدید آستاراخان-ایران هم راه‌اندازی شده. کریدور INSTC با سرمایه‌گذاری ۳۸ میلیارد دلاری، پیش‌بینی می‌شود تا ۲۰۳۰ به ۳۲ میلیون تن بار کل برسد.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>مسیر</th><th>مایل دریایی</th><th>کیلومتر</th><th>ملاحظات</th></tr></thead>
+        <tbody>
+          <tr><td>انزلی → آستاراخان (خزر/INSTC)</td><td class="num-cell">۵۴۶</td><td class="num-cell">۱٬۰۱۱</td><td>کوتاه‌ترین مسیر پرحجم؛ بدون عبور از تنگه یا کانال</td></tr>
+          <tr><td>انزلی → مخاچقلا (خزر)</td><td class="num-cell">۳۴۴</td><td class="num-cell">۶۳۷</td><td>کوتاه‌ترین گزینه خزر؛ اتصال ریلی به قفقاز شمالی و جنوب روسیه</td></tr>
+          <tr><td>گذرگاه ریلی/زمینی آستارا</td><td>—</td><td>—</td><td>در سه‌ماهه اول ۱۴۰۴ به‌تنهایی ۲۷۴٬۰۷۰ تن کالا از این مرز به روسیه/قفقاز صادر شده</td></tr>
+          <tr><td>چابهار → نووروسیسک (دریای سیاه)</td><td class="num-cell">۳٬۹۸۷</td><td class="num-cell">۷٬۳۸۴</td><td>گزینه جایگزین در صورت نیاز به دریای سیاه؛ با دور زدن هرمز</td></tr>
+          <tr><td>چابهار → سن‌پترزبورگ (بالتیک)</td><td class="num-cell">۶٬۹۴۱</td><td class="num-cell">۱۲٬۸۵۵</td><td>طولانی‌ترین گزینه؛ فقط برای مقاصد عمیقاً شمالی توجیه‌پذیر</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>۵-۲. مسیر چین — دو کانال با اقتصاد متفاوت</h3>
+    <figure>
+      <img src="/report-images/report-گزارش_تحلیلی_بازار_جوش_شیرین_روسیه/img-2.png" alt="کریدورهای ورود جوش شیرین به روسیه از چین، مالزی و ترکیه">
+      <figcaption>کریدورهای ورود جوش شیرین به روسیه از چین، مالزی و ترکیه، در مقایسه با نزدیک‌ترین کریدور ایران (خزر)</figcaption>
+    </figure>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کانال</th><th>مسیر</th><th>فاصله</th><th>زمان ترانزیت</th></tr></thead>
+        <tbody>
+          <tr><td>دریایی (ارزان‌ترین، شرق روسیه)</td><td>چینگ‌دائو → ولادی‌وستوک/واستوچنی</td><td class="num-cell">۹۸۰ مایل / ۱٬۸۱۵ کیلومتر</td><td class="num-cell">۷ تا ۱۵ روز</td></tr>
+          <tr><td>ریلی (مقصد مسکو/غرب روسیه)</td><td>هاربین → مانژولی/زابایکالسک → مسکو</td><td class="num-cell">~۶٬۰۰۰-۷٬۰۰۰ کیلومتر</td><td class="num-cell">۱۶ تا ۲۲ روز</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>قیمت تمام‌شده رسمی چین (۲۱۶.۵ دلار بر تن) با کانال دریایی ارزان به ولادی‌وستوک سازگار است. رساندن محصول چینی به مسکو/غرب روسیه (بازار اصلی مصرف) نیازمند کانال ریلی گران‌تر است: ۴٬۶۰۰ تا ۵٬۸۰۰ دلار هر کانتینر ۲۰ فوت (≈۱۸۰-۲۳۰ دلار بر تن)، که مجموع قیمت تمام‌شده را به ~۳۵۰-۴۹۰ دلار بر تن می‌رساند.</p>
+
+    <h3>۵-۳. مسیر ترکیه — کوتاه اما در معرض ریسک جدید</h3>
+    <p>سامسون → نووروسیسک: سرویس فری هفتگی RUSCON (گروه Delo)، ترمینال NUTEP نووروسیسک — فقط ۲۱۶ مایل دریایی (۴۰۱ کیلومتر)، ترانزیت ۲ تا ۷ روز.</p>
+    <div class="callout bad"><p><strong>هشدار ریسک:</strong> از اواسط ۲۰۲۶ چندین فروند کشتی/فری فعال در خط سامسون/تراپزون-نووروسیسک هدف حملات پهپادی اوکراینی قرار گرفته‌اند؛ حداقل یک فری ترکیه‌ای در ۹ اوت ۲۰۲۶ در نزدیکی نووروسیسک بر اثر برخورد پهپاد آسیب دید. این ریسک مستقیماً کریدور دریای سیاه را (از جمله گزینه چابهار-نووروسیسک ایران) تحت تأثیر قرار می‌دهد.</p></div>
+
+    <h3>۵-۴. مسیر مالزی — حجم کوچک، مسافت طولانی</h3>
+    <p>سرویس لاینر مستقیم FESCO: بندر کلانگ/پاسیر گودانگ/پنانگ → هوشی‌مین (ترانشیپمنت) → سن‌پترزبورگ، تناوب هفتگی، ترانزیت بیش از ۴۲ روز (۸٬۹۶۰ مایل دریایی / ~۱۶٬۶۰۰ کیلومتر). با توجه به حجم بسیار کم (۳۸۰ تن در کل سال) و قیمت واحد بالا، این جریان تجاری بیشتر یک محصول تخصصی/دارویی محسوب می‌شود تا رقیب فله.</p>
+
+    <div class="chart-box">
+      <div class="chart-h" style="height:260px"><canvas id="chartDistance"></canvas></div>
+      <div class="cap">فاصله کریدورهای اصلی هر تأمین‌کننده تا نزدیک‌ترین مقصد ورودی روسیه (کیلومتر)؛ مسیر مالزی به دلیل مقیاس متفاوت در نمودار نیامده</div>
+    </div>
+  </section>
+
+  <section id="s6">
+    <div class="sec-head"><span class="sec-num">۶</span><h2>تخمین قیمت تمام‌شده (CIF) «جوش شیرین پارس»</h2></div>
+    <p>مفروضات: کانتینر ۲۰ فوت استاندارد، ۲۵ تن فله کیسه‌ای/پالتی؛ FOB پایه پارس ۲۵۰ دلار بر تن از بندر مبدأ ایرانی.</p>
+    <div class="chart-box">
+      <div class="chart-h" style="height:280px"><canvas id="chartCPT"></canvas></div>
+      <div class="cap">ساختار قیمت تمام‌شده CIF به تفکیک FOB و میانگین بازه حمل‌ونقل/بیمه، به ازای هر کریدور و سناریو</div>
+    </div>
+
+    <h3>۶-۱. کریدور خزر (انزلی → آستاراخان/مخاچقلا) — مسیر اصلی فعلی</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>سناریو</th><th>FOB</th><th>حمل و بیمه (تخمینی)</th><th>CIF مقصد</th></tr></thead>
+        <tbody>
+          <tr><td>شرایط عادی</td><td class="num-cell">۲۵۰</td><td class="num-cell">۷۰ – ۱۰۰</td><td class="num-cell">۳۲۰ – ۳۵۰</td></tr>
+          <tr><td>ظرفیت محدود / اوج تقاضا</td><td class="num-cell">۲۵۰</td><td class="num-cell">۱۱۰ – ۱۵۰</td><td class="num-cell">۳۶۰ – ۴۰۰</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>۶-۲. کریدور دریای سیاه (چابهار → نووروسیسک، با دور زدن هرمز)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>سناریو</th><th>FOB</th><th>حمل و بیمه (تخمینی)</th><th>CIF مقصد</th></tr></thead>
+        <tbody>
+          <tr><td>شرایط عادی</td><td class="num-cell">۲۵۰</td><td class="num-cell">۹۰ – ۱۴۰</td><td class="num-cell">۳۴۰ – ۳۹۰</td></tr>
+          <tr><td>شرایط پرریسک (حق‌بیمه جنگی، ریسک پهپادی)</td><td class="num-cell">۲۵۰</td><td class="num-cell">۱۵۰ – ۲۱۰</td><td class="num-cell">۴۰۰ – ۴۶۰</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>۶-۳. کریدور بالتیک (چابهار → سن‌پترزبورگ، با دور زدن هرمز)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>سناریو</th><th>FOB</th><th>حمل و بیمه (تخمینی)</th><th>CIF مقصد</th></tr></thead>
+        <tbody>
+          <tr><td>شرایط عادی</td><td class="num-cell">۲۵۰</td><td class="num-cell">۱۵۰ – ۲۱۰</td><td class="num-cell">۴۰۰ – ۴۶۰</td></tr>
+          <tr><td>شرایط پرریسک</td><td class="num-cell">۲۵۰</td><td class="num-cell">۲۳۰ – ۳۰۰</td><td class="num-cell">۴۸۰ – ۵۵۰</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout"><p>جمع‌بندی: کریدور خزر با تخمین CIF ۳۲۰-۴۰۰ دلار بر تن، رقابتی‌ترین و — با توجه به بحران هرمز و ریسک پهپادی دریای سیاه — ایمن‌ترین گزینه است.</p></div>
+  </section>
+
+  <section id="s7">
+    <div class="sec-head"><span class="sec-num">۷</span><h2>تعرفه، مالیات و الزامات مقرراتی</h2></div>
+    <div class="pill-row">
+      <div class="pill"><div class="p pos">٪۵</div><div class="n">تعرفه استاندارد (غیر اوراسیا)</div></div>
+      <div class="pill"><div class="p zero">٪۰</div><div class="n">اعضای اتحادیه اوراسیا</div></div>
+      <div class="pill"><div class="p zero">٪۰~</div><div class="n">ایران، تحت تجارت آزاد اوراسیا-ایران</div></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>مورد</th><th>وضعیت</th></tr></thead>
+        <tbody>
+          <tr><td>تعرفه استاندارد ورودی (غیر اتحادیه اوراسیا)</td><td>٪۵ (برای چین، ترکیه، مالزی، کره، آلمان، مصر، هند)</td></tr>
+          <tr><td>تعرفه اعضای اتحادیه اقتصادی اوراسیا</td><td>٪۰ (قزاقستان، ارمنستان، قرقیزستان و...)</td></tr>
+          <tr><td>تعرفه ایران تحت موافقت‌نامه تجارت آزاد اوراسیا-ایران</td><td>موافقت‌نامه کامل از ۱۵ مه ۲۰۲۵ اجرایی و حدود ٪۹۰ اقلام تعرفه‌ای از جمله محصولات شیمیایی را بدون عوارض می‌کند؛ ردیف تعرفه‌ای دقیق ۲۸۳۶۳۰ باید در پیوست رسمی موافقت‌نامه راستی‌آزمایی شود</td></tr>
+          <tr><td>الزامات گرید خوراکی</td><td>انطباق با مقررات فنی اتحادیه اوراسیا: TR TS ۰۲۱/۲۰۱۱ (ایمنی غذایی)، TR TS ۰۲۲/۲۰۱۱ (برچسب‌گذاری)، TR TS ۰۲۹/۲۰۱۲ (افزودنی‌های غذایی)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="s8">
+    <div class="sec-head"><span class="sec-num">۸</span><h2>برآورد مصرف ظاهری روسیه و تفکیک بخش‌های مصرف</h2></div>
+    <p>برای تخمین مصرف واقعی داخلی روسیه از ترکیب سه روش مستقل استفاده شده: (۱) بر مبنای ظرفیت/تولید واقعی BSK، (۲) برآورد پایین-به-بالا از تولید واقعی صنعت غذایی و دام روسیه (آمار Rosstat/Минсельхоз)، (۳) جمع مستقیم واردات شناخته‌شده.</p>
+    <div class="chart-box">
+      <div class="chart-h" style="height:230px"><canvas id="chartConsumption"></canvas></div>
+      <div class="cap">تولید داخلی و واردات به‌عنوان مقادیر مستقل؛ مصرف ظاهری کل حاصل جمع‌بندی هر سه روش است، نه جمع مستقیم این دو ستون</div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>بخش / روش برآورد</th><th>حجم تخمینی (تن در سال)</th><th>مبنا</th></tr></thead>
+        <tbody>
+          <tr><td>تولید داخلی (BSK، ۲۰۲۴)</td><td class="num-cell">۱۹۳٬۹۰۰</td><td>اعلام مستقیم شرکت (Interfax/RBC)</td></tr>
+          <tr><td>صادرات BSK (بیش از ٪۴۰ تولید)</td><td class="num-cell">~۷۸٬۰۰۰+</td><td>اعلام مستقیم شرکت</td></tr>
+          <tr><td>واردات شناخته‌شده (۲۰۲۵)</td><td class="num-cell">~۲۰٬۴۰۰</td><td>آمار گمرک چین/ترکیه + اطلاعات بازار ایران</td></tr>
+          <tr><td>— بخش غذایی (نانوایی/شیرینی‌جات)</td><td class="num-cell">۱۰٬۰۰۰ – ۳۰٬۰۰۰</td><td>تولید صنعت نان/شیرینی روسیه × نرخ مصرف استاندارد ٪۰.۵-۱.۲</td></tr>
+          <tr><td>— بخش خوراک دام (بافر شکمبه)</td><td class="num-cell">~۶۰٬۰۰۰ (محتاطانه)</td><td>جمعیت گاو شیری روسیه (۷.۳ میلیون رأس) × نرخ مصرف استاندارد جهانی</td></tr>
+          <tr><td>— بخش صنعتی/دارویی/سایر</td><td>باقیمانده، کمّی‌نشده</td><td>—</td></tr>
+          <tr class="hl"><td>مصرف ظاهری کل روسیه</td><td class="num-cell">۱۱۵٬۰۰۰ – ۱۶۰٬۰۰۰</td><td>تولید + واردات − صادرات، جمع‌بندی سه روش</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="s9">
+    <div class="sec-head"><span class="sec-num">۹</span><h2>جدول مقایسه‌ای جامع بازار</h2></div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:280px"><canvas id="chartLanded"></canvas></div>
+      <div class="cap">میله‌ها: بازه قیمت تمام‌شده برآوردی (FOB + حمل و بیمه) &middot; نقطه مسی: قیمت واقعی/رسمی ثبت‌شده (در دسترس فقط برای چین)</div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کشور/تأمین‌کننده</th><th>حجم (تن)</th><th>FOB مبدأ ($/تن)</th><th>حمل و بیمه تا مقصد</th><th>CIF تمام‌شده ($/تن)</th></tr></thead>
+        <tbody>
+          <tr><td>ایران (کل، عمدتاً کریدور خزر)</td><td class="num-cell">~۱۶٬۰۰۰</td><td class="num-cell">۲۵۰</td><td class="num-cell">۷۰ – ۱۵۰</td><td class="num-cell">۳۲۰ – ۴۰۰</td></tr>
+          <tr><td>چین (فله، ولادی‌وستوک)</td><td class="num-cell">۳٬۸۶۸</td><td class="num-cell">۱۸۰</td><td>کوتاه (مرز/دریای نزدیک)</td><td class="num-cell">۲۱۶.۵ (رسمی)</td></tr>
+          <tr><td>چین (رسیده به مسکو، ریل)</td><td>—</td><td class="num-cell">۱۸۰</td><td class="num-cell">۱۸۰ – ۲۳۰</td><td class="num-cell">۳۵۰ – ۴۲۰</td></tr>
+          <tr><td>ترکیه — Kazan Soda (نووروسیسک)</td><td class="num-cell">۵۲</td><td class="num-cell">۳۰۰ – ۳۲۰</td><td class="num-cell">۳۰-۶۰ عادی / ۷۰-۱۲۰ پرریسک</td><td class="num-cell">۳۳۰-۳۸۰ / ۳۷۰-۴۴۰</td></tr>
+          <tr><td>مالزی (گرید ویژه، سن‌پترزبورگ)</td><td class="num-cell">۳۸۰</td><td>نامشخص</td><td class="num-cell">۲۰۰ – ۳۰۰+</td><td class="num-cell">۱٬۵۲۱ (رسمی، غیرقابل‌مقایسه با فله)</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cards">
+      <div class="card"><span class="tag opp">۱</span><p>ایران با فاصله زیاد بزرگ‌ترین تأمین‌کننده از نظر تناژ است، با قیمت تمام‌شده رقابتی از طریق کریدور خزر.</p></div>
+      <div class="card"><span class="tag opp">۲</span><p>چین ارزان‌ترین قیمت خام را دارد اما فقط برای بازار شرق روسیه؛ برای رقابت در بازار اصلی (مسکو/غرب روسیه)، قیمت تمام‌شده چین به‌مراتب بالاتر می‌رود.</p></div>
+      <div class="card"><span class="tag opp">۳</span><p>ترکیه نزدیک‌ترین رقیب قیمتی به ایران است، اما با ریسک جدید حملات پهپادی دریای سیاه مواجه است — که مزیت ایمنی کریدور خزر ایران را برجسته‌تر می‌کند.</p></div>
+    </div>
+  </section>
+
+  <section id="s11">
+    <div class="sec-head"><span class="sec-num">۱۱</span><h2>جمع‌بندی و توصیه‌های اجرایی</h2></div>
+    <h3>فرصت‌ها</h3>
+    <div class="cards">
+      <div class="card"><span class="tag opp">۱</span><p>ایران، و به احتمال زیاد جوش شیرین پارس، هم‌اکنون تأمین‌کننده اصلی و مسلط بازار واردات روسیه است.</p></div>
+      <div class="card"><span class="tag opp">۲</span><p>کریدور خزر/INSTC کوتاه، رو به رشد و در حال حاضر تنها مسیر کاملاً ایمن صادرات دریایی ایران به روسیه است.</p></div>
+      <div class="card"><span class="tag opp">۳</span><p>آسیب‌پذیری فعلی هر دو رقیب اصلی (کانال ریلی گران چین برای مسکو؛ ریسک پهپادی دریای سیاه ترکیه) فرصتی برای جذب سهم بیشتر بازار فراهم می‌کند.</p></div>
+      <div class="card"><span class="tag opp">۴</span><p>احتمال معافیت یا کاهش تعرفه ٪۵ استاندارد از طریق موافقت‌نامه تجارت آزاد اوراسیا-ایران.</p></div>
+    </div>
+    <h3>ریسک‌ها</h3>
+    <div class="cards">
+      <div class="card"><span class="tag risk">۱</span><p>تسلط تقریباً کامل تولید داخلی (BSK) بر بخش خوراکی/دارویی سقفی طبیعی برای رشد بیشتر واردات ایجاد می‌کند.</p></div>
+      <div class="card"><span class="tag risk">۲</span><p>زیرساخت کانتینری کریدور خزر هنوز نوپاست؛ تأخیر یا کمبود ظرفیت کشتی می‌تواند زمان تحویل را غیرقابل‌پیش‌بینی کند.</p></div>
+      <div class="card"><span class="tag risk">۳</span><p>بحران هرمز و بی‌ثباتی منطقه‌ای، ریسک، هزینه بیمه و عدم قطعیت زمان‌بندی را برای هر محموله افزایش می‌دهد.</p></div>
+      <div class="card"><span class="tag risk">۴</span><p>کانال توزیع فعال یک رقیب ایرانی دیگر («БСК-Иран») در بازار خرده‌فروشی/عمده‌فروشی روسیه، نیازمند رصد مستمر.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <h3>منابع</h3>
+  <ol>
+    <li>گمرک چین (GACC) از طریق UN Comtrade — صادرات چین به روسیه، HS ۲۸۳۶۳۰، ۲۰۲۵</li>
+    <li>آمار ترکیه (TÜİK) از طریق UN Comtrade — صادرات ترکیه به روسیه، HS ۲۸۳۶۳۰، ۲۰۲۵</li>
+    <li>ITC Trade Map — فایل‌های آمار واردات/صادرات روسیه، ۲۰۲۵ (ارائه‌شده توسط کارفرما)</li>
+    <li>اتاق بازرگانی مشترک ایران و روسیه؛ گمرک آستارا — آمار صادرات از مرز آستارا</li>
+    <li>Bashkir Soda Company (soda.ru, td-bkh.ru, Interfax، RBC) — تولید، محصولات و صادرات</li>
+    <li>Березниковский содовый завод (bsz.ru، Wikipedia) — ظرفیت سودای کلسینه</li>
+    <li>Крымский содовый завод (sodaplant.ru) — محصولات و انطباق مقرراتی</li>
+    <li>Kazan Soda Elektrik / WE Soda / Ciner Group (kazansoda.com، Wikipedia، Daily Sabah) — ظرفیت و صادرات ترکیه</li>
+    <li>Intratec.us، ProcurementResource.com، Price-Watch.ai، Made-in-China.com — قیمت‌های اسپات FOB بی‌کربنات سدیم</li>
+    <li>Eurasian Economic Commission (eec.eaeunion.org)، SpecialEurasia — موافقت‌نامه تجارت آزاد اتحادیه اوراسیا-ایران</li>
+    <li>Ports Europe، Caspianpost.com، Model Diplomat، artarail.com — کریدور INSTC و بنادر خزر</li>
+    <li>Wikipedia («۲۰۲۶ Strait of Hormuz crisis»)، Al Jazeera، Lloyd's List Intelligence، NBC News، straits.live — بحران تنگه هرمز ۲۰۲۶</li>
+    <li>Railjournal.com، RailFreight.com، sh-zhongshen.com، silkwaysourcing.com — گذرگاه ریلی زابایکالسک-مانژولی و هزینه‌های حمل</li>
+    <li>unisco.com، portseurope.com، bsfrussia.ru، ruscon.ru — بنادر و خطوط فری ترکیه-روسیه، از جمله گزارش‌های حملات پهپادی ۲۰۲۶</li>
+    <li>fesco.com، malaysia.docshipper.com — مسیر و سرویس لاینر مالزی-روسیه</li>
+    <li>russalt-sz.ru — قیمت‌های عمده‌فروشی داخلی بی‌کربنات سدیم روسیه</li>
+    <li>Rosstat، Минсельхоз، cyberleninka.ru، agrarnayanauka.ru — تولید صنعت غذایی، خوراک دام و جمعیت دام روسیه</li>
+    <li>USGS Mineral Commodity Summaries (Soda Ash) — آمار جهانی سودای سبک</li>
+    <li>www.chemistry-expo.ru، agroprodmash-expo.ru، crocus-expo.ru — نمایشگاه‌های تجاری</li>
+    <li>chempack.ru، utsrus.com، rtholding.ru — توزیع‌کنندگان مواد شیمیایی/افزودنی‌های غذایی روسیه</li>
+    <li>rupec.ru، rccnews.ru، www.soda.ru، www.rzd-partner.ru، trans.ru، flagma.ru، board.himtrade.ru — منابع خبری/B2B/لجستیک روسیه، صحت‌سنجی‌شده ۷ سپتامبر ۲۰۲۶</li>
+    <li>bsksalt.ru — توزیع‌کننده روسی محصول جوش شیرین با برند «БСК-Иран»؛ شاهد کانال توزیع رقیب ایرانی موجود در بازار روسیه</li>
+    <li>اطلاعیه‌های رسمی Roskhim / دولت روسیه — فروش ٪۵۷.۴۳ سهام BSK به هلدینگ Roskhim، ژوئن ۲۰۲۵</li>
+    <li>rzd-partner.ru، سامانه عوارض جاده‌ای Platon (روسیه) — تغییرات تعرفه ریلی و عوارض جاده‌ای ۲۰۲۶</li>
+    <li>گزارش‌های بندر آستاراخان و کریدور INSTC — آمار حجم بار کریدور خزر ۲۰۲۵-۲۰۲۶</li>
+  </ol>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){
+    return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US")); }
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  var charts = [];
+  function themeColors(){
+    return {
+      ink: cssVar('--ink-soft'),
+      grid: cssVar('--line-soft'),
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
+      copper: cssVar('--copper-500'),
+      copperDark: cssVar('--copper-600'),
+      bad: cssVar('--bad'),
+      good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+
+  function baseOptions(c){
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif";
+    Chart.defaults.color = c.ink;
+    Chart.defaults.borderColor = c.grid;
+  }
+
+  function buildAll(){
+    var c = themeColors();
+    baseOptions(c);
+    charts.forEach(function(ch){ ch.destroy(); });
+    charts = [];
+
+    // ---- Supplier share donut (Pars split out from rest of Iran) ----
+    charts.push(new Chart(document.getElementById('chartShare'), {
+      type: 'doughnut',
+      data: {
+        labels: ['جوش شیرین پارس — ۱۰٬۰۰۰ تن', 'سایر صادرکنندگان ایرانی — ۶٬۰۰۰ تن', 'چین — ۳٬۸۶۸ تن', 'سایر مبادی — ۵۳۲ تن'],
+        datasets: [{
+          data: [10000, 6000, 3868, 532],
+          backgroundColor: [c.copper, c.copper + '66', c.petrolDark, c.petrol + '55'],
+          borderColor: c.bg, borderWidth: 3
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, cutout: '60%',
+        plugins: {
+          legend: { position: 'bottom', rtl: true, labels: { color: c.ink, usePointStyle: true, boxWidth: 8, font: { size: 11.5 } } },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return ctx.label + ' (' + toFa(Math.round(ctx.parsed/204)/10) + '٪)'; } } }
+        }
+      }
+    }));
+
+    // ---- FOB spot range by origin ----
+    charts.push(new Chart(document.getElementById('chartFOB'), {
+      type: 'bar',
+      data: {
+        labels: ['چین (شاندونگ)', 'ترکیه (Kazan Soda)', 'ایران — پارس'],
+        datasets: [{
+          label: 'بازه FOB اسپات ($/تن)',
+          data: [[170,230],[300,320],[250,250]],
+          backgroundColor: [c.petrolDark, c.petrol + 'aa', c.copper],
+          borderRadius: 6,
+          maxBarThickness: 60
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ var d = ctx.raw; return d[0]===d[1] ? (fmt(d[0]) + '$ (پایه ثابت)') : (fmt(d[0]) + ' تا ' + fmt(d[1]) + '$'); } } }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: c.ink } },
+          y: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } }
+        }
+      }
+    }));
+
+    // ---- Distance chart ----
+    charts.push(new Chart(document.getElementById('chartDistance'), {
+      type: 'bar',
+      data: {
+        labels: ['ایران — خزر (انزلی-آستاراخان)', 'ترکیه — دریایی (سامسون-نووروسیسک)', 'چین — دریایی (چینگ‌دائو-ولادی‌وستوک)', 'چین — ریلی (هاربین-مسکو)', 'ایران — دریای سیاه (چابهار-نووروسیسک)', 'ایران — بالتیک (چابهار-سن‌پترزبورگ)'],
+        datasets: [{
+          data: [1011, 401, 1815, 6500, 7384, 12855],
+          backgroundColor: [c.copper, c.petrolDark, c.petrolDark, c.petrolDark, c.copper + '99', c.copper + '99'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return fmt(ctx.parsed.x) + ' کیلومتر'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11.5 } } }
+        }
+      }
+    }));
+
+    // ---- CIF/CPT stacked (Caspian / Black Sea / Baltic x normal/peak) ----
+    charts.push(new Chart(document.getElementById('chartCPT'), {
+      type: 'bar',
+      data: {
+        labels: ['خزر — عادی', 'خزر — اوج تقاضا', 'دریای سیاه — عادی', 'دریای سیاه — پرریسک', 'بالتیک — عادی', 'بالتیک — پرریسک'],
+        datasets: [
+          { label: 'FOB', data: [250,250,250,250,250,250], backgroundColor: c.petrolDark, borderRadius: { topLeft:0, topRight:0, bottomLeft:6, bottomRight:6 }, stack: 's' },
+          { label: 'حمل و بیمه (میانگین بازه)', data: [85,130,115,180,180,265], backgroundColor: c.copper, borderRadius: { topLeft:6, topRight:6, bottomLeft:0, bottomRight:0 }, stack: 's' }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { rtl: true, labels: { color: c.ink, usePointStyle: true } },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return ctx.dataset.label + ': ' + fmt(ctx.parsed.y) + '$'; } } }
+        },
+        scales: {
+          x: { stacked: true, grid: { display: false }, ticks: { color: c.ink, font: { size: 11 } } },
+          y: { stacked: true, grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } }
+        }
+      }
+    }));
+
+    // ---- Domestic production vs imports vs total apparent consumption ----
+    charts.push(new Chart(document.getElementById('chartConsumption'), {
+      type: 'bar',
+      data: {
+        labels: ['تولید داخلی BSK (۲۰۲۴)', 'واردات شناخته‌شده (۲۰۲۵)', 'مصرف ظاهری کل (برآورد سه‌روشی)'],
+        datasets: [{
+          data: [[0,193900],[0,20400],[115000,160000]],
+          backgroundColor: [c.petrolDark, c.copper, c.petrol + 'aa'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ var d = ctx.raw; return d[0]===0 ? (fmt(d[1]) + ' تن') : (fmt(d[0]) + ' تا ' + fmt(d[1]) + ' تن'); } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } },
+          y: { grid: { display: false }, ticks: { color: c.ink } }
+        }
+      }
+    }));
+
+    // ---- Comprehensive landed-cost comparison ----
+    charts.push(new Chart(document.getElementById('chartLanded'), {
+      type: 'bar',
+      data: {
+        labels: ['ایران (کریدور خزر)', 'چین (ولادی‌وستوک)', 'چین (رسیده به مسکو)', 'ترکیه — عادی', 'ترکیه — پرریسک'],
+        datasets: [
+          {
+            label: 'بازه قیمت تمام‌شده برآوردی ($/تن)',
+            data: [[320,400],[216.5,216.5],[350,420],[330,380],[370,440]],
+            backgroundColor: c.petrol + 'aa',
+            borderRadius: 6,
+            barThickness: 30
+          },
+          {
+            type: 'scatter',
+            label: 'قیمت واقعی/رسمی ثبت‌شده ($/تن)',
+            data: [ { x: 216.5, y: 'چین (ولادی‌وستوک)' } ],
+            backgroundColor: c.bad,
+            borderColor: c.bad,
+            pointStyle: 'rectRot',
+            pointRadius: 9,
+            pointHoverRadius: 11
+          }
+        ]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { rtl: true, labels: { color: c.ink, usePointStyle: true } },
+          tooltip: {
+            rtl: true, textDirection: 'rtl',
+            callbacks: {
+              label: function(ctx){
+                if (ctx.dataset.type === 'scatter') return ctx.dataset.label + ': ' + fmt(ctx.parsed.y) + '$';
+                var d = ctx.raw; return ctx.dataset.label + ': ' + fmt(d[0]) + ' تا ' + fmt(d[1]) + '$';
+              }
+            }
+          }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } }, min: 0, max: 480 },
+          y: { grid: { display: false }, ticks: { color: c.ink } }
+        }
+      }
+    }));
+  }
+
+  buildAll();
+  if (window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildAll);
+  }
+})();
+</script>
+
+</body>
+</html>
