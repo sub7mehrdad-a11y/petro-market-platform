@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>استراتژی بازاریابی عراق</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(26px,4vw,38px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 62ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(6, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:900px){ .kpi-row{ grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width:520px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+  .kpi.good .v{ color: #8FE3BE; }
+  .kpi.bad .v{ color: #F0A98F; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
+  strong{ color: var(--ink); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+  .callout.bad{ border-inline-start-color: var(--bad); background: var(--bad-bg); }
+  .callout.good{ border-inline-start-color: var(--good); background: var(--good-bg); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  :root[data-theme="dark"] .card .tag, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag{ color: var(--copper-400); } }
+  .card .tag.opp{ background: var(--good-bg); color: var(--good); }
+  .card .tag.risk{ background: var(--bad-bg); color: var(--bad); }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:15px; color:var(--ink); }
+
+  .stat-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:12px; margin: 16px 0 20px; }
+  @media (max-width:800px){ .stat-grid{ grid-template-columns: repeat(2,1fr); } }
+  .stat{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius:12px;
+    padding: 14px 16px; box-shadow: var(--card-shadow);
+  }
+  .stat .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-size:22px; font-weight:600; color: var(--petrol-700); }
+  :root[data-theme="dark"] .stat .v, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .stat .v{ color: var(--copper-400); } }
+  .stat .l{ font-size:12.5px; color: var(--muted); margin-top:3px; }
+  .stat .d{ font-size: 12px; margin-top:6px; font-weight:600; }
+  .stat .d.up{ color: var(--good); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+  .two-col{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap:16px; align-items:stretch; }
+  @media (max-width:820px){ .two-col{ grid-template-columns: 1fr; } }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>استراتژی بازاریابی سدیم بی‌کربنات در عراق</h1>
+    <p class="lead">اندازه واقعی بازار، آسیب‌پذیری‌های رقبای ترکیه‌ای/چینی، مزیت کریدور مهران و خریداران کلیدی هدف.</p>
+    <div class="meta">
+      <span>منبع: Trade Map + داده‌ی خرد Volza + تحلیل صنایع پایین‌دستی</span>
+      <span>محدوده: HS بی‌کربنات سدیم</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">+۱۳٬۰۰۰ <small>تن</small></div><div class="l">اندازه واقعی بازار ۲۰۲۵ (رسمی+پنهان)</div></div>
+      <div class="kpi good"><div class="v">۵٬۹۳۴ <small>تن</small></div><div class="l">صادرات پنهان ایران (Volza، ثبت‌نشده در Trade Map)</div></div>
+      <div class="kpi bad"><div class="v">٪۹۶</div><div class="l">سهم ترکیه از بازار رسمی ثبت‌شده</div></div>
+      <div class="kpi good"><div class="v">٪۳۷+</div><div class="l">رشد صادرات از مرز مهران، سه‌ماهه اول ۲۰۲۶</div></div>
+      <div class="kpi"><div class="v">۱۵۰ <small>م$</small></div><div class="l">ارزش صادرات مرز مهران، سه‌ماهه اول</div></div>
+      <div class="kpi good"><div class="v">&lt;۳ <small>روز</small></div><div class="l">زمان ترانزیت مهران تا بغداد</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">۱</span><h2>اقتصاد کلان و دینامیک پنهان تقاضا</h2></div>
+    <p>بازار مواد شیمیایی پایه عراق، به دلیل فقدان تاریخی زیرساخت تولید داخلی در زنجیره کلرآلکالی و کربنات‌ها، وابستگی مطلق و ساختاری به واردات دارد. اقتصاد عراق (تولید ناخالص داخلی تخمینی ۲۶۵ میلیارد دلار، جمعیت ۴۶.۶ میلیون نفر در ۲۰۲۶) در حال فاصله‌گرفتن از واردات کالای نهایی و حرکت به سمت صنایع پایین‌دستی/فرآوری است.</p>
+
+    <div class="two-col">
+      <div class="chart-box" style="margin:0">
+        <div class="chart-h" style="height:260px"><canvas id="chartMarketSize"></canvas></div>
+        <div class="cap">اندازه رسمی ثبت‌شده در برابر بازار پنهان — یک خطای محاسباتی فاحش در آمار رسمی</div>
+      </div>
+      <div class="chart-box" style="margin:0">
+        <div class="chart-h" style="height:260px"><canvas id="chartOfficialShare"></canvas></div>
+        <div class="cap">سهم بازار رسمی ثبت‌شده، ۲۰۲۵</div>
+      </div>
+    </div>
+    <div class="callout copper"><p>حجم کل واردات رسمی ثبت‌شده (Trade Map، ۲۰۲۵) <strong>۶٬۹۹۵ تن</strong> به ارزش ~۳ میلیون دلار است. اما واکاوی داده‌ی خرد گمرکی (Volza) نشان می‌دهد صادرات پنهان و ثبت‌نشده از مبدأ ایران <strong>۵٬۹۳۴ تن</strong> (میانگین ۲۶۴ $/تن) بوده — با تجمیع، اندازه واقعی بازار از <strong>۱۳٬۰۰۰ تن</strong> فراتر می‌رود.</p></div>
+
+    <h3>محرک‌های رشد تقاضا در چهار خوشه صنعتی</h3>
+    <div class="chart-box">
+      <div class="chart-h" style="height:230px"><canvas id="chartSectorGrowth"></canvas></div>
+      <div class="cap">نرخ رشد مرکب سالانه (CAGR) بخش‌های مصرف‌کننده</div>
+    </div>
+    <div class="cards">
+      <div class="card"><h4>لبنیات و فرآورده‌های شیر</h4><p>واردات لبنی عراق &gt;۷۶۳ میلیون دلار/سال؛ طرح ۹۵ میلیون دلاری FAO برای خوشه‌های تولید شیر روستایی؛ بازیگران: لبنیات ره‌سه‌ن، لبنیات نجف، مجتمع‌های موصل.</p></div>
+      <div class="card"><h4>شوینده و بهداشت خانگی (FMCG)</h4><p>بازار جهانی شوینده از ۸۸.۱۴ به ۱۳۲.۶۱ میلیارد دلار تا ۲۰۳۴؛ سدیم بی‌کربنات به‌عنوان جایگزین ارزان و سازگار با محیط‌زیست فسفات‌ها؛ بازیگران: Sanita، Poleks، Ezel Premium.</p></div>
+      <div class="card"><h4>آرد، شیرینی‌پزی و فرآوری غذا</h4><p>مگاپروژه آسیاب آرد الاتحاد در بابل — ظرفیت ۴٬۵۰۰ تن/روز (شش خط Bühler سوئیس)، انبار غلات ۱.۸ میلیون تن؛ بخش پردازش غذایی ٪۳۴ کل تقاضای جهانی بی‌کربنات.</p></div>
+      <div class="card"><h4>نوشیدنی</h4><p>بازار نوشیدنی غیرالکلی عراق از ۴.۷ به ۷.۱ میلیارد دلار (۲۰۲۶-۲۰۳۱)؛ بازیگران: گروه کاروانجی (کرکوک)، کوکاکولا ایچجک (کارخانه جدید بغداد، جولای ۲۰۲۵).</p></div>
+    </div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">۲</span><h2>تحلیل انتقادی رقبا و آسیب‌پذیری‌های استراتژیک</h2></div>
+    <p>رقبای اصلی به دو دسته تقسیم می‌شوند: تأمین‌کنندگان ترکیه‌ای (تأمین‌کننده اصلی بازار) و تأمین‌کنندگان چینی (بازیگران حاشیه‌ای). هر یک نقاط قوت مشخص دارند، اما آسیب‌پذیری‌هایی هم دارند که می‌توان با اهرم «تحویل فوری و قیمت پایین‌تر» دقیقاً هدف قرار داد.</p>
+
+    <h3>هژمونی متزلزل ترکیه (گروه‌های Ciner و WE Soda)</h3>
+    <p>Kazan Soda Elektrik و Eti Soda با ظرفیت ترکیبی &gt;۵ میلیون تن/سال (استخراج محلول از ترونای بی‌پازاری/کازان)، تسلط بلامنازع بر صادرات به عراق دارند — خلوص &gt;٪۹۹، ردپای کربن تا ٪۵۵ کمتر از رقبای سنتتیک اروپایی.</p>
+    <div class="chart-box">
+      <div class="chart-h" style="height:260px"><canvas id="chartCompetitorPrice"></canvas></div>
+      <div class="cap">قیمت سرخط جهانی در برابر قیمت واقعی تحویلی (DAP)، به تفکیک تأمین‌کننده و گرید — شکاف بین این دو، فرصت اصلی مذاکره قیمت است</div>
+    </div>
+    <div class="callout bad"><p><strong>پاشنه آشیل ترکیه — گلوگاه مرزی ابراهیم خلیل:</strong> مصوبه ۹۵۷ کابینه عراق و سیستم دیجیتال اجباری آسیکودا (ASYCUDA) در ۲۰۲۶ به بحران لجستیکی تبدیل شده؛ مناقشات اربیل-بغداد بر سر درآمد گمرکی باعث شده در مقاطعی (اکتبر ۲۰۲۵، اوایل ۲۰۲۶) ترخیص روزانه از ۳-۴ هزار کامیون به صفر برسد. زمان ترانزیت عادی ۳ تا ۵ روز، به هفته‌ها افزایش یافته — دموراژ، انبارداری و خطر توقف خط تولید برای خریداران مرکز/جنوب عراق.</p></div>
+
+    <h3>تله نقدینگی تأمین‌کنندگان چینی</h3>
+    <p>چین با قیمت‌های بسیار پایین (میانگین ۱۹۱ تا حداکثر ۲۹۰ $/تن FOB) تنها ٪۴ بازار را در اختیار دارد. مشکل ساختاری: زمان ترانزیت دریایی ۴۰ تا ۵۰ روز تا بندر ام‌القصر، حداقل سفارش سنگین، و پرداخت ٪۱۰۰ پیش‌پرداخت یا LC در دید — یعنی سرمایه خریدار عراقی نزدیک به دو ماه پیش از دریافت کالا بلوکه می‌شود. در اقتصادی با دسترسی دشوار به اعتبار بانکی، این هزینه فرصت جذابیت قیمت پایین چین را در محاسبه بهای تمام‌شده کل (TCO) از بین می‌برد.</p>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">۳</span><h2>مزیت صادرات ایران — کریدور مهران</h2></div>
+    <div class="callout good"><p>برخلاف مرز ابراهیم خلیل (درگیر تنش‌های بغداد-اربیل)، مرز مهران (زرباطیه) مستقیماً تحت کنترل دولت فدرال عراق (استان واسط) است و ترخیص با سرعت بالا و چالش کمتر انجام می‌شود. داده‌ی سه‌ماهه اول ۲۰۲۶: صادرات مرز مهران با ٪۳۷ رشد سالانه به <strong>۱۵۰ میلیون دلار</strong> (۵۲۴٬۰۰۰ تن) رسیده. فاصله ۱۵۰ کیلومتری مهران تا بغداد و دسترسی سریع به کربلا/بابل، زمان ترانزیت را به زیر ۳ روز کاهش می‌دهد.</p></div>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">۴</span><h2>شرکت‌های بازرگانی و مصرف‌کننده با پتانسل خرید بالا</h2></div>
+    <p>با تمرکز بر پایگاه داده خریداران کلیدی، چهار هلدینگ استراتژیک به‌عنوان اهداف اصلی افزایش سهم بازار انتخاب شده‌اند.</p>
+    <div class="chart-box">
+      <div class="chart-h" style="height:230px"><canvas id="chartBuyers"></canvas></div>
+      <div class="cap">پتانسیل خرید ماهانه (تن) — چهار خریدار هدف</div>
+    </div>
+    <div class="cards">
+      <div class="card"><h4>الاتحاد للصناعات الغذائية</h4><p>بابل (مدحتیه) — تصفیه شکر ۶٬۰۰۰ تن/روز، روغن‌کشی ۳٬۲۰۰ تن/روز، آسیاب آرد ۴٬۵۰۰ تن/روز (۲۰۲۵). پتانسیل &gt;۱٬۰۰۰ تن/ماه گرید غذایی؛ ۲۱۰ کامیون اختصاصی از بندر ام‌القصر — فعلاً عمدتاً از بنادر جنوبی/ترکیه تأمین می‌شود.</p></div>
+      <div class="card"><h4>الجود لتكنولوجيا الزراعة</h4><p>کربلا (الجزیره، وابسته به آستان قدس عباسی) — شوینده، ضدعفونی‌کننده، نهاده کشاورزی؛ ISO 9001:2015. پتانسیل &gt;۵۰۰ تن/ماه گرید صنعتی/کشاورزی. مجاورت به مرز مهران مزیت مطلق استراتژیک است.</p></div>
+      <div class="card"><h4>سانيتا (گروه INDEVCO)</h4><p>اربیل و بغداد — بخشی از هلدینگ چندملیتی لبنانی با &gt;۱۱٬۵۰۰ کارمند و صادرات به ۸۰ کشور. پتانسیل &gt;۱۰۰ تن/ماه گرید صنعتی؛ زنجیره تأمین کارخانه اربیل فعلاً به برندهای Ciner ترکیه وابسته است.</p></div>
+      <div class="card"><h4>كراوانجي للمشروبات</h4><p>کرکوک (آلتون‌کوپری) — از بزرگ‌ترین تولیدکنندگان نوشابه/آب معدنی/آبمیوه شمال و مرکز عراق. پتانسیل &gt;۱۰۰ تن/ماه گرید غذایی برای تصفیه آب صنعتی و تنظیم اسیدیته.</p></div>
+    </div>
+    <p style="font-size:13.5px;font-style:italic">لیست تکمیلی خریداران بالقوه در بانک شرکت‌های سایت در دسترس است.</p>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>منابع: ITC Trade Map، داده‌ی خرد بارنامه‌ای Volza، آمار گمرک مرز مهران، تحلیل صنایع پایین‌دستی عراق (لبنیات، شوینده، آرد/شیرینی‌پزی، نوشیدنی).</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){
+    return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US")); }
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  var charts = [];
+  function themeColors(){
+    return {
+      ink: cssVar('--ink-soft'),
+      grid: cssVar('--line-soft'),
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
+      copper: cssVar('--copper-500'),
+      copperDark: cssVar('--copper-600'),
+      bad: cssVar('--bad'),
+      good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+
+  function baseOptions(c){
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif";
+    Chart.defaults.color = c.ink;
+    Chart.defaults.borderColor = c.grid;
+  }
+
+  function buildAll(){
+    var c = themeColors();
+    baseOptions(c);
+    charts.forEach(function(ch){ ch.destroy(); });
+    charts = [];
+
+    // ---- Official vs hidden market size ----
+    charts.push(new Chart(document.getElementById('chartMarketSize'), {
+      type: 'bar',
+      data: {
+        labels: ['ثبت‌شده رسمی (Trade Map)', 'پنهان از ایران (Volza)', 'برآورد واقعی کل بازار'],
+        datasets: [{
+          data: [6995, 5934, 12929],
+          backgroundColor: [c.petrolDark, c.bad + 'cc', c.copper],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return fmt(ctx.parsed.x) + ' تن'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11.5 } } }
+        }
+      }
+    }));
+
+    // ---- Official market share donut ----
+    charts.push(new Chart(document.getElementById('chartOfficialShare'), {
+      type: 'doughnut',
+      data: {
+        labels: ['ترکیه — ٪۹۶', 'چین — ٪۴'],
+        datasets: [{ data: [96, 4], backgroundColor: [c.copper, c.petrolDark], borderColor: c.bg, borderWidth: 3 }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, cutout: '60%',
+        plugins: { legend: { position: 'bottom', rtl: true, labels: { color: c.ink, usePointStyle: true, boxWidth: 8 } } }
+      }
+    }));
+
+    // ---- Sector CAGR ----
+    charts.push(new Chart(document.getElementById('chartSectorGrowth'), {
+      type: 'bar',
+      data: {
+        labels: ['نوشیدنی (عراق)', 'غذایی گرید بی‌کربنات (جهانی)', 'لبنیات (خاورمیانه)', 'شوینده (جهانی)'],
+        datasets: [{ data: [8.52, 5.2, 4.64, 4.6], backgroundColor: c.copper, borderRadius: 6 }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return toFa(ctx.parsed.x) + '٪ CAGR'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return toFa(v) + '٪'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink } }
+        }
+      }
+    }));
+
+    // ---- Competitor headline vs delivered price ----
+    charts.push(new Chart(document.getElementById('chartCompetitorPrice'), {
+      type: 'bar',
+      data: {
+        labels: ['ترکیه — گرید صنعتی (DAP واقعی)', 'ترکیه — گرید غذایی (DAP واقعی)', 'ترکیه — پرمیوم خوراک دام (Birsen)', 'چین — FOB'],
+        datasets: [
+          {
+            label: 'بازه قیمت واقعی تحویلی',
+            data: [[315,348],[310,356],[670,670],[191,290]],
+            backgroundColor: [c.petrol + 'aa', c.petrol + 'aa', c.copperDark, c.petrolDark + '88'],
+            borderRadius: 6,
+            barThickness: 26
+          },
+          {
+            type: 'scatter',
+            label: 'میانگین سرخط جهانی ترکیه (FOB Mersin)',
+            data: [ { x: 450, y: 'ترکیه — گرید صنعتی (DAP واقعی)' } ],
+            backgroundColor: c.bad,
+            borderColor: c.bad,
+            pointStyle: 'rectRot',
+            pointRadius: 9,
+            pointHoverRadius: 11
+          }
+        ]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { rtl: true, labels: { color: c.ink, usePointStyle: true, font: { size: 11 } } },
+          tooltip: {
+            rtl: true, textDirection: 'rtl',
+            callbacks: {
+              label: function(ctx){
+                if (ctx.dataset.type === 'scatter') return ctx.dataset.label + ': ' + fmt(ctx.parsed.y) + '$';
+                var d = ctx.raw; return ctx.dataset.label + ': ' + fmt(d[0]) + ' تا ' + fmt(d[1]) + '$';
+              }
+            }
+          }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11 } } }
+        }
+      }
+    }));
+
+    // ---- Buyer potential ----
+    charts.push(new Chart(document.getElementById('chartBuyers'), {
+      type: 'bar',
+      data: {
+        labels: ['الاتحاد للصناعات الغذائية', 'الجود لتكنولوجيا الزراعة', 'سانيتا (INDEVCO)', 'كراوانجي للمشروبات'],
+        datasets: [{ data: [1000, 500, 100, 100], backgroundColor: [c.copper, c.copper + 'cc', c.petrol + 'aa', c.petrol + 'aa'], borderRadius: 6 }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return 'بیش از ' + fmt(ctx.parsed.x) + ' تن/ماه'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11.5 } } }
+        }
+      }
+    }));
+  }
+
+  buildAll();
+  if (window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildAll);
+  }
+})();
+</script>
+
+</body>
+</html>

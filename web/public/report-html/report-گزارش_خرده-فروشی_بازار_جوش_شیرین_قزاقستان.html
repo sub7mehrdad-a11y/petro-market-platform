@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>خرده‌فروشی جوش شیرین قزاقستان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(26px,4vw,38px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 62ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(6, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:900px){ .kpi-row{ grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width:520px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+  .kpi.good .v{ color: #8FE3BE; }
+  .kpi.bad .v{ color: #F0A98F; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
+  strong{ color: var(--ink); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  :root[data-theme="dark"] .card .tag, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag{ color: var(--copper-400); } }
+  .card p{ margin:0; font-size: 14.5px; }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>گزارش خرده‌فروشی و توزیع داخلی بازار جوش شیرین قزاقستان</h1>
+    <p class="lead">بررسی برندها، ساختار قیمت مصرف‌کننده و فرصت‌های ورود از طریق زنجیره توزیع داخلی.</p>
+    <div class="meta">
+      <span>منبع: بازدید مستقیم پلتفرم‌های فروش، سپتامبر ۲۰۲۶</span>
+      <span>نرخ ارز: ۴۴۷.۶ تنگه بر دلار</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi good"><div class="v">۳ تا ۶×</div><div class="l">پرمیوم بسته‌های کوچک مصرفی نسبت به فله</div></div>
+      <div class="kpi"><div class="v">٪۴۰-۵۰</div><div class="l">پرمیوم کیسه ۲۵ کیلویی نسبت به فله</div></div>
+      <div class="kpi"><div class="v">۵۵۹</div><div class="l">قیمت واقعی ثبت‌شده گمرک، روسیه ($/تن)</div></div>
+      <div class="kpi"><div class="v">۶۲۵-۶۷۰</div><div class="l">قیمت فله/عمده واقعی بازار ($/تن)</div></div>
+      <div class="kpi"><div class="v">۱٬۶۰۰-۳٬۷۰۰</div><div class="l">بازه قیمت بسته‌های کوچک مصرفی ($/تن)</div></div>
+      <div class="kpi"><div class="v">БСК</div><div class="l">برند غالب قفسه (روسیه)</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">۱</span><h2>خلاصه مدیریتی</h2></div>
+    <p>بازار مصرفی جوش شیرین قزاقستان به‌طور کامل به واردات وابسته است و هیچ تولیدکننده صنعتی بی‌کربنات سدیم در داخل کشور فعالیت نمی‌کند. برند کلاسیک روسی БСК (شرکت سودای باشقیرستان) با جعبه مقوایی ۵۰۰ گرمی، انتخاب غالب قفسه‌های خرده‌فروشی است. توزیع از دو مسیر اصلی انجام می‌شود: زنجیره‌های فیزیکی هایپرمارکت و پلتفرم‌های دیجیتال/اپ‌های تحویل.</p>
+    <div class="callout copper"><p><strong>یافته راهبردی اصلی:</strong> فرصت اقتصادی برای «جوش شیرین پارس» در فاصله چشمگیر میان قیمت فله وارداتی و قیمت قفسه مصرف‌کننده نهایی نهفته است: قیمت خرده‌فروشی بسته‌های کوچک مصرفی به‌طور معمول ۳ تا ۶ برابر قیمت فله/عمده است. این فاصله، فضای روشنی برای ورود از طریق بسته‌بندی برند اختصاصی یا قرارداد Private Label با زنجیره‌های بزرگ فروشگاهی ایجاد می‌کند.</p></div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">۲</span><h2>ساختار زنجیره خرده‌فروشی و کانال‌های توزیع</h2></div>
+    <p>نبود تولید داخلی به این معناست که کل بازار، از عمده تا خرده، به کالای وارداتی (عمدتاً با منشأ روسیه و در حجم کمتر چین) متکی است. توزیع مدرن این کالا از دو مسیر موازی صورت می‌گیرد:</p>
+    <div class="cards">
+      <div class="card"><span class="tag">زنجیره‌های فیزیکی</span><p>Magnum Cash &amp; Carry (بزرگ‌ترین شبکه کشور، با بخش عمده‌فروشی اختصاصی MagnumOpt)، Small &amp; Skif، Galmart (پریمیوم، آستانه/آلماتی)، Semeiniy و Astykzhan (زنجیره‌های منطقه‌ای)، Fix Price (بزرگ‌ترین زنجیره تخفیفی).</p></div>
+      <div class="card"><span class="tag">پلتفرم‌های دیجیتال</span><p>مارکت‌پلیس‌های سراسری Kaspi و Satu.kz، سوپرمارکت‌های آنلاین Arbuz.kz و Flip.kz، و اپ‌های تحویل محلی (vkusmart در آستانه) — سهم فزاینده‌ای از خرید خانوار در شهرهای بزرگ.</p></div>
+    </div>
+    <p>برند БСК به دلیل سابقه طولانی و طرح بسته‌بندی شناخته‌شده، سهم غالب قفسه محصولات کلاسیک ۵۰۰ گرمی را در اختیار دارد و عملاً استاندارد ذهنی مصرف‌کننده قزاقستانی محسوب می‌شود. در کنار آن، چند برند فرعی روسی (Доктор вкус، Приправыч) در بسته‌بندی‌های کوچک‌تر برای مصارف تخصصی پخت‌وپز عرضه می‌شوند، و توزیع‌کنندگان محلی محصول وارداتی فله (عمدتاً با منشأ چین) را زیر برندهای عمومی مانند «АС» بسته‌بندی و عرضه می‌کنند.</p>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">۳</span><h2>جدول برندها، بسته‌بندی و قیمت مصرف‌کننده</h2></div>
+    <p>جدول زیر بر پایه بازدید مستقیم از صفحات فروش پلتفرم‌های اصلی (Satu.kz، Semeiniy.kz، Biotus.kz و vkusmart.vmv.kz) در سپتامبر ۲۰۲۶ تهیه شده است.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>برند</th><th>مبدأ</th><th>بسته‌بندی</th><th>قیمت (تنگه)</th><th>معادل تقریبی ($/تن)</th></tr></thead>
+        <tbody>
+          <tr><td>БСК (باشقیرسودا)</td><td>روسیه</td><td>جعبه مقوایی، ۵۰۰ گرم</td><td class="num-cell">۳۵۷</td><td class="num-cell">≈۱٬۵۹۵</td></tr>
+          <tr><td>Доктор вкус</td><td>روسیه</td><td>پاکت نرم، ۱۸۰ گرم</td><td class="num-cell">۲۹۶</td><td class="num-cell">≈۳٬۶۷۰</td></tr>
+          <tr><td>Приправыч</td><td>روسیه</td><td>ساشه، ۲۰ گرم (قنادی)</td><td class="num-cell">۷۵</td><td class="num-cell">≈۸٬۳۸۰</td></tr>
+          <tr><td>АС (بسته‌بندی محلی)</td><td>قزاقستان (از فله وارداتی)</td><td>پاکت/قوطی، ۵۰۰ گرم</td><td class="num-cell">۳۵۵</td><td class="num-cell">≈۱٬۵۹۰</td></tr>
+          <tr><td>Сода АС</td><td>قزاقستان (از فله وارداتی)</td><td>جعبه، ۴۰۰ گرم</td><td class="num-cell">۵۴۰</td><td class="num-cell">≈۳٬۰۲۰</td></tr>
+          <tr><td>Arm &amp; Hammer</td><td>ایالات متحده</td><td>جعبه، ۲۲۷ گرم</td><td class="num-cell">۲٬۷۱۰</td><td class="num-cell">≈۲۶٬۶۷۰</td></tr>
+          <tr><td>محصول عمده (نمونه چین)</td><td>چین</td><td>فله (هر کیلوگرم)</td><td class="num-cell">۲۸۰/کیلو</td><td class="num-cell">≈۶۲۵</td></tr>
+          <tr><td>بسته‌بندی محلی نیمه‌عمده</td><td>قزاقستان (بازبسته‌بندی)</td><td>فله (هر کیلوگرم)</td><td class="num-cell">۳۰۰/کیلو</td><td class="num-cell">≈۶۷۰</td></tr>
+          <tr><td>کیسه صنعتی/نیمه‌خرده</td><td>قزاقستان (توزیع)</td><td>کیسه ۲۵ کیلویی</td><td class="num-cell">۴۳۰/کیلو</td><td class="num-cell">≈۹۶۰</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:280px"><canvas id="chartBrandPrice"></canvas></div>
+      <div class="cap">معادل دلاری بر تن به تفکیک بسته‌بندی (Приправыч و Arm &amp; Hammer به‌دلیل مقیاس/جایگاه کاملاً متفاوت — ساشه تخصصی و برند وارداتی پریمیوم — در نمودار نیامده‌اند)</div>
+    </div>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">۴</span><h2>تحلیل لایه‌های قیمتی: از گمرک تا قفسه</h2></div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:260px"><canvas id="chartLadder"></canvas></div>
+      <div class="cap">نردبان قیمت از درب کارخانه روسیه تا بسته کوچک مصرفی در قزاقستان ($/تن، مقادیر میانی بازه‌های گزارش‌شده)</div>
+    </div>
+    <p>بر اساس برآورد قیمت درب کارخانه (Ex-works) روسیه در بازه ۲۷۰ تا ۳۱۰ دلار بر تن و هزینه حمل ریلی تخمینی ۷۰ تا ۸۰ دلار بر تن، قیمت تمام‌شده مورد انتظار کالای روسی در آلماتی حدود ۳۴۰ تا ۳۹۰ دلار بر تن برآورد می‌شود؛ در حالی که آمار گمرک قزاقستان، ارزش واقعی ثبت‌شده واردات این کالا از روسیه را حدود ۵۵۹ دلار بر تن نشان می‌دهد.</p>
+    <p>داده‌های میدانی این گزارش نشان می‌دهد قیمت‌های فله/عمده واقعی بازار (نمونه چین و بسته‌بندی محلی نیمه‌عمده، حدود ۶۲۵ تا ۶۷۰ دلار بر تن) تنها ٪۱۲ تا ٪۲۰ بالاتر از رقم گمرکی ۵۵۹ دلار قرار دارند، نه چند برابر آن. این هم‌خوانی نشان می‌دهد سطح قیمت گمرکی ثبت‌شده با سطح قیمت عمده/نیمه‌عمده بازار داخلی هم‌راستاست و شکاف آن با برآورد ۳۴۰-۳۹۰ دلاری احتمالاً بیشتر ناشی از دست‌کم‌گرفته‌شدن هزینه واقعی تمام‌شده صادراتی (گرید محصول، گواهی استاندارد و اقلام هزینه‌ای جانبی) است، نه یک پرمیوم بسته‌بندی خرده‌فروشی پنهان.</p>
+    <div class="callout"><p><strong>پرمیوم واقعی و بسیار بزرگ‌تر بسته‌بندی</strong> در مرحله بعد از ورود کالا و در زنجیره توزیع داخلی ظاهر می‌شود: کیسه نیمه‌خرده‌فروشی ۲۵ کیلویی حدود ٪۴۰-۵۰ بالاتر از قیمت فله قیمت‌گذاری می‌شود (≈۹۶۰ دلار بر تن)، و بسته‌های کوچک مصرفی (۵۰۰ تا ۱۸۰ گرمی) در بازه ۳ تا ۶ برابر قیمت فله (≈۱٬۶۰۰ تا ۳٬۷۰۰ دلار بر تن) به فروش می‌رسند. به بیان دیگر، حاشیه سود واقعی این بازار در لایه توزیع/بسته‌بندی داخلی شکل می‌گیرد، نه در نقطه ورود گمرکی.</p></div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>منبع اصلی: بازدید مستقیم صفحات فروش Satu.kz، Semeiniy.kz، Biotus.kz و vkusmart.vmv.kz، سپتامبر ۲۰۲۶ — گزارش تحلیلی مفصل بازار واردات جوش شیرین قزاقستان (تجارت کلان/گمرکی) جداگانه در دسترس است.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){
+    return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US")); }
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  var charts = [];
+  function themeColors(){
+    return {
+      ink: cssVar('--ink-soft'),
+      grid: cssVar('--line-soft'),
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
+      copper: cssVar('--copper-500'),
+      copperDark: cssVar('--copper-600'),
+      bad: cssVar('--bad'),
+      good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+
+  function baseOptions(c){
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif";
+    Chart.defaults.color = c.ink;
+    Chart.defaults.borderColor = c.grid;
+  }
+
+  function buildAll(){
+    var c = themeColors();
+    baseOptions(c);
+    charts.forEach(function(ch){ ch.destroy(); });
+    charts = [];
+
+    // ---- Brand price per ton ----
+    charts.push(new Chart(document.getElementById('chartBrandPrice'), {
+      type: 'bar',
+      data: {
+        labels: ['محصول عمده (چین)','بسته‌بندی محلی نیمه‌عمده','کیسه صنعتی ۲۵کیلویی','АС — پاکت ۵۰۰گ','БСК — جعبه ۵۰۰گ','Сода АС — جعبه ۴۰۰گ','Доктор вкус — پاکت ۱۸۰گ'],
+        datasets: [{
+          data: [625,670,960,1590,1595,3020,3670],
+          backgroundColor: [c.petrolDark, c.petrolDark, c.petrol + 'aa', c.copper + '99', c.copper, c.copper, c.copperDark],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return fmt(ctx.parsed.x) + ' $/تن'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11.5 } } }
+        }
+      }
+    }));
+
+    // ---- Price ladder ----
+    charts.push(new Chart(document.getElementById('chartLadder'), {
+      type: 'bar',
+      data: {
+        labels: ['درب کارخانه روسیه (Ex-works)','برآورد رسیده به آلماتی (CIF)','واقعی ثبت‌شده گمرک','فله/عمده واقعی بازار','کیسه صنعتی ۲۵ کیلویی','بسته کوچک مصرفی (میانگین)'],
+        datasets: [{
+          data: [290, 365, 559, 647, 960, 2635],
+          backgroundColor: [c.petrolDark, c.petrol + 'cc', c.bad, c.petrol + '99', c.copper + 'cc', c.copper],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return fmt(ctx.parsed.x) + ' $/تن (میانی بازه)'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11.5 } } }
+        }
+      }
+    }));
+  }
+
+  buildAll();
+  if (window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildAll);
+  }
+})();
+</script>
+
+</body>
+</html>

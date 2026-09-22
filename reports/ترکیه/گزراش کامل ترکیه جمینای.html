@@ -1,0 +1,510 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>پژوهش جامع ترکیه</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(24px,3.6vw,36px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 62ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(6, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:900px){ .kpi-row{ grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width:520px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+  .kpi.good .v{ color: #8FE3BE; }
+  .kpi.bad .v{ color: #F0A98F; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
+  strong{ color: var(--ink); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+  .callout.bad{ border-inline-start-color: var(--bad); background: var(--bad-bg); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  :root[data-theme="dark"] .card .tag, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag{ color: var(--copper-400); } }
+  .card .tag.risk{ background: var(--bad-bg); color: var(--bad); }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:15px; color:var(--ink); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+  .two-col{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap:16px; align-items:stretch; }
+  @media (max-width:820px){ .two-col{ grid-template-columns: 1fr; } }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>پژوهش جامع اقتصاد، مهندسی تولید و استراتژی صادراتی بی‌کربنات سدیم ترکیه</h1>
+    <p class="lead">دوگانگی فناوری (استخراج محلول در برابر فرآیند سلوه)، ساختار هزینه، مقاصد صادراتی و مزیت رقابتی ترکیه در برابر چین و ایران.</p>
+    <div class="meta">
+      <span>محدوده: کد HS ۲۸۳۶۳۰</span>
+      <span>منبع اصلی: WITS، OEC، گزارش‌های مالی WE Soda/Şişecam</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۵۵۹٬۳۶۶ <small>تن</small></div><div class="l">صادرات جوش شیرین ترکیه، ۲۰۲۴ (رتبه ۲ جهان)</div></div>
+      <div class="kpi"><div class="v">۱۵۲-۱۶۱ <small>م$</small></div><div class="l">ارزش صادرات جوش شیرین، ۲۰۲۴</div></div>
+      <div class="kpi good"><div class="v">۹۰-۱۳۰</div><div class="l">هزینه تمام‌شده تولید ($/تن، استخراج محلول)</div></div>
+      <div class="kpi bad"><div class="v">٪۹۰+</div><div class="l">سهم ترکیه از بازار عراق</div></div>
+      <div class="kpi"><div class="v">۲۶۰-۳۲۰</div><div class="l">قیمت تحویل‌شده (DAP) به عراق ($/تن)</div></div>
+      <div class="kpi good"><div class="v">٪۵۶</div><div class="l">حاشیه سود نقدی عملیاتی WE Soda، ۲۰۲۵</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">۱</span><h2>مهندسی فرآیند و پایه‌های تکنولوژیک</h2></div>
+    <p>تولید بی‌کربنات سدیم ترکیه بر دو رویکرد کاملاً متمایز استوار است که این دوگانگی تکنولوژیک، مزیت رقابتی بی‌نظیری فراهم کرده است.</p>
+    <div class="cards">
+      <div class="card"><h4>تولید طبیعی — استخراج محلول (Solution Mining)</h4><p>استخراج ترونا از حوضه‌های بی‌پازاری و کازان (نزدیک آنکارا): تزریق آب گرم به عمق ۶۰۰-۸۰۰ متری، انحلال ترونا، پمپاژ به سطح و فرآیند مونوهیدرات — خلوص تا ٪۹۹.۸. بدون نیاز به کوره کلسیناسیون پرمصرف انرژی.</p></div>
+      <div class="card"><h4>تولید مصنوعی — فرآیند سلوه (Solvay)</h4><p>در مجتمع ساحلی مرسین: NaCl + NH₃ + CO₂ + H₂O → NaHCO₃ + NH₄Cl، با کوره‌های کلسیناسیون سنگ آهک پرانرژی و بازیابی آمونیاک. همین تفاوت، شالوده اصلی تفاوت بهای تمام‌شده و ردپای کربن محصولات ترکیه است.</p></div>
+    </div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">۲</span><h2>معماری صنعتی و ظرفیت تولیدکنندگان بزرگ</h2></div>
+    <p>صنعت تولید کربنات/بی‌کربنات سدیم ترکیه در انحصار دو ابرشرکت است: گروه سینر (WE Soda) و گروه شیشه‌جام (Soda Sanayii).</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>شرکت</th><th>فناوری</th><th>ظرفیت بی‌کربنات</th><th>ظرفیت کل کربنات‌ها</th><th>محل</th><th>وضعیت توسعه</th></tr></thead>
+        <tbody>
+          <tr><td>Kazan Soda Elektrik</td><td>استخراج محلول</td><td>۲۳۰٬۰۰۰ ← ۳۴۵٬۰۰۰ تن</td><td>~۳.۰ ← ۳.۴۵۵ میلیون تن</td><td>سینجان، آنکارا</td><td>در حال اجرای افزایش ظرفیت</td></tr>
+          <tr><td>Eti Soda</td><td>استخراج محلول</td><td>۲۰۰٬۰۰۰ تن</td><td>~۱.۹۵ میلیون تن</td><td>بی‌پازاری، آنکارا</td><td>تولید باثبات، ظرفیت کامل</td></tr>
+          <tr><td>Soda Sanayii A.Ş.</td><td>فرآیند سلوه (مصنوعی)</td><td>۱۲۲٬۰۰۰ تن</td><td>۱.۵ ← ۱.۷ میلیون تن</td><td>آکدنیز، مرسین</td><td>پروژه ۱۲۵.۳ م$ افزایش ظرفیت</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:230px"><canvas id="chartCapacity"></canvas></div>
+      <div class="cap">ظرفیت بی‌کربنات سدیم به تفکیک شرکت (هزار تن)؛ Kazan/Eti بر پایه استخراج محلول طبیعی، Soda Sanayii بر پایه فرآیند سلوه مصنوعی</div>
+    </div>
+    <p style="font-size:14px">گروه سینر با سرمایه‌گذاری &gt;۲ میلیارد دلار طی یک دهه و تملک اخیر Genesis Alkali آمریکا (۱.۴۲۵ میلیارد دلار)، ظرفیت جهانی خود را به ~۹.۵ میلیون تن رسانده — بزرگ‌ترین تولیدکننده سودای طبیعی جهان. مجتمع کازان با ۱.۶۵ میلیارد تن ذخیره ترونا (دومین ذخیره جهان پس از وایومینگ آمریکا)، طول عمر استخراج ۲۷ سال دارد؛ نیروگاه کوجنریشن اختصاصی آن (۳۸۰ مگاوات) سالانه ۲.۳ میلیارد کیلووات‌ساعت برق مازاد به شبکه آنکارا تزریق می‌کند.</p>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">۳</span><h2>آنالیز معماری هزینه‌ها</h2></div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:230px"><canvas id="chartCost"></canvas></div>
+      <div class="cap">بازه هزینه نقدی تولید بی‌کربنات سدیم به تفکیک فناوری و منطقه ($/تن)</div>
+    </div>
+    <p>در روش سلوه (مرسین)، بیش از ٪۶۰ هزینه عملیاتی به آمونیاک، گاز طبیعی و برق اختصاص دارد — میانگین اروپای غربی ~۲۵۰ $/تن؛ Soda Sanayii با یکپارچگی عمودی (معادن سنگ آهک/نمک اختصاصی + کوجنریشن ۱۲۰ م$) هزینه نهایی خود را به ۱۵۰-۱۹۰ $/تن رسانده.</p>
+    <p>در روش استخراج محلول (Kazan/Eti)، حذف کامل کوره‌های کلسیناسیون پرانرژی، هزینه نقدی تولید را به ۹۰-۱۲۵ $/تن (گزارش مالی WE Soda، ۲۰۲۳) می‌رساند — مزیت هزینه تحویل‌شده ۱۶۵-۱۸۰ $/تن نسبت به تولیدکنندگان مصنوعی اروپا. با احتساب بسته‌بندی/سربار/استهلاک، هزینه نهایی به‌ندرت از ۱۰۰-۱۳۰ $/تن فراتر می‌رود. WE Soda در سه‌ماهه سوم ۲۰۲۵، Adjusted EBITDA معادل ۱۰۵ $/تن و حاشیه سود نقدی عملیاتی (Netback) ٪۵۶ برای کل سال ثبت کرده است.</p>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">۴</span><h2>حجم صادرات و مقاصد جهانی</h2></div>
+    <p>ترکیه سومین صادرکننده بزرگ کربنات‌ها (فصل ۲۸۳۶) در جهان است — ۱.۲۹ میلیارد دلار صادرات در ۲۰۲۴ (٪۱۰.۶ سهم جهانی). برای بی‌کربنات سدیم خالص (HS ۲۸۳۶۳۰)، صادرات ۲۰۲۴ به ۱۵۲.۷-۱۶۱ میلیون دلار و ۵۵۹٬۳۶۶ تن رسید — پس از چین، دومین صادرکننده بزرگ جهان از نظر حجم.</p>
+    <div class="chart-box">
+      <div class="chart-h" style="height:280px"><canvas id="chartExports"></canvas></div>
+      <div class="cap">۱۰ مقصد برتر صادرات بی‌کربنات سدیم ترکیه، ۲۰۲۴ (میلیون دلار)</div>
+    </div>
+  </section>
+
+  <section id="s5">
+    <div class="sec-head"><span class="sec-num">۵</span><h2>لجستیک صادراتی و بازار استراتژیک عراق</h2></div>
+    <p>قیمت FOB مرسین برای گرید غذایی در سه‌ماهه اول ۲۰۲۶ در محدوده ۲۳۰-۲۷۰ $/تن تثبیت شد؛ تنش‌های خاورمیانه در مارس ۲۰۲۶ باعث افزایش ٪۲ قیمت شد چون خریداران منطقه‌ای برای امنیت تأمین به ترکیه هجوم آوردند. عراق (واردات کشاورزی/غذایی از ترکیه ۲.۹۹ میلیارد دلار در ۱۱ ماه ۲۰۲۵) با سهم &gt;٪۹۰ کاملاً به ترکیه وابسته است — چین تنها ۱۴۴ هزار دلار.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>مبدأ (ترکیه)</th><th>مقصد (عراق)</th><th>کرایه کامیون دربست</th><th>هزینه به ازای تن</th></tr></thead>
+        <tbody>
+          <tr><td>مرسین</td><td>زاخو/اربیل</td><td class="num-cell">۱٬۲۰۰-۱٬۵۰۰$</td><td class="num-cell">۵۰-۶۵$</td></tr>
+          <tr><td>مرسین</td><td>بغداد</td><td class="num-cell">۱٬۶۵۰-۲٬۰۰۰$</td><td class="num-cell">۷۰-۹۰$</td></tr>
+          <tr><td>استانبول/کوجائلی</td><td>زاخو/اربیل</td><td class="num-cell">۱٬۹۰۰-۲٬۳۰۰$</td><td class="num-cell">۸۰-۱۰۰$</td></tr>
+          <tr><td>آنکارا (کازان/اتی)</td><td>زاخو/سلیمانیه</td><td class="num-cell">۱٬۷۰۰-۲٬۲۵۰$</td><td class="num-cell">۷۵-۱۰۰$</td></tr>
+          <tr><td>همه مبادی (خرده‌بار)</td><td>همه مقاصد</td><td>۱۵۰-۲۵۰$/پالت</td><td class="num-cell">۱۵۰-۲۵۰$</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:200px"><canvas id="chartDAP"></canvas></div>
+      <div class="cap">ساختار قیمت تحویل‌شده (DAP) به مرز زاخو/انبار اربیل</div>
+    </div>
+    <div class="callout copper"><p>با ترانزیت جاده‌ای فقط ۲ تا ۵ روزه و قیمت DAP ۲۶۰-۳۲۰ $/تن، ترکیه عملاً امکان رقابت را از عرضه‌کنندگان آسیایی و اروپایی در بازار عراق سلب کرده است.</p></div>
+  </section>
+
+  <section id="s6">
+    <div class="sec-head"><span class="sec-num">۶</span><h2>مزیت رقابتی در برابر چین و ایران</h2></div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:200px"><canvas id="chartCarbon"></canvas></div>
+      <div class="cap">ردپای کربن تولید (تن CO₂e به ازای هر تن محصول)</div>
+    </div>
+    <div class="cards">
+      <div class="card"><h4>در برابر چین</h4><p>چین بزرگ‌ترین صادرکننده جهان (۲۲۴ م$، ٪۲۰ سهم جهانی، ۲۰۲۴) با تولیدکنندگانی چون Hunan Yuhua (۴۰۰ هزار تن) و Hengyang Hai Lian (۱.۴ میلیون تن). اما با گواهی CarbonClear™ و انتشار کربن ~⅓ چین، و ترانزیت ۲ تا ۵ روزه در برابر ۳۰-۴۵ روز دریایی چین، ترکیه با اجرای CBAM اتحادیه اروپا برتری روزافزونی پیدا می‌کند.</p></div>
+      <div class="card"><span class="tag risk">در برابر ایران</span><p>تحریم‌های بین‌المللی امکان گشایش LC از طریق سوییفت را برای شرکت‌های ایرانی مسدود می‌کند؛ خریداران ممتاز اروپایی/منطقه‌ای از ترس جرایم خزانه‌داری آمریکا از تجارت با ایران پرهیز می‌کنند. گواهی‌های BRC/GMP و خلوص &gt;٪۹۹.۸ ترکیه، اعتماد برندهای جهانی را جلب کرده — صنایع خریدار ثبات ترکیه را به قیمت ارزان اما متغیر ترجیح می‌دهند.</p></div>
+    </div>
+  </section>
+
+  <section id="s7">
+    <div class="sec-head"><span class="sec-num">۷</span><h2>چشم‌انداز استراتژیک</h2></div>
+    <p>ترکیه با بهره‌برداری هوشمندانه از موهبت زمین‌شناختی (معادن ترونای آنکارا) و سرمایه‌گذاری سنگین در تکنولوژی دوستدار محیط‌زیست (استخراج محلول)، بازاری &gt;۱۵۲ میلیون دلاری با صادرات سالانه &gt;۵۵۰ هزار تن ساخته و بازارهایی چون بلژیک، اسپانیا، ایتالیا و عراق را قبضه کرده است. با ادامه سرمایه‌گذاری‌های صدها میلیون دلاری، جایگاه ترکیه در زنجیره تأمین جهانی ترکیبات سدیم در دهه‌های آینده مستحکم‌تر خواهد شد.</p>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>منابع: WITS، Observatory of Economic Complexity (OEC)، گزارش‌های مالی WE Soda/Şişecam، اسناد ارزیابی اثرات زیست‌محیطی (ÇED) ترکیه، آمار گمرکی عراق.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){
+    return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US")); }
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  var charts = [];
+  function themeColors(){
+    return {
+      ink: cssVar('--ink-soft'),
+      grid: cssVar('--line-soft'),
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
+      copper: cssVar('--copper-500'),
+      copperDark: cssVar('--copper-600'),
+      bad: cssVar('--bad'),
+      good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+
+  function baseOptions(c){
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif";
+    Chart.defaults.color = c.ink;
+    Chart.defaults.borderColor = c.grid;
+  }
+
+  function buildAll(){
+    var c = themeColors();
+    baseOptions(c);
+    charts.forEach(function(ch){ ch.destroy(); });
+    charts = [];
+
+    // ---- Capacity by company ----
+    charts.push(new Chart(document.getElementById('chartCapacity'), {
+      type: 'bar',
+      data: {
+        labels: ['Kazan Soda Elektrik', 'Eti Soda', 'Soda Sanayii (مرسین)'],
+        datasets: [{
+          data: [[230,345],[200,200],[122,122]],
+          backgroundColor: [c.copper, c.copper + 'cc', c.petrolDark],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ var d = ctx.raw; return d[0]===d[1] ? (fmt(d[1]) + ' هزار تن') : (fmt(d[0]) + ' ← ' + fmt(d[1]) + ' هزار تن'); } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } },
+          y: { grid: { display: false }, ticks: { color: c.ink } }
+        }
+      }
+    }));
+
+    // ---- Cost comparison ----
+    charts.push(new Chart(document.getElementById('chartCost'), {
+      type: 'bar',
+      data: {
+        labels: ['استخراج محلول (Kazan/Eti)', 'سلوه — مرسین (Soda Sanayii)', 'سلوه — میانگین اروپای غربی'],
+        datasets: [{
+          data: [[90,125],[150,190],[250,250]],
+          backgroundColor: [c.good, c.copper, c.bad + 'aa'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ var d = ctx.raw; return d[0]===d[1] ? (fmt(d[1]) + ' $/تن') : (fmt(d[0]) + ' تا ' + fmt(d[1]) + ' $/تن'); } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 12 } } }
+        }
+      }
+    }));
+
+    // ---- Export destinations 2024 ----
+    charts.push(new Chart(document.getElementById('chartExports'), {
+      type: 'bar',
+      data: {
+        labels: ['بلژیک','اسپانیا','ایتالیا','هلند','لهستان','پرتغال','مصر','فرانسه','بریتانیا','اوکراین'],
+        datasets: [{
+          data: [23.00,15.72,14.82,11.60,8.92,7.28,7.85,6.50,5.44,4.59],
+          backgroundColor: c.petrol + 'aa',
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return fmt(ctx.parsed.x) + ' میلیون$'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink } }
+        }
+      }
+    }));
+
+    // ---- DAP buildup ----
+    charts.push(new Chart(document.getElementById('chartDAP'), {
+      type: 'bar',
+      data: {
+        labels: ['قیمت درب کارخانه (Ex-works)', 'هزینه حمل جاده‌ای', 'قیمت تحویل‌شده (DAP) زاخو/اربیل'],
+        datasets: [{
+          data: [[200,230],[60,90],[260,320]],
+          backgroundColor: [c.petrolDark, c.copper, c.copperDark],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ var d = ctx.raw; return fmt(d[0]) + ' تا ' + fmt(d[1]) + ' $/تن'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11.5 } } }
+        }
+      }
+    }));
+
+    // ---- Carbon footprint ----
+    charts.push(new Chart(document.getElementById('chartCarbon'), {
+      type: 'bar',
+      data: {
+        labels: ['ترکیه — استخراج محلول (CarbonClear™)', 'میانگین تولیدکنندگان سنتتیک (چین/اروپا)'],
+        datasets: [{
+          data: [0.275, 0.85],
+          backgroundColor: [c.good, c.bad],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return ctx.parsed.x + ' تن CO₂e/تن محصول'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11.5 } } }
+        }
+      }
+    }));
+  }
+
+  buildAll();
+  if (window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildAll);
+  }
+})();
+</script>
+
+</body>
+</html>
