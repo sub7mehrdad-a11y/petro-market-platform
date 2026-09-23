@@ -3,11 +3,16 @@
 // (نام شرکت، کشور، گرید) طبق خواسته‌ی صریح کاربر. هیچ جمله‌ی دیگه‌ای از خودمون
 // اضافه/کم نشده تا متن تأییدشده دست‌نخورده بمونه.
 //
-// چرا لینک دانلود به‌جای پیوست واقعی (تصمیم ۲۰۲۶-۰۹-۱۳): سرور SMTP شرکت
-// (mail.parssoda.com) روی هر پیوست واقعی بالای ~۵۰-۱۰۰ کیلوبایت با
-// ECONNRESET/ETIMEDOUT شکست می‌خورد (با بیسکشن سیستماتیک تأیید شد — مشکل
-// زیرساخت سرور ایمیل، نه کد ما). به‌جاش کاتالوگ‌ها روی خودِ سایت میزبانی
-// می‌شن و فقط لینکشون توی متن ایمیل میاد.
+// کاتالوگ‌های food/feed/industrial: چون خودشون صفحه‌ی وب روی parssoda.com
+// هستن (نه فایل)، همیشه به‌صورت لینک توی متن میان.
+//
+// کاتالوگ بسته‌بندی: برخلاف تصمیم قبلی (۲۰۲۶-۰۹-۱۳ — که بیسکشن سیستماتیک
+// نشون داد سرور SMTP شرکت روی پیوست بالای ~۵۰-۱۰۰ کیلوبایت با
+// ECONNRESET/ETIMEDOUT شکست می‌خوره)، در ۲۰۲۶-۰۹-۲۳ با تست واقعی (فایل
+// All Packing.pdf، ۳.۲ مگابایت، به ایمیل کاربر) مشخص شد این محدودیت دیگه
+// وجود نداره — ایمیل رسید و پیوست سالم بود. پس این یکی الان *پیوست واقعی*
+// است (توی send/route.js اضافه می‌شه)، نه لینک؛ اینجا فقط توی متن ایمیل
+// اشاره می‌شه که پیوست شده.
 
 // شبکه‌ی ایمنیِ دوم برای فرمت ایمیل (اولی: scripts/clean_company_emails.py که
 // خودِ داده‌ی companies.json رو پاک می‌کنه). این یکی سمت runtime سایت است —
@@ -21,20 +26,18 @@ export function isValidEmail(email) {
   return typeof email === "string" && EMAIL_FORMAT_RE.test(email.trim());
 }
 
-const CATALOG_URL_ENV_KEYS = {
-  packing: "OUTREACH_CATALOG_URL_PACKING",
-  food: "OUTREACH_CATALOG_URL_FOOD",
-  feed: "OUTREACH_CATALOG_URL_FEED",
-  industrial: "OUTREACH_CATALOG_URL_INDUSTRIAL",
-  // برای "unclear" از همون لینک فود گرید استفاده می‌شه (پیش‌فرض تصمیم کاربر).
-  unclear: "OUTREACH_CATALOG_URL_FOOD",
-};
-
-const CATALOG_LABEL = {
-  food: "Food Grade Catalogue",
-  feed: "Cattle / Feed Grade Catalogue",
-  industrial: "Industrial Grade Catalogue",
-  unclear: "Food Grade Catalogue",
+// هر گرید یک یا چند لینک داره — «دامی» چون صفحه‌ی عمومی‌اش (Products/Feed-Grade)
+// عملاً خالیه، هر دو زیرصفحه‌ی واقعی (گاوداری + طیور) با هم فرستاده می‌شن
+// (تصمیم صریح کاربر، ۲۰۲۶-۰۹-۲۳). "unclear" از همون لینک فود گرید استفاده
+// می‌کنه (پیش‌فرض تصمیم قبلی کاربر).
+const CATALOG_LINKS_CONFIG = {
+  food: [{ label: "Food Grade Catalogue", envKey: "OUTREACH_CATALOG_URL_FOOD" }],
+  feed: [
+    { label: "Feed Grade Catalogue — Dairy Cows", envKey: "OUTREACH_CATALOG_URL_FEED_DAIRY" },
+    { label: "Feed Grade Catalogue — Poultry", envKey: "OUTREACH_CATALOG_URL_FEED_POULTRY" },
+  ],
+  industrial: [{ label: "Industrial Grade Catalogue", envKey: "OUTREACH_CATALOG_URL_INDUSTRIAL" }],
+  unclear: [{ label: "Food Grade Catalogue", envKey: "OUTREACH_CATALOG_URL_FOOD" }],
 };
 
 const GRADE_LABEL_FA = {
@@ -85,23 +88,27 @@ export function gradeLabelFa(grade) {
 
 // لینک‌های واقعی رو از env می‌خونه (بعد از اینکه کاتالوگ‌ها روی سایت آپلود و
 // URLشون داده بشه، همین‌جا پر می‌شن — بدون نیاز به تغییر کد). تا وقتی خالی‌ان،
-// null برمی‌گرده و فراخوان (preview/send) باید به‌جای فرستادن لینک شکسته، هشدار
-// بده یا از ارسال جلوگیری کنه.
+// url هر ردیف null برمی‌گرده و فراخوان (preview/send) باید به‌جای فرستادن لینک
+// شکسته، هشدار بده یا از ارسال جلوگیری کنه.
 export function getCatalogLinks(grade) {
-  const packingUrl = process.env.OUTREACH_CATALOG_URL_PACKING || null;
-  const gradeKey = CATALOG_URL_ENV_KEYS[grade] ? grade : "unclear";
-  const catalogUrl = process.env[CATALOG_URL_ENV_KEYS[gradeKey]] || null;
+  const gradeKey = CATALOG_LINKS_CONFIG[grade] ? grade : "unclear";
+  const links = CATALOG_LINKS_CONFIG[gradeKey].map(({ label, envKey }) => ({
+    label,
+    url: process.env[envKey] || null,
+    envKey,
+  }));
   return {
-    packingUrl,
-    catalogUrl,
-    catalogLabel: CATALOG_LABEL[gradeKey] || CATALOG_LABEL.unclear,
-    missing: [!packingUrl && "OUTREACH_CATALOG_URL_PACKING", !catalogUrl && CATALOG_URL_ENV_KEYS[gradeKey]].filter(
-      Boolean
-    ),
+    links,
+    missing: links.filter((l) => !l.url).map((l) => l.envKey),
   };
 }
 
 const SUBJECT = "Sodium Bicarbonate (Food/Industrial Grade) from Iran — Sepehran Chemical";
+
+// مسیر نسبی به ریشه‌ی مخزن (نه web/) — send/route.js با ROOT خودش join می‌کنه.
+// یک منبع واحد برای اسم/مسیر فایل، تا جای دیگه‌ای تکرار نشه.
+export const PACKING_PDF_RELATIVE_PATH = "assets/outreach/All Packing.pdf";
+export const PACKING_PDF_FILENAME = "Pars Baking Soda Group - Packing Details.pdf";
 
 // متن پایه، عیناً از Email Marketing.docx — {{COMPANY}}, {{COUNTRY_EN}} و
 // {{GRADE_SENTENCE}} تنها جاهای شخصی‌سازی‌شده‌ن.
@@ -125,7 +132,7 @@ We would be delighted to become your trusted business partner in {{COUNTRY_EN}}.
 
 To prepare our best quotation, kindly let us know your required product grade, specifications, packaging, and estimated quantity.
 
-For more information about our company and products, please find our catalogues below:
+Please find our full packing options attached (PDF), and our product catalogues below:
 {{CATALOG_LINKS}}
 We would be pleased to discuss your requirements and provide a solution tailored to your business needs.
 
@@ -154,10 +161,8 @@ export function renderOutreachEmail(company) {
   // وقتی لینکی هنوز تنظیم نشده، به‌جای فرستادن یک URL خالی/شکسته توی متن،
   // صراحتاً می‌نویسیم که لینک در دست تکمیله — تا هیچ ایمیل نیمه‌کاره‌ای
   // (حتی توی حالت پیش‌نمایش) شبیه چیز نهایی به نظر نرسه.
-  const catalogLinksBlock = [
-    `All Packing Details: ${catalogLinks.packingUrl || "[LINK PENDING]"}`,
-    `${catalogLinks.catalogLabel}: ${catalogLinks.catalogUrl || "[LINK PENDING]"}`,
-  ].join("\n") + "\n";
+  const catalogLinksBlock =
+    catalogLinks.links.map((l) => `${l.label}: ${l.url || "[LINK PENDING]"}`).join("\n") + "\n";
 
   const body = BASE_TEMPLATE
     .replaceAll("{{COMPANY}}", companyName)

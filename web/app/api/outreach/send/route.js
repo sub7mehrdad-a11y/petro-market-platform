@@ -3,10 +3,16 @@ import path from "path";
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import { getCompanies, getCountryEnglishName, getEmailOutreachSent } from "@/lib/data";
-import { renderOutreachEmail, isValidEmail } from "@/lib/outreachTemplate";
+import {
+  renderOutreachEmail,
+  isValidEmail,
+  PACKING_PDF_RELATIVE_PATH,
+  PACKING_PDF_FILENAME,
+} from "@/lib/outreachTemplate";
 
 const ROOT = path.join(process.cwd(), "..");
 const SENT_LOG_FILE = path.join(ROOT, "data", "email_outreach_sent.json");
+const PACKING_PDF_PATH = path.join(ROOT, PACKING_PDF_RELATIVE_PATH);
 
 // ⚠️ سقف هر درخواست — طبق تصمیم صریح کاربر (دسته‌ای، نه یکجا برای همه‌ی
 // شرکت‌ها) تا ریسک اسپم‌فلگ‌شدن دامنه‌ی ایمیل شرکت پایین بمونه.
@@ -76,13 +82,13 @@ export async function POST(request) {
   }
 
   // شبکه‌ی ایمنی: حتی اگه یک روز OUTREACH_SENDING_ENABLED زودتر از موعد true
-  // بشه، تا وقتی همه‌ی لینک‌های کاتالوگ (بسته‌بندی + هر سه گرید) روی سایت
-  // آپلود و توی env گذاشته نشدن، هیچ ایمیلی با لینک "[LINK PENDING]" واقعاً
-  // فرستاده نمی‌شه — چون از قبل نمی‌دونیم دسته‌ی انتخاب‌شده چه گریدهایی داره.
+  // بشه، تا وقتی همه‌ی لینک‌های کاتالوگ (هر سه گرید) روی سایت آپلود و توی env
+  // گذاشته نشدن، هیچ ایمیلی با لینک "[LINK PENDING]" واقعاً فرستاده نمی‌شه —
+  // چون از قبل نمی‌دونیم دسته‌ی انتخاب‌شده چه گریدهایی داره.
   const requiredLinkEnvVars = [
-    "OUTREACH_CATALOG_URL_PACKING",
     "OUTREACH_CATALOG_URL_FOOD",
-    "OUTREACH_CATALOG_URL_FEED",
+    "OUTREACH_CATALOG_URL_FEED_DAIRY",
+    "OUTREACH_CATALOG_URL_FEED_POULTRY",
     "OUTREACH_CATALOG_URL_INDUSTRIAL",
   ];
   const missingLinkEnvVars = requiredLinkEnvVars.filter((key) => !process.env[key]);
@@ -91,6 +97,16 @@ export async function POST(request) {
       {
         error: `لینک‌های کاتالوگ هنوز روی سایت آپلود/تنظیم نشدن (متغیرهای env گمشده: ${missingLinkEnvVars.join(", ")}).`,
       },
+      { status: 500 }
+    );
+  }
+
+  // کاتالوگ بسته‌بندی دیگه لینک نیست، پیوست واقعیه — قبل از هر ارسالی مطمئن
+  // شو فایلش سر جاشه (وگرنه sendMail برای هر شرکت جدا خطا می‌داد، به‌جای
+  // یک خطای واضح یک‌جا).
+  if (!fs.existsSync(PACKING_PDF_PATH)) {
+    return NextResponse.json(
+      { error: `فایل پیوست بسته‌بندی پیدا نشد: ${PACKING_PDF_RELATIVE_PATH}` },
       { status: 500 }
     );
   }
@@ -136,9 +152,11 @@ export async function POST(request) {
         ...(ccList.length > 0 ? { cc: ccList } : {}),
         subject: rendered.subject,
         text: rendered.body,
-        // عمداً بدون attachments — کاتالوگ‌ها به‌صورت لینک داخل متن ایمیلن
-        // (نه فایل پیوست)، چون سرور SMTP شرکت روی پیوست‌های واقعی شکست
-        // می‌خورد. جزئیات کامل در web/lib/outreachTemplate.js.
+        // کاتالوگ بسته‌بندی پیوست واقعی می‌شه (تست واقعی ۲۰۲۶-۰۹-۲۳ نشون داد
+        // سرور SMTP شرکت دیگه روی این حجم شکست نمی‌خوره)؛ بقیه‌ی کاتالوگ‌ها
+        // (food/feed/industrial) چون صفحه‌ی وبن نه فایل، همچنان لینک می‌مونن —
+        // جزئیات کامل در web/lib/outreachTemplate.js.
+        attachments: [{ filename: PACKING_PDF_FILENAME, path: PACKING_PDF_PATH }],
       });
       results.push({ id, ok: true });
       newSentRecords.push({
