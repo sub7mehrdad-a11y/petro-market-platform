@@ -7,6 +7,7 @@ const CONTENT_TYPES = {
   ".pdf": "application/pdf",
   ".doc": "application/msword",
   ".docx": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+  ".html": "text/html; charset=utf-8",
 };
 
 // دانلود همیشه از روی id در manifest انجام می‌شه (نه از روی مسیر خام URL)

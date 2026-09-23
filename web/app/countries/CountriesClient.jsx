@@ -94,6 +94,12 @@ export default function CountriesClient({ countries }) {
         subtitle="پرونده‌ی بازارهای جهانی محصول — آمار تجارت، روند صادرات و محتوای اختصاصی هر کشور."
         actions={
           <>
+            <Link
+              href="/unions"
+              className="text-sm text-petrol-700 hover:text-petrol-900 border border-petrol-300 hover:border-petrol-500 rounded-full px-4 py-2 transition-colors"
+            >
+              اتحادیه‌ها ←
+            </Link>
             <input
               type="text"
               placeholder="جست‌وجوی کشور…"
@@ -115,7 +121,7 @@ export default function CountriesClient({ countries }) {
         }
       />
 
-      <p className="text-xs text-petrol-300 mb-4 leading-6">
+      <p className="text-xs text-slate-500 mb-4 leading-6">
         آمار تراز/قیمت از ITC Trade Map (۲۰۲۵) — یک رتبه‌بندی جهانی کلی، نه لزوماً رابطه‌ی
         تجاری با ایران. «شریک تجاری» فقط برای کشورهایی که گزارش اختصاصی دارن (نشان کوچک
         روی کارت) واقعی و موجوده.

@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>معماری اطلاعاتی چین</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(24px,3.6vw,36px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 62ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(6, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:900px){ .kpi-row{ grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width:520px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+  .kpi.good .v{ color: #8FE3BE; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
+  strong{ color: var(--ink); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  :root[data-theme="dark"] .card .tag, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag{ color: var(--copper-400); } }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:14.5px; color:var(--ink); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); }
+
+  .term-grid{ display:grid; grid-template-columns: repeat(3,1fr); gap:10px; margin: 14px 0; }
+  @media (max-width:800px){ .term-grid{ grid-template-columns: repeat(2,1fr); } }
+  @media (max-width:520px){ .term-grid{ grid-template-columns: 1fr; } }
+  .term{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 10px;
+    padding: 10px 12px; box-shadow: var(--card-shadow);
+  }
+  .term .zh{ font-size: 15px; font-weight:700; color: var(--petrol-700); }
+  :root[data-theme="dark"] .term .zh, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .term .zh{ color: var(--copper-400); } }
+  .term .fa{ font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>معماری اطلاعاتی و تحلیل استراتژیک بازار کربنات هیدروژن سدیم در چین</h1>
+    <p class="lead">طرح معماری یک ایجنت هوش مصنوعی برای پایش روزانه‌ی بازار چین — پنج لایه منبع اطلاعاتی، هستی‌شناسی معنایی و الگوهای استنتاج مرتبه دوم.</p>
+    <div class="meta">
+      <span>کد تعرفه گمرکی چین: HS ۲۸۳۶۳۰۰۰</span>
+      <span>محور اصلی: بویان شیمیایی (یوان‌شینگ سابق، ۰۰۰۶۸۳.SZ)</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۹.۶ <small>م تن</small></div><div class="l">ظرفیت کربنات سدیم بویان (از ۱.۱ م تن اولیه)</div></div>
+      <div class="kpi"><div class="v">۱.۵ <small>م تن</small></div><div class="l">ظرفیت جوش شیرین بویان</div></div>
+      <div class="kpi good"><div class="v">٪۹۵.۰۷</div><div class="l">نرخ بهره‌برداری بویان، ۲۰۲۱</div></div>
+      <div class="kpi"><div class="v">۷۶۱ <small>هزار تن</small></div><div class="l">رکورد تولید هفتگی کربنات سدیم صنعت، مه ۲۰۲۵</div></div>
+      <div class="kpi"><div class="v">٪۹۱</div><div class="l">نرخ بهره‌برداری صنعت در همان هفته</div></div>
+      <div class="kpi"><div class="v">۲۱ مه ۲۰۲۵</div><div class="l">تغییر نام یوان‌شینگ → بویان شیمیایی</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">۱</span><h2>ساختار بنیادین بازار و نهاد پیشرو</h2></div>
+    <p>بیش از ٪۵۱.۳ ظرفیت تولید جوش شیرین چین در منطقه مرکزی (华中地区) متمرکز است، اما رهبری بلامنازع در اختیار غول‌های مغولستان داخلی با مزیت استخراج قلیای طبیعی (Natural Alkali) است. «شرکت مواد شیمیایی بویان مغولستان داخلی» — تا ۲۱ مه ۲۰۲۵ با نام «انرژی یوان‌شینگ» شناخته می‌شد (کد سهام بدون تغییر: ۰۰۰۶۸۳) — به‌تنهایی ٪۴۰-۵۰ سهم صنعت جوش شیرین چین را دارد.</p>
+    <div class="chart-box">
+      <div class="chart-h" style="height:230px"><canvas id="chartCapacity"></canvas></div>
+      <div class="cap">رشد ظرفیت بویان/یوان‌شینگ (هزار تن در سال)</div>
+    </div>
+    <p>ظرفیت اولیه جوش شیرین این شرکت ~۱.۱ میلیون تن بود (تولید واقعی ۱.۰۴۵۷ میلیون تن با نرخ بهره‌برداری ٪۹۵.۰۷ در ۲۰۲۱)؛ با تکمیل دو فاز پروژه تاموسو در آلاشان، ظرفیت کربنات سدیم به ۹.۶ میلیون تن و ظرفیت جوش شیرین به ۱.۵ میلیون تن رسیده — با پروژه‌های در حال احداث اضافه (۲.۸ میلیون تن کربنات تا پایان ۲۰۲۵، ۱.۶ میلیون تن جوش شیرین تا اواسط ۲۰۲۶). در نیمه اول ۲۰۲۶ این شرکت ۶.۴۲۵ میلیون تن تولید و ۵.۸۲۹ میلیون تن فروخته است.</p>
+    <div class="callout copper"><p><strong>تنوع‌بخشی پایین‌دستی:</strong> بویان محصولات FMCG بر پایه جوش شیرین هم تولید می‌کند — برند خوراکی «مالان» (تنها دارنده نشان غذای سبز در این حوزه)، قرص جوشان، خمیردندان، شوینده میوه/سبزی و تمیزکننده لباسشویی. پایش نفوذ این محصولات در خرده‌فروشی، سیگنال ارزشمندی از تقاضای مصرف‌کننده نهایی است.</p></div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">۲</span><h2>پنج لایه استراتژیک منبع اطلاعاتی</h2></div>
+    <div class="cards">
+      <div class="card"><span class="tag">لایه ۱</span><p>پورتال‌های رسمی تولیدکنندگان — اخبار سرمایه‌گذاران، توقف/راه‌اندازی خطوط، گزارش‌های مالی دوره‌ای.</p></div>
+      <div class="card"><span class="tag">لایه ۲</span><p>پلتفرم‌های هوش تجاری قیمت‌گذاری — Zhuochuang Information (卓创资讯، sci99.com) و Baichuan Yingfu (百川盈孚، baiinfo.com): قیمت‌های نقدی، تعطیلی کارخانه، تحلیل احساسات بازار.</p></div>
+      <div class="card"><span class="tag">لایه ۳</span><p>درگاه گمرکی چین (stats.customs.gov.cn) — کوئری بر پایه HS ۲۸۳۶۳۰۰۰؛ رصد موانع غیرتعرفه‌ای مثل گواهی سلامت CCIC برای صادرات به ترکیه و مجوز «شرط G» برای اقلام دوکاربرد.</p></div>
+      <div class="card"><span class="tag">لایه ۴</span><p>نهادهای تنظیم‌گر و انجمن صنفی — CISIA (نمک‌های معدنی) و CPCIF (نفت و شیمی): هشدار مازاد ظرفیت، استانداردهای تولید پاک، گزارش ESG صنعت.</p></div>
+      <div class="card"><span class="tag">لایه ۵</span><p>پورتال‌های مالی/بازار سرمایه — EastMoney، Sina Finance، Sohu: رهگیری نمادهای ۰۰۰۶۸۳ (بویان)، ۶۰۰۹۲۹ (Snowsky)، ۰۰۰۷۰۷ (Shuanghuan) برای همبستگی قیمت کالا و ارزش سهام.</p></div>
+    </div>
+
+    <h3>نهادهای هدف لایه یک</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>نهاد</th><th>نام چینی / نماد</th><th>پورتال</th><th>محورهای استخراج</th></tr></thead>
+        <tbody>
+          <tr><td>بویان شیمیایی (یوان‌شینگ سابق)</td><td>内蒙古博源化工 (SZ:000683)</td><td>yuanxing.chinacoal.com</td><td>پروژه‌های ۱.۶/۲.۸ م‌تنی، تولید تاموسو، فروش مالان</td></tr>
+          <tr><td>صنعت نمک شوتیان</td><td>雪天盐业 (SH:600929)</td><td>snowskysalt.com.cn</td><td>&gt;۸ م‌تن تولید سالانه، خلوص ٪۹۹.۶</td></tr>
+          <tr><td>هوبی شوان‌هوان</td><td>湖北双环科技 (SZ:000707)</td><td>hbshkj.cn</td><td>جوش شیرین ۳۰ هزار تن، کربنات سبک/سنگین برند هونگ‌شوان‌هوان</td></tr>
+          <tr><td>شاندونگ هایهوا</td><td>山东海化集团</td><td>haihua.com.cn</td><td>کاتالوگ محصولات، قیمت پلتفرم فروش الکترونیکی</td></tr>
+          <tr><td>بوها تیانجین</td><td>天津渤化</td><td>cn-ctbe.com</td><td>ظرفیت مواد شیمیایی پایه</td></tr>
+          <tr><td>گلدن-الفنت سیچوان</td><td>四川金象赛瑞化工 (OTC:834994)</td><td>jxgf.com</td><td>کودهای نیتروژنی، زنجیره تأمین منطقه‌ای</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">۳</span><h2>هستی‌شناسی معنایی و کلیدواژه‌های محرک جستجو</h2></div>
+    <p>ساختار زبان تجاری چین نیازمند نقشه دانشی یکپارچه است — نه صرفاً ترجمه مستقیم.</p>
+    <div class="term-grid">
+      <div class="term"><div class="zh">碳酸氢钠 / 小苏打</div><div class="fa">کربنات هیدروژن سدیم / جوش شیرین — مترادف قطعی</div></div>
+      <div class="term"><div class="zh">纯碱</div><div class="fa">خاکستر سودا / کربنات سدیم — ماده اولیه مرتبط</div></div>
+      <div class="term"><div class="zh">重质纯碱 / 轻质纯碱</div><div class="fa">سودای سنگین / سودای سبک</div></div>
+      <div class="term"><div class="zh">产能 / 产量</div><div class="fa">ظرفیت نامی / تولید واقعی محقق‌شده</div></div>
+      <div class="term"><div class="zh">开工负荷率</div><div class="fa">نرخ بهره‌برداری / لود کارخانه</div></div>
+      <div class="term"><div class="zh">出厂价格</div><div class="fa">قیمت درب کارخانه (Ex-factory)</div></div>
+      <div class="term"><div class="zh">交投气氛</div><div class="fa">احساسات حاکم بر معاملات — برای مدل‌سازی تقاضای کوتاه‌مدت</div></div>
+    </div>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">۴</span><h2>استنتاج مرتبه دوم — فراتر از خواندن اعداد</h2></div>
+    <div class="cards">
+      <div class="card"><h4>همبستگی با کربنات سدیم</h4><p>در مه ۲۰۲۵ تولید هفتگی کربنات سدیم رکورد ۷۶۱ هزار تن (نرخ بهره‌برداری ٪۹۱) زد، در حالی که موجودی انبارها روی ~۸۷۰ هزار تن انباشته شد و تقاضای شیشه تخت (به‌دلیل بحران مستغلات چین) افت کرد — سیگنال هشدار زودهنگام برای سرریز مازاد تولید به خطوط جوش شیرین.</p></div>
+      <div class="card"><h4>متغیرهای کلان ژئوپلیتیک</h4><p>فروکش‌کردن تنش‌های تعرفه‌ای در مقاطعی باعث بازیابی قیمت قراردادهای آتی کربنات سدیم/جوش شیرین شده — نیازمند ماژول تحلیل اخبار کلان اقتصادی برای مدل‌سازی این ارتباط.</p></div>
+      <div class="card"><h4>چرخه‌های تعمیر و نگهداری</h4><p>اورهال برنامه‌ریزی‌شده می‌تواند موقتاً فشار مازاد عرضه را خنثی کند، اما روند کلی بازار را در برابر ورود ظرفیت جدید تغییر نمی‌دهد — رصد کلماتی مثل «توقف تولید» و «راه‌اندازی آزمایشی» برای ترسیم جدول شوک‌های عرضه لازم است.</p></div>
+      <div class="card"><h4>هدف نهایی</h4><p>یکپارچه‌سازی این پنج لایه، ایجنت را قادر می‌سازد فراتر از گزارش تغییرات روزانه قیمت/ظرفیت، الگوهای پنهان زنجیره تأمین و تأثیر سیاست‌گذاری کلان را با دقت پیش‌بینی کند.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>منابع: yuanxing.chinacoal.com، ochem.sci99.com (卓创资讯)، baiinfo.com (百川盈孚)، stats.customs.gov.cn، cisia.org، cpcif.org.cn، data.eastmoney.com، finance.sina.com.cn، q.stock.sohu.com.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){
+    return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US")); }
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  var charts = [];
+  function themeColors(){
+    return {
+      ink: cssVar('--ink-soft'),
+      grid: cssVar('--line-soft'),
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
+      copper: cssVar('--copper-500'),
+      copperDark: cssVar('--copper-600'),
+      bad: cssVar('--bad'),
+      good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+
+  function baseOptions(c){
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif";
+    Chart.defaults.color = c.ink;
+    Chart.defaults.borderColor = c.grid;
+  }
+
+  function buildAll(){
+    var c = themeColors();
+    baseOptions(c);
+    charts.forEach(function(ch){ ch.destroy(); });
+    charts = [];
+
+    charts.push(new Chart(document.getElementById('chartCapacity'), {
+      type: 'bar',
+      data: {
+        labels: ['کربنات سدیم — اولیه', 'کربنات سدیم — فعلی', 'جوش شیرین — اولیه', 'جوش شیرین — فعلی'],
+        datasets: [{
+          data: [1100, 9600, 1100, 1500],
+          backgroundColor: [c.petrol + '99', c.petrolDark, c.copper + '99', c.copper],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return fmt(ctx.parsed.x) + ' هزار تن'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } },
+          y: { grid: { display: false }, ticks: { color: c.ink } }
+        }
+      }
+    }));
+  }
+
+  buildAll();
+  if (window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildAll);
+  }
+})();
+</script>
+
+</body>
+</html>

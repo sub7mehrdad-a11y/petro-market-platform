@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import {
   getCountries, getCountrySummary, getCountryProfile, getTradeMapForCountry, getImportSuppliers,
   getIranExports, getIranExportToCountry, getPerCapitaConsumption, getCompetitorForCountry,
+  getMarketShareHistory, getUnionsForCountry,
 } from "@/lib/data";
 import CompanyTable from "../../components/CompanyTable";
 import ExhibitionTable from "../../components/ExhibitionTable";
@@ -10,6 +11,7 @@ import WorldRouteMap from "../../components/WorldRouteMap";
 import PageHeader from "../../components/PageHeader";
 import CountryStatStrip from "../../components/CountryStatStrip";
 import SupplierBreakdown from "../../components/SupplierBreakdown";
+import MarketShareTrend from "../../components/MarketShareTrend";
 import ExportTrend from "../../components/ExportTrend";
 import IranExportSection from "../../components/IranExportSection";
 
@@ -67,6 +69,7 @@ export default async function CountryPage({ params }) {
   const profile = getCountryProfile(country);
   const trade = getTradeMapForCountry(country);
   const suppliers = getImportSuppliers(country);
+  const shareHistory = getMarketShareHistory(country);
   const iranExports = country === "ایران" ? getIranExports() : null;
   const iranExportToHere = country !== "ایران" ? getIranExportToCountry(country) : null;
   const perCapita = getPerCapitaConsumption(country);
@@ -79,6 +82,7 @@ export default async function CountryPage({ params }) {
   // رقم واردات دقیق‌تری از ITC نتیجه گرفته، باید همین‌جا (در یکی از این دو
   // فایل) real_trade_stats بگیره تا آمار صفحه‌اش خودکار به‌روز بشه.
   const realTrade = getCompetitorForCountry(country)?.real_trade_stats || profile?.real_trade_stats || null;
+  const unions = getUnionsForCountry(country);
   const sortedExhibitions = sortExhibitionsByDate(exhibitions);
   const smartReport = reports.find((r) => r.report_type === "summary");
 
@@ -87,7 +91,7 @@ export default async function CountryPage({ params }) {
       <PageHeader
         breadcrumb={[
           { label: "داشبورد", href: "/" },
-          { label: "کشورها", href: "/countries" },
+          { label: "کشورها و اتحادیه‌ها", href: "/countries" },
           { label: country },
         ]}
         title={country}
@@ -151,14 +155,19 @@ export default async function CountryPage({ params }) {
             value: companies.length.toLocaleString("fa-IR"),
             unit: "شرکت",
           },
-          perCapita?.estimated_tons != null && {
+          // برآورد سرانه‌ی جهانی یک حدس عمومی بر پایه‌ی جمعیت/سرانه‌ی متوسط جهانیه؛
+          // وقتی گزارش تحلیلی مفصل رقم واقعی بازار رو داره (realTrade)، این تخمین
+          // عمومی می‌تونه به‌شدت متفاوت و گمراه‌کننده باشه (مثلاً برای ازبکستان
+          // ۴۸,۱۶۹ تن تخمین سرانه در برابر ۱۳,۰۰۰ تن واقعی گزارش) — پس هروقت رقم
+          // واقعی داریم، این تخمین عمومی اصلاً نشون داده نمی‌شه.
+          !realTrade && perCapita?.estimated_tons != null && {
             label: perCapita.is_population_based
               ? `برآورد بازار مصرف (${TIER_FA[perCapita.tier] || "بر پایه‌ی جمعیت"})`
               : "برآورد بازار مصرف سالانه",
             value: perCapita.estimated_tons.toLocaleString("fa-IR"),
             unit: "تن/سال",
           },
-          perCapita && {
+          !realTrade && perCapita && {
             label: `مصرف سرانه${perCapita.is_population_based ? ` (${TIER_FA[perCapita.tier] || "میانگین جهانی"})` : perCapita.is_estimated ? " (برآوردی)" : ""}`,
             value: perCapita.kg_per_capita.toLocaleString("fa-IR"),
             unit: "کیلوگرم/نفر",
@@ -171,24 +180,54 @@ export default async function CountryPage({ params }) {
         ].filter(Boolean)}
       />
 
+      {unions.length > 0 && (
+        <section className="card p-5">
+          <h2 className="text-lg font-bold mb-1">عضویت در پیمان‌های تجاری چندجانبه</h2>
+          <p className="text-xs text-slate-500 mb-4">
+            اتحادیه‌ها/پیمان‌هایی که {country} در آن‌ها عضو، ناظر یا شریک است — برای تعرفهٔ ترجیحی
+            احتمالی و شناخت رقبای منطقه‌ای، جزئیات هر پیمان را ببینید.
+          </p>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {unions.map((u) => (
+              <Link
+                key={u.id}
+                href={`/unions/${u.id}`}
+                className="block border border-slate-200 rounded-lg p-3 hover:border-copper-500 transition-colors"
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="font-medium text-sm text-petrol-900">{u.name_fa}</span>
+                  <span className="text-[10px] text-slate-400 shrink-0">{u.short_fa}</span>
+                </div>
+                <div className="text-xs text-slate-500 mt-1">
+                  {u.type_fa} ·{" "}
+                  {u.relation === "member"
+                    ? "عضو"
+                    : u.relation === "observer"
+                    ? "عضو ناظر"
+                    : u.relation === "partner"
+                    ? "کشور شریک"
+                    : "عضو وابسته"}
+                </div>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       {iranExports && <IranExportSection data={iranExports} />}
 
       {suppliers && <SupplierBreakdown data={suppliers} />}
+
+      {shareHistory && <MarketShareTrend data={shareHistory} />}
 
       {trade && (trade.exports_2025 || trade.imports_2025) && (
         <section className="card p-5">
           <h2 className="text-lg font-bold mb-1">آمار تجارت جهانی محصول (۲۰۲۵)</h2>
           <p className="text-xs text-slate-500 mb-4">
-            منبع: ITC Trade Map — رتبه‌بندی کلی جهانی این کشور، نه لزوماً رابطه‌ی تجاری با ایران.
+            {realTrade
+              ? "منبع صادرات: ITC Trade Map (رتبه‌بندی کلی جهانی، نه لزوماً رابطه‌ی تجاری با ایران) — منبع واردات: گزارش تحلیلی مفصل (اصلاح‌شده، جایگزین آمار ناقص ITC)."
+              : "منبع: ITC Trade Map — رتبه‌بندی کلی جهانی این کشور، نه لزوماً رابطه‌ی تجاری با ایران."}
           </p>
-          {realTrade && trade?.imports_2025?.quantity != null && (
-            <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-md px-3 py-2 mb-4">
-              ⚠ رقم «واردات» زیر از آمار آینه‌ی (Mirror) ITC Trade Map است و برای {country} ناقصه —
-              فقط {trade.imports_2025.quantity.toLocaleString("fa-IR")} تن رو نشون می‌ده، درحالی‌که
-              واردات واقعی حدود {realTrade.imports_tons.toLocaleString("fa-IR")} تنه (بالای همین صفحه، از
-              گزارش تحلیلی مفصل).
-            </p>
-          )}
           <div className="grid gap-4 sm:grid-cols-2">
             {trade.exports_2025 && (
               <div className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 p-4">
@@ -238,48 +277,74 @@ export default async function CountryPage({ params }) {
             )}
             {trade.imports_2025 && (
               <div className="rounded-lg border border-slate-200 border-s-4 border-s-petrol-400 p-4">
-                <div className="text-xs font-bold text-petrol-800 mb-2">واردات</div>
-                <dl className="text-sm space-y-1.5">
-                  <div className="flex justify-between gap-2">
-                    <dt className="text-slate-500">ارزش کل</dt>
-                    <dd className="font-tabular font-medium">
-                      {(trade.imports_2025.value_usd_k * 1000).toLocaleString("fa-IR")} دلار
-                    </dd>
-                  </div>
-                  {trade.imports_2025.quantity != null && (
-                    <div className="flex justify-between gap-2">
-                      <dt className="text-slate-500">حجم</dt>
-                      <dd className="font-tabular font-medium">
-                        {trade.imports_2025.quantity.toLocaleString("fa-IR")} {trade.imports_2025.quantity_unit}
-                      </dd>
-                    </div>
+                <div className="text-xs font-bold text-petrol-800 mb-2">
+                  واردات
+                  {realTrade && (
+                    <span className="font-normal text-amber-700"> — اصلاح‌شده طبق گزارش تحلیلی</span>
                   )}
-                  {trade.imports_2025.unit_value_usd != null && (
-                    <div className="flex justify-between gap-2">
-                      <dt className="text-slate-500">قیمت میانگین</dt>
+                </div>
+                {realTrade ? (
+                  // به‌جای آمار آینه‌ی (Mirror) ناقص ITC، مستقیم رقم واقعی گزارش
+                  // تحلیلی مفصل رو نشون می‌دیم — نه اینکه عدد غلط رو نگه داریم و
+                  // فقط کنارش هشدار بدیم. ارزش کل/قیمت میانگین/تعرفه‌ی ITC عمداً
+                  // حذف شدن چون بر پایه‌ی همون حجم غلط محاسبه شده بودن و دیگه با
+                  // حجم اصلاح‌شده هم‌خونی ندارن.
+                  <div className="text-sm">
+                    <div className="flex justify-between gap-2 mb-2">
+                      <dt className="text-slate-500">حجم واقعی</dt>
                       <dd className="font-tabular font-bold text-petrol-800">
-                        {trade.imports_2025.unit_value_usd.toLocaleString("fa-IR")} دلار/تن
+                        {realTrade.imports_tons.toLocaleString("fa-IR")} تن
                       </dd>
                     </div>
-                  )}
-                  {trade.imports_2025.avg_tariff_pct != null && (
+                    {realTrade.imports_note && (
+                      <p className="text-xs text-slate-500 leading-6 pt-2 border-t border-slate-100">
+                        {realTrade.imports_note}
+                      </p>
+                    )}
+                  </div>
+                ) : (
+                  <dl className="text-sm space-y-1.5">
                     <div className="flex justify-between gap-2">
-                      <dt className="text-slate-500">تعرفه‌ی گمرکی میانگین</dt>
+                      <dt className="text-slate-500">ارزش کل</dt>
                       <dd className="font-tabular font-medium">
-                        {trade.imports_2025.avg_tariff_pct.toLocaleString("fa-IR")}٪
+                        {(trade.imports_2025.value_usd_k * 1000).toLocaleString("fa-IR")} دلار
                       </dd>
                     </div>
-                  )}
-                  {trade.imports_2025.growth_value_1y_pct != null && (
-                    <div className="flex justify-between gap-2">
-                      <dt className="text-slate-500">رشد ارزش (۱ ساله)</dt>
-                      <dd className="font-tabular font-medium">
-                        {trade.imports_2025.growth_value_1y_pct > 0 ? "+" : ""}
-                        {trade.imports_2025.growth_value_1y_pct.toLocaleString("fa-IR")}٪
-                      </dd>
-                    </div>
-                  )}
-                </dl>
+                    {trade.imports_2025.quantity != null && (
+                      <div className="flex justify-between gap-2">
+                        <dt className="text-slate-500">حجم</dt>
+                        <dd className="font-tabular font-medium">
+                          {trade.imports_2025.quantity.toLocaleString("fa-IR")} {trade.imports_2025.quantity_unit}
+                        </dd>
+                      </div>
+                    )}
+                    {trade.imports_2025.unit_value_usd != null && (
+                      <div className="flex justify-between gap-2">
+                        <dt className="text-slate-500">قیمت میانگین</dt>
+                        <dd className="font-tabular font-bold text-petrol-800">
+                          {trade.imports_2025.unit_value_usd.toLocaleString("fa-IR")} دلار/تن
+                        </dd>
+                      </div>
+                    )}
+                    {trade.imports_2025.avg_tariff_pct != null && (
+                      <div className="flex justify-between gap-2">
+                        <dt className="text-slate-500">تعرفه‌ی گمرکی میانگین</dt>
+                        <dd className="font-tabular font-medium">
+                          {trade.imports_2025.avg_tariff_pct.toLocaleString("fa-IR")}٪
+                        </dd>
+                      </div>
+                    )}
+                    {trade.imports_2025.growth_value_1y_pct != null && (
+                      <div className="flex justify-between gap-2">
+                        <dt className="text-slate-500">رشد ارزش (۱ ساله)</dt>
+                        <dd className="font-tabular font-medium">
+                          {trade.imports_2025.growth_value_1y_pct > 0 ? "+" : ""}
+                          {trade.imports_2025.growth_value_1y_pct.toLocaleString("fa-IR")}٪
+                        </dd>
+                      </div>
+                    )}
+                  </dl>
+                )}
               </div>
             )}
           </div>

@@ -1,9 +1,13 @@
 import Link from "next/link";
-import { getFlatPriceRecords, getNewsAnalysis, getTradeMapForCountry, getIranExports } from "@/lib/data";
+import {
+  getFlatPriceRecords, getNewsAnalysis, getTradeMapForCountry, getIranExports,
+  getGlobalMarketShareHistory,
+} from "@/lib/data";
 import PriceSection from "./components/PriceSection";
 import NewsCard from "./components/NewsCard";
 import KpiRow from "./components/KpiRow";
 import PageHeader from "./components/PageHeader";
+import MarketShareTrend from "./components/MarketShareTrend";
 
 const BASE_FOB_USD = 250;
 
@@ -82,6 +86,8 @@ export default function DashboardPage() {
       }
     : null;
 
+  const globalShareHistory = getGlobalMarketShareHistory();
+
   const kpiCards = [
     {
       label: "قیمت پایه‌ی مرجع FOB ما",
@@ -121,6 +127,10 @@ export default function DashboardPage() {
         highlightSpecs={SODA_ASH_HIGHLIGHTS}
         allRows={rows}
       />
+
+      {globalShareHistory && (
+        <MarketShareTrend data={globalShareHistory} title="روند سهم صادرکنندگان بزرگ از بازار جهانی" />
+      )}
 
       <section className="card p-5">
         <h2 className="text-lg font-bold mb-3">مهم‌ترین تحلیل‌های خبری</h2>

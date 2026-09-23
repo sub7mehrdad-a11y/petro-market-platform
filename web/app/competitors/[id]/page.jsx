@@ -104,7 +104,7 @@ export default async function CompetitorPage({ params }) {
   return (
     <div className="space-y-6">
       <div>
-        <Link href="/competitors" className="text-sm text-petrol-300 hover:text-copper-300 transition-colors">
+        <Link href="/competitors" className="text-sm text-slate-500 hover:text-copper-700 transition-colors">
           ← تحلیل رقبا
         </Link>
       </div>
@@ -419,6 +419,36 @@ export default async function CompetitorPage({ params }) {
                     <td className="py-2 pe-4 font-medium whitespace-nowrap">{t.period}</td>
                     <td className="py-2 pe-4 font-tabular font-bold text-copper-800 whitespace-nowrap">{t.range}</td>
                     <td className="py-2 text-slate-500">{t.note}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Section>
+      )}
+
+      {/* روند سالانه‌ی حجم صادرات — برای رقبایی که داده‌ی چندساله (با کیفیت متفاوت هر سال) دارن */}
+      {c.export_volume_trend && (
+        <Section title={c.export_volume_trend.title} subtitle={c.export_volume_trend.note}>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="text-right text-slate-500 border-b border-slate-200">
+                  <th className="py-2 pe-4">سال</th>
+                  <th className="py-2 pe-4">وضعیت انتشار داده</th>
+                  <th className="py-2 pe-4">حجم صادرات</th>
+                  <th className="py-2 pe-4">توضیح / رشد</th>
+                  <th className="py-2">منبع</th>
+                </tr>
+              </thead>
+              <tbody>
+                {c.export_volume_trend.rows.map((r, i) => (
+                  <tr key={i} className="border-b border-slate-100 align-top">
+                    <td className="py-2 pe-4 font-bold text-petrol-900 font-tabular whitespace-nowrap">{r.year}</td>
+                    <td className="py-2 pe-4 text-slate-600">{r.status}</td>
+                    <td className="py-2 pe-4 font-tabular font-medium whitespace-nowrap">{r.volume}</td>
+                    <td className="py-2 pe-4 text-slate-600">{r.detail}</td>
+                    <td className="py-2 text-slate-400 text-xs">{r.source}</td>
                   </tr>
                 ))}
               </tbody>

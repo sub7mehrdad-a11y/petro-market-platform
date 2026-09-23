@@ -55,8 +55,11 @@ export default function TransitEstimator({ places, rates }) {
       distanceKm,
       // کرایه‌ی یک کامیون: نرخ میانه‌ی مشاهده‌شده × فاصله
       truckCost: perKm.median * distanceKm,
-      truckLow: perKm.min != null ? perKm.min * distanceKm : null,
-      truckHigh: perKm.max != null ? perKm.max * distanceKm : null,
+      // p10/p90 نه min/max خام — یک پست پرت (تک‌افتاده و به‌احتمال غلط‌خوانده‌شده)
+      // می‌تونه min/max رو به بازه‌ای بی‌معنا (مثلاً چند تومان تا چند صد میلیون)
+      // جابه‌جا کنه؛ نگاه کن توضیح summarize() توی web/lib/data.js.
+      truckLow: perKm.p10 != null ? perKm.p10 * distanceKm : null,
+      truckHigh: perKm.p90 != null ? perKm.p90 * distanceKm : null,
       // فقط اگر نمونه‌ی تناژدار داشتیم؛ وگرنه چیزی از خودمان نمی‌سازیم
       perTonCost: perTonKm.median != null ? perTonKm.median * distanceKm : null,
     };
@@ -144,8 +147,8 @@ export default function TransitEstimator({ places, rates }) {
 
             {result.truckLow != null && (
               <div className="text-xs text-slate-500 mt-1">
-                بازه‌ی مشاهده‌شده در نمونه: {formatToman(result.truckLow)} تا{" "}
-                {formatToman(result.truckHigh)}
+                بازه‌ی رایج (۱۰ تا ۹۰ صدکِ نمونه، بدون دو سر افراطی): {formatToman(result.truckLow)}{" "}
+                تا {formatToman(result.truckHigh)}
               </div>
             )}
 

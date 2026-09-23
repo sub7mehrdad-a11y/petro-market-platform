@@ -1,0 +1,531 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بازار جهانی جوش شیرین</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(28px,4.2vw,42px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 62ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(6, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:900px){ .kpi-row{ grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width:520px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+  .kpi.good .v{ color: #8FE3BE; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
+  strong{ color: var(--ink); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+  .callout.bad{ border-inline-start-color: var(--bad); background: var(--bad-bg); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  :root[data-theme="dark"] .card .tag, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag{ color: var(--copper-400); } }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:14.5px; color:var(--ink); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0 0 8px; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>گزارش جامع بازار جهانی جوش‌شیرین</h1>
+    <p class="lead">تحلیل رقابتی جهانی برند «جوش شیرین پارس» — تولید، مصرف سرانه، تفکیک گرید/صنعت، قیمت‌ها و تجارت جهانی؛ با مقایسه‌ی صریح منابع متناقض به‌جای یک عدد قطعی.</p>
+    <div class="meta">
+      <span>کد HS: ۲۸۳۶۳۰</span>
+      <span>منبع اصلی: IndexBox، TrendEconomy/UN Comtrade، فایلینگ SEC شرکت‌ها</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۳.۵-۶.۸ <small>میلیارد$</small></div><div class="l">ارزش بازار جهانی ۲۰۲۴ (بسته به منبع)</div></div>
+      <div class="kpi"><div class="v">۶.۲-۱۲ <small>م تن</small></div><div class="l">حجم مصرف جهانی (بسته به منبع)</div></div>
+      <div class="kpi"><div class="v">٪۵۳</div><div class="l">سهم تولید چین+آمریکا+هند</div></div>
+      <div class="kpi"><div class="v">۹۹۱ <small>م$</small></div><div class="l">ارزش صادرات جهانی HS۲۸۳۶۳۰، ۲۰۲۴</div></div>
+      <div class="kpi"><div class="v">۰.۸۴ <small>کیلوگرم</small></div><div class="l">میانگین مصرف سرانه جهانی</div></div>
+      <div class="kpi good"><div class="v">٪۶.۵</div><div class="l">CAGR گرید دارویی — سریع‌ترین رشد</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="s0">
+    <div class="sec-head"><span class="sec-num">TL;DR</span><h2>خلاصه سه‌خطی</h2></div>
+    <p>بازار جهانی از نظر ارزش بین ۳.۵ تا ۶.۸ میلیارد دلار و از نظر حجم بین ۶.۲ تا ۱۲ میلیون تن برآورد می‌شود (اختلاف ناشی از تعریف متفاوت دامنه محصول). چین، آمریکا و هند مجموعاً ٪۴۶ مصرف و ٪۵۳ تولید جهانی را دارند. بزرگ‌ترین کاربرد جهانی غذا/نوشیدنی است اما ترکیب مصرف به‌شدت منطقه‌ای است — شکاف مصرف سرانه بین کشورهای توسعه‌یافته (۴-۶.۵ کیلوگرم/نفر) و در حال توسعه (کمتر از ۱-۲ کیلوگرم/نفر) بسیار مشهود است.</p>
+    <div class="cards">
+      <div class="card"><h4>بازیگران اصلی جهانی</h4><p>Solvay (بلژیک، برند BICAR، ۹ کارخانه)، Church &amp; Dwight (آمریکا، Arm &amp; Hammer)، Tata Chemicals (هند)، Tosoh/Asahi Kasei (ژاپن)، Şişecam/Ciner-WE Soda (ترکیه)، تولیدکنندگان چین.</p></div>
+      <div class="card"><h4>تجارت جهانی</h4><p>ارزش صادرات: ۸۷۷ م$ (۲۰۲۳) ← ۹۹۱ م$ (۲۰۲۴). چین و ترکیه بزرگ‌ترین صادرکنندگان — مجموعاً ~٪۵۲-۵۵ حجم.</p></div>
+    </div>
+  </section>
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">۱</span><h2>تولید و مصرف جهانی</h2></div>
+    <p>برآوردهای ارزش بازار بین مؤسسات تحقیقاتی بسیار پراکنده‌اند و باید با احتیاط استفاده شوند:</p>
+    <div class="chart-box">
+      <div class="chart-h" style="height:280px"><canvas id="chartMarketValue"></canvas></div>
+      <div class="cap">ارزش بازار جهانی به تفکیک منبع (میلیارد دلار، سال پایه ۲۰۲۴-۲۰۲۵)</div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>منبع</th><th>ارزش بازار</th><th>سال پایه</th><th>پیش‌بینی</th><th>CAGR</th></tr></thead>
+        <tbody>
+          <tr><td>Grand View Research / GM Insights</td><td class="num-cell">۶.۸ میلیارد$</td><td>۲۰۲۴</td><td>۹.۹ میلیارد$ (۲۰۳۴)</td><td class="num-cell">٪۳.۷</td></tr>
+          <tr><td>IndexBox</td><td class="num-cell">۵.۴ میلیارد$</td><td>۲۰۲۴</td><td>~۶.۴-۶.۸ میلیارد$ (۲۰۳۵)</td><td class="num-cell">٪۱.۵-۲.۱</td></tr>
+          <tr><td>Mordor Intelligence</td><td class="num-cell">۵.۰۸ میلیارد$</td><td>۲۰۲۵</td><td>۶.۸۲ میلیارد$ (۲۰۳۱)</td><td class="num-cell">٪۵.۲۱</td></tr>
+          <tr><td>Fortune Business Insights</td><td class="num-cell">۴.۱۳ میلیارد$</td><td>۲۰۲۵</td><td>۶.۴۰ میلیارد$ (۲۰۳۴)</td><td class="num-cell">٪۵.۰</td></tr>
+          <tr><td>Cognitive Market Research</td><td class="num-cell">۴.۸۵ میلیارد$</td><td>۲۰۲۴</td><td>—</td><td class="num-cell">٪۵.۰</td></tr>
+          <tr><td>Skyquest</td><td class="num-cell">۴.۳۳ میلیارد$</td><td>۲۰۲۴</td><td>۷.۰۱ میلیارد$ (۲۰۳۳)</td><td class="num-cell">٪۵.۵</td></tr>
+          <tr><td>Market Research Future</td><td class="num-cell">۳.۵۲ میلیارد$</td><td>۲۰۲۴</td><td>۵.۳۹ میلیارد$ (۲۰۳۵)</td><td class="num-cell">٪۳.۹۵</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>بزرگ‌ترین تولیدکنندگان و مصرف‌کنندگان (IndexBox، ۲۰۲۴)</h3>
+    <div class="chart-box">
+      <div class="chart-h" style="height:220px"><canvas id="chartProducers"></canvas></div>
+      <div class="cap">تولید و مصرف (میلیون تن)</div>
+    </div>
+    <p style="font-size:14px">چین، آمریکا و هند مجموعاً ٪۵۳ تولید جهانی را دارند؛ ترکیه، روسیه، ژاپن، پاکستان، برزیل، آلمان و بریتانیا ٪۲۸ دیگر.</p>
+
+    <div class="cards">
+      <div class="card"><h4>Solvay (بلژیک)</h4><p>رهبر جهانی، برند BICAR، ۹ کارخانه، ~٪۱۴ سهم ظرفیت جهانی. کارخانه Devnya بلغارستان (مشترک با Şişecam) دومین کارخانه بزرگ بی‌کربنات اروپا.</p></div>
+      <div class="card"><h4>Church &amp; Dwight (آمریکا)</h4><p>برند Arm &amp; Hammer (۱۸۴۶)؛ طبق فایلینگ SEC «پیشروترین تولیدکننده بی‌کربنات جهان» و بزرگ‌ترین تولیدکننده آمریکا.</p></div>
+      <div class="card"><h4>Tata Chemicals (هند)</h4><p>برندهای Sodakarb، Medikarb، Alkakarb؛ سرمایه‌گذاری ۶۰ میلیون پوندی برای کارخانه دارویی ۱۸۰ هزار تنی در Northwich بریتانیا (۲۰۲۷).</p></div>
+      <div class="card"><h4>Şişecam/Ciner-WE Soda (ترکیه)</h4><p>Kazan Soda: ۲.۷ میلیون تن سودااش + ۲۰۰ هزار تن بی‌کربنات/سال؛ بزرگ‌ترین واحد اروپا؛ کل تولید صادر می‌شود.</p></div>
+    </div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">۲</span><h2>مصرف سرانه بر اساس منطقه/سطح توسعه</h2></div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:280px"><canvas id="chartPerCapita"></canvas></div>
+      <div class="cap">مصرف سرانه (کیلوگرم/نفر/سال) — شکاف روشن توسعه‌یافته/در حال توسعه</div>
+    </div>
+    <div class="callout copper"><p><strong>نتیجه‌گیری راهبردی:</strong> شکاف ساختاری بین کشورهای توسعه‌یافته (۴-۶.۵ کیلوگرم/نفر) و در حال توسعه (کمتر از ۱-۲ کیلوگرم/نفر) نشان می‌دهد پتانسیل رشد مصرف در بازارهای نوظهور — شامل خاورمیانه، آسیای مرکزی و آفریقا که در تیررس صادراتی ایران قرار دارند — بالاست.</p></div>
+    <p style="font-size:13.5px;font-style:italic">روش‌شناسی: برای چین و هند (رقم مستقیم در دسترس نبود) از فرمول مصرف ملی÷جمعیت استفاده شد. این ارقام شامل کل مصرف کشور (صنعتی+غذایی+دارویی+خوراک دام) است، نه صرفاً مصرف خانگی — ممکن است برای کشورهای توسعه‌یافته بالا به‌نظر برسد چون بخشی مصرف صنعتی/FGD است.</p>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">۳</span><h2>تفکیک مصرف بر اساس گرید</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>گرید</th><th>Business Research Insights</th><th>Mordor (۲۰۲۵)</th><th>Market Reports World (۲۰۲۳)</th></tr></thead>
+        <tbody>
+          <tr><td>غذایی (Food)</td><td class="num-cell">٪۴۴</td><td class="num-cell">٪۳۵.۴۸ (بزرگ‌ترین)</td><td class="num-cell">~٪۲۴ (۱.۵M تن)</td></tr>
+          <tr><td>فنی/صنعتی (Technical)</td><td class="num-cell">٪۳۶</td><td>باقی‌مانده حجم</td><td class="num-cell">~٪۵۸ (۳.۶M تن، بزرگ‌ترین)</td></tr>
+          <tr><td>دارویی/پزشکی</td><td class="num-cell">٪۲۰</td><td>سریع‌ترین رشد (CAGR ٪۶.۵۵)</td><td class="num-cell">~٪۱۲ (۷۲۰K تن)</td></tr>
+          <tr><td>خوراک دام</td><td>(در «سایر»)</td><td>باقی‌مانده حجم</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout bad"><p><strong>اختلاف کلیدی:</strong> اینکه گرید غذایی یا فنی بزرگ‌تر است، بین منابع اختلاف‌نظر جدی دارد — احتمالاً ناشی از نحوه دسته‌بندی FGD/صنعتی در برابر غذایی. گرید دارویی مورد توافق همه به‌عنوان سریع‌ترین بخش در حال رشد است (دیالیز، آنتی‌اسید، قرص جوشان).</p></div>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">۴</span><h2>تفکیک بر اساس صنعت مصرف‌کننده</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>صنعت</th><th>Business Research Insights (جهانی)</th><th>Grand View (آمریکای شمالی)</th></tr></thead>
+        <tbody>
+          <tr><td>غذا و نوشیدنی</td><td class="num-cell">٪۴۰+</td><td>دومین (نزدیک خوراک دام)</td></tr>
+          <tr><td>مواد شیمیایی</td><td class="num-cell">٪۲۲</td><td>یکی از محرک‌های اصلی</td></tr>
+          <tr><td>دارویی</td><td class="num-cell">٪۱۵</td><td>—</td></tr>
+          <tr><td>خوراک دام</td><td class="num-cell">٪۱۰</td><td class="num-cell">٪۲۷.۳۲ (بزرگ‌ترین در آمریکای شمالی)</td></tr>
+          <tr><td>گوگردزدایی گاز دودکش (FGD)</td><td class="num-cell">٪۹</td><td>—</td></tr>
+          <tr><td>سایر</td><td class="num-cell">٪۴</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cards">
+      <div class="card"><h4>چین</h4><p>نیروگاه‌های زغال‌سنگی انبوه و مقررات محیط‌زیستی — FGD و کاربرد صنعتی سهم بزرگ‌تری دارند.</p></div>
+      <div class="card"><h4>آمریکای شمالی</h4><p>خوراک دام (بافر pH شکمبه گاو شیری) تاریخاً بزرگ‌ترین یا یکی از بزرگ‌ترین بخش‌ها.</p></div>
+      <div class="card"><h4>اروپا/آمریکا</h4><p>گرید غذایی و FGD (به‌ویژه آلمان/هلند) غالب؛ مقررات سخت‌گیرانه اتحادیه اروپا محرک رشد FGD.</p></div>
+      <div class="card"><h4>بازار جهانی FGD</h4><p>&gt;۴۸۰ هزار تن/سال با رشد ~٪۱۲ بین ۲۰۲۲ و ۲۰۲۳ — کاربرد آتی بالقوه برای گریدهای ویژه.</p></div>
+    </div>
+  </section>
+
+  <section id="s5">
+    <div class="sec-head"><span class="sec-num">۵</span><h2>قیمت‌ها ۲۰۲۵ و تجارت جهانی</h2></div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:240px"><canvas id="chartPrices"></canvas></div>
+      <div class="cap">قیمت به تفکیک منطقه/گرید ($/تن) — بازه‌ی وسیع از ~۱۵۰$ (چین، فنی) تا ~۶۷۴$ (آمریکا، صادراتی)</div>
+    </div>
+    <p style="font-size:14px">میانگین صادرات ۲۰۲۴ (IndexBox): آمریکا ~۶۸۲$/تن، چین ~۲۳۰$/تن — اختلاف عظیم بین گرید فنی چینی و گریدهای باکیفیت غربی.</p>
+    <div class="chart-box">
+      <div class="chart-h" style="height:220px"><canvas id="chartExporters"></canvas></div>
+      <div class="cap">بزرگ‌ترین صادرکنندگان جهانی، ۲۰۲۴ (هزار تن، IndexBox)</div>
+    </div>
+    <p style="font-size:14px">ارزش صادرات جهانی: ۸۷۷ میلیون دلار (۲۰۲۳) ← ۹۹۱ میلیون دلار (۲۰۲۴). واردات جهانی ۲۰۲۴: ~۲.۴-۲.۷ میلیون تن؛ مقاصد اصلی: فرانسه، کره جنوبی، آلمان.</p>
+  </section>
+
+  <section id="s6">
+    <div class="sec-head"><span class="sec-num">۶</span><h2>توصیه‌ها</h2></div>
+    <div class="cards">
+      <div class="card"><span class="tag">مرحله ۱ — فوری</span><p><strong>موقعیت‌یابی رقابتی منطقه‌ای:</strong> ایران به خاورمیانه، آسیای مرکزی و آفریقا نزدیک است — مناطق با مصرف سرانه پایین و پتانسیل رشد بالا. تمرکز روی صادرات منطقه‌ای با مزیت لجستیک نسبت به چین/ترکیه؛ قیمت مرجع خاورمیانه (~۳۱۵$ FOB) معیار رقابت‌پذیری.</p></div>
+      <div class="card"><span class="tag">مرحله ۲ — میان‌مدت</span><p><strong>ارتقای گرید محصول:</strong> گرید دارویی سریع‌ترین رشد (CAGR ~٪۶.۵) و حاشیه بالاتر (۶۰۰-۶۸۰$ در برابر ۱۵۰-۲۳۰$ فنی). اولویت گواهی USP/BP — با توجه به گسترش تهاجمی رقبایی مثل Tata.</p></div>
+      <div class="card"><span class="tag">مرحله ۳ — بلندمدت</span><p><strong>کاربرد FGD/صنعتی محیط‌زیستی:</strong> با تشدید مقررات جهانی، تقاضای sorbent در حال رشد است. هم‌افزایی با تولید کاستیک سودا و سولفات آمونیوم شرکت.</p></div>
+      <div class="card"><span class="tag">پایش مداوم</span><p>ظرفیت‌گذاری‌های جدید ترکیه (WE Soda/Şişecam) — رقیب مستقیم منطقه‌ای که کل تولید را صادر می‌کند.</p></div>
+    </div>
+  </section>
+
+  <section id="s7">
+    <div class="sec-head"><span class="sec-num">۷</span><h2>هشدارها و محدودیت‌های داده</h2></div>
+    <div class="callout bad"><p><strong>اختلاف بزرگ بین منابع:</strong> ارزش بازار (۳.۵-۶.۸ میلیارد$) و حجم (۶.۲-۱۲ میلیون تن) بین منابع اختلاف زیادی دارند — ناشی از تعاریف متفاوت دامنه محصول. هیچ عدد واحدی قطعی تلقی نشود؛ برای هر رقم بازه ارائه شده.</p></div>
+    <p style="font-size:14px">معتبرترین منابع این گزارش: داده تجاری رسمی (TrendEconomy/UN Comtrade)، فایلینگ‌های SEC شرکت‌ها، بیانیه‌های رسمی Solvay/Tata، و IndexBox (حجم/سرانه). مصرف سرانه چین/هند برآورد شخصی (حجم÷جمعیت) است. داده تجاری مبتنی بر ارزش به‌دلیل تفاوت شدید قیمت گریدها مستقیماً به حجم قابل تبدیل نیست. هیچ داده اختصاصی منتشرشده‌ای درباره تولید/مصرف/صادرات ایران در منابع بین‌المللی یافت نشد.</p>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>منابع: IndexBox (Global Baking Soda Market Report 2026)، TrendEconomy/UN Comtrade، Grand View Research، Mordor Intelligence، Fortune Business Insights، Cognitive Market Research، Skyquest، Market Research Future، Business Research Insights، فایلینگ‌های SEC (Church &amp; Dwight)، بیانیه‌های رسمی Solvay و Tata Chemicals، Intratec.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){
+    return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US")); }
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  var charts = [];
+  function themeColors(){
+    return {
+      ink: cssVar('--ink-soft'),
+      grid: cssVar('--line-soft'),
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
+      copper: cssVar('--copper-500'),
+      copperDark: cssVar('--copper-600'),
+      bad: cssVar('--bad'),
+      good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+
+  function baseOptions(c){
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif";
+    Chart.defaults.color = c.ink;
+    Chart.defaults.borderColor = c.grid;
+  }
+
+  function buildAll(){
+    var c = themeColors();
+    baseOptions(c);
+    charts.forEach(function(ch){ ch.destroy(); });
+    charts = [];
+
+    // ---- Market value by source ----
+    charts.push(new Chart(document.getElementById('chartMarketValue'), {
+      type: 'bar',
+      data: {
+        labels: ['Grand View/GM Insights','IndexBox','Mordor','Cognitive','Fortune Business','Skyquest','Market Research Future'],
+        datasets: [{ data: [6.8,5.4,5.08,4.85,4.13,4.33,3.52], backgroundColor: c.copper, borderRadius: 6 }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return toFa(ctx.parsed.x) + ' میلیارد$'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return toFa(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink } }
+        }
+      }
+    }));
+
+    // ---- Top producers/consumers ----
+    charts.push(new Chart(document.getElementById('chartProducers'), {
+      type: 'bar',
+      data: {
+        labels: ['چین','آمریکا','هند'],
+        datasets: [
+          { label: 'تولید (میلیون تن)', data: [3.3,1.7,1.0], backgroundColor: c.petrolDark, borderRadius: 4 },
+          { label: 'مصرف (میلیون تن)', data: [2.6,1.6,1.0], backgroundColor: c.copper, borderRadius: 4 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { rtl: true, labels: { color: c.ink, usePointStyle: true } },
+          tooltip: { rtl: true, textDirection: 'rtl' }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: c.ink } },
+          y: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return toFa(v); } } }
+        }
+      }
+    }));
+
+    // ---- Per-capita consumption ----
+    charts.push(new Chart(document.getElementById('chartPerCapita'), {
+      type: 'bar',
+      data: {
+        labels: ['آلمان','ایتالیا','فرانسه (میانی)','بریتانیا','آمریکا (میانی)','برزیل','چین (برآوردی)','شیلی','میانگین جهانی','هند (برآوردی)','کلمبیا','پرو'],
+        datasets: [{
+          data: [6.5,5.7,5.4,5.4,4.6,1.9,1.84,0.87,0.84,0.69,0.37,0.36],
+          backgroundColor: function(ctx){ return ctx.dataIndex <= 4 ? c.copper : (ctx.dataIndex === 8 ? c.petrolDark : c.petrol + '99'); },
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return toFa(ctx.parsed.x) + ' کیلوگرم/نفر'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return toFa(v); } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11 } } }
+        }
+      }
+    }));
+
+    // ---- Prices by region/grade ----
+    charts.push(new Chart(document.getElementById('chartPrices'), {
+      type: 'bar',
+      data: {
+        labels: ['چین (اسپات داخلی، فنی)','خاورمیانه/ترکیه (FOB)','هند (Ex-Mumbai، غذایی)','اروپا — آلمان (FOB)','آمریکا (اسپات)','آمریکا (صادراتی FOB)'],
+        datasets: [{ data: [160,315,370,577,317,674], backgroundColor: [c.petrol + 'aa', c.good, c.copper + '99', c.copperDark, c.copper, c.bad], borderRadius: 6 }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return fmt(ctx.parsed.x) + ' $/تن'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11.5 } } }
+        }
+      }
+    }));
+
+    // ---- Top exporters ----
+    charts.push(new Chart(document.getElementById('chartExporters'), {
+      type: 'bar',
+      data: {
+        labels: ['چین — ٪۳۰ سهم', 'ترکیه — ٪۲۲ سهم'],
+        datasets: [{ data: [753,535], backgroundColor: [c.bad, c.copper], borderRadius: 6 }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return fmt(ctx.parsed.x) + ' هزار تن'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } },
+          y: { grid: { display: false }, ticks: { color: c.ink } }
+        }
+      }
+    }));
+  }
+
+  buildAll();
+  if (window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildAll);
+  }
+})();
+</script>
+
+</body>
+</html>

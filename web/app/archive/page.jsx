@@ -147,7 +147,7 @@ export default function ArchivePage() {
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <div>
             <h2 className="text-lg font-bold">آرشیو گزارش‌ها</h2>
-            <p className="text-xs text-slate-500 mt-0.5">همه‌ی گزارش‌ها — چه گزارش‌های هوشمند مدیریتی، چه گزارش‌های مفصل — همین‌جا بایگانی می‌شن.</p>
+            <p className="text-xs text-slate-500 mt-0.5">همه‌ی گزارش‌ها — چه گزارش‌های هوشمند مدیریتی، چه گزارش‌های مفصل — در این صفحه بایگانی می‌شوند.</p>
           </div>
           <div className="flex flex-wrap gap-2">
             <input

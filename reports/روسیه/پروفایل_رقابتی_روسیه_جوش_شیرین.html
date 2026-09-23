@@ -1,0 +1,569 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>پروفایل رقابتی روسیه</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(28px,4.2vw,42px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 62ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(6, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:900px){ .kpi-row{ grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width:520px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+  .kpi.good .v{ color: #8FE3BE; }
+  .kpi.bad .v{ color: #F0A98F; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
+  strong{ color: var(--ink); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+  .callout.bad{ border-inline-start-color: var(--bad); background: var(--bad-bg); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+  }
+  .card .tag.opp{ background: var(--good-bg); color: var(--good); }
+  .card .tag.risk{ background: var(--bad-bg); color: var(--bad); }
+  .card .tag.num{ background: var(--petrol-50); color: var(--petrol-700); }
+  :root[data-theme="dark"] .card .tag.num, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag.num{ color: var(--copper-400); } }
+  .card p{ margin:0; font-size: 14.5px; }
+
+  .stat-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:12px; margin: 16px 0 20px; }
+  @media (max-width:800px){ .stat-grid{ grid-template-columns: repeat(2,1fr); } }
+  .stat{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius:12px;
+    padding: 14px 16px; box-shadow: var(--card-shadow);
+  }
+  .stat .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-size:22px; font-weight:600; color: var(--petrol-700); }
+  :root[data-theme="dark"] .stat .v, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .stat .v{ color: var(--copper-400); } }
+  .stat .l{ font-size:12.5px; color: var(--muted); margin-top:3px; }
+  .stat .d{ font-size: 12px; margin-top:6px; font-weight:600; }
+  .stat .d.up{ color: var(--good); } .stat .d.down{ color: var(--bad); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+  .two-col{ display:grid; grid-template-columns: 1.1fr 0.9fr; gap:16px; align-items:stretch; }
+  @media (max-width:820px){ .two-col{ grid-template-columns: 1fr; } }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 14px; min-width: 560px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+  caption{ caption-side: top; text-align: right; font-size: 12.5px; color: var(--muted); padding: 8px 12px 0; }
+
+  .pill-row{ display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0; }
+  .pill{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 12px;
+    padding: 12px 20px; min-width: 120px; box-shadow: var(--card-shadow);
+  }
+  .pill .p{ font-family:"Fira Code"; font-size:22px; font-weight:700; }
+  .pill .p.zero{ color: var(--good); } .pill .p.pos{ color: var(--copper-600); }
+  .pill .n{ font-size:12.5px; color:var(--muted); margin-top:2px; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer h3{ color: var(--ink-soft); font-size:13px; margin: 0 0 10px; }
+  footer ol{ margin:0; padding-inline-start: 20px; }
+  footer li{ margin-bottom:6px; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>پروفایل رقابتی روسیه در بازار جهانی جوش شیرین</h1>
+    <p class="lead">بررسی روسیه نه به‌عنوان بازار واردات، بلکه به‌عنوان یک رقیب صادراتی: تولیدکنندگان، ساختار هزینه، صادرات و مقاصد، لجستیک و اثر تحریم‌ها.</p>
+    <div class="meta">
+      <span>تاریخ تهیه: شهریور ۱۴۰۵ (سپتامبر ۲۰۲۶)</span>
+      <span>کد HS: ۲۸۳۶۳۰</span>
+      <span>منبع اصلی: ITC Trade Map (داده‌ی آینه) + IndexBox</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi bad"><div class="v">۱۲.۷ <small>م$</small></div><div class="l">صادرات جهانی HS۲۸۳۶۳۰، ۲۰۲۵</div></div>
+      <div class="kpi bad"><div class="v">٪۶۴-</div><div class="l">افت صادرات از اوج ۲۰۲۱</div></div>
+      <div class="kpi"><div class="v">٪۳۷.۱</div><div class="l">سهم قزاقستان از صادرات</div></div>
+      <div class="kpi good"><div class="v">٪۱٬۰۴۹+</div><div class="l">رشد صادرات به برزیل، ۲۰۲۱←۲۰۲۵</div></div>
+      <div class="kpi"><div class="v">۱۹۳٬۹۰۰ <small>تن</small></div><div class="l">تولید داخلی BSK، ۲۰۲۴</div></div>
+      <div class="kpi bad"><div class="v">~۰</div><div class="l">صادرات باقیمانده به اتحادیه اروپا</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">۱</span><h2>تولیدکنندگان اصلی جوش شیرین در روسیه</h2></div>
+    <div class="callout"><p><strong>نکته ساختاری کلیدی:</strong> برخلاف ترکیه (Eti Soda، بی‌پازاری/آنکارا) که با استخراج محلول از ذخایر طبیعی ترونا تولید می‌کند، تمام ظرفیت شناسایی‌شده روسیه بر پایه فرآیند مصنوعی سولوی-آمونیاکی (سنگ‌آهک + نمک طعام + آمونیاک) است. هیچ ذخیره یا بهره‌برداری تجاری از ترونای طبیعی در روسیه شناسایی نشد.</p></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>شرکت</th><th>موقعیت</th><th>ظرفیت بی‌کربنات سدیم</th><th>وضعیت</th></tr></thead>
+        <tbody>
+          <tr><td>АО «Башкирская содовая компания» (BSK)</td><td>استرلیتامک، باشقیرستان</td><td class="num-cell">۱۹۳٬۹۰۰ تن (۲۰۲۴، رشد ٪۲۰)</td><td>پیشرو #۱ کشور؛ گزارش اختصاصی جداگانه در دسترس</td></tr>
+          <tr><td>ПАО «Крымский содовый завод» (Krymsoda)</td><td>کراسنوپرکوپسک، کریمه</td><td class="num-cell">ظرفیت اسمی ۲۰٬۰۰۰ تن</td><td>تحت رژیم تحریمی جداگانه و سخت‌تر از ۲۰۱۴</td></tr>
+          <tr><td>АО «БСЗ» — برژنیکی</td><td>برژنیکی، استان پرم</td><td>تولید بی‌کربنات به‌روشنی تأیید نشد</td><td>قدیمی‌ترین کارخانه سودا (۱۸۸۳)؛ محصول اصلی سودای کلسینه، نه جوش شیرین</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>مالکیت BSK — سابقه پیچیده و به‌تازگی تغییریافته</h3>
+    <p>۲۰۲۰: دادستانی کل روسیه تخلف در خصوصی‌سازی سهام BSK را احراز کرد و سهام به نفع دولت توقیف شد. ژوئن ۲۰۲۱: BSK در فهرست «بنگاه‌های استراتژیک» قرار گرفت. آوریل ۲۰۲۳: پوتین ٪۳۸.۲۸ سهام را به مالکیت جمهوری باشقیرستان منتقل کرد؛ باقی سهم فدرال (٪۵۷.۴) به مدیریت امانی سپرده شد. مارس ۲۰۲۵: BSK از فهرست بنگاه‌های استراتژیک خارج شد.</p>
+    <div class="callout bad"><p><strong>۶ ژوئن ۲۰۲۵:</strong> دولت فدرال کل ٪۵۷.۴۳ سهم باقی‌مانده خود را به‌طور قطعی به هلدینگ «روس‌خیم» فروخت — هلدینگی که به‌گفته‌ی ویکی‌پدیای روسی «به‌احتمال» تحت کنترل آرکادی روتنبرگ (از افراد تحت تحریم آمریکا و اتحادیه اروپا) است. این تغییر مالکیت می‌تواند ریسک تحریم ثانویه را برای هرگونه طرف معامله خارجی BSK افزایش دهد.</p></div>
+
+    <h3>یک تناقض آماری مهم</h3>
+    <p>جمع دو تولیدکننده شناخته‌شده (BSK ~۱۹۴ هزار تن + Krymsoda ۲۰ هزار تن ≈ ۲۱۴ هزار تن) با گزارش قدیمی‌تر Kommersant (۲۰۱۷، سهم ٪۸۵ برای BSK → تولید کل کشور ~۲۲۸ هزار تن) نسبتاً سازگار است. اما یک گزارش تحلیلی بین‌المللی (IndexBox، فوریه ۲۰۲۶) کل تولید جوش شیرین روسیه در ۲۰۲۴ را ۴۸۱ هزار تن اعلام کرده — رقمی که به‌شدت با داده‌های مستقیم شرکتی مغایرت دارد و در این گزارش حل‌نشده باقی می‌ماند.</p>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">۲</span><h2>ساختار هزینه تولید</h2></div>
+    <p>هیچ منبع عمومی هزینه نقدی تولید هر تن جوش شیرین BSK یا Krymsoda را به‌صورت عدد دلاری افشا نکرده — «داده معتبر یافت نشد». هر دو تولیدکننده روسی صرفاً بر پایه فرآیند سولوی-آمونیاکی مصنوعی فعالیت می‌کنند؛ روسیه در همان دسته تولیدکنندگان «مصنوعی» چین و اروپا (Solvay بلژیک، Ciech لهستان) قرار می‌گیرد، نه در دسته ممتاز تولیدکنندگان طبیعی کم‌هزینه مانند ترکیه و آمریکا.</p>
+
+    <h3>نقش گاز طبیعی ارزان روسیه در ساختار هزینه</h3>
+    <div class="two-col">
+      <div class="chart-box" style="margin:0">
+        <div class="chart-h" style="height:260px"><canvas id="chartGas"></canvas></div>
+        <div class="cap">قیمت مؤثر گاز طبیعی صنعتی، ۲۰۲۴-۲۰۲۵ (دلار به‌ازای هزار مترمکعب)</div>
+      </div>
+      <div>
+        <p style="font-size:14.5px">قیمت مؤثر گاز طبیعی برای مصرف‌کنندگان صنعتی روسیه در ۲۰۲۴ به‌طور میانگین حدود ۱۴۰ دلار به‌ازای هزار مترمکعب بوده — در مقایسه با میانگین Henry Hub آمریکا (۷۹.۱ دلار). یعنی گاز صنعتی روسیه اکنون از گاز آمریکا هم گران‌تر شده، برخلاف تصور رایج. با این حال، همچنان به‌طور قابل‌توجهی پایین‌تر از گاز صنعتی اروپا (۳۵۰ تا ۵۰۰+ دلار) است.</p>
+        <div class="callout"><p>جمع‌بندی: روسیه در هزینه انرژی نسبت به رقبای اروپایی وابسته به واردات LNG مزیت دارد، اما این مزیت به‌اندازه‌ی مزیت ذاتی معدن طبیعی ترونای ترکیه نیست.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">۳</span><h2>صادرات و مقاصد</h2></div>
+    <p>این بخش بر پایه سه دسته داده تنظیم شده: صادرات مستقیم‌گزارش‌شده روسیه (۲۰۱۷-۲۰۲۱، آمار گمرک فدرال)، داده‌ی آینه — گزارش‌شده توسط کشورهای واردکننده، نه خودِ روسیه (۲۰۲۱-۲۰۲۵)، و داده‌ی آینه تفصیلی (حجم/قیمت واحد/تعرفه) برای ۲۰۲۵.</p>
+
+    <h3>۳-۱. روند کامل ارزش صادرات، HS ۲۸۳۶۳۰ (۲۰۱۷-۲۰۲۵)</h3>
+    <div class="chart-box">
+      <div class="chart-h" style="height:260px"><canvas id="chartExportTrend"></canvas></div>
+      <div class="cap">صادرات جهانی روسیه از اوج ۳۴.۹ میلیون دلار (۲۰۲۱) به ۱۲.۷ میلیون دلار (۲۰۲۵) سقوط کرده — کاهشی ~٪۶۴، عمدتاً طی یک سال (٪۵۱- بین ۲۰۲۲ و ۲۰۲۳)</div>
+    </div>
+
+    <h3>۳-۲. مقاصد صادراتی، ۲۰۲۱ در برابر ۲۰۲۵</h3>
+    <div class="chart-box">
+      <div class="chart-h" style="height:300px"><canvas id="chartDestinations"></canvas></div>
+      <div class="cap">داده‌ی آینه، هزار دلار — کشورهایی که در ۲۰۲۱ حضور محسوس داشتند و به صفر رسیدند نمایش داده نشده‌اند (نگاه کنید به متن)</div>
+    </div>
+    <div class="callout bad"><p><strong>بازار اروپا کاملاً از دست رفت:</strong> اوکراین ۲٬۱۳۱ ← ۰، بلژیک ۱٬۵۸۶ ← ۰، دانمارک ۱٬۶۱۵ ← ۰، آلمان ۶۹۱ ← ۰، مجارستان ۱٬۴۱۴ ← ۰، نروژ ۱٬۳۰۸ ← ۰، لهستان ۹۲۴ ← ۰ (هزار دلار، ۲۰۲۱←۲۰۲۵) — به‌علاوه فنلاند، لتونی، لیتوانی، سوئد، یونان، استونی، کرواسی و تقریباً تمام بازارهای باقیمانده اتحادیه اروپا.</p></div>
+    <div class="callout copper"><p><strong>ظهور برزیل:</strong> از تنها ۳۳۷ هزار دلار (۲۰۲۱) به ۲٬۰۴۷ (۲۰۲۲)، ۴٬۱۶۶ (۲۰۲۴) و ۳٬۸۷۲ هزار دلار (۲۰۲۵) — رشدی بیش از ۱۰ برابر، تأییدشده مستقل توسط OEC. با این حال روسیه در برزیل با تعرفه ٪۲۰ اختصاصی برای HS ۲۸۳۶۳۰ مواجه است (به‌مراتب بالاتر از ٪۶.۳ رده گسترده‌تر کربنات‌ها) و همچنان با قیمت واحد فقط ۲۴۳ دلار بر تن (نازل‌ترین رقم در کل جدول) رقابت‌پذیری قیمتی بالایی حفظ کرده.</p></div>
+    <p style="font-size:13.5px;font-style:italic">نتیجه: روسیه بیشتر «بازار خود را باخته» تا «بازار را جابه‌جا کرده» — رشدهای CIS/برزیل/ترکیه واقعی است اما جبران‌کننده کامل افت اروپا نیست.</p>
+
+    <h3>۳-۳. داده تفصیلی HS ۲۸۳۶۳۰ در ۲۰۲۵ — حجم، قیمت واحد، رشد و تعرفه</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>کشور</th><th>ارزش ۲۰۲۵ (هزار$)</th><th>حجم (تن)</th><th>قیمت واحد ($/تن)</th><th>سهم</th><th>رشد سالانه ۲۱-۲۵</th><th>تعرفه (٪)</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>جمع کل</td><td class="num-cell">۱۲٬۶۶۲</td><td class="num-cell">۳۴٬۵۵۳</td><td class="num-cell">۳۶۶</td><td class="num-cell">٪۱۰۰</td><td class="num-cell">٪۱۸-</td><td>—</td></tr>
+          <tr><td>قزاقستان</td><td class="num-cell">۴٬۶۹۳</td><td class="num-cell">۸٬۳۹۴</td><td class="num-cell">۵۵۹</td><td class="num-cell">٪۳۷.۱</td><td class="num-cell">٪۱۵+</td><td class="num-cell">۰</td></tr>
+          <tr><td>برزیل</td><td class="num-cell">۳٬۸۷۲</td><td class="num-cell">۱۵٬۹۶۷</td><td class="num-cell">۲۴۳</td><td class="num-cell">٪۳۰.۶</td><td class="num-cell">٪۷۵+</td><td class="num-cell">۲۰</td></tr>
+          <tr><td>مصر</td><td class="num-cell">۱٬۱۶۵</td><td class="num-cell">۲٬۳۲۵</td><td class="num-cell">۵۰۱</td><td class="num-cell">٪۹.۲</td><td class="num-cell">٪۱۶-</td><td class="num-cell">۳.۵</td></tr>
+          <tr><td>ترکیه</td><td class="num-cell">۶۸۵</td><td class="num-cell">۳٬۰۳۴</td><td class="num-cell">۲۲۶</td><td class="num-cell">٪۵.۴</td><td class="num-cell">٪۲۱۰+</td><td class="num-cell">۵.۵</td></tr>
+          <tr><td>گرجستان</td><td class="num-cell">۵۸۶</td><td class="num-cell">۸۸۴</td><td class="num-cell">۶۶۳</td><td class="num-cell">٪۴.۶</td><td class="num-cell">٪۱۶+</td><td class="num-cell">۰</td></tr>
+          <tr><td>سایر (آذربایجان، مغولستان، قرقیزستان، مراکش، اسرائیل، هند، ارمنستان)</td><td class="num-cell">۱٬۶۶۱</td><td class="num-cell">۳٬۹۴۹</td><td>۲۵۲-۶۱۰</td><td class="num-cell">٪۱۳.۱</td><td>متغیر</td><td>۰-۷.۵</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>۳-۴. قیمت واحد صادراتی به تفکیک بازار (نهایی)</h3>
+    <div class="chart-box">
+      <div class="chart-h" style="height:260px"><canvas id="chartUnitPrice"></canvas></div>
+      <div class="cap">میانگین کلی ۳۶۶ دلار بر تن؛ بازارهای گران‌تر عموماً نزدیک/CIS، بازارهای ارزان‌تر عموماً دورتر و پرحجم‌تر</div>
+    </div>
+
+    <div class="callout"><p><strong>ارمنستان — تأیید سه‌گانه و مستقل:</strong> رقم ارمنستان در سه منبع کاملاً مستقل دقیقاً یکسان گزارش شده: ۴۰۰ تن، ۱۲۵ هزار دلار، قیمت واحد ۳۱۳ دلار بر تن، سهم ٪۲۸.۷ از واردات ارمنستان، تعرفه صفر برای روسیه (عضویت EAEU) در برابر تعرفه ٪۵ ایران — اطمینان بالایی به صحت این رقم می‌دهد.</p></div>
+
+    <h3>۳-۵. زمینه: رده گسترده‌تر HS ۲۸۳۶ «کربنات‌ها»</h3>
+    <p>در رده وسیع‌تر کربنات‌ها (نه صرفاً جوش شیرین)، سهم قزاقستان به ٪۷۱.۱ می‌رسد (در برابر ٪۳۷.۱ برای HS ۲۸۳۶۳۰ خالص) — تأییدی بر اینکه بخش بزرگی از حجم عظیم قزاقستان در واقع سود کربنات صنعتی است، نه جوش شیرین. حجم دقیق صادرات ۲۰۲۵ (۳۴٬۵۵۳ تن) پایین‌تر از برآورد IndexBox برای ۲۰۲۴ (۵۰ تا ۵۸ هزار تن) است — قابل توضیح با روند نزولی مستمر بین ۲۰۲۴ و ۲۰۲۵.</p>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">۴</span><h2>لجستیک و حمل‌ونقل</h2></div>
+    <div class="cards">
+      <div class="card"><span class="tag num">دریای سیاه</span><p>بندر نووروسیسک — مسیر اصلی برای بازارهای مدیترانه‌ای، خاورمیانه و برخی مقاصد آفریقایی/آمریکای‌لاتین (مصر، الجزایر، اسرائیل).</p></div>
+      <div class="card"><span class="tag num">دریای بالتیک</span><p>سن‌پترزبورگ/اوست-لوگا — مسیر تاریخی اروپای شمالی؛ پس از ۲۰۲۲ به‌شدت تحت‌تأثیر محدودیت‌های بندری اتحادیه اروپا و کاهش اعتماد خریداران.</p></div>
+      <div class="card"><span class="tag num">مرزهای زمینی</span><p>شبکه گیج ۱۵۲۰ میلی‌متری مشترک شوروی — قزاقستان، ازبکستان، آذربایجان، بلاروس، ارمنستان، قرقیزستان بدون تعویض بوژی متصل‌اند؛ مزیت ساختاری واقعی نسبت به ایران و ترکیه (گیج ۱۴۳۵).</p></div>
+      <div class="card"><span class="tag num">INSTC</span><p>عمدتاً ابزار روسیه برای رسیدن به ایران/هند، نه ابزاری که به رقابت روسیه با ایران در بازارهای سوم کمک کند — آن بازارها از پیش با ریل شوروی به روسیه متصل‌اند.</p></div>
+    </div>
+    <p style="font-size:13.5px;font-style:italic">داده کمّی رسمی (نرخ کرایه دلاری، روزهای ترانزیت دقیق) برای مسیرهای مشخص استرلیتاماک/کریمه به ایروان، تاشکند یا باکو در منابع باز یافت نشد — «داده معتبر یافت نشد». به‌صورت کیفی، مسیر ریلی مستقیم به قفقاز/آسیای میانه بدیهتاً سریع‌تر و کم‌هزینه‌تر از صادرات به اروپای غربی است.</p>
+  </section>
+
+  <section id="s5">
+    <div class="sec-head"><span class="sec-num">۵</span><h2>اثر تحریم‌ها و ژئوپلیتیک</h2></div>
+
+    <h3>۵-۱. آیا جوش شیرین مستقیماً هدف تحریم کالایی است؟</h3>
+    <p>بر اساس بررسی بسته‌های تحریمی متوالی اتحادیه اروپا (تا بسته نوزدهم، اکتبر ۲۰۲۵) و آمریکا، هیچ ممنوعیت وارداتی/صادراتی مشخصی که صراحتاً HS ۲۸۳۶۳۰ یا رده گسترده‌تر ۲۸۳۶ را نام ببرد یافت نشد. آنچه در بسته‌های تحریمی دیده می‌شود عمدتاً سود پرک و مشتقات کلر است (محصول دیگر خودِ شرکت، برای صادرات اتحادیه اروپا به روسیه ممنوع، نه واردات از روسیه).</p>
+
+    <h3>۵-۲. تأثیرهای غیرمستقیم: بانکی، مالی، بیمه‌ای</h3>
+    <ul style="padding-inline-start:20px; margin:0 0 12px; color:var(--ink-soft)">
+      <li style="margin-bottom:6px">قطع بانک‌های بزرگ روسی (از جمله VTB) از سوییفت از ۲۰۲۲، تجارت را به سمت یوان چین یا کانال‌های جایگزین (CIPS/CNAPS) سوق داده.</li>
+      <li style="margin-bottom:6px">طبق پژوهش CEPR، صادرکنندگان روسی به‌طور فزاینده مجبور به تأمین مالی خود از طریق اعتبار تجاری به خریداران خارجی شده‌اند.</li>
+      <li>پژوهش مرکز CASE نشان می‌دهد حجم تراکنش‌های «ترانزیتی» با برخی کشورهای CIS/ترکیه گاه تا ٪۵۰ بیشتر از حجم واقعی تجارت بوده — نشانه دور زدن تحریم از طریق کشورهای واسط.</li>
+    </ul>
+
+    <h3>۵-۳. آیا بازار اروپا از دست رفته یا جابه‌جا شده؟</h3>
+    <p>بله — و این موضوع با داده کمّی مستقیم به‌طور قطعی تأیید می‌شود، نه صرفاً استنتاج. تقریباً تمام بازارهای اتحادیه اروپا به صفر رسیدند، هم‌زمان کل صادرات جهانی روسیه ٪۶۴ سقوط کرد — یعنی افت اروپا صرفاً جابه‌جایی نبوده، بخش عمده آن به‌طور خالص از دست رفته و جایگزین نشده است.</p>
+
+    <h3>۵-۴. لایه اضافی تحریم برای کریمه</h3>
+    <p>کارخانه Krymsoda در کریمه از ۲۰۱۴ (نه فقط ۲۰۲۲) تحت تحریم تجاری تقریباً کامل غرب قرار دارد. یعنی حتی اگر تحریم عمومی روسیه در آینده کاهش یابد، محصولات این کارخانه به‌طور جداگانه همچنان می‌توانند تحت تحریم بمانند — ریسک ژئوپلیتیکی مضاعف مختص همین یک تولیدکننده.</p>
+
+    <h3>۵-۵. رقابت با ایران در بازارهای سوم</h3>
+    <div class="callout"><p>داده‌ی ارمنستان ۲۰۲۵ تأیید می‌کند: روسیه با ٪۲۸.۷ سهم بازار دومین تأمین‌کننده ارمنستان است و از تعرفه صفر EAEU (که ایران در آن عضو نیست) بهره می‌برد — یک نمونه مستند که روسیه، علی‌رغم همه تحریم‌ها، به لطف عضویت EAEU و همسایگی ریلی مستقیم، از ایران در یک بازار مشترک تعرفه پایین‌تری می‌گیرد؛ هرچند ایران هنوز سهم بازار و رشد سالانه بالاتری دارد.</p></div>
+  </section>
+
+  <section id="s7">
+    <div class="sec-head"><span class="sec-num">۷</span><h2>جمع‌بندی راهبردی</h2></div>
+    <div class="cards">
+      <div class="card"><span class="tag num">۱</span><p>سقوط صادراتی روسیه پس از ۲۰۲۲ اکنون واقعیتی مستند و کمّی است: از ۳۴.۹ میلیون دلار (۲۰۲۱) به ۱۲.۷ میلیون دلار (۲۰۲۵)، عمدتاً ناشی از حذف کامل بازارهای اتحادیه اروپا. روسیه در حال کوچک‌شدن است، نه رشد.</p></div>
+      <div class="card"><span class="tag num">۲</span><p>روسیه بازار را «باخته»، نه لزوماً «جابه‌جا کرده»: رشدهای قزاقستان، برزیل، ترکیه و گرجستان واقعی‌اند اما به لحاظ حجم دلاری قادر به جبران کامل افت اروپا نبوده‌اند — رقیبی رو به کوچک‌شدن در اکثر بازارها.</p></div>
+      <div class="card"><span class="tag num">۳</span><p>قزاقستان، نه ارمنستان، اصلی‌ترین میدان رقابت واقعی روسیه است — با فاصله زیاد بزرگ‌ترین و رو-به-رشدترین مقصد. ارمنستان مهم‌ترین نمونه‌ی مستند رقابت مستقیم با ایران است، اما مقیاسش کوچک‌تر.</p></div>
+      <div class="card"><span class="tag num">۴</span><p>مزیت واقعی روسیه در CIS، ترکیبی از لجستیک ریلی مشترک و تعرفه صفر EAEU است — دقیقاً همان مزیتی که ایران در آن فاقد عضویت است.</p></div>
+      <div class="card"><span class="tag num">۵</span><p>تحریم‌های بانکی/مالی (نه تحریم مستقیم کالایی) اصلی‌ترین اصطکاک تجاری باقی می‌ماند: قطع سوییفت، ریسک تحریم ثانویه پس از واگذاری BSK به روس‌خیم، و نیاز به واسطه‌های پرداخت — چالش‌هایی مشابه صادرکنندگان ایرانی.</p></div>
+      <div class="card"><span class="tag num">۶</span><p>کریمه یک لایه ریسک/فرصت جداگانه باقی می‌ماند: Krymsoda تحت رژیم تحریمی سخت‌تر و قدیمی‌تر (از ۲۰۱۴) قرار دارد و عملاً از بازار غرب به‌طور کامل محروم است.</p></div>
+      <div class="card"><span class="tag num">۷</span><p>کیفیت داده درباره روسیه، با وجود قطع گزارش‌دهی مستقیم گمرکی از ۲۰۲۲، از طریق داده‌ی آینه‌ی ITC تا حد زیادی قابل‌جبران است؛ اما تناقض آماری تولید/مصرف داخلی کل کشور (۴۸۱ هزار تن IndexBox در برابر ~۲۱۴ هزار تن مجموع تولیدکنندگان شناخته‌شده) کماکان حل‌نشده باقی می‌ماند.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <h3>منابع اصلی</h3>
+  <ol>
+    <li>ITC Trade Map — «List of importing markets for a product exported by Russian Federation» (مستقیم ۲۰۱۷-۲۰۲۱، آینه ۲۰۲۱-۲۰۲۵) برای HS ۲۸۳۶۳۰؛ نسخه تفصیلی ۲۰۲۵ برای HS ۲۸۳۶۳۰ و رده گسترده‌تر HS ۲۸۳۶ — چهار فایل ارائه‌شده توسط کارفرما</li>
+    <li>ویکی‌پدیای روسی: صفحات «Башкирская содовая компания»، «Березниковский содовый завод»، «Крымский содовый завод»، «Транспортный коридор Север — Юг» (بازبینی ۲۰۲۶)</li>
+    <li>RBC اوفا/پرم، Forbes Russia، Vedomosti، TAdviser — اخبار مالکیت و مالی BSK (۲۰۲۳-۲۰۲۶)</li>
+    <li>World Bank WITS / UN Comtrade — آمار تجاری HS ۲۸۳۶۳۰</li>
+    <li>IndexBox — «Europe's Baking Soda Market» و «Global Baking Soda Market» (فوریه-مارس ۲۰۲۶)</li>
+    <li>КонсультантПлюс، tbank.ru، Независимая газета — قیمت گاز طبیعی صنعتی روسیه (۲۰۲۴-۲۰۲۵)</li>
+    <li>S&amp;P Global Commodity Insights، Kneppelhout، BDW، Squire Patton Boggs — بسته‌های تحریمی اتحادیه اروپا</li>
+    <li>CEPR («Russia's missing payments»)، Carnegie Endowment، CASE Center، CREA — تحلیل تحریم مالی/انرژی روسیه</li>
+    <li>تحقیق داخلی این واحد بر بازار ارمنستان (۲۰۲۵، بر پایه ITC Trade Map)</li>
+    <li>فصلنامه آسیای پسا-شوروی مرکزی، INION RAN (۲۰۲۴) — کریدور شمال-جنوب</li>
+    <li>OEC — Observatory of Economic Complexity، پروفایل بازار برزیل</li>
+  </ol>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){
+    return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US")); }
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  var charts = [];
+  function themeColors(){
+    return {
+      ink: cssVar('--ink-soft'),
+      grid: cssVar('--line-soft'),
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
+      copper: cssVar('--copper-500'),
+      copperDark: cssVar('--copper-600'),
+      bad: cssVar('--bad'),
+      good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+
+  function baseOptions(c){
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif";
+    Chart.defaults.color = c.ink;
+    Chart.defaults.borderColor = c.grid;
+  }
+
+  function buildAll(){
+    var c = themeColors();
+    baseOptions(c);
+    charts.forEach(function(ch){ ch.destroy(); });
+    charts = [];
+
+    // ---- Gas price comparison ----
+    charts.push(new Chart(document.getElementById('chartGas'), {
+      type: 'bar',
+      data: {
+        labels: ['روسیه (صنعتی، ۲۰۲۴)', 'آمریکا — Henry Hub', 'اروپا (صنعتی)'],
+        datasets: [{
+          data: [[0,140],[0,79.1],[350,500]],
+          backgroundColor: [c.copper, c.petrolDark, c.bad + 'aa'],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ var d = ctx.raw; return d[0]===0 ? (fmt(d[1]) + ' $/هزار متر مکعب') : (fmt(d[0]) + ' تا ' + fmt(d[1]) + ' $'); } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } },
+          y: { grid: { display: false }, ticks: { color: c.ink } }
+        }
+      }
+    }));
+
+    // ---- Export value trend 2017-2025 (direct + mirror) ----
+    charts.push(new Chart(document.getElementById('chartExportTrend'), {
+      type: 'line',
+      data: {
+        labels: ['۲۰۱۷','۲۰۱۸','۲۰۱۹','۲۰۲۰','۲۰۲۱','۲۰۲۲','۲۰۲۳','۲۰۲۴','۲۰۲۵'],
+        datasets: [
+          { label: 'گزارش مستقیم گمرک روسیه', data: [20273,23274,24421,26288,34904,null,null,null,null], borderColor: c.petrolDark, backgroundColor: c.petrolDark, tension: 0.25, spanGaps: false },
+          { label: 'داده‌ی آینه (گزارش کشورهای واردکننده)', data: [null,null,null,null,33023,30799,15124,17070,12662], borderColor: c.copper, backgroundColor: c.copper, tension: 0.25 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { rtl: true, labels: { color: c.ink, usePointStyle: true } },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return ctx.dataset.label + ': ' + fmt(ctx.parsed.y) + ' هزار$'; } } }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: c.ink } },
+          y: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } }
+        }
+      }
+    }));
+
+    // ---- Destinations 2021 vs 2025 ----
+    charts.push(new Chart(document.getElementById('chartDestinations'), {
+      type: 'bar',
+      data: {
+        labels: ['قزاقستان','برزیل','مصر','ترکیه','گرجستان','آذربایجان','مغولستان','قرقیزستان','مراکش','اسرائیل','هند','ارمنستان'],
+        datasets: [
+          { label: '۲۰۲۱ (هزار$)', data: [2531,337,891,8,345,334,317,190,462,577,212,188], backgroundColor: c.petrol + '99', borderRadius: 4 },
+          { label: '۲۰۲۵ (هزار$)', data: [4693,3872,1165,685,586,426,295,225,210,193,187,125], backgroundColor: c.copper, borderRadius: 4 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { rtl: true, labels: { color: c.ink, usePointStyle: true } },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return ctx.dataset.label + ': ' + fmt(ctx.parsed.y) + '$'; } } }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11 } } },
+          y: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } }
+        }
+      }
+    }));
+
+    // ---- Unit price by destination ----
+    charts.push(new Chart(document.getElementById('chartUnitPrice'), {
+      type: 'bar',
+      data: {
+        labels: ['گرجستان','قرقیزستان','مغولستان','قزاقستان','مصر','هند','مراکش','برزیل','ترکیه'],
+        datasets: [{
+          data: [663,610,588,559,501,252,335,243,226],
+          backgroundColor: c.petrol + 'aa',
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return fmt(ctx.parsed.x) + ' $/تن'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink } }
+        }
+      }
+    }));
+  }
+
+  buildAll();
+  if (window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildAll);
+  }
+})();
+</script>
+
+</body>
+</html>

@@ -43,6 +43,12 @@ MANIFEST_FILE = os.path.join(REPORTS_DIR, "manifest.json")
 # داخل web/public چون Next.js هرچی اونجا باشه رو مستقیم و بدون هیچ API اضافه
 # از ریشه‌ی سایت سرو می‌کنه — همون کاری که برای عکس‌های داخل گزارش‌ها لازمه.
 IMAGES_OUT_DIR = os.path.join(BASE_DIR, "web", "public", "report-images")
+# گزارش‌های مفصلی که خودشون یک فایل HTML مستقل (خودبسنده، با CSS/JS خودشون)
+# هستن -- عیناً همین‌جا کپی می‌شن تا توی صفحه‌ی گزارش داخل یک iframe لود بشن
+# (نه پارس‌شدن به بلوک مثل docx، چون طراحی/چارت‌های خودش رو داره و پارس‌کردن
+# نابودش می‌کنه).
+HTML_OUT_DIR = os.path.join(BASE_DIR, "web", "public", "report-html")
+HTML_TITLE_RE = re.compile(r"<title>(.*?)</title>", re.IGNORECASE | re.DOTALL)
 
 CONTENT_TYPE_EXT = {
     "image/png": "png",
@@ -67,19 +73,22 @@ GEMINI_MODEL = "gemini-3.6-flash"
 
 REPORTS = [
     {
-        "file": "گزارش_مدیریتی_بازار_برزیل_بروزرسانی_۲۰۲۵.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "گزارش_مدیریتی_بازار_برزیل_بروزرسانی_۲۰۲۵.html",
         "country": "برزیل",
         "type": "detailed",
     },
     {
-        "file": "گزارش استراتژِی بازایابی عراق.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "گزارش استراتژِی بازایابی عراق.html",
         "country": "عراق",
         "type": "detailed",
     },
     {
         # بازار خرده‌فروشی و قیمت‌های واقعی جوش شیرین در سوپرمارکت‌ها و
         # فروشگاه‌های آنلاین عراق — شامل لینک به صفحه‌ی محصول و عکس هر برند.
-        "file": "گزارش_جامع_بازار_خرده_فروشی_و_جوش_شیرین_در_عراق.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "گزارش_جامع_بازار_خرده_فروشی_و_جوش_شیرین_در_عراق.html",
         "country": "عراق",
         "type": "detailed",
     },
@@ -104,7 +113,8 @@ REPORTS = [
         "type": "summary",
     },
     {
-        "file": "گزراش کامل ترکیه جمینای.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "گزراش کامل ترکیه جمینای.html",
         "country": "ترکیه",
         "type": "detailed",
     },
@@ -119,7 +129,8 @@ REPORTS = [
         "type": "summary",
     },
     {
-        "file": "گزارش_تحلیلی_بازار_جوش_شیرین_ارمنستان.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "گزارش_تحلیلی_بازار_جوش_شیرین_ارمنستان.html",
         "country": "ارمنستان",
         "type": "detailed",
     },
@@ -129,7 +140,10 @@ REPORTS = [
         "type": "summary",
     },
     {
-        "file": "گزارش_تحلیلی_بازار_جوش_شیرین_روسیه.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده (طبق خواسته‌ی کاربر) — نسخه‌ی Word قبلی
+        # جایگزین شد. محتوا عیناً از نسخه‌ی Word اصلی است (بدون کم/زیاد کردن
+        # عدد)، فقط با نمودار Chart.js و جدول‌بندی/کارت‌های طراحی‌شده‌ی سایت.
+        "file": "گزارش_تحلیلی_بازار_جوش_شیرین_روسیه.html",
         "country": "روسیه",
         "type": "detailed",
     },
@@ -139,8 +153,47 @@ REPORTS = [
         "type": "summary",
     },
     {
-        "file": "گزارش_تحلیلی_بازار_جوش_شیرین_ازبکستان.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "گزارش_تحلیلی_بازار_جوش_شیرین_ازبکستان.html",
         "country": "ازبکستان",
+        "type": "detailed",
+    },
+    {
+        # پروفایل رقابتی چین -- جدا از گزارش‌های «بازار X» (که بازارهای واردکننده‌ن)،
+        # این‌ها پژوهش رقیب/صادرکننده‌ن، دقیقاً مثل گزارش‌های ترکیه که از قبل
+        # این‌جا هستن. چین هم مثل ترکیه/روسیه هم‌زمان «کشور» (صفحه‌ی /countries)
+        # و «رقیب» (صفحه‌ی /competitors) است.
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "تحلیل رقیب جوش شیرین چین.html",
+        "country": "چین",
+        "type": "detailed",
+    },
+    {
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "China_Baking_Soda_Competitor_Research_v2.html",
+        "country": "چین",
+        "type": "detailed",
+    },
+    {
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "منابع تجاری جوش شیرین چین.html",
+        "country": "چین",
+        "type": "detailed",
+    },
+    {
+        # PDF است -- نوع «detailed» از PDF پشتیبانی نمی‌کنه، پس «summary»
+        # (با استخراج Gemini) استفاده می‌شه.
+        "file": "China_sodium_bicarbonate_executive_report.pdf",
+        "country": "چین",
+        "type": "summary",
+    },
+    {
+        # پروفایل رقابتی روسیه -- جدا از گزارش‌های «بازار روسیه» (که از دید
+        # واردکننده‌ی جوش شیرین به روسیه‌ست)؛ این یکی روسیه رو به‌عنوان
+        # صادرکننده/رقیب بررسی می‌کنه (منبع اصلی رکورد روسیه در competitors.json).
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "پروفایل_رقابتی_روسیه_جوش_شیرین.html",
+        "country": "روسیه",
         "type": "detailed",
     },
     {
@@ -148,7 +201,8 @@ REPORTS = [
         # رصد قیمت سودا اش/جوش شیرین و شاخص‌های ترانزیت. country="جهانی"
         # عمداً از getCountries()/enrich_countries.py مستثنا شده چون یک
         # کشور واقعی نیست.
-        "file": "گزارش پس‌زمینه بازار جهانی سودا اش.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "گزارش پس‌زمینه بازار جهانی سودا اش.html",
         "country": "جهانی",
         "type": "detailed",
     },
@@ -157,8 +211,54 @@ REPORTS = [
         # data/per_capita_consumption.json (ساخته‌شده‌ی دستی از جدول این
         # گزارش) روی صفحه‌ی هر کشور استفاده می‌شه. country="جهانی" چون
         # گزارش پس‌زمینه است، نه مخصوص یک کشور.
-        "file": "مصرف جهانی جوش شیرین.docx",
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "مصرف جهانی جوش شیرین.html",
         "country": "جهانی",
+        "type": "detailed",
+    },
+    {
+        "file": "گزارش_خلاصه_بازار_جوش_شیرین_قزاقستان.docx",
+        "country": "قزاقستان",
+        "type": "summary",
+    },
+    {
+        # از این گزارش به بعد قالب گزارش‌های مفصل HTML شد (خواناتر/جذاب‌تر از Word
+        # ساده) — نسخه‌ی Word قبلی این گزارش با این فایل جایگزین شد (طبق خواسته‌ی
+        # کاربر). به‌جای پارس‌شدن به بلوک (مثل docx)، عیناً به شکل صفحه‌ی HTML
+        # مستقل داخل iframe نمایش داده می‌شه — نگاه کن build_html_report().
+        "file": "گزارش_تحلیلی_بازار_جوش_شیرین_قزاقستان.html",
+        "country": "قزاقستان",
+        "type": "detailed",
+    },
+    {
+        # گزارش خرده‌فروشی/توزیع داخلی — جدا از گزارش تحلیلی بالا (که سمت
+        # واردات/تجارت کلان قزاقستانه)؛ این یکی زنجیره‌ی توزیع، برندها، و
+        # لایه‌های قیمتی از گمرک تا قفسه‌ی مصرف‌کننده رو پوشش می‌ده. بازنویسی‌شده
+        # به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "گزارش_خرده‌فروشی_بازار_جوش_شیرین_قزاقستان.html",
+        "country": "قزاقستان",
+        "type": "detailed",
+    },
+    {
+        # پروفایل عمیق تولیدکننده‌ی مسلط داخلی روسیه — جدا از گزارش‌های «بازار
+        # روسیه» بالاتر (که سمت واردات/رقابت رو پوشش می‌دن)، این یکی تک‌شرکتیه؛
+        # همین داده برای غنی‌سازی producers[0] در data/competitors.json هم
+        # استفاده شد (ساختار مالکیت، هزینه، مشتریان، قیمت صادراتی).
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "تحلیل_شرکت_سودای_باشقیرستان.html",
+        "country": "روسیه",
+        "type": "detailed",
+    },
+    {
+        # گزارش راهبردی ترانزیت/کریدورهای حمل‌ونقل اوراسیا (بر پایه‌ی گزارش
+        # EDB «شبکه‌ی حمل‌ونقل اوراسیا» + رصد رویدادهای ژئوپلیتیک ۲۰۲۵-۲۰۲۶) —
+        # به خودِ اتحادیه‌ی اوراسیا (EAEU) مربوطه، نه یک کشور خاص؛ country="اوراسیا"
+        # مثل "جهانی" یک برچسب غیر-کشوریه (نگاه کن NON_COUNTRY_LABELS و
+        # UNION_REPORT_LABELS توی web/lib/data.js) و توی صفحه‌ی /unions/eaeu
+        # نمایش داده می‌شه، نه توی /countries.
+        # بازنویسی‌شده به HTML طراحی‌شده — نسخه‌ی Word قبلی جایگزین شد.
+        "file": "گزارش_ترانزیت_اوراسیا.html",
+        "country": "اوراسیا",
         "type": "detailed",
     },
 ]
@@ -308,6 +408,24 @@ def build_detailed_report(path: str, report_id: str) -> dict:
     return {"title": title, "blocks": blocks}
 
 
+def build_html_report(path: str, report_id: str) -> dict:
+    # کپی بایت‌به‌بایت (نه متنی) تا هیچ تبدیل line-ending/encoding‌ای رخ نده —
+    # فایل دقیقاً همون چیزیه که سرو می‌شه. عنوان جدا از روی همون بایت‌ها
+    # (decode برای رجکس) استخراج می‌شه، بدون بازنویسی فایل.
+    with open(path, "rb") as f:
+        raw = f.read()
+
+    title_match = HTML_TITLE_RE.search(raw.decode("utf-8"))
+    title = title_match.group(1).strip() if title_match else None
+
+    os.makedirs(HTML_OUT_DIR, exist_ok=True)
+    dest = os.path.join(HTML_OUT_DIR, f"{report_id}.html")
+    with open(dest, "wb") as f:
+        f.write(raw)
+
+    return {"title": title, "format": "html", "html_path": f"/report-html/{report_id}.html"}
+
+
 def build_summary_report(path: str, is_pdf: bool, client: genai.Client) -> dict:
     text = extract_pdf_text(path) if is_pdf else extract_plain_text(path)
     interaction = client.interactions.create(
@@ -351,9 +469,14 @@ def main():
 
         report_id = slugify_id(entry["file"], "report")
         is_pdf = entry["file"].lower().endswith(".pdf")
+        is_html = entry["file"].lower().endswith(".html")
         parsed_path = os.path.join(PARSED_DIR, f"{report_id}.json")
 
-        if entry["type"] == "detailed":
+        if entry["type"] == "detailed" and is_html:
+            # خودبسنده و بدون AI‌ست، پس همیشه امن برای اجرای دوباره‌ست.
+            parsed = build_html_report(src_path, report_id)
+            title = parsed["title"] or entry["file"]
+        elif entry["type"] == "detailed":
             if is_pdf:
                 print(f"[WARN] {entry['file']}: نوع 'detailed' برای PDF پشتیبانی نمی‌شه، رد شد.")
                 continue

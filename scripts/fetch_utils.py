@@ -15,6 +15,7 @@ import re
 import ssl
 import html
 import http.client
+import http.cookiejar
 import xml.etree.ElementTree as ET
 import urllib.request
 import urllib.error
@@ -32,6 +33,17 @@ HEADERS = {
 # می‌شه؛ استفاده‌ی صریح از باندل certifi این مشکل رو روی هر پلتفرمی (ویندوز/لینوکس
 # گیت‌هاب اکشنز) حل می‌کنه.
 SSL_CONTEXT = ssl.create_default_context(cafile=certifi.where())
+
+# بعضی سایت‌ها (مثلاً economic.mfa.ir، کشف‌شده ۲۰۲۶-۰۹-۱۶) روی درخواست اول یک
+# کوکی ست می‌کنن و تا وقتی همون کوکی رو در درخواست بعدی نبینن، مدام ۳۰۷ ریدایرکت
+# می‌دن — با urllib.request.urlopen ساده (بدون کوکی‌جار) این به یک حلقه‌ی بی‌نهایت
+# ریدایرکت می‌رسه (خطای "infinite loop"). این opener مشترک یک کوکی‌جار خالی نگه
+# می‌داره تا چنین سایت‌هایی هم قابل‌خوندن باشن؛ برای سایت‌های بدون این نیاز هم
+# بی‌ضرره (کوکی‌جار خالی می‌مونه).
+_OPENER = urllib.request.build_opener(
+    urllib.request.HTTPCookieProcessor(http.cookiejar.CookieJar()),
+    urllib.request.HTTPSHandler(context=SSL_CONTEXT),
+)
 
 _META_CHARSET_RE = re.compile(rb"charset=[\"']?\s*([\w-]+)", re.IGNORECASE)
 
@@ -71,7 +83,7 @@ def _decode_html(raw: bytes, content_type_header: str | None) -> str:
 def fetch_page_text(url: str, max_chars: int = 6000, timeout: int = 20) -> str:
     """HTML رو می‌گیره، تگ/اسکریپت/استایل رو حذف می‌کنه، و به یک متن ساده و کوتاه تبدیل می‌کنه."""
     req = urllib.request.Request(url, headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=timeout, context=SSL_CONTEXT) as resp:
+    with _OPENER.open(req, timeout=timeout) as resp:
         raw_bytes = resp.read()
         # نام raw_html (نه html) چون ماژول html بالا import شده و سایه‌انداختن
         # روی اسمش، اولین کسی که این تابع رو گسترش بده گیج می‌کنه.

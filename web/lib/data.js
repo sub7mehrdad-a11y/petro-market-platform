@@ -63,6 +63,15 @@ export function getReportsManifest() {
   return readJsonSafe(MANIFEST_FILE, []);
 }
 
+// گزارش‌های اختصاصیِ یک اتحادیه (فیلد country برابر با برچسبش توی
+// UNION_REPORT_LABELS) — برای صفحه‌ی /unions/[id]. اتحادیه‌ای که هنوز گزارش
+// اختصاصی نداره، آرایه‌ی خالی می‌گیره.
+export function getReportsForUnion(unionId) {
+  const label = UNION_REPORT_LABELS[unionId];
+  if (!label) return [];
+  return getReportsManifest().filter((r) => r.country === label);
+}
+
 export function getReportsDir() {
   return REPORTS_DIR;
 }
@@ -134,11 +143,18 @@ export function getParsedReport(id) {
   return parsed ? { ...parsed, manifest: entry } : null;
 }
 
+// نگاشت شناسه‌ی اتحادیه → برچسبی که گزارش‌های اختصاصی همون اتحادیه (توی
+// REPORTS اسکریپت ingest_reports.py) با فیلد country ثبت می‌شن — دقیقاً مثل
+// «جهانی» برای گزارش‌های پس‌زمینه، یک برچسب غیر-کشوریه. اتحادیه‌ی جدیدی که
+// گزارش اختصاصی گرفت، یک ورودی این‌جا اضافه می‌کنه.
+export const UNION_REPORT_LABELS = { eaeu: "اوراسیا" };
+
 // فهرست همه‌ی کشورهایی که حداقل توی یکی از منابع (شرکت/نمایشگاه/گزارش/قیمت) هستن.
 // «جهانی» یک کشور واقعی نیست — برچسب گزارش‌های پس‌زمینه‌ی سراسری (مثل بازار
-// جهانی سودا اش) که به هیچ کشور خاصی مربوط نمی‌شن؛ نباید توی صفحه‌ی
-// /countries یا محاسبات فاصله/شریک‌تجاری ظاهر بشه.
-const NON_COUNTRY_LABELS = new Set(["جهانی"]);
+// جهانی سودا اش) که به هیچ کشور خاصی مربوط نمی‌شن؛ برچسب‌های UNION_REPORT_LABELS
+// هم همین‌طور (مثلاً «اوراسیا» برچسب گزارش اختصاصی اتحادیه‌ست، نه کشور) — هیچ‌کدوم
+// نباید توی صفحه‌ی /countries یا محاسبات فاصله/شریک‌تجاری ظاهر بشن.
+const NON_COUNTRY_LABELS = new Set(["جهانی", ...Object.values(UNION_REPORT_LABELS)]);
 
 export function getCountries() {
   const set = new Set();
@@ -242,6 +258,16 @@ export function getTransitPlaces() {
   return readJsonSafe(path.join(DATA_DIR, "transit_places.json"), {});
 }
 
+// کریدورهای بین‌المللی ترانزیت (ریلی/جاده‌ای/دریایی) — طول مسیر، زمان تخمینی
+// و هزینه‌ی هر TEU (وقتی منبع مستند داشت). برخلاف getTransitRateEstimate
+// (کرایه‌ی جاده‌ای داخلی ایران، از پست‌های روزانه‌ی اعلام‌بار)، این یک عکسِ
+// نسبتاً ایستای زیرساخت بین‌المللیه؛ عمدتاً از گزارش EDB «شبکه‌ی حمل‌ونقل
+// اوراسیا» + چند مسیر دریایی/مرزی که منبعشون هنوز «estimate-needs-verification»
+// علامت خورده (نه عدد جعلی).
+export function getTransitCorridors() {
+  return readJsonSafe(path.join(DATA_DIR, "transit_corridors.json"), null);
+}
+
 // میانه (نه میانگین) — چون نمونه کوچک است و یک پست پرت (مثل یک مسیر خیلی کوتاه
 // با کرایه‌ی مقطوع) میانگین را کاملاً جابه‌جا می‌کند.
 function median(nums) {
@@ -251,13 +277,33 @@ function median(nums) {
   return s.length % 2 ? s[mid] : (s[mid - 1] + s[mid]) / 2;
 }
 
+// صدکِ خطی (linear interpolation) روی آرایه‌ی مرتب‌شده — برای p10/p90.
+function percentile(sorted, p) {
+  if (sorted.length === 0) return null;
+  const idx = (sorted.length - 1) * p;
+  const lo = Math.floor(idx);
+  const hi = Math.min(lo + 1, sorted.length - 1);
+  const frac = idx - lo;
+  return sorted[lo] + (sorted[hi] - sorted[lo]) * frac;
+}
+
 function summarize(values) {
-  if (values.length === 0) return { median: null, sampleSize: 0, min: null, max: null };
+  if (values.length === 0) {
+    return { median: null, sampleSize: 0, min: null, max: null, p10: null, p90: null };
+  }
+  const sorted = [...values].sort((a, b) => a - b);
   return {
     median: median(values),
     sampleSize: values.length,
-    min: Math.min(...values),
-    max: Math.max(...values),
+    min: sorted[0],
+    max: sorted[sorted.length - 1],
+    // p10/p90 (نه min/max خام) برای بازه‌ی نمایشی — یک پست تک‌افتاده‌ی غلط‌خوانده‌شده
+    // (مثلاً یک پست که مدل قیمتش رو اشتباه استخراج کرده) می‌تونه min/max خام رو به
+    // شکل مضحکی جابه‌جا کنه (مثلاً بازه‌ای از ۱۸۹ تومان تا ۲۵۷ میلیون تومان برای
+    // یک کامیون)؛ صدکِ ۱۰ تا ۹۰ دقیقاً همون منطق «میانه به‌جای میانگین» بالا رو
+    // برای «بازه» هم اعمال می‌کنه — بدون حذف داده، فقط دو سر افراطی رو کم‌وزن می‌کنه.
+    p10: percentile(sorted, 0.1),
+    p90: percentile(sorted, 0.9),
   };
 }
 
@@ -283,6 +329,22 @@ export function getTransitRateEstimate() {
 export function getImportSuppliers(country) {
   const all = readJsonSafe(path.join(DATA_DIR, "import_suppliers.json"), {});
   return all[country] || null;
+}
+
+// خروجی scripts/ingest_market_share_history.py — سهم چندسالهٔ هر کشور مبدأ از
+// بازار یک مقصد (یا از صادرات جهانی)، نه فقط یک سال. سؤالی که SupplierBreakdown
+// جواب نمی‌دهد: سهم چه کسی دارد رشد/افت می‌کند، و آن سهمِ ازدست‌رفته را چه کسی
+// می‌گیرد. منبع: WITS (آینه‌ی عمومی UN Comtrade)، نه ITC Trade Map.
+export function getMarketShareHistory(country) {
+  const all = readJsonSafe(path.join(DATA_DIR, "market_share_history.json"), { markets: {} });
+  return Object.values(all.markets || {}).find((m) => m.importer_fa === country) || null;
+}
+
+// نسخه‌ی جهانی همان فایل — سهم بزرگ‌ترین صادرکنندگان از «سبد هسته‌ی قابل
+// مقایسه» (نه کل صادرات جهانی؛ توضیح در data.markets.global.note_fa).
+export function getGlobalMarketShareHistory() {
+  const all = readJsonSafe(path.join(DATA_DIR, "market_share_history.json"), { markets: {} });
+  return all.markets?.global || null;
 }
 
 // خروجی scripts/ingest_iran_exports.py — صادرات واقعی ایران (نه واردات جهانی)
@@ -352,6 +414,159 @@ export function getPerCapitaConsumption(country) {
     is_population_based: true,
     population,
     estimated_tons: Math.round((population * kgPerCapita) / 1000),
+  };
+}
+
+// خروجی برداشت دستی «پژوهش اتحادیه‌های اقتصادی جهان» (data/trade_unions.json)
+// — کدام کشورها عضو کدام اتحادیه/پیمان تجاری چندجانبه‌اند، وضعیت ایران در هر
+// کدام، و کاربردش برای صادرات جوش شیرین. برخلاف بقیه‌ی داده‌های تجاری سایت،
+// این فایل خروجی یک ایجنت خودکار نیست؛ یک سند تحقیقی ثابت است که فقط با
+// انتشار پژوهش جدید به‌روز می‌شود.
+export function getTradeUnions() {
+  const data = readJsonSafe(path.join(DATA_DIR, "trade_unions.json"), { unions: {} });
+  return data.unions || {};
+}
+
+export function getTradeUnion(id) {
+  return getTradeUnions()[id] || null;
+}
+
+// همه‌ی اتحادیه‌هایی که یک کشور در آن‌ها عضو/ناظر/شریک/وابسته است — برای بخش
+// «عضویت در پیمان‌های تجاری» در پروفایل هر کشور. یک کشور می‌تواند هم‌زمان در
+// چند اتحادیه باشد (مثلاً روسیه هم در EAEU هم در CIS و SCO و BRICS).
+const UNION_RELATION_FIELDS = [
+  ["members", "member"],
+  ["observers", "observer"],
+  ["partner_countries", "partner"],
+  ["associate_countries", "associate"],
+];
+
+export function getUnionsForCountry(countryFa) {
+  const unions = getTradeUnions();
+  const result = [];
+  for (const u of Object.values(unions)) {
+    for (const [field, relation] of UNION_RELATION_FIELDS) {
+      if (u[field]?.includes(countryFa)) {
+        result.push({ ...u, relation });
+        break;
+      }
+    }
+  }
+  return result;
+}
+
+// یک شکل یکسان از «واردات این کشور به تفکیک مبدأ» — بدون توجه به این‌که کدام
+// اسکریپت آن را ساخته. اولویت با import_suppliers.json (مستقیم از ITC، سال
+// ۲۰۲۵)؛ اگر نبود، آخرین سالِ market_share_history.json (WITS). این دو تنها
+// منابعی روی سایت‌ان که واردات یک کشور را ردیف‌به‌ردیف به تفکیک مبدأ می‌دهند —
+// real_trade_stats و top_trade_partners فقط چند رقم دستی/روایی دارند، نه یک
+// جدول کامل قابل جمع‌بندی.
+export function getCountryImportBreakdown(country) {
+  const direct = getImportSuppliers(country);
+  if (direct?.suppliers?.length) {
+    return {
+      source: "import_suppliers",
+      year: direct.year,
+      total_usd_k: direct.total?.value_usd_k ?? null,
+      suppliers: direct.suppliers.map((s) => ({
+        country: s.country,
+        value_usd_k: s.value_usd_k ?? null,
+        tons: s.quantity_unit === "Tons" ? s.quantity ?? null : null,
+        share_pct: s.share_pct ?? null,
+      })),
+    };
+  }
+
+  const history = getMarketShareHistory(country);
+  const lastYear = history?.years?.[history.years.length - 1];
+  if (lastYear?.suppliers?.length) {
+    return {
+      source: "market_share_history",
+      year: lastYear.year,
+      total_usd_k: lastYear.total_usd_k ?? null,
+      suppliers: lastYear.suppliers.map((s) => ({
+        country: s.country_fa,
+        value_usd_k: s.value_usd_k ?? null,
+        tons: s.quantity_kg != null ? Math.round(s.quantity_kg / 1000) : null,
+        share_pct: s.share_pct ?? null,
+      })),
+    };
+  }
+
+  return null;
+}
+
+function round1(n) {
+  return n == null ? null : Math.round(n * 10) / 10;
+}
+
+// جمع‌بندی تجارت یک اتحادیه: از میان کشورهای عضو، هر کدام که تفکیک واردات
+// داشته باشند (getCountryImportBreakdown)، سهم تأمین‌کننده‌های «داخل همین
+// اتحادیه» در برابر «خارج از اتحادیه» را جدا می‌کند و در سطح کل اتحادیه جمع
+// می‌زند. عمداً یک رقم ذخیره‌شده/دستی نیست — هر بار از روی همان داده‌ی
+// کشورهایی که تا الان تحقیق شده‌اند محاسبه می‌شود؛ یعنی با هر کشور جدیدی که
+// import_suppliers.json یا market_share_history.json برایش تکمیل شود، رقم
+// اتحادیه‌اش هم خودکار به‌روزتر می‌شود، بدون این‌که کسی عددی را دستی ویرایش کند.
+//
+// چرا فقط بر پایه‌ی ارزش (USD)، نه تناژ: تناژ فقط برای بعضی ردیف‌ها موجود است؛
+// جمع‌زدن تناژ ردیف‌های ناقص در کنار هم عددی می‌سازد که به‌ظاهر دقیق ولی واقعاً
+// گمراه‌کننده است. کل اتحادیه فقط برحسب ارزش جمع می‌شود؛ تناژ فقط در سطح هر
+// عضو (که خودش کامل است) نشان داده می‌شود.
+export function getUnionTradeStats(unionId) {
+  const union = getTradeUnion(unionId);
+  if (!union?.members?.length) return null;
+
+  const memberSet = new Set(union.members);
+  let totalUsdK = 0;
+  let intraUsdK = 0;
+  let membersWithData = 0;
+
+  const memberRows = union.members.map((member) => {
+    const breakdown = getCountryImportBreakdown(member);
+    if (!breakdown) {
+      return { country: member, hasData: false };
+    }
+    membersWithData += 1;
+
+    const total = breakdown.total_usd_k ?? breakdown.suppliers.reduce((s, r) => s + (r.value_usd_k || 0), 0);
+    const intra = breakdown.suppliers
+      .filter((s) => s.country !== member && memberSet.has(s.country))
+      .reduce((s, r) => s + (r.value_usd_k || 0), 0);
+    const topExternal = [...breakdown.suppliers]
+      .filter((s) => !memberSet.has(s.country))
+      .sort((a, b) => (b.value_usd_k || 0) - (a.value_usd_k || 0))[0];
+    const totalTons = breakdown.suppliers.every((s) => s.tons != null)
+      ? breakdown.suppliers.reduce((s, r) => s + r.tons, 0)
+      : null;
+
+    if (total) {
+      totalUsdK += total;
+      intraUsdK += intra;
+    }
+
+    return {
+      country: member,
+      hasData: true,
+      source: breakdown.source,
+      year: breakdown.year,
+      total_usd_k: total || null,
+      total_tons: totalTons,
+      intra_usd_k: intra || null,
+      intra_share_pct: total ? round1((intra / total) * 100) : null,
+      top_external_supplier: topExternal
+        ? { country: topExternal.country, share_pct: topExternal.share_pct }
+        : null,
+    };
+  });
+
+  return {
+    union_id: unionId,
+    members_total: union.members.length,
+    members_with_data: membersWithData,
+    total_usd_k: totalUsdK || null,
+    intra_usd_k: intraUsdK || null,
+    intra_share_pct: totalUsdK ? round1((intraUsdK / totalUsdK) * 100) : null,
+    member_rows: memberRows,
   };
 }
 

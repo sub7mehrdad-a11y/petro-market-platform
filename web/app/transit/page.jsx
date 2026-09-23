@@ -1,6 +1,7 @@
-import { getTransitPlaces, getTransitRateEstimate, getNewsAnalysis } from "@/lib/data";
+import { getTransitPlaces, getTransitRateEstimate, getTransitCorridors, getNewsAnalysis } from "@/lib/data";
 import NewsCard from "@/app/components/NewsCard";
 import TransitEstimator from "./TransitEstimator";
+import TransitCorridorsSection from "@/app/components/TransitCorridorsSection";
 
 const TRANSIT_KEYWORDS = [
   "ترانزیت",
@@ -39,6 +40,7 @@ function isTransitRelated(entry) {
 export default function TransitPage() {
   const places = getTransitPlaces();
   const rates = getTransitRateEstimate();
+  const corridors = getTransitCorridors();
   const transitNews = getNewsAnalysis().filter(isTransitRelated);
 
   return (
@@ -52,6 +54,8 @@ export default function TransitPage() {
       </section>
 
       <TransitEstimator places={places} rates={rates} />
+
+      <TransitCorridorsSection data={corridors} />
 
       <section className="card p-5">
         <div className="flex items-baseline justify-between gap-2 mb-2">

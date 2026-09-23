@@ -32,7 +32,7 @@ export async function POST(request) {
       grade_label_fa: gradeLabelFa(rendered.grade),
       subject: rendered.subject,
       body: rendered.body,
-      attachments: rendered.attachments,
+      missingLinks: rendered.missingLinks,
     };
   });
 
@@ -41,5 +41,9 @@ export async function POST(request) {
     .map((e) => e.trim())
     .filter(Boolean);
 
-  return NextResponse.json({ previews, truncated: companyIds.length > 10, cc });
+  // اگه هر کدوم از پیش‌نمایش‌ها لینک ناقص داشته باشن (یعنی env هنوز پر نشده)،
+  // یک‌جا بالای پیش‌نمایش هشدار می‌دیم تا لازم نباشه هر کارت رو جدا چک کرد.
+  const missingLinkEnvVars = [...new Set(previews.flatMap((p) => p.missingLinks || []))];
+
+  return NextResponse.json({ previews, truncated: companyIds.length > 10, cc, missingLinkEnvVars });
 }

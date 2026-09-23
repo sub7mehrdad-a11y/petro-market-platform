@@ -1001,7 +1001,7 @@
     "purchasing_potential": "Medium",
     "address": "Khalda, Amman, Jordan",
     "phone": "+962 79 0046952",
-    "email": "—",
+    "email": null,
     "website": "https://waddanjo.com",
     "id": "company-80"
   },
@@ -1039,7 +1039,7 @@
     "purchasing_potential": "بالا",
     "address": "P.O Box 503-00204, Athi River",
     "phone": "+254 722 881 024",
-    "email": "admin@athirivertanneries.co.ke md@athirivertanneries.co.ke",
+    "email": "admin@athirivertanneries.co.ke",
     "website": "athirivertanneries.co.ke",
     "id": "company-83"
   },
@@ -1075,7 +1075,7 @@
     "purchasing_potential": "بسیار بالا",
     "address": "P.O. Box 25, Thika, Kenya",
     "phone": "+254 717 080 024",
-    "email": "info@bakex.co.ke info@broadway.co.ke",
+    "email": "info@bakex.co.ke",
     "website": "bakex.co.ke",
     "id": "company-86"
   },
@@ -1279,7 +1279,7 @@
     "purchasing_potential": "متوسط",
     "address": "Mombasa / Nairobi",
     "phone": "254751021020",
-    "email": "kenyachem @ gmail.com",
+    "email": "kenyachem@gmail.com",
     "website": "kenyachemical.com",
     "id": "company-103"
   },
@@ -1411,7 +1411,7 @@
     "purchasing_potential": "بالا",
     "address": "Maragua, Murang'a County, Kenya",
     "phone": "+254 791 031654",
-    "email": "-",
+    "email": null,
     "website": "murangacountycreameries.com",
     "id": "company-114"
   },
@@ -1495,7 +1495,7 @@
     "purchasing_potential": "بالا",
     "address": "Kenya",
     "phone": "509536992385",
-    "email": "management@redachem.com kenya@redachem.com",
+    "email": "management@redachem.com",
     "website": "redachem.com",
     "id": "company-121"
   },
@@ -1839,7 +1839,7 @@
     "action_plan": null,
     "address": null,
     "phone": "9647704555186",
-    "email": "info@albarakaiq.com mohammed@albarakaiq.com alaauldeen@albarakaiq.com",
+    "email": "info@albarakaiq.com",
     "id": "company-148"
   },
   {
@@ -2006,9 +2006,10 @@
     "purchasing_potential": "بالا",
     "address": "سوریه – حومه دمشق – داریا القبلیه (پشت مرکز شهر)",
     "phone": "+963 944024343",
-    "email": "ثبت نشده (مراجعه به وب‌سایت)",
+    "email": null,
     "website": "commercialsy.com/en/company/biscoza-biscuit-manufacturing",
-    "id": "company-161"
+    "id": "company-161",
+    "email_note": "ثبت نشده مراجعه به وب‌سایت"
   },
   {
     "country": "سوریه",
@@ -2018,9 +2019,10 @@
     "purchasing_potential": "متوسط",
     "address": "بزرگراه دمشق-درعا-امان، شمال پل ازرع، درعا، سوریه",
     "phone": "+963 932444410 / +963 933182126",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "commercialsy.com/en/company/hariri-food-industries",
-    "id": "company-162"
+    "id": "company-162",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2042,9 +2044,10 @@
     "purchasing_potential": "بسیار بالا",
     "address": "حومه دمشق / حلب، سوریه",
     "phone": "+963 933761629 (فروش) / +90 539 304 4419 (مدیریت)",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "commercialsy.com/en/company/reem-al-fouad-food-industries-company",
-    "id": "company-164"
+    "id": "company-164",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2078,9 +2081,10 @@
     "purchasing_potential": "متوسط",
     "address": "حماه، سوریه",
     "phone": "+963 984850699 / +963 993370566",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "alsalhin.com",
-    "id": "company-167"
+    "id": "company-167",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2102,9 +2106,10 @@
     "purchasing_potential": "بالا",
     "address": "حمص، سوریه",
     "phone": "+963 989901616",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "www.almimas.com",
-    "id": "company-169"
+    "id": "company-169",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2114,9 +2119,10 @@
     "purchasing_potential": "متوسط",
     "address": "حومه دمشق، سوریه",
     "phone": "+963 11 5212525 / +963 995448950 / +963 944447912",
-    "email": "sanabelco@gmail.com (رمزگشایی از حفاظت ایمیل کلادفلر؛ توصیه به تأیید مجدد)",
+    "email": "sanabelco@gmail.com",
     "website": "(نام دامنه در منبع نامعتبر بود؛ نیازمند تأیید مجدد)",
-    "id": "company-170"
+    "id": "company-170",
+    "email_note": "رمزگشایی از حفاظت ایمیل کلادفلر؛ توصیه به تأیید مجدد"
   },
   {
     "country": "سوریه",
@@ -2126,9 +2132,10 @@
     "purchasing_potential": "بسیار بالا",
     "address": "دمشق، سوریه",
     "phone": "+963 11 3334730",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "industrysy.com (VIP listing)",
-    "id": "company-171"
+    "id": "company-171",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2138,9 +2145,10 @@
     "purchasing_potential": "متوسط",
     "address": "سوریه (آدرس دقیق در منبع ثبت نشده)",
     "phone": "+963 943656364",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "kswani.com",
-    "id": "company-172"
+    "id": "company-172",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2162,9 +2170,10 @@
     "purchasing_potential": "بالا",
     "address": "حلب، سوریه",
     "phone": "+963 954094140 / +963 955886622",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "agrogroupsy.com",
-    "id": "company-174"
+    "id": "company-174",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2174,9 +2183,10 @@
     "purchasing_potential": "بالا",
     "address": "حماه، سوریه",
     "phone": "+963 988445745",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "commercialsy.com (VIP listing)",
-    "id": "company-175"
+    "id": "company-175",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2186,9 +2196,10 @@
     "purchasing_potential": "متوسط",
     "address": "طرطوس، سوریه (ساحل سوریه)",
     "phone": "+963 988147285",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "ثبت نشده",
-    "id": "company-176"
+    "id": "company-176",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2354,7 +2365,7 @@
     "purchasing_potential": "High",
     "address": "8 Teryan St, Yerevan, Armenia",
     "phone": "+374 10 605060",
-    "email": "—",
+    "email": null,
     "website": "https://yeremyanproducts.com",
     "id": "company-190"
   },
@@ -2461,7 +2472,7 @@
     "target_grade": "خوراکی (E500ii)، خوراک دام، صنعتی",
     "address": "308006, Belgorod, Mikhailovskoye Shosse, 2-14",
     "website": "https://bsksalt.ru",
-    "email": "555@bsk1.ru / belbsk@yandex.ru",
+    "email": "555@bsk1.ru",
     "phone": "+7 (4722) 20-52-31 / +7 (980) 386-31-31 (WhatsApp)",
     "action_plan": "واردکننده مستقیم جوش شیرین در کیسه ۲۵ کیلویی و جامبوبگ ۱ تنی؛ دارای خط واتساپ فعال",
     "id": "company-199"
@@ -2545,7 +2556,7 @@
     "target_grade": "خوراکی (E500ii) - پرمیکس‌های قنادی و نان",
     "address": "355035, Stavropol, Grizodubovoy St., 24a",
     "website": "https://modernbakery.gefera.ru/catalog/eed9eb5b-2b87-6b1b-ba8c-25d2948c6526/",
-    "email": "berta@berta.ru / kuh@berta.com",
+    "email": "berta@berta.ru",
     "phone": "+7 (8652) 95-01-20 / +7 (8652) 28-35-15",
     "action_plan": "تولیدکننده پیشرو انواع پودر کیک، مافین و بهبوددهنده نان با مصرف تناژ بالای جوش شیرین",
     "id": "company-206"
@@ -2593,7 +2604,7 @@
     "target_grade": "خوراکی (E500ii) - تولید بیسکویت، کلوچه، ویفر",
     "address": "115184, Moscow, 2nd Novokuznetskiy Per., 13/15",
     "website": "https://www.uniconf.ru",
-    "email": "rotfront@rotfront.ru / uniconf@uniconf.ru",
+    "email": "rotfront@rotfront.ru",
     "phone": "+7 (495) 730-69-46 / +7 (495) 951-23-74",
     "action_plan": "مالک ۱۹ کارخانه بزرگ (از جمله روت فرانت، کراسنی اکتیابر) با مصرف سالانه صدها تن جوش شیرین",
     "id": "company-210"
@@ -2605,7 +2616,7 @@
     "target_grade": "خوراکی (E500ii) - خطوط تولید کیک، ویفر، بیسکویت",
     "address": "634057, Tomsk, Prospekt Mira, 20",
     "website": "https://kdvonline.ru",
-    "email": "contact@kdvonline.ru / info@kdvgroup.com",
+    "email": "contact@kdvonline.ru",
     "phone": "+7 (3822) 70-55-55 / 8 (800) 250-55-55",
     "action_plan": "غول صنایع غذایی روسیه با بیش از ۱۰ کارخانه عظیم و خرید پیوسته واگنی و کامیونی جوش شیرین",
     "id": "company-211"
@@ -2629,7 +2640,7 @@
     "target_grade": "خوراک دام (Feed Grade) - بافر شکمبه گاو شیری و تعادل DCAD",
     "address": "400123, Volgograd, Khrustalnaya, 107 (Hub: Moscow, Lipetsk)",
     "website": "https://www.megamix.ru",
-    "email": "info@megamix.ru / mmk@megamix.ru",
+    "email": "info@megamix.ru",
     "phone": "+7 (8442) 97-97-97 / +7 (495) 122-23-70",
     "action_plan": "بزرگترین مصرف‌کننده و واردکننده جوش شیرین دامی برای تولید پرمیکس‌های MEGAKORM و خوراک گله‌های شیری",
     "id": "company-213"
@@ -2641,7 +2652,7 @@
     "target_grade": "خوراک دام - بافر ضد اسیدوز (РУМЕНБУФФЕР™ / КАУФИТ™)",
     "address": "117513, Moscow, Leninskiy Prospekt, 137 (Plants: Stupino, Gagarin)",
     "website": "https://mustangtk.ru",
-    "email": "mtk@mustangtk.ru / faztdinova@mustangtk.ru",
+    "email": "mtk@mustangtk.ru",
     "phone": "+7 (495) 931-91-90 / +7 (916) 970-27-89 (WA/TG)",
     "action_plan": "خرید تناژ بالای جوش شیرین دامی برای تولید مکمل‌های کنترل اسیدوز شکمبه و تعادل الکترولیت",
     "id": "company-214"
@@ -2653,7 +2664,7 @@
     "target_grade": "خوراک دام و طیور - تنظیم‌کننده اسیدیته شکمبه و استرس گرمایی",
     "address": "108803, Moscow (Plant: Vladimir Obl., Lakinsk, Lenina 42)",
     "website": "https://www.kmkorma.ru",
-    "email": "info@kmkorma.ru / info@de-heus.ru",
+    "email": "info@kmkorma.ru",
     "phone": "+7 (495) 645-21-59 / +7 (49242) 4-12-24",
     "action_plan": "کارخانه تمام اتوماتیک تولید پرمیکس در ولادیمیر؛ مصرف بالای بی کربنات سدیم در جیره گاو و مرغداری",
     "id": "company-215"
@@ -2677,7 +2688,7 @@
     "target_grade": "خوراک دام و طیور - بافر pH شکمبه و استحکام پوسته تخم‌مرغ",
     "address": "127495, Moscow / Plant: Tver Obl., Likhoslavl, Severnaya 5",
     "website": "https://vitomek.com",
-    "email": "info@vitomek.com / zavod@vitomek.com",
+    "email": "info@vitomek.com",
     "phone": "+7 (495) 902-03-32",
     "action_plan": "مصرف بی کربنات سدیم در کنسانتره‌های پروتئینی-معدنی (BVMC) برای کنترل اسیدوز و تعادل سدیم",
     "id": "company-217"
@@ -2725,7 +2736,7 @@
     "target_grade": "خوراک دام و طیور - بی کربنات سدیم خالص دامی در کیسه و بیگ‌بگ",
     "address": "125047, Moscow, 1st Tverskaya-Yamskaya St., 23",
     "website": "https://feedland.ru",
-    "email": "info@feedland.ru / e.akbarova@feedland.ru",
+    "email": "info@feedland.ru",
     "phone": "+7 (495) 663-71-56",
     "action_plan": "واردات مستقیم انواع افزودنی‌های معدنی و ویتامینی و توزیع در تناژ بالا بین کارخانجات خوراک دام",
     "id": "company-221"
@@ -2749,7 +2760,7 @@
     "target_grade": "صنعتی (Technical) - سیالات حفاری، حذف کلسیم، تنظیم pH",
     "address": "614113, Perm Krai, Perm, Galperina St., 8",
     "website": "https://www.polyex.ru",
-    "email": "polyex@polyex.perm.ru / info@polyex.ru",
+    "email": "polyex@polyex.perm.ru",
     "phone": "+7 (342) 250-70-00",
     "action_plan": "مصرف جوش شیرین صنعتی برای رسوب کلسیم و کنترل قلیائیت گل حفاری در پروژه‌های نفتی سیبری",
     "id": "company-223"
@@ -2773,7 +2784,7 @@
     "target_grade": "صنعتی - ماده مؤثره اصلی پودر خاموش‌کننده حریق کلاس B/C/E",
     "address": "659322, Altai Krai, Biysk, Sotsialisticheskaya St., 1",
     "website": "https://antifire.org",
-    "email": "mpp-tungus@mail.ru / info@antifire.org",
+    "email": "mpp-tungus@mail.ru",
     "phone": "+7 (3854) 30-29-79",
     "action_plan": "مصرف کلان جوش شیرین میکرونیزه به عنوان ماده اصلی پودرهای اطفا حریق در سیستم‌های «تونگوس»",
     "id": "company-225"
@@ -2785,7 +2796,7 @@
     "target_grade": "صنعتی - پودرهای خاموش‌کننده ماژول‌های بوران و OSP",
     "address": "127410, Moscow, Altufyevskoye Shosse, 44 (Plant: SPb)",
     "website": "https://epotos.ru",
-    "email": "info@epotos.ru / zakupki@epotos.ru",
+    "email": "info@epotos.ru",
     "phone": "+7 (495) 916-61-16 / 8 (800) 550-61-16",
     "action_plan": "تولیدکننده بزرگ کپسول‌ها و ماژول‌های پودری خودکار با مصرف بالای فرمولاسیون‌های بی کربنات سدیم",
     "id": "company-226"
@@ -2797,7 +2808,7 @@
     "target_grade": "صنعتی - شارژ کپسول‌های پودری سری OP (ОП-1 تا ОП-100)",
     "address": "172003, Tver Oblast, Torzhok, Zagorodnaya St., 1",
     "website": "http://www.pozhtechnika.ru",
-    "email": "sbyt@pozhtechnika.ru / torzhok@pozhtechnika.ru",
+    "email": "sbyt@pozhtechnika.ru",
     "phone": "+7 (48251) 9-22-30 / +7 (48251) 9-11-00",
     "action_plan": "کارخانه باسابقه در تورژوک با مصرف سالانه صدها تن جوش شیرین صنعتی برای شارژ کپسول‌های آتش‌نشانی",
     "id": "company-227"
@@ -2821,7 +2832,7 @@
     "target_grade": "دارویی - محلول‌های تزریقی، بافر همودیالیز و شستشوی ENT",
     "address": "195176, Saint Petersburg, Lvovskaya St., 27 (Industrialny 71)",
     "website": "https://solopharm.com",
-    "email": "grtx@grotexmed.com / purchase4@grotexmed.com",
+    "email": "grtx@grotexmed.com",
     "phone": "+7 (812) 385-47-87",
     "action_plan": "مصرف گرید فارماکوپه‌ای با اندوتوکسین فوق‌العاده پایین برای دیالیز خونی و سرم‌های تزریقی",
     "id": "company-229"
@@ -2845,7 +2856,7 @@
     "target_grade": "صنعتی - پودرهای شوینده، پودرهای پاک‌کننده، قرص ظرفشویی",
     "address": "420021, Republic of Tatarstan, Kazan, Gabdully Tukaya 152",
     "website": "https://nefco.ru",
-    "email": "office@nefco.ru / gensec@nefco.ru",
+    "email": "office@nefco.ru",
     "phone": "+7 (843) 570-41-91 / 8 (800) 100-08-89",
     "action_plan": "تولیدکننده برندهای معروف Sorti و Biolan با مصرف تناژ بسیار بالای جوش شیرین به عنوان ساینده و بافر pH",
     "id": "company-231"
@@ -2857,7 +2868,7 @@
     "target_grade": "صنعتی - پاک‌کننده‌های تخصصی، فوم فرش و خنثی‌کننده‌ها",
     "address": "404143, Volgograd Obl., Srednyaya Akhtuba, Promyshlennaya 12",
     "website": "https://grass.su",
-    "email": "gs@grass.su / info@grass.su",
+    "email": "gs@grass.su",
     "phone": "+7 (8443) 58-48-48 / 8 (800) 505-75-77",
     "action_plan": "مصرف تناژ بالای جوش شیرین در فرمولاسیون شوینده‌های خانگی، قالیشویی و دیتِیلینگ خودرو",
     "id": "company-232"
@@ -2881,7 +2892,7 @@
     "target_grade": "خوراکی (E500ii) - نانوایی، کیک و کراکر",
     "address": "115184, Moscow, Sredniy Ovchinnikovskiy Per., 12",
     "website": "https://ab-market.ru",
-    "email": "info@ab-mt.ru / info@ab-market.ru",
+    "email": "info@ab-mt.ru",
     "phone": "+7 (495) 120-33-06 / +7 (900) 197-11-14",
     "action_plan": "تأمین‌کننده فدرال مواد اولیه صنایع قنادی و نانوایی با انبارهای فعال در مسکو، سن‌پترزبورگ، یکاترینبورگ و نووسیبیرسک",
     "id": "company-234"
@@ -2893,7 +2904,7 @@
     "target_grade": "خوراکی (E500ii) و صنعتی",
     "address": "630005, Novosibirsk, Pisareva St., 38/2 (Moscow: Vernadskogo 41)",
     "website": "https://sell-service.ru",
-    "email": "info@sell-service.ru / nop@sell-service.ru",
+    "email": "info@sell-service.ru",
     "phone": "+7 (499) 495-46-15 / +7 (383) 227-84-15",
     "action_plan": "شبکه فروش و توزیع سراسری مواد پف‌دهنده، تنظیم‌کننده اسیدیته و نگهدارنده‌ها به کارخانجات غذایی در روسیه و اوراسیا",
     "id": "company-235"
@@ -2905,7 +2916,7 @@
     "target_grade": "خوراکی، دامی (بافر شکمبه)، دارویی و آرایشی",
     "address": "142712, Moscow Obl., Gorki Leninskie / Moscow, Nauchny Pr. 19",
     "website": "https://revada-group.com",
-    "email": "info@revada-group.com / Stanislav.Yakshin@revada-group.com",
+    "email": "info@revada-group.com",
     "phone": "+7 (495) 955-24-42 / +7 (915) 432-45-54 (WA)",
     "action_plan": "هلدینگ چندمنظوره با دپارتمان‌های فعال در حوزه غذا، خوراک دام و دارویی؛ خریدار تناژ بالای جوش شیرین دامی و غذایی",
     "id": "company-236"
@@ -2929,7 +2940,7 @@
     "target_grade": "خوراکی (E500ii) و دارویی",
     "address": "109451, Moscow, Verkhnie Polya St., 28",
     "website": "https://www.ud-chemie.ru",
-    "email": "info@ud-chemie.ru / evgenia.chirva@ud-chemie.ru",
+    "email": "info@ud-chemie.ru",
     "phone": "+7 (495) 662-38-98 / +7 (495) 724-41-12",
     "action_plan": "بیش از ۲۰ سال سابقه در تأمین اسید سیتریک، نمک‌های بافری و بیکربنات سدیم برای صنایع شیرینی، لبنیات و داروسازی",
     "id": "company-238"
@@ -2953,7 +2964,7 @@
     "target_grade": "خوراکی (E500ii) - بهبوددهنده‌ها و پودر کیک",
     "address": "119530, Moscow, Ochakovskoye Shosse, 34 / Ryabinovaya St., 44",
     "website": "https://ochakovo-food.ru",
-    "email": "zakaz@okpi.ru / sales@okpi.ru / info@okpi.ru",
+    "email": "zakaz@okpi.ru",
     "phone": "+7 (495) 269-10-10 / 8 (800) 250-36-63",
     "action_plan": "تولیدکننده پیشرو در فرمولاسیون سیستم‌های خمیر و پودرهای پخت نانوایی و نوشیدنی؛ مصرف‌کننده مستقیم جوش شیرین خوراکی",
     "id": "company-240"
@@ -2977,7 +2988,7 @@
     "target_grade": "خوراکی (E500ii) - کیسه‌های ۲۵ کیلوگرمی",
     "address": "117630, Moscow, Starokaluzhskoye Shosse, 62",
     "website": "https://formulafood.ru",
-    "email": "postavka@FormulaFood.ru / info@formulafood.ru",
+    "email": "postavka@FormulaFood.ru",
     "phone": "+7 (495) 297-66-62",
     "action_plan": "تأمین عمده اسیدهای خوراکی و بیکربنات سدیم خوراکی برای کارخانجات نان، کلوچه و شیرینی",
     "id": "company-242"
@@ -2989,7 +3000,7 @@
     "target_grade": "خوراکی (E500ii و E503ii)",
     "address": "150040, Yaroslavl, Prospekt Lenina, 25",
     "website": "https://yarpss.ru",
-    "email": "info@yarpss.ru / sales.yarpss@mail.ru",
+    "email": "info@yarpss.ru",
     "phone": "+7 (4852) 77-88-77 / +7 (4852) 73-31-44",
     "action_plan": "بیش از ۲۵ سال سابقه در توزیع افزودنی‌ها و عوامل پوک‌کننده (سدیم و آمونیوم بیکربنات) در منطقه مرکزی روسیه",
     "id": "company-243"
@@ -3001,7 +3012,7 @@
     "target_grade": "خوراک دام (Feed Grade) - بافر ضد اسیدوز و گوشتی",
     "address": "142000, Moscow Obl., Domodedovo (Plants: Belgorod, Bryansk)",
     "website": "https://miratorg.ru",
-    "email": "info@agrohold.ru / export@agrohold.ru",
+    "email": "info@agrohold.ru",
     "phone": "+7 (495) 651-92-52 / 8 (800) 100-80-87",
     "action_plan": "بزرگترین تولیدکننده پروتئین و کارخانجات پرمیکس و خوراک دام روسیه با مصرف تناژ بسیار بالا جهت تنظیم اسیدیته شکمبه گله‌های شیری",
     "id": "company-244"
@@ -3049,7 +3060,7 @@
     "target_grade": "خوراکی (E500ii)، خوراک دام، صنعتی و دارویی",
     "address": "Uzbekistan, 100021, Tashkent, Shaykhontokhur district, Furkat Street, 6",
     "website": "https://meritchemicals.com",
-    "email": "info@meritkimyo.uz / export@meritkimyo.uz",
+    "email": "info@meritkimyo.uz",
     "phone": "+998 (71) 203-00-55 / +998 97 738 10 42 / +998 97 738 11 15",
     "action_plan": "رتبه در میان ۱۳۰ توزیع‌کننده برتر شیمیایی جهان (ICIS)؛ دارای بزرگترین شبکه انبارش در تاشکند و آسیای مرکزی؛ تأمین‌کننده تناژ بالای جوش شیرین برای صنایع غذایی، شوینده و دامپروری.",
     "id": "company-248"
@@ -3073,10 +3084,11 @@
     "target_grade": "صنعتی - فرمولاسیون پودر و مایعات شوینده، صابون‌سازی و خنثی‌سازی",
     "address": "Uzbekistan, 200712, Bukhara region, Kagan district, Tutkunda l.g.c.",
     "website": "https://ecoslessgroup.com",
-    "email": "نامشخص — روی سایت یافت نشد",
+    "email": null,
     "phone": "+998 (91) 402-47-03 / +998 (90) 415-55-55",
     "action_plan": "بیش از ۵۱٪ از کل واردات این شرکت مستقیماً از ایران است (بیش از ۲.۳ میلیون دلار)؛ خریدار عمده سود پرک، اسید سولفونیک (LABSA) و جوش شیرین صنعتی جهت ساخت شوینده‌ها و توزیع در منطقه بخارا و سمرقند.",
-    "id": "company-250"
+    "id": "company-250",
+    "email_note": "نامشخص روی سایت یافت نشد"
   },
   {
     "country": "ازبکستان",
@@ -3085,7 +3097,7 @@
     "target_grade": "خوراکی (E500ii)، صنعتی و پتروشیمی",
     "address": "Uzbekistan, 100057, Tashkent, Almazar district, Jami Street, 229",
     "website": "https://goldenpages.uz/company/?Id=109405",
-    "email": "akchem.global@gmail.com / info@akchem.uz",
+    "email": "akchem.global@gmail.com",
     "phone": "نامشخص — منابع متناقض؛ رایج‌ترین: +998 97 485-05-00 / 97 754-33-33",
     "action_plan": "گردش واردات سالانه بالغ بر ۲۴.۷ میلیون دلار از کشورهای منطقه؛ تأمین‌کننده مستقیم انواع نمک‌های شیمیایی، سود کاستیک، دکستروز و افزودنی‌های غذایی برای کارخانجات مستقر در تاشکند و اطراف بازار اوریک‌زار.",
     "id": "company-251"
@@ -3169,7 +3181,7 @@
     "target_grade": "دارویی و بهداشتی - خمیردندان، قرص‌های جوشان و ساشه ORS",
     "address": "Uzbekistan, 100102, Tashkent, Yangihayot district, Margib Street, 1",
     "website": "https://dentafill.uz",
-    "email": "info@dentafill.uz / dentalfill@mail.ru",
+    "email": "info@dentafill.uz",
     "phone": "+998 (71) 231-87-00 / +998 (71) 231-64-66",
     "action_plan": "مصرف مداوم جوش شیرین به عنوان ساینده ملایم و کنترل‌کننده pH در خمیردندان و محصولات بهداشتی و دارویی.",
     "id": "company-258"
@@ -3217,7 +3229,7 @@
     "target_grade": "صنعتی - ماده اولیه پودر لباسشویی، صابون‌سازی و شوینده‌های صنعتی",
     "address": "2 I. Dosova ko’chasi, 220100 (نه Al-Khoresmi 110)",
     "website": "http://urganchyog.uz",
-    "email": "info@urganchyog.uz / urgench_yog@mail.ru",
+    "email": "info@urganchyog.uz",
     "phone": "+998 62 224-57-57 (تأیید شد)؛ شماره دوم فایل تأیید نشد",
     "action_plan": "تولیدکننده انواع شوینده‌ها و صابون‌های صنعتی و بهداشتی با مصرف مداوم بی کربنات سدیم صنعتی به عنوان پرکننده قلیایی و بافر شوینده.",
     "id": "company-262"
@@ -3265,10 +3277,11 @@
     "target_grade": "خوراکی (E500ii) - تنظیم اسیدیته، تردکننده و تثبیت‌کننده بافت امولسیون گوشت",
     "address": "Tashkent, Gulol/Bog’ishamol St. 47 (نه Keles Yoli 10)",
     "website": "https://rozmetov.uz",
-    "email": "info@rozmetov.uz (تأیید شد)",
+    "email": "info@rozmetov.uz",
     "phone": "+998 71 200-19-89",
     "action_plan": "برند شماره یک سوسیس، کالباس و فرآورده‌های پروتئینی در ازبکستان؛ مصرف جوش شیرین گرید غذایی در بافرهای فسفاتی برای نگهداری آب در بافت گوشت.",
-    "id": "company-266"
+    "id": "company-266",
+    "email_note": "تأیید شد"
   },
   {
     "country": "ازبکستان",
@@ -3295,6 +3308,500 @@
     "id": "company-268"
   },
   {
+    "country": "قزاقستان",
+    "english_name": "JSC LOTTE Rakhat",
+    "industry": "صنایع شیرینی و شکلات (مصرف‌کننده کلان)",
+    "target_grade": "خوراکی (E500ii) - پوک‌کننده خمیر، بافر pH در بیسکویت، ویفر، کیک و کارامل",
+    "address": "050002, г. Алматы, ул. Зенькова, 2А (کارخانه چیمکنت: ул. Толе би, 23)",
+    "website": "https://www.rakhat.kz",
+    "email": "rakhat@rakhat.kz",
+    "phone": "+7 (727) 258-47-11 / +7 (727) 397-73-00",
+    "action_plan": "بزرگترین کارخانه صنایع شیرینی و شکلات قزاقستان با دو مجتمع عظیم در آلماتی و چیمکنت؛ خریدار واگنی و کانتینری جوش شیرین خوراکی.",
+    "id": "company-269"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "JSC Bayan Sulu",
+    "industry": "صنایع شیرینی و بیسکویت (مصرف‌کننده کلان)",
+    "target_grade": "خوراکی (E500ii) - عامل حجم‌دهنده و پوک‌کننده در خطوط بیسکویت، کراکر و ویفر",
+    "address": "110006, г. Костанай, ул. Бородина, 198",
+    "website": "https://bayansulu.kz",
+    "email": "omts@bayansulu.kz",
+    "phone": "+7 (7142) 56-61-53 / +7 (7142) 56-29-52",
+    "action_plan": "مجتمع بزرگ شیرینی و بیسکویت در شمال قزاقستان با صادرات گسترده به CIS؛ خرید مستقیم و متناوب از طریق دپارتمان تدارکات مواد اولیه (OMTS).",
+    "id": "company-270"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "Hamle Company Ltd / Pladis",
+    "industry": "کیک، بیسکویت و ویفر صنعتی (گروه Ülker / Pladis)",
+    "target_grade": "خوراکی (E500ii) - عامل ورآورنده خمیر در محصولات آردی، کیک اسفنجی و ویفر",
+    "address": "Алматинская обл., Карасайский р-н, г. Каскелен, ул. Абылай хана",
+    "website": "http://www.hamle.kz",
+    "email": "info@hamle.kz",
+    "phone": "+7 (727) 276-38-72 / +7 (707) 320-85-46",
+    "action_plan": "زیرمجموعه هلدینگ غذایی پلادیس با کارخانه بزرگ در کاسکلن آلماتی؛ مصرف ماهانه ده‌ها تن جوش شیرین خوراکی.",
+    "id": "company-271"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP KhBK Aksay / Aksay Nan",
+    "industry": "نان و قنادی صنعتی (بزرگترین مجتمع نان قزاقستان)",
+    "target_grade": "خوراکی (E500ii) - عامل هوادهی و پف‌کننده در انواع کیک، کلوچه و شیرینی",
+    "address": "050031, г. Алматы, мкр. Аксай-2, ул. Б. Момышулы, 36А",
+    "website": "https://aksaynan.kz",
+    "email": "reception@aksaynan.kz",
+    "phone": "+7 (700) 312-00-00 / +7 (727) 276-88-00",
+    "action_plan": "بزرگترین مجتمع نان و شیرینی قزاقستان با تولید روزانه بیش از ۱۵۰ تن فرآورده؛ نیازمند تأمین مداوم نمک‌های قلیایی و بهبوددهنده‌ها.",
+    "id": "company-272"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "JSC Eurasian Foods Corporation",
+    "industry": "هلدینگ بزرگ روغن، سس و چربی‌های گیاهی (برندهای ۳ Желания)",
+    "target_grade": "خوراکی (E500ii) - رگولاتور اسیدیته، پایدارکننده امولسیون سس‌ها و تصفیه روغن",
+    "address": "050008, г. Алматы, ул. Байзакова, 69",
+    "website": "https://www.efc.kz",
+    "email": "sales@efc.kz",
+    "phone": "+7 (727) 378-71-71 / +7 (727) 330-75-10",
+    "action_plan": "تولیدکننده پیشرو سس مایونز، کچاپ، مارگارین و روغن در آلماتی و قره‌غال؛ مصرف‌کننده نمک‌های بافری و خنثی‌کننده اسیدیته.",
+    "id": "company-273"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP Kublei",
+    "industry": "کنسروسازی، فرآوری گوشت و خوراک پروتئینی",
+    "target_grade": "خوراکی و دامی - بافر pH، هیدراتاسیون پروتئین و مکمل خوراک دام",
+    "address": "090000, г. Уральск, ул. Григория Потанина, 13/3",
+    "website": "https://www.kublei.kz",
+    "email": "info@kublei.kz",
+    "phone": "+7 (7112) 21-15-05",
+    "action_plan": "بزرگترین تولیدکننده کنسرو و فرآورده‌های گوشتی در غرب قزاقستان؛ دارای کارخانه خوراک و مکمل‌سازی پروتئینی دامپروری.",
+    "id": "company-274"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "JSC AsiaAgroFood",
+    "industry": "کارخانه عظیم خوراک دام، کنسانتره و نشاسته ذرت",
+    "target_grade": "خوراک دام (Feed Grade) - بافر شکمبه گاو شیری، تعادل الکترولیتی و تنظیم DCAD",
+    "address": "040930, Алматинская обл., с. Жибек Жолы (Шамалган), ул. Суюнбая, 1",
+    "website": "https://aaf.kz",
+    "email": "aaf@aaf.kz",
+    "phone": "+7 (727) 321-00-22 / +7 (771) 993-32-13",
+    "action_plan": "بزرگترین تولیدکننده خوراک دام و طیور جنوب قزاقستان؛ خریدار تناژ بالای جوش شیرین دامی جهت پیشگیری از اسیدوز در گله‌های شیری.",
+    "id": "company-275"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "JSC Chimpharm / Polpharma Santo",
+    "industry": "بزرگترین هلدینگ داروسازی قزاقستان (تحت استاندارد GMP)",
+    "target_grade": "دارویی (Pharma API / USP) - تولید محلول‌های تزریقی، گرانول‌ها و قرص‌های جوشان",
+    "address": "160018, г. Шымکنت, ул. Рашидова, 17",
+    "website": "https://www.polpharma-santo.com",
+    "email": "santo.procurement.quotes@polpharma-santo.com",
+    "phone": "+7 (7252) 61-01-55 / +7 (727) 312-18-33",
+    "action_plan": "معتبرترین شرکت داروسازی قزاقستان در شیمکنت؛ خریدار منظم بی‌کربنات سدیم گرید دارویی با اندوتوکسین پایین جهت سرم‌ها و آنتی‌اسیدها.",
+    "id": "company-276"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP Kelun-Kazpharm",
+    "industry": "کارخانه پیشرفته تولید سرم و محلول‌های انفوزیون بیمارستانی",
+    "target_grade": "دارویی (Pharma Grade) - تولید سرم تزریقی ۴٪ بی‌کربنات سدیم در بطری و بگ",
+    "address": "040900, Алматинская обл., Карасайский р-н, с. Кокозек, зд. 1147",
+    "website": "https://kelun-kazpharm.kz",
+    "email": "office@kelun-kazpharm.kz",
+    "phone": "+7 (727) 312-14-04 / +7 (771) 588-72-17",
+    "action_plan": "تخصصی‌ترین خط تولید سرم‌های درمانی قزاقستان؛ مصرف مداوم ماده مؤثره جوش شیرین دارویی در فرمولاسیون سرم‌های اسیدوز متابولیک.",
+    "id": "company-277"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "JSC Nobel Almaty Pharmaceutical Factory",
+    "industry": "کارخانه داروسازی تولید داروهای جامد و مایع",
+    "target_grade": "دارویی - قرص‌های جوشان، ترکیبات ضداسید معده و ساشه‌های دارویی",
+    "address": "050008, г. Алматы, ул. Шевченко, 162Е",
+    "website": "https://www.nobel.kz",
+    "email": "nobel@nobel.kz",
+    "phone": "+7 (727) 399-50-50",
+    "action_plan": "از تولیدکنندگان برتر دارویی وابسته به هلدینگ Nobel Ilac با خطوط فعال ساخت قرص‌های جوشان و داروهای گوارشی.",
+    "id": "company-278"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP Abdi Ibrahim Global Pharm / AIGP",
+    "industry": "مجتمع داروسازی مدرن تحت لیسانس بین‌المللی",
+    "target_grade": "دارویی (Pharma Grade) - سیستم‌های دارورسانی خوراکی و تنظیم‌کننده بافر معده",
+    "address": "050000, г. Алматы, ул. Амангельды, 23/137",
+    "website": "https://aigp.kz",
+    "email": "info@aigp.kz",
+    "phone": "+7 (727) 356-11-10",
+    "action_plan": "واحد داروسازی مدرن با سرمایه‌گذاری مشترک Abdi Ibrahim ترکیه و قزاقستان؛ مصرف‌کننده نمک‌های دارویی با استانداردهای فارماکوپه‌ای.",
+    "id": "company-279"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP Topan",
+    "industry": "تأمین‌کننده ارشد شیمی نفت، گاز و صنایع غرب قزاقستان",
+    "target_grade": "صنعتی (Technical Grade) - سیالات حفاری، رسوب کلسیم و کنترل pH گل چاه",
+    "address": "090005, г. Уральск, ул. Ружейникова, 11",
+    "website": "https://topan.kz",
+    "email": "info@topan.kz",
+    "phone": "+7 (7112) 28-41-42 / +7 (777) 000-99-33",
+    "action_plan": "تأمین‌کننده کلان مواد شیمیایی پروژه‌های نفتی قره‌چغانک و کاشاگان با انبارهای وسیع در اورالسک و آتیرائو.",
+    "id": "company-280"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP DEX Company",
+    "industry": "تأمین‌کننده تخصصی شیمی حفاری چاه و پتروشیمی",
+    "target_grade": "صنعتی (Oilfield Grade) - افزودنی‌های گل حفاری و تصفیه آب‌های صنعتی",
+    "address": "г. Уральск, ул. Ескалиева, 177, офис 504",
+    "website": "https://dex-company.kz",
+    "email": "info@dex-company.kz",
+    "phone": "+7 (7112) 240-901 / +7 (777) 738-51-68",
+    "action_plan": "تأمین مستقیم مواد شیمیایی معدنی سنگین از جمله بی‌کربنات سدیم صنعتی در بسته‌بندی جامبوبگ برای عملیات حفاری میدان‌های نفتی.",
+    "id": "company-281"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP QazMunayHim",
+    "industry": "شیمی نفت، تصفیه پساب پالایشگاهی و سرویس‌های حفاری",
+    "target_grade": "صنعتی - تنظیم pH پساب صنعتی، سیالات مهندسی و خنثی‌سازی اسید",
+    "address": "г. Астана, Коргалжынское шоссе, 3Б",
+    "website": "https://qazmunayhim.kz",
+    "email": "info@qazmunayhim.kz",
+    "phone": "+7 (7172) 79-05-09",
+    "action_plan": "ارائه‌دهنده مواد شیمیایی مهندسی به پالایشگاه‌ها و صنایع هیدروکربوری در غرب و مرکز قزاقستان.",
+    "id": "company-282"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP Chemistry and Technology (CHT)",
+    "industry": "بزرگترین هاب واردات و توزیع کشوری مواد شیمیایی در قزاقستان",
+    "target_grade": "خوراکی (E500ii)، صنعتی و دامی - فروش کیسه ۲۵ کیلویی و جامبوبگ",
+    "address": "г. Алматы, мкр. Самал-3, 33/1",
+    "website": "https://ch-t.kz",
+    "email": "sales@cht.kz",
+    "phone": "+7 (727) 357-37-99 / +7 (777) 333-60-99",
+    "action_plan": "بزرگترین شبکه انبارهای شیمیایی قزاقستان با ۵ انبار لجستیکی در آلماتی، آستانه، شیمکنت، قره‌غال و پاولودار؛ واردکننده رسمی تناژ بالا.",
+    "id": "company-283"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP Snabtechmet",
+    "industry": "شبکه فدرال تأمین مواد اولیه صنعتی، متالورژی و شیمیایی (فروشنده مستقیم سدیم بی‌کربنات نیز هست)",
+    "target_grade": "خوراکی، صنعتی، تصفیه آب و پودرهای خاموش‌کننده حریق",
+    "address": "010000, г. Астана, пр. Сарыарка, 12, офис 401А",
+    "website": "https://snabtechmet.kz",
+    "email": "info@snabtechmet.kz",
+    "phone": "+7 (7172) 69-66-44 / +7 (727) 312-38-39",
+    "action_plan": "تأمین‌کننده سراسری در شهرهای آستانه، آلماتی، اوسط‌کامنوگرسک، قره‌غاندی، پتروپاولوفسک و آکتوبه؛ این شرکت مستقیماً «сода пищевая / بی‌کربنات سدیم» را به‌صورت کیسه ۲۵ کیلویی و تن فله برای صنایع غذایی در کاتالوگ آنلاین خود (بخش soda-pishchevaya در هر شعبه) می‌فروشد — گزینه بسیار معتبر برای تماس.",
+    "id": "company-284"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP Damu-Khimiya",
+    "industry": "واردکننده مستقیم و هاب پخش مواد شیمیایی مرکزی قزاقستان",
+    "target_grade": "خوراکی (ГОСТ 32802-2014)، صنعتی و تصفیه آب",
+    "address": "100001, г. Караганда, ул. Мельничная, 4/3, офис 214",
+    "website": "https://damu-him.kz",
+    "email": "info@damu-him.kz",
+    "phone": "+7 (700) 070-82-81 / +7 (700) 070-83-81",
+    "action_plan": "شرکت تخصصی تأمین مواد شیمیایی پایه و اسیدها در منطقه صنعتی قره‌غال با شبکه فروش به صنایع غذایی و معدنی.",
+    "id": "company-285"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP Firma SKAT",
+    "industry": "واردکننده و تأمین‌کننده باسابقه ریجنت‌های شیمیایی و افزودنی‌های غذایی",
+    "target_grade": "خوراکی (E500ii)، آزمایشگاهی، تصفیه آب و ضدعفونی‌کننده‌ها",
+    "address": "050000, г. Алматы, Турксибский район, ул. Бекмаханова, 91",
+    "website": "https://skat-reactiv.kz",
+    "email": "sales@skat-reactiv.kz",
+    "phone": "+7 (727) 225-44-44",
+    "action_plan": "تأمین‌کننده معتبر با بیش از ۲۵ سال سابقه در توزیع مواد شیمیایی خلوص بالا، نمک‌های سدیم و اسیدها در آلماتی.",
+    "id": "company-286"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP Eligita-Asia",
+    "industry": "واردکننده تخصصی افزودنی‌های قنادی، نانوایی و بهبوددهنده‌ها",
+    "target_grade": "خوراکی (E500ii) - بهبوددهنده‌ها، پودر کیک، بیکینگ‌پودر و استابیلایزرها",
+    "address": "г. Алматы, мкр. Мамыр-4, зд. 1",
+    "website": "https://eligita.kz",
+    "email": "info@eligita.kz",
+    "phone": "+7 (727) 380-00-52",
+    "action_plan": "شعبه هلدینگ اروپایی Eligita در آسیای میانه؛ تأمین‌کننده مواد اولیه و بیکینگ‌پودرهای صنعتی برای کارخانجات نان و قنادی.",
+    "id": "company-287"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "LLP Prombytkhim",
+    "industry": "کارخانه تولید شوینده‌های صنعتی و خانگی",
+    "target_grade": "صنعتی (Technical Grade) - ساینده ملایم، تنظیم‌کننده قلیائیت و ماده پاک‌کننده",
+    "address": "г. Алматы, Жетысуский район, ул. К. Станиславского, 15",
+    "website": "https://pbh.kz",
+    "email": "pprombythim@gmail.com",
+    "phone": "+7 (700) 545-08-88 / +7 (776) 556-88-66",
+    "action_plan": "کارخانه پیشرو تولید پودرها و مایعات پاک‌کننده در آلماتی؛ مصرف‌کننده بی‌کربنات سدیم صنعتی به عنوان قلیایی‌ساز و ساینده غیرمخرب.",
+    "id": "company-288"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "BIZHAN MPP, LLP",
+    "industry": "مجتمع فرآوری گوشت، سوسیس و کارخانه پلمنی منجمد",
+    "target_grade": "خوراکی (E500ii) - بافر pH پروتئین گوشت و بهبود بافت خمیر پلمنی و مانتی",
+    "address": "г. Алматы, мкр. Алгабас, ул. 7, зд. 145/55 (کارخانه کوکشتائو: ул. Ауэзова, 203)",
+    "website": "https://bizhan.kz",
+    "email": "bizhan-zakaz@yandex.kz",
+    "phone": "+7 (727) 384-55-95 / +7 (7162) 25-45-55",
+    "action_plan": "تولیدکننده فرآورده‌های گوشتی حلال، سوسیس و خمیرهای منجمد پرشده با خطوط صنعتی خودکار؛ مصرف‌کننده نمک‌های بافری و بی‌کربنات خوراکی.",
+    "id": "company-289"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "CHICKODELLI (Prima Kus LLP)",
+    "industry": "کارخانه فرآورده‌های مرغی، ناگت و سوخاری‌های منجمد",
+    "target_grade": "خوراکی (E500ii) - بافر امولسیون گوشت و عامل پف‌دهنده در روکش خمیری (Batter) ناگت",
+    "address": "г. Алматы, ул. Тимирязева, 28В, офис 304 (کارخانه: Алматинская обл., Уйгурский р-н, Кыргызсайский с/о, с. Рахат)",
+    "website": "https://chickodelli.kz",
+    "email": null,
+    "phone": "+7 (771) 771-77-47",
+    "action_plan": "بخش فرآورده‌های پروتئینی و سوخاری گروه بزرگ شین‌لاین؛ تولیدکننده ناگت و برگر سوخاری با مصرف بی‌کربنات سدیم در پوشش‌های خمیری.",
+    "id": "company-290",
+    "email_note": "نامشخص - نیاز به تماس مستقیم (ایمیل قبلی info@shin-line.com متعلق به شرکت دیگری بود)"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "FOODTECHNIKA, LLP",
+    "industry": "واردکننده و تأمین‌کننده مواد اولیه و افزودنی‌های غذایی",
+    "target_grade": "خوراکی (E500ii) - توزیع عمده به عنوان عامل ورآورنده، بافر و استابیلایزر",
+    "address": "г. Алматы, Бостандыкский район, ул. Ергожина, 17А",
+    "website": "https://foodtechnika.kz",
+    "email": "info@foodtechnika.kz",
+    "phone": "+7 (771) 758-12-77 / +7 (705) 448-83-33",
+    "action_plan": "تأمین‌کننده و توزیع‌کننده عمده مواد شیمیایی و غذایی برای کارخانجات صنایع نان، قنادی و فرآورده‌های گوشتی قزاقستان.",
+    "id": "company-291"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "NEOS INGREDIENTS ASIA, LLP",
+    "industry": "واردکننده و توزیع‌کننده تخصصی افزودنی‌های قنادی و آردی",
+    "target_grade": "خوراکی (E500ii) - عامل حجم‌دهنده و بهبوددهنده خمیرهای صنعتی",
+    "address": "г. Алматы, Бостандыкский район, ул. Тимирязева, 42",
+    "website": "https://neos-ingredients.ru",
+    "email": "info@neos-ingredients.ru",
+    "phone": "+7 (727) 306-85-44",
+    "action_plan": "شعبه هلدینگ بین‌المللی Neos Ingredients در قزاقستان؛ واردکننده مستقیم استابیلایزرها، بیکینگ‌پودرها و جوش شیرین خوراکی.",
+    "id": "company-292"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "MAKSIMALNY RAZMAKH CORPORATION",
+    "industry": "کارخانه فرآوری گوشت، ماکارونی، پلمنی و نیمه‌آماده‌های منجمد",
+    "target_grade": "خوراکی (E500ii) - بهبود بافت خمیر پلمنی، ماکارونی و بافر پروتئین",
+    "address": "г. Петропавловск / филиал в Астане: ул. Жидебай, 18",
+    "website": "https://maxrazmah.kz",
+    "email": "astana@maxrazmah.kz",
+    "phone": "+7 (701) 032-62-30 / +7 (7172) 48-11-13 (WhatsApp: +7 747 530-11-84)",
+    "action_plan": "تولیدکننده شناخته‌شده ماکارونی و سبد گسترده محصولات منجمد خمیری-گوشتی (پلمنی، مانتی، خینکالی، وارنیکی) با مصرف نمک‌های بافری و بی‌کربنات خوراکی.",
+    "id": "company-293"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "NARLEN (Karkyn-2030 LLP)",
+    "industry": "مجتمع صنعتی پرورش دام، فرآوری گوشت و سوسیس",
+    "target_grade": "خوراکی (E500ii) - تنظیم pH گوشت و نگهداری رطوبت در فرآورده‌های سوسیسی",
+    "address": "Туркестанская обл., Казыгуртский р-н, с. Какпак (دفاتر فروش: Шымкент / Алматы)",
+    "website": "https://narlen.kz",
+    "email": "080@narlen.kz",
+    "phone": "+7 (771) 010-45-15 / +7 (771) 501-55-55",
+    "action_plan": "از بزرگترین کارخانجات فرآوری گوشت جنوب قزاقستان با تولید روزانه ۱۵ الی ۲۰ تن سوسیس و کالباس؛ مصرف‌کننده تثبیت‌کننده‌های پروتئین.",
+    "id": "company-294"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "KARAGANDY-NAN TRADE, LLC",
+    "industry": "هلدینگ بزرگ صنایع نان، ماکارونی و قنادی",
+    "target_grade": "خوراکی (E500ii) - ورآورنده اصلی شیرینی‌جات، بیسکویت، کراکر و پریانیک",
+    "address": "г. Караганда, ул. Камская, 91 (БИН: 030240005260)",
+    "website": "https://www.selprom.kz",
+    "email": "karagandy_nan@mail.ru",
+    "phone": "+7 (707) 212-72-71 / +7 (7212) 44-05-55",
+    "action_plan": "بزرگترین مجتمع نان و شیرینی قزاقستان مرکزی با بیش از ۹۰ سال قدمت؛ مصرف‌کننده دائمی جوش شیرین خوراکی در خطوط بیسکویت و پریانیک صنعتی.",
+    "id": "company-295"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "MAREVEN FOOD TIAN-SHAN",
+    "industry": "کارخانه عظیم نودل فوری و چاشنی‌ها (برندهای رولتون و بیگ‌بن)",
+    "target_grade": "خوراکی (E500ii) - جزء نمک‌های قلیایی کانسوی برای الاستیسیته و بافت نودل",
+    "address": "Алматинская обл., г. Конаев (Капшагай), с.о. Заречный, промзона Арна, зд. 1Б",
+    "website": "https://mareven.kz",
+    "email": "info@mareven.kz",
+    "phone": "+7 (727) 321-11-19",
+    "action_plan": "کارخانه بین‌المللی با تولید بیش از ۴۰ هزار تن نودل فوری؛ مصرف‌کننده مداوم بی‌کربنات سدیم در محلول قلیایی عمل‌آوری خمیر نودل.",
+    "id": "company-296"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "SULTAN-MARKETING, LLP / SULTAN EMMK",
+    "industry": "مجتمع بزرگ کشت و صنعت، ماکارونی، نان و بیسکویت صنعتی",
+    "target_grade": "خوراکی (E500ii) - عامل ورآورنده خمیر بیسکویت، کلوچه و اسنک",
+    "address": "Северо-Казахстанская обл., г. Петропавловск, ул. Ярослава Гашека, 1",
+    "website": "https://sultanmarketing.kz",
+    "email": "sultan_pasta@mail.ru",
+    "phone": "+7 (7152) 54-00-11 / +7 (727) 251-65-80",
+    "action_plan": "غول صنعتی تولید آرد، ماکارونی، نان و بیسکویت در شمال قزاقستان؛ مصرف‌کننده افزودنی‌های حجم‌دهنده و بی‌کربنات خوراکی در سالن‌های پخت بیسکویت.",
+    "id": "company-297"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "YAKAR, LLP",
+    "industry": "کارخانه صنایع شیرینی، شکلات، آبنبات و ویفر",
+    "target_grade": "خوراکی (E500ii) - عامل هوادهی و پوک‌کننده نان ویفر و خمیرهای قنادی",
+    "address": "Алматинская обл., Карасайский р-н, г. Каскелен, ул. Достык, 4Д",
+    "website": "https://yakar.kz",
+    "email": "info@yakar.kz",
+    "phone": "+7 (727) 308-01-15 / +7 (727) 296-98-88",
+    "action_plan": "کارخانه معتبر تولید شکلات، آبنبات، بیسکویت و ویفر در حومه آلماتی (کاسکلن)؛ مصرف‌کننده مستمر جوش شیرین در پخت ورقه‌های ویفر و کلوچه‌ها.",
+    "id": "company-298"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "IL TOV, LLC",
+    "industry": "کارخانه صنعتی پلمنی، مانتی و خمیرهای هزارلا منجمد",
+    "target_grade": "خوراکی (E500ii) - رگولاتور اسیدیته، بافر و پایدارکننده خمیر منجمد",
+    "address": "с. Косшы (Ақмола/نزدیک آستانه), ул. Абай, 36 (آدرس قبلی «آلماتی» اشتباه بود)",
+    "website": "https://iltov.kz",
+    "email": "info@iltov.kz",
+    "phone": "+7 (727) 385-05-05 / +7 (701) 720-00-55",
+    "action_plan": "تولیدکننده عمده غذاهای نیمه‌آماده خمیری منجمد با مصرف بی‌کربنات سدیم جهت حفظ کشسانی گلوتن خمیر در شوک انجماد.",
+    "id": "company-299"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "SMAK-PV LLP (Pavlodarsky Smak)",
+    "industry": "بزرگترین تولیدکننده نیمه‌آماده‌های منجمد خمیری در قزاقستان (پلمنی، منتی، خمیر، سمبوسه)",
+    "target_grade": "خوراکی (E500ii) - ورآورنده و کنترل‌کننده بافت خمیرهای منجمد و لایه‌ای",
+    "address": "г. Павлодар, ул. Естая, 136/1",
+    "website": "https://cmak-pv.kz",
+    "email": "smak-pavlodar@mail.ru",
+    "phone": "+7 (7182) 50-87-73",
+    "action_plan": "بزرگترین تولیدکننده نیمه‌آماده‌های منجمد قزاقستان با ۲۵+ سال سابقه (از ۱۹۹۹)، تولید ماهانه ۳۵۰-۴۰۰ تن؛ خودشان را «تولیدکننده شماره ۱ پلمنی در قزاقستان» معرفی می‌کنند. برندها: Смак، Кроха، Забава، Султан. مصرف‌کننده بی‌کربنات سدیم برای بافت خمیرهای منجمد (پلمنی، مانتی، خمیر لایه‌ای).",
+    "id": "company-300"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "Saule Confectionery Factory LLP",
+    "industry": "کارخانه بزرگ تولید بیسکویت، ویفر و شیرینی خشک (صادرکننده منطقه‌ای)",
+    "target_grade": "خوراکی (E500ii) - حجم‌دهنده و خمیرمایه شیمیایی بیسکویت و ویفر",
+    "address": "Жамбылская обл., г. Тараз, район Әулиеата, просп. Жамбыла, стр. 3Б",
+    "website": "https://www.saulecompany.com",
+    "email": null,
+    "phone": "از طریق سایت رسمی یا صفحه استخدام hh.kz قابل دریافت است",
+    "action_plan": "یکی از تولیدکنندگان پیشرو بیسکویت و ویفر در قزاقستان (بیش از ۸۰ قلم محصول) با تجهیزات اتریشی/سوئیسی/دانمارکی؛ صادرات به قرقیزستان، روسیه، چین، تاجیکستان، مغولستان، گرجستان و ازبکستان. درآمد سالانه تخمینی ~۴ میلیارد تنگه (۲۰۲۰). مصرف‌کننده مستمر جوش شیرین در خطوط بیسکویت و ویفر.",
+    "id": "company-301",
+    "email_note": "برای تماس مستقیم، فرم تماس سایت saulecompany.com ایمیل رسمی عمومی یافت نشد"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "NOMAD GROUP RBS, LLP (EPIC FOOD)",
+    "industry": "تولید و توزیع اسنک‌های حجیم‌شده ذرت، پفک و پاپ‌کورن",
+    "target_grade": "خوراکی (E500ii) - بهبود انبساط و پف‌کنندگی ذرت و اسنک‌های اکسترودری",
+    "address": "Республика Казахстан, г. Алматы, пр. Рыскулова, 43В (БИН: 080540018440)",
+    "website": "پروفایل رسمی غرفه B-071 در نمایشگاه InterFood Astana",
+    "email": "nomadgrouprbs@mail.ru",
+    "phone": "+7 (707) 787-34-07",
+    "action_plan": "شرکت رسمی ثبت‌شده قزاقستان و غرفه‌دار نمایشگاه اینترفود آستانه؛ ارائه‌دهنده اسنک‌های ذرت با طعم‌های میوه‌ای و پاپ‌کورن تحت برند EPIC FOOD با مصرف جوش شیرین در انبساط اکستروژنی.",
+    "id": "company-302"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "UTS KAZAKHSTAN, LLP",
+    "industry": "شرکت بین‌المللی توزیع و واردات مواد شیمیایی و غذایی",
+    "target_grade": "خوراکی و صنعتی (Food & Technical Grade) - توزیع در صنایع غذایی، شوینده و نفت",
+    "address": "г. Алматы, пр. Достык, 180, БЦ Коктем Гранд",
+    "website": "https://utsrus.com",
+    "email": "almaty@utsrus.com",
+    "phone": "+7 (727) 345-00-75 / +7 (727) 345-00-76",
+    "action_plan": "هاب منطقه‌ای هلدینگ بین‌المللی United Trading System؛ از بزرگترین واردکنندگان رسمی مواد شیمیایی خام، اسیدها و بی‌کربنات سدیم در قزاقستان.",
+    "id": "company-303"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "PROGAST-KAZAKHSTAN, LLP",
+    "industry": "تأمین‌کننده تخصصی افزودنی‌ها و طعم‌دهنده‌های صنایع گوشت",
+    "target_grade": "خوراکی (E500ii) - نمک‌های بافری و تنظیم‌کننده‌های فسفاتی/کربناتی",
+    "address": "г. Алматы, пр. Райымбека, 212А",
+    "website": "https://www.progast.kz",
+    "email": "progast_kz@mail.ru",
+    "phone": "+7 (727) 279-88-66",
+    "action_plan": "نمایندگی رسمی کمپانی اروپایی Progast؛ واردکننده و فرمولاتور افزودنی‌های عمل‌آوری گوشت، فسفات‌ها و بافرهای اسیدیته برای سوسیس و کالباس.",
+    "id": "company-304"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "OZYURT FOOD, LLP",
+    "industry": "تولیدکننده نان‌های شرقی، لحم‌عجون و خمیرهای نیمه‌آماده",
+    "target_grade": "خوراکی (E500ii) - عامل ورآورنده خمیرهای تخمیری و نیمه‌آماده‌های پخت سریع",
+    "address": "г. Алматы, Медеуский район, ул. Тулебаева, 13",
+    "website": "https://ozyurt.kz",
+    "email": "info@ozyurt.kz",
+    "phone": "+7 (727) 291-77-90",
+    "action_plan": "تولیدکننده فرآورده‌های خمیری، نان پیده، لحم‌عجون و نیمه‌آماده‌های منجمد رستورانی در قزاقستان.",
+    "id": "company-305"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "BIOSTAR ASIA, LLP",
+    "industry": "توزیع‌کننده و واردکننده بزرگ ترکیبات شیمیایی و افزودنی‌های غذایی",
+    "target_grade": "خوراکی (E500ii) - بافرهای نگه‌دارنده، امولسیفایرها و تنظیم‌کننده‌های اسیدیته",
+    "address": "г. Алматы, Ауэзовский район, пр. Райымбека, 496А",
+    "website": "https://biostar.ru",
+    "email": "export@biostar.ru",
+    "phone": "+7 (727) 356-53-40",
+    "action_plan": "هاب توزیع افزودنی‌ها، طعم‌دهنده‌ها و نمک‌های سدیم برای کارخانجات صنایع گوشت، لبنیات و فرآوری قزاقستان.",
+    "id": "company-306"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "MAKSIMOVSKY PRODUCT MF, LLP",
+    "industry": "کارخانه تولید فرآورده‌های نیمه‌آماده منجمد خمیری و گوشتی",
+    "target_grade": "خوراکی (E500ii) - پایدارکننده خمیر منجمد پلمنی و مانتی",
+    "address": "г. Астана, район Байконыр, ул. Жетиген, 41",
+    "website": "https://mf-product.kz",
+    "email": "accountant@mf-product.kz",
+    "phone": "+7 (701) 034-80-08",
+    "action_plan": "تولیدکننده صنعتی پلمنی، مانتی، وارنیکی با مصرف بی‌کربنات خوراکی جهت تثبیت ساختار خمیر در سرمایش و پخت بدون وا رفتگی.",
+    "id": "company-307"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "ROMANOVSKY PRODUCT",
+    "industry": "کارخانه صنعتی نان برگر، ساندویچ و نیمه‌آماده‌های غذایی",
+    "target_grade": "خوراکی (E500ii) - عامل ورآورنده و نرم‌کننده بافت نان و پیراشکی",
+    "address": "г. Астана, ул. Бейсекбаева, 28",
+    "website": "https://romanovskiyproduct.kz",
+    "email": "kazah.produkt@mail.ru",
+    "phone": "+7 (775) 390-77-66 / +7 (771) 050-44-60",
+    "action_plan": "تولید روزانه بیش از ۹۰,۰۰۰ عدد نان برگر و فرآورده‌های آردی در پایتخت قزاقستان؛ مصرف‌کننده مستقیم نمک‌های بی‌کربنات برای هوادهی و بافت یکنواخت نان.",
+    "id": "company-308"
+  },
+  {
+    "country": "قزاقستان",
+    "english_name": "ORDABASY KUS, LLP",
+    "industry": "هلدینگ پرورش بوقلمون، کارخانه تولید خوراک و فرآوری گوشت",
+    "target_grade": "دامی (Feed Grade) و خوراکی - بافر شکمبه/جیره طیور (DCAD) و عمل‌آوری گوشت",
+    "address": "Туркестанская обл., Ордабасинский р-н, с. Бадам, ул. А. Шопакулы, 2/1",
+    "website": "https://ordabasy-kus.kz",
+    "email": "a.sokolov@ordabasykys.kz",
+    "phone": "+7 (777) 011-90-09 / +7 (701) 716-87-85",
+    "action_plan": "بزرگترین مجتمع گوشت بوقلمون قزاقستان؛ دارای کارخانه خوراک‌سازی اختصاصی با مصرف بی‌کربنات سدیم دامی برای تنظیم موازنه الکترولیت و اسیدیته جیره طیور.",
+    "id": "company-309"
+  },
+  {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
     "english_name": "Suntory PepsiCo Vietnam Beverage",
     "industry": "Beverages / Food",
@@ -3305,7 +3812,7 @@
     "email": "CorporateAffairs.Department@suntorypepsico.vn",
     "website": "https://www.suntorypepsico.vn",
     "country": "ویتنام",
-    "id": "company-269"
+    "id": "company-310"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -3318,7 +3825,7 @@
     "email": "info@kienvuong.com",
     "website": "https://www.kienvuong.com",
     "country": "ویتنام",
-    "id": "company-270"
+    "id": "company-311"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -3331,7 +3838,7 @@
     "email": "jenny19820902@hungfuleather.com",
     "website": "https://www.hungfuleather.net",
     "country": "ویتنام",
-    "id": "company-271"
+    "id": "company-312"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -3341,10 +3848,10 @@
     "purchasing_potential": "+500 Tons (Corporate)",
     "address": "Lagos Free Zone, Lekki, Lagos, Nigeria (JV manufacturing site); Tolaram Group HQ: 1A International Business Park #13-01, Singapore 609933",
     "phone": "(65) 6387 7777 (Tolaram Group HQ, Singapore)",
-    "email": "info@tolaram.com)",
+    "email": "info@tolaram.com",
     "website": "https://www.tolaram.com",
     "country": "سنگاپور",
-    "id": "company-272"
+    "id": "company-313"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -3357,7 +3864,7 @@
     "email": "cs@parle.biz",
     "website": "https://www.parleproducts.com/",
     "country": "نیجریه",
-    "id": "company-273"
+    "id": "company-314"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -3370,7 +3877,7 @@
     "email": "unichem@unitedchemicals.com",
     "website": "https://unitedchemicals.com",
     "country": "اندونزی",
-    "id": "company-274"
+    "id": "company-315"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -3383,7 +3890,7 @@
     "email": "info@leaderchem.net",
     "website": "https://leaderchem.net",
     "country": "امارات",
-    "id": "company-275"
+    "id": "company-316"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -3396,7 +3903,7 @@
     "email": "info@logotranschem.ae",
     "website": "https://www.logotranschem.ae",
     "country": "امارات",
-    "id": "company-276"
+    "id": "company-317"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -3409,7 +3916,7 @@
     "email": "k.baltag@alqithara.ae",
     "website": "https://www.alqithara.ae/",
     "country": "امارات",
-    "id": "company-277"
+    "id": "company-318"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -3422,7 +3929,7 @@
     "email": "info@intersac.com",
     "website": "https://intersac.com",
     "country": "کانادا",
-    "id": "company-278"
+    "id": "company-319"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -3435,7 +3942,7 @@
     "email": "lulu@lumix-industry.com",
     "website": "https://lumix-industry.com",
     "country": "بنگلادش",
-    "id": "company-279"
+    "id": "company-320"
   },
   {
     "source_note": "Volza (راستی‌آزمایی‌شده)",
@@ -3448,7 +3955,7 @@
     "email": "barakatalyamin@gmail.com",
     "website": "https://www.barakatalyamin.com/#",
     "country": "عراق",
-    "id": "company-280"
+    "id": "company-321"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3461,7 +3968,7 @@
     "email": "info@agchemigroup.com",
     "website": "https://www.agchemigroup.com",
     "country": "چک",
-    "id": "company-281"
+    "id": "company-322"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3474,7 +3981,7 @@
     "email": "alcachimica@alcachimica.com",
     "website": "https://alcachimica.it",
     "country": "ایتالیا",
-    "id": "company-282"
+    "id": "company-323"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3487,7 +3994,7 @@
     "email": "tilaukset@algol.fi",
     "website": "https://www.algolchemicals.com",
     "country": "فنلاند",
-    "id": "company-283"
+    "id": "company-324"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3500,7 +4007,7 @@
     "email": "info@amcan.fr",
     "website": "https://dempseyeurope.com",
     "country": "فرانسه",
-    "id": "company-284"
+    "id": "company-325"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3513,7 +4020,7 @@
     "email": "avantor.pl@avantormaterials.com",
     "website": "https://www.poch.com.pl",
     "country": "لهستان",
-    "id": "company-285"
+    "id": "company-326"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3526,7 +4033,7 @@
     "email": "karmegam@avrtradings.com",
     "website": "https://www.avrtradings.com",
     "country": "هند",
-    "id": "company-286"
+    "id": "company-327"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3539,7 +4046,7 @@
     "email": "info@barkmans.se",
     "website": "https://barkmans.se",
     "country": "سوئد",
-    "id": "company-287"
+    "id": "company-328"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3552,7 +4059,7 @@
     "email": "investor-relations@azelis.com",
     "website": "https://www.azelis.com",
     "country": "دانمارک",
-    "id": "company-288"
+    "id": "company-329"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3565,7 +4072,7 @@
     "email": "azelis@azelis.fr",
     "website": "https://www.azelis.com",
     "country": "فرانسه",
-    "id": "company-289"
+    "id": "company-330"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3578,7 +4085,7 @@
     "email": "info@azelis.ro",
     "website": "https://www.azelis.com",
     "country": "رومانی",
-    "id": "company-290"
+    "id": "company-331"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3591,7 +4098,7 @@
     "email": "biuro@foodwell.pl",
     "website": "https://foodwell.pl",
     "country": "لهستان",
-    "id": "company-291"
+    "id": "company-332"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3604,7 +4111,7 @@
     "email": "office@bangbonsomer.com",
     "website": "https://www.bangbonsomer.com",
     "country": "فنلاند",
-    "id": "company-292"
+    "id": "company-333"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3617,7 +4124,7 @@
     "email": "barcelonesa@barcelonesa.com",
     "website": "https://www.barcelonesa.com",
     "country": "اسپانیا",
-    "id": "company-293"
+    "id": "company-334"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3630,7 +4137,7 @@
     "email": "ghpl@ghpl.pl",
     "website": "https://ghpl.pl",
     "country": "لهستان",
-    "id": "company-294"
+    "id": "company-335"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3643,7 +4150,7 @@
     "email": "office@beofon.ro",
     "website": "http://www.beofon.ro",
     "country": "رومانی",
-    "id": "company-295"
+    "id": "company-336"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3656,7 +4163,7 @@
     "email": "info@brpkimya.com",
     "website": "https://brpkimya.com",
     "country": "ترکیه",
-    "id": "company-296"
+    "id": "company-337"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3669,7 +4176,7 @@
     "email": "main.se@brenntag-nordic.com",
     "website": "https://www.brenntag.com/en-se/",
     "country": "سوئد",
-    "id": "company-297"
+    "id": "company-338"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3682,7 +4189,7 @@
     "email": "reliant.nordic@brenntag.com",
     "website": "https://www.brenntag.com/en-no/",
     "country": "نروژ",
-    "id": "company-298"
+    "id": "company-339"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3695,7 +4202,7 @@
     "email": "info.fi@brenntag.com",
     "website": "https://www.brenntag.com/en-fi/",
     "country": "فنلاند",
-    "id": "company-299"
+    "id": "company-340"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3708,7 +4215,7 @@
     "email": "biuro@brenntag.pl",
     "website": "https://www.brenntag.com/pl-pl/",
     "country": "لهستان",
-    "id": "company-300"
+    "id": "company-341"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3721,7 +4228,7 @@
     "email": "biuro@brenntag.pl",
     "website": "https://www.brenntag.com/pl-pl/",
     "country": "لهستان",
-    "id": "company-301"
+    "id": "company-342"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3734,7 +4241,7 @@
     "email": "biuro@brenntag.pl",
     "website": "https://www.brenntag.com/pl-pl/",
     "country": "لهستان",
-    "id": "company-302"
+    "id": "company-343"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3747,7 +4254,7 @@
     "email": "biuro@brenntag.pl",
     "website": "https://www.brenntag.com/pl-pl/",
     "country": "لهستان",
-    "id": "company-303"
+    "id": "company-344"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3760,7 +4267,7 @@
     "email": "info@brenntag.it",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-304"
+    "id": "company-345"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3773,7 +4280,7 @@
     "email": "info@brenntag.it",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-305"
+    "id": "company-346"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3786,7 +4293,7 @@
     "email": "info@brenntag.it",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-306"
+    "id": "company-347"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3799,7 +4306,7 @@
     "email": "info@brenntag.it",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-307"
+    "id": "company-348"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3812,7 +4319,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-308"
+    "id": "company-349"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3825,7 +4332,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-309"
+    "id": "company-350"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3838,7 +4345,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-310"
+    "id": "company-351"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3851,7 +4358,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-311"
+    "id": "company-352"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3864,7 +4371,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-312"
+    "id": "company-353"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3877,7 +4384,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-313"
+    "id": "company-354"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3890,7 +4397,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-314"
+    "id": "company-355"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3903,7 +4410,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-315"
+    "id": "company-356"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3916,7 +4423,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-316"
+    "id": "company-357"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3929,7 +4436,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-317"
+    "id": "company-358"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3942,7 +4449,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-318"
+    "id": "company-359"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3955,7 +4462,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-319"
+    "id": "company-360"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3968,7 +4475,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-320"
+    "id": "company-361"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3981,7 +4488,7 @@
     "email": "info.italia@brenntag.com",
     "website": "https://www.brenntag.com/it-it/",
     "country": "ایتالیا",
-    "id": "company-321"
+    "id": "company-362"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -3994,7 +4501,7 @@
     "email": "contactro@brenntag.com",
     "website": "https://www.brenntag.com/en-ro/",
     "country": "رومانی",
-    "id": "company-322"
+    "id": "company-363"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4007,7 +4514,7 @@
     "email": "sales-tcel@tatachemicals.com",
     "website": "https://tatachemicalseurope.com/",
     "country": "هلند",
-    "id": "company-323"
+    "id": "company-364"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4020,7 +4527,7 @@
     "email": "info@ctc-sweets.com",
     "website": "http://www.ctc-sweets.com",
     "country": "مصر",
-    "id": "company-324"
+    "id": "company-365"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4033,7 +4540,7 @@
     "email": "info@caldic.be",
     "website": "https://www.caldic.com",
     "country": "بلژیک",
-    "id": "company-325"
+    "id": "company-366"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4046,7 +4553,7 @@
     "email": "info@cbc-europe.com",
     "website": "https://cbc-europe.com",
     "country": "آلمان",
-    "id": "company-326"
+    "id": "company-367"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4059,7 +4566,7 @@
     "email": "chemap@chemap.cz",
     "website": "https://www.chemap.cz",
     "country": "چک",
-    "id": "company-327"
+    "id": "company-368"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4072,7 +4579,7 @@
     "email": "info@chemia.ch",
     "website": "https://www.chemia.ch",
     "country": "سوئیس",
-    "id": "company-328"
+    "id": "company-369"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4085,7 +4592,7 @@
     "email": "chimab@chimab.it",
     "website": "https://www.brenntag.com/en-de/industries/food-and-nutrition/",
     "country": "ایتالیا",
-    "id": "company-329"
+    "id": "company-370"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4098,7 +4605,7 @@
     "email": "chimab@chimab.it",
     "website": "https://www.brenntag.com/en-de/industries/food-and-nutrition/",
     "country": "ایتالیا",
-    "id": "company-330"
+    "id": "company-371"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4111,7 +4618,7 @@
     "email": "chimab@chimab.it",
     "website": "https://www.brenntag.com/en-de/industries/food-and-nutrition/",
     "country": "ایتالیا",
-    "id": "company-331"
+    "id": "company-372"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4124,7 +4631,7 @@
     "email": "info@chimitex.it",
     "website": "https://www.chimitex.it",
     "country": "ایتالیا",
-    "id": "company-332"
+    "id": "company-373"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4137,7 +4644,7 @@
     "email": "info@chimitex.it",
     "website": "https://www.chimitex.it",
     "country": "ایتالیا",
-    "id": "company-333"
+    "id": "company-374"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4150,7 +4657,7 @@
     "email": "ciechtrading@ciechgroup.com",
     "website": "https://www.qemetica.com",
     "country": "لهستان",
-    "id": "company-334"
+    "id": "company-375"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4163,7 +4670,7 @@
     "email": "coger@coger.fr",
     "website": "https://www.cogershop.com",
     "country": "فرانسه",
-    "id": "company-335"
+    "id": "company-376"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4176,7 +4683,7 @@
     "email": "info@comercialgodo.com",
     "website": "https://comercialgodo.com",
     "country": "اسپانیا",
-    "id": "company-336"
+    "id": "company-377"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4189,7 +4696,7 @@
     "email": "office@cio.ro",
     "website": "http://www.cio.ro",
     "country": "رومانی",
-    "id": "company-337"
+    "id": "company-378"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4202,7 +4709,7 @@
     "email": "office@cosal.ro",
     "website": "https://www.cosal.ro",
     "country": "رومانی",
-    "id": "company-338"
+    "id": "company-379"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4215,7 +4722,7 @@
     "email": "info@credin.dk",
     "website": "https://www.credin.dk",
     "country": "دانمارک",
-    "id": "company-339"
+    "id": "company-380"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4228,7 +4735,7 @@
     "email": "cristian@cristiangrup.ro",
     "website": "http://www.cristiangrup.ro",
     "country": "رومانی",
-    "id": "company-340"
+    "id": "company-381"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4241,7 +4748,7 @@
     "email": "disachim@disachim.com",
     "website": "https://www.disachim.com",
     "country": "فرانسه",
-    "id": "company-341"
+    "id": "company-382"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4254,7 +4761,7 @@
     "email": "info@distrimspa.com",
     "website": "https://www.distrimspa.com",
     "country": "الجزایر",
-    "id": "company-342"
+    "id": "company-383"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4267,7 +4774,7 @@
     "email": "kontakt@oetker.dk",
     "website": "https://www.oetker.dk",
     "country": "دانمارک",
-    "id": "company-343"
+    "id": "company-384"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4280,7 +4787,7 @@
     "email": "office@oetker.at",
     "website": "https://www.oetker.at",
     "country": "اتریش",
-    "id": "company-344"
+    "id": "company-385"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4293,7 +4800,7 @@
     "email": "info@zahrangroup.com",
     "website": "https://www.zahrangroup.com",
     "country": "مصر",
-    "id": "company-345"
+    "id": "company-386"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4306,7 +4813,7 @@
     "email": "ekoprom@zg.t-com.hr",
     "website": "https://www.ekoprom.hr",
     "country": "کرواسی",
-    "id": "company-346"
+    "id": "company-387"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4319,7 +4826,7 @@
     "email": "engelhardt@engelhardt.se",
     "website": "https://www.engelhardt.se",
     "country": "سوئد",
-    "id": "company-347"
+    "id": "company-388"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4332,7 +4839,7 @@
     "email": "salg@engelhardt.dk",
     "website": "https://engelhardt.dk",
     "country": "دانمارک",
-    "id": "company-348"
+    "id": "company-389"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4345,7 +4852,7 @@
     "email": "contact@adetis-ingredients.fr",
     "website": "https://adetis-ingredients.fr",
     "country": "فرانسه",
-    "id": "company-349"
+    "id": "company-390"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4358,7 +4865,7 @@
     "email": "foodsystems@tateandlyle.com",
     "website": "https://www.tateandlyle.com",
     "country": "فرانسه",
-    "id": "company-350"
+    "id": "company-391"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4371,7 +4878,7 @@
     "email": "info@gecotrap.com.tn",
     "website": "http://www.gecotrap.com.tn",
     "country": "تونس",
-    "id": "company-351"
+    "id": "company-392"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4384,7 +4891,7 @@
     "email": "info@faravelli.it",
     "website": "https://www.faravelli.it",
     "country": "ایتالیا",
-    "id": "company-352"
+    "id": "company-393"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4397,7 +4904,7 @@
     "email": "office@govcrest.ro",
     "website": "https://www.govcrest.ro",
     "country": "رومانی",
-    "id": "company-353"
+    "id": "company-394"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4410,7 +4917,7 @@
     "email": "info@gremount.com.cn",
     "website": "https://www.gremountint.com",
     "country": "چین",
-    "id": "company-354"
+    "id": "company-395"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4423,7 +4930,7 @@
     "email": "media@griffithfoods.com",
     "website": "https://griffithfoods.com",
     "country": "بلژیک",
-    "id": "company-355"
+    "id": "company-396"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4436,7 +4943,7 @@
     "email": "handlowy@chemia.opole.pl",
     "website": "http://www.chemia.opole.pl",
     "country": "لهستان",
-    "id": "company-356"
+    "id": "company-397"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4449,7 +4956,7 @@
     "email": "export@ghtech.com",
     "website": "https://www.ghtech.com",
     "country": "چین",
-    "id": "company-357"
+    "id": "company-398"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4462,7 +4969,7 @@
     "email": "info@haedener.ch",
     "website": "https://www.haedener.ch",
     "country": "سوئیس",
-    "id": "company-358"
+    "id": "company-399"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4475,7 +4982,7 @@
     "email": "post@hl-solberg.no",
     "website": "https://www.hl-solberg.no",
     "country": "نروژ",
-    "id": "company-359"
+    "id": "company-400"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4488,7 +4995,7 @@
     "email": "info@helmag.com",
     "website": "https://www.helmag.com",
     "country": "آلمان",
-    "id": "company-360"
+    "id": "company-401"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4501,7 +5008,7 @@
     "email": "info@himfarminvest.com.ua",
     "website": "https://himfarminvest.com.ua",
     "country": "اوکراین",
-    "id": "company-361"
+    "id": "company-402"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4514,7 +5021,7 @@
     "email": "info@ihc-chempharm.com",
     "website": "https://www.ihc-chempharm.com/",
     "country": "آلمان",
-    "id": "company-362"
+    "id": "company-403"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4527,7 +5034,7 @@
     "email": "info@imcdgroup.com",
     "website": "https://www.imcdgroup.com/",
     "country": "هلند",
-    "id": "company-363"
+    "id": "company-404"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4540,7 +5047,7 @@
     "email": "office@industrialchim.ro",
     "website": "https://www.industrialchim.ro/",
     "country": "رومانی",
-    "id": "company-364"
+    "id": "company-405"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4553,7 +5060,7 @@
     "email": "sphongburut@ashland.com",
     "website": "https://www.ashland.com/",
     "country": "تایلند",
-    "id": "company-365"
+    "id": "company-406"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4566,7 +5073,7 @@
     "email": "info@janus-services.com",
     "website": "https://janus-services.com/",
     "country": "هلند",
-    "id": "company-366"
+    "id": "company-407"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4579,7 +5086,7 @@
     "email": "kratoska@kratoska.cz",
     "website": "https://www.kratoska.cz/",
     "country": "چک",
-    "id": "company-367"
+    "id": "company-408"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4592,7 +5099,7 @@
     "email": "biuro@labomix.com.pl",
     "website": "http://www.labomix.com.pl",
     "country": "لهستان",
-    "id": "company-368"
+    "id": "company-409"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4605,7 +5112,7 @@
     "email": "contact@riadhpharm.dz",
     "website": "https://riadhpharm.dz/",
     "country": "الجزایر",
-    "id": "company-369"
+    "id": "company-410"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4618,7 +5125,7 @@
     "email": "mailbox@aprochimide.it",
     "website": "https://aprochimide.it/",
     "country": "ایتالیا",
-    "id": "company-370"
+    "id": "company-411"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4631,7 +5138,7 @@
     "email": "mailbox@aprochimide.it",
     "website": "https://aprochimide.it/",
     "country": "ایتالیا",
-    "id": "company-371"
+    "id": "company-412"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4644,7 +5151,7 @@
     "email": "mailbox@aprochimide.it",
     "website": "https://aprochimide.it/",
     "country": "ایتالیا",
-    "id": "company-372"
+    "id": "company-413"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4657,7 +5164,7 @@
     "email": "info@linegal.pl",
     "website": "https://linegal.pl/",
     "country": "لهستان",
-    "id": "company-373"
+    "id": "company-414"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4670,7 +5177,7 @@
     "email": "info@lirpasilicones.com",
     "website": "https://lirpasilicones.com/",
     "country": "اسپانیا",
-    "id": "company-374"
+    "id": "company-415"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4683,7 +5190,7 @@
     "email": "contact@manuchar.com",
     "website": "https://www.manuchar.com/",
     "country": "بلژیک",
-    "id": "company-375"
+    "id": "company-416"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4696,7 +5203,7 @@
     "email": "info@merck.ch",
     "website": "https://www.merckgroup.com/ch-en",
     "country": "سوئیس",
-    "id": "company-376"
+    "id": "company-417"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4709,7 +5216,7 @@
     "email": "CS.Merck@merckgroup.com",
     "website": "https://www.merckgroup.com/fi-fi",
     "country": "فنلاند",
-    "id": "company-377"
+    "id": "company-418"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4722,7 +5229,7 @@
     "email": "rodo@pgd.biz.pl",
     "website": "http://www.merkur.com.pl",
     "country": "لهستان",
-    "id": "company-378"
+    "id": "company-419"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4735,7 +5242,7 @@
     "email": "support@mido.com.eg",
     "website": "http://www.mido.com.eg",
     "country": "مصر",
-    "id": "company-379"
+    "id": "company-420"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4748,7 +5255,7 @@
     "email": "nanosoda.ua@gmail.com",
     "website": "https://nano-soda.com.ua/",
     "country": "اوکراین",
-    "id": "company-380"
+    "id": "company-421"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4761,7 +5268,7 @@
     "email": "info@nordiskaunipol.se",
     "website": "https://nordiskaunipol.se/",
     "country": "سوئد",
-    "id": "company-381"
+    "id": "company-422"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4774,7 +5281,7 @@
     "email": "office@crisfood.ro",
     "website": "https://www.crisfoods.ro/",
     "country": "رومانی",
-    "id": "company-382"
+    "id": "company-423"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4787,7 +5294,7 @@
     "email": "agro.ch@omya.com",
     "website": "https://www.omya.com",
     "country": "سوئیس",
-    "id": "company-383"
+    "id": "company-424"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4800,7 +5307,7 @@
     "email": "biuro@orchem.com.pl",
     "website": "https://orchem.com.pl",
     "country": "لهستان",
-    "id": "company-384"
+    "id": "company-425"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4813,7 +5320,7 @@
     "email": "office@permakem.no",
     "website": "https://www.permakem.no",
     "country": "نروژ",
-    "id": "company-385"
+    "id": "company-426"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4826,7 +5333,7 @@
     "email": "biuro@pharma-cosmetic.com.pl",
     "website": "http://www.pharma-cosmetic.com.pl",
     "country": "لهستان",
-    "id": "company-386"
+    "id": "company-427"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4839,7 +5346,7 @@
     "email": "info@policontract.md",
     "website": "https://policontract.md",
     "country": "مولداوی",
-    "id": "company-387"
+    "id": "company-428"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4852,7 +5359,7 @@
     "email": "biuro@polmarkus.com.pl",
     "website": "https://polmarkus.com.pl",
     "country": "لهستان",
-    "id": "company-388"
+    "id": "company-429"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4865,7 +5372,7 @@
     "email": "biuro@galfarm.com.pl",
     "website": "https://galfarm.pl",
     "country": "لهستان",
-    "id": "company-389"
+    "id": "company-430"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4878,7 +5385,7 @@
     "email": "chemia@standard.pl",
     "website": "https://www.standard.pl",
     "country": "لهستان",
-    "id": "company-390"
+    "id": "company-431"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4891,7 +5398,7 @@
     "email": "industrial-minerals@lehvoss.de",
     "website": "http://www.remy-group.com",
     "country": "آلمان",
-    "id": "company-391"
+    "id": "company-432"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4904,7 +5411,7 @@
     "email": "receptie_antwerpen@hanos.be",
     "website": "https://www.hanos.be",
     "country": "بلژیک",
-    "id": "company-392"
+    "id": "company-433"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4917,7 +5424,7 @@
     "email": "info@riverchimica.com",
     "website": "http://www.riverchimica.com",
     "country": "ایتالیا",
-    "id": "company-393"
+    "id": "company-434"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4930,7 +5437,7 @@
     "email": "info@riverchimica.com",
     "website": "http://www.riverchimica.com",
     "country": "ایتالیا",
-    "id": "company-394"
+    "id": "company-435"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4943,7 +5450,7 @@
     "email": "info@riverchimica.com",
     "website": "http://www.riverchimica.com",
     "country": "ایتالیا",
-    "id": "company-395"
+    "id": "company-436"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4956,7 +5463,7 @@
     "email": "info@rodals.md",
     "website": "http://www.rodals.md",
     "country": "مولداوی",
-    "id": "company-396"
+    "id": "company-437"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4969,7 +5476,7 @@
     "email": "info@simpo.it",
     "website": "https://www.simpo.it",
     "country": "ایتالیا",
-    "id": "company-397"
+    "id": "company-438"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4982,7 +5489,7 @@
     "email": "a.s@sahastraa.com",
     "website": "https://www.sahastraa.com",
     "country": "هند",
-    "id": "company-398"
+    "id": "company-439"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -4995,7 +5502,7 @@
     "email": "salt@salt.no",
     "website": "https://www.salt.no",
     "country": "نروژ",
-    "id": "company-399"
+    "id": "company-440"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5008,7 +5515,7 @@
     "email": "info@snick.be",
     "website": "https://www.snick.be",
     "country": "بلژیک",
-    "id": "company-400"
+    "id": "company-441"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5021,7 +5528,7 @@
     "email": "firmapost@solbergindustri.no",
     "website": "https://www.solbergindustri.no",
     "country": "نروژ",
-    "id": "company-401"
+    "id": "company-442"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5034,7 +5541,7 @@
     "email": "contact@solvay.com",
     "website": "https://www.solvay.com",
     "country": "دانمارک",
-    "id": "company-402"
+    "id": "company-443"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5047,7 +5554,7 @@
     "email": "contact@solvay.com",
     "website": "https://www.solvay.com",
     "country": "سوئد",
-    "id": "company-403"
+    "id": "company-444"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5060,7 +5567,7 @@
     "email": "info@specialkemi.se",
     "website": "http://www.specialkemi.se",
     "country": "سوئد",
-    "id": "company-404"
+    "id": "company-445"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5073,7 +5580,7 @@
     "email": "office@spottrading.ro",
     "website": "https://www.spottrading.ro",
     "country": "رومانی",
-    "id": "company-405"
+    "id": "company-446"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5086,7 +5593,7 @@
     "email": "office@stanchem.pl",
     "website": "https://www.stanchem.pl",
     "country": "لهستان",
-    "id": "company-406"
+    "id": "company-447"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5099,7 +5606,7 @@
     "email": "firmapost@storms.no",
     "website": "https://storms.no",
     "country": "نروژ",
-    "id": "company-407"
+    "id": "company-448"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5112,7 +5619,7 @@
     "email": "hello@ncc.ie",
     "website": "https://www.ncc.ie",
     "country": "ایرلند",
-    "id": "company-408"
+    "id": "company-449"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5125,7 +5632,7 @@
     "email": "info@torchiani.com",
     "website": "https://www.torchiani.com/",
     "country": "ایتالیا",
-    "id": "company-409"
+    "id": "company-450"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5138,7 +5645,7 @@
     "email": "mail@toscochimica.com",
     "website": "https://toscochimica.com/",
     "country": "ایتالیا",
-    "id": "company-410"
+    "id": "company-451"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5151,7 +5658,7 @@
     "email": "msd@tycoon-global.com",
     "website": "https://www.tycoon-global.com/",
     "country": "چین",
-    "id": "company-411"
+    "id": "company-452"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5164,7 +5671,7 @@
     "email": "ranairan@uetcindia.com",
     "website": "http://www.uetcindia.com",
     "country": "هند",
-    "id": "company-412"
+    "id": "company-453"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5177,7 +5684,7 @@
     "email": "contact@univarsolutions.com",
     "website": "https://www.univarsolutions.com",
     "country": "فرانسه",
-    "id": "company-413"
+    "id": "company-454"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5190,7 +5697,7 @@
     "email": "info-pt@univarsolutions.com",
     "website": "https://www.univarsolutions.com",
     "country": "پرتغال",
-    "id": "company-414"
+    "id": "company-455"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5203,7 +5710,7 @@
     "email": "Univar.dk@univarsolutions.com",
     "website": "https://www.univarsolutions.com",
     "country": "دانمارک",
-    "id": "company-415"
+    "id": "company-456"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5216,7 +5723,7 @@
     "email": "Order.se@univarsolutions.com",
     "website": "https://www.univarsolutions.se",
     "country": "سوئد",
-    "id": "company-416"
+    "id": "company-457"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5229,7 +5736,7 @@
     "email": "Ordre.no@univarsolutions.com",
     "website": "https://www.univarsolutions.no",
     "country": "نروژ",
-    "id": "company-417"
+    "id": "company-458"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5242,7 +5749,7 @@
     "email": "Order.fi@univarsolutions.com",
     "website": "https://www.univarsolutions.fi",
     "country": "فنلاند",
-    "id": "company-418"
+    "id": "company-459"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5255,7 +5762,7 @@
     "email": "vutstb@gmail.com",
     "website": "https://utstd.com.ua",
     "country": "اوکراین",
-    "id": "company-419"
+    "id": "company-460"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5268,7 +5775,7 @@
     "email": "office@vega.ro",
     "website": "https://vega.ro",
     "country": "رومانی",
-    "id": "company-420"
+    "id": "company-461"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5281,7 +5788,7 @@
     "email": "info@vhumana.com",
     "website": "https://www.vhumana.com",
     "country": "پرتغال",
-    "id": "company-421"
+    "id": "company-462"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5294,7 +5801,7 @@
     "email": "info@whitegroup.co.th",
     "website": "http://www.whitegroup.co.th",
     "country": "تایلند",
-    "id": "company-422"
+    "id": "company-463"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5307,7 +5814,7 @@
     "email": "info@whitegroup.co.th",
     "website": "http://www.whitegroup.co.th",
     "country": "تایلند",
-    "id": "company-423"
+    "id": "company-464"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5320,7 +5827,7 @@
     "email": "biuro@wibial.pl",
     "website": "https://wibial.pl/",
     "country": "لهستان",
-    "id": "company-424"
+    "id": "company-465"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5333,7 +5840,7 @@
     "email": "info@zeelandia.be",
     "website": "https://www.zeelandia.be/",
     "country": "بلژیک",
-    "id": "company-425"
+    "id": "company-466"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5346,7 +5853,7 @@
     "email": "ziarnex.warszawa@apc.com.pl",
     "website": "https://ziarnex.pl/",
     "country": "لهستان",
-    "id": "company-426"
+    "id": "company-467"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5359,7 +5866,7 @@
     "email": "info@arista.com.ua",
     "website": "https://arista.com.ua/",
     "country": "اوکراین",
-    "id": "company-427"
+    "id": "company-468"
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5372,6 +5879,861 @@
     "email": "wzcg@fxhr.cn",
     "website": "http://www.sxfx.com.cn",
     "country": "چین",
-    "id": "company-428"
+    "id": "company-469"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "CHICKODELLI (Shin-Line Group)",
+    "arabic_name": "ТОО «Шин-Лайн» (Бренд «Chickodelli»)",
+    "industry": "کارخانه فرآورده‌های مرغی، ناگت و سوخاری‌های منجمد",
+    "target_grade": "خوراکی (E500ii) - بافر امولسیون گوشت و عامل پف‌دهنده در روکش خمیری (Batter) ناگت",
+    "address": "Алматинская обл., Илийский р-н, с. Байсерке, ул. Султана Бейбарса, 1",
+    "phone": "+7 (727) 390-80-00",
+    "email": "info@shin-line.com",
+    "website": "https://shin-line.com",
+    "action_plan": "بخش فرآورده‌های پروتئینی و سوخاری گروه بزرگ شین‌لاین؛ تولیدکننده ناگت و برگر سوخاری با مصرف بی‌کربنات سدیم در پوشش‌های خمیری.",
+    "country": "قزاقستان",
+    "id": "company-470"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "PRIME FOOD FACTORY, LLP",
+    "arabic_name": "ТОО «Prime Food Factory» (Бренд «Самса Шеф»)",
+    "industry": "تولیدکننده صنعتی سمبوسه سنتی، خمیر لایه‌ای و پیراشکی منجمد",
+    "target_grade": "خوراکی (E500ii) - ورآورنده و کنترل‌کننده بافت خمیرهای چندلایه پفکی",
+    "address": "г. Алматы, Алатауский район, микрорайон Алгабас",
+    "phone": "+7 (701) 055-55-40 / +7 (727) 344-00-11",
+    "email": "info@samsachef.kz",
+    "website": "https://samsachef.kz",
+    "action_plan": "بزرگترین کارخانه تخصصی تولید سمبوسه و نیمه‌آماده‌های لایه‌ای در قزاقستان؛ مصرف‌کننده بی‌کربنات سدیم برای دستیابی به بافت ترد ورقه‌های خمیر.",
+    "country": "قزاقستان",
+    "id": "company-471"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "SWEET PREMIUM, LLP",
+    "arabic_name": "ТОО «Свит Премиум»",
+    "industry": "کارخانه تولید شیرینی، کوکی و ویفر",
+    "target_grade": "خوراکی (E500ii) - حجم‌دهنده و خمیرمایه شیمیایی بیسکویت و کوکی",
+    "address": "Алматинская обл., Карасайский район, с.о. Райымбек",
+    "phone": "+7 (727) 317-22-33",
+    "email": "info@sweetpremium.kz",
+    "website": "https://sweetpremium.kz",
+    "action_plan": "تولیدکننده فرآورده‌های شیرینی و ویفر در آلماتی با خریدهای مستمر نمک‌های قلیایی E500ii در کیسه‌های ۲۵ کیلوگرمی.",
+    "country": "قزاقستان",
+    "id": "company-472"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "CONFECTIONERY COMPANY DYMKA",
+    "arabic_name": "Кондитерская фабрика «Дымка»",
+    "industry": "غول تولید انواع بیسکویت، کراکر، شیرینی سنتی، ویفر و کیک",
+    "target_grade": "خوراکی (E500ii) - ورآورنده بنیادین در خطوط تولید انبوه کراکر و بیسکویت",
+    "address": "Россия, Кировская обл., г. Слободской / г. Киров, ул. Потребкооперации, 19",
+    "phone": "+7 (8332) 71-38-00",
+    "email": "info@dymka.ru",
+    "website": "https://dymka.ru",
+    "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
+    "country": "روسیه",
+    "id": "company-473"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "GRILIAZH CONFECTIONERY",
+    "arabic_name": "Булочная-кондитерская «Грильяж» (ООО «Грильяж»)",
+    "industry": "کارخانه نان صنعتی، کیک، بیسکویت، کراکر و شیرینی‌پزی",
+    "target_grade": "خوراکی (E500ii) - حجم‌دهنده و پوک‌کننده خمیر شیرینی و بیسکویت",
+    "address": "Россия, г. Оренбург, ул. Советская, 27 / ул. Комсомольская",
+    "phone": "+7 (3532) 42-27-55",
+    "email": "grilyazh56@mail.ru",
+    "website": "https://кондитерская-грильяж.рф",
+    "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
+    "country": "روسیه",
+    "id": "company-474"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "LUTOV SNACK GROUP, LLC",
+    "arabic_name": "ООО «Лутов Снек Групп»",
+    "industry": "کارخانه تولید کراکر، اسنک‌های اکسترودری، سوخاری و برشتوک گندمی",
+    "target_grade": "خوراکی (E500ii) - عامل هوادهی، پوک‌کنندگی و تردی خمیر نان سوخاری و کراکر",
+    "address": "Россия, г. Воронеж, Монтажный проезд, 13Б",
+    "phone": "+7 (905) 623-43-99 / +7 (473) 239-09-45",
+    "email": "info@lutov-snack.ru",
+    "website": "https://lutov-snack.ru",
+    "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
+    "country": "روسیه",
+    "id": "company-475"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "MITZHEL (Zhelen Meat Group)",
+    "arabic_name": "ООО «Митжел» (ГК «Желен»)",
+    "industry": "کارخانه فرآوری گوشت، تولید سوسیس و غذاهای نیمه‌آماده",
+    "target_grade": "خوراکی (E500ii) - بافر پروتئین گوشت و تنظیم هیدراتاسیون امولسیون سوسیس",
+    "address": "Россия, Оренбургская обл., г. Орск (دفتر آستانه: г. Астана)",
+    "phone": "+7 (3537) 20-30-40",
+    "email": "info@zhelen.ru",
+    "website": "https://zhelen.ru",
+    "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
+    "country": "روسیه",
+    "id": "company-476"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "STROYBYTSERVICE / HACCPER",
+    "arabic_name": "ООО «Стройбытсервис» (Бренд «HACCPER»)",
+    "industry": "تولیدکننده شوینده‌های حرفه‌ای، مواد بهداشتی و پاک‌کننده‌های خطوط غذایی",
+    "target_grade": "صنعتی (Technical Grade) - تنظیم قلیائیت و ماده ساینده ملایم شوینده‌های خطوط صنعتی",
+    "address": "Россия, г. Воронеж, ул. Дружинников, 7Д, офис 8/3",
+    "phone": "+7 (495) 414-12-05 / +7 (499) 504-98-85",
+    "email": "info@haccper.ru",
+    "website": "https://haccper.ru",
+    "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
+    "country": "روسیه",
+    "id": "company-477"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "SLADEKS, LLC / TM SWEET SLOBODA",
+    "arabic_name": "ООО «Сладекс» (КФ «Сладкая Слобода»)",
+    "industry": "کارخانه تولید انواع بیسکویت شکری، کراکر و ویفر",
+    "target_grade": "خوراکی (E500ii) - عامل پوک‌کننده و ایجاد رنگ و تردی در پخت شیرینی",
+    "address": "Россия, г. Киров, ул. Производственная, 29",
+    "phone": "+7 (8332) 71-11-20",
+    "email": "info@sladkasloboda.ru",
+    "website": "https://sladkasloboda.ru",
+    "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
+    "country": "روسیه",
+    "id": "company-478"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "URA CONFECTIONERS",
+    "arabic_name": "ПК «Уральские кондитеры»",
+    "industry": "کارخانه عظیم شیرینی‌پزی، بیسکویت جو و ویفر صنعتی",
+    "target_grade": "خوراکی (E500ii) - ورآورنده اصلی خمیر بیسکویت و شیرینی‌های قالبی",
+    "address": "Россия, г. Челябинск, ул. Дарвина, 14",
+    "phone": "+7 (351) 211-50-50",
+    "email": "info@uracon.ru",
+    "website": "https://uracon.ru",
+    "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
+    "country": "روسیه",
+    "id": "company-479"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "DAMATE GROUP",
+    "arabic_name": "ГК «Дамате»",
+    "industry": "بزرگترین تولیدکننده گوشت بوقلمون و اردک، کارخانه خوراک و سوسیس در روسیه",
+    "target_grade": "دامی و خوراکی (Feed & Food Grade) - بافر جیره طیور و فرآوری گوشت",
+    "address": "Россия, г. Москва, 2-й Павелецкий проезд, 5, стр. 1 (مزارع در پنزا و روستوف)",
+    "phone": "+7 (495) 777-99-77",
+    "email": "info@acdamate.com",
+    "website": "https://acdamate.com",
+    "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
+    "country": "روسیه",
+    "id": "company-480"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "SLASTI TD / SLASTI CONFECTIONERY",
+    "arabic_name": "ООО «КФ «Сласти» (ТД «Сласти»)",
+    "industry": "کارخانه تولید کوکی، مارشمالو و ویفر",
+    "target_grade": "خوراکی (E500ii) - عامل ورآورنده خمیرهای بیسکویتی و شیرینی‌های زیرسازی شده",
+    "address": "Россия, Самарская обл., г. Тольятти, ул. Голосова, 16А",
+    "phone": "+7 (8482) 759-700 / +7 (800) 500-40-90",
+    "email": "snab@slasti.com",
+    "website": "https://slasti.com",
+    "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
+    "country": "روسیه",
+    "id": "company-481"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "SELL-SERVICE, LLC",
+    "arabic_name": "ООО «Селл-Сервис»",
+    "industry": "واردکننده و تأمین‌کننده کشوری افزودنی‌های غذایی و شیمیایی",
+    "target_grade": "خوراکی و صنعتی - واردات عمده کانتینری بی‌کربنات سدیم و اسیدهای خوراکی",
+    "address": "Россия, г. Новосибирск, ул. Станционная, 30А / г. Москва",
+    "phone": "+7 (383) 363-22-24",
+    "email": "info@sell-s.ru",
+    "website": "https://sell-s.ru",
+    "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
+    "country": "روسیه",
+    "id": "company-482"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "NEO CHEMICAL",
+    "arabic_name": "ООО «Нео Кемикал»",
+    "industry": "تأمین‌کننده کلان مواد اولیه شیمیایی و پتروشیمی",
+    "target_grade": "صنعتی و خوراکی - توزیع در صنایع شوینده، شیشه، نفت و خوراک",
+    "address": "Россия, Нижегородская обл., г. Дзержинск, ул. Речная, 2А",
+    "phone": "+7 (8313) 26-55-55",
+    "email": "info@neochemical.ru",
+    "website": "https://neochemical.ru",
+    "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
+    "country": "روسیه",
+    "id": "company-483"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Empire Golden Group LLC",
+    "arabic_name": "Empire Golden Group LLC",
+    "industry": "شرکت بازرگانی عمومی و توزیع منطقه‌ای کالا در استان بخارا (طرف مذاکره در سفر)",
+    "target_grade": "خوراکی و صنعتی",
+    "address": "Uzbekistan, Bukhara region, Gijduvan district, Zarafshan, Shogolona St., 174",
+    "phone": "+998 (91) 415-00-00 (Region Office)",
+    "email": "empire.golden.uz@gmail.com",
+    "website": "https://tradeatlas.com",
+    "action_plan": "شرکت فعال در حوزه واردات و توزیع کالاهای اساسی و مواد شیمیایی مصرفی در منطقه گیژدووان و حومه بخارا؛ دارای آمادگی خرید محموله‌های کامیونی از ایران.",
+    "country": "ازبکستان",
+    "id": "company-484"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Asia Export Co.",
+    "arabic_name": "Asia Export Co.",
+    "industry": "شرکت بازرگانی بین‌المللی و کارگزاری واردات کالا (طرف مذاکره در سفر)",
+    "target_grade": "خوراکی، خوراک دام و صنعتی",
+    "address": "Uzbekistan, Tashkent / Bukhara Hub",
+    "phone": "+998 (97) 300-44-55",
+    "email": "asiaexport.uz@bk.ru",
+    "website": "https://exportgenius.in",
+    "action_plan": "کارگزار و خریدار محموله‌های کانتینری و واگنی محصولات شیمیایی معدنی از ایران و کشورهای CIS؛ فعال در ترخیص گمرکی و حمل لجستیکی تا انبار خریداران نهایی ازبکستان.",
+    "country": "ازبکستان",
+    "id": "company-485"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Food Impex Group",
+    "arabic_name": "Food Impex Group",
+    "industry": "هلدینگ تخصصی واردات و پخش مواد اولیه غذایی (طرف مذاکره در سفر)",
+    "target_grade": "خوراکی (E500ii) - شیرینی، بیسکویت، بیکینگ پودر",
+    "address": "Uzbekistan, Tashkent, Almazar district, near O'rikzor Market",
+    "phone": "+998 (90) 910-88-77",
+    "email": "foodimpex.uz@gmail.com",
+    "website": "https://exporters.sg",
+    "action_plan": "مستقر در مجاورت بازار بزرگ اوریک‌زار تاشکند (هاب عمده‌فروشی مواد غذایی ازبکستان)؛ شریک تجاری نزدیک Akchem Trade با تقاضای دوره‌ای جوش شیرین کیسه‌ای و خرده‌فروشی.",
+    "country": "ازبکستان",
+    "id": "company-486"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Ashtarak-Kat CJSC (Pargev LLC)",
+    "arabic_name": "Ashtarak-Kat CJSC (Pargev LLC)",
+    "industry": "تولیدکننده پیشرو لبنیات، بستنی و دسرهای لبنی و پودری",
+    "target_grade": "Food Grade",
+    "address": "ایروان، خ درو ۱۳",
+    "phone": "+374 11 999991\n+374 60 838888",
+    "email": "info@ashtarakkat.am",
+    "website": "ashtarakkat.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-487"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Tamara LLC",
+    "arabic_name": "Tamara LLC",
+    "industry": "کارخانجات بزرگ تولید شیرینی، کیک، کلوچه، نان صنعتی و بستنی",
+    "target_grade": "Food Grade",
+    "address": "ابوویان، خ آچاریان ۱۴",
+    "phone": "+374 222 63333\n+374 10 249812",
+    "email": "info@tamara.am",
+    "website": "tamara.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-488"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Yerevan Beer CJSC (Kilikia)",
+    "arabic_name": "Yerevan Beer CJSC (Kilikia)",
+    "industry": "کارخانه ماءالشعیر کیلیکیا، لیموناد، آبمیوه و نوشابه‌های گازدار",
+    "target_grade": "Food Grade / Technical",
+    "address": "ایروان، بلوار ایساکوف ۸",
+    "phone": "+374 10 542141\n+374 10 583654",
+    "email": "marketing@kilikia.am",
+    "website": "kilikia.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-489"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "SIS Natural CJSC (Yan / Sis)",
+    "arabic_name": "SIS Natural CJSC (Yan / Sis)",
+    "industry": "تولیدکننده آبمیوه‌های طبیعی، شهد میوه و سبزیجات کنسروی",
+    "target_grade": "Food Grade",
+    "address": "ایروان، خ هاقتاناک ۱/۷",
+    "phone": "+374 11 650650\n+374 10 744288",
+    "email": "info@sisnatural.am",
+    "website": "sisnatural.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-490"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Atenk LLC",
+    "arabic_name": "Atenk LLC",
+    "industry": "مجتمع فرآورده‌های گوشتی، سوسیس و خمیرهای منجمد آماده",
+    "target_grade": "Food Grade",
+    "address": "ایروان، خ ساراو آغبیوری ۵۹/۱",
+    "phone": "+374 60 434303",
+    "email": "info@atenk.am",
+    "website": "atenk.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-491"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Arcolad CJSC",
+    "arabic_name": "Arcolad CJSC",
+    "industry": "کارخانه شکلات‌سازی و قلیایی‌سازی پودر کاکائو و فیلینگ",
+    "target_grade": "Food Grade",
+    "address": "ایروان، خ متسارنتسی ۱۷/۵",
+    "phone": "+374 10 711144\n+374 91 002163",
+    "email": "info@arcolad.am",
+    "website": "arcolad.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-492"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Derjava-S CJSC (SlavGroup)",
+    "arabic_name": "Derjava-S CJSC (SlavGroup)",
+    "industry": "هلدینگ بزرگ واردات، بسته‌بندی خانگی و توزیع مواد غذایی",
+    "target_grade": "Food & FMCG",
+    "address": "ایروان، خ هاقتاناک ۱/۱",
+    "phone": "+374 10 771100\n+374 10 771101",
+    "email": "info@derjavas.am",
+    "website": "derjavas.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-493"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Dustr Marianna LLC (Marianna)",
+    "arabic_name": "Dustr Marianna LLC (Marianna)",
+    "industry": "صنایع فرآوری شیر، تولید پنیر و خامه صنعتی",
+    "target_grade": "Food Grade",
+    "address": "ایروان، خ سباستیا ۲۴",
+    "phone": "+374 10 442655\n+374 10 442656",
+    "email": "info@marianna.am",
+    "website": "marianna.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-494"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Araks Poultry Factory OJSC",
+    "arabic_name": "Araks Poultry Factory OJSC",
+    "industry": "بزرگ‌ترین مجتمع مرغداری گوشتی، تخم‌گذار و کارخانه دان آماده",
+    "target_grade": "Feed Grade",
+    "address": "استان آرماویر، روستای جراربی",
+    "phone": "+374 60 508888\n+374 33 661111",
+    "email": "info@araxpf.am",
+    "website": "araxpf.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش خوراک دام و طیور با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-495"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Lusakert Poultry Plant LLC",
+    "arabic_name": "Lusakert Poultry Plant LLC",
+    "industry": "مجتمع پرورش مرغ تخم‌گذار، دان آماده و مکمل‌های خوراک طیور",
+    "target_grade": "Feed Grade",
+    "address": "استان کوتایک، لوساکرت/گتامج",
+    "phone": "+374 97 211000\n+374 60 448778",
+    "email": "lusakertpoultry@gmail.com",
+    "website": "yell.am/lusakert",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش خوراک دام و طیور با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-496"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Arzni Group (Poultry & Cattle)",
+    "arabic_name": "Arzni Group (Poultry & Cattle)",
+    "industry": "مجتمع پرورش گاو شیری و طیور (بافر شکمبه و خوراک دامی)",
+    "target_grade": "Feed Grade",
+    "address": "استان کوتایک، روستای ارزنی ۵/۲",
+    "phone": "+374 98 977375\n+374 98 332266",
+    "email": "arznipoultry@gmail.com",
+    "website": "armproduct.am/arzni",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش خوراک دام و طیور با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-497"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Manana Grain LLC (Manana Feed)",
+    "arabic_name": "Manana Grain LLC (Manana Feed)",
+    "industry": "سیلوهای غلات، آسیاب و کارخانجات تولید کنسانتره خوراک دام",
+    "target_grade": "Feed Grade",
+    "address": "استان آرارات، سورناوان، بزرگراه ۶",
+    "phone": "+374 15 222090\n+374 96 222090",
+    "email": "info@mananagrain.am",
+    "website": "mananastone.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش خوراک دام و طیور با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-498"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Spayka LLC (Agro-Cattle Division)",
+    "arabic_name": "Spayka LLC (Agro-Cattle Division)",
+    "industry": "هلدینگ بزرگ کشاورزی، مجتمع‌های گلخانه‌ای و دامپروری سنگین",
+    "target_grade": "Feed Grade",
+    "address": "ایروان، خ باگراتونیاتس ۷۰/۱۸",
+    "phone": "+374 10 444470\n+374 60 704444",
+    "email": "spayka@spayka.com",
+    "website": "spayka.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش خوراک دام و طیور با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-499"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Shirak Poultry Factory LLC",
+    "arabic_name": "Shirak Poultry Factory LLC",
+    "industry": "کارخانه مرغداری و دان متمرکز در شمال ارمنستان",
+    "target_grade": "Feed Grade",
+    "address": "استان شیراک، گیومری، قاریبجانیان",
+    "phone": "+374 312 34500\n+374 93 404050",
+    "email": "shirakpoultry@mail.ru",
+    "website": "spyur.am/shirak",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش خوراک دام و طیور با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-500"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Liqvor Pharmaceuticals CJSC",
+    "arabic_name": "Liqvor Pharmaceuticals CJSC",
+    "industry": "شرکت داروسازی پیشرو ارمنستان (تولید سرم و محلول‌های همودیالیز)",
+    "target_grade": "Pharma Grade (EP/USP)",
+    "address": "ایروان، خ کوچینیان ۷/۹",
+    "phone": "+374 60 378800",
+    "email": "info@liqvor.com",
+    "website": "liqvor.com",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع شوینده و داروسازی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-501"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Arpimed Pharmaceutical Enterprise",
+    "arabic_name": "Arpimed Pharmaceutical Enterprise",
+    "industry": "تولید دارو، قرص‌های جوشان، آنتی‌اسیدها و محلول‌های بهداشتی",
+    "target_grade": "Pharma Grade",
+    "address": "ابوویان، میکرورایون دوم، پلاک ۱۹",
+    "phone": "+374 222 21725\n+374 222 21703",
+    "email": "info@arpimed.com",
+    "website": "arpimed.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع شوینده و داروسازی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-502"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Vitamax-E LLC / Vitamax Chemical",
+    "arabic_name": "Vitamax-E LLC / Vitamax Chemical",
+    "industry": "تولیدکننده پودرهای شوینده، مایع ظرفشویی، صابون و پاک‌کننده‌ها",
+    "target_grade": "Industrial / Detergent",
+    "address": "ایروان، شنگاویت، خ شیراکی ۱۵",
+    "phone": "+374 10 482050\n+374 91 405520",
+    "email": "info@vitamax.am",
+    "website": "vitamax.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع شوینده و داروسازی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-503"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Veolia Djur CJSC (Veolia Water)",
+    "arabic_name": "Veolia Djur CJSC (Veolia Water)",
+    "industry": "شرکت ملی تأمین و تصفیه آب آشامیدنی ارمنستان (تنظیم pH آب)",
+    "target_grade": "Water Treatment Grade",
+    "address": "ایروان، خ ابوویان ۶۶a",
+    "phone": "+374 11 300185\n1-85 (Hotline)",
+    "email": "am.water.com.all@veolia.com",
+    "website": "veolia.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع شوینده و داروسازی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-504"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "Zangezur Copper Molybdenum (ZCMC)",
+    "arabic_name": "Zangezur Copper Molybdenum (ZCMC)",
+    "industry": "بزرگ‌ترین مجتمع معدنی مس و مولیبدن (خنثی‌سازی اسید و باطله)",
+    "target_grade": "Industrial / Technical",
+    "address": "ایروان، مرکز تجاری کامار / کاجاران",
+    "phone": "+374 60 500003\n+374 285 33131",
+    "email": "info@zcmc.am",
+    "website": "zcmc.am",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع شوینده و داروسازی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-505"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "NeoChem / ChemGroup Armenia",
+    "arabic_name": "NeoChem / ChemGroup Armenia",
+    "industry": "شرکت‌های تخصصی واردات و توزیع مواد شیمیایی و مواد اولیه صنعتی",
+    "target_grade": "Industrial / Food / Feed",
+    "address": "ایروان، منطقه صنعتی شنگاویت و چارباخ",
+    "phone": "+374 10 523311\n+374 94 425510",
+    "email": "sales@neochem.am",
+    "website": "spyur.am/chemical",
+    "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع شوینده و داروسازی با مصرف مستقیم و واردات جوش شیرین.",
+    "country": "ارمنستان",
+    "id": "company-506"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "SPARTAK (JV JSC Spartak)",
+    "arabic_name": "СП ОАО «Спартак»",
+    "industry": "کارخانه عظیم صنایع شیرینی، شکلات، بیسکویت و ویفر",
+    "target_grade": "خوراکی (E500ii) - عامل حجم‌دهنده و پوک‌کننده خمیر در مقیاس بسیار بالا",
+    "address": "246003, Беларусь, г. Гомель, ул. Советская, 63",
+    "phone": "+375 (232) 69-07-35 / +375 (232) 69-07-01",
+    "email": "snab@spartak.by",
+    "website": "https://spartak.by",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "بلاروس",
+    "id": "company-507",
+    "email_note": "تدارکات"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "GOMEL MEAT PROCESSING PLANT, OJSC",
+    "arabic_name": "ОАО «Гомельский мясокомбинат»",
+    "industry": "مجتمع عظیم فرآوری گوشت، سوسیس و کارخانه پلمنی",
+    "target_grade": "خوراکی (E500ii) - آماده‌سازی خمیر پلمنی و بافر هیدراتاسیون گوشت",
+    "address": "246042, Беларусь, г. Гомель, ул. Ильича, 4",
+    "phone": "+375 (232) 50-65-10 (приемная) / +375 (232) 38-10-74 (снабжение)",
+    "email": "info@mkgomel.by",
+    "website": "https://mkgomel.by",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "بلاروس",
+    "id": "company-508"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "KALINKOVICHI MEAT PROCESSING PLANT",
+    "arabic_name": "ОАО «Калинковичский мясокомбинат»",
+    "industry": "مجتمع بزرگ گوشتی، سوسیس و نیمه‌آماده‌های خمیری منجمد",
+    "target_grade": "خوراکی (E500ii) - بهبود بافت خمیر پلمنی و بافر اسیدیته گوشت",
+    "address": "247710, Беларусь, Гомельская обл., г. Калинковичи, ул. Северная, 8",
+    "phone": "+375 (2345) 2-60-23 / +375 (2345) 2-64-52 / +375 (2345) 2-63-71",
+    "email": "kmk@mail.gomel.by",
+    "website": "https://www.kmk.by",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "بلاروس",
+    "id": "company-509"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "BREST MEAT PROCESSING PLANT, OJSC",
+    "arabic_name": "ОАО «Брестский мясокомбинат»",
+    "industry": "مجتمع بزرگ گوشتی، سوسیس و کارخانه پلمنی منجمد",
+    "target_grade": "خوراکی (E500ii) - بهبود بافت خمیر پلمنی و بافر پروتئین در فرآورده‌های گوشتی",
+    "address": "224014, Беларусь, г. Брест, ул. Писателя Смирнова, 4",
+    "phone": "+375 (162) 27-78-00 / +375 (162) 27-78-25",
+    "email": "info@brestmeat.by",
+    "website": "https://brestmeat.by",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "بلاروس",
+    "id": "company-510"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "GRODNO MEAT PROCESSING PLANT, OJSC",
+    "arabic_name": "ОАО «Гродненский мясокомбинат»",
+    "industry": "مجتمع فرآوری گوشت، سوسیس و نیمه‌آماده‌های پلمنی",
+    "target_grade": "خوراکی (E500ii) - آماده‌سازی خمیر پلمنی و بافر فسفات/کربنات گوشت",
+    "address": "230005, Беларусь, г. Гродно, ул. Мясницкая, 25",
+    "phone": "+375 (152) 45-49-83 (تدارکات) / +375 (152) 45-50-00",
+    "email": "omts@grodnomk.by",
+    "website": "https://grodnomk.by",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "بلاروس",
+    "id": "company-511"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "KRASNY PISCHEVIK, OJSC",
+    "arabic_name": "ОАО «Красный пищевик»",
+    "industry": "کارخانه باسابقه مارشمالو (زفیر)، حلوا، ژله و شیرینی‌جات",
+    "target_grade": "خوراکی (E500ii) - هوادهی و ورآوری بافت شیرینی و پایدارسازی بافت ژل‌ها",
+    "address": "213805, Беларусь, Могилевская обл., г. Бобруйск, ул. Бахарова, 145",
+    "phone": "+375 (225) 48-27-31",
+    "email": "info@zefir.by",
+    "website": "https://zefir.by",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "بلاروس",
+    "id": "company-512"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "VOLKOVYSK MEAT-PROCESSING PLANT, OJSC",
+    "arabic_name": "ОАО «Волковысский мясокомбинат»",
+    "industry": "مجتمع بزرگ گوشتی، سوسیس و پلمنی منجمد",
+    "target_grade": "خوراکی (E500ii) - بافر هیدراتاسیون گوشت و نرم‌کننده خمیر پلمنی",
+    "address": "231900, Беларусь, Гродненская обл., г. Волковыск, ул. Октябрьская, 151",
+    "phone": "+375 (1512) 5-00-00",
+    "email": "info@volmk.by",
+    "website": "https://volmk.by",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "بلاروس",
+    "id": "company-513"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "BELASEPTIKA (CJSC BelAseptika)",
+    "arabic_name": "ЗАО «БелАсептика»",
+    "industry": "کارخانه تولید شوینده‌ها، ضدعفونی‌کننده‌ها و بهداشت صنایع",
+    "target_grade": "صنعتی (Technical Grade) - تنظیم قلیائیت و جزء ساینده ملایم شوینده‌ها",
+    "address": "223043, Беларусь, Минский р-н, д. Цнянка, ул. Армейская, 8",
+    "phone": "+375 (17) 500-33-01 / +375 (17) 500-33-11",
+    "email": "info@belaseptika.by",
+    "website": "https://belaseptika.by",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "بلاروس",
+    "id": "company-514"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "ATA LTD CONFECTIONERY FACTORY, LLC",
+    "arabic_name": "ОсОО Кондитерская фабрика «АТА ЛТД»",
+    "industry": "کارخانه صنعتی تولید بیسکویت، ویفر، کیک و شکلات",
+    "target_grade": "خوراکی (E500ii) - پوک‌کننده و حجم‌دهنده اصلی خمیر بیسکویت و ویفر",
+    "address": "Кыргызстан, г. Бишкек, ул. Чолпон-Атинская, 16",
+    "phone": "+996 (312) 35-71-71 / +996 (312) 63-12-12",
+    "email": "office@ata.kg",
+    "website": "https://ata.kg",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "قرقیزستان",
+    "id": "company-515"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "ATAMAN KG LLC",
+    "arabic_name": "ОсОО «Атаман КГ»",
+    "industry": "کارخانه تولید پلمنی، مانتی، سامسا و نیمه‌آماده‌های منجمد حلال",
+    "target_grade": "خوراکی (E500ii) - تنظیم اسیدیته و بهبود الاستیسیته خمیر پلمنی",
+    "address": "Кыргызстан, Чуйская обл., с. Лебединовка / г. Бишкек",
+    "phone": "+996 (312) 65-11-22",
+    "email": "info@ataman.kg",
+    "website": "https://ataman.kg",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "قرقیزستان",
+    "id": "company-516"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "BARKAD LLC",
+    "arabic_name": "ОсОО «Баркад»",
+    "industry": "مجتمع فرآوری گوشت، سوسیس و غذاهای نیمه‌آماده",
+    "target_grade": "خوراکی (E500ii) - پایدارکننده بافت خمیر و بافر گوشت",
+    "address": "Кыргызстан, Аламудунский р-н, с. Мыкан",
+    "phone": "+996 (312) 44-55-66",
+    "email": "info@barkad.kg",
+    "website": "https://barkad.kg",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "قرقیزستان",
+    "id": "company-517"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "TATYMAL GROUP, LLC",
+    "arabic_name": "ОсОО «Татымал Групп»",
+    "industry": "کارخانه تولید چاشنی‌ها، ادویه‌جات ترکیبی، بیکینگ‌پودر و افزودنی‌های غذایی",
+    "target_grade": "خوراکی (E500ii) - جزء پایه در فرمولاسیون بیکینگ‌پودر و پودرهای ترکیبی خمیر",
+    "address": "Кыргызстан, г. Бишкек",
+    "phone": "+996 557 77 55 11",
+    "email": "tatymal@hotmail.com",
+    "website": "http://tatmal.kg",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "قرقیزستان",
+    "id": "company-518"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "COLIAN LTD",
+    "arabic_name": "COLIAN SP. Z O.O. / COLIAN LTD",
+    "industry": "هلدینگ چندملیتی شکلات، بیسکویت، کوکی و ویفر",
+    "target_grade": "خوراکی (E500ii) - ورآورنده اصلی خطوط صنعتی بیسکویت و ویفر",
+    "address": "Poland, 62-860 Opatówek, ul. Zdrojowa 1",
+    "phone": "+48 (62) 590-33-00",
+    "email": "colian@colian.com",
+    "website": "https://colian.com",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "لهستان",
+    "id": "company-519"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "GOLEBIEWSKI HOLDING - TAGO",
+    "arabic_name": "TAGO Zakłady Przemysłu Cukierniczego",
+    "industry": "بزرگترین کارخانه بیسکویت، کلوچه زنجبیلی، ویفر و شیرینی در لهستان",
+    "target_grade": "خوراکی (E500ii) - حجم‌دهنده و تردکننده انواع شیرینی‌جات پخته",
+    "address": "Poland, 05-250 Radzymin, Ciemne, ul. Wołomińska 125",
+    "phone": "+48 (22) 760-41-00",
+    "email": "tago@tago.com.pl",
+    "website": "https://tago.com.pl",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "لهستان",
+    "id": "company-520"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "E.WEDEL",
+    "arabic_name": "LOTTE Wedel Sp. z o.o.",
+    "industry": "کارخانه کهن شکلات، شیرینی و کیک در لهستان",
+    "target_grade": "خوراکی (E500ii) - پوک‌کننده خمیر کیک، کلوچه و محصولات ویفری",
+    "address": "Poland, 03-802 Warszawa, ul. Zamoyskiego 28/30",
+    "phone": "+48 (22) 670-60-00",
+    "email": "wedel@wedel.pl",
+    "website": "https://wedel.pl",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "لهستان",
+    "id": "company-521"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "MIESZKO S.A.",
+    "arabic_name": "MIESZKO S.A.",
+    "industry": "کارخانه تولید شکلات، پرالین، بیسکویت و شیرینی",
+    "target_grade": "خوراکی (E500ii) - عامل ورآورنده خمیر در شیرینی‌های لایه‌ای و بیسکویت",
+    "address": "Poland, 47-400 Racibórz, ul. Starowiejska 75",
+    "phone": "+48 (32) 755-10-00",
+    "email": "mieszko@mieszko.pl",
+    "website": "https://mieszko.pl",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "لهستان",
+    "id": "company-522"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "WAWEL S.A.",
+    "arabic_name": "WAWEL S.A.",
+    "industry": "کارخانه بزرگ صنایع شکلات، بیسکویت و ویفر",
+    "target_grade": "خوراکی (E500ii) - عامل هوادهی و سبک‌سازی بافت بیسکویت",
+    "address": "Poland, 32-410 Dobczyce, ul. Władysława Warneńczyka 14",
+    "phone": "+48 (12) 252-70-00",
+    "email": "poczta@wawel.com.pl",
+    "website": "https://wawel.com.pl",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "لهستان",
+    "id": "company-523"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "TAREEQ AL-KAWTHER",
+    "arabic_name": "TAREEQ AL-KAWTHER SP. Z O.O.",
+    "industry": "شرکت توزیع و صادرات عمده شیرینی‌جات، بیسکویت و اسنک",
+    "target_grade": "خوراکی (E500ii) - توزیع بازرگانی شیرینی و بیسکویت‌های صنعتی",
+    "address": "Poland, 05-462 Duchnów, ul. Kresowa 14",
+    "phone": "یافت نشد (ثبت استعلام مستقیم از طریق ایمیل)",
+    "email": "ceo@tareeqalkawther.com",
+    "website": "https://tareeqalkawther.com",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "لهستان",
+    "id": "company-524"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "BEIJING SHIPULLER CO., LTD.",
+    "arabic_name": "BEIJING SHIPULLER CO., LTD.",
+    "industry": "کارخانه عظیم نودل سنتی و فوری، رشته فرنگی و آرد سوخاری پانکو (Panko)",
+    "target_grade": "خوراکی (E500ii) - نمک قلیایی عمل‌آوری خمیر نودل (Kansui) و ورآورنده خمیر پانکو",
+    "address": "No.28 Xinxi Road, Haidian District, Beijing, China",
+    "phone": "+86-10-62969035",
+    "email": "sales@shipuller.com",
+    "website": "https://www.yumartfood.com",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "چین",
+    "id": "company-525"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "KINDY FOODS CO., LTD.",
+    "arabic_name": "KINDY FOODS COMPANY LIMITED",
+    "industry": "کارخانه تخصصی ویفر توپی، بیسکویت خرسی، کوکی و شکلات",
+    "target_grade": "خوراکی (E500ii) - ورآورنده و سبک‌کننده خمیر ویفر و بیسکویت",
+    "address": "Tangkou Xu Industrial Zone, Tangkou Town, Kaiping, Guangdong, China",
+    "phone": "+86-750-2333289 / +86-13929080766",
+    "email": "sales@kindyfoods.com",
+    "website": "https://www.kindyfoods.com",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "چین",
+    "id": "company-526"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "ZHENGZHOU AOXUE FOOD SCIENCE & TECH",
+    "arabic_name": "Zhengzhou Aoxue Food Science and Technology Co., Ltd.",
+    "industry": "تولیدکننده پیش‌مخلوط‌های قنادی (Pastry Premix) و پودر بستنی",
+    "target_grade": "خوراکی (E500ii) - فرمولاسیون پودرهای آماده کیک و پکینگ‌پودر",
+    "address": "China, Henan Province, Zhengzhou City",
+    "phone": "+86-13838219849 / +86-13007521253",
+    "email": "hyan77173@gmail.com",
+    "website": "https://aoxuefood.com",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "چین",
+    "id": "company-527"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "UKRKORN, PRIVATE ENTERPRISE",
+    "arabic_name": "ЧП «Укркорн» (Бренд «Їж Наше»)",
+    "industry": "کارخانه تولید اسنک‌های اکسترودری ذرت، پفک و فرآورده‌های غلات",
+    "target_grade": "خوراکی (E500ii) - عامل بهبود انبساط و پف‌کنندگی خمیر اکستروژن ذرت",
+    "address": "Украина, Черкасская обл., с. Мошны",
+    "phone": "+380 (93) 247-39-09",
+    "email": "a20172077@gmail.com",
+    "website": "http://esh-nashe.com",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "اوکراین",
+    "id": "company-528"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "LANTMÄNNEN AXA",
+    "arabic_name": "ПАО «Лантманнен Акса» (Бренд «AXA»)",
+    "industry": "هلدینگ بزرگ غلات صبحانه، کورن‌فلکس، گرانولا و اسنک‌های اکسترودری",
+    "target_grade": "خوراکی (E500ii) - رگولاتور حباب‌زایی و ورآمدن خمیر برشتوک و غلات",
+    "address": "Украина, Киевская обл., г. Борисполь, ул. Привокзальная, 44 / Германия",
+    "phone": "+380 (44) 281-06-00",
+    "email": "info@lantmannen-axa.com.ua",
+    "website": "https://lantmannen-axa.com.ua",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "اوکراین",
+    "id": "company-529"
+  },
+  {
+    "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
+    "english_name": "ALAN MEAT PROCESSING PLANT, LLC",
+    "arabic_name": "ООО «Мясокомбинат «Алан»",
+    "industry": "مجتمع فرآوری گوشت و سوسیس‌های ممتاز",
+    "target_grade": "خوراکی (E500ii) - بافر تثبیت پروتئین و رطوبت امولسیون گوشت",
+    "address": "Украина, г. Днепр, ул. Стартовая, 26",
+    "phone": "+380 (56) 790-25-25",
+    "email": "info@alan.ua",
+    "website": "https://alan.ua",
+    "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
+    "country": "اوکراین",
+    "id": "company-530"
   }
 ]
