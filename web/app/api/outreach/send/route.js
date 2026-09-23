@@ -3,7 +3,7 @@ import path from "path";
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import { getCompanies, getCountryEnglishName, getEmailOutreachSent } from "@/lib/data";
-import { renderOutreachEmail } from "@/lib/outreachTemplate";
+import { renderOutreachEmail, isValidEmail } from "@/lib/outreachTemplate";
 
 const ROOT = path.join(process.cwd(), "..");
 const SENT_LOG_FILE = path.join(ROOT, "data", "email_outreach_sent.json");
@@ -108,6 +108,12 @@ export async function POST(request) {
     const c = byId.get(id);
     if (!c || !c.email) {
       results.push({ id, ok: false, error: "شرکت یا ایمیلش پیدا نشد" });
+      continue;
+    }
+    // شبکه‌ی ایمنی دوم: حتی اگه صفحه فیلتر نکرده باشه (مثلاً فراخوان مستقیم
+    // API)، یک آدرس بدفرمت هیچ‌وقت به sendMail نمی‌رسه.
+    if (!isValidEmail(c.email)) {
+      results.push({ id, ok: false, error: "فرمت ایمیل این شرکت نامعتبر است" });
       continue;
     }
     const emailLower = c.email.trim().toLowerCase();

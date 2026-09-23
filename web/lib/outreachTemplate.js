@@ -9,6 +9,18 @@
 // زیرساخت سرور ایمیل، نه کد ما). به‌جاش کاتالوگ‌ها روی خودِ سایت میزبانی
 // می‌شن و فقط لینکشون توی متن ایمیل میاد.
 
+// شبکه‌ی ایمنیِ دوم برای فرمت ایمیل (اولی: scripts/clean_company_emails.py که
+// خودِ داده‌ی companies.json رو پاک می‌کنه). این یکی سمت runtime سایت است —
+// حتی اگه یک دسته‌ی جدید شرکت (نمایشگاه بعدی، کشور بعدی) بدون عبور از اسکریپت
+// پایتون مستقیم به companies.json اضافه بشه و یک مقدار شلخته داشته باشه
+// («ثبت نشده»، چند ایمیل با فاصله از هم...)، صفحه‌ی /outreach و API ارسال
+// بازم قبل از نمایش/ارسال ردش می‌کنن، نه اینکه خطای مبهم SMTP برگردونن.
+const EMAIL_FORMAT_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+export function isValidEmail(email) {
+  return typeof email === "string" && EMAIL_FORMAT_RE.test(email.trim());
+}
+
 const CATALOG_URL_ENV_KEYS = {
   packing: "OUTREACH_CATALOG_URL_PACKING",
   food: "OUTREACH_CATALOG_URL_FOOD",

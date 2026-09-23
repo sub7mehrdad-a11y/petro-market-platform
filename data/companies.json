@@ -1001,7 +1001,7 @@
     "purchasing_potential": "Medium",
     "address": "Khalda, Amman, Jordan",
     "phone": "+962 79 0046952",
-    "email": "—",
+    "email": null,
     "website": "https://waddanjo.com",
     "id": "company-80"
   },
@@ -1039,7 +1039,7 @@
     "purchasing_potential": "بالا",
     "address": "P.O Box 503-00204, Athi River",
     "phone": "+254 722 881 024",
-    "email": "admin@athirivertanneries.co.ke md@athirivertanneries.co.ke",
+    "email": "admin@athirivertanneries.co.ke",
     "website": "athirivertanneries.co.ke",
     "id": "company-83"
   },
@@ -1075,7 +1075,7 @@
     "purchasing_potential": "بسیار بالا",
     "address": "P.O. Box 25, Thika, Kenya",
     "phone": "+254 717 080 024",
-    "email": "info@bakex.co.ke info@broadway.co.ke",
+    "email": "info@bakex.co.ke",
     "website": "bakex.co.ke",
     "id": "company-86"
   },
@@ -1279,7 +1279,7 @@
     "purchasing_potential": "متوسط",
     "address": "Mombasa / Nairobi",
     "phone": "254751021020",
-    "email": "kenyachem @ gmail.com",
+    "email": "kenyachem@gmail.com",
     "website": "kenyachemical.com",
     "id": "company-103"
   },
@@ -1411,7 +1411,7 @@
     "purchasing_potential": "بالا",
     "address": "Maragua, Murang'a County, Kenya",
     "phone": "+254 791 031654",
-    "email": "-",
+    "email": null,
     "website": "murangacountycreameries.com",
     "id": "company-114"
   },
@@ -1495,7 +1495,7 @@
     "purchasing_potential": "بالا",
     "address": "Kenya",
     "phone": "509536992385",
-    "email": "management@redachem.com kenya@redachem.com",
+    "email": "management@redachem.com",
     "website": "redachem.com",
     "id": "company-121"
   },
@@ -1839,7 +1839,7 @@
     "action_plan": null,
     "address": null,
     "phone": "9647704555186",
-    "email": "info@albarakaiq.com mohammed@albarakaiq.com alaauldeen@albarakaiq.com",
+    "email": "info@albarakaiq.com",
     "id": "company-148"
   },
   {
@@ -2006,9 +2006,10 @@
     "purchasing_potential": "بالا",
     "address": "سوریه – حومه دمشق – داریا القبلیه (پشت مرکز شهر)",
     "phone": "+963 944024343",
-    "email": "ثبت نشده (مراجعه به وب‌سایت)",
+    "email": null,
     "website": "commercialsy.com/en/company/biscoza-biscuit-manufacturing",
-    "id": "company-161"
+    "id": "company-161",
+    "email_note": "ثبت نشده مراجعه به وب‌سایت"
   },
   {
     "country": "سوریه",
@@ -2018,9 +2019,10 @@
     "purchasing_potential": "متوسط",
     "address": "بزرگراه دمشق-درعا-امان، شمال پل ازرع، درعا، سوریه",
     "phone": "+963 932444410 / +963 933182126",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "commercialsy.com/en/company/hariri-food-industries",
-    "id": "company-162"
+    "id": "company-162",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2042,9 +2044,10 @@
     "purchasing_potential": "بسیار بالا",
     "address": "حومه دمشق / حلب، سوریه",
     "phone": "+963 933761629 (فروش) / +90 539 304 4419 (مدیریت)",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "commercialsy.com/en/company/reem-al-fouad-food-industries-company",
-    "id": "company-164"
+    "id": "company-164",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2078,9 +2081,10 @@
     "purchasing_potential": "متوسط",
     "address": "حماه، سوریه",
     "phone": "+963 984850699 / +963 993370566",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "alsalhin.com",
-    "id": "company-167"
+    "id": "company-167",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2102,9 +2106,10 @@
     "purchasing_potential": "بالا",
     "address": "حمص، سوریه",
     "phone": "+963 989901616",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "www.almimas.com",
-    "id": "company-169"
+    "id": "company-169",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2114,9 +2119,10 @@
     "purchasing_potential": "متوسط",
     "address": "حومه دمشق، سوریه",
     "phone": "+963 11 5212525 / +963 995448950 / +963 944447912",
-    "email": "sanabelco@gmail.com (رمزگشایی از حفاظت ایمیل کلادفلر؛ توصیه به تأیید مجدد)",
+    "email": "sanabelco@gmail.com",
     "website": "(نام دامنه در منبع نامعتبر بود؛ نیازمند تأیید مجدد)",
-    "id": "company-170"
+    "id": "company-170",
+    "email_note": "رمزگشایی از حفاظت ایمیل کلادفلر؛ توصیه به تأیید مجدد"
   },
   {
     "country": "سوریه",
@@ -2126,9 +2132,10 @@
     "purchasing_potential": "بسیار بالا",
     "address": "دمشق، سوریه",
     "phone": "+963 11 3334730",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "industrysy.com (VIP listing)",
-    "id": "company-171"
+    "id": "company-171",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2138,9 +2145,10 @@
     "purchasing_potential": "متوسط",
     "address": "سوریه (آدرس دقیق در منبع ثبت نشده)",
     "phone": "+963 943656364",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "kswani.com",
-    "id": "company-172"
+    "id": "company-172",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2162,9 +2170,10 @@
     "purchasing_potential": "بالا",
     "address": "حلب، سوریه",
     "phone": "+963 954094140 / +963 955886622",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "agrogroupsy.com",
-    "id": "company-174"
+    "id": "company-174",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2174,9 +2183,10 @@
     "purchasing_potential": "بالا",
     "address": "حماه، سوریه",
     "phone": "+963 988445745",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "commercialsy.com (VIP listing)",
-    "id": "company-175"
+    "id": "company-175",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2186,9 +2196,10 @@
     "purchasing_potential": "متوسط",
     "address": "طرطوس، سوریه (ساحل سوریه)",
     "phone": "+963 988147285",
-    "email": "ثبت نشده",
+    "email": null,
     "website": "ثبت نشده",
-    "id": "company-176"
+    "id": "company-176",
+    "email_note": "ثبت نشده"
   },
   {
     "country": "سوریه",
@@ -2354,7 +2365,7 @@
     "purchasing_potential": "High",
     "address": "8 Teryan St, Yerevan, Armenia",
     "phone": "+374 10 605060",
-    "email": "—",
+    "email": null,
     "website": "https://yeremyanproducts.com",
     "id": "company-190"
   },
@@ -2461,7 +2472,7 @@
     "target_grade": "خوراکی (E500ii)، خوراک دام، صنعتی",
     "address": "308006, Belgorod, Mikhailovskoye Shosse, 2-14",
     "website": "https://bsksalt.ru",
-    "email": "555@bsk1.ru / belbsk@yandex.ru",
+    "email": "555@bsk1.ru",
     "phone": "+7 (4722) 20-52-31 / +7 (980) 386-31-31 (WhatsApp)",
     "action_plan": "واردکننده مستقیم جوش شیرین در کیسه ۲۵ کیلویی و جامبوبگ ۱ تنی؛ دارای خط واتساپ فعال",
     "id": "company-199"
@@ -2545,7 +2556,7 @@
     "target_grade": "خوراکی (E500ii) - پرمیکس‌های قنادی و نان",
     "address": "355035, Stavropol, Grizodubovoy St., 24a",
     "website": "https://modernbakery.gefera.ru/catalog/eed9eb5b-2b87-6b1b-ba8c-25d2948c6526/",
-    "email": "berta@berta.ru / kuh@berta.com",
+    "email": "berta@berta.ru",
     "phone": "+7 (8652) 95-01-20 / +7 (8652) 28-35-15",
     "action_plan": "تولیدکننده پیشرو انواع پودر کیک، مافین و بهبوددهنده نان با مصرف تناژ بالای جوش شیرین",
     "id": "company-206"
@@ -2593,7 +2604,7 @@
     "target_grade": "خوراکی (E500ii) - تولید بیسکویت، کلوچه، ویفر",
     "address": "115184, Moscow, 2nd Novokuznetskiy Per., 13/15",
     "website": "https://www.uniconf.ru",
-    "email": "rotfront@rotfront.ru / uniconf@uniconf.ru",
+    "email": "rotfront@rotfront.ru",
     "phone": "+7 (495) 730-69-46 / +7 (495) 951-23-74",
     "action_plan": "مالک ۱۹ کارخانه بزرگ (از جمله روت فرانت، کراسنی اکتیابر) با مصرف سالانه صدها تن جوش شیرین",
     "id": "company-210"
@@ -2605,7 +2616,7 @@
     "target_grade": "خوراکی (E500ii) - خطوط تولید کیک، ویفر، بیسکویت",
     "address": "634057, Tomsk, Prospekt Mira, 20",
     "website": "https://kdvonline.ru",
-    "email": "contact@kdvonline.ru / info@kdvgroup.com",
+    "email": "contact@kdvonline.ru",
     "phone": "+7 (3822) 70-55-55 / 8 (800) 250-55-55",
     "action_plan": "غول صنایع غذایی روسیه با بیش از ۱۰ کارخانه عظیم و خرید پیوسته واگنی و کامیونی جوش شیرین",
     "id": "company-211"
@@ -2629,7 +2640,7 @@
     "target_grade": "خوراک دام (Feed Grade) - بافر شکمبه گاو شیری و تعادل DCAD",
     "address": "400123, Volgograd, Khrustalnaya, 107 (Hub: Moscow, Lipetsk)",
     "website": "https://www.megamix.ru",
-    "email": "info@megamix.ru / mmk@megamix.ru",
+    "email": "info@megamix.ru",
     "phone": "+7 (8442) 97-97-97 / +7 (495) 122-23-70",
     "action_plan": "بزرگترین مصرف‌کننده و واردکننده جوش شیرین دامی برای تولید پرمیکس‌های MEGAKORM و خوراک گله‌های شیری",
     "id": "company-213"
@@ -2641,7 +2652,7 @@
     "target_grade": "خوراک دام - بافر ضد اسیدوز (РУМЕНБУФФЕР™ / КАУФИТ™)",
     "address": "117513, Moscow, Leninskiy Prospekt, 137 (Plants: Stupino, Gagarin)",
     "website": "https://mustangtk.ru",
-    "email": "mtk@mustangtk.ru / faztdinova@mustangtk.ru",
+    "email": "mtk@mustangtk.ru",
     "phone": "+7 (495) 931-91-90 / +7 (916) 970-27-89 (WA/TG)",
     "action_plan": "خرید تناژ بالای جوش شیرین دامی برای تولید مکمل‌های کنترل اسیدوز شکمبه و تعادل الکترولیت",
     "id": "company-214"
@@ -2653,7 +2664,7 @@
     "target_grade": "خوراک دام و طیور - تنظیم‌کننده اسیدیته شکمبه و استرس گرمایی",
     "address": "108803, Moscow (Plant: Vladimir Obl., Lakinsk, Lenina 42)",
     "website": "https://www.kmkorma.ru",
-    "email": "info@kmkorma.ru / info@de-heus.ru",
+    "email": "info@kmkorma.ru",
     "phone": "+7 (495) 645-21-59 / +7 (49242) 4-12-24",
     "action_plan": "کارخانه تمام اتوماتیک تولید پرمیکس در ولادیمیر؛ مصرف بالای بی کربنات سدیم در جیره گاو و مرغداری",
     "id": "company-215"
@@ -2677,7 +2688,7 @@
     "target_grade": "خوراک دام و طیور - بافر pH شکمبه و استحکام پوسته تخم‌مرغ",
     "address": "127495, Moscow / Plant: Tver Obl., Likhoslavl, Severnaya 5",
     "website": "https://vitomek.com",
-    "email": "info@vitomek.com / zavod@vitomek.com",
+    "email": "info@vitomek.com",
     "phone": "+7 (495) 902-03-32",
     "action_plan": "مصرف بی کربنات سدیم در کنسانتره‌های پروتئینی-معدنی (BVMC) برای کنترل اسیدوز و تعادل سدیم",
     "id": "company-217"
@@ -2725,7 +2736,7 @@
     "target_grade": "خوراک دام و طیور - بی کربنات سدیم خالص دامی در کیسه و بیگ‌بگ",
     "address": "125047, Moscow, 1st Tverskaya-Yamskaya St., 23",
     "website": "https://feedland.ru",
-    "email": "info@feedland.ru / e.akbarova@feedland.ru",
+    "email": "info@feedland.ru",
     "phone": "+7 (495) 663-71-56",
     "action_plan": "واردات مستقیم انواع افزودنی‌های معدنی و ویتامینی و توزیع در تناژ بالا بین کارخانجات خوراک دام",
     "id": "company-221"
@@ -2749,7 +2760,7 @@
     "target_grade": "صنعتی (Technical) - سیالات حفاری، حذف کلسیم، تنظیم pH",
     "address": "614113, Perm Krai, Perm, Galperina St., 8",
     "website": "https://www.polyex.ru",
-    "email": "polyex@polyex.perm.ru / info@polyex.ru",
+    "email": "polyex@polyex.perm.ru",
     "phone": "+7 (342) 250-70-00",
     "action_plan": "مصرف جوش شیرین صنعتی برای رسوب کلسیم و کنترل قلیائیت گل حفاری در پروژه‌های نفتی سیبری",
     "id": "company-223"
@@ -2773,7 +2784,7 @@
     "target_grade": "صنعتی - ماده مؤثره اصلی پودر خاموش‌کننده حریق کلاس B/C/E",
     "address": "659322, Altai Krai, Biysk, Sotsialisticheskaya St., 1",
     "website": "https://antifire.org",
-    "email": "mpp-tungus@mail.ru / info@antifire.org",
+    "email": "mpp-tungus@mail.ru",
     "phone": "+7 (3854) 30-29-79",
     "action_plan": "مصرف کلان جوش شیرین میکرونیزه به عنوان ماده اصلی پودرهای اطفا حریق در سیستم‌های «تونگوس»",
     "id": "company-225"
@@ -2785,7 +2796,7 @@
     "target_grade": "صنعتی - پودرهای خاموش‌کننده ماژول‌های بوران و OSP",
     "address": "127410, Moscow, Altufyevskoye Shosse, 44 (Plant: SPb)",
     "website": "https://epotos.ru",
-    "email": "info@epotos.ru / zakupki@epotos.ru",
+    "email": "info@epotos.ru",
     "phone": "+7 (495) 916-61-16 / 8 (800) 550-61-16",
     "action_plan": "تولیدکننده بزرگ کپسول‌ها و ماژول‌های پودری خودکار با مصرف بالای فرمولاسیون‌های بی کربنات سدیم",
     "id": "company-226"
@@ -2797,7 +2808,7 @@
     "target_grade": "صنعتی - شارژ کپسول‌های پودری سری OP (ОП-1 تا ОП-100)",
     "address": "172003, Tver Oblast, Torzhok, Zagorodnaya St., 1",
     "website": "http://www.pozhtechnika.ru",
-    "email": "sbyt@pozhtechnika.ru / torzhok@pozhtechnika.ru",
+    "email": "sbyt@pozhtechnika.ru",
     "phone": "+7 (48251) 9-22-30 / +7 (48251) 9-11-00",
     "action_plan": "کارخانه باسابقه در تورژوک با مصرف سالانه صدها تن جوش شیرین صنعتی برای شارژ کپسول‌های آتش‌نشانی",
     "id": "company-227"
@@ -2821,7 +2832,7 @@
     "target_grade": "دارویی - محلول‌های تزریقی، بافر همودیالیز و شستشوی ENT",
     "address": "195176, Saint Petersburg, Lvovskaya St., 27 (Industrialny 71)",
     "website": "https://solopharm.com",
-    "email": "grtx@grotexmed.com / purchase4@grotexmed.com",
+    "email": "grtx@grotexmed.com",
     "phone": "+7 (812) 385-47-87",
     "action_plan": "مصرف گرید فارماکوپه‌ای با اندوتوکسین فوق‌العاده پایین برای دیالیز خونی و سرم‌های تزریقی",
     "id": "company-229"
@@ -2845,7 +2856,7 @@
     "target_grade": "صنعتی - پودرهای شوینده، پودرهای پاک‌کننده، قرص ظرفشویی",
     "address": "420021, Republic of Tatarstan, Kazan, Gabdully Tukaya 152",
     "website": "https://nefco.ru",
-    "email": "office@nefco.ru / gensec@nefco.ru",
+    "email": "office@nefco.ru",
     "phone": "+7 (843) 570-41-91 / 8 (800) 100-08-89",
     "action_plan": "تولیدکننده برندهای معروف Sorti و Biolan با مصرف تناژ بسیار بالای جوش شیرین به عنوان ساینده و بافر pH",
     "id": "company-231"
@@ -2857,7 +2868,7 @@
     "target_grade": "صنعتی - پاک‌کننده‌های تخصصی، فوم فرش و خنثی‌کننده‌ها",
     "address": "404143, Volgograd Obl., Srednyaya Akhtuba, Promyshlennaya 12",
     "website": "https://grass.su",
-    "email": "gs@grass.su / info@grass.su",
+    "email": "gs@grass.su",
     "phone": "+7 (8443) 58-48-48 / 8 (800) 505-75-77",
     "action_plan": "مصرف تناژ بالای جوش شیرین در فرمولاسیون شوینده‌های خانگی، قالیشویی و دیتِیلینگ خودرو",
     "id": "company-232"
@@ -2881,7 +2892,7 @@
     "target_grade": "خوراکی (E500ii) - نانوایی، کیک و کراکر",
     "address": "115184, Moscow, Sredniy Ovchinnikovskiy Per., 12",
     "website": "https://ab-market.ru",
-    "email": "info@ab-mt.ru / info@ab-market.ru",
+    "email": "info@ab-mt.ru",
     "phone": "+7 (495) 120-33-06 / +7 (900) 197-11-14",
     "action_plan": "تأمین‌کننده فدرال مواد اولیه صنایع قنادی و نانوایی با انبارهای فعال در مسکو، سن‌پترزبورگ، یکاترینبورگ و نووسیبیرسک",
     "id": "company-234"
@@ -2893,7 +2904,7 @@
     "target_grade": "خوراکی (E500ii) و صنعتی",
     "address": "630005, Novosibirsk, Pisareva St., 38/2 (Moscow: Vernadskogo 41)",
     "website": "https://sell-service.ru",
-    "email": "info@sell-service.ru / nop@sell-service.ru",
+    "email": "info@sell-service.ru",
     "phone": "+7 (499) 495-46-15 / +7 (383) 227-84-15",
     "action_plan": "شبکه فروش و توزیع سراسری مواد پف‌دهنده، تنظیم‌کننده اسیدیته و نگهدارنده‌ها به کارخانجات غذایی در روسیه و اوراسیا",
     "id": "company-235"
@@ -2905,7 +2916,7 @@
     "target_grade": "خوراکی، دامی (بافر شکمبه)، دارویی و آرایشی",
     "address": "142712, Moscow Obl., Gorki Leninskie / Moscow, Nauchny Pr. 19",
     "website": "https://revada-group.com",
-    "email": "info@revada-group.com / Stanislav.Yakshin@revada-group.com",
+    "email": "info@revada-group.com",
     "phone": "+7 (495) 955-24-42 / +7 (915) 432-45-54 (WA)",
     "action_plan": "هلدینگ چندمنظوره با دپارتمان‌های فعال در حوزه غذا، خوراک دام و دارویی؛ خریدار تناژ بالای جوش شیرین دامی و غذایی",
     "id": "company-236"
@@ -2929,7 +2940,7 @@
     "target_grade": "خوراکی (E500ii) و دارویی",
     "address": "109451, Moscow, Verkhnie Polya St., 28",
     "website": "https://www.ud-chemie.ru",
-    "email": "info@ud-chemie.ru / evgenia.chirva@ud-chemie.ru",
+    "email": "info@ud-chemie.ru",
     "phone": "+7 (495) 662-38-98 / +7 (495) 724-41-12",
     "action_plan": "بیش از ۲۰ سال سابقه در تأمین اسید سیتریک، نمک‌های بافری و بیکربنات سدیم برای صنایع شیرینی، لبنیات و داروسازی",
     "id": "company-238"
@@ -2953,7 +2964,7 @@
     "target_grade": "خوراکی (E500ii) - بهبوددهنده‌ها و پودر کیک",
     "address": "119530, Moscow, Ochakovskoye Shosse, 34 / Ryabinovaya St., 44",
     "website": "https://ochakovo-food.ru",
-    "email": "zakaz@okpi.ru / sales@okpi.ru / info@okpi.ru",
+    "email": "zakaz@okpi.ru",
     "phone": "+7 (495) 269-10-10 / 8 (800) 250-36-63",
     "action_plan": "تولیدکننده پیشرو در فرمولاسیون سیستم‌های خمیر و پودرهای پخت نانوایی و نوشیدنی؛ مصرف‌کننده مستقیم جوش شیرین خوراکی",
     "id": "company-240"
@@ -2977,7 +2988,7 @@
     "target_grade": "خوراکی (E500ii) - کیسه‌های ۲۵ کیلوگرمی",
     "address": "117630, Moscow, Starokaluzhskoye Shosse, 62",
     "website": "https://formulafood.ru",
-    "email": "postavka@FormulaFood.ru / info@formulafood.ru",
+    "email": "postavka@FormulaFood.ru",
     "phone": "+7 (495) 297-66-62",
     "action_plan": "تأمین عمده اسیدهای خوراکی و بیکربنات سدیم خوراکی برای کارخانجات نان، کلوچه و شیرینی",
     "id": "company-242"
@@ -2989,7 +3000,7 @@
     "target_grade": "خوراکی (E500ii و E503ii)",
     "address": "150040, Yaroslavl, Prospekt Lenina, 25",
     "website": "https://yarpss.ru",
-    "email": "info@yarpss.ru / sales.yarpss@mail.ru",
+    "email": "info@yarpss.ru",
     "phone": "+7 (4852) 77-88-77 / +7 (4852) 73-31-44",
     "action_plan": "بیش از ۲۵ سال سابقه در توزیع افزودنی‌ها و عوامل پوک‌کننده (سدیم و آمونیوم بیکربنات) در منطقه مرکزی روسیه",
     "id": "company-243"
@@ -3001,7 +3012,7 @@
     "target_grade": "خوراک دام (Feed Grade) - بافر ضد اسیدوز و گوشتی",
     "address": "142000, Moscow Obl., Domodedovo (Plants: Belgorod, Bryansk)",
     "website": "https://miratorg.ru",
-    "email": "info@agrohold.ru / export@agrohold.ru",
+    "email": "info@agrohold.ru",
     "phone": "+7 (495) 651-92-52 / 8 (800) 100-80-87",
     "action_plan": "بزرگترین تولیدکننده پروتئین و کارخانجات پرمیکس و خوراک دام روسیه با مصرف تناژ بسیار بالا جهت تنظیم اسیدیته شکمبه گله‌های شیری",
     "id": "company-244"
@@ -3049,7 +3060,7 @@
     "target_grade": "خوراکی (E500ii)، خوراک دام، صنعتی و دارویی",
     "address": "Uzbekistan, 100021, Tashkent, Shaykhontokhur district, Furkat Street, 6",
     "website": "https://meritchemicals.com",
-    "email": "info@meritkimyo.uz / export@meritkimyo.uz",
+    "email": "info@meritkimyo.uz",
     "phone": "+998 (71) 203-00-55 / +998 97 738 10 42 / +998 97 738 11 15",
     "action_plan": "رتبه در میان ۱۳۰ توزیع‌کننده برتر شیمیایی جهان (ICIS)؛ دارای بزرگترین شبکه انبارش در تاشکند و آسیای مرکزی؛ تأمین‌کننده تناژ بالای جوش شیرین برای صنایع غذایی، شوینده و دامپروری.",
     "id": "company-248"
@@ -3073,10 +3084,11 @@
     "target_grade": "صنعتی - فرمولاسیون پودر و مایعات شوینده، صابون‌سازی و خنثی‌سازی",
     "address": "Uzbekistan, 200712, Bukhara region, Kagan district, Tutkunda l.g.c.",
     "website": "https://ecoslessgroup.com",
-    "email": "نامشخص — روی سایت یافت نشد",
+    "email": null,
     "phone": "+998 (91) 402-47-03 / +998 (90) 415-55-55",
     "action_plan": "بیش از ۵۱٪ از کل واردات این شرکت مستقیماً از ایران است (بیش از ۲.۳ میلیون دلار)؛ خریدار عمده سود پرک، اسید سولفونیک (LABSA) و جوش شیرین صنعتی جهت ساخت شوینده‌ها و توزیع در منطقه بخارا و سمرقند.",
-    "id": "company-250"
+    "id": "company-250",
+    "email_note": "نامشخص روی سایت یافت نشد"
   },
   {
     "country": "ازبکستان",
@@ -3085,7 +3097,7 @@
     "target_grade": "خوراکی (E500ii)، صنعتی و پتروشیمی",
     "address": "Uzbekistan, 100057, Tashkent, Almazar district, Jami Street, 229",
     "website": "https://goldenpages.uz/company/?Id=109405",
-    "email": "akchem.global@gmail.com / info@akchem.uz",
+    "email": "akchem.global@gmail.com",
     "phone": "نامشخص — منابع متناقض؛ رایج‌ترین: +998 97 485-05-00 / 97 754-33-33",
     "action_plan": "گردش واردات سالانه بالغ بر ۲۴.۷ میلیون دلار از کشورهای منطقه؛ تأمین‌کننده مستقیم انواع نمک‌های شیمیایی، سود کاستیک، دکستروز و افزودنی‌های غذایی برای کارخانجات مستقر در تاشکند و اطراف بازار اوریک‌زار.",
     "id": "company-251"
@@ -3169,7 +3181,7 @@
     "target_grade": "دارویی و بهداشتی - خمیردندان، قرص‌های جوشان و ساشه ORS",
     "address": "Uzbekistan, 100102, Tashkent, Yangihayot district, Margib Street, 1",
     "website": "https://dentafill.uz",
-    "email": "info@dentafill.uz / dentalfill@mail.ru",
+    "email": "info@dentafill.uz",
     "phone": "+998 (71) 231-87-00 / +998 (71) 231-64-66",
     "action_plan": "مصرف مداوم جوش شیرین به عنوان ساینده ملایم و کنترل‌کننده pH در خمیردندان و محصولات بهداشتی و دارویی.",
     "id": "company-258"
@@ -3217,7 +3229,7 @@
     "target_grade": "صنعتی - ماده اولیه پودر لباسشویی، صابون‌سازی و شوینده‌های صنعتی",
     "address": "2 I. Dosova ko’chasi, 220100 (نه Al-Khoresmi 110)",
     "website": "http://urganchyog.uz",
-    "email": "info@urganchyog.uz / urgench_yog@mail.ru",
+    "email": "info@urganchyog.uz",
     "phone": "+998 62 224-57-57 (تأیید شد)؛ شماره دوم فایل تأیید نشد",
     "action_plan": "تولیدکننده انواع شوینده‌ها و صابون‌های صنعتی و بهداشتی با مصرف مداوم بی کربنات سدیم صنعتی به عنوان پرکننده قلیایی و بافر شوینده.",
     "id": "company-262"
@@ -3265,10 +3277,11 @@
     "target_grade": "خوراکی (E500ii) - تنظیم اسیدیته، تردکننده و تثبیت‌کننده بافت امولسیون گوشت",
     "address": "Tashkent, Gulol/Bog’ishamol St. 47 (نه Keles Yoli 10)",
     "website": "https://rozmetov.uz",
-    "email": "info@rozmetov.uz (تأیید شد)",
+    "email": "info@rozmetov.uz",
     "phone": "+998 71 200-19-89",
     "action_plan": "برند شماره یک سوسیس، کالباس و فرآورده‌های پروتئینی در ازبکستان؛ مصرف جوش شیرین گرید غذایی در بافرهای فسفاتی برای نگهداری آب در بافت گوشت.",
-    "id": "company-266"
+    "id": "company-266",
+    "email_note": "تأیید شد"
   },
   {
     "country": "ازبکستان",
@@ -3301,7 +3314,7 @@
     "target_grade": "خوراکی (E500ii) - پوک‌کننده خمیر، بافر pH در بیسکویت، ویفر، کیک و کارامل",
     "address": "050002, г. Алматы, ул. Зенькова, 2А (کارخانه چیمکنت: ул. Толе би, 23)",
     "website": "https://www.rakhat.kz",
-    "email": "rakhat@rakhat.kz / zakaz@rakhat.kz",
+    "email": "rakhat@rakhat.kz",
     "phone": "+7 (727) 258-47-11 / +7 (727) 397-73-00",
     "action_plan": "بزرگترین کارخانه صنایع شیرینی و شکلات قزاقستان با دو مجتمع عظیم در آلماتی و چیمکنت؛ خریدار واگنی و کانتینری جوش شیرین خوراکی.",
     "id": "company-269"
@@ -3313,7 +3326,7 @@
     "target_grade": "خوراکی (E500ii) - عامل حجم‌دهنده و پوک‌کننده در خطوط بیسکویت، کراکر و ویفر",
     "address": "110006, г. Костанай, ул. Бородина, 198",
     "website": "https://bayansulu.kz",
-    "email": "omts@bayansulu.kz / bayansulu@bayansulu.kz",
+    "email": "omts@bayansulu.kz",
     "phone": "+7 (7142) 56-61-53 / +7 (7142) 56-29-52",
     "action_plan": "مجتمع بزرگ شیرینی و بیسکویت در شمال قزاقستان با صادرات گسترده به CIS؛ خرید مستقیم و متناوب از طریق دپارتمان تدارکات مواد اولیه (OMTS).",
     "id": "company-270"
@@ -3325,7 +3338,7 @@
     "target_grade": "خوراکی (E500ii) - عامل ورآورنده خمیر در محصولات آردی، کیک اسفنجی و ویفر",
     "address": "Алматинская обл., Карасайский р-н, г. Каскелен, ул. Абылай хана",
     "website": "http://www.hamle.kz",
-    "email": "info@hamle.kz / briz-a@mail.kz",
+    "email": "info@hamle.kz",
     "phone": "+7 (727) 276-38-72 / +7 (707) 320-85-46",
     "action_plan": "زیرمجموعه هلدینگ غذایی پلادیس با کارخانه بزرگ در کاسکلن آلماتی؛ مصرف ماهانه ده‌ها تن جوش شیرین خوراکی.",
     "id": "company-271"
@@ -3337,7 +3350,7 @@
     "target_grade": "خوراکی (E500ii) - عامل هوادهی و پف‌کننده در انواع کیک، کلوچه و شیرینی",
     "address": "050031, г. Алматы, мкр. Аксай-2, ул. Б. Момышулы, 36А",
     "website": "https://aksaynan.kz",
-    "email": "reception@aksaynan.kz / aksaynan@aksaynan.kz",
+    "email": "reception@aksaynan.kz",
     "phone": "+7 (700) 312-00-00 / +7 (727) 276-88-00",
     "action_plan": "بزرگترین مجتمع نان و شیرینی قزاقستان با تولید روزانه بیش از ۱۵۰ تن فرآورده؛ نیازمند تأمین مداوم نمک‌های قلیایی و بهبوددهنده‌ها.",
     "id": "company-272"
@@ -3349,7 +3362,7 @@
     "target_grade": "خوراکی (E500ii) - رگولاتور اسیدیته، پایدارکننده امولسیون سس‌ها و تصفیه روغن",
     "address": "050008, г. Алматы, ул. Байзакова, 69",
     "website": "https://www.efc.kz",
-    "email": "sales@efc.kz / info@efc.kz",
+    "email": "sales@efc.kz",
     "phone": "+7 (727) 378-71-71 / +7 (727) 330-75-10",
     "action_plan": "تولیدکننده پیشرو سس مایونز، کچاپ، مارگارین و روغن در آلماتی و قره‌غال؛ مصرف‌کننده نمک‌های بافری و خنثی‌کننده اسیدیته.",
     "id": "company-273"
@@ -3385,7 +3398,7 @@
     "target_grade": "دارویی (Pharma API / USP) - تولید محلول‌های تزریقی، گرانول‌ها و قرص‌های جوشان",
     "address": "160018, г. Шымکنت, ул. Рашидова, 17",
     "website": "https://www.polpharma-santo.com",
-    "email": "santo.procurement.quotes@polpharma-santo.com / santo@polpharma-santo.com",
+    "email": "santo.procurement.quotes@polpharma-santo.com",
     "phone": "+7 (7252) 61-01-55 / +7 (727) 312-18-33",
     "action_plan": "معتبرترین شرکت داروسازی قزاقستان در شیمکنت؛ خریدار منظم بی‌کربنات سدیم گرید دارویی با اندوتوکسین پایین جهت سرم‌ها و آنتی‌اسیدها.",
     "id": "company-276"
@@ -3397,7 +3410,7 @@
     "target_grade": "دارویی (Pharma Grade) - تولید سرم تزریقی ۴٪ بی‌کربنات سدیم در بطری و بگ",
     "address": "040900, Алматинская обл., Карасайский р-н, с. Кокозек, зд. 1147",
     "website": "https://kelun-kazpharm.kz",
-    "email": "office@kelun-kazpharm.kz / support@kelun-kazpharm.kz",
+    "email": "office@kelun-kazpharm.kz",
     "phone": "+7 (727) 312-14-04 / +7 (771) 588-72-17",
     "action_plan": "تخصصی‌ترین خط تولید سرم‌های درمانی قزاقستان؛ مصرف مداوم ماده مؤثره جوش شیرین دارویی در فرمولاسیون سرم‌های اسیدوز متابولیک.",
     "id": "company-277"
@@ -3433,7 +3446,7 @@
     "target_grade": "صنعتی (Technical Grade) - سیالات حفاری، رسوب کلسیم و کنترل pH گل چاه",
     "address": "090005, г. Уральск, ул. Ружейникова, 11",
     "website": "https://topan.kz",
-    "email": "info@topan.kz / reagent@topan.kz",
+    "email": "info@topan.kz",
     "phone": "+7 (7112) 28-41-42 / +7 (777) 000-99-33",
     "action_plan": "تأمین‌کننده کلان مواد شیمیایی پروژه‌های نفتی قره‌چغانک و کاشاگان با انبارهای وسیع در اورالسک و آتیرائو.",
     "id": "company-280"
@@ -3481,7 +3494,7 @@
     "target_grade": "خوراکی، صنعتی، تصفیه آب و پودرهای خاموش‌کننده حریق",
     "address": "010000, г. Астана, пр. Сарыарка, 12, офис 401А",
     "website": "https://snabtechmet.kz",
-    "email": "info@snabtechmet.kz / alm@snabtechmet.kz",
+    "email": "info@snabtechmet.kz",
     "phone": "+7 (7172) 69-66-44 / +7 (727) 312-38-39",
     "action_plan": "تأمین‌کننده سراسری در شهرهای آستانه، آلماتی، اوسط‌کامنوگرسک، قره‌غاندی، پتروپاولوفسک و آکتوبه؛ این شرکت مستقیماً «сода пищевая / بی‌کربنات سدیم» را به‌صورت کیسه ۲۵ کیلویی و تن فله برای صنایع غذایی در کاتالوگ آنلاین خود (بخش soda-pishchevaya در هر شعبه) می‌فروشد — گزینه بسیار معتبر برای تماس.",
     "id": "company-284"
@@ -3505,7 +3518,7 @@
     "target_grade": "خوراکی (E500ii)، آزمایشگاهی، تصفیه آب و ضدعفونی‌کننده‌ها",
     "address": "050000, г. Алматы, Турксибский район, ул. Бекмаханова, 91",
     "website": "https://skat-reactiv.kz",
-    "email": "sales@skat-reactiv.kz / sale2@skat-reactiv.kz",
+    "email": "sales@skat-reactiv.kz",
     "phone": "+7 (727) 225-44-44",
     "action_plan": "تأمین‌کننده معتبر با بیش از ۲۵ سال سابقه در توزیع مواد شیمیایی خلوص بالا، نمک‌های سدیم و اسیدها در آلماتی.",
     "id": "company-286"
@@ -3553,10 +3566,11 @@
     "target_grade": "خوراکی (E500ii) - بافر امولسیون گوشت و عامل پف‌دهنده در روکش خمیری (Batter) ناگت",
     "address": "г. Алматы, ул. Тимирязева, 28В, офис 304 (کارخانه: Алматинская обл., Уйгурский р-н, Кыргызсайский с/о, с. Рахат)",
     "website": "https://chickodelli.kz",
-    "email": "نامشخص - نیاز به تماس مستقیم (ایمیل قبلی info@shin-line.com متعلق به شرکت دیگری بود)",
+    "email": null,
     "phone": "+7 (771) 771-77-47",
     "action_plan": "بخش فرآورده‌های پروتئینی و سوخاری گروه بزرگ شین‌لاین؛ تولیدکننده ناگت و برگر سوخاری با مصرف بی‌کربنات سدیم در پوشش‌های خمیری.",
-    "id": "company-290"
+    "id": "company-290",
+    "email_note": "نامشخص - نیاز به تماس مستقیم (ایمیل قبلی info@shin-line.com متعلق به شرکت دیگری بود)"
   },
   {
     "country": "قزاقستان",
@@ -3601,7 +3615,7 @@
     "target_grade": "خوراکی (E500ii) - تنظیم pH گوشت و نگهداری رطوبت در فرآورده‌های سوسیسی",
     "address": "Туркестанская обл., Казыгуртский р-н, с. Какпак (دفاتر فروش: Шымкент / Алматы)",
     "website": "https://narlen.kz",
-    "email": "080@narlen.kz / 099@narlen.kz",
+    "email": "080@narlen.kz",
     "phone": "+7 (771) 010-45-15 / +7 (771) 501-55-55",
     "action_plan": "از بزرگترین کارخانجات فرآوری گوشت جنوب قزاقستان با تولید روزانه ۱۵ الی ۲۰ تن سوسیس و کالباس؛ مصرف‌کننده تثبیت‌کننده‌های پروتئین.",
     "id": "company-294"
@@ -3637,7 +3651,7 @@
     "target_grade": "خوراکی (E500ii) - عامل ورآورنده خمیر بیسکویت، کلوچه و اسنک",
     "address": "Северо-Казахстанская обл., г. Петропавловск, ул. Ярослава Гашека, 1",
     "website": "https://sultanmarketing.kz",
-    "email": "sultan_pasta@mail.ru / info@sultanmarketing.kz",
+    "email": "sultan_pasta@mail.ru",
     "phone": "+7 (7152) 54-00-11 / +7 (727) 251-65-80",
     "action_plan": "غول صنعتی تولید آرد، ماکارونی، نان و بیسکویت در شمال قزاقستان؛ مصرف‌کننده افزودنی‌های حجم‌دهنده و بی‌کربنات خوراکی در سالن‌های پخت بیسکویت.",
     "id": "company-297"
@@ -3649,7 +3663,7 @@
     "target_grade": "خوراکی (E500ii) - عامل هوادهی و پوک‌کننده نان ویفر و خمیرهای قنادی",
     "address": "Алматинская обл., Карасайский р-н, г. Каскелен, ул. Достык, 4Д",
     "website": "https://yakar.kz",
-    "email": "info@yakar.kz / yakar_kz@mail.ru",
+    "email": "info@yakar.kz",
     "phone": "+7 (727) 308-01-15 / +7 (727) 296-98-88",
     "action_plan": "کارخانه معتبر تولید شکلات، آبنبات، بیسکویت و ویفر در حومه آلماتی (کاسکلن)؛ مصرف‌کننده مستمر جوش شیرین در پخت ورقه‌های ویفر و کلوچه‌ها.",
     "id": "company-298"
@@ -3661,7 +3675,7 @@
     "target_grade": "خوراکی (E500ii) - رگولاتور اسیدیته، بافر و پایدارکننده خمیر منجمد",
     "address": "с. Косшы (Ақмола/نزدیک آستانه), ул. Абай, 36 (آدرس قبلی «آلماتی» اشتباه بود)",
     "website": "https://iltov.kz",
-    "email": "info@iltov.kz / iltov@mail.ru",
+    "email": "info@iltov.kz",
     "phone": "+7 (727) 385-05-05 / +7 (701) 720-00-55",
     "action_plan": "تولیدکننده عمده غذاهای نیمه‌آماده خمیری منجمد با مصرف بی‌کربنات سدیم جهت حفظ کشسانی گلوتن خمیر در شوک انجماد.",
     "id": "company-299"
@@ -3685,10 +3699,11 @@
     "target_grade": "خوراکی (E500ii) - حجم‌دهنده و خمیرمایه شیمیایی بیسکویت و ویفر",
     "address": "Жамбылская обл., г. Тараз, район Әулиеата, просп. Жамбыла, стр. 3Б",
     "website": "https://www.saulecompany.com",
-    "email": "برای تماس مستقیم، فرم تماس سایت saulecompany.com (ایمیل رسمی عمومی یافت نشد)",
+    "email": null,
     "phone": "از طریق سایت رسمی یا صفحه استخدام hh.kz قابل دریافت است",
     "action_plan": "یکی از تولیدکنندگان پیشرو بیسکویت و ویفر در قزاقستان (بیش از ۸۰ قلم محصول) با تجهیزات اتریشی/سوئیسی/دانمارکی؛ صادرات به قرقیزستان، روسیه، چین، تاجیکستان، مغولستان، گرجستان و ازبکستان. درآمد سالانه تخمینی ~۴ میلیارد تنگه (۲۰۲۰). مصرف‌کننده مستمر جوش شیرین در خطوط بیسکویت و ویفر.",
-    "id": "company-301"
+    "id": "company-301",
+    "email_note": "برای تماس مستقیم، فرم تماس سایت saulecompany.com ایمیل رسمی عمومی یافت نشد"
   },
   {
     "country": "قزاقستان",
@@ -3745,7 +3760,7 @@
     "target_grade": "خوراکی (E500ii) - بافرهای نگه‌دارنده، امولسیفایرها و تنظیم‌کننده‌های اسیدیته",
     "address": "г. Алматы, Ауэзовский район, пр. Райымбека, 496А",
     "website": "https://biostar.ru",
-    "email": "export@biostar.ru / group@biostar.ru",
+    "email": "export@biostar.ru",
     "phone": "+7 (727) 356-53-40",
     "action_plan": "هاب توزیع افزودنی‌ها، طعم‌دهنده‌ها و نمک‌های سدیم برای کارخانجات صنایع گوشت، لبنیات و فرآوری قزاقستان.",
     "id": "company-306"
@@ -3757,7 +3772,7 @@
     "target_grade": "خوراکی (E500ii) - پایدارکننده خمیر منجمد پلمنی و مانتی",
     "address": "г. Астана, район Байконыр, ул. Жетиген, 41",
     "website": "https://mf-product.kz",
-    "email": "accountant@mf-product.kz / max_food@inbox.ru",
+    "email": "accountant@mf-product.kz",
     "phone": "+7 (701) 034-80-08",
     "action_plan": "تولیدکننده صنعتی پلمنی، مانتی، وارنیکی با مصرف بی‌کربنات خوراکی جهت تثبیت ساختار خمیر در سرمایش و پخت بدون وا رفتگی.",
     "id": "company-307"
@@ -3833,7 +3848,7 @@
     "purchasing_potential": "+500 Tons (Corporate)",
     "address": "Lagos Free Zone, Lekki, Lagos, Nigeria (JV manufacturing site); Tolaram Group HQ: 1A International Business Park #13-01, Singapore 609933",
     "phone": "(65) 6387 7777 (Tolaram Group HQ, Singapore)",
-    "email": "info@tolaram.com)",
+    "email": "info@tolaram.com",
     "website": "https://www.tolaram.com",
     "country": "سنگاپور",
     "id": "company-313"
@@ -5916,7 +5931,7 @@
     "target_grade": "خوراکی (E500ii) - ورآورنده بنیادین در خطوط تولید انبوه کراکر و بیسکویت",
     "address": "Россия, Кировская обл., г. Слободской / г. Киров, ул. Потребкооперации, 19",
     "phone": "+7 (8332) 71-38-00",
-    "email": "info@dymka.ru / snab@dymka.ru",
+    "email": "info@dymka.ru",
     "website": "https://dymka.ru",
     "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
     "country": "روسیه",
@@ -5958,7 +5973,7 @@
     "target_grade": "خوراکی (E500ii) - بافر پروتئین گوشت و تنظیم هیدراتاسیون امولسیون سوسیس",
     "address": "Россия, Оренбургская обл., г. Орск (دفتر آستانه: г. Астана)",
     "phone": "+7 (3537) 20-30-40",
-    "email": "info@zhelen.ru / mitzhel@mail.ru",
+    "email": "info@zhelen.ru",
     "website": "https://zhelen.ru",
     "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
     "country": "روسیه",
@@ -6028,7 +6043,7 @@
     "target_grade": "خوراکی (E500ii) - عامل ورآورنده خمیرهای بیسکویتی و شیرینی‌های زیرسازی شده",
     "address": "Россия, Самарская обл., г. Тольятти, ул. Голосова, 16А",
     "phone": "+7 (8482) 759-700 / +7 (800) 500-40-90",
-    "email": "snab@slasti.com / info@slasti.com",
+    "email": "snab@slasti.com",
     "website": "https://slasti.com",
     "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
     "country": "روسیه",
@@ -6112,7 +6127,7 @@
     "target_grade": "Food Grade",
     "address": "ایروان، خ درو ۱۳",
     "phone": "+374 11 999991\n+374 60 838888",
-    "email": "info@ashtarakkat.am\ninfo@ashtarakkat.info",
+    "email": "info@ashtarakkat.am",
     "website": "ashtarakkat.am",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
@@ -6126,7 +6141,7 @@
     "target_grade": "Food Grade",
     "address": "ابوویان، خ آچاریان ۱۴",
     "phone": "+374 222 63333\n+374 10 249812",
-    "email": "info@tamara.am\nlala@tamara.am",
+    "email": "info@tamara.am",
     "website": "tamara.am",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
@@ -6140,7 +6155,7 @@
     "target_grade": "Food Grade / Technical",
     "address": "ایروان، بلوار ایساکوف ۸",
     "phone": "+374 10 542141\n+374 10 583654",
-    "email": "marketing@kilikia.am\ninfo@kilikia.am",
+    "email": "marketing@kilikia.am",
     "website": "kilikia.am",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
@@ -6154,7 +6169,7 @@
     "target_grade": "Food Grade",
     "address": "ایروان، خ هاقتاناک ۱/۷",
     "phone": "+374 11 650650\n+374 10 744288",
-    "email": "info@sisnatural.am\nsales@sisnatural.am",
+    "email": "info@sisnatural.am",
     "website": "sisnatural.am",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
@@ -6196,7 +6211,7 @@
     "target_grade": "Food & FMCG",
     "address": "ایروان، خ هاقتاناک ۱/۱",
     "phone": "+374 10 771100\n+374 10 771101",
-    "email": "info@derjavas.am\nderjavas@gmail.com",
+    "email": "info@derjavas.am",
     "website": "derjavas.am",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
@@ -6322,7 +6337,7 @@
     "target_grade": "Pharma Grade",
     "address": "ابوویان، میکرورایون دوم، پلاک ۱۹",
     "phone": "+374 222 21725\n+374 222 21703",
-    "email": "info@arpimed.com\nmanagement@arpimed.am",
+    "email": "info@arpimed.com",
     "website": "arpimed.am",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع شوینده و داروسازی با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
@@ -6350,7 +6365,7 @@
     "target_grade": "Water Treatment Grade",
     "address": "ایروان، خ ابوویان ۶۶a",
     "phone": "+374 11 300185\n1-85 (Hotline)",
-    "email": "am.water.com.all@veolia.com\noffice@yerevandjur.am",
+    "email": "am.water.com.all@veolia.com",
     "website": "veolia.am",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع شوینده و داروسازی با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
@@ -6378,7 +6393,7 @@
     "target_grade": "Industrial / Food / Feed",
     "address": "ایروان، منطقه صنعتی شنگاویت و چارباخ",
     "phone": "+374 10 523311\n+374 94 425510",
-    "email": "sales@neochem.am\ninfo@promchem.am",
+    "email": "sales@neochem.am",
     "website": "spyur.am/chemical",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع شوینده و داروسازی با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
@@ -6392,11 +6407,12 @@
     "target_grade": "خوراکی (E500ii) - عامل حجم‌دهنده و پوک‌کننده خمیر در مقیاس بسیار بالا",
     "address": "246003, Беларусь, г. Гомель, ул. Советская, 63",
     "phone": "+375 (232) 69-07-35 / +375 (232) 69-07-01",
-    "email": "snab@spartak.by (تدارکات) / info@spartak.by",
+    "email": "snab@spartak.by",
     "website": "https://spartak.by",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "بلاروس",
-    "id": "company-507"
+    "id": "company-507",
+    "email_note": "تدارکات"
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6406,7 +6422,7 @@
     "target_grade": "خوراکی (E500ii) - آماده‌سازی خمیر پلمنی و بافر هیدراتاسیون گوشت",
     "address": "246042, Беларусь, г. Гомель, ул. Ильича, 4",
     "phone": "+375 (232) 50-65-10 (приемная) / +375 (232) 38-10-74 (снабжение)",
-    "email": "info@mkgomel.by / gmk_azbuka@mkgomel.by",
+    "email": "info@mkgomel.by",
     "website": "https://mkgomel.by",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "بلاروس",
@@ -6420,7 +6436,7 @@
     "target_grade": "خوراکی (E500ii) - بهبود بافت خمیر پلمنی و بافر اسیدیته گوشت",
     "address": "247710, Беларусь, Гомельская обл., г. Калинковичи, ул. Северная, 8",
     "phone": "+375 (2345) 2-60-23 / +375 (2345) 2-64-52 / +375 (2345) 2-63-71",
-    "email": "kmk@mail.gomel.by / sales@kmk.by / ved@kmk.by",
+    "email": "kmk@mail.gomel.by",
     "website": "https://www.kmk.by",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "بلاروس",
@@ -6434,7 +6450,7 @@
     "target_grade": "خوراکی (E500ii) - بهبود بافت خمیر پلمنی و بافر پروتئین در فرآورده‌های گوشتی",
     "address": "224014, Беларусь, г. Брест, ул. Писателя Смирнова, 4",
     "phone": "+375 (162) 27-78-00 / +375 (162) 27-78-25",
-    "email": "info@brestmeat.by / omts@brestmeat.by",
+    "email": "info@brestmeat.by",
     "website": "https://brestmeat.by",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "بلاروس",
@@ -6448,7 +6464,7 @@
     "target_grade": "خوراکی (E500ii) - آماده‌سازی خمیر پلمنی و بافر فسفات/کربنات گوشت",
     "address": "230005, Беларусь, г. Гродно, ул. Мясницкая, 25",
     "phone": "+375 (152) 45-49-83 (تدارکات) / +375 (152) 45-50-00",
-    "email": "omts@grodnomk.by / info@grodnomk.by",
+    "email": "omts@grodnomk.by",
     "website": "https://grodnomk.by",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "بلاروس",
@@ -6462,7 +6478,7 @@
     "target_grade": "خوراکی (E500ii) - هوادهی و ورآوری بافت شیرینی و پایدارسازی بافت ژل‌ها",
     "address": "213805, Беларусь, Могилевская обл., г. Бобруйск, ул. Бахарова, 145",
     "phone": "+375 (225) 48-27-31",
-    "email": "info@zefir.by / sbyt@zefir.by",
+    "email": "info@zefir.by",
     "website": "https://zefir.by",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "بلاروس",
@@ -6504,7 +6520,7 @@
     "target_grade": "خوراکی (E500ii) - پوک‌کننده و حجم‌دهنده اصلی خمیر بیسکویت و ویفر",
     "address": "Кыргызстан, г. Бишкек, ул. Чолпон-Атинская, 16",
     "phone": "+996 (312) 35-71-71 / +996 (312) 63-12-12",
-    "email": "office@ata.kg / info@ata.kg",
+    "email": "office@ata.kg",
     "website": "https://ata.kg",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "قرقیزستان",
@@ -6560,7 +6576,7 @@
     "target_grade": "خوراکی (E500ii) - ورآورنده اصلی خطوط صنعتی بیسکویت و ویفر",
     "address": "Poland, 62-860 Opatówek, ul. Zdrojowa 1",
     "phone": "+48 (62) 590-33-00",
-    "email": "colian@colian.com / sekretariat@colian.com",
+    "email": "colian@colian.com",
     "website": "https://colian.com",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "لهستان",
@@ -6574,7 +6590,7 @@
     "target_grade": "خوراکی (E500ii) - حجم‌دهنده و تردکننده انواع شیرینی‌جات پخته",
     "address": "Poland, 05-250 Radzymin, Ciemne, ul. Wołomińska 125",
     "phone": "+48 (22) 760-41-00",
-    "email": "tago@tago.com.pl / export@tago.com.pl",
+    "email": "tago@tago.com.pl",
     "website": "https://tago.com.pl",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "لهستان",
@@ -6644,7 +6660,7 @@
     "target_grade": "خوراکی (E500ii) - نمک قلیایی عمل‌آوری خمیر نودل (Kansui) و ورآورنده خمیر پانکو",
     "address": "No.28 Xinxi Road, Haidian District, Beijing, China",
     "phone": "+86-10-62969035",
-    "email": "sales@shipuller.com / info@shipuller.com",
+    "email": "sales@shipuller.com",
     "website": "https://www.yumartfood.com",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "چین",
@@ -6658,7 +6674,7 @@
     "target_grade": "خوراکی (E500ii) - ورآورنده و سبک‌کننده خمیر ویفر و بیسکویت",
     "address": "Tangkou Xu Industrial Zone, Tangkou Town, Kaiping, Guangdong, China",
     "phone": "+86-750-2333289 / +86-13929080766",
-    "email": "sales@kindyfoods.com / info@kindyfoods.com",
+    "email": "sales@kindyfoods.com",
     "website": "https://www.kindyfoods.com",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "چین",

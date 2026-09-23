@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import { getCompanies, getCountryEnglishName, getEmailOutreachSent } from "@/lib/data";
-import { classifyGrade } from "@/lib/outreachTemplate";
+import { classifyGrade, isValidEmail } from "@/lib/outreachTemplate";
 import OutreachClient from "./OutreachClient";
 
 // فقط ۴۰۷ شرکت داریم — فیلتر/جست‌وجو کاملاً سمت کلاینت انجام می‌شه (مثل
@@ -17,8 +17,11 @@ export default function OutreachPage() {
 
   const sentEmails = new Set(getEmailOutreachSent().map((r) => r.email));
 
+  // فقط ایمیل‌های واقعاً معتبر — نه فقط truthy — وارد لیست قابل‌انتخاب می‌شن؛
+  // شبکه‌ی ایمنی دوم (اولی: scripts/clean_company_emails.py) برای داده‌ی
+  // جدیدی که مستقیم و بدون عبور از اون اسکریپت وارد companies.json بشه.
   const companies = getCompanies()
-    .filter((c) => c.email)
+    .filter((c) => isValidEmail(c.email))
     .map((c) => ({
       id: c.id,
       english_name: c.english_name,
