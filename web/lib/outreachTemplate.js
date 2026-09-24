@@ -105,10 +105,21 @@ export function getCatalogLinks(grade) {
 
 const SUBJECT = "Sodium Bicarbonate (Food/Industrial Grade) from Iran — Sepehran Chemical";
 
-// مسیر نسبی به ریشه‌ی مخزن (نه web/) — send/route.js با ROOT خودش join می‌کنه.
-// یک منبع واحد برای اسم/مسیر فایل، تا جای دیگه‌ای تکرار نشه.
-export const PACKING_PDF_RELATIVE_PATH = "assets/outreach/All Packing.pdf";
-export const PACKING_PDF_FILENAME = "Pars Baking Soda Group - Packing Details.pdf";
+// پیوست‌های ثابتی که به همه‌ی ایمیل‌های معرفی، صرف‌نظر از گرید شرکت، ضمیمه
+// می‌شن. مسیرها نسبی به ریشه‌ی مخزن‌ان (نه web/) — send/route.js با ROOT خودش
+// join می‌کنه. یک منبع واحد برای لیست/اسم/مسیر فایل‌ها، تا جای دیگه‌ای
+// تکرار نشه.
+export const FIXED_ATTACHMENTS = [
+  {
+    relativePath: "assets/outreach/All Packing.pdf",
+    filename: "Pars Baking Soda Group - Packing Details.pdf",
+  },
+  {
+    // درخواست کاربر ۲۰۲۶-۰۹-۲۴: پروفایل شرکت هم مثل بسته‌بندی پیوست واقعی بشه.
+    relativePath: "assets/outreach/Company profile.pdf",
+    filename: "Pars Baking Soda Group - Company Profile.pdf",
+  },
+];
 
 // متن پایه، عیناً از Email Marketing.docx — {{COMPANY}}, {{COUNTRY_EN}} و
 // {{GRADE_SENTENCE}} تنها جاهای شخصی‌سازی‌شده‌ن.
@@ -132,7 +143,7 @@ We would be delighted to become your trusted business partner in {{COUNTRY_EN}}.
 
 To prepare our best quotation, kindly let us know your required product grade, specifications, packaging, and estimated quantity.
 
-Please find our full packing options attached (PDF), and our product catalogues below:
+Please find our company profile and full packing options attached (PDF), and our product catalogues below:
 {{CATALOG_LINKS}}
 We would be pleased to discuss your requirements and provide a solution tailored to your business needs.
 

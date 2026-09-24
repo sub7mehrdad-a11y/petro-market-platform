@@ -3,16 +3,14 @@ import path from "path";
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
 import { getCompanies, getCountryEnglishName, getEmailOutreachSent } from "@/lib/data";
-import {
-  renderOutreachEmail,
-  isValidEmail,
-  PACKING_PDF_RELATIVE_PATH,
-  PACKING_PDF_FILENAME,
-} from "@/lib/outreachTemplate";
+import { renderOutreachEmail, isValidEmail, FIXED_ATTACHMENTS } from "@/lib/outreachTemplate";
 
 const ROOT = path.join(process.cwd(), "..");
 const SENT_LOG_FILE = path.join(ROOT, "data", "email_outreach_sent.json");
-const PACKING_PDF_PATH = path.join(ROOT, PACKING_PDF_RELATIVE_PATH);
+const RESOLVED_FIXED_ATTACHMENTS = FIXED_ATTACHMENTS.map((a) => ({
+  filename: a.filename,
+  path: path.join(ROOT, a.relativePath),
+}));
 
 // ⚠️ سقف هر درخواست — طبق تصمیم صریح کاربر (دسته‌ای، نه یکجا برای همه‌ی
 // شرکت‌ها) تا ریسک اسپم‌فلگ‌شدن دامنه‌ی ایمیل شرکت پایین بمونه.
@@ -101,12 +99,15 @@ export async function POST(request) {
     );
   }
 
-  // کاتالوگ بسته‌بندی دیگه لینک نیست، پیوست واقعیه — قبل از هر ارسالی مطمئن
-  // شو فایلش سر جاشه (وگرنه sendMail برای هر شرکت جدا خطا می‌داد، به‌جای
+  // پیوست‌های ثابت (بسته‌بندی + پروفایل شرکت) — قبل از هر ارسالی مطمئن شو
+  // همه‌شون سر جاشونن (وگرنه sendMail برای هر شرکت جدا خطا می‌داد، به‌جای
   // یک خطای واضح یک‌جا).
-  if (!fs.existsSync(PACKING_PDF_PATH)) {
+  const missingAttachments = RESOLVED_FIXED_ATTACHMENTS.filter((a) => !fs.existsSync(a.path));
+  if (missingAttachments.length > 0) {
     return NextResponse.json(
-      { error: `فایل پیوست بسته‌بندی پیدا نشد: ${PACKING_PDF_RELATIVE_PATH}` },
+      {
+        error: `فایل پیوست پیدا نشد: ${missingAttachments.map((a) => a.filename).join(", ")}`,
+      },
       { status: 500 }
     );
   }
@@ -152,11 +153,11 @@ export async function POST(request) {
         ...(ccList.length > 0 ? { cc: ccList } : {}),
         subject: rendered.subject,
         text: rendered.body,
-        // کاتالوگ بسته‌بندی پیوست واقعی می‌شه (تست واقعی ۲۰۲۶-۰۹-۲۳ نشون داد
-        // سرور SMTP شرکت دیگه روی این حجم شکست نمی‌خوره)؛ بقیه‌ی کاتالوگ‌ها
-        // (food/feed/industrial) چون صفحه‌ی وبن نه فایل، همچنان لینک می‌مونن —
+        // بسته‌بندی + پروفایل شرکت پیوست واقعی می‌شن (تست واقعی ۲۰۲۶-۰۹-۲۳ نشون
+        // داد سرور SMTP شرکت دیگه روی این حجم‌ها شکست نمی‌خوره)؛ کاتالوگ‌های
+        // food/feed/industrial چون صفحه‌ی وبن نه فایل، همچنان لینک می‌مونن —
         // جزئیات کامل در web/lib/outreachTemplate.js.
-        attachments: [{ filename: PACKING_PDF_FILENAME, path: PACKING_PDF_PATH }],
+        attachments: RESOLVED_FIXED_ATTACHMENTS,
       });
       results.push({ id, ok: true });
       newSentRecords.push({
