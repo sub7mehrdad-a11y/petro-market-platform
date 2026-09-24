@@ -6910,5 +6910,119 @@
         "note": "Technical soda ash offer is listed on the trade board, but no price value is specified in the text."
       }
     ]
+  },
+  {
+    "collected_at": "2026-09-23T10:11:17.742248+00:00",
+    "date": "2026-09-23",
+    "records": [
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "China",
+        "price_type": "FOB",
+        "value": 179.59,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "July 2026",
+        "note": "Latest reported FOB price for China"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "India",
+        "price_type": "CIF",
+        "value": 286.4,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "July 2026",
+        "note": "Latest reported CIF price for India"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Turkey",
+        "price_type": "FOB",
+        "value": null,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "2026-09-23",
+        "note": "اطلاعات قیمتی برای جوش شیرین در کشور ترکیه در متن موجود نبود."
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Russia",
+        "price_type": "domestic",
+        "value": null,
+        "currency": "RUB",
+        "unit": "mt",
+        "source_name": "Himtrade",
+        "source_url": "http://board.himtrade.ru/",
+        "source_reported_date": "2026-09-23",
+        "note": "اطلاعات قیمتی برای جوش شیرین در کشور روسیه در متن موجود نبود."
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "China",
+        "price_type": "domestic",
+        "value": 1050,
+        "currency": "CNY",
+        "unit": "mt",
+        "source_name": "Trading Economics",
+        "source_url": "https://tradingeconomics.com/commodity/soda-ash",
+        "source_reported_date": "2026-09-23",
+        "note": "Spot market price traded in China"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "China",
+        "price_type": "FOB",
+        "value": 164.25,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "July 2026",
+        "note": "Latest reported FOB price for China"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "India",
+        "price_type": "CIF",
+        "value": 271.06,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "July 2026",
+        "note": "Latest reported CIF price for India"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "Turkey",
+        "price_type": "FOB",
+        "value": null,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "July 2026",
+        "note": "از ترکیه به عنوان عرضه‌کننده نام برده شده اما عدد دقیق قیمت در متن موجود نیست."
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "Russia",
+        "price_type": "domestic",
+        "value": null,
+        "currency": "RUB",
+        "unit": "mt",
+        "source_name": "Bashkir Soda Company",
+        "source_url": "https://www.soda.ru/ru/",
+        "source_reported_date": "2026-09-23",
+        "note": "اطلاعات قیمتی برای سودا اش در کشور روسیه در متن موجود نبود."
+      }
+    ]
   }
 ]
