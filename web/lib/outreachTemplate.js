@@ -111,11 +111,8 @@ const SUBJECT = "Sodium Bicarbonate (Food/Industrial Grade) from Iran — Sepehr
 // تکرار نشه.
 export const FIXED_ATTACHMENTS = [
   {
-    relativePath: "assets/outreach/All Packing.pdf",
-    filename: "Pars Baking Soda Group - Packing Details.pdf",
-  },
-  {
-    // درخواست کاربر ۲۰۲۶-۰۹-۲۴: پروفایل شرکت هم مثل بسته‌بندی پیوست واقعی بشه.
+    // درخواست کاربر ۲۰۲۶-۰۹-۲۴: فقط پروفایل شرکت پیوست بشه — بسته‌بندی
+    // (All Packing.pdf) که قبلاً هم‌زمان باهاش پیوست می‌شد، دیگه لازم نیست.
     relativePath: "assets/outreach/Company profile.pdf",
     filename: "Pars Baking Soda Group - Company Profile.pdf",
   },
@@ -143,7 +140,7 @@ We would be delighted to become your trusted business partner in {{COUNTRY_EN}}.
 
 To prepare our best quotation, kindly let us know your required product grade, specifications, packaging, and estimated quantity.
 
-Please find our company profile and full packing options attached (PDF), and our product catalogues below:
+Please find our company profile attached (PDF), and our product catalogues below:
 {{CATALOG_LINKS}}
 We would be pleased to discuss your requirements and provide a solution tailored to your business needs.
 

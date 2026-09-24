@@ -99,9 +99,9 @@ export async function POST(request) {
     );
   }
 
-  // پیوست‌های ثابت (بسته‌بندی + پروفایل شرکت) — قبل از هر ارسالی مطمئن شو
-  // همه‌شون سر جاشونن (وگرنه sendMail برای هر شرکت جدا خطا می‌داد، به‌جای
-  // یک خطای واضح یک‌جا).
+  // پیوست‌های ثابت (فعلاً فقط پروفایل شرکت — نگاه کن FIXED_ATTACHMENTS توی
+  // outreachTemplate.js) — قبل از هر ارسالی مطمئن شو همه‌شون سر جاشونن
+  // (وگرنه sendMail برای هر شرکت جدا خطا می‌داد، به‌جای یک خطای واضح یک‌جا).
   const missingAttachments = RESOLVED_FIXED_ATTACHMENTS.filter((a) => !fs.existsSync(a.path));
   if (missingAttachments.length > 0) {
     return NextResponse.json(
@@ -153,8 +153,8 @@ export async function POST(request) {
         ...(ccList.length > 0 ? { cc: ccList } : {}),
         subject: rendered.subject,
         text: rendered.body,
-        // بسته‌بندی + پروفایل شرکت پیوست واقعی می‌شن (تست واقعی ۲۰۲۶-۰۹-۲۳ نشون
-        // داد سرور SMTP شرکت دیگه روی این حجم‌ها شکست نمی‌خوره)؛ کاتالوگ‌های
+        // پروفایل شرکت پیوست واقعی می‌شه (تست واقعی ۲۰۲۶-۰۹-۲۳ نشون داد سرور
+        // SMTP شرکت دیگه روی این حجم‌ها شکست نمی‌خوره)؛ کاتالوگ‌های
         // food/feed/industrial چون صفحه‌ی وبن نه فایل، همچنان لینک می‌مونن —
         // جزئیات کامل در web/lib/outreachTemplate.js.
         attachments: RESOLVED_FIXED_ATTACHMENTS,
