@@ -1,0 +1,990 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>رژیم تجاری CIS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(26px,4vw,40px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 68ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(6, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:900px){ .kpi-row{ grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width:520px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 19px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+  .kpi.good .v{ color: #8FE3BE; }
+  .kpi.bad .v{ color: #F0A98F; }
+
+  /* ---------- Sections ---------- */
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
+  strong{ color: var(--ink); font-weight:700; }
+  ul.plain{ margin:0 0 12px; padding-inline-start: 20px; color: var(--ink-soft); }
+  ul.plain li{ margin-bottom: 8px; max-width: 74ch; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout p + p{ margin-top: 8px; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+  .callout.alert{ border-inline-start-color: var(--bad); background: var(--bad-bg); }
+  .callout .cal-title{ display:block; font-weight:800; color: var(--ink); margin-bottom: 6px; }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+  }
+  .card .tag.opp{ background: var(--good-bg); color: var(--good); }
+  .card .tag.threat{ background: var(--bad-bg); color: var(--bad); }
+  .card .tag.warn{ background: var(--copper-100); color: var(--copper-700); }
+  .card p{ margin:0; font-size: 14.5px; }
+
+  /* stat mini */
+  .stat-grid{ display:grid; grid-template-columns: repeat(4,1fr); gap:12px; margin: 16px 0 20px; }
+  @media (max-width:800px){ .stat-grid{ grid-template-columns: repeat(2,1fr); } }
+  .stat{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius:12px;
+    padding: 14px 16px; box-shadow: var(--card-shadow);
+  }
+  .stat .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-size:21px; font-weight:600; color: var(--petrol-700); }
+  :root[data-theme="dark"] .stat .v, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .stat .v{ color: var(--copper-400); } }
+  .stat .l{ font-size:12.5px; color: var(--muted); margin-top:3px; }
+  .stat .d{ font-size: 12px; margin-top:6px; font-weight:600; }
+  .stat .d.up{ color: var(--good); } .stat .d.down{ color: var(--bad); }
+
+  /* charts */
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; height:280px; }
+  .two-col{ display:grid; grid-template-columns: 1fr 1fr; gap:16px; align-items:stretch; }
+  @media (max-width:820px){ .two-col{ grid-template-columns: 1fr; } }
+
+  /* tables */
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 560px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+  caption{ caption-side: top; text-align: right; font-size: 12.5px; color: var(--muted); padding: 8px 12px 0; }
+
+  figure{ margin: 16px 0; }
+  figure img{ border-radius: 12px; border: 1px solid var(--line); display:block; box-shadow: var(--card-shadow); margin: 0 auto; }
+  figcaption{ font-size: 12.5px; color: var(--muted); margin-top: 8px; text-align:center; }
+
+  .pill-row{ display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0; }
+  .pill{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 12px;
+    padding: 12px 20px; min-width: 120px; box-shadow: var(--card-shadow);
+  }
+  .pill .p{ font-family:"Fira Code"; font-size:22px; font-weight:700; }
+  .pill .p.zero{ color: var(--good); } .pill .p.pos{ color: var(--copper-600); }
+  .pill .n{ font-size:12.5px; color:var(--muted); margin-top:2px; }
+
+  /* toc */
+  .toc{ background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px; padding: 18px 20px; box-shadow: var(--card-shadow); }
+  .toc ol{ margin:0; padding-inline-start: 20px; columns: 2; column-gap: 28px; }
+  @media (max-width:700px){ .toc ol{ columns: 1; } }
+  .toc li{ margin-bottom: 8px; break-inside: avoid; }
+  .toc a{ text-decoration:none; color: var(--ink-soft); font-size: 14px; }
+  .toc a:hover{ color: var(--copper-600); }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer h3{ color: var(--ink-soft); font-size:13px; margin: 18px 0 10px; }
+  footer h3:first-child{ margin-top:0; }
+  footer ol{ margin:0; padding-inline-start: 20px; }
+  footer li{ margin-bottom:6px; }
+  footer p.note{ font-style: italic; margin-top: 16px; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+
+  /* ---------- CIS report additions ---------- */
+  .g{ display:inline-block; font-size:11px; font-weight:800; padding:0 7px; border-radius:999px; line-height:1.75; vertical-align:1px; margin-inline:2px; white-space:nowrap; }
+  .g.ga{ background: var(--good-bg); color: var(--good); }
+  .g.gb{ background: var(--copper-100); color: var(--copper-700); }
+  .g.gc{ background: var(--bad-bg); color: var(--bad); }
+  :root[data-theme="dark"] .g.gb{ color: var(--copper-300); }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .g.gb{ color: var(--copper-300); } }
+
+  .summary{ font-size: 16.5px; }
+  .summary p{ max-width: 80ch; }
+  section h3{ scroll-margin-top: 16px; }
+  section{ scroll-margin-top: 16px; }
+  p a, li a, td a{ text-decoration: none; border-bottom: 1px dotted currentColor; font-size: .92em; }
+  p.src{ font-size: 12.5px; color: var(--muted); max-width: none; }
+  p.src a{ font-size: 1em; }
+
+  .table-wrap table{ min-width: 720px; }
+  .table-wrap.wide table{ min-width: 900px; }
+  tbody td{ vertical-align: top; line-height: 1.75; }
+  thead th{ white-space: normal; }
+  table.matrix td:not(:first-child):not(:last-child){ font-family: "Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; font-size: 13px; white-space: nowrap; }
+  table.matrix td:last-child{ font-size: 12.5px; }
+
+  .legend-row{ display:flex; flex-wrap:wrap; gap:10px 18px; font-size:13px; color: var(--ink-soft); margin: 10px 0 4px; }
+  .legend-row span{ display:inline-flex; align-items:center; gap:6px; }
+
+  /* timeline */
+  .timeline{ position:relative; margin: 18px 0 8px; padding-inline-start: 26px; }
+  .timeline::before{ content:""; position:absolute; inset-inline-start: 7px; top: 6px; bottom: 6px; width: 2px; background: var(--line); }
+  .tl-item{ position:relative; margin-bottom: 14px; }
+  .tl-item::before{ content:""; position:absolute; inset-inline-start: -24px; top: 8px; width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 3px solid var(--petrol-500); }
+  .tl-item.hot::before{ border-color: var(--copper-500); }
+  .tl-item.bad::before{ border-color: var(--bad); }
+  .tl-item.future::before{ border-style: dashed; border-color: var(--muted); }
+  .tl-date{ font-family:"Fira Code","Vazirmatn",monospace; font-size: 12.5px; font-weight:600; color: var(--copper-600); }
+  :root[data-theme="dark"] .tl-date{ color: var(--copper-400); }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .tl-date{ color: var(--copper-400); } }
+  .tl-text{ font-size: 14.5px; color: var(--ink-soft); }
+  .tl-text strong{ color: var(--ink); }
+
+  .chart-h.tall{ height: 320px; }
+  .chart-h.short{ height: 240px; }
+
+  .callout ul{ margin: 6px 0 0; padding-inline-start: 20px; color: var(--ink-soft); }
+  blockquote{ margin: 0; }
+  .conclusion p{ font-size: 16px; }
+  .hero h1{ font-size: clamp(26px,4.2vw,42px); }
+  .hero .sub{ color: var(--hero-ink-soft); font-size: 15.5px; max-width: 78ch; margin: 0 0 18px; }
+  .kpi .v{ font-size: 18px; }
+  @media (max-width:520px){ .kpi .v{ font-size: 16px; } }
+
+  /* fixes */
+  .toc a{ border-bottom: none !important; font-size: 14px !important; }
+  a{ unicode-bidi: isolate; }
+  .tl-date{ font-family: "Vazirmatn", Tahoma, sans-serif !important; font-size: 13px; font-weight: 700; }
+  .table-wrap.wide table{ min-width: 820px; }
+  table.matrix td:not(:first-child):not(:last-child){ font-family: inherit; white-space: normal; }
+  table.matrix{ font-size: 13px; }
+  table.matrix th.grp{ text-align: center; border-inline-start: 1px solid rgba(255,255,255,0.18); }
+  table.matrix th.sub{ background: var(--petrol-600); font-size: 11.5px; font-weight: 600; text-align: center; padding: 6px 6px; }
+  table.matrix th.sub.ir{ background: var(--copper-600); }
+  table.matrix td.z, table.matrix td.p, table.matrix td.na{ text-align: center; white-space: nowrap; padding: 9px 6px; }
+  table.matrix td .n{ font-family: "Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; font-weight: 600; }
+  table.matrix td.z .n{ color: var(--good); }
+  table.matrix td.p .n{ color: var(--copper-700); }
+  :root[data-theme="dark"] table.matrix td.p .n{ color: var(--copper-300); }
+  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) table.matrix td.p .n{ color: var(--copper-300); } }
+  table.matrix td.na .n{ color: var(--muted); }
+  table.matrix td.ir{ background: color-mix(in srgb, var(--copper-100) 45%, transparent); }
+  table.matrix td.note{ font-size: 12px; min-width: 220px; line-height: 1.7; }
+  table.matrix td .g{ font-size: 10px; padding: 0 5px; }
+
+  /* dark-mode heading/link colours via tokens (selector-list media query is invalid CSS) */
+  :root{ --h2c: #123742; --h3c: #17414A; --statc: #123742; --linkc: #AD5F22; }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --h2c: #EAA659; --h3c: #9CC4CA; --statc: #EAA659; --linkc: #EAA659; } }
+  :root[data-theme="dark"]{ --h2c: #EAA659; --h3c: #9CC4CA; --statc: #EAA659; --linkc: #EAA659; }
+  h2{ color: var(--h2c); }
+  h3{ color: var(--h3c); }
+  .stat .v{ color: var(--statc); }
+  a{ color: var(--linkc); }
+  .chart-h.short{ height: 270px; }
+  .toc ol, footer ol{ list-style-type: persian; }
+</style>
+</head>
+<body>
+
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">هوشمندی تجاری &middot; جوش شیرین پارس</span>
+    <h1>رژیم تجاری کشورهای مستقل مشترک‌المنافع و جایگاه جوش شیرین ایران</h1>
+    <p class="sub">گزارش پژوهشی برای هیئت‌مدیره‌ی شرکت جوش شیرین پارس — رژیم تجاری کشورهای مستقل مشترک‌المنافع و تعرفه‌ی واردات جوش شیرین (HS 283630)؛ وضعیت در ۲ مهر ۱۴۰۵ (۲۴ سپتامبر ۲۰۲۶)</p>
+    <div class="meta">
+      <span>تهیه‌شده برای: هیئت‌مدیره‌ی شرکت جوش شیرین پارس</span>
+      <span>وضعیت در: ۲ مهر ۱۴۰۵ (۲۴ سپتامبر ۲۰۲۶)</span>
+    </div>
+    
+<div class="kpi-row">
+  <div class="kpi good"><div class="v">۰٪</div><div class="l">تعرفه‌ی جوش شیرین ایرانی در پنج عضو اوراسیا</div></div>
+  <div class="kpi"><div class="v">۵٪</div><div class="l">تعرفه‌ی جوش شیرین چینی و ترک در اوراسیا</div></div>
+  <div class="kpi good"><div class="v">~۳۰۹ <small>دلار/تن</small></div><div class="l">فاصله‌ی قیمت پایه‌ی پارس با جوش شیرین روسی در قزاقستان</div></div>
+  <div class="kpi"><div class="v">۱۰٬۶۷۶ <small>تن</small></div><div class="l">واردات جوش شیرین قزاقستان (۲۰۲۵)</div></div>
+  <div class="kpi"><div class="v">۹ <small>کشور</small></div><div class="l">مشارکت فعال در نهادهای CIS (۲۰۲۶)</div></div>
+  <div class="kpi bad"><div class="v">۶ اکتبر ۲۰۲۶</div><div class="l">آغاز کاهش تعرفه‌ی جوش شیرین اماراتی در اوراسیا</div></div>
+</div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="toc">
+    <ol>
+      <li><a href="#s0">خلاصه‌ی مدیریتی</a></li>
+      <li><a href="#s1">کشورهای مستقل مشترک‌المنافع در سال ۲۰۲۶: وضعیت عضویت و ساختار نهادی</a></li><li><a href="#s2">پیمان تجارت آزاد ۲۰۱۱: معافیت تعرفه‌ای تنها برای کالای با مبدأ CIS</a></li><li><a href="#s3">موافقت‌نامه‌ی تجارت آزاد اوراسیا و ایران: تعرفه‌ی صفر برای جوش شیرین ایرانی</a></li><li><a href="#s4">تعرفه‌ی واردات جوش شیرین (HS 283630) به تفکیک کشور</a></li><li><a href="#s5">تحولات ۲۰۲۴ تا ۲۰۲۶: جنگ و تحریم به‌عنوان متغیر تعیین‌کننده</a></li><li><a href="#s6">جایگاه رقابتی جوش شیرین پارس در بازارهای CIS</a></li><li><a href="#s7">توصیه‌های راهبردی به تفکیک بازار و به ترتیب اولویت</a></li><li><a href="#s8">موارد باز نیازمند راستی‌آزمایی</a></li><li><a href="#s9">جمع‌بندی</a></li>
+    </ol>
+  </div>
+
+  <section id="s0" class="summary">
+    <div class="sec-head"><span class="sec-num">۰۰</span><h2>خلاصه‌ی مدیریتی</h2></div>
+    <p>در بازارهای کشورهای مستقل مشترک‌المنافع (Commonwealth of Independent States — CIS)، پیمان تجارت آزاد CIS مصوب ۲۰۱۱ تعیین‌کننده‌ی جایگاه تعرفه‌ای جوش شیرین ایران نیست، زیرا این پیمان تنها به کالاهای با مبدأ کشورهای عضو معافیت می‌دهد و در عمل به سود تولیدکنندگان روس و قزاق عمل می‌کند. عامل تعیین‌کننده <strong>موافقت‌نامه‌ی تجارت آزاد کامل اتحادیه‌ی اقتصادی اوراسیا و ایران است که از ۱۵ مه ۲۰۲۵ اجرا می‌شود</strong>. بر پایه‌ی تصمیم شماره‌ی ۱ هیئت‌رئیسه‌ی کمیسیون اقتصادی اوراسیا (۱۴ ژانویه‌ی ۲۰۲۵)، <strong>جوش شیرین با مبدأ ایران با تعرفه‌ی صفر وارد هر پنج عضو اوراسیا، یعنی روسیه، بلاروس، قزاقستان، قرقیزستان و ارمنستان، می‌شود</strong>، در حالی که همین کالا از مبدأ چین و ترکیه ۵ درصد تعرفه می‌پردازد. در بیرون از اوراسیا، ازبکستان بر جوش شیرین از هر مبدأ تعرفه‌ی صفر اعمال می‌کند، نرخ تاجیکستان حدود ۵٫۵ درصد برآورد می‌شود اما تأیید نشده است، و آذربایجان، ترکمنستان و گرجستان عملاً برای همه‌ی مبدأها تعرفه‌ی صفر دارند. بر این اساس، <strong>قوی‌ترین جایگاه جوش شیرین پارس در بازارهای قزاقستان و روسیه قرار دارد</strong>؛ قیمت پایه‌ی FOB شرکت (۲۵۰ دلار در تن) فاصله‌ی چشمگیری با ارزش گمرکی واحد جوش شیرین روسی در قزاقستان (۵۵۹ دلار در تن) دارد. با این حال، <strong>محدودیت اصلی در سال ۲۰۲۶ تعرفه نیست</strong>، بلکه جنگ، بسته‌شدن تنگه‌ی هرمز، تحریم‌ها، دشواری مسیرهای پرداخت و هزینه‌ی بالای لجستیک زمینی است. دو تهدید تازه نیز در افق قرار دارد: اجرای موافقت‌نامه‌ی اوراسیا و امارات از ۶ اکتبر ۲۰۲۶، که مزیت تعرفه‌ای ایران در برابر کالای اماراتی را تا ۲۰۳۱ به‌تدریج از میان می‌برد، و ابهام در آینده‌ی عضویت ارمنستان در اوراسیا.</p>
+    <div class="callout copper"><p><p><strong>راهنمای درجه‌ی اعتبار داده‌ها در این گزارش.</strong> <strong><span class="g ga">الف</span></strong> داده‌ای است که از متن قانونی یا پایگاه‌های رسمی و معتبر تعرفه، با ذکر سند و تاریخ، تأیید شده است. <strong><span class="g gb">ب</span></strong> داده‌ای است که در منابع ثانویه یا پایگاه‌های تجمیعی به‌طور سازگار آمده یا آخرین سال گزارش‌شده در WITS است و هنوز در متن رسمی جاری مشاهده نشده است. <strong><span class="g gc">ج</span></strong> داده‌ای تقریبی و تأییدنشده است که از مصوبه‌ی منسوخ، داده‌ی متعارض یا دانش عمومی به دست آمده است. رقمی که علامت ندارد در درجه‌ی <span class="g ga">الف</span> قرار دارد. علامت * در جدول‌ها نشان می‌دهد که داده از دانش عمومی است و در منابع مستند این گزارش پشتوانه‌ی مستقیم ندارد.</p></p></div>
+  </section>
+
+<section id="s1">
+<div class="sec-head"><span class="sec-num">۰۱</span><h2>کشورهای مستقل مشترک‌المنافع در سال ۲۰۲۶: وضعیت عضویت و ساختار نهادی</h2></div>
+
+<p>کشورهای مستقل مشترک‌المنافع با موافقت‌نامه‌ی بلووژ (۸ دسامبر ۱۹۹۱) پایه‌گذاری شد، با پروتکل آلماآتا (۲۱ دسامبر ۱۹۹۱) گسترش یافت و منشور آن در ۲۲ ژانویه‌ی ۱۹۹۳ به تصویب رسید (<a href="https://en.wikipedia.org/wiki/Commonwealth_of_Independent_States">Wikipedia: CIS</a>). از نظر حقوقی، «عضو» کشوری است که منشور را تصویب کرده باشد؛ به همین دلیل اوکراین و ترکمنستان، که موافقت‌نامه‌ی مؤسس را تصویب کرده‌اند اما منشور را تصویب نکرده‌اند، هرگز عضو کامل به شمار نیامده‌اند. <strong>در سپتامبر ۲۰۲۶ نُه کشور در نهادهای CIS مشارکت فعال دارند</strong>: روسیه، بلاروس، قزاقستان، قرقیزستان، تاجیکستان، ازبکستان، ارمنستان، آذربایجان و ترکمنستان. ترکمنستان از اوت ۲۰۰۵ خود را «عضو وابسته» معرفی می‌کند، اما <strong>ریاست دوره‌ای CIS را از ۱ ژانویه‌ی ۲۰۲۶ بر عهده دارد</strong> (<a href="https://tass.com/world/2027905">TASS</a>). اجلاس بعدی سران در ۹ اکتبر ۲۰۲۶ در منطقه‌ی آوازه‌ی ترکمنستان برگزار خواهد شد (<a href="https://tass.ru/mezhdunarodnaya-panorama/26059751">TASS</a>).</p>
+<p><strong>مولداوی در دوره‌ی خروج قرار دارد.</strong> دولت این کشور در ۱۱ مارس ۲۰۲۶ خروج را تصویب کرد و پارلمان در ۲ آوریل ۲۰۲۶ رأی نهایی را به فسخ موافقت‌نامه‌ی مؤسس، پروتکل و منشور داد. اطلاعیه‌ی رسمی در ۸ آوریل ۲۰۲۶ به امین‌دار در مینسک رسید و <strong>خروج از ۸ آوریل ۲۰۲۷ مؤثر خواهد شد</strong> (<a href="https://interfax.com/newsroom/top-stories/117146/">Interfax</a>؛ <a href="https://tass.com/world/2117509/amp">TASS factbox</a>). مولداوی قصد دارد در حدود ۱۰۲ تا ۱۰۴ معاهده‌ی اقتصادی، از جمله پیمان تجارت آزاد ۲۰۱۱، باقی بماند. وزارت خارجه‌ی روسیه در امکان‌پذیری ماندن در معاهداتی که «به‌طور جدایی‌ناپذیر» به عضویت CIS وابسته‌اند تردید کرده و به‌طور مشخص از پیمان تجارت آزاد ۱۸ اکتبر ۲۰۱۱ نام برده است (<a href="https://ria.ru/20260619/moldaviya-2099971147.html">RIA Novosti, 19 Jun 2026</a>). <strong>اوکراین</strong> از سال ۲۰۱۸ در نهادهای CIS شرکت نمی‌کند؛ این کشور در مارس ۲۰۲۶ از ۸۷ تا ۸۸ معاهده‌ی دیگر در چارچوب CIS خارج شد و در ۴ سپتامبر ۲۰۲۶ لایحه‌ی خروج از سه موافقت‌نامه‌ی دیگر را به پارلمان ارائه کرد (<a href="https://www.eurointegration.com.ua/rus/news/2026/03/26/7234062/">Evropeiska Pravda</a>؛ <a href="https://lenta.ru/news/2026/09/04/ukraina-zahotela-vyyti-iz-ryada-soglasheniy/">Lenta.ru</a>). <strong>گرجستان</strong> از ۱۸ اوت ۲۰۰۹ از CIS خارج شده است.</p>
+<p>از نظر نهادی، شورای سران کشورها عالی‌ترین مرجع و شورای سران دولت‌ها مرجع اصلی تصمیم‌گیری اقتصادی به شمار می‌رود. شورای سران دولت‌ها آخرین بار در ۲۲ مه ۲۰۲۶ در عشق‌آباد تشکیل جلسه داد (<a href="https://avesta.tj/2026/05/23/ocherednoe-zasedanie-soveta-glav-pravitelstv-sng-proshlo-v-ashhabade/">Avesta.tj</a>). دیگر نهادهای اصلی عبارت‌اند از: کمیته‌ی اجرایی در مینسک، که امین‌دار معاهدات است و سرگئی لبدف از سال ۲۰۰۷ ریاست آن را بر عهده دارد؛ دادگاه اقتصادی CIS؛ مجمع بین‌المجالس با هشت پارلمان عضو؛ و کمیته‌ی آمار CIS (<a href="https://iacis.ru/ob_organizatcii/chto_takoe_mpa_sng">IPA CIS</a>). راهبرد توسعه‌ی اقتصادی CIS تا سال ۲۰۳۰ در ۲۹ مه ۲۰۲۰ تصویب شده است (<a href="https://base.garant.ru/74743871/">Garant</a>). اجلاس دوشنبه در ۱۰ اکتبر ۲۰۲۵ قالب «CIS+» را برای همکاری با کشورهای خارج از بلوک ایجاد کرد و به سازمان همکاری شانگهای وضعیت ناظر اعطا نمود (<a href="https://www.newscentralasia.net/2025/10/10/cis-summit-in-dushanbe-launch-of-cis-turkmenistan-takes-chairmanship-and-key-security-package-approved/">nCa</a>). جمعیت این بلوک حدود ۲۵۲ میلیون نفر و تولید ناخالص اسمی آن حدود ۲٫۸ تریلیون دلار برآورد می‌شود (برآورد ۲۰۲۵). به گفته‌ی دبیرکل، تجارت متقابل اعضا در چهار سال اخیر ۱۸ درصد رشد کرده است (<a href="https://vestikavkaza.ru/news/vzaimnaa-torgovla-stran-sng-pokazala-uverennyj-rost.html">Vestnik Kavkaza/RIA</a>)، اما رقم رسمی کل تجارت درون‌بلوکی برای سال‌های ۲۰۲۴ و ۲۰۲۵ از سوی کمیته‌ی آمار CIS در دسترس قرار نگرفت. از نظر سیاسی، CIS در لبه‌ی غربی خود (اوکراین و مولداوی) در حال کوچک‌شدن است، اما در آسیای مرکزی و قفقاز جنوبی پایدار مانده است. تنش آذربایجان و روسیه پس از سقوط هواپیمای آذربایجانی در دسامبر ۲۰۲۴ و غیبت رئیس‌جمهور آذربایجان در اجلاس غیررسمی ۲۲ دسامبر ۲۰۲۵ به خروج این کشور منجر نشده است (<a href="https://www.themoscowtimes.com/2025/12/22/azerbaijans-aliyev-skips-informal-cis-summit-in-st-petersburg-a91504">Moscow Times</a>).</p>
+<h3>ماتریس عضویت و وضعیت حقوقی (سپتامبر ۲۰۲۶)</h3>
+<div class="table-wrap wide"><table>
+<thead>
+<tr>
+<th>کشور</th>
+<th>وضعیت در CIS</th>
+<th>پیمان تجارت آزاد CIS ۲۰۱۱ (تاریخ اجرا)</th>
+<th>اتحادیه‌ی اقتصادی اوراسیا (EAEU)</th>
+<th>سازمان جهانی تجارت (WTO)</th>
+<th>مالیات بر ارزش افزوده‌ی واردات</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>روسیه</td>
+<td>عضو کامل</td>
+<td>عضو؛ ۲۰ سپتامبر ۲۰۱۲؛ در برابر اوکراین از ۱ ژانویه‌ی ۲۰۱۶ معلق</td>
+<td>عضو</td>
+<td>عضو*</td>
+<td><strong>۲۲٪ از ۱ ژانویه‌ی ۲۰۲۶</strong></td>
+</tr>
+<tr>
+<td>بلاروس</td>
+<td>عضو کامل</td>
+<td>عضو؛ ۲۰ سپتامبر ۲۰۱۲</td>
+<td>عضو</td>
+<td>غیرعضو (در حال الحاق)*</td>
+<td>۲۰٪*</td>
+</tr>
+<tr>
+<td>قزاقستان</td>
+<td>عضو کامل</td>
+<td>عضو؛ ۸ دسامبر ۲۰۱۲</td>
+<td>عضو</td>
+<td>عضو*</td>
+<td><strong>۱۶٪ از ۱ ژانویه‌ی ۲۰۲۶</strong></td>
+</tr>
+<tr>
+<td>قرقیزستان</td>
+<td>عضو کامل</td>
+<td>عضو؛ ۱۳ دسامبر ۲۰۱۳</td>
+<td>عضو</td>
+<td>عضو*</td>
+<td>۱۲٪*</td>
+</tr>
+<tr>
+<td>ارمنستان</td>
+<td>عضو کامل</td>
+<td>عضو؛ ۱۷ اکتبر ۲۰۱۲</td>
+<td>عضو؛ قانون آغاز الحاق به اتحادیه‌ی اروپا (مارس ۲۰۲۵) این عضویت را در معرض پرسش قرار داده است</td>
+<td>عضو*</td>
+<td>۲۰٪*</td>
+</tr>
+<tr>
+<td>تاجیکستان</td>
+<td>عضو کامل (رئیس ۲۰۲۵)</td>
+<td>عضو؛ ۱۹ مارس ۲۰۱۶ <span class="g gc">ج</span> (تاریخ مورد اختلاف)</td>
+<td>—</td>
+<td>عضو از ۲۰۱۳</td>
+<td><strong>۱۴٪ (۲۰۲۴ تا ۲۰۲۶)؛ ۱۳٪ از ۲۰۲۷</strong></td>
+</tr>
+<tr>
+<td>ازبکستان</td>
+<td>عضو کامل</td>
+<td>از طریق پروتکل ۳۱ مه ۲۰۱۳؛ اجرا از ۱۶ مه ۲۰۱۴</td>
+<td>ناظر (از دسامبر ۲۰۲۰)*</td>
+<td>غیرعضو؛ مرحله‌ی پایانی الحاق، هدف ۲۰۲۶</td>
+<td><strong>۱۲٪</strong></td>
+</tr>
+<tr>
+<td>آذربایجان</td>
+<td>عضو کامل</td>
+<td>غیرعضو؛ موافقت‌نامه‌ی ۱۹۹۴ و موافقت‌نامه‌های دوجانبه</td>
+<td>—</td>
+<td>غیرعضو؛ مذاکره‌ی الحاق جاری</td>
+<td>۱۸٪</td>
+</tr>
+<tr>
+<td>ترکمنستان</td>
+<td>عضو وابسته از ۲۰۰۵ (رئیس ۲۰۲۶)</td>
+<td>غیرعضو؛ اجرای موقت موافقت‌نامه‌ی ۱۹۹۴ و موافقت‌نامه‌های دوجانبه</td>
+<td>—</td>
+<td>ناظر*</td>
+<td>مشخص نشد</td>
+</tr>
+<tr>
+<td>مولداوی</td>
+<td>عضو در دوره‌ی خروج؛ خروج مؤثر از ۸ آوریل ۲۰۲۷</td>
+<td>عضو؛ ۹ دسامبر ۲۰۱۲؛ قصد ماندن دارد و مسکو تردید دارد</td>
+<td>بررسی نشد</td>
+<td>عضو*</td>
+<td>۲۰٪ (نرخ کاهش‌یافته ۸٪)</td>
+</tr>
+<tr>
+<td>اوکراین</td>
+<td>منشور را تصویب نکرده است؛ از ۲۰۱۸ از نهادها خارج است</td>
+<td>رسماً عضو؛ رابطه با روسیه از ۲۰۱۶ متوقف؛ لایحه‌ی خروج شماره‌ی ۰۳۸۸</td>
+<td>—</td>
+<td>عضو*</td>
+<td>بررسی نشد</td>
+</tr>
+<tr>
+<td>گرجستان</td>
+<td>خارج‌شده از ۲۰۰۹</td>
+<td>غیرعضو</td>
+<td>—</td>
+<td>عضو*</td>
+<td>بررسی نشد</td>
+</tr>
+<tr>
+<td>ایران (برای مقایسه)</td>
+<td>غیرعضو</td>
+<td>غیرعضو</td>
+<td><strong>ناظر از ۲۶ دسامبر ۲۰۲۴؛ موافقت‌نامه‌ی تجارت آزاد کامل از ۱۵ مه ۲۰۲۵</strong></td>
+<td>غیرعضو*</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p class="src">منابع جدول: تاریخ‌های اجرای پیمان (<a href="https://en.wikipedia.org/wiki/Commonwealth_of_Independent_States_Treaty_on_Free_Trade_Area">Wikipedia: CIS FTA</a>)؛ پروتکل ازبکستان (<a href="https://base.garant.ru/71664136/">Garant</a>؛ <a href="https://lex.uz/ru/docs/2304877">Lex.uz</a>)؛ وضعیت ناظر ایران (<a href="https://eec.eaeunion.org/news/speech/iran-stal-nablyudatelem-v-evraziyskom-ekonomicheskom-soyuze/">EEC</a>)؛ روند الحاق ازبکستان به WTO (<a href="https://www.wto.org/english/news_e/news26_e/acc_27jul26_470_e.htm">WTO, 27 Jul 2026</a>)؛ آذربایجان (<a href="https://wto.az/en/areas/regional-trade-agreements">wto.az</a>)؛ مالیات بر ارزش افزوده‌ی روسیه (<a href="https://www.themoscowtimes.com/2025/11/28/putin-signs-law-raising-russias-value-added-tax-to-22-a91275">Moscow Times</a>)، قزاقستان (<a href="https://www.vatupdate.com/2025/08/13/kazakhstan-amends-tax-code-vat-rate-changes-effective-january-2026/">VATupdate</a>)، ازبکستان (<a href="https://taxsummaries.pwc.com/republic-of-uzbekistan/corporate/other-taxes">PwC</a>)، تاجیکستان (<a href="https://andoz.tj/docs/kodex/Kodex_14_05_2025_Nav_ENG_en.pdf">Tax Code RT</a>)، آذربایجان (<a href="https://taxsummaries.pwc.com/azerbaijan/corporate/other-taxes">PwC</a>) و مولداوی (<a href="https://taxsummaries.pwc.com/moldova/corporate/other-taxes">PwC</a>).</p>
+<h3>گاه‌شمار تحولات کلیدی</h3>
+<div class="timeline">
+  <div class="tl-item"><div class="tl-date">۸ و ۲۱ دسامبر ۱۹۹۱ · ۲۲ ژانویه ۱۹۹۳</div><div class="tl-text">امضای موافقت‌نامه‌ی بلووژ و پروتکل آلماآتا و تصویب منشور CIS</div></div>
+  <div class="tl-item"><div class="tl-date">۱۸ اوت ۲۰۰۹</div><div class="tl-text">خروج گرجستان از CIS مؤثر شد</div></div>
+  <div class="tl-item"><div class="tl-date">۱۸ اکتبر ۲۰۱۱ · ۲۰ سپتامبر ۲۰۱۲</div><div class="tl-text"><strong>امضا و اجرای پیمان منطقه‌ی تجارت آزاد CIS</strong> (نخست برای روسیه، بلاروس و اوکراین)</div></div>
+  <div class="tl-item"><div class="tl-date">۱۶ مه ۲۰۱۴</div><div class="tl-text">پروتکل پیوستن ازبکستان به رژیم تجارت آزاد CIS اجرایی شد</div></div>
+  <div class="tl-item bad"><div class="tl-date">۱ ژانویه ۲۰۱۶</div><div class="tl-text">روسیه اجرای پیمان را در برابر اوکراین معلق کرد (قانون 410-FZ)</div></div>
+  <div class="tl-item"><div class="tl-date">۲۷ اکتبر ۲۰۱۹</div><div class="tl-text">موافقت‌نامه‌ی موقت تجارت ترجیحی اوراسیا و ایران اجرایی شد</div></div>
+  <div class="tl-item"><div class="tl-date">۲۶ دسامبر ۲۰۲۴</div><div class="tl-text">ایران به عضویت ناظر اتحادیه‌ی اقتصادی اوراسیا درآمد</div></div>
+  <div class="tl-item hot"><div class="tl-date">۱۵ مه ۲۰۲۵</div><div class="tl-text"><strong>موافقت‌نامه‌ی تجارت آزاد کامل اوراسیا و ایران اجرایی شد</strong>؛ تعرفه‌ی صفر برای جوش شیرین ایرانی</div></div>
+  <div class="tl-item bad"><div class="tl-date">۲۷–۲۸ سپتامبر ۲۰۲۵</div><div class="tl-text">تحریم‌های سازمان ملل علیه ایران با سازوکار ماشه بازگشت</div></div>
+  <div class="tl-item bad"><div class="tl-date">۲۸ فوریه · ۴ مارس ۲۰۲۶</div><div class="tl-text">جنگ آغاز شد و تنگه‌ی هرمز بسته شد</div></div>
+  <div class="tl-item"><div class="tl-date">۸ آوریل ۲۰۲۶</div><div class="tl-text">اطلاعیه‌ی رسمی خروج مولداوی از CIS به امین‌دار در مینسک تسلیم شد</div></div>
+  <div class="tl-item future"><div class="tl-date">۶ اکتبر ۲۰۲۶</div><div class="tl-text">موافقت‌نامه‌ی اوراسیا و امارات اجرایی می‌شود و کاهش تدریجی تعرفه‌ی جوش شیرین اماراتی آغاز خواهد شد</div></div>
+  <div class="tl-item future"><div class="tl-date">دسامبر ۲۰۲۶</div><div class="tl-text">شورای عالی اوراسیا درباره‌ی آینده‌ی عضویت ارمنستان تصمیم‌گیری خواهد کرد</div></div>
+  <div class="tl-item future"><div class="tl-date">۸ آوریل ۲۰۲۷</div><div class="tl-text">خروج مولداوی از CIS مؤثر خواهد شد</div></div>
+</div>
+
+
+</section>
+<section id="s2">
+<div class="sec-head"><span class="sec-num">۰۲</span><h2>پیمان تجارت آزاد ۲۰۱۱: معافیت تعرفه‌ای تنها برای کالای با مبدأ CIS</h2></div>
+
+<h3>طرف‌ها و ساختار حقوقی</h3>
+<p>پیمان منطقه‌ی تجارت آزاد CIS در ۱۸ اکتبر ۲۰۱۱ در سن‌پترزبورگ به امضای هشت کشور رسید: ارمنستان، بلاروس، قزاقستان، قرقیزستان، مولداوی، روسیه، تاجیکستان و اوکراین. این پیمان سی روز پس از دریافت سومین اطلاعیه‌ی تصویب لازم‌الاجرا می‌شد و از <strong>۲۰ سپتامبر ۲۰۱۲</strong> برای روسیه، بلاروس و اوکراین به اجرا درآمد (<a href="https://www.kontur-extern.ru/info/normativ/document/1/189369-dogovor-o-zone-svobodnoy-torgovli">Kontur.Normativ</a>). روسیه پیمان را با قانون فدرال شماره‌ی 21-FZ مورخ ۱ آوریل ۲۰۱۲ تصویب کرد (<a href="https://base.garant.ru/70102524/">Garant</a>). ازبکستان به خود پیمان نپیوست، بلکه از طریق «پروتکل اجرای پیمان میان طرف‌های آن و ازبکستان» (مینسک، ۳۱ مه ۲۰۱۳) وارد این رژیم شد؛ این پروتکل با قانون ZRU-362 مورخ ۲۷ دسامبر ۲۰۱۳ تصویب شد و از ۱۶ مه ۲۰۱۴ برای ازبکستان اجرایی شد (<a href="https://lex.uz/ru/docs/2304877">Lex.uz</a>). <strong>آذربایجان، ترکمنستان و گرجستان طرف پیمان نیستند</strong> و تجارت آن‌ها با کشورهای CIS بر موافقت‌نامه‌ی تجارت آزاد ۱۹۹۴، پروتکل ۱۹۹۹ آن و موافقت‌نامه‌های دوجانبه استوار است (<a href="https://en.wikipedia.org/wiki/Commonwealth_of_Independent_States_Agreement_on_the_Establishment_of_a_Free_Trade_Area">Wikipedia</a>). پیمان ۲۵ ماده و ۶ پیوست دارد و تنها متن معتبر آن روسی است. پیوست ۱ استثناهای حقوق ورودی و صادراتی هر کشور، پیوست ۴ قواعد حل اختلاف و پیوست ۶ سازوکار ویژه‌ی اعضای اتحادیه‌ی گمرکی را تعیین می‌کند (<a href="https://www.consultant.ru/document/cons_doc_LAW_121497/">ConsultantPlus</a>). مدت پیمان نامحدود است و خروج از آن با اطلاعیه‌ی کتبی، دست‌کم دوازده ماه پیش از تاریخ خروج، انجام می‌شود (ماده‌ی ۲۵).</p>
+<h3>تعرفه، معافیت‌ها، حقوق صادراتی و محدودیت‌های مقداری</h3>
+<p>قاعده‌ی محوری پیمان در ماده‌ی ۲(۱) آمده است: هیچ طرفی بر صادرات به قلمرو طرف دیگر یا واردات کالای «با مبدأ» طرف دیگر حقوق گمرکی یا عوارض هم‌ارز آن وضع نمی‌کند، <strong>«مگر در مواردی که در پیوست ۱ پیش‌بینی شده است»</strong> (<a href="https://www.kontur-extern.ru/info/normativ/document/1/189369-dogovor-o-zone-svobodnoy-torgovli">Kontur.Normativ</a>). استثناهای وارداتی در ابتدا سه گروه کالا، یعنی الکل، شکر و توتون، را پوشش می‌داد و <strong>تا سال ۲۰۱۵ به دو ردیف شکر کاهش یافت</strong>. در مقابل، فهرست حقوق صادراتی مجاز گسترده‌تر است و گروه‌هایی از جمله فرآورده‌های سوختی و انرژی، ضایعات فلزی، مواد معدنی خام، پوست، دانه‌ها و دام زنده را در بر می‌گیرد؛ طرف‌ها متعهد شده‌اند این نرخ‌ها را منجمد کنند و برای حذف مرحله‌ای آن‌ها مذاکره نمایند (<a href="https://ria.ru/20161018/1479411161.html">RIA Novosti</a>). برای نمونه، روسیه در پیوست ۱ بر ماهی، دانه‌های روغنی، مواد معدنی، فلزات و چوب حقوق صادراتی ۱۰ تا ۵۰ درصد دارد و قزاقستان بر گاز طبیعی ۳۰ درصد حقوق صادراتی اعمال می‌کند؛ این جزئیات از خلاصه‌ی پیوست به دست آمده است و باید با جدول اصلی تطبیق داده شود <span class="g gb">ب</span>. ماده‌ی ۳ ممنوعیت‌ها و محدودیت‌های مقداری را، جز در حدود ماده‌ی ۱۱ گات ۱۹۹۴، منع می‌کند. <strong>ردیف جوش شیرین در فهرست استثنای وارداتی قرار ندارد</strong>؛ در نتیجه جوش شیرین روسی و قزاق با گواهی مبدأ معتبر بدون تعرفه وارد ازبکستان، تاجیکستان و مولداوی می‌شود.</p>
+<h3>قواعد مبدأ و گواهی ST-1</h3>
+<p>ماده‌ی ۴ پیمان، قواعد مبدأ مندرج در موافقت‌نامه‌ی CIS درباره‌ی قواعد تعیین کشور مبدأ مورخ ۲۰ نوامبر ۲۰۰۹ را معیار قرار می‌دهد. نسخه‌ی تلفیقی این موافقت‌نامه اصلاحات ۳۱ مه ۲۰۱۹ و ۸ ژوئن ۲۰۲۳ را در بر دارد و پیوستی درباره‌ی نظام گواهی الکترونیکی به آن افزوده شده است (<a href="https://www.consultant.ru/document/cons_doc_LAW_95897/">ConsultantPlus</a>). پروتکل سوچی (۸ ژوئن ۲۰۲۳) فهرست قواعد خاص محصول را با ویرایش ۲۰۲۲ نظام هماهنگ تطبیق داد و روسیه آن را با قانون شماره‌ی 51-FZ مورخ ۲۳ مارس ۲۰۲۴ تصویب کرد (<a href="https://www.consultant.ru/law/hotdocs/84163.html">ConsultantPlus</a>). برخورداری از ترجیح تعرفه‌ای مستلزم ارائه‌ی <strong>گواهی فرم ST-1 (<bdi>СТ-1</bdi>)</strong> یا اظهارنامه‌ی مبدأ است. قواعد مبدأ در میان اعضا یکسان نیست: <strong>ازبکستان و ترکمنستان هنوز قواعد ۱۹۹۳ را اجرا می‌کنند و آذربایجان قواعد ۲۰۰۰ را به کار می‌برد</strong> (<a href="https://www.macmap.org/en/resources/cis">ITC Market Access Map</a>). معیارهای متداول قواعد ۲۰۰۹، یعنی تغییر سرفصل چهاررقمی و سقف ۵۰ درصدی سهم مواد غیربومی، در متن ماده مشاهده نشده‌اند <span class="g gc">ج</span> و پیش از هر تصمیم عملیاتی باید تأیید شوند.</p>
+<h3>اقدامات جبرانی و سازوکار پیوست ۶</h3>
+<p>مواد ۸ تا ۱۰ پیمان حق هر طرف، یا اتحادیه‌ی گمرکی، را برای اعمال اقدامات حفاظتی ویژه، ضددامپینگ و جبرانی در تجارت متقابل حفظ می‌کنند و قواعد سازمان جهانی تجارت را معیار قرار می‌دهند (<a href="https://www.kontur-extern.ru/info/normativ/document/1/189369-dogovor-o-zone-svobodnoy-torgovli">Kontur.Normativ</a>؛ <a href="https://ria.ru/20161018/1479411161.html">RIA Novosti</a>). مهم‌ترین ابزار عملی در این زمینه پیوست ۶ است که به اعضای اتحادیه‌ی گمرکی اجازه می‌دهد در برابر طرفی که با کشور ثالث موافقت‌نامه‌ی تجارت آزاد منعقد کرده است، در صورت «زیان یا تهدید به زیان»، حقوق گمرکی وضع کنند. روسیه با تصمیم دولت شماره‌ی ۷۳۶ مورخ ۳۱ ژوئیه‌ی ۲۰۱۴ همین سازوکار را پس از امضای موافقت‌نامه‌ی مولداوی با اتحادیه‌ی اروپا به کار برد و تعرفه‌ی عادی را بر ۱۷ تا ۱۹ گروه کالای مولداویایی برقرار کرد (<a href="https://www.alta.ru/tamdoc/14ps0736/">Alta-Soft</a>؛ <a href="https://www.expert-grup.org/en/biblioteca/comentarii/item/1000-taxe-zero-rusia">Expert-Grup</a>). همچنین روسیه اجرای پیمان را از ۱ ژانویه‌ی ۲۰۱۶، با قانون فدرال شماره‌ی 410-FZ، در برابر اوکراین معلق کرد (<a href="https://base.garant.ru/70102524/">Garant</a>). در کمیسیون اقتصادی اوراسیا هیچ اقدام ضددامپینگ، جبرانی یا حفاظتی بر جوش شیرین شناسایی نشد.</p>
+<h3>حل اختلاف</h3>
+<p>ماده‌ی ۱۹ و پیوست ۴ روند حل اختلاف را تعیین می‌کنند؛ این روند با مشورت آغاز می‌شود، سپس به کمیسیون کارشناسی می‌رسد و تماماً به زبان روسی انجام می‌شود. طرف‌ها همچنین می‌توانند به دادگاه اقتصادی CIS مراجعه کنند. این دادگاه دست‌کم یک نظر مشورتی درباره‌ی ماده‌ی ۲(۱) صادر کرده است که نظر شماره‌ی 01-1/2-13 مورخ ۲۴ دسامبر ۲۰۱۳ است و به درخواست یک اتحادیه‌ی کارفرمایی بلاروسی و از طریق کمیته‌ی اجرایی مطرح شد (<a href="https://etalonline.by/document/?regnum=n01300120">Etalonline.by</a>). هیچ سابقه‌ی عمومی از تشکیل کمیسیون کارشناسی موضوع پیوست ۴ یافت نشد. بزرگ‌ترین اختلافات، یعنی اختلاف روسیه و اوکراین در ۲۰۱۶ و اختلاف روسیه و مولداوی در ۲۰۱۴، یا در سطح سیاسی باقی ماندند یا به سازمان جهانی تجارت ارجاع شدند؛ پروتکل ازبکستان نیز بر مذاکره‌ی دوجانبه تکیه دارد (<a href="https://www.gazeta.uz/ru/2013/12/28/cis/">Gazeta.uz</a>). بنابراین هسته‌ی صفرتعرفه‌ای پیمان در عمل رعایت می‌شود، اما ممنوعیت‌های بهداشتی و سیاسی مکرراً آن را دور می‌زنند و سازوکار جبرانی مؤثری در برابر این ممنوعیت‌ها وجود ندارد.</p>
+<h3>اسناد مرتبط</h3>
+<p>موافقت‌نامه‌ی تجارت آزاد خدمات، استقرار و سرمایه‌گذاری (سوچی، ۸ ژوئن ۲۰۲۳) رژیم تجارت آزاد کالا را به بخش خدمات گسترش می‌دهد. امضاکنندگان آن ارمنستان، بلاروس، قزاقستان، قرقیزستان، روسیه، تاجیکستان و ازبکستان هستند و این موافقت‌نامه تا ژوئن ۲۰۲۵ برای همه‌ی امضاکنندگان به‌جز ازبکستان اجرایی شده بود (<a href="https://www.rapsinews.ru/international_news/20250611/310950631.html">RAPSI</a>). نکته‌ی اصلی برای شرکت آن است که <strong>پیمان ۲۰۱۱ هیچ امتیازی به کالای با مبدأ ایران نمی‌دهد</strong>. اثر این پیمان بر شرکت غیرمستقیم است: جوش شیرین روسی و قزاق بدون تعرفه وارد تاجیکستان و مولداوی می‌شود، در حالی که کالای ایرانی تعرفه‌ی عادی می‌پردازد. بسته‌بندی مجدد یا انجام عملیات ساده در یکی از کشورهای CIS نیز معمولاً مبدأ جدید ایجاد نمی‌کند، زیرا قواعد ۲۰۰۹ فهرستی از «عملیات ناکافی» دارد؛ جزئیات این فهرست در این گزارش تأیید نشده است <span class="g gc">ج</span>.</p>
+
+</section>
+<section id="s3">
+<div class="sec-head"><span class="sec-num">۰۳</span><h2>موافقت‌نامه‌ی تجارت آزاد اوراسیا و ایران: تعرفه‌ی صفر برای جوش شیرین ایرانی</h2></div>
+
+<h3>اتحادیه‌ی گمرکی و تعرفه‌ی مشترک</h3>
+<p>اتحادیه‌ی اقتصادی اوراسیا اتحادیه‌ی گمرکی پنج کشور روسیه، بلاروس، قزاقستان، قرقیزستان و ارمنستان است. این اتحادیه یک تعرفه‌ی خارجی مشترک (<bdi>ЕТТ ЕАЭС</bdi>) و یک قانون گمرکی واحد دارد و میان اعضای آن حقوق گمرکی دریافت نمی‌شود. هر پنج عضو طرف پیمان CIS ۲۰۱۱ نیز هستند، اما تجارت میان خود را بر پایه‌ی رژیم عمیق‌تر اتحادیه‌ی گمرکی انجام می‌دهند؛ از این رو پیمان CIS برای آن‌ها عمدتاً روابط با ازبکستان، تاجیکستان و مولداوی را تنظیم می‌کند. اعضای اوراسیا از سال ۲۰۱۵ نمی‌توانند به‌تنهایی موافقت‌نامه‌ی تجارت آزاد جدید منعقد کنند (<a href="https://en.wikipedia.org/wiki/Commonwealth_of_Independent_States_Treaty_on_Free_Trade_Area">Wikipedia</a>)، و به همین سبب موافقت‌نامه با ایران در سطح اتحادیه منعقد شده است.</p>
+<p>نرخ تعرفه‌ی مشترک برای <strong>جوش شیرین (<bdi dir="ltr">2836 30 000 0</bdi>) ۵ درصد</strong> است و این نرخ در پایگاه‌های تعرفه‌ای بررسی‌شده یکسان گزارش شده است (<a href="https://www.alta.ru/tnved/code/2836300000/">Alta-Soft 2836</a>؛ <a href="https://www.tws.by/tws/tnved/code/4063">TWS.BY</a>). تنها تغییر موقت در دوره‌ی ۲۰۲۲ تا ۲۰۲۶ آن بود که تعرفه‌ی جوش شیرین از ۲۵ آوریل تا ۳۰ سپتامبر ۲۰۲۲، بر پایه‌ی تصمیم شماره‌ی ۴۶ شورای کمیسیون مورخ ۵ آوریل ۲۰۲۲، صفر شد و از ۱ اکتبر ۲۰۲۲ به ۵ درصد بازگشت (<a href="https://www.tws.by/tws/tnved/code/4063">TWS.BY</a>). <strong>چین و ترکیه در بازنگری سال ۲۰۲۱ نظام ترجیحات تعرفه‌ای از فهرست کشورهای در حال توسعه حذف شدند</strong> (تصمیم شماره‌ی ۱۷ شورای کمیسیون، اجرا از ۱۲ اکتبر ۲۰۲۱) و از این رو تعرفه‌ی کامل را می‌پردازند (<a href="https://www.alta.ru/laws_news/82863/">Alta-Soft</a>؛ <a href="https://www.rbc.ru/politics/05/03/2021/603e0f409a7947421ef8242b">RBC</a>). ایران نیز به احتمال زیاد، با توجه به سطح درآمد سرانه، در همین وضعیت قرار دارد <span class="g gc">ج</span>، اما این موضوع پس از اجرای موافقت‌نامه‌ی تجارت آزاد اهمیت عملی ندارد.</p>
+<h3>سازوکار موافقت‌نامه‌ی تجارت آزاد ایران و اوراسیا</h3>
+<p>موافقت‌نامه‌ی موقت در ۱۷ مه ۲۰۱۸ امضا شد و از ۲۷ اکتبر ۲۰۱۹ به اجرا درآمد. موافقت‌نامه‌ی کامل در ۲۵ دسامبر ۲۰۲۳ امضا شد (<a href="https://eec.eaeunion.org/en/comission/department/dotp/torgovye-soglasheniya/iran.php">EEC</a>) و <strong>از ۱۵ مه ۲۰۲۵ اجرایی است</strong> (<a href="https://eec.eaeunion.org/news/eaes-iran-vstupilo-v-silu-polnoformatnoe-soglashenie-o-svobodnoy-torgovle-/">EEC news</a>). این موافقت‌نامه حدود ۹۰ درصد فهرست کالاها را پوشش می‌دهد، متوسط تعرفه‌ی ایران بر کالاهای اوراسیا را از ۲۰ درصد به ۴٫۵ درصد کاهش می‌دهد و حجم تجارت ۱۲ میلیارد دلار را هدف میان‌مدت قرار داده است (<a href="https://www.alta.ru/ts_news/119082/">Alta-Soft</a>). اجرای موافقت‌نامه در سمت اوراسیا بر پایه‌ی <strong>تصمیم شماره‌ی ۱ هیئت‌رئیسه‌ی کمیسیون اقتصادی اوراسیا مورخ ۱۴ ژانویه‌ی ۲۰۲۵</strong> انجام می‌شود. بند ۲ این تصمیم مقرر می‌دارد که بر کالاهای با مبدأ ایران که طبق موافقت‌نامه وارد می‌شوند «<strong>تعرفه‌ی صفر درصد</strong> اعمال می‌شود، مگر کالاهای مندرج در فهرست» و در صورتی که نرخ تعرفه‌ی مشترک کمتر از نرخ فهرست باشد، نرخ کمتر اعمال خواهد شد (<a href="https://zakon.uchet.kz/rus/docs/H25EK000001">zakon.uchet.kz</a>؛ <a href="https://www.alta.ru/tamdoc/25kr0001/">Alta-Soft</a>). تنها اصلاحیه‌ی شناسایی‌شده، تصمیم شماره‌ی ۴۳ مورخ ۷ آوریل ۲۰۲۶ است که به جوهر چاپ مربوط می‌شود. کمیسیون فهرست تلفیقی استثناها را به تاریخ ۱ ژوئیه‌ی ۲۰۲۶ منتشر کرده است (<a href="https://eec.eaeunion.org/comission/department/catr/ttr/iran-pref.php">EEC</a>).</p>
+<p>وضعیت ردیف جوش شیرین در این سازوکار روشن است. پایگاه TWS.BY برای <strong>ردیف <bdi dir="ltr">2836 30</bdi> هیچ درج ویژه‌ای برای ایران ندارد</strong>، در حالی که برای همین ردیف درج‌های مربوط به امارات و ویتنام وجود دارد؛ بنابراین نبود درج ایران معنادار است و قاعده‌ی عمومی صفر درصد بر این ردیف حاکم است <span class="g gb">ب</span> (<a href="https://www.tws.by/tws/tnved/code/4063">TWS.BY 2836</a>). ردیف‌های فصل ۲۸ در متن اصلی فهرست استثنا مشاهده نشده‌اند و تأیید این نتیجه در متن رسمی ضروری است.</p>
+<div class="chart-box">
+  <div class="chart-h tall"><canvas id="chTariff" role="img" aria-label="حقوق ورودی جوش شیرین بر حسب کشور مقصد و مبدأ"></canvas></div>
+  <div class="cap">حقوق ورودی جوش شیرین (٪) در کشورهای مقصد بر حسب مبدأ کالا. نرخ ایران در اوراسیا درجه‌ی <span class="g gb">ب</span> دارد، زیرا قاعده‌ی صفر درصد تأیید شده است اما وضعیت ردیف از پایگاه تجمیعی TWS.BY خوانده شده است؛ نرخ تاجیکستان تقریبی <span class="g gc">ج</span> است.</div>
+</div>
+<p>قواعد مبدأ در فصل ۶ موافقت‌نامه آمده است. کالا باید یا به‌طور کامل در ایران به دست آمده باشد، یا طبق معیار عمومی گزارش‌شده <strong>دست‌کم ۵۰ درصد قیمت درب کارخانه‌ی آن ارزش افزوده باشد</strong>، یا قاعده‌ی خاص محصول مندرج در پیوست ۲ را برآورده کند. سقف حداقلی ۵ درصد و قاعده‌ی حمل مستقیم نیز پیش‌بینی شده است؛ قاعده‌ی حمل مستقیم عبور از کشور ثالث را مجاز می‌داند، به شرط آنکه کالا در آن کشور معامله یا مصرف نشود. گواهی مبدأ <strong>فرم CT-3 (<bdi>СТ-3</bdi>)</strong> به زبان انگلیسی و با اعتبار <strong>۱۲ ماه</strong> صادر می‌شود؛ محموله‌های تا ۲۰۰ یورو از ارائه‌ی گواهی معاف‌اند و صدور گواهی به‌صورت عطف به ماسبق در موارد استثنایی مجاز است (<a href="https://eec.eaeunion.org/upload/medialibrary/f49/EAEU_Rules-of-Origin_rus.pdf">EEC, Chapter 6</a>). بر پایه‌ی قاعده‌ی حمل مستقیم، محموله‌ای که از مسیر ترکمنستان یا قزاقستان به روسیه صرفاً ترانزیت می‌شود، ترجیح تعرفه‌ای خود را از دست نمی‌دهد. کمیسیون در ۲۲ سپتامبر ۲۰۲۶ اعلام کرد که روش ساده‌شده‌ی اثبات مبدأ کالاهای ترجیحی حفظ خواهد شد، اما متن کامل این خبر در دسترس نبود (<a href="https://eec.eaeunion.org/en/news/eaes-sokhranit-uproshchennyy-poryadok-podtverzhdeniya-proiskhozhdeniya-vvozimykh-v-ramkakh-preferents/">EEC</a>). در صورتی که بخشی از خاکستر سودای مصرفی در تولید جوش شیرین وارداتی باشد، رعایت آستانه‌ی ۵۰ درصد باید محاسبه و مستندسازی شود.</p>
+<p>در سمت ایران، نرخ تعرفه‌ی عادی و نرخ ترجیحی ایران بر جوش شیرین با مبدأ اوراسیا در هیچ منبع اصلی تأیید نشد. ردیف ملی جوش شیرین در ایران <bdi dir="ltr">2836 30 90</bdi> است (<a href="https://www.atarkhis.com/1399/10/16/%D8%A8%D8%AE%D8%B4%D9%86%D8%A7%D9%85%D9%87-%D8%B4%D9%85%D8%A7%D8%B1%D9%87-%DB%B2%DB%B1%DB%B1-%DB%B1%DB%B2%DB%B5%DB%B3%DB%B2%DB%B9%DB%B2%D8%B5%D8%A7%D8%AF%D8%B1%D8%A7%D8%AA-%D8%AC%D9%88%D8%B4/">atarkhis</a>) و این نکته برای ارزیابی رقابت احتمالی جوش شیرین روسی در بازار داخلی ایران اهمیت دارد.</p>
+<h3>برهم‌کنش رژیم‌ها و ورود امارات</h3>
+<p>یک محموله جوش شیرین هنگام ورود به قزاقستان با چند رژیم هم‌زمان روبه‌رو است. محموله‌ی روسی در قلمرو اتحادیه‌ی گمرکی آزادانه جابه‌جا می‌شود؛ محموله‌ی ازبک طبق پیمان CIS و با گواهی ST-1 تعرفه‌ی صفر می‌پردازد؛ محموله‌ی ایرانی طبق موافقت‌نامه‌ی ایران و اوراسیا و با گواهی CT-3 تعرفه‌ی صفر می‌پردازد؛ و محموله‌ی چینی یا ترک مشمول تعرفه‌ی ۵ درصد است. از ۶ اکتبر ۲۰۲۶ رژیم دیگری نیز به این مجموعه افزوده می‌شود: <strong>موافقت‌نامه‌ی مشارکت اقتصادی اوراسیا و امارات</strong>. طبق تصمیم شماره‌ی ۱۱۳ هیئت‌رئیسه (۲۵ اوت ۲۰۲۶)، تعرفه‌ی جوش شیرین با مبدأ امارات به این ترتیب کاهش می‌یابد: ۴٫۲ درصد (۶ اکتبر تا ۳۱ دسامبر ۲۰۲۶)، ۳٫۳ درصد (۲۰۲۷)، ۲٫۵ درصد (۲۰۲۸)، ۱٫۷ درصد (۲۰۲۹)، ۰٫۸ درصد (۲۰۳۰) و صفر از ۲۰۳۱ (<a href="https://www.tws.by/tws/tnved/code/4063">TWS.BY</a>؛ <a href="https://tass.com/economy/2169769">TASS</a>). ویتنام نیز از سال ۲۰۱۶ موافقت‌نامه‌ی تجارت آزاد با اوراسیا دارد.</p>
+<div class="chart-box">
+  <div class="chart-h"><canvas id="chUae" role="img" aria-label="کاهش تدریجی تعرفه جوش شیرین اماراتی در اوراسیا"></canvas></div>
+  <div class="cap">فرسایش مزیت تعرفه‌ای جوش شیرین ایرانی در اوراسیا بر اساس جدول کاهش تعرفه‌ی کالای اماراتی طبق تصمیم شماره‌ی ۱۱۳ هیئت‌رئیسه‌ی کمیسیون (۲۵ اوت ۲۰۲۶).</div>
+</div>
+
+</section>
+<section id="s4">
+<div class="sec-head"><span class="sec-num">۰۴</span><h2>تعرفه‌ی واردات جوش شیرین (HS 283630) به تفکیک کشور</h2></div>
+
+<div class="legend-row">
+<span><span class="g ga">الف</span> تأییدشده از متن قانونی یا پایگاه رسمی</span>
+<span><span class="g gb">ب</span> منبع ثانویه سازگار یا آخرین سال WITS</span>
+<span><span class="g gc">ج</span> تقریبی یا تأییدنشده</span>
+</div><p>جدول زیر نرخ حقوق ورودی جوش شیرین را، به‌صورت درصد ارزش گمرکی، برای سه گروه مبدأ نشان می‌دهد. «شریک» به کالای با مبدأ عضو اوراسیا یا طرف پیمان CIS با گواهی مبدأ معتبر اطلاق می‌شود.</p>
+<div class="table-wrap"><table class="matrix">
+<caption>حقوق ورودی جوش شیرین (٪ ارزش گمرکی) بر حسب مبدأ — وضعیت سپتامبر ۲۰۲۶</caption>
+<thead><tr><th>کشور</th><th class="sub">شریک CIS یا اوراسیا</th><th class="sub ir">ایران</th><th class="sub">ترکیه و چین</th><th>مبنای حقوقی و یادداشت</th></tr></thead><tbody>
+<tr><td>روسیه</td><td class="z"><span class="n">۰٪</span></td><td class="z ir"><span class="n">۰٪</span><span class="g gb">ب</span></td><td class="p"><span class="n">۵٪</span></td><td class="note">تعرفه‌ی مشترک اوراسیا؛ ایران: تصمیم شماره‌ی ۱ هیئت‌رئیسه (۱۴ ژانویه‌ی ۲۰۲۵)، اجرا از ۱۵ مه ۲۰۲۵؛ مالیات بر ارزش افزوده ۲۲٪</td></tr>
+<tr><td>بلاروس</td><td class="z"><span class="n">۰٪</span></td><td class="z ir"><span class="n">۰٪</span><span class="g gb">ب</span></td><td class="p"><span class="n">۵٪</span></td><td class="note">مانند روسیه؛ مالیات بر ارزش افزوده ۲۰٪</td></tr>
+<tr><td>قزاقستان</td><td class="z"><span class="n">۰٪</span></td><td class="z ir"><span class="n">۰٪</span><span class="g gb">ب</span></td><td class="p"><span class="n">۵٪</span></td><td class="note">مانند روسیه؛ مالیات بر ارزش افزوده ۱۶٪ از ۲۰۲۶</td></tr>
+<tr><td>قرقیزستان</td><td class="z"><span class="n">۰٪</span></td><td class="z ir"><span class="n">۰٪</span><span class="g gb">ب</span></td><td class="p"><span class="n">۵٪</span></td><td class="note">مانند روسیه</td></tr>
+<tr><td>ارمنستان</td><td class="z"><span class="n">۰٪</span></td><td class="z ir"><span class="n">۰٪</span><span class="g gb">ب</span></td><td class="p"><span class="n">۵٪</span></td><td class="note">مانند روسیه؛ آینده‌ی عضویت در اوراسیا در دسامبر ۲۰۲۶ بررسی می‌شود</td></tr>
+<tr><td>ازبکستان</td><td class="z"><span class="n">۰٪</span></td><td class="z ir"><span class="n">۰٪</span><span class="g gb">ب</span></td><td class="z"><span class="n">۰٪</span><span class="g gb">ب</span></td><td class="note">پیوست ۱ مصوبه‌ی <bdi>ПП-3818</bdi> (۲۰۱۸، آخرین اصلاح ۱۶ فوریه‌ی ۲۰۲۶)؛ مالیات بر ارزش افزوده ۱۲٪</td></tr>
+<tr><td>تاجیکستان</td><td class="z"><span class="n">۰٪</span></td><td class="p ir"><span class="n">~۵٫۵٪</span><span class="g gc">ج</span></td><td class="p"><span class="n">~۵٫۵٪</span><span class="g gc">ج</span></td><td class="note">مصوبه‌ی جاری شماره‌ی ۴۷۰ (۲۰۲۴) در دسترس نبود؛ رقم از مصوبه‌ی منسوخ ۲۰۱۸ و WITS ۲۰۲۱؛ مالیات بر ارزش افزوده ۱۴٪</td></tr>
+<tr><td>آذربایجان</td><td class="z"><span class="n">۰٪</span></td><td class="z ir"><span class="n">۰٪</span></td><td class="z"><span class="n">۰٪</span><span class="g gb">ب</span></td><td class="note">تعرفه‌ی عادی صفر برای همه‌ی مبدأها (WITS ۲۰۲۳)؛ مالیات بر ارزش افزوده ۱۸٪</td></tr>
+<tr><td>ترکمنستان</td><td class="z"><span class="n">۰٪</span></td><td class="z ir"><span class="n">۰٪</span></td><td class="z"><span class="n">۰٪</span><span class="g gb">ب</span></td><td class="note">جوش شیرین در فهرست کالاهای مشمول حقوق ورودی گمرک ترکمنستان قرار ندارد</td></tr>
+<tr><td>مولداوی</td><td class="z"><span class="n">۰٪</span></td><td class="p ir"><span class="n">۳٪</span><span class="g gb">ب</span></td><td class="p"><span class="n">۳٪</span><span class="g gb">ب</span></td><td class="note">WITS ۲۰۲۳؛ کالای ترک احتمالاً صفر <span class="g gc">ج</span>؛ ادامه‌ی پیمان CIS پس از آوریل ۲۰۲۷ نامعلوم؛ مالیات بر ارزش افزوده ۲۰٪</td></tr>
+<tr><td>گرجستان</td><td class="z"><span class="n">۰٪</span></td><td class="z ir"><span class="n">۰٪</span></td><td class="z"><span class="n">۰٪</span><span class="g gb">ب</span></td><td class="note">WITS ۲۰۲۲؛ عضو CIS نیست</td></tr>
+<tr><td>اوکراین</td><td class="na"><span class="n">—</span></td><td class="p ir"><span class="n">۵٫۵٪</span><span class="g gb">ب</span></td><td class="p"><span class="n">۵٫۵٪</span><span class="g gb">ب</span></td><td class="note">تعرفه‌ی عادی (WITS ۲۰۲۳)؛ رژیم CIS با روسیه متوقف؛ خارج از دامنه‌ی هدف</td></tr>
+</tbody></table></div>
+<p class="src">منابع جدول: نرخ‌های اوراسیا (<a href="https://www.alta.ru/tamdoc/25kr0001/">Alta-Soft</a>؛ <a href="https://www.tws.by/tws/tnved/code/4063">TWS.BY</a>)؛ ازبکستان (<a href="https://lex.uz/ru/docs/3802366">lex.uz <bdi>ПП-3818</bdi></a>)؛ تاجیکستان (<a href="https://prg.kz/Document/?doc_id=32581756">PRG.kz</a>؛ <a href="https://tajtrade.tj/media/399.pdf">tajtrade.tj</a>؛ <a href="https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/762/partner/000/product/283630/year/all/datatype/reported">WITS</a>)؛ آذربایجان (<a href="https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/031/partner/000/product/283630/year/all/datatype/reported">WITS</a>)؛ ترکمنستان (<a href="https://customs.gov.tm/en/customs-info/customs-fees/duties">State Customs Service</a>)؛ مولداوی (<a href="https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/498/partner/000/product/283630/year/all/datatype/reported">WITS</a>)؛ گرجستان و اوکراین (<a href="https://wits.worldbank.org/API/V1/SDMX/V21/datasource/TRN/reporter/268;804/partner/000/product/283630/year/all/datatype/reported">WITS</a>).</p>
+<p>در <strong>ازبکستان</strong> نرخ‌ها در سطح سرفصل چهاررقمی تعیین شده‌اند و نرخ سرفصل 2836 صفر است (<a href="https://lex.uz/ru/docs/3802366">lex.uz</a>). مصوبه‌ی <bdi>ПП-181</bdi> (۱۴ مه ۲۰۲۵) طبقه‌بندی را با نامگذاری جدید تطبیق داد، اما سند تعیین نرخ همچنان مصوبه‌ی <bdi>ПП-3818</bdi> است (<a href="https://lex.uz/ru/docs/7533469">lex.uz <bdi>ПП-181</bdi></a>). عوارض ترخیص ازبکستان مبلغی ثابت بر پایه‌ی واحد محاسبه‌ی پایه است که بسته به ارزش محموله از ۱ تا ۲۵ واحد تغییر می‌کند (مصوبه‌ی شماره‌ی ۵۵ هیئت وزیران مورخ ۳۱ ژانویه‌ی ۲۰۲۵) (<a href="https://www.norma.uz/novoe_v_zakonodatelstve/utverjdeny_stavki_tamojennyh_sborov1">NORMA.UZ</a>). موافقت‌نامه‌ی ترجیحی ازبکستان و ترکیه در ژوئیه‌ی ۲۰۲۶ از ۱۲ به ۲۰ قلم کالا گسترش یافت، اما هیچ نشانه‌ای از شمول جوش شیرین در آن وجود ندارد (<a href="https://kun.uz/en/news/2026/07/17/uzbekistan-turkey-move-to-deepen-trade-ties-with-expanded-preferential-goods-list-9940f1">Kun.uz</a>). موافقت‌نامه‌ی ترجیحی ایران و ازبکستان از اکتبر ۲۰۲۴ تنها در سطح «مقدماتی» گزارش شده و تا سپتامبر ۲۰۲۶ نشانه‌ای از امضا یا اجرای آن یافت نشده است (<a href="https://tvbrics.com/en/news/iran-and-uzbekistan-to-reach-preferential-trade-agreement/">TV BRICS</a>؛ <a href="https://www.trend.az/casia/uzbekistan/4219323.html">Trend.az</a>).</p>
+<p>در <strong>تاجیکستان</strong> رقم ۵٫۵ درصد میانگین ساده‌ی چند ردیف ملی است و نباید پیش از بررسی مصوبه‌ی شماره‌ی ۴۷۰ مبنای قیمت‌گذاری قرار گیرد (<a href="https://www.trade.gov/country-commercial-guides/tajikistan-import-tariffs">US ITA</a>). در <strong>آذربایجان و ترکمنستان</strong> مبدأ کالا هیچ تفاوت تعرفه‌ای ایجاد نمی‌کند و رقابت تماماً بر قیمت، کیفیت و کرایه‌ی حمل استوار است.</p>
+
+</section>
+<section id="s5">
+<div class="sec-head"><span class="sec-num">۰۵</span><h2>تحولات ۲۰۲۴ تا ۲۰۲۶: جنگ و تحریم به‌عنوان متغیر تعیین‌کننده</h2></div>
+
+<h3>ایران: از اجرای موافقت‌نامه‌ی تجارت آزاد تا جنگ و بسته‌شدن هرمز</h3>
+<p>در نخستین سال اجرای موافقت‌نامه، صادرات ایران به اوراسیا رشد دورقمی داشت. طبق آمار گمرک ایران، این صادرات در هشت ماه نخست سال ۱۴۰۴ (آوریل تا نوامبر ۲۰۲۵) به <strong>۱٫۴۶ میلیارد دلار، معادل ۱۱ درصد رشد، و ۳٫۸۹ میلیون تن</strong> رسید (<a href="https://www.presstv.ir/Detail/2025/11/29/759702/Iran-exports-EAEU-rise-IRICA-November-figures">PressTV</a>) و برای کل سال ۱۴۰۴ رشد ۱۶ درصدی گزارش شده است (<a href="https://www.tehrantimes.com/news/526947/Iran-s-annual-export-to-Eurasia-increases-16">Tehran Times</a>). ایران در ۲۶ دسامبر ۲۰۲۴ به عضویت ناظر اتحادیه درآمد و در سپتامبر ۲۰۲۵ نقشه‌ی راه سه‌ساله‌ی همکاری به امضا رسید (<a href="https://caspiannews.com/news-detail/eaeu-iran-sign-three-year-roadmap-to-boost-trade-2025-9-28-0/">Caspian News</a>). پس از آن سه تحول پیاپی رخ داد. نخست، تحریم‌های سازمان ملل در ۲۷ و ۲۸ سپتامبر ۲۰۲۵ با سازوکار ماشه بازگشت، هرچند روسیه و چین این بازگشت را فاقد اعتبار حقوقی می‌دانند (<a href="https://news.un.org/en/story/2025/09/1165974">UN News</a>؛ <a href="https://www.atlanticcouncil.org/blogs/menasource/snapback-sanctions-are-deepening-the-iran-russia-alignment/">Atlantic Council</a>). دوم، <strong>جنگ از ۲۸ فوریه‌ی ۲۰۲۶</strong> آغاز شد و <strong>تنگه‌ی هرمز از ۴ مارس</strong> بسته شد؛ آتش‌بس و بازگشایی ۷ آوریل پایدار نماند و تحریم‌های تازه‌ی آمریکا در ۲۰ اوت ۲۰۲۶ اعمال شد (<a href="https://en.wikipedia.org/wiki/Economic_impact_of_the_2026_Iran_war">Wikipedia</a>). در اوت ۲۰۲۶ تردد روزانه‌ی کشتی‌ها در هرمز از بیش از ۱۳۰ فروند به عددی تک‌رقمی کاهش یافت (<a href="https://www.iranintl.com/en/202608143831">Iran International</a>). سوم، هزینه‌ی لجستیک به‌شدت افزایش یافت: هزینه‌ی هر کانتینر از بنادر جنوبی حدود ۳ هزار دلار و از مسیر زمینی حدود ۱۲ هزار دلار است. ظرفیت اسمی بنادر شمالی بیش از ۳۰ میلیون تن در سال است و کمتر از یک‌سوم آن مورد استفاده قرار می‌گیرد؛ پایانه‌ی آستارا در پنج ماه نخست ۲۰۲۶ تنها ۳۴۵ هزار تن کالا جابه‌جا کرد. کارشناسان مسیرهای زمینی را «راهبرد تاب‌آوری، و نه جایگزین» ارزیابی کرده‌اند (<a href="https://cyprusshippingnews.com/2026/09/17/can-iran-replace-sea-trade-with-land-routes/">Cyprus Shipping News/DW</a>).</p>
+<p>هیچ سند رسمی درباره‌ی تعلیق موافقت‌نامه یافت نشد. آلکسی اورچوک، معاون نخست‌وزیر روسیه، در ۳ سپتامبر ۲۰۲۶ اعلام کرد که این موافقت‌نامه مانع کاهش حجم تجارت روسیه و ایران شده است (<a href="https://finance.mail.ru/article/overchuk-soobshil-o-sohranenii-obemov-torgovli-s-iranom-69225808/">finance.mail.ru</a>). در همین ماه وزیر اقتصاد ایران برای «فعال‌سازی مرزهای شمالی» به مسکو سفر کرد. صادرات غله‌ی روسیه به ایران از مسیر خزر در سال ۲۰۲۶ حدود ۸۱ درصد رشد داشته است (<a href="https://carnegieendowment.org/russia-eurasia/politika/2026/06/russia-reaction-iran-us-deal">Carnegie</a>)؛ این جریان بار برگشت کشتی‌های خزر را تأمین می‌کند و می‌تواند کرایه‌ی صادرات ایران به شمال را کاهش دهد. نخستین واگن‌های ریلی ایران در دسامبر ۲۰۲۵ از ترکمنستان عبور کردند و به بخارا رسیدند؛ طبق داده‌های داخلی شرکت، کرایه‌ی ریلی ایران تا بخارا حدود <strong>۶۵ دلار در تن</strong> است.</p>
+<h3>بلوک CIS و اوراسیا: مالیات بالاتر، تحریم‌های ثانویه و ممنوعیت‌های سیاسی</h3>
+<p><strong>نرخ مالیات بر ارزش افزوده از ۱ ژانویه‌ی ۲۰۲۶ در روسیه از ۲۰ به ۲۲ درصد و در قزاقستان از ۱۲ به ۱۶ درصد افزایش یافت</strong> (<a href="https://en.iz.ru/en/2019127/2026-01-01/vat-rate-russia-has-increased-22-january-1-2026">Izvestia</a>؛ <a href="https://www.ey.com/en_kz/technical/tax-alerts/kazakhstan-tax-legislation-update">EY Kazakhstan</a>). این مالیات برای خریدار صنعتی قابل استرداد است، اما سرمایه‌ی در گردش مورد نیاز او را افزایش می‌دهد. خطر تحریم نیز از طرف‌های روس فراتر رفته و کشورهای واسطه را در بر گرفته است. آمریکا در ۱۴ اوت ۲۰۲۵ شبکه‌ی رمزارز روبل‌محور A7A5 مستقر در قرقیزستان را تحریم کرد (<a href="https://home.treasury.gov/news/press-releases/sb0225">US Treasury</a>). اتحادیه‌ی اروپا در بسته‌ی نوزدهم (اکتبر ۲۰۲۵) بانک‌های قرقیز و تاجیک را در فهرست تحریم قرار داد و در بسته‌ی بیستم (آوریل ۲۰۲۶) <strong>برای نخستین بار «ابزار ضددورزدن» را علیه یک کشور، یعنی قرقیزستان، به کار برد</strong>؛ در همین بسته سه بانک تاجیک از فهرست خارج شدند (<a href="https://eurasianet.org/eu-imposes-anti-circumvention-sanctions-on-kyrgyzstan-for-assisting-russia">Eurasianet</a>). وزارت دادگستری قرقیزستان در ۱۹ مه ۲۰۲۶ فعالیت ۵۰ شرکت را به سبب ارتباط با طرف‌های تحریمی متوقف کرد (<a href="https://www.fdd.org/analysis/2026/05/21/eu-anti-circumvention-sanctions-spark-policy-change-in-kyrgyzstan/">FDD</a>). طبق اظهارات رسمی روسیه، ۸۵ تا ۹۶ درصد تسویه‌های درون CIS با پول‌های ملی انجام می‌شود (<a href="https://tass.com/economy/2026265">TASS</a>)؛ این ارقام ادعای رسمی است و به‌طور مستقل تأیید نشده است.</p>
+<p>ممنوعیت‌های بهداشتی با انگیزه‌ی سیاسی به ابزار ثابت روسیه تبدیل شده است؛ نمونه‌های آن عبارت‌اند از ممنوعیت محصولات کشاورزی قزاقستان (۲۰۲۴ و ۲۰۲۵)، صیفی‌جات ارمنستان (از ۳۰ مه ۲۰۲۶) و کالاهای آذربایجان در بحران ۲۰۲۵. تجارت آذربایجان و روسیه در هفت ماه نخست ۲۰۲۶ حدود ۳۱٫۳ درصد کاهش یافت (<a href="https://www.themoscowtimes.com/2026/05/28/russia-ramps-up-pressure-on-armenia-with-produce-import-ban-a92871">Moscow Times</a>؛ <a href="https://www.azernews.az/analysis/262999.html">AzerNews</a>). مهم‌ترین تحول نهادی برای شرکت پرونده‌ی ارمنستان است. پارلمان ارمنستان در ۲۶ مارس ۲۰۲۵ قانون آغاز الحاق به اتحادیه‌ی اروپا را تصویب کرد و رئیس‌جمهور روسیه اعلام کرده است که ادغام با اتحادیه‌ی اروپا «خودبه‌خود» به معنای پایان تعامل ارمنستان با اوراسیا خواهد بود. <strong>یک گروه کاری گزینه‌های اقدام درباره‌ی عضویت ارمنستان را برای اجلاس دسامبر ۲۰۲۶ شورای عالی اوراسیا آماده می‌کند</strong> (<a href="https://tass.com/economy/2142143">TASS</a>). در سپتامبر ۲۰۲۶ مسکو صریحاً اعلام کرد که این قانون به معنای خروج است و ایروان این برداشت را نپذیرفت (<a href="https://euromaidanpress.com/2026/09/02/russia-says-armenias-eu-accession-law-means-leaving-moscow-led-trade-bloc-yerevan-disagrees/">Euromaidan Press</a>). در صورت خروج ارمنستان از اوراسیا، ترجیح تعرفه‌ای موافقت‌نامه‌ی ایران در آن بازار نیز از میان خواهد رفت؛ این نتیجه‌ای استنباطی است که از ساختار حقوقی موافقت‌نامه به دست می‌آید.</p>
+<h3>رقبای بیرونی و دیگر تحولات نهادی</h3>
+<p><strong>تجارت چین و آسیای مرکزی در سال ۲۰۲۵ با ۱۲ درصد رشد به رکورد ۱۰۶٫۳ میلیارد دلار رسید.</strong> معاهده‌ی دوستی دائمی و سکوی تسهیل تجارت که در اجلاس آستانه (ژوئن ۲۰۲۵) به تصویب رسید، پشتوانه‌ی این رشد به شمار می‌رود (<a href="https://timesca.com/central-asia-trade-with-china-tops-record-100-billion-in-2025/">Times of Central Asia</a>). ترکیه نیز از طریق سازمان کشورهای ترک‌زبان و کریدور میانی حضور خود را گسترش می‌دهد (<a href="https://www.caspianpolicy.org/research/middle-corridor/hopes-and-hurdles-takeaways-from-the-ots-summit-in-gabala">Caspian Policy Center</a>). ازبکستان در ژوئیه‌ی ۲۰۲۶ سیزدهمین نشست کارگروه الحاق به سازمان جهانی تجارت را برگزار کرد؛ این کشور ۳۱ موافقت‌نامه‌ی دوجانبه از ۳۴ مورد را ارائه کرده و پایان فرایند الحاق در سال ۲۰۲۶ را هدف قرار داده است (<a href="https://www.gazeta.uz/en/2026/08/03/wto-uzb/">Gazeta.uz</a>). اوکراین لایحه‌ی خروج از پیمان CIS را با شماره‌ی ۰۳۸۸ ثبت کرده است؛ این لایحه هنوز تصویب نشده است و خروج در هر حال دوازده ماه پس از اطلاعیه مؤثر خواهد شد (<a href="https://7eminar.ua/news/23942-ukrayina-vixoditime-iz-zoni-vilnoyi-torgivli-snd-u-radi-zarejestruvali">7eminar.ua</a>). اوراسیا همچنین قانون گمرکی جدیدی در دست تصویب دارد که دیجیتال‌سازی گسترده‌تری را به همراه خواهد داشت (<a href="https://www.euronews.com/business/2025/12/12/russian-marketplaces-to-benefit-from-new-eaeu-customs-code">Euronews</a>).</p>
+
+</section>
+<section id="s6">
+<div class="sec-head"><span class="sec-num">۰۶</span><h2>جایگاه رقابتی جوش شیرین پارس در بازارهای CIS</h2></div>
+
+<h3>قزاقستان</h3>
+<p><strong>قزاقستان</strong> روشن‌ترین فرصت است. طبق داده‌های داخلی شرکت که بر آمار ملی قزاقستان در ITC Trade Map استوار است، واردات جوش شیرین این کشور در سال ۲۰۲۵ به <strong>۱۰٬۶۷۶ تن به ارزش ۶٫۱۷ میلیون دلار</strong> رسید. <strong>روسیه ۷۸٫۶ درصد این حجم (۸٬۳۹۴ تن، با ارزش واحد ۵۵۹ دلار در تن)</strong> و <strong>چین ۱۹٫۲ درصد آن (۲٬۰۵۱ تن، با ارزش واحد ۳۵۱ دلار در تن)</strong> را تأمین کرده‌اند و سهم ثبت‌شده‌ی ایران تقریباً صفر بوده است. هزینه‌ی کالای چینی پس از اعمال تعرفه‌ی ۵ درصد حدود ۳۶۹ دلار در تن (۳۵۱ × ۱٫۰۵) است. کالای ایرانی تعرفه‌ای نمی‌پردازد؛ بنابراین جوش شیرین پارس با قیمت FOB ۲۵۰ دلار، تا زمانی که هزینه‌ی کرایه و دیگر هزینه‌ها تا مرز قزاقستان کمتر از حدود <strong>۱۱۸ دلار در تن</strong> باشد، ارزان‌تر از کالای چینی به مرز می‌رسد. حاشیه‌ی متناظر در برابر کالای روسی حدود <strong>۳۰۹ دلار در تن</strong> است. مالیات بر ارزش افزوده‌ی ۱۶ درصد به‌طور یکسان بر همه‌ی مبدأها اعمال می‌شود و ترتیب رقابتی را تغییر نمی‌دهد. دو قید بر این محاسبه وارد است: نخست، ارزش واحد گمرکی شامل هزینه‌ی حمل تا مرز است و کیفیت محصولات (خوراکی در برابر صنعتی) یکسان نیست؛ دوم، تسلط روسیه با وجود این اختلاف قیمت نشان می‌دهد که برند، شبکه‌ی توزیع، زمان تحویل و الزامات فنی و بهداشتی اوراسیا نیز عوامل تعیین‌کننده به شمار می‌روند و رقابت صرفاً بر پایه‌ی قیمت انجام نمی‌شود.</p>
+<div class="two-col">
+  <div class="chart-box">
+    <div class="chart-h short"><canvas id="chKzCost" role="img" aria-label="مقایسه هزینه جوش شیرین در مرز قزاقستان"></canvas></div>
+    <div class="cap">برای روسیه و چین ارزش واحد گمرکی سال ۲۰۲۵ نمایش داده شده است (کالای چینی با احتساب ۵٪ تعرفه). برای جوش شیرین پارس قیمت پایه‌ی FOB ۲۵۰ دلار به‌علاوه‌ی سقف کرایه‌ای نشان داده شده است که قیمت تحویل را با کالای چینی برابر می‌کند (حدود ۱۱۹ دلار).</div>
+  </div>
+  <div class="chart-box">
+    <div class="chart-h short"><canvas id="chKzShare" role="img" aria-label="سهم حجمی تأمین‌کنندگان جوش شیرین قزاقستان"></canvas></div>
+    <div class="cap">سهم حجمی واردات جوش شیرین قزاقستان در سال ۲۰۲۵ (کل ۱۰٬۶۷۶ تن؛ آمار ملی قزاقستان)؛ سهم ثبت‌شده‌ی ایران تقریباً صفر است.</div>
+  </div>
+</div>
+<h3>روسیه</h3>
+<p><strong>روسیه</strong> بزرگ‌ترین بازار موجود شرکت است. طبق داده‌های داخلی، <strong>شرکت در سال ۲۰۲۵ حدود ۱۰ هزار تن جوش شیرین به روسیه صادر کرده است</strong> و کل صادرات ایران به روسیه در سال گذشته حدود ۱۶ هزار تن بوده است. آمار گمرک ایران رقم متفاوتی را نشان می‌دهد: کل صادرات جوش شیرین ایران ۵۳٬۶۱۷ تن بوده و روسیه با <strong>۲۶٬۹۶۶ تن (۵۰٫۳ درصد)</strong> نخستین مقصد آن است؛ این دو رقم احتمالاً به سال‌های متفاوت مربوط می‌شوند (کادر کیفیت داده). بر پایه‌ی رقم نخست، سهم شرکت از صادرات ایران به روسیه حدود ۶۲ درصد و بر پایه‌ی رقم دوم حدود ۳۷ درصد است. افزون بر این، آمار رسمی Trade Map حجم واقعی تجارت را کمتر از واقع نشان می‌دهد. رقیب اصلی شرکت در روسیه شرکت باشقیر سودا (Bashkir Soda Company، با نام تجاری «<bdi>Башкирская сода</bdi>») است که در سال ۲۰۲۴ حدود <strong>۱۹۳٬۹۰۰ تن جوش شیرین خوراکی</strong> تولید کرد و بیش از ۴۰ درصد آن، یعنی بیش از حدود ۷۸ هزار تن، را صادر نمود (داده‌های داخلی شرکت). مزیت تعرفه‌ای شرکت در روسیه در برابر چین و ترکیه ۵ واحد درصد است؛ این مزیت در برابر کالای اماراتی از ۶ اکتبر ۲۰۲۶ به ۴٫۲ واحد کاهش می‌یابد و تا سال ۲۰۳۱ به صفر می‌رسد.</p>
+<h3>ارمنستان، قرقیزستان و بلاروس</h3>
+<p><strong>ارمنستان</strong> بازاری کوچک اما تثبیت‌شده است و واردات آن در سال ۲۰۲۵ به ۱٬۱۸۰ تن به ارزش ۴۳۵ هزار دلار رسید. <strong>ایران با ۵۳٫۳ درصد ارزش واردات (۶۹۶ تن، ۳۳۳ دلار در تن) نخستین تأمین‌کننده‌ی این بازار است</strong> و روسیه ۲۸٫۷ درصد (۴۰۰ تن، ۳۱۳ دلار در تن) را در اختیار دارد (داده‌های داخلی شرکت). ارزش واحد کالای روسی در ارمنستان از کالای ایرانی کمتر است و از این رو ارمنستان تنها بازاری است که روسیه در آن بر پایه‌ی قیمت رقابت می‌کند. تعرفه‌ی کالای ایرانی از ۱۵ مه ۲۰۲۵ صفر است، اما آینده‌ی این ترجیح به تصمیم اوراسیا درباره‌ی عضویت ارمنستان بستگی دارد. <strong>قرقیزستان و بلاروس</strong> از شرایط تعرفه‌ای یکسان برخوردارند، اما داده‌ی بازاری از این دو کشور در دست نیست.</p>
+<h3>ازبکستان، تاجیکستان و دیگر بازارها</h3>
+<p><strong>ازبکستان</strong> برای همه‌ی مبدأها تعرفه‌ی یکسان (صفر) اعمال می‌کند و رقابت در این بازار بر قیمت و لجستیک استوار است. اندازه‌ی بازار حدود <strong>۱۳ هزار تن در سال</strong> (دامنه‌ی ۱۲٬۵۰۰ تا ۱۴ هزار تن، بر پایه‌ی برآورد از سمت عرضه) است و <strong>ایران طبق آمار گمرک ایران ۳٬۴۳۲ تن، یعنی حدود ۲۶ درصد آن،</strong> را تأمین کرده است. باشقیر سودا بر بازار خرده‌فروشی مسلط است؛ تولیدکننده‌ی داخلی، فرغانه‌آزوت (Farg'onaazot)، حدود ۳ هزار تن در سال ظرفیت دارد و کارخانه‌ی خاکستر سودای قونغیرات ۲۰۰ هزار تن در سال ظرفیت دارد (داده‌های داخلی شرکت). با قیمت FOB ۲۵۰ دلار و کرایه‌ی ریلی ۶۵ دلار، قیمت تحویل جوش شیرین پارس در بخارا حدود <strong>۳۱۵ دلار در تن</strong> خواهد بود که مالیات بر ارزش افزوده‌ی ۱۲ درصد و عوارض ثابت ترخیص به آن افزوده می‌شود. خطر میان‌مدت این بازار، گسترش تولید داخلی بر پایه‌ی خاکستر سودای قونغیرات است.</p>
+<p><strong>تاجیکستان</strong> بازاری کوچک با داده‌های متعارض است. طبق WITS، واردات این کشور در سال ۲۰۲۳ به ۲٬۴۳۱ تن رسید؛ روسیه ۶۸٫۲ درصد حجم را با ارزش واحد ۵۴۶ دلار در تن و ایران ۲۹٫۶ درصد (۷۱۸ تن) را با ارزش واحد ۴۵۷ دلار در تن تأمین کرده‌اند. آمار گمرک ایران برای همین مسیر تنها حدود ۳۸۹ تن با ارزش واحد حدود ۱۹۰ دلار در تن نشان می‌دهد (داده‌های داخلی شرکت). کالای ایرانی حتی با تعرفه‌ی تقریبی ۵٫۵ درصد <span class="g gc">ج</span> همچنان ارزان‌تر از کالای روسی معاف از تعرفه است (۴۵۷ × ۱٫۰۵۵ ≈ ۴۸۲ دلار در برابر ۵۴۶ دلار). <strong>آذربایجان و ترکمنستان</strong> برای همه‌ی مبدأها تعرفه‌ی صفر دارند و داده‌ی بازاری از این دو کشور در دست نیست.</p>
+<h3>کادر کیفیت داده: تعارض‌ها و اصلاحات</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>موضوع</th>
+<th>ارقام متعارض</th>
+<th>رقم مرجح و دلیل</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>تعرفه‌ی جوش شیرین ایرانی در ارمنستان</td>
+<td>۵٪ (برآورد پیشین داخلی شرکت) در برابر ۰٪</td>
+<td><strong>۰٪</strong> از ۱۵ مه ۲۰۲۵ طبق تصمیم شماره‌ی ۱ هیئت‌رئیسه‌ی کمیسیون؛ نرخ ۵٪ نرخ تعرفه‌ی مشترک پیش از اجرای موافقت‌نامه‌ی کامل است</td>
+</tr>
+<tr>
+<td>تعرفه و مالیات بر ارزش افزوده‌ی جوش شیرین در ازبکستان</td>
+<td>حدود ۵٪ تعرفه و ۲۰٪ مالیات (برآورد پیشین داخلی شرکت) در برابر ۰٪ و ۱۲٪</td>
+<td><strong>۰٪ و ۱۲٪</strong>؛ تعرفه‌ی ۰٪ از مصوبه‌ی <bdi>ПП-3818</bdi> <span class="g gb">ب</span> و WITS ۲۰۲۱ و نرخ ۵٪ مربوط به دوره‌ی ۲۰۰۶ تا ۲۰۱۵ است؛ مالیات ۱۲٪ طبق PwC و BizReg است و نرخ ۲۰٪ به پیش از اصلاحات ۲۰۱۹ تعلق دارد</td>
+</tr>
+<tr>
+<td>صادرات جوش شیرین ایران به روسیه</td>
+<td>حدود ۱۶ هزار تن (داده‌ی داخلی، سال گذشته) در برابر ۲۶٬۹۶۶ تن (گمرک ایران)</td>
+<td>هر دو رقم گزارش می‌شوند و احتمالاً به سال‌های متفاوت مربوط‌اند؛ تا تطبیق سال مرجع، رقم گمرک برای سهم مقصد و رقم داخلی برای برآورد سهم شرکت به کار می‌رود</td>
+</tr>
+<tr>
+<td>صادرات ایران به تاجیکستان</td>
+<td>۷۱۸ تن و ۴۵۷ دلار در تن (WITS، واردات تاجیکستان ۲۰۲۳) در برابر حدود ۳۸۹ تن و ۱۹۰ دلار در تن (گمرک ایران)</td>
+<td>حل‌نشده؛ تفاوت احتمالاً از ارزش‌گذاری FOB در برابر CIF، ترانزیت یا صادرات غیرمستقیم ناشی می‌شود؛ برای تحلیل قیمت، رقم وارداتی مقصد مرجح است</td>
+</tr>
+<tr>
+<td>تاریخ اجرای پیمان CIS برای تاجیکستان</td>
+<td>۱۹ مارس ۲۰۱۶ در برابر «تصویب‌نشده» تا اکتبر ۲۰۱۶ (RIA)</td>
+<td>تاریخ ۲۰۱۶ مرجح است، اما تأیید امین‌دار لازم است؛ این موضوع اثر عملی بر کالای روسی ندارد</td>
+</tr>
+<tr>
+<td>تاریخ اجرای پروتکل ازبکستان</td>
+<td>۱۶ مه ۲۰۱۴ در برابر ۱۲ ژانویه‌ی ۲۰۱۴</td>
+<td><strong>۱۶ مه ۲۰۱۴</strong> طبق Garant و پایگاه‌های حقوقی ازبکستان</td>
+</tr>
+<tr>
+<td>نرخ سرفصل 2836 در ازبکستان</td>
+<td>دو قرائت «۰» در برابر یک قرائت با خانه‌ی خالی</td>
+<td>صفر <span class="g gb">ب</span>؛ تأیید نهایی در tarif.customs.uz لازم است</td>
+</tr>
+</tbody>
+</table></div>
+
+</section>
+<section id="s7">
+<div class="sec-head"><span class="sec-num">۰۷</span><h2>توصیه‌های راهبردی به تفکیک بازار و به ترتیب اولویت</h2></div>
+
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>اولویت</th>
+<th>بازار</th>
+<th>اقدام پیشنهادی</th>
+<th>منطق</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>۱</td>
+<td>قزاقستان</td>
+<td>ورود فعال به بازار با هدف جذب سهم چین (حدود ۲ هزار تن) و بخشی از سهم روسیه؛ قیمت‌گذاری بر پایه‌ی تحویل در مرز با سقف کرایه‌ی کمتر از حدود ۱۱۸ دلار در تن؛ جذب توزیع‌کننده‌ی محلی و اخذ مجوزهای فنی و بهداشتی اوراسیا</td>
+<td>تعرفه‌ی ۰٪ در برابر ۵٪ برای کالای چینی و فاصله‌ی قیمتی حدود ۳۰۰ دلار با کالای روسی</td>
+</tr>
+<tr>
+<td>۲</td>
+<td>روسیه</td>
+<td>حفظ و گسترش حجم حدود ۱۰ هزار تنی؛ صدور منظم گواهی CT-3 با اعتبار ۱۲ ماه برای هر محموله؛ تنوع‌بخشی به مسیرها (خزر، آستارا و ترانزیت ریلی از ترکمنستان و قزاقستان با رعایت قاعده‌ی حمل مستقیم)</td>
+<td>بزرگ‌ترین بازار موجود؛ رقابت با کالای اماراتی از اکتبر ۲۰۲۶ آغاز می‌شود و تا ۲۰۳۱ تشدید خواهد شد</td>
+</tr>
+<tr>
+<td>۳</td>
+<td>ارمنستان</td>
+<td>حفظ جایگاه نخست؛ انعقاد قراردادهای کوتاه‌مدت و پایش تصمیم دسامبر ۲۰۲۶ اوراسیا درباره‌ی عضویت ارمنستان</td>
+<td>خطر حذف ترجیح تعرفه‌ای در صورت تغییر وضعیت عضویت ارمنستان</td>
+</tr>
+<tr>
+<td>۴</td>
+<td>ازبکستان</td>
+<td>رقابت قیمتی بر پایه‌ی کرایه‌ی ریلی ۶۵ دلار تا بخارا؛ برندسازی در برابر «<bdi>Башкирская сода</bdi>»؛ پیگیری گنجاندن ردیف <bdi dir="ltr">2836 30</bdi> در موافقت‌نامه‌ی ترجیحی ایران و ازبکستان از طریق سازمان توسعه‌ی تجارت</td>
+<td>تعرفه برای همه‌ی مبدأها صفر است و رقابت بر قیمت و لجستیک استوار است</td>
+</tr>
+<tr>
+<td>۵</td>
+<td>تاجیکستان</td>
+<td>حفظ حجم موجود پس از تأیید نرخ‌های مصوبه‌ی شماره‌ی ۴۷۰ و تطبیق آمار</td>
+<td>کالای ایرانی حتی با تعرفه‌ی حدود ۵٫۵٪ از کالای روسی ارزان‌تر است</td>
+</tr>
+<tr>
+<td>۶</td>
+<td>آذربایجان، ترکمنستان و گرجستان</td>
+<td>توسعه‌ی فروش با تکیه بر قیمت و کرایه و استفاده از مسیرهای آستارا و سرخس</td>
+<td>تعرفه برای همه‌ی مبدأها صفر است و رقابت تنها بر قیمت و کرایه استوار است</td>
+</tr>
+<tr>
+<td>۷</td>
+<td>مولداوی و اوکراین</td>
+<td>عدم سرمایه‌گذاری فعال</td>
+<td>دوری جغرافیایی، گرایش به اتحادیه‌ی اروپا، اختلاف تعرفه‌ای ناچیز و ابهام در عضویت</td>
+</tr>
+<tr>
+<td>مشترک</td>
+<td>پرداخت و انطباق</td>
+<td>پرهیز از بانک‌های تحریمی قرقیز و تاجیک؛ تسویه با روبل و تنگه از مجاری معتبر؛ پایش ماهانه‌ی تحریم‌ها</td>
+<td>ریسک توقیف وجوه پس از بسته‌های نوزدهم و بیستم تحریم اتحادیه‌ی اروپا</td>
+</tr>
+<tr>
+<td>مشترک</td>
+<td>قواعد مبدأ</td>
+<td>مستندسازی ارزش افزوده‌ی دست‌کم ۵۰٪ برای جوش شیرین، به‌ویژه در صورت وارداتی‌بودن خاکستر سودا</td>
+<td>پیش‌شرط برخورداری از تعرفه‌ی صفر اوراسیا</td>
+</tr>
+</tbody>
+</table></div>
+
+</section>
+<section id="s8">
+<div class="sec-head"><span class="sec-num">۰۸</span><h2>موارد باز نیازمند راستی‌آزمایی</h2></div>
+
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>ردیف</th>
+<th>موضوع</th>
+<th>منبع مرجع برای تأیید</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>۱</td>
+<td>نبود ردیف <bdi dir="ltr">2836 30 000 0</bdi> در فهرست استثنای تصمیم شماره‌ی ۱ هیئت‌رئیسه</td>
+<td>فهرست تلفیقی کمیسیون به تاریخ ۱ ژوئیه‌ی ۲۰۲۶ («<bdi>перечень ИРАН на 01-07-2026</bdi>») یا پایگاه Alta «<bdi>Такса</bdi>»</td>
+</tr>
+<tr>
+<td>۲</td>
+<td>جدول تعهدات تعرفه‌ای ایران در برابر کالای اوراسیا و نرخ عادی ایران برای ردیف <bdi dir="ltr">2836 30 90</bdi></td>
+<td>کتاب مقررات صادرات و واردات ۱۴۰۵؛ سازمان توسعه‌ی تجارت؛ گمرک ایران</td>
+</tr>
+<tr>
+<td>۳</td>
+<td>نرخ جاری جوش شیرین در تاجیکستان طبق مصوبه‌ی شماره‌ی ۴۷۰ (۲۸ اوت ۲۰۲۴، ویرایش ۲۶ اوت ۲۰۲۶)</td>
+<td>پایگاه‌های PRG.kz و Continent یا گمرک تاجیکستان</td>
+</tr>
+<tr>
+<td>۴</td>
+<td>نرخ جوش شیرین در تعرفه‌ی یکپارچه‌ی ازبکستان پس از مصوبه‌ی <bdi>ПП-181</bdi></td>
+<td>tarif.customs.uz</td>
+</tr>
+<tr>
+<td>۵</td>
+<td>قاعده‌ی خاص محصول فصل ۲۸ (پیوست ۲ فصل ۶ موافقت‌نامه) و ماهیت آستانه‌ی ۵۰٪ (حداقل ارزش افزوده یا سقف مواد غیربومی)</td>
+<td>متن رسمی قواعد مبدأ موافقت‌نامه‌ی ایران و اوراسیا</td>
+</tr>
+<tr>
+<td>۶</td>
+<td>مرجع صادرکننده‌ی گواهی CT-3 در ایران (اتاق بازرگانی یا سازمان توسعه‌ی تجارت) و وضعیت گواهی الکترونیکی</td>
+<td>بخشنامه‌های گمرک ایران و سازمان توسعه‌ی تجارت</td>
+</tr>
+<tr>
+<td>۷</td>
+<td>امضا یا اجرای موافقت‌نامه‌ی ترجیحی ایران و ازبکستان و فهرست کالاهای آن</td>
+<td>lex.uz؛ سازمان توسعه‌ی تجارت</td>
+</tr>
+<tr>
+<td>۸</td>
+<td>نتیجه‌ی اجلاس دسامبر ۲۰۲۶ شورای عالی اوراسیا درباره‌ی ارمنستان</td>
+<td>کمیسیون اقتصادی اوراسیا</td>
+</tr>
+<tr>
+<td>۹</td>
+<td>ادامه یا توقف عضویت مولداوی در پیمان CIS پس از ۸ آوریل ۲۰۲۷</td>
+<td>کمیته‌ی اجرایی CIS</td>
+</tr>
+<tr>
+<td>۱۰</td>
+<td>نرخ مالیات بر ارزش افزوده‌ی واردات در بلاروس، قرقیزستان، ارمنستان و ترکمنستان</td>
+<td>قوانین مالیاتی ملی</td>
+</tr>
+<tr>
+<td>۱۱</td>
+<td>تطبیق آمار صادرات جوش شیرین ایران به روسیه (۱۶ هزار تن در برابر ۲۶٬۹۶۶ تن) و به تاجیکستان</td>
+<td>گمرک ایران و آمار وارداتی کشورهای مقصد برای سال یکسان</td>
+</tr>
+<tr>
+<td>۱۲</td>
+<td>وضعیت عملی اجرای موافقت‌نامه در سمت ایران در دوره‌ی جنگ ۲۰۲۶</td>
+<td>سازمان توسعه‌ی تجارت؛ کمیسیون اقتصادی اوراسیا</td>
+</tr>
+</tbody>
+</table></div>
+
+</section>
+<section id="s9">
+<div class="sec-head"><span class="sec-num">۰۹</span><h2>جمع‌بندی</h2></div>
+<div class="conclusion">
+<p>معماری حقوقی تجارت در بازارهای پساشوروی به زیان جوش شیرین ایران نیست. تنها بلوکی که به کالای ایرانی ترجیح تعرفه‌ای می‌دهد، یعنی اتحادیه‌ی اقتصادی اوراسیا، همان بلوکی است که بزرگ‌ترین بازارهای جوش شیرین منطقه را در اختیار دارد. پیمان CIS، که بیشترین مزیت را برای رقبای روس و قزاق ایجاد می‌کند، در بازارهایی اثر دارد که یا تعرفه‌ی جوش شیرین در آن‌ها برای همه‌ی مبدأها صفر است، مانند ازبکستان، یا اندازه‌ی کوچکی دارند، مانند تاجیکستان. بنابراین مسئله‌ی اصلی شرکت دسترسی تعرفه‌ای نیست، بلکه توانایی تحویل است: تعرفه‌ی صفر تنها زمانی ارزش دارد که محموله با گواهی CT-3 معتبر، از مسیری قابل اتکا و با سازوکار پرداخت امن به مقصد برسد، و در سال ۲۰۲۶ همین سه حلقه آسیب‌پذیرترین بخش زنجیره‌ی صادرات به شمار می‌روند.</p>
+<p>مزیت تعرفه‌ای شرکت دائمی نیست و از دو سو در معرض فرسایش قرار دارد. موافقت‌نامه‌ی اوراسیا و امارات این مزیت را در برابر کالای اماراتی تا سال ۲۰۳۱ به صفر می‌رساند و تصمیم اوراسیا درباره‌ی ارمنستان ممکن است یک بازار تثبیت‌شده را از دایره‌ی ترجیح خارج کند. پنجره‌ای که از ۱۵ مه ۲۰۲۵ گشوده شده است، برای تثبیت سهم در قزاقستان و روسیه از طریق برندسازی، توسعه‌ی شبکه‌ی توزیع و انعقاد قراردادهای بلندمدت، محدود است. شرکتی که پیش از بسته‌شدن این پنجره در این بازارها جایگاه پایدار ایجاد کند، پس از هم‌سطح‌شدن تعرفه‌ها نیز جایگاه خود را حفظ خواهد کرد.</p></div>
+</section>
+
+  <footer>
+    <p>ارقام تعرفه با درجه‌ی اعتبار علامت‌گذاری شده‌اند. پیش از قیمت‌گذاری قراردادی، نرخ‌های درجه‌ی <span class="g gb">ب</span> و <span class="g gc">ج</span> باید در منبع رسمی مندرج در بخش «موارد باز نیازمند راستی‌آزمایی» تأیید شوند.</p>
+  </footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  if (typeof Chart === 'undefined') return;
+  function toFa(n){
+    var map = {'0':'۰','1':'۱','2':'۲','3':'۳','4':'۴','5':'۵','6':'۶','7':'۷','8':'۸','9':'۹','.':'٫',',':'٬'};
+    return String(n).replace(/[0-9.,]/g, function(d){ return map[d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString('en-US', {maximumFractionDigits: 1})); }
+  function cssVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  function colors(){
+    return {
+      ink: cssVar('--ink'), inkSoft: cssVar('--ink-soft'), muted: cssVar('--muted'),
+      line: cssVar('--line-soft'), petrol: cssVar('--petrol-500'), petrolLight: cssVar('--petrol-300'),
+      copper: cssVar('--copper-500'), copperLight: cssVar('--copper-300'), bad: cssVar('--bad'), good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+  function opts(c, o){
+    o = o || {};
+    var horizontal = !!o.horizontal;
+    var valueAxis = {
+      beginAtZero: true,
+      title: { display: !!o.valueTitle, text: o.valueTitle || '', color: c.inkSoft, font: { family:'Vazirmatn', size: 12 } },
+      ticks: { color: c.muted, font: { family:'Fira Code', size: 11 }, callback: function(v){ return fmt(v) + (o.suffix || ''); } },
+      grid: { color: c.line },
+      stacked: !!o.stacked
+    };
+    if (o.max !== undefined) valueAxis.max = o.max;
+    var catAxis = { ticks: { color: c.ink, font: { family:'Vazirmatn', size: 12.5 } }, grid: { display: false }, stacked: !!o.stacked };
+    // right-to-left reading order
+    if (horizontal){ valueAxis.reverse = true; catAxis.position = 'right'; }
+    else { catAxis.reverse = true; valueAxis.position = 'right'; }
+    return {
+      indexAxis: horizontal ? 'y' : 'x',
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: o.legend !== false, position: 'bottom', rtl: true,
+          labels: { color: c.inkSoft, font: { family:'Vazirmatn', size: 12 }, boxWidth: 12, boxHeight: 12, padding: 14 } },
+        tooltip: {
+          rtl: true, titleFont: { family:'Vazirmatn' }, bodyFont: { family:'Vazirmatn' },
+          callbacks: {
+            label: function(ctx){
+              var v = horizontal ? ctx.parsed.x : ctx.parsed.y;
+              return ' ' + ctx.dataset.label + ': ' + fmt(v) + (o.suffix || '');
+            }
+          }
+        }
+      },
+      scales: horizontal ? { x: valueAxis, y: catAxis } : { x: catAxis, y: valueAxis }
+    };
+  }
+
+  var charts = [];
+  function build(){
+    charts.forEach(function(ch){ ch.destroy(); }); charts = [];
+    var c = colors();
+
+    // 1 — baking-soda import duty by destination group and origin
+    var el = document.getElementById('chTariff');
+    if (el){
+      charts.push(new Chart(el, {
+        type: 'bar',
+        data: {
+          labels: [['اعضای اوراسیا', '(۵ کشور)'], 'ازبکستان', 'تاجیکستان (تقریبی)', 'مولداوی', ['آذربایجان، ترکمنستان', 'و گرجستان']],
+          datasets: [
+            { label: 'شریک CIS یا اوراسیا', data: [0, 0, 0, 0, 0], backgroundColor: c.petrolLight, borderRadius: 4, minBarLength: 3 },
+            { label: 'ایران', data: [0, 0, 5.5, 3, 0], backgroundColor: c.copper, borderRadius: 4, minBarLength: 3 },
+            { label: 'چین و ترکیه', data: [5, 0, 5.5, 3, 0], backgroundColor: c.petrol, borderRadius: 4, minBarLength: 3 }
+          ]
+        },
+        options: opts(c, { valueTitle: 'حقوق ورودی جوش شیرین (٪ ارزش گمرکی)', suffix: '٪', max: 7 })
+      }));
+    }
+
+    // 2 — UAE phase-down erodes Iran's baking-soda margin in the EAEU
+    el = document.getElementById('chUae');
+    if (el){
+      var o2 = opts(c, { valueTitle: 'حقوق ورودی جوش شیرین در اوراسیا (٪)', suffix: '٪', max: 6 });
+      charts.push(new Chart(el, {
+        type: 'line',
+        data: {
+          labels: ['۲۰۲۵', '۲۰۲۶ (از ۶ اکتبر)', '۲۰۲۷', '۲۰۲۸', '۲۰۲۹', '۲۰۳۰', '۲۰۳۱'],
+          datasets: [
+            { label: 'چین و ترکیه', data: [5,5,5,5,5,5,5], borderColor: c.petrol, backgroundColor: c.petrol, stepped: true, borderWidth: 2.5, pointRadius: 3 },
+            { label: 'امارات', data: [5,4.2,3.3,2.5,1.7,0.8,0], borderColor: c.bad, backgroundColor: c.bad, borderWidth: 2.5, pointRadius: 4, tension: 0 },
+            { label: 'ایران', data: [0,0,0,0,0,0,0], borderColor: c.copper, backgroundColor: c.copper, borderWidth: 3, pointRadius: 3 }
+          ]
+        },
+        options: o2
+      }));
+    }
+
+    // 3 — Kazakhstan: landed-cost comparison for baking soda
+    el = document.getElementById('chKzCost');
+    if (el){
+      charts.push(new Chart(el, {
+        type: 'bar',
+        data: {
+          labels: ['روسیه (ارزش واحد گمرکی)', 'چین (با ۵٪ تعرفه)', 'جوش شیرین پارس'],
+          datasets: [
+            { label: 'ارزش واحد یا قیمت پایه (دلار در تن)', data: [559, 369, 250], backgroundColor: [c.petrol, c.petrolLight, c.copper], borderRadius: 4, barThickness: 26 },
+            { label: 'سقف کرایه تا برابری با کالای چینی', data: [0, 0, 119], backgroundColor: c.copperLight, borderRadius: 4, barThickness: 26 }
+          ]
+        },
+        options: opts(c, { horizontal: true, stacked: true, valueTitle: 'دلار در تن', suffix: '' })
+      }));
+    }
+
+    // 4 — Kazakhstan: baking soda import volume shares 2025
+    el = document.getElementById('chKzShare');
+    if (el){
+      charts.push(new Chart(el, {
+        type: 'doughnut',
+        data: {
+          labels: ['روسیه', 'چین', 'سایر'],
+          datasets: [{ data: [8394, 2051, 231], backgroundColor: [c.petrol, c.petrolLight, c.muted], borderColor: c.bg, borderWidth: 2 }]
+        },
+        options: {
+          responsive: true, maintainAspectRatio: false, cutout: '58%',
+          plugins: {
+            legend: { position: 'bottom', rtl: true, labels: { color: c.inkSoft, font: { family:'Vazirmatn', size: 12 }, boxWidth: 12, padding: 12 } },
+            tooltip: { rtl: true, titleFont:{family:'Vazirmatn'}, bodyFont:{family:'Vazirmatn'},
+              callbacks: { label: function(ctx){ var t = 10676; return ' ' + ctx.label + ': ' + fmt(ctx.parsed) + ' تن (' + fmt((ctx.parsed/t*100).toFixed(1)) + '٪)'; } } }
+          }
+        }
+      }));
+    }
+
+  }
+
+  build();
+  try {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', build);
+    new MutationObserver(build).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
+  } catch(e){}
+})();
+
+</script>
+
+</body>
+</html>
