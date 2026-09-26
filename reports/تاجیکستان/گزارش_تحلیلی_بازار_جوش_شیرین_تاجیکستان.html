@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بازار جوش شیرین تاجیکستان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(24px,3.6vw,36px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 66ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(4, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:700px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  :root[data-theme="dark"] h3, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h3{ color: var(--petrol-100); } }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 76ch; }
+  strong{ color: var(--ink); font-weight:700; }
+  ul.plain{ margin:0 0 12px; padding-inline-start:0; list-style:none; }
+  ul.plain li{ position:relative; padding-inline-end:18px; margin-bottom:8px; color:var(--ink-soft); max-width:76ch; }
+  ul.plain li::before{ content:'•'; position:absolute; right:0; top:0; color:var(--copper-500); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout p + p{ margin-top:8px; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  :root[data-theme="dark"] .card .tag, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag{ color: var(--copper-400); } }
+  .card .tag.bad{ background: var(--bad-bg); color: var(--bad); }
+  .card .tag.good{ background: var(--good-bg); color: var(--good); }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:14.5px; color:var(--ink); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); vertical-align:top; }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); white-space:nowrap; }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  figure{ margin: 16px 0; }
+  figure img{ border-radius: 12px; border: 1px solid var(--line); display:block; box-shadow: var(--card-shadow); width:100%; }
+  figcaption{ font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+
+  .pill-row{ display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0; }
+  .pill{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 12px;
+    padding: 12px 20px; min-width: 120px; box-shadow: var(--card-shadow); flex:1;
+  }
+  .pill .p{ font-family:"Fira Code"; font-size:20px; font-weight:700; color:var(--petrol-700); }
+  :root[data-theme="dark"] .pill .p, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .pill .p{ color: var(--copper-400); } }
+  .pill .p.bad{ color: var(--bad); }
+  .pill .p.good{ color: var(--good); }
+  .pill .n{ font-size:12.5px; color:var(--muted); margin-top:2px; text-align:center; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0 0 8px; max-width:none; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>گزارش تحلیلی بازار واردات جوش شیرین جمهوری تاجیکستان</h1>
+    <p class="lead">ارزیابی آمار واردات، رقابت مبادی تأمین، هزینه تمام‌شده در دوشنبه و رقابت‌پذیری «جوش شیرین پارس» — بر پایه آمار رسمی WITS/UN Comtrade و گمرک جمهوری اسلامی ایران.</p>
+    <div class="meta">
+      <span>تاریخ تنظیم: مهر ۱۴۰۵ (سپتامبر ۲۰۲۶)</span>
+      <span>کد HS: ۲۸۳۶۳۰</span>
+      <span>آخرین سال آماری کامل: ۲۰۲۳</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۲,۴۳۰.۶ <small>تن</small></div><div class="l">حجم واردات ۲۰۲۳ (رشد ۴۹.۳٪ نسبت به ۲۰۲۲)</div></div>
+      <div class="kpi"><div class="v">۶۸-۷۲<small>٪</small></div><div class="l">سهم روسیه — تأمین‌کننده مسلط بازار</div></div>
+      <div class="kpi"><div class="v">۲۶-۳۰<small>٪</small></div><div class="l">سهم ایران — رشد از ۱.۶٪ در ۲۰۲۰</div></div>
+      <div class="kpi"><div class="v">۳۳۱-۳۴۲$</div><div class="l">قیمت تمام‌شده پارس در دوشنبه (سناریوی ریلی) — ~۳۸٪ کمتر از روسیه</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">۱</span><h2>خلاصه مدیریتی</h2></div>
+    <p>این گزارش بازار واردات جوش شیرین (بی‌کربنات سدیم، کد تعرفه HS 283630) جمهوری تاجیکستان را بر پایه آمار رسمی وارداتی این کشور نزد پایگاه WITS/UN Comtrade، آمار صادراتی گمرک جمهوری اسلامی ایران، و پژوهش تکمیلی میدانی/وب تحلیل می‌کند. تاجیکستان کشوری کاملاً محصور در خشکی است و کل مصرف خود را از مسیر واردات تأمین می‌کند؛ ارزیابی زیر رقابت‌پذیری «جوش شیرین پارس» را در برابر تأمین‌کنندگان فعلی این بازار — به‌ویژه روسیه و ایران — می‌سنجد.</p>
+    <ul class="plain">
+      <li>حجم بازار واردات در آخرین سال آماری کامل (۲۰۲۳) به ۲,۴۳۰.۶ تن به ارزش ۱,۲۶۲.۷ هزار دلار رسیده است؛ این رقم نسبت به سال ۲۰۲۲ رشد ۴۹.۳ درصدی و نسبت به سال ۲۰۲۰ رشد تجمعی ۵۸.۴ درصدی نشان می‌دهد — روند رشد پیوسته و قابل‌توجه.</li>
+      <li>آمار خوداظهاری واردات تاجیکستان برای سال‌های ۲۰۲۴ و ۲۰۲۵ هنوز منتشر نشده است؛ در غیاب آن، تحلیل جاری بر پایه آخرین سال کامل (۲۰۲۳) به‌علاوه داده‌های آینه‌ای در دسترس از سوی برخی مبادی صادرکننده (چین، ترکیه) برای سال ۲۰۲۴ ارائه شده است.</li>
+      <li>روسیه با ۱,۶۵۷.۴ تن (۶۸ تا ۷۲ درصد سهم) تأمین‌کننده مسلط بازار است. سرویس گمرک فدرال روسیه از مارس ۲۰۲۲ انتشار برخط آمار تفصیلی صادرات به تفکیک کالا و کشور مقصد را متوقف کرده و هیچ رقم رسمی جدیدتری برای سال‌های ۲۰۲۴-۲۰۲۵ در دسترس نیست.</li>
+      <li>ایران با ۷۱۸.۲ تن (طبق آمار وارداتی رسمی تاجیکستان) در جایگاه دوم با حدود ۲۶ تا ۳۰ درصد سهم قرار دارد؛ این رقم با آمار صادراتی داخلی گمرک ایران (۳۸۹ تن) مغایرت قابل‌توجهی دارد.</li>
+      <li>هیچ تولیدکننده داخلی بی‌کربنات سدیم در تاجیکستان شناسایی نشد؛ بازار ۱۰۰ درصد به واردات وابسته است و هیچ کف قیمتی داخلی وجود ندارد.</li>
+      <li>میانگین تعرفه واردات تاجیکستان در بازه صفر تا ۱۵ درصد (میانگین کل اقتصاد حدود ۷ درصد) قرار دارد؛ نرخ اختصاصی محصول جوش شیرین با جست‌وجو یافت نشد. مالیات بر ارزش افزوده ۱۴ تا ۱۵ درصد است.</li>
+      <li>تاجیکستان به دو کشور ثالث (ترکمنستان و سپس ازبکستان) برای اتصال به شبکه ریلی ایران نیاز دارد؛ نخستین ترانزیت مستقیم واگن ایرانی از مسیر سرخس تا بخارا در دسامبر ۲۰۲۵ فعال شد و خط‌آهن بخارا–دوشنبه از سال ۲۰۱۸ به‌صورت مستقیم و فعال در خدمت است.</li>
+      <li>با برون‌یابی روند رشد موجود، حجم بازار سال ۲۰۲۵ در محدوده ۳,۳۰۰ تا ۳,۵۱۰ تن تخمین زده می‌شود.</li>
+    </ul>
+    <div class="callout copper">
+      <p><strong>یافته‌ی کلیدی:</strong> بازار با رشد سریع، بدون تولیدکننده داخلی رقیب، و با شکاف قیمتی قابل‌توجه بین برند خرده‌فروشی مسلط روسی (۵۴۶$/تن) و قیمت تمام‌شده «جوش شیرین پارس» (۳۳۱-۳۴۲$/تن در سناریوی ریلی) — فضای رقابتی روشنی برای فله باز است.</p>
+    </div>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">۲</span><h2>آمار واردات و سهم بازار مبادی تأمین</h2></div>
+
+    <h3>۲.۱. روند چندساله واردات (۲۰۲۰-۲۰۲۳)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>سال</th><th>حجم (تن)</th><th>ارزش (هزار دلار)</th><th>قیمت میانگین ($/تن)</th><th>رشد سالانه</th></tr></thead>
+        <tbody>
+          <tr><td>۲۰۲۰</td><td class="num-cell">۱,۵۳۴.۸</td><td class="num-cell">۷۴۲.۵</td><td class="num-cell">۴۸۴</td><td>—</td></tr>
+          <tr><td>۲۰۲۱</td><td class="num-cell">۱,۲۵۹.۰</td><td class="num-cell">۴۸۷.۲</td><td class="num-cell">۳۸۷</td><td>−۱۸.۰٪</td></tr>
+          <tr><td>۲۰۲۲</td><td class="num-cell">۱,۶۲۷.۵</td><td class="num-cell">۸۳۷.۷</td><td class="num-cell">۵۱۵</td><td>+۲۹.۳٪</td></tr>
+          <tr class="hl"><td>۲۰۲۳</td><td class="num-cell">۲,۴۳۰.۶</td><td class="num-cell">۱,۲۶۲.۷</td><td class="num-cell">۵۲۰</td><td>+۴۹.۳٪</td></tr>
+          <tr><td>۲۰۲۴-۲۰۲۵</td><td colspan="4">داده منتشر نشده</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>روند کلی صعودی است؛ افت سال ۲۰۲۱ (احتمالاً متأثر از اختلالات کووید در زنجیره تأمین منطقه‌ای) با جهش ۴۹ درصدی سال ۲۰۲۳ جبران و از آن عبور شده است.</p>
+    <div class="chart-box">
+      <div class="chart-h" style="height:230px"><canvas id="chartImportTrend"></canvas></div>
+      <div class="cap">روند حجم واردات تاجیکستان، ۲۰۲۰-۲۰۲۳ (تن) — منبع: WITS/UN Comtrade</div>
+    </div>
+
+    <h3>۲.۲. سهم مبادی تأمین در آخرین سال گزارش‌شده (۲۰۲۳)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>مبدأ</th><th>حجم (تن)</th><th>سهم حجمی</th><th>ارزش (هزار$)</th><th>سهم ارزشی</th><th>قیمت میانگین ($/تن)</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>روسیه</td><td class="num-cell">۱,۶۵۷.۴</td><td class="num-cell">۶۸.۲٪</td><td class="num-cell">۹۰۵.۴</td><td class="num-cell">۷۱.۷٪</td><td class="num-cell">۵۴۶</td></tr>
+          <tr><td>ایران</td><td class="num-cell">۷۱۸.۲</td><td class="num-cell">۲۹.۶٪</td><td class="num-cell">۳۲۸.۱</td><td class="num-cell">۲۶.۰٪</td><td class="num-cell">۴۵۷</td></tr>
+          <tr><td>پاکستان</td><td class="num-cell">۴۳.۱</td><td class="num-cell">۱.۸٪</td><td class="num-cell">۲۱.۸</td><td class="num-cell">۱.۷٪</td><td class="num-cell">۵۰۵</td></tr>
+          <tr><td>ترکیه</td><td class="num-cell">۵.۶</td><td class="num-cell">۰.۲٪</td><td class="num-cell">۲.۴</td><td class="num-cell">۰.۲٪</td><td class="num-cell">۴۲۳</td></tr>
+          <tr><td>ازبکستان</td><td class="num-cell">۴.۰</td><td class="num-cell">۰.۲٪</td><td class="num-cell">۱.۴</td><td class="num-cell">۰.۱٪</td><td class="num-cell">۳۴۱</td></tr>
+          <tr><td>فرانسه / آمریکا (ناچیز)</td><td class="num-cell">۰.۹</td><td class="num-cell">&lt;۰.۱٪</td><td class="num-cell">۳.۰</td><td class="num-cell">۰.۲٪</td><td>غیرقابل‌اتکا (حجم بسیار کوچک)</td></tr>
+          <tr><td>چین</td><td class="num-cell">۱.۵</td><td class="num-cell">۰.۱٪</td><td class="num-cell">۰.۸</td><td class="num-cell">۰.۱٪</td><td class="num-cell">۵۰۰</td></tr>
+          <tr><td>جمع کل</td><td class="num-cell">۲,۴۳۰.۶</td><td class="num-cell">۱۰۰٪</td><td class="num-cell">۱,۲۶۲.۷</td><td class="num-cell">۱۰۰٪</td><td class="num-cell">۵۲۰</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:260px"><canvas id="chartSupplierShare"></canvas></div>
+      <div class="cap">سهم حجمی مبادی تأمین، ۲۰۲۳</div>
+    </div>
+
+    <h3>۲.۲-الف. آخرین آمار در دسترس مبادی کوچک‌تر (چین و ترکیه) برای سال ۲۰۲۴</h3>
+    <p>از آنجا که آمار خوداظهاری وارداتی تاجیکستان برای سال ۲۰۲۴ هنوز منتشر نشده، برای دو مبدأ چین و ترکیه (که هر دو کد HS 283630 را در گزارش‌دهی صادراتی خود به‌طور مستقیم ثبت می‌کنند) آمار خوداظهاری صادراتی به‌عنوان تازه‌ترین سنجه در دسترس استخراج و ارائه شده است:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>مبدأ</th><th>سال</th><th>حجم (تن)</th><th>ارزش (هزار$)</th><th>قیمت میانگین ($/تن)</th><th>منبع</th></tr></thead>
+        <tbody>
+          <tr><td>چین</td><td>۲۰۲۳</td><td class="num-cell">۱.۵ (به‌روایت واردات تاجیکستان)</td><td class="num-cell">۷۵۰</td><td class="num-cell">۵۰۰</td><td>آمار وارداتی تاجیکستان</td></tr>
+          <tr><td>چین</td><td>۲۰۲۴</td><td class="num-cell">۶.۰</td><td class="num-cell">۳,۱۶۰</td><td class="num-cell">۵۲۷</td><td>آمار صادراتی گمرک چین</td></tr>
+          <tr><td>ترکیه</td><td>۲۰۲۳</td><td class="num-cell">۵.۵</td><td class="num-cell">۲,۳۵۰</td><td class="num-cell">۴۲۳</td><td>هر دو منبع</td></tr>
+          <tr><td>ترکیه</td><td>۲۰۲۴</td><td class="num-cell">۹.۳</td><td class="num-cell">۴,۷۶۰</td><td class="num-cell">۵۱۳</td><td>آمار صادراتی گمرک ترکیه</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>حجم هر دو مبدأ در سال‌های اخیر همچنان بسیار کوچک است (زیر ۱۰ تن در سال) و نمی‌تواند جایگاه ساختاری روسیه یا ایران را به چالش بکشد؛ با این حال، رشد محسوس چین از ۱.۵ به ۶.۰ تن و ترکیه از ۵.۵ به ۹.۳ تن طی یک سال، در مقیاس کوچک خود، با روند کلی رشد بازار همسو است.</p>
+
+    <h3>۲.۳. مقایسه سهم بازار در طول زمان (۲۰۲۰ در برابر ۲۰۲۳)</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>مبدأ</th><th>سهم ۲۰۲۰</th><th>سهم ۲۰۲۳</th><th>روند</th></tr></thead>
+        <tbody>
+          <tr><td>روسیه</td><td class="num-cell">۹۲.۹٪</td><td class="num-cell">۷۱.۷٪</td><td>نزولی به لحاظ سهم (حجم مطلق تقریباً دو برابر شده؛ رقبا سریع‌تر رشد کرده‌اند)</td></tr>
+          <tr class="hl"><td>ایران</td><td class="num-cell">۱.۶٪</td><td class="num-cell">۲۶.۰٪</td><td>صعودی و قابل‌توجه — ورود مؤثر به بازار طی ۲۰۲۲-۲۰۲۳</td></tr>
+          <tr><td>پاکستان</td><td class="num-cell">۲.۲٪</td><td class="num-cell">۱.۷٪</td><td>نسبتاً ثابت</td></tr>
+          <tr><td>ازبکستان</td><td class="num-cell">۲.۵٪</td><td class="num-cell">۰.۱٪</td><td>نزولی</td></tr>
+          <tr><td>چین</td><td>—</td><td class="num-cell">۰.۱٪</td><td>ورود تازه اما ناچیز</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <p>روسیه همچنان مسلط است اما سهم آن رو به کاهش می‌رود. رشد سهم ایران از ۱.۶ به ۲۶.۰ درصد در سه سال، مهم‌ترین یافته مثبت این بخش است: ایران هم‌اکنون تأمین‌کننده دوم بازار محسوب می‌شود. ازبکستان و ترکیه — که در یک سند ثانویه مورد بررسی، مجموعاً ۱۵ درصد سهم برای آن‌ها ادعا شده بود — در آمار رسمی وارداتی تاجیکستان عملاً سهمی ناچیز (زیر ۰.۵ درصد مجموع) دارند.</p>
+    </div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:230px"><canvas id="chartShareEvolution"></canvas></div>
+      <div class="cap">تحول سهم بازار به تفکیک مبدأ، ۲۰۲۰ در برابر ۲۰۲۳</div>
+    </div>
+
+    <h3>۲.۴. برآورد بازار سال ۲۰۲۵</h3>
+    <p>در غیاب آمار خوداظهاری رسمی وارداتی تاجیکستان برای سال‌های ۲۰۲۴ و ۲۰۲۵، حجم و ارزش بازار برای سال ۲۰۲۵ بر پایه دو روش از مبنای آخرین سال کامل (۲۰۲۳) محاسبه شده است:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>روش برآورد</th><th>نرخ رشد</th><th>حجم برآوردی ۲۰۲۵ (تن)</th><th>ارزش برآوردی ۲۰۲۵ (هزار$)</th></tr></thead>
+        <tbody>
+          <tr><td>میانگین رشد سالانه محصول (۲۰۲۱-۲۰۲۳)</td><td class="num-cell">۲۰.۲٪</td><td class="num-cell">۳,۵۱۱.۷</td><td class="num-cell">۱,۸۲۴.۴</td></tr>
+          <tr><td>نرخ رشد کلان واردات تاجیکستان ۲۰۲۵ (همه کالاها)</td><td class="num-cell">۱۸.۶٪</td><td class="num-cell">۳,۴۱۸.۹</td><td class="num-cell">۱,۷۷۶.۱</td></tr>
+          <tr class="hl"><td>میانگین (برآورد مرکزی)</td><td>—</td><td class="num-cell">۳,۴۱۱.۰</td><td class="num-cell">۱,۷۹۹.۸</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>تفکیک برآوردی به تفکیک کشور مبدأ، با فرض ثابت‌ماندن سهم‌های بازار سال ۲۰۲۳:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>مبدأ</th><th>سهم فرضی</th><th>حجم برآوردی ۲۰۲۵ (تن)</th><th>ارزش برآوردی ۲۰۲۵ (هزار$)</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>روسیه</td><td>۶۸.۲٪ / ۷۱.۷٪</td><td class="num-cell">۲,۳۲۶.۳</td><td class="num-cell">۱,۲۹۰.۵</td></tr>
+          <tr><td>ایران</td><td>۲۹.۶٪ / ۲۶.۰٪</td><td class="num-cell">۱,۰۰۹.۷</td><td class="num-cell">۴۶۸.۰</td></tr>
+          <tr><td>پاکستان</td><td>۱.۸٪ / ۱.۷٪</td><td class="num-cell">۶۱.۴</td><td class="num-cell">۳۰.۶</td></tr>
+          <tr><td>ترکیه</td><td>۰.۲٪ / ۰.۲٪</td><td class="num-cell">۶.۸</td><td class="num-cell">۳.۶</td></tr>
+          <tr><td>ازبکستان</td><td>۰.۲٪ / ۰.۱٪</td><td class="num-cell">۶.۸</td><td class="num-cell">۱.۸</td></tr>
+          <tr><td>چین</td><td>۰.۱٪ / ۰.۱٪</td><td class="num-cell">۳.۴</td><td class="num-cell">۱.۸</td></tr>
+          <tr><td>سایر (فرانسه/آمریکا)</td><td>ناچیز</td><td class="num-cell">~۰</td><td class="num-cell">۳.۶</td></tr>
+          <tr><td>جمع کل</td><td>۱۰۰٪</td><td class="num-cell">۳,۴۱۱.۰</td><td class="num-cell">۱,۷۹۹.۸</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">۳</span><h2>تولید داخلی و رقبای بومی</h2></div>
+    <p>هیچ تولیدکننده صنعتی بی‌کربنات سدیم در جمهوری تاجیکستان شناسایی نشد.</p>
+    <div class="callout">
+      <p>نبود تولید داخلی به معنای نبود کف قیمتی رقابتی داخلی است: قیمت بازار به‌طور کامل تابع قیمت تمام‌شده واردات از مبادی مختلف است. در مقابل، نبود یک تولیدکننده/توزیع‌کننده محلی با شبکه توزیع جاافتاده به این معناست که ورود به بازار صرفاً به رقابت با تأمین‌کنندگان خارجی دیگر (نه یک بازیگر داخلی محافظت‌شده) محدود است.</p>
+    </div>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">۴</span><h2>بررسی قیمت‌های FOB در مبادی مبدأ</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>مبدأ</th><th>گرید</th><th>قیمت FOB/EXW ($/تن)</th><th>قیمت واردات واقعی به تاجیکستان ($/تن)</th></tr></thead>
+        <tbody>
+          <tr><td>چین (گمرک چین، ۲۰۲۴)</td><td>صنعتی/خوراکی</td><td class="num-cell">۱۶۵–۲۷۰ (اسپات FOB شانگهای)</td><td class="num-cell">۵۲۷ (حجم بسیار کوچک: تنها ۶ تن)</td></tr>
+          <tr class="hl"><td>روسیه (باشقیر سودا/استرلیتماک، بسته ۵۰۰گ)</td><td>خوراکی</td><td class="num-cell">برآورد EXW ۳۸۰–۵۰۰</td><td class="num-cell">۵۴۶ (آمار رسمی ۲۰۲۳)</td></tr>
+          <tr><td>ایران (میانگین آمار وارداتی تاجیکستان)</td><td>صنعتی/خوراکی فله</td><td>—</td><td class="num-cell">۴۵۷ (آمار رسمی ۲۰۲۳)</td></tr>
+          <tr><td>ترکیه (گمرک ترکیه، ۲۰۲۴)</td><td>نامشخص</td><td>—</td><td class="num-cell">۵۱۳ (حجم کوچک: ۹.۳ تن)</td></tr>
+          <tr><td>پاکستان</td><td>نامشخص</td><td>—</td><td class="num-cell">۵۰۵ (آمار رسمی ۲۰۲۳)</td></tr>
+          <tr><td>جوش شیرین پارس (ایران) — مبنای شرکت</td><td>صنعتی/خوراکی فله</td><td class="num-cell">۲۵۰ (FOB پایه)</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:230px"><canvas id="chartAvgPrice"></canvas></div>
+      <div class="cap">میانگین قیمت واقعی واردات به تاجیکستان به تفکیک مبدأ، ۲۰۲۳-۲۰۲۴ ($/تن)</div>
+    </div>
+  </section>
+
+  <section id="s5">
+    <div class="sec-head"><span class="sec-num">۵</span><h2>مسیر زمینی و فواصل حمل‌ونقل</h2></div>
+    <p>تاجیکستان کشوری کاملاً محصور در خشکی است و برای اتصال به شبکه ریلی ایران باید از دو کشور ثالث — ترکمنستان و سپس ازبکستان — عبور کند. مبادی گمرکی واقعی صادرات ایران به تاجیکستان طبق آمار داخلی (مشهد و لطف‌آباد) دقیقاً بر همین کریدور منطبق‌اند.</p>
+    <figure>
+      <img src="/report-images/report-گزارش_تحلیلی_بازار_جوش_شیرین_تاجیکستان/img-1.jpg" alt="نقشه کریدور ایران-افغانستان/آسیای میانه">
+      <figcaption>نقشه‌ی کریدور زمینی منطقه‌ای مرتبط با مسیر ترانزیت ایران به آسیای میانه.</figcaption>
+    </figure>
+    <figure>
+      <img src="/report-images/report-گزارش_تحلیلی_بازار_جوش_شیرین_تاجیکستان/img-2.jpg" alt="نقشه گذرگاه مرزی و خط‌آهن منطقه‌ای">
+      <figcaption>نقشه‌ی گذرگاه مرزی و خط‌آهن منطقه‌ای (ERA) — کریدور سرخس-بخارا-دوشنبه.</figcaption>
+    </figure>
+    <div class="callout copper">
+      <p>نخستین ترانزیت مستقیم واگن ایرانی از مسیر سرخس تا بخارا در دسامبر ۲۰۲۵ فعال شد؛ خط‌آهن بخارا–دوشنبه (از طریق گالابا-آمازنگ) از سال ۲۰۱۸ به‌صورت مستقیم و فعال در خدمت است — یعنی زیرساخت ریلی لازم برای این مسیر از قبل موجود و عملیاتی است.</p>
+    </div>
+  </section>
+
+  <section id="s6">
+    <div class="sec-head"><span class="sec-num">۶</span><h2>تخمین قیمت تمام‌شده (CIF) «جوش شیرین پارس» در دوشنبه</h2></div>
+    <ul class="plain">
+      <li>مبنای FOB: ۲۵۰ دلار در تن (بندرهای ایران / مبدأ مشهد)</li>
+      <li>مبنای ظرف: کانتینر استاندارد ۲۰ فوت، ۲۵ تن فله کیسه‌ای/پالت</li>
+      <li>کرایه حمل ریلی ایران تا بخارا: ۶۵ دلار در تن؛ کرایه جاده‌ای همان مسیر: ۱۲۰ دلار در تن</li>
+      <li>کرایه حمل بخش بخارا تا دوشنبه: برآوردی (بدون نرخ استعلام‌شده مستقیم)، بر پایه فاصله ریلی تأییدشده ۴۲۴ کیلومتر و بازه معیار منطقه‌ای ۰.۰۳۵ تا ۰.۰۵ دلار بر تن-کیلومتر برای ریل، و فاصله جاده‌ای ۵۳۸ کیلومتر با بازه ۰.۰۸ تا ۰.۱۰ دلار بر تن-کیلومتر برای جاده</li>
+      <li>بیمه: ۱ تا ۲ دلار در تن</li>
+    </ul>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>سناریو</th><th>FOB ($/تن)</th><th>حمل+بیمه ($/تن)</th><th>قیمت تمام‌شده CIF دوشنبه ($/تن)</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>عادی — کریدور ریلی (سرخس-بخارا-دوشنبه)</td><td class="num-cell">۲۵۰</td><td class="num-cell">۸۱–۹۲</td><td class="num-cell">۳۳۱–۳۴۲</td></tr>
+          <tr><td>اوج فصل / عدم دسترسی به واگن — کریدور جاده‌ای</td><td class="num-cell">۲۵۰</td><td class="num-cell">۱۶۶–۱۷۷</td><td class="num-cell">۴۱۶–۴۲۷</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="s7">
+    <div class="sec-head"><span class="sec-num">۷</span><h2>جدول مقایسه‌ای جامع بازار</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>تأمین‌کننده</th><th>FOB/EXW ($/تن)</th><th>حمل تخمینی ($/تن)</th><th>قیمت واقعی/برآوردی ($/تن)</th><th>سهم بازار</th></tr></thead>
+        <tbody>
+          <tr><td>روسیه</td><td class="num-cell">۳۸۰–۵۰۰</td><td>—</td><td class="num-cell">۵۴۶ (واقعی، آمار رسمی)</td><td class="num-cell">۶۸–۷۲٪</td></tr>
+          <tr><td>ایران — آمار وارداتی رسمی تاجیکستان</td><td class="num-cell">۱۹۰ (طبق آمار گمرک)</td><td>—</td><td class="num-cell">۴۵۷ (واقعی، آمار رسمی WITS)</td><td class="num-cell">۲۶–۳۰٪</td></tr>
+          <tr><td>پاکستان</td><td>—</td><td>—</td><td class="num-cell">۵۰۵ (واقعی، آمار رسمی)</td><td class="num-cell">۱.۸٪ حجمی</td></tr>
+          <tr class="hl"><td>جوش شیرین پارس — سناریوی ریلی عادی</td><td class="num-cell">۲۵۰</td><td class="num-cell">۸۱–۹۲</td><td class="num-cell">۳۳۱–۳۴۲</td><td>صفر (فعلاً بدون سهم مستقیم برند)</td></tr>
+          <tr><td>جوش شیرین پارس — سناریوی جاده/اوج</td><td class="num-cell">۲۵۰</td><td class="num-cell">۱۶۶–۱۷۷</td><td class="num-cell">۴۱۶–۴۲۷</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout copper">
+      <p>در سناریوی ریلی عادی، قیمت تمام‌شده پارس (۳۳۱–۳۴۲ دلار) حدود ۲۰۴ تا ۲۱۵ دلار در تن (~۳۸–۳۹٪) کمتر از میانگین قیمت واقعی واردات از روسیه (۵۴۶ دلار) است — بزرگ‌ترین شکاف رقابتی شناسایی‌شده در این گزارش. در برابر میانگین رسمی واردات از ایران (۴۵۷ دلار)، برآورد پارس ۱۱۵ تا ۱۲۶ دلار (~۲۵–۲۸٪) پایین‌تر است؛ حتی در سناریوی محافظه‌کارانه جاده‌ای (۴۱۶–۴۲۷ دلار)، همچنان اندکی رقابتی‌تر از این میانگین باقی می‌ماند. پاکستان با سهم کوچک (۱.۸٪ حجمی) و قیمت میانی (۵۰۵ دلار) رقیبی درجه‌دوم و غیرساختاری تلقی می‌شود.</p>
+    </div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:230px"><canvas id="chartCifComparison"></canvas></div>
+      <div class="cap">مقایسه قیمت تمام‌شده — پارس (دو سناریو) در برابر میانگین قیمت واقعی واردات رقبا ($/تن)</div>
+    </div>
+  </section>
+
+  <section id="s8">
+    <div class="sec-head"><span class="sec-num">۸</span><h2>جمع‌بندی و توصیه‌های اجرایی</h2></div>
+    <div class="cards">
+      <div class="card">
+        <span class="tag good">فرصت</span>
+        <h4>بازار پررشد، بدون رقیب داخلی</h4>
+        <p>رشد سریع (+۴۹٪ حجمی در سال ۲۰۲۳) و بدون هیچ تولیدکننده داخلی رقیب.</p>
+      </div>
+      <div class="card">
+        <span class="tag good">فرصت</span>
+        <h4>شکاف قیمتی با روسیه</h4>
+        <p>شکاف قیمتی قابل‌توجه با روسیه — رقیب مسلط فعلی — که عمدتاً از نفوذ برند خرده‌فروشی ناشی می‌شود، نه از کارایی هزینه؛ فضایی برای رقابت قیمتی فله باز است.</p>
+      </div>
+      <div class="card">
+        <span class="tag good">فرصت</span>
+        <h4>ایران هم‌اکنون جایگاه دوم بازار را دارد</h4>
+        <p>رشد سهم ایران از ۱.۶ به ۲۶.۰ درصد در سه سال، سابقه‌ای قابل‌اتکا برای ورود مؤثر تأمین‌کننده‌های ایرانی به این بازار نشان می‌دهد.</p>
+      </div>
+      <div class="card">
+        <span class="tag bad">ریسک</span>
+        <h4>مسیر ترانزیت چندکشوری</h4>
+        <p>عبور از دو کشور ثالث با گیج ریلی متفاوت از ایران، وابستگی به ظرفیت واگن، و حساسیت به ثبات مسیر ترانزیتی.</p>
+      </div>
+      <div class="card">
+        <span class="tag bad">ریسک</span>
+        <h4>نبود تأیید مستقل نرخ تعرفه</h4>
+        <p>نرخ تعرفه اختصاصی این ردیف کالایی با جست‌وجو یافت نشد؛ برآورد فعلی بر پایه میانگین کل اقتصاد است.</p>
+      </div>
+      <div class="card">
+        <span class="tag bad">ریسک</span>
+        <h4>اندازه‌ی کوچک بازار</h4>
+        <p>کوچک بودن کلی این بازار (~۲,۴۰۰ تن در سال) در مقایسه با بازارهای بزرگ‌تر منطقه (برای نمونه ازبکستان با حدود ۱۳,۰۰۰ تن).</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>منابع: WITS/UN Comtrade (آمار وارداتی تاجیکستان و صادراتی چین/ترکیه، HS 283630) &middot; آمار خام صادراتی گمرک جمهوری اسلامی ایران &middot; سرویس گمرک فدرال روسیه (FTS) و پرتال باشقیر سودا (BSK) &middot; Interfax &middot; Asia-Plus؛ StanRadar &middot; Rome2Rio؛ Wanderlog؛ OrexCA.com (فواصل مسیر) &middot; Railway Gazette International؛ Eurasianet؛ The Diplomat؛ Central Asia News (خط‌آهن گالابا-آمازنگ) &middot; trade.gov — Tajikistan Country Commercial Guide &middot; Price-Watch.ai &middot; Worldometer.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){
+    return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US")); }
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  var charts = [];
+  function themeColors(){
+    return {
+      ink: cssVar('--ink-soft'),
+      grid: cssVar('--line-soft'),
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
+      copper: cssVar('--copper-500'),
+      copperDark: cssVar('--copper-600'),
+      bad: cssVar('--bad'),
+      good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+
+  function baseOptions(c){
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif";
+    Chart.defaults.color = c.ink;
+    Chart.defaults.borderColor = c.grid;
+  }
+
+  function buildAll(){
+    var c = themeColors();
+    baseOptions(c);
+    charts.forEach(function(ch){ ch.destroy(); });
+    charts = [];
+
+    // ---- Import volume trend 2020-2023 ----
+    charts.push(new Chart(document.getElementById('chartImportTrend'), {
+      type: 'bar',
+      data: {
+        labels: ['۲۰۲۰', '۲۰۲۱', '۲۰۲۲', '۲۰۲۳'],
+        datasets: [{
+          data: [1534.8, 1259.0, 1627.5, 2430.6],
+          backgroundColor: function(ctx){ return ctx.dataIndex === 3 ? c.copper : c.petrol; },
+          borderRadius: 6
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return fmt(ctx.parsed.y) + ' تن'; } } }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: c.ink } },
+          y: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } }
+        }
+      }
+    }));
+
+    // ---- Supplier share 2023 (donut) ----
+    charts.push(new Chart(document.getElementById('chartSupplierShare'), {
+      type: 'doughnut',
+      data: {
+        labels: ['روسیه', 'ایران', 'پاکستان', 'ترکیه', 'ازبکستان', 'سایر'],
+        datasets: [{
+          data: [68.2, 29.6, 1.8, 0.2, 0.2, 0.2],
+          backgroundColor: [c.petrolDark, c.copper, c.petrol, c.copperDark, c.good, c.ink + '55'],
+          borderColor: c.bg,
+          borderWidth: 2
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', rtl: true, labels: { color: c.ink, font: { size: 12 } } },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return ctx.label + ': ' + fmt(ctx.parsed) + '٪'; } } }
+        }
+      }
+    }));
+
+    // ---- Share evolution 2020 vs 2023 ----
+    charts.push(new Chart(document.getElementById('chartShareEvolution'), {
+      type: 'bar',
+      data: {
+        labels: ['روسیه', 'ایران', 'پاکستان', 'ازبکستان'],
+        datasets: [
+          { label: '۲۰۲۰', data: [92.9, 1.6, 2.2, 2.5], backgroundColor: c.petrol + 'aa', borderRadius: 5 },
+          { label: '۲۰۲۳', data: [71.7, 26.0, 1.7, 0.1], backgroundColor: c.copper, borderRadius: 5 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { position: 'bottom', rtl: true, labels: { color: c.ink } },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return ctx.dataset.label + ': ' + fmt(ctx.parsed.y) + '٪'; } } }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { color: c.ink } },
+          y: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '٪'; } } }
+        }
+      }
+    }));
+
+    // ---- Average import price by origin ----
+    charts.push(new Chart(document.getElementById('chartAvgPrice'), {
+      type: 'bar',
+      data: {
+        labels: ['ازبکستان', 'ترکیه', 'چین', 'پاکستان', 'ایران', 'روسیه'],
+        datasets: [{
+          data: [341, 423, 500, 505, 457, 546],
+          backgroundColor: function(ctx){ return ctx.dataIndex === 5 ? c.bad : c.petrol; },
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return '~' + fmt(ctx.parsed.x) + ' $/تن'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink } }
+        }
+      }
+    }));
+
+    // ---- CIF comparison: Pars scenarios vs competitors ----
+    charts.push(new Chart(document.getElementById('chartCifComparison'), {
+      type: 'bar',
+      data: {
+        labels: ['پارس — سناریوی ریلی', 'پارس — سناریوی جاده', 'ایران (میانگین واقعی)', 'پاکستان (میانگین واقعی)', 'روسیه (میانگین واقعی)'],
+        datasets: [{
+          data: [[331,342],[416,427],[457,457],[505,505],[546,546]],
+          backgroundColor: [c.good, c.copper, c.petrol, c.petrol, c.bad],
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ var r = ctx.raw; return r[0] === r[1] ? fmt(r[0]) + ' $/تن' : fmt(r[0]) + ' تا ' + fmt(r[1]) + ' $/تن'; } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 12 } } }
+        }
+      }
+    }));
+  }
+
+  buildAll();
+  if (window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildAll);
+  }
+})();
+</script>
+
+</body>
+</html>
