@@ -1,6 +1,11 @@
 """
-جمعیت + سطح درآمد کشورها از World Bank Open Data API (رایگان، بدون کلید) —
-برای برآورد «بازار مصرف تخمینی» هر کشور در web/lib/data.js.
+جمعیت + سطح درآمد + شاخص‌های اقتصادی پایه‌ی کشورها از World Bank Open Data
+API (رایگان، بدون کلید) — برای برآورد «بازار مصرف تخمینی» و نمایش پروفایل
+اقتصادی هر کشور در web/lib/data.js.
+
+۲۰۲۶-۰۹-۲۶: به درخواست کاربر، سه شاخص دیگر هم اضافه شد (علاوه‌بر جمعیت):
+درصد جمعیت شهرنشین، تولید ناخالص داخلی سرانه، و تولید ناخالص داخلی کل —
+همون منبع (World Bank)، همون الگوی mrv=1 (آخرین سال موجود هر کشور).
 
 چرا سطح درآمد هم لازم شد (نه فقط جمعیت): نسخه‌ی اول فقط با میانگین جهانی
 (۰.۸۴ کیلوگرم/نفر) برای همه‌ی کشورهای بدون رقم مستقیم ضرب می‌شد؛ کاربر درست
@@ -34,6 +39,9 @@ OUTPUT_FILE = os.path.join(BASE_DIR, "data", "country_population.json")
 
 COUNTRY_LIST_URL = "https://api.worldbank.org/v2/country?format=json&per_page=400"
 POP_URL = "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?mrv=1&format=json&per_page=400"
+URBAN_PCT_URL = "https://api.worldbank.org/v2/country/all/indicator/SP.URB.TOTL.IN.ZS?mrv=1&format=json&per_page=400"
+GDP_PER_CAPITA_URL = "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.PCAP.CD?mrv=1&format=json&per_page=400"
+GDP_TOTAL_URL = "https://api.worldbank.org/v2/country/all/indicator/NY.GDP.MKTP.CD?mrv=1&format=json&per_page=400"
 
 # HIC=High income, UMC/LMC=Upper/Lower-middle income, LIC=Low income (طبقه‌بندی رسمی World Bank)
 INCOME_TO_TIER = {
@@ -48,6 +56,24 @@ def fetch_json(url):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=30) as resp:
         return json.loads(resp.read().decode("utf-8"))
+
+
+def merge_indicator(result, real_countries, iso2_to_fa, rows, value_key, year_key):
+    """رکورد یک شاخص World Bank (mrv=1) رو توی result موجود ادغام می‌کنه —
+    فقط برای کشورهایی که از قبل توی result هستن (یعنی جمعیت‌شون شناخته شده)."""
+    matched = 0
+    for row in rows:
+        iso3 = row.get("countryiso3code")
+        if not iso3 or iso3 not in real_countries or row.get("value") is None:
+            continue
+        meta = real_countries[iso3]
+        fa = iso2_to_fa.get(meta["iso2Code"].lower())
+        if not fa or fa not in result:
+            continue
+        result[fa][value_key] = row["value"]
+        result[fa][year_key] = int(row["date"])
+        matched += 1
+    return matched
 
 
 def main():
@@ -86,6 +112,21 @@ def main():
 
     if unmapped:
         print(f"[WARN] {len(unmapped)} کشور بدون نگاشت فارسی (رد شدند): {unmapped[:10]}...")
+
+    print("[INFO] گرفتن درصد جمعیت شهرنشین ...")
+    _meta3, urban_rows = fetch_json(URBAN_PCT_URL)
+    n = merge_indicator(result, real_countries, iso2_to_fa, urban_rows, "urban_pct", "urban_pct_year")
+    print(f"[OK] {n} کشور.")
+
+    print("[INFO] گرفتن تولید ناخالص داخلی سرانه ...")
+    _meta4, gdp_pc_rows = fetch_json(GDP_PER_CAPITA_URL)
+    n = merge_indicator(result, real_countries, iso2_to_fa, gdp_pc_rows, "gdp_per_capita_usd", "gdp_per_capita_year")
+    print(f"[OK] {n} کشور.")
+
+    print("[INFO] گرفتن تولید ناخالص داخلی کل ...")
+    _meta5, gdp_total_rows = fetch_json(GDP_TOTAL_URL)
+    n = merge_indicator(result, real_countries, iso2_to_fa, gdp_total_rows, "gdp_total_usd", "gdp_total_year")
+    print(f"[OK] {n} کشور.")
 
     os.makedirs(os.path.dirname(OUTPUT_FILE), exist_ok=True)
     with open(OUTPUT_FILE, "w", encoding="utf-8") as f:

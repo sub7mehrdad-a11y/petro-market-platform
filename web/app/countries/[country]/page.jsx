@@ -3,13 +3,14 @@ import { notFound } from "next/navigation";
 import {
   getCountries, getCountrySummary, getCountryProfile, getTradeMapForCountry, getImportSuppliers,
   getIranExports, getIranExportToCountry, getPerCapitaConsumption, getCompetitorForCountry,
-  getMarketShareHistory, getUnionsForCountry,
+  getMarketShareHistory, getUnionsForCountry, getCountryPopulation,
 } from "@/lib/data";
 import CompanyTable from "../../components/CompanyTable";
 import ExhibitionTable from "../../components/ExhibitionTable";
 import WorldRouteMap from "../../components/WorldRouteMap";
 import PageHeader from "../../components/PageHeader";
 import CountryStatStrip from "../../components/CountryStatStrip";
+import CountryEconomicProfile from "../../components/CountryEconomicProfile";
 import SupplierBreakdown from "../../components/SupplierBreakdown";
 import MarketShareTrend from "../../components/MarketShareTrend";
 import ExportTrend from "../../components/ExportTrend";
@@ -82,6 +83,17 @@ export default async function CountryPage({ params }) {
   // رقم واردات دقیق‌تری از ITC نتیجه گرفته، باید همین‌جا (در یکی از این دو
   // فایل) real_trade_stats بگیره تا آمار صفحه‌اش خودکار به‌روز بشه.
   const realTrade = getCompetitorForCountry(country)?.real_trade_stats || profile?.real_trade_stats || null;
+  const econProfile = getCountryPopulation(country);
+  // وقتی realTrade داریم، مصرف سرانه‌ی «برآورد جهانی بر پایه‌ی تیر درآمدی»
+  // (پایین‌تر، perCapita) نشون داده نمی‌شه — اما این یعنی نباید مصرف سرانه رو
+  // کلاً حذف کنیم؛ باید از رقم واقعی خودِ گزارش (imports_tons) تقسیم بر جمعیت
+  // واقعی کشور محاسبه بشه، نه برآورد عمومی. نمونه: تاجیکستان با برآورد عمومی
+  // ~۴۸ کیلوگرم/نفر (بر پایه‌ی میانگین تیر درآمدی) در برابر رقم واقعی محاسبه‌شده
+  // از گزارش که به‌مراتب پایین‌تره.
+  const realPerCapitaKg =
+    realTrade?.imports_tons != null && econProfile?.population
+      ? (realTrade.imports_tons * 1000) / econProfile.population
+      : null;
   const unions = getUnionsForCountry(country);
   const sortedExhibitions = sortExhibitionsByDate(exhibitions);
   const smartReport = reports.find((r) => r.report_type === "summary");
@@ -172,6 +184,14 @@ export default async function CountryPage({ params }) {
             value: perCapita.kg_per_capita.toLocaleString("fa-IR"),
             unit: "کیلوگرم/نفر",
           },
+          // وقتی رقم واقعی داریم، به‌جای برآورد عمومی بالا، مصرف سرانه از خودِ
+          // رقم گزارش (imports_tons) تقسیم بر جمعیت واقعی کشور محاسبه می‌شه —
+          // نه یک میانگین تیر درآمدی حدسی.
+          realTrade && realPerCapitaKg != null && {
+            label: "مصرف سرانه (بر پایه‌ی گزارش)",
+            value: realPerCapitaKg.toLocaleString("fa-IR", { maximumFractionDigits: 3 }),
+            unit: "کیلوگرم/نفر",
+          },
           exhibitions.length > 0 && {
             label: "نمایشگاه‌های مرتبط",
             value: exhibitions.length.toLocaleString("fa-IR"),
@@ -179,6 +199,8 @@ export default async function CountryPage({ params }) {
           },
         ].filter(Boolean)}
       />
+
+      <CountryEconomicProfile profile={econProfile} />
 
       {unions.length > 0 && (
         <section className="card p-5">
