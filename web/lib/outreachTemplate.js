@@ -103,7 +103,9 @@ export function getCatalogLinks(grade) {
   };
 }
 
-const SUBJECT = "Sodium Bicarbonate (Food/Industrial Grade) from Iran — Sepehran Chemical";
+// ۲۰۲۶-۰۹-۲۷: به درخواست کاربر، «Iran» از سابجکت حذف و اسم فرستنده به
+// Pars Soda عوض شد (به‌جای Sepehran Chemical).
+const SUBJECT = "Sodium Bicarbonate (Food/Industrial Grade) — Pars Soda";
 
 // پیوست‌های ثابتی که به همه‌ی ایمیل‌های معرفی، صرف‌نظر از گرید شرکت، ضمیمه
 // می‌شن. مسیرها نسبی به ریشه‌ی مخزن‌ان (نه web/) — send/route.js با ROOT خودش
