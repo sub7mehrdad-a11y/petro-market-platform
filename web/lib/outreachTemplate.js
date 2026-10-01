@@ -103,9 +103,22 @@ export function getCatalogLinks(grade) {
   };
 }
 
-// ۲۰۲۶-۰۹-۲۷: به درخواست کاربر، «Iran» از سابجکت حذف و اسم فرستنده به
-// Pars Soda عوض شد (به‌جای Sepehran Chemical).
-const SUBJECT = "Sodium Bicarbonate (Food/Industrial Grade) — Pars Soda";
+// ۲۰۲۶-۱۰-۰۱: به درخواست کاربر، سابجکت دوباره عوض شد — نه «Iran» نه اسم
+// شرکت (Pars Soda) توی سابجکت نباشه؛ فقط «Producer and Supplier of Sodium
+// Bicarbonate» به‌همراه همون گریدی که قراره به این شرکت خاص معرفی بشه، توی
+// پرانتز. چون گرید به ازای هر شرکت فرق می‌کنه، سابجکت دیگه ثابت نیست و
+// داخل renderOutreachEmail از روی grade ساخته می‌شه (نه این‌جا).
+const SUBJECT_GRADE_LABEL_EN = {
+  food: "Food Grade",
+  feed: "Feed Grade",
+  industrial: "Industrial Grade",
+  unclear: "Food/Feed/Industrial Grade",
+};
+
+function buildSubject(grade) {
+  const label = SUBJECT_GRADE_LABEL_EN[grade] || SUBJECT_GRADE_LABEL_EN.unclear;
+  return `Producer and Supplier of Sodium Bicarbonate (${label})`;
+}
 
 // پیوست‌های ثابتی که به همه‌ی ایمیل‌های معرفی، صرف‌نظر از گرید شرکت، ضمیمه
 // می‌شن. مسیرها نسبی به ریشه‌ی مخزن‌ان (نه web/) — send/route.js با ROOT خودش
@@ -181,7 +194,7 @@ export function renderOutreachEmail(company) {
     .replace("{{CATALOG_LINKS}}", catalogLinksBlock);
 
   return {
-    subject: SUBJECT,
+    subject: buildSubject(grade),
     body,
     grade,
     catalogLinks,
