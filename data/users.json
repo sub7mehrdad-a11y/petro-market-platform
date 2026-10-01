@@ -1,0 +1,12 @@
+[
+  {
+    "username": "manager",
+    "passwordHash": "85cb8496534e5a94611f48a5c57e1042:385d67127f6c008055b098314359d3d983c06b6600dff87ca1f575b6bbf0963acb6b617d4485808747454ace3b7578f47df48875941ca75c33febadba788a35b",
+    "role": "viewer"
+  },
+  {
+    "username": "admin",
+    "passwordHash": "8034b37ae2e65fc49f5c976dfa6cff51:2b9ada8b8bffc4eb9af50bf69d0ae731a824ddee55a030d6481dd73704a1f5f7eb704e32dc48d4db3f8e99c281d280da2f8a74cf609ef36625f400727ca847fb",
+    "role": "commercial"
+  }
+]

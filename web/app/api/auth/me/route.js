@@ -1,0 +1,14 @@
+import { NextResponse } from "next/server";
+import { cookies } from "next/headers";
+import { verifySessionToken, SESSION_COOKIE_NAME } from "@/lib/auth";
+
+// فقط برای ناوبری سمت کلاینت (Sidebar) — تا خوندن کوکی لازم نیست توی
+// layout.js (سرور) بیفته و کل سایت رو از prerender استاتیک خارج کنه.
+export async function GET() {
+  const cookieStore = await cookies();
+  const session = verifySessionToken(cookieStore.get(SESSION_COOKIE_NAME)?.value);
+  if (!session) {
+    return NextResponse.json({ username: null, role: null }, { status: 401 });
+  }
+  return NextResponse.json({ username: session.username, role: session.role });
+}

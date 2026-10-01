@@ -17,6 +17,17 @@ function readJsonSafe(filePath, fallback) {
   }
 }
 
+// کاربران سیستم لاگین (data/users.json) — نگاه کن web/lib/auth.js و
+// web/scripts/manage-users.mjs برای ساخت/ویرایش.
+export function getUsers() {
+  return readJsonSafe(path.join(DATA_DIR, "users.json"), []);
+}
+
+export function findUserByUsername(username) {
+  const normalized = String(username || "").trim().toLowerCase();
+  return getUsers().find((u) => u.username.toLowerCase() === normalized) || null;
+}
+
 export function getPriceHistory() {
   return readJsonSafe(path.join(DATA_DIR, "price_history.json"), []);
 }

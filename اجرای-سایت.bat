@@ -15,15 +15,20 @@ echo    پلتفرم تحقیق و توسعه سپهران شیمی
 echo ==========================================================
 echo.
 
-if not exist ".env.local" (
-    echo [!] فایل رمز عبور پیدا نشد.
+if not exist "..\.env" (
+    echo [!] فایل .env پیدا نشد.
     echo.
-    echo     یک فایل به اسم  .env.local  داخل پوشه‌ی web بساز
-    echo     و این خط را داخلش بنویس ^(به‌جای ستاره‌ها رمز خودت^):
+    echo     یک فایل به اسم  .env  در ریشه‌ی پروژه بساز ^(از .env.example کپی کن^)
+    echo     و SESSION_SECRET را در آن تنظیم کن، وگرنه لاگین کار نمی‌کند.
     echo.
-    echo         SITE_PASSWORD=********
+    pause
+)
+
+if not exist "..\data\users.json" (
+    echo [!] هیچ کاربری ثبت نشده.
     echo.
-    echo     بدون این فایل سایت بدون رمز بالا می‌آید.
+    echo     از همین پوشه ^(web^) این دستور را بزن تا یک کاربر بسازی:
+    echo         node scripts/manage-users.mjs add ^<username^> ^<password^> ^<viewer^|commercial^>
     echo.
     pause
 )

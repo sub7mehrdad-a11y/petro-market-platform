@@ -25,6 +25,11 @@ export default function RootLayout({ children }) {
       {/*
         چیدمان: سایدبار ثابت سمت راست + ستون محتوا.
         در موبایل سایدبار به نوار بالا تبدیل می‌شود (منطقش داخل خود Sidebar).
+
+        نقش/یوزرنیم کاربر عمداً این‌جا (سرور) خونده نمی‌شه — چون خوندن کوکی
+        توی layout کل سایت رو از prerender استاتیک خارج می‌کرد (هر صفحه‌ی
+        کشور/رقیب/گزارش که از قبل SSG بود، dynamic می‌شد). به‌جاش Sidebar
+        خودش نقش رو از /api/auth/me می‌خونه (نگاه کن web/app/components/Sidebar.jsx).
       */}
       <body className="min-h-full font-[family-name:var(--font-vazirmatn)] bg-petrol-50 text-slate-900">
         <div className="min-h-screen flex flex-col lg:flex-row">

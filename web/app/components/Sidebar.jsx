@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 
 /**
  * ناوبری اصلی — سایدبار سمت راست (چون کل سایت RTL است).
@@ -15,7 +15,7 @@ import { usePathname } from "next/navigation";
  * زیر breakpoint لارج، سایدبار به یک نوار بالا + کشوی بازشونده تبدیل می‌شود.
  */
 
-function buildNavGroups(showOutreach) {
+function buildNavGroups(showOutreach, role) {
   return [
     {
       items: [{ href: "/", label: "داشبورد", icon: IconDashboard }],
@@ -43,9 +43,11 @@ function buildNavGroups(showOutreach) {
         { href: "/exhibitions", label: "نمایشگاه‌ها", icon: IconCalendar },
       ],
     },
-    // «ابزارها» فقط وقتی نشون داده می‌شه که showOutreach روشن باشه — طبق
-    // درخواست کاربر، تا تأیید هیئت‌مدیره، این بخش کلاً از سایت دیده نشه.
-    ...(showOutreach
+    // «ابزارها» فقط وقتی نشون داده می‌شه که showOutreach روشن باشه (تأیید
+    // هیئت‌مدیره) **و** کاربر نقش «بازرگانی» داشته باشه — نقش «مشاهده‌گر»
+    // (مثلاً مدیران) این بخش رو توی ناوبری نمی‌بینه. محافظت واقعی مسیر توی
+    // proxy.js انجام می‌شه؛ این فقط مخفی‌کردن لینک از ناوبریه.
+    ...(showOutreach && role === "commercial"
       ? [{ title: "ابزارها", items: [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }] }]
       : []),
   ];
@@ -105,8 +107,37 @@ function Brand({ compact = false }) {
   );
 }
 
-function NavContent({ pathname, onNavigate, showOutreach }) {
-  const navGroups = buildNavGroups(showOutreach);
+function LogoutButton({ username }) {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+
+  async function handleLogout() {
+    setLoading(true);
+    try {
+      await fetch("/api/auth/logout", { method: "POST" });
+    } finally {
+      router.push("/login");
+      router.refresh();
+    }
+  }
+
+  return (
+    <div className="flex items-center justify-between gap-2 px-3 py-2 text-xs text-petrol-600">
+      {username && <span className="truncate">{username}</span>}
+      <button
+        type="button"
+        onClick={handleLogout}
+        disabled={loading}
+        className="font-semibold text-copper-700 hover:text-copper-800 disabled:opacity-50 shrink-0"
+      >
+        خروج
+      </button>
+    </div>
+  );
+}
+
+function NavContent({ pathname, onNavigate, showOutreach, role, username }) {
+  const navGroups = buildNavGroups(showOutreach, role);
   return (
     <nav className="flex flex-col gap-5">
       {navGroups.map((group, gi) => (
@@ -125,6 +156,10 @@ function NavContent({ pathname, onNavigate, showOutreach }) {
       <div className="pt-1 mt-1 border-t border-petrol-200">
         <NavLink item={ASK_ITEM} pathname={pathname} onNavigate={onNavigate} />
       </div>
+
+      <div className="border-t border-petrol-200">
+        <LogoutButton username={username} />
+      </div>
     </nav>
   );
 }
@@ -132,6 +167,24 @@ function NavContent({ pathname, onNavigate, showOutreach }) {
 export default function Sidebar({ showOutreach = false }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  // نقش/یوزرنیم عمداً پراپ سروری نیست (نگاه کن توضیح توی layout.js) — خودمون
+  // از /api/auth/me می‌خونیم تا صفحات کشور/رقیب/گزارش هم‌چنان استاتیک بمونن.
+  const [session, setSession] = useState(null);
+
+  useEffect(() => {
+    if (pathname === "/login") return;
+    fetch("/api/auth/me")
+      .then((res) => (res.ok ? res.json() : null))
+      .then((data) => setSession(data))
+      .catch(() => setSession(null));
+  }, [pathname]);
+
+  // صفحه‌ی لاگین باید تنها و بدون ناوبری (که لینک همه‌ی بخش‌ها رو قبل از
+  // احراز هویت نشون می‌ده) باشه.
+  if (pathname === "/login") return null;
+
+  const role = session?.role;
+  const username = session?.username;
 
   return (
     <>
@@ -144,7 +197,7 @@ export default function Sidebar({ showOutreach = false }) {
         {/* sticky تا با اسکرول صفحات بلند (کشورها، شرکت‌ها) منو از دست نرود */}
         <div className="relative z-10 sticky top-0 flex flex-col gap-6 p-4 max-h-screen overflow-y-auto">
           <Brand />
-          <NavContent pathname={pathname} showOutreach={showOutreach} />
+          <NavContent pathname={pathname} showOutreach={showOutreach} role={role} username={username} />
         </div>
       </aside>
 
@@ -164,7 +217,13 @@ export default function Sidebar({ showOutreach = false }) {
         </div>
         {open && (
           <div className="px-4 pb-4 border-t border-petrol-200 pt-3">
-            <NavContent pathname={pathname} onNavigate={() => setOpen(false)} showOutreach={showOutreach} />
+            <NavContent
+              pathname={pathname}
+              onNavigate={() => setOpen(false)}
+              showOutreach={showOutreach}
+              role={role}
+              username={username}
+            />
           </div>
         )}
       </div>
