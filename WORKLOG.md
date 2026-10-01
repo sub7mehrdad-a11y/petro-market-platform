@@ -17,6 +17,41 @@
 
 ## ورودی‌ها
 
+### ۲۰۲۶-۱۰-۰۱ — سابجکت ایمیل معرفی دوباره عوض شد: بدون اسم شرکت، گرید پویا
+
+کاربر دو بار پشت‌سرهم سابجکت ایمیل معرفی رو اصلاح کرد:
+
+**دور اول (کامیت `714fcdf`):** حذف «Iran» از سابجکت و عوض‌کردن اسم
+فرستنده از «Sepehran Chemical» به «Pars Soda». سابجکت موقتاً ثابت شد:
+`Sodium Bicarbonate (Food/Industrial Grade) — Pars Soda`.
+
+**دور دوم (کامیت `13b5d4b`، همین امروز):** کاربر خواست حتی «Pars Soda»
+هم از سابجکت حذف بشه و به‌جاش سابجکت عمومی‌تر بشه: «Producer and
+Supplier of Sodium Bicarbonate» به‌همراه گرید *همون شرکت گیرنده* توی
+پرانتز (نه یک گرید ثابت برای همه). چون گرید بر اساس `target_grade` هر
+شرکت فرق می‌کنه، `SUBJECT` ثابت از `outreachTemplate.js` حذف و به یک
+تابع `buildSubject(grade)` تبدیل شد که داخل `renderOutreachEmail()`
+صدا زده می‌شه — نگاشت گرید به انگلیسی: food→Food Grade,
+feed→Feed Grade, industrial→Industrial Grade,
+unclear→Food/Feed/Industrial Grade.
+
+**راستی‌آزمایی:** `npm run build` موفق (exit 0)، و یک ایمیل تست واقعی
+(بدون CC، به `marketing@parssoda.com`) با `target_grade: "Feed Grade"`
+فرستاده شد — سابجکت دریافتی دقیقاً
+`Producer and Supplier of Sodium Bicarbonate (Feed Grade)` بود.
+
+بین این دو کامیت، همون ایمیل تستی (نسخه‌ی اصلاح‌شده‌ی دور اول، بدون CC)
+یک بار هم برای تأیید همکار به `joosheshirinptp@gmail.com` فرستاده شد —
+طبق درخواست کاربر، تا همکارشون بخونه و تأیید کنه. **فعال‌سازی کامل
+بخش ارسال ایمیل خودکار (`OUTREACH_UI_ENABLED`/`OUTREACH_SENDING_ENABLED`)
+هنوز در انتظار تأیید صریح و تازه‌ی کاربر است و دست‌نخورده باقی مانده.**
+
+**فایل‌ها:** `web/lib/outreachTemplate.js`.
+
+**کامیت‌ها:** `714fcdf`، `13b5d4b`
+
+---
+
 ### ۲۰۲۶-۰۹-۲۷ — بازطراحی گزارش خلاصه‌ی مدیریتی تاجیکستان هم به HTML
 
 کاربر خواست گزارش خلاصه (که دیروز فقط به‌عنوان docx/type=summary وارد
