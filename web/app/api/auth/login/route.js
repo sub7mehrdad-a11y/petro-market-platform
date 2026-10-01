@@ -3,6 +3,16 @@ import { findUserByUsername } from "@/lib/data";
 import { verifyPassword, createSession, SESSION_COOKIE_NAME, SESSION_COOKIE_MAX_AGE } from "@/lib/auth";
 
 export async function POST(request) {
+  // بدون این، createSession پایین‌تر throw می‌کنه و کاربر یک ۵۰۰ خام می‌بینه —
+  // به‌جاش یک پیام روشن بده (یادت باشه: SESSION_SECRET هم توی .env محلی هم
+  // توی تنظیمات محیطی Liara لازمه).
+  if (!process.env.SESSION_SECRET) {
+    return NextResponse.json(
+      { error: "پیکربندی سرور ناقص است (SESSION_SECRET تنظیم نشده)." },
+      { status: 500 }
+    );
+  }
+
   let username, password;
   try {
     ({ username, password } = await request.json());
