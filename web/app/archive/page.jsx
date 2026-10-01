@@ -3,8 +3,8 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 
-const COUNTRIES = ["برزیل", "ترکیه", "چین", "هند", "کنیا", "اردن", "عراق", "سایر"];
-const PRODUCTS = ["جوش شیرین", "سود پرک", "آمونیوم سولفات", "سایر"];
+const COUNTRIES = ["ایران", "برزیل", "ترکیه", "چین", "هند", "کنیا", "اردن", "عراق", "سایر"];
+const PRODUCTS = ["جوش شیرین", "روغن حرارتی سنتزی", "سود پرک", "آمونیوم سولفات", "سایر"];
 const REPORT_TYPE_FA = { detailed: "گزارش مفصل", summary: "گزارش مدیریتی (خلاصه)" };
 
 function formatSize(bytes) {

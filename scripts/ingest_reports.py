@@ -287,9 +287,26 @@ REPORTS = [
         "country": "تاجیکستان",
         "type": "detailed",
     },
+    {
+        # محصول جدید، خارج از سبد جوش شیرین — بررسی بازار داخلی ایران برای
+        # سیال انتقال حرارت سنتزی «ترموتک». به همین دلیل override صریح
+        # "product" دارد (نگاه کن تابع entry_product پایین‌تر)؛ country هم
+        # "ایران" است چون این گزارش درباره‌ی بازار مصرف داخلی‌ست، نه یک کشور
+        # هدف صادراتی مثل بقیه‌ی REPORTS.
+        "file": "گزارش_بازار_روغن_حرارتی_ترموتک.html",
+        "country": "ایران",
+        "type": "detailed",
+        "product": "روغن حرارتی سنتزی",
+    },
 ]
 
 PRODUCT = "جوش شیرین"
+
+
+def entry_product(entry: dict) -> str:
+    """محصول این ورودی — پیش‌فرض PRODUCT (جوش شیرین)، مگر اینکه خودِ ورودی
+    صریحاً "product" جدا داشته باشه (مثل گزارش ترموتک، محصول دیگری)."""
+    return entry.get("product", PRODUCT)
 
 SUMMARY_EXTRACTION_SYSTEM_PROMPT = """
 تو یک دستیار ساختاردهی گزارش هستی. من متن کامل یک گزارش مدیریتی (خودِ متعلق به
@@ -527,7 +544,7 @@ def main():
             "id": report_id,
             "title": title,
             "country": entry["country"],
-            "product": PRODUCT,
+            "product": entry_product(entry),
             "report_type": entry["type"],
             **parsed,
         }
@@ -544,7 +561,7 @@ def main():
             "id": report_id,
             "title": title,
             "country": entry["country"],
-            "product": PRODUCT,
+            "product": entry_product(entry),
             "report_type": entry["type"],
             "original_filename": dest_filename,
             "relative_path": os.path.join(entry["country"], dest_filename).replace("\\", "/"),

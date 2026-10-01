@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>بازار سیال انتقال حرارت سنتزی ترموتک</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(24px,3.6vw,36px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 70ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(4, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:700px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size:16px; font-weight:700; margin: 20px 0 10px; color: var(--petrol-600); }
+  :root[data-theme="dark"] h3, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h3{ color: var(--copper-300); } }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 78ch; }
+  strong{ color: var(--ink); font-weight:700; }
+  ul.bullets{ margin: 0 0 14px; padding-inline-start: 20px; color: var(--ink-soft); max-width: 78ch; }
+  ul.bullets li{ margin-bottom: 8px; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p, .callout ul{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout ul{ padding-inline-start: 20px; }
+  .callout ul li{ margin-bottom: 8px; }
+  .callout ul li:last-child{ margin-bottom: 0; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+  .callout.bad{ border-inline-start-color: var(--bad); background: var(--bad-bg); }
+
+  .pill-row{ display:flex; flex-wrap:wrap; gap:8px; margin: 10px 0 16px; }
+  .pill{
+    display:inline-flex; align-items:center; gap:6px;
+    font-size:12.5px; font-weight:600; color: var(--petrol-700);
+    background: var(--petrol-50); border:1px solid var(--line-soft);
+    border-radius: 999px; padding: 5px 12px;
+  }
+  :root[data-theme="dark"] .pill, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .pill{ color: var(--copper-300); } }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 560px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); vertical-align:top; }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); white-space:nowrap; }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0; max-width:none; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; محصول جدید (خارج از سبد جوش شیرین)</span>
+    <h1>گزارش بررسی بازار سیال انتقال حرارت سنتزی «ترموتک» در ایران</h1>
+    <p class="lead">شرایط تولید، توزیع و فروش، اندازه‌ی بازار و صنایع مصرف‌کننده — ارزیابی امکان ورود به بازار داخلی سیالات انتقال حرارت سنتزی، به‌عنوان جایگزین واردات Therminol 55 و مشابه آن.</p>
+    <div class="meta">
+      <span>تاریخ تنظیم: مهر ۱۴۰۵ (اکتبر ۲۰۲۶)</span>
+      <span>محصول: RIPI-PRSS Thermo Tec — معادل داخلی Therminol 55</span>
+      <span>واحد تحقیق و توسعه</span>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۳,۵۰۰-۷,۳۰۰ <small>تن/سال</small></div><div class="l">کل بازار سیال انتقال حرارت ایران (معدنی + سنتزی)</div></div>
+      <div class="kpi"><div class="v">۴۰۰-۱,۲۰۰ <small>تن/سال</small></div><div class="l">سهم سیالات سنتزی — عمدتاً وارداتی، بدون رقیب داخلی جدی</div></div>
+      <div class="kpi"><div class="v">۲.۵-۳.۵<small>$/kg</small></div><div class="l">قیمت هدف پیشنهادی ترموتک — حدود ۴۸٪ ارزان‌تر از Therminol وارداتی</div></div>
+      <div class="kpi"><div class="v">۶۰۰-۱,۵۰۰ <small>تن/سال</small></div><div class="l">بازار قابل دستیابی در افق ۳ تا ۵ سال (۱.۵ تا ۵ میلیون دلار)</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section id="s1">
+    <div class="sec-head"><span class="sec-num">۱</span><h2>خلاصه مدیریتی</h2></div>
+    <p>محصول «ترموتک» (RIPI-PRSS Thermo Tec) یک سیال انتقال حرارت سنتزی با پایه هیدروکربن آروماتیک آلکیله است که دانش فنی آن در پژوهشگاه صنعت نفت توسعه یافته و شرکت پترو روان صنعت سپهر عرضه‌ی آن را بر عهده دارد. مشخصات فنی این محصول در همه‌ی شاخص‌های اصلی با سیال Therminol 55 (پرفروش‌ترین سیال سنتزی دمای متوسط در جهان، ساخت شرکت آمریکایی Eastman) منطبق است و پژوهشگاه صنعت نفت نیز آن را در اردیبهشت ۱۴۰۴ به‌عنوان «روغن حرارتی سنتزی معادل Therminol 55» رونمایی کرده است.</p>
+    <h3>یافته‌های اصلی</h3>
+    <ul class="bullets">
+      <li><strong>بازار داخلی کوچک ولی کم‌رقیب است.</strong> کل مصرف روغن‌های انتقال حرارت در ایران (معدنی و سنتزی) حدود ۳,۵۰۰ تا ۷,۰۰۰ تن در سال برآورد می‌شود و سهم سیالات سنتزی از آن حدود ۴۰۰ تا ۱,۲۰۰ تن است. در بخش سنتزی، رقیب داخلی جدی وجود ندارد و بازار تاکنون با واردات برندهای خارجی تأمین شده است.</li>
+      <li><strong>مزیت اصلی محصول، جایگزینی واردات است.</strong> تأمین برندهای خارجی به دلیل تحریم، نوسان ارز و اختلال اخیر در حمل‌ونقل دریایی تنگه هرمز پرهزینه و نامطمئن شده — فرصتی برای ورود یک محصول داخلی هم‌تراز.</li>
+      <li><strong>ماده اولیه تولید در داخل کشور موجود است.</strong> ماده اولیه این نوع سیال، آلکیلات سنگین (HAB) است که محصول جانبی واحدهای تولید آلکیل‌بنزن خطی (LAB) است. دو تولیدکننده داخلی (هلدینگ صنایع شیمیایی ایران و پتروشیمی بیستون) مجموعاً حدود ۱۳ تا ۱۴ هزار تن در سال HAB تولید می‌کنند که بخش عمده‌ی آن صادر می‌شود.</li>
+      <li><strong>مهم‌ترین صنایع هدف:</strong> شیمیایی و رزین‌سازی، پتروشیمی، فرآورش نفت و گاز، تولید MDF و نئوپان، کارخانه‌های آسفالت و قیر، و تصفیه‌ی روغن نباتی.</li>
+      <li>فاصله‌ی قیمت برند آمریکایی و نمونه‌های چینی عمدتاً ناشی از تفاوت ماهیت محصول، هزینه‌ی ماده اولیه و خدمات پشتیبان است (بخش ۴). بخش قابل‌توجهی از محصولات چینی که با نام «معادل Therminol 55» عرضه می‌شوند، در واقع روغن معدنی هستند.</li>
+      <li>قیمت هدف ترموتک (حدود ۱۲۷ میلیون تومان برای هر بشکه) حدود ۴۸ درصد پایین‌تر از محصول وارداتی و ۲.۲ تا ۲.۵ برابر قیمت کارخانه‌ای روغن معدنی است (بخش ۷).</li>
+      <li class="bad-text"><strong>مستندات فنی محصول کاستی‌هایی دارد</strong> که پیش از عرضه به مشتریان صنعتی باید برطرف شود (بخش ۳).</li>
+    </ul>
+  </section>
+
+  <section id="s2">
+    <div class="sec-head"><span class="sec-num">۲</span><h2>معرفی محصول و جایگاه فنی</h2></div>
+    <p>سیالات انتقال حرارت در سامانه‌های گرمایش غیرمستقیم به کار می‌روند. دستگاهی به نام «دیگ روغن داغ» یا «اویل‌هیتر» روغن را با مشعل گرم می‌کند و پمپ آن را در لوله‌ها به گردش درمی‌آورد تا گرما به مخازن، راکتورها، پرس‌ها یا خطوط فرآیند برسد — این روش گرمای ۱۵۰ تا ۳۵۰ درجه‌ی سلسیوس را بدون نیاز به فشار بالا (برخلاف بخار آب) تأمین می‌کند.</p>
+    <p>این سیالات در دو گروه اصلی قرار دارند: <strong>روغن‌های معدنی</strong> که از روغن پایه نفتی تولید می‌شوند و ارزان‌ترند، اما در دماهای بالاتر از حدود ۲۸۰ درجه به‌سرعت تجزیه می‌شوند و رسوب و کک ایجاد می‌کنند؛ و <strong>سیالات سنتزی</strong> که پایداری حرارتی، عمر کاری طولانی‌تر و عملکرد بهتری در دمای پایین دارند.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>شاخص</th><th>ترموتک (کاتالوگ)</th><th>Therminol 55</th><th>روغن حرارتی معدنی داخلی</th></tr></thead>
+        <tbody>
+          <tr><td>پایه شیمیایی</td><td>مخلوط هیدروکربن سنتزی</td><td>بنزن آلکیله C14–C30 (CAS 68855-24-3)</td><td>روغن پایه معدنی گروه یک</td></tr>
+          <tr><td>حداکثر دمای توده (°C)</td><td class="num-cell">۲۹۰</td><td class="num-cell">۳۰۰ (برگه فعلی)؛ ۲۹۰ (پیشین)</td><td class="num-cell">تا ۲۸۰-۳۲۰ (ادعای تولیدکننده)</td></tr>
+          <tr><td>حداکثر دمای کاربرد گسترش‌یافته (°C)</td><td class="num-cell">۳۱۵</td><td class="num-cell">۳۱۵</td><td>—</td></tr>
+          <tr><td>گرانروی در ۴۰ درجه (cSt)</td><td class="num-cell">۱۸.۳</td><td>درج نشده</td><td class="num-cell">۳۲ (ISO VG 32)</td></tr>
+          <tr><td>نقطه اشتعال، ASTM D92 (°C)</td><td class="num-cell">۱۹۴</td><td class="num-cell">۱۹۳</td><td class="num-cell">حدود ۲۴۰</td></tr>
+          <tr><td>دمای خوداشتعالی (°C)</td><td>درج نشده</td><td class="num-cell">۳۴۳</td><td>—</td></tr>
+          <tr><td>نقطه ریزش (°C)</td><td class="num-cell">۵۴-</td><td class="num-cell">۵۴-</td><td class="num-cell">معمولاً ۹- تا ۱۲-</td></tr>
+          <tr><td>قابلیت پمپاژ در دمای پایین</td><td class="num-cell">در ۲۸- درجه</td><td class="num-cell">در ۲۸- درجه</td><td class="num-cell">معمولاً تا ۷- درجه</td></tr>
+          <tr><td>وزن مولکولی متوسط</td><td class="num-cell">۳۱۰</td><td class="num-cell">۳۲۰</td><td>—</td></tr>
+          <tr><td>نقطه جوش (°C)</td><td class="num-cell">۳۴۵ (شروع تقطیر)</td><td class="num-cell">۳۵۱</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>مقایسه نشان می‌دهد شاخص‌های اصلی دو محصول (نقطه اشتعال، نقطه ریزش، حداقل دمای پمپاژ و حداکثر دمای کاربرد گسترش‌یافته) یکسان یا تقریباً یکسان است. این انطباق به‌تنهایی تولید داخلی را اثبات نمی‌کند — احراز آن مستلزم بازدید از خط تولید و بررسی منبع تأمین ماده اولیه است.</p>
+    <div class="callout">
+      <p>از منظر فنی، ترموتک برای سامانه‌هایی مناسب است که دمای توده‌ی سیال آن‌ها بین ۲۵۰ تا ۲۹۰ درجه است، راه‌اندازی در هوای سرد دارند، یا با مشکل رسوب‌گذاری و کک‌شدن روغن معدنی مواجه‌اند. در کاربردهای زیر ۲۵۰ درجه، روغن‌های معدنی ارزان‌تر معمولاً کافی‌اند و ترموتک تنها با استدلال «عمر کاری طولانی‌تر و کاهش توقفات» قابل فروش خواهد بود.</p>
+    </div>
+  </section>
+
+  <section id="s3">
+    <div class="sec-head"><span class="sec-num">۳</span><h2>نکات فنی نیازمند اصلاح در مستندات محصول</h2></div>
+    <p>بررسی کاتالوگ و برگه مشخصات فنی محصول، کاستی‌هایی را نشان می‌دهد که خریداران صنعتی — به‌ویژه شرکت‌های تابعه‌ی وزارت نفت — با دقت ارزیابی می‌کنند و می‌تواند اعتبار محصول را در مرحله‌ی ارزیابی فنی تضعیف کند:</p>
+    <div class="callout bad">
+      <ul>
+        <li><strong>تناقض در دمای کاری:</strong> عنوان و جدول مشخصات حداکثر دمای توده را ۲۹۰ درجه اعلام می‌کند، اما بخش مزایا از «کارکرد مداوم در ۳۰۰ درجه» سخن می‌گوید — ترموتک باید یک عدد واحد و مستند به آزمون خود اعلام کند.</li>
+        <li><strong>ادعای عدم خوداشتعالی تا ۳۲۰ درجه بدون داده‌ی پشتیبان:</strong> دمای خوداشتعالی و نقطه آتش در جدول خالی مانده؛ نباید با نقطه اشتعال (۱۹۴ درجه) خلط شود.</li>
+        <li><strong>ردیف‌های ناقص:</strong> ولتاژ شکست دی‌الکتریک و گرمای تبخیر خالی مانده و روش آزمون گرمای تبخیر به‌صورت ناقص «ASTM D» درج شده.</li>
+        <li><strong>عبارت نامتعارف در آزمون خوردگی مس:</strong> نتیجه‌ی ASTM D130 به‌صورت «Freshly (better than 1a)» درج شده که با طبقه‌بندی استاندارد مطابقت ندارد.</li>
+        <li><strong>فقدان داده‌های حیاتی طراحی:</strong> ظرفیت گرمایی ویژه، فشار بخار در دماهای مختلف، هدایت حرارتی در دمای کاری و نتیجه‌ی آزمون پایداری حرارتی (ASTM D6743) ارائه نشده — مهندسان طراح برای مقایسه با Therminol 55 به این داده‌ها نیاز دارند.</li>
+        <li><strong>شباهت متنی با برگه‌ی فنی Therminol 55:</strong> توصیف‌های انگلیسی جدول کلمه‌به‌کلمه با برگه‌ی Eastman یکسان است و متن بخش مزایا ترجمه‌ی مستقیم همان برگه به‌نظر می‌رسد؛ در مقابل، اعداد جدول کپی نشده‌اند. برای جلوگیری از تردید خریداران و ملاحظات حقوقی علامت تجاری، نگارش مستقل کاتالوگ و ارائه‌ی گزارش آزمون مستقل (ترجیحاً از آزمایشگاه مرجع) در مقایسه با Therminol 55 ضروری است.</li>
+        <li><strong>ناسازگاری جزئی:</strong> ظاهر محصول «زرد» معرفی شده، در حالی که رنگ آن طبق ASTM D1500 کمتر از ۰.۵ (تقریباً بی‌رنگ) اعلام شده.</li>
+        <li><strong>عدم اعلام وضعیت تماس غذایی:</strong> مشخص نیست محصول گواهی NSF HT1 (مجاز بودن تماس اتفاقی با مواد غذایی) دارد یا نه — این موضوع برای فروش به صنایع روغن نباتی و غذایی تعیین‌کننده است.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="s4">
+    <div class="sec-head"><span class="sec-num">۴</span><h2>ساختار بازار و رقبا</h2></div>
+    <h3>۴-۱. مالک فناوری و وضعیت فعلی محصول</h3>
+    <p>پژوهشگاه صنعت نفت در حاشیه‌ی بیست‌ونهمین نمایشگاه بین‌المللی نفت (اردیبهشت ۱۴۰۴) از روغن حرارتی سنتزی معادل Therminol 55 رونمایی کرد و در همان رویداد، تفاهم‌نامه‌ی همکاری تولید روغن حرارتی میان شرکت نفت و گاز اروندان، پژوهشگاه صنعت نفت و شرکت پترو روان صنعت سپهر به امضا رسید. شرکت پترو روان صنعت سپهر یک شرکت سهامی خاص (شناسه ملی ۱۴۰۱۳۵۵۷۹۵۶) و بر پایه‌ی اطلاعات ثبتی، نوپاست؛ سابقه‌ی تولید پایدار، ظرفیت اسمی و محل تولید این شرکت در منابع عمومی منتشر نشده است. پژوهشگاه صنعت نفت پیش‌تر محصولاتی مانند روغن کمپرسور را از HAB تولیدی صنایع شیمیایی ایران توسعه داده و روغن توربین‌های شرکت انتقال گاز را بومی‌سازی کرده — این سابقه، پشتوانه‌ی فنی محصول را تقویت می‌کند.</p>
+    <h3>۴-۲. رقبای داخلی (روغن‌های معدنی)</h3>
+    <p>چهار پالایشگاه روغن‌سازی کشور — نفت ایرانول، نفت بهران، نفت سپاهان و نفت پارس — همگی روغن پایه گروه یک تولید می‌کنند و روغن حرارتی معدنی عرضه می‌کنند. نفت بهران بیش از یک‌سوم بازار روغن‌های صنعتی کشور را در اختیار دارد و «بهران حرارت» پرفروش‌ترین روغن حرارتی بازار داخلی است. این روغن‌ها در عمل در دماهای بالای ۲۸۰ درجه با افت سریع کیفیت و تشکیل رسوب مواجه می‌شوند؛ ترموتک باید با استدلال «هزینه کل مالکیت» (عمر کاری طولانی‌تر، توقفات کمتر، شستشوی کمتر سامانه) در برابرشان عرضه شود.</p>
+    <h3>۴-۳. رقبای خارجی (سیالات سنتزی)</h3>
+    <p>برندهای Therminol (از جمله Therminol 55 و Therminol 66)، Shell Heat Transfer Fluid، Mobiltherm و Total Seriola از طریق شرکت‌های بازرگانی و نمایندگی‌های فروش در بازار ایران عرضه می‌شوند — قیمت‌ها عمدتاً بر پایه‌ی استعلام اعلام می‌شود. در شرایط کنونی، هزینه‌ی واردات به دلیل نرخ ارز بازار آزاد و افزایش شدید هزینه‌ی حمل دریایی در تنگه هرمز افزایش یافته که مزیت رقابتی تولید داخل را تقویت می‌کند.</p>
+    <h3>۴-۴. علت تفاوت قیمت محصول آمریکایی و نمونه‌های چینی</h3>
+    <p>قیمت Therminol 55 حدود دو تا سه برابر نمونه‌هایی است که از چین با عنوان «معادل Therminol 55» عرضه می‌شوند. این فاصله از پنج عامل ناشی می‌شود: (۱) بخش قابل‌توجهی از محصولات چینی ارزان در واقع روغن معدنی‌اند (طبق استاندارد GB 23971، کلاس‌های L-QB/L-QC)، نه سیال سنتزی واقعی (کلاس L-QD)؛ (۲) چین بزرگ‌ترین تولیدکننده‌ی LAB جهان است و ماده‌ی اولیه (HAB) را ارزان‌تر تأمین می‌کند؛ (۳) برند اصلی آزمون پایداری حرارتی بلندمدت (ASTM D6743) و کنترل کیفیت یکنواخت بین بچ‌ها انجام می‌دهد که هزینه‌بر است؛ (۴) Eastman خدمات پس از فروش، آنالیز دوره‌ای و مسئولیت حقوقی ارائه می‌کند؛ (۵) خریداران صنعتی به قیمت حساسیت کمی دارند چون هزینه‌ی سیال در برابر خسارت توقف تولید ناچیز است، و برندهای غربی از شبکه‌ی توزیع چندلایه عبور می‌کنند.</p>
+    <div class="callout copper">
+      <p><strong>نتیجه برای ترموتک:</strong> جایگاه قیمتی مناسب این محصول میان روغن معدنی ارزان و Therminol وارداتی گران قرار دارد — مشروط به ارائه‌ی گزارش آزمون مستقل و خدمات آنالیز سیال کارکرده، وگرنه خریداران صنعتی آن را هم‌ردیف نمونه‌های ارزان‌قیمت چینی ارزیابی خواهند کرد. ایران نیز به دلیل وجود دو تولیدکننده‌ی LAB، از همان مزیت ماده‌ی اولیه‌ای برخوردار است که تولیدکنندگان چینی از آن بهره می‌برند.</p>
+    </div>
+    <div class="chart-box">
+      <div class="chart-h" style="height:230px"><canvas id="chartPricePosition"></canvas></div>
+      <div class="cap">جایگاه قیمتی ترموتک در برابر رقبا — بازه‌ی قیمت هر کیلوگرم ($/kg)</div>
+    </div>
+  </section>
+
+  <section id="s5">
+    <div class="sec-head"><span class="sec-num">۵</span><h2>صنایع مصرف‌کننده</h2></div>
+    <p>جدول زیر صنایع مصرف‌کننده‌ی سیال انتقال حرارت در ایران و میزان تناسب ترموتک با هر صنعت را نشان می‌دهد؛ کاربردهای کاتالوگ محصول (بیواتانول، بیودیزل، آسفالت، سیمان، GTL، فرآورش گاز و نفت، پلیمر) در این جدول لحاظ شده و صنایع مهم دیگر نیز اضافه شده‌اند.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>صنعت</th><th>کاربرد سیال</th><th>دمای معمول (°C)</th><th>تناسب با ترموتک</th><th>اولویت</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td>شیمیایی، رزین‌سازی و رنگ</td><td>گرمایش راکتورهای رزین آلکید، پلی‌استر و فنولیک</td><td class="num-cell">۲۰۰-۲۸۰</td><td>بالا</td><td>الف</td></tr>
+          <tr class="hl"><td>پتروشیمی و پلیمر</td><td>گرمایش مخازن، خطوط و راکتورها؛ واحدهای نرم‌کننده و PET</td><td class="num-cell">۲۰۰-۳۰۰</td><td>بالا (زیر ۲۹۰ درجه)</td><td>الف</td></tr>
+          <tr class="hl"><td>فرآورش نفت و پالایش گاز</td><td>سامانه‌های روغن داغ در احیای گلایکول، تثبیت میعانات</td><td class="num-cell">۱۸۰-۲۹۰</td><td>بالا؛ خریداران دولتی، الزام به خرید داخلی</td><td>الف</td></tr>
+          <tr class="hl"><td>MDF و نئوپان</td><td>گرمایش پرس‌های پیوسته و طبقاتی</td><td class="num-cell">۲۲۰-۲۶۰</td><td>متوسط تا بالا؛ حجم بالای سیال در هر خط</td><td>الف</td></tr>
+          <tr><td>آسفالت و قیر</td><td>گرمایش مخازن قیر، خطوط و میکسر</td><td class="num-cell">۱۶۰-۲۲۰</td><td>متوسط؛ تعداد مصرف‌کننده زیاد است</td><td>ب</td></tr>
+          <tr><td>تصفیه روغن نباتی</td><td>بوگیری (دئودوریزاسیون) و گرمایش</td><td class="num-cell">۲۴۰-۲۷۰</td><td>فنی بالا؛ مشروط به تأیید تماس غذایی</td><td>ب</td></tr>
+          <tr><td>نساجی</td><td>استنتر، تثبیت حرارتی و چاپ</td><td class="num-cell">۱۸۰-۲۳۰</td><td>متوسط</td><td>ج</td></tr>
+          <tr><td>غذایی (نان صنعتی، شیرینی)</td><td>فرهای روغن داغ</td><td class="num-cell">۲۰۰-۲۵۰</td><td>مشروط به تأیید تماس غذایی</td><td>ج</td></tr>
+          <tr><td>سیمان</td><td>بازیافت حرارت اتلافی (چرخه رانکین آلی)</td><td class="num-cell">۲۵۰-۳۰۰</td><td>بالا ولی تعداد پروژه‌ها در ایران محدود</td><td>ج</td></tr>
+          <tr><td>بیوسوخت (بیواتانول و بیودیزل)</td><td>تقطیر و گرمایش فرآیند</td><td class="num-cell">۱۵۰-۲۵۰</td><td>فنی مناسب؛ صنعت در ایران کوچک است</td><td>ج</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>نکته درباره‌ی آسفالت: در ایران سالانه حدود ۲ تا ۲.۵ میلیون تن قیر مصرف می‌شود — معادل تولید چندین میلیون تن آسفالت در ده‌ها کارخانه. تعداد زیاد مصرف‌کنندگان این بخش را به کانال مناسبی برای فروش حجمی تبدیل می‌کند، هرچند حساسیت قیمتی در آن بالاست.</p>
+  </section>
+
+  <section id="s6">
+    <div class="sec-head"><span class="sec-num">۶</span><h2>برآورد اندازه‌ی بازار</h2></div>
+    <p>آمار رسمی تفکیکی مصرف یا واردات سیالات انتقال حرارت در ایران به‌صورت عمومی منتشر نمی‌شود. برآورد زیر به روش پایین‌به‌بالا و بر اساس تعداد تقریبی سامانه‌ها، حجم سیال در هر سامانه، نرخ جایگزینی (هر ۳ تا ۶ سال) و نرخ جبران سالانه (حدود ۵ تا ۱۰ درصد حجم سامانه) تهیه شده — ارقام تخمینی‌اند و باید با آمار گمرکی و مصاحبه با مصرف‌کنندگان اصلی تدقیق شوند.</p>
+    <div class="chart-box">
+      <div class="chart-h" style="height:260px"><canvas id="chartMarketByIndustry"></canvas></div>
+      <div class="cap">برآورد مصرف سالانه‌ی سیال انتقال حرارت به تفکیک بخش مصرف (تن/سال، بازه‌ی برآوردی)</div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>بخش مصرف</th><th>برآورد مصرف سالانه (تن)</th><th>مبنای برآورد</th></tr></thead>
+        <tbody>
+          <tr><td>شیمیایی، رزین، پتروشیمی و پلیمر</td><td class="num-cell">۱,۰۰۰-۲,۰۰۰</td><td>ده‌ها واحد با حجم سامانه ۲۰ تا ۳۰۰ متر مکعب</td></tr>
+          <tr><td>فرآورش نفت و پالایش گاز</td><td class="num-cell">۵۰۰-۱,۵۰۰</td><td>سامانه‌های روغن داغ بزرگ در تعداد محدود واحد</td></tr>
+          <tr><td>آسفالت و قیر</td><td class="num-cell">۸۰۰-۱,۵۰۰</td><td>چند صد کارخانه‌ی آسفالت و واحد قیرسازی با سامانه‌های کوچک</td></tr>
+          <tr><td>MDF و نئوپان</td><td class="num-cell">۵۰۰-۹۰۰</td><td>حدود ۳۰ تا ۴۰ خط با ۵۰ تا ۱۵۰ متر مکعب سیال در هر خط</td></tr>
+          <tr><td>روغن نباتی و غذایی</td><td class="num-cell">۳۰۰-۶۰۰</td><td>حدود ۳۰ پالایشگاه روغن نباتی و واحدهای غذایی</td></tr>
+          <tr><td>نساجی، لاستیک، سیمان و سایر</td><td class="num-cell">۴۰۰-۸۰۰</td><td>واحدهای پراکنده</td></tr>
+          <tr class="hl"><td>جمع کل (معدنی و سنتزی)</td><td class="num-cell">۳,۵۰۰-۷,۳۰۰</td><td>—</td></tr>
+          <tr class="hl"><td>سهم سنتزی (۱۰ تا ۲۰٪)</td><td class="num-cell">۴۰۰-۱,۲۰۰</td><td>عمدتاً وارداتی</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout">
+      <p><strong>آزمون سازگاری برآورد:</strong> طبق گزارش‌های کدال، فروش داخلی روغن‌های صنعتی نفت بهران در پنج ماه نخست ۱۴۰۵ حدود ۲۹ میلیون لیتر (~۶۰ هزار تن در سال) و نفت ایرانول در چهار ماه نخست حدود ۹ هزار متر مکعب (~۲۳ هزار تن در سال) بوده است. با سهم بیش از یک‌سوم بهران، کل بازار روغن‌های صنعتی حدود ۱۸۰ هزار تن در سال برآورد می‌شود؛ برآورد مصرف روغن حرارتی (۳,۵۰۰ تا ۷,۳۰۰ تن) حدود ۲ تا ۴ درصد این رقم است که با سهم متعارف روغن‌های حرارتی از بازار روغن‌های صنعتی سازگار است.</p>
+    </div>
+    <p><strong>بازار قابل دستیابی برای ترموتک:</strong> اگر محصول بتواند علاوه بر جایگزینی واردات سنتزی، بخشی از مصرف روغن معدنی در کاربردهای ۲۵۰ تا ۲۹۰ درجه را نیز جذب کند، بازار قابل دستیابی آن در افق ۳ تا ۵ سال حدود ۶۰۰ تا ۱,۵۰۰ تن در سال خواهد بود. با قیمت فروش ۲.۵ تا ۳.۵ دلار در هر کیلوگرم، ارزش این بازار حدود ۱.۵ تا ۵ میلیون دلار در سال است.</p>
+    <div class="callout copper">
+      <p><strong>پیشنهاد تدقیق:</strong> استخراج آمار واردات گمرک ایران برای ردیف‌های تعرفه‌ای که سیالات انتقال حرارت سنتزی در آن‌ها ترخیص می‌شوند (معمولاً فصل‌های ۲۷۱۰، ۲۷۰۷ و ۳۸۲۴) در سه سال اخیر، مهم‌ترین گام برای دقیق‌کردن این برآورد است.</p>
+    </div>
+  </section>
+
+  <section id="s7">
+    <div class="sec-head"><span class="sec-num">۷</span><h2>قیمت و اقتصاد توزیع</h2></div>
+    <h3>۷-۱. قیمت روز روغن‌های حرارتی در بازار داخلی</h3>
+    <p>جدول زیر قیمت‌های اعلام‌شده توسط فروشندگان روانکار صنعتی در سامانه‌ی مقایسه قیمت ترب (torob.com) و فروشگاه فیدار اویل (fidaroil.com) در ۶ مهر ۱۴۰۵ را نشان می‌دهد؛ با فرض چگالی ۰.۸۷ کیلوگرم بر لیتر (~۱۸۱ کیلوگرم در هر بشکه‌ی ۲۰۸ لیتری) و نرخ دلار بازار آزاد (~۲۳۴ هزار تومان) به دلار تبدیل شده است.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>محصول</th><th>فروشنده</th><th>بسته‌بندی</th><th>قیمت (تومان)</th><th>هر کیلوگرم (تومان)</th><th>معادل دلاری هر کیلوگرم</th></tr></thead>
+        <tbody>
+          <tr><td>بهران حرارت (معدنی، ISO VG 32)</td><td>تراور</td><td>بشکه ۲۰۸ لیتری</td><td class="num-cell">۴۶,۲۰۰,۰۰۰</td><td class="num-cell">~۲۵۵ هزار</td><td class="num-cell">۱.۰۹</td></tr>
+          <tr><td>بهران حرارت</td><td>روغنیتو</td><td>بشکه ۲۰۸ لیتری</td><td class="num-cell">۷۵,۶۰۰,۰۰۰</td><td class="num-cell">~۴۱۸ هزار</td><td class="num-cell">۱.۷۹</td></tr>
+          <tr><td>بهران حرارت</td><td>روغن تورال جنوب</td><td>بشکه ۲۰۸ لیتری</td><td class="num-cell">۸۰,۰۰۰,۰۰۰</td><td class="num-cell">~۴۴۲ هزار</td><td class="num-cell">۱.۸۹</td></tr>
+          <tr><td>بهران حرارت</td><td>فیدار اویل</td><td>بشکه ۲۰۸ لیتری</td><td class="num-cell">۱۲۰,۰۰۰,۰۰۰</td><td class="num-cell">~۶۶۳ هزار</td><td class="num-cell">۲.۸۳</td></tr>
+          <tr><td>ایرانول HT-B32 (معدنی)</td><td>فیدار اویل</td><td>بشکه ۲۰۸ لیتری</td><td class="num-cell">۱۲۸,۰۰۰,۰۰۰</td><td class="num-cell">~۷۰۷ هزار</td><td class="num-cell">۳.۰۲</td></tr>
+          <tr><td>Shell Heat Transfer Oil S2 (معدنی، وارداتی)</td><td>فیدار اویل</td><td>سطل ۲۰ لیتری</td><td class="num-cell">۷,۰۰۰,۰۰۰</td><td class="num-cell">~۴۰۲ هزار</td><td class="num-cell">۱.۷۲</td></tr>
+          <tr class="hl"><td>Therminol (سنتزی، وارداتی)</td><td>روانکاران خاورمیانه (ترب)</td><td>بشکه (حجم درج نشده)</td><td class="num-cell">۲۴۵,۰۰۰,۰۰۰</td><td class="num-cell">~۱.۱۸-۱.۳۵ میلیون</td><td class="num-cell">۵.۰-۵.۸</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>۷-۲. قیمت کارخانه‌ای بر پایه‌ی گزارش‌های رسمی کدال</h3>
+    <p>شرکت‌های نفت بهران (شبهرن) و نفت ایرانول (شرانول) مقدار و مبلغ فروش ماهانه‌ی هر گروه محصول را در سامانه‌ی کدال منتشر می‌کنند. این گزارش‌ها روغن حرارتی را جداگانه گزارش نمی‌کنند؛ ارقام زیر میانگین کل گروه «روغن‌های صنعتی» (حرارتی، هیدرولیک، دنده، توربین و مشابه) در فروش داخلی است.</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>شرکت و دوره</th><th>نرخ فروش هر لیتر (تومان)</th><th>هر بشکه ۲۰۸ لیتری (میلیون تومان)</th><th>با مالیات بر ارزش افزوده ۱۰٪</th><th>تغییر نسبت به دوره مشابه سال قبل</th></tr></thead>
+        <tbody>
+          <tr><td>نفت بهران، مرداد ۱۴۰۵</td><td class="num-cell">۲۵۶,۲۴۱</td><td class="num-cell">۵۳.۳</td><td class="num-cell">۵۸.۶</td><td>—</td></tr>
+          <tr><td>نفت بهران، پنج‌ماهه ۱۴۰۵</td><td class="num-cell">۲۳۰,۲۲۴</td><td class="num-cell">۴۷.۹</td><td class="num-cell">۵۲.۷</td><td class="num-cell">۲.۲۵ برابر</td></tr>
+          <tr><td>نفت ایرانول، تیر ۱۴۰۵</td><td class="num-cell">۲۱۸,۴۱۷</td><td class="num-cell">۴۵.۴</td><td class="num-cell">۵۰.۰</td><td>—</td></tr>
+          <tr><td>نفت ایرانول، خرداد ۱۴۰۵</td><td class="num-cell">۲۱۱,۲۰۴</td><td class="num-cell">۴۳.۹</td><td class="num-cell">۴۸.۳</td><td>—</td></tr>
+          <tr><td>نفت ایرانول، چهارماهه ۱۴۰۵</td><td class="num-cell">۲۰۴,۰۲۶</td><td class="num-cell">۴۲.۴</td><td class="num-cell">۴۶.۷</td><td class="num-cell">۲.۰۵ برابر</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout bad">
+      <p>قیمت کارخانه‌ای روغن‌های صنعتی در یک سال گذشته بیش از دو برابر شده و روند ماهانه‌ی آن همچنان صعودی است.</p>
+    </div>
+
+    <h3>۷-۳. جایگاه قیمتی پیشنهادی ترموتک</h3>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>رقیب</th><th>قیمت هر بشکه (میلیون تومان)</th><th>نسبت قیمت ترموتک (۱۲۷ میلیون تومان) به رقیب</th></tr></thead>
+        <tbody>
+          <tr><td>روغن صنعتی معدنی، قیمت کارخانه‌ای با مالیات (کدال)</td><td class="num-cell">۵۰-۵۹</td><td class="num-cell">۲.۲ تا ۲.۵ برابر</td></tr>
+          <tr><td>روغن حرارتی معدنی، قیمت خرده‌فروشی (میانه ترب)</td><td class="num-cell">۷۵-۸۰</td><td class="num-cell">~۱.۶ برابر</td></tr>
+          <tr class="hl"><td>Therminol وارداتی</td><td class="num-cell">~۲۴۵</td><td class="num-cell">~۴۸٪ ارزان‌تر</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>فاصله‌ی قیمتی ترموتک با روغن معدنی در سطح قیمت کارخانه‌ای (۲.۲ تا ۲.۵ برابر) در محدوده‌ی متعارف بازارهای جهانی (دو تا چهار برابر) قرار دارد؛ بنابراین فروش ترموتک در برابر روغن‌های معدنی مستلزم استدلال «هزینه کل مالکیت» است، نه قیمت به‌تنهایی. مزیت قیمتی روشن ترموتک در برابر Therminol وارداتی است که بازار اصلی جایگزینی آن را تشکیل می‌دهد.</p>
+  </section>
+
+  <section id="s8">
+    <div class="sec-head"><span class="sec-num">۸</span><h2>واژه‌نامه اصطلاحات فنی</h2></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>اصطلاح</th><th>تعریف</th><th>اهمیت در این گزارش</th></tr></thead>
+        <tbody>
+          <tr><td>سیال انتقال حرارت / روغن حرارتی</td><td>روغنی که در یک مدار بسته گرم می‌شود و گرما را به تجهیزات فرآیند منتقل می‌کند</td><td>محصول مورد بررسی</td></tr>
+          <tr><td>دیگ روغن داغ / اویل‌هیتر</td><td>دستگاهی که روغن حرارتی را با مشعل گرم کرده و در لوله‌ها به گردش درمی‌آورد</td><td>تجهیز اصلی مصرف‌کننده‌ی روغن</td></tr>
+          <tr><td>روغن معدنی / روغن سنتزی</td><td>معدنی از روغن پایه نفتی؛ سنتزی با واکنش شیمیایی در کارخانه ساخته می‌شود</td><td>معدنی ارزان‌تر ولی عمر کوتاه‌تر؛ سنتزی عمر طولانی‌تر و رسوب کمتر</td></tr>
+          <tr><td>LAB (آلکیل‌بنزن خطی)</td><td>مولکول حلقه بنزن + زنجیره کربنی ۱۰ تا ۱۳ کربنه؛ ماده اولیه اصلی شوینده‌ها</td><td>محصول اصلی کارخانه‌هایی که ماده اولیه ترموتک را تولید می‌کنند</td></tr>
+          <tr><td>HAB (آلکیلات سنگین)</td><td>محصول جانبی تولید LAB، مولکول‌های سنگین‌تر</td><td>ماده اولیه‌ی Therminol 55 و ترموتک</td></tr>
+          <tr><td>دمای توده (Bulk Temperature)</td><td>دمای متوسط روغن در حال گردش</td><td>حداکثر مجاز ترموتک ۲۹۰ درجه</td></tr>
+          <tr><td>نقطه اشتعال / دمای خوداشتعالی</td><td>دمایی که بخار روغن نزدیک شعله جرقه می‌زند / بدون شعله خودبه‌خود آتش می‌گیرد</td><td>شاخص‌های ایمنی؛ ادعای ۳۲۰ درجه‌ی ترموتک فاقد داده‌ی پشتیبان است</td></tr>
+          <tr><td>نقطه ریزش (Pour Point)</td><td>پایین‌ترین دمایی که روغن هنوز جاری می‌شود</td><td>نشان‌دهنده‌ی قابلیت راه‌اندازی در هوای سرد</td></tr>
+          <tr><td>ASTM / ASTM D6743</td><td>انجمن آمریکایی آزمون و مواد؛ D6743 آزمون پایداری حرارتی بلندمدت</td><td>مهم‌ترین داده‌ی غایب در مستندات ترموتک</td></tr>
+          <tr><td>TDS / SDS</td><td>برگه مشخصات فنی / برگه اطلاعات ایمنی محصول</td><td>مدارک الزامی در خرید صنعتی</td></tr>
+          <tr><td>GB 23971 و کلاس‌های L-QB، L-QC، L-QD</td><td>استاندارد ملی چین برای روغن حرارتی و کلاس‌های آن</td><td>L-QB/L-QC معمولاً معدنی و L-QD عمدتاً سنتزی است</td></tr>
+          <tr><td>NSF HT1</td><td>گواهی مجاز بودن سیال برای تماس اتفاقی با مواد غذایی</td><td>شرط فروش به صنایع روغن نباتی و غذایی</td></tr>
+          <tr><td>FOB</td><td>قیمت تحویل کالا روی کشتی در بندر مبدأ، بدون هزینه حمل و بیمه</td><td>مبنای قیمت‌های اعلامی چینی</td></tr>
+          <tr><td>وندور لیست</td><td>فهرست تأمین‌کنندگان مجاز شرکت‌های نفت، گاز و پتروشیمی</td><td>شرط شرکت در مناقصات این شرکت‌ها</td></tr>
+          <tr><td>پرکردن اولیه (First Fill)</td><td>روغنی که سازنده‌ی تجهیز زمان نصب داخل آن می‌ریزد</td><td>مصرف‌کننده معمولاً در تعویض‌های بعدی همان برند را انتخاب می‌کند</td></tr>
+          <tr><td>هزینه کل مالکیت</td><td>مجموع هزینه‌ی خرید، تعویض، توقف تولید و نگهداری در طول عمر سامانه</td><td>استدلال اصلی فروش سیال سنتزی در برابر روغن معدنی ارزان</td></tr>
+          <tr><td>کدال</td><td>سامانه‌ی رسمی انتشار اطلاعات شرکت‌های بورسی</td><td>منبع میانگین قیمت واقعی فروش روغن‌سازان</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="s9">
+    <div class="sec-head"><span class="sec-num">۹</span><h2>منابع</h2></div>
+    <div class="pill-row">
+      <span class="pill">پژوهشگاه صنعت نفت و شانا (shana.ir)</span>
+      <span class="pill">Eastman — Therminol 55 TDS/SDS (eastman.com)</span>
+      <span class="pill">Global Heat Transfer (globalhtf.com)</span>
+      <span class="pill">انیگما — تحلیل بنیادی شیران (enigma.ir)</span>
+      <span class="pill">هلدینگ صنایع شیمیایی ایران (iciiclab.com)</span>
+      <span class="pill">شانا و کیان پترولیوم — پتروشیمی بیستون</span>
+      <span class="pill">دنیای اقتصاد (donya-e-eqtesad.com)</span>
+      <span class="pill">نفت بهران — سهم بازار روانکارها (behranoil.co)</span>
+      <span class="pill">مهرنیوز و دنیای اقتصاد — مصرف داخلی قیر</span>
+      <span class="pill">Procurement Resource — قیمت HAB</span>
+      <span class="pill">ترب (torob.com)</span>
+      <span class="pill">فیدار اویل (fidaroil.com)</span>
+      <span class="pill">نفت ایرانول — لیست قیمت (iranol.ir)</span>
+      <span class="pill">سامانه کدال (codal.ir) — نفت بهران/شبهرن و نفت ایرانول/شرانول</span>
+      <span class="pill">بورس کالای ایران (ime.co.ir)</span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <p>گزارش داخلی واحد تحقیق و توسعه — ارزیابی امکان‌سنجی بازار محصول «ترموتک»، خارج از سبد محصولات جوش شیرین. ارقام برآوردی بر پایه‌ی منابع عمومی وب و گزارش‌های رسمی (کدال، شانا) تهیه شده و باید پیش از تصمیم‌گیری نهایی با آمار گمرکی و مصاحبه با مصرف‌کنندگان اصلی تدقیق شوند.</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){
+    return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; });
+  }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US")); }
+
+  function cssVar(name){
+    return getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+  }
+
+  var charts = [];
+  function themeColors(){
+    return {
+      ink: cssVar('--ink-soft'),
+      grid: cssVar('--line-soft'),
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
+      copper: cssVar('--copper-500'),
+      copperDark: cssVar('--copper-600'),
+      bad: cssVar('--bad'),
+      good: cssVar('--good'),
+      bg: cssVar('--bg-soft')
+    };
+  }
+
+  function baseOptions(c){
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif";
+    Chart.defaults.color = c.ink;
+    Chart.defaults.borderColor = c.grid;
+  }
+
+  function buildAll(){
+    var c = themeColors();
+    baseOptions(c);
+    charts.forEach(function(ch){ ch.destroy(); });
+    charts = [];
+
+    // ---- Market size by consuming industry (floating range bars) ----
+    charts.push(new Chart(document.getElementById('chartMarketByIndustry'), {
+      type: 'bar',
+      data: {
+        labels: ['شیمیایی/رزین/پتروشیمی/پلیمر', 'فرآورش نفت و پالایش گاز', 'آسفالت و قیر', 'MDF و نئوپان', 'روغن نباتی و غذایی', 'نساجی/لاستیک/سیمان/سایر'],
+        datasets: [{
+          label: 'بازه‌ی برآوردی مصرف سالانه (تن)',
+          data: [[1000,2000],[500,1500],[800,1500],[500,900],[300,600],[400,800]],
+          backgroundColor: c.petrol,
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){
+            var r = ctx.raw;
+            return fmt(r[0]) + ' تا ' + fmt(r[1]) + ' تن';
+          } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11.5 } } }
+        }
+      }
+    }));
+
+    // ---- Price positioning (floating range bars, $/kg) ----
+    charts.push(new Chart(document.getElementById('chartPricePosition'), {
+      type: 'bar',
+      data: {
+        labels: ['روغن معدنی داخلی (خرده‌فروشی)', 'ترموتک — قیمت هدف پیشنهادی', 'معادل‌های چینی (FOB)', 'Therminol وارداتی'],
+        datasets: [{
+          data: [[1.09,3.02],[2.5,3.5],[2,3],[5.0,5.8]],
+          backgroundColor: function(ctx){
+            var i = ctx.dataIndex;
+            if (i === 1) return c.copper;
+            if (i === 3) return c.bad;
+            return c.petrol;
+          },
+          borderRadius: 6
+        }]
+      },
+      options: {
+        indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){
+            var r = ctx.raw;
+            return fmt(r[0]) + ' تا ' + fmt(r[1]) + ' $/kg';
+          } } }
+        },
+        scales: {
+          x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v) + '$'; } } },
+          y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 12 } } }
+        }
+      }
+    }));
+  }
+
+  buildAll();
+  if (window.matchMedia){
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', buildAll);
+  }
+})();
+</script>
+
+</body>
+</html>
