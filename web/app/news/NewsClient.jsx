@@ -25,19 +25,43 @@ function timeAgo(dateStr) {
   return dateStr;
 }
 
+// رنگ کادر کارت بر اساس فرصت/تهدیدبودن خبر برای ما — impact را
+// news_analysis_bot.py می‌سازد؛ رکوردهای قدیمی‌تر این فیلد را ندارند و
+// عمداً به‌عنوان خنثی (بدون کلاس اضافه، همون کادر خاکستری پیش‌فرض) درنظر
+// گرفته می‌شوند.
+const IMPACT_CARD_CLASS = {
+  opportunity: "card-impact-opportunity",
+  threat: "card-impact-threat",
+};
+
+const IMPACT_LABEL = {
+  opportunity: { text: "فرصت", className: "text-emerald-700 bg-emerald-50" },
+  threat: { text: "تهدید", className: "text-rose-700 bg-rose-50" },
+};
+
 function NewsGridCard({ entry }) {
   const facts = (entry.key_facts || []).slice(0, 3);
+  const impactClass = IMPACT_CARD_CLASS[entry.impact] || "";
+  const impactLabel = IMPACT_LABEL[entry.impact];
 
   return (
-    <article className="card p-5 flex flex-col h-full">
+    <article className={`card p-5 flex flex-col h-full ${impactClass}`}>
       <div className="flex items-start justify-between gap-2 mb-3">
-        {entry.topic ? (
-          <span className="text-[11px] font-semibold text-copper-800 bg-copper-50 rounded-full px-2.5 py-1">
-            {entry.topic}
-          </span>
-        ) : (
-          <span />
-        )}
+        <div className="flex flex-wrap items-center gap-1.5">
+          {entry.topic ? (
+            <span className="text-[11px] font-semibold text-copper-800 bg-copper-50 rounded-full px-2.5 py-1">
+              {entry.topic}
+            </span>
+          ) : null}
+          {impactLabel && (
+            <span
+              className={`text-[11px] font-semibold rounded-full px-2.5 py-1 ${impactLabel.className}`}
+              title="برآورد اثر این خبر بر جایگاه رقابتی ما"
+            >
+              {impactLabel.text}
+            </span>
+          )}
+        </div>
         <span className="text-[11px] text-slate-400 shrink-0">{timeAgo(entry.date)}</span>
       </div>
 

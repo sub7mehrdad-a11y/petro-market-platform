@@ -3,12 +3,22 @@ function fallbackHeadline(analysisFa) {
   return firstLine.length > 80 ? firstLine.slice(0, 80) + "…" : firstLine;
 }
 
+// رنگ کادر بر اساس فرصت/تهدیدبودن خبر برای ما (فیلد impact، تولیدشده توسط
+// news_analysis_bot.py). این کارت مرزش فقط border-b (خط جداکننده) است، پس
+// به‌جای رنگ کل کادر، یک نوار رنگی در سمت شروع خط (راست، چون سایت RTL است)
+// اضافه می‌شود. impact نامشخص/neutral یعنی همون رنگ خاکستری فعلی، بدون تغییر.
+const IMPACT_ACCENT = {
+  opportunity: "border-s-4 border-s-emerald-500 ps-3 -ms-3",
+  threat: "border-s-4 border-s-rose-500 ps-3 -ms-3",
+};
+
 export default function NewsCard({ entry, compact = false }) {
   const primarySource = entry.sources?.[0]?.name;
   const headline = entry.headline_fa || fallbackHeadline(entry.analysis_fa);
+  const impactAccent = IMPACT_ACCENT[entry.impact] || "";
 
   return (
-    <article className="border-b border-slate-100 last:border-0 py-4 first:pt-0">
+    <article className={`border-b border-slate-100 last:border-0 py-4 first:pt-0 ${impactAccent}`}>
       <div className="flex items-baseline justify-between gap-2 mb-1">
         <h3 className="font-semibold leading-6">
           {primarySource && <span className="text-copper-700">{primarySource}</span>}

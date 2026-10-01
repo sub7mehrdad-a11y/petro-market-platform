@@ -69,6 +69,12 @@ TOPICS = [
 MAX_ITEMS_PER_RUN = 4          # حداکثر یک آیتم به‌ازای هر موضوع
 DEDUP_LOOKBACK_DAYS = 12       # پنجره‌ی مقایسه برای تشخیص تکرار
 
+# مقادیر معتبر فیلد impact (فرصت/تهدید/خنثی) — برای رنگ‌بندی کادر خبر در
+# فرانت‌اند (NewsCard.jsx و NewsClient.jsx) استفاده می‌شه. رکوردهای قدیمی‌تر
+# (قبل از این تغییر) این فیلد رو ندارن؛ فرانت‌اند نبودش رو معادل neutral
+# می‌گیره، پس نیازی به بازپرکردن رکوردهای قدیمی نیست.
+VALID_IMPACTS = {"opportunity", "threat", "neutral"}
+
 # منابع seed برای اخبار/تحلیل — نقطه‌ی شروع، نه فهرست بسته. هر منبع جدید معتبر
 # و بدون‌لاگینی که پیدا کردید همین‌جا اضافه کنید.
 SEED_NEWS_SOURCES = [
@@ -259,6 +265,19 @@ SYSTEM_PROMPT = f"""
   توی هر گزارش تکرار نمی‌کنه.
 - اگر خودِ خبر مستقیماً درباره‌ی شرکت ماست، نیازی نیست قیمت خودمون رو توی
   متن تکرار کنی — همین که خبر به ما مربوطه کافیه.
+- فیلد impact: مشخص کن این خبر در نهایت برای ما (جوش شیرین پارس) چه اثری
+  داره — دقیقاً یکی از این سه مقدار انگلیسی (بدون ترجمه): "opportunity"،
+  "threat"، یا "neutral".
+  - "opportunity": رقیب رو تضعیف می‌کنه (هزینه/کرایه‌ش بالا می‌ره، مشکل
+    لجستیکی یا تحریمی پیدا می‌کنه، ظرفیتش کم می‌شه) یا وضعیت ما رو مستقیماً
+    تقویت می‌کنه (هزینه/کرایه‌ی ورودی ما پایین میاد، مسیر ترانزیتی برامون
+    بهتر می‌شه، تقاضای بازار بالا می‌ره).
+  - "threat": برعکس — هزینه/کرایه‌ی ما بالا می‌ره، رقیب ارزان‌تر یا قوی‌تر
+    می‌شه، مسیر/دسترسی ما بدتر می‌شه، یا تقاضا افت می‌کنه.
+  - "neutral": خبر صرفاً یک عدد یا رویداد خنثی/پس‌زمینه‌ست و اثر مستقیم و
+    روشنی روی جایگاه رقابتی ما نداره.
+  neutral رو پیش‌فرض در نظر بگیر؛ opportunity یا threat رو فقط وقتی بگو که
+  واقعاً از جهت‌ِ اثرش مطمئنی — حدس نزن.
 - یک تیتر کوتاه (حداکثر ۱۲ کلمه).
 - فیلد key_facts: فهرست کوتاه اعداد/رویدادهای کلیدی که آیتم روشون بنا شده
   (مثل "سودا اش ۱۰۳۰ یوآن بر تن"، "FBX معادل ۳۵۶۲ دلار"). این فیلد برای تشخیص
@@ -288,6 +307,7 @@ SYSTEM_PROMPT = f"""
       "headline_fa": "تیتر کوتاه...",
       "analysis_fa": "...",
       "key_facts": ["...", "..."],
+      "impact": "opportunity" | "threat" | "neutral",
       "sources": [{{"name": "...", "url": "..."}}]
     }}
   ]
@@ -488,6 +508,9 @@ def main():
             print(f"[SKIP] تکراری نسبت به {DEDUP_LOOKBACK_DAYS} روز اخیر: {item.get('headline_fa')}")
             continue
 
+        raw_impact = (item.get("impact") or "").strip().lower()
+        impact = raw_impact if raw_impact in VALID_IMPACTS else "neutral"
+
         record = {
             "date": today_iso,
             "generated_at": now.isoformat(),
@@ -495,6 +518,7 @@ def main():
             "headline_fa": fix_terminology(item.get("headline_fa", "")),
             "analysis_fa": fix_terminology(item.get("analysis_fa", "")),
             "key_facts": [fix_terminology(f) for f in item.get("key_facts", [])],
+            "impact": impact,
             "sources": item.get("sources", []),
         }
         log.append(record)
