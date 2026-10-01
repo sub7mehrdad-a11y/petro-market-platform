@@ -10,3 +10,7 @@ beautifulsoup4
 reportlab
 arabic-reshaper
 python-bidi
+
+# فقط برای scripts/exhibitor_lead_finder.py (رندر سایت‌های JS-heavy برای استخراج
+# تماس) — بعد از نصب پکیج، یک‌بار `playwright install --with-deps chromium` هم لازمه.
+playwright

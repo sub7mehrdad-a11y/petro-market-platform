@@ -71,7 +71,7 @@ import json
 import time
 import argparse
 from datetime import datetime, timezone
-from urllib.parse import urlparse
+from urllib.parse import urlparse, urljoin, parse_qs, unquote
 
 import httpx
 import openpyxl
@@ -419,7 +419,64 @@ WHATSAPP_RE = re.compile(r"(?:https?://)?(?:api\.)?wa\.me/(\+?\d[\d\-]{6,15})", 
 WHATSAPP_LINK_RE = re.compile(r"(?:https?://)?(?:api\.)?whatsapp\.com/send\?phone=(\+?\d[\d\-]{6,15})", re.IGNORECASE)
 TEL_RE = re.compile(r'href=["\']tel:(\+?[\d\-\s()]{6,20})["\']', re.IGNORECASE)
 
-CONTACT_PATHS = ["", "/contact", "/contact-us", "/contactus", "/en/contact", "/en/contact-us"]
+# ۲۰۲۶-۰۹-۱۲: کاربر درست گفت که پوشش ایمیل (۵۰۳ از ۲۲۴۶) خیلی کمه. یک نمونه
+# (crustncrumb.com، Shopify) رو دستی چک کردم: ایمیل واقعی رویش بود، ولی توی
+# مسیر /pages/contact (قرارداد Shopify)، نه هیچ‌کدوم از مسیرهای پایین. به‌جای
+# فقط حدس‌زدن مسیرهای ثابت، الان اول لینک‌های واقعی «Contact» رو از خودِ صفحه‌ی
+# اصلی سایت پیدا و دنبال می‌کنیم (کار می‌کنه برای هر ساختار/CMS)، و این مسیرهای
+# ثابت فقط fallback نهایی‌ان.
+CONTACT_PATHS = [
+    "", "/contact", "/contact-us", "/contactus", "/contact.html", "/contact-us.html",
+    "/pages/contact", "/pages/contact-us", "/en/contact", "/en/contact-us",
+    "/about-us/contact", "/about/contact", "/get-in-touch", "/reach-us",
+]
+
+
+# ۲۰۲۶-۰۹-۱۳: ۶۳٪ شرکت‌های مرتبط اصلاً لینک وب‌سایت توی پروفایل نمایشگاهشون
+# ثبت نکرده بودن (فیلد اختیاریه). برای این‌ها با جست‌وجوی متنی (بدون کلید API،
+# صفحه‌ی HTML جست‌وجوی DuckDuckGo) دنبال سایت رسمی‌شون می‌گردیم. این‌جور
+# دامنه‌ها معمولاً دایرکتوری/شبکه‌ی اجتماعی‌ان، نه سایت خودِ شرکت — رد می‌شن.
+DIRECTORY_DOMAIN_BLOCKLIST = {
+    "linkedin.com", "facebook.com", "instagram.com", "twitter.com", "x.com", "youtube.com",
+    "alibaba.com", "indiamart.com", "tradeindia.com", "yellowpages.com", "europages.com",
+    "kompass.com", "dnb.com", "bloomberg.com", "crunchbase.com", "emis.com", "all.biz",
+    "opencorporates.com", "wikipedia.org", "zoominfo.com", "rocketreach.co",
+    "google.com", "maps.google.com", "gulfood.com", "exhibitors.gulfood.com",
+    "pitchbook.com", "manta.com", "yelp.com", "glassdoor.com", "indeed.com",
+    "made-in-china.com", "globalsources.com", "ec21.com", "tradekey.com",
+}
+DIRECTORY_PATH_MARKERS = ("company-profile", "/info/", "/profile/", "cegjegyzek", "company-search")
+
+
+def search_company_website(client: httpx.Client, name: str, country: str) -> str | None:
+    # ۲۰۲۶-۰۹-۱۳: تست دستی نشون داد DuckDuckGo زیر بار مکرر گاهی تا ~۹۰ ثانیه
+    # طول می‌کشه جواب بده (نه رد کردن درخواست، فقط کندی) — با timeout=15 قبلی،
+    # صدها جست‌وجوی واقعاً موفق به‌اشتباه «چیزی پیدا نشد» ثبت می‌شدن.
+    query = f"{name} {country or ''} official website".strip()
+    try:
+        resp = client.get(
+            "https://html.duckduckgo.com/html/", params={"q": query}, headers=HEADERS,
+            timeout=45, follow_redirects=True,
+        )
+        resp.raise_for_status()
+    except Exception:  # noqa: BLE001 — جست‌وجوی وب هم مثل بقیه منابع بیرونی غیرقابل‌اعتماده
+        return None
+
+    soup = BeautifulSoup(resp.text, "html.parser")
+    for a in soup.select("a.result__a")[:8]:
+        href = a.get("href") or ""
+        qs = parse_qs(urlparse(href).query)
+        target = qs.get("uddg", [None])[0]
+        if not target:
+            continue
+        target = unquote(target)
+        domain = urlparse(target).netloc.lower().lstrip("www.")
+        if any(b in domain for b in DIRECTORY_DOMAIN_BLOCKLIST):
+            continue
+        if any(m in target.lower() for m in DIRECTORY_PATH_MARKERS):
+            continue
+        return target
+    return None
 
 
 def fetch_exhibitor_website(client: httpx.Client, profile_url: str) -> str | None:
@@ -449,37 +506,109 @@ def extract_contacts_from_html(html: str) -> dict:
     return {"emails": emails[:3], "whatsapp": whatsapp[:2], "phones": phones[:3]}
 
 
-def enrich_company_contacts(client: httpx.Client, profile_url: str) -> dict:
+def find_contact_links(homepage_html: str, base_url: str) -> list[str]:
     """
-    از پروفایل نمایشگاه لینک سایت رو می‌گیره، بعد خودِ سایت (و ۱-۲ مسیر رایج
-    صفحه‌ی تماس) رو برای ایمیل/واتساپ/تلفن می‌گرده. نتیجه همیشه یک dict برمی‌گردونه
-    (حتی اگه چیزی پیدا نشه) تا در progress قابل ثبت باشه و دوباره تلاش نشه.
+    لینک‌های واقعی «Contact/تماس» را از خودِ صفحه‌ی اصلی سایت پیدا می‌کند —
+    روی href یا متن لینک، هرکدوم که شامل «contact» باشه (بدون توجه به بزرگی/
+    کوچکی حروف). این کار برای هر ساختار/CMS جواب می‌ده، برخلاف حدس‌زدن مسیر
+    ثابت که فقط برای الگوهای از‌قبل‌شناخته‌شده کار می‌کند.
     """
-    result = {"website": None, "email": None, "whatsapp": None, "contact_note": None}
+    soup = BeautifulSoup(homepage_html, "html.parser")
+    links = set()
+    for a in soup.find_all("a", href=True):
+        href = a["href"].strip()
+        text = a.get_text(" ", strip=True).lower()
+        if "contact" in href.lower() or "contact" in text or "تماس" in text:
+            if href.startswith(("mailto:", "tel:", "javascript:", "#")):
+                continue
+            links.add(urljoin(base_url, href))
+    return list(links)[:5]  # سقف ۵ تا، وگرنه بعضی سایت‌ها ده‌ها لینک تکراری دارن
+
+
+def enrich_company_contacts(client: httpx.Client, profile_url: str, name: str = "",
+                             country: str = "", browser=None) -> dict:
+    """
+    از پروفایل نمایشگاه لینک سایت رو می‌گیره (یا اگه نبود، با جست‌وجوی وب حدس
+    می‌زنه)، بعد خودِ صفحه‌ی اصلی سایت را می‌خونه (هم مستقیم برای ایمیل/تماس، هم
+    برای پیدا کردن لینک واقعی «Contact» روی همون صفحه)، و اگر چیزی پیدا نشد،
+    چند مسیر ثابت رایج (CONTACT_PATHS) را هم امتحان می‌کند. اگر بعد از همه‌ی
+    این‌ها هنوز چیزی نبود و یک مرورگر Playwright داده شده، صفحه را واقعاً رندر
+    می‌کند (برای سایت‌های React/Next.js که محتواشون فقط بعد از اجرای جاوااسکریپت
+    ظاهر می‌شه، نه در HTML خام). نتیجه همیشه یک dict برمی‌گردونه (حتی اگه چیزی
+    پیدا نشه) تا در progress قابل ثبت باشه و دوباره تلاش نشه.
+    """
+    result = {"website": None, "email": None, "whatsapp": None, "contact_note": None,
+              "website_source": None}
 
     website = fetch_exhibitor_website(client, profile_url)
+    website_source = "exhibitor_profile"
     if not website:
-        result["contact_note"] = "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد"
+        website = search_company_website(client, name, country)
+        website_source = "web_search"
+    if not website:
+        result["contact_note"] = "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد و جست‌وجوی وب هم چیزی نداد"
         return result
     result["website"] = website
+    result["website_source"] = website_source
 
     found = {"emails": [], "whatsapp": [], "phones": []}
-    checked_any = False
-    for path in CONTACT_PATHS:
-        try:
-            resp = client.get(website.rstrip("/") + path, headers=HEADERS, timeout=12, follow_redirects=True)
-            checked_any = True
-        except Exception:  # noqa: BLE001 — سایت‌های بیرونی غیرقابل‌اعتمادن؛ هیچ خطایی نباید کل اجرا را کرش بدهد
-            continue
-        if resp.status_code >= 400:
-            continue
-        c = extract_contacts_from_html(resp.text)
+
+    def merge(html: str) -> bool:
+        c = extract_contacts_from_html(html)
         found["emails"] = found["emails"] or c["emails"]
         found["whatsapp"] = found["whatsapp"] or c["whatsapp"]
         found["phones"] = found["phones"] or c["phones"]
-        if found["emails"] and (found["whatsapp"] or found["phones"]):
-            break  # هرچی لازم بود پیدا شد، سراغ مسیر بعدی نریم
+        return bool(found["emails"] and (found["whatsapp"] or found["phones"]))
 
+    checked_any = False
+    contact_candidates: list[str] = []
+    try:
+        resp = client.get(website, headers=HEADERS, timeout=12, follow_redirects=True)
+        checked_any = True
+        if resp.status_code < 400:
+            if merge(resp.text):
+                return _finalize_contacts(result, found, checked_any)
+            contact_candidates = find_contact_links(resp.text, str(resp.url))
+    except Exception:  # noqa: BLE001 — سایت‌های بیرونی غیرقابل‌اعتمادن؛ هیچ خطایی نباید کل اجرا را کرش بدهد
+        pass
+
+    # اول لینک‌های واقعیِ «Contact» که از خودِ صفحه پیدا کردیم (دقیق‌تر)، بعد
+    # مسیرهای ثابت حدسی به‌عنوان fallback.
+    for url in contact_candidates + [website.rstrip("/") + p for p in CONTACT_PATHS[1:]]:
+        try:
+            resp = client.get(url, headers=HEADERS, timeout=12, follow_redirects=True)
+            checked_any = True
+        except Exception:  # noqa: BLE001
+            continue
+        if resp.status_code >= 400:
+            continue
+        if merge(resp.text):
+            break
+
+    if browser is not None and not (found["emails"] or found["whatsapp"] or found["phones"]):
+        for url in [website] + contact_candidates[:2]:
+            rendered = render_with_playwright(browser, url)
+            if rendered and merge(rendered):
+                break
+
+    return _finalize_contacts(result, found, checked_any)
+
+
+def render_with_playwright(browser, url: str) -> str | None:
+    """صفحه رو با مرورگر بی‌صدا (headless) واقعاً رندر می‌کند — برای سایت‌های
+    React/Next.js/Shopify-app که محتواشون فقط بعد از اجرای جاوااسکریپت میاد."""
+    try:
+        page = browser.new_page()
+        try:
+            page.goto(url, timeout=20000, wait_until="networkidle")
+            return page.content()
+        finally:
+            page.close()
+    except Exception:  # noqa: BLE001 — یک سایت کند/خراب نباید کل پاس تماس‌گیری را متوقف کند
+        return None
+
+
+def _finalize_contacts(result: dict, found: dict, checked_any: bool) -> dict:
     if found["emails"]:
         result["email"] = found["emails"][0]
     if found["whatsapp"]:
@@ -495,38 +624,85 @@ def enrich_company_contacts(client: httpx.Client, profile_url: str) -> dict:
     return result
 
 
-def enrich_contacts_pass(progress: dict, progress_path: str, on_batch_done, flush_every: int = 20,
-                          deadline: float | None = None) -> None:
+def enrich_contacts_pass(progress: dict, progress_path: str, on_batch_done, flush_every: int = 5,
+                          deadline: float | None = None, contact_limit: int | None = None) -> None:
     """
     روی همه‌ی شرکت‌های relevant=true در progress که هنوز غنی‌سازی تماس نشدن
     (کلید contact_checked ندارن) اجرا می‌شه. هر flush_every تا، فوری ذخیره می‌کنه —
     مثل llm_refine، اگه وسط راه قطع بشه چیزی از دست نمی‌ره.
+
+    contact_limit: اگه ست بشه، فقط همین تعداد شرکتِ جدید (از ابتدای فهرست باقی‌مانده،
+    یعنی به ترتیب همون ترتیبی که در progress ثبت شدن) بررسی می‌شه و بعد اجرا تمیز
+    متوقف می‌شه — برای اجرای دستی به‌صورت دسته‌های کوچک و قابل‌پیگیری.
     """
     todo = [(k, v) for k, v in progress.items() if v.get("relevant") and not v.get("contact_checked")]
     if not todo:
         print("  همه‌ی شرکت‌های مرتبط قبلاً برای تماس بررسی شده‌اند.")
         return
-    print(f"  {len(todo)} شرکت مرتبط برای استخراج ایمیل/وب‌سایت/واتساپ بررسی می‌شه.")
+    remaining_total = len(todo)
+    if contact_limit:
+        todo = todo[:contact_limit]
+    print(f"  {len(todo)} شرکت (از {remaining_total} باقی‌مانده) برای استخراج ایمیل/وب‌سایت/واتساپ بررسی می‌شه.")
 
-    with httpx.Client(follow_redirects=True) as client:
-        for i, (key, record) in enumerate(todo, start=1):
-            if deadline and time.time() > deadline:
-                save_progress(progress_path, progress)
-                on_batch_done()
-                print(f"  [DEADLINE] زمان تمام شد؛ {len(todo) - i + 1} شرکت باقی‌مانده برای اجرای بعدی می‌مونه.")
-                return
+    # Playwright اختیاریه — اگه نصب/راه‌اندازی نشده باشه (مثلاً بدون
+    # `playwright install chromium`)، بدون اون و فقط با httpx ادامه می‌دیم.
+    playwright_ctx, browser = None, None
+    try:
+        from playwright.sync_api import sync_playwright
+        playwright_ctx = sync_playwright().start()
+        browser = playwright_ctx.chromium.launch()
+        print("  [INFO] Playwright برای سایت‌های JS-heavy فعال شد.")
+    except Exception as e:  # noqa: BLE001
+        print(f"  [INFO] Playwright در دسترس نبود ({e}) — فقط با httpx ادامه می‌دیم.")
 
-            try:
-                contacts = enrich_company_contacts(client, record.get("profile_url"))
-            except Exception as e:  # noqa: BLE001 — یک شرکت خراب نباید کل پاس تماس‌گیری را متوقف کند
-                contacts = {"website": None, "email": None, "whatsapp": None,
-                            "contact_note": f"خطای غیرمنتظره: {e}"}
-            progress[key] = {**record, **contacts, "contact_checked": True}
+    try:
+        with httpx.Client(follow_redirects=True) as client:
+            for i, (key, record) in enumerate(todo, start=1):
+                if deadline and time.time() > deadline:
+                    save_progress(progress_path, progress)
+                    on_batch_done()
+                    print(f"  [DEADLINE] زمان تمام شد؛ {len(todo) - i + 1} شرکت باقی‌مانده برای اجرای بعدی می‌مونه.")
+                    return
 
-            if i % flush_every == 0 or i == len(todo):
-                save_progress(progress_path, progress)
-                on_batch_done()
-                print(f"  [OK] {i}/{len(todo)} شرکت بررسی شد")
+                try:
+                    contacts = enrich_company_contacts(
+                        client, record.get("profile_url"),
+                        name=record.get("name", ""), country=record.get("country", ""),
+                        browser=browser,
+                    )
+                except Exception as e:  # noqa: BLE001 — یک شرکت خراب نباید کل پاس تماس‌گیری را متوقف کند
+                    contacts = {"website": None, "email": None, "whatsapp": None,
+                                "contact_note": f"خطای غیرمنتظره: {e}"}
+                _enrich_pass_body(key, record, contacts, progress, i, todo, flush_every,
+                                   progress_path, on_batch_done)
+    finally:
+        if browser:
+            browser.close()
+        if playwright_ctx:
+            playwright_ctx.stop()
+
+
+def _enrich_pass_body(key, record, contacts, progress, i, todo, flush_every, progress_path, on_batch_done):
+    # ۲۰۲۶-۰۹-۱۳: این حلقه (برخلاف fetch_all_exhibitors) هیچ فاصله‌ای بین
+    # درخواست‌های پیاپی به exhibitors.gulfood.com نداشت — برای صدها شرکت
+    # پشت‌سرهم، دقیقاً الگوی رباتیه که Cloudflare معمولاً بلاک/چالش می‌کنه.
+    # به احتمال زیاد همین، هم علت خرابی مکرر CI بود هم علت این‌که همین
+    # اجرا وسط راه شروع کرد به شکست‌خوردن (باعث گم‌شدن ۲۹۲ وب‌سایت شد،
+    # قبل از این‌که merge پایین رو اضافه کنیم).
+    time.sleep(REQUEST_DELAY_SEC)
+    # ۲۰۲۶-۰۹-۱۳: هیچ‌وقت مقدار قبلاً پیداشده رو با یک نتیجه‌ی خالی (مثلاً
+    # به‌خاطر بلاک/تایم‌اوت موقت خودِ سایت نمایشگاه در بازبررسی) پاک نکن —
+    # یک بار همین باعث شد ۲۹۲ تا وب‌سایت درست از دست بره. فقط وقتی مقدار
+    # جدید واقعاً چیزی داره، جای قدیمی رو می‌گیره.
+    for field in ("website", "email", "whatsapp"):
+        if not contacts.get(field) and record.get(field):
+            contacts[field] = record[field]
+    progress[key] = {**record, **contacts, "contact_checked": True}
+
+    if i % flush_every == 0 or i == len(todo):
+        save_progress(progress_path, progress)
+        on_batch_done()
+        print(f"  [OK] {i}/{len(todo)} شرکت بررسی شد")
 
 
 def extract_json_array(text: str) -> list:
@@ -579,12 +755,14 @@ def write_xlsx(companies: list[dict], event_name: str) -> str:
     ws.title = "شرکت‌ها"
     ws.sheet_view.rightToLeft = True
 
-    headers = ["ردیف", "نام شرکت", "کشور", "نوع", "گرید پیشنهادی", "وب‌سایت", "ایمیل",
-               "واتساپ/تلفن", "وضعیت تماس", "دلیل (مدل)", "دسته‌بندی‌های سایت",
+    headers = ["ردیف", "نام شرکت", "کشور", "نوع", "گرید پیشنهادی", "وب‌سایت", "منبع وب‌سایت",
+               "ایمیل", "واتساپ/تلفن", "وضعیت تماس", "دلیل (مدل)", "دسته‌بندی‌های سایت",
                "توضیحات", "غرفه", "لینک پروفایل"]
     ws.append(headers)
     for cell in ws[1]:
         cell.font = Font(bold=True)
+
+    website_source_fa = {"exhibitor_profile": "پروفایل نمایشگاه", "web_search": "جست‌وجوی وب (حدسی)"}
 
     for i, c in enumerate(companies, start=1):
         ws.append([
@@ -594,6 +772,7 @@ def write_xlsx(companies: list[dict], event_name: str) -> str:
             COMPANY_TYPE_FA.get(c.get("company_type"), c.get("company_type") or ""),
             c.get("suggested_grade", ""),
             c.get("website", ""),
+            website_source_fa.get(c.get("website_source"), ""),
             c.get("email", ""),
             c.get("whatsapp", ""),
             c.get("contact_note", "") if not (c.get("email") or c.get("whatsapp")) else "",
@@ -604,7 +783,7 @@ def write_xlsx(companies: list[dict], event_name: str) -> str:
             c.get("profile_url", ""),
         ])
 
-    widths = [6, 32, 16, 16, 30, 30, 26, 20, 30, 40, 40, 55, 20, 45]
+    widths = [6, 32, 16, 16, 30, 30, 18, 26, 20, 30, 40, 40, 55, 20, 45]
     for idx, w in enumerate(widths, start=1):
         ws.column_dimensions[openpyxl.utils.get_column_letter(idx)].width = w
     for row in ws.iter_rows(min_row=2):
@@ -767,6 +946,8 @@ def main():
     parser.add_argument("--max", type=int, default=None, help="حداکثر تعداد شرکت برای دریافت (برای تست)")
     parser.add_argument("--event-name", default=None, help="نام نمایشگاه برای درج در خروجی (پیش‌فرض: اسلاگ URL)")
     parser.add_argument("--no-llm", action="store_true", help="پاس نهایی مدل زبانی را رد کن (فقط فیلتر قانون‌محور)")
+    parser.add_argument("--contact-limit", type=int, default=None,
+                         help="فقط همین تعداد شرکتِ جدید را برای تماس بررسی کن و تمیز متوقف شو (برای اجرای دستی دسته‌ای)")
     parser.add_argument("--engine", choices=["groq", "gemini", "auto"], default="groq",
                          help="موتور پاس نهایی — پیش‌فرض فقط Groq اختصاصی (طبق تصمیم صریح کاربر: "
                               "بدون fallback به سهمیه‌ی مشترک Gemini، حتی اگه کندتر تموم بشه). "
@@ -868,7 +1049,8 @@ def main():
         print("[5/5] رد شد (--no-enrich)")
     else:
         print("[5/5] استخراج ایمیل/وب‌سایت/واتساپ برای شرکت‌های مرتبط")
-        enrich_contacts_pass(progress, progress_path, on_batch_done=flush_output, deadline=deadline)
+        enrich_contacts_pass(progress, progress_path, on_batch_done=flush_output, deadline=deadline,
+                              contact_limit=args.contact_limit)
 
     total_relevant = flush_output()
     print(f"\n[DONE] {total_relevant} شرکت مرتبط در {out_path} ذخیره شد "
