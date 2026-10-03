@@ -109,15 +109,18 @@ export function getCatalogLinks(grade) {
 // پرانتز. چون گرید به ازای هر شرکت فرق می‌کنه، سابجکت دیگه ثابت نیست و
 // داخل renderOutreachEmail از روی grade ساخته می‌شه (نه این‌جا).
 const SUBJECT_GRADE_LABEL_EN = {
-  food: "Food Grade",
-  feed: "Feed Grade",
-  industrial: "Industrial Grade",
-  unclear: "Food/Feed/Industrial Grade",
+  food: "food-grade",
+  feed: "feed-grade",
+  industrial: "industrial-grade",
+  // گرید نامشخص/چندگانه: به‌جای حدس‌زدن یک گرید، هر سه رو می‌گیم.
+  unclear: "food, feed and industrial grade",
 };
 
+// ۲۰۲۶-۱۰-۰۳: قالب سابجکت به درخواست کاربر عوض شد؛ فقط عبارت گرید به‌ازای
+// هر گیرنده فرق می‌کنه.
 function buildSubject(grade) {
   const label = SUBJECT_GRADE_LABEL_EN[grade] || SUBJECT_GRADE_LABEL_EN.unclear;
-  return `Producer and Supplier of Sodium Bicarbonate (${label})`;
+  return `Stable supply of ${label} sodium bicarbonate, direct from the producer`;
 }
 
 // پیوست‌های ثابتی که به همه‌ی ایمیل‌های معرفی، صرف‌نظر از گرید شرکت، ضمیمه

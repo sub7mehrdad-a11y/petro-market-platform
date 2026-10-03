@@ -164,7 +164,7 @@ function NavContent({ pathname, onNavigate, showOutreach, role, username }) {
   );
 }
 
-export default function Sidebar({ showOutreach = false }) {
+export default function Sidebar() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   // نقش/یوزرنیم عمداً پراپ سروری نیست (نگاه کن توضیح توی layout.js) — خودمون
@@ -185,6 +185,7 @@ export default function Sidebar({ showOutreach = false }) {
 
   const role = session?.role;
   const username = session?.username;
+  const showOutreach = session?.outreachEnabled === true;
 
   return (
     <>

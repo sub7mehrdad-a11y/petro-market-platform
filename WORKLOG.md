@@ -17,6 +17,30 @@
 
 ## ورودی‌ها
 
+### ۲۰۲۶-۱۰-۰۳ — فعال‌سازی بخش ایمیل معرفی + سابجکت جدید + دروازه‌ی runtime
+
+کاربر (بعد از تأیید همکار) صریحاً گفت «اوکی هست روشنش کن». `OUTREACH_UI_ENABLED` و
+`OUTREACH_SENDING_ENABLED` توی `.env` محلی `true` شدن (روی Liara باید خود کاربر
+توی پنل ست کنه — `.env` توی گیت نیست).
+
+**سابجکت جدید:** `Stable supply of <feed-grade|food-grade|industrial-grade> sodium
+bicarbonate, direct from the producer` — گرید متناسب هر گیرنده؛ گرید نامشخص →
+«food, feed and industrial grade».
+
+**دروازه‌ی runtime:** صفحه‌ی `/outreach` و لینک سایدبار قبلاً موقع build ثابت می‌شدن
+(بعد از ست‌کردن env روی Liara بدون rebuild کار نمی‌کرد، و فهرست «قبلاً ارسال شد»
+هم کهنه می‌موند). حالا `/outreach` با `force-dynamic` و لینک سایدبار از
+`/api/auth/me` (فیلد `outreachEnabled`) خونده می‌شه؛ بقیه‌ی سایت هم‌چنان SSG.
+تست محلی: admin → ۲۰۰، manager → ۳۰۷.
+
+**هشدار ثبت‌شده برای کاربر:** `data/email_outreach_sent.json` روی دیسک ناپایدار
+Liara با هر دیپلوی پاک می‌شه → خطر ایمیل تکراری؛ نیاز به دیسک دائمی.
+
+**فایل‌ها:** `web/lib/outreachTemplate.js`، `web/app/api/auth/me/route.js`،
+`web/app/components/Sidebar.jsx`، `web/app/layout.js`، `web/app/outreach/page.jsx`.
+
+---
+
 ### ۲۰۲۶-۱۰-۰۳ — لاگین روی Liara: تشخیص Secure از روی هدر Origin
 
 بعد از فیکس قبلی (`4e39ead`) کاربر با آدرس `http://peropars-rd.ir/login` باز هم

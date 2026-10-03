@@ -10,5 +10,11 @@ export async function GET() {
   if (!session) {
     return NextResponse.json({ username: null, role: null }, { status: 401 });
   }
-  return NextResponse.json({ username: session.username, role: session.role });
+  // outreachEnabled اینجا (runtime) خونده می‌شه، نه توی layout.js — تا با ست‌کردن
+  // env روی Liara فقط restart کافی باشه و به rebuild نیاز نباشه.
+  return NextResponse.json({
+    username: session.username,
+    role: session.role,
+    outreachEnabled: process.env.OUTREACH_UI_ENABLED === "true",
+  });
 }
