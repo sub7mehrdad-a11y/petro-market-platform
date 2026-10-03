@@ -321,6 +321,7 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
             }`}
           >
             {sendResult.error || `${sendResult.sent} ایمیل ارسال شد، ${sendResult.failed} ناموفق.`}
+            {sendResult.logError && <div className="mt-1 font-semibold text-rose-700">⚠ {sendResult.logError}</div>}
           </div>
         )}
       </section>

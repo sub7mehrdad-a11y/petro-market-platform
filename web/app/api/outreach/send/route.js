@@ -2,11 +2,16 @@ import fs from "fs";
 import path from "path";
 import nodemailer from "nodemailer";
 import { NextResponse } from "next/server";
-import { getCompanies, getCountryEnglishName, getEmailOutreachSent } from "@/lib/data";
+import {
+  getCompanies,
+  getCountryEnglishName,
+  getEmailOutreachSent,
+  getOutreachSentStatePath,
+  getOutreachSentStateOnly,
+} from "@/lib/data";
 import { renderOutreachEmail, isValidEmail, FIXED_ATTACHMENTS } from "@/lib/outreachTemplate";
 
 const ROOT = path.join(process.cwd(), "..");
-const SENT_LOG_FILE = path.join(ROOT, "data", "email_outreach_sent.json");
 const RESOLVED_FIXED_ATTACHMENTS = FIXED_ATTACHMENTS.map((a) => ({
   filename: a.filename,
   path: path.join(ROOT, a.relativePath),
@@ -30,10 +35,29 @@ function buildTransport() {
   });
 }
 
+// قبل از هر ارسالی مطمئن می‌شیم می‌تونیم لاگ رو بنویسیم — ایمیلی که رفته ولی
+// ثبت نشده، دفعه‌ی بعد دوباره برای همون شرکت می‌ره.
+function checkSentLogWritable() {
+  if (process.env.NODE_ENV === "production" && !process.env.OUTREACH_STATE_DIR) {
+    return "OUTREACH_STATE_DIR تنظیم نشده: روی سرور لاگ ارسال باید روی دیسک دائمی باشد (وگرنه با دیپلوی بعدی پاک می‌شود و ایمیل تکراری می‌رود).";
+  }
+  try {
+    const file = getOutreachSentStatePath();
+    fs.mkdirSync(path.dirname(file), { recursive: true });
+    fs.accessSync(path.dirname(file), fs.constants.W_OK);
+    return null;
+  } catch (err) {
+    return `مسیر لاگ ارسال قابل نوشتن نیست: ${String(err?.message || err)}`;
+  }
+}
+
 function appendToSentLog(records) {
-  const existing = getEmailOutreachSent();
-  fs.mkdirSync(path.dirname(SENT_LOG_FILE), { recursive: true });
-  fs.writeFileSync(SENT_LOG_FILE, JSON.stringify([...existing, ...records], null, 2), "utf-8");
+  const file = getOutreachSentStatePath();
+  const existing = getOutreachSentStateOnly();
+  // نوشتن اتمیک: اول فایل موقت، بعد rename — تا قطعی وسط نوشتن لاگ رو خراب نکنه.
+  const tmp = `${file}.tmp`;
+  fs.writeFileSync(tmp, JSON.stringify([...existing, ...records], null, 2), "utf-8");
+  fs.renameSync(tmp, file);
 }
 
 // طبق درخواست صریح کاربر: این آدرس‌ها باید بدون استثنا روی CC همه‌ی ایمیل‌های
@@ -69,6 +93,11 @@ export async function POST(request) {
       { error: `حداکثر ${MAX_BATCH_SIZE} شرکت در هر دسته — لطفاً انتخاب رو کمتر کن.` },
       { status: 400 }
     );
+  }
+
+  const logProblem = checkSentLogWritable();
+  if (logProblem) {
+    return NextResponse.json({ error: logProblem }, { status: 500 });
   }
 
   const transporter = buildTransport();
@@ -173,11 +202,19 @@ export async function POST(request) {
     }
   }
 
+  // اگه نوشتن لاگ شکست بخوره، ایمیل‌ها همین الان رفتن — پس ۵۰۰ نمی‌دیم؛ هشدار
+  // صریح برمی‌گردونیم تا کاربر لیست رو دستی ثبت کنه.
+  let logError = null;
   if (newSentRecords.length > 0) {
-    appendToSentLog(newSentRecords);
+    try {
+      appendToSentLog(newSentRecords);
+    } catch (err) {
+      logError = `ایمیل‌ها ارسال شدند ولی ثبت در لاگ شکست خورد: ${String(err?.message || err)}`;
+    }
   }
 
   return NextResponse.json({
+    ...(logError ? { logError } : {}),
     sent: newSentRecords.length,
     failed: results.filter((r) => !r.ok).length,
     results,

@@ -16,6 +16,10 @@ COPY . .
 
 RUN cd web && npm run build
 
+# محل دیسک دائمی Liara (لاگ ایمیل‌های ارسال‌شده — نگاه کن OUTREACH_STATE_DIR در
+# .env.example). خودِ دیسک از پنل Liara روی همین مسیر mount می‌شه.
+RUN mkdir -p /app/persist
+
 ENV NODE_ENV=production
 EXPOSE 3000
 

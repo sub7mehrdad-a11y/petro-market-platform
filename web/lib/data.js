@@ -128,8 +128,28 @@ export function getCountryEnglishName(countryFa) {
 // از scripts/ingest_sent_emails.py (کمپین قدیمی) + هر ارسال واقعی جدید از
 // طریق صفحه‌ی «ایمیل معرفی». بر اساس خودِ آدرس ایمیل چک می‌شه، نه id شرکت —
 // چون آدرس‌های کمپین قدیمی همیشه با شرکت فعلی دیتابیس یک‌به‌یک نیستن.
+// لاگ ایمیل‌های ارسال‌شده‌ی outreach دو بخش داره:
+//  - baseline: data/email_outreach_sent.json توی ریپو (کمپین‌های قبلی، فقط‌خواندنی
+//    روی سرور — با هر دیپلوی از گیت برمی‌گرده).
+//  - state: ارسال‌های جدیدِ سایت. روی Liara دیسک کانتینر با هر دیپلوی پاک می‌شه،
+//    پس مسیرش با OUTREACH_STATE_DIR روی یک دیسک دائمی (مثلاً /app/persist) می‌رود.
+//    بدون این متغیر (توسعه‌ی محلی) همون فایل baseline است.
+const OUTREACH_BASELINE_FILE = path.join(DATA_DIR, "email_outreach_sent.json");
+
+export function getOutreachSentStatePath() {
+  const dir = process.env.OUTREACH_STATE_DIR;
+  return dir ? path.join(dir, "email_outreach_sent.json") : OUTREACH_BASELINE_FILE;
+}
+
+// فقط ارسال‌های جدید (فایل state) — برای نوشتن (append) توی send/route.js.
+export function getOutreachSentStateOnly() {
+  return readJsonSafe(getOutreachSentStatePath(), []);
+}
+
 export function getEmailOutreachSent() {
-  return readJsonSafe(path.join(DATA_DIR, "email_outreach_sent.json"), []);
+  const baseline = readJsonSafe(OUTREACH_BASELINE_FILE, []);
+  if (getOutreachSentStatePath() === OUTREACH_BASELINE_FILE) return baseline;
+  return [...baseline, ...getOutreachSentStateOnly()];
 }
 
 export function getExhibitions() {
