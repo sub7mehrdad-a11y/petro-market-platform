@@ -37,8 +37,16 @@ export async function POST(request) {
   // اصلی توی x-forwarded-proto میاد). قبلاً با NODE_ENV=production همیشه Secure
   // بود: روی http (دامنه‌ی بدون SSL، یا آدرس شبکه‌ی محلی) مرورگر کوکی رو دور
   // می‌ریخت و کاربر بعد از «ورود موفق» دوباره به /login برمی‌گشت.
+  // مطمئن‌ترین نشانه‌ی پروتکلی که مرورگر واقعاً می‌بینه، هدر Origin همین POST
+  // است (مرورگر برای هر fetch POST می‌فرستدش)؛ x-forwarded-proto پشت پروکسی
+  // Liara ممکنه با پروتکل اتصال داخلی پر شده باشه نه با چیزی که کاربر دیده.
+  const origin = request.headers.get("origin");
   const forwardedProto = request.headers.get("x-forwarded-proto")?.split(",")[0].trim();
-  const isHttps = forwardedProto ? forwardedProto === "https" : request.nextUrl.protocol === "https:";
+  const isHttps = origin
+    ? origin.startsWith("https://")
+    : forwardedProto
+      ? forwardedProto === "https"
+      : request.nextUrl.protocol === "https:";
   response.cookies.set(SESSION_COOKIE_NAME, token, {
     httpOnly: true,
     secure: isHttps,
