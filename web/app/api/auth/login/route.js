@@ -33,9 +33,15 @@ export async function POST(request) {
 
   const token = createSession(user);
   const response = NextResponse.json({ ok: true, role: user.role });
+  // Secure فقط وقتی کاربر واقعاً با https وارد شده (پشت پروکسی Liara پروتکل
+  // اصلی توی x-forwarded-proto میاد). قبلاً با NODE_ENV=production همیشه Secure
+  // بود: روی http (دامنه‌ی بدون SSL، یا آدرس شبکه‌ی محلی) مرورگر کوکی رو دور
+  // می‌ریخت و کاربر بعد از «ورود موفق» دوباره به /login برمی‌گشت.
+  const forwardedProto = request.headers.get("x-forwarded-proto")?.split(",")[0].trim();
+  const isHttps = forwardedProto ? forwardedProto === "https" : request.nextUrl.protocol === "https:";
   response.cookies.set(SESSION_COOKIE_NAME, token, {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
+    secure: isHttps,
     sameSite: "lax",
     path: "/",
     maxAge: SESSION_COOKIE_MAX_AGE,
