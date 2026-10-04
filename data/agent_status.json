@@ -1,0 +1,37 @@
+{
+  "price": {
+    "ok": true,
+    "exit_code": 0,
+    "started_at": "2026-10-04T11:11:38.283557+00:00",
+    "finished_at": "2026-10-04T11:14:56.143809+00:00",
+    "output_tail": "[OK] fetched https://www.echemi.com/productsInformation/pd20150901033-sodium-bicarbonate.html (6000 chars)\n[WARN] failed to fetch https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186: HTTP Error 403: Forbidden\n[OK] fetched https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends (6000 chars)\n[OK] fetched https://tradingeconomics.com/commodity/soda-ash (6000 chars)\n[WARN] failed to fetch https://www.chemanalyst.com/Pricing-data/soda-ash-76: HTTP Error 403: Forbidden\n[OK] fetched https://www.procurementresource.com/resource-center/soda-ash-price-trends (6000 chars)\n[OK] fetched http://board.himtrade.ru/ (6000 chars)\n[OK] fetched https://flagma.ru/ (137 chars)\n[OK] fetched https://www.soda.ru/ru/ (1579 chars)\n[DEDUP] ('sodium bicarbonate', 'China', 'FOB'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-08)\n[DEDUP] ('sodium bicarbonate', 'India', 'CIF'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-08)\n[DEDUP] ('sodium bicarbonate', 'Germany', 'CIF'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-08)\n[DEDUP] ('sodium bicarbonate', 'Australia', 'CIF'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-08)\n[DEDUP] ('sodium bicarbonate', 'Brazil', 'CIF'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-08)\n[DEDUP] ('soda ash', 'China', 'FOB'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-08)\n[DEDUP] ('soda ash', 'India', 'CIF'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-08)\n[DEDUP] ('soda ash', 'USA', 'CIF'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-08)\n[DEDUP] ('soda ash', 'Brazil', 'CIF'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-08)\n[DEDUP] ('soda ash', 'Canada', 'CIF'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-08)\n[INFO] 10 رکورد هم‌پوشان در همین اجرا حذف شد.\n[OK] 11/15 رکورد با عدد واقعی ثبت شد.\n"
+  },
+  "news": {
+    "ok": true,
+    "exit_code": 0,
+    "started_at": "2026-10-04T11:14:56.182807+00:00",
+    "finished_at": "2026-10-04T11:16:09.640166+00:00",
+    "output_tail": "[OK] fetched https://www.dailysabah.com/business (7510 chars)\n[OK] fetched https://tradingeconomics.com/commodity/soda-ash (6654 chars)\n[OK] fetched https://chemxplore.com/countries/turkey (5276 chars)\n[RETRY] https://www.chemeurope.com/en/news/\n[WARN] failed to fetch https://www.chemeurope.com/en/news/: <urlopen error [Errno 104] Connection reset by peer>\n[OK] fetched https://oilprice.com/Latest-Energy-News/World-News/ (12000 chars)\n[OK] fetched https://www.freightos.com/freightos-baltic-index/ (12000 chars)\n[OK] fetched https://www.drewry.co.uk/world-container-index (12000 chars)\n[OK] fetched https://tradingeconomics.com/commodity/baltic (9785 chars)\n[OK] fetched https://rupec.ru/ (4218 chars)\n[OK] fetched https://rccnews.ru/ (4434 chars)\n[OK] fetched https://www.soda.ru/ru/ (1579 chars)\n[OK] fetched https://www.rzd-partner.ru/ (12000 chars)\n[OK] fetched https://trans.ru/ (3460 chars)\n[OK] fetched https://flagma.ru/ (137 chars)\n[OK] fetched http://board.himtrade.ru/ (10926 chars)\n[OK] fetched https://www.caixinglobal.com/ (12000 chars)\n[OK] fetched https://www.scmp.com/business (7547 chars)\n[OK] fetched https://www.globaltimes.cn/ (5481 chars)\n[OK] fetched http://www.news.cn/english/ (4393 chars)\n[OK] fetched http://english.customs.gov.cn/newsroom/news (2044 chars)\n[OK] fetched https://economic.mfa.ir/ (12000 chars)\n[OK] RSS Container News: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS The Loadstar: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Splash247: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Hellenic Shipping News: 12 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS gCaptain: 12 آیتم خوانده شد، 5 آیتم مرتبط\n[INFO] مدل 4 آیتم برگرداند.\n[OK] ثبت شد [بازار سودا اش و کربنات سدیم]: ثبات قیمت کربنات سدیم در بازار چین در سطح ۱۰۵۰ یوآن\n[OK] ثبت شد [صنعت جوش شیرین و رقبا]: جهش نزدیک به ۱۰ برابری صادرات شیمی غیرآلی روسیه به مکزیک\n[OK] ثبت شد [ترانزیت، کرایه‌ی حمل و لجستیک]: گیر افتادن ۱۲ درصد از ظرفیت کانتینری جهان در تراکم بنادر\n[OK] ثبت شد [انرژی، ارز و ژئوپلیتیک]: توافق گروه هفت برای آزادسازی ۱۰۰ میلیون بشکه ذخایر اضطراری سوخت\n[OK] مجموعاً 4 خبر تازه‌ی 2026-10-04 ذخیره شد.\n"
+  },
+  "turkey": {
+    "ok": true,
+    "exit_code": 0,
+    "started_at": "2026-10-04T11:16:09.678546+00:00",
+    "finished_at": "2026-10-04T11:16:38.579855+00:00",
+    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.wesoda.com/media/ (2449 chars)\n[OK] fetched https://www.wesoda.com/investors/ (2587 chars)\n[OK] fetched https://www.etisoda.com/ (2036 chars)\n[OK] fetched https://www.kazansoda.com/ (2059 chars)\n--- منابع لجستیک/اقتصاد ---\n[OK] fetched https://www.utikad.org.tr/en (5000 chars)\n[OK] fetched https://www.hurriyetdailynews.com/index/economy (3471 chars)\n[OK] fetched https://www.dailysabah.com/business (5000 chars)\n\n[OK] رصد ترکیه 2026-10-04 ذخیره شد — 0 خبر شرکتی، 3 خبر لجستیکی.\n"
+  },
+  "china": {
+    "ok": true,
+    "exit_code": 0,
+    "started_at": "2026-10-04T11:16:38.617742+00:00",
+    "finished_at": "2026-10-04T11:17:18.290974+00:00",
+    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.shandong-haihua.net/news.html (5000 chars)\n[OK] fetched http://en.haihua.com.cn/product_1/4.html (5000 chars)\n[OK] fetched http://www.en.chinayuhuagroup.com/ (4895 chars)\n--- منابع لجستیک/اقتصاد صادراتی ---\n[OK] fetched https://www.globaltimes.cn/business/ (5000 chars)\n[OK] fetched https://gcaptain.com/tag/container-freight-rates/ (5000 chars)\n[OK] fetched https://www.container-news.com/ (5000 chars)\n\n[OK] رصد چین 2026-10-04 ذخیره شد — 2 خبر شرکتی، 1 خبر لجستیکی.\n"
+  },
+  "transit": {
+    "ok": true,
+    "exit_code": 0,
+    "started_at": "2026-10-04T11:17:18.330121+00:00",
+    "finished_at": "2026-10-04T11:17:26.992152+00:00",
+    "output_tail": "[OK] amintara50: 14 پست استخراج شد\n[OK] jadeh_app: 8 پست استخراج شد\n\n[DONE] 22 پست (13 با قیمت صریح) در /home/runner/work/petro-market-platform/petro-market-platform/data/transit_log.json ذخیره شد.\n"
+  }
+}
