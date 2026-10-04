@@ -492,7 +492,37 @@ export function getUnionsForCountry(countryFa) {
 // منابعی روی سایت‌ان که واردات یک کشور را ردیف‌به‌ردیف به تفکیک مبدأ می‌دهند —
 // real_trade_stats و top_trade_partners فقط چند رقم دستی/روایی دارند، نه یک
 // جدول کامل قابل جمع‌بندی.
+// تفکیک واردات از روی «گزارش تحلیلی» خود کشور (data/country_profiles.json یا
+// competitors.json → report_import_breakdown). طبق قاعده‌ی پروژه (گزارش اختصاصی
+// جایگزین Trade Map می‌شود)، اگر برای کشوری وجود داشته باشد بر ITC/WITS اولویت دارد.
+// ارزش دلاری عمداً null است: گزارش‌ها حجم (تن) برآورد کرده‌اند، نه ارزش.
+function getReportImportBreakdown(country) {
+  const rb =
+    getCountryProfile(country)?.report_import_breakdown ||
+    getCompetitorForCountry(country)?.report_import_breakdown;
+  if (!rb?.total_tons || !rb.suppliers?.length) return null;
+  return {
+    source: "report",
+    year: rb.year,
+    note: rb.note || null,
+    total_usd_k: null,
+    total_tons: rb.total_tons,
+    suppliers: rb.suppliers.map((sp) => {
+      const tons = sp.tons != null ? sp.tons : Math.round((sp.share_pct / 100) * rb.total_tons);
+      return {
+        country: sp.country,
+        value_usd_k: null,
+        tons,
+        share_pct: sp.share_pct != null ? sp.share_pct : round1((tons / rb.total_tons) * 100),
+      };
+    }),
+  };
+}
+
 export function getCountryImportBreakdown(country) {
+  const fromReport = getReportImportBreakdown(country);
+  if (fromReport) return fromReport;
+
   const direct = getImportSuppliers(country);
   if (direct?.suppliers?.length) {
     return {
@@ -550,7 +580,10 @@ export function getUnionTradeStats(unionId) {
   const memberSet = new Set(union.members);
   let totalUsdK = 0;
   let intraUsdK = 0;
+  let totalTons = 0;
+  let intraTons = 0;
   let membersWithData = 0;
+  let membersWithTons = 0;
 
   const memberRows = union.members.map((member) => {
     const breakdown = getCountryImportBreakdown(member);
@@ -559,31 +592,49 @@ export function getUnionTradeStats(unionId) {
     }
     membersWithData += 1;
 
-    const total = breakdown.total_usd_k ?? breakdown.suppliers.reduce((s, r) => s + (r.value_usd_k || 0), 0);
-    const intra = breakdown.suppliers
-      .filter((s) => s.country !== member && memberSet.has(s.country))
-      .reduce((s, r) => s + (r.value_usd_k || 0), 0);
-    const topExternal = [...breakdown.suppliers]
-      .filter((s) => !memberSet.has(s.country))
-      .sort((a, b) => (b.value_usd_k || 0) - (a.value_usd_k || 0))[0];
-    const totalTons = breakdown.suppliers.every((s) => s.tons != null)
-      ? breakdown.suppliers.reduce((s, r) => s + r.tons, 0)
+    const isIntra = (sp) => sp.country !== member && memberSet.has(sp.country);
+    const sumOf = (list, key) => list.reduce((acc, r) => acc + (r[key] || 0), 0);
+
+    const usdTotal = breakdown.total_usd_k ?? (sumOf(breakdown.suppliers, "value_usd_k") || null);
+    const usdIntra = sumOf(breakdown.suppliers.filter(isIntra), "value_usd_k");
+
+    // تناژ فقط وقتی معتبره که یا گزارش خودش کل رو داده، یا همه‌ی ردیف‌ها تناژ دارن.
+    const allHaveTons = breakdown.suppliers.every((sp) => sp.tons != null);
+    const tonsTotal = breakdown.total_tons ?? (allHaveTons ? sumOf(breakdown.suppliers, "tons") : null);
+    const tonsIntra = tonsTotal != null && breakdown.suppliers.every((sp) => sp.tons != null)
+      ? sumOf(breakdown.suppliers.filter(isIntra), "tons")
       : null;
 
-    if (total) {
-      totalUsdK += total;
-      intraUsdK += intra;
+    if (usdTotal) {
+      totalUsdK += usdTotal;
+      intraUsdK += usdIntra;
     }
+    if (tonsTotal != null && tonsIntra != null) {
+      membersWithTons += 1;
+      totalTons += tonsTotal;
+      intraTons += tonsIntra;
+    }
+
+    // مبنای سهم: ارزش اگه داریم، وگرنه تناژ (گزارش‌ها فقط تناژ دارن)
+    const useUsd = !!usdTotal;
+    const topExternal = [...breakdown.suppliers]
+      .filter((sp) => !memberSet.has(sp.country))
+      .sort((a, b) => (useUsd ? (b.value_usd_k || 0) - (a.value_usd_k || 0) : (b.tons || 0) - (a.tons || 0)))[0];
 
     return {
       country: member,
       hasData: true,
       source: breakdown.source,
       year: breakdown.year,
-      total_usd_k: total || null,
-      total_tons: totalTons,
-      intra_usd_k: intra || null,
-      intra_share_pct: total ? round1((intra / total) * 100) : null,
+      note: breakdown.note || null,
+      total_usd_k: usdTotal || null,
+      total_tons: tonsTotal,
+      intra_usd_k: usdIntra || null,
+      intra_share_pct: useUsd
+        ? round1((usdIntra / usdTotal) * 100)
+        : tonsTotal && tonsIntra != null
+          ? round1((tonsIntra / tonsTotal) * 100)
+          : null,
       top_external_supplier: topExternal
         ? { country: topExternal.country, share_pct: topExternal.share_pct }
         : null,
@@ -594,9 +645,13 @@ export function getUnionTradeStats(unionId) {
     union_id: unionId,
     members_total: union.members.length,
     members_with_data: membersWithData,
+    members_with_tons: membersWithTons,
     total_usd_k: totalUsdK || null,
     intra_usd_k: intraUsdK || null,
     intra_share_pct: totalUsdK ? round1((intraUsdK / totalUsdK) * 100) : null,
+    total_tons: membersWithTons ? totalTons : null,
+    intra_tons: membersWithTons ? intraTons : null,
+    intra_tons_share_pct: membersWithTons && totalTons ? round1((intraTons / totalTons) * 100) : null,
     member_rows: memberRows,
   };
 }

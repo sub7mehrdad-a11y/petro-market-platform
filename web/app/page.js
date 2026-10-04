@@ -1,9 +1,10 @@
 import Link from "next/link";
 import {
   getFlatPriceRecords, getNewsAnalysis, getTradeMapForCountry, getIranExports,
-  getGlobalMarketShareHistory,
+  getGlobalMarketShareHistory, getIntratecMonthly,
 } from "@/lib/data";
 import PriceSection from "./components/PriceSection";
+import IntratecSampleCard from "./components/IntratecSampleCard";
 import NewsCard from "./components/NewsCard";
 import KpiRow from "./components/KpiRow";
 import PageHeader from "./components/PageHeader";
@@ -119,6 +120,8 @@ export default function DashboardPage() {
         highlightSpecs={BICARBONATE_HIGHLIGHTS}
         allRows={rows}
       />
+
+      <IntratecSampleCard records={getIntratecMonthly()} />
 
       <PriceSection
         title="سود اش (Soda Ash)"

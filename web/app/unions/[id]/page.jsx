@@ -79,7 +79,7 @@ function formatUsdK(valueK) {
   return `${Math.round(usd).toLocaleString("fa-IR")} دلار`;
 }
 
-const SOURCE_LABEL = { import_suppliers: "ITC Trade Map", market_share_history: "WITS" };
+const SOURCE_LABEL = { import_suppliers: "ITC Trade Map", market_share_history: "WITS", report: "گزارش تحلیلی" };
 
 function MemberTradeRow({ row }) {
   const iso2 = getTradeMapForCountry(row.country)?.iso2;
@@ -104,7 +104,7 @@ function MemberTradeRow({ row }) {
           )}
         </td>
         <td className="py-2 pe-4 text-slate-400" colSpan={3}>
-          هنوز تفکیک واردات‌به‌مبدأ برای این کشور تحقیق نشده
+          هنوز برای این کشور تحقیق/گزارش تحلیلی تکمیل نشده
         </td>
       </tr>
     );
@@ -122,9 +122,17 @@ function MemberTradeRow({ row }) {
         )}
       </td>
       <td className="py-2 pe-4 font-tabular">
-        {formatUsdK(row.total_usd_k)}
-        {row.total_tons != null && (
-          <span className="text-slate-400"> · {row.total_tons.toLocaleString("fa-IR")} تن</span>
+        {row.total_usd_k != null ? (
+          <>
+            {formatUsdK(row.total_usd_k)}
+            {row.total_tons != null && (
+              <span className="text-slate-400"> · {row.total_tons.toLocaleString("fa-IR")} تن</span>
+            )}
+          </>
+        ) : row.total_tons != null ? (
+          <>{row.total_tons.toLocaleString("fa-IR")} تن</>
+        ) : (
+          "—"
         )}
       </td>
       <td className="py-2 pe-4 font-tabular">
@@ -140,7 +148,12 @@ function MemberTradeRow({ row }) {
                 : ""
             }`
           : "—"}
-        <span className="text-[10px] text-slate-400"> · {SOURCE_LABEL[row.source]} {row.year}</span>
+        <span
+          className={`text-[10px] ${row.source === "report" ? "text-copper-700 font-semibold" : "text-slate-400"}`}
+          title={row.note || undefined}
+        >
+          {" "}· {SOURCE_LABEL[row.source]} {row.year}
+        </span>
       </td>
     </tr>
   );
@@ -224,16 +237,47 @@ export default async function UnionPage({ params }) {
           title="حجم تجارت جوش شیرین اتحادیه (کد HS ۲۸۳۶۳۰)"
           subtitle={
             stats.members_with_data > 0
-              ? `محاسبه‌شده از روی داده‌ی واقعیِ ${stats.members_with_data.toLocaleString("fa-IR")} عضو از ${stats.members_total.toLocaleString(
+              ? `محاسبه‌شده از روی داده‌ی ${stats.members_with_data.toLocaleString("fa-IR")} عضو از ${stats.members_total.toLocaleString(
                   "fa-IR"
-                )} — نه یک رقم دستی؛ با تکمیل تفکیک واردات‌به‌مبدأ هر کشور، این بخش خودکار به‌روز می‌شود.`
+                )} — کشورهایی که گزارش تحلیلی دارند از روی همان گزارش (حجم برآوردی، بدون ارزش دلاری)، بقیه از ITC/WITS؛ با تکمیل تحقیق هر کشور، این بخش خودکار به‌روز می‌شود.`
               : "هنوز برای هیچ‌کدام از اعضای این اتحادیه تفکیک واردات‌به‌مبدأ تحقیق نشده — با تکمیل تحقیق هر کشور، این بخش خودکار پر می‌شود."
           }
         >
+          {stats.total_tons ? (
+            <div className="grid gap-4 sm:grid-cols-3 mb-5">
+              <div className="rounded-lg border border-slate-200 border-s-4 border-s-petrol-400 p-4">
+                <div className="text-xs text-slate-500 mb-1">
+                  کل واردات (بر حسب تناژ — {stats.members_with_tons.toLocaleString("fa-IR")} عضو دارای داده)
+                </div>
+                <div className="font-bold font-tabular text-petrol-900">
+                  {stats.total_tons.toLocaleString("fa-IR")} تن
+                </div>
+              </div>
+              <div className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 p-4">
+                <div className="text-xs text-slate-500 mb-1">واردات از داخل خودِ اتحادیه</div>
+                <div className="font-bold font-tabular text-copper-800">
+                  {stats.intra_tons.toLocaleString("fa-IR")} تن
+                  {stats.intra_tons_share_pct != null && (
+                    <span className="text-sm text-copper-700"> ({stats.intra_tons_share_pct.toLocaleString("fa-IR")}٪)</span>
+                  )}
+                </div>
+              </div>
+              <div className="rounded-lg border border-slate-200 border-s-4 border-s-slate-300 p-4">
+                <div className="text-xs text-slate-500 mb-1">واردات از خارج اتحادیه</div>
+                <div className="font-bold font-tabular text-slate-700">
+                  {(stats.total_tons - stats.intra_tons).toLocaleString("fa-IR")} تن
+                  {stats.intra_tons_share_pct != null && (
+                    <span className="text-sm text-slate-500"> ({(100 - stats.intra_tons_share_pct).toLocaleString("fa-IR")}٪)</span>
+                  )}
+                </div>
+              </div>
+            </div>
+          ) : null}
+
           {stats.total_usd_k ? (
             <div className="grid gap-4 sm:grid-cols-3 mb-5">
               <div className="rounded-lg border border-slate-200 border-s-4 border-s-petrol-400 p-4">
-                <div className="text-xs text-slate-500 mb-1">کل واردات شناخته‌شده (اعضای دارای داده)</div>
+                <div className="text-xs text-slate-500 mb-1">کل واردات به ارزش دلاری (فقط اعضای دارای آمار ارزشی ITC/WITS)</div>
                 <div className="font-bold font-tabular text-petrol-900">{formatUsdK(stats.total_usd_k)}</div>
               </div>
               <div className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 p-4">
