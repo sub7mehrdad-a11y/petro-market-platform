@@ -38,12 +38,15 @@ jobs:
       - name: Run Intratec watch bot
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-        run: python scripts/intratec_watch_bot.py
+        run: python scripts/run_agent.py intratec scripts/intratec_watch_bot.py
 
+      # if: always() — حتی وقتی ربات خراب شده، وضعیت/خروجی خطا (agent_status.json) کامیت
+      # بشه تا بشه علت رو از روی گیت دید.
       - name: Commit updated data file
+        if: always()
         run: |
           git config user.name "market-data-bot"
           git config user.email "actions@github.com"
-          git add data/intratec_monthly.json
+          git add data/agent_status.json data/intratec_monthly.json
           git diff --quiet --cached || git commit -m "به‌روزرسانی ماهانه‌ی قیمت‌های نمونه‌ی Intratec"
           git push

@@ -31,6 +31,7 @@ import os
 import re
 import sys
 import json
+import threading
 from datetime import datetime, timezone
 
 from google import genai
@@ -122,6 +123,30 @@ def call_agent(client: genai.Client, sources_block: str) -> str:
         input=build_user_prompt(sources_block),
     )
     return interaction.output_text
+
+
+CALL_DEADLINE_SEC = 240
+
+
+def call_with_deadline(fn, seconds):
+    """fn رو توی یک thread (daemon) اجرا می‌کنه و بعد از seconds ثانیه TimeoutError می‌ده.
+    thread گیرکرده کشته نمی‌شه ولی daemon است و جلوی خروج پروسه رو نمی‌گیره."""
+    box = {}
+
+    def runner():
+        try:
+            box["value"] = fn()
+        except BaseException as e:  # noqa: BLE001
+            box["error"] = e
+
+    t = threading.Thread(target=runner, daemon=True)
+    t.start()
+    t.join(seconds)
+    if t.is_alive():
+        raise TimeoutError(f"فراخوانی مدل بعد از {seconds} ثانیه پاسخ نداد")
+    if "error" in box:
+        raise box["error"]
+    return box["value"]
 
 
 def extract_json_array(text: str):
@@ -242,13 +267,24 @@ def main():
     fetched = fetch_sources(SEED_SOURCES)
     sources_block = build_sources_block(fetched)
 
+    # سقف زمان + حداکثر ۳ بار تلاش: خروجی مدل گاهی JSON معتبر نیست یا فراخوانی
+    # بی‌پایان گیر می‌کنه (تست محلی ۲۰۲۶-۱۰-۰۴: بیش از ۱۰ دقیقه بی‌پاسخ، و
+    # http_options.timeout روی client.interactions اثری نداشت)؛ بدون تلاش مجدد یک
+    # خروجی بد یعنی از دست رفتن کل روز (بات توی Actions continue-on-error است و
+    # خرابی بی‌صدا می‌مونه).
     client = genai.Client(api_key=api_key)
-    raw_text = call_agent(client, sources_block)
-
-    try:
-        records = extract_json_array(raw_text)
-    except ValueError as e:
-        print(f"[ERROR] {e}")
+    records = None
+    last_error = None
+    for attempt in range(1, 4):
+        try:
+            raw_text = call_with_deadline(lambda: call_agent(client, sources_block), CALL_DEADLINE_SEC)
+            records = extract_json_array(raw_text)
+            break
+        except Exception as e:  # noqa: BLE001 — هر خطای API/پارس باید تلاش مجدد بخوره
+            last_error = e
+            print(f"[WARN] تلاش {attempt}/3 ناموفق: {type(e).__name__}: {str(e)[:400]}")
+    if records is None:
+        print(f"[ERROR] هر ۳ تلاش شکست خورد: {last_error}")
         raise SystemExit(1)
 
     records = dedupe_records(records)

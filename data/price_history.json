@@ -7768,5 +7768,215 @@
         "note": "Soda ash (Сода кальцинированная) listed on bulletin board, but no numerical price was provided in the text."
       }
     ]
+  },
+  {
+    "collected_at": "2026-10-04T04:54:24.263419+00:00",
+    "date": "2026-10-04",
+    "records": [
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "China",
+        "price_type": "FOB",
+        "value": 177.78,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "Reported FOB price for China"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "China",
+        "price_type": "domestic",
+        "value": 181.0,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "June 2026",
+        "note": "Domestic market price in China"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "India",
+        "price_type": "CIF",
+        "value": 268.78,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "Reported CIF price for India"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Turkey",
+        "price_type": "domestic",
+        "value": null,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "ChemAnalyst",
+        "source_url": "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",
+        "source_reported_date": "June 2026",
+        "note": "No numerical price value provided in text (Price Index rose 10.34% Q-o-Q)"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Russia",
+        "price_type": "domestic",
+        "value": null,
+        "currency": "RUB",
+        "unit": "mt",
+        "source_name": "Himtrade",
+        "source_url": "http://board.himtrade.ru/",
+        "source_reported_date": "October 2026",
+        "note": "No numerical price value provided in text for sodium bicarbonate"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "USA",
+        "price_type": "CIF",
+        "value": 406.0,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "ChemAnalyst",
+        "source_url": "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",
+        "source_reported_date": "June 2026",
+        "note": "Average quarter price, CFR New York equivalent"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Singapore",
+        "price_type": "FOB",
+        "value": 247.67,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "ChemAnalyst",
+        "source_url": "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",
+        "source_reported_date": "June 2026",
+        "note": "FOB Jurong assessment"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Germany",
+        "price_type": "CIF",
+        "value": 291.78,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "Reported CIF price for Germany"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "China",
+        "price_type": "domestic",
+        "value": 1050,
+        "currency": "CNY",
+        "unit": "mt",
+        "source_name": "Trading Economics",
+        "source_url": "https://tradingeconomics.com/commodity/soda-ash",
+        "source_reported_date": "2026-10-02",
+        "note": "Spot benchmark trading contract price"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "China",
+        "price_type": "FOB",
+        "value": 152.7,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "Reported FOB price for China"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "India",
+        "price_type": "CIF",
+        "value": 243.49,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "Reported CIF price for India"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "Turkey",
+        "price_type": "FOB",
+        "value": null,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "Q2 2026",
+        "note": "No numerical price value provided in text (mentioned as international supplier affecting European market)"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "Russia",
+        "price_type": "domestic",
+        "value": null,
+        "currency": "RUB",
+        "unit": "mt",
+        "source_name": "Bashkir Soda Company",
+        "source_url": "https://www.soda.ru/ru/",
+        "source_reported_date": "2026-10-04",
+        "note": "No numerical price value provided in text for soda ash"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "USA",
+        "price_type": "domestic",
+        "value": 188.33,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "ChemAnalyst",
+        "source_url": "https://www.chemanalyst.com/Pricing-data/soda-ash-76",
+        "source_reported_date": "June 2026",
+        "note": "Ex-works average price"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "USA",
+        "price_type": "CIF",
+        "value": 308.32,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "Reported CIF price for USA"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "Japan",
+        "price_type": "CIF",
+        "value": 225.67,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "ChemAnalyst",
+        "source_url": "https://www.chemanalyst.com/Pricing-data/soda-ash-76",
+        "source_reported_date": "June 2026",
+        "note": "CFR Tokyo trades assessment"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "Germany",
+        "price_type": "domestic",
+        "value": 429.0,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "ChemAnalyst",
+        "source_url": "https://www.chemanalyst.com/Pricing-data/soda-ash-76",
+        "source_reported_date": "June 2026",
+        "note": "Average price reflecting local spot market and inland delivery costs"
+      }
+    ]
   }
 ]
