@@ -19,3 +19,7 @@ scripts/*.pdf
 
 # لاگ اجرای محلی exhibitor_lead_finder.py — موقتی، نه سورس
 scripts/_*.log
+
+# صف ارسال ایمیل (وضعیت اجرایی، نه داده‌ی پروژه)
+data/outreach_queue.json
+data/outreach_queue.json.tmp

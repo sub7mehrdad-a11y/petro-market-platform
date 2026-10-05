@@ -17,6 +17,37 @@
 
 ## ورودی‌ها
 
+### ۲۰۲۶-۱۰-۰۵ — صف ارسال با فاصله‌ی زمانی + گزارش عملکرد ایمیل از روی اینباکس
+
+درخواست کاربر: (۱) ارسال پشت‌سرهم ریسک بن دارد؟ پیشنهاد ۱ ایمیل در دقیقه؛ (۲) گزارش اینکه چندتا
+ایمیل برای چه گریدی ارسال/تحویل/پاسخ داده شد.
+**۱) صف ارسال** (`web/lib/outreachQueue.js`، `web/instrumentation.js`): `POST /api/outreach/send`
+دیگه ایمیل نمی‌فرسته، فقط شرکت‌ها رو در صف می‌ذاره (تا ۵۰۰ تا در هر بار؛ تکراری/نامعتبر رد). یک کارگر
+پس‌زمینه (از `instrumentation.js` موقع بالاآمدن سرور) هر `OUTREACH_SEND_INTERVAL_SEC` ثانیه
+(پیش‌فرض ۶۰، نوسان ±۲۵٪) یک ایمیل می‌فرسته؛ سقف `OUTREACH_DAILY_LIMIT` (پیش‌فرض ۱۵۰ در ۲۴ ساعت)؛
+تلاش مجدد ۳ بار با فاصله‌ی ۱۰ دقیقه؛ تایم‌اوت SMTP. صف روی دیسک (کنار لاگ ارسال، پس روی Liara
+پایدار) ذخیره و بعد از ری‌استارت ادامه پیدا می‌کنه (`data/outreach_queue.json` توی gitignore).
+پنل «صف ارسال» توی `/outreach` (توقف/ادامه/لغو/تلاش دوباره). `OUTREACH_TEST_REDIRECT` برای تست امن:
+همه‌ی ایمیل‌ها فقط به یک آدرس، بدون CC و بدون ثبت در لاگ. لاگ ارسال حالا `message_id`، `grade`،
+`company_id` هم داره. تست محلی (با redirect به sub7.mehrdad@gmail.com و دیسک موقت): صف‌گذاری، حذف
+تکراری، pause/resume، عدم ثبت ارسال تست در لاگ ✅. **مشاهده:** SMTP شرکت گاهی ~۱۰۰ ثانیه برای یک
+ایمیل طول می‌کشه (خودش throttle می‌کنه).
+**۲) گزارش** (`web/lib/outreachReport.js`، `GET /api/outreach/report?days=7|30|90|all`، پنل
+«گزارش عملکرد» توی `/outreach`، و `node scripts/outreach-report.mjs [روز|all]` از پوشه‌ی web/):
+با IMAP روی صندوق `SMTP_USER` فقط هدرها رو می‌خونه و با لاگ ارسال تطبیق می‌ده: ارسال/گرید،
+تحویل‌تأییدشده («Delivered:» سرور MailEnable)، برگشتی قطعی، تأخیر، پاسخ واقعی (In-Reply-To یا
+آدرس/دامنه‌ی شرکتی گیرنده) و پاسخ خودکار. نتیجه‌ی اجرای واقعی: ۷۶ ارسال ثبت‌شده، ۶ برگشتی قطعی
+(≈۷٫۹٪ — بالاتر از حد امن ~۲٪)، ۱ پاسخ واقعی (عراق، گرید صنعتی). **یافته‌ها:** (الف) گواهی TLS
+سرور ایمیل (CN=mail.petrocaspiansepehr.com) از ۲۰۲۴-۱۱-۱۶ منقضی است → `IMAP_TLS_REJECT_UNAUTHORIZED=false`
+لازم است تا تمدید؛ (ب) صندوق ۲۲۸ پیام دارد که ۱۹۱ تای وضعیت (DSN) مربوط به گیرنده‌هایی‌ست که توی
+لاگ ارسال نیستن (کمپین قبلی از MailEnable WebMail)؛ ۲۰ شرکت از بانک شرکت‌ها قبلاً ایمیل
+گرفته‌ان ولی در لاگ ارسال نیستن (خطر ایمیل تکراری) — پیشنهاد شد همگام‌سازی شود.
+**فایل‌ها:** `web/lib/outreachQueue.js`، `web/lib/outreachReport.js`، `web/instrumentation.js`،
+`web/app/api/outreach/{send,queue,report}/route.js`، `web/app/outreach/{OutreachClient,QueuePanel,ReportPanel}.jsx`،
+`web/scripts/outreach-report.mjs`، `web/package.json` (+imapflow)، `.env.example`، `.gitignore`.
+
+---
+
 ### ۲۰۲۶-۱۰-۰۴ — بازنویسی کامل گزارش ترموتک بر پایه‌ی نسخه‌ی اصلاح‌شده‌ی کاربر
 
 کاربر نسخه‌ی اصلاح‌شده‌ی `ThermoTec_Iran_Market_Report.docx` رو داد (خودش ویرایش کرده بود؛

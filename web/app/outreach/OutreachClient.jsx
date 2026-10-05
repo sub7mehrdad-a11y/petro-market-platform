@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from "react";
 import PageHeader from "../components/PageHeader";
+import QueuePanel from "./QueuePanel";
+import ReportPanel from "./ReportPanel";
 
 const GRADE_LABELS = {
   food: "خوراکی",
@@ -10,7 +12,8 @@ const GRADE_LABELS = {
   unclear: "نامشخص/چندگانه",
 };
 
-const BATCH_SIZE = 30;
+// حالا «صف‌گذاری»ه، نه ارسال فوری (ارسال واقعی با فاصله‌ی زمانی توسط کارگر پس‌زمینه) — سقف بالاتره.
+const BATCH_SIZE = 200;
 
 export default function OutreachClient({ companies, countries, sendingEnabled }) {
   const [country, setCountry] = useState("همه");
@@ -39,6 +42,7 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
   const [previewLoading, setPreviewLoading] = useState(false);
   const [sendResult, setSendResult] = useState(null);
   const [sending, setSending] = useState(false);
+  const [queueRefresh, setQueueRefresh] = useState(0);
 
   const addToSelection = (list) => {
     setSelected((prev) => {
@@ -104,7 +108,7 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
   }
 
   async function sendBatch(ids) {
-    if (!confirm(`ارسال واقعی برای ${ids.length.toLocaleString("fa-IR")} شرکت انجام بشه؟`)) return;
+    if (!confirm(`${ids.length.toLocaleString("fa-IR")} شرکت به صف ارسال واقعی اضافه بشه؟ (ایمیل‌ها با فاصله‌ی زمانی، یکی‌یکی فرستاده می‌شن)`)) return;
     setSending(true);
     setSendResult(null);
     try {
@@ -116,14 +120,13 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
       const data = await res.json();
       setSendResult({ status: res.status, ...data });
       if (res.ok) {
-        // موفق‌ها رو از لیست انتخاب حذف کن تا اشتباهی دوباره فرستاده نشن
+        // هرچی وارد صف شد (یا از قبل ارسال/در صف بود) از لیست انتخاب حذف می‌شه تا دوباره اضافه نشه
         setSelected((prev) => {
           const next = new Map(prev);
-          for (const r of data.results || []) {
-            if (r.ok) next.delete(r.id);
-          }
+          for (const id of ids) next.delete(id);
           return next;
         });
+        setQueueRefresh((n) => n + 1);
       }
     } finally {
       setSending(false);
@@ -301,12 +304,12 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
               className="bg-copper-700 text-white text-sm font-medium rounded-lg px-4 py-2 hover:bg-copper-800 disabled:opacity-40"
             >
               {sending
-                ? "در حال ارسال..."
-                : `ارسال ${Math.min(checkedIds.length, BATCH_SIZE).toLocaleString("fa-IR")} تای اول`}
+                ? "در حال افزودن به صف..."
+                : `افزودن ${Math.min(checkedIds.length, BATCH_SIZE).toLocaleString("fa-IR")} شرکت به صف ارسال`}
             </button>
             {checkedIds.length > BATCH_SIZE && (
               <span className="text-xs text-slate-400">
-                (سقف هر دسته {BATCH_SIZE} تاست — بقیه رو بعد از این دسته بفرست)
+                (سقف هر بار {BATCH_SIZE} شرکت — بقیه رو بعداً اضافه کن)
               </span>
             )}
           </div>
@@ -320,11 +323,20 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
                 : "bg-rose-50 text-rose-700 border border-rose-200"
             }`}
           >
-            {sendResult.error || `${sendResult.sent} ایمیل ارسال شد، ${sendResult.failed} ناموفق.`}
+            {sendResult.error ||
+              `${(sendResult.queued ?? 0).toLocaleString("fa-IR")} شرکت وارد صف شد${
+                sendResult.skipped?.length ? `، ${sendResult.skipped.length.toLocaleString("fa-IR")} مورد رد شد (تکراری/نامعتبر)` : ""
+              }. ارسال خودکار با فاصله‌ی حدود ${(sendResult.interval_sec || 60).toLocaleString("fa-IR")} ثانیه انجام می‌شود.${
+                sendResult.test_redirect ? " (حالت تست: همه‌ی ایمیل‌ها فقط به آدرس تست می‌رن)" : ""
+              }`}
             {sendResult.logError && <div className="mt-1 font-semibold text-rose-700">⚠ {sendResult.logError}</div>}
           </div>
         )}
       </section>
+
+      <QueuePanel refreshKey={queueRefresh} />
+
+      <ReportPanel />
 
       {/* پیش‌نمایش */}
       {previewLoading && <p className="text-sm text-slate-500">در حال ساخت پیش‌نمایش...</p>}
