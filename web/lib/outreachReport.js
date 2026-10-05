@@ -196,9 +196,22 @@ export async function buildOutreachReport({ sentRecords, companies, days = 7 }) 
     .filter(({ rec }) => windowByEmail.has(rec.email))
     .map(({ rec, date }) => ({ name: rec.name || null, grade: rec._grade, country: rec.country || companyByEmail.get(rec.email)?.country || null, date: date ? new Date(date).toISOString() : null }));
 
+  // ردیف‌های تفصیلی هر ارسال (برای خروجی اکسل و نمودار زمانی)
+  const rows = inWindow.map((r) => ({
+    name: r.name || companyByEmail.get(r.email)?.english_name || null,
+    country: r.country || companyByEmail.get(r.email)?.country || null,
+    email: r.email,
+    grade: r._grade,
+    sent_at: r.sent_at,
+    status: dsnState.get(r.email) || "none", // failed | delivered | relayed | delayed | none
+    replied: replied.has(r.email),
+    auto_replied: autoReplied.has(r.email),
+  }));
+
   return {
     generated_at: new Date().toISOString(),
     window_days: days,
+    rows,
     since: since ? since.toISOString() : null,
     totals: finish(totals),
     by_grade: Object.fromEntries(Object.entries(grades).map(([g, v]) => [g, finish(v)])),

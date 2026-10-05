@@ -20,6 +20,41 @@ export default function ReportPanel() {
   const [loading, setLoading] = useState(false);
   const [report, setReport] = useState(null);
   const [error, setError] = useState("");
+  const [downloading, setDownloading] = useState("");
+
+  // دانلود: همین گزارشی که روی صفحه است (بدون خواندن دوباره‌ی صندوق ورودی) به سرور فرستاده می‌شه
+  // تا اکسل/HTML ساخته و برگردونده بشه.
+  async function download(format) {
+    if (!report) return;
+    setDownloading(format);
+    setError("");
+    try {
+      const res = await fetch("/api/outreach/report/export", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ format, report }),
+      });
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
+        setError(data.error || "ساخت فایل ناموفق بود.");
+        return;
+      }
+      const blob = await res.blob();
+      const name = /filename="([^"]+)"/.exec(res.headers.get("Content-Disposition") || "")?.[1] || `outreach-report.${format}`;
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = name;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch {
+      setError("خطا در دانلود فایل.");
+    } finally {
+      setDownloading("");
+    }
+  }
 
   async function build() {
     setLoading(true);
@@ -61,6 +96,15 @@ export default function ReportPanel() {
 
       {report && t && (
         <>
+          <div className="flex flex-wrap items-center gap-2 mb-4">
+            <button type="button" onClick={() => download("xlsx")} disabled={!!downloading} className="border border-emerald-600 text-emerald-700 text-sm font-medium rounded-lg px-3 py-1.5 hover:bg-emerald-50 disabled:opacity-40">
+              {downloading === "xlsx" ? "در حال ساخت..." : "دانلود اکسل (تیم بازرگانی)"}
+            </button>
+            <button type="button" onClick={() => download("html")} disabled={!!downloading} className="border border-copper-600 text-copper-800 text-sm font-medium rounded-lg px-3 py-1.5 hover:bg-copper-50 disabled:opacity-40">
+              {downloading === "html" ? "در حال ساخت..." : "دانلود گزارش هیئت‌مدیره (با نمودار)"}
+            </button>
+            <span className="text-xs text-slate-400">فایل HTML را در مرورگر باز کنید؛ برای PDF از «چاپ» استفاده کنید.</span>
+          </div>
           <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-6 mb-4">
             {[
               ["ارسال‌شده", t.sent],
