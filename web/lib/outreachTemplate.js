@@ -138,6 +138,8 @@ export const FIXED_ATTACHMENTS = [
 
 // متن پایه، عیناً از Email Marketing.docx — {{COMPANY}}, {{COUNTRY_EN}} و
 // {{GRADE_SENTENCE}} تنها جاهای شخصی‌سازی‌شده‌ن.
+// ۲۰۲۶-۱۰-۰۶ (درخواست کاربر): ظرفیت ماهانه «تا ۱۵٬۰۰۰ تن»، خط تولید گرید دارویی «به‌زودی»، و
+// بسته‌بندی ۵۰۰ گرمی (برای صادرات) به متن اضافه شد.
 const BASE_TEMPLATE = `Dear Sir/Madam,
 
 To company {{COMPANY}}
@@ -146,11 +148,11 @@ My name is Mehrdad Abutalebi, and I am the Export Marketing at Pars Baking Soda 
 
 I would like to take this opportunity to briefly introduce our company. Pars Baking Soda Group consists of Petro Tarh Pars Co. and Jooshe Shirin Pars Chemical Industries Co., with two manufacturing plants located in Shiraz and Mashhad, Iran.
 
-Our combined production capacity ranges from 7,000 to 10,000 metric tons per month, enabling us to ensure a stable and reliable supply to customers worldwide.
+Our monthly production capacity reaches up to 15,000 metric tons of sodium bicarbonate, enabling us to ensure a stable and reliable supply to customers worldwide.
 
-We manufacture high-quality sodium bicarbonate (baking soda) in accordance with international standards, available in Food Grade, Feed Grade, and Industrial Grade. We can supply the product in various packaging options based on customer requirements, including:
+We manufacture high-quality sodium bicarbonate (baking soda) in accordance with international standards, available in Food Grade, Feed Grade, and Industrial Grade, and our Pharmaceutical Grade production line will be launched soon. We can supply the product in various packaging options based on customer requirements, including:
 
-25 kg bags - 1,000 kg jumbo bags - 1,250 kg jumbo bags
+500 g retail packs (available for export) - 25 kg bags - 1,000 kg jumbo bags - 1,250 kg jumbo bags
 {{GRADE_SENTENCE}}
 Over the years, we have successfully expanded our export business to CIS countries, East Asia, Africa, Europe, Oman, Qatar, Kuwait, India, and many other international markets. As an experienced exporter, we are committed to offering competitive prices, consistent product quality, reliable delivery, and long-term cooperation.
 
