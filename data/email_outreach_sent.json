@@ -530,5 +530,77 @@
     "phone": "info@zeidan-co.com",
     "sent_at": "None",
     "source": "legacy-iraq-campaign"
+  },
+  {
+    "email": "akchem.global@gmail.com",
+    "name": "Akchem Global LLC (Akchem Trade)",
+    "company_id": "company-251",
+    "country": "ازبکستان",
+    "grade": "unclear",
+    "sent_at": "2026-10-04T11:13:44.000Z",
+    "source": "backfill-from-dsn"
+  },
+  {
+    "email": "call-center@safiabakery.uz",
+    "name": "Safia Cafe & Bakery (Safia Sweet LLC)",
+    "company_id": "company-253",
+    "country": "ازبکستان",
+    "grade": "food",
+    "sent_at": "2026-10-04T11:13:50.000Z",
+    "source": "backfill-from-dsn"
+  },
+  {
+    "email": "info@kimyo.uz",
+    "name": "Kimyo.uz (LLC Kimyo)",
+    "company_id": "company-254",
+    "country": "ازبکستان",
+    "grade": "unclear",
+    "sent_at": "2026-10-04T11:13:56.000Z",
+    "source": "backfill-from-dsn"
+  },
+  {
+    "email": "info@saneg.com",
+    "name": "Sanoat Energetika Guruhi (SANEG)",
+    "company_id": "company-260",
+    "country": "ازبکستان",
+    "grade": "industrial",
+    "sent_at": "2026-10-04T11:14:05.000Z",
+    "source": "backfill-from-dsn"
+  },
+  {
+    "email": "parranda@i.ua",
+    "name": "Maroqand-Parranda LLC / Marakand Food Product",
+    "company_id": "company-263",
+    "country": "ازبکستان",
+    "grade": "unclear",
+    "sent_at": "2026-10-04T11:14:08.000Z",
+    "source": "backfill-from-dsn"
+  },
+  {
+    "email": "office@eriell.com",
+    "name": "ERIELL Group (Eriell GmbH Tashkent)",
+    "company_id": "company-259",
+    "country": "ازبکستان",
+    "grade": "industrial",
+    "sent_at": "2026-10-04T11:15:05.000Z",
+    "source": "backfill-from-dsn"
+  },
+  {
+    "email": "info@urganchyog.uz",
+    "name": "Urganch Yog'-Moy JSC",
+    "company_id": "company-262",
+    "country": "ازبکستان",
+    "grade": "industrial",
+    "sent_at": "2026-10-04T11:15:56.000Z",
+    "source": "backfill-from-dsn"
+  },
+  {
+    "email": "info@barvent.uz",
+    "name": "Barvent Impex LLC",
+    "company_id": "company-255",
+    "country": "ازبکستان",
+    "grade": "industrial",
+    "sent_at": "2026-10-04T11:23:21.000Z",
+    "source": "backfill-from-dsn"
   }
 ]
