@@ -2004,5 +2004,54 @@
         "url": "https://www.kazansoda.com/"
       }
     ]
+  },
+  {
+    "date": "2026-10-11",
+    "generated_at": "2026-10-11T11:38:36.882998+00:00",
+    "headline_fa": "ثبات در عملکرد رقبای جوش شیرین ترکیه و توسعه گذرگاه‌های مرزی",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "آغاز عملیات اجرایی در گذرگاه مرزی قامشلی-نصیبین میان سوریه و ترکیه",
+        "summary": "سوریه ساخت‌وساز و ساماندهی گذرگاه مرزی قامشلی-نصیبین در مرز ترکیه را جهت تسهیل در تردد و ترانزیت آغاز کرده است.",
+        "source_url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "headline": "هدف‌گذاری ۲۰۰ میلیارد دلاری صنعت لجستیک ترکیه در اجلاس ۲۰۲۵",
+        "summary": "انجمن خدمات بین‌المللی حمل‌ونقل و لجستیک ترکیه (UTIKAD) در اجلاس ۲۰۲۵ بر توسعه فناوری، نوآوری و ارتقای ترکیه به جمع ۱۰ کشور برتر لجستیک جهان تاکید کرد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      }
+    ],
+    "market_note": "در داده‌های خام امروز از سایت‌های رسمی WE Soda، Eti Soda و Kazan Soda، هیچ خبر، اطلاعیه یا گزارش جدیدی درباره تغییر ظرفیت، طرح‌های توسعه، قیمت‌گذاری یا نتایج مالی رقبای ترک منتشر نشده است. بنابراین وضعیت رقابتی مستقیم در بازار جوش شیرین تغییری نکرده و قیمت مرجع صادراتی ۲۵۰ دلار بر تن ما همچنان در موضع قبلی قرار دارد. در بخش لجستیک، پیگیری طرح‌های توسعه ترانزیتی ترکیه و راه‌اندازی گذرگاه‌های مرزی جدید مانند قامشلی-نصیبین نشان‌دهنده برنامه‌ریزی این کشور برای تقویت مسیرهای زمینی صادرات است. این تحرکات زیرساختی می‌تواند در میان‌مدت دسترسی ترانزیتی ترکیه به بازارهای خاورمیانه را تسهیل کند، اما در حال حاضر سیگنال قیمتی یا عملیاتی جدیدی که مستلزم تغییر فوری در استراتژی صادراتی «جوش شیرین پارس» باشد مشاهده نمیشود.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda Official",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda Official",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTIKAD",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hurriyet Daily News Economy",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]

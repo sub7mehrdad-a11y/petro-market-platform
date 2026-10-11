@@ -8350,5 +8350,215 @@
         "note": "اطلاعات قیمتی برای سودا اش در روسیه در متن منبع موجود نیست."
       }
     ]
+  },
+  {
+    "collected_at": "2026-10-11T11:35:07.203737+00:00",
+    "date": "2026-10-11",
+    "records": [
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "China",
+        "price_type": "FOB",
+        "value": 177.78,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "FOB price in China"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "India",
+        "price_type": "CIF",
+        "value": 268.78,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "CIF price in India"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Germany",
+        "price_type": "CIF",
+        "value": 291.78,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "CIF price in Germany"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Australia",
+        "price_type": "CIF",
+        "value": 272.78,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "CIF price in Australia"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Brazil",
+        "price_type": "CIF",
+        "value": 319.78,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "CIF price in Brazil"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "China",
+        "price_type": "domestic",
+        "value": 181,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "June 2026",
+        "note": "Market price in China"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "India",
+        "price_type": "domestic",
+        "value": 268.4,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "June 2026",
+        "note": "Market price in India"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Turkey",
+        "price_type": "FOB",
+        "value": null,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "2026",
+        "note": "No price data available in provided text"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Russia",
+        "price_type": "domestic",
+        "value": null,
+        "currency": "RUB",
+        "unit": "mt",
+        "source_name": "Bashkir Soda Company",
+        "source_url": "https://www.soda.ru/ru/",
+        "source_reported_date": "2026",
+        "note": "No price data available in provided text"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "China",
+        "price_type": "domestic",
+        "value": 1050,
+        "currency": "CNY",
+        "unit": "mt",
+        "source_name": "Trading Economics",
+        "source_url": "https://tradingeconomics.com/commodity/soda-ash",
+        "source_reported_date": "2026-10-09",
+        "note": "Spot market benchmark price in China"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "China",
+        "price_type": "FOB",
+        "value": 152.7,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "FOB price in China"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "India",
+        "price_type": "CIF",
+        "value": 243.49,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "CIF price in India"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "USA",
+        "price_type": "CIF",
+        "value": 308.32,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "CIF price in USA"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "Brazil",
+        "price_type": "CIF",
+        "value": 295.13,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "CIF price in Brazil"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "Canada",
+        "price_type": "CIF",
+        "value": 323.32,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "August 2026",
+        "note": "CIF price in Canada"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "Turkey",
+        "price_type": "FOB",
+        "value": null,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "Q2 2026",
+        "note": "Turkey mentioned as a supplier, but specific numeric price was not provided"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "Russia",
+        "price_type": "domestic",
+        "value": null,
+        "currency": "RUB",
+        "unit": "mt",
+        "source_name": "Himtrade Board",
+        "source_url": "http://board.himtrade.ru/",
+        "source_reported_date": "October 2026",
+        "note": "No price data available in provided text"
+      }
+    ]
   }
 ]
