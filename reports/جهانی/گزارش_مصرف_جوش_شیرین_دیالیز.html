@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>جوش شیرین گرید دیالیز: مصرف در ایران و جهان</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(24px,3.6vw,36px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 66ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(4, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:700px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  :root[data-theme="dark"] h3, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h3{ color: var(--petrol-100); } }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 76ch; }
+  strong{ color: var(--ink); font-weight:700; }
+  ul.plain{ margin:0 0 12px; padding-inline-start:0; list-style:none; }
+  ul.plain li{ position:relative; padding-inline-end:18px; margin-bottom:8px; color:var(--ink-soft); max-width:76ch; }
+  ul.plain li::before{ content:'•'; position:absolute; right:0; top:0; color:var(--copper-500); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout p + p{ margin-top:8px; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  :root[data-theme="dark"] .card .tag, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag{ color: var(--copper-400); } }
+  .card .tag.bad{ background: var(--bad-bg); color: var(--bad); }
+  .card .tag.good{ background: var(--good-bg); color: var(--good); }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:14.5px; color:var(--ink); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); vertical-align:top; }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); white-space:nowrap; }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  figure{ margin: 16px 0; }
+  figure img{ border-radius: 12px; border: 1px solid var(--line); display:block; box-shadow: var(--card-shadow); width:100%; }
+  figcaption{ font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+
+  .pill-row{ display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0; }
+  .pill{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 12px;
+    padding: 12px 20px; min-width: 120px; box-shadow: var(--card-shadow); flex:1;
+  }
+  .pill .p{ font-family:"Fira Code"; font-size:20px; font-weight:700; color:var(--petrol-700); }
+  :root[data-theme="dark"] .pill .p, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .pill .p{ color: var(--copper-400); } }
+  .pill .p.bad{ color: var(--bad); }
+  .pill .p.good{ color: var(--good); }
+  .pill .n{ font-size:12.5px; color:var(--muted); margin-top:2px; text-align:center; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0 0 8px; max-width:none; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+
+  p.src{ font-size:12.5px; color:var(--muted); margin-top:-4px; }
+  .tcap{ font-weight:800; font-size:15px; color:var(--petrol-700); margin:26px 0 8px; }
+  :root[data-theme="dark"] .tcap{ color: var(--copper-400); }
+  .t-wrap tbody td:first-child{ white-space:normal; min-width:150px; }
+  .t-wrap table{ min-width: 760px; }
+  .grade{ font-size:12px; color:var(--muted); font-weight:600; white-space:nowrap; }
+  sup.cite{ font-size:11px; line-height:0; margin-inline:1px; }
+  sup.cite a{ text-decoration:none; font-weight:700; color:var(--copper-600); }
+  .formula{ direction:rtl; font-size:16px; text-align:center; }
+  .formula p{ text-align:center; font-weight:700; color:var(--ink); }
+  td.st-ok{ background:var(--good-bg) !important; color:var(--good) !important; font-weight:700; }
+  td.st-unk{ background:#FFF3CF !important; color:#8A6410 !important; font-weight:700; }
+  td.st-bad{ background:var(--bad-bg) !important; color:var(--bad) !important; font-weight:700; }
+  :root[data-theme="dark"] td.st-unk{ background:#3A3012 !important; color:#E8C766 !important; }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) td.st-unk{ background:#3A3012 !important; color:#E8C766 !important; } }
+  ol.srcs{ list-style:none; padding:0; margin:0; counter-reset:s; }
+  ol.srcs li{ position:relative; padding-inline-start:44px; margin-bottom:9px; font-size:14px; color:var(--ink-soft); max-width:none; }
+  ol.srcs li .n{ position:absolute; right:0; top:0; font-family:"Fira Code"; font-weight:600; font-size:12px;
+    background:var(--petrol-50); color:var(--petrol-700); border:1px solid var(--line-soft); border-radius:7px; padding:1px 8px; }
+  ol.srcs li a{ direction:ltr; unicode-bidi:embed; word-break:break-all; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>جوش شیرین گرید دیالیز: مصرف در ایران و جهان</h1>
+    <p class="lead">گزارش پژوهشی بازار برای هیئت‌مدیره‌ی شرکت جوش شیرین پارس</p>
+    <div class="meta"><span>وضعیت در ۱۹ مهر ۱۴۰۵ (۱۱ اکتبر ۲۰۲۶)</span></div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۳,۳۰۰ <small>تن</small></div><div class="l">مصرف سالانه‌ی ایران (برآورد ۲۰۲۶؛ دامنه ۲,۲۰۰ تا ۴,۴۰۰)</div></div>
+      <div class="kpi"><div class="v">۳۰۴ <small>هزار تن</small></div><div class="l">مصرف جهانی گرید همودیالیز (۲۰۲۳) — حدود ۵٪ کل تقاضای جوش شیرین</div></div>
+      <div class="kpi"><div class="v">۷۵ <small>کیلوگرم</small></div><div class="l">مصرف سالانه‌ی هر بیمار همودیالیز (دامنه ۵۰ تا ۱۰۰)</div></div>
+      <div class="kpi"><div class="v">۵۰۰ تا ۱,۲۵۰ <small>$/تن</small></div><div class="l">دامنه‌ی قیمت‌های ثبت‌شده — واردات ایران ۱,۱۵۴ تا ۱,۲۴۹</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section id="s1">
+<div class="sec-head"><span class="sec-num">۱</span><h2>خلاصه‌ی مدیریتی</h2></div>
+<p>این گزارش مصرف جوش شیرین گرید دیالیز، یعنی بی‌کربنات سدیم (NaHCO₃) مصرفی در ساخت کنسانتره‌ی بی‌کربنات همودیالیز، را در ایران و جهان بررسی می‌کند. مصرف هر بیمار از غلظت بی‌کربنات دیالیزات (محلول تمیزکننده‌ی خون)، حجم دیالیزات هر جلسه و تعداد جلسه‌های سالانه برآورد شده و با آمار رسمی واردات ایران و برآورد منتشرشده‌ی مصرف جهانی سنجیده شده است.</p>
+<p><strong>ایران.</strong> شمار بیماران همودیالیز از ۲۹٬۲۰۰ نفر در ۲۰۱۵ به ۳۸٬۰۰۰ نفر در ۲۰۲۲ رسیده و با ادامه‌ی همان رشد (۳٫۸ درصد در سال) در ۲۰۲۶ حدود ۴۴٬۰۰۰ نفر برآورد می‌شود. با مصرف ۷۵ کیلوگرم برای هر بیمار در سال، مصرف ملی حدود <strong>۳٬۳۰۰ تن</strong> (دامنه‌ی ۲٬۲۰۰ تا ۴٬۴۰۰ تن) و سرانه‌ی آن ۳۸ گرم برای هر ایرانی است <span class="grade">[ج]</span>. واردات رسمی ردیف تعرفه‌ی «سدیم بی‌کربنات غیرتزریقی گرید دارویی» در سال ۱۴۰۳ برابر ۳٬۱۲۸ تن و ۳٫۷ میلیون دلار بوده و با این برآورد هم‌خوان است<sup class="cite"><a href="#src-1" title="منبع ۱">[۱]</a></sup> <span class="grade">[الف]</span>. ارزش واحد ثبت‌شده‌ی واردات ۱٬۱۵۴ تا ۱٬۲۴۹ دلار در تن است و ۸۷ درصد واردات ده ماهه‌ی ۱۴۰۴ از ترکیه بوده است.</p>
+<p><strong>جهان.</strong> شمار بیماران دیالیزی جهان حدود ۴٫۵ میلیون نفر است و مصرف جهانی گرید همودیالیز در ۲۰۲۳ بر پایه‌ی گزارش Chemical Week حدود <strong>۳۰۴ هزار تن</strong> (حدود ۵ درصد کل تقاضای جوش شیرین) بوده است<sup class="cite"><a href="#src-5" title="منبع ۵">[۵]</a></sup> <span class="grade">[ب]</span>؛ محاسبه‌ی مستقل (حدود ۴ میلیون بیمار همودیالیز با ۷۵ کیلوگرم) ۲۵۰ تا ۳۰۰ هزار تن می‌دهد و با این رقم سازگار است. برای برآورد مصرف هر کشور، رابطه‌ی ساده‌ی «مصرف (تن) = جمعیت (میلیون) × بیمار همودیالیز در هر میلیون نفر × ۰٫۰۷۵» پیشنهاد می‌شود؛ خطای آن در سطح هر کشور حدود ۳۵ تا ۴۰ درصد است <span class="grade">[ج]</span>.</p>
+<p><strong>قیمت.</strong> قیمت علنی میانگین جهانی برای گرید همودیالیز منتشر نشده است، زیرا فروش آن قراردادی است. قیمت‌های ثبت‌شده در دامنه‌ی ۵۰۰ تا ۱٬۲۵۰ دلار در تن قرار دارند: ارزش واحد صادرات اتحادیه‌ی اروپا ۵۲۶ یورو، قیمت یک توزیع‌کننده‌ی هندی برای گرید دارویی حدود ۷۰۳ دلار و ارزش واحد واردات ایران ۱٬۱۶۹ دلار در تن (۱۴۰۳).</p>
+<p><strong>گرید جاری شرکت.</strong> نمونه‌ی ارسالی شرکت در آزمون مستقل (SGS، فوریه‌ی ۲۰۲۵) با حدود پایه‌ی همودیالیز در میزان دارو، کلرید، سولفات، آهن و آرسنیک سازگار است، اما کربنات (۰٫۲۸ درصد برحسب CO₃ در برابر حد ۰٫۲۳ درصد) از حد مجاز بالاتر است و آلومینیوم، مس، کلسیم، منیزیم، ترکیبات آلی و اندوتوکسین آزمون نشده‌اند. شرکت تاکنون این گرید را تولید نکرده است.</p>
+<div class="tcap">جدول ۱ — شاخص‌های کلیدی</div>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>شاخص</th><th>مقدار</th></tr></thead>
+<tbody>
+<tr><td><strong>مصرف سالانه‌ی هر بیمار همودیالیز</strong></td><td>حدود ۷۵ کیلوگرم (دامنه‌ی ۵۰ تا ۱۰۰)</td></tr>
+<tr><td><strong>بیماران همودیالیز ایران (۲۰۲۶، برآورد)</strong></td><td>۴۴٬۰۰۰ نفر؛ حدود ۵۰۷ نفر در هر میلیون جمعیت</td></tr>
+<tr><td><strong>مصرف ایران</strong></td><td>حدود ۳٬۳۰۰ تن در سال (۲٬۲۰۰ تا ۴٬۴۰۰)؛ سرانه ۳۸ گرم</td></tr>
+<tr><td><strong>واردات رسمی ردیف دارویی ایران (۱۴۰۳)</strong></td><td>۳٬۱۲۸ تن؛ ۳٫۶۶ میلیون دلار؛ ۱٬۱۶۹ دلار در تن</td></tr>
+<tr><td><strong>بیماران دیالیزی جهان</strong></td><td>حدود ۴٫۵ میلیون نفر؛ میانگین حدود ۵۵۰ نفر در هر میلیون</td></tr>
+<tr><td><strong>مصرف جهانی همودیالیز (۲۰۲۳)</strong></td><td>۳۰۴ هزار تن؛ سرانه‌ی جهانی حدود ۳۸ گرم</td></tr>
+<tr><td><strong>قیمت‌های ثبت‌شده</strong></td><td>حدود ۵۰۰ تا ۱٬۲۵۰ دلار در تن</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="s2">
+<div class="sec-head"><span class="sec-num">۲</span><h2>اصول برآورد مصرف هر بیمار</h2></div>
+<p>در همودیالیز بی‌کربنات سدیم نقش بافر دارد و اسیدوز بیمار نارسایی کلیه را جبران می‌کند. دیالیزات از ترکیب آب تصفیه‌شده، کنسانتره‌ی اسیدی و کنسانتره‌ی بی‌کربنات ساخته می‌شود؛ کنسانتره‌ی بی‌کربنات به‌صورت محلول آماده یا پودر خشک (کیسه یا کارتریج) عرضه می‌شود و ماده‌ی اولیه‌ی هر دو جوش شیرین دارویی است. </p>
+<p>غلظت تجویزی بی‌کربنات دیالیزات را به‌طور میانگین ۳۵٫۵ میلی‌اکی‌والان در لیتر (mEq/L) و مدت میانگین جلسه حدود ۲۳۲ دقیقه است<sup class="cite"><a href="#src-2" title="منبع ۲">[۲]</a></sup>. با جرم مولی ۸۴٫۰۱ گرم بر مول، جرم نظری بی‌کربنات هر جلسه در دو سطح جریان رایج دیالیزات به‌دست می‌آید.</p>
+<div class="tcap">جدول ۲ — جرم جوش شیرین در هر جلسه و مصرف سالانه‌ی هر بیمار</div>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>سناریو</th><th>جریان دیالیزات (mL/min)</th><th>حجم هر جلسه (لیتر)</th><th>جرم هر جلسه (گرم)</th><th>جلسه در سال</th><th>مصرف سالانه (کیلوگرم)</th></tr></thead>
+<tbody>
+<tr><td><strong>مبنا (محاسبه‌ی نظری)</strong></td><td class="num-cell">۸۰۰</td><td class="num-cell">۱۸۶</td><td class="num-cell">۵۵۴</td><td class="num-cell">۱۳۶</td><td class="num-cell">۷۵</td></tr>
+<tr><td><strong>کران بالا (بسته‌ی تجاری ۷۲۰ گرمی)</strong></td><td>—</td><td>—</td><td class="num-cell">۷۲۰</td><td class="num-cell">۱۴۰</td><td class="num-cell">۱۰۱ (حدود ۱۰۰)</td></tr>
+</tbody>
+</table></div>
+<p>جلسه‌ی مبنا: سه جلسه در هفته با کسر حدود ۵ درصد جلسه‌های ازدست‌رفته (۱۳۶ جلسه)؛ در کشورهای کم‌درآمد دو جلسه در هفته نیز متداول است. جرم بسته‌های تجاری (۶۵۰ تا ۱۱۵۰ گرم) از مقدار نظری بیشتر است، زیرا با حاشیه‌ی اطمینان و برای جلسه‌های طولانی‌تر طراحی شده‌اند .</p>
+</section>
+<section id="s3">
+<div class="sec-head"><span class="sec-num">۳</span><h2>ایران</h2></div>
+<h3><bdi>۳٫۱</bdi> بیماران دیالیزی</h3>
+<p>ثبت ملی ایران رشد پیوسته‌ی بیماران را نشان می‌دهد: ۵٬۷۱۷ نفر در ۱۹۹۷، ۱۲٬۵۰۰ نفر در ۲۰۰۶ (۱۷۹ در میلیون جمعیت)، ۳۰٬۲۸۴ بیمار دیالیزی در ۲۰۱۶ (۳۸۰ در میلیون) و ۳۰٬۸۸۲ بیمار همودیالیز در ۲۰۱۷<sup class="cite"><a href="#src-13" title="منبع ۱۳">[۱۳]</a></sup>. در پایان ۲۰۱۵ از حدود ۵۸٬۰۰۰ بیمار مرحله‌ی پایانی بیماری کلیه، ۲۹٬۲۰۰ نفر همودیالیز، ۱٬۶۲۴ نفر دیالیز صفاقی و ۲۷٬۰۰۰ نفر پیوند کلیه داشتند<sup class="cite"><a href="#src-13" title="منبع ۱۳">[۱۳]</a></sup>. جدیدترین رقم ارائه شده ۳۸٬۰۰۰ بیمار همودیالیز در ۲۰۲۲ است<sup class="cite"><a href="#src-13" title="منبع ۱۳">[۱۳]</a></sup>. نرخ رشد مرکب ۲۰۱۵ تا ۲۰۲۲ حدود ۳٫۸ درصد در سال است و ادامه‌ی آن، ۴۴٬۰۰۰ نفر را برای ۲۰۲۶ و ۵۱٬۰۰۰ نفر را برای ۲۰۳۰ پیش‌بینی می‌کند.</p>
+<p>شبکه‌ی درمان شامل حدود ۵۷۰ مرکز همودیالیز و بیش از ۵٬۸۰۰ دستگاه است و حدود ۱۷ درصد بیماران در کلینیک‌های خصوصی درمان می‌شوند. در ۲۰۱۷، ۸۰ درصد بیماران سه جلسه، ۱۶ درصد دو جلسه و ۴ درصد یک جلسه در هفته دریافت می‌کردند<sup class="cite"><a href="#src-13" title="منبع ۱۳">[۱۳]</a></sup>. </p>
+<p>سهم درمان سه‌جلسه‌ای از ۳۸ درصد در ۱۹۹۷ بالا رفته است و مصرف سرانه‌ی هر بیمار در سال‌های بعد احتمالاً اندکی بیشتر از رقم ۲۰۱۷ است. با جمعیت ۸۶٫۸ میلیون نفر، فراوانی بیماران حدود ۵۰۷ نفر در میلیون جمعیت است؛ این رقم از میانه‌ی منطقه‌ی خاورمیانه (۳۵۱ بیمار دیالیزی و ۲۷۷ بیمار همودیالیز در میلیون) بالاتر، به میانگین جهانی (حدود ۴۸۰ بیمار همودیالیز) نزدیک و از چین و برزیل (حدود ۷۶۰ تا ۸۱۰ بیمار دیالیزی) پایین‌تر است<sup class="cite"><a href="#src-6" title="منبع ۶">[۶]</a></sup><sup class="cite"><a href="#src-3" title="منبع ۳">[۳]</a></sup>.</p>
+<div class="chart-box"><div class="chart-h" style="height:260px"><canvas id="chPatients"></canvas></div><div class="cap">بیماران همودیالیز ایران بر پایه‌ی ثبت ملی (بخش ۳٫۱)؛ ۲۰۲۶ برآورد و ۲۰۳۰ پیش‌بینی است</div></div>
+<h3><bdi>۳٫۲</bdi> برآورد مصرف ملی</h3>
+<p>مصرف ملی از حاصل‌ضرب تعداد بیماران همودیالیز در مصرف سالانه‌ی هر بیمار به‌دست می‌آید. جدول ۳ سه سطح مصرف را برای ۴۰ تا ۵۱ هزار بیمار نشان می‌دهد.</p>
+<div class="tcap">جدول ۳ — مصرف سالانه‌ی جوش شیرین گرید دیالیز در ایران (تن)</div>
+<div class="table-wrap"><table>
+<thead><tr><th>شمار بیماران</th><th>۵۰ کیلوگرم برای هر بیمار</th><th>۷۵ کیلوگرم (مبنا)</th><th>۱۰۰ کیلوگرم برای هر بیمار</th></tr></thead>
+<tbody>
+<tr><td class="num-cell"><strong>۴۰٬۰۰۰</strong></td><td class="num-cell">۲٬۰۰۰</td><td class="num-cell">۳٬۰۰۰</td><td class="num-cell">۴٬۰۰۰</td></tr>
+<tr><td><strong>۴۴٬۰۰۰ (برآورد ۲۰۲۶)</strong></td><td class="num-cell">۲٬۲۰۰</td><td class="num-cell">۳٬۳۰۰</td><td class="num-cell">۴٬۴۰۰</td></tr>
+<tr><td><strong>۵۱٬۰۰۰ (پیش‌بینی ۲۰۳۰)</strong></td><td class="num-cell">۲٬۵۵۰</td><td class="num-cell">۳٬۸۲۵</td><td class="num-cell">۵٬۱۰۰</td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:270px"><canvas id="chScen"></canvas></div><div class="cap">مصرف سالانه‌ی ایران (تن) برای سه سطح شمار بیمار و سه سطح مصرف هر بیمار</div></div>
+<p>همه‌ی ارقام برآورد هستند. مصرف مبنا (۳٬۳۰۰ تن) با جمعیت ۸۶٫۸ میلیون نفر سرانه‌ای حدود ۳۸ گرم برای هر ایرانی می‌دهد.</p>
+<h3><bdi>۳٫۳</bdi> واردات رسمی و قیمت‌های ثبت‌شده‌ی گمرکی</h3>
+<p>تعرفه‌ی گمرکی ایران برای بی‌کربنات سدیم دو ردیف دارد: «سدیم بی‌کربنات غیرتزریقی گرید دارویی» (ردیف ۲۸۳۶۳۰۱۰) و «سایر» (ردیف ۲۸۳۶۳۰۹۰). جدول ۴ بر پایه‌ی آمار رسمی گمرک جمهوری اسلامی ایران برای سال‌های ۱۴۰۲ و ۱۴۰۳ (کل سال) و ده ماه نخست ۱۴۰۴ تنظیم شده است<sup class="cite"><a href="#src-1" title="منبع ۱">[۱]</a></sup>. ارزش‌ها ارزش گمرکی CIF (شامل بهای کالا، بیمه و حمل تا مرز ایران) به دلار است.</p>
+<div class="tcap">جدول ۴ — واردات ایران در ردیف‌های بی‌کربنات سدیم</div>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>سال</th><th>دارویی: وزن (تن)</th><th>دارویی: ارزش (میلیون دلار)</th><th>دارویی: دلار در تن</th><th>سایر: وزن (تن)</th><th>سایر: ارزش (میلیون دلار)</th><th>سایر: دلار در تن</th></tr></thead>
+<tbody>
+<tr><td class="num-cell"><strong>۱۴۰۲</strong></td><td class="num-cell">۱٬۱۲۱</td><td class="num-cell">۱٫۲۹</td><td class="num-cell">۱٬۱۵۴</td><td class="num-cell">۳٬۷۸۰</td><td class="num-cell">۳٫۷۱</td><td class="num-cell">۹۸۰</td></tr>
+<tr><td class="num-cell"><strong>۱۴۰۳</strong></td><td class="num-cell">۳٬۱۲۸</td><td class="num-cell">۳٫۶۶</td><td class="num-cell">۱٬۱۶۹</td><td class="num-cell">۳٬۴۲۶</td><td class="num-cell">۲٫۸۴</td><td class="num-cell">۸۲۸</td></tr>
+<tr><td><strong>۱۴۰۴ (ده‌ماهه)</strong></td><td class="num-cell">۲٬۰۶۵</td><td class="num-cell">۲٫۵۸</td><td class="num-cell">۱٬۲۴۹</td><td class="num-cell">۱٬۷۳۶</td><td class="num-cell">۱٫۳۷</td><td class="num-cell">۷۹۰</td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:270px"><canvas id="chImpW"></canvas></div><div class="cap">وزن واردات ایران در دو ردیف تعرفه (تن) — ۱۴۰۴ فقط ده ماهه است</div></div>
+<div class="chart-box"><div class="chart-h" style="height:250px"><canvas id="chImpP"></canvas></div><div class="cap">ارزش واحد واردات (دلار در تن، CIF)</div></div>
+<p>در ده ماه نخست ۱۴۰۴، ترکیه ۱٬۷۹۸ تن (۸۷ درصد وزن ردیف دارویی) با ارزش واحد ۱٬۲۵۱ دلار در تن، امارات ۲۴۸ تن (۱۲ درصد) با حدود ۱٬۲۱۷ دلار، آلمان ۱۵٫۶ تن با ۱٬۵۹۸ دلار و هند ۳٫۳ تن با ۸۷۰ دلار در تن این ردیف را تأمین کرده‌اند<sup class="cite"><a href="#src-1" title="منبع ۱">[۱]</a></sup>.</p>
+<div class="chart-box"><div class="chart-h" style="height:250px"><canvas id="chTurkey"></canvas></div><div class="cap">سهم کشورها از وزن واردات ردیف دارویی، ده ماه نخست ۱۴۰۴ (٪ — طبق متن؛ سایر = آلمان و هند)</div></div>
+<p>محموله‌های امارات احتمالاً بازصادرات یا تجارت واسطه‌ای است و منشأ تولید آن‌ها از آمار قابل تشخیص نیست .</p>
+<p>واردات تجهیزات دیالیز نیز رشد ظرفیت درمان را تأیید می‌کند: واردات دستگاه دیالیز (ردیف ۹۰۱۸۹۰۳۰) از ۲۷٫۱ تن و ۳٫۶ میلیون دلار در ۱۴۰۲ به ۴۲٫۰ تن و ۵٫۵ میلیون دلار در ۱۴۰۳ رسیده و در ده ماه ۱۴۰۴ برابر ۳۴٫۹ تن و ۴٫۴ میلیون دلار بوده است؛ ارزش واردات صافی دیالیز (ردیف ۸۴۲۱۲۹۴۰) از ۱٫۲ به ۱٫۹ میلیون دلار رسیده است<sup class="cite"><a href="#src-1" title="منبع ۱">[۱]</a></sup> <span class="grade">[الف]</span>.</p>
+<h3><bdi>۳٫۴</bdi> تحلیل کلی بازار مصرف گرید دیالیز در ایران</h3>
+<p><strong>اندازه.</strong> بازار گرید دیالیز در ایران حدود ۳٬۳۰۰ تن در سال است و با ارزش واحد واردات ۱۴۰۳ ارزشی حدود ۳٫۹ میلیون دلار دارد؛ این بازار حدود ۱ درصد مصرف جهانی همودیالیز است <span class="grade">[ج]</span>.</p>
+<p><strong>ساختار عرضه.</strong> بر پایه‌ی آمار گمرک، عرضه‌ی ردیف دارویی تقریباً به‌طور کامل وارداتی و متمرکز بر ترکیه است؛ منشأ تولیدی محموله‌های ترکیه روشن نیست.</p>
+<p><strong>تقاضا.</strong> مصرف تابع شمار بیماران است و با نرخ حدود ۳٫۸ درصد در سال رشد می‌کند؛ بر این پایه مصرف مبنا از ۳٬۳۰۰ تن در ۲۰۲۶ به حدود ۳٬۸۰۰ تن در ۲۰۳۰ می‌رسد، یعنی حدود ۵۰۰ تن افزایش. فاصله‌ی فراوانی بیماران ایران با چین و برزیل (حدود ۳۰ تا ۳۵ درصد) می‌تواند نشانه‌ی ظرفیت رشد یا ساختار سنی جوان‌تر باشد و بدون آمار رسمی قطعی نیست.</p>
+<p><strong>مصرف‌کنندگان مستقیم</strong> تولیدکنندگان کنسانتره، پودر و کارتریج بی‌کربنات و مراکز دیالیز هستند.</p>
+</section>
+<section id="s4">
+<div class="sec-head"><span class="sec-num">۴</span><h2>جهان</h2></div>
+<h3><bdi>۴٫۱</bdi> بیماران و مصرف جهانی</h3>
+<p>برآورد نشان می‌دهد در ۲۰۱۰ حدود ۲٫۶ میلیون نفر در جهان درمان جایگزین کلیه دریافت می‌کردند و این رقم تا ۲۰۳۰ به حدود ۵٫۴ میلیون نفر (دامنه‌ی ۳٫۹ تا ۷٫۶ میلیون) می‌رسد<sup class="cite"><a href="#src-13" title="منبع ۱۳">[۱۳]</a></sup>. شرکت Fresenius Medical Care (بزرگ‌ترین ارائه‌دهنده‌ی خدمات دیالیز) شمار بیماران دیالیزی جهان را ۳٫۹ میلیون در ۲۰۲۲ با رشد حدود ۳ درصد در سال و اکنون «حدود ۴٫۵ میلیون» اعلام می‌کند. با فرض حدود ۸۸ درصد همودیالیز (باقی دیالیز صفاقی) شمار بیماران همودیالیز جهان ۳٫۳ تا ۴٫۰ میلیون نفر است.</p>
+<p>گزارش Chemical Week (بر پایه‌ی داده‌ی S&amp;P Global) مصرف جهانی گرید همودیالیز را در ۲۰۲۳ برابر <strong>۳۰۴ هزار تن</strong> و کل تقاضای جهانی جوش شیرین را ۵٫۹ میلیون تن اعلام کرده است؛ همودیالیز بنابراین حدود ۵ درصد کل تقاضاست. سهم مناطق از مصرف همودیالیز، آمریکای شمالی ۲۴ درصد (حدود ۷۳ هزار تن)، اروپای غربی ۱۶ درصد (حدود ۴۹ هزار تن) و چین ۱۶ درصد (حدود ۴۹ هزار تن) است و ۴۴ درصد (حدود ۱۳۴ هزار تن) به بقیه‌ی جهان می‌رسد<sup class="cite"><a href="#src-5" title="منبع ۵">[۵]</a></sup> <span class="grade">[ب]</span>. محاسبه‌ی مستقل با ۳٫۷ تا ۴٫۰ میلیون بیمار همودیالیز و ۷۵ کیلوگرم، ۲۷۸ تا ۳۰۰ هزار تن می‌دهد؛ رقم منتشرشده معادل حدود ۷۷ کیلوگرم برای هر بیمار همودیالیز است و با مصرف ۷۵ کیلوگرم همخوانی کامل دارد. سرانه‌ی جهانی مصرف همودیالیز حدود ۳۸ گرم برای هر نفر است و ایران (۳۸ گرم) با آن برابر است.</p>
+<div class="chart-box"><div class="chart-h" style="height:270px"><canvas id="chRegions"></canvas></div><div class="cap">سهم مناطق از مصرف جهانی گرید همودیالیز، ۲۰۲۳ (٪؛ کل ۳۰۴ هزار تن)</div></div>
+<p>رشد تقاضای جهانی جوش شیرین ۲٫۸ درصد در سال (۲۰۱۹ تا ۲۰۲۳) و پیش‌بینی آن ۲٫۲ درصد در سال تا ۲۰۲۸ است<sup class="cite"><a href="#src-5" title="منبع ۵">[۵]</a></sup> <span class="grade">[ب]</span>؛ رشد بیماران دیالیزی حدود ۳ درصد است. ارزش بازار جهانی «جوش شیرین گرید دارویی» (همه‌ی مصارف دارویی) بر پایه‌ی گزارش Future Market Insights ۲۶۵ میلیون دلار در ۲۰۲۳، ۲۷۵ میلیون دلار در ۲۰۲۴ و ۳۸۸ میلیون دلار در ۲۰۳۴ (رشد مرکب سالانه‌ی ۳٫۵ درصد) است.</p>
+<h3><bdi>۴٫۲</bdi> فراوانی بیماران نسبت به جمعیت و ضریب برآورد مصرف</h3>
+<p>برای برآورد مصرف کشورها، شمار بیماران دیالیزی ثبت‌شده در هر میلیون نفر جمعیت از جدول‌های مرجع بین‌المللی سامانه‌ی آمار بیماری‌های کلیوی آمریکا (United States Renal Data System — USRDS؛ پایان ۲۰۲۳) و گزارش انجمن دیالیز ژاپن (JSDT) محاسبه شد. جدول ۵ شمار بیماران، فراوانی و مصرف برآوردی را با فرض ۸۸ درصد همودیالیز و ۷۵ کیلوگرم برای هر بیمار نشان می‌دهد.</p>
+<div class="tcap">جدول ۵ — بیماران دیالیزی ثبت‌شده و مصرف برآوردی جوش شیرین گرید دیالیز در کشورهای منتخب</div>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>کشور</th><th>بیماران دیالیزی</th><th>بیمار در میلیون نفر</th><th>جمعیت ضمنی (میلیون)</th><th>مصرف برآوردی (تن)</th><th>سرانه (گرم)</th></tr></thead>
+<tbody>
+<tr><td><strong>چین</strong></td><td class="num-cell">۱٬۰۶۹٬۳۹۲</td><td class="num-cell">۷۵۹</td><td class="num-cell">۱٬۴۱۰</td><td class="num-cell">۷۰٬۶۰۰</td><td class="num-cell">۵۰</td></tr>
+<tr><td><strong>آمریکا</strong></td><td class="num-cell">۵۵۲٬۹۵۰</td><td class="num-cell">۱٬۶۷۷</td><td class="num-cell">۳۳۰</td><td class="num-cell">۳۶٬۵۰۰</td><td class="num-cell">۱۱۱</td></tr>
+<tr><td><strong>ژاپن (۲۰۲۴)</strong></td><td class="num-cell">۳۳۷٬۴۱۴</td><td class="num-cell">۲٬۷۲۵</td><td class="num-cell">۱۲۴</td><td class="num-cell">۲۲٬۳۰۰</td><td class="num-cell">۱۸۰</td></tr>
+<tr><td><strong>برزیل</strong></td><td class="num-cell">۱۷۲٬۵۸۵</td><td class="num-cell">۸۱۲</td><td class="num-cell">۲۱۳</td><td class="num-cell">۱۱٬۴۰۰</td><td class="num-cell">۵۴</td></tr>
+<tr><td><strong>تایلند</strong></td><td class="num-cell">۱۵۲٬۸۲۷</td><td class="num-cell">۲٬۳۱۷</td><td class="num-cell">۶۶</td><td class="num-cell">۱۰٬۱۰۰</td><td class="num-cell">۱۵۳</td></tr>
+<tr><td><strong>تایوان</strong></td><td class="num-cell">۸۲٬۴۸۸</td><td class="num-cell">۳٬۵۲۲</td><td class="num-cell">۲۳</td><td class="num-cell">۵٬۴۰۰</td><td class="num-cell">۲۳۳</td></tr>
+<tr><td><strong>مالزی</strong></td><td class="num-cell">۵۳٬۲۱۰</td><td class="num-cell">۱٬۵۹۴</td><td class="num-cell">۳۳</td><td class="num-cell">۳٬۵۰۰</td><td class="num-cell">۱۰۵</td></tr>
+<tr><td><strong>فرانسه</strong></td><td class="num-cell">۵۲٬۸۲۴</td><td class="num-cell">۷۷۳</td><td class="num-cell">۶۸</td><td class="num-cell">۳٬۵۰۰</td><td class="num-cell">۵۱</td></tr>
+<tr><td><strong>اسپانیا</strong></td><td class="num-cell">۲۹٬۸۶۶</td><td class="num-cell">۶۲۱</td><td class="num-cell">۴۸</td><td class="num-cell">۲٬۰۰۰</td><td class="num-cell">۴۱</td></tr>
+<tr><td><strong>نیجریه</strong></td><td class="num-cell">۲٬۸۶۶</td><td class="num-cell">۱۳</td><td class="num-cell">۲۲۸</td><td class="num-cell">۱۹۰</td><td class="num-cell">۰٫۸</td></tr>
+<tr class="hl"><td><strong>ایران (همودیالیز، ۲۰۲۶، برآورد)</strong></td><td class="num-cell">۴۴٬۰۰۰</td><td class="num-cell">۵۰۷</td><td class="num-cell">۸۶٫۸</td><td class="num-cell">۳٬۳۰۰</td><td class="num-cell">۳۸</td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:330px"><canvas id="chPerCap"></canvas></div><div class="cap">سرانه‌ی مصرف گرید همودیالیز (گرم برای هر نفر) — کشورهای منتخب</div></div>
+<div class="chart-box"><div class="chart-h" style="height:330px"><canvas id="chTons"></canvas></div><div class="cap">مصرف برآوردی ملی (تن در سال) — کشورهای منتخب</div></div>
+<p class="src">منابع: USRDS ۲۰۲۵ و JSDT<sup class="cite"><a href="#src-3" title="منبع ۳">[۳]</a></sup><sup class="cite"><a href="#src-4" title="منبع ۴">[۴]</a></sup> <span class="grade">[ب]</span>؛ جمعیت ضمنی از تقسیم شمار بیماران بر فراوانی به‌دست آمده است. پوشش ثبت در کشورها یکسان نیست و ایران در جدول USRDS وجود ندارد. رقم ایران همودیالیز است و ضریب ۸۸ درصد به آن اعمال نشده است. رقم ژاپن در جدول USRDS (۳۳۱٬۰۴۰ نفر) با گزارش JSDT سازگار نیست و رقم JSDT به کار رفته است.</p>
+<p><strong>ضریب پیشنهادی.</strong> با ۷۵ کیلوگرم برای هر بیمار همودیالیز، سرانه‌ی مصرف (گرم) برابر ۰٫۰۷۵ برابر شمار بیماران همودیالیز در هر میلیون نفر است؛ مصرف ملی (تن) نیز از رابطه‌ی زیر به‌دست می‌آید:</p>
+<div class="callout copper formula"><p><strong>مصرف (تن) = جمعیت (میلیون نفر) × بیمار همودیالیز در هر میلیون نفر × ۰٫۰۷۵</strong></p></div>
+<p>اگر فقط شمار کل بیماران دیالیزی در دسترس باشد، ضریب ۰٫۰۶۶ (۰٫۰۷۵ × ۸۸ درصد) به کار می‌رود. فراوانی بیماران با سطح درآمد و پوشش بیمه‌ی دیالیز بالا می‌رود؛ جدول ۶ دامنه‌های راهنما را نشان می‌دهد.</p>
+<div class="tcap">جدول ۶ — دامنه‌های راهنمای فراوانی بیماران و سرانه‌ی مصرف</div>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>گروه</th><th>نمونه‌ها (بیمار دیالیزی در میلیون نفر)</th><th>فراوانی راهنما</th><th>سرانه‌ی مصرف (گرم)</th></tr></thead>
+<tbody>
+<tr><td><strong>کم‌درآمد</strong></td><td>نیجریه ۱۳؛ بنگلادش ۱۰۹</td><td class="num-cell">تا ۱۱۰</td><td class="num-cell">تا ۷</td></tr>
+<tr><td><strong>خاورمیانه و درآمد متوسط با پوشش محدود</strong></td><td>میانه‌ی خاورمیانه ۳۵۱ (همودیالیز ۲۷۷)<sup class="cite"><a href="#src-6" title="منبع ۶">[۶]</a></sup>؛ ایران ۵۰۷ (همودیالیز)</td><td class="num-cell">۲۸۰ تا ۵۱۰</td><td class="num-cell">۲۱ تا ۳۸</td></tr>
+<tr><td><strong>درآمد متوسط‌بالا با پوشش گسترده</strong></td><td>چین ۷۵۹؛ برزیل ۸۱۲</td><td class="num-cell">۷۵۰ تا ۸۲۰</td><td class="num-cell">۵۰ تا ۵۴</td></tr>
+<tr><td><strong>اروپای غربی و آمریکای شمالی</strong></td><td>میانه‌ی اروپای غربی ۴۴۸<sup class="cite"><a href="#src-8" title="منبع ۸">[۸]</a></sup>؛ میانه‌ی آمریکای شمالی و کارائیب ۶۲۰<sup class="cite"><a href="#src-7" title="منبع ۷">[۷]</a></sup>؛ اسپانیا ۶۲۱؛ فرانسه ۷۷۳؛ آمریکا ۱٬۶۷۷</td><td class="num-cell">۴۵۰ تا ۱٬۷۰۰</td><td class="num-cell">۳۰ تا ۱۱۱</td></tr>
+<tr><td><strong>شرق آسیا با پوشش همگانی</strong></td><td>ژاپن ۲٬۷۲۵؛ تایلند ۲٬۳۱۷؛ تایوان ۳٬۵۲۲</td><td class="num-cell">۲٬۳۰۰ تا ۳٬۵۰۰</td><td class="num-cell">۱۵۰ تا ۲۳۳</td></tr>
+</tbody>
+</table></div>
+<p><strong>دقت ضریب.</strong> مصرف هر بیمار در همه‌ی کشورها یکسان نیست. رقم منتشرشده‌ی مصرف چین (۴۹ هزار تن) برای حدود ۹۴۰ هزار بیمار همودیالیز، حدود ۵۰ کیلوگرم برای هر بیمار می‌دهد؛ در برابر، سهم ۲۴ درصدی آمریکای شمالی (حدود ۷۳ هزار تن) برای حدود ۶۰۰ هزار بیمار همودیالیز (آمریکا، کانادا و مکزیک؛ برآورد)، بیش از ۱۰۰ کیلوگرم برای هر بیمار را نشان می‌دهد <span class="grade">[ج]</span>. به همین دلیل ضریب ۷۵ کیلوگرم میانگین جهانی را درست می‌دهد، اما خطای برآورد هر کشور حدود ۳۵ تا ۴۰ درصد است.</p>
+<h3><bdi>۴٫۳</bdi> قیمت‌های ثبت‌شده‌ی جهانی</h3>
+<p>فروش گرید همودیالیز میان تولیدکننده و مصرف‌کننده قراردادی است و وب‌گاه‌های رسمی تولیدکنندگان (Solvay، Qemetica، Tata Chemicals، Church &amp; Dwight و دیگران) فهرست قیمت ندارند؛ میانگین جهانی منتشرشده‌ای نیز وجود ندارد. جدول ۷ قیمت‌ها و ارزش‌های واحد ثبت‌شده را گرد آورده است.</p>
+<div class="tcap">جدول ۷ — قیمت‌ها و ارزش‌های واحد ثبت‌شده‌ی جوش شیرین (دلار یا یورو در تن)</div>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>شاخص</th><th>مقدار</th><th>توضیح</th><th>درجه</th></tr></thead>
+<tbody>
+<tr><td><strong>واردات ایران، ردیف دارویی (گمرک، CIF)</strong></td><td>۱٬۱۵۴ تا ۱٬۲۴۹ دلار</td><td>سال‌های ۱۴۰۲ تا ۱۴۰۴؛ ۱٬۱۶۹ دلار در ۱۴۰۳</td><td>الف</td></tr>
+<tr><td><strong>صادرات اتحادیه‌ی اروپا (کد ۲۸۳۶۳۰)<sup class="cite"><a href="#src-12" title="منبع ۱۲">[۱۲]</a></sup></strong></td><td>میانگین ۵۲۶ یورو </td><td>ژانویه‌ی ۲۰۲۲ تا مارس ۲۰۲۶؛ همه‌ی گریدها</td><td>ب</td></tr>
+<tr><td><strong>واردات اتحادیه‌ی اروپا از بریتانیا و آمریکا<sup class="cite"><a href="#src-12" title="منبع ۱۲">[۱۲]</a></sup></strong></td><td>۵۸۱ و ۱٬۱۶۰ یورو</td><td>احتمال سهم گریدهای ویژه و حجم‌های کوچک</td><td>ج</td></tr>
+<tr><td><strong>توزیع‌کننده‌ی هندی، گرید دارویی (Medikarb</strong>، <strong>Tata)</strong></td><td>حدود ۷۰۳ دلار (۶۸٬۰۰۰ روپیه)</td><td>کیسه‌ی ۲۵ کیلوگرمی؛ شامل حاشیه‌ی توزیع؛ نرخ ۹۶٫۸ روپیه به ازای دلار</td><td>ب</td></tr>
+<tr><td><strong>قیمت ضمنی بازار گرید دارویی</strong></td><td>حدود ۹۰۰ تا ۱٬۱۰۰ دلار</td><td>ارزش بازار ۲۷۵ میلیون دلار بر مصرف ۲۵۰ تا ۳۰۰ هزار تن</td><td>ب</td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:270px"><canvas id="chPrices"></canvas></div><div class="cap">دامنه‌ی قیمت‌ها و ارزش‌های واحد ثبت‌شده (دلار؛ ردیف‌های یورویی با همان عدد یورو)</div></div>
+<p>دامنه‌ی ۵۰۰ تا ۱٬۲۵۰ دلار در تن شواهد بالا را خلاصه می‌کند: کف آن ارزش واحد صادرات اروپا، میانه‌ی آن قیمت توزیع‌کننده‌ی هندی و سقف آن قیمت ضمنی بازار و ارزش واحد واردات ایران است .</p>
+<h3><bdi>۴٫۴</bdi> عرضه‌ی جهانی</h3>
+<p>عرضه‌ی گرید همودیالیز در دست شمار محدودی از گروه‌های دارای گواهی GMP است؛ حجم تولید گرید دارویی هیچ‌یک به‌طور علنی منتشر نشده است. جدول ۸ تأمین‌کنندگان شاخص را نشان می‌دهد.</p>
+<div class="tcap">جدول ۸ — تأمین‌کنندگان شاخص گرید همودیالیز</div>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>شرکت</th><th>محصول و گواهی‌ها</th><th>یادداشت</th></tr></thead>
+<tbody>
+<tr><td><strong>Solvay (بلژیک؛ واحدها در فرانسه، اسپانیا و تایلند)</strong></td><td>BICAR® PHARMA Hemodialysis؛ GMP بر پایه‌ی ICH Q7؛ دارای CEP و DMF<sup class="cite"><a href="#src-10" title="منبع ۱۰">[۱۰]</a></sup></td><td>در ژانویه‌ی ۲۰۲۳ Fresenius از «محدودیت تأمین» Solvay خبر داد و تأمین‌کننده‌ی دوم را تأیید کرد<sup class="cite"><a href="#src-9" title="منبع ۹">[۹]</a></sup> <span class="grade">[الف]</span></td></tr>
+<tr><td><strong>Qemetica (پیش‌تر CIECH؛ لهستان و آلمان)</strong></td><td>برند Sobic HD؛ GMP و ثبت در EudraGMP</td><td>خط ویژه‌ی دارویی تا ۵۰ هزار تن در Stassfurt آلمان <span class="grade">[الف]</span></td></tr>
+<tr><td><strong>Tata Chemicals (هند، بریتانیا، سنگاپور)</strong></td><td>گریدهای EP/USP و همودیالیز در Tata Chemicals Europe</td><td>طرح ۱۸۰ هزار تنی بریتانیا (نخستین تولید ۲۰۲۷)؛ خرید واحد ۶۰ هزار تنی Novabay در مارس ۲۰۲۶<sup class="cite"><a href="#src-11" title="منبع ۱۱">[۱۱]</a></sup> <span class="grade">[الف]</span></td></tr>
+<tr><td><strong>Church &amp; Dwight (آمریکا)</strong></td><td>USP Hemodialysis Grade؛ واحدهای ثبت‌شده‌ی FDA و مطابق cGMP</td><td>از ۲۰۲۳ تأمین‌کننده‌ی دوم کیسه‌ی bibag شرکت Fresenius<sup class="cite"><a href="#src-9" title="منبع ۹">[۹]</a></sup> <span class="grade">[الف]</span></td></tr>
+<tr><td><strong>WE Soda و Genesis Alkali (بریتانیا و آمریکا؛ در ترکیه Kazan Soda)</strong></td><td>Hemodialysis Grade 2 مطابق USP</td><td>بزرگ‌ترین تولیدکننده‌ی خاکستر سودای طبیعی؛ ظرفیت جوش شیرین ذکر نشده <span class="grade">[ب]</span></td></tr>
+<tr><td><strong>گروه‌های چینی (Henan Zhongyuan و دیگران)</strong></td><td>عرضه‌ی گرید «USP/EP» در بازارهای تجاری</td><td>اعتبار گواهی‌ها تأیید نشد <span class="grade">[ج]</span></td></tr>
+</tbody>
+</table></div>
+<p>دو نکته‌ی بازار: خریداران بزرگ (مانند Fresenius) برای تنوع‌بخشی منبع تأمین‌کننده‌ی دوم را تأیید می‌کنند؛ و ظرفیت‌های جدید اروپایی (Tata) چندین برابر رشد سالانه‌ی تقاضا (حدود ۷٬۵۰۰ تن) است و در صورت جایگزین‌نشدن ظرفیت قدیمی، فشار قیمتی در اروپا و مناطق مجاور محتمل است <span class="grade">[ج]</span>.</p>
+</section>
+<section id="s5">
+<div class="sec-head"><span class="sec-num">۵</span><h2>استانداردهای ضروری، بسته‌بندی و حجم پک‌ها</h2></div>
+<h3><bdi>۵٫۱</bdi> استانداردها</h3>
+<p>گرید همودیالیز سه لایه‌ی الزام دارد. <strong>مشخصات فارماکوپه‌ای</strong>: تک‌نگار بی‌کربنات سدیم در فارماکوپه‌ی ایالات متحده (United States Pharmacopeia — USP) با خلوص ۹۹٫۰ تا ۱۰۰٫۵ درصد (بر پایه‌ی خشک) و آزمون‌های ویژه‌ی همودیالیز برای آلومینیوم (حداکثر ۲ ppm)، مس (۱ ppm)، آهن (۵ ppm)، کلسیم (۱۰۰ ppm)، منیزیم (۴۰ ppm)، کربنات (۰٫۲۳ درصد) و ترکیبات آلی (۱۰۰ ppm) <span class="grade">[الف]</span>؛ فارماکوپه‌ی اروپا (Ph. Eur.)، بریتانیا (BP) و هند (IP) نیز مرجع‌اند. عبارت ppm یعنی یک میلی‌گرم در هر کیلوگرم. <strong>نظام کیفیت:</strong> اصول تولید خوب دارویی (Good Manufacturing Practice — GMP) برای ماده‌ی مؤثره بر پایه‌ی رهنمود ICH Q7، و برای فروش به اروپا گواهی تطابق با تک‌نگار فارماکوپه‌ی اروپا (Certificate of Suitability — CEP) و پرونده‌ی اصلی دارو (Drug Master File — DMF) <span class="grade">[الف]</span>. <strong>استانداردهای مایعات دیالیز:</strong> مجموعه‌ی ISO 23500 کیفیت آب و مایعات همودیالیز، از جمله کنسانتره‌ها، را تعریف می‌کند و مشتریان بار میکروبی و اندوتوکسین را معمولاً در قرارداد درج می‌کنند <span class="grade">[ج]</span>. در ایران ثبت ماده‌ی اولیه و کنسانتره نزد سازمان غذا و دارو لازم است.</p>
+<div class="tcap">جدول ۹ — بسته‌های تجاری پودر بی‌کربنات دیالیز</div>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>محصول</th><th>حجم بسته</th><th>یادداشت</th><th>درجه</th></tr></thead>
+<tbody>
+<tr><td><strong>کیسه‌ی bibag (Fresenius)</strong></td><td>۶۵۰ و ۹۰۰ گرم</td><td>بسته‌ی اصلی پودر برای دستگاه‌های Fresenius</td><td>الف</td></tr>
+<tr><td><strong>کارتریج BiCart (Baxter/Vantive)</strong></td><td>۷۲۰ و ۱٬۱۵۰ گرم</td><td>وزن از نام محصول استنباط شد و در سند فنی تأیید نشد</td><td>ج</td></tr>
+<tr><td><strong>کارتریج Solcart B (آمریکا)</strong></td><td>۶۵۰ گرم</td><td>بسته‌ی ۱۰ تایی ۹۶٫۹۷ دلار؛ حدود ۹٫۷۰ دلار برای هر عدد</td><td>ب</td></tr>
+<tr><td><strong>پودر بی‌کربنات (مناقصه‌ی بیمارستان در فیلیپین)</strong></td><td>۸۴۰ گرم</td><td>بودجه‌ی ردیف، نه قیمت قرارداد</td><td>ج</td></tr>
+</tbody>
+</table></div>
+<p>جرم نظری هر جلسه ۳۴۶ تا ۵۵۴ گرم است و بسته‌های ۶۵۰ تا ۹۰۰ گرمی با حاشیه‌ی اطمینان برای جلسه‌های طولانی‌تر طراحی شده‌اند؛ بنابراین یک بسته معادل یک جلسه‌ی درمان است. اگر هر جلسه یک بسته‌ی کامل مصرف شود، مصرف سالانه‌ی هر بیمار با ۱۳۶ تا ۱۵۶ بسته حدود ۸۸ تا ۱۴۰ کیلوگرم می‌شود؛ این رقم از مصرف نظری بالاتر است و نشان می‌دهد در مراکزی که مستقیم از بسته‌ی تجاری استفاده می‌کنند، مصرف ماده‌ی اولیه از مقدار نظری بیشتر است. سهم این مراکز در ایران روشن نیست و به همین دلیل دامنه‌ی ۵۰ تا ۱۰۰ کیلوگرم برای هر بیمار به کار رفته است .</p>
+</section>
+<section id="s6">
+<div class="sec-head"><span class="sec-num">۶</span><h2>مقایسه‌ی گرید همودیالیز با گرید جاری شرکت</h2></div>
+<p>جدول ۱۰ حدود گرید همودیالیز (USP و برگه‌ی فنی Genesis برای گرید همودیالیز) را با نتایج آزمون مستقل SGS ایران روی نمونه‌ی ارسالی شرکت (گزارش شماره‌ی ۶۵۰۲۰۱/۰۱۰۸۷، فوریه‌ی ۲۰۲۵) مقایسه می‌کند <span class="grade">[الف]</span>. شرکت این گرید را تاکنون تولید نکرده است و نمونه‌ی آزمون‌شده گرید جاری است.</p>
+<div class="tcap">جدول ۱۰ — حدود گرید همودیالیز در برابر نمونه‌ی شرکت</div>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>پارامتر</th><th>الزام گرید همودیالیز</th><th>نمونه‌ی شرکت (SGS، ۲۰۲۵)</th><th>ارزیابی</th></tr></thead>
+<tbody>
+<tr><td><strong>میزان دارو (Assay)</strong></td><td class="num-cell">۹۹٫۰ تا ۱۰۰٫۵٪</td><td class="num-cell">۹۹٫۴۹٪</td><td class="st-ok">منطبق (حاشیه‌ی ۰٫۴۹ واحد)</td></tr>
+<tr><td><strong>افت وزن در خشک‌کردن (رطوبت)</strong></td><td>حداکثر ۰٫۲۵٪</td><td class="num-cell">۰٫۱۰٪</td><td class="st-ok">منطبق</td></tr>
+<tr><td><strong>کلرید</strong></td><td>حداکثر ۱۵۰ ppm</td><td>۱۱۹ ppm برحسب NaCl (حدود ۷۲ ppm Cl)</td><td class="st-ok">منطبق</td></tr>
+<tr><td><strong>سولفات</strong></td><td>حداکثر ۱۵۰ ppm</td><td>۱۳۰ ppm</td><td class="st-ok">منطبق (حاشیه‌ی ۱۳٪)</td></tr>
+<tr><td><strong>آهن</strong></td><td>حداکثر ۵ ppm</td><td>۳٫۵ ppm</td><td class="st-ok">منطبق (حاشیه‌ی ۳۰٪)</td></tr>
+<tr><td><strong>آرسنیک</strong></td><td>حداکثر ۲ ppm</td><td>کمتر از ۱ ppm</td><td class="st-ok">منطبق</td></tr>
+<tr><td><strong>فلزات سنگین (برحسب سرب)</strong></td><td>حداکثر ۵ ppm</td><td>کمتر از ۵ ppm</td><td class="st-unk">نامعلوم: حد گزارش با حد مجاز برابر است</td></tr>
+<tr><td><strong>کربنات (CO₃)</strong></td><td>حداکثر ۰٫۲۳٪</td><td>۰٫۲۸٪ (معادل ۰٫۵۰٪ Na₂CO₃)</td><td class="st-bad">خارج از حد؛ حدود ۲۳٪ بیشتر</td></tr>
+<tr><td><strong>مس</strong></td><td>حداکثر ۱ ppm</td><td>کمتر از ۲ mg/kg</td><td class="st-unk">نامعلوم: حد گزارش از حد مجاز بالاتر است</td></tr>
+<tr><td><strong>آلومینیوم</strong></td><td>حداکثر ۲ ppm</td><td>آزمون نشده</td><td class="st-unk">نامعلوم</td></tr>
+<tr><td><strong>کلسیم و منیزیم</strong></td><td>حداکثر ۱۰۰ و ۴۰ ppm</td><td>آزمون نشده</td><td class="st-unk">نامعلوم</td></tr>
+<tr><td><strong>ترکیبات آلی</strong></td><td>حداکثر ۱۰۰ ppm</td><td>آزمون نشده</td><td class="st-unk">نامعلوم</td></tr>
+<tr><td><strong>pH محلول ۵٪</strong></td><td>حداکثر ۸٫۶</td><td class="num-cell">۸٫۲۴</td><td class="st-ok">منطبق</td></tr>
+<tr><td><strong>دانه‌بندی</strong></td><td>≤۱٪ بزرگ‌تر از ۱۸۰ میکرون؛ ≥۹۰٪ بزرگ‌تر از ۴۵ میکرون</td><td>آزمون نشده</td><td class="st-unk">نامعلوم</td></tr>
+<tr><td><strong>اندوتوکسین و بار میکروبی</strong></td><td>مطابق قرارداد مشتری</td><td>آزمون نشده</td><td class="st-unk">نامعلوم</td></tr>
+<tr><td><strong>GMP (ICH Q7)، CEP، DMF</strong></td><td>ارائه‌ی گواهی توسط تولیدکنندگان پیشرو</td><td>گرید دارویی تاکنون تولید نشده؛ گواهی وجود ندارد</td><td class="st-bad">شکاف اصلی</td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:260px"><canvas id="chStatus"></canvas></div><div class="cap">وضعیت ۱۶ پارامتر/الزام مقایسه‌شده — شمار موارد هر وضعیت</div></div>
+<p class="src">رنگ سبز: منطبق؛ زرد: نامعلوم؛ قرمز: ناهم‌خوان. معادل‌سازی‌های کربنات و کلرید محاسبه‌ی مستقیم از جرم‌های مولی است <span class="grade">[ب]</span>.</p>
+<p><strong>نتیجه‌ی مقایسه.</strong> پارامترهای اندازه‌گیری‌شده (میزان دارو، رطوبت، کلرید، سولفات، آهن و آرسنیک) با حدود همودیالیز سازگارند، هرچند حاشیه‌ی آهن و سولفات کم است و در دسته‌های مختلف می‌تواند از حد عبور کند. کربنات تنها پارامتر خارج از حد است؛ حد داخلی ۱ درصد Na₂CO₃ در گزارش آزمایشگاه حدود ۲٫۵ برابر مقدار لازم برای گرید همودیالیز است. آلومینیوم، مس، کلسیم، منیزیم، ترکیبات آلی، دانه‌بندی و اندوتوکسین، که گرید همودیالیز را از گرید معمولی جدا می‌کنند، آزمون نشده یا حد گزارش آن‌ها بالاتر از حد مجاز بوده است. فاصله‌ی اصلی بنابراین در کنترل فرایند و اثبات کیفیت است و نه در خلوص پایه <span class="grade">[ج]</span>.</p>
+</section>
+<section id="s7">
+<div class="sec-head"><span class="sec-num">۷</span><h2>جمع‌بندی</h2></div>
+<p>مصرف گرید دیالیز تقریباً به‌طور کامل تابع شمار بیماران همودیالیز است و هر بیمار سالانه حدود ۷۵ کیلوگرم مصرف می‌کند. مصرف ایران حدود ۳٬۳۰۰ تن در سال (حدود ۱ درصد مصرف جهانی ۳۰۴ هزار تن) برآورد می‌شود و واردات رسمی ردیف دارویی در ۱۴۰۳ (۳٬۱۲۸ تن، ۳٫۷ میلیون دلار) آن را تأیید می‌کند؛ بازار ایران وابسته به واردات و متمرکز بر ترکیه است و با رشد حدود ۳٫۸ درصد در سال تا ۲۰۳۰ به حدود ۳٬۸۰۰ تن می‌رسد. برای کشورهای دیگر، رابطه‌ی «جمعیت × فراوانی بیماران همودیالیز × ۰٫۰۷۵» برآوردی با خطای حدود ۳۵ تا ۴۰ درصد می‌دهد. </p>
+</section>
+<section id="srcs">
+<div class="sec-head"><h2>منابع</h2></div>
+<ol class="srcs">
+<li id="src-1"><span class="n">۱</span>گمرک جمهوری اسلامی ایران — آمار واردات به تفکیک تعرفه (۱۴۰۲، ۱۴۰۳ و ده‌ماهه‌ی ۱۴۰۴): <a href="https://www.irica.gov.ir" target="_blank" rel="noopener">irica.gov.ir</a></li>
+<li id="src-2"><span class="n">۲</span>DOPPS — غلظت بی‌کربنات دیالیزات و مدت جلسه: <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC3832240" target="_blank" rel="noopener">PMC3832240</a></li>
+<li id="src-3"><span class="n">۳</span>USRDS — جدول‌های مرجع بین‌المللی ۲۰۲۵: <a href="https://usrds-adr.niddk.nih.gov/2025/reference-tables" target="_blank" rel="noopener">usrds-adr.niddk.nih.gov</a></li>
+<li id="src-4"><span class="n">۴</span>انجمن دیالیز ژاپن (JSDT) — گزارش ۲۰۲۴: <a href="https://www.jstage.jst.go.jp/article/jsdt/58/12/58_524/_article/-char/en" target="_blank" rel="noopener">jstage.jst.go.jp</a></li>
+<li id="src-5"><span class="n">۵</span>Chemical Week — Slower but steady expansion for bicarb: <a href="https://chemweek.mydigitalpublication.com/articles/slower-but-steady-expansion-for-bicarb" target="_blank" rel="noopener">chemweek.mydigitalpublication.com</a></li>
+<li id="src-6"><span class="n">۶</span>ISN Global Kidney Health Atlas 2023 — خاورمیانه: <a href="https://www.theisn.org/wp-content/uploads/2024/01/ISN-GKHA-2023_Narrative_Script_Middle-East_v0.1.pdf" target="_blank" rel="noopener">theisn.org</a></li>
+<li id="src-7"><span class="n">۷</span>ISN Global Kidney Health Atlas 2023 — آمریکای شمالی و کارائیب: <a href="https://www.theisn.org/wp-content/uploads/2023/08/ISN-GKHA-2023_Narrative_Script_North-Am-Caribbean_v0.1.pdf" target="_blank" rel="noopener">theisn.org</a></li>
+<li id="src-8"><span class="n">۸</span>ISN Global Kidney Health Atlas 2023 — اروپای غربی: <a href="https://www.theisn.org/wp-content/uploads/2023/08/ISN-GKHA-2023_Narrative_Script_Western-Europe_v0.1.pdf" target="_blank" rel="noopener">theisn.org</a></li>
+<li id="src-9"><span class="n">۹</span>Fresenius — اطلاعیه‌ی تأمین‌کننده‌ی bibag (۲۰۲۳): <a href="https://freseniusmedicalcare.com/content/dam/fmcna/live/support/documents/instructions-for-use/product-information-notice---ifus/105415-01_Rev_A.pdf" target="_blank" rel="noopener">freseniusmedicalcare.com</a></li>
+<li id="src-10"><span class="n">۱۰</span>Solvay — Bicar®pharma: <a href="https://www.solvay.com/en/brands/bicarpharma" target="_blank" rel="noopener">solvay.com</a></li>
+<li id="src-11"><span class="n">۱۱</span>Tata Chemicals — گزارش سالانه‌ی سال مالی ۲۰۲۶: <a href="https://www.tatachemicals.com/AnnualReportFY2026.pdf" target="_blank" rel="noopener">tatachemicals.com</a></li>
+<li id="src-12"><span class="n">۱۲</span>Trendeconomy — تجارت جهانی HS 283630: <a href="https://trendeconomy.com/data/commodity_h2/283630" target="_blank" rel="noopener">trendeconomy.com</a></li>
+<li id="src-13"><span class="n">۱۳</span>منابع علمی ثبت ملی دیالیز ایران: Nafar و همکاران (IJKD، ۲۰۲۰)، BMC Nephrology (داده‌ی ۲۰۱۵)، Omranikhoo و همکاران (Health Economics Review، ۲۰۲۵)؛ برآورد جهانی Liyanage و همکاران (Lancet).</li>
+</ol>
+</section>
+
+
+</main>
+
+<footer class="wrap">
+  <p>تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس &middot; وضعیت در ۱۹ مهر ۱۴۰۵ (۱۱ اکتبر ۲۰۲۶)</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var D = {"scen": {"labels": ["۴۰٬۰۰۰", "۴۴٬۰۰۰ (برآورد ۲۰۲۶)", "۵۱٬۰۰۰ (پیش‌بینی ۲۰۳۰)"], "cols": ["۵۰ کیلوگرم برای هر بیمار", "۷۵ کیلوگرم (مبنا)", "۱۰۰ کیلوگرم برای هر بیمار"], "data": [[2000.0, 3000.0, 4000.0], [2200.0, 3300.0, 4400.0], [2550.0, 3825.0, 5100.0]]}, "imp": {"years": ["۱۴۰۲", "۱۴۰۳", "۱۴۰۴ (ده‌ماهه)"], "ph_w": [1121.0, 3128.0, 2065.0], "ot_w": [3780.0, 3426.0, 1736.0], "ph_p": [1154.0, 1169.0, 1249.0], "ot_p": [980.0, 828.0, 790.0]}, "cty": [["تایوان", 5400.0, 233.0], ["ژاپن (۲۰۲۴)", 22300.0, 180.0], ["تایلند", 10100.0, 153.0], ["آمریکا", 36500.0, 111.0], ["مالزی", 3500.0, 105.0], ["برزیل", 11400.0, 54.0], ["فرانسه", 3500.0, 51.0], ["چین", 70600.0, 50.0], ["اسپانیا", 2000.0, 41.0], ["ایران (۲۰۲۶، برآورد)", 3300.0, 38.0], ["نیجریه", 190.0, 0.8]], "cty_t": [["چین", 70600.0, 50.0], ["آمریکا", 36500.0, 111.0], ["ژاپن (۲۰۲۴)", 22300.0, 180.0], ["برزیل", 11400.0, 54.0], ["تایلند", 10100.0, 153.0], ["تایوان", 5400.0, 233.0], ["مالزی", 3500.0, 105.0], ["فرانسه", 3500.0, 51.0], ["ایران (۲۰۲۶، برآورد)", 3300.0, 38.0], ["اسپانیا", 2000.0, 41.0], ["نیجریه", 190.0, 0.8]], "status": {"ok": 7, "unk": 7, "bad": 2}};
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){ return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; }); }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US").replace(/,/g, "٬")); }
+  function cssVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  var charts = [];
+  function colors(){
+    return { ink: cssVar('--ink-soft'), grid: cssVar('--line-soft'), petrol: cssVar('--petrol-500'), petrolDark: cssVar('--petrol-700'),
+             copper: cssVar('--copper-500'), copperDark: cssVar('--copper-600'), copperLight: cssVar('--copper-300'),
+             bad: cssVar('--bad'), good: cssVar('--good'), bg: cssVar('--bg-soft') };
+  }
+  function tip(fn){ return { rtl: true, textDirection: 'rtl', callbacks: { label: fn } }; }
+  function el(id){ return document.getElementById(id); }
+  function mk(id, cfg){ if (el(id)) charts.push(new Chart(el(id), cfg)); }
+  function xy(c, ytick){ return { x: { grid: { display: false }, ticks: { color: c.ink } }, y: { grid: { color: c.grid }, ticks: { color: c.ink, callback: ytick || function(v){ return fmt(v); } } } }; }
+  function hbar(c, xtick){ return { x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: xtick || function(v){ return fmt(v); } } }, y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 12 } } } }; }
+  function legend(c){ return { position: 'bottom', rtl: true, labels: { color: c.ink, font: { size: 12 } } }; }
+
+  function build(){
+    var c = colors();
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif"; Chart.defaults.color = c.ink; Chart.defaults.borderColor = c.grid;
+    charts.forEach(function(ch){ ch.destroy(); }); charts = [];
+
+    mk('chPatients', { type: 'bar',
+      data: { labels: ['۱۹۹۷', '۲۰۰۶', '۲۰۱۵', '۲۰۱۷', '۲۰۲۲', '۲۰۲۶ (برآورد)', '۲۰۳۰ (پیش‌بینی)'],
+              datasets: [{ data: [5717, 12500, 29200, 30882, 38000, 44000, 51000],
+                backgroundColor: function(x){ return x.dataIndex >= 5 ? c.copperLight : c.petrol; }, borderRadius: 6 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tip(function(x){ return fmt(x.parsed.y) + ' بیمار'; }) }, scales: xy(c) } });
+
+    mk('chTurkey', { type: 'doughnut',
+      data: { labels: ['ترکیه', 'امارات', 'سایر (آلمان و هند)'], datasets: [{ data: [87, 12, 1], backgroundColor: [c.petrolDark, c.copper, c.ink + '55'], borderColor: c.bg, borderWidth: 2 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: legend(c), tooltip: tip(function(x){ return x.label + ': ' + fmt(x.parsed) + '٪'; }) } } });
+
+    mk('chRegions', { type: 'doughnut',
+      data: { labels: ['آمریکای شمالی (≈۷۳ هزار تن)', 'اروپای غربی (≈۴۹ هزار تن)', 'چین (≈۴۹ هزار تن)', 'بقیه‌ی جهان (≈۱۳۴ هزار تن)'],
+              datasets: [{ data: [24, 16, 16, 44], backgroundColor: [c.petrolDark, c.copper, c.bad, c.petrol], borderColor: c.bg, borderWidth: 2 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: legend(c), tooltip: tip(function(x){ return x.label + ': ' + fmt(x.parsed) + '٪'; }) } } });
+
+    var S = D.scen, scol = [c.petrol, c.petrolDark, c.copper];
+    mk('chScen', { type: 'bar',
+      data: { labels: S.labels, datasets: S.cols.map(function(name, i){ return { label: name, data: S.data.map(function(r){ return r[i]; }), backgroundColor: scol[i], borderRadius: 5 }; }) },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: legend(c), tooltip: tip(function(x){ return x.dataset.label + ': ' + fmt(x.parsed.y) + ' تن'; }) }, scales: xy(c) } });
+
+    var I = D.imp;
+    mk('chImpW', { type: 'bar',
+      data: { labels: I.years, datasets: [ { label: 'ردیف دارویی', data: I.ph_w, backgroundColor: c.copper, borderRadius: 5 }, { label: 'ردیف سایر', data: I.ot_w, backgroundColor: c.petrol, borderRadius: 5 } ] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: legend(c), tooltip: tip(function(x){ return x.dataset.label + ': ' + fmt(x.parsed.y) + ' تن'; }) }, scales: xy(c) } });
+    mk('chImpP', { type: 'line',
+      data: { labels: I.years, datasets: [ { label: 'ردیف دارویی', data: I.ph_p, borderColor: c.copper, backgroundColor: c.copper, tension: .25, pointRadius: 5 }, { label: 'ردیف سایر', data: I.ot_p, borderColor: c.petrol, backgroundColor: c.petrol, tension: .25, pointRadius: 5 } ] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: legend(c), tooltip: tip(function(x){ return x.dataset.label + ': ' + fmt(x.parsed.y) + ' $/تن'; }) }, scales: xy(c, function(v){ return fmt(v) + '$'; }) } });
+
+    function hl(arr){ return function(x){ return /ایران/.test(arr[x.dataIndex][0]) ? c.copper : c.petrol; }; }
+    mk('chPerCap', { type: 'bar',
+      data: { labels: D.cty.map(function(r){ return r[0]; }), datasets: [{ data: D.cty.map(function(r){ return r[2]; }), backgroundColor: hl(D.cty), borderRadius: 5 }] },
+      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tip(function(x){ return fmt(x.parsed.x) + ' گرم'; }) }, scales: hbar(c) } });
+    mk('chTons', { type: 'bar',
+      data: { labels: D.cty_t.map(function(r){ return r[0]; }), datasets: [{ data: D.cty_t.map(function(r){ return r[1]; }), backgroundColor: hl(D.cty_t), borderRadius: 5 }] },
+      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tip(function(x){ return fmt(x.parsed.x) + ' تن'; }) }, scales: hbar(c) } });
+
+    // دامنه‌ی قیمت‌ها: ۰→کف (پررنگ) و کف→سقف (روشن)
+    var pairs = [[1154, 1249], [526, 526], [581, 581], [1160, 1160], [703, 703], [900, 1100]];
+    var labels = ['واردات ایران، ردیف دارویی (CIF)', 'صادرات اتحادیه‌ی اروپا (یورو)', 'واردات اتحادیه‌ی اروپا از بریتانیا (یورو)', 'واردات اتحادیه‌ی اروپا از آمریکا (یورو)', 'توزیع‌کننده‌ی هندی، گرید دارویی', 'قیمت ضمنی بازار گرید دارویی'];
+    mk('chPrices', { type: 'bar',
+      data: { labels: labels, datasets: [ { data: pairs.map(function(p){ return p[0]; }), backgroundColor: [c.copper, c.petrol, c.petrol, c.petrol, c.petrol, c.petrolDark], borderRadius: 4, stack: 's' },
+                                         { data: pairs.map(function(p){ return p[1] - p[0]; }), backgroundColor: c.copperLight + 'aa', borderRadius: 4, stack: 's' } ] },
+      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: tip(function(x){ var p = pairs[x.dataIndex]; return p[0] === p[1] ? fmt(p[0]) + ' در تن' : fmt(p[0]) + ' تا ' + fmt(p[1]) + ' در تن'; }) },
+        scales: { x: { stacked: true, grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } } }, y: { stacked: true, grid: { display: false }, ticks: { color: c.ink, font: { size: 12 } } } } } });
+
+    var st = D.status;
+    mk('chStatus', { type: 'doughnut',
+      data: { labels: ['منطبق', 'نامعلوم (آزمون نشده یا حد گزارش نامناسب)', 'خارج از حد / شکاف اصلی'], datasets: [{ data: [st.ok, st.unk, st.bad], backgroundColor: [c.good, '#E3B341', c.bad], borderColor: c.bg, borderWidth: 2 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: legend(c), tooltip: tip(function(x){ return x.label + ': ' + fmt(x.parsed) + ' مورد'; }) } } });
+  }
+  build();
+  if (window.matchMedia){ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', build); }
+})();
+</script>
+
+</body>
+</html>
