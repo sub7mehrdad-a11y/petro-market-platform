@@ -29,6 +29,43 @@ export function getQueueFilePath() {
   return path.join(path.dirname(getOutreachSentStatePath()), "outreach_queue.json");
 }
 
+// بررسی‌های «آماده‌ی ارسال»ـ مشترک بین API دستی (send/route.js) و ارسال خودکار (outreachAuto.js).
+// null = همه چیز آماده؛ وگرنه متن مشکل (فارسی) برمی‌گرده.
+const REQUIRED_CATALOG_ENV = [
+  "OUTREACH_CATALOG_URL_FOOD",
+  "OUTREACH_CATALOG_URL_FEED_DAIRY",
+  "OUTREACH_CATALOG_URL_FEED_POULTRY",
+  "OUTREACH_CATALOG_URL_INDUSTRIAL",
+];
+
+export function checkOutreachReady() {
+  // قبل از هر ارسالی مطمئن می‌شیم می‌تونیم لاگ رو بنویسیم — ایمیلی که رفته ولی ثبت نشده،
+  // دفعه‌ی بعد دوباره برای همون شرکت می‌ره.
+  if (process.env.NODE_ENV === "production" && !process.env.OUTREACH_STATE_DIR) {
+    return "OUTREACH_STATE_DIR تنظیم نشده: روی سرور لاگ ارسال و صف باید روی دیسک دائمی باشد (وگرنه با دیپلوی بعدی پاک می‌شود و ایمیل تکراری می‌رود).";
+  }
+  try {
+    const file = getOutreachSentStatePath();
+    fs.mkdirSync(path.dirname(file), { recursive: true });
+    fs.accessSync(path.dirname(file), fs.constants.W_OK);
+  } catch (err) {
+    return `مسیر لاگ ارسال قابل نوشتن نیست: ${String(err?.message || err)}`;
+  }
+  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASSWORD) {
+    return "تنظیمات SMTP (SMTP_HOST/SMTP_USER/SMTP_PASSWORD) کامل نیست.";
+  }
+  // شبکه‌ی ایمنی: تا همه‌ی لینک‌های کاتالوگ توی env نباشن، هیچ ایمیلی با «[LINK PENDING]» نمی‌ره.
+  const missing = REQUIRED_CATALOG_ENV.filter((k) => !process.env[k]);
+  if (missing.length > 0) {
+    return `لینک‌های کاتالوگ هنوز تنظیم نشدن (متغیرهای env گمشده: ${missing.join(", ")}).`;
+  }
+  const missingFiles = FIXED_ATTACHMENTS.filter((a) => !fs.existsSync(path.join(ROOT, a.relativePath)));
+  if (missingFiles.length > 0) {
+    return `فایل پیوست پیدا نشد: ${missingFiles.map((a) => a.filename).join(", ")}`;
+  }
+  return null;
+}
+
 export function getQueueSettings() {
   const interval = Number(process.env.OUTREACH_SEND_INTERVAL_SEC);
   const limit = Number(process.env.OUTREACH_DAILY_LIMIT);

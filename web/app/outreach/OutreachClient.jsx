@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import PageHeader from "../components/PageHeader";
 import QueuePanel from "./QueuePanel";
 import ReportPanel from "./ReportPanel";
+import AutoPanel from "./AutoPanel";
 
 const GRADE_LABELS = {
   food: "خوراکی",
@@ -333,6 +334,8 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
           </div>
         )}
       </section>
+
+      <AutoPanel />
 
       <QueuePanel refreshKey={queueRefresh} />
 
