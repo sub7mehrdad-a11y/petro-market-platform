@@ -42,7 +42,13 @@ export function loadAutoConfig() {
   return {
     per_day: Math.min(Math.max(Math.floor(perDay), 1), 200),
     send_hour_tehran: Number.isFinite(Number(cfg.send_hour_tehran)) ? Number(cfg.send_hour_tehran) : 10,
-    countries: Array.isArray(cfg.countries) ? cfg.countries : [],
+    // کشورهای اولویت‌دار (اوراسیا) اول؛ بعد «countries»؛ «paused_countries» اصلاً ارسال نمی‌شن.
+    priority_countries: Array.isArray(cfg.priority_countries) ? cfg.priority_countries : [],
+    countries: [
+      ...(Array.isArray(cfg.priority_countries) ? cfg.priority_countries : []),
+      ...(Array.isArray(cfg.countries) ? cfg.countries : []),
+    ].filter((c, i, a) => a.indexOf(c) === i && !(cfg.paused_countries || []).includes(c)),
+    paused_countries: Array.isArray(cfg.paused_countries) ? cfg.paused_countries : [],
     exclude_company_ids: new Set(Array.isArray(cfg.exclude_company_ids) ? cfg.exclude_company_ids : []),
     report: {
       weekday: cfg.report?.weekday && WEEKDAYS.includes(cfg.report.weekday) ? cfg.report.weekday : "Saturday",
@@ -104,6 +110,16 @@ function diskProblem() {
   return null;
 }
 
+// وضعیت دیسک دائم برای نمایش در پنل (مستقل از روشن‌بودن ارسال خودکار)
+export function getDiskStatus() {
+  if (process.env.NODE_ENV === "production" && !process.env.OUTREACH_STATE_DIR) {
+    return { ok: false, text: "OUTREACH_STATE_DIR تنظیم نشده — لاگ ارسال روی دیسک دائم نیست." };
+  }
+  const problem = diskProblem();
+  if (problem) return { ok: false, text: problem };
+  return { ok: true, text: process.env.NODE_ENV === "production" ? "دیسک دائم متصل است." : "محیط توسعه — بررسی دیسک اعمال نمی‌شه." };
+}
+
 export function checkAutoReady() {
   if (process.env.OUTREACH_AUTO_ENABLED !== "true") return "ارسال خودکار خاموشه (OUTREACH_AUTO_ENABLED).";
   if (process.env.OUTREACH_SENDING_ENABLED !== "true") return "ارسال واقعی خاموشه (OUTREACH_SENDING_ENABLED).";
@@ -146,13 +162,22 @@ export function eligibleByCountry(cfg = loadAutoConfig()) {
 }
 
 export function pickDailyBatch(limit, cfg = loadAutoConfig()) {
-  const pools = [...eligibleByCountry(cfg).values()].map((l) => l.slice());
+  const byCountry = eligibleByCountry(cfg);
   const picked = [];
-  while (picked.length < limit && pools.some((p) => p.length > 0)) {
-    for (const p of pools) {
-      if (picked.length >= limit) break;
-      if (p.length) picked.push(p.shift());
+  // لایه‌ی اول: کشورهای اولویت‌دار (به‌نوبت)؛ فقط وقتی همه‌شون تموم شد → بقیه‌ی کشورها (باز هم به‌نوبت).
+  const tiers = [
+    cfg.countries.filter((c) => cfg.priority_countries.includes(c)),
+    cfg.countries.filter((c) => !cfg.priority_countries.includes(c)),
+  ];
+  for (const tier of tiers) {
+    const pools = tier.map((c) => (byCountry.get(c) || []).slice());
+    while (picked.length < limit && pools.some((p) => p.length > 0)) {
+      for (const p of pools) {
+        if (picked.length >= limit) break;
+        if (p.length) picked.push(p.shift());
+      }
     }
+    if (picked.length >= limit) break;
   }
   return picked;
 }
@@ -307,6 +332,9 @@ export function getAutoStatus() {
     per_day: cfg.per_day,
     send_hour_tehran: cfg.send_hour_tehran,
     countries: cfg.countries,
+    priority_countries: cfg.priority_countries,
+    paused_countries: cfg.paused_countries,
+    disk: getDiskStatus(),
     remaining_by_country: byCountry,
     remaining_total: remaining,
     days_left: cfg.per_day > 0 ? Math.ceil(remaining / cfg.per_day) : null,

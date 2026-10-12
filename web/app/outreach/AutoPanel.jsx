@@ -58,6 +58,9 @@ export default function AutoPanel() {
         </span>
       </div>
 
+      <p className={`text-sm mb-2 ${s.disk?.ok ? "text-emerald-700" : "text-rose-700"}`}>
+        {s.disk?.ok ? "✓" : "⚠"} دیسک دائم: {s.disk?.text}
+      </p>
       {!s.auto_enabled && <p className="text-sm text-amber-700 mb-2">ارسال خودکار خاموشه — برای روشن‌شدن متغیر OUTREACH_AUTO_ENABLED=true روی سرور لازمه.</p>}
       {s.auto_enabled && s.ready_problem && <p className="text-sm text-rose-700 mb-2">⚠ {s.ready_problem}</p>}
       {s.test_redirect && <p className="text-sm text-amber-700 mb-2">حالت تست: همه‌ی ایمیل‌ها فقط به آدرس تست می‌رن.</p>}
@@ -98,9 +101,14 @@ export default function AutoPanel() {
         <summary className="cursor-pointer">باقی‌مانده به تفکیک کشور</summary>
         <div className="mt-2 flex flex-wrap gap-2">
           {s.countries.map((c) => (
-            <span key={c} className="rounded-md bg-slate-50 border border-slate-200 px-2 py-1">{c}: {n(s.remaining_by_country[c])}</span>
+            <span key={c} className={`rounded-md border px-2 py-1 ${s.priority_countries?.includes(c) ? "bg-copper-50 border-copper-200" : "bg-slate-50 border-slate-200"}`}>
+              {c}{s.priority_countries?.includes(c) ? " (اولویت)" : ""}: {n(s.remaining_by_country[c])}
+            </span>
           ))}
         </div>
+        {s.paused_countries?.length > 0 && (
+          <p className="mt-2">فعلاً ارسال نمی‌شه: {s.paused_countries.join("، ")}</p>
+        )}
       </details>
 
       {s.report.enabled && (
