@@ -6,6 +6,7 @@
 //   node scripts/manage-users.mjs add <username> <password> <viewer|commercial>
 //   node scripts/manage-users.mjs remove <username>
 //   node scripts/manage-users.mjs list
+//   node scripts/manage-users.mjs print-env   (مقدار PLATFORM_USERS_JSON برای لیارا)
 //
 // "add" برای یوزرنیم تکراری، رمز/نقش رو به‌روزرسانی می‌کنه (نه رکورد جدید).
 
@@ -68,6 +69,9 @@ if (command === "add") {
     writeUsers(next);
     console.log(`کاربر «${username}» حذف شد.`);
   }
+} else if (command === "print-env") {
+  // مقدار متغیر PLATFORM_USERS_JSON برای لیارا (یک خط JSON). خروجی را هرگز کامیت نکن.
+  console.log(JSON.stringify(readUsers()));
 } else if (command === "list") {
   const users = readUsers();
   if (users.length === 0) {

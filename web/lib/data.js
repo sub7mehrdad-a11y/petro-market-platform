@@ -19,7 +19,16 @@ function readJsonSafe(filePath, fallback) {
 
 // کاربران سیستم لاگین (data/users.json) — نگاه کن web/lib/auth.js و
 // web/scripts/manage-users.mjs برای ساخت/ویرایش.
+// اولویت با env «PLATFORM_USERS_JSON» (آرایه‌ی JSON همان قالب فایل): هش رمزها بیرون از مخزن عمومی
+// نگه داشته می‌شن. اگه env نبود یا نامعتبر بود، به فایل برمی‌گرده.
 export function getUsers() {
+  const fromEnv = process.env.PLATFORM_USERS_JSON;
+  if (fromEnv) {
+    try {
+      const parsed = JSON.parse(fromEnv);
+      if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+    } catch {}
+  }
   return readJsonSafe(path.join(DATA_DIR, "users.json"), []);
 }
 

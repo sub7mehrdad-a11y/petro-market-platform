@@ -2,6 +2,25 @@ import { NextResponse } from "next/server";
 import { findUserByUsername } from "@/lib/data";
 import { verifyPassword, createSession, SESSION_COOKIE_NAME, SESSION_COOKIE_MAX_AGE } from "@/lib/auth";
 
+// محدودکننده‌ی تلاش ناموفق (حافظه‌ی پروسه): جلوی حدس‌زدن رمز رو می‌گیره. پس از MAX_FAILS تلاش
+// ناموفق در بازه‌ی WINDOW_MS، همون IP یا همون نام‌کاربری تا پایان بازه ۴۲۹ می‌گیره.
+const WINDOW_MS = 15 * 60 * 1000;
+const MAX_FAILS = 8;
+const fails = new Map(); // key -> { count, resetAt }
+
+function failState(key) {
+  const now = Date.now();
+  const s = fails.get(key);
+  if (!s || s.resetAt <= now) return { count: 0, resetAt: now + WINDOW_MS };
+  return s;
+}
+function registerFail(key) {
+  const s = failState(key);
+  s.count += 1;
+  fails.set(key, s);
+  if (fails.size > 5000) for (const [k, v] of fails) if (v.resetAt <= Date.now()) fails.delete(k);
+}
+
 export async function POST(request) {
   // بدون این، createSession پایین‌تر throw می‌کنه و کاربر یک ۵۰۰ خام می‌بینه —
   // به‌جاش یک پیام روشن بده (یادت باشه: SESSION_SECRET هم توی .env محلی هم
@@ -24,10 +43,19 @@ export async function POST(request) {
     return NextResponse.json({ error: "نام کاربری و رمز عبور الزامی است." }, { status: 400 });
   }
 
+  const ip = (request.headers.get("x-forwarded-for") || "").split(",")[0].trim() || "unknown";
+  const ipKey = `ip:${ip}`;
+  const userKey = `u:${String(username).trim().toLowerCase()}`;
+  if (failState(ipKey).count >= MAX_FAILS || failState(userKey).count >= MAX_FAILS) {
+    return NextResponse.json({ error: "تلاش‌های ناموفق زیاد بود. چند دقیقه‌ی دیگر دوباره امتحان کنید." }, { status: 429 });
+  }
+
   const user = findUserByUsername(username);
   // پیام خطای یکسان برای «کاربر نیست» و «رمز غلط است» — تا امکان حدس‌زدن
   // نام‌های کاربری معتبر از روی تفاوت پیام فراهم نشه.
   if (!user || !verifyPassword(password, user.passwordHash)) {
+    registerFail(ipKey);
+    registerFail(userKey);
     return NextResponse.json({ error: "نام کاربری یا رمز عبور اشتباه است." }, { status: 401 });
   }
 
