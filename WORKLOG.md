@@ -17,6 +17,19 @@
 
 ## ورودی‌ها
 
+### ۲۰۲۶-۱۰-۱۵ — رفع گیرکردن ربات چین در Actions (داده‌ی روزانه از ۱۱ اکتبر به‌روز نمی‌شد)
+
+بررسی کامل سیستم: workflow «Daily Market Agents» در ۴ از ۶ اجرای اخیر (۹، ۱۲، ۱۳، ۱۴ اکتبر) روی استپ **ربات چین** تا سقف ۶ ساعت گیر کرد و cancel شد؛
+چون استپ commit بعدش اجرا نمی‌شد، داده‌ی قیمت/اخبار/ترکیه همه‌ی اون روزها از دست رفت (آخرین کامیت داده: ۱۱ اکتبر).
+علت: `client.interactions.create` بدون سقف زمان (فقط ربات قیمت `call_with_deadline` داشت).
+- `scripts/run_agent.py`: سقف زمان هر ربات (`AGENT_TIMEOUT_SEC`، پیش‌فرض ۹۰۰ ثانیه) + یک تلاش مجدد؛ کد خروج ۱۲۴ و `timed_out` در `agent_status.json`. تست با اسکریپت گیرکرده: ۳ ثانیه → قطع → تلاش دوم → exit=124.
+- `.github/workflows/daily_market_agents.yml`: `timeout-minutes` برای job (۱۲۰) و هر ربات (۴۰)، استپ commit با `if: always()` و `git pull --rebase --autostash` قبل از push.
+- داده‌ی ۱۲ تا ۱۴ اکتبر قابل بازیابی نیست؛ اجرای بعدی (۰۵:۳۰ UTC) یا «Run workflow» دستی ادامه می‌ده.
+
+**فایل‌ها:** `scripts/run_agent.py`، `.github/workflows/daily_market_agents.yml`، `WORKLOG.md`.
+
+---
+
 ### ۲۰۲۶-۱۰-۱۵ — سخت‌کردن امنیت ورود (محدودیت تلاش + هش کاربران بیرون از مخزن)
 
 بعد از حادثه‌ی هک ایمیل و ارزیابی ریسک: مخزن عمومیه و `data/users.json` (هش scrypt دو کاربر) توش بود؛ ورود هم محدودیت تلاش نداشت.

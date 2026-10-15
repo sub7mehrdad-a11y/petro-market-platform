@@ -20,6 +20,12 @@ from datetime import datetime, timezone
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 STATUS_FILE = os.path.join(BASE_DIR, "data", "agent_status.json")
 TAIL_CHARS = 2500
+# سقف زمان هر ربات: فراخوانی مدل/شبکه گاهی بی‌پایان گیر می‌کنه (ربات چین ۴ روز از ۶ روز ۱۰–۱۴
+# اکتبر ۲۰۲۶ تا سقف ۶ ساعت job گیر کرد و چون استپ commit اجرا نشد، داده‌ی روزانه از دست رفت).
+# پس از سقف، پروسه کشته می‌شه و یک بار دوباره تلاش می‌کنیم.
+TIMEOUT_SEC = int(os.environ.get("AGENT_TIMEOUT_SEC", "900"))
+TIMEOUT_RETRIES = int(os.environ.get("AGENT_TIMEOUT_RETRIES", "1"))
+TIMEOUT_EXIT_CODE = 124
 
 
 def load_status():
@@ -45,24 +51,40 @@ def main():
 
     env = dict(os.environ, PYTHONUNBUFFERED="1", PYTHONIOENCODING="utf-8")
     started = datetime.now(timezone.utc)
-    proc = subprocess.run(
-        [sys.executable, script, *args],
-        cwd=BASE_DIR,
-        env=env,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-    )
-    output = proc.stdout or ""
-    # خروجی کامل هم‌چنان توی لاگ Actions چاپ می‌شه
-    print(output)
+    output = ""
+    returncode = None
+    timed_out = False
+    for attempt in range(1, TIMEOUT_RETRIES + 2):
+        try:
+            proc = subprocess.run(
+                [sys.executable, script, *args],
+                cwd=BASE_DIR,
+                env=env,
+                stdout=subprocess.PIPE,
+                stderr=subprocess.STDOUT,
+                text=True,
+                encoding="utf-8",
+                errors="replace",
+                timeout=TIMEOUT_SEC,
+            )
+            output, returncode, timed_out = proc.stdout or "", proc.returncode, False
+            break
+        except subprocess.TimeoutExpired as e:
+            partial = e.stdout or ""
+            if isinstance(partial, bytes):
+                partial = partial.decode("utf-8", errors="replace")
+            output = f"{partial}\n[TIMEOUT] ربات «{name}» بعد از {TIMEOUT_SEC} ثانیه پاسخ نداد (تلاش {attempt}).\n"
+            returncode, timed_out = TIMEOUT_EXIT_CODE, True
+            print(output)
+    # خروجی کامل هم‌چنان توی لاگ Actions چاپ می‌شه (در حالت تایم‌اوت قبلاً چاپ شده)
+    if not timed_out:
+        print(output)
 
     status = load_status()
     status[name] = {
-        "ok": proc.returncode == 0,
-        "exit_code": proc.returncode,
+        "ok": returncode == 0,
+        "exit_code": returncode,
+        "timed_out": timed_out,
         "started_at": started.isoformat(),
         "finished_at": datetime.now(timezone.utc).isoformat(),
         "output_tail": redact(output)[-TAIL_CHARS:],
@@ -71,7 +93,7 @@ def main():
     with open(STATUS_FILE, "w", encoding="utf-8") as f:
         json.dump(status, f, ensure_ascii=False, indent=2)
 
-    sys.exit(proc.returncode)
+    sys.exit(returncode)
 
 
 if __name__ == "__main__":
