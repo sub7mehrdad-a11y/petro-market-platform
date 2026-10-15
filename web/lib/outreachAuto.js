@@ -17,7 +17,7 @@ import fs from "fs";
 import path from "path";
 import nodemailer from "nodemailer";
 import { getCompanies, getEmailOutreachSent, getOutreachSentStatePath } from "@/lib/data";
-import { checkOutreachReady, enqueueCompanies, readQueue } from "@/lib/outreachQueue";
+import { checkOutreachReady, enqueueCompanies, readQueue, getHaltReason } from "@/lib/outreachQueue";
 import { isValidEmail } from "@/lib/outreachTemplate";
 import { buildOutreachReport } from "@/lib/outreachReport";
 import { buildReportXlsx, buildReportHtml, reportFileName } from "@/lib/outreachReportExport";
@@ -249,6 +249,8 @@ function reportBody(report, remaining) {
 
 export async function sendWeeklyReport() {
   const to = reportRecipient();
+  const halt = getHaltReason();
+  if (halt) throw new Error(halt);
   if (!to) throw new Error("OUTREACH_REPORT_TO تنظیم نشده");
   if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASSWORD) throw new Error("تنظیمات SMTP کامل نیست");
 

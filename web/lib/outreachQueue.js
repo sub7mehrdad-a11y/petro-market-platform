@@ -38,7 +38,21 @@ const REQUIRED_CATALOG_ENV = [
   "OUTREACH_CATALOG_URL_INDUSTRIAL",
 ];
 
+// قفل اضطراری مستقل از env: اگه data/outreach_halt.json با halted=true باشه، هیچ ایمیلی
+// (صف، ارسال خودکار، گزارش هفتگی) از این پروسه خارج نمی‌شه. برگشت: فایل رو پاک یا halted رو false کن.
+export function getHaltReason() {
+  try {
+    const f = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "outreach_halt.json"), "utf-8"));
+    if (f?.halted === true) return f.reason || "ارسال ایمیل متوقف شده است.";
+  } catch (err) {
+    if (err?.code !== "ENOENT") return "فایل قفل ارسال قابل خواندن نیست؛ برای احتیاط ارسال متوقف شد.";
+  }
+  return null;
+}
+
 export function checkOutreachReady() {
+  const halt = getHaltReason();
+  if (halt) return halt;
   // قبل از هر ارسالی مطمئن می‌شیم می‌تونیم لاگ رو بنویسیم — ایمیلی که رفته ولی ثبت نشده،
   // دفعه‌ی بعد دوباره برای همون شرکت می‌ره.
   if (process.env.NODE_ENV === "production" && !process.env.OUTREACH_STATE_DIR) {
@@ -187,6 +201,7 @@ export function queueAction(action, ids) {
 }
 
 function buildTransport() {
+  if (getHaltReason()) return null;
   const host = process.env.SMTP_HOST;
   const port = Number(process.env.SMTP_PORT || 587);
   const user = process.env.SMTP_USER;
@@ -315,7 +330,7 @@ export function startOutreachWorker() {
   const loop = async () => {
     let delayMs = IDLE_POLL_MS;
     try {
-      if (process.env.OUTREACH_SENDING_ENABLED === "true") {
+      if (process.env.OUTREACH_SENDING_ENABLED === "true" && !getHaltReason()) {
         const r = await processOne();
         delayMs = r.delayMs;
         // فقط وقتی واقعاً ارسالی انجام شده (یا صف بیکار شده) فایل رو بنویس — نه هر ۱۵ ثانیه.
