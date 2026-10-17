@@ -504,5 +504,323 @@
     "website": null,
     "source_file": "گزارش تفصیلی اطلس نمایشگاه‌های بین‌المللی تخصصی (۲۰۲۶ - ۲۰۲۷).docx",
     "id": "exhibition-48"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "ChemTech World Expo",
+    "focus": "مواد شیمیایی، پتروشیمی، دارو و صنایع فرایندی",
+    "location": "Mumbai, India",
+    "date": "سالانه، فوریه (دوره ۲۰۲۶: ۳ تا ۶ فوریه)",
+    "website": "www.chemtech-online.com",
+    "id": "exhibition-49"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "India Process Expo and Conference",
+    "focus": "تجهیزات و صنایع فرایندی (مرتبط با شیمیایی)",
+    "location": "Hyderabad, India",
+    "date": "دوره ۲۰۲۶: ۳۰ ژوئیه تا ۱ اوت",
+    "id": "exhibition-50"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "HPCI India",
+    "focus": "مواد اولیه آرایشی و بهداشتی",
+    "location": "Mumbai, India",
+    "date": "دوره ۲۰۲۷: ۲۷ و ۲۸ ژانویه",
+    "id": "exhibition-51"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Indusfood Ingredients",
+    "focus": "مواد اولیه غذایی",
+    "location": "New Delhi, India",
+    "date": "دوره ۲۰۲۷: ۶ تا ۸ ژانویه",
+    "id": "exhibition-52"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "IndusfoodTech",
+    "focus": "فناوری و تجهیزات فرآوری غذا",
+    "location": "New Delhi, India",
+    "date": "دوره ۲۰۲۷: ۶ تا ۸ ژانویه",
+    "id": "exhibition-53"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Vitafoods India",
+    "focus": "مواد اولیه غذایی، مکمل و تغذیه",
+    "location": "Mumbai, India",
+    "date": "دوره ۲۰۲۷: ۹ تا ۱۱ فوریه",
+    "id": "exhibition-54"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "AAHAR – International Food & Hospitality Fair",
+    "focus": "غذا و مهمان‌داری",
+    "location": "New Delhi, India",
+    "date": "سالانه، مارس (دوره ۴۰ام: ۱۰ تا ۱۴ مارس ۲۰۲۶)",
+    "id": "exhibition-55"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Food & Beverage Expo",
+    "focus": "غذا و نوشیدنی",
+    "location": "Chennai, India",
+    "date": "دوره ۲۰۲۷: ۲۴ تا ۲۶ ژانویه",
+    "id": "exhibition-56"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Food Confluence",
+    "focus": "غذا",
+    "location": "Bangalore, India",
+    "date": "دوره ۲۰۲۷: ۲۰ تا ۲۲ ژانویه",
+    "id": "exhibition-57"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "India's Premier Food & Dairy Processing Expo",
+    "focus": "فرآوری غذا و لبنیات",
+    "location": "Bangalore, India",
+    "date": "دوره ۲۰۲۷: ۲۸ تا ۳۰ آوریل",
+    "id": "exhibition-58"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Foodtech India",
+    "focus": "فناوری غذا",
+    "location": "India (شهر در منبع ذکر نشده)",
+    "date": "دوره ۲۰۲۶: ۲۱ تا ۲۳ اوت",
+    "id": "exhibition-59"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Bharat Food Expo",
+    "focus": "غذا",
+    "location": "Jaipur, India",
+    "date": "دوره ۲۰۲۶: ۲۸ تا ۳۰ نوامبر",
+    "id": "exhibition-60"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Bakers Technology Fair",
+    "focus": "نانوایی و شیرینی‌پزی",
+    "location": "Bangalore, India",
+    "date": "دوره ۲۰۲۷: ۲۰ تا ۲۲ ژانویه",
+    "id": "exhibition-61"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "CBEX – Chocolate & Bakery Expo",
+    "focus": "نانوایی و شیرینی‌پزی",
+    "location": "Mumbai, India",
+    "date": "دوره ۲۰۲۶: ۸ تا ۱۰ اکتبر",
+    "id": "exhibition-62"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Bakery and Commercial Kitchen Equipment",
+    "focus": "نانوایی و شیرینی‌پزی",
+    "location": "Bangalore, India",
+    "date": "دوره ۲۰۲۶: ۱۱ تا ۱۳ ژوئن",
+    "id": "exhibition-63"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Poultry India",
+    "focus": "خوراک دام و طیور",
+    "location": "Hyderabad, India",
+    "date": "سالانه، نوامبر (دوره ۲۰۲۶: ۲۵ تا ۲۷ نوامبر)",
+    "website": "www.poultryindia.co.in",
+    "id": "exhibition-64"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Poultry Expo India",
+    "focus": "خوراک دام و طیور",
+    "location": "Bangalore, India",
+    "date": "دوره ۲۰۲۷: ۲۱ تا ۲۳ مه",
+    "id": "exhibition-65"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "VIV Select India",
+    "focus": "خوراک دام و طیور و دام",
+    "location": "New Delhi, India",
+    "date": "نخستین دوره: ۲۲ تا ۲۴ آوریل ۲۰۲۶",
+    "id": "exhibition-66"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Agritech India",
+    "focus": "کشاورزی، دام و طیور",
+    "location": "Bangalore, India",
+    "date": "دوره ۲۰۲۷: ۲۱ تا ۲۳ اوت",
+    "id": "exhibition-67"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "CPHI India",
+    "focus": "دارو و تجهیزات پزشکی (مواد اولیه دارویی)",
+    "location": "Delhi-NCR, India",
+    "date": "سالانه، نوامبر (دوره ۲۰۲۶: ۲۳ تا ۲۵ نوامبر)",
+    "website": "www.cphi.com/india",
+    "id": "exhibition-68"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "PMEC India",
+    "focus": "تجهیزات و بسته‌بندی دارویی",
+    "location": "Delhi-NCR, India",
+    "date": "دوره ۲۰۲۶: ۲۴ تا ۲۶ نوامبر",
+    "id": "exhibition-69"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "iPHEX",
+    "focus": "دارو",
+    "location": "New Delhi, India",
+    "date": "دوره ۲۰۲۶ (دوازدهم): ۷ تا ۹ سپتامبر",
+    "id": "exhibition-70"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Medical Fair India",
+    "focus": "تجهیزات پزشکی و بیمارستانی (دیالیز)",
+    "location": "Mumbai / New Delhi, India",
+    "date": "دوره ۲۰۲۶ بمبئی: ۱۷ تا ۱۹ سپتامبر؛ دوره ۲۰۲۷ دهلی‌نو: ۱۳ تا ۱۵ مارس",
+    "id": "exhibition-71"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Medicall",
+    "focus": "تجهیزات بیمارستانی",
+    "location": "Mumbai, India",
+    "date": "دوره ژوئیه ۲۰۲۶ (جزئیات در منبع ناقص)",
+    "id": "exhibition-72"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "IFAT India",
+    "focus": "تصفیه آب و محیط زیست",
+    "location": "Mumbai, India",
+    "date": "دوره ۲۰۲۶: ۹ تا ۱۱ سپتامبر",
+    "id": "exhibition-73"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "AQUAEX India",
+    "focus": "تصفیه آب",
+    "location": "New Delhi, India",
+    "date": "دوره ۲۰۲۶: ۸ تا ۱۰ اکتبر",
+    "id": "exhibition-74"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "India Water Show / Water India",
+    "focus": "تصفیه آب",
+    "location": "Hyderabad, India",
+    "date": "دوره ۲۰۲۶: ۸ تا ۱۰ اکتبر",
+    "id": "exhibition-75"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "EAW Global Aqua Expo",
+    "focus": "تصفیه آب",
+    "location": "New Delhi, India",
+    "date": "دوره ۲۰۲۶: ۶ تا ۸ اوت",
+    "id": "exhibition-76"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Everything About Water Expo",
+    "focus": "تصفیه آب",
+    "location": "New Delhi, India",
+    "date": "دوره ۲۰۲۷: ۲۹ تا ۳۱ ژانویه",
+    "id": "exhibition-77"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "WaterEX / Delhi Water Expo",
+    "focus": "تصفیه آب",
+    "location": "New Delhi, India",
+    "date": "دوره ۲۰۲۷: ۲۳ تا ۲۵ سپتامبر",
+    "id": "exhibition-78"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "AQUAMATE India",
+    "focus": "تصفیه آب",
+    "location": "New Delhi, India",
+    "date": "دوره ۲۰۲۸: ۷ تا ۹ مارس",
+    "id": "exhibition-79"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Fire India",
+    "focus": "ایمنی و آتش‌نشانی (خاموش‌کننده‌ها)",
+    "location": "New Delhi, India",
+    "date": "دوره ۲۰۲۶: ۲۸ تا ۳۰ سپتامبر",
+    "id": "exhibition-80"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "Fire & Security India Expo (FSIE)",
+    "focus": "ایمنی و آتش‌نشانی",
+    "location": "Mumbai, India",
+    "date": "دوره ۲۰۲۶: ۳ تا ۵ سپتامبر",
+    "id": "exhibition-81"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "IFSEC India",
+    "focus": "ایمنی و آتش‌نشانی و امنیت",
+    "location": "New Delhi, India",
+    "date": "دوره ۲۰۲۶: ۳ تا ۵ دسامبر",
+    "id": "exhibition-82"
+  },
+  {
+    "country": "هند",
+    "source_file": "لیست_نمایشگاههای_تجاری_هند.xlsx",
+    "name": "FSD Expo",
+    "focus": "ایمنی و آتش‌نشانی",
+    "location": "New Delhi, India",
+    "date": "دوره ۲۰۲۷: ۱۰ و ۱۱ ژوئن",
+    "id": "exhibition-83"
   }
 ]
