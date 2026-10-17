@@ -5,6 +5,7 @@ import {
   getExhibitions, getNewsAnalysis, getFlatPriceRecords, getTradeMapForCountry,
 } from "@/lib/data";
 import TurkeyMap from "../../components/TurkeyMap";
+import InteractiveMapFrame from "../../components/InteractiveMapFrame";
 import CompetitorWatchFeed from "../../components/CompetitorWatchFeed";
 import ExportTrend from "../../components/ExportTrend";
 
@@ -172,8 +173,18 @@ export default async function CompetitorPage({ params }) {
         </Section>
       )}
 
-      {/* نقشه */}
-      {c.map && (
+      {/* نقشه‌ی تعاملی (کارخانه‌ها، بنادر، مرزها و فاصله‌ی جاده‌ای) — جایگزین نقشه‌ی ساده‌ی قدیمی */}
+      {c.interactive_map && (
+        <Section
+          title="نقشه‌ی تعاملی تولیدکنندگان و مسیرهای صادراتی"
+          subtitle="روی هر کارخانه کلیک کنید تا فاصله‌ی جاده‌ای آن تا بنادر، مرزها و مراکز مصرف دیده شود"
+        >
+          <InteractiveMapFrame src={c.interactive_map} title={`نقشه‌ی تعاملی ${c.name}`} />
+        </Section>
+      )}
+
+      {/* نقشه‌ی ساده‌ی قدیمی — فقط وقتی نقشه‌ی تعاملی نداریم */}
+      {c.map && !c.interactive_map && (
         <Section
           title="نقشه‌ی صنعتی و مسیرهای صادراتی"
           subtitle="موقعیت کارخانه‌های جوش شیرین، بنادر خروجی و گذرگاه‌های مرزی صادراتی"
