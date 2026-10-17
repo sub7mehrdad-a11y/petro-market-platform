@@ -6,6 +6,8 @@ import {
 } from "@/lib/data";
 import TurkeyMap from "../../components/TurkeyMap";
 import InteractiveMapFrame from "../../components/InteractiveMapFrame";
+import ProfileCharts from "../../components/ProfileCharts";
+import ProfileSections from "../../components/ProfileSections";
 import CompetitorWatchFeed from "../../components/CompetitorWatchFeed";
 import ExportTrend from "../../components/ExportTrend";
 
@@ -253,6 +255,9 @@ export default async function CompetitorPage({ params }) {
           ))}
         </div>
       </Section>
+
+      {/* نمودارهای عمومی پروفایل (از جدول‌های گزارش تحلیلی) */}
+      {c.charts && <ProfileCharts charts={c.charts} />}
 
       {/* نمودارها */}
       {isTurkey && (
@@ -511,6 +516,9 @@ export default async function CompetitorPage({ params }) {
         </Section>
       )}
 
+      {/* بخش‌های تفصیلی پروفایل (متن و جدول‌های گزارش تحلیلی) */}
+      {c.sections && <ProfileSections sections={c.sections} />}
+
       {/* جایگاه رقابتی */}
       {c.competitive_position && (
         <Section title="جایگاه رقابتی">
@@ -579,6 +587,17 @@ export default async function CompetitorPage({ params }) {
             مشاهده‌ی همه‌ی اخبار تحلیلی ←
           </Link>
         </Section>
+      )}
+
+      {c.sources && (
+        <details className="card p-5">
+          <summary className="cursor-pointer text-lg font-bold text-petrol-900">منابع گزارش</summary>
+          <ol className="mt-4 space-y-2 list-decimal pe-5">
+            {c.sources.map((s, i) => (
+              <li key={i} className="text-sm leading-7 text-slate-600">{s}</li>
+            ))}
+          </ol>
+        </details>
       )}
 
       {c.report_id && (
