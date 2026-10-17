@@ -581,6 +581,16 @@ export default async function CompetitorPage({ params }) {
         </Section>
       )}
 
+      {c.report_id && (
+        <Link
+          href={`/reports/${encodeURIComponent(c.report_id)}`}
+          className="block card p-4 hover:border-copper-500 transition-colors text-sm"
+        >
+          <span className="font-bold text-petrol-900">گزارش کامل پروفایل رقابتی {c.name}</span>
+          <span className="text-slate-500"> — متن کامل با نمودار و جدول، شامل ارقام و منابع ←</span>
+        </Link>
+      )}
+
       {c.source_docs && (
         <p className="text-xs text-slate-400">
           منبع داده‌های ساختاریافته‌ی این صفحه: {c.source_docs.join(" · ")}

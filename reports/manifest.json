@@ -406,5 +406,17 @@
     "size_bytes": 94537,
     "uploaded_at": "2026-10-04T06:36:22.910920+00:00",
     "parsed_path": "parsed/report-گزارش_بازار_روغن_حرارتی_ترموتک.json"
+  },
+  {
+    "id": "report-پروفایل_رقابتی_هند_جوش_شیرین",
+    "title": "پروفایل رقابتی هند در بازار جوش شیرین",
+    "country": "هند",
+    "product": "جوش شیرین",
+    "report_type": "detailed",
+    "original_filename": "پروفایل_رقابتی_هند_جوش_شیرین.html",
+    "relative_path": "هند/پروفایل_رقابتی_هند_جوش_شیرین.html",
+    "size_bytes": 86052,
+    "uploaded_at": "2026-10-17T21:00:36.838812+00:00",
+    "parsed_path": "parsed/report-پروفایل_رقابتی_هند_جوش_شیرین.json"
   }
 ]
