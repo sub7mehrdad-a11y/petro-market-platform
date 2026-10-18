@@ -600,14 +600,19 @@ export default async function CompetitorPage({ params }) {
         </details>
       )}
 
-      {c.report_id && (
-        <Link
-          href={`/reports/${encodeURIComponent(c.report_id)}`}
-          className="block card p-4 hover:border-copper-500 transition-colors text-sm"
-        >
-          <span className="font-bold text-petrol-900">گزارش کامل پروفایل رقابتی {c.name}</span>
-          <span className="text-slate-500"> — متن کامل با نمودار و جدول، شامل ارقام و منابع ←</span>
-        </Link>
+      {(c.report_links || (c.report_id ? [{ id: c.report_id, label: `گزارش کامل پروفایل رقابتی ${c.name}` }] : [])).length > 0 && (
+        <div className="grid gap-3 sm:grid-cols-3">
+          {(c.report_links || [{ id: c.report_id, label: `گزارش کامل پروفایل رقابتی ${c.name}` }]).map((r) => (
+            <Link
+              key={r.id}
+              href={`/reports/${encodeURIComponent(r.id)}`}
+              className="block card p-4 hover:border-copper-500 transition-colors text-sm"
+            >
+              <span className="font-bold text-petrol-900">{r.label}</span>
+              <span className="text-slate-500"> ←</span>
+            </Link>
+          ))}
+        </div>
       )}
 
       {c.source_docs && (

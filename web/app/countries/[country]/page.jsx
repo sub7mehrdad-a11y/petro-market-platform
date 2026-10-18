@@ -94,6 +94,13 @@ export default async function CountryPage({ params }) {
     realTrade?.imports_tons != null && econProfile?.population
       ? (realTrade.imports_tons * 1000) / econProfile.population
       : null;
+  // کشورهای تولیدکننده‌ای که آمار ITC‌شان صحیح است (مثل هند): تولید/ظرفیت/مصرف ظاهری از گزارش، بدون
+  // «اصلاح» واردات. مصرف سرانه از مصرف ظاهری (نه واردات) محاسبه می‌شه.
+  const supply = profile?.supply_stats || null;
+  const supplyPerCapitaKg =
+    supply?.apparent_consumption_tons != null && econProfile?.population
+      ? (supply.apparent_consumption_tons * 1000) / econProfile.population
+      : null;
   const unions = getUnionsForCountry(country);
   const sortedExhibitions = sortExhibitionsByDate(exhibitions);
   const smartReport = reports.find((r) => r.report_type === "summary");
@@ -155,6 +162,26 @@ export default async function CountryPage({ params }) {
             value: `${realTrade.apparent_consumption_min_tons.toLocaleString("fa-IR")}–${realTrade.apparent_consumption_max_tons.toLocaleString("fa-IR")}`,
             unit: "تن/سال",
           },
+          supply?.capacity_tons != null && {
+            label: "ظرفیت نصب‌شده‌ی تولید",
+            value: supply.capacity_tons.toLocaleString("fa-IR"),
+            unit: "تن/سال",
+          },
+          supply?.production_tons != null && {
+            label: `تولید داخلی (${supply.production_period})`,
+            value: supply.production_tons.toLocaleString("fa-IR"),
+            unit: "تن",
+          },
+          supply?.apparent_consumption_tons != null && {
+            label: "مصرف ظاهری داخلی (محاسباتی)",
+            value: supply.apparent_consumption_tons.toLocaleString("fa-IR"),
+            unit: "تن/سال",
+          },
+          supplyPerCapitaKg != null && {
+            label: "مصرف سرانه (بر پایه‌ی گزارش)",
+            value: supplyPerCapitaKg.toLocaleString("fa-IR", { maximumFractionDigits: 3 }),
+            unit: "کیلوگرم/نفر",
+          },
           trade?.export_trend?.cagr_pct != null && {
             label: `رشد سالانه‌ی صادرات (${String(trade.export_trend.first_year).replace(
               /\d/g,
@@ -172,14 +199,14 @@ export default async function CountryPage({ params }) {
           // عمومی می‌تونه به‌شدت متفاوت و گمراه‌کننده باشه (مثلاً برای ازبکستان
           // ۴۸,۱۶۹ تن تخمین سرانه در برابر ۱۳,۰۰۰ تن واقعی گزارش) — پس هروقت رقم
           // واقعی داریم، این تخمین عمومی اصلاً نشون داده نمی‌شه.
-          !realTrade && perCapita?.estimated_tons != null && {
+          !realTrade && !supply && perCapita?.estimated_tons != null && {
             label: perCapita.is_population_based
               ? `برآورد بازار مصرف (${TIER_FA[perCapita.tier] || "بر پایه‌ی جمعیت"})`
               : "برآورد بازار مصرف سالانه",
             value: perCapita.estimated_tons.toLocaleString("fa-IR"),
             unit: "تن/سال",
           },
-          !realTrade && perCapita && {
+          !realTrade && !supply && perCapita && {
             label: `مصرف سرانه${perCapita.is_population_based ? ` (${TIER_FA[perCapita.tier] || "میانگین جهانی"})` : perCapita.is_estimated ? " (برآوردی)" : ""}`,
             value: perCapita.kg_per_capita.toLocaleString("fa-IR"),
             unit: "کیلوگرم/نفر",
@@ -199,6 +226,10 @@ export default async function CountryPage({ params }) {
           },
         ].filter(Boolean)}
       />
+
+      {supply?.note && (
+        <p className="text-xs text-slate-500 leading-6 -mt-4">{supply.note}</p>
+      )}
 
       <CountryEconomicProfile profile={econProfile} />
 

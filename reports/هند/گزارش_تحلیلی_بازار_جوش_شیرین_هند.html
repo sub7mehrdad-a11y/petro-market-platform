@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>گزارش جامع تحلیلی بازار واردات جوش شیرین کشور هند</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(24px,3.6vw,36px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 66ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(4, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:700px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  :root[data-theme="dark"] h3, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h3{ color: var(--petrol-100); } }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 76ch; }
+  strong{ color: var(--ink); font-weight:700; }
+  ul.plain{ margin:0 0 12px; padding-inline-start:0; list-style:none; }
+  ul.plain li{ position:relative; padding-inline-end:18px; margin-bottom:8px; color:var(--ink-soft); max-width:76ch; }
+  ul.plain li::before{ content:'•'; position:absolute; right:0; top:0; color:var(--copper-500); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout p + p{ margin-top:8px; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  :root[data-theme="dark"] .card .tag, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag{ color: var(--copper-400); } }
+  .card .tag.bad{ background: var(--bad-bg); color: var(--bad); }
+  .card .tag.good{ background: var(--good-bg); color: var(--good); }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:14.5px; color:var(--ink); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); vertical-align:top; }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); white-space:nowrap; }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  figure{ margin: 16px 0; }
+  figure img{ border-radius: 12px; border: 1px solid var(--line); display:block; box-shadow: var(--card-shadow); width:100%; }
+  figcaption{ font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+
+  .pill-row{ display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0; }
+  .pill{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 12px;
+    padding: 12px 20px; min-width: 120px; box-shadow: var(--card-shadow); flex:1;
+  }
+  .pill .p{ font-family:"Fira Code"; font-size:20px; font-weight:700; color:var(--petrol-700); }
+  :root[data-theme="dark"] .pill .p, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .pill .p{ color: var(--copper-400); } }
+  .pill .p.bad{ color: var(--bad); }
+  .pill .p.good{ color: var(--good); }
+  .pill .n{ font-size:12.5px; color:var(--muted); margin-top:2px; text-align:center; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0 0 8px; max-width:none; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+
+  p.src{ font-size:12.5px; color:var(--muted); margin-top:-4px; }
+  .t-wrap tbody td:first-child{ white-space:normal; min-width:170px; }
+  .t-wrap table{ min-width: 820px; }
+  ul.src-list li{ font-size:13.5px; margin-bottom:6px; }
+  .cards.three{ grid-template-columns: repeat(2,1fr); }
+
+  .tcap{ font-weight:800; font-size:15px; color:var(--petrol-700); margin:26px 0 8px; }
+  .t-wrap tbody td:first-child{ white-space:normal; min-width:150px; }
+  .t-wrap table{ min-width: 640px; }
+  td.nf{ color:var(--muted); font-style:italic; }
+  ul.pts{ margin:10px 0 14px; padding-inline-start:22px; }
+  ul.pts li{ margin-bottom:8px; max-width:none; }
+  p.sup-h{ margin:18px 0 4px; font-size:16px; }
+  p.sup-d{ margin:0 0 10px; padding-inline-start:14px; border-inline-start:3px solid var(--copper-300, #EAA659); color:var(--ink-soft); }
+  ol.srcs{ list-style:none; padding:0; margin:0; }
+  ol.srcs li{ position:relative; padding-inline-start:44px; margin-bottom:9px; font-size:14px; color:var(--ink-soft); max-width:none; }
+  ol.srcs li .n{ position:absolute; right:0; top:0; font-family:"Fira Code"; font-weight:600; font-size:12px;
+    background:var(--petrol-50); color:var(--petrol-700); border:1px solid var(--line-soft); border-radius:7px; padding:1px 8px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>گزارش جامع تحلیلی بازار واردات جوش شیرین کشور هند</h1>
+    <p class="lead">(ارزیابی واردات هند، قیمت‌های مبدأ و داخلی، هزینه تمام‌شده در بندر نهاوا شِوا و رقابت‌پذیری «جوش شیرین پارس»)</p>
+    <div class="meta"><span>تاریخ تنظیم: ۱۴ اکتبر ۲۰۲۶ (۲۲ مهر ۱۴۰۵)</span></div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۴۲٬۴۵۵ <small>تن</small></div><div class="l">واردات هند در ۲۰۲۵ — ۱۳٫۸۸ میلیون دلار (میانگین ۳۲۷ دلار در تن، CIF)</div></div>
+      <div class="kpi"><div class="v">۳۸٫۱ <small>٪</small></div><div class="l">سهم چین از ارزش واردات (۲۲۲ دلار در تن)؛ تایلند ۲۳٫۲٪</div></div>
+      <div class="kpi"><div class="v">۲۸۴ تا ۳۳۵ <small>$/تن</small></div><div class="l">قیمت تمام‌شده‌ی جوش شیرین پارس در بندر نهاوا شِوا (FOB ۲۳۰ تا ۲۷۰)</div></div>
+      <div class="kpi"><div class="v">۵۱۰ <small>تن</small></div><div class="l">واردات هند از ایران در ۲۰۲۵ (حدود ۱٪) — عمدتاً از مسیر تاجر اماراتی</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section id="s1">
+<div class="sec-head"><span class="sec-num">۱</span><h2>خلاصه مدیریتی</h2></div>
+<p>این گزارش بازار واردات جوش شیرین (بی‌کربنات سدیم) هند را از نظر حجم، ساختار تأمین، قیمت، تعرفه، مقررات و هزینه تمام‌شده محصول ایرانی بررسی می‌کند. نتیجه کلی آن است که بازار واردات هند در برابر ظرفیت داخلی اشباع است و ورود محصول ایرانی در شرایط کنونی بیش از قیمت، به دسترسی لجستیکی، کانال پرداخت و ریسک تحریمی وابسته است.</p>
+<ul class="pts">
+<li>حجم بازار واردات: در سال ۲۰۲۵ هند ۴۲٬۴۵۵ تن به ارزش ۱۳٫۸۸ میلیون دلار وارد کرده است؛ میانگین ارزش واحد ۳۲۷ دلار در تن بر مبنای CIF بوده است. رقم سال ۲۰۲۴ (WITS) برابر ۴۴٬۰۵۵ تن و ۱۳٫۸۸ میلیون دلار است.</li>
+<li>هند خالص صادرکننده است: در سال مالی ۲۰۲۵-۲۶ واردات ۴۳٬۳۴۷ تن و صادرات ۴۶٬۸۲۰ تن گزارش شده است. ظرفیت اسمی صنعت ۴۹۰ هزار تن (مارس ۲۰۲۵) و تولید ۳۶۰ هزار تن در سال مالی ۲۰۲۴-۲۵ است.</li>
+<li>ساختار تأمین: چین با ۳۸٫۱ درصد ارزش و ۲۲۲ دلار در تن، تایلند با ۲۳٫۲ درصد و ۳۴۷ دلار در تن (تعرفه صفر)، و بریتانیا با ۱۱٫۶ درصد (گرید ویژه) پیشتازند. سهم ایران در ۲۰۲۵ برابر ۵۱۰ تن (حدود یک درصد) بوده است.</li>
+<li>رقیب مهم: شرکت Solvay هم از تایلند و هم از بلغارستان تأمین می‌کند؛ جابه‌جایی واردات از بلغارستان به تایلند در ۲۰۲۵ احتمالاً به‌دلیل تعرفه صفر (آسه‌آن–هند) است.</li>
+<li>قیمت تمام‌شده محصول ایرانی با FOB ‏۲۳۰ تا ۲۷۰ دلار در بندر نهاوا شِوا (بدون IGST بازیافتنی) ۲۸۴ تا ۳۳۵ دلار در تن برآورد می‌شود؛ بالاتر از چین (۲۵۹ تا ۲۹۲) و پایین‌تر از تایلند (حدود ۳۶۵). نقطه سر‌به‌سر با چین FOB حدود ۲۰۲ تا ۲۳۶ دلار است.</li>
+<li>در برابر قیمت تحویلی تولیدکنندگان داخلی در حیدرآباد (برآورد ۳۲۵ تا ۳۴۵ دلار)، نقطه سر‌به‌سر FOB حدود ۲۴۶ تا ۲۶۴ دلار است؛ مزیت قیمتی قابل‌توجهی وجود ندارد.</li>
+<li>مانع اصلی دسترسی است: تنگه هرمز از حدود ۲۸ فوریه ۲۰۲۶ عملاً بسته گزارش شده، برای مسیر کانتینری ایران–هند در اکتبر ۲۰۲۶ خط یا نرخ قابل رزرو مستندی یافت نشد، و ریسک تحریمی پرداخت و حمل بالاست.</li>
+<li>بخش بزرگ مصرف صنعتی برق (مناقصه ۴۰ هزار تنی NTPC) شرط ۱۰۰ درصد تولید داخلی دارد و برای واردکننده بسته است.</li>
+</ul>
+</section>
+<section id="s2">
+<div class="sec-head"><span class="sec-num">۲</span><h2>آمار واردات و سهم بازار مبادی تأمین</h2></div>
+<h3><bdi>۲٫۱</bdi> حجم و ارزش واردات</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>منبع / سال</th><th>وزن واردات (تن)</th><th>ارزش (میلیون دلار)</th><th>قیمت واحد CIF (دلار/تن)</th></tr></thead>
+<tbody>
+<tr><td>WITS — ۲۰۲۴</td><td class="num-cell">۴۴٬۰۵۵</td><td class="num-cell">۱۳٫۸۸</td><td class="num-cell">۳۱۵</td></tr>
+<tr><td><strong>Trade Map — ۲۰۲۵</strong></td><td class="num-cell"><strong>۴۲٬۴۵۵</strong></td><td class="num-cell"><strong>۱۳٫۸۸</strong></td><td class="num-cell"><strong>۳۲۷</strong></td></tr>
+<tr><td>AMAI — سال مالی ۲۰۲۴-۲۵</td><td>حدود ۴۴٬۰۰۰ (بولتن: ۴۵٬۸۷۴)</td><td class="nf">—</td><td class="nf">—</td></tr>
+<tr><td>AMAI — سال مالی ۲۰۲۵-۲۶</td><td class="num-cell">۴۳٬۳۴۷</td><td class="nf">—</td><td class="nf">—</td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:270px"><canvas id="chImp"></canvas></div><div class="cap">وزن واردات هند به تفکیک منبع آماری (تن)؛ AMAI سال مالی (آوریل–مارس) و Trade Map/WITS سال تقویمی‌اند و جمع‌پذیر نیستند</div></div>
+<p><em>آمار واردات هند بر مبنای CIF ثبت می‌شود؛ بنابراین ارزش واحد شامل کرایه و بیمه است. ارقام AMAI سال مالی (آوریل تا مارس) و ارقام Trade Map/WITS سال تقویمی هستند و جمع یا مقایسه مستقیم ندارند.</em></p>
+<h3><bdi>۲٫۲</bdi> تأمین‌کنندگان در سال تقویمی ۲۰۲۵ (Trade Map)</h3>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>مبدأ</th><th>سهم از ارزش</th><th>وزن (تن)</th><th>قیمت واحد (دلار/تن)</th><th>ملاحظه</th></tr></thead>
+<tbody>
+<tr><td>چین</td><td class="num-cell">۳۸٫۱٪</td><td class="num-cell">۲۳٬۸۲۰</td><td class="num-cell">۲۲۲</td><td>رشد حدود ۱۷۸٪ در سال</td></tr>
+<tr><td>تایلند</td><td class="num-cell">۲۳٫۲٪</td><td class="num-cell">۹٬۲۷۳</td><td class="num-cell">۳۴۷</td><td>تعرفه صفر</td></tr>
+<tr><td>بریتانیا</td><td class="num-cell">۱۱٫۶٪</td><td class="nf">—</td><td class="num-cell">حدود ۹۹۴</td><td>گرید ویژه</td></tr>
+<tr class="hl"><td>ایران</td><td class="num-cell">۱٫۰٪</td><td class="num-cell">۵۱۰</td><td class="num-cell">حدود ۲۸۰</td><td>عمدتاً از مسیر تاجر اماراتی</td></tr>
+<tr class="hl"><td><strong>جمع کل</strong></td><td class="num-cell"><strong>۱۰۰٪</strong></td><td class="num-cell"><strong>۴۲٬۴۵۵</strong></td><td class="num-cell"><strong>۳۲۷</strong></td><td></td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:300px"><canvas id="chShare"></canvas></div><div class="cap">سهم تأمین‌کنندگان از ارزش واردات ۲۰۲۵ (٪)؛ «سایر» تفاضل تا ۱۰۰٪ است (محاسبه‌ی خود نمودار، نه رقم گزارش)</div></div>
+<h3><bdi>۲٫۳</bdi> تأمین‌کنندگان در سال تقویمی ۲۰۲۴ (WITS) و روند</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>مبدأ</th><th>وزن ۲۰۲۴ (تن)</th><th>قیمت واحد (دلار/تن)</th><th>روند تا ۲۰۲۵</th></tr></thead>
+<tbody>
+<tr><td>چین</td><td class="num-cell">۱۵٬۵۰۹</td><td class="num-cell">۲۵۳</td><td>صعودی</td></tr>
+<tr><td>بلغارستان</td><td class="num-cell">۱۱٬۰۰۱</td><td class="num-cell">۲۷۶</td><td>نزولی شدید</td></tr>
+<tr><td>روسیه</td><td class="num-cell">۵٬۳۹۳</td><td class="num-cell">۲۳۶</td><td>نزولی شدید</td></tr>
+<tr><td>ترکیه</td><td class="num-cell">۴٬۲۰۴</td><td class="nf">—</td><td>تقریباً خارج‌شده </td></tr>
+<tr><td>تایلند</td><td class="num-cell">۲٬۵۴۵</td><td class="num-cell">۴۹۷</td><td>صعودی؛ کاهش قیمت واحد</td></tr>
+<tr><td>سنگاپور</td><td class="num-cell">۲٬۲۷۷</td><td class="num-cell">۳۴۲</td><td class="nf">—</td></tr>
+<tr><td>بریتانیا</td><td class="num-cell">۱٬۳۱۲</td><td class="nf">—</td><td class="nf">—</td></tr>
+<tr><td>امارات</td><td class="num-cell">۸۸۴</td><td class="nf">—</td><td class="nf">—</td></tr>
+<tr class="hl"><td>ایران</td><td class="num-cell">۴۲۱</td><td class="num-cell">۲۰۰</td><td>مبهم (بند زیر)</td></tr>
+<tr class="hl"><td><strong>جمع کل</strong></td><td class="num-cell"><strong>۴۴٬۰۵۵</strong></td><td class="num-cell"><strong>۳۱۵</strong></td><td></td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:300px"><canvas id="chSup24"></canvas></div><div class="cap">وزن واردات ۲۰۲۴ به تفکیک مبدأ (تن؛ WITS)</div></div>
+<ul class="pts">
+<li>چین و تایلند جایگزین بلغارستان، روسیه و ترکیه شده‌اند؛ ایران ورودی کوچک و ناپایدار دارد.</li>
+<li>وضعیت ایران: WITS مقدار ۱٬۰۶۶ تن (۳۰۶ هزار دلار) در ۲۰۲۳ و ۴۲۱ تن (۸۴ هزار دلار) در ۲۰۲۴ را نشان می‌دهد؛ سری Trade Map برای ۲۰۲۵ مقدار ۵۱۰ تن دارد. </li>
+<li>شواهد محموله‌ای (ImportGenius): پنج محموله با مبدأ ایران از ۸ فوریه تا ۶ مه ۲۰۲۵ جمعاً ۳۳۴ تن (هر کانتینر ۲۸ تن) با فروشنده یک شرکت تجاری اماراتی و گرید «مصارف صنعتی» ثبت شده است. نام محصول «سجی خار» است که ممکن است کربنات سدیم را هم دربر بگیرد، بنابراین بی‌کربنات بودن همه این تناژ قطعی نیست.</li>
+<li>در آمار گمرک ایران (سال ۱۴۰۴) صادرات ۵۳٬۶۱۷ تن (میانگین حدود ۱۸۱ دلار FOB) ثبت شده و هیچ محموله‌ای به مقصد هند نیست؛ این با عبور کالا از طریق تاجر امارات سازگار است (اظهارنامه صادراتی مقصد امارات یا کشور دیگر).</li>
+</ul>
+</section>
+<section id="s3">
+<div class="sec-head"><span class="sec-num">۳</span><h2>تولید داخلی و رقبای بومی</h2></div>
+<p>مصرف داخلی سال مالی ۲۰۲۲-۲۳ حدود ۲۷۲٫۵ و ۲۰۲۳-۲۴ حدود ۳۱۲٫۴ هزار تن (برآورد AMAI) است. جمع تولید و واردات منهای صادرات سال مالی ۲۰۲۴-۲۵ برابر ۳۷۳ هزار تن (۳۶۰+۴۴−۳۱) تخمین مصرف ظاهری را نشان می‌دهد؛ سهم واردات از آن حدود ۱۲ درصد است (محاسبه تحلیلی). سهم بخش‌های مصرف در ۲۰۲۲-۲۳ (AMAI): غذا و نانوایی ۳۶٪، صنعتی با تصفیه دود نیروگاه ۱۹٪، خوراک دام ۱۷٪، درمانی ۹٪، سایر ۱۹٪.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>شرکت</th><th>نشانه / ظرفیت</th></tr></thead>
+<tbody>
+<tr><td>Tata Chemicals</td><td>Sodakarb (غذایی)، Alkakarb (خوراک)، Speckarb (صنعتی)، Medikarb (دارویی)؛ از حدود ۱۴۰ به حدود ۲۹۰ هزار تن</td></tr>
+<tr><td>GHCL</td><td>برند LION؛ ۱۲۰ هزار تن تا ۱۴۰ هزار تن (صفحه محصول)</td></tr>
+<tr><td>Nirma</td><td>۴۶۰ تن در روز (کالاتلاو و پوربندر)</td></tr>
+<tr><td>DCW</td><td>محصول در فهرست رسمی موجود است</td></tr>
+</tbody>
+</table></div>
+<p><strong>مناقصات صنعتی:</strong> نیروگاه NTPC دادری دو مناقصه ۴۰٬۰۰۰ تنی در بازار الکترونیک دولتی (GeM) منتشر کرده است (پایان ژانویه و ۲۱ اکتبر ۲۰۲۶). مناقصه اکتبر حداقل ۱۰۰٪ محتوای داخلی لازم دارد </p>
+</section>
+<section id="s4">
+<div class="sec-head"><span class="sec-num">۴</span><h2>بررسی قیمت‌ها</h2></div>
+<h3><bdi>۴٫۱</bdi> قیمت واردات (ارزش واحد گمرکی)</h3>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>مبدأ / دوره</th><th>قیمت واقعی ورود به هند (دلار/تن، CIF)</th><th>ملاحظه</th></tr></thead>
+<tbody>
+<tr><td>کل واردات ۲۰۲۴ (WITS)</td><td class="num-cell">۳۱۵</td><td></td></tr>
+<tr><td>کل واردات ۲۰۲۵ (Trade Map)</td><td class="num-cell">۳۲۷</td><td></td></tr>
+<tr><td>چین ۲۰۲۴ / ۲۰۲۵</td><td class="num-cell">۲۵۳ / ۲۲۲</td><td>قیمت FOB معادل حدود ۱۸۰ تا ۱۹۰ (برآورد)</td></tr>
+<tr><td>تایلند ۲۰۲۴ / ۲۰۲۵</td><td class="num-cell">۴۹۷ / ۳۴۷</td><td>تغییر ترکیب گرید (استنتاج)</td></tr>
+<tr><td>بلغارستان ۲۰۲۴</td><td class="num-cell">۲۷۶</td><td></td></tr>
+<tr><td>روسیه ۲۰۲۴</td><td class="num-cell">۲۳۶</td><td></td></tr>
+<tr class="hl"><td>ایران ۲۰۲۳ / ۲۰۲۴ / ۲۰۲۵</td><td class="num-cell">۲۸۷ / ۲۰۰ / حدود ۲۸۰</td><td></td></tr>
+<tr><td>میانگین AMAI، ژانویه / آوریل ۲۰۲۶</td><td class="num-cell">۳۶۳ / ۳۰۳</td><td></td></tr>
+<tr><td><strong>مرجع جوش شیرین پارس (FOB)</strong></td><td class="num-cell"><strong>۲۳۰ تا ۲۷۰</strong></td><td><strong>مبنای محاسباتی شرکت</strong></td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:280px"><canvas id="chPrice"></canvas></div><div class="cap">ارزش واحد واردات (CIF، دلار در تن) — ایران ۲۰۲۴ و ۲۰۲۵ طبق ردیف جدول</div></div>
+<h3><bdi>۴٫۲</bdi> قیمت‌نامه رسمی تولیدکنندگان داخلی (از ۱ ژوئن ۲۰۲۶، روپیه در تن، تحویل از کارخانه، بدون GST)</h3>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>گرید</th><th>Tata — بازارهای منطقه‌ای</th><th>Tata — سایر هند</th><th>GHCL — بنگال غربی/تامیل‌نادو</th><th>GHCL — گجرات و سایر هند</th></tr></thead>
+<tbody>
+<tr><td>فنی</td><td class="num-cell">۲۷٬۱۰۰</td><td class="num-cell">۲۷٬۶۰۰</td><td class="num-cell">۲۶٬۵۰۰</td><td class="num-cell">۲۷٬۵۰۰</td></tr>
+<tr><td>خوراک دام</td><td class="num-cell">۲۷٬۴۰۰</td><td class="num-cell">۲۷٬۹۰۰</td><td class="num-cell">۲۶٬۸۰۰</td><td class="num-cell">۲۷٬۸۰۰</td></tr>
+<tr><td>غذایی / تصفیه‌شده</td><td class="num-cell">۲۸٬۳۰۰</td><td class="num-cell">۲۸٬۸۰۰</td><td class="num-cell">۲۷٬۰۰۰</td><td class="num-cell">۲۸٬۰۰۰</td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:300px"><canvas id="chDom"></canvas></div><div class="cap">قیمت‌نامه تولیدکنندگان داخلی از ۱ ژوئن ۲۰۲۶ (روپیه در تن، تحویل از کارخانه، بدون GST)</div></div>
+<p><em>معادل دلاری با نرخ ۹۶ روپیه: ۲۷۶ تا ۳۰۰ دلار در تن. قیمت‌نامه نوامبر ۲۰۲۵ تاتا (فنی، منطقه‌ای) ۲۵٬۶۰۰ روپیه بوده و افزایش ژوئن حدود ۱٬۵۰۰ روپیه (۵٫۹٪) است.</em></p>
+</section>
+<section id="s5">
+<div class="sec-head"><span class="sec-num">۵</span><h2>دو سناریو</h2></div>
+<div class="table-wrap"><table>
+<thead><tr><th>مولفه</th><th>سناریو الف: مسیر باز</th><th>سناریو ب: مسیر بسته (وضعیت کنونی)</th></tr></thead>
+<tbody>
+<tr><td>شرط تحقق</td><td>بازگشایی حمل از خلیج فارس، کانال پرداخت پذیرفته‌شده و پذیرش بار در بندر هند</td><td>بدون تغییر</td></tr>
+<tr><td>قیمت رقابتی</td><td>مطابق بخش ۶؛ در FOB حدود ۲۵۰ هم‌سطح تولید داخلی و گران‌تر از چین</td><td>مشخص نیست؛ هزینه جنگی، بیمه و کرایه بالاتر</td></tr>
+<tr><td>حجم ممکن</td><td>بر پایه سابقه ثبت‌شده (۴۲۱ تا ۱٬۰۶۶ تن در سال)؛ نه پیش‌بینی قطعی</td><td>تا رفع موانع به احتمال زیاد صفر</td></tr>
+<tr><td>راهبرد</td><td>گرید فنی/خوراک دام و بازارهای جنوب و شرق هند</td><td>تمرکز بر بازارهای دیگر</td></tr>
+</tbody>
+</table></div>
+</section>
+<section id="s6">
+<div class="sec-head"><span class="sec-num">۶</span><h2>تخمین قیمت تمام‌شده (CIF و واردات) «جوش شیرین پارس»</h2></div>
+<ul class="pts">
+<li>مبنای FOB: ۲۳۰، ۲۵۰ و ۲۷۰ دلار در تن؛ کانتینر ۲۰ فوتی با بار خالص ۲۵ تن (محموله‌های ثبت‌شده ایران ۲۸ تن در کانتینر؛ با ۲۸ تن هزینه هر تن ۳ تا ۷ دلار کمتر می‌شود).</li>
+<li>کرایه دریایی فرضی ۴۵۰ تا ۵۵۰ دلار در کانتینر (بیمه ۰٫۳٪؛ برآورد، بدون نرخ پیشنهادی واقعی)؛ نرخ ارز ۹۶ روپیه.</li>
+<li>هزینه‌های بندری و ترخیص حدود ۴۴٬۰۰۰ روپیه در کانتینر و حمل داخلی تا حیدرآباد حدود ۴۸٬۰۰۰ روپیه (فرض).</li>
+<li>حقوق غیرقابل‌استرداد ۸٫۲۵٪ بر CIF؛ IGST ‏۱۸٪ برای واردکننده ثبت‌شده قابل‌استرداد است و در مقایسه لحاظ نشده است.</li>
+</ul>
+<div class="table-wrap"><table>
+<thead><tr><th>سناریو</th><th>CIF (دلار/تن)</th><th>در بندر نهاوا شِوا پس از حقوق و هزینه بندری</th><th>تحویلی حیدرآباد</th></tr></thead>
+<tbody>
+<tr><td class="num-cell">FOB ۲۳۰</td><td class="num-cell">۲۴۹ تا ۲۵۳</td><td class="num-cell">۲۸۸ تا ۲۹۲</td><td class="num-cell">۳۰۸ تا ۳۱۲</td></tr>
+<tr><td><strong>FOB ۲۵۰ (مرجع)</strong></td><td class="num-cell"><strong>۲۶۹ تا ۲۷۳</strong></td><td class="num-cell"><strong>۳۰۹ تا ۳۱۴</strong></td><td class="num-cell"><strong>۳۲۹ تا ۳۳۴</strong></td></tr>
+<tr><td class="num-cell">FOB ۲۷۰</td><td class="num-cell">۲۸۹ تا ۲۹۳</td><td class="num-cell">۳۳۱ تا ۳۳۵</td><td class="num-cell">۳۵۱ تا ۳۵۵</td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:300px"><canvas id="chLanded"></canvas></div><div class="cap">قیمت تمام‌شده‌ی جوش شیرین پارس (دلار در تن؛ میانه‌ی بازه‌ی جدول)</div></div>
+<p><em>سناریو تنش (نمونه تحلیلی): کرایه ۱٬۵۰۰ دلار در کانتینر و بیمه جنگی ۱٪ با FOB ۲۵۰ به CIF حدود ۳۱۳ و قیمت در بندر حدود ۳۵۷ دلار می‌رسد؛ این نرخ‌ها مستند نیستند. تغییر هر ۱۰۰ دلار کرایه در کانتینر حدود ۴ دلار در تن اثر دارد.</em></p>
+</section>
+<section id="s7">
+<div class="sec-head"><span class="sec-num">۷</span><h2>تعرفه، مالیات و الزامات مقرراتی</h2></div>
+<div class="table-wrap"><table>
+<thead><tr><th>مورد</th><th>وضعیت</th><th>ملاحظه</th></tr></thead>
+<tbody>
+<tr><td>حقوق گمرکی پایه (BCD)</td><td>۷٫۵٪ برای ایران </td><td>بدون ترجیح؛ برای تایلند ۰٪ (تجارت آزاد آسه‌آن)</td></tr>
+<tr><td>عوارض اجتماعی (SWS)</td><td>۱۰٪ حقوق گمرکی (۰٫۷۵٪ از ارزش)</td><td>قاعده عمومی؛ استثنای کالا احراز نشد</td></tr>
+<tr><td>حقوق غیرقابل‌استرداد</td><td>۸٫۲۵٪ از CIF</td><td>برآورد؛ نرخنامه رسمی CBIC/ICEGATE تأیید نشد</td></tr>
+<tr><td>IGST</td><td>۱۸٪ بر (CIF + حقوق)</td><td>قابل‌استرداد (اعتبار مالیاتی ورودی)؛ ردیف رسمی تأیید نشد</td></tr>
+<tr><td>ضددامپینگ</td><td>ندارد (بی‌کربنات)</td><td>ADD سودااش HS ۲۸۳۶۲۰ از ترکیه، روسیه، آمریکا و ایران (توصیه ۸۸ دلار در تن برای ایران؛ اطلاعیه اجرایی تأیید نشد)</td></tr>
+<tr><td>اقدام حفاظتی</td><td>ندارد (بی‌کربنات)</td><td>تحقیق حفاظتی سودااش از ۱۶ مارس ۲۰۲۶ ادامه دارد</td></tr>
+<tr><td>استاندارد</td><td>IS ۲۱۲۴:۲۰۲۳ (BIS)</td><td>گواهی اختیاری؛ در فهرست QCO مواد شیمیایی نیست</td></tr>
+</tbody>
+</table></div>
+<h3>الزامات به تفکیک کاربرد:</h3>
+<ul class="pts">
+<li>غذایی: کد واردکننده-صادرکننده (IEC)، مجوز واردات FSSAI، شناسه افزودنی INS ۵۰۰(ii) و اظهار از طریق ICEGATE به دفتر بازرسی واردات غذا (FICS)؛ الزام ثبت کارخانه خارجی برای این محصول یافت نشد.</li>
+<li>خوراک دام: فهرست‌های مصوب افزودنی وزارت دامداری (DAHD)؛ مدرک الزام‌آور اختصاصی در ۲۰۲۶ یافت نشد.</li>
+<li>دارویی: ثبت محصول و سایت و مجوز واردات از CDSCO از طریق نماینده مجاز؛ تکلیف به نوع محصول بستگی دارد.</li>
+<li>صنعتی: اظهار مصرف غیرغذایی و مدارک معمول؛ SDS و COA معمولاً شرط قرارداد است.</li>
+</ul>
+<p><strong>احتیاط:</strong> تولیدکنندگان سودااش (مانند GHCL و DCW) همان شرکت‌هایی هستند که بی‌کربنات هم می‌سازند؛ بنابراین احتمال شکایت ضددامپینگ آینده علیه بی‌کربنات منتفی نیست (استنتاج).</p>
+</section>
+<section id="s8">
+<div class="sec-head"><span class="sec-num">۸</span><h2>جدول مقایسه‌ای جامع بازار</h2></div>
+<div class="table-wrap"><table>
+<thead><tr><th>تأمین‌کننده</th><th>قیمت مبدأ (دلار/تن)</th><th>قیمت در بندر هند (پس از حقوق، بدون IGST)</th><th>سهم بازار ۲۰۲۵</th></tr></thead>
+<tbody>
+<tr><td>چین</td><td>CIF اظهاری ۲۲۲ (و ۲۵۳ در ۲۰۲۴)</td><td class="num-cell">۲۵۹ تا ۲۹۲</td><td class="num-cell">۳۸٫۱٪</td></tr>
+<tr><td>تایلند (Solvay)</td><td>CIF اظهاری ۳۴۷</td><td>حدود ۳۶۵ (تعرفه صفر)</td><td class="num-cell">۲۳٫۲٪</td></tr>
+<tr><td>بریتانیا</td><td class="num-cell">CIF حدود ۹۹۴</td><td>گرید ویژه؛ قابل‌مقایسه نیست</td><td class="num-cell">۱۱٫۶٪</td></tr>
+<tr class="hl"><td><strong>ایران — جوش شیرین پارس</strong></td><td class="num-cell"><strong>FOB ۲۳۰ تا ۲۷۰</strong></td><td class="num-cell"><strong>۲۸۸ تا ۳۳۵</strong></td><td><strong>۱٫۰٪ (نمونه محموله‌ای)</strong></td></tr>
+<tr><td>تولیدکنندگان داخلی</td><td>قیمت کارخانه ۲۷۶ تا ۳۰۰</td><td>تحویلی حیدرآباد (برآورد) ۳۲۵ تا ۳۴۵</td><td class="nf">—</td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:280px"><canvas id="chCmp"></canvas></div><div class="cap">قیمت در بندر هند پس از حقوق، بدون IGST (دلار در تن؛ میانه‌ی بازه‌ی جدول)</div></div>
+<ul class="pts">
+<li>نسبت به چین: محصول ایرانی در همه سناریوهای FOB حدود ۲۹ تا ۷۶ دلار گران‌تر است؛ سر‌به‌سر در FOB حدود ۲۰۲ تا ۲۰۶ (نسبت به CIF ۲۲۲) و ۲۳۲ تا ۲۳۶ (نسبت به ۲۵۳).</li>
+<li>نسبت به تایلند: ایران در بندر حدود ۳۰ تا ۷۷ دلار ارزان‌تر است، </li>
+<li>نسبت به تولیدکنندگان داخلی: در FOB حدود ۲۵۰ هم‌سطح؛ مزیت قیمتی ناچیز.</li>
+</ul>
+</section>
+<section id="s9">
+<div class="sec-head"><span class="sec-num">۹</span><h2>ریسک‌ها و محدودیت‌های داده</h2></div>
+<h3>ریسک‌ها</h3>
+<ul class="pts">
+<li>دسترسی: نبود مسیر کانتینری، نبود کانال پرداخت تأییدشده، امکان نپذیرفتن بار در بنادر هند و ریسک تحریمی ثانویه برای طرف هندی.</li>
+<li>رقابت: چین با قیمت پایین‌تر و سهم رو به رشد، Solvay با تعرفه صفر، و تولیدکنندگان داخلی با ظرفیت بیش از مصرف و حضور در مناقصات دولتی.</li>
+<li>ارز و قیمت: کاهش ارزش روپیه (نرخ ۹۶) به نفع محصول داخلی؛ نیاز به بازنگری ماهانه قیمت‌ها.</li>
+<li>مدل هزینه: کرایه و هزینه بندری فرضی‌اند و در شرایط جنگی ممکن است بسیار بالاتر باشند.</li>
+</ul>
+<h3>محدودیت‌های داده</h3>
+<ul class="pts">
+<li>تمام آمار Trade Map و WITS پیش از جنگ (۲۰۲۴ و ۲۰۲۵) است؛ سری ماهانه کشور به کشور ۲۰۲۶ به دست نیامد </li>
+<li>ارقام AMAI سال مالی هستند و با سال تقویمی جمع‌پذیر نیستند؛ واردات ۲۰۲۴-۲۵ در دو منبع ۴۴٬۰۰۰ و ۴۵٬۸۷۴ تن آمده است.</li>
+</ul>
+</section>
+<section id="s10">
+<div class="sec-head"><span class="sec-num">۱۰</span><h2>جمع‌بندی و توصیه‌های اجرایی</h2></div>
+<h3>فرصت‌ها</h3>
+<ul class="pts">
+<li>ورودی ایران در دو سال ۲۰۲۳ و ۲۰۲۵ حجم قابل مشاهده (۴۲۱ تا ۱٬۰۶۶ تن) داشته است و مسیر تجاری از طریق شرکت‌های امارات سابقه دارد.</li>
+<li>قیمت تمام‌شده ایران نسبت به محصول تایلندی (گریدهای گران‌تر) و در FOB حدود ۲۵۰ نسبت به تولیدکنندگان داخلی قابل‌رقابت است.</li>
+<li>سهم بلغارستان، روسیه و ترکیه تقریباً خالی شده و تقاضای گرید فنی و خوراک دام در حال جابه‌جایی به منابع جدید است.</li>
+</ul>
+<h3>تهدیدها</h3>
+<ul class="pts">
+<li>دسترسی لجستیکی و مالی در شرایط جنگی، رقابت چین و Solvay، مازاد ظرفیت داخلی و شروط محتوای داخلی در مناقصات صنعتی.</li>
+</ul>
+</section>
+<section id="srcs">
+<div class="sec-head"><h2>منابع</h2></div>
+<ol class="srcs">
+<li id="src-1"><span class="n">۱</span>ITC Trade Map — واردات و صادرات هند، HS ۲۸۳۶۳۰، سال تقویمی ۲۰۲۵ (فایل‌های دانلودشده)</li>
+<li id="src-2"><span class="n">۲</span>WITS / UN Comtrade — واردات هند، HS ۲۸۳۶۳۰، سال‌های ۲۰۲۳ و ۲۰۲۴</li>
+<li id="src-3"><span class="n">۳</span>گزارش آمار گمرک جمهوری اسلامی ایران — صادرات سال ۱۴۰۴ (مارس ۲۰۲۵ تا مارس ۲۰۲۶)</li>
+<li id="src-4"><span class="n">۴</span>انجمن تولیدکنندگان قلیایی هند (AMAI) — ظرفیت و تولید ملی؛ بولتن‌های فوریه و مه ۲۰۲۶</li>
+<li id="src-5"><span class="n">۵</span>Tata Chemicals — نامه تغییر قیمت ۳۱ مه ۲۰۲۶ و قیمت‌نامه ۷ نوامبر ۲۰۲۵؛ صورت جلسه نتایج ۴ مه ۲۰۲۶؛ گزارش سالانه ۲۰۲۵-۲۶</li>
+<li id="src-6"><span class="n">۶</span>GHCL — قیمت‌نامه ۱ ژوئن ۲۰۲۶، گزارش سالانه ۲۰۲۵-۲۶ و صفحه محصول؛ Nirma و DCW — صفحات محصول</li>
+<li id="src-7"><span class="n">۷</span>DGTR هند — پرونده ضددامپینگ سودااش ۶/۳۱/۲۰۲۴-DGTR و اصلاحیه ۴ نوامبر ۲۰۲۵؛ پرونده حفاظتی ۲۲/۰۱/۲۰۲۶-DGTR (به نقل از)</li>
+<li id="src-8"><span class="n">۸</span>OFAC — فهرست SDN، پرسش‌های متداول، هشدارهای ۲۴ اوت و ۵ اکتبر ۲۰۲۶ (به نقل از)</li>
+<li id="src-9"><span class="n">۹</span>FSSAI، CDSCO و وزارت دامداری هند — راهنماها و فهرست‌های منتشرشده</li>
+<li id="src-10"><span class="n">۱۰</span>ImportGenius — رکوردهای محموله‌ای واردکنندگان هندی (شاهد ثانویه)؛ GeM — مناقصات NTPC با شماره‌های GEM/۲۰۲۵/B/۶۹۸۲۰۵۷ و GEM/۲۰۲۶/B/۸۱۰۰۸۰۶</li>
+<li id="src-11"><span class="n">۱۱</span>Reuters (۸ اکتبر ۲۰۲۶)، Mint (۲۳ ژوئیه ۲۰۲۶) و پاسخ پارلمان هند درباره چابهار (۵ دسامبر ۲۰۲۵)</li>
+</ol>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p>تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس &middot; تاریخ تنظیم: ۱۴ اکتبر ۲۰۲۶ (۲۲ مهر ۱۴۰۵)</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+"use strict";
+
+  var D = {"imp": {"labels": ["WITS ۲۰۲۴", "Trade Map ۲۰۲۵", "AMAI سال مالی ۲۰۲۴-۲۵", "AMAI سال مالی ۲۰۲۵-۲۶"], "v": [44055.0, 42455.0, 44000.0, 43347.0]}, "share": [["چین", 38.1], ["تایلند", 23.2], ["بریتانیا", 11.6], ["ایران", 1.0], ["سایر (تفاضل تا ۱۰۰٪)", 26.1]], "sup24": {"labels": ["چین", "بلغارستان", "روسیه", "ترکیه", "تایلند", "سنگاپور", "بریتانیا", "امارات", "ایران"], "v": [15509.0, 11001.0, 5393.0, 4204.0, 2545.0, 2277.0, 1312.0, 884.0, 421.0]}, "price": {"labels": ["کل واردات", "چین", "تایلند", "ایران"], "y2024": [315, 253, 497, 200], "y2025": [327, 222, 347, 280]}, "dom": {"labels": ["فنی", "خوراک دام", "غذایی / تصفیه‌شده"], "series": [{"name": "Tata — بازارهای منطقه‌ای", "v": [27100.0, 27400.0, 28300.0]}, {"name": "Tata — سایر هند", "v": [27600.0, 27900.0, 28800.0]}, {"name": "GHCL — بنگال غربی/تامیل‌نادو", "v": [26500.0, 26800.0, 27000.0]}, {"name": "GHCL — گجرات و سایر هند", "v": [27500.0, 27800.0, 28000.0]}]}, "landed": {"labels": ["FOB ۲۳۰", "FOB ۲۵۰ (مرجع)", "FOB ۲۷۰"], "cif": [251.0, 271.0, 291.0], "port": [290.0, 311.5, 333.0], "hyd": [310.0, 331.5, 353.0]}, "cmp": [["چین", 275.5], ["تایلند (Solvay)", 365.0], ["ایران", 311.5], ["تولیدکنندگان داخلی", 335.0]]};
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){ return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; }); }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US").replace(/,/g, "٬")); }
+  function cssVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  var charts = [];
+  function colors(){
+    return { ink: cssVar('--ink-soft'), grid: cssVar('--line-soft'), petrol: cssVar('--petrol-500'), petrolDark: cssVar('--petrol-700'),
+             copper: cssVar('--copper-500'), copperDark: cssVar('--copper-600'), copperLight: cssVar('--copper-300'),
+             bad: cssVar('--bad'), good: cssVar('--good'), bg: cssVar('--bg-soft') };
+  }
+  function tip(fn){ return { rtl: true, textDirection: 'rtl', callbacks: { label: fn } }; }
+  function el(id){ return document.getElementById(id); }
+  function mk(id, cfg){ if (el(id)) charts.push(new Chart(el(id), cfg)); }
+  function xy(c, ytick){ return { x: { grid: { display: false }, ticks: { color: c.ink } }, y: { grid: { color: c.grid }, ticks: { color: c.ink, callback: ytick || function(v){ return fmt(v); } } } }; }
+  function legend(c){ return { position: 'bottom', rtl: true, labels: { color: c.ink, font: { size: 12 } } }; }
+  function bar(id, c, labels, sets, unit, hlIran){
+    mk(id, { type: 'bar',
+      data: { labels: labels, datasets: sets.map(function(s){ return { label: s.name, data: s.v, backgroundColor: s.color || c.copper, borderRadius: 5 }; }) },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: sets.length > 1 ? legend(c) : { display: false }, tooltip: tip(function(x){ return (sets.length > 1 ? x.dataset.label + ': ' : '') + fmt(x.parsed.y) + ' ' + unit; }) }, scales: xy(c) } });
+  }
+  function hl(arr, c){ return arr.map(function(l){ return /ایران/.test(l) ? c.copper : c.petrol; }); }
+
+  function build(){
+    var c = colors();
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif"; Chart.defaults.color = c.ink; Chart.defaults.borderColor = c.grid;
+    charts.forEach(function(ch){ ch.destroy(); }); charts = [];
+
+    bar('chImp', c, D.imp.labels, [{ name: 'وزن واردات', v: D.imp.v, color: c.petrol }], 'تن');
+    mk('chShare', { type: 'doughnut',
+      data: { labels: D.share.map(function(r){ return r[0]; }), datasets: [{ data: D.share.map(function(r){ return r[1]; }), backgroundColor: [c.petrolDark, c.copper, c.petrol, c.bad, c.ink + '55'], borderColor: c.bg, borderWidth: 2 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: legend(c), tooltip: tip(function(x){ return x.label + ': ' + fmt(x.parsed) + '٪'; }) } } });
+    mk('chSup24', { type: 'bar',
+      data: { labels: D.sup24.labels, datasets: [{ label: 'وزن ۲۰۲۴', data: D.sup24.v, backgroundColor: hl(D.sup24.labels, c), borderRadius: 5 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tip(function(x){ return fmt(x.parsed.y) + ' تن'; }) }, scales: xy(c) } });
+    bar('chPrice', c, D.price.labels, [{ name: '۲۰۲۴', v: D.price.y2024, color: c.copperLight }, { name: '۲۰۲۵', v: D.price.y2025, color: c.copper }], 'دلار/تن');
+    var pal = [c.petrol, c.petrolDark, c.copperLight, c.copper];
+    bar('chDom', c, D.dom.labels, D.dom.series.map(function(s, i){ return { name: s.name, v: s.v, color: pal[i] }; }), 'روپیه/تن');
+    bar('chLanded', c, D.landed.labels, [{ name: 'CIF', v: D.landed.cif, color: c.copperLight }, { name: 'در بندر نهاوا شِوا', v: D.landed.port, color: c.copper }, { name: 'تحویلی حیدرآباد', v: D.landed.hyd, color: c.petrolDark }], 'دلار/تن');
+    mk('chCmp', { type: 'bar',
+      data: { labels: D.cmp.map(function(r){ return r[0]; }), datasets: [{ label: 'قیمت در بندر', data: D.cmp.map(function(r){ return r[1]; }), backgroundColor: D.cmp.map(function(r){ return /ایران/.test(r[0]) ? c.copper : c.petrol; }), borderRadius: 5 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tip(function(x){ return fmt(x.parsed.y) + ' دلار/تن'; }) }, scales: xy(c) } });
+
+  }
+  build();
+  if (window.matchMedia){ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', build); }
+})();
+</script>
+
+</body>
+</html>

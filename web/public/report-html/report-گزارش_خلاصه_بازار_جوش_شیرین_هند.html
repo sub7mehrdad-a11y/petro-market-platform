@@ -1,0 +1,393 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>گزارش خلاصه بازار واردات جوش شیرین کشور هند</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F7F3EC;
+    --bg-soft: #FFFFFF;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(24px,3.6vw,36px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 66ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(4, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:700px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  :root[data-theme="dark"] h3, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h3{ color: var(--petrol-100); } }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 76ch; }
+  strong{ color: var(--ink); font-weight:700; }
+  ul.plain{ margin:0 0 12px; padding-inline-start:0; list-style:none; }
+  ul.plain li{ position:relative; padding-inline-end:18px; margin-bottom:8px; color:var(--ink-soft); max-width:76ch; }
+  ul.plain li::before{ content:'•'; position:absolute; right:0; top:0; color:var(--copper-500); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout p + p{ margin-top:8px; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  :root[data-theme="dark"] .card .tag, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag{ color: var(--copper-400); } }
+  .card .tag.bad{ background: var(--bad-bg); color: var(--bad); }
+  .card .tag.good{ background: var(--good-bg); color: var(--good); }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:14.5px; color:var(--ink); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); vertical-align:top; }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); white-space:nowrap; }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  figure{ margin: 16px 0; }
+  figure img{ border-radius: 12px; border: 1px solid var(--line); display:block; box-shadow: var(--card-shadow); width:100%; }
+  figcaption{ font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+
+  .pill-row{ display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0; }
+  .pill{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 12px;
+    padding: 12px 20px; min-width: 120px; box-shadow: var(--card-shadow); flex:1;
+  }
+  .pill .p{ font-family:"Fira Code"; font-size:20px; font-weight:700; color:var(--petrol-700); }
+  :root[data-theme="dark"] .pill .p, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .pill .p{ color: var(--copper-400); } }
+  .pill .p.bad{ color: var(--bad); }
+  .pill .p.good{ color: var(--good); }
+  .pill .n{ font-size:12.5px; color:var(--muted); margin-top:2px; text-align:center; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0 0 8px; max-width:none; }
+
+  a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
+
+  p.src{ font-size:12.5px; color:var(--muted); margin-top:-4px; }
+  .t-wrap tbody td:first-child{ white-space:normal; min-width:170px; }
+  .t-wrap table{ min-width: 820px; }
+  ul.src-list li{ font-size:13.5px; margin-bottom:6px; }
+  .cards.three{ grid-template-columns: repeat(2,1fr); }
+
+  .tcap{ font-weight:800; font-size:15px; color:var(--petrol-700); margin:26px 0 8px; }
+  .t-wrap tbody td:first-child{ white-space:normal; min-width:150px; }
+  .t-wrap table{ min-width: 640px; }
+  td.nf{ color:var(--muted); font-style:italic; }
+  ul.pts{ margin:10px 0 14px; padding-inline-start:22px; }
+  ul.pts li{ margin-bottom:8px; max-width:none; }
+  p.sup-h{ margin:18px 0 4px; font-size:16px; }
+  p.sup-d{ margin:0 0 10px; padding-inline-start:14px; border-inline-start:3px solid var(--copper-300, #EAA659); color:var(--ink-soft); }
+  ol.srcs{ list-style:none; padding:0; margin:0; }
+  ol.srcs li{ position:relative; padding-inline-start:44px; margin-bottom:9px; font-size:14px; color:var(--ink-soft); max-width:none; }
+  ol.srcs li .n{ position:absolute; right:0; top:0; font-family:"Fira Code"; font-weight:600; font-size:12px;
+    background:var(--petrol-50); color:var(--petrol-700); border:1px solid var(--line-soft); border-radius:7px; padding:1px 8px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>گزارش خلاصه بازار واردات جوش شیرین کشور هند</h1>
+    <p class="lead">(قیمت تمام‌شده در بندر نهاوا شِوا و رقابت‌پذیری «جوش شیرین پارس»)</p>
+    <div class="meta"><span>تاریخ تنظیم: ۱۴ اکتبر ۲۰۲۶ (۲۲ مهر ۱۴۰۵)  |  کد تعرفه HS ۲۸۳۶۳۰</span></div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۴۲٬۴۵۵ <small>تن</small></div><div class="l">واردات هند در ۲۰۲۵ — ۱۳٫۸۸ میلیون دلار (۳۲۷ دلار در تن، CIF)</div></div>
+      <div class="kpi"><div class="v">۲۸۴ تا ۳۳۵ <small>$/تن</small></div><div class="l">قیمت جوش شیرین پارس در بندر نهاوا شِوا (FOB ۲۳۰ تا ۲۷۰)</div></div>
+      <div class="kpi"><div class="v">۲۹ تا ۷۶ <small>$</small></div><div class="l">گران‌تر از محصول چین در همه‌ی سناریوهای FOB</div></div>
+      <div class="kpi"><div class="v">۱ <small>٪</small></div><div class="l">سهم ایران از واردات ۲۰۲۵ (۵۱۰ تن)</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section id="s1">
+<div class="sec-head"><span class="sec-num">۱</span><h2>خلاصه مدیریتی</h2></div>
+<p>این گزارش بازار واردات جوش شیرین هند را از نظر حجم، تأمین‌کنندگان، قیمت و هزینه تمام‌شده بررسی می‌کند. مبنای محاسبه قیمت FOB ‏۲۳۰ تا ۲۷۰ دلار در تن (مرجع ۲۵۰) است. نتیجه آن است که بازار واردات هند کوچک و در برابر ظرفیت داخلی اشباع است و ورود محصول ایرانی در شرایط کنونی بیش از قیمت، به دسترسی حمل، کانال پرداخت و ریسک تحریمی وابسته است.</p>
+</section>
+<section id="s2">
+<div class="sec-head"><span class="sec-num">۲</span><h2>آمار واردات و سهم بازار مبادی تأمین</h2></div>
+<p>هند در سال ۲۰۲۵ حدود ۴۲٬۴۵۵ تن جوش شیرین به ارزش ۱۳٫۸۸ میلیون دلار (میانگین ۳۲۷ دلار در تن، CIF) وارد کرده است. در سال مالی ۲۰۲۵-۲۶ واردات ۴۳٬۳۴۷ تن و صادرات ۴۶٬۸۲۰ تن بوده است. کشورهای اصلی صادرکننده به هند به شرح زیر می‌باشند:</p>
+<p class="sup-h"><strong>چین (رتبه ۱ تأمین‌کننده): حجم واردات ۲۳٬۸۲۰ تن (حدود ۳۸٪ سهم از ارزش)</strong></p>
+<p class="sup-d">ارزش اظهارشده: ۲۲۲ دلار در تن (CIF)؛ قیمت در بندر هند پس از حقوق: حدود ۲۵۹ تا ۲۹۲ دلار</p>
+<p class="sup-h"><strong>تایلند (رتبه ۲ تأمین‌کننده): حجم واردات ۹٬۲۷۳ تن (حدود ۲۳٪ سهم از ارزش)</strong></p>
+<p class="sup-d">ارزش اظهارشده: ۳۴۷ دلار در تن (CIF)، تعرفه صفر؛ قیمت در بندر: حدود ۳۶۵ دلار؛ تأمین‌کننده اصلی Solvay</p>
+<p class="sup-h"><strong>بریتانیا (رتبه ۳ تأمین‌کننده): حدود ۱۲٪ سهم از ارزش (گرید ویژه)</strong></p>
+<p class="sup-d">ارزش واحد حدود ۹۹۴ دلار در تن؛ قابل‌مقایسه با محصول عمومی نیست</p>
+<p class="sup-h"><strong>ایران: ۵۱۰ تن در ۲۰۲۵ (حدود ۱٪)؛ عمدتاً از مسیر یک تاجر اماراتی</strong></p>
+<p class="sup-d">ارزش واحد حدود ۲۸۰ دلار در تن؛ سابقه WITS: ۱٬۰۶۶ تن (۲۰۲۳) و ۴۲۱ تن (۲۰۲۴)</p>
+<p><em>آمار واردات هند بر مبنای CIF است. داده‌های تجاری مربوط به پیش از جنگ (۲۰۲۴ و ۲۰۲۵) است. اختلاف سری ایران در WITS و Trade Map حل نشده است. تولید داخلی: ظرفیت ۴۹۰ هزار تن و تولید ۳۶۰ هزار تن در سال مالی ۲۰۲۴-۲۵ (AMAI)؛ تولیدکنندگان اصلی Tata Chemicals، GHCL، Nirma و DCW.</em></p>
+<div class="chart-box"><div class="chart-h" style="height:360px"><canvas id="chVol"></canvas></div><div class="cap">حجم واردات هند از سه تأمین‌کننده‌ی نام‌برده در بخش ۲ (تن، ۲۰۲۵)</div></div>
+<div class="chart-box"><div class="chart-h" style="height:300px"><canvas id="chVal"></canvas></div><div class="cap">سهم از ارزش واردات ۲۰۲۵ (٪) — اعدادی که در متن گزارش آمده (بریتانیا ≈ ۱۲٪)</div></div>
+</section>
+<section id="s3">
+<div class="sec-head"><span class="sec-num">۳</span><h2>بررسی قیمت‌ها</h2></div>
+<ul class="pts">
+<li>چین: ارزش اظهارشده ۲۲۲ دلار CIF در ۲۰۲۵ (۲۵۳ در ۲۰۲۴)؛ FOB معادل حدود ۱۸۰ تا ۱۹۰ دلار (برآورد). قیمت FOB گمرک چین به تفکیک گرید به دست نیامد.</li>
+<li>تولیدکنندگان داخلی (از ۱ ژوئن ۲۰۲۶، تحویل از کارخانه، بدون GST): Tata ‏۲۷٬۱۰۰ تا ۲۸٬۸۰۰ و GHCL ‏۲۶٬۵۰۰ تا ۲۸٬۰۰۰ روپیه در تن؛ معادل ۲۷۶ تا ۳۰۰ دلار.</li>
+</ul>
+</section>
+<section id="s4">
+<div class="sec-head"><span class="sec-num">۴</span><h2>تخمین قیمت تمام‌شده «جوش شیرین پارس» در بندر نهاوا شِوا</h2></div>
+<ul class="pts">
+<li>فرض‌ها: کانتینر ۲۰ فوتی با ۲۵ تن؛ کرایه فرضی ۴۵۰ تا ۵۵۰ دلار در کانتینر؛ حقوق غیرقابل‌استرداد ۸٫۲۵٪ (بدون IGST بازیافتنی)؛ هزینه بندری ۴۴٬۰۰۰ روپیه؛ نرخ ۹۶ روپیه.</li>
+</ul>
+<p><strong>FOB ‏۲۵۰ دلار: CIF حدود ۲۶۹ تا ۲۷۳؛ قیمت در بندر حدود ۳۰۹ تا ۳۱۴ دلار در تن؛ تحویلی حیدرآباد ۳۲۹ تا ۳۳۴</strong></p>
+<p><strong>دامنه FOB ‏۲۳۰ تا ۲۷۰: قیمت در بندر ۲۸۴ تا ۳۳۵ دلار؛ سناریوی تنش (کرایه ۱٬۵۰۰ دلار، بیمه جنگی ۱٪) حدود ۳۵۷ دلار</strong></p>
+<div class="chart-box"><div class="chart-h" style="height:300px"><canvas id="chBuild"></canvas></div><div class="cap">ساخت قیمت جوش شیرین پارس با FOB مرجع ۲۵۰ دلار (دلار در تن؛ میانه‌ی بازه‌های متن بخش ۴)</div></div>
+</section>
+<section id="s5">
+<div class="sec-head"><span class="sec-num">۵</span><h2>جدول مقایسه‌ای جامع بازار</h2></div>
+<div class="table-wrap"><table>
+<thead><tr><th>تأمین‌کننده</th><th>قیمت مبدأ (دلار/تن)</th><th>قیمت در بندر هند پس از حقوق (دلار/تن)</th><th>سهم ۲۰۲۵</th></tr></thead>
+<tbody>
+<tr><td>چین</td><td>CIF اظهاری ۲۲۲ (۲۵۳ در ۲۰۲۴)</td><td class="num-cell">۲۵۹ تا ۲۹۲</td><td class="num-cell">۳۸٫۱٪</td></tr>
+<tr><td>تایلند (Solvay)</td><td>CIF اظهاری ۳۴۷</td><td class="num-cell">حدود ۳۶۵</td><td class="num-cell">۲۳٫۲٪</td></tr>
+<tr><td>تولیدکنندگان داخلی</td><td>قیمت کارخانه ۲۷۶ تا ۳۰۰</td><td>تحویلی حیدرآباد ۳۲۵ تا ۳۴۵ (برآورد)</td><td class="nf">—</td></tr>
+<tr class="hl"><td><strong>ایران — جوش شیرین پارس</strong></td><td class="num-cell"><strong>FOB ۲۳۰ تا ۲۷۰</strong></td><td class="num-cell"><strong>۲۸۸ تا ۳۳۵</strong></td><td class="num-cell"><strong>۱٫۰٪</strong></td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:280px"><canvas id="chCmp"></canvas></div><div class="cap">قیمت در بندر هند پس از حقوق (دلار در تن؛ میانه‌ی بازه‌ی جدول)</div></div>
+</section>
+<section id="s6">
+<div class="sec-head"><span class="sec-num">۶</span><h2>دسترسی، تعرفه و جمع‌بندی</h2></div>
+<ul class="pts">
+<li>تعرفه: حقوق گمرکی پایه ۷٫۵٪ به‌علاوه SWS (برآورد حقوق ۸٫۲۵٪)، بدون ترجیح برای ایران و صفر برای تایلند؛ ضددامپینگ سودااش شامل بی‌کربنات نیست؛ اقدام تجاری جاری برای بی‌کربنات یافت نشد.</li>
+<li>دسترسی: تنگه هرمز از ۲۸ فوریه ۲۰۲۶ عملاً بسته گزارش شده و برای مسیر ایران–هند در اکتبر ۲۰۲۶ خط یا نرخ قابل رزرو یافت نشد؛ ریسک تحریمی پرداخت و حمل بالاست.</li>
+<li>رقابت: محصول ایرانی از چین ۲۹ تا ۷۶ دلار گران‌تر و در FOB حدود ۲۵۰ با تولیدکنندگان داخلی هم‌سطح است؛ مناقصه ۴۰ هزار تنی صنعت برق شرط ۱۰۰٪ محتوای داخلی دارد.</li>
+<li>توصیه: تا روشن شدن مسیر حمل و کانال پرداخت، اقدام تجاری گسترده انجام نشود؛ در صورت بازشدن مسیر، تمرکز بر گرید فنی و خوراک دام در جنوب و شرق هند و قیمت مرجع FOB ‏۲۵۰ به‌عنوان سقف.</li>
+</ul>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p>تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس &middot; تاریخ تنظیم: ۱۴ اکتبر ۲۰۲۶ (۲۲ مهر ۱۴۰۵)  |  کد تعرفه HS ۲۸۳۶۳۰</p>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+(function(){
+"use strict";
+
+  var D = {"cmp": [["چین", 275.5], ["تایلند (Solvay)", 365.0], ["تولیدکنندگان داخلی", 335.0], ["ایران", 311.5]], "vol": [["چین", 23820], ["تایلند", 9273], ["ایران", 510]], "val": [["چین", 38], ["تایلند", 23], ["بریتانیا", 12], ["ایران", 1]], "build": [["FOB مرجع", 250], ["CIF (میانه ۲۶۹–۲۷۳)", 271], ["در بندر نهاوا شِوا (۳۰۹–۳۱۴)", 311.5], ["تحویلی حیدرآباد (۳۲۹–۳۳۴)", 331.5]]};
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){ return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; }); }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US").replace(/,/g, "٬")); }
+  function cssVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  var charts = [];
+  function colors(){
+    return { ink: cssVar('--ink-soft'), grid: cssVar('--line-soft'), petrol: cssVar('--petrol-500'), petrolDark: cssVar('--petrol-700'),
+             copper: cssVar('--copper-500'), copperDark: cssVar('--copper-600'), copperLight: cssVar('--copper-300'),
+             bad: cssVar('--bad'), good: cssVar('--good'), bg: cssVar('--bg-soft') };
+  }
+  function tip(fn){ return { rtl: true, textDirection: 'rtl', callbacks: { label: fn } }; }
+  function el(id){ return document.getElementById(id); }
+  function mk(id, cfg){ if (el(id)) charts.push(new Chart(el(id), cfg)); }
+  function xy(c, ytick){ return { x: { grid: { display: false }, ticks: { color: c.ink } }, y: { grid: { color: c.grid }, ticks: { color: c.ink, callback: ytick || function(v){ return fmt(v); } } } }; }
+  function legend(c){ return { position: 'bottom', rtl: true, labels: { color: c.ink, font: { size: 12 } } }; }
+  function bar(id, c, labels, sets, unit, hlIran){
+    mk(id, { type: 'bar',
+      data: { labels: labels, datasets: sets.map(function(s){ return { label: s.name, data: s.v, backgroundColor: s.color || c.copper, borderRadius: 5 }; }) },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: sets.length > 1 ? legend(c) : { display: false }, tooltip: tip(function(x){ return (sets.length > 1 ? x.dataset.label + ': ' : '') + fmt(x.parsed.y) + ' ' + unit; }) }, scales: xy(c) } });
+  }
+  function hl(arr, c){ return arr.map(function(l){ return /ایران/.test(l) ? c.copper : c.petrol; }); }
+
+  function build(){
+    var c = colors();
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif"; Chart.defaults.color = c.ink; Chart.defaults.borderColor = c.grid;
+    charts.forEach(function(ch){ ch.destroy(); }); charts = [];
+
+    mk('chVol', { type: 'bar',
+      data: { labels: D.vol.map(function(r){ return r[0]; }), datasets: [{ label: 'حجم', data: D.vol.map(function(r){ return r[1]; }), backgroundColor: D.vol.map(function(r){ return /ایران/.test(r[0]) ? c.copper : c.petrol; }), borderRadius: 5 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tip(function(x){ return fmt(x.parsed.y) + ' تن'; }) }, scales: xy(c) } });
+    mk('chVal', { type: 'doughnut',
+      data: { labels: D.val.map(function(r){ return r[0]; }), datasets: [{ data: D.val.map(function(r){ return r[1]; }), backgroundColor: [c.petrolDark, c.petrol, c.copperLight, c.copper], borderColor: c.bg, borderWidth: 2 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: legend(c), tooltip: tip(function(x){ return x.label + ': ' + fmt(x.parsed) + '٪'; }) } } });
+    mk('chBuild', { type: 'bar',
+      data: { labels: D.build.map(function(r){ return r[0]; }), datasets: [{ label: 'قیمت', data: D.build.map(function(r){ return r[1]; }), backgroundColor: [c.petrolDark, c.petrol, c.copperLight, c.copper], borderRadius: 5 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tip(function(x){ return fmt(x.parsed.y) + ' دلار/تن'; }) }, scales: xy(c) } });
+    mk('chCmp', { type: 'bar',
+      data: { labels: D.cmp.map(function(r){ return r[0]; }), datasets: [{ label: 'قیمت در بندر', data: D.cmp.map(function(r){ return r[1]; }), backgroundColor: D.cmp.map(function(r){ return /ایران/.test(r[0]) ? c.copper : c.petrol; }), borderRadius: 5 }] },
+      options: { responsive: true, maintainAspectRatio: false, plugins: { legend: { display: false }, tooltip: tip(function(x){ return fmt(x.parsed.y) + ' دلار/تن'; }) }, scales: xy(c) } });
+
+  }
+  build();
+  if (window.matchMedia){ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', build); }
+})();
+</script>
+
+</body>
+</html>
