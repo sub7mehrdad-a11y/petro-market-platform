@@ -329,6 +329,8 @@ REPORTS = [
         "file": "پروفایل_رقابتی_هند_جوش_شیرین.html",
         "country": "هند",
         "type": "detailed",
+        # نسخه‌ی Word اصلی کنار HTML برای دانلود (فیلد docx_* در manifest)
+        "docx": "پروفایل_رقابتی_هند_جوش_شیرین_کامل.docx",
     },
     {
         # محصول جدید، خارج از سبد جوش شیرین — بررسی بازار داخلی ایران برای
@@ -600,6 +602,20 @@ def main():
         dest_path = os.path.join(country_dir, dest_filename)
         shutil.copyfile(src_path, dest_path)
 
+        docx_extra = {}
+        if entry.get("docx"):
+            docx_src = os.path.join(SRC_DIR, entry["docx"])
+            if os.path.exists(docx_src):
+                docx_dest = os.path.join(country_dir, entry["docx"])
+                shutil.copyfile(docx_src, docx_dest)
+                docx_extra = {
+                    "docx_filename": entry["docx"],
+                    "docx_relative_path": os.path.join(entry["country"], entry["docx"]).replace("\\", "/"),
+                    "docx_size_bytes": os.path.getsize(docx_dest),
+                }
+            else:
+                print(f"[WARN] فایل Word پیدا نشد: {docx_src}")
+
         manifest.append({
             "id": report_id,
             "title": title,
@@ -611,6 +627,7 @@ def main():
             "size_bytes": os.path.getsize(dest_path),
             "uploaded_at": datetime.now(timezone.utc).isoformat(),
             "parsed_path": f"parsed/{report_id}.json",
+            **docx_extra,
         })
 
         print(f"[OK] {entry['country']} / {entry['type']}: {title}")

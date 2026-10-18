@@ -603,14 +603,23 @@ export default async function CompetitorPage({ params }) {
       {(c.report_links || (c.report_id ? [{ id: c.report_id, label: `گزارش کامل پروفایل رقابتی ${c.name}` }] : [])).length > 0 && (
         <div className="grid gap-3 sm:grid-cols-3">
           {(c.report_links || [{ id: c.report_id, label: `گزارش کامل پروفایل رقابتی ${c.name}` }]).map((r) => (
-            <Link
-              key={r.id}
-              href={`/reports/${encodeURIComponent(r.id)}`}
-              className="block card p-4 hover:border-copper-500 transition-colors text-sm"
-            >
-              <span className="font-bold text-petrol-900">{r.label}</span>
-              <span className="text-slate-500"> ←</span>
-            </Link>
+            <div key={r.id}>
+              <Link
+                href={`/reports/${encodeURIComponent(r.id)}`}
+                className="block card p-4 hover:border-copper-500 transition-colors text-sm"
+              >
+                <span className="font-bold text-petrol-900">{r.label}</span>
+                <span className="text-slate-500"> ←</span>
+              </Link>
+              {r.docx && (
+                <a
+                  href={`/api/reports/download?id=${encodeURIComponent(r.id)}&format=docx`}
+                  className="block text-xs text-copper-700 hover:underline mt-1 ps-1"
+                >
+                  دانلود فایل Word ↓
+                </a>
+              )}
+            </div>
           ))}
         </div>
       )}

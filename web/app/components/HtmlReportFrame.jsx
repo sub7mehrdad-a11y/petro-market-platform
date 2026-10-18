@@ -36,7 +36,14 @@ export default function HtmlReportFrame({ src, title }) {
     };
   }
 
-  useEffect(() => () => cleanup.current?.(), []);
+  // اگه iframe قبل از hydrate شدن React لود شده باشه، onLoad هیچ‌وقت صدا زده نمی‌شه و ارتفاع روی
+  // مقدار پیش‌فرض می‌مونه؛ پس بعد از mount هم یک‌بار (در صورت آماده‌بودن سند) اندازه‌گیری رو شروع می‌کنیم.
+  useEffect(() => {
+    const doc = iframeRef.current?.contentWindow?.document;
+    if (doc && doc.readyState === "complete" && !cleanup.current) handleLoad();
+    return () => cleanup.current?.();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <iframe

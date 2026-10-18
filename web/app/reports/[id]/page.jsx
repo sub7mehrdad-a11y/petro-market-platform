@@ -45,12 +45,22 @@ export default async function ReportDetailPage({ params }) {
               {entry.report_type && <> · {REPORT_TYPE_FA[entry.report_type]}</>}
             </p>
           </div>
-          <a
-            href={`/api/reports/download?id=${entry.id}`}
-            className="shrink-0 bg-copper-700 text-white text-sm font-medium rounded-lg px-4 py-2.5 shadow-sm hover:bg-copper-800 hover:shadow-md transition-all"
-          >
-            دانلود فایل اصلی
-          </a>
+          <div className="shrink-0 flex flex-wrap gap-2">
+            {entry.docx_relative_path && (
+              <a
+                href={`/api/reports/download?id=${encodeURIComponent(entry.id)}&format=docx`}
+                className="border border-copper-700 text-copper-800 text-sm font-medium rounded-lg px-4 py-2.5 hover:bg-copper-50 transition-all"
+              >
+                دانلود فایل Word
+              </a>
+            )}
+            <a
+              href={`/api/reports/download?id=${entry.id}`}
+              className="bg-copper-700 text-white text-sm font-medium rounded-lg px-4 py-2.5 shadow-sm hover:bg-copper-800 hover:shadow-md transition-all"
+            >
+              {entry.docx_relative_path ? "دانلود نسخه‌ی HTML" : "دانلود فایل اصلی"}
+            </a>
+          </div>
         </div>
 
         {!parsed ? (
