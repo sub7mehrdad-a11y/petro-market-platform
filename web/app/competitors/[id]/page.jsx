@@ -10,6 +10,8 @@ import ProfileCharts from "../../components/ProfileCharts";
 import ProfileSections from "../../components/ProfileSections";
 import CompetitorWatchFeed from "../../components/CompetitorWatchFeed";
 import ExportTrend from "../../components/ExportTrend";
+import { latestPricePerSource, formatPrice } from "@/lib/priceFormat";
+import { sortExhibitionsUpcomingFirst } from "@/lib/exhibitionDate";
 
 // مسیر اسکریپت رصد روزانه‌ی هر رقیب — برای پیام «هنوز اجرا نشده» و برای گیرنده‌ی لاگ.
 const WATCH_SCRIPT_PATHS = {
@@ -93,15 +95,15 @@ export default async function CompetitorPage({ params }) {
   const watchLog = hasWatch ? watchLogGetter() : [];
 
   // نمایشگاه‌ها و اخبار مرتبط با همین کشور رقیب، از همون بانک‌های موجود سایت
-  const exhibitions = getExhibitions().filter((e) => e.country === c.name);
+  const exhibitions = sortExhibitionsUpcomingFirst(getExhibitions().filter((e) => e.country === c.name));
   const relatedNews = getNewsAnalysis()
     .filter((n) => {
       const hay = `${n.headline_fa || ""} ${n.analysis_fa || ""}`;
       return hay.includes(c.name);
     })
     .slice(0, 4);
-  const priceRows = getFlatPriceRecords().filter(
-    (p) => p.country_or_region === c.name_en && p.value != null
+  const priceRows = latestPricePerSource(
+    getFlatPriceRecords().filter((p) => p.country_or_region === c.name_en && p.value != null)
   );
 
   return (
@@ -544,7 +546,7 @@ export default async function CompetitorPage({ params }) {
             {c.strategic_takeaways.map((t, i) => (
               <li key={i} className="flex gap-3">
                 <span className="shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-copper-500 text-white text-xs font-bold font-tabular">
-                  {i + 1}
+                  {(i + 1).toLocaleString("fa-IR")}
                 </span>
                 <span className="text-sm leading-7 text-slate-700">{t}</span>
               </li>
@@ -560,7 +562,7 @@ export default async function CompetitorPage({ params }) {
             {priceRows.slice(0, 6).map((p, i) => (
               <div key={i} className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 bg-white shadow-sm p-3">
                 <div className="text-xs text-slate-500">{p.product} · {p.price_type}</div>
-                <div className="font-bold text-copper-800 font-tabular">{p.value} {p.currency}/{p.unit}</div>
+                <div className="font-bold text-copper-800 font-tabular">{formatPrice(p)}</div>
                 <div className="text-[11px] text-slate-400">{p.source_reported_date}</div>
               </div>
             ))}

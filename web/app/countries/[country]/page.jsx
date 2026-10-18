@@ -15,44 +15,11 @@ import SupplierBreakdown from "../../components/SupplierBreakdown";
 import MarketShareTrend from "../../components/MarketShareTrend";
 import ExportTrend from "../../components/ExportTrend";
 import IranExportSection from "../../components/IranExportSection";
+import { latestPricePerSource, formatPrice, unitFa } from "@/lib/priceFormat";
+import { sortExhibitionsUpcomingFirst } from "@/lib/exhibitionDate";
 
 const REPORT_TYPE_FA = { detailed: "گزارش مفصل", summary: "گزارش مدیریتی (خلاصه)" };
 const TIER_FA = { developed: "میانگین کشورهای توسعه‌یافته", developing: "میانگین در حال توسعه", least_developed: "میانگین کم‌درآمد" };
-
-const PERSIAN_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
-function toAsciiDigits(str) {
-  return String(str).replace(/[۰-۹]/g, (d) => String(PERSIAN_DIGITS.indexOf(d)));
-}
-
-const MONTHS = {
-  "ژانویه": 1, "فوریه": 2, "مارس": 3, "آوریل": 4, "مه": 5, "می": 5, "ژوئن": 6,
-  "ژوئیه": 7, "جولای": 7, "اوت": 8, "آگوست": 8, "سپتامبر": 9, "اکتبر": 10,
-  "نوامبر": 11, "دسامبر": 12,
-};
-
-// تاریخ‌های نمایشگاه‌ها متن آزادن (مثل "۱۵ تا ۱۷ جولای ۲۰۲۶")؛ این تابع فقط
-// سال+ماه رو برای مرتب‌سازی تقریبی استخراج می‌کنه، نه یک تاریخ دقیق.
-function approxSortKey(dateStr) {
-  if (!dateStr) return null;
-  const ascii = toAsciiDigits(dateStr);
-  const yearMatch = ascii.match(/(20\d{2})/);
-  if (!yearMatch) return null;
-  const year = parseInt(yearMatch[1], 10);
-  const monthEntry = Object.entries(MONTHS).find(([name]) => dateStr.includes(name));
-  const month = monthEntry ? monthEntry[1] : 0;
-  return year * 100 + month;
-}
-
-function sortExhibitionsByDate(exhibitions) {
-  return [...exhibitions].sort((a, b) => {
-    const ka = approxSortKey(a.date);
-    const kb = approxSortKey(b.date);
-    if (ka == null && kb == null) return 0;
-    if (ka == null) return 1;
-    if (kb == null) return -1;
-    return ka - kb;
-  });
-}
 
 export function generateStaticParams() {
   return getCountries().map((country) => ({ country }));
@@ -66,7 +33,8 @@ export default async function CountryPage({ params }) {
     notFound();
   }
 
-  const { companies, exhibitions, reports, prices } = getCountrySummary(country);
+  const { companies, exhibitions, reports, prices: allPrices } = getCountrySummary(country);
+  const prices = latestPricePerSource(allPrices);
   const profile = getCountryProfile(country);
   const trade = getTradeMapForCountry(country);
   const suppliers = getImportSuppliers(country);
@@ -102,7 +70,7 @@ export default async function CountryPage({ params }) {
       ? (supply.apparent_consumption_tons * 1000) / econProfile.population
       : null;
   const unions = getUnionsForCountry(country);
-  const sortedExhibitions = sortExhibitionsByDate(exhibitions);
+  const sortedExhibitions = sortExhibitionsUpcomingFirst(exhibitions);
   const smartReport = reports.find((r) => r.report_type === "summary");
 
   return (
@@ -296,7 +264,7 @@ export default async function CountryPage({ params }) {
                     <div className="flex justify-between gap-2">
                       <dt className="text-slate-500">حجم</dt>
                       <dd className="font-tabular font-medium">
-                        {trade.exports_2025.quantity.toLocaleString("fa-IR")} {trade.exports_2025.quantity_unit}
+                        {trade.exports_2025.quantity.toLocaleString("fa-IR")} {unitFa(trade.exports_2025.quantity_unit)}
                       </dd>
                     </div>
                   )}
@@ -367,7 +335,7 @@ export default async function CountryPage({ params }) {
                       <div className="flex justify-between gap-2">
                         <dt className="text-slate-500">حجم</dt>
                         <dd className="font-tabular font-medium">
-                          {trade.imports_2025.quantity.toLocaleString("fa-IR")} {trade.imports_2025.quantity_unit}
+                          {trade.imports_2025.quantity.toLocaleString("fa-IR")} {unitFa(trade.imports_2025.quantity_unit)}
                         </dd>
                       </div>
                     )}
@@ -379,13 +347,20 @@ export default async function CountryPage({ params }) {
                         </dd>
                       </div>
                     )}
-                    {trade.imports_2025.avg_tariff_pct != null && (
-                      <div className="flex justify-between gap-2">
-                        <dt className="text-slate-500">تعرفه‌ی گمرکی میانگین</dt>
-                        <dd className="font-tabular font-medium">
-                          {trade.imports_2025.avg_tariff_pct.toLocaleString("fa-IR")}٪
-                        </dd>
+                    {profile?.tariff_note ? (
+                      <div>
+                        <dt className="text-slate-500">تعرفه‌ی گمرکی (طبق گزارش)</dt>
+                        <dd className="text-xs leading-6 text-slate-700 mt-1">{profile.tariff_note}</dd>
                       </div>
+                    ) : (
+                      trade.imports_2025.avg_tariff_pct != null && (
+                        <div className="flex justify-between gap-2">
+                          <dt className="text-slate-500">تعرفه‌ی گمرکی میانگین</dt>
+                          <dd className="font-tabular font-medium">
+                            {trade.imports_2025.avg_tariff_pct.toLocaleString("fa-IR")}٪
+                          </dd>
+                        </div>
+                      )
                     )}
                     {trade.imports_2025.growth_value_1y_pct != null && (
                       <div className="flex justify-between gap-2">
@@ -493,7 +468,7 @@ export default async function CountryPage({ params }) {
                     <td className="py-2 pe-4">{p.product}</td>
                     <td className="py-2 pe-4">{p.price_type}</td>
                     <td className="py-2 pe-4">
-                      {p.value != null ? `${p.value} ${p.currency}/${p.unit}` : "—"}
+                      {formatPrice(p)}
                     </td>
                     <td className="py-2 pe-4 text-slate-500">{p.source_reported_date}</td>
                     <td className="py-2">
@@ -517,7 +492,7 @@ export default async function CountryPage({ params }) {
       </section>
 
       <section className="card p-5">
-        <h2 className="text-lg font-bold mb-3">نمایشگاه‌ها ({sortedExhibitions.length}) — به ترتیب نزدیک‌ترین تاریخ</h2>
+        <h2 className="text-lg font-bold mb-3">نمایشگاه‌ها ({sortedExhibitions.length}) — نزدیک‌ترین نمایشگاه آینده اول</h2>
         <ExhibitionTable exhibitions={sortedExhibitions} />
       </section>
     </div>

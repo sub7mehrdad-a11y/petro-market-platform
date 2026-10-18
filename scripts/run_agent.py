@@ -13,6 +13,8 @@
 
 import json
 import os
+import re
+import time
 import subprocess
 import sys
 from datetime import datetime, timezone
@@ -26,6 +28,10 @@ TAIL_CHARS = 2500
 TIMEOUT_SEC = int(os.environ.get("AGENT_TIMEOUT_SEC", "900"))
 TIMEOUT_RETRIES = int(os.environ.get("AGENT_TIMEOUT_RETRIES", "1"))
 TIMEOUT_EXIT_CODE = 124
+# خطاهای گذرای API (مثلاً ۵۰۳ «high demand» جمینای که ۱۷ اکتبر ۲۰۲۶ ربات چین رو یک روز بی‌داده گذاشت) → تلاش مجدد با فاصله.
+TRANSIENT_RETRIES = int(os.environ.get("AGENT_TRANSIENT_RETRIES", "2"))
+TRANSIENT_DELAY_SEC = int(os.environ.get("AGENT_TRANSIENT_DELAY_SEC", "60"))
+TRANSIENT_PATTERN = re.compile(r"(503|429|500|502|504)|UNAVAILABLE|high demand|RESOURCE_EXHAUSTED|rate.?limit|ConnectError|SSL|timed out", re.I)
 
 
 def load_status():
@@ -54,7 +60,9 @@ def main():
     output = ""
     returncode = None
     timed_out = False
-    for attempt in range(1, TIMEOUT_RETRIES + 2):
+    transient_tries = 0
+    timeout_tries = 0
+    for attempt in range(1, TIMEOUT_RETRIES + TRANSIENT_RETRIES + 2):
         try:
             proc = subprocess.run(
                 [sys.executable, script, *args],
@@ -68,6 +76,12 @@ def main():
                 timeout=TIMEOUT_SEC,
             )
             output, returncode, timed_out = proc.stdout or "", proc.returncode, False
+            if returncode != 0 and transient_tries < TRANSIENT_RETRIES and TRANSIENT_PATTERN.search(output[-3000:]):
+                transient_tries += 1
+                print(output)
+                print(f"[RETRY] خطای گذرا؛ تلاش مجدد {transient_tries}/{TRANSIENT_RETRIES} بعد از {TRANSIENT_DELAY_SEC} ثانیه")
+                time.sleep(TRANSIENT_DELAY_SEC)
+                continue
             break
         except subprocess.TimeoutExpired as e:
             partial = e.stdout or ""
@@ -76,6 +90,9 @@ def main():
             output = f"{partial}\n[TIMEOUT] ربات «{name}» بعد از {TIMEOUT_SEC} ثانیه پاسخ نداد (تلاش {attempt}).\n"
             returncode, timed_out = TIMEOUT_EXIT_CODE, True
             print(output)
+            timeout_tries += 1
+            if timeout_tries > TIMEOUT_RETRIES:
+                break
     # خروجی کامل هم‌چنان توی لاگ Actions چاپ می‌شه (در حالت تایم‌اوت قبلاً چاپ شده)
     if not timed_out:
         print(output)

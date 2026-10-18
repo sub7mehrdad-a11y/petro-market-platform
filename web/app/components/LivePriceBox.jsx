@@ -1,3 +1,5 @@
+import { formatPrice } from "@/lib/priceFormat";
+
 const PRICE_TYPE_FA = { domestic: "داخلی", FOB: "FOB", CIF: "CIF" };
 
 // این باکس همیشه از price_history.json فعلی خونده می‌شه (هر بار صفحه لود بشه)،
@@ -19,7 +21,7 @@ export default function LivePriceBox({ prices }) {
               {p.product} · {PRICE_TYPE_FA[p.price_type] || p.price_type}
             </div>
             <div className="font-bold text-copper-800 font-tabular">
-              {p.value} {p.currency}/{p.unit}
+              {formatPrice(p)}
             </div>
             <div className="text-[11px] text-slate-400">{p.source_reported_date}</div>
           </div>
