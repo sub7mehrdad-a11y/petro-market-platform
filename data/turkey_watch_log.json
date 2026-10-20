@@ -2182,5 +2182,54 @@
         "url": "https://www.dailysabah.com/business"
       }
     ]
+  },
+  {
+    "date": "2026-10-20",
+    "generated_at": "2026-10-20T10:34:04.981064+00:00",
+    "headline_fa": "برنامه‌ریزی ترکیه برای توسعه زیرساخت‌های لجستیکی و تقویت مسیرهای ترانزیتی",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "هدف‌گذاری ۲۰۰ میلیارد دلاری صنعت لجستیک ترکیه",
+        "summary": "انجمن حمل‌ونقل و لجستیک ترکیه (UTİKAD) در اجلاس ۲۰۲۵ اعلام کرد که قصد دارد بازار لجستیک این کشور را به ۲۰۰ میلیارد دلار رسانده و ترکیه را در جمع ۱۰ کشور برتر لجستیک جهان قرار دهد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "headline": "تأکید ترکیه بر اهمیت اقتصادی پروژه زیرساختی «راه توسعه»",
+        "summary": "مقامات ترکیه اعلام کردند که پروژه ترانزیتی و زیرساختی «راه توسعه» می‌تواند سالانه ۷۰ هزار شغل ایجاد کند و زیرساخت‌های حمل‌ونقل و ترانزیت منطقه‌ای این کشور را تقویت نماید.",
+        "source_url": "https://www.dailysabah.com/business"
+      }
+    ],
+    "market_note": "در گزارش‌های امروز، هیچ اطلاعیه یا خبر جدیدی درباره تغییر ظرفیت تولید، قیمت‌گذاری یا نتایج مالی رقبای اصلی ترک (شرکت‌های اتی‌سودا و کازان‌سودا) وجود نداشت. اما در بخش لجستیک، تمرکز ترکیه بر اجرای پروژه «راه توسعه» و هدف‌گذاری ۲۰۰ میلیارد دلاری برای تبدیل شدن به هاب لجستیکی منطقه برجسته است. توسعه زیرساخت‌های ترانزیتی ترکیه می‌تواند هزینه‌های حمل زمینی رقیب به بازارهای هدف مانند عراق را باز هم کاهش دهد. برای شرکت سپهران شیمی با قیمت پایه صادراتی ۲۵۰ دلار بر تن، تقویت بیشتر شبکه لجستیک ترکیه زنگ خطری است که ضرورت حفظ رقابت‌پذیری قیمتی و بهینه‌سازی مسیرهای ترانزیتی ایران را دوچندان می‌کند.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda Official Site",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda Official Site",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTİKAD Logistics Association",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hurriyet Daily News Economy",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
