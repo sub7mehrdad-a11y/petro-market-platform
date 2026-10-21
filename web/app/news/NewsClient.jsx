@@ -35,8 +35,8 @@ const IMPACT_CARD_CLASS = {
 };
 
 const IMPACT_LABEL = {
-  opportunity: { text: "فرصت", className: "text-emerald-700 bg-emerald-50" },
-  threat: { text: "تهدید", className: "text-rose-700 bg-rose-50" },
+  opportunity: { text: "فرصت", className: "text-success bg-success-soft" },
+  threat: { text: "تهدید", className: "text-danger bg-danger-soft" },
 };
 
 function NewsGridCard({ entry }) {
@@ -49,7 +49,7 @@ function NewsGridCard({ entry }) {
       <div className="flex items-start justify-between gap-2 mb-3">
         <div className="flex flex-wrap items-center gap-1.5">
           {entry.topic ? (
-            <span className="text-[11px] font-semibold text-copper-800 bg-copper-50 rounded-full px-2.5 py-1">
+            <span className="text-[11px] font-semibold text-primary-hover bg-primary-soft rounded-full px-2.5 py-1">
               {entry.topic}
             </span>
           ) : null}
@@ -62,20 +62,20 @@ function NewsGridCard({ entry }) {
             </span>
           )}
         </div>
-        <span className="text-[11px] text-slate-400 shrink-0">{timeAgo(entry.date)}</span>
+        <span className="text-[11px] text-text-muted shrink-0">{timeAgo(entry.date)}</span>
       </div>
 
-      <h3 className="font-bold leading-7 text-petrol-900 mb-2">
+      <h3 className="font-bold leading-7 text-text mb-2">
         {entry.headline_fa || "یادداشت تحلیلی"}
       </h3>
 
-      <p className="text-sm text-slate-600 leading-7 line-clamp-5">{entry.analysis_fa}</p>
+      <p className="text-sm text-text leading-7 line-clamp-5">{entry.analysis_fa}</p>
 
       {facts.length > 0 && (
-        <ul className="mt-4 bg-petrol-50/60 rounded-lg p-3 space-y-1.5">
+        <ul className="mt-4 bg-canvas/60 rounded-lg p-3 space-y-1.5">
           {facts.map((f, i) => (
-            <li key={i} className="text-[11px] text-slate-600 leading-5 flex gap-1.5">
-              <span className="text-copper-500 shrink-0">◂</span>
+            <li key={i} className="text-[11px] text-text leading-5 flex gap-1.5">
+              <span className="text-primary shrink-0">◂</span>
               <span>{f}</span>
             </li>
           ))}
@@ -83,14 +83,14 @@ function NewsGridCard({ entry }) {
       )}
 
       {entry.sources?.length > 0 && (
-        <div className="mt-auto pt-3 border-t border-slate-100 flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-slate-500">
+        <div className="mt-auto pt-3 border-t border-border flex flex-wrap gap-x-3 gap-y-1 text-[11px] text-text-muted">
           {entry.sources.map((s, i) => (
             <a
               key={i}
               href={s.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-copper-700 hover:underline"
+              className="text-primary hover:underline"
             >
               {s.name} ↗
             </a>
@@ -139,7 +139,7 @@ export default function NewsClient({ entries }) {
             placeholder="جست‌وجو در اخبار…"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="bg-petrol-700 border border-white/10 text-sm text-white placeholder:text-petrol-300 rounded-full px-4 py-2.5 w-full sm:w-64 focus:outline-none focus:ring-2 focus:ring-copper-500"
+            className="input w-full sm:w-64"
           />
         }
       />
@@ -166,7 +166,7 @@ export default function NewsClient({ entries }) {
       </div>
 
       {filtered.length === 0 ? (
-        <div className="card p-6 text-sm text-slate-500">خبری مطابق این فیلتر پیدا نشد.</div>
+        <div className="card p-6 text-sm text-text-muted">خبری مطابق این فیلتر پیدا نشد.</div>
       ) : (
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {filtered.map((entry, i) => (

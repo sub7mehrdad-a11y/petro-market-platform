@@ -1,88 +1,47 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
+<meta name="color-scheme" content="light">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>رژیم تجاری CIS</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/report-assets/report-fonts.css">
 <style>
   :root{
     color-scheme: light;
-    --bg: #F7F3EC;
+    --bg: #F5F8FC;
     --bg-soft: #FFFFFF;
-    --ink: #16232A;
-    --ink-soft: #4B5A61;
-    --muted: #7C8A90;
-    --line: #E4DDD0;
-    --line-soft: #EDE7DA;
-    --petrol-900: #0B2027;
-    --petrol-700: #123742;
-    --petrol-600: #17414A;
-    --petrol-500: #2A5860;
-    --petrol-300: #7FA3A9;
-    --petrol-100: #D7E2E4;
-    --petrol-50: #EAF1F2;
-    --copper-700: #8B4A1C;
-    --copper-600: #AD5F22;
-    --copper-500: #C9762E;
-    --copper-400: #DA8C42;
-    --copper-300: #EAA659;
-    --copper-100: #FAE4C7;
-    --copper-50: #FDF3E7;
-    --good: #2F7D5A;
-    --good-bg: #E7F3EC;
-    --bad: #B4472C;
-    --bad-bg: #FBEAE4;
-    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
-    --hero-ink: #EAF1F2;
-    --hero-ink-soft: #D7E2E4;
+    --ink: #263B50;
+    --ink-soft: #52687D;
+    --muted: #52687D;
+    --line: #D2DEEB;
+    --line-soft: #E2EEFB;
+    --petrol-900: #193D5B;
+    --petrol-700: #205B8A;
+    --petrol-600: #286DA6;
+    --petrol-500: #478DCA;
+    --petrol-300: #A2C7EC;
+    --petrol-100: #E2EEFB;
+    --petrol-50: #F1F7FD;
+    --copper-700: #1D4A70;
+    --copper-600: #205B8A;
+    --copper-500: #286DA6;
+    --copper-400: #478DCA;
+    --copper-300: #77ACDE;
+    --copper-100: #E2EEFB;
+    --copper-50: #F1F7FD;
+    --good: #176C4C;
+    --good-bg: #EAF7EF;
+    --bad: #A52E4A;
+    --bad-bg: #FFF0F3;
+    --card-shadow: 0 1px 2px rgba(38,59,80,0.05), 0 10px 24px -14px rgba(38,59,80,0.35);
+    --hero-ink: #F1F7FD;
+    --hero-ink-soft: #E2EEFB;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg: #0B2027;
-      --bg-soft: #10262E;
-      --ink: #EAF1F2;
-      --ink-soft: #C4D3D6;
-      --muted: #8FA4A9;
-      --line: #1E3841;
-      --line-soft: #17313A;
-      --petrol-50: #17313A;
-      --petrol-100: #1E3841;
-      --copper-500: #E0954D;
-      --copper-400: #EAA659;
-      --copper-100: #3A2A17;
-      --copper-50: #2A1F13;
-      --good: #6FCB9E;
-      --good-bg: #12332A;
-      --bad: #E38A73;
-      --bad-bg: #3A2019;
-      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg: #0B2027;
-    --bg-soft: #10262E;
-    --ink: #EAF1F2;
-    --ink-soft: #C4D3D6;
-    --muted: #8FA4A9;
-    --line: #1E3841;
-    --line-soft: #17313A;
-    --petrol-50: #17313A;
-    --petrol-100: #1E3841;
-    --copper-500: #E0954D;
-    --copper-400: #EAA659;
-    --copper-100: #3A2A17;
-    --copper-50: #2A1F13;
-    --good: #6FCB9E;
-    --good-bg: #12332A;
-    --bad: #E38A73;
-    --bad-bg: #3A2019;
-    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
-  }
+  
+  
 
   *{ box-sizing: border-box; }
   html,body{ margin:0; padding:0; }
@@ -105,7 +64,7 @@
   /* ---------- Hero ---------- */
   .hero{
     background:
-      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      radial-gradient(1100px 420px at 85% -10%, rgba(40,109,166,0.16), transparent 60%),
       linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
     color: var(--hero-ink);
     padding-block: 52px 40px;
@@ -142,7 +101,7 @@
     padding: 14px 12px;
   }
   .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 19px; color:#fff; }
-  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#E2EEFB); }
   .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
   .kpi.good .v{ color: #8FE3BE; }
   .kpi.bad .v{ color: #F0A98F; }
@@ -161,7 +120,6 @@
     border-radius: 7px; padding: 3px 9px; flex-shrink:0;
   }
   h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
-  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
   h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
   p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
   strong{ color: var(--ink); font-weight:700; }
@@ -202,7 +160,6 @@
     padding: 14px 16px; box-shadow: var(--card-shadow);
   }
   .stat .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-size:21px; font-weight:600; color: var(--petrol-700); }
-  :root[data-theme="dark"] .stat .v, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .stat .v{ color: var(--copper-400); } }
   .stat .l{ font-size:12.5px; color: var(--muted); margin-top:3px; }
   .stat .d{ font-size: 12px; margin-top:6px; font-weight:600; }
   .stat .d.up{ color: var(--good); } .stat .d.down{ color: var(--bad); }
@@ -264,15 +221,13 @@
   footer p.note{ font-style: italic; margin-top: 16px; }
 
   a{ color: var(--copper-600); }
-  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
 
   /* ---------- CIS report additions ---------- */
   .g{ display:inline-block; font-size:11px; font-weight:800; padding:0 7px; border-radius:999px; line-height:1.75; vertical-align:1px; margin-inline:2px; white-space:nowrap; }
   .g.ga{ background: var(--good-bg); color: var(--good); }
   .g.gb{ background: var(--copper-100); color: var(--copper-700); }
   .g.gc{ background: var(--bad-bg); color: var(--bad); }
-  :root[data-theme="dark"] .g.gb{ color: var(--copper-300); }
-  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .g.gb{ color: var(--copper-300); } }
+  
 
   .summary{ font-size: 16.5px; }
   .summary p{ max-width: 80ch; }
@@ -301,8 +256,7 @@
   .tl-item.bad::before{ border-color: var(--bad); }
   .tl-item.future::before{ border-style: dashed; border-color: var(--muted); }
   .tl-date{ font-family:"Fira Code","Vazirmatn",monospace; font-size: 12.5px; font-weight:600; color: var(--copper-600); }
-  :root[data-theme="dark"] .tl-date{ color: var(--copper-400); }
-  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .tl-date{ color: var(--copper-400); } }
+  
   .tl-text{ font-size: 14.5px; color: var(--ink-soft); }
   .tl-text strong{ color: var(--ink); }
 
@@ -331,17 +285,16 @@
   table.matrix td .n{ font-family: "Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; font-weight: 600; }
   table.matrix td.z .n{ color: var(--good); }
   table.matrix td.p .n{ color: var(--copper-700); }
-  :root[data-theme="dark"] table.matrix td.p .n{ color: var(--copper-300); }
-  @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) table.matrix td.p .n{ color: var(--copper-300); } }
+  
   table.matrix td.na .n{ color: var(--muted); }
   table.matrix td.ir{ background: color-mix(in srgb, var(--copper-100) 45%, transparent); }
   table.matrix td.note{ font-size: 12px; min-width: 220px; line-height: 1.7; }
   table.matrix td .g{ font-size: 10px; padding: 0 5px; }
 
   /* dark-mode heading/link colours via tokens (selector-list media query is invalid CSS) */
-  :root{ --h2c: #123742; --h3c: #17414A; --statc: #123742; --linkc: #AD5F22; }
-  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --h2c: #EAA659; --h3c: #9CC4CA; --statc: #EAA659; --linkc: #EAA659; } }
-  :root[data-theme="dark"]{ --h2c: #EAA659; --h3c: #9CC4CA; --statc: #EAA659; --linkc: #EAA659; }
+  :root{ --h2c: #205B8A; --h3c: #286DA6; --statc: #205B8A; --linkc: #205B8A; }
+  
+  
   h2{ color: var(--h2c); }
   h3{ color: var(--h3c); }
   .stat .v{ color: var(--statc); }
@@ -846,7 +799,7 @@
   </footer>
 </main>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="/report-assets/chart.umd.min.js"></script>
 <script>
 (function(){
   if (typeof Chart === 'undefined') return;
@@ -859,7 +812,7 @@
   function colors(){
     return {
       ink: cssVar('--ink'), inkSoft: cssVar('--ink-soft'), muted: cssVar('--muted'),
-      line: cssVar('--line-soft'), petrol: cssVar('--petrol-500'), petrolLight: cssVar('--petrol-300'),
+      line: cssVar('--line-soft'), petrol: '#536779', petrolLight: cssVar('--petrol-300'),
       copper: cssVar('--copper-500'), copperLight: cssVar('--copper-300'), bad: cssVar('--bad'), good: cssVar('--good'),
       bg: cssVar('--bg-soft')
     };

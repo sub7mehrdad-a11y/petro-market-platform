@@ -14,7 +14,7 @@ function formatUsdK(valueK) {
 
 function TradeBox({ trade }) {
   if (!trade) {
-    return <p className="text-xs text-slate-400">داده‌ی تجاری ثبت‌نشده</p>;
+    return <p className="text-xs text-text-muted">داده‌ی تجاری ثبت‌نشده</p>;
   }
   const { exports_2025: exp, imports_2025: imp } = trade;
   const balanceK = exp?.trade_balance_usd_k ?? imp?.trade_balance_usd_k;
@@ -23,8 +23,8 @@ function TradeBox({ trade }) {
     <div className="space-y-1.5">
       {balanceK != null && (
         <div className="flex items-center justify-between text-xs">
-          <span className="text-slate-500">تراز تجاری ۲۰۲۵</span>
-          <span className={`font-bold font-tabular ${balanceK >= 0 ? "text-copper-800" : "text-slate-600"}`}>
+          <span className="text-text-muted">تراز تجاری ۲۰۲۵</span>
+          <span className={`font-bold ${balanceK >= 0 ? "text-primary-hover" : "text-text"}`}>
             {balanceK >= 0 ? "+" : ""}
             {formatUsdK(balanceK)}
           </span>
@@ -32,23 +32,23 @@ function TradeBox({ trade }) {
       )}
       {exp?.value_usd_k != null && (
         <div className="flex items-center justify-between text-xs">
-          <span className="text-slate-500">صادرات · قیمت میانگین</span>
-          <span className="font-medium font-tabular">
+          <span className="text-text-muted">صادرات · قیمت میانگین</span>
+          <span className="font-medium">
             {exp.unit_value_usd != null ? `${exp.unit_value_usd.toLocaleString("fa-IR")} $/تن` : "—"}
           </span>
         </div>
       )}
       {imp?.value_usd_k != null && (
         <div className="flex items-center justify-between text-xs">
-          <span className="text-slate-500">واردات · قیمت میانگین</span>
-          <span className="font-medium font-tabular">
+          <span className="text-text-muted">واردات · قیمت میانگین</span>
+          <span className="font-medium">
             {imp.unit_value_usd != null ? `${imp.unit_value_usd.toLocaleString("fa-IR")} $/تن` : "—"}
           </span>
         </div>
       )}
-      {!exp && !imp && <p className="text-xs text-slate-400">داده‌ی تجاری ثبت‌نشده</p>}
+      {!exp && !imp && <p className="text-xs text-text-muted">داده‌ی تجاری ثبت‌نشده</p>}
       {trade.export_trend && (
-        <div className="pt-1.5 border-t border-slate-100">
+        <div className="pt-1.5 border-t border-border">
           <ExportTrend trend={trade.export_trend} />
         </div>
       )}
@@ -96,7 +96,7 @@ export default function CountriesClient({ countries }) {
           <>
             <Link
               href="/unions"
-              className="text-sm text-petrol-700 hover:text-petrol-900 border border-petrol-300 hover:border-petrol-500 rounded-full px-4 py-2 transition-colors"
+              className="text-sm text-text hover:text-text border border-primary hover:border-primary rounded-full px-4 py-2 transition-colors"
             >
               اتحادیه‌ها ←
             </Link>
@@ -105,12 +105,12 @@ export default function CountriesClient({ countries }) {
               placeholder="جست‌وجوی کشور…"
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="bg-petrol-700 border border-white/10 text-sm text-white placeholder:text-petrol-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-copper-500"
+              className="input"
             />
             <select
               value={sort}
               onChange={(e) => setSort(e.target.value)}
-              className="bg-petrol-700 border border-white/10 text-sm text-white rounded-full px-3 py-2 focus:outline-none focus:ring-2 focus:ring-copper-500"
+              className="input"
             >
               <option value="relevance">مرتبط‌ترین اول</option>
               <option value="imports">بیشترین واردات</option>
@@ -121,7 +121,7 @@ export default function CountriesClient({ countries }) {
         }
       />
 
-      <p className="text-xs text-slate-500 mb-4 leading-6">
+      <p className="text-xs text-text-muted mb-4 leading-6">
         آمار تراز/قیمت از ITC Trade Map (۲۰۲۵) — یک رتبه‌بندی جهانی کلی، نه لزوماً رابطه‌ی
         تجاری با ایران. «شریک تجاری» فقط برای کشورهایی که گزارش اختصاصی دارن (نشان کوچک
         روی کارت) واقعی و موجوده.
@@ -134,26 +134,11 @@ export default function CountriesClient({ countries }) {
             href={`/countries/${encodeURIComponent(c.name)}`}
             className="group block card card-hover overflow-hidden"
           >
-            {/*
-              نسخه‌ی قبلی پرچم رو تمام‌قد پس‌زمینه‌ی کادر می‌کرد — برای پرچم‌های
-              راه‌راه‌افقی (مثل روسیه) یا برش می‌خورد (cover) یا توی یک فضای
-              تیره‌ی نیمه‌خالی شناور می‌موند (contain)، هیچ‌کدوم شیک نبود. حالا
-              پرچم یک چیپ با نسبت واقعی خودشه، ثابت روی سمت چپِ فیزیکیِ کادر
-              (نه سمت منطقی/start که توی RTL می‌شد راست) و روبه‌روی اسم؛
-              پس‌زمینه‌ی کادر یک گرادیان ثابت و تمیزه که به‌جای هر کشور فرق نمی‌کنه.
-            */}
-            <div
-              className="relative h-20 flex items-center p-3 overflow-hidden"
-              style={{ backgroundImage: "linear-gradient(135deg, #123742, #0B2027)" }}
-            >
-              <div
-                className="pointer-events-none absolute -top-8 -start-8 h-24 w-24 rounded-full opacity-40"
-                style={{ background: "radial-gradient(circle, rgba(201,118,46,.35), transparent 70%)" }}
-              />
-              <div className="relative z-10 min-w-0 flex-1 flex items-center gap-1.5 flex-wrap pl-20">
-                <h2 className="font-bold text-white text-sm drop-shadow truncate">{c.name}</h2>
+            <div className="flex items-center justify-between gap-3 border-b border-border bg-surface-soft p-3">
+              <div className="min-w-0 flex flex-1 flex-wrap items-center gap-1.5">
+                <h2 className="truncate text-sm font-bold text-text">{c.name}</h2>
                 {c.hasProfile && (
-                  <span className="text-[9px] bg-copper-500 text-white rounded-full px-1.5 py-0.5 font-bold shrink-0">
+                  <span className="badge badge-primary shrink-0 !min-h-0 !px-2 !py-0.5 text-[10px]">
                     گزارش اختصاصی
                   </span>
                 )}
@@ -162,26 +147,26 @@ export default function CountriesClient({ countries }) {
                 <img
                   src={`https://flagcdn.com/w160/${c.trade.iso2}.png`}
                   alt=""
-                  className="absolute left-3 top-1/2 -translate-y-1/2 z-10 h-14 w-20 rounded-md object-cover ring-1 ring-white/25 shadow-md shrink-0"
+                  className="h-9 w-14 shrink-0 rounded-md border border-border object-cover"
                 />
               )}
             </div>
 
             <div className="p-3 space-y-3">
-              <div className="flex gap-3 text-[11px] text-slate-500">
+              <div className="flex gap-3 text-[11px] text-text-muted">
                 <span>{c.companies.toLocaleString("fa-IR")} شرکت</span>
                 <span>{c.exhibitions.toLocaleString("fa-IR")} نمایشگاه</span>
                 <span>{c.reports.toLocaleString("fa-IR")} گزارش</span>
               </div>
-              <div className="pt-2 border-t border-slate-100">
+              <div className="pt-2 border-t border-border">
                 <TradeBox trade={c.trade} />
               </div>
               {c.partners?.length > 0 && (
-                <div className="pt-2 border-t border-slate-100">
-                  <div className="text-[10px] text-slate-400 mb-1">شرکای تجاری اصلی</div>
+                <div className="pt-2 border-t border-border">
+                  <div className="text-[10px] text-text-muted mb-1">شرکای تجاری اصلی</div>
                   <ol className="text-xs space-y-0.5">
                     {c.partners.slice(0, 3).map((p, i) => (
-                      <li key={i} className="text-slate-600">
+                      <li key={i} className="text-text">
                         {i + 1}. {p.country}
                       </li>
                     ))}

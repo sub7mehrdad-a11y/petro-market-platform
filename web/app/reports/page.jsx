@@ -13,7 +13,7 @@ export default function SmartReportsPage() {
           <>
             گزارش‌های خلاصه‌ی مدیریتی، با قالب یکسان و به‌روزرسانی خودکار بر اساس آخرین قیمت‌های
             جمع‌آوری‌شده (بخش «قیمت‌های زنده» در هر گزارش را ببینید). گزارش‌های مفصل و آرشیو کامل در{" "}
-            <Link href="/archive" className="text-copper-700 hover:underline">
+            <Link href="/archive" className="text-primary hover:underline">
               آرشیو گزارش‌ها
             </Link>{" "}
             در دسترس است.
@@ -23,7 +23,7 @@ export default function SmartReportsPage() {
 
       {smartReports.length === 0 ? (
         <div className="card p-5">
-          <p className="text-sm text-slate-500">هنوز گزارش هوشمندی ثبت نشده.</p>
+          <p className="text-sm text-text-muted">هنوز گزارش هوشمندی ثبت نشده.</p>
         </div>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2">
@@ -34,21 +34,21 @@ export default function SmartReportsPage() {
               <Link
                 key={r.id}
                 href={`/reports/${r.id}`}
-                className="block card p-5 hover:border-copper-600 hover:shadow-sm transition"
+                className="block card p-5 hover:border-primary hover:shadow-sm transition"
               >
-                <div className="text-xs text-slate-500 mb-1">{r.country} · {r.product}</div>
+                <div className="text-xs text-text-muted mb-1">{r.country} · {r.product}</div>
                 <h2 className="font-bold mb-3 leading-6">{r.title}</h2>
                 {stats.length > 0 && (
                   <div className="flex flex-wrap gap-3">
                     {stats.map((s, i) => (
-                      <div key={i} className="text-xs bg-slate-50 border border-slate-200 rounded-md px-2 py-1">
-                        <span className="text-slate-500">{s.label}: </span>
-                        <span className="font-semibold text-copper-800">{s.value} {s.unit}</span>
+                      <div key={i} className="text-xs bg-canvas border border-border rounded-md px-2 py-1">
+                        <span className="text-text-muted">{s.label}: </span>
+                        <span className="font-semibold text-primary-hover">{s.value} {s.unit}</span>
                       </div>
                     ))}
                   </div>
                 )}
-                <span className="inline-block mt-3 text-sm text-copper-700">مشاهده‌ی گزارش کامل ←</span>
+                <span className="inline-block mt-3 text-sm text-primary">مشاهده‌ی گزارش کامل ←</span>
               </Link>
             );
           })}

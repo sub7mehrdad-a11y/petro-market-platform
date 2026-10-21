@@ -5,10 +5,12 @@ import {
   Tooltip, Legend, ResponsiveContainer, Cell, LabelList,
 } from "recharts";
 
-const COPPER = "#C9762E";
-const COPPER_LIGHT = "#EAA659";
-const PETROL = "#123742";
-const PETROL_LIGHT = "#4C7B83";
+import { CHART, CHART_IRAN, CHART_GRID, CHART_TEXT, CHART_TEXT_STRONG } from "@/lib/chartTheme";
+
+const COPPER = CHART[0];
+const COPPER_LIGHT = CHART[1];
+const PETROL = CHART_IRAN;
+const PETROL_LIGHT = CHART[7];
 
 /**
  * رنگ روش تولید — در همه‌ی نمودارهای این صفحه یکسان است.
@@ -25,16 +27,18 @@ const METHOD_COLOR = {
   synthetic: PETROL_LIGHT, // فرآیند سنتتیک سُلوِه — سودا سانایی (شیشه‌جام)
 };
 
-const axisProps = { fontSize: 12, tick: { fill: "#5B7B82" } };
+const axisProps = { fontSize: 12, tick: { fill: CHART_TEXT } };
 
 function ChartFrame({ title, note, children, height = 300 }) {
   return (
     <div className="card p-4">
-      <h4 className="text-sm font-bold text-petrol-900 mb-1">{title}</h4>
-      {note && <p className="text-xs text-slate-500 mb-3">{note}</p>}
+      <h4 className="text-sm font-bold text-text mb-1">{title}</h4>
+      {note && <p className="text-xs text-text-muted mb-3">{note}</p>}
+      <div dir="ltr">
       <ResponsiveContainer width="100%" height={height}>
         {children}
       </ResponsiveContainer>
+      </div>
     </div>
   );
 }
@@ -54,10 +58,10 @@ export function ExportDestinationsChart({ destinations }) {
       height={340}
     >
       <BarChart data={data} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" vertical={false} />
+        <CartesianGrid strokeDasharray="3 3" stroke={CHART_GRID} vertical={false} />
         <XAxis dataKey="country" {...axisProps} interval={0} angle={-35} textAnchor="end" height={62} />
         <YAxis {...axisProps} tickFormatter={(v) => (v / 1000).toLocaleString("fa-IR") + "K"} />
-        <Tooltip
+        <Tooltip wrapperStyle={{ direction: "rtl" }}
           formatter={(v, n) => (n === "volume" ? [`${v.toLocaleString("fa-IR")} تن`, "حجم"] : v)}
           contentStyle={{ fontSize: 12, direction: "rtl" }}
         />
@@ -78,10 +82,10 @@ export function FobTrendChart({ trend }) {
       height={300}
     >
       <LineChart data={data} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" />
+        <CartesianGrid strokeDasharray="3 3" stroke={CHART_GRID} />
         <XAxis dataKey="period" {...axisProps} interval={0} angle={-20} textAnchor="end" height={70} />
         <YAxis {...axisProps} domain={[200, 380]} />
-        <Tooltip formatter={(v) => [`${v} دلار/تن`, "قیمت FOB"]} contentStyle={{ fontSize: 12, direction: "rtl" }} />
+        <Tooltip wrapperStyle={{ direction: "rtl" }} formatter={(v) => [`${v} دلار/تن`, "قیمت FOB"]} contentStyle={{ fontSize: 12, direction: "rtl" }} />
         <Line type="monotone" dataKey="price" stroke={COPPER} strokeWidth={2.5} dot={{ r: 4, fill: COPPER }} />
       </LineChart>
     </ChartFrame>
@@ -105,10 +109,10 @@ export function CostComparisonChart() {
       height={260}
     >
       <BarChart data={data} margin={{ top: 16, right: 16, left: 8, bottom: 8 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" vertical={false} />
+        <CartesianGrid strokeDasharray="3 3" stroke={CHART_GRID} vertical={false} />
         <XAxis dataKey="label" {...axisProps} interval={0} height={46} />
         <YAxis {...axisProps} domain={[0, 220]} />
-        <Tooltip
+        <Tooltip wrapperStyle={{ direction: "rtl" }}
           formatter={(v) => [`${v} دلار/تن`, "هزینه‌ی تولید"]}
           labelFormatter={(l) => {
             const row = data.find((d) => d.label === l);
@@ -120,7 +124,7 @@ export function CostComparisonChart() {
           {data.map((d, i) => (
             <Cell key={i} fill={METHOD_COLOR[d.kind]} />
           ))}
-          <LabelList dataKey="cost" position="top" style={{ fontSize: 11, fill: "#334155" }} />
+          <LabelList dataKey="cost" position="top" style={{ fontSize: 11, fill: CHART_TEXT_STRONG }} />
         </Bar>
       </BarChart>
     </ChartFrame>
@@ -144,10 +148,10 @@ export function CapacityChart({ producers }) {
       height={250}
     >
       <BarChart data={data} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" vertical={false} />
+        <CartesianGrid strokeDasharray="3 3" stroke={CHART_GRID} vertical={false} />
         <XAxis dataKey="name" {...axisProps} interval={0} height={50} />
         <YAxis {...axisProps} tickFormatter={(v) => (v / 1000).toLocaleString("fa-IR") + "K"} />
-        <Tooltip formatter={(v) => [`${v.toLocaleString("fa-IR")} تن/سال`, "ظرفیت"]} contentStyle={{ fontSize: 12, direction: "rtl" }} />
+        <Tooltip wrapperStyle={{ direction: "rtl" }} formatter={(v) => [`${v.toLocaleString("fa-IR")} تن/سال`, "ظرفیت"]} contentStyle={{ fontSize: 12, direction: "rtl" }} />
         <Bar dataKey="capacity" radius={[4, 4, 0, 0]}>
           {data.map((d, i) => (
             <Cell key={i} fill={METHOD_COLOR[d.kind] || PETROL_LIGHT} />
@@ -165,15 +169,15 @@ export function CarbonChart({ carbon }) {
   return (
     <ChartFrame title="شدت انتشار کربن" note={carbon.note} height={230}>
       <BarChart data={data} margin={{ top: 8, right: 16, left: 8, bottom: 8 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" vertical={false} />
+        <CartesianGrid strokeDasharray="3 3" stroke={CHART_GRID} vertical={false} />
         <XAxis dataKey="label" {...axisProps} interval={0} height={40} />
         <YAxis {...axisProps} />
-        <Tooltip formatter={(v) => [`${v} تن CO₂e`, "شدت انتشار"]} contentStyle={{ fontSize: 12, direction: "rtl" }} />
+        <Tooltip wrapperStyle={{ direction: "rtl" }} formatter={(v) => [`${v} تن CO₂e`, "شدت انتشار"]} contentStyle={{ fontSize: 12, direction: "rtl" }} />
         <Bar dataKey="value" radius={[4, 4, 0, 0]}>
           {data.map((d, i) => (
             <Cell key={i} fill={d.label.includes("اروپا") ? PETROL_LIGHT : COPPER} />
           ))}
-          <LabelList dataKey="value" position="top" style={{ fontSize: 11, fill: "#334155" }} />
+          <LabelList dataKey="value" position="top" style={{ fontSize: 11, fill: CHART_TEXT_STRONG }} />
         </Bar>
       </BarChart>
     </ChartFrame>
@@ -193,12 +197,12 @@ export function FreightChart({ freight }) {
       height={260}
     >
       <BarChart data={data} layout="vertical" margin={{ top: 8, right: 40, left: 8, bottom: 8 }}>
-        <CartesianGrid strokeDasharray="3 3" stroke="#E2E8F0" horizontal={false} />
+        <CartesianGrid strokeDasharray="3 3" stroke={CHART_GRID} horizontal={false} />
         <XAxis type="number" {...axisProps} />
         <YAxis type="category" dataKey="route" {...axisProps} width={185} />
-        <Tooltip formatter={(v) => [`${v} دلار/تن`, "کرایه"]} contentStyle={{ fontSize: 12, direction: "rtl" }} />
+        <Tooltip wrapperStyle={{ direction: "rtl" }} formatter={(v) => [`${v} دلار/تن`, "کرایه"]} contentStyle={{ fontSize: 12, direction: "rtl" }} />
         <Bar dataKey="cost" fill={COPPER_LIGHT} radius={[0, 4, 4, 0]}>
-          <LabelList dataKey="cost" position="right" style={{ fontSize: 11, fill: "#334155" }} />
+          <LabelList dataKey="cost" position="right" style={{ fontSize: 11, fill: CHART_TEXT_STRONG }} />
         </Bar>
       </BarChart>
     </ChartFrame>

@@ -1,88 +1,47 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
+<meta name="color-scheme" content="light">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>بازار جوش شیرین تاجیکستان</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/report-assets/report-fonts.css">
 <style>
   :root{
     color-scheme: light;
-    --bg: #F7F3EC;
+    --bg: #F5F8FC;
     --bg-soft: #FFFFFF;
-    --ink: #16232A;
-    --ink-soft: #4B5A61;
-    --muted: #7C8A90;
-    --line: #E4DDD0;
-    --line-soft: #EDE7DA;
-    --petrol-900: #0B2027;
-    --petrol-700: #123742;
-    --petrol-600: #17414A;
-    --petrol-500: #2A5860;
-    --petrol-300: #7FA3A9;
-    --petrol-100: #D7E2E4;
-    --petrol-50: #EAF1F2;
-    --copper-700: #8B4A1C;
-    --copper-600: #AD5F22;
-    --copper-500: #C9762E;
-    --copper-400: #DA8C42;
-    --copper-300: #EAA659;
-    --copper-100: #FAE4C7;
-    --copper-50: #FDF3E7;
-    --good: #2F7D5A;
-    --good-bg: #E7F3EC;
-    --bad: #B4472C;
-    --bad-bg: #FBEAE4;
-    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
-    --hero-ink: #EAF1F2;
-    --hero-ink-soft: #D7E2E4;
+    --ink: #263B50;
+    --ink-soft: #52687D;
+    --muted: #52687D;
+    --line: #D2DEEB;
+    --line-soft: #E2EEFB;
+    --petrol-900: #193D5B;
+    --petrol-700: #205B8A;
+    --petrol-600: #286DA6;
+    --petrol-500: #478DCA;
+    --petrol-300: #A2C7EC;
+    --petrol-100: #E2EEFB;
+    --petrol-50: #F1F7FD;
+    --copper-700: #1D4A70;
+    --copper-600: #205B8A;
+    --copper-500: #286DA6;
+    --copper-400: #478DCA;
+    --copper-300: #77ACDE;
+    --copper-100: #E2EEFB;
+    --copper-50: #F1F7FD;
+    --good: #176C4C;
+    --good-bg: #EAF7EF;
+    --bad: #A52E4A;
+    --bad-bg: #FFF0F3;
+    --card-shadow: 0 1px 2px rgba(38,59,80,0.05), 0 10px 24px -14px rgba(38,59,80,0.35);
+    --hero-ink: #F1F7FD;
+    --hero-ink-soft: #E2EEFB;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-  @media (prefers-color-scheme: dark){
-    :root:not([data-theme="light"]){
-      --bg: #0B2027;
-      --bg-soft: #10262E;
-      --ink: #EAF1F2;
-      --ink-soft: #C4D3D6;
-      --muted: #8FA4A9;
-      --line: #1E3841;
-      --line-soft: #17313A;
-      --petrol-50: #17313A;
-      --petrol-100: #1E3841;
-      --copper-500: #E0954D;
-      --copper-400: #EAA659;
-      --copper-100: #3A2A17;
-      --copper-50: #2A1F13;
-      --good: #6FCB9E;
-      --good-bg: #12332A;
-      --bad: #E38A73;
-      --bad-bg: #3A2019;
-      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
-    }
-  }
-  :root[data-theme="dark"]{
-    --bg: #0B2027;
-    --bg-soft: #10262E;
-    --ink: #EAF1F2;
-    --ink-soft: #C4D3D6;
-    --muted: #8FA4A9;
-    --line: #1E3841;
-    --line-soft: #17313A;
-    --petrol-50: #17313A;
-    --petrol-100: #1E3841;
-    --copper-500: #E0954D;
-    --copper-400: #EAA659;
-    --copper-100: #3A2A17;
-    --copper-50: #2A1F13;
-    --good: #6FCB9E;
-    --good-bg: #12332A;
-    --bad: #E38A73;
-    --bad-bg: #3A2019;
-    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
-  }
+  
+  
 
   *{ box-sizing: border-box; }
   html,body{ margin:0; padding:0; }
@@ -104,7 +63,7 @@
 
   .hero{
     background:
-      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
+      radial-gradient(1100px 420px at 85% -10%, rgba(40,109,166,0.16), transparent 60%),
       linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
     color: var(--hero-ink);
     padding-block: 52px 40px;
@@ -140,7 +99,7 @@
     padding: 14px 12px;
   }
   .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
-  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#E2EEFB); }
   .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
 
   main{ padding-block: 44px 30px; }
@@ -156,9 +115,7 @@
     border-radius: 7px; padding: 3px 9px; flex-shrink:0;
   }
   h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
-  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
   h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
-  :root[data-theme="dark"] h3, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h3{ color: var(--petrol-100); } }
   p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 76ch; }
   strong{ color: var(--ink); font-weight:700; }
   ul.plain{ margin:0 0 12px; padding-inline-start:0; list-style:none; }
@@ -185,7 +142,6 @@
     padding: 3px 10px; border-radius:999px; margin-bottom:10px;
     background: var(--petrol-50); color: var(--petrol-700);
   }
-  :root[data-theme="dark"] .card .tag, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .card .tag{ color: var(--copper-400); } }
   .card .tag.bad{ background: var(--bad-bg); color: var(--bad); }
   .card .tag.good{ background: var(--good-bg); color: var(--good); }
   .card p{ margin:0; font-size: 14.5px; }
@@ -221,7 +177,6 @@
     padding: 12px 20px; min-width: 120px; box-shadow: var(--card-shadow); flex:1;
   }
   .pill .p{ font-family:"Fira Code"; font-size:20px; font-weight:700; color:var(--petrol-700); }
-  :root[data-theme="dark"] .pill .p, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .pill .p{ color: var(--copper-400); } }
   .pill .p.bad{ color: var(--bad); }
   .pill .p.good{ color: var(--good); }
   .pill .n{ font-size:12.5px; color:var(--muted); margin-top:2px; text-align:center; }
@@ -233,7 +188,6 @@
   footer p{ margin:0 0 8px; max-width:none; }
 
   a{ color: var(--copper-600); }
-  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
 </style>
 </head>
 <body>
@@ -516,7 +470,7 @@
   <p>منابع: WITS/UN Comtrade (آمار وارداتی تاجیکستان و صادراتی چین/ترکیه، HS 283630) &middot; آمار خام صادراتی گمرک جمهوری اسلامی ایران &middot; سرویس گمرک فدرال روسیه (FTS) و پرتال باشقیر سودا (BSK) &middot; Interfax &middot; Asia-Plus؛ StanRadar &middot; Rome2Rio؛ Wanderlog؛ OrexCA.com (فواصل مسیر) &middot; Railway Gazette International؛ Eurasianet؛ The Diplomat؛ Central Asia News (خط‌آهن گالابا-آمازنگ) &middot; trade.gov — Tajikistan Country Commercial Guide &middot; Price-Watch.ai &middot; Worldometer.</p>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script src="/report-assets/chart.umd.min.js"></script>
 <script>
 (function(){
   "use strict";
@@ -535,8 +489,8 @@
     return {
       ink: cssVar('--ink-soft'),
       grid: cssVar('--line-soft'),
-      petrol: cssVar('--petrol-500'),
-      petrolDark: cssVar('--petrol-700'),
+      petrol: '#536779',
+      petrolDark: '#193D5B',
       copper: cssVar('--copper-500'),
       copperDark: cssVar('--copper-600'),
       bad: cssVar('--bad'),

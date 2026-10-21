@@ -45,9 +45,9 @@ export default function TransitPage() {
 
   return (
     <div className="space-y-6">
-      <section className="bg-petrol-gradient text-white rounded-xl overflow-hidden relative p-6">
+      <section className="bg-petrol-gradient text-text rounded-2xl overflow-hidden relative p-6">
         <h1 className="text-xl font-bold">تحلیل ترانزیت و باربری</h1>
-        <p className="text-sm leading-7 text-petrol-50 max-w-3xl mt-2">
+        <p className="text-sm leading-7 text-text max-w-3xl mt-2">
           بر اساس نرخ‌های واقعی کرایه‌ی جاده‌ای که هر روز از کانال‌های اعلام‌بار جمع‌آوری می‌شود،
           هزینه‌ی حمل مسیرهای دیگر را تخمین بزنید و آخرین اخبار و تحلیل‌های حوزه‌ی ترانزیت را ببینید.
         </p>
@@ -60,11 +60,11 @@ export default function TransitPage() {
       <section className="card p-5">
         <div className="flex items-baseline justify-between gap-2 mb-2">
           <h2 className="text-lg font-bold">آخرین اخبار و تحلیل‌های ترانزیت</h2>
-          <span className="text-xs text-slate-400">ایران و بازارهای جهانی · با ذکر منبع</span>
+          <span className="text-xs text-text-muted">ایران و بازارهای جهانی · با ذکر منبع</span>
         </div>
 
         {transitNews.length === 0 ? (
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-text-muted">
             هنوز خبر تحلیلی مرتبط با حوزه‌ی ترانزیت/باربری ثبت نشده. با اجرای بعدی ایجنت رصد اخبار
             این بخش پر می‌شود.
           </p>

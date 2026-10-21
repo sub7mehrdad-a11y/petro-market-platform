@@ -12,6 +12,7 @@ import CompetitorWatchFeed from "../../components/CompetitorWatchFeed";
 import ExportTrend from "../../components/ExportTrend";
 import { latestPricePerSource, formatPrice } from "@/lib/priceFormat";
 import { sortExhibitionsUpcomingFirst } from "@/lib/exhibitionDate";
+import { sourceDateFa, gregorianFa, jalaliFa } from "@/lib/dateFormat";
 
 // مسیر اسکریپت رصد روزانه‌ی هر رقیب — برای پیام «هنوز اجرا نشده» و برای گیرنده‌ی لاگ.
 const WATCH_SCRIPT_PATHS = {
@@ -26,9 +27,9 @@ import {
 } from "../../components/CompetitorCharts";
 
 const TONE = {
-  danger: "border-s-copper-500",
+  danger: "border-s-primary",
   good: "border-s-petrol-400",
-  neutral: "border-s-slate-300",
+  neutral: "border-s-border",
 };
 
 export function generateStaticParams() {
@@ -39,8 +40,8 @@ function Section({ title, subtitle, children }) {
   return (
     <section className="card p-5">
       <div className="mb-4">
-        <h2 className="text-lg font-bold text-petrol-900">{title}</h2>
-        {subtitle && <p className="text-xs text-slate-500 mt-0.5">{subtitle}</p>}
+        <h2 className="text-lg font-bold text-text">{title}</h2>
+        {subtitle && <p className="text-xs text-text-muted mt-0.5">{subtitle}</p>}
       </div>
       {children}
     </section>
@@ -109,35 +110,26 @@ export default async function CompetitorPage({ params }) {
   return (
     <div className="space-y-6">
       <div>
-        <Link href="/competitors" className="text-sm text-slate-500 hover:text-copper-700 transition-colors">
+        <Link href="/competitors" className="text-sm text-text-muted hover:text-primary transition-colors">
           ← تحلیل رقبا
         </Link>
       </div>
 
       {/* سربرگ — پرچم کشور رقیب به‌عنوان پس‌زمینه، هم‌شکل با کارت‌های صفحه‌ی کشورها */}
-      <section
-        className="bg-petrol-gradient text-white rounded-xl overflow-hidden relative"
-        style={
-          flagIso2
-            ? {
-                backgroundImage: `linear-gradient(to top, rgba(11,32,39,.95), rgba(11,32,39,.78)), url(https://flagcdn.com/w1280/${flagIso2}.png)`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-              }
-            : undefined
-        }
-      >
-        <div
-          className="pointer-events-none absolute -top-20 -start-20 h-64 w-64 rounded-full opacity-50"
-          style={{ background: "radial-gradient(circle, rgba(201,118,46,.4), transparent 70%)" }}
-        />
+      <section className="bg-petrol-gradient rounded-2xl overflow-hidden relative">
         <div className="relative z-10 p-6">
           <div className="flex items-baseline gap-3 flex-wrap mb-1">
             <h1 className="text-2xl font-black">{c.name}</h1>
-            <span className="text-sm text-petrol-200">{c.name_en}</span>
+            {flagIso2 && (
+              <img
+                src={`https://flagcdn.com/w160/${flagIso2}.png`}
+                alt=""
+                className="h-7 w-10 rounded border border-border object-cover"
+              />
+            )}
           </div>
-          <p className="text-copper-300 text-sm font-medium mb-4">{c.rank_note}</p>
-          <p className="text-sm leading-7 text-petrol-50 max-w-3xl">{c.summary}</p>
+          <p className="text-primary text-sm font-medium mb-4">{c.rank_note}</p>
+          <p className="text-sm leading-7 text-text max-w-3xl">{c.summary}</p>
 
           {/* تعداد ستون‌ها با تعداد آمار هماهنگ می‌شود؛ وگرنه با ۳ آمار، یک خانه‌ی
               خالی در گرید چهارستونی می‌ماند و کارت‌ها بی‌دلیل کج به نظر می‌رسند. */}
@@ -147,10 +139,10 @@ export default async function CompetitorPage({ params }) {
             }`}
           >
             {headlineStats.map((s, i) => (
-              <div key={i} className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-                <div className="text-[11px] text-petrol-200 mb-1">{s.label}</div>
-                <div className="font-black font-tabular text-lg">
-                  {s.value} <span className="text-xs font-normal text-petrol-200">{s.unit}</span>
+              <div key={i} className="bg-surface rounded-xl p-3 border border-border">
+                <div className="text-[11px] text-text-muted mb-1">{s.label}</div>
+                <div className="font-black text-lg">
+                  {s.value} <span className="text-xs font-normal text-text-muted">{s.unit}</span>
                 </div>
               </div>
             ))}
@@ -159,7 +151,7 @@ export default async function CompetitorPage({ params }) {
           </div>
 
           {tradeStats.length > 0 && (
-            <p className="text-[11px] text-petrol-300 mt-3">
+            <p className="text-[11px] text-text-muted mt-3">
               ارقام تجاری از ITC Trade Map (جدیدترین سال موجود: ۲۰۲۵)؛ ارقام هزینه و لجستیک از
               گزارش‌های تحلیلی همین پلتفرم با ذکر سالشان.
             </p>
@@ -204,41 +196,41 @@ export default async function CompetitorPage({ params }) {
             <div
               key={i}
               className={`card p-4 border-s-4 ${
-                p.tech_type === "solution" ? "border-s-copper-500" : "border-s-petrol-400"
+                p.tech_type === "solution" ? "border-s-primary" : "border-s-petrol-400"
               }`}
             >
-              <div className="font-bold text-petrol-900">{p.name}</div>
-              <div className="text-[11px] text-slate-400 mb-2">{p.name_en}</div>
+              <div className="font-bold text-text">{p.name}</div>
+              <div className="text-[11px] text-text-muted mb-2">{p.name_en}</div>
 
               <dl className="text-xs space-y-1.5">
                 <div className="flex justify-between gap-2">
-                  <dt className="text-slate-500">مالکیت</dt>
+                  <dt className="text-text-muted">مالکیت</dt>
                   <dd className="font-medium text-end">{p.owner}</dd>
                 </div>
                 <div className="flex justify-between gap-2">
-                  <dt className="text-slate-500">فناوری</dt>
+                  <dt className="text-text-muted">فناوری</dt>
                   <dd className="font-medium text-end">{p.tech}</dd>
                 </div>
                 <div className="flex justify-between gap-2">
-                  <dt className="text-slate-500">ظرفیت جوش شیرین</dt>
-                  <dd className="font-bold text-copper-800 font-tabular text-end">{p.bicarb_capacity}</dd>
+                  <dt className="text-text-muted">ظرفیت جوش شیرین</dt>
+                  <dd className="font-bold text-primary-hover text-end">{p.bicarb_capacity}</dd>
                 </div>
                 {p.total_carbonates && (
                   <div className="flex justify-between gap-2">
-                    <dt className="text-slate-500">کل کربنات‌ها</dt>
-                    <dd className="font-medium font-tabular text-end">{p.total_carbonates}</dd>
+                    <dt className="text-text-muted">کل کربنات‌ها</dt>
+                    <dd className="font-medium text-end">{p.total_carbonates}</dd>
                   </div>
                 )}
                 <div className="flex justify-between gap-2">
-                  <dt className="text-slate-500">محل استقرار</dt>
+                  <dt className="text-text-muted">محل استقرار</dt>
                   <dd className="font-medium text-end">{p.location}</dd>
                 </div>
               </dl>
 
-              {p.notes && <p className="text-xs text-slate-600 leading-6 mt-3 pt-3 border-t border-slate-100">{p.notes}</p>}
+              {p.notes && <p className="text-xs text-text leading-6 mt-3 pt-3 border-t border-border">{p.notes}</p>}
 
               {p.future && (
-                <p className="text-xs text-copper-700 mt-2">
+                <p className="text-xs text-primary mt-2">
                   <span className="font-semibold">توسعه: </span>{p.future}
                 </p>
               )}
@@ -248,7 +240,7 @@ export default async function CompetitorPage({ params }) {
                   href={p.website}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block mt-3 text-xs text-copper-700 hover:underline"
+                  className="inline-block mt-3 text-xs text-primary hover:underline"
                 >
                   {p.website.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "")} ↗
                 </a>
@@ -284,7 +276,7 @@ export default async function CompetitorPage({ params }) {
             <div className="overflow-x-auto">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="text-right text-slate-500 border-b border-slate-200">
+                  <tr className="text-right text-text-muted border-b border-border">
                     <th className="py-2 pe-4">شاخص</th>
                     <th className="py-2 pe-4">۲۰۲۳</th>
                     <th className="py-2 pe-4">۲۰۲۴</th>
@@ -293,11 +285,11 @@ export default async function CompetitorPage({ params }) {
                 </thead>
                 <tbody>
                   {c.cost_structure.rows.map((r, i) => (
-                    <tr key={i} className="border-b border-slate-100 align-top">
+                    <tr key={i} className="border-b border-border align-top">
                       <td className="py-2 pe-4 font-medium">{r.metric}</td>
-                      <td className="py-2 pe-4 font-tabular text-slate-600">{r.y2023}</td>
-                      <td className="py-2 pe-4 font-tabular font-bold text-copper-800">{r.y2024}</td>
-                      <td className="py-2 font-tabular text-slate-600">{r.y2025}</td>
+                      <td className="py-2 pe-4 font-tabular text-text">{r.y2023}</td>
+                      <td className="py-2 pe-4 font-tabular font-bold text-primary-hover">{r.y2024}</td>
+                      <td className="py-2 font-tabular text-text">{r.y2025}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -305,7 +297,7 @@ export default async function CompetitorPage({ params }) {
             </div>
           )}
           {c.cost_structure.synthetic_estimate && (
-            <p className="text-xs text-slate-500 leading-6 mt-3 bg-slate-50 border border-slate-200 rounded-md p-3">
+            <p className="text-xs text-text-muted leading-6 mt-3 bg-canvas border border-border rounded-md p-3">
               {c.cost_structure.synthetic_estimate}
             </p>
           )}
@@ -315,10 +307,10 @@ export default async function CompetitorPage({ params }) {
       {/* منبع اولیه — معدن قلیای طبیعی (فقط برای رقبایی که این بخش را دارند، مثل بویان چین) */}
       {c.resource_base && (
         <Section title={c.resource_base.name} subtitle={c.resource_base.location_label}>
-          <p className="text-sm leading-7 text-slate-700 mb-4">{c.resource_base.summary}</p>
+          <p className="text-sm leading-7 text-text mb-4">{c.resource_base.summary}</p>
 
           <div className="grid gap-4 lg:grid-cols-[1fr_320px]">
-            <div className="rounded-lg overflow-hidden border border-slate-200">
+            <div className="rounded-lg overflow-hidden border border-border">
               <iframe
                 src={`https://maps.google.com/maps?q=${c.resource_base.lat},${c.resource_base.lon}&z=9&output=embed`}
                 title={`نقشه‌ی ${c.resource_base.name}`}
@@ -326,23 +318,23 @@ export default async function CompetitorPage({ params }) {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
               />
-              <div className="bg-slate-50 border-t border-slate-200 px-3 py-2 text-xs text-slate-600">
+              <div className="bg-canvas border-t border-border px-3 py-2 text-xs text-text">
                 مختصات مرکز محدوده‌ی معدن (تقریبی): {c.resource_base.lat}, {c.resource_base.lon}
               </div>
             </div>
 
             <div className="space-y-3">
-              <dl className="text-xs space-y-1.5 rounded-lg border border-slate-200 p-3">
+              <dl className="text-xs space-y-1.5 rounded-lg border border-border p-3">
                 {c.resource_base.geology.map((g, i) => (
                   <div key={i} className="flex justify-between gap-3">
-                    <dt className="text-slate-500 shrink-0">{g.label}</dt>
+                    <dt className="text-text-muted shrink-0">{g.label}</dt>
                     <dd className="font-medium text-end">{g.value}</dd>
                   </div>
                 ))}
               </dl>
               {c.resource_base.operator && (
-                <p className="text-xs text-slate-500">
-                  <span className="font-semibold text-slate-600">بهره‌بردار: </span>
+                <p className="text-xs text-text-muted">
+                  <span className="font-semibold text-text">بهره‌بردار: </span>
                   {c.resource_base.operator}
                 </p>
               )}
@@ -352,9 +344,9 @@ export default async function CompetitorPage({ params }) {
           {c.resource_base.economics && (
             <div className="grid gap-3 sm:grid-cols-3 mt-4">
               {c.resource_base.economics.map((e, i) => (
-                <div key={i} className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 bg-white shadow-sm p-3">
-                  <div className="text-xs text-slate-500 mb-1">{e.label}</div>
-                  <div className="font-bold text-copper-800 text-sm leading-6">{e.value}</div>
+                <div key={i} className="rounded-lg border border-border border-s-4 border-s-primary bg-white shadow-sm p-3">
+                  <div className="text-xs text-text-muted mb-1">{e.label}</div>
+                  <div className="font-bold text-primary-hover text-sm leading-6">{e.value}</div>
                 </div>
               ))}
             </div>
@@ -364,16 +356,16 @@ export default async function CompetitorPage({ params }) {
             <div className="overflow-x-auto mt-4">
               <table className="w-full text-sm">
                 <thead>
-                  <tr className="text-right text-slate-500 border-b border-slate-200">
+                  <tr className="text-right text-text-muted border-b border-border">
                     <th className="py-2 pe-4">تاریخ</th>
                     <th className="py-2">رویداد</th>
                   </tr>
                 </thead>
                 <tbody>
                   {c.resource_base.timeline.map((t, i) => (
-                    <tr key={i} className="border-b border-slate-100 align-top">
+                    <tr key={i} className="border-b border-border align-top">
                       <td className="py-2 pe-4 font-medium whitespace-nowrap">{t.date}</td>
-                      <td className="py-2 text-slate-600">{t.event}</td>
+                      <td className="py-2 text-text">{t.event}</td>
                     </tr>
                   ))}
                 </tbody>
@@ -382,7 +374,7 @@ export default async function CompetitorPage({ params }) {
           )}
 
           {c.resource_base.notes && (
-            <p className="text-xs text-slate-500 leading-6 mt-4 bg-slate-50 border border-slate-200 rounded-md p-3">
+            <p className="text-xs text-text-muted leading-6 mt-4 bg-canvas border border-border rounded-md p-3">
               {c.resource_base.notes}
             </p>
           )}
@@ -395,7 +387,7 @@ export default async function CompetitorPage({ params }) {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-right text-slate-500 border-b border-slate-200">
+                <tr className="text-right text-text-muted border-b border-border">
                   <th className="py-2 pe-4">#</th>
                   <th className="py-2 pe-4">مقصد</th>
                   <th className="py-2 pe-4">ارزش (م. دلار)</th>
@@ -405,12 +397,12 @@ export default async function CompetitorPage({ params }) {
               </thead>
               <tbody>
                 {c.export_destinations_2024.map((d) => (
-                  <tr key={d.rank} className="border-b border-slate-100 align-top">
-                    <td className="py-2 pe-4 font-tabular text-slate-400">{d.rank}</td>
+                  <tr key={d.rank} className="border-b border-border align-top">
+                    <td className="py-2 pe-4 font-tabular text-text-muted">{d.rank}</td>
                     <td className="py-2 pe-4 font-medium whitespace-nowrap">{d.country}</td>
                     <td className="py-2 pe-4 font-tabular">{d.value_musd}</td>
                     <td className="py-2 pe-4 font-tabular">{d.volume_t.toLocaleString("fa-IR")}</td>
-                    <td className="py-2 text-slate-500 max-w-sm">{d.note}</td>
+                    <td className="py-2 text-text-muted max-w-sm">{d.note}</td>
                   </tr>
                 ))}
               </tbody>
@@ -425,7 +417,7 @@ export default async function CompetitorPage({ params }) {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-right text-slate-500 border-b border-slate-200">
+                <tr className="text-right text-text-muted border-b border-border">
                   <th className="py-2 pe-4">دوره</th>
                   <th className="py-2 pe-4">محدوده‌ی قیمت</th>
                   <th className="py-2">توضیح</th>
@@ -433,10 +425,10 @@ export default async function CompetitorPage({ params }) {
               </thead>
               <tbody>
                 {c.fob_price_trend.map((t, i) => (
-                  <tr key={i} className="border-b border-slate-100 align-top">
+                  <tr key={i} className="border-b border-border align-top">
                     <td className="py-2 pe-4 font-medium whitespace-nowrap">{t.period}</td>
-                    <td className="py-2 pe-4 font-tabular font-bold text-copper-800 whitespace-nowrap">{t.range}</td>
-                    <td className="py-2 text-slate-500">{t.note}</td>
+                    <td className="py-2 pe-4 font-tabular font-bold text-primary-hover whitespace-nowrap">{t.range}</td>
+                    <td className="py-2 text-text-muted">{t.note}</td>
                   </tr>
                 ))}
               </tbody>
@@ -451,7 +443,7 @@ export default async function CompetitorPage({ params }) {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-right text-slate-500 border-b border-slate-200">
+                <tr className="text-right text-text-muted border-b border-border">
                   <th className="py-2 pe-4">سال</th>
                   <th className="py-2 pe-4">وضعیت انتشار داده</th>
                   <th className="py-2 pe-4">حجم صادرات</th>
@@ -461,12 +453,12 @@ export default async function CompetitorPage({ params }) {
               </thead>
               <tbody>
                 {c.export_volume_trend.rows.map((r, i) => (
-                  <tr key={i} className="border-b border-slate-100 align-top">
-                    <td className="py-2 pe-4 font-bold text-petrol-900 font-tabular whitespace-nowrap">{r.year}</td>
-                    <td className="py-2 pe-4 text-slate-600">{r.status}</td>
+                  <tr key={i} className="border-b border-border align-top">
+                    <td className="py-2 pe-4 font-bold text-text font-tabular whitespace-nowrap">{r.year}</td>
+                    <td className="py-2 pe-4 text-text">{r.status}</td>
                     <td className="py-2 pe-4 font-tabular font-medium whitespace-nowrap">{r.volume}</td>
-                    <td className="py-2 pe-4 text-slate-600">{r.detail}</td>
-                    <td className="py-2 text-slate-400 text-xs">{r.source}</td>
+                    <td className="py-2 pe-4 text-text">{r.detail}</td>
+                    <td className="py-2 text-text-muted text-xs">{r.source}</td>
                   </tr>
                 ))}
               </tbody>
@@ -478,12 +470,12 @@ export default async function CompetitorPage({ params }) {
       {/* عراق */}
       {c.iraq_case && (
         <Section title={c.iraq_case.title}>
-          <p className="text-sm leading-7 text-slate-700 mb-4">{c.iraq_case.body}</p>
+          <p className="text-sm leading-7 text-text mb-4">{c.iraq_case.body}</p>
           <div className="grid gap-3 sm:grid-cols-3">
             {c.iraq_case.price_build_up.map((s, i) => (
-              <div key={i} className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 bg-white shadow-sm p-3">
-                <div className="text-xs text-slate-500 mb-1">{s.step}</div>
-                <div className="font-bold text-copper-800 font-tabular">{s.value}</div>
+              <div key={i} className="rounded-lg border border-border border-s-4 border-s-primary bg-white shadow-sm p-3">
+                <div className="text-xs text-text-muted mb-1">{s.step}</div>
+                <div className="font-bold text-primary-hover">{s.value}</div>
               </div>
             ))}
           </div>
@@ -496,7 +488,7 @@ export default async function CompetitorPage({ params }) {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-right text-slate-500 border-b border-slate-200">
+                <tr className="text-right text-text-muted border-b border-border">
                   <th className="py-2 pe-4">مبدأ</th>
                   <th className="py-2 pe-4">مقصد</th>
                   <th className="py-2 pe-4">کامیون دربست</th>
@@ -505,11 +497,11 @@ export default async function CompetitorPage({ params }) {
               </thead>
               <tbody>
                 {c.freight_rates.rows.map((r, i) => (
-                  <tr key={i} className="border-b border-slate-100">
+                  <tr key={i} className="border-b border-border">
                     <td className="py-2 pe-4 font-medium">{r.origin}</td>
                     <td className="py-2 pe-4">{r.dest}</td>
-                    <td className="py-2 pe-4 font-tabular text-slate-600">{r.truck_usd}</td>
-                    <td className="py-2 font-tabular font-bold text-copper-800">{r.per_ton_usd}</td>
+                    <td className="py-2 pe-4 font-tabular text-text">{r.truck_usd}</td>
+                    <td className="py-2 font-tabular font-bold text-primary-hover">{r.per_ton_usd}</td>
                   </tr>
                 ))}
               </tbody>
@@ -526,11 +518,11 @@ export default async function CompetitorPage({ params }) {
         <Section title="جایگاه رقابتی">
           <div className="grid gap-4 lg:grid-cols-2">
             {c.competitive_position.map((cp, i) => (
-              <div key={i} className="rounded-lg border border-slate-200 p-4">
-                <h3 className="font-bold text-sm text-petrol-900 mb-2">{cp.vs}</h3>
+              <div key={i} className="rounded-lg border border-border p-4">
+                <h3 className="font-bold text-sm text-text mb-2">{cp.vs}</h3>
                 <ul className="list-disc pe-4 space-y-2">
                   {cp.points.map((p, j) => (
-                    <li key={j} className="text-sm leading-7 text-slate-700">{p}</li>
+                    <li key={j} className="text-sm leading-7 text-text">{p}</li>
                   ))}
                 </ul>
               </div>
@@ -545,10 +537,10 @@ export default async function CompetitorPage({ params }) {
           <ol className="space-y-3">
             {c.strategic_takeaways.map((t, i) => (
               <li key={i} className="flex gap-3">
-                <span className="shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-copper-500 text-white text-xs font-bold font-tabular">
+                <span className="shrink-0 flex h-6 w-6 items-center justify-center rounded-full bg-primary text-white text-xs font-bold">
                   {(i + 1).toLocaleString("fa-IR")}
                 </span>
-                <span className="text-sm leading-7 text-slate-700">{t}</span>
+                <span className="text-sm leading-7 text-text">{t}</span>
               </li>
             ))}
           </ol>
@@ -560,10 +552,10 @@ export default async function CompetitorPage({ params }) {
         <Section title="قیمت‌های رصدشده‌ی این کشور" subtitle="از داشبورد قیمت روزانه — همیشه به‌روز">
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {priceRows.slice(0, 6).map((p, i) => (
-              <div key={i} className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 bg-white shadow-sm p-3">
-                <div className="text-xs text-slate-500">{p.product} · {p.price_type}</div>
-                <div className="font-bold text-copper-800 font-tabular">{formatPrice(p)}</div>
-                <div className="text-[11px] text-slate-400">{p.source_reported_date}</div>
+              <div key={i} className="rounded-lg border border-border border-s-4 border-s-primary bg-white shadow-sm p-3">
+                <div className="text-xs text-text-muted">{p.product} · {p.price_type}</div>
+                <div className="font-bold text-primary-hover">{formatPrice(p)}</div>
+                <div className="text-[11px] text-text-muted">{sourceDateFa(p.source_reported_date)}</div>
               </div>
             ))}
           </div>
@@ -585,7 +577,7 @@ export default async function CompetitorPage({ params }) {
               <NewsCard key={i} entry={n} compact />
             ))}
           </div>
-          <Link href="/news" className="inline-block mt-3 text-sm text-copper-700 hover:underline">
+          <Link href="/news" className="inline-block mt-3 text-sm text-primary hover:underline">
             مشاهده‌ی همه‌ی اخبار تحلیلی ←
           </Link>
         </Section>
@@ -593,10 +585,10 @@ export default async function CompetitorPage({ params }) {
 
       {c.sources && (
         <details className="card p-5">
-          <summary className="cursor-pointer text-lg font-bold text-petrol-900">منابع گزارش</summary>
+          <summary className="cursor-pointer text-lg font-bold text-text">منابع گزارش</summary>
           <ol className="mt-4 space-y-2 list-decimal pe-5">
             {c.sources.map((s, i) => (
-              <li key={i} className="text-sm leading-7 text-slate-600">{s}</li>
+              <li key={i} className="text-sm leading-7 text-text">{s}</li>
             ))}
           </ol>
         </details>
@@ -608,15 +600,15 @@ export default async function CompetitorPage({ params }) {
             <div key={r.id}>
               <Link
                 href={`/reports/${encodeURIComponent(r.id)}`}
-                className="block card p-4 hover:border-copper-500 transition-colors text-sm"
+                className="block card p-4 hover:border-primary transition-colors text-sm"
               >
-                <span className="font-bold text-petrol-900">{r.label}</span>
-                <span className="text-slate-500"> ←</span>
+                <span className="font-bold text-text">{r.label}</span>
+                <span className="text-text-muted"> ←</span>
               </Link>
               {r.docx && (
                 <a
                   href={`/api/reports/download?id=${encodeURIComponent(r.id)}&format=docx`}
-                  className="block text-xs text-copper-700 hover:underline mt-1 ps-1"
+                  className="block text-xs text-primary hover:underline mt-1 ps-1"
                 >
                   دانلود فایل Word ↓
                 </a>
@@ -627,7 +619,7 @@ export default async function CompetitorPage({ params }) {
       )}
 
       {c.source_docs && (
-        <p className="text-xs text-slate-400">
+        <p className="text-xs text-text-muted">
           منبع داده‌های ساختاریافته‌ی این صفحه: {c.source_docs.join(" · ")}
         </p>
       )}

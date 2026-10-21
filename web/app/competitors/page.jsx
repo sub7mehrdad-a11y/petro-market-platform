@@ -4,15 +4,8 @@ import PageHeader from "../components/PageHeader";
 
 // کد دوحرفی کشور برای پرچم از همان جایی می‌آید که صفحه‌ی کشورها استفاده می‌کند
 // (data/trade_map_2025.json) — تا اگر روزی اصلاح شد، هر دو صفحه با هم درست بمانند.
-function flagStyle(countryName) {
-  const iso2 = getTradeMapForCountry(countryName)?.iso2;
-  return {
-    backgroundImage: iso2
-      ? `linear-gradient(to top, rgba(11,32,39,.92), rgba(11,32,39,.35)), url(https://flagcdn.com/w640/${iso2}.png)`
-      : "linear-gradient(135deg, #123742, #0B2027)",
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  };
+function flagIso2(countryName) {
+  return getTradeMapForCountry(countryName)?.iso2 || null;
 }
 
 // دو آمار روی کارت: ارزش و حجم صادرات از داده‌ی ITC (۲۰۲۵) — همان منبعی که
@@ -50,32 +43,38 @@ export default function CompetitorsPage() {
           <Link
             key={c.id}
             href={`/competitors/${c.id}`}
-            className="group block card overflow-hidden hover:border-copper-500 hover:shadow-md transition-all"
+            className="group block card overflow-hidden card-hover"
           >
-            <div className="relative h-28 flex items-end p-4" style={flagStyle(c.name)}>
-              <div className="relative z-10">
+            <div className="flex items-center justify-between gap-3 border-b border-border bg-surface-soft p-4">
+              <div className="min-w-0">
                 <div className="flex items-baseline gap-2 flex-wrap">
-                  <h2 className="text-lg font-black text-white drop-shadow">{c.name}</h2>
-                  <span className="text-xs text-petrol-200">{c.name_en}</span>
+                  <h2 className="text-lg font-black text-text">{c.name}</h2>
                 </div>
-                <p className="text-xs text-copper-300 font-medium mt-0.5">{c.rank_note}</p>
+                <p className="text-xs text-primary font-medium mt-0.5">{c.rank_note}</p>
               </div>
+              {flagIso2(c.name) && (
+                <img
+                  src={`https://flagcdn.com/w160/${flagIso2(c.name)}.png`}
+                  alt=""
+                  className="h-10 w-14 shrink-0 rounded-md border border-border object-cover"
+                />
+              )}
             </div>
 
             <div className="p-5">
-            <p className="text-sm text-slate-600 leading-7 line-clamp-3">{c.summary}</p>
+            <p className="text-sm text-text leading-7 line-clamp-3">{c.summary}</p>
 
             <div className="flex flex-wrap gap-2 mt-4">
               {cardStats(c).map((s, i) => (
-                <span key={i} className="text-xs bg-slate-50 border border-slate-200 rounded-md px-2 py-1">
-                  <span className="text-slate-500">{s.label}: </span>
-                  <span className="font-bold text-petrol-900 font-tabular">{s.value}</span>
-                  <span className="text-slate-500"> {s.unit}</span>
+                <span key={i} className="text-xs bg-canvas border border-border rounded-md px-2 py-1">
+                  <span className="text-text-muted">{s.label}: </span>
+                  <span className="font-bold text-text">{s.value}</span>
+                  <span className="text-text-muted"> {s.unit}</span>
                 </span>
               ))}
             </div>
 
-            <span className="inline-block mt-4 text-sm text-copper-700 font-medium">
+            <span className="inline-block mt-4 text-sm text-primary font-medium">
               مشاهده‌ی تحلیل کامل ←
             </span>
             </div>

@@ -33,29 +33,29 @@ export default function SupplierBreakdown({ data, highlight = "ایران" }) {
     <section className="card p-5">
       <div className="flex items-baseline justify-between gap-2 flex-wrap mb-1">
         <h2 className="text-lg font-bold">کشورهای مبدأ واردات</h2>
-        <span className="text-xs text-slate-400">
+        <span className="text-xs text-text-muted">
           بر پایه‌ی ارزش واردات · {data.year?.toLocaleString("fa-IR", { useGrouping: false })}
         </span>
       </div>
-      <p className="text-xs text-slate-500 mb-4">
+      <p className="text-xs text-text-muted mb-4">
         منبع: ITC Trade Map — تفکیک واقعی مبدأ‌به‌مبدأ. کل واردات{" "}
-        <b className="font-tabular">{usdK(data.total?.value_usd_k)}</b>
+        <b className="">{usdK(data.total?.value_usd_k)}</b>
         {data.total?.quantity != null && (
           <>
             {" "}
-            معادل <b className="font-tabular">{data.total.quantity.toLocaleString("fa-IR")}</b> تن
+            معادل <b className="">{data.total.quantity.toLocaleString("fa-IR")}</b> تن
           </>
         )}
         .
       </p>
 
-      <ul className="divide-y divide-slate-100">
+      <ul className="divide-y divide-border">
         {data.suppliers.map((s, i) => {
           const isUs = s.country === highlight;
           return (
             <li
               key={i}
-              className={`py-2.5 ${isUs ? "bg-copper-50/60 -mx-2 px-2 rounded-lg" : ""}`}
+              className={`py-2.5 ${isUs ? "bg-primary-soft/60 -mx-2 px-2 rounded-lg" : ""}`}
             >
               <div className="flex items-center gap-3">
                 {s.iso2 ? (
@@ -65,29 +65,29 @@ export default function SupplierBreakdown({ data, highlight = "ایران" }) {
                     className="h-4 w-6 rounded-sm object-cover shrink-0 ring-1 ring-black/5"
                   />
                 ) : (
-                  <span className="h-4 w-6 rounded-sm bg-slate-100 shrink-0" />
+                  <span className="h-4 w-6 rounded-sm bg-canvas shrink-0" />
                 )}
 
-                <span className={`text-sm shrink-0 ${isUs ? "font-black text-copper-800" : "font-medium"}`}>
+                <span className={`text-sm shrink-0 ${isUs ? "font-black text-primary-hover" : "font-medium"}`}>
                   {s.country}
                 </span>
 
-                <span className="text-xs font-tabular text-slate-600 shrink-0">
+                <span className="text-xs text-text shrink-0">
                   {usdK(s.value_usd_k)}
                 </span>
 
                 {/* نوار سهم — از راست رشد می‌کند (RTL) */}
-                <span className="flex-1 h-1.5 rounded-full bg-slate-100 overflow-hidden min-w-8">
+                <span className="flex-1 h-1.5 rounded-full bg-canvas overflow-hidden min-w-8">
                   <span
-                    className={`block h-full rounded-full ${isUs ? "bg-copper-500" : "bg-petrol-300"}`}
+                    className={`block h-full rounded-full ${isUs ? "bg-primary" : "bg-petrol-300"}`}
                     style={{ width: `${Math.max(4, ((s.value_usd_k || 0) / max) * 100)}%` }}
                   />
                 </span>
 
                 {s.growth_value_5y_pct != null && (
                   <span
-                    className={`text-[11px] font-tabular font-bold shrink-0 ${
-                      s.growth_value_5y_pct >= 0 ? "text-emerald-700" : "text-rose-700"
+                    className={`text-[11px] font-bold shrink-0 ${
+                      s.growth_value_5y_pct >= 0 ? "text-success" : "text-danger"
                     }`}
                   >
                     {pct(s.growth_value_5y_pct)}
@@ -95,19 +95,19 @@ export default function SupplierBreakdown({ data, highlight = "ایران" }) {
                 )}
               </div>
 
-              <div className="flex flex-wrap gap-x-4 gap-y-0.5 text-[11px] text-slate-400 mt-1 ps-9">
+              <div className="flex flex-wrap gap-x-4 gap-y-0.5 text-[11px] text-text-muted mt-1 ps-9">
                 {s.share_pct != null && <span>سهم {s.share_pct.toLocaleString("fa-IR")}٪</span>}
                 {s.unit_value_usd != null && (
                   <span>
                     قیمت واحد{" "}
-                    <b className="font-tabular text-slate-500">
+                    <b className="text-text-muted">
                       {s.unit_value_usd.toLocaleString("fa-IR")}
                     </b>{" "}
                     دلار/تن
                   </span>
                 )}
                 {s.tariff_pct != null && (
-                  <span className={s.tariff_pct === 0 ? "text-emerald-600 font-medium" : ""}>
+                  <span className={s.tariff_pct === 0 ? "text-success font-medium" : ""}>
                     تعرفه {s.tariff_pct.toLocaleString("fa-IR")}٪
                   </span>
                 )}
@@ -117,7 +117,7 @@ export default function SupplierBreakdown({ data, highlight = "ایران" }) {
         })}
       </ul>
 
-      <p className="text-[11px] text-slate-400 mt-4 leading-6">
+      <p className="text-[11px] text-text-muted mt-4 leading-6">
         «رشد» ستون چپ، نرخ سالانه‌ی مرکب ارزش واردات از آن مبدأ در پنج سال گذشته است.
         {anyTariff && (
           <>

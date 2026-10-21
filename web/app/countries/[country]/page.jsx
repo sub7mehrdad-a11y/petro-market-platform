@@ -17,6 +17,7 @@ import ExportTrend from "../../components/ExportTrend";
 import IranExportSection from "../../components/IranExportSection";
 import { latestPricePerSource, formatPrice, unitFa } from "@/lib/priceFormat";
 import { sortExhibitionsUpcomingFirst } from "@/lib/exhibitionDate";
+import { sourceDateFa, gregorianFa, jalaliFa } from "@/lib/dateFormat";
 
 const REPORT_TYPE_FA = { detailed: "گزارش مفصل", summary: "گزارش مدیریتی (خلاصه)" };
 const TIER_FA = { developed: "میانگین کشورهای توسعه‌یافته", developing: "میانگین در حال توسعه", least_developed: "میانگین کم‌درآمد" };
@@ -89,7 +90,6 @@ export default async function CountryPage({ params }) {
       <CountryStatStrip
         country={country}
         iso2={trade?.iso2}
-        note={trade?.name_en}
         stats={[
           iranExportToHere && {
             label: "صادرات ایران به این کشور (۱۴۰۴، ۱۰ ماهه)",
@@ -196,7 +196,7 @@ export default async function CountryPage({ params }) {
       />
 
       {supply?.note && (
-        <p className="text-xs text-slate-500 leading-6 -mt-4">{supply.note}</p>
+        <p className="text-xs text-text-muted leading-6 -mt-4">{supply.note}</p>
       )}
 
       <CountryEconomicProfile profile={econProfile} />
@@ -204,7 +204,7 @@ export default async function CountryPage({ params }) {
       {unions.length > 0 && (
         <section className="card p-5">
           <h2 className="text-lg font-bold mb-1">عضویت در پیمان‌های تجاری چندجانبه</h2>
-          <p className="text-xs text-slate-500 mb-4">
+          <p className="text-xs text-text-muted mb-4">
             اتحادیه‌ها/پیمان‌هایی که {country} در آن‌ها عضو، ناظر یا شریک است — برای تعرفهٔ ترجیحی
             احتمالی و شناخت رقبای منطقه‌ای، جزئیات هر پیمان را ببینید.
           </p>
@@ -213,13 +213,13 @@ export default async function CountryPage({ params }) {
               <Link
                 key={u.id}
                 href={`/unions/${u.id}`}
-                className="block border border-slate-200 rounded-lg p-3 hover:border-copper-500 transition-colors"
+                className="block border border-border rounded-lg p-3 hover:border-primary transition-colors"
               >
                 <div className="flex items-center justify-between gap-2">
-                  <span className="font-medium text-sm text-petrol-900">{u.name_fa}</span>
-                  <span className="text-[10px] text-slate-400 shrink-0">{u.short_fa}</span>
+                  <span className="font-medium text-sm text-text">{u.name_fa}</span>
+                  <span className="text-[10px] text-text-muted shrink-0">{u.short_fa}</span>
                 </div>
-                <div className="text-xs text-slate-500 mt-1">
+                <div className="text-xs text-text-muted mt-1">
                   {u.type_fa} ·{" "}
                   {u.relation === "member"
                     ? "عضو"
@@ -244,50 +244,50 @@ export default async function CountryPage({ params }) {
       {trade && (trade.exports_2025 || trade.imports_2025) && (
         <section className="card p-5">
           <h2 className="text-lg font-bold mb-1">آمار تجارت جهانی محصول (۲۰۲۵)</h2>
-          <p className="text-xs text-slate-500 mb-4">
+          <p className="text-xs text-text-muted mb-4">
             {realTrade
               ? "منبع صادرات: ITC Trade Map (رتبه‌بندی کلی جهانی، نه لزوماً رابطه‌ی تجاری با ایران) — منبع واردات: گزارش تحلیلی مفصل (اصلاح‌شده، جایگزین آمار ناقص ITC)."
               : "منبع: ITC Trade Map — رتبه‌بندی کلی جهانی این کشور، نه لزوماً رابطه‌ی تجاری با ایران."}
           </p>
           <div className="grid gap-4 sm:grid-cols-2">
             {trade.exports_2025 && (
-              <div className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 p-4">
-                <div className="text-xs font-bold text-copper-800 mb-2">صادرات</div>
+              <div className="rounded-lg border border-border border-s-4 border-s-primary p-4">
+                <div className="text-xs font-bold text-primary-hover mb-2">صادرات</div>
                 <dl className="text-sm space-y-1.5">
                   <div className="flex justify-between gap-2">
-                    <dt className="text-slate-500">ارزش کل</dt>
-                    <dd className="font-tabular font-medium">
+                    <dt className="text-text-muted">ارزش کل</dt>
+                    <dd className="font-medium">
                       {(trade.exports_2025.value_usd_k * 1000).toLocaleString("fa-IR")} دلار
                     </dd>
                   </div>
                   {trade.exports_2025.quantity != null && (
                     <div className="flex justify-between gap-2">
-                      <dt className="text-slate-500">حجم</dt>
-                      <dd className="font-tabular font-medium">
+                      <dt className="text-text-muted">حجم</dt>
+                      <dd className="font-medium">
                         {trade.exports_2025.quantity.toLocaleString("fa-IR")} {unitFa(trade.exports_2025.quantity_unit)}
                       </dd>
                     </div>
                   )}
                   {trade.exports_2025.unit_value_usd != null && (
                     <div className="flex justify-between gap-2">
-                      <dt className="text-slate-500">قیمت میانگین</dt>
-                      <dd className="font-tabular font-bold text-copper-800">
+                      <dt className="text-text-muted">قیمت میانگین</dt>
+                      <dd className="font-bold text-primary-hover">
                         {trade.exports_2025.unit_value_usd.toLocaleString("fa-IR")} دلار/تن
                       </dd>
                     </div>
                   )}
                   {trade.exports_2025.share_world_pct != null && (
                     <div className="flex justify-between gap-2">
-                      <dt className="text-slate-500">سهم از صادرات جهانی</dt>
-                      <dd className="font-tabular font-medium">
+                      <dt className="text-text-muted">سهم از صادرات جهانی</dt>
+                      <dd className="font-medium">
                         {trade.exports_2025.share_world_pct.toLocaleString("fa-IR")}٪
                       </dd>
                     </div>
                   )}
                   {trade.exports_2025.growth_value_1y_pct != null && (
                     <div className="flex justify-between gap-2">
-                      <dt className="text-slate-500">رشد ارزش (۱ ساله)</dt>
-                      <dd className="font-tabular font-medium">
+                      <dt className="text-text-muted">رشد ارزش (۱ ساله)</dt>
+                      <dd className="font-medium">
                         {trade.exports_2025.growth_value_1y_pct > 0 ? "+" : ""}
                         {trade.exports_2025.growth_value_1y_pct.toLocaleString("fa-IR")}٪
                       </dd>
@@ -297,11 +297,11 @@ export default async function CountryPage({ params }) {
               </div>
             )}
             {trade.imports_2025 && (
-              <div className="rounded-lg border border-slate-200 border-s-4 border-s-petrol-400 p-4">
-                <div className="text-xs font-bold text-petrol-800 mb-2">
+              <div className="rounded-lg border border-border border-s-4 border-s-petrol-400 p-4">
+                <div className="text-xs font-bold text-text mb-2">
                   واردات
                   {realTrade && (
-                    <span className="font-normal text-amber-700"> — اصلاح‌شده طبق گزارش تحلیلی</span>
+                    <span className="font-normal text-warning"> — اصلاح‌شده طبق گزارش تحلیلی</span>
                   )}
                 </div>
                 {realTrade ? (
@@ -312,13 +312,13 @@ export default async function CountryPage({ params }) {
                   // حجم اصلاح‌شده هم‌خونی ندارن.
                   <div className="text-sm">
                     <div className="flex justify-between gap-2 mb-2">
-                      <dt className="text-slate-500">حجم واقعی</dt>
-                      <dd className="font-tabular font-bold text-petrol-800">
+                      <dt className="text-text-muted">حجم واقعی</dt>
+                      <dd className="font-bold text-text">
                         {realTrade.imports_tons.toLocaleString("fa-IR")} تن
                       </dd>
                     </div>
                     {realTrade.imports_note && (
-                      <p className="text-xs text-slate-500 leading-6 pt-2 border-t border-slate-100">
+                      <p className="text-xs text-text-muted leading-6 pt-2 border-t border-border">
                         {realTrade.imports_note}
                       </p>
                     )}
@@ -326,37 +326,37 @@ export default async function CountryPage({ params }) {
                 ) : (
                   <dl className="text-sm space-y-1.5">
                     <div className="flex justify-between gap-2">
-                      <dt className="text-slate-500">ارزش کل</dt>
-                      <dd className="font-tabular font-medium">
+                      <dt className="text-text-muted">ارزش کل</dt>
+                      <dd className="font-medium">
                         {(trade.imports_2025.value_usd_k * 1000).toLocaleString("fa-IR")} دلار
                       </dd>
                     </div>
                     {trade.imports_2025.quantity != null && (
                       <div className="flex justify-between gap-2">
-                        <dt className="text-slate-500">حجم</dt>
-                        <dd className="font-tabular font-medium">
+                        <dt className="text-text-muted">حجم</dt>
+                        <dd className="font-medium">
                           {trade.imports_2025.quantity.toLocaleString("fa-IR")} {unitFa(trade.imports_2025.quantity_unit)}
                         </dd>
                       </div>
                     )}
                     {trade.imports_2025.unit_value_usd != null && (
                       <div className="flex justify-between gap-2">
-                        <dt className="text-slate-500">قیمت میانگین</dt>
-                        <dd className="font-tabular font-bold text-petrol-800">
+                        <dt className="text-text-muted">قیمت میانگین</dt>
+                        <dd className="font-bold text-text">
                           {trade.imports_2025.unit_value_usd.toLocaleString("fa-IR")} دلار/تن
                         </dd>
                       </div>
                     )}
                     {profile?.tariff_note ? (
                       <div>
-                        <dt className="text-slate-500">تعرفه‌ی گمرکی (طبق گزارش)</dt>
-                        <dd className="text-xs leading-6 text-slate-700 mt-1">{profile.tariff_note}</dd>
+                        <dt className="text-text-muted">تعرفه‌ی گمرکی (طبق گزارش)</dt>
+                        <dd className="text-xs leading-6 text-text mt-1">{profile.tariff_note}</dd>
                       </div>
                     ) : (
                       trade.imports_2025.avg_tariff_pct != null && (
                         <div className="flex justify-between gap-2">
-                          <dt className="text-slate-500">تعرفه‌ی گمرکی میانگین</dt>
-                          <dd className="font-tabular font-medium">
+                          <dt className="text-text-muted">تعرفه‌ی گمرکی میانگین</dt>
+                          <dd className="font-medium">
                             {trade.imports_2025.avg_tariff_pct.toLocaleString("fa-IR")}٪
                           </dd>
                         </div>
@@ -364,8 +364,8 @@ export default async function CountryPage({ params }) {
                     )}
                     {trade.imports_2025.growth_value_1y_pct != null && (
                       <div className="flex justify-between gap-2">
-                        <dt className="text-slate-500">رشد ارزش (۱ ساله)</dt>
-                        <dd className="font-tabular font-medium">
+                        <dt className="text-text-muted">رشد ارزش (۱ ساله)</dt>
+                        <dd className="font-medium">
                           {trade.imports_2025.growth_value_1y_pct > 0 ? "+" : ""}
                           {trade.imports_2025.growth_value_1y_pct.toLocaleString("fa-IR")}٪
                         </dd>
@@ -380,9 +380,9 @@ export default async function CountryPage({ params }) {
           {/* روند چندساله‌ی صادرات — یک عدد سالانه مهم‌تر از عدد یک سال است:
               نشان می‌دهد این مبدأ دارد سهم می‌گیرد یا از دست می‌دهد. */}
           {trade.export_trend?.cagr_pct != null && (
-            <div className="mt-4 pt-4 border-t border-slate-100">
+            <div className="mt-4 pt-4 border-t border-border">
               <ExportTrend trend={trade.export_trend} />
-              <p className="text-[11px] text-slate-400 mt-2">
+              <p className="text-[11px] text-text-muted mt-2">
                 میانگین رشد سالانه‌ی مرکب ارزش صادرات بین {String(trade.export_trend.first_year).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d])} و{" "}
                 {String(trade.export_trend.last_year).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d])} (ارقام هزار دلار، منبع ITC).
               </p>
@@ -398,18 +398,18 @@ export default async function CountryPage({ params }) {
 
           <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 mt-4">
             {profile.total_import_volume?.value != null && (
-              <div className="border border-slate-200 border-s-4 border-s-copper-500 rounded-lg p-3 bg-white shadow-sm">
-                <div className="text-xs text-slate-500 mb-1">کل واردات ({profile.total_import_volume.period})</div>
-                <div className="font-bold text-copper-800 font-tabular">
+              <div className="border border-border border-s-4 border-s-primary rounded-lg p-3 bg-white shadow-sm">
+                <div className="text-xs text-text-muted mb-1">کل واردات ({profile.total_import_volume.period})</div>
+                <div className="font-bold text-primary-hover">
                   {profile.total_import_volume.value.toLocaleString("fa-IR")} {profile.total_import_volume.unit}
                 </div>
               </div>
             )}
             {profile.top_trade_partners?.map((p, i) => (
-              <div key={i} className="border border-slate-200 border-s-4 border-s-copper-500 rounded-lg p-3 bg-white shadow-sm">
-                <div className="text-xs text-slate-500 mb-1">شریک تجاری #{i + 1}</div>
+              <div key={i} className="border border-border border-s-4 border-s-primary rounded-lg p-3 bg-white shadow-sm">
+                <div className="text-xs text-text-muted mb-1">شریک تجاری #{i + 1}</div>
                 <div className="font-bold">{p.country}</div>
-                <div className="text-xs text-slate-500 mt-1">{p.note}</div>
+                <div className="text-xs text-text-muted mt-1">{p.note}</div>
               </div>
             ))}
           </div>
@@ -420,7 +420,7 @@ export default async function CountryPage({ params }) {
         <div>
           <Link
             href={`/reports/${smartReport.id}`}
-            className="inline-block bg-copper-700 text-white text-sm font-medium rounded-lg px-4 py-2.5 shadow-sm hover:bg-copper-800 hover:shadow-md transition-all"
+            className="inline-block bg-primary text-white text-sm font-medium rounded-lg px-4 py-2.5 shadow-sm hover:bg-primary-hover hover:shadow-md transition-all"
           >
             مشاهده‌ی گزارش هوشمند کامل ({country}) ←
           </Link>
@@ -435,10 +435,10 @@ export default async function CountryPage({ params }) {
               <li key={r.id}>
                 <Link
                   href={`/reports/${r.id}`}
-                  className="block border border-slate-200 rounded-lg p-3 hover:border-copper-600 transition"
+                  className="block border border-border rounded-lg p-3 hover:border-primary transition"
                 >
                   <div className="font-medium">{r.title}</div>
-                  <div className="text-xs text-slate-500 mt-1">
+                  <div className="text-xs text-text-muted mt-1">
                     {REPORT_TYPE_FA[r.report_type] || "گزارش"}
                   </div>
                 </Link>
@@ -454,7 +454,7 @@ export default async function CountryPage({ params }) {
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-right text-slate-500 border-b border-slate-200">
+                <tr className="text-right text-text-muted border-b border-border">
                   <th className="py-2 pe-4">محصول</th>
                   <th className="py-2 pe-4">نوع قیمت</th>
                   <th className="py-2 pe-4">مقدار</th>
@@ -464,16 +464,16 @@ export default async function CountryPage({ params }) {
               </thead>
               <tbody>
                 {prices.map((p, i) => (
-                  <tr key={i} className="border-b border-slate-100">
+                  <tr key={i} className="border-b border-border">
                     <td className="py-2 pe-4">{p.product}</td>
                     <td className="py-2 pe-4">{p.price_type}</td>
                     <td className="py-2 pe-4">
                       {formatPrice(p)}
                     </td>
-                    <td className="py-2 pe-4 text-slate-500">{p.source_reported_date}</td>
+                    <td className="py-2 pe-4 text-text-muted">{sourceDateFa(p.source_reported_date)}</td>
                     <td className="py-2">
                       {p.source_url ? (
-                        <a href={p.source_url} target="_blank" rel="noopener noreferrer" className="text-copper-700 hover:underline">
+                        <a href={p.source_url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
                           {p.source_name}
                         </a>
                       ) : "—"}

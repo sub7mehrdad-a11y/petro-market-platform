@@ -15,9 +15,9 @@ const REAL_BORDER_GEO = {
 };
 
 const LAYERS = [
-  { key: "facilities", label: "کارخانه‌ها", color: "#C9762E", shape: "square" },
-  { key: "ports", label: "بنادر خروجی", color: "#0B7285", shape: "circle" },
-  { key: "borders", label: "گذرگاه‌های مرزی", color: "#9C2B2B", shape: "triangle" },
+  { key: "facilities", label: "کارخانه‌ها", color: "#286DA6", shape: "square" },
+  { key: "ports", label: "بنادر خروجی", color: "#286F94", shape: "circle" },
+  { key: "borders", label: "گذرگاه‌های مرزی", color: "#A52E4A", shape: "triangle" },
 ];
 
 function Marker({ x, y, color, shape, emphasized }) {
@@ -64,15 +64,15 @@ export default function TurkeyMap({ map, countryId }) {
 
   return (
     <div>
-      <div className="rounded-xl border border-petrol-100 bg-petrol-50/60 overflow-hidden">
+      <div className="rounded-xl border border-border bg-canvas/60 overflow-hidden">
         <svg viewBox={viewBox} className="w-full h-auto" role="img"
              aria-label="نقشه‌ی شماتیک با موقعیت کارخانه‌های جوش شیرین، بنادر خروجی و گذرگاه‌های مرزی صادراتی">
           {/* زمینه‌ی «دریا/بوم» همیشه اول رسم می‌شه — قبلاً برای کشورهای بدون
               مرز واقعی، یک مستطیل تمام‌قدِ سفید همین نقش رو داشت و چون رنگش
               با پس‌زمینه‌ی صفحه یکی بود، عملاً نامرئی می‌شد (اصل گزارش‌شده‌ی
-              «نقشه نمایش داده نمی‌شه»). یک رنگ روشن مشخص (#EAF4F4) این مشکل
+              «نقشه نمایش داده نمی‌شه»). یک رنگ روشن مشخص (#F1F7FD) این مشکل
               رو حل می‌کنه، هم برای fallback عمومی هم زیر مرزهای واقعی/نیمه‌واقعی. */}
-          <rect x="0" y="0" width={vbWidth} height={vbHeight} fill="#EAF4F4" stroke="#7FA3A9"
+          <rect x="0" y="0" width={vbWidth} height={vbHeight} fill="#F1F7FD" stroke="#A2C7EC"
                 strokeWidth="2" rx="12" />
 
           {geo &&
@@ -81,7 +81,7 @@ export default function TurkeyMap({ map, countryId }) {
                 key={i}
                 d={d}
                 fill={geo.strokeOnly ? "none" : "#ffffff"}
-                stroke="#7FA3A9"
+                stroke="#77ACDE"
                 strokeWidth={geo.strokeOnly ? 2.5 : 1.5}
                 strokeLinejoin="round"
                 strokeLinecap="round"
@@ -97,7 +97,7 @@ export default function TurkeyMap({ map, countryId }) {
                 textAnchor="middle"
                 fontSize="12"
                 fontWeight="700"
-                fill="#0B2027"
+                fill="#263B50"
                 style={{ paintOrder: "stroke", stroke: "#fff", strokeWidth: 3.5 }}
               >
                 {p.name}
@@ -118,24 +118,24 @@ export default function TurkeyMap({ map, countryId }) {
                 clipPath: l.shape === "triangle" ? "polygon(50% 0, 100% 100%, 0 100%)" : undefined,
               }}
             />
-            <span className="text-slate-600">{l.label}</span>
+            <span className="text-text">{l.label}</span>
           </span>
         ))}
       </div>
 
       <div className="grid gap-3 sm:grid-cols-3 mt-4">
         {LAYERS.map((layer) => (
-          <div key={layer.key} className="rounded-lg border border-slate-200 p-3">
+          <div key={layer.key} className="rounded-lg border border-border p-3">
             <div className="text-xs font-bold mb-2" style={{ color: layer.color }}>
               {layer.label}
             </div>
             <ul className="space-y-1.5">
               {(map[layer.key] || []).map((item, i) => (
                 <li key={i} className="text-xs leading-5">
-                  <span className={`font-semibold ${item.key ? "text-copper-800" : "text-slate-800"}`}>
+                  <span className={`font-semibold ${item.key ? "text-primary-hover" : "text-text"}`}>
                     {item.name}
                   </span>
-                  <span className="block text-slate-500">{item.sub}</span>
+                  <span className="block text-text-muted">{item.sub}</span>
                 </li>
               ))}
             </ul>
@@ -143,7 +143,7 @@ export default function TurkeyMap({ map, countryId }) {
         ))}
       </div>
 
-      <p className="text-[11px] text-slate-400 mt-2">
+      <p className="text-[11px] text-text-muted mt-2">
         {geo
           ? "مرز کشور از یک GeoJSON عمومی ساده‌شده رسم شده و موقعیت هر نشانگر بر پایه‌ی مختصات جغرافیایی واقعی آن است؛ محل دقیق کارخانه‌ها در سطح شهرستان تقریبی است، نه پلاک صنعتی."
           : "این نقشه مرز واقعی کشور رو نداره — فقط موقعیت نسبی نشانگرها نسبت به هم، بر پایه‌ی مختصات جغرافیایی واقعی‌شونه؛ محل دقیق کارخانه‌ها در سطح شهر تقریبی است، نه پلاک صنعتی."}

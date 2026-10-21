@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
+import { sourceDateFa, gregorianFa, jalaliFa } from "@/lib/dateFormat";
 
 const COUNTRIES = ["ایران", "برزیل", "ترکیه", "چین", "هند", "کنیا", "اردن", "عراق", "سایر"];
 const PRODUCTS = ["جوش شیرین", "روغن حرارتی سنتزی", "سود پرک", "آمونیوم سولفات", "سایر"];
@@ -88,9 +89,9 @@ export default function ArchivePage() {
         <h1 className="text-xl font-bold mb-4">آپلود گزارش بازار</h1>
         <form onSubmit={handleUpload} className="grid gap-3 sm:grid-cols-2">
           <div>
-            <label className="block text-sm text-slate-600 mb-1">کشور</label>
+            <label className="block text-sm text-text mb-1">کشور</label>
             <select
-              className="w-full border border-slate-300 rounded-md px-3 py-2 text-sm"
+              className="w-full border border-border rounded-md px-3 py-2 text-sm"
               value={form.country}
               onChange={(e) => setForm({ ...form, country: e.target.value })}
             >
@@ -100,9 +101,9 @@ export default function ArchivePage() {
             </select>
           </div>
           <div>
-            <label className="block text-sm text-slate-600 mb-1">محصول</label>
+            <label className="block text-sm text-text mb-1">محصول</label>
             <select
-              className="w-full border border-slate-300 rounded-md px-3 py-2 text-sm"
+              className="w-full border border-border rounded-md px-3 py-2 text-sm"
               value={form.product}
               onChange={(e) => setForm({ ...form, product: e.target.value })}
             >
@@ -112,17 +113,17 @@ export default function ArchivePage() {
             </select>
           </div>
           <div className="sm:col-span-2">
-            <label className="block text-sm text-slate-600 mb-1">عنوان گزارش</label>
+            <label className="block text-sm text-text mb-1">عنوان گزارش</label>
             <input
               type="text"
-              className="w-full border border-slate-300 rounded-md px-3 py-2 text-sm"
+              className="w-full border border-border rounded-md px-3 py-2 text-sm"
               placeholder="مثلاً: تحلیل بازار جوش شیرین برزیل - تابستان ۲۰۲۶"
               value={form.title}
               onChange={(e) => setForm({ ...form, title: e.target.value })}
             />
           </div>
           <div className="sm:col-span-2">
-            <label className="block text-sm text-slate-600 mb-1">فایل (PDF یا Word)</label>
+            <label className="block text-sm text-text mb-1">فایل (PDF یا Word)</label>
             <input
               type="file"
               accept=".pdf,.doc,.docx"
@@ -130,12 +131,12 @@ export default function ArchivePage() {
               className="w-full text-sm"
             />
           </div>
-          {uploadError && <p className="sm:col-span-2 text-sm text-rose-600">{uploadError}</p>}
+          {uploadError && <p className="sm:col-span-2 text-sm text-danger">{uploadError}</p>}
           <div className="sm:col-span-2">
             <button
               type="submit"
               disabled={uploading}
-              className="bg-copper-700 text-white text-sm font-medium rounded-lg px-4 py-2.5 shadow-sm hover:bg-copper-800 hover:shadow-md transition-all disabled:opacity-50 cursor-pointer"
+              className="bg-primary text-white text-sm font-medium rounded-lg px-4 py-2.5 shadow-sm hover:bg-primary-hover hover:shadow-md transition-all disabled:opacity-50 cursor-pointer"
             >
               {uploading ? "در حال آپلود..." : "آپلود"}
             </button>
@@ -147,7 +148,7 @@ export default function ArchivePage() {
         <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
           <div>
             <h2 className="text-lg font-bold">آرشیو گزارش‌ها</h2>
-            <p className="text-xs text-slate-500 mt-0.5">همه‌ی گزارش‌ها — چه گزارش‌های هوشمند مدیریتی، چه گزارش‌های مفصل — در این صفحه بایگانی می‌شوند.</p>
+            <p className="text-xs text-text-muted mt-0.5">همه‌ی گزارش‌ها — چه گزارش‌های هوشمند مدیریتی، چه گزارش‌های مفصل — در این صفحه بایگانی می‌شوند.</p>
           </div>
           <div className="flex flex-wrap gap-2">
             <input
@@ -155,12 +156,12 @@ export default function ArchivePage() {
               placeholder="جست‌وجو در عنوان/نام فایل..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="border border-slate-300 rounded-md px-3 py-1.5 text-sm"
+              className="border border-border rounded-md px-3 py-1.5 text-sm"
             />
             <select
               value={countryFilter}
               onChange={(e) => setCountryFilter(e.target.value)}
-              className="border border-slate-300 rounded-md px-2 py-1.5 text-sm"
+              className="border border-border rounded-md px-2 py-1.5 text-sm"
             >
               <option value="همه">همه‌ی کشورها</option>
               {COUNTRIES.map((c) => (
@@ -170,7 +171,7 @@ export default function ArchivePage() {
             <select
               value={productFilter}
               onChange={(e) => setProductFilter(e.target.value)}
-              className="border border-slate-300 rounded-md px-2 py-1.5 text-sm"
+              className="border border-border rounded-md px-2 py-1.5 text-sm"
             >
               <option value="همه">همه‌ی محصولات</option>
               {PRODUCTS.map((p) => (
@@ -180,7 +181,7 @@ export default function ArchivePage() {
             <select
               value={typeFilter}
               onChange={(e) => setTypeFilter(e.target.value)}
-              className="border border-slate-300 rounded-md px-2 py-1.5 text-sm"
+              className="border border-border rounded-md px-2 py-1.5 text-sm"
             >
               <option value="همه">همه‌ی انواع</option>
               <option value="summary">گزارش مدیریتی (خلاصه)</option>
@@ -190,24 +191,24 @@ export default function ArchivePage() {
         </div>
 
         {loading ? (
-          <p className="text-sm text-slate-500">در حال بارگذاری...</p>
+          <p className="text-sm text-text-muted">در حال بارگذاری...</p>
         ) : filtered.length === 0 ? (
-          <p className="text-sm text-slate-500">گزارشی پیدا نشد.</p>
+          <p className="text-sm text-text-muted">گزارشی پیدا نشد.</p>
         ) : (
-          <ul className="divide-y divide-slate-100">
+          <ul className="divide-y divide-border">
             {filtered.map((r) => (
               <li key={r.id} className="py-3 flex items-center justify-between gap-3">
                 <div>
-                  <Link href={`/reports/${r.id}`} className="font-medium text-copper-700 hover:underline">
+                  <Link href={`/reports/${r.id}`} className="font-medium text-primary hover:underline">
                     {r.title}
                   </Link>
                   {r.report_type && (
-                    <span className="ms-2 inline-block rounded-full bg-slate-100 px-2 py-0.5 text-xs text-slate-600">
+                    <span className="ms-2 inline-block rounded-full bg-canvas px-2 py-0.5 text-xs text-text">
                       {REPORT_TYPE_FA[r.report_type]}
                     </span>
                   )}
-                  <p className="text-xs text-slate-500 mt-0.5">
-                    {r.country} · {r.product} · {formatSize(r.size_bytes)} · {new Date(r.uploaded_at).toLocaleDateString("fa-IR")}
+                  <p className="text-xs text-text-muted mt-0.5">
+                    {r.country} · {r.product} · {formatSize(r.size_bytes)} · {jalaliFa(r.uploaded_at)}
                   </p>
                 </div>
               </li>

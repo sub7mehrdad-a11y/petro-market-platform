@@ -10,17 +10,17 @@ export default function SectionBody({ text }) {
     const [header, ...body] = rows;
     return (
       <div className="overflow-x-auto my-2">
-        <table className="w-full text-sm border border-slate-200">
+        <table className="w-full text-sm border border-border">
           <thead>
-            <tr className="bg-slate-50">
+            <tr className="bg-canvas">
               {header.map((h, i) => (
-                <th key={i} className="py-1.5 px-3 text-right border-b border-slate-200">{h}</th>
+                <th key={i} className="py-1.5 px-3 text-right border-b border-border">{h}</th>
               ))}
             </tr>
           </thead>
           <tbody>
             {body.map((row, i) => (
-              <tr key={i} className="border-b border-slate-100">
+              <tr key={i} className="border-b border-border">
                 {row.map((c, j) => (
                   <td key={j} className="py-1.5 px-3">{c}</td>
                 ))}

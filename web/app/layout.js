@@ -1,17 +1,27 @@
-import { Vazirmatn, Fira_Code } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-import Sidebar from "./components/Sidebar";
+import AppShell from "./components/Sidebar";
 
-const vazirmatn = Vazirmatn({
+// فونت‌ها self-host‌اند (از بسته‌ی طراحی، لایسنس OFL کنار فایل‌ها): بدون وابستگی به Google Fonts در
+// build/اجرا، پس روی لیارا و محیط آفلاین هم یکسان کار می‌کنند.
+const vazirmatn = localFont({
   variable: "--font-vazirmatn",
-  subsets: ["arabic", "latin"],
+  display: "swap",
+  src: [
+    { path: "./fonts/Vazirmatn-400.ttf", weight: "400", style: "normal" },
+    { path: "./fonts/Vazirmatn-500.ttf", weight: "500", style: "normal" },
+    { path: "./fonts/Vazirmatn-600.ttf", weight: "600", style: "normal" },
+    { path: "./fonts/Vazirmatn-700.ttf", weight: "700", style: "normal" },
+    { path: "./fonts/Vazirmatn-800.ttf", weight: "800", style: "normal" },
+    { path: "./fonts/Vazirmatn-900.ttf", weight: "900", style: "normal" },
+  ],
 });
 
-// برای ارقام قیمت/آمار — فونت monospace با figure عددی ثابت، حس «دقیق و تحلیلی»
-// مناسب داشبورد به داده‌ها می‌ده (طبق توصیه‌ی سیستم طراحی برای محصولات دیتا-محور).
-const firaCode = Fira_Code({
+// ارقام داخل جدول‌ها (tnum) — طبق طرح فقط در جدول.
+const firaCode = localFont({
   variable: "--font-fira-code",
-  subsets: ["latin"],
+  display: "swap",
+  src: [{ path: "./fonts/FiraCode-400.ttf", weight: "400 500", style: "normal" }],
 });
 
 export const metadata = {
@@ -31,19 +41,16 @@ export default function RootLayout({ children }) {
         کشور/رقیب/گزارش که از قبل SSG بود، dynamic می‌شد). به‌جاش Sidebar
         خودش نقش رو از /api/auth/me می‌خونه (نگاه کن web/app/components/Sidebar.jsx).
       */}
-      <body className="min-h-full font-[family-name:var(--font-vazirmatn)] bg-petrol-50 text-slate-900">
-        <div className="min-h-screen flex flex-col lg:flex-row">
-          <Sidebar />
-
-          <div className="flex-1 min-w-0 flex flex-col">
-            <main className="flex-1 w-full max-w-6xl mx-auto px-4 py-6 lg:px-8 lg:py-8">
-              {children}
-            </main>
-            <footer className="border-t border-petrol-200 text-center text-xs text-petrol-600 py-5 px-4">
+      <body className="min-h-full font-[family-name:var(--font-vazirmatn)] bg-canvas text-text">
+        <AppShell
+          footer={
+            <footer className="mx-auto mt-6 w-full max-w-6xl border-t border-border px-4 py-5 text-xs leading-[1.85] text-text-muted lg:px-8">
               سپهران شیمی — داده‌ها روزی یک‌بار از منابع عمومی وب به‌صورت خودکار به‌روزرسانی می‌شن؛ هر عدد به منبع خودش لینک شده.
             </footer>
-          </div>
-        </div>
+          }
+        >
+          {children}
+        </AppShell>
       </body>
     </html>
   );
