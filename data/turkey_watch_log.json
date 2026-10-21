@@ -2231,5 +2231,49 @@
         "url": "https://www.dailysabah.com/business"
       }
     ]
+  },
+  {
+    "date": "2026-10-21",
+    "generated_at": "2026-10-21T10:39:48.995220+00:00",
+    "headline_fa": "عدم انتشار خبر جدید از رقبای ترک و تاکید ترکیه بر توسعه لجستیک",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "هدف‌گذاری ترکیه برای دستیابی به بازار لجستیک ۲۰۰ میلیارد دلاری",
+        "summary": "انجمن بین‌المللی ارائه‌دهندگان خدمات حمل‌ونقل و لجستیک ترکیه (UTIKAD) در همایش لجستیک ۲۰۲۵ اعلام کرد که قصد دارد حوزه لجستیک این کشور را به حجم بازار ۲۰۰ میلیارد دلار رسانده و ترکیه را در جمع ۱۰ کشور برتر لجستیک جهان قرار دهد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      }
+    ],
+    "market_note": "امروز در صفحات رسمی شرکت‌های رقیب (اتی سودا و کازان سودا) هیچ اطلاعیه یا خبر جدیدی درباره تغییر ظرفیت تولید، قیمت‌گذاری یا گزارش‌های مالی صادرات جوش شیرین منتشر نشده است. با این حال، اخبار بخش لجستیک ترکیه نشان‌دهنده استراتژی کلان این کشور برای تقویت زیرساخت‌های حمل‌ونقل و تثبیت موقعیت خود به عنوان هاب لجستیکی منطقه است. این رویکرد به معنای تداوم و تقویت مزیت لجستیکی ترکیه در بازارهای همسایه از جمله عراق است. در غیاب تحرکات قیمتی جدید از سوی رقیب، قیمت پایه صادراتی ۲۵0 دلار بر تن سپهران شیمی کماکان باید با استراتژی حفظ سهم بازار در برابر رقابت زمینی ترکیه تنظیم شود.",
+    "sources": [
+      {
+        "name": "WE Soda News & Resources",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda Homepage",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda Homepage",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTIKAD Logistics Association",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hurriyet Daily News Economy",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
