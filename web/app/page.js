@@ -8,6 +8,7 @@ import IntratecSampleCard from "./components/IntratecSampleCard";
 import NewsCard from "./components/NewsCard";
 import KpiRow from "./components/KpiRow";
 import PageHeader from "./components/PageHeader";
+import PrintButton from "./components/PrintButton";
 import MarketShareTrend from "./components/MarketShareTrend";
 
 const BASE_FOB_USD = 250;
@@ -104,13 +105,14 @@ export default function DashboardPage() {
   return (
     <div className="space-y-8">
       <PageHeader
+        actions={<PrintButton />}
         title="داشبورد بازار"
         subtitle="وضعیت قیمت جهانی، رقبا و روند بازار جوش شیرین — به‌روزرسانی خودکار روزانه"
       />
 
       <KpiRow cards={kpiCards} />
 
-      <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-md px-3 py-2 inline-block">
+      <p className="text-xs text-warning bg-warning-soft border border-warning rounded-md px-3 py-2 inline-block">
         توجه: قیمت‌های «داخلی» (ارز محلی) و «CIF» با «FOB» دلاری قابل مقایسه‌ی مستقیم نیستن — نوع هر قیمت کنارش برچسب‌گذاری شده.
       </p>
 
@@ -138,7 +140,7 @@ export default function DashboardPage() {
       <section className="card p-5">
         <h2 className="text-lg font-bold mb-3">مهم‌ترین تحلیل‌های خبری</h2>
         {latestNews.length === 0 ? (
-          <p className="text-sm text-slate-500">هنوز تحلیلی ثبت نشده.</p>
+          <p className="text-sm text-text-muted">هنوز تحلیلی ثبت نشده.</p>
         ) : (
           <div>
             {latestNews.map((entry, i) => (
@@ -146,7 +148,7 @@ export default function DashboardPage() {
             ))}
           </div>
         )}
-        <Link href="/news" className="inline-block mt-4 text-sm text-copper-700 hover:underline">
+        <Link href="/news" className="inline-block mt-4 text-sm text-primary hover:underline">
           مشاهده‌ی همه‌ی اخبار تحلیلی ←
         </Link>
       </section>

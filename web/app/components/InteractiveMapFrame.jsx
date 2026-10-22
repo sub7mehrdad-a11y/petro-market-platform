@@ -39,13 +39,13 @@ export default function InteractiveMapFrame({ src, title }) {
           resize();
           setTimeout(resize, 800);
         }}
-        className="w-full rounded-lg border border-slate-200 bg-white"
+        className="w-full rounded-lg border border-border bg-white"
         style={{ height, border: 0 }}
         loading="lazy"
       />
-      <div className="mt-2 text-xs text-slate-500">
+      <div className="mt-2 text-xs text-text-muted">
         نقشه به اینترنت نیاز دارد (کتابخانه‌ی d3 و فونت). برای نمایش تمام‌صفحه{" "}
-        <a href={src} target="_blank" rel="noopener noreferrer" className="text-copper-700 hover:underline">
+        <a href={src} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
           در تب جدید باز کنید ↗
         </a>
       </div>

@@ -1,28 +1,53 @@
 @import "tailwindcss";
 
-/* رنگ‌های «کوره» — نفتی تیره + مسی گرم؛ هویت بصری منتخب برای تحقیق و توسعه سپهران شیمی */
+/* توکن‌های طراحی تأییدشده‌ی بسته‌ی الف/ب (ui/sepehran-package-b/tailwind-theme.css).
+   نام‌های petrol-50 تا petrol-900 حفظ شده ولی اکنون طیف آبی‌اند؛ طیف مسی (copper)
+   عمداً حذف شده تا استفاده‌ی باقی‌مانده بی‌صدا رنگ نشود (کلاس ناشناخته = بدون رنگ و در
+   گرپ دیده می‌شود). نقش هر رنگ در ui/color-migration.md ثبت است. */
 @theme {
-  --color-petrol-50: #EAF1F2;
-  --color-petrol-100: #D7E2E4;
-  --color-petrol-200: #AFC5C9;
-  --color-petrol-300: #7FA3A9;
-  --color-petrol-400: #4C7B83;
-  --color-petrol-500: #2A5860;
-  --color-petrol-600: #17414A;
-  --color-petrol-700: #123742;
-  --color-petrol-800: #0D2830;
-  --color-petrol-900: #0B2027;
+  --color-petrol-50: #F1F7FD;
+  --color-petrol-100: #E2EEFB;
+  --color-petrol-200: #C7DEF5;
+  --color-petrol-300: #A2C7EC;
+  --color-petrol-400: #77ACDE;
+  --color-petrol-500: #478DCA;
+  --color-petrol-600: #286DA6;
+  --color-petrol-700: #205B8A;
+  --color-petrol-800: #1D4A70;
+  --color-petrol-900: #193D5B;
 
-  --color-copper-50: #FDF3E7;
-  --color-copper-100: #FAE4C7;
-  --color-copper-200: #F3C68C;
-  --color-copper-300: #EAA659;
-  --color-copper-400: #DA8C42;
-  --color-copper-500: #C9762E;
-  --color-copper-600: #AD5F22;
-  --color-copper-700: #8B4A1C;
-  --color-copper-800: #6B3916;
-  --color-copper-900: #4A2810;
+  --color-canvas: #F5F8FC;
+  --color-surface: #FFFFFF;
+  --color-surface-soft: #F1F7FD;
+  --color-text: #263B50;
+  --color-text-muted: #52687D;
+  --color-border: #D2DEEB;
+  --color-primary: #286DA6;
+  --color-primary-hover: #205B8A;
+  --color-primary-soft: #E2EEFB;
+  --color-focus: #205B8A;
+  --color-success: #176C4C;
+  --color-success-soft: #EAF7EF;
+  --color-danger: #A52E4A;
+  --color-danger-soft: #FFF0F3;
+  --color-warning: #815F13;
+  --color-warning-soft: #FFF8DF;
+  --color-info: #286F94;
+  --color-info-soft: #EBF5FA;
+
+  --color-chart-1: #286DA6;
+  --color-chart-2: #4263A5;
+  --color-chart-3: #7757A2;
+  --color-chart-4: #A64270;
+  --color-chart-5: #6E7131;
+  --color-chart-6: #286F94;
+  --color-chart-7: #5F6097;
+  --color-chart-8: #536779;
+  --color-chart-iran: #193D5B;
+
+  --shadow-sm: 0 1px 2px rgba(38, 59, 80, 0.04);
+  --shadow-card: 0 2px 4px rgba(38, 59, 80, 0.025), 0 12px 28px rgba(38, 59, 80, 0.035);
+  --shadow-raised: 0 5px 12px rgba(38, 59, 80, 0.06), 0 16px 32px rgba(38, 59, 80, 0.05);
 }
 
 @theme inline {
@@ -30,92 +55,190 @@
   --font-tabular: var(--font-fira-code);
 }
 
+html {
+  color-scheme: light;
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
 body {
   font-family: var(--font-vazirmatn), Arial, Helvetica, sans-serif;
+  background: var(--color-canvas);
+  color: var(--color-text);
 }
 
-/* برای ارقام قیمت/آمار توی داشبورد — figure عددی هم‌عرض، خوانایی بهتر برای مقایسه‌ی ستونی */
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* اعداد جدول‌ها: figure هم‌عرض فقط در جدول (طبق بند قوانین ثابت طراحی)؛ KPI و عنوان‌ها
+   proportional‌اند. جهت LTR و isolate چون «۱۲٬۴۴۶» باید بین متن فارسی نشکند. */
 .font-tabular {
-  font-family: var(--font-fira-code), ui-monospace, monospace;
-  font-feature-settings: "tnum" 1, "zero" 1;
+  font-family: var(--font-fira-code), var(--font-vazirmatn), ui-monospace, monospace;
+  font-feature-settings: "tnum" 1;
   font-variant-numeric: tabular-nums;
 }
-
-/* پس‌زمینه‌ی هدر/بخش‌های تیره‌ی سایت — گرادیان نفتی مورب مسیر «کوره» */
-.bg-petrol-gradient {
-  background: linear-gradient(135deg, var(--color-petrol-900) 0%, var(--color-petrol-700) 100%);
+table .font-tabular,
+.data-number {
+  direction: ltr;
+  unicode-bidi: isolate;
 }
 
-/* ------------------------------------------------------------------ کارت‌ها
-   کارت سفید روی بوم تیره.
-
-   چرا یک کلاس مشترک به‌جای تکرار کلاس‌های Tailwind در ۲۳ جای مختلف: شکل کارت
-   عنصر اصلی هویت بصری این سایت است؛ وقتی در ۲۳ فایل تکرار شده باشد، اولین
-   تغییر طراحی (مثل همین پاس) یعنی ۲۳ جای مختلف که یکی‌شان جا می‌ماند.
-
-   جزئیات از روی طرح: گردی ۱۶ پیکسل (نه ۱۲)، بدون حاشیه‌ی خاکستری محسوس، و
-   سایه‌ی دولایه — یک لایه‌ی نزدیک برای لبه و یک لایه‌ی پخش برای جداشدن از بوم
-   تیره. روی زمینه‌ی تیره، سایه‌ی تک‌لایه‌ی Tailwind تقریباً دیده نمی‌شود. */
+/* ------------------------------------------------------------------ کارت
+   کارت سفید با حاشیه‌ی آبی‌خاکستری و سایه‌ی ملایم (شعاع ۱۶). */
 .card {
-  background: #fff;
+  background: var(--color-surface);
   border-radius: 1rem;
-  border: 1px solid rgba(11, 32, 39, 0.06);
-  box-shadow:
-    0 1px 2px rgba(11, 32, 39, 0.06),
-    0 12px 28px -14px rgba(11, 32, 39, 0.45);
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-card);
 }
 
 .card-hover {
-  transition: box-shadow 0.2s, transform 0.2s;
+  transition: box-shadow 0.2s, border-color 0.2s;
 }
 .card-hover:hover {
-  box-shadow:
-    0 1px 2px rgba(11, 32, 39, 0.08),
-    0 18px 36px -16px rgba(11, 32, 39, 0.55);
-  transform: translateY(-2px);
+  border-color: var(--color-petrol-300);
+  box-shadow: var(--shadow-raised);
 }
 
-/* --------------------------------------------------- کادر فرصت/تهدید خبر
-   رنگ کادر کارت خبر بر اساس فیلد impact که news_analysis_bot.py تولید می‌کنه:
-   سبز = خبر به نفع ماست (opportunity)، قرمز = به ضرر ماست (threat)، و بدون
-   این کلاس‌ها (impact نامشخص/neutral) یعنی همون کادر خاکستری پیش‌فرض کارت.
-   عمداً بعد از .card تعریف شده تا رنگ حاشیه‌ش رو override کنه. */
+/* کادر فرصت/تهدید خبر؛ رنگ حاشیه از فیلد impact. بعد از .card تا حاشیه را override کند. */
 .card-impact-opportunity {
-  border-color: #10b981;
-  box-shadow:
-    0 1px 2px rgba(11, 32, 39, 0.06),
-    0 12px 28px -14px rgba(16, 185, 129, 0.35);
+  border-color: var(--color-success);
 }
 .card-impact-threat {
-  border-color: #e11d48;
-  box-shadow:
-    0 1px 2px rgba(11, 32, 39, 0.06),
-    0 12px 28px -14px rgba(225, 29, 72, 0.35);
+  border-color: var(--color-danger);
+}
+
+/* هدر برندی روشن صفحه‌های جزئیات (رقیب، نمایشگاه، ترانزیت) — به‌جای گرادیان تیره‌ی قبلی. */
+.bg-petrol-gradient {
+  background: var(--color-surface-soft);
+  border: 1px solid var(--color-border);
+}
+
+/* ------------------------------------------------------------------ دکمه‌ها */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 44px;
+  border: 1px solid transparent;
+  border-radius: 0.75rem;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background: var(--color-primary);
+  color: #fff;
+  transition: background 0.15s, color 0.15s;
+  cursor: pointer;
+}
+.btn:hover {
+  background: var(--color-primary-hover);
+}
+.btn-secondary {
+  background: var(--color-surface);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+.btn-secondary:hover {
+  background: var(--color-primary-soft);
+}
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  background: var(--color-canvas);
+  color: var(--color-text-muted);
+  border-color: var(--color-border);
+  cursor: not-allowed;
+}
+
+/* ------------------------------------------------------------------ نشان‌ها */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.125rem 0.625rem;
+  min-height: 26px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  white-space: nowrap;
+  background: var(--color-info-soft);
+  color: var(--color-info);
+}
+.badge-success { background: var(--color-success-soft); color: var(--color-success); }
+.badge-danger { background: var(--color-danger-soft); color: var(--color-danger); }
+.badge-warning { background: var(--color-warning-soft); color: var(--color-warning); }
+.badge-neutral { background: var(--color-canvas); color: var(--color-text-muted); }
+.badge-primary { background: var(--color-primary-soft); color: var(--color-primary); }
+
+/* ------------------------------------------------------------------ ورودی‌ها
+   فیلدهای فیلتر/جست‌وجو؛ قبلاً روی بوم تیره‌ی نفتی بودند. */
+.input {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 0.875rem;
+  border-radius: 0.75rem;
+  min-height: 44px;
+  padding: 0.5rem 0.875rem;
+}
+.input::placeholder {
+  color: var(--color-text-muted);
+}
+.input:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 2px;
 }
 
 /* ------------------------------------------------------------------ چیپ‌ها
-   دکمه‌های فیلتر روی بوم تیره (صفحه‌ی اخبار و…) — قرص گرد، حالت فعال مسی. */
+   دکمه‌های فیلتر (اخبار و…) — قرص گرد، حالت فعال primary-soft + primary. */
 .chip {
   display: inline-flex;
   align-items: center;
   gap: 0.375rem;
   border-radius: 9999px;
   padding: 0.4rem 0.9rem;
+  min-height: 36px;
   font-size: 0.8125rem;
-  background: var(--color-petrol-700);
-  color: var(--color-petrol-100);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: background 0.15s, color 0.15s;
+  background: var(--color-surface);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
   cursor: pointer;
 }
 .chip:hover {
-  background: var(--color-petrol-600);
-  color: #fff;
+  background: var(--color-surface-soft);
+  color: var(--color-primary);
 }
 .chip-active,
 .chip-active:hover {
-  background: var(--color-copper-500);
-  color: #fff;
-  border-color: transparent;
-  font-weight: 600;
+  background: var(--color-primary-soft);
+  color: var(--color-primary);
+  border-color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* ------------------------------------------------------------------ چاپ (A4)
+   سایدبار/نوار بالا/دکمه‌های اقدام چاپ نمی‌شوند؛ کارت‌ها و جدول‌ها از وسط نمی‌شکنند.
+   رنگ تنها حامل معنا نیست (متن/برچسب کنار هر نشان هست)، پس چاپ سیاه‌وسفید هم خوانا می‌ماند. */
+@media print {
+  @page { size: A4; margin: 14mm; }
+  html, body { background: #fff !important; }
+  aside, [aria-label="ناوبری اصلی"], .print\:hidden, button, .btn, .skip, nav[aria-label="صفحه‌بندی"] { display: none !important; }
+  .lg\:ps-\[248px\], .lg\:ps-20 { padding-inline-start: 0 !important; }
+  .sticky { position: static !important; }
+  main { max-width: none !important; padding: 0 !important; }
+  .card { box-shadow: none !important; break-inside: avoid; }
+  tr, li { break-inside: avoid; }
+  a { color: inherit !important; text-decoration: none !important; }
+  iframe { height: auto !important; }
 }

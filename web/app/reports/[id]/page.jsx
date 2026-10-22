@@ -31,7 +31,7 @@ export default async function ReportDetailPage({ params }) {
   return (
     <div className="space-y-6">
       <div>
-        <Link href={backHref} className="text-sm text-slate-500 hover:text-copper-700 transition-colors">
+        <Link href={backHref} className="text-sm text-text-muted hover:text-primary transition-colors">
           {backLabel}
         </Link>
       </div>
@@ -40,7 +40,7 @@ export default async function ReportDetailPage({ params }) {
         <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
           <div>
             <h1 className="text-xl font-bold">{entry.title}</h1>
-            <p className="text-sm text-slate-500 mt-1">
+            <p className="text-sm text-text-muted mt-1">
               {entry.country} · {entry.product}
               {entry.report_type && <> · {REPORT_TYPE_FA[entry.report_type]}</>}
             </p>
@@ -49,14 +49,14 @@ export default async function ReportDetailPage({ params }) {
             {entry.docx_relative_path && (
               <a
                 href={`/api/reports/download?id=${encodeURIComponent(entry.id)}&format=docx`}
-                className="border border-copper-700 text-copper-800 text-sm font-medium rounded-lg px-4 py-2.5 hover:bg-copper-50 transition-all"
+                className="border border-primary text-primary-hover text-sm font-medium rounded-lg px-4 py-2.5 hover:bg-primary-soft transition-all"
               >
                 دانلود فایل Word
               </a>
             )}
             <a
               href={`/api/reports/download?id=${entry.id}`}
-              className="bg-copper-700 text-white text-sm font-medium rounded-lg px-4 py-2.5 shadow-sm hover:bg-copper-800 hover:shadow-md transition-all"
+              className="bg-primary text-white text-sm font-medium rounded-lg px-4 py-2.5 shadow-sm hover:bg-primary-hover hover:shadow-md transition-all"
             >
               {entry.docx_relative_path ? "دانلود نسخه‌ی HTML" : "دانلود فایل اصلی"}
             </a>
@@ -64,7 +64,7 @@ export default async function ReportDetailPage({ params }) {
         </div>
 
         {!parsed ? (
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-text-muted">
             نسخه‌ی وب هوشمند برای این فایل ساخته نشده؛ فقط فایل اصلی رو دانلود کنید.
           </p>
         ) : parsed.format === "html" ? (

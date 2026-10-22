@@ -1,4 +1,5 @@
 "use client";
+import { sourceDateFa, gregorianFa, jalaliFa } from "@/lib/dateFormat";
 
 import {
   LineChart,
@@ -10,13 +11,14 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { CHART, CHART_GRID, CHART_TEXT } from "@/lib/chartTheme";
 
 // پالت دسته‌ای اعتبارسنجی‌شده (validate_palette.js، حالت light — همه‌ی چک‌ها PASS):
 // مسی (برند اصلی) → قرمز هشدار (از قبل تو پروژه بود) → آبی → سبز. ترتیب ثابته،
 // چرخشی انتخاب نمی‌شه. پترول برند اینجا نیست چون رنگ‌آمیزی خیلی کم‌اشباعی داره
 // (فقط برای متن/پس‌زمینه مناسبه، نه برای تفکیک سری‌های داده — زیر آستانه‌ی chroma
 // رد شد).
-const SERIES_COLORS = ["#C9762E", "#9C2B2B", "#0C7DA6", "#4C7A3D"];
+const SERIES_COLORS = CHART.slice(0, 4);
 
 const PRICE_TYPE_FA = { domestic: "داخلی", FOB: "FOB", CIF: "CIF" };
 const CURRENCY_FA = { USD: "دلار آمریکا", CNY: "یوان چین", EUR: "یورو" };
@@ -63,22 +65,23 @@ function CurrencyChart({ currency, unit, rows }) {
 
   return (
     <div className="mb-4 last:mb-0">
-      <p className="text-xs text-slate-500 mb-1">
+      <p className="text-xs text-text-muted mb-1">
         بر حسب {CURRENCY_FA[currency] || currency} — {unit || "تن"}
       </p>
+      <div dir="ltr">
       <ResponsiveContainer width="100%" height={300}>
         <LineChart data={data} margin={{ top: 10, right: 20, left: 0, bottom: 10 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
-          <XAxis dataKey="date" fontSize={12} />
+          <CartesianGrid strokeDasharray="3 3" stroke={CHART_GRID} />
+          <XAxis dataKey="date" fontSize={12} tickFormatter={(d) => gregorianFa(d, { short: true })} />
           <YAxis
             fontSize={12}
-            label={{ value: currency, angle: -90, position: "insideLeft", fontSize: 11, fill: "#64748b" }}
+            label={{ value: currency, angle: -90, position: "insideLeft", fontSize: 11, fill: CHART_TEXT }}
           />
-          <Tooltip
+          <Tooltip wrapperStyle={{ direction: "rtl" }}
             formatter={(value, name) => [`${value} ${currency}`, name]}
             labelFormatter={(date, payload) => {
               const reported = payload?.[0]?.payload?.[`${payload[0].name}__reported`];
-              return reported ? `تاریخ جمع‌آوری: ${date} (منبع: ${reported})` : `تاریخ جمع‌آوری: ${date}`;
+              return reported ? `تاریخ جمع‌آوری: ${gregorianFa(date)} (منبع: ${sourceDateFa(reported)})` : `تاریخ جمع‌آوری: ${date}`;
             }}
           />
           <Legend wrapperStyle={{ fontSize: 12 }} />
@@ -95,6 +98,7 @@ function CurrencyChart({ currency, unit, rows }) {
           ))}
         </LineChart>
       </ResponsiveContainer>
+      </div>
     </div>
   );
 }
@@ -104,7 +108,7 @@ export default function PriceChart({ rows }) {
 
   if (groups.size === 0) {
     return (
-      <p className="text-sm text-slate-500">هنوز داده‌ی قیمتی با عدد واقعی ثبت نشده.</p>
+      <p className="text-sm text-text-muted">هنوز داده‌ی قیمتی با عدد واقعی ثبت نشده.</p>
     );
   }
 

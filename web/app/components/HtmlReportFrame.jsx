@@ -51,7 +51,7 @@ export default function HtmlReportFrame({ src, title }) {
       src={src}
       title={title}
       onLoad={handleLoad}
-      className="w-full border border-slate-200 rounded-lg"
+      className="w-full border border-border rounded-lg"
       style={{ height }}
     />
   );

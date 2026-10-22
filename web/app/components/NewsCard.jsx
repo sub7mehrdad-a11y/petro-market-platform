@@ -1,3 +1,4 @@
+import { sourceDateFa, gregorianFa, jalaliFa } from "@/lib/dateFormat";
 function fallbackHeadline(analysisFa) {
   const firstLine = (analysisFa || "").split("\n")[0];
   return firstLine.length > 80 ? firstLine.slice(0, 80) + "…" : firstLine;
@@ -8,8 +9,8 @@ function fallbackHeadline(analysisFa) {
 // به‌جای رنگ کل کادر، یک نوار رنگی در سمت شروع خط (راست، چون سایت RTL است)
 // اضافه می‌شود. impact نامشخص/neutral یعنی همون رنگ خاکستری فعلی، بدون تغییر.
 const IMPACT_ACCENT = {
-  opportunity: "border-s-4 border-s-emerald-500 ps-3 -ms-3",
-  threat: "border-s-4 border-s-rose-500 ps-3 -ms-3",
+  opportunity: "border-s-4 border-s-success ps-3 -ms-3",
+  threat: "border-s-4 border-s-danger ps-3 -ms-3",
 };
 
 export default function NewsCard({ entry, compact = false }) {
@@ -18,32 +19,32 @@ export default function NewsCard({ entry, compact = false }) {
   const impactAccent = IMPACT_ACCENT[entry.impact] || "";
 
   return (
-    <article className={`border-b border-slate-100 last:border-0 py-4 first:pt-0 ${impactAccent}`}>
+    <article className={`border-b border-border last:border-0 py-4 first:pt-0 ${impactAccent}`}>
       <div className="flex items-baseline justify-between gap-2 mb-1">
         <h3 className="font-semibold leading-6">
-          {primarySource && <span className="text-copper-700">{primarySource}</span>}
+          {primarySource && <span className="text-primary">{primarySource}</span>}
           {primarySource && " — "}
           {headline}
         </h3>
-        <span className="text-xs text-slate-400 shrink-0">{entry.date}</span>
+        <span className="text-xs text-text-muted shrink-0">{gregorianFa(entry.date)}</span>
       </div>
 
       {/* موضوع فقط روی رکوردهای بعد از ۲۰۲۶-۰۸-۲۳ وجود داره (نسخه‌ی چندموضوعی ربات خبر) */}
       {entry.topic && (
-        <span className="inline-block text-[11px] text-petrol-700 bg-petrol-50 border border-petrol-100 rounded-full px-2 py-0.5 mb-2">
+        <span className="inline-block text-[11px] text-text bg-canvas border border-border rounded-full px-2 py-0.5 mb-2">
           {entry.topic}
         </span>
       )}
 
-      <p className={`text-sm text-slate-600 leading-7 whitespace-pre-line ${compact ? "line-clamp-3" : ""}`}>
+      <p className={`text-sm text-text leading-7 whitespace-pre-line ${compact ? "line-clamp-3" : ""}`}>
         {entry.analysis_fa}
       </p>
 
       {entry.sources?.length > 0 && (
-        <div className="text-xs text-slate-500 flex flex-wrap gap-x-3 gap-y-1 mt-2">
+        <div className="text-xs text-text-muted flex flex-wrap gap-x-3 gap-y-1 mt-2">
           <span>منابع:</span>
           {entry.sources.map((s, i) => (
-            <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="text-copper-700 hover:underline">
+            <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
               {s.name}
             </a>
           ))}

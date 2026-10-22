@@ -12,10 +12,11 @@ import {
   Legend,
   ResponsiveContainer,
 } from "recharts";
+import { CHART, CHART_GRID } from "@/lib/chartTheme";
 
 // همون پالت دسته‌ای اعتبارسنجی‌شده‌ی PriceChart.jsx (مسی → قرمز → آبی → سبز)،
 // برای یکدستی بصری بین نمودار قیمت‌ها و نمودارهای گزارش‌ها.
-const COLORS = ["#C9762E", "#9C2B2B", "#0C7DA6", "#4C7A3D"];
+const COLORS = CHART.slice(0, 4);
 
 // چارت‌های گزارش با {categories, series:[{name, values}]} میان؛ recharts آرایه‌ای
 // از آبجکت به شکل {category, seriesName: value, ...} می‌خواد.
@@ -35,14 +36,15 @@ export default function ReportChart({ chart }) {
     <div className="my-4">
       <h4 className="font-semibold text-sm mb-2">
         {chart.title}
-        {chart.unit && <span className="text-slate-400 font-normal"> ({chart.unit})</span>}
+        {chart.unit && <span className="text-text-muted font-normal"> ({chart.unit})</span>}
       </h4>
+      <div dir="ltr">
       <ResponsiveContainer width="100%" height={280}>
         <ChartComp data={data} margin={{ top: 10, right: 20, left: 0, bottom: 10 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+          <CartesianGrid strokeDasharray="3 3" stroke={CHART_GRID} />
           <XAxis dataKey="category" fontSize={12} />
           <YAxis fontSize={12} />
-          <Tooltip />
+          <Tooltip wrapperStyle={{ direction: "rtl" }} />
           {chart.series?.length > 1 && <Legend wrapperStyle={{ fontSize: 12 }} />}
           {(chart.series || []).map((s, i) =>
             chart.type === "line" ? (
@@ -53,6 +55,7 @@ export default function ReportChart({ chart }) {
           )}
         </ChartComp>
       </ResponsiveContainer>
+      </div>
     </div>
   );
 }

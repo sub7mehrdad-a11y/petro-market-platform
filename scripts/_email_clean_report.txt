@@ -1,0 +1,18 @@
+16 رکورد تغییر کرد از 2044 کل:
+
+company-161 (Biscoza Biscuit Manufacturing): None -> None
+company-162 (Hariri Food Industries): None -> None
+company-164 (Reem Al Fouad Food Industries (brand: Nabaa Al Fouad)): None -> None
+company-167 (Al-Saleheen Food Company): None -> None
+company-169 (Al-Mimas Trading and Industry Company): None -> None
+company-170 (Our Syrian Family Company for Food Industries): 'sanabelco@gmail.com' -> 'sanabelco@gmail.com'
+company-171 (United Soap and Detergents Company): None -> None
+company-172 (Kswani Bros (كسواني إخوان)): None -> None
+company-174 (AGRO PLANET (اگرو پلنت)): None -> None
+company-175 (Mira for Feed and Poultry (مؤسسة ميرا للأعلاف والدواجن)): None -> None
+company-176 (Al-Iskandar for Poultry (شركة الإسكندر للدواجن)): None -> None
+company-250 (LLC Bukhara Eco Sless (Ecosless Group)): None -> None
+company-266 (Rozmetov Z.M. LLC): 'info@rozmetov.uz' -> 'info@rozmetov.uz'
+company-290 (CHICKODELLI (Prima Kus LLP)): None -> None
+company-301 (Saule Confectionery Factory LLP): None -> None
+company-507 (SPARTAK (JV JSC Spartak)): 'snab@spartak.by' -> 'snab@spartak.by'

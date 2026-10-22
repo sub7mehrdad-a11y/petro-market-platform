@@ -33,17 +33,17 @@ export default function CountryEconomicProfile({ profile }) {
   return (
     <section className="card p-5">
       <h2 className="text-lg font-bold mb-1">اطلاعات اقتصادی پایه</h2>
-      <p className="text-xs text-slate-500 mb-4">
+      <p className="text-xs text-text-muted mb-4">
         منبع: World Bank Open Data — آخرین سال آماری موجود برای هر شاخص (
         {(profile.year || profile.gdp_total_year || "").toString().replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d])}).
       </p>
       <div className="grid gap-3 grid-cols-2 sm:grid-cols-4">
         {items.map((it) => (
-          <div key={it.label} className="border border-slate-200 rounded-lg p-3">
-            <div className="text-[11px] text-slate-500 mb-1.5 leading-5">{it.label}</div>
+          <div key={it.label} className="border border-border rounded-lg p-3">
+            <div className="text-[11px] text-text-muted mb-1.5 leading-5">{it.label}</div>
             <div className="flex items-baseline gap-1.5 flex-wrap">
-              <span className="font-black font-tabular text-lg text-petrol-900">{it.value}</span>
-              <span className="text-[11px] text-slate-400">{it.unit}</span>
+              <span className="font-black text-lg text-text">{it.value}</span>
+              <span className="text-[11px] text-text-muted">{it.unit}</span>
             </div>
           </div>
         ))}

@@ -5,7 +5,7 @@ function RichText({ block }) {
   if (!block.runs) return block.text;
   return block.runs.map((r, i) =>
     r.href ? (
-      <a key={i} href={r.href} target="_blank" rel="noopener noreferrer" className="text-copper-700 hover:underline">
+      <a key={i} href={r.href} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
         {r.text}
       </a>
     ) : (
@@ -22,7 +22,7 @@ function Block({ block }) {
       <img
         src={block.src}
         alt=""
-        className="max-w-full h-auto rounded-lg border border-slate-200 my-4 mx-auto"
+        className="max-w-full h-auto rounded-lg border border-border my-4 mx-auto"
       />
     );
   }
@@ -41,17 +41,17 @@ function Block({ block }) {
   if (block.type === "table") {
     return (
       <div className="overflow-x-auto my-3">
-        <table className="w-full text-sm border border-slate-200">
+        <table className="w-full text-sm border border-border">
           <thead>
-            <tr className="bg-slate-50">
+            <tr className="bg-canvas">
               {block.headers.map((h, i) => (
-                <th key={i} className="py-1.5 px-3 text-right border-b border-slate-200">{h}</th>
+                <th key={i} className="py-1.5 px-3 text-right border-b border-border">{h}</th>
               ))}
             </tr>
           </thead>
           <tbody>
             {block.rows.map((row, i) => (
-              <tr key={i} className="border-b border-slate-100">
+              <tr key={i} className="border-b border-border">
                 {row.map((c, j) => (
                   <td key={j} className="py-1.5 px-3">{c}</td>
                 ))}

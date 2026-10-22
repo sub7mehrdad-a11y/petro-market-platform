@@ -16,8 +16,8 @@ function Section({ title, subtitle, children }) {
   return (
     <section className="card p-5">
       <div className="mb-4">
-        <h2 className="text-lg font-bold text-petrol-900">{title}</h2>
-        {subtitle && <p className="text-xs text-slate-500 mt-0.5">{subtitle}</p>}
+        <h2 className="text-lg font-bold text-text">{title}</h2>
+        {subtitle && <p className="text-xs text-text-muted mt-0.5">{subtitle}</p>}
       </div>
       {children}
     </section>
@@ -37,40 +37,36 @@ export default async function ExhibitionDetailPage({ params }) {
   return (
     <div className="space-y-6">
       <div>
-        <Link href="/exhibitions" className="text-sm text-slate-500 hover:text-copper-700 transition-colors">
+        <Link href="/exhibitions" className="text-sm text-text-muted hover:text-primary transition-colors">
           ← بانک نمایشگاه‌ها
         </Link>
       </div>
 
-      <section className="bg-petrol-gradient text-white rounded-xl overflow-hidden relative">
-        <div
-          className="pointer-events-none absolute -top-20 -start-20 h-64 w-64 rounded-full opacity-50"
-          style={{ background: "radial-gradient(circle, rgba(201,118,46,.4), transparent 70%)" }}
-        />
+      <section className="bg-petrol-gradient rounded-2xl overflow-hidden relative">
         <div className="relative z-10 p-6">
           <div className="flex items-baseline gap-3 flex-wrap mb-1">
             <h1 className="text-2xl font-black">{e.name}</h1>
-            <span className="text-sm text-petrol-200">{e.country}</span>
+            <span className="text-sm text-text-muted">{e.country}</span>
           </div>
-          {e.organizer && <p className="text-copper-300 text-sm font-medium mb-3">{e.organizer}</p>}
+          {e.organizer && <p className="text-primary text-sm font-medium mb-3">{e.organizer}</p>}
 
           <div className="grid gap-3 sm:grid-cols-3 mt-4">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-              <div className="text-[11px] text-petrol-200 mb-1">زمان</div>
+            <div className="bg-surface rounded-xl p-3 border border-border">
+              <div className="text-[11px] text-text-muted mb-1">زمان</div>
               <div className="font-bold text-sm">{e.date}</div>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-              <div className="text-[11px] text-petrol-200 mb-1">محل</div>
+            <div className="bg-surface rounded-xl p-3 border border-border">
+              <div className="text-[11px] text-text-muted mb-1">محل</div>
               <div className="font-bold text-sm">{e.location}</div>
             </div>
             {e.website && (
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-                <div className="text-[11px] text-petrol-200 mb-1">وب‌سایت رسمی</div>
+              <div className="bg-surface rounded-xl p-3 border border-border">
+                <div className="text-[11px] text-text-muted mb-1">وب‌سایت رسمی</div>
                 <a
                   href={e.website.startsWith("http") ? e.website : `https://${e.website}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-bold text-sm text-copper-300 hover:underline"
+                  className="font-bold text-sm text-primary hover:underline"
                 >
                   {e.website} ↗
                 </a>
@@ -79,15 +75,15 @@ export default async function ExhibitionDetailPage({ params }) {
           </div>
 
           {(e.focus || e.target_grade) && (
-            <p className="text-sm leading-7 text-petrol-50 max-w-3xl mt-4">
+            <p className="text-sm leading-7 text-text max-w-3xl mt-4">
               {e.focus || e.target_grade}
             </p>
           )}
 
           {/* خریداران/غرفه‌داران بالقوه — فعلاً فقط فایل ارمنستان این ستون را دارد */}
           {e.audience && (
-            <p className="text-sm leading-7 text-petrol-100 max-w-3xl mt-2">
-              <span className="text-petrol-300">خریداران و غرفه‌داران بالقوه: </span>
+            <p className="text-sm leading-7 text-text max-w-3xl mt-2">
+              <span className="text-text-muted">خریداران و غرفه‌داران بالقوه: </span>
               {e.audience}
             </p>
           )}
@@ -99,12 +95,12 @@ export default async function ExhibitionDetailPage({ params }) {
         subtitle="ترکیب صنایع حاضر و عملکرد دوره‌های قبل — استخراج‌شده از سایت رسمی نمایشگاه"
       >
         {!report ? (
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-text-muted">
             گزارشی برای این نمایشگاه هنوز ساخته نشده. اسکریپت{" "}
             <code className="text-xs">scripts/enrich_exhibitions.py</code> را اجرا کنید.
           </p>
         ) : !hasRealData ? (
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-text-muted">
             {report.past_editions_summary || "اطلاعات کافی درباره‌ی این نمایشگاه در دسترس نیست."}
           </p>
         ) : (
@@ -113,8 +109,8 @@ export default async function ExhibitionDetailPage({ params }) {
               <span
                 className={`inline-block rounded-full px-2 py-0.5 text-[11px] font-bold ${
                   report.data_availability === "sufficient"
-                    ? "bg-copper-50 text-copper-800"
-                    : "bg-slate-100 text-slate-600"
+                    ? "bg-primary-soft text-primary-hover"
+                    : "bg-canvas text-text"
                 }`}
               >
                 میزان اطلاعات: {AVAILABILITY_FA[report.data_availability]}
@@ -123,12 +119,12 @@ export default async function ExhibitionDetailPage({ params }) {
 
             {report.industries_present?.length > 0 && (
               <div>
-                <h4 className="text-xs font-bold text-slate-500 mb-2">صنایع پررنگ‌تر در این نمایشگاه</h4>
+                <h4 className="text-xs font-bold text-text-muted mb-2">صنایع پررنگ‌تر در این نمایشگاه</h4>
                 <div className="flex flex-wrap gap-2">
                   {report.industries_present.map((ind, i) => (
                     <span
                       key={i}
-                      className="text-xs bg-slate-50 border border-slate-200 rounded-full px-3 py-1"
+                      className="text-xs bg-canvas border border-border rounded-full px-3 py-1"
                     >
                       {ind}
                     </span>
@@ -139,20 +135,20 @@ export default async function ExhibitionDetailPage({ params }) {
 
             {report.past_editions_summary && (
               <div>
-                <h4 className="text-xs font-bold text-slate-500 mb-2">عملکرد دوره‌های قبل</h4>
-                <p className="text-sm leading-7 text-slate-700">{report.past_editions_summary}</p>
+                <h4 className="text-xs font-bold text-text-muted mb-2">عملکرد دوره‌های قبل</h4>
+                <p className="text-sm leading-7 text-text">{report.past_editions_summary}</p>
               </div>
             )}
 
             {report.exhibitor_notes && (
-              <div className="rounded-lg bg-petrol-50 border border-petrol-100 p-4">
-                <h4 className="text-xs font-bold text-petrol-800 mb-1.5">نکته برای تصمیم به حضور</h4>
-                <p className="text-sm leading-7 text-slate-700">{report.exhibitor_notes}</p>
+              <div className="rounded-lg bg-canvas border border-border p-4">
+                <h4 className="text-xs font-bold text-text mb-1.5">نکته برای تصمیم به حضور</h4>
+                <p className="text-sm leading-7 text-text">{report.exhibitor_notes}</p>
               </div>
             )}
 
             {report.sources?.length > 0 && (
-              <div className="text-xs text-slate-500 flex flex-wrap gap-x-3 gap-y-1 pt-1">
+              <div className="text-xs text-text-muted flex flex-wrap gap-x-3 gap-y-1 pt-1">
                 <span>منبع:</span>
                 {report.sources.map((s, i) => (
                   <a
@@ -160,7 +156,7 @@ export default async function ExhibitionDetailPage({ params }) {
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-copper-700 hover:underline"
+                    className="text-primary hover:underline"
                   >
                     {s.url}
                   </a>

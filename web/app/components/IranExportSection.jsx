@@ -35,9 +35,9 @@ export default function IranExportSection({ data }) {
     <section className="card p-5">
       <div className="flex items-baseline justify-between gap-2 flex-wrap mb-1">
         <h2 className="text-lg font-bold">صادرات ایران به کشورهای دنیا</h2>
-        <span className="text-xs text-slate-400">جوش شیرین — {data.hs_code}</span>
+        <span className="text-xs text-text-muted">جوش شیرین — {data.hs_code}</span>
       </div>
-      <p className="text-xs text-slate-500 mb-4">
+      <p className="text-xs text-text-muted mb-4">
         منبع: {data.source}. {data.hs_description_fa}
       </p>
 
@@ -45,24 +45,24 @@ export default function IranExportSection({ data }) {
           فقط ده‌ماهه است و کنار سال کامل گذاشتنش بدون برچسب گمراه‌کننده می‌شد. */}
       <div className="grid grid-cols-3 gap-3 mb-5">
         {data.annual_totals.map((y) => (
-          <div key={y.year_fa} className="rounded-xl bg-petrol-50 border border-petrol-100 p-3 text-center">
-            <div className="text-xs text-slate-500 mb-1">
+          <div key={y.year_fa} className="rounded-xl bg-canvas border border-border p-3 text-center">
+            <div className="text-xs text-text-muted mb-1">
               {faDigits(y.year_fa)}
               {y.is_partial_year && y.months_covered && (
-                <span className="text-copper-600"> ({faDigits(y.months_covered)} ماهه)</span>
+                <span className="text-primary"> ({faDigits(y.months_covered)} ماهه)</span>
               )}
             </div>
-            <div className="text-lg font-bold font-tabular text-petrol-900">{tons(y.tons)}</div>
-            <div className="text-[11px] text-slate-400 font-tabular">{usdK(y.value_usd)}</div>
+            <div className="text-lg font-bold text-text">{tons(y.tons)}</div>
+            <div className="text-[11px] text-text-muted">{usdK(y.value_usd)}</div>
           </div>
         ))}
       </div>
 
-      <h3 className="text-sm font-bold text-slate-700 mb-2">
+      <h3 className="text-sm font-bold text-text mb-2">
         مقاصد صادراتی — {faDigits(data.annual_totals.find((y) => y.is_partial_year && y.months_covered)?.year_fa)} (
         {faDigits(data.annual_totals.find((y) => y.is_partial_year && y.months_covered)?.months_covered)} ماهه)
       </h3>
-      <ul className="divide-y divide-slate-100">
+      <ul className="divide-y divide-border">
         {data.destinations_1404_10m.map((d, i) => (
           <li key={i} className="py-2.5">
             <div className="flex items-center gap-3">
@@ -73,22 +73,22 @@ export default function IranExportSection({ data }) {
                   className="h-4 w-6 rounded-sm object-cover shrink-0 ring-1 ring-black/5"
                 />
               ) : (
-                <span className="h-4 w-6 rounded-sm bg-slate-100 shrink-0" />
+                <span className="h-4 w-6 rounded-sm bg-canvas shrink-0" />
               )}
 
               <span className="text-sm font-medium shrink-0">{d.country_fa}</span>
 
-              <span className="text-xs font-tabular text-slate-600 shrink-0">{tons(d.tons)}</span>
+              <span className="text-xs text-text shrink-0">{tons(d.tons)}</span>
 
-              <span className="flex-1 h-1.5 rounded-full bg-slate-100 overflow-hidden min-w-8">
+              <span className="flex-1 h-1.5 rounded-full bg-canvas overflow-hidden min-w-8">
                 <span
-                  className="block h-full rounded-full bg-copper-500"
+                  className="block h-full rounded-full bg-primary"
                   style={{ width: `${Math.max(4, (d.tons / maxTons) * 100)}%` }}
                 />
               </span>
 
               {d.unit_price_usd_per_ton != null && (
-                <span className="text-[11px] font-tabular text-slate-400 shrink-0">
+                <span className="text-[11px] text-text-muted shrink-0">
                   {d.unit_price_usd_per_ton.toLocaleString("fa-IR")} $/تن
                 </span>
               )}
@@ -99,28 +99,28 @@ export default function IranExportSection({ data }) {
 
       {data.customs_offices_1404_10m?.length > 0 && (
         <>
-          <h3 className="text-sm font-bold text-slate-700 mt-6 mb-2">
+          <h3 className="text-sm font-bold text-text mt-6 mb-2">
             گمرک‌های صادرکننده — مسیرهای اصلی خروج از کشور
           </h3>
-          <ul className="divide-y divide-slate-100">
+          <ul className="divide-y divide-border">
             {data.customs_offices_1404_10m.slice(0, 8).map((o, i) => (
               <li key={i} className="py-2">
                 <div className="flex items-center gap-3">
                   <span className="text-sm font-medium shrink-0 w-32 truncate">{o.office_fa}</span>
-                  <span className="text-xs font-tabular text-slate-600 shrink-0">{tons(o.tons)}</span>
-                  <span className="flex-1 h-1.5 rounded-full bg-slate-100 overflow-hidden min-w-8">
+                  <span className="text-xs text-text shrink-0">{tons(o.tons)}</span>
+                  <span className="flex-1 h-1.5 rounded-full bg-canvas overflow-hidden min-w-8">
                     <span
                       className="block h-full rounded-full bg-petrol-400"
                       style={{ width: `${Math.max(4, (o.tons / data.customs_offices_1404_10m[0].tons) * 100)}%` }}
                     />
                   </span>
-                  <span className="text-[11px] font-tabular text-slate-400 shrink-0">{usdK(o.value_usd)}</span>
+                  <span className="text-[11px] text-text-muted shrink-0">{usdK(o.value_usd)}</span>
                 </div>
               </li>
             ))}
           </ul>
           {data.customs_offices_1404_10m.length > 8 && (
-            <p className="text-[11px] text-slate-400 mt-2">
+            <p className="text-[11px] text-text-muted mt-2">
               و {faDigits(data.customs_offices_1404_10m.length - 8)} گمرک دیگر با حجم کوچک‌تر.
             </p>
           )}
@@ -128,14 +128,14 @@ export default function IranExportSection({ data }) {
       )}
 
       {data.pharma_grade_1404_10m?.tons > 0 && (
-        <p className="text-xs text-slate-500 bg-copper-50 border border-copper-100 rounded-lg px-3 py-2 mt-4">
-          علاوه بر این، در همین دوره <b className="font-tabular">{tons(data.pharma_grade_1404_10m.tons)}</b> (
+        <p className="text-xs text-text-muted bg-primary-soft border border-border rounded-lg px-3 py-2 mt-4">
+          علاوه بر این، در همین دوره <b className="">{tons(data.pharma_grade_1404_10m.tons)}</b> (
           {usdK(data.pharma_grade_1404_10m.value_usd)}) جوش شیرین <b>گرید دارویی</b> (غیرتزریقی) هم صادر شده — جدا از
           ارقام بالا، چون گرید و بازار متفاوتی دارد.
         </p>
       )}
 
-      <p className="text-[11px] text-slate-400 mt-4 leading-6">
+      <p className="text-[11px] text-text-muted mt-4 leading-6">
         داده‌ی تفکیک‌شده به کشور و گمرک فقط برای دوره‌ی ده‌ماهه‌ی ۱۴۰۴ در دسترس است؛ ارقام سال‌های
         ۱۴۰۲ و ۱۴۰۳ بالا، جمع کل کشوری‌اند (بدون تفکیک مقصد یا گمرک).
       </p>

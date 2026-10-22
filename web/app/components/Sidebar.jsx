@@ -1,37 +1,39 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 
 /**
- * ناوبری اصلی — سایدبار سمت راست (چون کل سایت RTL است).
+ * پوسته‌ی برنامه — سایدبار سمت راست + نوار بالایی + کشوی موبایل (طرح بسته‌ی الف/ب:
+ * ui/sepehran-package-b/shell.html).
  *
- * چرا از منوی افقی به سایدبار رفتیم: ده آیتم در یک نوار افقی، در نمایشگر کوچک
- * به چند سطر می‌شکست و ترتیب بصری‌اش به هم می‌ریخت، و جایی هم برای «کدام صفحه
- * باز است» نداشت. سایدبار هم گروه‌بندی موضوعی می‌دهد، هم حالت فعال، هم جا برای
- * آیتم‌های بعدی (روسیه و…) بدون شلوغ‌شدن.
- *
- * زیر breakpoint لارج، سایدبار به یک نوار بالا + کشوی بازشونده تبدیل می‌شود.
+ * - دسکتاپ (≥۱۰۲۴): سایدبار ۲۴۸ پیکسل، قابل جمع‌شدن به ۸۰ پیکسل (وضعیت در localStorage؛
+ *   اگر در دسترس نبود هم صفحه درست کار می‌کند).
+ * - موبایل/تبلت: نوار بالایی با دکمه‌ی منو؛ منو کشو است، Escape می‌بندد و فوکوس به دکمه برمی‌گردد.
+ * - نقش/یوزرنیم عمداً پراپ سروری نیست (توضیح در layout.js) — از /api/auth/me خوانده می‌شود
+ *   تا صفحات کشور/رقیب/گزارش استاتیک بمانند.
+ * - نمایش «ابزارهای بازرگانی» فقط برای نقش commercial و وقتی outreachEnabled است؛ حفاظت
+ *   واقعی مسیر در proxy.js است و این فقط پنهان‌کردن لینک.
  */
+
+const ROLE_LABELS = { viewer: "مشاهده‌گر", commercial: "بازرگانی" };
 
 function buildNavGroups(showOutreach, role) {
   return [
+    { items: [{ href: "/", label: "داشبورد", icon: IconDashboard }] },
     {
-      items: [{ href: "/", label: "داشبورد", icon: IconDashboard }],
-    },
-    {
-      title: "بازار",
+      title: "تحلیل بازار",
       items: [
         { href: "/countries", label: "کشورها و اتحادیه‌ها", icon: IconGlobe, extraActivePrefixes: ["/unions"] },
-        { href: "/competitors", label: "تحلیل رقبا", icon: IconTarget },
-        { href: "/transit", label: "تحلیل ترانزیت", icon: IconTruck },
+        { href: "/competitors", label: "تحلیل رقبا", icon: IconCompetitors },
+        { href: "/transit", label: "تحلیل ترانزیت", icon: IconTransit },
       ],
     },
     {
       title: "محتوا",
       items: [
-        { href: "/reports", label: "گزارش‌های هوشمند", icon: IconSpark },
+        { href: "/reports", label: "گزارش‌های هوشمند", icon: IconReport },
         { href: "/archive", label: "آرشیو گزارش‌ها", icon: IconArchive },
         { href: "/news", label: "اخبار تحلیلی", icon: IconNews },
       ],
@@ -40,74 +42,73 @@ function buildNavGroups(showOutreach, role) {
       title: "بانک اطلاعات",
       items: [
         { href: "/companies", label: "شرکت‌ها", icon: IconBuilding },
-        { href: "/exhibitions", label: "نمایشگاه‌ها", icon: IconCalendar },
+        { href: "/exhibitions", label: "نمایشگاه‌ها", icon: IconExhibition },
       ],
     },
-    // «ابزارها» فقط وقتی نشون داده می‌شه که showOutreach روشن باشه (تأیید
-    // هیئت‌مدیره) **و** کاربر نقش «بازرگانی» داشته باشه — نقش «مشاهده‌گر»
-    // (مثلاً مدیران) این بخش رو توی ناوبری نمی‌بینه. محافظت واقعی مسیر توی
-    // proxy.js انجام می‌شه؛ این فقط مخفی‌کردن لینک از ناوبریه.
+    { items: [{ href: "/ask", label: "جست‌وجو و پرسش", icon: IconSearch }] },
     ...(showOutreach && role === "commercial"
-      ? [{ title: "ابزارها", items: [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }] }]
+      ? [{ title: "ابزارهای بازرگانی", items: [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }] }]
       : []),
   ];
 }
-
-const ASK_ITEM = { href: "/ask", label: "جست‌وجو و پرسش", icon: IconSearch };
 
 function isActive(pathname, href) {
   if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(`${href}/`);
 }
 
-function NavLink({ item, pathname, onNavigate }) {
-  // «کشورها و اتحادیه‌ها» باید موقع مرور /unions هم فعال به‌نظر برسه — دو
-  // مسیر جدا (/countries و /unions) پشت یک آیتم ناوبری‌ان تا هم لینک مستقیم
-  // به هر کدوم کار کنه هم بصری «یک بخش واحد» حس بشن.
+function NavLink({ item, pathname, onNavigate, collapsed }) {
+  // «کشورها و اتحادیه‌ها» باید موقع مرور /unions هم فعال دیده شود (دو مسیر پشت یک آیتم).
   const active =
-    isActive(pathname, item.href) ||
-    (item.extraActivePrefixes || []).some((p) => isActive(pathname, p));
+    isActive(pathname, item.href) || (item.extraActivePrefixes || []).some((p) => isActive(pathname, p));
   const Icon = item.icon;
   return (
     <Link
       href={item.href}
       onClick={onNavigate}
       aria-current={active ? "page" : undefined}
-      className={`group relative flex items-center gap-2.5 rounded-lg px-3 py-2.5 text-sm transition-colors ${
+      aria-label={item.label}
+      title={collapsed ? item.label : undefined}
+      className={`relative my-0.5 flex min-h-11 items-center gap-2.5 rounded-xl px-3 py-2.5 text-[13px] transition-colors ${
+        collapsed ? "justify-center px-2.5" : ""
+      } ${
         active
-          ? "bg-petrol-500 text-white font-semibold"
-          : "text-petrol-700 hover:bg-petrol-100 hover:text-petrol-900"
+          ? "bg-primary-soft font-bold text-primary"
+          : "font-medium text-text-muted hover:bg-surface-soft hover:text-primary"
       }`}
     >
-      {/* نوار مسی لبه‌ی راست برای آیتم فعال — همان نشانگر طرح */}
-      {active && (
-        <span className="absolute -end-4 top-1/2 -translate-y-1/2 h-6 w-1 rounded-s bg-copper-400" />
-      )}
-      <Icon className={active ? "text-copper-200" : "text-petrol-500"} />
-      <span className="truncate">{item.label}</span>
+      {active && <span className="absolute inset-y-[13px] start-0 w-[3px] rounded bg-primary" />}
+      <Icon />
+      {!collapsed && <span className="truncate">{item.label}</span>}
     </Link>
   );
 }
 
-function Brand({ compact = false }) {
+function Brand({ collapsed }) {
   return (
-    <Link href="/" className="flex items-center gap-2.5 min-w-0">
-      <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-copper-400 to-copper-600 font-black text-petrol-900 text-sm shrink-0">
-        سص
-      </span>
-      <span className="leading-tight min-w-0">
-        <span className="block font-black text-[15px] tracking-tight text-petrol-900 truncate">
-          تحقیق و توسعه سپهران شیمی
+    <Link href="/" className="flex min-w-0 items-center gap-3 text-text hover:no-underline">
+      <img
+        src="/logo.png"
+        width={52}
+        height={52}
+        alt="آرم رسمی شرکت"
+        className="h-[52px] w-[52px] shrink-0 rounded-lg bg-white object-contain"
+      />
+      {!collapsed && (
+        <span className="min-w-0 leading-[1.7]">
+          <strong className="block text-sm font-black">
+            تحقیق و توسعه
+            <br />
+            سپهران شیمی
+          </strong>
+          <small className="block text-[11px] text-text-muted">هوش تجاری بازار جوش شیرین</small>
         </span>
-        {!compact && (
-          <span className="block text-[11px] text-petrol-600">هوش تجاری بازار جوش شیرین</span>
-        )}
-      </span>
+      )}
     </Link>
   );
 }
 
-function LogoutButton({ username }) {
+function SidebarFoot({ username, role, collapsed }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
@@ -122,54 +123,45 @@ function LogoutButton({ username }) {
   }
 
   return (
-    <div className="flex items-center justify-between gap-2 px-3 py-2 text-xs text-petrol-600">
-      {username && <span className="truncate">{username}</span>}
-      <button
-        type="button"
-        onClick={handleLogout}
-        disabled={loading}
-        className="font-semibold text-copper-700 hover:text-copper-800 disabled:opacity-50 shrink-0"
-      >
-        خروج
-      </button>
+    <div className="mt-auto border-t border-border pt-4">
+      <div className={`flex items-center gap-2.5 rounded-xl bg-canvas p-3 ${collapsed ? "justify-center bg-transparent p-0" : ""}`}>
+        <span className="grid h-[34px] w-[34px] shrink-0 place-items-center rounded-full bg-primary-soft text-primary">
+          <IconUser />
+        </span>
+        {!collapsed && (
+          <span className="min-w-0 flex-1 text-xs">
+            <strong className="block truncate">{username || "حساب سازمانی"}</strong>
+            <small className="text-text-muted">{ROLE_LABELS[role] || ""}</small>
+          </span>
+        )}
+      </div>
+      {!collapsed && (
+        <button
+          type="button"
+          onClick={handleLogout}
+          disabled={loading}
+          className="mt-2 flex min-h-11 w-full items-center gap-2 rounded-xl px-3 text-sm font-semibold text-text-muted transition-colors hover:bg-primary-soft hover:text-primary disabled:opacity-50"
+        >
+          <IconLogout />
+          خروج
+        </button>
+      )}
     </div>
   );
 }
 
-function NavContent({ pathname, onNavigate, showOutreach, role, username }) {
-  const navGroups = buildNavGroups(showOutreach, role);
-  return (
-    <nav className="flex flex-col gap-5">
-      {navGroups.map((group, gi) => (
-        <div key={gi} className="flex flex-col gap-0.5">
-          {group.title && (
-            <div className="px-3 pb-1 text-[10px] font-bold tracking-wide text-petrol-500 uppercase">
-              {group.title}
-            </div>
-          )}
-          {group.items.map((item) => (
-            <NavLink key={item.href} item={item} pathname={pathname} onNavigate={onNavigate} />
-          ))}
-        </div>
-      ))}
-
-      <div className="pt-1 mt-1 border-t border-petrol-200">
-        <NavLink item={ASK_ITEM} pathname={pathname} onNavigate={onNavigate} />
-      </div>
-
-      <div className="border-t border-petrol-200">
-        <LogoutButton username={username} />
-      </div>
-    </nav>
-  );
-}
-
-export default function Sidebar() {
+export default function AppShell({ children, footer }) {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  // نقش/یوزرنیم عمداً پراپ سروری نیست (نگاه کن توضیح توی layout.js) — خودمون
-  // از /api/auth/me می‌خونیم تا صفحات کشور/رقیب/گزارش هم‌چنان استاتیک بمونن.
+  const [collapsed, setCollapsed] = useState(false);
   const [session, setSession] = useState(null);
+  const menuBtn = useRef(null);
+
+  useEffect(() => {
+    try {
+      if (localStorage.getItem("sidebar-collapsed") === "1") setCollapsed(true);
+    } catch {}
+  }, []);
 
   useEffect(() => {
     if (pathname === "/login") return;
@@ -179,191 +171,297 @@ export default function Sidebar() {
       .catch(() => setSession(null));
   }, [pathname]);
 
-  // صفحه‌ی لاگین باید تنها و بدون ناوبری (که لینک همه‌ی بخش‌ها رو قبل از
-  // احراز هویت نشون می‌ده) باشه.
-  if (pathname === "/login") return null;
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
 
-  const role = session?.role;
-  const username = session?.username;
-  const showOutreach = session?.outreachEnabled === true;
+  useEffect(() => {
+    if (!open) return;
+    const drawer = document.getElementById("mobile-menu");
+    const focusables = () => [...(drawer?.querySelectorAll("a[href], button:not([disabled])") || [])];
+    focusables()[0]?.focus();
+    function onKey(e) {
+      if (e.key === "Escape") {
+        setOpen(false);
+        menuBtn.current?.focus();
+        return;
+      }
+      // محصورسازی Tab داخل کشو تا فوکوس به صفحه‌ی زیر آن نرود
+      if (e.key === "Tab") {
+        const f = focusables();
+        if (!f.length) return;
+        const first = f[0];
+        const last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
+    }
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open]);
+
+  function toggleCollapsed() {
+    setCollapsed((v) => {
+      try {
+        localStorage.setItem("sidebar-collapsed", v ? "0" : "1");
+      } catch {}
+      return !v;
+    });
+  }
+
+  // صفحه‌ی ورود باید تنها و بدون ناوبری باشد (لینک بخش‌ها را قبل از احراز نشان نمی‌دهیم).
+  if (pathname === "/login") return <>{children}</>;
+
+  const groups = buildNavGroups(session?.outreachEnabled === true, session?.role);
+  const sidebarInner = (isCollapsed, onNavigate) => (
+    <>
+      <Brand collapsed={isCollapsed} />
+      <nav aria-label="ناوبری اصلی" className="flex flex-col">
+        {groups.map((group, gi) => (
+          <div key={gi} className="mb-5 last:mb-0">
+            {group.title && !isCollapsed && (
+              <div className="px-3 pb-2 text-[11px] font-bold text-text-muted">{group.title}</div>
+            )}
+            {group.items.map((item) => (
+              <NavLink key={item.href} item={item} pathname={pathname} onNavigate={onNavigate} collapsed={isCollapsed} />
+            ))}
+          </div>
+        ))}
+      </nav>
+      <SidebarFoot username={session?.username} role={session?.role} collapsed={isCollapsed} />
+    </>
+  );
 
   return (
-    <>
-      {/* دسکتاپ — ستون ثابت سمت راست */}
-      <aside className="hidden lg:flex lg:flex-col w-64 shrink-0 bg-petrol-50 border-e border-petrol-200 relative overflow-hidden">
-        <div
-          className="pointer-events-none absolute -top-20 -start-20 h-56 w-56 rounded-full opacity-30"
-          style={{ background: "radial-gradient(circle, rgba(201,118,46,.25), transparent 70%)" }}
-        />
-        {/* sticky تا با اسکرول صفحات بلند (کشورها، شرکت‌ها) منو از دست نرود */}
-        <div className="relative z-10 sticky top-0 flex flex-col gap-6 p-4 max-h-screen overflow-y-auto">
-          <Brand />
-          <NavContent pathname={pathname} showOutreach={showOutreach} role={role} username={username} />
-        </div>
+    <div className={`min-h-screen ${collapsed ? "lg:ps-20 print:ps-0" : "lg:ps-[248px] print:ps-0"} transition-[padding] duration-200`}>
+      <a
+        href="#main"
+        className="fixed start-4 top-2 z-[100] -translate-y-[150%] rounded-xl border-2 border-focus bg-white px-5 py-3 focus:translate-y-0"
+      >
+        رفتن به محتوای اصلی
+      </a>
+
+      {/* دسکتاپ — ستون ثابت */}
+      <aside
+        className={`print:hidden fixed inset-y-0 start-0 z-40 hidden flex-col gap-[22px] overflow-y-auto border-e border-border bg-white px-4 pb-4 pt-6 transition-[width] duration-200 lg:flex ${
+          collapsed ? "w-20 px-3" : "w-[248px]"
+        }`}
+      >
+        {sidebarInner(collapsed, undefined)}
       </aside>
 
-      {/* موبایل/تبلت — نوار بالا و کشوی بازشونده */}
-      <div className="lg:hidden bg-petrol-50 border-b border-petrol-200 sticky top-0 z-30">
-        <div className="flex items-center justify-between gap-3 px-4 py-3">
-          <Brand compact />
+      {/* موبایل/تبلت — کشو */}
+      {open && (
+        <>
           <button
             type="button"
-            onClick={() => setOpen((v) => !v)}
-            aria-expanded={open}
-            aria-label="منوی ناوبری"
-            className="rounded-lg p-2 text-petrol-700 hover:bg-petrol-100 transition-colors"
+            aria-label="بستن منو"
+            tabIndex={-1}
+            onClick={() => setOpen(false)}
+            className="fixed inset-0 z-[35] cursor-default border-0 bg-[rgba(38,59,80,.28)] lg:hidden"
+          />
+          <aside
+            id="mobile-menu"
+            className="fixed inset-y-0 start-0 z-40 flex w-[min(88vw,300px)] flex-col gap-[22px] overflow-y-auto border-e border-border bg-white px-4 pb-4 pt-5 lg:hidden"
           >
-            {open ? <IconClose /> : <IconMenu />}
+            <button
+              type="button"
+              aria-label="بستن منو"
+              onClick={() => {
+                setOpen(false);
+                menuBtn.current?.focus();
+              }}
+              className="grid h-11 w-11 place-items-center self-end rounded-xl text-text-muted hover:bg-primary-soft hover:text-primary"
+            >
+              <IconClose />
+            </button>
+            {sidebarInner(false, () => setOpen(false))}
+          </aside>
+        </>
+      )}
+
+      {/* نوار بالایی */}
+      <div className="print:hidden sticky top-0 z-20 flex min-h-[76px] items-center justify-between gap-4 border-b border-border bg-white/[0.97] px-4 py-3 lg:px-8">
+        <div className="flex items-center gap-3 text-[13px] text-text-muted">
+          <button
+            type="button"
+            ref={menuBtn}
+            onClick={() => setOpen(true)}
+            aria-label="بازکردن منو"
+            aria-controls="mobile-menu"
+            aria-expanded={open}
+            className="grid h-11 w-11 place-items-center rounded-xl hover:bg-primary-soft hover:text-primary lg:hidden"
+          >
+            <IconMenu />
           </button>
+          <button
+            type="button"
+            onClick={toggleCollapsed}
+            aria-label={collapsed ? "بازکردن منو" : "جمع‌کردن منو"}
+            aria-expanded={!collapsed}
+            className="hidden h-11 w-11 place-items-center rounded-xl hover:bg-primary-soft hover:text-primary lg:grid"
+          >
+            <IconMenu />
+          </button>
+          <span className="hidden sm:inline">تحقیق و توسعه سپهران شیمی</span>
+          <img src="/logo.png" width={36} height={36} alt="آرم رسمی شرکت" className="h-9 w-9 rounded-lg bg-white object-contain lg:hidden" />
         </div>
-        {open && (
-          <div className="px-4 pb-4 border-t border-petrol-200 pt-3">
-            <NavContent
-              pathname={pathname}
-              onNavigate={() => setOpen(false)}
-              showOutreach={showOutreach}
-              role={role}
-              username={username}
-            />
-          </div>
-        )}
+        <Link
+          href="/ask"
+          className="flex min-h-11 items-center gap-2 rounded-xl border border-border bg-canvas px-3 py-2 text-[13px] text-text-muted hover:no-underline"
+        >
+          <IconSearch />
+          <span>جست‌وجو و پرسش</span>
+        </Link>
       </div>
-    </>
+
+      <div className="flex min-w-0 flex-col">
+        <main id="main" className="mx-auto w-full max-w-6xl flex-1 px-4 py-6 lg:px-8 lg:py-8">
+          {children}
+        </main>
+        {footer}
+      </div>
+    </div>
   );
 }
 
 /* ---------------------------------------------------------------- آیکون‌ها
-   inline SVG و بدون کتابخانه — ده آیکون ساده ارزش یک وابستگی جدید را ندارد. */
+   inline SVG (هم‌شکل با طرح) و بدون کتابخانه. */
 
 function svgProps(className) {
   return {
-    className: `h-4 w-4 shrink-0 ${className || ""}`,
+    className: `h-5 w-5 shrink-0 ${className || ""}`,
     viewBox: "0 0 24 24",
     fill: "none",
     stroke: "currentColor",
-    strokeWidth: 1.8,
+    strokeWidth: 1.75,
     strokeLinecap: "round",
     strokeLinejoin: "round",
     "aria-hidden": "true",
   };
 }
 
-function IconDashboard({ className }) {
+const iconColor = "text-primary";
+
+function IconDashboard() {
   return (
-    <svg {...svgProps(className)}>
-      <rect x="3" y="3" width="7" height="9" rx="1.5" />
-      <rect x="14" y="3" width="7" height="5" rx="1.5" />
-      <rect x="14" y="12" width="7" height="9" rx="1.5" />
-      <rect x="3" y="16" width="7" height="5" rx="1.5" />
+    <svg {...svgProps(iconColor)}>
+      <rect x="3" y="3" width="7" height="7" rx="1.5" />
+      <rect x="14" y="3" width="7" height="7" rx="1.5" />
+      <rect x="3" y="14" width="7" height="7" rx="1.5" />
+      <rect x="14" y="14" width="7" height="7" rx="1.5" />
     </svg>
   );
 }
-
-function IconGlobe({ className }) {
+function IconGlobe() {
   return (
-    <svg {...svgProps(className)}>
+    <svg {...svgProps(iconColor)}>
       <circle cx="12" cy="12" r="9" />
-      <path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18" />
+      <ellipse cx="12" cy="12" rx="4" ry="9" />
+      <path d="M3 12h18M5 6.5h14M5 17.5h14" />
     </svg>
   );
 }
-
-function IconTarget({ className }) {
+function IconCompetitors() {
   return (
-    <svg {...svgProps(className)}>
-      <circle cx="12" cy="12" r="8.5" />
-      <circle cx="12" cy="12" r="4.5" />
-      <circle cx="12" cy="12" r="1" />
+    <svg {...svgProps(iconColor)}>
+      <path d="M4 20V11h4v9m2 0V4h4v16m2 0V8h4v12M2 20h20" />
     </svg>
   );
 }
-
-function IconTruck({ className }) {
+function IconTransit() {
   return (
-    <svg {...svgProps(className)}>
-      <path d="M2 7h11v9H2zM13 10h4l4 3.5V16h-8z" />
-      <circle cx="6" cy="18" r="1.8" />
-      <circle cx="17" cy="18" r="1.8" />
+    <svg {...svgProps(iconColor)}>
+      <circle cx="5" cy="6" r="2" />
+      <circle cx="19" cy="18" r="2" />
+      <path d="M7 6h8a4 4 0 0 1 0 8H9a4 4 0 0 0 0 8h4" />
     </svg>
   );
 }
-
-function IconSpark({ className }) {
+function IconReport() {
   return (
-    <svg {...svgProps(className)}>
-      <path d="M12 3l1.9 5.3L19 10l-5.1 1.7L12 17l-1.9-5.3L5 10l5.1-1.7z" />
-      <path d="M18.5 16.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z" />
+    <svg {...svgProps(iconColor)}>
+      <path d="M14 3H5v18h14V8zM14 3v5h5M8 12h8M8 16h8" />
     </svg>
   );
 }
-
-function IconArchive({ className }) {
+function IconArchive() {
   return (
-    <svg {...svgProps(className)}>
-      <rect x="3" y="4" width="18" height="4" rx="1" />
-      <path d="M5 8v11a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8" />
-      <path d="M10 12h4" />
+    <svg {...svgProps(iconColor)}>
+      <rect x="3" y="3" width="18" height="5" rx="1" />
+      <path d="M5 8v13h14V8M9 12h6" />
     </svg>
   );
 }
-
-function IconNews({ className }) {
+function IconNews() {
   return (
-    <svg {...svgProps(className)}>
-      <rect x="3" y="5" width="14" height="15" rx="1.5" />
-      <path d="M17 9h3a1 1 0 0 1 1 1v8a2 2 0 0 1-2 2h-1M6 9h8M6 13h8M6 17h5" />
+    <svg {...svgProps(iconColor)}>
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <path d="M7 8h5v5H7zM15 8h3M15 12h3M7 16h11" />
     </svg>
   );
 }
-
-function IconBuilding({ className }) {
+function IconBuilding() {
   return (
-    <svg {...svgProps(className)}>
-      <rect x="4" y="3" width="10" height="18" rx="1" />
-      <path d="M14 9h5a1 1 0 0 1 1 1v11M7 7h4M7 11h4M7 15h4M17 13h1M17 17h1" />
+    <svg {...svgProps(iconColor)}>
+      <path d="M4 21V7h10v14M14 11h6v10M2 21h20M7 10h4M7 14h4M7 18h4M17 14v1M17 18v1" />
     </svg>
   );
 }
-
-function IconCalendar({ className }) {
+function IconExhibition() {
   return (
-    <svg {...svgProps(className)}>
-      <rect x="3" y="5" width="18" height="16" rx="2" />
-      <path d="M3 10h18M8 3v4M16 3v4" />
+    <svg {...svgProps(iconColor)}>
+      <path d="M3 9l3-5h12l3 5v3H3zM5 12v8h14v-8M10 20v-5h4v5M8 4l-1 8M16 4l1 8" />
     </svg>
   );
 }
-
-function IconMail({ className }) {
+function IconSearch() {
   return (
-    <svg {...svgProps(className)}>
+    <svg {...svgProps("h-[18px] w-[18px] text-text-muted")}>
+      <circle cx="10.5" cy="10.5" r="6.5" />
+      <path d="m16 16 5 5" />
+    </svg>
+  );
+}
+function IconMail() {
+  return (
+    <svg {...svgProps(iconColor)}>
       <rect x="3" y="5" width="18" height="14" rx="2" />
-      <path d="M3 7l9 6l9-6" />
+      <path d="m3 6 9 7 9-7" />
     </svg>
   );
 }
-
-function IconSearch({ className }) {
+function IconUser() {
   return (
-    <svg {...svgProps(className)}>
-      <circle cx="11" cy="11" r="6.5" />
-      <path d="M20 20l-4-4" />
+    <svg {...svgProps("")}>
+      <circle cx="12" cy="7" r="4" />
+      <path d="M4 21v-3a8 8 0 0 1 16 0v3" />
     </svg>
   );
 }
-
+function IconLogout() {
+  return (
+    <svg {...svgProps("")}>
+      <path d="M10 3h10v18H10M3 12h12m-8-4-4 4 4 4" />
+    </svg>
+  );
+}
 function IconMenu() {
   return (
-    <svg {...svgProps()} className="h-5 w-5">
-      <path d="M4 7h16M4 12h16M4 17h16" />
+    <svg {...svgProps("h-6 w-6")}>
+      <path d="M4 6h16M4 12h16M4 18h16" />
     </svg>
   );
 }
-
 function IconClose() {
   return (
-    <svg {...svgProps()} className="h-5 w-5">
-      <path d="M6 6l12 12M18 6L6 18" />
+    <svg {...svgProps("h-6 w-6")}>
+      <path d="m5 5 14 14M19 5 5 19" />
     </svg>
   );
 }

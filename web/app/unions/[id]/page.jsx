@@ -6,12 +6,12 @@ import {
 import PageHeader from "../../components/PageHeader";
 
 const IRAN_STATUS_STYLE = {
-  fta_full: "bg-emerald-50 text-emerald-800 border-emerald-200",
-  member: "bg-emerald-50 text-emerald-800 border-emerald-200",
-  founding_member: "bg-emerald-50 text-emerald-800 border-emerald-200",
-  observer: "bg-amber-50 text-amber-800 border-amber-200",
-  not_member: "bg-slate-50 text-slate-500 border-slate-200",
-  sanctioned_no_relation: "bg-slate-50 text-slate-500 border-slate-200",
+  fta_full: "bg-success-soft text-success border-success",
+  member: "bg-success-soft text-success border-success",
+  founding_member: "bg-success-soft text-success border-success",
+  observer: "bg-warning-soft text-warning border-warning",
+  not_member: "bg-canvas text-text-muted border-border",
+  sanctioned_no_relation: "bg-canvas text-text-muted border-border",
 };
 
 const CET_LABEL = { true: "بله", false: "خیر", null: "نامشخص" };
@@ -32,8 +32,8 @@ function Section({ title, subtitle, children }) {
   return (
     <section className="card p-5">
       <div className="mb-3">
-        <h2 className="text-lg font-bold text-petrol-900">{title}</h2>
-        {subtitle && <p className="text-xs text-slate-500 mt-0.5">{subtitle}</p>}
+        <h2 className="text-lg font-bold text-text">{title}</h2>
+        {subtitle && <p className="text-xs text-text-muted mt-0.5">{subtitle}</p>}
       </div>
       {children}
     </section>
@@ -57,7 +57,7 @@ function CountryChip({ name }) {
   );
   if (!exists) {
     return (
-      <span className="flex items-center gap-1.5 text-xs text-slate-500 border border-slate-200 rounded-full px-2.5 py-1 bg-slate-50">
+      <span className="flex items-center gap-1.5 text-xs text-text-muted border border-border rounded-full px-2.5 py-1 bg-canvas">
         {content}
       </span>
     );
@@ -65,7 +65,7 @@ function CountryChip({ name }) {
   return (
     <Link
       href={`/countries/${encodeURIComponent(name)}`}
-      className="flex items-center gap-1.5 text-xs text-petrol-800 border border-slate-200 rounded-full px-2.5 py-1 bg-white hover:border-copper-500 hover:text-copper-800 transition-colors"
+      className="flex items-center gap-1.5 text-xs text-text border border-border rounded-full px-2.5 py-1 bg-white hover:border-primary hover:text-primary transition-colors"
     >
       {content}
     </Link>
@@ -93,17 +93,17 @@ function MemberTradeRow({ row }) {
 
   if (!row.hasData) {
     return (
-      <tr className="border-b border-slate-100">
+      <tr className="border-b border-border">
         <td className="py-2 pe-4">
           {exists ? (
-            <Link href={`/countries/${encodeURIComponent(row.country)}`} className="hover:text-copper-700">
+            <Link href={`/countries/${encodeURIComponent(row.country)}`} className="hover:text-primary">
               {nameCell}
             </Link>
           ) : (
             nameCell
           )}
         </td>
-        <td className="py-2 pe-4 text-slate-400" colSpan={3}>
+        <td className="py-2 pe-4 text-text-muted" colSpan={3}>
           هنوز برای این کشور تحقیق/گزارش تحلیلی تکمیل نشده
         </td>
       </tr>
@@ -111,10 +111,10 @@ function MemberTradeRow({ row }) {
   }
 
   return (
-    <tr className="border-b border-slate-100">
+    <tr className="border-b border-border">
       <td className="py-2 pe-4 font-medium">
         {exists ? (
-          <Link href={`/countries/${encodeURIComponent(row.country)}`} className="hover:text-copper-700">
+          <Link href={`/countries/${encodeURIComponent(row.country)}`} className="hover:text-primary">
             {nameCell}
           </Link>
         ) : (
@@ -126,7 +126,7 @@ function MemberTradeRow({ row }) {
           <>
             {formatUsdK(row.total_usd_k)}
             {row.total_tons != null && (
-              <span className="text-slate-400"> · {row.total_tons.toLocaleString("fa-IR")} تن</span>
+              <span className="text-text-muted"> · {row.total_tons.toLocaleString("fa-IR")} تن</span>
             )}
           </>
         ) : row.total_tons != null ? (
@@ -136,11 +136,11 @@ function MemberTradeRow({ row }) {
         )}
       </td>
       <td className="py-2 pe-4 font-tabular">
-        <span className={row.intra_share_pct >= 30 ? "font-bold text-emerald-700" : "text-slate-600"}>
+        <span className={row.intra_share_pct >= 30 ? "font-bold text-success" : "text-text"}>
           {row.intra_share_pct != null ? `${row.intra_share_pct.toLocaleString("fa-IR")}٪` : "—"}
         </span>
       </td>
-      <td className="py-2 text-slate-500">
+      <td className="py-2 text-text-muted">
         {row.top_external_supplier
           ? `${row.top_external_supplier.country}${
               row.top_external_supplier.share_pct != null
@@ -149,7 +149,7 @@ function MemberTradeRow({ row }) {
             }`
           : "—"}
         <span
-          className={`text-[10px] ${row.source === "report" ? "text-copper-700 font-semibold" : "text-slate-400"}`}
+          className={`text-[10px] ${row.source === "report" ? "text-primary font-semibold" : "text-text-muted"}`}
           title={row.note || undefined}
         >
           {" "}· {SOURCE_LABEL[row.source]} {row.year}
@@ -181,15 +181,15 @@ export default async function UnionPage({ params }) {
 
       <div className="grid gap-4 sm:grid-cols-3">
         <div className="card p-4">
-          <div className="text-xs text-slate-500 mb-1">نوع پیمان</div>
-          <div className="font-bold text-petrol-900 text-sm">{u.type_fa}</div>
+          <div className="text-xs text-text-muted mb-1">نوع پیمان</div>
+          <div className="font-bold text-text text-sm">{u.type_fa}</div>
         </div>
         <div className="card p-4">
-          <div className="text-xs text-slate-500 mb-1">تعرفهٔ خارجی مشترک (CET)</div>
-          <div className="font-bold text-petrol-900 text-sm">{CET_LABEL[String(u.has_cet)]}</div>
+          <div className="text-xs text-text-muted mb-1">تعرفهٔ خارجی مشترک (CET)</div>
+          <div className="font-bold text-text text-sm">{CET_LABEL[String(u.has_cet)]}</div>
         </div>
         <div className="card p-4">
-          <div className="text-xs text-slate-500 mb-1">وضعیت ایران</div>
+          <div className="text-xs text-text-muted mb-1">وضعیت ایران</div>
           <div
             className={`inline-block text-xs font-medium rounded-full border px-2.5 py-1 mt-0.5 ${
               IRAN_STATUS_STYLE[u.iran_status] || IRAN_STATUS_STYLE.not_member
@@ -201,12 +201,12 @@ export default async function UnionPage({ params }) {
       </div>
 
       <Section title="معرفی">
-        <p className="text-sm text-slate-700 leading-7">{u.summary_fa}</p>
+        <p className="text-sm text-text leading-7">{u.summary_fa}</p>
       </Section>
 
       {u.baking_soda_note_fa && (
         <Section title="کاربرد برای صادرات جوش شیرین پارس">
-          <p className="text-sm text-copper-900 bg-copper-50 border border-copper-200 rounded-lg p-4 leading-7">
+          <p className="text-sm text-primary-hover bg-primary-soft border border-border rounded-lg p-4 leading-7">
             {u.baking_soda_note_fa}
           </p>
         </Section>
@@ -219,10 +219,10 @@ export default async function UnionPage({ params }) {
               <li key={r.id}>
                 <Link
                   href={`/reports/${r.id}`}
-                  className="block border border-slate-200 rounded-lg p-3 hover:border-copper-600 transition"
+                  className="block border border-border rounded-lg p-3 hover:border-primary transition"
                 >
                   <div className="font-medium">{r.title}</div>
-                  <div className="text-xs text-slate-500 mt-1">
+                  <div className="text-xs text-text-muted mt-1">
                     {REPORT_TYPE_FA[r.report_type] || "گزارش"}
                   </div>
                 </Link>
@@ -245,29 +245,29 @@ export default async function UnionPage({ params }) {
         >
           {stats.total_tons ? (
             <div className="grid gap-4 sm:grid-cols-3 mb-5">
-              <div className="rounded-lg border border-slate-200 border-s-4 border-s-petrol-400 p-4">
-                <div className="text-xs text-slate-500 mb-1">
+              <div className="rounded-lg border border-border border-s-4 border-s-petrol-400 p-4">
+                <div className="text-xs text-text-muted mb-1">
                   کل واردات (بر حسب تناژ — {stats.members_with_tons.toLocaleString("fa-IR")} عضو دارای داده)
                 </div>
-                <div className="font-bold font-tabular text-petrol-900">
+                <div className="font-bold text-text">
                   {stats.total_tons.toLocaleString("fa-IR")} تن
                 </div>
               </div>
-              <div className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 p-4">
-                <div className="text-xs text-slate-500 mb-1">واردات از داخل خودِ اتحادیه</div>
-                <div className="font-bold font-tabular text-copper-800">
+              <div className="rounded-lg border border-border border-s-4 border-s-primary p-4">
+                <div className="text-xs text-text-muted mb-1">واردات از داخل خودِ اتحادیه</div>
+                <div className="font-bold text-primary-hover">
                   {stats.intra_tons.toLocaleString("fa-IR")} تن
                   {stats.intra_tons_share_pct != null && (
-                    <span className="text-sm text-copper-700"> ({stats.intra_tons_share_pct.toLocaleString("fa-IR")}٪)</span>
+                    <span className="text-sm text-primary"> ({stats.intra_tons_share_pct.toLocaleString("fa-IR")}٪)</span>
                   )}
                 </div>
               </div>
-              <div className="rounded-lg border border-slate-200 border-s-4 border-s-slate-300 p-4">
-                <div className="text-xs text-slate-500 mb-1">واردات از خارج اتحادیه</div>
-                <div className="font-bold font-tabular text-slate-700">
+              <div className="rounded-lg border border-border border-s-4 border-s-border p-4">
+                <div className="text-xs text-text-muted mb-1">واردات از خارج اتحادیه</div>
+                <div className="font-bold text-text">
                   {(stats.total_tons - stats.intra_tons).toLocaleString("fa-IR")} تن
                   {stats.intra_tons_share_pct != null && (
-                    <span className="text-sm text-slate-500"> ({(100 - stats.intra_tons_share_pct).toLocaleString("fa-IR")}٪)</span>
+                    <span className="text-sm text-text-muted"> ({(100 - stats.intra_tons_share_pct).toLocaleString("fa-IR")}٪)</span>
                   )}
                 </div>
               </div>
@@ -276,39 +276,39 @@ export default async function UnionPage({ params }) {
 
           {stats.total_usd_k ? (
             <div className="grid gap-4 sm:grid-cols-3 mb-5">
-              <div className="rounded-lg border border-slate-200 border-s-4 border-s-petrol-400 p-4">
-                <div className="text-xs text-slate-500 mb-1">کل واردات به ارزش دلاری (فقط اعضای دارای آمار ارزشی ITC/WITS)</div>
-                <div className="font-bold font-tabular text-petrol-900">{formatUsdK(stats.total_usd_k)}</div>
+              <div className="rounded-lg border border-border border-s-4 border-s-petrol-400 p-4">
+                <div className="text-xs text-text-muted mb-1">کل واردات به ارزش دلاری (فقط اعضای دارای آمار ارزشی ITC/WITS)</div>
+                <div className="font-bold text-text">{formatUsdK(stats.total_usd_k)}</div>
               </div>
-              <div className="rounded-lg border border-slate-200 border-s-4 border-s-copper-500 p-4">
-                <div className="text-xs text-slate-500 mb-1">واردات از داخل خودِ اتحادیه</div>
-                <div className="font-bold font-tabular text-copper-800">
+              <div className="rounded-lg border border-border border-s-4 border-s-primary p-4">
+                <div className="text-xs text-text-muted mb-1">واردات از داخل خودِ اتحادیه</div>
+                <div className="font-bold text-primary-hover">
                   {formatUsdK(stats.intra_usd_k)}
                   {stats.intra_share_pct != null && (
-                    <span className="text-sm text-copper-700"> ({stats.intra_share_pct.toLocaleString("fa-IR")}٪)</span>
+                    <span className="text-sm text-primary"> ({stats.intra_share_pct.toLocaleString("fa-IR")}٪)</span>
                   )}
                 </div>
               </div>
-              <div className="rounded-lg border border-slate-200 border-s-4 border-s-slate-300 p-4">
-                <div className="text-xs text-slate-500 mb-1">واردات از خارج اتحادیه</div>
-                <div className="font-bold font-tabular text-slate-700">
+              <div className="rounded-lg border border-border border-s-4 border-s-border p-4">
+                <div className="text-xs text-text-muted mb-1">واردات از خارج اتحادیه</div>
+                <div className="font-bold text-text">
                   {formatUsdK(stats.total_usd_k - (stats.intra_usd_k || 0))}
                   {stats.intra_share_pct != null && (
-                    <span className="text-sm text-slate-500"> ({(100 - stats.intra_share_pct).toLocaleString("fa-IR")}٪)</span>
+                    <span className="text-sm text-text-muted"> ({(100 - stats.intra_share_pct).toLocaleString("fa-IR")}٪)</span>
                   )}
                 </div>
               </div>
             </div>
           ) : (
             stats.members_with_data === 0 && (
-              <p className="text-sm text-slate-400 mb-5">هیچ رقمی برای نمایش نیست.</p>
+              <p className="text-sm text-text-muted mb-5">هیچ رقمی برای نمایش نیست.</p>
             )
           )}
 
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-right text-slate-500 border-b border-slate-200">
+                <tr className="text-right text-text-muted border-b border-border">
                   <th className="py-2 pe-4">کشور عضو</th>
                   <th className="py-2 pe-4">کل واردات</th>
                   <th className="py-2 pe-4">سهم درون‌اتحادیه‌ای</th>
@@ -340,7 +340,7 @@ export default async function UnionPage({ params }) {
       })}
 
       {u.member_note_fa && (
-        <p className="text-xs text-slate-500 bg-slate-50 border border-slate-200 rounded-lg p-3 leading-6">
+        <p className="text-xs text-text-muted bg-canvas border border-border rounded-lg p-3 leading-6">
           ⚠️ {u.member_note_fa}
         </p>
       )}

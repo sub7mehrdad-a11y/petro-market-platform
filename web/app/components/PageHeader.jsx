@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 /**
- * سربرگ مشترک همه‌ی صفحات — روی بوم روشن.
+ * سربرگ مشترک همه‌ی صفحات — روی بوم روشن (طرح بسته‌ی الف).
  *
  * چرا مشترک شد: عنوان/زیرعنوان هر صفحه روی همان بوم می‌نشیند (نه داخل کارت
  * سفید). اگر هر صفحه رنگ‌های خودش را می‌نوشت، دیر یا زود یکی‌شان با متن روشن
@@ -12,19 +12,19 @@ import Link from "next/link";
  */
 export default function PageHeader({ title, subtitle, breadcrumb, actions, children }) {
   return (
-    <header className="border-b border-petrol-200 pb-5 mb-6">
+    <header className="mb-7">
       {breadcrumb?.length > 0 && (
-        <nav className="text-xs text-petrol-500 mb-2 flex items-center gap-1.5 flex-wrap">
+        <nav aria-label="مسیر صفحه" className="mb-3 flex flex-wrap items-center gap-2 text-xs text-text-muted">
           {breadcrumb.map((item, i) => (
-            <span key={i} className="flex items-center gap-1.5">
+            <span key={i} className="flex items-center gap-2">
               {item.href ? (
-                <Link href={item.href} className="hover:text-copper-700 transition-colors">
+                <Link href={item.href} className="hover:text-primary transition-colors">
                   {item.label}
                 </Link>
               ) : (
-                <span className="text-petrol-800 font-medium">{item.label}</span>
+                <span aria-current="page" className="font-medium text-text">{item.label}</span>
               )}
-              {i < breadcrumb.length - 1 && <span className="text-petrol-300">/</span>}
+              {i < breadcrumb.length - 1 && <span aria-hidden="true">‹</span>}
             </span>
           ))}
         </nav>
@@ -32,12 +32,12 @@ export default function PageHeader({ title, subtitle, breadcrumb, actions, child
 
       <div className="flex items-start justify-between gap-4 flex-wrap">
         <div className="min-w-0">
-          <h1 className="text-2xl font-black text-petrol-900 leading-tight">{title}</h1>
+          <h1 className="text-2xl lg:text-[28px] font-black text-text leading-[1.5]">{title}</h1>
           {subtitle && (
-            <p className="text-sm text-slate-600 mt-1.5 leading-7 max-w-3xl">{subtitle}</p>
+            <p className="mt-2 max-w-3xl text-sm leading-7 text-text-muted">{subtitle}</p>
           )}
         </div>
-        {actions && <div className="flex items-center gap-2 shrink-0">{actions}</div>}
+        {actions && <div className="flex w-full flex-wrap items-center gap-2 sm:w-auto [&_.input]:w-full sm:[&_.input]:w-auto">{actions}</div>}
       </div>
 
       {children}
@@ -45,16 +45,13 @@ export default function PageHeader({ title, subtitle, breadcrumb, actions, child
   );
 }
 
-/** دکمه‌ی اصلی مسی — همان CTA سمت چپ سربرگ در طرح. */
+/** دکمه‌ی اصلی — CTA سمت چپ سربرگ. */
 export function HeaderButton({ href, children }) {
-  const className =
-    "inline-flex items-center gap-2 rounded-full bg-copper-500 hover:bg-copper-600 " +
-    "text-white text-sm font-semibold px-5 py-2.5 transition-colors";
   return href ? (
-    <Link href={href} className={className}>
+    <Link href={href} className="btn hover:no-underline">
       {children}
     </Link>
   ) : (
-    <span className={className}>{children}</span>
+    <span className="btn">{children}</span>
   );
 }

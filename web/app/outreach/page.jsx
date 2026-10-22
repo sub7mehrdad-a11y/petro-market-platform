@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { getCompanies, getCountryEnglishName, getEmailOutreachSent } from "@/lib/data";
 import { classifyGrade, isValidEmail } from "@/lib/outreachTemplate";
+import { getHaltInfo } from "@/lib/outreachQueue";
 import OutreachClient from "./OutreachClient";
 
 // فقط ۴۰۷ شرکت داریم — فیلتر/جست‌وجو کاملاً سمت کلاینت انجام می‌شه (مثل
@@ -46,6 +47,7 @@ export default function OutreachPage() {
       companies={companies}
       countries={countries}
       sendingEnabled={process.env.OUTREACH_SENDING_ENABLED === "true"}
+      halt={getHaltInfo()}
     />
   );
 }

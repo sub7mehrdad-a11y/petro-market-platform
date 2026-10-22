@@ -11,14 +11,14 @@ function CorridorRow({ c }) {
   const isEstimate = c.source === "estimate-needs-verification";
 
   return (
-    <tr className="border-b border-slate-100 align-top">
+    <tr className="border-b border-border align-top">
       <td className="py-2 pe-4">
-        <div className="font-medium text-petrol-900">{c.name_fa}</div>
-        <div className="text-[11px] text-slate-400 mt-0.5">
+        <div className="font-medium text-text">{c.name_fa}</div>
+        <div className="text-[11px] text-text-muted mt-0.5">
           {c.countries_served?.join(" · ")}
         </div>
         {!servesIran && (
-          <span className="inline-block mt-1 text-[10px] font-medium text-amber-700 bg-amber-50 border border-amber-200 rounded-full px-2 py-0.5">
+          <span className="inline-block mt-1 text-[10px] font-medium text-warning bg-warning-soft border border-warning rounded-full px-2 py-0.5">
             کریدور رقیب — ایران را دور می‌زند
           </span>
         )}
@@ -30,9 +30,9 @@ function CorridorRow({ c }) {
       <td className="py-2 pe-4 font-tabular whitespace-nowrap">
         {c.cost_usd_per_teu != null ? `${faDigits(c.cost_usd_per_teu)} دلار/TEU` : "نامشخص"}
       </td>
-      <td className="py-2 text-slate-500 max-w-sm">
+      <td className="py-2 text-text-muted max-w-sm">
         {c.gauge_break_points?.length > 0 && (
-          <div className="text-[11px] text-copper-700 mb-1">
+          <div className="text-[11px] text-primary mb-1">
             تعویض گیج: {c.gauge_break_points.join("، ")}
           </div>
         )}
@@ -40,8 +40,8 @@ function CorridorRow({ c }) {
         <span
           className={`inline-block mt-1 text-[10px] rounded-full px-2 py-0.5 border ${
             isEstimate
-              ? "text-slate-500 bg-slate-50 border-slate-200"
-              : "text-emerald-700 bg-emerald-50 border-emerald-200"
+              ? "text-text-muted bg-canvas border-border"
+              : "text-success bg-success-soft border-success"
           }`}
         >
           منبع: {isEstimate ? "برآورد، نیازمند تأیید" : c.source}
@@ -64,20 +64,20 @@ export default function TransitCorridorsSection({ data }) {
     <section className="card p-5">
       <div className="flex items-baseline justify-between gap-2 mb-1 flex-wrap">
         <h2 className="text-lg font-bold">کریدورهای بین‌المللی ترانزیت</h2>
-        <span className="text-xs text-slate-400">{data.corridors.length.toLocaleString("fa-IR")} مسیر</span>
+        <span className="text-xs text-text-muted">{data.corridors.length.toLocaleString("fa-IR")} مسیر</span>
       </div>
-      <p className="text-xs text-slate-500 mb-4">
+      <p className="text-xs text-text-muted mb-4">
         طول مسیر، زمان تخمینی و هزینه‌ی هر TEU (وقتی منبع مستند داشت) برای کریدورهای بزرگ اوراسیا،
         مسیرهای دریایی صادراتی و دروازه‌های مرزی ایران.
       </p>
 
       {byMode.map((group) => (
         <div key={group.mode} className="mb-6 last:mb-0">
-          <h3 className="text-sm font-bold text-petrol-800 mb-2">{group.label}</h3>
+          <h3 className="text-sm font-bold text-text mb-2">{group.label}</h3>
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-right text-slate-500 border-b border-slate-200">
+                <tr className="text-right text-text-muted border-b border-border">
                   <th className="py-2 pe-4">مسیر</th>
                   <th className="py-2 pe-4">طول</th>
                   <th className="py-2 pe-4">زمان تخمینی</th>
@@ -96,7 +96,7 @@ export default function TransitCorridorsSection({ data }) {
       ))}
 
       {data.methodology_note_fa && (
-        <p className="text-[11px] text-slate-400 leading-6 mt-2 bg-slate-50 border border-slate-200 rounded-lg p-3">
+        <p className="text-[11px] text-text-muted leading-6 mt-2 bg-canvas border border-border rounded-lg p-3">
           {data.methodology_note_fa}
         </p>
       )}

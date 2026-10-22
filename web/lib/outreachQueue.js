@@ -50,6 +50,18 @@ export function getHaltReason() {
   return null;
 }
 
+// همان قفل، با جزئیات برای نمایش در رابط (دلیل + تاریخ توقف)؛ فقط خواندنی — برداشتن توقف از رابط ممکن نیست.
+export function getHaltInfo() {
+  const reason = getHaltReason();
+  if (!reason) return null;
+  let halted_at = null;
+  try {
+    const f = JSON.parse(fs.readFileSync(path.join(ROOT, "data", "outreach_halt.json"), "utf-8"));
+    halted_at = f?.halted_at || null;
+  } catch {}
+  return { reason, halted_at };
+}
+
 export function checkOutreachReady() {
   const halt = getHaltReason();
   if (halt) return halt;

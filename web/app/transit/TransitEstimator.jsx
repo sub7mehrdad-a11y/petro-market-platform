@@ -68,9 +68,9 @@ export default function TransitEstimator({ places, rates }) {
   return (
     <section className="card p-5">
       <h2 className="text-lg font-bold mb-1">جست‌وجوی هوشمند کرایه</h2>
-      <p className="text-sm text-slate-500 mb-4">
+      <p className="text-sm text-text-muted mb-4">
         مبدأ و مقصد را انتخاب کنید یا تایپ کنید — سیستم بر اساس نرخ‌های واقعی مشاهده‌شده، هزینه‌ی
-        تخمینی حمل یک محموله‌ی <b className="font-tabular">۲۴</b>‌تنی را برآورد می‌کند.
+        تخمینی حمل یک محموله‌ی <b className="">۲۴</b>‌تنی را برآورد می‌کند.
       </p>
 
       <datalist id="transit-places-list">
@@ -81,36 +81,36 @@ export default function TransitEstimator({ places, rates }) {
 
       <div className="grid sm:grid-cols-2 gap-3">
         <div>
-          <label className="text-xs text-slate-500 block mb-1">مبدأ</label>
+          <label className="text-xs text-text-muted block mb-1">مبدأ</label>
           <input
             type="text"
             list="transit-places-list"
             value={origin}
             onChange={(e) => setOrigin(e.target.value)}
             placeholder="مثلاً مشهد"
-            className="w-full border border-slate-300 rounded-md px-3 py-2 text-sm"
+            className="w-full border border-border rounded-md px-3 py-2 text-sm"
           />
         </div>
         <div>
-          <label className="text-xs text-slate-500 block mb-1">مقصد</label>
+          <label className="text-xs text-text-muted block mb-1">مقصد</label>
           <input
             type="text"
             list="transit-places-list"
             value={destination}
             onChange={(e) => setDestination(e.target.value)}
             placeholder="مثلاً آستارا"
-            className="w-full border border-slate-300 rounded-md px-3 py-2 text-sm"
+            className="w-full border border-border rounded-md px-3 py-2 text-sm"
           />
         </div>
       </div>
 
       <div className="mt-4">
         {result.status === "empty" && (
-          <p className="text-xs text-slate-400">مبدأ و مقصد را وارد کنید تا برآورد نمایش داده شود.</p>
+          <p className="text-xs text-text-muted">مبدأ و مقصد را وارد کنید تا برآورد نمایش داده شود.</p>
         )}
 
         {result.status === "unknown" && (
-          <p className="text-xs text-amber-700 bg-amber-50 border border-amber-200 rounded-md px-3 py-2">
+          <p className="text-xs text-warning bg-warning-soft border border-warning rounded-md px-3 py-2">
             {result.unresolvedOrigin && result.unresolvedDest
               ? "نه مبدأ و نه مقصد در پایگاه مختصات ثبت‌شده نیستند."
               : result.unresolvedOrigin
@@ -122,38 +122,38 @@ export default function TransitEstimator({ places, rates }) {
         )}
 
         {result.status === "no-rate" && (
-          <p className="text-xs text-slate-500">
+          <p className="text-xs text-text-muted">
             هنوز نرخ پایه‌ای از پست‌های واقعی محاسبه نشده — با اجرای بعدی ایجنت رصد این بخش فعال
             می‌شود.
           </p>
         )}
 
         {result.status === "same-place" && (
-          <p className="text-xs text-slate-500">مبدأ و مقصد یکی هستند.</p>
+          <p className="text-xs text-text-muted">مبدأ و مقصد یکی هستند.</p>
         )}
 
         {result.status === "ok" && (
-          <div className="rounded-lg bg-petrol-50 border border-petrol-100 p-4">
+          <div className="rounded-lg bg-canvas border border-border p-4">
             <div className="flex items-baseline justify-between flex-wrap gap-2">
-              <span className="text-sm text-slate-600">
+              <span className="text-sm text-text">
                 {result.originMatch} ← {result.destMatch} · حدود{" "}
-                <b className="font-tabular">{result.distanceKm.toLocaleString("fa-IR")}</b> کیلومتر
+                <b className="">{result.distanceKm.toLocaleString("fa-IR")}</b> کیلومتر
               </span>
-              <span className="text-xs text-slate-400">کرایه‌ی یک کامیون</span>
+              <span className="text-xs text-text-muted">کرایه‌ی یک کامیون</span>
             </div>
-            <div className="mt-2 text-2xl font-bold text-petrol-900 font-tabular">
+            <div className="mt-2 text-2xl font-bold text-text">
               {formatToman(result.truckCost)}
             </div>
 
             {result.truckLow != null && (
-              <div className="text-xs text-slate-500 mt-1">
+              <div className="text-xs text-text-muted mt-1">
                 بازه‌ی رایج (۱۰ تا ۹۰ صدکِ نمونه، بدون دو سر افراطی): {formatToman(result.truckLow)}{" "}
                 تا {formatToman(result.truckHigh)}
               </div>
             )}
 
             {result.perTonCost != null && (
-              <div className="text-xs text-slate-500 mt-1">
+              <div className="text-xs text-text-muted mt-1">
                 بر پایه‌ی {perTonKm.sampleSize.toLocaleString("fa-IR")} پست تناژدار:{" "}
                 {formatToman(result.perTonCost)} به ازای هر تن — یعنی{" "}
                 {formatToman(result.perTonCost * SHIPMENT_TONS)} برای یک محموله‌ی{" "}
@@ -164,15 +164,15 @@ export default function TransitEstimator({ places, rates }) {
         )}
       </div>
 
-      <p className="text-xs text-slate-400 mt-3 leading-6">
+      <p className="text-xs text-text-muted mt-3 leading-6">
         روش محاسبه: نرخ <b>میانه</b>ی مشاهده‌شده (
         {perKm.median != null && (
-          <b className="font-tabular text-slate-600">
+          <b className="text-text">
             {Math.round(perKm.median).toLocaleString("fa-IR")}
           </b>
         )}{" "}
         تومان به ازای هر کیلومتر برای یک کامیون، از روی{" "}
-        <b className="font-tabular">{perKm.sampleSize.toLocaleString("fa-IR")}</b> پست واقعی
+        <b className="">{perKm.sampleSize.toLocaleString("fa-IR")}</b> پست واقعی
         {perTonKm.sampleSize > 0 && (
           <>
             ؛ و {perTonKm.sampleSize.toLocaleString("fa-IR")} پست که تناژ هم داشتند

@@ -20,7 +20,7 @@ function DeltaBadge({ pct }) {
   return (
     <span
       className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] font-bold ${
-        up ? "bg-emerald-50 text-emerald-700" : "bg-rose-50 text-rose-700"
+        up ? "bg-success-soft text-success" : "bg-danger-soft text-danger"
       }`}
     >
       {up ? "+" : "−"}
@@ -69,7 +69,7 @@ function Sparkline({ values, up }) {
       <polyline
         points={points.join(" ")}
         fill="none"
-        stroke={up ? "#DA8C42" : "#7FA3A9"}
+        stroke={up ? "var(--color-chart-1)" : "var(--color-text-muted)"}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -84,24 +84,24 @@ function KpiCard({ label, value, unit, hint, deltaPct, spark, href, accent }) {
   const body = (
     <>
       <div className="flex items-start justify-between gap-2">
-        <span className="text-xs text-slate-500 leading-5">{label}</span>
+        <span className="text-xs text-text-muted leading-5">{label}</span>
         <DeltaBadge pct={deltaPct} />
       </div>
 
       <div className="mt-3 flex items-baseline gap-1.5 flex-wrap">
         <span
-          className={`font-black font-tabular text-3xl leading-none ${
-            accent ? "text-copper-700" : "text-petrol-900"
+          className={`font-black text-3xl leading-none ${
+            accent ? "text-primary" : "text-text"
           }`}
         >
           {value}
         </span>
-        {unit && <span className="text-xs text-slate-500">{unit}</span>}
+        {unit && <span className="text-xs text-text-muted">{unit}</span>}
       </div>
 
       {(hint || spark) && (
-        <div className="mt-4 pt-3 border-t border-slate-100 flex items-end justify-between gap-3">
-          <span className="text-[11px] text-slate-400 leading-5">{hint}</span>
+        <div className="mt-4 pt-3 border-t border-border flex items-end justify-between gap-3">
+          <span className="text-[11px] text-text-muted leading-5">{hint}</span>
           <Sparkline values={spark} up={up} />
         </div>
       )}

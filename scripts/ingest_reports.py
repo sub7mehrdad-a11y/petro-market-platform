@@ -31,6 +31,7 @@ from google import genai
 
 sys.path.insert(0, os.path.dirname(__file__))
 from docx_blocks import extract_blocks, extract_plain_text
+from report_theme import reskin_html
 
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
@@ -508,8 +509,10 @@ def build_html_report(path: str, report_id: str) -> dict:
 
     os.makedirs(HTML_OUT_DIR, exist_ok=True)
     dest = os.path.join(HTML_OUT_DIR, f"{report_id}.html")
+    # نسخه‌ی «نمایشی» با تم روشن آبی بازرنگ می‌شود (scripts/report_theme.py)؛ فایل اصلی دانلودی
+    # (reports/<کشور>/…) بایت‌به‌بایت دست‌نخورده می‌ماند.
     with open(dest, "wb") as f:
-        f.write(raw)
+        f.write(reskin_html(raw.decode("utf-8")).encode("utf-8"))
 
     return {"title": title, "format": "html", "html_path": f"/report-html/{report_id}.html"}
 

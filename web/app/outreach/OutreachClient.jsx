@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import PageHeader from "../components/PageHeader";
+import { jalaliFa } from "@/lib/dateFormat";
 import QueuePanel from "./QueuePanel";
 import ReportPanel from "./ReportPanel";
 import AutoPanel from "./AutoPanel";
@@ -16,7 +17,10 @@ const GRADE_LABELS = {
 // حالا «صف‌گذاری»ه، نه ارسال فوری (ارسال واقعی با فاصله‌ی زمانی توسط کارگر پس‌زمینه) — سقف بالاتره.
 const BATCH_SIZE = 200;
 
-export default function OutreachClient({ companies, countries, sendingEnabled }) {
+export default function OutreachClient({ companies, countries, sendingEnabled, halt }) {
+  // توقف اضطراری دستی (data/outreach_halt.json): همه‌ی دکمه‌های ارسال غیرفعال؛ انتخاب و پیش‌نمایش فقط‌خواندنی کار می‌کند.
+  const halted = !!halt;
+  const canSend = sendingEnabled && !halted;
   const [country, setCountry] = useState("همه");
   const [industry, setIndustry] = useState("");
   const [grade, setGrade] = useState("همه");
@@ -141,8 +145,17 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
         subtitle="ارسال دسته‌ای ایمیل معرفی شرکت + کاتالوگ محصول، بر اساس کشور/صنعت/گرید هر شرکت."
       />
 
-      {!sendingEnabled && (
-        <div className="bg-amber-50 border border-amber-200 text-amber-800 text-sm rounded-lg px-4 py-3">
+      {halted && (
+        <div role="alert" className="rounded-xl border border-danger bg-danger-soft px-5 py-4 text-danger">
+          <h2 className="text-lg font-black">ارسال ایمیل متوقف شده است</h2>
+          <p className="mt-2 text-sm">علت: {halt.reason}</p>
+          {halt.halted_at && <p className="mt-1 text-sm">تاریخ توقف: {jalaliFa(halt.halted_at)} (شمسی)</p>}
+          <p className="mt-2 text-sm">تا برداشته‌شدن توقف توسط مدیر سیستم هیچ ایمیلی ارسال نمی‌شود. برداشتن توقف فقط از طرف مدیر سیستم روی سرور انجام می‌شود.</p>
+        </div>
+      )}
+
+      {!sendingEnabled && !halted && (
+        <div className="bg-warning-soft border border-warning text-warning text-sm rounded-lg px-4 py-3">
           ⚠ ارسال واقعی فعلاً غیرفعاله (در انتظار تأیید هیئت‌مدیره) — می‌تونی لیست بسازی و پیش‌نمایش
           بگیری، ولی دکمه‌ی «ارسال» تا فعال‌شدن <code className="font-mono">OUTREACH_SENDING_ENABLED</code> کار
           نمی‌کنه.
@@ -156,7 +169,7 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
           <select
             value={country}
             onChange={(e) => setCountry(e.target.value)}
-            className="border border-slate-200 rounded-lg px-3 py-2 text-sm"
+            className="input"
           >
             <option value="همه">همه‌ی کشورها</option>
             {countries.map((c) => (
@@ -168,7 +181,7 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
           <select
             value={grade}
             onChange={(e) => setGrade(e.target.value)}
-            className="border border-slate-200 rounded-lg px-3 py-2 text-sm"
+            className="input"
           >
             <option value="همه">همه‌ی گریدها</option>
             {Object.entries(GRADE_LABELS).map(([k, label]) => (
@@ -182,19 +195,19 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
             placeholder="جست‌وجو در صنعت..."
             value={industry}
             onChange={(e) => setIndustry(e.target.value)}
-            className="border border-slate-200 rounded-lg px-3 py-2 text-sm flex-1 min-w-[160px]"
+            className="input flex-1 min-w-[160px]"
           />
         </div>
 
         <div className="flex items-center justify-between gap-3 flex-wrap">
-          <p className="text-sm text-slate-600">
+          <p className="text-sm text-text">
             {filtered.length.toLocaleString("fa-IR")} شرکت مطابق این فیلتر
           </p>
           <button
             type="button"
             onClick={() => addToSelection(filtered)}
             disabled={filtered.length === 0}
-            className="bg-petrol-700 text-white text-sm font-medium rounded-lg px-4 py-2 hover:bg-petrol-800 disabled:opacity-40"
+            className="btn"
           >
             + افزودن این {filtered.length.toLocaleString("fa-IR")} شرکت به لیست ارسال
           </button>
@@ -209,19 +222,19 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
           placeholder="اسم شرکت رو تایپ کن..."
           value={addQuery}
           onChange={(e) => setAddQuery(e.target.value)}
-          className="border border-slate-200 rounded-lg px-3 py-2 text-sm w-full max-w-md"
+          className="input w-full max-w-md"
         />
         {addSearchMatches.length > 0 && (
           <ul className="mt-3 space-y-1.5">
             {addSearchMatches.map((c) => (
               <li key={c.id} className="flex items-center justify-between gap-2 text-sm">
                 <span>
-                  {c.english_name} <span className="text-slate-400">— {c.country}</span>
+                  {c.english_name} <span className="text-text-muted">— {c.country}</span>
                 </span>
                 <button
                   type="button"
                   onClick={() => addToSelection([c])}
-                  className="text-copper-700 hover:underline shrink-0"
+                  className="text-primary hover:underline shrink-0"
                 >
                   + افزودن
                 </button>
@@ -239,19 +252,19 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
             {checkedIds.length.toLocaleString("fa-IR")} تیک‌خورده)
           </h2>
           {selectedList.length > 0 && (
-            <button type="button" onClick={clearAll} className="text-xs text-rose-600 hover:underline">
+            <button type="button" onClick={clearAll} className="text-xs text-danger hover:underline">
               پاک‌کردن کل لیست
             </button>
           )}
         </div>
 
         {selectedList.length === 0 ? (
-          <p className="text-sm text-slate-500">هنوز شرکتی به لیست اضافه نشده.</p>
+          <p className="text-sm text-text-muted">هنوز شرکتی به لیست اضافه نشده.</p>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-sm">
               <thead>
-                <tr className="text-right text-slate-500 border-b border-slate-200">
+                <tr className="text-right text-text-muted border-b border-border">
                   <th className="py-2 pe-3"></th>
                   <th className="py-2 pe-3">نام</th>
                   <th className="py-2 pe-3">کشور</th>
@@ -262,7 +275,7 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
               </thead>
               <tbody>
                 {selectedList.map(({ company: c, checked }) => (
-                  <tr key={c.id} className="border-b border-slate-100 align-top">
+                  <tr key={c.id} className="border-b border-border align-top">
                     <td className="py-2 pe-3">
                       <input type="checkbox" checked={checked} onChange={() => toggleChecked(c.id)} />
                     </td>
@@ -271,14 +284,14 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
                     <td className="py-2 pe-3 whitespace-nowrap">
                       {GRADE_LABELS[c.grade]}
                       {c.already_sent && (
-                        <span className="ms-1.5 text-[10px] bg-rose-50 text-rose-700 rounded-full px-1.5 py-0.5">
+                        <span className="ms-1.5 text-[10px] bg-danger-soft text-danger rounded-full px-1.5 py-0.5">
                           قبلاً ارسال شده
                         </span>
                       )}
                     </td>
-                    <td className="py-2 pe-3 text-xs text-slate-500 whitespace-nowrap">{c.email}</td>
+                    <td className="py-2 pe-3 text-xs text-text-muted whitespace-nowrap">{c.email}</td>
                     <td className="py-2">
-                      <button type="button" onClick={() => removeRow(c.id)} className="text-slate-400 hover:text-rose-600">
+                      <button type="button" onClick={() => removeRow(c.id)} className="text-text-muted hover:text-danger">
                         ×
                       </button>
                     </td>
@@ -290,26 +303,26 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
         )}
 
         {checkedIds.length > 0 && (
-          <div className="flex flex-wrap items-center gap-3 mt-4 pt-4 border-t border-slate-100">
+          <div className="flex flex-wrap items-center gap-3 mt-4 pt-4 border-t border-border">
             <button
               type="button"
               onClick={() => openPreview(checkedIds.slice(0, 10))}
-              className="border border-slate-300 text-slate-700 text-sm font-medium rounded-lg px-4 py-2 hover:bg-slate-50"
+              className="btn btn-secondary"
             >
               پیش‌نمایش (حداکثر ۱۰ تا)
             </button>
             <button
               type="button"
               onClick={() => sendBatch(checkedIds.slice(0, BATCH_SIZE))}
-              disabled={!sendingEnabled || sending}
-              className="bg-copper-700 text-white text-sm font-medium rounded-lg px-4 py-2 hover:bg-copper-800 disabled:opacity-40"
+              disabled={!canSend || sending}
+              className="btn"
             >
               {sending
                 ? "در حال افزودن به صف..."
                 : `افزودن ${Math.min(checkedIds.length, BATCH_SIZE).toLocaleString("fa-IR")} شرکت به صف ارسال`}
             </button>
             {checkedIds.length > BATCH_SIZE && (
-              <span className="text-xs text-slate-400">
+              <span className="text-xs text-text-muted">
                 (سقف هر بار {BATCH_SIZE} شرکت — بقیه رو بعداً اضافه کن)
               </span>
             )}
@@ -320,8 +333,8 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
           <div
             className={`mt-3 text-sm rounded-lg px-3 py-2 ${
               sendResult.status === 200
-                ? "bg-petrol-50 text-petrol-800 border border-petrol-100"
-                : "bg-rose-50 text-rose-700 border border-rose-200"
+                ? "bg-canvas text-text border border-border"
+                : "bg-danger-soft text-danger border border-danger"
             }`}
           >
             {sendResult.error ||
@@ -330,27 +343,27 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
               }. ارسال خودکار با فاصله‌ی حدود ${(sendResult.interval_sec || 60).toLocaleString("fa-IR")} ثانیه انجام می‌شود.${
                 sendResult.test_redirect ? " (حالت تست: همه‌ی ایمیل‌ها فقط به آدرس تست می‌رن)" : ""
               }`}
-            {sendResult.logError && <div className="mt-1 font-semibold text-rose-700">⚠ {sendResult.logError}</div>}
+            {sendResult.logError && <div className="mt-1 font-semibold text-danger">⚠ {sendResult.logError}</div>}
           </div>
         )}
       </section>
 
-      <AutoPanel />
+      <AutoPanel halted={halted} />
 
-      <QueuePanel refreshKey={queueRefresh} />
+      <QueuePanel refreshKey={queueRefresh} halted={halted} />
 
       <ReportPanel />
 
       {/* پیش‌نمایش */}
-      {previewLoading && <p className="text-sm text-slate-500">در حال ساخت پیش‌نمایش...</p>}
+      {previewLoading && <p className="text-sm text-text-muted">در حال ساخت پیش‌نمایش...</p>}
       {previews && (
         <section className="card p-5 space-y-5">
           <h2 className="text-lg font-bold">پیش‌نمایش ({previews.length.toLocaleString("fa-IR")} نمونه)</h2>
           <div
             className={`text-xs rounded-md px-3 py-2 border ${
               previewCc.length > 0
-                ? "bg-petrol-50 text-petrol-800 border-petrol-100"
-                : "bg-amber-50 text-amber-700 border-amber-200"
+                ? "bg-canvas text-text border-border"
+                : "bg-warning-soft text-warning border-warning"
             }`}
           >
             {previewCc.length > 0
@@ -358,19 +371,19 @@ export default function OutreachClient({ companies, countries, sendingEnabled })
               : "⚠️ هیچ آدرس CC ای تنظیم نشده (OUTREACH_CC_EMAILS خالیه) — قبل از ارسال واقعی چک کن."}
           </div>
           {missingLinkEnvVars.length > 0 && (
-            <div className="text-xs rounded-md px-3 py-2 border bg-amber-50 text-amber-700 border-amber-200">
+            <div className="text-xs rounded-md px-3 py-2 border bg-warning-soft text-warning border-warning">
               ⚠️ لینک کاتالوگ‌ها هنوز روی سایت آپلود/تنظیم نشده (متغیرهای env گمشده:{" "}
               {missingLinkEnvVars.join("، ")}) — پایین متن ایمیل به‌جاش «[LINK PENDING]» می‌بینی. تا
               این تنظیم نشه، دکمه‌ی ارسال واقعی هم قفل می‌مونه.
             </div>
           )}
           {previews.map((p) => (
-            <div key={p.id} className="border border-slate-200 rounded-lg p-4">
-              <div className="text-xs text-slate-500 mb-1">
+            <div key={p.id} className="border border-border rounded-lg p-4">
+              <div className="text-xs text-text-muted mb-1">
                 {p.english_name} — {p.email} — گرید: {p.grade_label_fa}
               </div>
               <div className="text-sm font-bold mb-2">{p.subject}</div>
-              <pre className="text-xs whitespace-pre-wrap font-sans leading-6 text-slate-700 bg-slate-50 rounded-md p-3">
+              <pre className="text-xs whitespace-pre-wrap font-sans leading-6 text-text bg-canvas rounded-md p-3">
                 {p.body}
               </pre>
             </div>

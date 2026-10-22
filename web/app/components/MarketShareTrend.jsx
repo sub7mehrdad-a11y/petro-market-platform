@@ -15,12 +15,13 @@
 import {
   AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
 } from "recharts";
+import { CHART, CHART_OTHER, CHART_GRID, CHART_TEXT } from "@/lib/chartTheme";
 
 // همون پالت اعتبارسنجی‌شده‌ی PriceChart.jsx (مسی/قرمز/آبی/سبز) + چند رنگ
 // مکمل هم‌خانواده برای وقتی بیش از ۴ تأمین‌کننده‌ی برجسته داریم. «سایر» همیشه
 // خاکستریه، صرف‌نظر از ترتیب.
-const SERIES_COLORS = ["#C9762E", "#9C2B2B", "#0C7DA6", "#4C7A3D", "#7C5CBF", "#B08900"];
-const OTHER_COLOR = "#94a3b8";
+const SERIES_COLORS = CHART.slice(0, 6);
+const OTHER_COLOR = CHART_OTHER;
 const MAX_SERIES = 5; // بیشتر از این، به «سایر» جمع می‌شه
 
 function faDigits(n) {
@@ -116,7 +117,7 @@ function MoversTable({ movers }) {
     <div className="mt-4 overflow-x-auto">
       <table className="w-full text-sm">
         <thead>
-          <tr className="text-right text-slate-500 border-b border-slate-200">
+          <tr className="text-right text-text-muted border-b border-border">
             <th className="py-2 pe-4">کشور مبدأ</th>
             <th className="py-2 pe-4">سهم {faDigits(movers.first_year)}</th>
             <th className="py-2 pe-4">سهم {faDigits(movers.last_year)}</th>
@@ -125,17 +126,17 @@ function MoversTable({ movers }) {
         </thead>
         <tbody>
           {shown.map((r) => (
-            <tr key={r.country_fa} className="border-b border-slate-100">
+            <tr key={r.country_fa} className="border-b border-border">
               <td className="py-2 pe-4 font-medium">{r.country_fa}</td>
-              <td className="py-2 pe-4 font-tabular text-slate-600">{pctLabel(r.share_first)}</td>
-              <td className="py-2 pe-4 font-tabular text-slate-600">{pctLabel(r.share_last)}</td>
+              <td className="py-2 pe-4 font-tabular text-text">{pctLabel(r.share_first)}</td>
+              <td className="py-2 pe-4 font-tabular text-text">{pctLabel(r.share_last)}</td>
               <td
                 className={`py-2 font-tabular font-bold ${
                   r.delta_pct_points > 0.05
-                    ? "text-emerald-700"
+                    ? "text-success"
                     : r.delta_pct_points < -0.05
-                    ? "text-rose-700"
-                    : "text-slate-400"
+                    ? "text-danger"
+                    : "text-text-muted"
                 }`}
               >
                 {deltaLabel(r.delta_pct_points)}
@@ -173,28 +174,30 @@ export default function MarketShareTrend({ data, title }) {
         <h2 className="text-lg font-bold">
           {title || `روند سهم بازار ${data.importer_fa || ""}`}
         </h2>
-        <span className="text-xs text-slate-400">
+        <span className="text-xs text-text-muted">
           {faDigits(firstY)}–{faDigits(lastY)} · منبع: WITS
           {data.manual_overrides && Object.keys(data.manual_overrides).length > 0 && " + آمار رسمی کشوری"}
         </span>
       </div>
-      <p className="text-xs text-slate-500 mb-4">
+      <p className="text-xs text-text-muted mb-4">
         سهم هر کشور مبدأ از ارزش واردات، سال به سال — نشان می‌دهد سهم چه کسی
         دارد رشد یا افت می‌کند، نه فقط وضعیت امسال.
       </p>
 
+      <div dir="ltr">
+
       <ResponsiveContainer width="100%" height={280}>
         <AreaChart data={chartData} margin={{ top: 10, right: 20, left: 0, bottom: 10 }}>
-          <CartesianGrid strokeDasharray="3 3" stroke="#e2e8f0" />
+          <CartesianGrid strokeDasharray="3 3" stroke={CHART_GRID} />
           <XAxis dataKey="year" fontSize={12} tickFormatter={faDigits} />
           <YAxis
             fontSize={12}
             domain={[0, 100]}
             ticks={[0, 20, 40, 60, 80, 100]}
             tickFormatter={(v) => `${v}٪`}
-            label={{ value: "سهم بازار", angle: -90, position: "insideLeft", fontSize: 11, fill: "#64748b" }}
+            label={{ value: "سهم بازار", angle: -90, position: "insideLeft", fontSize: 11, fill: CHART_TEXT }}
           />
-          <Tooltip
+          <Tooltip wrapperStyle={{ direction: "rtl" }}
             formatter={(value, name) => [`${Number(value).toLocaleString("fa-IR")}٪`, name]}
             labelFormatter={(year) => `سال ${faDigits(year)}`}
           />
@@ -212,12 +215,13 @@ export default function MarketShareTrend({ data, title }) {
           ))}
         </AreaChart>
       </ResponsiveContainer>
+      </div>
 
       {movers?.ranked && (
         (() => {
           const note = buildSubstitutionNote(movers.ranked);
           return note ? (
-            <p className="text-sm text-slate-700 bg-slate-50 border border-slate-200 rounded-lg p-3 mt-4 leading-6">
+            <p className="text-sm text-text bg-canvas border border-border rounded-lg p-3 mt-4 leading-6">
               {note}
             </p>
           ) : null;
@@ -227,13 +231,13 @@ export default function MarketShareTrend({ data, title }) {
       <MoversTable movers={movers} />
 
       {note_fa && (
-        <p className="text-[11px] text-amber-700 bg-amber-50 border border-amber-200 rounded-lg p-3 mt-4 leading-6">
+        <p className="text-[11px] text-warning bg-warning-soft border border-warning rounded-lg p-3 mt-4 leading-6">
           {note_fa}
         </p>
       )}
 
       {mirror_gaps && Object.keys(mirror_gaps).length > 0 && (
-        <p className="text-[11px] text-slate-400 mt-3 leading-6">
+        <p className="text-[11px] text-text-muted mt-3 leading-6">
           ⚠️ {Object.entries(mirror_gaps)
             .filter(([, g]) => g.missing_years?.length)
             .map(([name, g]) => `${name} در سال‌های ${g.missing_years.map(faDigits).join("، ")} در این جدول دیده نمی‌شود`)

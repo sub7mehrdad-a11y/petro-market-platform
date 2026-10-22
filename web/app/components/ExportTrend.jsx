@@ -25,7 +25,7 @@ function Sparkline({ values, positive }) {
       {values.map((v, i) => (
         <div
           key={i}
-          className={`w-1.5 rounded-t ${positive ? "bg-copper-400" : "bg-petrol-300"}`}
+          className={`w-1.5 rounded-t ${positive ? "bg-primary" : "bg-petrol-300"}`}
           style={{ height: `${Math.max(8, (v / max) * 100)}%` }}
         />
       ))}
@@ -46,18 +46,18 @@ export default function ExportTrend({ trend, variant = "card" }) {
 
   if (variant === "hero") {
     return (
-      <div className="bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-white/10">
-        <div className="text-[11px] text-petrol-200 mb-1">
+      <div className="bg-surface rounded-xl p-3 border border-border">
+        <div className="text-[11px] text-text-muted mb-1">
           رشد سالانه‌ی صادرات ({faYear(first_year)}–{faYear(last_year)})
         </div>
         <div className="flex items-end justify-between gap-2">
-          <div className={`font-black font-tabular text-lg ${positive ? "text-copper-300" : "text-rose-300"}`}>
+          <div className={`font-black text-lg ${positive ? "text-primary" : "text-danger"}`}>
             {formatPct(cagr_pct)}
-            <span className="text-xs font-normal text-petrol-200"> در سال</span>
+            <span className="text-xs font-normal text-text-muted"> در سال</span>
           </div>
           <Sparkline values={values} positive={positive} />
         </div>
-        <div className="text-[10px] text-petrol-300 mt-1">
+        <div className="text-[10px] text-text-muted mt-1">
           مجموع {faYear(span)} سال: {formatPct(total_change_pct)}
         </div>
       </div>
@@ -66,12 +66,12 @@ export default function ExportTrend({ trend, variant = "card" }) {
 
   return (
     <div className="flex items-center justify-between gap-2">
-      <div className="text-[11px] text-slate-500">
+      <div className="text-[11px] text-text-muted">
         روند صادرات {faYear(first_year)}–{faYear(last_year)}
-        <span className={`font-bold font-tabular ms-1 ${positive ? "text-copper-700" : "text-rose-700"}`}>
+        <span className={`font-bold ms-1 ${positive ? "text-primary" : "text-danger"}`}>
           {formatPct(cagr_pct)}
         </span>
-        <span className="text-slate-400"> سالانه</span>
+        <span className="text-text-muted"> سالانه</span>
       </div>
       <Sparkline values={values} positive={positive} />
     </div>

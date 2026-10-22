@@ -11,7 +11,7 @@ export default function SummaryReportView({ report, livePrices = [], countryProf
       <LivePriceBox prices={livePrices} />
 
       {countryProfile?.port && (
-        <div className="border border-slate-200 rounded-lg p-4">
+        <div className="border border-border rounded-lg p-4">
           <h3 className="text-sm font-semibold mb-2">نقشه‌ی مسیر و فاصله تا بنادر مرجع</h3>
           <WorldRouteMap
             destPort={countryProfile.port}
@@ -21,9 +21,9 @@ export default function SummaryReportView({ report, livePrices = [], countryProf
           {countryProfile.top_trade_partners?.length > 0 && (
             <div className="mt-3 grid gap-2 sm:grid-cols-3">
               {countryProfile.top_trade_partners.map((p, i) => (
-                <div key={i} className="text-xs bg-slate-50 border border-slate-200 rounded-md p-2">
+                <div key={i} className="text-xs bg-canvas border border-border rounded-md p-2">
                   <div className="font-semibold">{p.country}</div>
-                  <div className="text-slate-500">{p.note}</div>
+                  <div className="text-text-muted">{p.note}</div>
                 </div>
               ))}
             </div>
@@ -34,10 +34,10 @@ export default function SummaryReportView({ report, livePrices = [], countryProf
       {key_stats.length > 0 && (
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {key_stats.map((s, i) => (
-            <div key={i} className="border border-slate-200 border-s-4 border-s-copper-500 rounded-lg p-4 bg-white shadow-sm">
-              <div className="text-xs text-slate-500 mb-1">{s.label}</div>
-              <div className="text-lg font-bold text-copper-800 font-tabular">
-                {s.value} <span className="text-sm font-normal text-slate-500">{s.unit}</span>
+            <div key={i} className="border border-border border-s-4 border-s-primary rounded-lg p-4 bg-white shadow-sm">
+              <div className="text-xs text-text-muted mb-1">{s.label}</div>
+              <div className="text-lg font-bold text-primary-hover">
+                {s.value} <span className="text-sm font-normal text-text-muted">{s.unit}</span>
               </div>
             </div>
           ))}
@@ -45,7 +45,7 @@ export default function SummaryReportView({ report, livePrices = [], countryProf
       )}
 
       {charts.map((chart, i) => (
-        <div key={i} className="border border-slate-200 rounded-lg p-4">
+        <div key={i} className="border border-border rounded-lg p-4">
           <ReportChart chart={chart} />
         </div>
       ))}
