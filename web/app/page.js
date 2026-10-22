@@ -8,6 +8,7 @@ import IntratecSampleCard from "./components/IntratecSampleCard";
 import NewsCard from "./components/NewsCard";
 import KpiRow from "./components/KpiRow";
 import PageHeader from "./components/PageHeader";
+import PrintButton from "./components/PrintButton";
 import MarketShareTrend from "./components/MarketShareTrend";
 
 const BASE_FOB_USD = 250;
@@ -104,6 +105,7 @@ export default function DashboardPage() {
   return (
     <div className="space-y-8">
       <PageHeader
+        actions={<PrintButton />}
         title="داشبورد بازار"
         subtitle="وضعیت قیمت جهانی، رقبا و روند بازار جوش شیرین — به‌روزرسانی خودکار روزانه"
       />

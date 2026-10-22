@@ -226,3 +226,19 @@ table .font-tabular,
   border-color: var(--color-primary);
   font-weight: 700;
 }
+
+/* ------------------------------------------------------------------ چاپ (A4)
+   سایدبار/نوار بالا/دکمه‌های اقدام چاپ نمی‌شوند؛ کارت‌ها و جدول‌ها از وسط نمی‌شکنند.
+   رنگ تنها حامل معنا نیست (متن/برچسب کنار هر نشان هست)، پس چاپ سیاه‌وسفید هم خوانا می‌ماند. */
+@media print {
+  @page { size: A4; margin: 14mm; }
+  html, body { background: #fff !important; }
+  aside, [aria-label="ناوبری اصلی"], .print\:hidden, button, .btn, .skip, nav[aria-label="صفحه‌بندی"] { display: none !important; }
+  .lg\:ps-\[248px\], .lg\:ps-20 { padding-inline-start: 0 !important; }
+  .sticky { position: static !important; }
+  main { max-width: none !important; padding: 0 !important; }
+  .card { box-shadow: none !important; break-inside: avoid; }
+  tr, li { break-inside: avoid; }
+  a { color: inherit !important; text-decoration: none !important; }
+  iframe { height: auto !important; }
+}

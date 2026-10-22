@@ -37,7 +37,7 @@ export default function PageHeader({ title, subtitle, breadcrumb, actions, child
             <p className="mt-2 max-w-3xl text-sm leading-7 text-text-muted">{subtitle}</p>
           )}
         </div>
-        {actions && <div className="flex flex-wrap items-center gap-2 shrink-0">{actions}</div>}
+        {actions && <div className="flex w-full flex-wrap items-center gap-2 sm:w-auto [&_.input]:w-full sm:[&_.input]:w-auto">{actions}</div>}
       </div>
 
       {children}

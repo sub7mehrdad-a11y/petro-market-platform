@@ -10,6 +10,8 @@ import ProfileCharts from "../../components/ProfileCharts";
 import ProfileSections from "../../components/ProfileSections";
 import CompetitorWatchFeed from "../../components/CompetitorWatchFeed";
 import ExportTrend from "../../components/ExportTrend";
+import SectionNav from "../../components/SectionNav";
+import PrintButton from "../../components/PrintButton";
 import { latestPricePerSource, formatPrice } from "@/lib/priceFormat";
 import { sortExhibitionsUpcomingFirst } from "@/lib/exhibitionDate";
 import { sourceDateFa, gregorianFa, jalaliFa } from "@/lib/dateFormat";
@@ -38,7 +40,7 @@ export function generateStaticParams() {
 
 function Section({ title, subtitle, children }) {
   return (
-    <section className="card p-5">
+    <section data-nav className="card scroll-mt-40 p-5">
       <div className="mb-4">
         <h2 className="text-lg font-bold text-text">{title}</h2>
         {subtitle && <p className="text-xs text-text-muted mt-0.5">{subtitle}</p>}
@@ -110,9 +112,12 @@ export default async function CompetitorPage({ params }) {
   return (
     <div className="space-y-6">
       <div>
-        <Link href="/competitors" className="text-sm text-text-muted hover:text-primary transition-colors">
-          ← تحلیل رقبا
-        </Link>
+        <div className="flex items-center justify-between gap-3">
+          <Link href="/competitors" className="text-sm text-text-muted hover:text-primary transition-colors print:hidden">
+            ← تحلیل رقبا
+          </Link>
+          <PrintButton />
+        </div>
       </div>
 
       {/* سربرگ — پرچم کشور رقیب به‌عنوان پس‌زمینه، هم‌شکل با کارت‌های صفحه‌ی کشورها */}
@@ -158,6 +163,8 @@ export default async function CompetitorPage({ params }) {
           )}
         </div>
       </section>
+
+      <SectionNav />
 
       {/* رصد زنده — هر رقیبی که ایجنت اختصاصی روزانه داره (ترکیه، چین) */}
       {hasWatch && (

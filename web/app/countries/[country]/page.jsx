@@ -9,6 +9,7 @@ import CompanyTable from "../../components/CompanyTable";
 import ExhibitionTable from "../../components/ExhibitionTable";
 import WorldRouteMap from "../../components/WorldRouteMap";
 import PageHeader from "../../components/PageHeader";
+import PrintButton from "../../components/PrintButton";
 import CountryStatStrip from "../../components/CountryStatStrip";
 import CountryEconomicProfile from "../../components/CountryEconomicProfile";
 import SupplierBreakdown from "../../components/SupplierBreakdown";
@@ -83,6 +84,7 @@ export default async function CountryPage({ params }) {
           { label: country },
         ]}
         title={country}
+        actions={<PrintButton />}
         subtitle="پرونده‌ی کشور — آمار تجارت جهانی، شرکای تأمین، شرکت‌ها، نمایشگاه‌ها و گزارش‌های مرتبط."
       />
 

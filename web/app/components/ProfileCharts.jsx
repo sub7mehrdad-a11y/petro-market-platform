@@ -57,6 +57,7 @@ function ProfileChart({ chart }) {
 
 export default function ProfileCharts({ charts }) {
   return (
+    <section data-nav data-nav-title="نمودارها" className="scroll-mt-40">
     <div className="grid gap-4 lg:grid-cols-2">
       {charts.map((c, i) => (
         <div key={i} className={charts.length % 2 === 1 && i === charts.length - 1 ? "lg:col-span-2" : ""}>
@@ -64,5 +65,6 @@ export default function ProfileCharts({ charts }) {
         </div>
       ))}
     </div>
+    </section>
   );
 }

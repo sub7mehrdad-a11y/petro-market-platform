@@ -177,10 +177,28 @@ export default function AppShell({ children, footer }) {
 
   useEffect(() => {
     if (!open) return;
+    const drawer = document.getElementById("mobile-menu");
+    const focusables = () => [...(drawer?.querySelectorAll("a[href], button:not([disabled])") || [])];
+    focusables()[0]?.focus();
     function onKey(e) {
       if (e.key === "Escape") {
         setOpen(false);
         menuBtn.current?.focus();
+        return;
+      }
+      // محصورسازی Tab داخل کشو تا فوکوس به صفحه‌ی زیر آن نرود
+      if (e.key === "Tab") {
+        const f = focusables();
+        if (!f.length) return;
+        const first = f[0];
+        const last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
       }
     }
     document.addEventListener("keydown", onKey);
@@ -220,7 +238,7 @@ export default function AppShell({ children, footer }) {
   );
 
   return (
-    <div className={`min-h-screen ${collapsed ? "lg:ps-20" : "lg:ps-[248px]"} transition-[padding] duration-200`}>
+    <div className={`min-h-screen ${collapsed ? "lg:ps-20 print:ps-0" : "lg:ps-[248px] print:ps-0"} transition-[padding] duration-200`}>
       <a
         href="#main"
         className="fixed start-4 top-2 z-[100] -translate-y-[150%] rounded-xl border-2 border-focus bg-white px-5 py-3 focus:translate-y-0"
@@ -230,7 +248,7 @@ export default function AppShell({ children, footer }) {
 
       {/* دسکتاپ — ستون ثابت */}
       <aside
-        className={`fixed inset-y-0 start-0 z-40 hidden flex-col gap-[22px] overflow-y-auto border-e border-border bg-white px-4 pb-4 pt-6 transition-[width] duration-200 lg:flex ${
+        className={`print:hidden fixed inset-y-0 start-0 z-40 hidden flex-col gap-[22px] overflow-y-auto border-e border-border bg-white px-4 pb-4 pt-6 transition-[width] duration-200 lg:flex ${
           collapsed ? "w-20 px-3" : "w-[248px]"
         }`}
       >
@@ -268,7 +286,7 @@ export default function AppShell({ children, footer }) {
       )}
 
       {/* نوار بالایی */}
-      <div className="sticky top-0 z-20 flex min-h-[76px] items-center justify-between gap-4 border-b border-border bg-white/[0.97] px-4 py-3 lg:px-8">
+      <div className="print:hidden sticky top-0 z-20 flex min-h-[76px] items-center justify-between gap-4 border-b border-border bg-white/[0.97] px-4 py-3 lg:px-8">
         <div className="flex items-center gap-3 text-[13px] text-text-muted">
           <button
             type="button"

@@ -111,5 +111,51 @@ def rebuild_all(verbose: bool = True) -> int:
     return n
 
 
+
+
+# ---------------------------------------------------------------- نقشه‌های تعاملی (public/competitor-maps)
+# نقشه‌ها فایل‌های خودبسته‌ی Cowork با متغیرهای CSS روشن/تیره‌اند. فقط حالت روشن و پالت جدید؛ رنگ‌های معنایی
+# (کارخانه/بندر/مرز/بازار) با توکن‌های وضعیت/نمودار هم‌خانواده شده‌اند. idempotent.
+MAP_VAR_MAP = {
+    "#f4f5f2": "#F5F8FC", "#1d2a2f": "#263B50", "#51616a": "#52687D", "#d9dfdc": "#D2DEEB",
+    "#dcebf1": "#E2EEFB", "#f1ede3": "#F1F7FD", "#e7dfc9": "#DCE9F6", "#9fb3b9": "#A2C7EC", "#b9b29c": "#93A4B5",
+    "#a63a20": "#A52E4A", "#0b6e8a": "#286F94", "#c07a0a": "#815F13", "#5a3b86": "#7757A2",
+    "#eef1ee": "#F1F7FD", "#fbf1dc": "#FFF8DF", "#6a4a06": "#815F13",
+}
+
+
+def reskin_map(text: str) -> str:
+    text = re.sub(r"(<style[^>]*>)(.*?)(</style>)", lambda m: m.group(1) + _strip_dark(m.group(2)) + m.group(3), text, flags=re.S)
+    # فقط داخل بلوک :root (نه کل فایل) تا رنگ‌های درون‌خطی ناخواسته عوض نشوند
+    def fix_root(m):
+        body = m.group(2)
+        for a, b in MAP_VAR_MAP.items():
+            body = re.sub(re.escape(a), b, body, flags=re.I)
+        return m.group(1) + body + m.group(3)
+    text = re.sub(r"(:root\s*\{)([^{}]*)(\})", fix_root, text, count=1)
+    if 'name="color-scheme"' not in text:
+        text = text.replace("<head>", '<head>\n<meta name="color-scheme" content="light">', 1)
+    return text
+
+
+def rebuild_maps(verbose: bool = True) -> int:
+    d = os.path.join(BASE_DIR, "web", "public", "competitor-maps")
+    n = 0
+    for fn in sorted(os.listdir(d)):
+        if not fn.endswith(".html"):
+            continue
+        p = os.path.join(d, fn)
+        raw = open(p, "rb").read().decode("utf-8")
+        new = reskin_map(raw)
+        if new != raw:
+            open(p, "wb").write(new.encode("utf-8"))
+            n += 1
+    if verbose:
+        print(f"بازرنگ {n} نقشه‌ی تعاملی")
+    return n
+
+
 if __name__ == "__main__":
-    sys.exit(0 if rebuild_all() else 1)
+    ok = rebuild_all()
+    rebuild_maps()
+    sys.exit(0 if ok else 1)

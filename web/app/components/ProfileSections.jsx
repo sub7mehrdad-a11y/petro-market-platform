@@ -56,7 +56,7 @@ export default function ProfileSections({ sections }) {
   return (
     <>
       {sections.map((s, si) => (
-        <section key={si} className="card p-5">
+        <section key={si} data-nav className="card scroll-mt-40 p-5">
           <h2 className="text-lg font-bold text-text mb-4">{s.title}</h2>
           {s.blocks.map((b, bi) => {
             if (b.t === "h") return <h3 key={bi} className="font-bold text-sm text-text mt-5 mb-2">{b.text}</h3>;
