@@ -17,16 +17,16 @@
 import { ImapFlow } from "imapflow";
 import { classifyGrade } from "./outreachTemplate.js";
 
-const FREE_MAIL = new Set([
+export const FREE_MAIL = new Set([
   "gmail.com", "googlemail.com", "yahoo.com", "ymail.com", "hotmail.com", "outlook.com", "live.com", "msn.com",
   "icloud.com", "mail.ru", "yandex.ru", "yandex.com", "aol.com", "protonmail.com", "qq.com", "163.com",
 ]);
-const AUTO_SUBJECT_RE = /automatic reply|auto.?reply|out of office|autoreply|away from|vacation|خارج از دفتر|پاسخ خودکار/i;
-const DSN_SUBJECT_RE = /undeliver|delivery status|failure notice|returned mail|delivery (has )?failed|mail delivery|could not be delivered|message not delivered/i;
+export const AUTO_SUBJECT_RE = /automatic reply|auto.?reply|out of office|autoreply|away from|vacation|خارج از دفتر|پاسخ خودکار/i;
+export const DSN_SUBJECT_RE = /undeliver|delivery status|failure notice|returned mail|delivery (has )?failed|mail delivery|could not be delivered|message not delivered/i;
 
-const domainOf = (email) => String(email || "").toLowerCase().split("@")[1] || "";
+export const domainOf = (email) => String(email || "").toLowerCase().split("@")[1] || "";
 
-function parseHeaders(buf) {
+export function parseHeaders(buf) {
   const out = {};
   const text = buf ? buf.toString("utf-8") : "";
   // unfold + split

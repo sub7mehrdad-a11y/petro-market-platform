@@ -17,6 +17,18 @@
 
 ## ورودی‌ها
 
+### ۲۰۲۶-۱۰-۲۲ — ایمیل: یادآوری بعد از ۱۴ روز + فوروارد پاسخ مشتری به همکار (شاخه‌ی `feature/outreach-followup`، پیش‌فرض خاموش)
+
+درخواست کاربر: (۱) هر شرکتی که بعد از حدود دو هفته جواب نداده یک ایمیل یادآوری بگیرد؛ (۲) پاسخ مشتری‌ها که به صندوق خود کاربر می‌آید برای **همکار** (ایمیل سازمانی) فوروارد شود تا او ارتباط را ادامه دهد.
+- **ماژول‌ها:** `lib/outreachFollowupCore.js` (منطق خالص، تست‌شده)، `lib/outreachFollowup.js` (IMAP/SMTP/زمان‌بند)، `lib/outreachFollowupState.js` (وضعیت پایدار کنار لاگ ارسال: `outreach_followup_state.json` داخل `OUTREACH_STATE_DIR`)، API `/api/outreach/followup`، پنل `FollowupPanel.jsx`. صف: `enqueueReminders` + شاخه‌ی `kind:"reminder"` در `sendItem` (همان فاصله/سقف روزانه/توقف/حالت تست).
+- **یادآوری** (`OUTREACH_REMINDER_ENABLED=true`): روزی یک‌بار بعد از ساعت ارسال خودکار؛ فقط ارسال‌های خود پلتفرم (`source=outreach-queue` با Message-ID) — **کمپین قدیمی عراق یادآوری نمی‌گیرد**؛ ≥`OUTREACH_REMINDER_AFTER_DAYS`(۱۴) و ≤`…MAX_AGE_DAYS`(۶۰) روز؛ بدون پاسخ واقعی، بدون bounce، فقط یک‌بار برای هر شرکت؛ سقف `…PER_DAY`(۱۰)، قدیمی‌ترین اول. اگر وضعیت پاسخ‌ها از IMAP خوانده نشود **هیچ یادآوری‌ای نمی‌رود**. در همان رشته‌ی ایمیل اول (Re: + In-Reply-To/References)، بدون پیوست؛ در لاگ ارسال/گزارش عملکرد ثبت نمی‌شود. ⚠ **متن یادآوری تازه است و باید تأیید شود** (`buildReminderEmail`).
+- **فوروارد پاسخ** (`OUTREACH_FORWARD_ENABLED=true` + `OUTREACH_FORWARD_TO`): هر `OUTREACH_FORWARD_POLL_MIN`(۱۰) دقیقه INBOX فقط‌خواندنی؛ فقط پاسخ «واقعی» که به ایمیل ما تطبیق خورد (رشته‌ی ایمیل > همان آدرس > هم‌دامنه‌ی شرکتی؛ gmail/… هم‌دامنه حساب نمی‌شود). پاسخ خودکار، برگشتی، فرستنده‌ی داخلی (SMTP_USER/CC/گیرنده) و ایمیل بی‌ارتباط فوروارد نمی‌شود. ایمیلِ فوروارد: خلاصه‌ی مشخصات + متن پاسخ + فایل اصلی `.eml` (با پیوست‌های مشتری)، `Reply-To` = مشتری (همکار با «Reply» مستقیم به مشتری جواب می‌دهد). **اولین فعال‌سازی فقط خط پایه می‌گذارد** (پاسخ‌های قدیمی فوروارد نمی‌شوند). پیشرفت (`last_uid`) بعد از هر پیام ذخیره می‌شود؛ خطا → همان پیام دوباره، بعد از ۵ بار رد می‌شود.
+- **قفل‌ها:** قفل اضطراری `outreach_halt.json` هر دو را متوقف می‌کند؛ حالت تست (`OUTREACH_TEST_REDIRECT`) هر دو را به آدرس تست می‌برد. هیچ فلگی روشن نشد.
+- **تست:** `node --test web/lib/outreachFollowupCore.test.mjs` (۹ مورد) و `node --import ./scripts/alias-loader.mjs scripts/test-followup.mjs` (از پوشه‌ی web؛ IMAP جعلی + سینک SMTP محلی: خط پایه، فوروارد، پاسخ خودکار/بی‌ارتباط/داخلی، بدون تکرار، خطای SMTP، یادآوری در حالت تست) — همه گذشت. اتصال واقعی به صندوق/SMTP تست نشده (عمداً).
+- **برای فعال‌سازی روی لیارا:** `OUTREACH_FORWARD_TO=<ایمیل همکار>` + `OUTREACH_FORWARD_ENABLED=true` (اول با `OUTREACH_TEST_REDIRECT` امتحان شود)، بعد پس از تأیید متن: `OUTREACH_REMINDER_ENABLED=true`. وابستگی جدید: `mailparser`.
+
+---
+
 ### ۲۰۲۶-۱۰-۲۲ — بازطراحی UI (شاخه‌ی `design/ui-refresh`) — مرحله‌ی ۲: حالت‌های پایه، چاپ، ناوبری بخش‌ها، نقشه‌ها، خروجی ایمیل
 
 - **حالت‌های پایه:** `not-found.js` (۴۰۴)، `error.js` (۵۰۰ با «تلاش دوباره»)، `loading.js` + `StateMessage.jsx` طبق متن طرح. favicon/apple-icon از آرم رسمی (`app/icon.png`, `app/apple-icon.png`؛ `favicon.ico` قدیمی حذف).

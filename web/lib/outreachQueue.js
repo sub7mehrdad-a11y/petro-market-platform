@@ -18,6 +18,8 @@ import path from "path";
 import nodemailer from "nodemailer";
 import { getCompanies, getCountryEnglishName, getOutreachSentStatePath, getOutreachSentStateOnly } from "@/lib/data";
 import { renderOutreachEmail, FIXED_ATTACHMENTS, isValidEmail } from "@/lib/outreachTemplate";
+import { buildReminderEmail } from "@/lib/outreachFollowupCore.js";
+import { recordReminderResult } from "@/lib/outreachFollowupState";
 
 const ROOT = path.join(process.cwd(), "..");
 const MAX_ATTEMPTS = 3;
@@ -170,6 +172,35 @@ export function enqueueCompanies(companyIds) {
   });
 }
 
+// یادآوری‌ها (کوتاه، در رشته‌ی همان ایمیل اول): وارد «همین صف» می‌شوند تا فاصله‌ی زمانی، سقف روزانه،
+// توقف موقت/اضطراری و حالت تست دقیقاً مثل ایمیل معرفی اعمال شود. در لاگ ارسال (و گزارش عملکرد) ثبت نمی‌شوند.
+export function enqueueReminders(records) {
+  return mutateQueue((state) => {
+    const active = new Set(state.items.filter((i) => i.status === "queued").map((i) => i.email));
+    let queued = 0;
+    for (const r of records) {
+      const email = String(r.email || "").trim().toLowerCase();
+      if (!email || !isValidEmail(email) || active.has(email)) continue;
+      active.add(email);
+      state.items.push({
+        id: `r-${Date.now().toString(36)}-${state.items.length}`,
+        kind: "reminder",
+        company_id: r.company_id,
+        email,
+        name: r.name || null,
+        country: r.country || null,
+        orig_message_id: r.message_id,
+        orig_sent_at: r.sent_at,
+        queued_at: new Date().toISOString(),
+        status: "queued",
+        attempts: 0,
+      });
+      queued += 1;
+    }
+    return { queued };
+  });
+}
+
 export function getQueueSummary() {
   const state = readQueue();
   const settings = getQueueSettings();
@@ -181,7 +212,7 @@ export function getQueueSummary() {
     .filter((i) => i.status !== "queued")
     .sort((a, b) => String(b.sent_at || b.failed_at || b.queued_at).localeCompare(String(a.sent_at || a.failed_at || a.queued_at)))
     .slice(0, 8)
-    .map((i) => ({ id: i.id, name: i.name, email: i.email, status: i.status, sent_at: i.sent_at || null, error: i.error || null, test: !!i.test }));
+    .map((i) => ({ id: i.id, kind: i.kind || "intro", name: i.name, email: i.email, status: i.status, sent_at: i.sent_at || null, error: i.error || null, test: !!i.test }));
   return {
     paused: state.paused,
     next_send_at: state.next_send_at,
@@ -239,7 +270,7 @@ function ccList() {
   return (process.env.OUTREACH_CC_EMAILS || "").split(",").map((e) => e.trim()).filter(Boolean);
 }
 
-async function sendItem(item) {
+export async function sendItem(item) {
   const settings = getQueueSettings();
   const transport = buildTransport();
   if (!transport) throw new Error("تنظیمات SMTP کامل نیست");
@@ -252,6 +283,25 @@ async function sendItem(item) {
     country_en: getCountryEnglishName(company.country),
     target_grade: company.target_grade,
   });
+
+  // یادآوری: همان رشته‌ی ایمیل اول (Re: + In-Reply-To/References)، بدون پیوست.
+  if (item.kind === "reminder") {
+    const reminder = buildReminderEmail({ originalSubject: rendered.subject, companyName: company.english_name });
+    const fromAddress = process.env.SMTP_FROM || process.env.SMTP_USER;
+    const fromName = process.env.SMTP_FROM_NAME || "Pars Baking Soda Group";
+    const redirect = settings.testRedirect;
+    const cc = redirect ? [] : ccList();
+    const info = await transport.sendMail({
+      from: `"${fromName}" <${fromAddress}>`,
+      to: redirect || item.email,
+      ...(cc.length ? { cc } : {}),
+      subject: redirect ? `[TEST → ${item.email}] ${reminder.subject}` : reminder.subject,
+      text: reminder.body,
+      ...(item.orig_message_id ? { inReplyTo: item.orig_message_id, references: item.orig_message_id } : {}),
+    });
+    return { info, grade: rendered.grade, company, test: !!redirect };
+  }
+
   const attachments = FIXED_ATTACHMENTS.map((a) => ({ filename: a.filename, path: path.join(ROOT, a.relativePath) }));
   for (const a of attachments) if (!fs.existsSync(a.path)) throw new Error(`فایل پیوست پیدا نشد: ${a.filename}`);
 
@@ -317,8 +367,15 @@ async function processOne() {
     }
   });
 
-  // لاگ ارسال (برای جلوگیری از ایمیل تکراری و برای گزارش): فقط ارسال واقعی، نه تست
-  if (outcome.ok && !outcome.test) {
+  // یادآوری در لاگ ارسال/گزارش ثبت نمی‌شود؛ فقط در وضعیت پیگیری (تا دوباره یادآوری نگیرد).
+  if (item.kind === "reminder") {
+    if (outcome.ok && !outcome.test) {
+      recordReminderResult(item.email, { status: "sent", sent_at: new Date().toISOString(), message_id: outcome.info?.messageId || null });
+    } else if (!outcome.ok) {
+      const after = readQueue().items.find((x) => x.id === item.id);
+      if (after?.status === "failed") recordReminderResult(item.email, { status: "failed", failed_at: new Date().toISOString(), error: outcome.error });
+    }
+  } else if (outcome.ok && !outcome.test) {
     appendToSentLog({
       email: item.email,
       name: item.name,

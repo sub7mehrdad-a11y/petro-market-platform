@@ -6,5 +6,7 @@ export async function register() {
     startOutreachWorker();
     const { startOutreachAuto } = await import("./lib/outreachAuto.js");
     startOutreachAuto();
+    const { startOutreachFollowup } = await import("./lib/outreachFollowup.js");
+    startOutreachFollowup();
   }
 }

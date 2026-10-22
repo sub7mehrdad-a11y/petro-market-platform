@@ -116,7 +116,7 @@ export default function QueuePanel({ refreshKey, halted = false }) {
         <ul className="divide-y divide-border text-sm">
           {q.recent.map((r) => (
             <li key={r.id} className="py-1.5 flex flex-wrap items-center justify-between gap-2">
-              <span className="truncate max-w-[60%]">{r.name || r.email}</span>
+              <span className="truncate max-w-[60%]">{r.name || r.email}{r.kind === "reminder" && <span className="badge badge-primary ms-2 !min-h-0 !px-2 !py-0 text-[10px]">یادآوری</span>}</span>
               <span className={`text-[11px] rounded-full px-2 py-0.5 ${STATUS_STYLE[r.status]}`} title={r.error || undefined}>
                 {STATUS_FA[r.status]}{r.test ? " (تست)" : ""}
               </span>
