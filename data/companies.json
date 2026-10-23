@@ -637,9 +637,16 @@
     "purchasing_potential": "Very High",
     "address": "5 Awwad Mkhaimar St., P.O. Box 330488, Amman 11134, Jordan",
     "phone": "+962 6 4886261",
-    "email": "email@hammoudeh.com",
     "website": "https://www.hammoudeh.com",
-    "id": "company-52"
+    "id": "company-52",
+    "email_history": [
+      {
+        "email": "email@hammoudeh.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "اردن",
@@ -975,9 +982,16 @@
     "purchasing_potential": "Very High",
     "address": "Marka Industrial Area, Amman",
     "phone": "+962 6 4894500",
-    "email": "sales@udmc.com.jo",
     "website": "https://www.udmc.com.jo",
-    "id": "company-78"
+    "id": "company-78",
+    "email_history": [
+      {
+        "email": "sales@udmc.com.jo",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "اردن",
@@ -1039,9 +1053,16 @@
     "purchasing_potential": "بالا",
     "address": "P.O Box 503-00204, Athi River",
     "phone": "+254 722 881 024",
-    "email": "admin@athirivertanneries.co.ke",
     "website": "athirivertanneries.co.ke",
-    "id": "company-83"
+    "id": "company-83",
+    "email_history": [
+      {
+        "email": "admin@athirivertanneries.co.ke",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "کنیا",
@@ -1183,9 +1204,16 @@
     "purchasing_potential": "بالا",
     "address": "Enterprise Road, Industrial Area, Nairobi",
     "phone": "254724253333",
-    "email": "sales@ennsvalleybakery.com",
     "website": "https://www.ennsvalley-bakery.com",
-    "id": "company-95"
+    "id": "company-95",
+    "email_history": [
+      {
+        "email": "sales@ennsvalleybakery.com",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "کنیا",
@@ -2057,9 +2085,16 @@
     "purchasing_potential": "متوسط",
     "address": "حومه دمشق – جاده الکسوه – جاده المناشر، سوریه",
     "phone": "+963 944680343",
-    "email": "aamalalhalibi@gmail.com",
     "website": "commercialsy.com/en/company/al-halibi-food-industries-company-canned-goods",
-    "id": "company-165"
+    "id": "company-165",
+    "email_history": [
+      {
+        "email": "aamalalhalibi@gmail.com",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 5.1.1 The email account that you tried to reach does not exist. Please",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "سوریه",
@@ -2377,9 +2412,20 @@
     "purchasing_potential": "High",
     "address": "Kotayk St. 1/94, Abovyan, Armenia",
     "phone": "+374 93 949090",
-    "email": "sales@tamaragroup.am",
+    "email": "export@tamaragroup.am",
     "website": "https://tamaragroup.am",
-    "id": "company-191"
+    "id": "company-191",
+    "email_history": [
+      {
+        "email": "sales@tamaragroup.am",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 5.7.1 No such user! 1792224625-OASJwe4bwKo0-FGoLbRSV'",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "export@tamaragroup.am",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://tamaragroup.am/contact"
+      }
+    ]
   },
   {
     "country": "ارمنستان",
@@ -3229,10 +3275,17 @@
     "target_grade": "صنعتی - ماده اولیه پودر لباسشویی، صابون‌سازی و شوینده‌های صنعتی",
     "address": "2 I. Dosova ko’chasi, 220100 (نه Al-Khoresmi 110)",
     "website": "http://urganchyog.uz",
-    "email": "info@urganchyog.uz",
     "phone": "+998 62 224-57-57 (تأیید شد)؛ شماره دوم فایل تأیید نشد",
     "action_plan": "تولیدکننده انواع شوینده‌ها و صابون‌های صنعتی و بهداشتی با مصرف مداوم بی کربنات سدیم صنعتی به عنوان پرکننده قلیایی و بافر شوینده.",
-    "id": "company-262"
+    "id": "company-262",
+    "email_history": [
+      {
+        "email": "info@urganchyog.uz",
+        "reason": "برگشت قطعی: دامنه‌ی ایمیل وجود ندارد/سرور ایمیل ندارد — پاسخ سرور مقصد: Remote Server returned: '600 Failed to connect to the recipient's mail server.  No DNS information w",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "ازبکستان",
@@ -3241,10 +3294,17 @@
     "target_grade": "دام و طیور (Feed Grade) - بافر جیره، استحکام پوسته تخم‌مرغ و رفع استرس گرمایی",
     "address": "Uzbekistan, Samarkand region, Samarkand district",
     "website": "https://yellowpages.uz/en/company/maroqand-parranda-llc",
-    "email": "parranda@i.ua",
     "phone": "+998 (66) 234-14-43 / +998 (90) 282-00-00",
     "action_plan": "تولیدکننده عمده مرغ و تخم‌مرغ در استان سمرقند؛ مصرف بی کربنات سدیم دامی در ترکیب کنسانتره و دان آماده برای جلوگیری از اسیدوز و تنظیم الکترولیت‌ها.",
-    "id": "company-263"
+    "id": "company-263",
+    "email_history": [
+      {
+        "email": "parranda@i.ua",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 User not found. See http://mail.i.ua/err/2/'",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "ازبکستان",
@@ -3338,10 +3398,17 @@
     "target_grade": "خوراکی (E500ii) - عامل ورآورنده خمیر در محصولات آردی، کیک اسفنجی و ویفر",
     "address": "Алматинская обл., Карасайский р-н, г. Каскелен, ул. Абылай хана",
     "website": "http://www.hamle.kz",
-    "email": "info@hamle.kz",
     "phone": "+7 (727) 276-38-72 / +7 (707) 320-85-46",
     "action_plan": "زیرمجموعه هلدینگ غذایی پلادیس با کارخانه بزرگ در کاسکلن آلماتی؛ مصرف ماهانه ده‌ها تن جوش شیرین خوراکی.",
-    "id": "company-271"
+    "id": "company-271",
+    "email_history": [
+      {
+        "email": "info@hamle.kz",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "قزاقستان",
@@ -3603,10 +3670,17 @@
     "target_grade": "خوراکی (E500ii) - بهبود بافت خمیر پلمنی، ماکارونی و بافر پروتئین",
     "address": "г. Петропавловск / филиал в Астане: ул. Жидебай, 18",
     "website": "https://maxrazmah.kz",
-    "email": "astana@maxrazmah.kz",
     "phone": "+7 (701) 032-62-30 / +7 (7172) 48-11-13 (WhatsApp: +7 747 530-11-84)",
     "action_plan": "تولیدکننده شناخته‌شده ماکارونی و سبد گسترده محصولات منجمد خمیری-گوشتی (پلمنی، مانتی، خینکالی، وارنیکی) با مصرف نمک‌های بافری و بی‌کربنات خوراکی.",
-    "id": "company-293"
+    "id": "company-293",
+    "email_history": [
+      {
+        "email": "astana@maxrazmah.kz",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 Message was not accepted -- invalid mailbox.  Local mailbox astana@maxr",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "قزاقستان",
@@ -3627,10 +3701,17 @@
     "target_grade": "خوراکی (E500ii) - ورآورنده اصلی شیرینی‌جات، بیسکویت، کراکر و پریانیک",
     "address": "г. Караганда, ул. Камская, 91 (БИН: 030240005260)",
     "website": "https://www.selprom.kz",
-    "email": "karagandy_nan@mail.ru",
     "phone": "+7 (707) 212-72-71 / +7 (7212) 44-05-55",
     "action_plan": "بزرگترین مجتمع نان و شیرینی قزاقستان مرکزی با بیش از ۹۰ سال قدمت؛ مصرف‌کننده دائمی جوش شیرین خوراکی در خطوط بیسکویت و پریانیک صنعتی.",
-    "id": "company-295"
+    "id": "company-295",
+    "email_history": [
+      {
+        "email": "karagandy_nan@mail.ru",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 Message was not accepted -- invalid mailbox.  Local mailbox karagandy_n",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "قزاقستان",
@@ -3736,10 +3817,17 @@
     "target_grade": "خوراکی (E500ii) - نمک‌های بافری و تنظیم‌کننده‌های فسفاتی/کربناتی",
     "address": "г. Алматы, пр. Райымбека, 212А",
     "website": "https://www.progast.kz",
-    "email": "progast_kz@mail.ru",
     "phone": "+7 (727) 279-88-66",
     "action_plan": "نمایندگی رسمی کمپانی اروپایی Progast؛ واردکننده و فرمولاتور افزودنی‌های عمل‌آوری گوشت، فسفات‌ها و بافرهای اسیدیته برای سوسیس و کالباس.",
-    "id": "company-304"
+    "id": "company-304",
+    "email_history": [
+      {
+        "email": "progast_kz@mail.ru",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 Message was not accepted -- invalid mailbox.  Local mailbox progast_kz@",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "قزاقستان",
@@ -3748,10 +3836,17 @@
     "target_grade": "خوراکی (E500ii) - عامل ورآورنده خمیرهای تخمیری و نیمه‌آماده‌های پخت سریع",
     "address": "г. Алматы, Медеуский район, ул. Тулебаева, 13",
     "website": "https://ozyurt.kz",
-    "email": "info@ozyurt.kz",
     "phone": "+7 (727) 291-77-90",
     "action_plan": "تولیدکننده فرآورده‌های خمیری، نان پیده، لحم‌عجون و نیمه‌آماده‌های منجمد رستورانی در قزاقستان.",
-    "id": "company-305"
+    "id": "company-305",
+    "email_history": [
+      {
+        "email": "info@ozyurt.kz",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "قزاقستان",
@@ -4732,10 +4827,17 @@
     "purchasing_potential": "High",
     "address": "BUCURESTI, SECTOR 6, Romania",
     "phone": "+40 740 414 919",
-    "email": "cristian@cristiangrup.ro",
     "website": "http://www.cristiangrup.ro",
     "country": "رومانی",
-    "id": "company-381"
+    "id": "company-381",
+    "email_history": [
+      {
+        "email": "cristian@cristiangrup.ro",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5239,10 +5341,17 @@
     "purchasing_potential": "Medium",
     "address": "Cairo/Ismailia Road,Cairo, Egypt",
     "phone": "+20 2 22668412",
-    "email": "support@mido.com.eg",
     "website": "http://www.mido.com.eg",
     "country": "مصر",
-    "id": "company-420"
+    "id": "company-420",
+    "email_history": [
+      {
+        "email": "support@mido.com.eg",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5330,10 +5439,17 @@
     "purchasing_potential": "High",
     "address": "Kraków, Poland",
     "phone": "+48 12 638 00 20",
-    "email": "biuro@pharma-cosmetic.com.pl",
     "website": "http://www.pharma-cosmetic.com.pl",
     "country": "لهستان",
-    "id": "company-427"
+    "id": "company-427",
+    "email_history": [
+      {
+        "email": "biuro@pharma-cosmetic.com.pl",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5564,10 +5680,17 @@
     "purchasing_potential": "Medium",
     "address": "Västra Frölunda, Sweden",
     "phone": "+46 31 80 12 20",
-    "email": "info@specialkemi.se",
     "website": "http://www.specialkemi.se",
     "country": "سوئد",
-    "id": "company-445"
+    "id": "company-445",
+    "email_history": [
+      {
+        "email": "info@specialkemi.se",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "ITC Trade Map (راستی‌آزمایی‌شده)",
@@ -5903,11 +6026,18 @@
     "target_grade": "خوراکی (E500ii) - ورآورنده و کنترل‌کننده بافت خمیرهای چندلایه پفکی",
     "address": "г. Алматы, Алатауский район, микрорайон Алгабас",
     "phone": "+7 (701) 055-55-40 / +7 (727) 344-00-11",
-    "email": "info@samsachef.kz",
     "website": "https://samsachef.kz",
     "action_plan": "بزرگترین کارخانه تخصصی تولید سمبوسه و نیمه‌آماده‌های لایه‌ای در قزاقستان؛ مصرف‌کننده بی‌کربنات سدیم برای دستیابی به بافت ترد ورقه‌های خمیر.",
     "country": "قزاقستان",
-    "id": "company-471"
+    "id": "company-471",
+    "email_history": [
+      {
+        "email": "info@samsachef.kz",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -5959,11 +6089,18 @@
     "target_grade": "خوراکی (E500ii) - عامل هوادهی، پوک‌کنندگی و تردی خمیر نان سوخاری و کراکر",
     "address": "Россия, г. Воронеж, Монтажный проезд, 13Б",
     "phone": "+7 (905) 623-43-99 / +7 (473) 239-09-45",
-    "email": "info@lutov-snack.ru",
     "website": "https://lutov-snack.ru",
     "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
     "country": "روسیه",
-    "id": "company-475"
+    "id": "company-475",
+    "email_history": [
+      {
+        "email": "info@lutov-snack.ru",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6001,11 +6138,18 @@
     "target_grade": "خوراکی (E500ii) - عامل پوک‌کننده و ایجاد رنگ و تردی در پخت شیرینی",
     "address": "Россия, г. Киров, ул. Производственная, 29",
     "phone": "+7 (8332) 71-11-20",
-    "email": "info@sladkasloboda.ru",
     "website": "https://sladkasloboda.ru",
     "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
     "country": "روسیه",
-    "id": "company-478"
+    "id": "company-478",
+    "email_history": [
+      {
+        "email": "info@sladkasloboda.ru",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6015,11 +6159,18 @@
     "target_grade": "خوراکی (E500ii) - ورآورنده اصلی خمیر بیسکویت و شیرینی‌های قالبی",
     "address": "Россия, г. Челябинск, ул. Дарвина, 14",
     "phone": "+7 (351) 211-50-50",
-    "email": "info@uracon.ru",
     "website": "https://uracon.ru",
     "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
     "country": "روسیه",
-    "id": "company-479"
+    "id": "company-479",
+    "email_history": [
+      {
+        "email": "info@uracon.ru",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6057,11 +6208,18 @@
     "target_grade": "خوراکی و صنعتی - واردات عمده کانتینری بی‌کربنات سدیم و اسیدهای خوراکی",
     "address": "Россия, г. Новосибирск, ул. Станционная, 30А / г. Москва",
     "phone": "+7 (383) 363-22-24",
-    "email": "info@sell-s.ru",
     "website": "https://sell-s.ru",
     "action_plan": "کارخانجات بزرگ تولید شیرینی، بیسکویت، فرآورده‌های پروتئینی، خوراک دام و شوینده‌های صنعتی روسیه.",
     "country": "روسیه",
-    "id": "company-482"
+    "id": "company-482",
+    "email_history": [
+      {
+        "email": "info@sell-s.ru",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6085,11 +6243,18 @@
     "target_grade": "خوراکی و صنعتی",
     "address": "Uzbekistan, Bukhara region, Gijduvan district, Zarafshan, Shogolona St., 174",
     "phone": "+998 (91) 415-00-00 (Region Office)",
-    "email": "empire.golden.uz@gmail.com",
     "website": "https://tradeatlas.com",
     "action_plan": "شرکت فعال در حوزه واردات و توزیع کالاهای اساسی و مواد شیمیایی مصرفی در منطقه گیژدووان و حومه بخارا؛ دارای آمادگی خرید محموله‌های کامیونی از ایران.",
     "country": "ازبکستان",
-    "id": "company-484"
+    "id": "company-484",
+    "email_history": [
+      {
+        "email": "empire.golden.uz@gmail.com",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 5.1.1 The email account that you tried to reach does not exist. Please",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6099,11 +6264,18 @@
     "target_grade": "خوراکی، دام و طیور و صنعتی",
     "address": "Uzbekistan, Tashkent / Bukhara Hub",
     "phone": "+998 (97) 300-44-55",
-    "email": "asiaexport.uz@bk.ru",
     "website": "https://exportgenius.in",
     "action_plan": "کارگزار و خریدار محموله‌های کانتینری و واگنی محصولات شیمیایی معدنی از ایران و کشورهای CIS؛ فعال در ترخیص گمرکی و حمل لجستیکی تا انبار خریداران نهایی ازبکستان.",
     "country": "ازبکستان",
-    "id": "company-485"
+    "id": "company-485",
+    "email_history": [
+      {
+        "email": "asiaexport.uz@bk.ru",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 Message was not accepted -- invalid mailbox.  Local mailbox asiaexport.",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6141,11 +6313,18 @@
     "target_grade": "Food Grade",
     "address": "ابوویان، خ آچاریان ۱۴",
     "phone": "+374 222 63333\n+374 10 249812",
-    "email": "info@tamara.am",
     "website": "tamara.am",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع غذایی و نان صنعتی با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
-    "id": "company-488"
+    "id": "company-488",
+    "email_history": [
+      {
+        "email": "info@tamara.am",
+        "reason": "برگشت قطعی: دامنه‌ی ایمیل وجود ندارد/سرور ایمیل ندارد — پاسخ سرور مقصد: Remote Server returned: '600 Failed to connect to the recipient's mail server.  No DNS information w",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6253,11 +6432,18 @@
     "target_grade": "Feed Grade",
     "address": "استان کوتایک، لوساکرت/گتامج",
     "phone": "+374 97 211000\n+374 60 448778",
-    "email": "lusakertpoultry@gmail.com",
     "website": "yell.am/lusakert",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش خوراک دام و طیور با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
-    "id": "company-496"
+    "id": "company-496",
+    "email_history": [
+      {
+        "email": "lusakertpoultry@gmail.com",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 5.1.1 The email account that you tried to reach does not exist. Please",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6281,11 +6467,18 @@
     "target_grade": "Feed Grade",
     "address": "استان آرارات، سورناوان، بزرگراه ۶",
     "phone": "+374 15 222090\n+374 96 222090",
-    "email": "info@mananagrain.am",
     "website": "mananastone.am",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش خوراک دام و طیور با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
-    "id": "company-498"
+    "id": "company-498",
+    "email_history": [
+      {
+        "email": "info@mananagrain.am",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6309,11 +6502,18 @@
     "target_grade": "Feed Grade",
     "address": "استان شیراک، گیومری، قاریبجانیان",
     "phone": "+374 312 34500\n+374 93 404050",
-    "email": "shirakpoultry@mail.ru",
     "website": "spyur.am/shirak",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش خوراک دام و طیور با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
-    "id": "company-500"
+    "id": "company-500",
+    "email_history": [
+      {
+        "email": "shirakpoultry@mail.ru",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 Message was not accepted -- invalid mailbox.  Local mailbox shirakpoult",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6351,11 +6551,18 @@
     "target_grade": "Industrial / Detergent",
     "address": "ایروان، شنگاویت، خ شیراکی ۱۵",
     "phone": "+374 10 482050\n+374 91 405520",
-    "email": "info@vitamax.am",
     "website": "vitamax.am",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع شوینده و داروسازی با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
-    "id": "company-503"
+    "id": "company-503",
+    "email_history": [
+      {
+        "email": "info@vitamax.am",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6393,11 +6600,18 @@
     "target_grade": "Industrial / Food / Feed",
     "address": "ایروان، منطقه صنعتی شنگاویت و چارباخ",
     "phone": "+374 10 523311\n+374 94 425510",
-    "email": "sales@neochem.am",
     "website": "spyur.am/chemical",
     "action_plan": "کارخانجات تخصصی ارمنستان در بخش صنایع شوینده و داروسازی با مصرف مستقیم و واردات جوش شیرین.",
     "country": "ارمنستان",
-    "id": "company-506"
+    "id": "company-506",
+    "email_history": [
+      {
+        "email": "sales@neochem.am",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6520,11 +6734,18 @@
     "target_grade": "خوراکی (E500ii) - پوک‌کننده و حجم‌دهنده اصلی خمیر بیسکویت و ویفر",
     "address": "Кыргызстан, г. Бишкек, ул. Чолпон-Атинская, 16",
     "phone": "+996 (312) 35-71-71 / +996 (312) 63-12-12",
-    "email": "office@ata.kg",
     "website": "https://ata.kg",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "قرقیزستان",
-    "id": "company-515"
+    "id": "company-515",
+    "email_history": [
+      {
+        "email": "office@ata.kg",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 No Such User Here'",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6660,11 +6881,22 @@
     "target_grade": "خوراکی (E500ii) - نمک قلیایی عمل‌آوری خمیر نودل (Kansui) و ورآورنده خمیر پانکو",
     "address": "No.28 Xinxi Road, Haidian District, Beijing, China",
     "phone": "+86-10-62969035",
-    "email": "sales@shipuller.com",
+    "email": "info@yumartfood.com",
     "website": "https://www.yumartfood.com",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "چین",
-    "id": "company-525"
+    "id": "company-525",
+    "email_history": [
+      {
+        "email": "sales@shipuller.com",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@yumartfood.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.yumartfood.com/contact-us/"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6716,11 +6948,18 @@
     "target_grade": "خوراکی (E500ii) - رگولاتور حباب‌زایی و ورآمدن خمیر برشتوک و غلات",
     "address": "Украина, Киевская обл., г. Борисполь, ул. Привокзальная, 44 / Германия",
     "phone": "+380 (44) 281-06-00",
-    "email": "info@lantmannen-axa.com.ua",
     "website": "https://lantmannen-axa.com.ua",
     "action_plan": "هلدینگ‌ها و تولیدکنندگان معتبر بین‌المللی با خطوط تولید صنعتی و صادرات فعال به بازارهای اوراسیا.",
     "country": "اوکراین",
-    "id": "company-529"
+    "id": "company-529",
+    "email_history": [
+      {
+        "email": "info@lantmannen-axa.com.ua",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "source_note": "بانک اطلاعاتی خریداران نمایشگاه قزاقستان (فایل ارائه‌شده توسط کاربر)",
@@ -6816,9 +7055,16 @@
     "action_plan": "پیشنهاد قرارداد پارت بزرگ برای خط جدید کنسانتره دامی",
     "address": "Республика Таджикистан, Согдийская область, Б. Гафуровский р-н, Заводской поворот 10А",
     "phone": "کال سنتر: 55-33",
-    "email": "info@ordifatir.com",
     "website": "https://fatir.tj",
-    "id": "company-536"
+    "id": "company-536",
+    "email_history": [
+      {
+        "email": "info@ordifatir.com",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "تاجیکستان",
@@ -6872,9 +7118,16 @@
     "action_plan": "معرفی برای پوک‌کردن بافت خمیرهای لایه‌ای منجمد",
     "address": "Республика Таджикистан, ул. Абдуллобекова, 9, г. Душанбе",
     "phone": "+992 90 900 24 30 / +992 93 740 5555",
-    "email": "info@ahsan.tj",
     "website": "https://mino.tj/biz/ooo-mansur-2016-dushanbe",
-    "id": "company-540"
+    "id": "company-540",
+    "email_history": [
+      {
+        "email": "info@ahsan.tj",
+        "reason": "برگشت قطعی: حساب غیرفعال — پاسخ سرور مقصد: 550 Disabled",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "تاجیکستان",
@@ -6886,9 +7139,16 @@
     "action_plan": "معرفی به‌عنوان نمک تخمیر/بهبوددهنده برای خط نان صنعتی",
     "address": "Республика Таджикистан, 734000, г. Душанбе, р-н Сино, ул. С. Шерози, 37/2",
     "phone": "+992 90 455 55 01",
-    "email": "ooo_shamima@inbox.ru",
     "website": "https://barcodes.tj/manufacturers?category_id=20",
-    "id": "company-541"
+    "id": "company-541",
+    "email_history": [
+      {
+        "email": "ooo_shamima@inbox.ru",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 Message was not accepted -- invalid mailbox.  Local mailbox ooo_shamima",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "تاجیکستان",
@@ -6956,9 +7216,16 @@
     "action_plan": "معرفی به‌عنوان بافر ملایم حمام رنگرزی راکتیو و شستشوی صنعتی الیاف",
     "address": "Республика Таджикистан, 734042, г. Душанбе, пр. С. Шерози",
     "phone": "+992 37 221 36 73",
-    "email": "anvar_text@tajnet.com",
     "website": "http://textil.tj",
-    "id": "company-546"
+    "id": "company-546",
+    "email_history": [
+      {
+        "email": "anvar_text@tajnet.com",
+        "reason": "برگشت قطعی: دامنه‌ی ایمیل وجود ندارد/سرور ایمیل ندارد — پاسخ سرور مقصد: Remote Server returned: '602 Failed to connect to the recipient's mail server.  No MX records were f",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "تاجیکستان",
@@ -7026,9 +7293,20 @@
     "action_plan": "کانال بالقوه عرضه گرید دارویی به کارخانه‌های فرموله‌کننده داخلی — توزیع‌کننده از ۱۹۹۹",
     "address": "г. Душанбе, р-н Фирдавси, ул. Н. Кабоева 104/31 (+شعب خجند، بختر)",
     "phone": "+992 37 234 0001",
-    "email": "dushanbe@osonpharm.tj",
+    "email": "bokhtar@osonpharm.tj",
     "website": "https://www.osonpharm.tj",
-    "id": "company-551"
+    "id": "company-551",
+    "email_history": [
+      {
+        "email": "dushanbe@osonpharm.tj",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 Message was not accepted -- invalid mailbox.  Local mailbox dushanbe@os",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "bokhtar@osonpharm.tj",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.osonpharm.tj"
+      }
+    ]
   },
   {
     "country": "هند",
@@ -7245,10 +7523,17 @@
     "english_name": "A&M Global Solutions Inc/ Food Group International",
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Specialty Food، Snacks، Private Label",
     "target_grade": "خوراکی – اوتمیل و غلات",
-    "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
     "website": "https://www.avelina.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 41-95, South Hall 7 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/am-global-solutions-inc-food-group-international",
-    "id": "company-572"
+    "id": "company-572",
+    "email_history": [
+      {
+        "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "پاکستان",
@@ -7445,10 +7730,17 @@
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Snacks، Private Label، Halal and Kosher Food",
     "target_grade": "خوراکی – محصولات متنوع خوراکی",
     "phone": "+88-09613 090909",
-    "email": "xyz@email.com",
     "website": "https://www.pranfoods.net/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- SH-V15, South Hall 12 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/agricultural-marketing-co-ltd",
-    "id": "company-591"
+    "id": "company-591",
+    "email_history": [
+      {
+        "email": "xyz@email.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "آمریکا",
@@ -7931,10 +8223,17 @@
     "industry": "تولیدکننده — Spreads، Honey & Jams، Specialty Food، Snacks",
     "target_grade": "خوراکی – خوراکی‌های شیرین",
     "phone": "+201552614380",
-    "email": "info@example.com",
     "website": "https://www.almogharbel-nuts.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- DG-198, North Hall 13 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/al-mogharbel-for-food-industries",
-    "id": "company-637"
+    "id": "company-637",
+    "email_history": [
+      {
+        "email": "info@example.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "کویت",
@@ -8327,10 +8626,22 @@
     "english_name": "AND ICE | CHILLATO | HOTLY",
     "industry": "تولیدکننده — Specialty Food، Fortified Foods & Health Products، Beverages، Free-From Products",
     "target_grade": "خوراکی – بستنی و محصولات منجمد",
-    "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+    "email": "info@andice.com",
     "website": "https://www.andice.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 21-30, South Hall 3 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/and-ice-chillato-hotly",
-    "id": "company-675"
+    "id": "company-675",
+    "email_history": [
+      {
+        "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@andice.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://andice.com/pages/contact"
+      }
+    ],
+    "phone": "+30 231 079 6686"
   },
   {
     "country": "هند",
@@ -8389,10 +8700,22 @@
     "english_name": "Arab Australian Dairy Good and pack co. LTD",
     "industry": "تولیدکننده — Dairy، Dried Milk Products، Cheese، Butter",
     "target_grade": "خوراکی – لبنیات",
-    "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+    "email": "info@arabaust.com",
     "website": "https://www.arabaust.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- R-344, Shk Rashid Hall · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/arab-australian-dairy-good-and-pack-co-ltd",
-    "id": "company-681"
+    "id": "company-681",
+    "email_history": [
+      {
+        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@arabaust.com",
+        "confidence": "تأیید دستی + خودکار",
+        "source_url": "https://www.arabaust.com"
+      }
+    ],
+    "phone": "+962 6 222 1115"
   },
   {
     "country": "امارات",
@@ -8410,10 +8733,17 @@
     "english_name": "Arab Taste for Bakeries and sweets",
     "industry": "تولیدکننده — Private Label، Bakery، Cakes & Desserts، Free-From Products",
     "target_grade": "خوراکی – نانوایی و شیرینی‌پزی",
-    "email": "user@domain.com",
     "website": "https://delham.sa",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 37-65, South Hall 6 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/arab-taste-for-bakeries-and-sweets",
-    "id": "company-683"
+    "id": "company-683",
+    "email_history": [
+      {
+        "email": "user@domain.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "مصر",
@@ -8463,10 +8793,20 @@
     "industry": "تولیدکننده — Snacks، Bakery، Cakes & Desserts، Beverages",
     "target_grade": "خوراکی – نانوایی و شیرینی‌پزی",
     "phone": "+201050624300",
-    "email": "example@example.com",
     "website": "https://www.abuauf.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 45-29, South Hall 8 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/a-u-f-egypt",
-    "id": "company-688"
+    "id": "company-688",
+    "email_history": [
+      {
+        "email": "example@example.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove",
+        "suggested_email": "info@abuauf.com",
+        "needs_human_review": true,
+        "note": "نام شرکت فقط تا حدی با سایت می‌خواند؛ پیش از استفاده تأیید دستی شود"
+      }
+    ]
   },
   {
     "country": "هند",
@@ -8505,10 +8845,17 @@
     "english_name": "AC PRIMASUD",
     "industry": "تولیدکننده — Snacks، Beverages، Free-From Products، Popcorn",
     "target_grade": "خوراکی – نوشیدنی و اسنک",
-    "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
     "website": "https://www.primasud.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- Z5-H28, Za'abeel Hall 5 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/ac-primasud",
-    "id": "company-692"
+    "id": "company-692",
+    "email_history": [
+      {
+        "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "برزیل",
@@ -8525,10 +8872,17 @@
     "english_name": "Acai Petruz",
     "industry": "تولیدکننده — Specialty Food، Private Label، Organic Products، Halal and Kosher Food",
     "target_grade": "خوراکی – فرآوری غذاهای منجمد",
-    "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
     "website": "https://www.petruz.com/en",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 26-51, South Hall 4 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/acai-petruz",
-    "id": "company-694"
+    "id": "company-694",
+    "email_history": [
+      {
+        "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "ترکیه",
@@ -8960,10 +9314,17 @@
     "industry": "بازرگان/توزیع‌کننده — Pulses/ Grains / Cereals / Flours، Private Label، Organic Products، Free-From Products",
     "target_grade": "خوراکی – بازرگانی مواد خوراکی",
     "phone": "+91 33 40511200",
-    "email": "info@baljitgroup.in",
     "website": "https://www.baljitgroup.com/agrotech",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N6-A26, North Hall 6 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/baljit-agrotech-private-limited",
-    "id": "company-735"
+    "id": "company-735",
+    "email_history": [
+      {
+        "email": "info@baljitgroup.in",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "لهستان",
@@ -9274,10 +9635,22 @@
     "english_name": "CHEF'S CHOICE FOODS MANUFACTURER CO., LTD",
     "industry": "تولیدکننده — Private Label، Organic Products، Halal and Kosher Food، Bakery",
     "target_grade": "خوراکی – نانوایی",
-    "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+    "email": "export@chefschoicefoods.com",
     "website": "https://www.chefschoicefoods.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N1-L21, North Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/chefs-choice-foods-manufacturer-co-ltd",
-    "id": "company-765"
+    "id": "company-765",
+    "email_history": [
+      {
+        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "export@chefschoicefoods.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.chefschoicefoods.com/"
+      }
+    ],
+    "phone": "+66 2 422 5406"
   },
   {
     "country": "آمریکا",
@@ -9285,10 +9658,17 @@
     "industry": "بازرگان/توزیع‌کننده — Pulses/ Grains / Cereals / Flours، Halal and Kosher Food، Bakery، Cakes & Desserts",
     "target_grade": "گرید تجاری – توزیع‌کننده مواد خوراکی خدماتی",
     "phone": "4079571886",
-    "email": "webmaster@cheneybrothers.com",
     "website": "https://www.cheneybrothers.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 40-7, South Hall 7 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/cheney-brothers",
-    "id": "company-766"
+    "id": "company-766",
+    "email_history": [
+      {
+        "email": "webmaster@cheneybrothers.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "چین",
@@ -9400,10 +9780,17 @@
     "industry": "تولیدکننده — Specialty Food، Meat، Poultry & Seafood، Halal and Kosher Food",
     "target_grade": "خوراکی – محصولات گوشت، نانوایی و خشکبار",
     "phone": "+1 555-555-5556",
-    "email": "info@rungivoo.com",
     "website": "https://jk-prod.odoo.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- R-H51, Shk Rashid Hall · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/chrono-food",
-    "id": "company-777"
+    "id": "company-777",
+    "email_history": [
+      {
+        "email": "info@rungivoo.com",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "تایوان",
@@ -9557,20 +9944,38 @@
     "english_name": "Cyprus Millers by Hadjigiorkis",
     "industry": "تولیدکننده — Private Label، Bakery، Cakes & Desserts، Baking Supplies",
     "target_grade": "خوراکی – آرد",
-    "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+    "email": "info@cyprusmillers.com",
     "website": "https://www.cyprusmillers.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 21-19, South Hall 3 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/cyprus-millers-by-hadjigiorkis",
-    "id": "company-792"
+    "id": "company-792",
+    "email_history": [
+      {
+        "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@cyprusmillers.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.cyprusmillers.com/"
+      }
+    ]
   },
   {
     "country": "سری‌لانکا",
     "english_name": "D&R Exports (Pvt)Ltd",
     "industry": "بازرگان/توزیع‌کننده — Pulses/ Grains / Cereals / Flours، Vegetable & Animal Oils & Fats، Spreads، Honey & Jams",
     "target_grade": "خوراکی – عمومی",
-    "email": "0e6a29e4756740a8a63493e912ba2174@sentry.wixpress.com",
     "website": "https://www.dandrexports.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 57-52, South Hall 10 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/dr-exports-pvtltd",
-    "id": "company-793"
+    "id": "company-793",
+    "email_history": [
+      {
+        "email": "0e6a29e4756740a8a63493e912ba2174@sentry.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "لهستان",
@@ -9627,10 +10032,21 @@
     "english_name": "Dairyhub.lt",
     "industry": "تولیدکننده — Dairy، Dried Milk Products، Cheese، Butter",
     "target_grade": "خوراکی – لبنیات",
-    "email": "name@email.com",
+    "email": "welcome@dairyhub.lt",
     "website": "https://www.dairyhub.lt/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- M-G19, Shk Maktoum Hall · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/dairyhub-lt",
-    "id": "company-799"
+    "id": "company-799",
+    "email_history": [
+      {
+        "email": "name@email.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "welcome@dairyhub.lt",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.dairyhub.lt/"
+      }
+    ]
   },
   {
     "country": "پاکستان",
@@ -9765,10 +10181,21 @@
     "english_name": "DaoHer Beverage",
     "industry": "تولیدکننده — Beverages، Tea، Non-alcoholic Beverages، Instant Beverages",
     "target_grade": "خوراکی – نوشیدنی",
-    "email": "1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com",
+    "email": "info@daoherbev.com",
     "website": "https://www.daoherbev.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- Z4-A62, Za'abeel Hall 4 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/daoher-beverage",
-    "id": "company-812"
+    "id": "company-812",
+    "email_history": [
+      {
+        "email": "1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@daoherbev.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://daoherbev.com/"
+      }
+    ]
   },
   {
     "country": "تایلند",
@@ -9890,10 +10317,17 @@
     "industry": "تولیدکننده — Dairy، Frozen Food، Frozen Dairy Products، Cream & Cream Products",
     "target_grade": "خوراکی – لبنیات",
     "phone": "0240681818",
-    "email": "name@domain.com",
     "website": "https://www.eurial.eu/en/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- R-G28, Shk Rashid Hall · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/eurial",
-    "id": "company-824"
+    "id": "company-824",
+    "email_history": [
+      {
+        "email": "name@domain.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "مالزی",
@@ -9995,10 +10429,21 @@
     "industry": "بازرگان/توزیع‌کننده — Meat، Poultry & Seafood، Halal and Kosher Food، Government/Associations",
     "target_grade": "خوراکی – مواد اولیه خوراکی",
     "phone": "+14169797967",
-    "email": "UGb@XQ.gaBwxp",
+    "email": "export@eximcan.com",
     "website": "https://www.eximcan.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N9-B27, North Hall 9 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/eximcan-canada",
-    "id": "company-834"
+    "id": "company-834",
+    "email_history": [
+      {
+        "email": "UGb@XQ.gaBwxp",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "export@eximcan.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.eximcan.com"
+      }
+    ]
   },
   {
     "country": "امارات",
@@ -10209,10 +10654,22 @@
     "english_name": "Foodvest Industries (M) Sdn.Bhd",
     "industry": "تولیدکننده — Halal and Kosher Food، Bakery، Cakes & Desserts، Beverages",
     "target_grade": "خوراکی – نانوایی",
-    "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+    "email": "sales@foodvest.com",
     "website": "https://foodvest.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- DG-200, North Hall 13 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/foodvest-industries-m-sdn-bhd",
-    "id": "company-854"
+    "id": "company-854",
+    "email_history": [
+      {
+        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "sales@foodvest.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.foodvest.com/"
+      }
+    ],
+    "phone": "+60 4-333 2289"
   },
   {
     "country": "عربستان سعودی",
@@ -10220,10 +10677,17 @@
     "industry": "تولیدکننده — Private Label، Bakery، Cakes & Desserts، Dairy",
     "target_grade": "خوراکی – نانوایی",
     "phone": "+966549132222",
-    "email": "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
     "website": "https://www.forsan.com.sa",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 601, Hall 6 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/forsan-foods-consumer-products-co-ltd",
-    "id": "company-855"
+    "id": "company-855",
+    "email_history": [
+      {
+        "email": "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "چین",
@@ -10295,10 +10759,17 @@
     "english_name": "FRENVI GmbH",
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Specialty Food، Snacks، Private Label",
     "target_grade": "خوراکی – نانوایی",
-    "email": "dpo-google@google.com",
     "website": "https://www.frenvi.de",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 6-93, South Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/frenvi-gmbh",
-    "id": "company-862"
+    "id": "company-862",
+    "email_history": [
+      {
+        "email": "dpo-google@google.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "امارات",
@@ -10359,10 +10830,17 @@
     "industry": "تولیدکننده — Fortified Foods & Health Products، Dry Goods، Free-From Products، Frozen Food",
     "target_grade": "خوراکی – خشکبار و میوه‌های منجمد",
     "phone": "37491900003",
-    "email": "example@gmail.com",
     "website": "https://frostics.am",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 2-44, South Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/frostics-cjsc",
-    "id": "company-868"
+    "id": "company-868",
+    "email_history": [
+      {
+        "email": "example@gmail.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "امارات",
@@ -10485,10 +10963,17 @@
     "industry": "بازرگان/توزیع‌کننده — Meat، Poultry & Seafood، Dairy، Unprocessed Meat",
     "target_grade": "خوراکی – گوشت و مرغ",
     "phone": "+18003330949",
-    "email": "user@domain.com",
     "website": "https://www.gcfoods.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- S1-F24, Shk Saeed Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/gc-foods",
-    "id": "company-880"
+    "id": "company-880",
+    "email_history": [
+      {
+        "email": "user@domain.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "کره جنوبی",
@@ -10507,10 +10992,21 @@
     "industry": "بازرگان/توزیع‌کننده — Vegetable & Animal Oils & Fats، Spreads، Honey & Jams، Specialty Food",
     "target_grade": "خوراکی – روغن و کره",
     "phone": "+593980541045",
-    "email": "correo@ejemplo.com",
+    "email": "sales@galaexportec.com",
     "website": "https://www.galaexportec.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- A-105, South Hall 5 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/gala-export",
-    "id": "company-882"
+    "id": "company-882",
+    "email_history": [
+      {
+        "email": "correo@ejemplo.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "sales@galaexportec.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.galaexportec.com/en"
+      }
+    ]
   },
   {
     "country": "اوکراین",
@@ -10813,10 +11309,17 @@
     "english_name": "Golden Harvest Foods Private Limited",
     "industry": "تولیدکننده — Private Label، Bakery، Cakes & Desserts، Frozen Food",
     "target_grade": "خوراکی – نانوایی",
-    "email": "mail@example.com",
     "website": "https://www.mezban.net",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N1-E120, North Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/golden-harvest-foods-private-limited",
-    "id": "company-911"
+    "id": "company-911",
+    "email_history": [
+      {
+        "email": "mail@example.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "بنگلادش",
@@ -11235,10 +11738,17 @@
     "english_name": "Gundogdu Gida Sut Urunleri Sanayi Ve Dis Ticaret Anonim Sirketi",
     "industry": "تولیدکننده — Halal and Kosher Food، Vegetable & Animal Oils & Fats، Chilled & Fresh Food، Dairy",
     "target_grade": "خوراکی – لبنیات و روغن زیتون",
-    "email": "50365a6fe24f4ff28f6b625410e04a35@sentry.io",
     "website": "https://www.gundogdugida.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- M-A12, Shk Maktoum Hall · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/gundogdu-gida-sut-urunleri-sanayi-ve-dis-ticaret-anonim-sirketi",
-    "id": "company-951"
+    "id": "company-951",
+    "email_history": [
+      {
+        "email": "50365a6fe24f4ff28f6b625410e04a35@sentry.io",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "ترکیه",
@@ -12010,10 +12520,17 @@
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Private Label، Halal and Kosher Food، Bakery",
     "target_grade": "خوراکی – نانوایی",
     "phone": "+1 305 713 3909",
-    "email": "example@mail.com",
     "website": "https://flavour.tech",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- F4-1, Hall 4 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/flavourtech",
-    "id": "company-1024"
+    "id": "company-1024",
+    "email_history": [
+      {
+        "email": "example@mail.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "فرانسه",
@@ -12095,10 +12612,21 @@
     "english_name": "I.A.S. Corp",
     "industry": "بازرگان/توزیع‌کننده — Pulses/ Grains / Cereals / Flours، Vegetable & Animal Oils & Fats، Snacks، Organic Products",
     "target_grade": "خوراکی – توزیع و صادرات مواد خوراکی",
-    "email": "user@domain.com",
+    "email": "info@iasusa.com",
     "website": "https://www.iasusa.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 41-2, South Hall 7 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/i-a-s-corp",
-    "id": "company-1032"
+    "id": "company-1032",
+    "email_history": [
+      {
+        "email": "user@domain.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@iasusa.com",
+        "confidence": "تأیید دستی + خودکار",
+        "source_url": "https://www.iasusa.com/contact"
+      }
+    ]
   },
   {
     "country": "تونس",
@@ -12233,10 +12761,17 @@
     "english_name": "Ind e Com de Carnes e Derivados Boi Brasil",
     "industry": "تولیدکننده — Meat، Poultry & Seafood، Unprocessed Meat، Processed Meat",
     "target_grade": "خوراکی – فرآوری گوشت",
-    "email": "1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com",
     "website": "https://www.boibrasil.ind.br/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- S1-F57, Shk Saeed Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/ind-e-com-de-carnes-e-derivados-boi-brasil",
-    "id": "company-1045"
+    "id": "company-1045",
+    "email_history": [
+      {
+        "email": "1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "هند",
@@ -12625,10 +13160,21 @@
     "industry": "بازرگان/توزیع‌کننده — Snacks، Spreads، Honey & Jams، Beverages",
     "target_grade": "خوراکی – مواد اولیه",
     "phone": "971555527942",
-    "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+    "email": "info@jamaicafoodstuff.com",
     "website": "https://www.jamaicafoodstuff.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N1-D120, North Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/jftc-food-and-beverages-trading-fzco",
-    "id": "company-1082"
+    "id": "company-1082",
+    "email_history": [
+      {
+        "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@jamaicafoodstuff.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.jamaicafoodstuff.com/"
+      }
+    ]
   },
   {
     "country": "چین",
@@ -12646,10 +13192,22 @@
     "english_name": "JM Foods",
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Snacks، Private Label، Meat",
     "target_grade": "خوراکی – خوراکی‌های آماده",
-    "email": "gm@jmfood.ae",
+    "email": "info@jmfoodgulf.com",
     "website": "https://www.jmfoodgulf.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- D2-40, Hall 2 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/jm-foods",
-    "id": "company-1084"
+    "id": "company-1084",
+    "email_history": [
+      {
+        "email": "gm@jmfood.ae",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@jmfoodgulf.com",
+        "confidence": "تأیید دستی + خودکار",
+        "source_url": "https://www.jmfoodgulf.com"
+      }
+    ],
+    "phone": "+971 4 883 8238"
   },
   {
     "country": "پاکستان",
@@ -12700,10 +13258,21 @@
     "industry": "بازرگان/توزیع‌کننده — Snacks، Spreads، Honey & Jams، Bakery",
     "target_grade": "خوراکی – مواد اولیه (آجیل و دانه)",
     "phone": "+97147181288",
-    "email": "name@mail.com",
+    "email": "contact@kahramanagro.net",
     "website": "https://www.kahramanagro.net",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N4-E2, North Hall 4 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/kahraman-agro-dmcc",
-    "id": "company-1089"
+    "id": "company-1089",
+    "email_history": [
+      {
+        "email": "name@mail.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "contact@kahramanagro.net",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.kahramanagro.net/contact-us"
+      }
+    ]
   },
   {
     "country": "استرالیا",
@@ -12785,10 +13354,22 @@
     "english_name": "Kayceylon",
     "industry": "بازرگان/توزیع‌کننده — Bakery، Cakes & Desserts، Beverages، Dry Goods",
     "target_grade": "خوراکی – ادویه‌جات و قهوه",
-    "email": "hello@company.com",
+    "email": "sachin@kayceyloncinnamon.com",
     "website": "https://kayceyloncinnamon.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 56-17, South Hall 10 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/kayceylon",
-    "id": "company-1097"
+    "id": "company-1097",
+    "email_history": [
+      {
+        "email": "hello@company.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "sachin@kayceyloncinnamon.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://kayceyloncinnamon.com/contact"
+      }
+    ],
+    "phone": "+44 7852 805644"
   },
   {
     "country": "بنگلادش",
@@ -12838,10 +13419,21 @@
     "industry": "تولیدکننده — Vegetable & Animal Oils & Fats، Beverages، Dairy، Frozen Food",
     "target_grade": "خوراکی – لبنیات",
     "phone": "+61383766284",
-    "email": "NOREPLY@ENVATO.COM",
+    "email": "ceo@kiki.co.com",
     "website": "https://www.kiki.co.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- SH-P23, South Hall 12 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/kian-shams-maham-holding-co",
-    "id": "company-1102"
+    "id": "company-1102",
+    "email_history": [
+      {
+        "email": "NOREPLY@ENVATO.COM",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "ceo@kiki.co.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://kiki.co.com/"
+      }
+    ]
   },
   {
     "country": "مصر",
@@ -13100,10 +13692,22 @@
     "english_name": "HQ Dried Fruits Factory LLC",
     "industry": "تولیدکننده — Bakery، Cakes & Desserts، Dry Goods، Dried Fruits",
     "target_grade": "خوراکی – فرآوری خشکبار و محصولات پخت",
-    "email": "export@hqdriedfruits.com",
+    "email": "sales@hqdriedfruits.uz",
     "website": "https://hqdriedfruits.uz",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 34-14, South Hall 6 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/hq-dried-fruits-factory-llc",
-    "id": "company-1127"
+    "id": "company-1127",
+    "email_history": [
+      {
+        "email": "export@hqdriedfruits.com",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "sales@hqdriedfruits.uz",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://hqdriedfruits.uz"
+      }
+    ],
+    "phone": "+998 99 892 99 77"
   },
   {
     "country": "پاکستان",
@@ -13830,10 +14434,17 @@
     "english_name": "Lactalis",
     "industry": "تولیدکننده — Dairy، Yoghurt (Regular، Flavoured، Fruit",
     "target_grade": "خوراکی – صنایع لبنی و فرآوری شیر",
-    "email": "DPO@fr.lactalis.com",
     "website": "https://www.lactalis.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- R-C14, Shk Rashid Hall · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/lactalis",
-    "id": "company-1196"
+    "id": "company-1196",
+    "email_history": [
+      {
+        "email": "DPO@fr.lactalis.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "لهستان",
@@ -14391,10 +15002,17 @@
     "english_name": "Lincoln International",
     "industry": "بازرگان/توزیع‌کننده — Meat، Poultry & Seafood، Unprocessed Meat، Processed Meat",
     "target_grade": "خوراکی – فرآوری گوشت و طیور",
-    "email": "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
     "website": "https://www.lincolnfoods.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- S1-F20, Shk Saeed Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/lincoln-international",
-    "id": "company-1249"
+    "id": "company-1249",
+    "email_history": [
+      {
+        "email": "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "سری‌لانکا",
@@ -14625,10 +15243,21 @@
     "english_name": "MACKWOODS TEA",
     "industry": "تولیدکننده — Technology، Specialty Food، Professional Services، Private Label",
     "target_grade": "خوراکی – صنایع نوشیدنی و چای",
-    "email": "filler@godaddy.com",
+    "email": "tea1@mackwoodstea.com",
     "website": "https://www.mackwoodstea.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- Z6-A56, Za'abeel Hall 6 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/mackwoods-tea",
-    "id": "company-1271"
+    "id": "company-1271",
+    "email_history": [
+      {
+        "email": "filler@godaddy.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "tea1@mackwoodstea.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://mackwoodstea.com/contact-us"
+      }
+    ]
   },
   {
     "country": "تایلند",
@@ -14973,10 +15602,17 @@
     "industry": "تولیدکننده — Specialty Food، Fortified Foods & Health Products، Beverages، Free-From Products",
     "target_grade": "خوراکی – نوشابه‌سازی و آشامیدنی‌ها",
     "phone": "06-6443-0075",
-    "email": "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
     "website": "https://www.marukai-food.com/english",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 30-43, South Hall 5 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/marukai-corporation",
-    "id": "company-1304"
+    "id": "company-1304",
+    "email_history": [
+      {
+        "email": "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "هند",
@@ -15207,10 +15843,22 @@
     "english_name": "Mediascore Food",
     "industry": "بازرگان/توزیع‌کننده — Pulses/ Grains / Cereals / Flours، Spreads، Honey & Jams، Specialty Food",
     "target_grade": "خوراکی – واردات و توزیع مواد خوراکی",
-    "email": "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+    "email": "hello@mediascorefooding.fr",
     "website": "https://www.mediascorefooding.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 40-15, South Hall 7 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/mediascore-food",
-    "id": "company-1326"
+    "id": "company-1326",
+    "email_history": [
+      {
+        "email": "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "hello@mediascorefooding.fr",
+        "confidence": "تأیید دستی + خودکار",
+        "source_url": "https://www.mediascorefooding.com"
+      }
+    ],
+    "phone": "+33 1 49 80 96 96"
   },
   {
     "country": "سری‌لانکا",
@@ -15301,10 +15949,21 @@
     "industry": "تولیدکننده — Bakery، Cakes & Desserts، Dry Goods، Condiments & Sauces",
     "target_grade": "خوراکی – پودرهای کیک و صنایع نانوایی",
     "phone": "9619218066",
-    "email": "email@domain.com",
+    "email": "meptico@meptico.com",
     "website": "https://www.meptico.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 52-3, South Hall 9 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/meptico",
-    "id": "company-1335"
+    "id": "company-1335",
+    "email_history": [
+      {
+        "email": "email@domain.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "meptico@meptico.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.meptico.com/ContactUs"
+      }
+    ]
   },
   {
     "country": "آلمان",
@@ -15407,10 +16066,17 @@
     "industry": "تولیدکننده — Beverages، Non-alcoholic Beverages، Iced Tea، Energy Drinks",
     "target_grade": "خوراکی – نوشیدنی‌های گازدار",
     "phone": "+971502746259",
-    "email": "4655cd66c57a5c02dddf05d1216ee87c@o310573.ingest.us.sentry.io",
     "website": "https://www.mete.ae",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- PD3, PD18, The Pavilion · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/mete-drinks",
-    "id": "company-1345"
+    "id": "company-1345",
+    "email_history": [
+      {
+        "email": "4655cd66c57a5c02dddf05d1216ee87c@o310573.ingest.us.sentry.io",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "لتونی",
@@ -15438,10 +16104,20 @@
     "english_name": "Moon Dates",
     "industry": "تولیدکننده — Snacks، Specialty Food، Fortified Foods & Health Products، Dry Goods",
     "target_grade": "خوراکی – خشکبار/میوه‌های خشک",
-    "email": "email@example.com",
     "website": "https://moon-dates.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 43-9, South Hall 7 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/moon-dates",
-    "id": "company-1348"
+    "id": "company-1348",
+    "email_history": [
+      {
+        "email": "email@example.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove",
+        "suggested_email": "moondatestunisie@gmail.com",
+        "needs_human_review": true,
+        "note": "روی سایت شرکت دیده شد؛ دامنه‌ی متفاوت"
+      }
+    ]
   },
   {
     "country": "دانمارک",
@@ -15521,10 +16197,21 @@
     "english_name": "MGV AGROINDUSTRIAL/ RAW PEANUT",
     "industry": "بازرگان/توزیع‌کننده — Pulses/ Grains / Cereals / Flours، Vegetable & Animal Oils & Fats، Snacks، Halal and Kosher Food",
     "target_grade": "خوراکی – توزیع مواد اولیه خوراکی",
-    "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+    "email": "sales@mgvagroindustrial.com",
     "website": "https://www.mgvagroindustrial.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N9-D26, North Hall 9 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/mgv-agroindustrial-raw-peanut",
-    "id": "company-1356"
+    "id": "company-1356",
+    "email_history": [
+      {
+        "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "sales@mgvagroindustrial.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.mgvagroindustrial.com/"
+      }
+    ]
   },
   {
     "country": "مالزی",
@@ -15541,10 +16228,17 @@
     "english_name": "Miante Agri Superfoods",
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Specialty Food، Snacks، Bakery",
     "target_grade": "خوراکی – نانوایی و اسنک",
-    "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
     "website": "https://www.miantesnacks.africa",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 39-30, South Hall 7 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/miante-agri-superfoods",
-    "id": "company-1358"
+    "id": "company-1358",
+    "email_history": [
+      {
+        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "مراکش",
@@ -15603,10 +16297,17 @@
     "english_name": "Milano Co. For food Industries",
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Halal and Kosher Food، Private Label، Bakery",
     "target_grade": "خوراکی – صنایع نانوایی، کیک و ماکارونی",
-    "email": "Example@Gmail.Com",
     "website": "https://www.alassylgroup.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 46-56, South Hall 8 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/milano-co-for-food-industries",
-    "id": "company-1364"
+    "id": "company-1364",
+    "email_history": [
+      {
+        "email": "Example@Gmail.Com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "بلژیک",
@@ -15752,10 +16453,17 @@
     "english_name": "Miyama Green Corporation",
     "industry": "بازرگان/توزیع‌کننده — Snacks، Bakery، Cakes & Desserts، Frozen Food",
     "target_grade": "خوراکی – بازرگانی و صادرات/واردات",
-    "email": "test@sample.com",
     "website": "https://www.miyama-green.co.jp/en/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 31-64, South Hall 5 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/miyama-green-corporation",
-    "id": "company-1378"
+    "id": "company-1378",
+    "email_history": [
+      {
+        "email": "test@sample.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "صربستان",
@@ -15951,10 +16659,17 @@
     "english_name": "Mr Makhana",
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Specialty Food، Snacks، Organic Products",
     "target_grade": "خوراکی – اسنک و نانوایی",
-    "email": "email@example.com",
     "website": "https://mrmakhana.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N1-H29, North Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/mr-makhana",
-    "id": "company-1397"
+    "id": "company-1397",
+    "email_history": [
+      {
+        "email": "email@example.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "سنگاپور",
@@ -16171,10 +16886,21 @@
     "english_name": "Nanak Foods Inc",
     "industry": "تولیدکننده — Private Label، Halal and Kosher Food، Bakery، Cakes & Desserts",
     "target_grade": "خوراکی – لبنیات و شیرینی‌سازی",
-    "email": "user@domain.com",
+    "email": "info@nanakfoods.com",
     "website": "https://www.nanakfoods.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 24-30, South Hall 4 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nanak-foods-inc",
-    "id": "company-1418"
+    "id": "company-1418",
+    "email_history": [
+      {
+        "email": "user@domain.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@nanakfoods.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://nanakfoods.com/contact-us"
+      }
+    ]
   },
   {
     "country": "آفریقای جنوبی",
@@ -16338,10 +17064,21 @@
     "industry": "تولیدکننده — Private Label، Snacks، Vegetable & Animal Oils & Fats، Bakery",
     "target_grade": "خوراکی – صنایع روغن و شیرینی‌پزی",
     "phone": "(035) 757-3321",
-    "email": "Yourmail@your.mail.com",
+    "email": "info@naturzgroup.com",
     "website": "https://www.naturzgroup.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- Z1-A3, Za'abeel Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/naturz-group-sdn-bhd",
-    "id": "company-1434"
+    "id": "company-1434",
+    "email_history": [
+      {
+        "email": "Yourmail@your.mail.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@naturzgroup.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.naturzgroup.com"
+      }
+    ]
   },
   {
     "country": "برزیل",
@@ -16507,10 +17244,17 @@
     "english_name": "Noor Alarab For Foodstuff Trading CO LLC",
     "industry": "بازرگان/توزیع‌کننده — Pulses/ Grains / Cereals / Flours، Vegetable & Animal Oils & Fats، Frozen Food، Dry Goods",
     "target_grade": "خوراکی – توزیع و بازرگانی",
-    "email": "purchase@nooralarabfoodstuffs.com",
     "website": "https://nooralarabfoodstuff.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- DG-320, North Hall 13 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/noor-alarab-for-foodstuff-trading-co-llc",
-    "id": "company-1450"
+    "id": "company-1450",
+    "email_history": [
+      {
+        "email": "purchase@nooralarabfoodstuffs.com",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "فنلاند",
@@ -16538,10 +17282,21 @@
     "industry": "تولیدکننده — Private Label، Organic Products، Halal and Kosher Food، Bakery",
     "target_grade": "خوراکی – شیرین‌کننده",
     "phone": "+919611490899",
-    "email": "john@example.com",
+    "email": "abhishek.pathak@onwo.trade",
     "website": "https://www.onwo.trade",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N7-D17, North Hall 7 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/onwo",
-    "id": "company-1453"
+    "id": "company-1453",
+    "email_history": [
+      {
+        "email": "john@example.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "abhishek.pathak@onwo.trade",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.onwo.trade/en/contact"
+      }
+    ]
   },
   {
     "country": "نیوزیلند",
@@ -16663,20 +17418,44 @@
     "english_name": "NORIDANE",
     "industry": "بازرگان/توزیع‌کننده — Vegetable & Animal Oils & Fats، Meat، Poultry & Seafood، Frozen Food",
     "target_grade": "خوراکی – بازرگانی و توزیع",
-    "email": "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+    "email": "info@noridane.com",
     "website": "https://www.noridane.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- S-K64, Trade Centre Arena · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/noridane",
-    "id": "company-1465"
+    "id": "company-1465",
+    "email_history": [
+      {
+        "email": "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@noridane.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.noridane.com"
+      }
+    ],
+    "phone": "+45 32 54 03 04"
   },
   {
     "country": "بریتانیا",
     "english_name": "Norwest Foods International Ltd",
     "industry": "بازرگان/توزیع‌کننده — Halal and Kosher Food، Meat، Poultry & Seafood، Frozen Food",
     "target_grade": "خوراکی – فرآوری گوشت و توزیع",
-    "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+    "email": "mail@norwest-foods.com",
     "website": "https://www.norwest-foods.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- S-L2, Trade Centre Arena · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/norwest-foods-international-ltd",
-    "id": "company-1466"
+    "id": "company-1466",
+    "email_history": [
+      {
+        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "mail@norwest-foods.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.norwest-foods.com/"
+      }
+    ],
+    "phone": "+44 1565 759000"
   },
   {
     "country": "مصر",
@@ -16767,10 +17546,21 @@
     "industry": "بازرگان/توزیع‌کننده — Beverages، Tea، Smoothies، Non-alcoholic Beverages",
     "target_grade": "خوراکی – بازرگانی مواد خوراکی و نوشیدنی",
     "phone": "+34632532454",
-    "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+    "email": "info@nuraniimportexport.com",
     "website": "https://www.nuraniimportexport.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N1-A126, North Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nurani-import-export-sl",
-    "id": "company-1475"
+    "id": "company-1475",
+    "email_history": [
+      {
+        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@nuraniimportexport.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.nuraniimportexport.com"
+      }
+    ]
   },
   {
     "country": "ترکیه",
@@ -16904,10 +17694,17 @@
     "english_name": "Nutririon from Water (NXW",
     "industry": "تولیدکننده — Technology، Private Label، Organic Products، Bakery",
     "target_grade": "خوراکی – نانوایی و محصولات خوراکی غنی‌شده",
-    "email": "user@domain.com",
     "website": "https://www.nutritionfromwater.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- PD78, The Pavilion · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/nutririon-from-water-nxw",
-    "id": "company-1488"
+    "id": "company-1488",
+    "email_history": [
+      {
+        "email": "user@domain.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "هند",
@@ -16934,10 +17731,21 @@
     "english_name": "O's Bubble",
     "industry": "تولیدکننده — Halal and Kosher Food، Fortified Foods & Health Products، Beverages، Frozen Food",
     "target_grade": "خوراکی – نوشیدنی‌ها و غذاهای منجمد",
-    "email": "aec31088a6fb4f6eafac028a91e1cf21@o769852.ingest.sentry.io",
+    "email": "info@osbubble.com",
     "website": "https://www.osbubble.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- Z4-A36, Za'abeel Hall 4 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/os-bubble",
-    "id": "company-1491"
+    "id": "company-1491",
+    "email_history": [
+      {
+        "email": "aec31088a6fb4f6eafac028a91e1cf21@o769852.ingest.sentry.io",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@osbubble.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.osbubble.com/"
+      }
+    ]
   },
   {
     "country": "هلند",
@@ -17102,10 +17910,17 @@
     "english_name": "PEP Cocotine",
     "industry": "تولیدکننده — Specialty Food، Snacks، Organic Products، Halal and Kosher Food",
     "target_grade": "خوراکی – نانوایی",
-    "email": "dpo-rgpd@eureden.com",
     "website": "https://www.cocotine.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 9-72, South Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/pep-cocotine",
-    "id": "company-1507"
+    "id": "company-1507",
+    "email_history": [
+      {
+        "email": "dpo-rgpd@eureden.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "مالزی",
@@ -17145,10 +17960,21 @@
     "industry": "تولیدکننده — Vegetable & Animal Oils & Fats، Private Label، Organic Products، Halal and Kosher Food",
     "target_grade": "خوراکی – روغن و چربی خوراکی",
     "phone": "+302723023105",
-    "email": "info@kalamataoliveoil.net",
+    "email": "info@tsaglis.gr",
     "website": "https://tsaglis.gr",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- Z1-C21, Za'abeel Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/petros-tsaglis-s-a",
-    "id": "company-1511"
+    "id": "company-1511",
+    "email_history": [
+      {
+        "email": "info@kalamataoliveoil.net",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@tsaglis.gr",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://tsaglis.gr/contact/"
+      }
+    ]
   },
   {
     "country": "عمان",
@@ -17206,10 +18032,21 @@
     "english_name": "Philippine Grocers Food Exports, Inc",
     "industry": "تولیدکننده — Spreads، Honey & Jams، Snacks، Bakery",
     "target_grade": "خوراکی – نانوایی و شیرینی‌پزی",
-    "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+    "email": "mirpuriarun@gmail.com",
     "website": "https://www.philippinegrocers.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N2-D51, North Hall 2 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/philippine-grocers-food-exports-inc",
-    "id": "company-1517"
+    "id": "company-1517",
+    "email_history": [
+      {
+        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "mirpuriarun@gmail.com",
+        "confidence": "تأیید دستی + خودکار",
+        "source_url": "https://www.philippinegrocers.com"
+      }
+    ]
   },
   {
     "country": "عربستان سعودی",
@@ -17457,10 +18294,21 @@
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Vegetable & Animal Oils & Fats، Specialty Food، Snacks",
     "target_grade": "خوراکی – غذاهای آماده",
     "phone": "+30 214 4047390",
-    "email": "example@example.gr",
+    "email": "info@paliria.com",
     "website": "https://www.paliria.com/en/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- A-70, South Hall 3 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/paliria-s-a",
-    "id": "company-1541"
+    "id": "company-1541",
+    "email_history": [
+      {
+        "email": "example@example.gr",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@paliria.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.paliria.com/en/"
+      }
+    ]
   },
   {
     "country": "افغانستان",
@@ -17508,10 +18356,17 @@
     "english_name": "Parayil Food Products Pvt Ltd",
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Spreads، Honey & Jams، Specialty Food",
     "target_grade": "خوراکی – نانوایی و فرآورده‌های خوراکی",
-    "email": "abc@abc.abc",
     "website": "https://dailydelight.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N1-E23, North Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/parayil-food-products-pvt-ltd",
-    "id": "company-1546"
+    "id": "company-1546",
+    "email_history": [
+      {
+        "email": "abc@abc.abc",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "آفریقای جنوبی",
@@ -17772,10 +18627,17 @@
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Snacks، Private Label، Halal and Kosher Food",
     "target_grade": "خوراکی – نانوایی، شیرینی و اسنک",
     "phone": "+88-09613 090909",
-    "email": "xyz@email.com",
     "website": "https://www.pranfoods.net/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- SH-V9, South Hall 12 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/pran-foods-limited",
-    "id": "company-1571"
+    "id": "company-1571",
+    "email_history": [
+      {
+        "email": "xyz@email.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "امارات",
@@ -17953,10 +18815,17 @@
     "english_name": "Productos Selectos de Agave",
     "industry": "تولیدکننده — Private Label، Organic Products، Halal and Kosher Food، Free-From Products",
     "target_grade": "خوراکی – مواد اولیه شیرین‌کننده",
-    "email": "katia.c@rionic-tech.com",
     "website": "https://grupopsa.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 28-40, South Hall 4 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/productos-selectos-de-agave",
-    "id": "company-1588"
+    "id": "company-1588",
+    "email_history": [
+      {
+        "email": "katia.c@rionic-tech.com",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "برزیل",
@@ -18034,10 +18903,22 @@
     "english_name": "Pronuben Baby & Lactonic",
     "industry": "تولیدکننده — Professional Services، Private Label، Halal and Kosher Food، Free-From Products",
     "target_grade": "خوراکی – مکمل/دارویی",
-    "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+    "email": "info@pronuben.com",
     "website": "https://www.pronuben.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 15-6, South Hall 2 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/pronuben-baby-lactonic",
-    "id": "company-1596"
+    "id": "company-1596",
+    "email_history": [
+      {
+        "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@pronuben.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.pronuben.com"
+      }
+    ],
+    "phone": "+34 915 99 19 63"
   },
   {
     "country": "استرالیا",
@@ -18382,10 +19263,21 @@
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Technology، Vegetable & Animal Oils & Fats، Snacks",
     "target_grade": "خوراکی – مواد اولیه",
     "phone": "+91-9829030170",
-    "email": "info.rahulagro@gmail.comm",
+    "email": "info@rahulagroindustries.com",
     "website": "https://rahulagroindustries.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N5-204, North Hall 5 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/rahul-agro-industries",
-    "id": "company-1629"
+    "id": "company-1629",
+    "email_history": [
+      {
+        "email": "info.rahulagro@gmail.comm",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@rahulagroindustries.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://rahulagroindustries.com/"
+      }
+    ]
   },
   {
     "country": "تایلند",
@@ -18436,10 +19328,21 @@
     "industry": "تولیدکننده — Specialty Food، Snacks، Private Label، Bakery",
     "target_grade": "خوراکی – فرآوری آجیل",
     "phone": "+52 656 633 22 07",
-    "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+    "email": "orders@ranchopecana.com",
     "website": "https://ranchopecana.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 15-84, South Hall 2 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/rancho-pecana",
-    "id": "company-1634"
+    "id": "company-1634",
+    "email_history": [
+      {
+        "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "orders@ranchopecana.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.ranchopecana.com/contactus"
+      }
+    ]
   },
   {
     "country": "سری‌لانکا",
@@ -18512,10 +19415,21 @@
     "industry": "تولیدکننده — Technology، Specialty Food، Snacks، Private Label",
     "target_grade": "خوراکی – اسنک‌های پروتئینی",
     "phone": "+971508355149",
-    "email": "hello@example.com",
+    "email": "info@rashtions.ae",
     "website": "https://www.rashtions.ae",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 35-80, South Hall 6 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/rashtions",
-    "id": "company-1641"
+    "id": "company-1641",
+    "email_history": [
+      {
+        "email": "hello@example.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@rashtions.ae",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://rashtions.ae/contact"
+      }
+    ]
   },
   {
     "country": "هند",
@@ -18849,10 +19763,21 @@
     "english_name": "Ryverra Chocolate and Confectionery Sdn Bhd",
     "industry": "تولیدکننده — Snacks، Private Label، Halal and Kosher Food، Bakery",
     "target_grade": "خوراکی – نانوایی",
-    "email": "aec31088a6fb4f6eafac028a91e1cf21@o769852.ingest.sentry.io",
+    "email": "hello.ryverra@gmail.com",
     "website": "https://www.ryverrashop.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N2-D102, North Hall 2 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/ryverra-chocolate-and-confectionery-sdn-bhd",
-    "id": "company-1673"
+    "id": "company-1673",
+    "email_history": [
+      {
+        "email": "aec31088a6fb4f6eafac028a91e1cf21@o769852.ingest.sentry.io",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "hello.ryverra@gmail.com",
+        "confidence": "تأیید دستی + خودکار",
+        "source_url": "https://www.ryverrashop.com"
+      }
+    ]
   },
   {
     "country": "پاکستان",
@@ -18892,20 +19817,34 @@
     "english_name": "Saint Michel Biscuits",
     "industry": "تولیدکننده — Private Label، Snacks، Bakery، Cakes & Desserts",
     "target_grade": "خوراکی – نانوایی",
-    "email": "you@example.com",
     "website": "https://www.stmichel.com/int/en",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 9-40, South Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/saint-michel-biscuits",
-    "id": "company-1677"
+    "id": "company-1677",
+    "email_history": [
+      {
+        "email": "you@example.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "هند",
     "english_name": "SAISHA FOODS AND BEVERAGES LLP",
     "industry": "تولیدکننده — Bakery، Cakes & Desserts، Gluten-free Baked Goods، Cakes / Dessert",
     "target_grade": "خوراکی – نانوایی",
-    "email": "email@example.com",
     "website": "https://monkeybarcakes.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- PD23, The Pavilion · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/saisha-foods-and-beverages-llp",
-    "id": "company-1678"
+    "id": "company-1678",
+    "email_history": [
+      {
+        "email": "email@example.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "بریتانیا",
@@ -18924,10 +19863,20 @@
     "industry": "تولیدکننده — Specialty Food، Snacks، Professional Services، Private Label",
     "target_grade": "خوراکی – نانوایی",
     "phone": "+919825027503",
-    "email": "Infofranchise@sankalponline.comfranchisemanager",
     "website": "https://sankalp-group.org/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N1-C48, North Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/sankalp-recreation-pvt-ltd",
-    "id": "company-1680"
+    "id": "company-1680",
+    "email_history": [
+      {
+        "email": "Infofranchise@sankalponline.comfranchisemanager",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove",
+        "suggested_email": "info@sankalponline.com",
+        "needs_human_review": true,
+        "note": "روی سایت شرکت دیده شد؛ دامنه‌ی متفاوت"
+      }
+    ]
   },
   {
     "country": "هند",
@@ -19206,10 +20155,17 @@
     "industry": "تولیدکننده — Specialty Food، Snacks، Private Label، Organic Products",
     "target_grade": "خوراکی – عمومی",
     "phone": "+922134375654",
-    "email": "abc@xyz.com",
     "website": "https://www.shangrila.com.pk/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N1-D102, North Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/shangrila-foods-private-limited",
-    "id": "company-1707"
+    "id": "company-1707",
+    "email_history": [
+      {
+        "email": "abc@xyz.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "عربستان سعودی",
@@ -19278,10 +20234,17 @@
     "english_name": "SHIH-CHUAN EXCELLENCE FOOD CO., LTD",
     "industry": "تولیدکننده — Specialty Food، Snacks، Private Label، Halal and Kosher Food",
     "target_grade": "خوراکی – چاشنی",
-    "email": "example@company.com",
     "website": "https://www.shih-chuan.com.tw",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- SW-M42, South Hall 11 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/shih-chuan-excellence-food-co-ltd",
-    "id": "company-1714"
+    "id": "company-1714",
+    "email_history": [
+      {
+        "email": "example@company.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "امارات",
@@ -19447,10 +20410,17 @@
     "english_name": "Sinmas Australia Pty Ltd",
     "industry": "تولیدکننده — Specialty Food، Snacks، Private Label، Halal and Kosher Food",
     "target_grade": "خوراکی – نانوایی و اسنک‌ها",
-    "email": "email@xyz.com",
     "website": "https://www.sinmas.com.au",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 28-21, South Hall 5 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/sinmas-australia-pty-ltd",
-    "id": "company-1730"
+    "id": "company-1730",
+    "email_history": [
+      {
+        "email": "email@xyz.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "ارمنستان",
@@ -19670,10 +20640,17 @@
     "industry": "تولیدکننده — Halal and Kosher Food، Meat، Poultry & Seafood، Frozen Food",
     "target_grade": "خوراکی – فرآوری گوشت (سوسیس، پیتزا)",
     "phone": "16478222255",
-    "email": "hello@businessname.com",
     "website": "https://www.solmazfoods.ca",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- S-H64, Trade Centre Arena · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/solmaz-food-inc",
-    "id": "company-1751"
+    "id": "company-1751",
+    "email_history": [
+      {
+        "email": "hello@businessname.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "مراکش",
@@ -19691,10 +20668,17 @@
     "english_name": "SOMAFACO",
     "industry": "تولیدکننده — Specialty Food، Halal and Kosher Food، Bakery، Cakes & Desserts",
     "target_grade": "خوراکی – شیرینی‌پزی و اسنک‌های آماده",
-    "email": "email@adresse.com",
     "website": "https://somafaco.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 47-43, South Hall 8 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/somafaco",
-    "id": "company-1753"
+    "id": "company-1753",
+    "email_history": [
+      {
+        "email": "email@adresse.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "تایلند",
@@ -19773,10 +20757,17 @@
     "english_name": "Rella Gida Sanayi Ve Ticaret A.S",
     "industry": "تولیدکننده — Private Label، Halal and Kosher Food، Bakery، Cakes & Desserts",
     "target_grade": "خوراکی – لبنیات و محصولات پنیری",
-    "email": "1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com",
     "website": "https://www.rellagida.com.tr/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- M-B43, Shk Maktoum Hall · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/rella-gida-sanayi-ve-ticaret-a-s",
-    "id": "company-1761"
+    "id": "company-1761",
+    "email_history": [
+      {
+        "email": "1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "هند",
@@ -20018,20 +21009,34 @@
     "industry": "تولیدکننده — Specialty Food، Private Label، Halal and Kosher Food، Fortified Foods & Health Products",
     "target_grade": "خوراکی – مواد اولیه نمکی",
     "phone": "+92 (213) 517-1411",
-    "email": "hi@yoursite.com",
     "website": "https://sana-salt.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N5-C52, North Hall 5 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/sana-salt",
-    "id": "company-1784"
+    "id": "company-1784",
+    "email_history": [
+      {
+        "email": "hi@yoursite.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "سوئیس",
     "english_name": "swissmooh AG",
     "industry": "تولیدکننده — Private Label، Halal and Kosher Food، Frozen Food، Dairy",
     "target_grade": "خوراکی – لبنیات",
-    "email": "psherman@example.com",
     "website": "https://www.swissmooh.ch",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- M-G63, Shk Maktoum Hall · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/swissmooh-ag",
-    "id": "company-1785"
+    "id": "company-1785",
+    "email_history": [
+      {
+        "email": "psherman@example.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "امارات",
@@ -20058,10 +21063,17 @@
     "english_name": "Sygama SA",
     "industry": "تولیدکننده — Beverages، Non-alcoholic Beverages، Carbonated Soft Drinks",
     "target_grade": "خوراکی – نوشیدنی‌های غیرالکلی",
-    "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
     "website": "https://www.swissmountainspring.ch",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- Z6-C40, Za'abeel Hall 6 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/sygama-sa",
-    "id": "company-1788"
+    "id": "company-1788",
+    "email_history": [
+      {
+        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "امارات",
@@ -20110,10 +21122,17 @@
     "english_name": "TAALI",
     "industry": "تولیدکننده — Private Label، Snacks، Specialty Food، Free-From Products",
     "target_grade": "خوراکی – اسنک و میان‌وعده",
-    "email": "email@example.com",
     "website": "https://taalifoods.in",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N1-E18, North Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/taali",
-    "id": "company-1793"
+    "id": "company-1793",
+    "email_history": [
+      {
+        "email": "email@example.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "ازبکستان",
@@ -20151,10 +21170,22 @@
     "english_name": "Talmera USA Inc",
     "industry": "تولیدکننده — Dairy، Cream & Cream Products، Cheese، Butter",
     "target_grade": "خوراکی – لبنیات",
-    "email": "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+    "email": "dairy@talmera.com",
     "website": "https://www.talmera.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- R-J26, Shk Rashid Hall · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/talmera-usa-inc",
-    "id": "company-1797"
+    "id": "company-1797",
+    "email_history": [
+      {
+        "email": "2062d0a4929b45348643784b5cb39c36@sentry.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "dairy@talmera.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.talmera.com/"
+      }
+    ],
+    "phone": "+1 424-321-6000"
   },
   {
     "country": "امارات",
@@ -20285,10 +21316,17 @@
     "english_name": "THE BOOM BEVERAGE SDN. BHD",
     "industry": "تولیدکننده — Beverages، Non-alcoholic Beverages، Carbonated Soft Drinks، Instant Beverages",
     "target_grade": "خوراکی – نوشابه",
-    "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
     "website": "https://www.theboombeverage.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- Z6-G4, Za'abeel Hall 6 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/the-boom-beverage-sdn-bhd",
-    "id": "company-1810"
+    "id": "company-1810",
+    "email_history": [
+      {
+        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "استرالیا",
@@ -20350,10 +21388,21 @@
     "industry": "بازرگان/توزیع‌کننده — Private Label، Meat، Poultry & Seafood، Bakery",
     "target_grade": "خوراکی – توزیع‌کننده",
     "phone": "00000000",
-    "email": "info@domain.com",
+    "email": "info@thehubtrading.com",
     "website": "https://www.thehubtrading.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- DG-188, North Hall 13 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/the-hub-trading",
-    "id": "company-1816"
+    "id": "company-1816",
+    "email_history": [
+      {
+        "email": "info@domain.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@thehubtrading.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.thehubtrading.com"
+      }
+    ]
   },
   {
     "country": "بریتانیا",
@@ -20508,10 +21557,21 @@
     "english_name": "Trade Cafe Limited",
     "industry": "بازرگان/توزیع‌کننده — Halal and Kosher Food، Meat، Poultry & Seafood، Dairy",
     "target_grade": "خوراکی – گوشت/لبنیات",
-    "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+    "email": "info@tradecafe.com",
     "website": "https://www.tradecafe.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- S2-B21, Shk Saeed Hall 2 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/trade-cafe-limited",
-    "id": "company-1831"
+    "id": "company-1831",
+    "email_history": [
+      {
+        "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@tradecafe.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.tradecafe.com/contact-us"
+      }
+    ]
   },
   {
     "country": "ایتالیا",
@@ -20572,10 +21632,21 @@
     "industry": "تولیدکننده — Free-From Products، Fortified Foods & Health Products، Beverages، Sugar-free Products",
     "target_grade": "خوراکی – نوشیدنی",
     "phone": "0044 1691 829106",
-    "email": "0c52cb89aa4d4154857a1584b6701db6@sentry.wixpress.com",
+    "email": "water@trederwensprings.co.uk",
     "website": "https://www.trederwensprings.co.uk",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 4-2, South Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/trederwen-springs",
-    "id": "company-1837"
+    "id": "company-1837",
+    "email_history": [
+      {
+        "email": "0c52cb89aa4d4154857a1584b6701db6@sentry.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "water@trederwensprings.co.uk",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.trederwensprings.co.uk"
+      }
+    ]
   },
   {
     "country": "آمریکا",
@@ -20657,10 +21728,17 @@
     "english_name": "Tropicool Superfoods & Acai",
     "industry": "تولیدکننده — Organic Products، Halal and Kosher Food، Frozen Food، Free-From Products",
     "target_grade": "خوراکی – سوپرفود",
-    "email": "0fd2930120484402ac9adfb9e05cacd5@o37417.ingest.sentry.io",
     "website": "https://www.tropicoolsuperfoods.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- S1-D53B, Shk Saeed Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/tropicool-superfoods-acai",
-    "id": "company-1845"
+    "id": "company-1845",
+    "email_history": [
+      {
+        "email": "0fd2930120484402ac9adfb9e05cacd5@o37417.ingest.sentry.io",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "هند",
@@ -20699,20 +21777,39 @@
     "english_name": "Tulip International Inc",
     "industry": "تولیدکننده — Beverages، Non-alcoholic Beverages، Juices & Nectars، Energy Drinks",
     "target_grade": "خوراکی – نوشیدنی‌های گازدار",
-    "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+    "email": "info@tulipint.com",
     "website": "https://www.tulipint.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- Z6-G75, Za'abeel Hall 6 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/tulip-international-inc",
-    "id": "company-1849"
+    "id": "company-1849",
+    "email_history": [
+      {
+        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "info@tulipint.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.tulipint.com"
+      }
+    ],
+    "phone": "+82 54-654-2688"
   },
   {
     "country": "ترکیه",
     "english_name": "Turkish Food Exporters",
     "industry": "بازرگان/توزیع‌کننده — Pulses/ Grains / Cereals / Flours، Vegetable & Animal Oils & Fats، Spreads، Honey & Jams",
     "target_grade": "خوراکی – غلات، روغن و محصولات کشاورزی",
-    "email": "1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com",
     "website": "https://www.tgi.org.tr/en",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 55-69, South Hall 9 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/turkish-food-exporters",
-    "id": "company-1850"
+    "id": "company-1850",
+    "email_history": [
+      {
+        "email": "1eeb89147c984dc6bc3ffafd9e6cd089@sentry.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "مجارستان",
@@ -20907,10 +22004,22 @@
     "english_name": "Valio Eesti AS",
     "industry": "تولیدکننده — Dairy، Cheese",
     "target_grade": "خوراکی – لبنیات",
-    "email": "johndoe@email.com",
+    "email": "elisa.ritsing@valio.ee",
     "website": "https://www.valio.ee/exp/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- R-188, Shk Rashid Hall · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/valio-eesti-as",
-    "id": "company-1869"
+    "id": "company-1869",
+    "email_history": [
+      {
+        "email": "johndoe@email.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "elisa.ritsing@valio.ee",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.valio.ee/exp/contact/"
+      }
+    ],
+    "phone": "+372 628 5700"
   },
   {
     "country": "عربستان سعودی",
@@ -20982,10 +22091,22 @@
     "english_name": "UPB Products",
     "industry": "تولیدکننده — Specialty Food، Snacks، Private Label، Meat",
     "target_grade": "خوراکی – اسنک و خوراکی",
-    "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+    "email": "enquiries@upbproducts.co.uk",
     "website": "https://www.upbproducts.co.uk/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 3-33, South Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/upb-products",
-    "id": "company-1876"
+    "id": "company-1876",
+    "email_history": [
+      {
+        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "enquiries@upbproducts.co.uk",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.upbproducts.co.uk/"
+      }
+    ],
+    "phone": "+44 20 8451 4744"
   },
   {
     "country": "هلند",
@@ -21148,10 +22269,20 @@
     "english_name": "Vidya Herbs Private Limited",
     "industry": "تولیدکننده — Private Label، Fortified Foods & Health Products، Beverages، Health & Wellness Products",
     "target_grade": "خوراکی – قهوه فوری و محصولات سالم",
-    "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
     "website": "https://www.vidyacoffee.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- Z5-C22, Za'abeel Hall 5 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/vidya-herbs-private-limited",
-    "id": "company-1892"
+    "id": "company-1892",
+    "email_history": [
+      {
+        "email": "605a7baede844d278b89dc95ae0a9123@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove",
+        "suggested_email": "info@vidyaherbs.com",
+        "needs_human_review": true,
+        "note": "روی سایت شرکت دیده شد؛ دامنه‌ی متفاوت"
+      }
+    ]
   },
   {
     "country": "ویتنام",
@@ -21214,10 +22345,17 @@
     "industry": "تولیدکننده — Beverages، Non-alcoholic Beverages، Juices & Nectars، Energy Drinks",
     "target_grade": "خوراکی – نوشیدنی‌های غیرالکلی و گازدار",
     "phone": "88003504535",
-    "email": "example@mail.com",
     "website": "https://kraljuice.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- Z4-B59, Za'abeel Hall 4 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/vima-llc",
-    "id": "company-1898"
+    "id": "company-1898",
+    "email_history": [
+      {
+        "email": "example@mail.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "هند",
@@ -21419,10 +22557,17 @@
     "industry": "بازرگان/توزیع‌کننده — Pulses/ Grains / Cereals / Flours، Vegetable & Animal Oils & Fats، Snacks، Professional Services",
     "target_grade": "خوراکی – عمومی",
     "phone": "+675 7700 8024",
-    "email": "hello@example.com",
     "website": "https://nationalno1.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N2-C133, North Hall 2 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/wr-carpenter-trading",
-    "id": "company-1917"
+    "id": "company-1917",
+    "email_history": [
+      {
+        "email": "hello@example.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "بریتانیا",
@@ -21533,10 +22678,20 @@
     "industry": "تولیدکننده — Specialty Food، Private Label، Meat، Poultry & Seafood",
     "target_grade": "خوراکی – سس و چاشنی",
     "phone": "88899988877",
-    "email": "info@webmail.com",
     "website": "https://www.yeos-europe.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N1-B25, North Hall 1 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/yeos",
-    "id": "company-1928"
+    "id": "company-1928",
+    "email_history": [
+      {
+        "email": "info@webmail.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove",
+        "suggested_email": "info-europe@yeos.com",
+        "needs_human_review": true,
+        "note": "روی سایت شرکت دیده شد؛ دامنه‌ی متفاوت"
+      }
+    ]
   },
   {
     "country": "کانادا",
@@ -21649,10 +22804,21 @@
     "english_name": "Yummy Karma",
     "industry": "تولیدکننده — Specialty Food، Snacks، Private Label، Halal and Kosher Food",
     "target_grade": "خوراکی – اسنک و فریزری",
-    "email": "0fd2930120484402ac9adfb9e05cacd5@o37417.ingest.sentry.io",
+    "email": "hello@yummykarma.com",
     "website": "https://www.yummykarma.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 28-3, South Hall 5 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/yummy-karma",
-    "id": "company-1939"
+    "id": "company-1939",
+    "email_history": [
+      {
+        "email": "0fd2930120484402ac9adfb9e05cacd5@o37417.ingest.sentry.io",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "hello@yummykarma.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.yummykarma.com/"
+      }
+    ]
   },
   {
     "country": "بریتانیا",
@@ -21692,10 +22858,17 @@
     "english_name": "YUTAKA FROZEN FOOD",
     "industry": "تولیدکننده — Specialty Food، Private Label، Meat، Poultry & Seafood",
     "target_grade": "خوراکی – نانوایی و اسنک‌های دریایی",
-    "email": "example@mail.com",
     "website": "https://sfg.com.tr/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- S-B61, Trade Centre Arena · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/yutaka-frozen-food",
-    "id": "company-1943"
+    "id": "company-1943",
+    "email_history": [
+      {
+        "email": "example@mail.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "امارات",
@@ -21723,10 +22896,21 @@
     "industry": "تولیدکننده — Pulses/ Grains / Cereals / Flours، Bakery، Cakes & Desserts، Rice",
     "target_grade": "خوراکی – نانوایی",
     "phone": "+6623370987",
-    "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+    "email": "hello@suwannaphumrice.com",
     "website": "https://www.suwannaphumrice.com",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- N10-F83, North Hall 10 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/suwannaphum-rice-co-ltd",
-    "id": "company-1946"
+    "id": "company-1946",
+    "email_history": [
+      {
+        "email": "18d2f96d279149989b95faf0a4b41882@sentry-next.wixpress.com",
+        "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
+        "date": "2026-10-23",
+        "action": "replace",
+        "replaced_with": "hello@suwannaphumrice.com",
+        "confidence": "بالا (هم‌دامنه با سایت، دیده‌شده روی صفحه‌ی شرکت)",
+        "source_url": "https://www.suwannaphumrice.com/contact"
+      }
+    ]
   },
   {
     "country": "ایتالیا",
@@ -21788,10 +22972,17 @@
     "industry": "تولیدکننده — Organic Products، Specialty Food، Fortified Foods & Health Products، Beverages",
     "target_grade": "خوراکی – سایر خوراکی‌ها",
     "phone": "+94 374353444",
-    "email": "sI@v.Do",
     "website": "https://wedagedaraproducts.com/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 56-5, South Hall 10 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/wedagedara-producers-pvt-ltd",
-    "id": "company-1952"
+    "id": "company-1952",
+    "email_history": [
+      {
+        "email": "sI@v.Do",
+        "reason": "دامنه‌ی ایمیل وجود ندارد (NXDOMAIN روی ۳ DNS مستقل)",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "تاجیکستان",
@@ -22145,10 +23336,17 @@
     "target_grade": "دارویی (Pharma Grade)",
     "address": "بیشکک، خیابان بایتیک باتیر ۳۶، طبقه اول",
     "phone": "+996 312 56-39-74 ؛ +996 770 06 60 00",
-    "email": "vitameditd@gmail.com",
     "website": "https://vitamedltd.kg",
     "source_note": "بانک خریداران جوش شیرین قرقیزستان (فایل ارائه‌شده توسط کاربر، مهر ۱۴۰۵) · منبع شناسایی: وب‌سایت رسمی شرکت",
-    "id": "company-1989"
+    "id": "company-1989",
+    "email_history": [
+      {
+        "email": "vitameditd@gmail.com",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 5.1.1 The email account that you tried to reach does not exist. Please",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "قرقیزستان",
@@ -22158,10 +23356,17 @@
     "target_grade": "دارویی (Pharma Grade)",
     "address": "بیشکک، پرسپکت چوی ۱۵۱، دفتر ۱۴",
     "phone": "+996 554 552 250",
-    "email": "info@avita.kg",
     "website": "https://avita.kg",
     "source_note": "بانک خریداران جوش شیرین قرقیزستان (فایل ارائه‌شده توسط کاربر، مهر ۱۴۰۵) · منبع شناسایی: Vibe Prospecting + وب‌سایت رسمی شرکت",
-    "id": "company-1990"
+    "id": "company-1990",
+    "email_history": [
+      {
+        "email": "info@avita.kg",
+        "reason": "برگشت قطعی: صندوق این آدرس وجود ندارد — پاسخ سرور مقصد: Remote Server returned: '550 No Such User Here'",
+        "date": "2026-10-23",
+        "action": "remove"
+      }
+    ]
   },
   {
     "country": "قرقیزستان",
@@ -22860,5 +24065,1107 @@
     "website": "https://www.lobachemie.com",
     "source_note": "بانک شرکت‌های هدف بازار هند (فایل ارائه‌شده توسط کاربر، مهر ۱۴۰۵) · نقش: توزیع‌کننده/تولیدکننده مواد آزمایشگاهی · منبع فهرست: فهرست اول (تحقیق من) · فهرست محصول (بی‌کربنات) تأیید نشد",
     "id": "company-2051"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "AVANGARD GROUP OF COMPANIES",
+    "industry": "تولیدکننده — تولیدکننده افزودنی‌ها و طعم‌دهنده‌های غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+7 495 230-14-97",
+    "email": "info@avangard.global",
+    "website": "https://avangard.global",
+    "address": "Moscow, Bldg. 1, 8, Bibirevskaya Str.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A205 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2052"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "AMETIS",
+    "industry": "تولیدکننده — تولیدکننده مواد استخراج‌شده طبیعی برای صنایع غذایی",
+    "target_grade": "خوراکی – استخراج طبیعی",
+    "phone": "+7 416 233-34-42",
+    "email": "info@ametis.ru",
+    "website": "https://en.ametis.ru",
+    "address": "Blagoveshchensk, 68, Naberezhnaya str.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A209 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2053"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "AMURSKY OIL EXTRACTION PLANT, LLC",
+    "industry": "تولیدکننده — تولیدکننده روغن‌های خوراکی از سویا و غلات",
+    "target_grade": "خوراکی – روغن‌های خوراکی",
+    "phone": "+7 416 220-10-00",
+    "email": "export@amuragro.ru",
+    "website": "https://amuragro.ru",
+    "address": "Belogorsk, st. Proizvodstvennaya, 18",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A119 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2054"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "BIOZEVTIKA",
+    "industry": "تولیدکننده — تولیدکننده طعم‌دهنده‌های طبیعی از ادویه‌جات و گیاهان دارویی",
+    "target_grade": "خوراکی – طعم‌دهنده طبیعی",
+    "phone": "+7 903 110-29-87",
+    "email": "office@biozevtika.ru",
+    "website": "https://www.biozevtika.ru",
+    "address": "Dedovsk, 1 Naberezhnaya Rechflota str.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A213 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2055"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "VIDYA RUS LLC",
+    "industry": "بازرگان/توزیع‌کننده — نماینده تامین‌کننده عصاره‌های گیاهی و مواد خام غذایی",
+    "target_grade": "خوراکی – عصاره‌های گیاهی",
+    "phone": "+7 931 334-61-27",
+    "email": "info@vidyaeurope.eu",
+    "website": "https://vidyarus.ru",
+    "address": "St. Petersburg, 83 Savushkina St., building 3, office 220",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A203 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2056"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "VKUSAROMA MC LLC",
+    "industry": "بازرگان/توزیع‌کننده — خانه‌تجاری تجاری طعم‌دهنده‌های صنعتی برای صنایع غذایی",
+    "target_grade": "خوراکی – طعم‌دهنده",
+    "phone": "+7 812 326-48-12",
+    "email": "info@vkusaroma.ru",
+    "website": "https://vkusaroma.ru",
+    "address": "Saint-Petersburg, Partizanskaya ul., 11 litera A, room 317",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A319 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2057"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "DINAMIC",
+    "industry": "بازرگان/توزیع‌کننده — نماینده تولیدکننده رنگ‌های مصنوعی خوراکی",
+    "target_grade": "خوراکی – رنگ خوراکی",
+    "phone": "+7 921 787-14-49",
+    "email": "dinamic@dinamiccolor.ru",
+    "website": "https://www.dinamiccolor.ru",
+    "address": "Saint-Petersburg",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A203 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2058"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "DON-AGRO, LLC",
+    "industry": "تولیدکننده — تولیدکننده و فرآورده‌های میوه‌ای (پلی) برای بازار غذایی",
+    "target_grade": "خوراکی – فرآوری میوه",
+    "phone": "+7 863 915-12-84",
+    "email": "dary.sadov@yandex.ru",
+    "website": "https://www.donfrukt.ru",
+    "address": "Rostov region",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A311 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2059"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "RUSEXTRACT",
+    "industry": "بازرگان/توزیع‌کننده — تولید و فروش عصاره‌های گیاهی برای صنایع غذایی",
+    "target_grade": "خوراکی – افزودنی‌های گیاهی",
+    "phone": "+7 900 101-99-00",
+    "email": "sales@rus-extract.com",
+    "website": "https://www.rus-extract.com",
+    "address": "Kemerovo, Kemerovo city, Tereshkova Street, 51.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A103 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2060"
+  },
+  {
+    "country": "چین",
+    "english_name": "DEOSEN BIOCHEMICAL (ORDOS) LTD",
+    "industry": "تولیدکننده — تولیدکننده‌ی هیدروکلوئیدهای محلول در آب برای صنایع غذایی",
+    "target_grade": "خوراکی – هیدروکلوئید",
+    "phone": "+86 533 722 0853",
+    "email": "grace.dou@deosen.com",
+    "website": "https://www.deosen.com",
+    "address": "Ordos, Sanshangliang industrial park,dalate,Ordos,Inner mongolia,China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A517 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2061"
+  },
+  {
+    "country": "چین",
+    "english_name": "DONGXIAO BIOTECHNOLOGY CO., LTD",
+    "industry": "تولیدکننده — تولیدکننده‌ی فرآورده‌های ذرت با کاربرد در صنایع خوراکی",
+    "target_grade": "خوراکی – محصولات ذرت",
+    "phone": "+86 536 652 8866",
+    "email": "export@cndongxiao.com",
+    "website": "https://www.cndongxiao.com",
+    "address": "Zhucheng, Xinxing Town, Zhucheng, Shandong, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A735 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2062"
+  },
+  {
+    "country": "هند",
+    "english_name": "ENCAPSCIFI LIFESCIENCES PRIVATE LIMITED",
+    "industry": "تولیدکننده — توسعه‌دهنده‌ی مواد مغذی و مکمل‌های غذایی",
+    "target_grade": "خوراکی – مکمل/نوتراسوتیکال",
+    "phone": "+91 80756 73248",
+    "email": "info@encapscifi.com",
+    "website": "https://encapscifi.com",
+    "address": "Bangalore, Q2, 2nd cross Road, Jigini 1st Stage,  Anekal Taluk, Jigani industrial area, Bangalore, Bengaluru",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A235 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2063"
+  },
+  {
+    "country": "چین",
+    "english_name": "FORTWAY CHEMICALS",
+    "industry": "بازرگان/توزیع‌کننده — توزیع‌کننده‌ی اسیدها، ویتامین‌ها و شیرین‌کننده‌های خوراکی",
+    "target_grade": "خوراکی – افزودنی‌ها",
+    "email": "david.zhou@fortway.hk",
+    "website": "http://www.fortway.hk",
+    "address": "Shanghai, room 2707, shanghai information tower, No.1403 of Minsheng Rd.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A839 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2064"
+  },
+  {
+    "country": "چین",
+    "english_name": "GANSU LIRCON BIOLOGICAL CO.,LTD.",
+    "industry": "تولیدکننده — تولیدکننده‌ی اینولین و دیگر فیبرهای خوراکی",
+    "target_grade": "خوراکی – اینولین",
+    "phone": "+86 943 594 3333",
+    "email": "inulinsophia@yeah.net",
+    "website": "https://www.gslek.com",
+    "address": "Pingchuan District / Baiyin City, Pingchuan District Economic Development Zone, Baiyin City, Gansu Province",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A733 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2065"
+  },
+  {
+    "country": "چین",
+    "english_name": "LIANYUNGANG KEDE FOOD INGREDIENTS CO.,LTD",
+    "industry": "تولیدکننده — تولیدکنندهٔ افزودنی‌های غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 518 8086 8877",
+    "email": "sales01@lygkede.com",
+    "website": "https://www.lygkede.com",
+    "address": "Lianyungang, No.8 Yunqiao Road, Dapu Industry Park, Lianyungang",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A805 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2066"
+  },
+  {
+    "country": "چین",
+    "english_name": "LIANYUNGANG NUOXIN FOOD INGREDIENT CO., LTD",
+    "industry": "تولیدکننده — تولیدکنندهٔ افزودنی‌های غذایی و خوراکی",
+    "target_grade": "خوراکی – افزودنی",
+    "email": "sales5@lygnx.com",
+    "website": "https://www.lygnx.com",
+    "address": "Jiangsu, NORTH QIANGHAI ROAD, HIGH-TECH INDUSTRIAL DEVELOPMENT ZONE,GANYUDISTRICT,LIANYUNGANG CITYJIANGSU PROVINCE,CHINA.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A521 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2067"
+  },
+  {
+    "country": "چین",
+    "english_name": "NEWTREND GROUP HOLDING CO., LTD.",
+    "industry": "تولیدکننده — تولیدکنندهٔ شیرین‌کننده‌های غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 755 8632 2798",
+    "email": "sales@newtrend-group.com",
+    "website": "https://www.newtrend-group.com",
+    "address": "Jiangxi, Huo Ju Avenue, Jinggangshan Economic & Technologic  Development Zone, Ji'an, Jiangxi, China. 343100",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A629 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2068"
+  },
+  {
+    "country": "مالزی",
+    "english_name": "ADASI GROUP SDN BHD",
+    "industry": "بازرگان/توزیع‌کننده — شرکت تجاری واردکننده و توزیع‌کننده مواد غذایی",
+    "target_grade": "خوراکی – مواد اولیه",
+    "phone": "+60 12-398 4430",
+    "email": "info@adasigroup.com",
+    "website": "https://www.adasigroup.com",
+    "address": "Kuala Lumpur, N­-05-­03, Pusat Perdagangan Bandar Bukit Jalil, Persiaran Jalil 3, 57000 Kuala Lumpur, Malaysia",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A111 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2069"
+  },
+  {
+    "country": "چین",
+    "english_name": "QINGDAO PENGYUAN KANGHUA NATURAL SOURCE CO., LTD.",
+    "industry": "تولیدکننده — تولیدکنندهٔ رنگ‌های طبیعی و کنسانتره‌های میوه",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 532 8242 0029",
+    "email": "yali.zhan@we-produce-natural-color.com",
+    "website": "https://www.we-produce-natural-color.com",
+    "address": "Shandong, No.1，Xingwu Road，Wubei Industrial Park，Laixi，Qingdao，Shandong，China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A507 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2070"
+  },
+  {
+    "country": "چین",
+    "english_name": "QINGDAO SAMIN CHEMICAL CO.,LTD.",
+    "industry": "تولیدکننده — تولیدکنندهٔ مواد شیمیایی خوراکی و افزودنی‌های غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "email": "davidwang@saminchemical.com",
+    "website": "https://www.saminchemical.com",
+    "address": "Qingdao, Suite 507, Tianjun Center #6 Building, 267 Tailiu Road, Qingdao, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A736 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2071"
+  },
+  {
+    "country": "چین",
+    "english_name": "ANHUI XINGZHOU PHARMA CO., LTD",
+    "industry": "تولیدکننده — تولید کننده ترکیبات شیمیایی مصرفی در صنایع غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 563 750 6089",
+    "email": "info@xingzhoupharma.com",
+    "website": "https://www.xzfood.com.cn",
+    "address": "Xuancheng/Anhui, Taocheng industrial area, Langxi county, Anhui",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A837 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2072"
+  },
+  {
+    "country": "چین",
+    "english_name": "BEIJING HERONSBILL FOOD MATERIAL CO. ,LTD",
+    "industry": "تولیدکننده — تولید و فروش مواد غذایی و افزودنی‌ها",
+    "target_grade": "خوراکی – مواد اولیه",
+    "phone": "+86 10 8722 0517",
+    "email": "sales@bjheronsbill.com",
+    "website": "https://www.bjheronsbill.com",
+    "address": "BEIJING, 1508,12 Floor,Building No.7, Xing Mao Street No.3, 19 Yard, BDA,Beijing,China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A422 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2073"
+  },
+  {
+    "country": "چین",
+    "english_name": "QINGDAO Z & F SUNGOLD INTERNATIONAL TRADE CO., LTD",
+    "industry": "بازرگان/توزیع‌کننده — توزیع‌کنندهٔ افزودنی‌های خوراکی و ترکیبات دارویی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 532 8092 0902",
+    "email": "sales@zfsungold.com",
+    "website": "http://www.zfsungold.com",
+    "address": "Shandong, RM.2488 Zhonghai International Plaza,Jiushui RD. ,No. 112,Licang District, Qingdao,Shandong,China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A731 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2074"
+  },
+  {
+    "country": "چین",
+    "english_name": "BIOAMIN LIMITED",
+    "industry": "بازرگان/توزیع‌کننده — تأمین‌کننده مواد غذایی و مکمل‌های ویتامینی",
+    "target_grade": "خوراکی – مکمل/آمینو اسید",
+    "phone": "+86 177 4971 2015",
+    "email": "info@bioamingroup.com",
+    "website": "https://www.bioamingroup.com",
+    "address": "SHANGHAI, NO777 GAOKE RD, PUDONG NEW DISTRICT, SHANGHAI, CHINA",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A619 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2075"
+  },
+  {
+    "country": "چین",
+    "english_name": "BIOGGROWING CO., LTD",
+    "industry": "تولیدکننده — تولید کننده پروبیوتیک‌های غذایی",
+    "target_grade": "خوراکی – مکمل",
+    "phone": "+86 21 3920 5777",
+    "email": "cs@biogrowing.com",
+    "website": "https://www.biogrowing.com",
+    "address": "Shanghai, No.10666 Songze Avenue, Qingpu District, Shanghai, P.R. China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A313 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2076"
+  },
+  {
+    "country": "چین",
+    "english_name": "QZU Co.,Ltd.",
+    "industry": "تولیدکننده — تولیدکنندهٔ پیش‌مخلوط‌های تغذیه‌ای و نوکلئوتیدها",
+    "target_grade": "خوراکی – افزودنی",
+    "email": "sales@bioqzu.com",
+    "website": "https://www.bioqzu.com",
+    "address": "SHANGHAI, Room 203, Building 9, Xuhui Center, 28th Lane, Yuanshou Road, Minhang District",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A715 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2077"
+  },
+  {
+    "country": "چین",
+    "english_name": "RUNDA FOOD TECHNOLOGY (SHANDONG) CO., LTD",
+    "industry": "تولیدکننده — تولیدکنندهٔ مواد نگهدارنده و افزودنی‌های غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "email": "export@rundafood.com",
+    "website": "http://www.rundafoodtech.com",
+    "address": "Zaozhuang, No.88,Mengzhuang Industrial Park ,Zaozhuang City,Shandong Province,China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A935 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2078"
+  },
+  {
+    "country": "چین",
+    "english_name": "RZBC(JUXIAN) CO., LTD.",
+    "industry": "تولیدکننده — تولید کننده‌ی اسید سیتریک و دیگر مواد افزودنی غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 633 828 2018",
+    "email": "sales@rzbc.com",
+    "website": "https://www.rzbc.com",
+    "address": "Rizhao, No. 209 Laiyang Road, Juxian Economic Development Zone",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A602 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2079"
+  },
+  {
+    "country": "هند",
+    "english_name": "SATGURU GUM INDUSTRIES",
+    "industry": "تولیدکننده — تولید کننده‌ی گام‌های خوراکی و مواد افزودنی",
+    "target_grade": "خوراکی – افزودنی",
+    "email": "rmehta@satguruind.com",
+    "website": "https://satguruglobal.com",
+    "address": "Wadhwan, 502-B, G.I.D.C Phase III",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A322 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2080"
+  },
+  {
+    "country": "چین",
+    "english_name": "SEVEN STAR LEMON TECHNOLOGY CO., LTD.",
+    "industry": "تولیدکننده — تولید کننده‌ی اسید سیتریک برای صنایع غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 536 662 0777",
+    "email": "gnyw@7lemonstar.com",
+    "website": "https://www.7lemonstar.com",
+    "address": "Linyi, Xuyao road, lushan project area, economic development zone,  yishui county, linyi city, shandong province, china.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A737 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2081"
+  },
+  {
+    "country": "چین",
+    "english_name": "SHANDONG BAILONG CHUANGYUAN BIO-TECH CO.,LTD",
+    "industry": "تولیدکننده — تولید کننده‌ی بیوتکنولوژی مواد غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 152 7542 5216",
+    "email": "fei@sdblcy.com",
+    "website": "https://www.sdblcycn.com",
+    "address": "Dezhou, Dexin Road, High&New Technology Development Zone, Yucheng City,Shandong Province ,China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A615 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2082"
+  },
+  {
+    "country": "چین",
+    "english_name": "SHANDONG BIGTREE DREYFUS SPECIAL MEALS FOOD CO., LTD",
+    "industry": "تولیدکننده — تولید کننده‌ی کرم‌های غیر لبنی، طعم‌دهنده‌ها و مواد غذایی دیگر",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 530 715 6799",
+    "email": "likecreamer@vip.126.com",
+    "website": "http://www.bigtreecreamers.com",
+    "address": "Heze, East Hedong Road, Lvling Town, High-Tech Zone, Heze, Shandong, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A509 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2083"
+  },
+  {
+    "country": "چین",
+    "english_name": "SHANDONG ENSIGN INDUSTRY CO., LTD.",
+    "industry": "تولیدکننده — تولید کننده‌ی اسید سیتریک، سیترات و سایر افزودنی‌ها",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 536 629 8598",
+    "email": "office@ensignworld.com",
+    "website": "http://www.ensignworld.com",
+    "address": "Weifang, No.1567, Changsheng Street, Changle, Weifang, 262499, Shandong Province, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A823 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2084"
+  },
+  {
+    "country": "چین",
+    "english_name": "SHANDONG STARLIGHT SO TRUE BIOLOGICAL TECHNOLOGY CO., LTD",
+    "industry": "تولیدکننده — تولید کننده‌ی فناوری‌های بیولوژیکی مرتبط با غذا",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 133 5544 8742",
+    "email": "sales1@so-true.com",
+    "website": "http://www.so-true.com",
+    "address": "Dezhou, Economic And Technology Development Zone,Laoling City,Shandong Prov.253600,China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A843 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2085"
+  },
+  {
+    "country": "چین",
+    "english_name": "SHANGHAI MERRY YANG ENTERPRISE CO., LTD.",
+    "industry": "بازرگان/توزیع‌کننده — فعالیت تجاری در حوزه مواد غذایی و توزیع",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 21 6260 1306",
+    "email": "sales@merryyang.com",
+    "website": "https://www.merryyang.com",
+    "address": "Shanghai, 604-605 xuanhua,shanghai,china",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A835 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2086"
+  },
+  {
+    "country": "چین",
+    "english_name": "SHANGHAI NATURE BIOTECHNOLOGY CO.,LTD.",
+    "industry": "بازرگان/توزیع‌کننده — دفتر فروش گروهی مواد غذایی و توزیع‌کننده",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 21 5538 7593",
+    "email": "zsc@bionature.cn",
+    "website": "http://www.bionature.cn",
+    "address": "Shanghai, Room 2006,GaoBao Building,No. 1666 North Sichuan Road,Shanghai,China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A929 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2087"
+  },
+  {
+    "country": "چین",
+    "english_name": "SHANGHAI QUEZHIYOU FOOD CO., LTD.",
+    "industry": "تولیدکننده — تولید کننده‌ی طعم‌دهنده‌ها و مواد غذایی مخصوص",
+    "target_grade": "خوراکی – افزودنی",
+    "email": "zhaoxiaojiao@hbflavor.com",
+    "website": "https://www.hbkq.cn",
+    "address": "Shanghai, No. 1299, Yecheng Road, Jiading District, Shanghai, China.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A807 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2088"
+  },
+  {
+    "country": "چین",
+    "english_name": "SHANGHAI YINONG BIOLOGICAL TECHNOLOGY CO., LTD.",
+    "industry": "تولیدکننده — توسعه و تولید میکروارگانیسم‌های کاربردی در صنایع غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "email": "service@yinongbio.com.cn",
+    "website": "http://www.shyinongbio.com",
+    "address": "Shanghai, \"Buliding 3, Xinchuang Park, Caohejing Nanqiao, No.850,  Lanfeng Road, Fengxian District, Shanghai, China \"",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A513 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2089"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "INVITA",
+    "industry": "بازرگان/توزیع‌کننده — توزیع‌کننده مواد افزودنی و مکمل‌های غذایی",
+    "target_grade": "خوراکی – مکمل/خوراکی",
+    "phone": "+7 495 287-07-33",
+    "email": "info@invita-rus.ru",
+    "website": "https://invita-rus.ru",
+    "address": "Moscow, 36, bld.1, office 5.5, Lusinovskaya st.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A303 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2090"
+  },
+  {
+    "country": "چین",
+    "english_name": "SHAOXING WEILE BIOTECHNOLOGY CO., LTD.",
+    "industry": "تولیدکننده — تولید کننده‌ی ویتامین‌ها، کاروتنوئیدها و رنگ‌های خوراکی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 575 8618 8322",
+    "email": "jason@wle-bio.com",
+    "website": "http://www.wle-bio.com",
+    "address": "Zhejiang, 716 Xingyao Building,159 Qixing Road,Qixing Street,Xinchang County,Zhejiang province,P.R.China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A723 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2091"
+  },
+  {
+    "country": "چین",
+    "english_name": "SHIFANG ZHIXIN CHEMICAL CO., LTD",
+    "industry": "تولیدکننده — تولید کننده‌ی فسفات‌ها و مواد شیمیایی خوراکی",
+    "target_grade": "خوراکی – افزودنی",
+    "email": "sales03@zxphosphates.com",
+    "website": "https://www.zxphosphates.com",
+    "address": "Shifang City, No.12 Team,Gonghe Country,Shigu Town, Shifang City, Sichuan Province, P.R. China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A633 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2092"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "GREEN CITY COMPANY",
+    "industry": "تولیدکننده — تولید پرکننده‌ها و مربا",
+    "target_grade": "خوراکی – نانوایی/مربا",
+    "phone": "+7 831 228-02-50",
+    "email": "ice@kzg-nn.ru",
+    "website": "https://www.kzg-nn.ru",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A121 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2093"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "COMPONENT-LACTIS, LLC",
+    "industry": "تولیدکننده — تولیدکنندهٔ افزودنی‌های لبنیات",
+    "target_grade": "خوراکی – لبنیات",
+    "phone": "+7 967 776-41-07",
+    "email": "sale@provita-lactis.ru",
+    "website": "https://provita-lactis.ru",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A411 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2094"
+  },
+  {
+    "country": "چین",
+    "english_name": "SUIZHOU SHILIDA BIOTECHNOLOGY CO., LTD.",
+    "industry": "تولیدکننده — تولیدکننده مواد شیمیایی خوراکی و عصاره‌های گیاهی برای صنایع غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 722 381 9586",
+    "email": "karenai@cnszsld.com",
+    "website": "https://www.sld-carotene.com",
+    "address": "Suizhou, Liushutang Community Industrial Area, Southern Suburbs of Zengdu District",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A919 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2095"
+  },
+  {
+    "country": "چین",
+    "english_name": "HENAN YACH GELATIN CO.,LTD.",
+    "industry": "تولیدکننده — تولیدکننده‌ی ژلاتین برای صنایع غذایی",
+    "target_grade": "خوراکی – ژلاتین/پخت",
+    "phone": "+86 371 6887 9610",
+    "email": "henanboom@boomgelatin.com.cn",
+    "website": "https://www.yachgelatin.com",
+    "address": "Xinmi, Ximazhuang industrial district, Liuzhai town,Xinmi city, Henan,China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A405 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2096"
+  },
+  {
+    "country": "چین",
+    "english_name": "SUNRISE FOOD INGREDIENTS (HUAINAN) CO., LTD.",
+    "industry": "تولیدکننده — تولیدکننده اسیدهای استیکات خوراکی مانند سدیم دی‌استیکات",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 554 533 8387",
+    "email": "info@sunacetate.com",
+    "website": "https://www.sunacetate.com",
+    "address": "Huainan, Datong Distric Huainan Anhui China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A605 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2097"
+  },
+  {
+    "country": "چین",
+    "english_name": "HENAN ZHENGTONG FOOD TECHNOLOGY CO., LTD.",
+    "industry": "تولیدکننده — توسعه و تولید امولسیفایرهای غذایی",
+    "target_grade": "خوراکی – امولسیفایر",
+    "phone": "+86 371 6025 1586",
+    "email": "info@ztcc.com",
+    "website": "https://www.ztcc.com",
+    "address": "Xingyang, The Intersection of Gongye Road and Jianshe Road",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A719 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2098"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "OSNOVNOY PRODUCT",
+    "industry": "تولیدکننده — تولید محصولات غلات اکسترود و اسنک",
+    "target_grade": "خوراکی – اسنک",
+    "phone": "+7 927 207-24-41",
+    "email": "pa@o-produkt.ru",
+    "website": "https://ruzik.org",
+    "address": "Samara, 165, Tashkent street, office 204",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A109 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2099"
+  },
+  {
+    "country": "چین",
+    "english_name": "VITAJOY (JIAXING) NUTRITION CO., LTD",
+    "industry": "تولیدکننده — شرکت محصولات تغذیه‌ای و مکمل‌های بهداشتی تولید می‌کند",
+    "target_grade": "خوراکی – مکمل",
+    "phone": "+1 855-900-8482",
+    "email": "sales@vitajoygroup.com",
+    "website": "https://www.vitajoygroup.com",
+    "address": "JIAXING, NO.929,MAJIABANG ROAD, ECONOMIC & TECHNOLOGICAL DEVELOPMENT ZONE, JIAXING CITY, ZHEJIANG, 314000,CHINA",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A511 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2100"
+  },
+  {
+    "country": "چین",
+    "english_name": "HIGH HOPE FOODS (NANJING) CO., LTD.",
+    "industry": "تولیدکننده — تولید هیدروکلوئیدهای خوراکی مانند کاراژن و آلژینات سدیم",
+    "target_grade": "خوراکی – هیدروکلوئید",
+    "email": "info@highhopefoods.cn",
+    "website": "https://www.highhopefoods.cn",
+    "address": "NANJING, NO.99 CHANGJIANG ROAD, NANJING210005, CHINA",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A743 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2101"
+  },
+  {
+    "country": "روسیه",
+    "english_name": "NATURAFOLICA",
+    "industry": "بازرگان/توزیع‌کننده — تأمین‌کنندهٔ عصاره‌ها و مواد افزودنی غذایی",
+    "target_grade": "خوراکی – استخراج و افزودنی",
+    "phone": "+7 960 944-51-33",
+    "email": "comdir@naturafolica.ru",
+    "website": "https://naturafolica.ru",
+    "address": "Moscow, vn.ter. Municipal District of Vernadsky Avenue, Vernadsky Avenue, 37, Building 1, Room 11/5",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A127 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2102"
+  },
+  {
+    "country": "چین",
+    "english_name": "WECARE PROBIOTICS CO., LTD.",
+    "industry": "تولیدکننده — تولیدکننده پروبیوتیک‌های خوراکی",
+    "target_grade": "خوراکی – مکمل",
+    "email": "sales@wecare-life.com",
+    "website": "https://www.wecare-life.com",
+    "address": "Jiangsu, No. 999 Guangming Road",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A417 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2103"
+  },
+  {
+    "country": "چین",
+    "english_name": "WEIFANG CENTURY-LIGHT BIOLOGY SCIENCE CO.,LTD.",
+    "industry": "تولیدکننده — تولیدکننده نشاسته اصلاح‌شده خوراکی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 536 218 5399",
+    "email": "office@grainmills.cn",
+    "website": "https://www.grainmills.cn",
+    "address": "Shandong, No.899, Fangshan Road, Baocheng Street, Changle County, Weifang, Shandong,CHINA",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A419 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2104"
+  },
+  {
+    "country": "چین",
+    "english_name": "HUNAN NEW MSTAR BIOTECHNOLOGY CO., LTD",
+    "industry": "تولیدکننده — استخراج ترکیبات فعال از گیاهان برای کاربردهای خوراکی",
+    "target_grade": "خوراکی – عصاره‌های گیاهی",
+    "phone": "+86 188 7481 8314",
+    "email": "info@newmstar.com",
+    "website": "https://www.newmstar.com",
+    "address": "changsha, Room 302, 3 / F, Unit N, Building B6, Huan Chuang industrial park, 2450 Yuelu West Avenue, Yuelu District",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A827 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2105"
+  },
+  {
+    "country": "چین",
+    "english_name": "HUNAN SUNFULL BIO-TECH CO., LTD",
+    "industry": "تولیدکننده — تولید عصاره‌های گیاهی با کاربردهای خوراکی",
+    "target_grade": "خوراکی – عصاره‌های گیاهی",
+    "email": "katy_lj@sunfullbio.com",
+    "website": "https://www.sunfullbio.com",
+    "address": "Hunan, Depu Enterprise Park, Economy & Technology Development Zone, Changsha",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A721 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2106"
+  },
+  {
+    "country": "چین",
+    "english_name": "WEISHAN HENGXIN  FOODS CO.,LTD.",
+    "industry": "تولیدکننده — شرکت فعال در تولید مواد غذایی",
+    "target_grade": "خوراکی – مواد خوراکی آماده",
+    "phone": "+86 195 0846 3685",
+    "email": "sales@hxspice.com",
+    "website": "https://www.hxspice.com",
+    "address": "JINING，SHANDONG, NANBO VILLAGE,LIANGCHENG TOWN,WEISHAN COUNTY,JINING,SHANDONG,CHINA",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A845 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2107"
+  },
+  {
+    "country": "چین",
+    "english_name": "WUHAN LANDMARK INDUSTRIAL CO.,LTD.",
+    "industry": "تولیدکننده — تولیدکننده ترکیبات سینیلیک به عنوان عطر و طعم خوراکی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 311 8770 5908",
+    "email": "info@landmarkind.com",
+    "website": "https://www.landmarkind.com",
+    "address": "Hubei, Shiqiao 1st road,Taizihu street",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A643 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2108"
+  },
+  {
+    "country": "چین",
+    "english_name": "JIANGSU GUOXIN UNION ENERGY CO., LTD",
+    "industry": "تولیدکننده — تولید اسید سیتریک و محصولات مشتق‌شده برای کاربردهای خوراکی",
+    "target_grade": "خوراکی – اسید سیتریک و مشتقات",
+    "email": "xueliang@co-union.com",
+    "website": "https://www.co-union.com",
+    "address": "Yixing, NO.1 Redian Road,Yixing Economic And Technological Development Zone,Jiangsu",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A623 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2109"
+  },
+  {
+    "country": "چین",
+    "english_name": "WUHAN WAKING LION CHEMICALS CO.,LTD.",
+    "industry": "تولیدکننده — تولیدکننده فسفات‌ها و مواد شیمیایی خوراکی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 27 8383 5073",
+    "email": "market@xingshichem.com",
+    "website": "https://www.xingshichem.com",
+    "address": "Wuhan, NO.160 CHEMICAL ROAD, CHE-MICAL INDUSTRY PARK, WUHAN CITY, HUBEI PROVINCE, P.R. CHINA",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A703 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2110"
+  },
+  {
+    "country": "چین",
+    "english_name": "WUXI HUIDE FOOD CO., LTD",
+    "industry": "تولیدکننده — تولیدکننده محصولات کاکائویی خوراکی",
+    "target_grade": "خوراکی – شکلات/قهوه",
+    "phone": "+86 181 6892 6881",
+    "email": "info@hdcocoamate.com",
+    "website": "https://www.hdcocoamate.com",
+    "address": "Jiangsu, Room 113-115, Building A1, 999-8 Gaolang East Road,Economic Development Zone,Wuxi City,Jiangsu Province,CHINA.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A739 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2111"
+  },
+  {
+    "country": "چین",
+    "english_name": "JIANGSU QISONG FOOD TECHNOLOGY CO., LTD.",
+    "industry": "تولیدکننده — تولید افزودنی‌های سدیم دیاسیتات برای صنایع غذایی",
+    "target_grade": "خوراکی – سدیم دیاسیتات",
+    "email": "sunny@lygtychem.com",
+    "website": "https://www.lygtychem.com",
+    "address": "Lianyungang, Qu Nan Road, Economic Development Zone, Guannan district, Lianyungang city, Jiangsu province, China.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A503 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2112"
+  },
+  {
+    "country": "چین",
+    "english_name": "GUANGDONG WINCOM FLAVORS & FRAGRANCES CO.,LTD.",
+    "industry": "تولیدکننده — تولیدکننده‌ی افزودنی‌های غذایی (عطر و طعم)",
+    "target_grade": "خوراکی – طعم‌دهنده",
+    "phone": "+86 167 6020 7859",
+    "email": "wincom@wincomff.com.cn",
+    "website": "https://www.wincom.net.cn",
+    "address": "Chaozhou, East side of longyanchengcun County telecommunication bureau, National Highway 324, Huanggang Town, Raoping County, Guangdong Province",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A424 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2113"
+  },
+  {
+    "country": "چین",
+    "english_name": "WUXI JINNONG BIOTECHNOLOGY CO., LTD.",
+    "industry": "تولیدکننده — تولیدکننده پروتئین برنج و سایر پروتئین‌های خوراکی",
+    "target_grade": "خوراکی – پروتئین‌های گیاهی",
+    "email": "sean@jinnongbio.com",
+    "website": "https://www.jinnongbio.com",
+    "address": "Jiangsu, No.1 Yansheng Road, Huishan District, Wuxi, Jiangsu Provice, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A909 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2114"
+  },
+  {
+    "country": "چین",
+    "english_name": "JIANGSU ZIPIN BIOTECH CO.,LTD.",
+    "industry": "تولیدکننده — ارائه راهکارهای بهبود بافت و ماندگاری برای صنایع غذایی",
+    "target_grade": "خوراکی – بهبود بافت",
+    "email": "lisa@zipinbio.com",
+    "website": "https://www.zipinbio.com",
+    "address": "TAIXING, Zhongchuang Industry Park, Yaowang Twon, Taixing, Jiangsu,China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A631 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2115"
+  },
+  {
+    "country": "چین",
+    "english_name": "WUXI XINJINGYUAN FOOD TECHNOLOGY CO., LTD.",
+    "industry": "تولیدکننده — تولیدکننده پودر کاکائو صنعتی برای صنایع غذایی",
+    "target_grade": "خوراکی – شکلات/قهوه",
+    "phone": "+86 510 8871 6599",
+    "email": "info@skyswancocoa.com",
+    "website": "https://www.skyswancocoa.com",
+    "address": "Wuxi, 1109, Wenhua International, No.3-27 Huaxia Road, Wuxi 214000 Jiangsu, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A627 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2116"
+  },
+  {
+    "country": "چین",
+    "english_name": "XINGHUA FULLWEALTH FOODS CO., LTD",
+    "industry": "تولیدکننده — تولیدکننده سبزیجات خشک و ادویه‌های خوراکی",
+    "target_grade": "خوراکی – افزودنی/ادویه",
+    "phone": "+86 523 8321 0609",
+    "email": "vicky@fwvegetables.com",
+    "website": "http://www.fwvegetables.com",
+    "address": "Xinghua, Wangheng Economic Development Area",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A907 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2117"
+  },
+  {
+    "country": "چین",
+    "english_name": "KINGHERBS LIMITED",
+    "industry": "بازرگان/توزیع‌کننده — تجارت ترکیبات گیاهی، ویتامین‌ها و مواد معدنی برای صنایع غذایی",
+    "target_grade": "خوراکی – ترکیبات گیاهی و ویتامین‌ها",
+    "phone": "+86 731 8986 5683",
+    "email": "info@kingherbs.com",
+    "website": "https://www.kingherbs.com",
+    "address": "CHANGSHA, 27 Floor, Blding 6, Cimen, Wanjiali Rd, Changsha City, 410014, Hunan, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A641 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2118"
+  },
+  {
+    "country": "چین",
+    "english_name": "HANGZHOU SKYHERB TECHNOLOGIES CO.,LTD.",
+    "industry": "تولیدکننده — تولیدکننده‌ی عصاره‌های گیاهی برای کاربردهای غذایی",
+    "target_grade": "خوراکی – عصاره گیاهی",
+    "email": "marketing@skyherb.cn",
+    "website": "https://www.skyherb.cn",
+    "address": "Hangzhou, Floor 10, Building B. 171 Xiangyuan Road, Hangzhou, Zhejiang, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A745 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2119"
+  },
+  {
+    "country": "چین",
+    "english_name": "HEBEI FINUTRA BIOTECH CO., LTD",
+    "industry": "تولیدکننده — تامین‌کننده‌ی مواد خام و افزودنی‌های عملکردی غذایی",
+    "target_grade": "خوراکی – مواد اولیه عملکردی",
+    "phone": "+86 311 8690 0072",
+    "email": "info@finutra.com",
+    "website": "https://www.finutra.com",
+    "address": "Shijiazhuang, Room 904, Fortune Plaza, 368 Shengli North Street, Chang'an District, Shijiazhuang city, Hebei province,China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A421 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2120"
+  },
+  {
+    "country": "چین",
+    "english_name": "HEBEIHUAHENG BIOLOGICAL TECHNOLOGY CO., LTD.",
+    "industry": "تولیدکننده — تولیدکننده‌ی اسیدهای آمینه و مواد اولیه غذایی",
+    "target_grade": "خوراکی – اسیدهای آمینه",
+    "email": "sales04@jizhouhuaheng.com",
+    "website": "https://www.hebeihuaheng.com",
+    "address": "Jizhou, No,777 Xinghua south street,Jizhou district,Hengshu city,  Hebei Province,China.PC:053200",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A841 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2121"
+  },
+  {
+    "country": "چین",
+    "english_name": "BLUE-CHEM CO., LIMITED",
+    "industry": "بازرگان/توزیع‌کننده — بازرگان صادرکننده‌ی Food Ingredients/دارو/افزودنی خوراک در ۳۰+ کشور (اصلاح دستی پس از خواندن توضیح شرکت)",
+    "target_grade": "خوراکی/دارویی – بازرگانی مواد اولیه",
+    "phone": "+86 21 5422 0256",
+    "email": "info@blue-chem.com",
+    "website": "https://blue-chem.com",
+    "address": "Shanghai, Room O603, 6/F, West end, Shanghai Mart Tower, No.2299 West Yan'an Road, Changning District, Shanghai, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A709 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2122"
+  },
+  {
+    "country": "چین",
+    "english_name": "HENAN CHEMSINO INDUSTRY CO., LTD",
+    "industry": "تولیدکننده — تولیدکننده‌ی امولسیون‌کننده‌های غذایی",
+    "target_grade": "خوراکی – امولسیون‌کننده",
+    "phone": "+86 371 5562 5861",
+    "email": "info@cnchemsino.com",
+    "website": "https://www.cnchemsino.com",
+    "address": "Zhengzhou, 8/F.,No.4,Belt & Road Economic and Trade Industrial Park, Zhengzhou, Henan",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A939 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2123"
+  },
+  {
+    "country": "چین",
+    "english_name": "HENAN CHIA TAI BIOCHEMISTRY TRADING CO., LTD",
+    "industry": "بازرگان/توزیع‌کننده — بازرگانی و توزیع مواد بیوتکنولوژی غذایی",
+    "target_grade": "خوراکی – مواد اولیه خوراکی",
+    "email": "daria@ct-bio.com",
+    "website": "http://www.cpbiolinkcn.com",
+    "address": "Zhengzhou, 12 st Floor, Building 3, Haihui Center, Guancheng Hui District. Zhengzhou, Henan, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A501 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2124"
+  },
+  {
+    "country": "چین",
+    "english_name": "CHONGQING CHUANDONG CHEMICAL (GROUP) CO., LTD.",
+    "industry": "تولیدکننده — گروه نمک‌های معدنی؛ افزودنی غذایی/خوراک دام (سدیم تری‌پلی‌فسفات) (اصلاح دستی پس از خواندن توضیح شرکت)",
+    "target_grade": "خوراکی – فسفات و نمک‌های معدنی",
+    "phone": "+86 23 6251 3268",
+    "email": "wxsq@cd1958.com",
+    "website": "https://en.cd1958.com",
+    "address": "Chongqing, No. 70 Danxin Street Dashiba Nanan District Chongqing, 400061, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A413 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2125"
+  },
+  {
+    "country": "چین",
+    "english_name": "HENAN JINDAN LACTIC ACID TECHNOLOGY CO., LTD",
+    "industry": "تولیدکننده — تولیدکننده‌ی اسید لاکتیک برای کاربردهای غذایی",
+    "target_grade": "خوراکی – اسید لاکتیک",
+    "phone": "+86 394 319 5099",
+    "email": "jindannm@jindanlactic.com",
+    "website": "https://www.hnjindan.com",
+    "address": "Dancheng, No.8 Jindan Avenue, Dancheng County, Henan",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A711 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2126"
+  },
+  {
+    "country": "چین",
+    "english_name": "HENAN TIANMIMI SUGAR INDUSTRY CO., LTD",
+    "industry": "تولیدکننده — تولیدکننده‌ی شکر و ژلانیوم برای صنایع غذایی",
+    "target_grade": "خوراکی – شکر و ژلانیوم",
+    "phone": "+86 135 2352 6587",
+    "email": "aprilwong@hntianmimi.com.cn",
+    "website": "https://www.hntianmimi.com",
+    "address": "Zhoukou City, Middle Section of Jianshe Road, Dancheng County, Henan Province, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A725 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2127"
+  },
+  {
+    "country": "چین",
+    "english_name": "YANTAI HONGRI BIOTECH CO., LTD.",
+    "industry": "تولیدکننده — تولید مواد فعال بیولوژیکی برای مصرف غذایی",
+    "target_grade": "خوراکی – مکمل/دارویی",
+    "phone": "+86 535 388 1999",
+    "email": "haiyanghonmao@163.com",
+    "website": "https://www.ythongri.com",
+    "address": "Yantai Haiyang, Xingcun Town Haiyang Yantai City,Shandong,China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A921 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2128"
+  },
+  {
+    "country": "چین",
+    "english_name": "HAINAN NICEPAL INDUSTRY CO.,LTD.",
+    "industry": "تولیدکننده — تولیدکننده‌ی پودر/پوره‌ی میوه و سبزی برای صنایع غذایی (اصلاح دستی پس از خواندن توضیح شرکت)",
+    "target_grade": "خوراکی – پودر و پوره‌ی میوه",
+    "phone": "+86 898 6586 0705",
+    "email": "info@nicepal.com.cn",
+    "website": "https://www.hnnicepal.com",
+    "address": "HAIKOU, NO.9 CHENGLI STREET,WUTONG ROAD,HAIKOU,HAINAN,CHINA.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A523 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2129"
+  },
+  {
+    "country": "چین",
+    "english_name": "YANTAI OUGUO PEANUT OIL CO.,LTD",
+    "industry": "تولیدکننده — تولید روغن و پروتئین بادام زمینی به عنوان ماده اولیه غذایی",
+    "target_grade": "خوراکی – فرآوری روغن",
+    "phone": "+86 400 058 2828",
+    "email": "admin@ytouguo.com",
+    "website": "https://www.yantaiouguo.com",
+    "address": "ZHAOYUAN, No.666,TENGJIA VILLAGE,BIGUO TOWN,ZHAOYUAN CITY,SHANDONG PROVINCE,CHINA",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A813 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2130"
+  },
+  {
+    "country": "چین",
+    "english_name": "AUSEN CHEMICAL GROUP CO., LTD",
+    "industry": "تولیدکننده — تولید کننده افزودنی‌های غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 21 8051 3801",
+    "email": "info@ausenchem.com",
+    "website": "https://www.ausenchem.com",
+    "address": "Shanghai, Building 3, 609 Bibo Road",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A923 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2131"
+  },
+  {
+    "country": "چین",
+    "english_name": "JIANGSU LIHONG TECHNOLOGY DEVELOPMENT CO., LTD.",
+    "industry": "تولیدکننده — تولیدکننده‌ی امولسیفایر (خط تولید فودگرید) (اصلاح دستی پس از خواندن توضیح شرکت)",
+    "target_grade": "خوراکی – امولسیفایر/ضدکف",
+    "phone": "+86 517 8357 1686",
+    "email": "ray@jslhpu.com",
+    "website": "http://www.jslhpu.com",
+    "address": "JIANGSU, NO.6 ZHANGZHU ROAD, HUAIAN SALINIZATION INDUSTRIAL PARK ,HUAIAN,JIANGSU,CHINA",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A707 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2132"
+  },
+  {
+    "country": "چین",
+    "english_name": "HYLEN CO.,LTD.",
+    "industry": "تولیدکننده — تولید کننده مواد اولیه غذایی",
+    "target_grade": "خوراکی – پیش‌مصرف",
+    "phone": "+86 532 5568 3066",
+    "email": "info@hylen.cn",
+    "website": "https://www.hylen.cn",
+    "address": "Qingdao city, 12F, Bandao Mansion, No.182-8 Haier Road,Qingdao 266061, China.",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A603 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2133"
+  },
+  {
+    "country": "چین",
+    "english_name": "ZHEJIANG HUAKANG PHARMACEUTICAL CO., LTD",
+    "industry": "تولیدکننده — تولید پلیول‌ها و مواد پایه گیاهی برای مواد خوراکی",
+    "target_grade": "خوراکی – مکمل/دارویی",
+    "email": "queency.yang@huakangpharma.com",
+    "website": "https://www.huakangpharma.com",
+    "address": "Zhejiang, No. 18 Huagong Road Huabu Town Kaihua County Zhejiang China 18",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A617 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2134"
+  },
+  {
+    "country": "چین",
+    "english_name": "JIANGSU KOLOD FOOD INGREDIENTS CO., LTD",
+    "industry": "تولیدکننده — تولید کننده افزودنی‌های غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 152 6135 9001",
+    "email": "sales3239@jskolod.com",
+    "website": "https://www.kolod.com",
+    "address": "Lianyungang, South Side of Wei Er Road,Guanyun Economic Zone",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A531 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2135"
+  },
+  {
+    "country": "چین",
+    "english_name": "ZHEJIANG QILI XINGGUANG COCOA PRODUCTS CORP., LTD",
+    "industry": "تولیدکننده — تولید محصولات کاکائویی برای صنایع قنادی",
+    "target_grade": "خوراکی – قنادی",
+    "phone": "+86 575 8817 3986",
+    "email": "info@xgcocoa.com",
+    "website": "https://www.xgcocoa.com",
+    "address": "Zhejiang, Qisheng Road, Baojiang Development Zone, Shaoxing City, Zhejiang Province, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A415 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2136"
+  },
+  {
+    "country": "چین",
+    "english_name": "CHONGQING LIHONG FINE CHEMICALS CO., LTD.",
+    "industry": "تولیدکننده — تولید کننده افزودنی‌های غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "email": "office@lihong.net",
+    "website": "https://www.lihong.net",
+    "address": "Chongqing, No.6 Jiangxia Road, Nan'an District, Chongqing, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A937 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2137"
+  },
+  {
+    "country": "چین",
+    "english_name": "ZHEJIANG ZANCHENG LIFE SCIENCES LTD.",
+    "industry": "تولیدکننده — تولید و تامین افزودنی‌های غذایی و خوراکی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 155 7913 7947",
+    "email": "sales@zanchenglife.com",
+    "website": "https://www.zanchenglife.com",
+    "address": "Hangzhou, ROOM 702, NO.318, HUAYUANGANG STREET, GONGSHU DISTRICT, HANGZHOU, ZHEJIANG, CHINA",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A729 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2138"
+  },
+  {
+    "country": "چین",
+    "english_name": "SICHUAN KINDIA MAY SCIENCE AND TECH CO.,LTD",
+    "industry": "تولیدکننده — تولیدکننده‌ی فسفات‌های خوراکی (سدیم/پتاسیم فسفات) — همسایه‌ی طبیعی پودر بکینگ (اصلاح دستی پس از خواندن توضیح شرکت)",
+    "target_grade": "خوراکی – فسفات‌های خوراکی (مکمل پودر بکینگ)",
+    "email": "kdm@kindiamay.com",
+    "website": "http://www.kindiamay.com",
+    "address": "Sichuan, #812 Tower 530-2,East Hope Tianxiang Plaza,520 Tianfu Avenue ,High-Tech Zone,Chengdu,Sichuan Province ,China .",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A621 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2139"
+  },
+  {
+    "country": "چین",
+    "english_name": "SHANDONG JIANYUAN BIOENGINEERING CO., LTD.",
+    "industry": "تولیدکننده — تولید و توزیع مواد اولیه غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "email": "info@jianyuangroup.com",
+    "website": "https://www.jianyuangroup.com",
+    "address": "Zhaoyuan City, No.100 Shengtai Road, Zhaoyuan City, Shandong China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A831 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2140"
+  },
+  {
+    "country": "چین",
+    "english_name": "YANTAI SHUANGTA FOOD CO.,LTD",
+    "industry": "تولیدکننده — تولید کننده پروتئین‌های غذایی",
+    "target_grade": "خوراکی – پروتئین",
+    "phone": "+86 400 189 9988",
+    "email": "info@shuangtafood.com",
+    "website": "https://www.shuangtafood.com",
+    "address": "Yantai, Jinling Town, Zhaoyuan City, Shandong Province",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A625 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2141"
+  },
+  {
+    "country": "چین",
+    "english_name": "QINGDAO VLAND BIOTECH GROUP CO., LTD",
+    "industry": "تولیدکننده — تولیدکننده‌ی آنزیم برای غذا/خوراک (کوشر و حلال) (اصلاح دستی پس از خواندن توضیح شرکت)",
+    "target_grade": "خوراکی – آنزیم‌ها",
+    "phone": "+86 188 6629 8185",
+    "email": "lev@vlandgroup.com",
+    "website": "https://www.vlandbiotek.com",
+    "address": "Qingdao city, 596-1 East Jiushui Road,Qingdao city,Shandong provinceChina",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A925 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2142"
+  },
+  {
+    "country": "چین",
+    "english_name": "YANTAI ZHAOYI BIOCHNOLOGY CO., LTD.",
+    "industry": "تولیدکننده — تولید کننده افزودنی‌های شیمیایی غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "phone": "+86 400 800 7276",
+    "email": "service@zhaoyibio.net",
+    "website": "https://www.ytzhaoyibio.com",
+    "address": "Qixia City, West of Shanghai Road，East Industrial Park，Taocun Town，Qixia City，Yantai City，Shandong Province，China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A727 · ایمیل: روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
+    "id": "company-2143"
+  },
+  {
+    "country": "چین",
+    "english_name": "XIAMEN ADDFUN BIOTECHNOLOGY CO.. LTD",
+    "industry": "تولیدکننده — تولید هیدروکلوئیدهای خوراکی برای کاربردهای غذایی",
+    "target_grade": "خوراکی – افزودنی",
+    "email": "ciel@addfun.com.cn",
+    "website": "http://www.addfun.com.cn",
+    "address": "Xiamen, Room 907, No. 11 Hubin East Road, Siming District, Xiamen, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A637 · ایمیل: ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
+    "id": "company-2144"
+  },
+  {
+    "country": "چین",
+    "english_name": "SHANDONG KUNDA BIOTECHNOLOGY COMPANY LIMITED",
+    "industry": "تولیدکننده — تولیدکننده‌ی سوربیک اسید/پتاسیم سوربات/نشاسته‌ی سیب‌زمینی شیرین (اصلاح دستی پس از خواندن توضیح شرکت)",
+    "target_grade": "خوراکی – سوربات و نشاسته",
+    "phone": "+86 539 223 7968",
+    "email": "info@hongdabio.com",
+    "website": "https://www.hongdabio.com",
+    "address": "Shandong China, No.47, Nanyihuan Road, Yishui Economic Development Zone, Yishui County, Linyi City, Shandong Province, 276400, China",
+    "source_note": "نمایشگاه Global Ingredients Show 2026 · Pavilion 2 Hall 11 A927 · ایمیل: تأییدشده روی سایت شرکت",
+    "id": "company-2145"
   }
 ]

@@ -37,6 +37,7 @@ COUNTRY_MAP_FILE = os.path.join(BASE_DIR, "scripts", "country_name_map.json")
 
 # نام‌هایی که توی نقشه‌ی استاندارد (country_name_map.json) با همین املا نیستن.
 COUNTRY_ALIASES = {
+    "russia": "روسیه",
     "iran": "ایران",
     "vietnam": "ویتنام",
     "republic of korea": "کره جنوبی",
@@ -91,11 +92,37 @@ def normalize_grade(text):
     return t or "خوراکی"
 
 
+def normalize_verified_row(r):
+    """
+    اکسل «(تأییدشده)» (خروجی export_verified_xlsx.py، پس از verify_company_contacts.py) ستون‌های دیگری دارد؛
+    به همان کلیدهای اکسل خام نگاشت می‌شود تا بقیه‌ی منطق ایمپورت یکی بماند.
+    """
+    desc = (r.get("دلیل (مدل)") or "").strip()
+    return {
+        "نام شرکت": r.get("نام شرکت"),
+        "کشور": r.get("کشور"),
+        "نوع": r.get("نوع"),
+        "گرید پیشنهادی": r.get("گرید پیشنهادی"),
+        "ایمیل": r.get("ایمیل (تأییدشده)"),
+        "وب‌سایت": r.get("وب‌سایت (تأییدشده)"),
+        "منبع وب‌سایت": r.get("وضعیت وب‌سایت"),
+        "واتساپ/تلفن": r.get("تلفن/واتساپ (معتبر)"),
+        "دسته‌بندی‌های سایت": desc,
+        "غرفه": r.get("غرفه"),
+        "لینک پروفایل": None,
+        "شهر/آدرس": r.get("شهر/آدرس"),
+        "_email_conf": r.get("اعتبار ایمیل"),
+        "_review": r.get("نیاز به بررسی دستی؟"),
+    }
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("xlsx")
     ap.add_argument("--event", required=True, help="نام نمایشگاه، مثلاً «Gulfood 2026»")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--include-class-review", action="store_true",
+                    help="(فقط اکسل تأییدشده) شرکت‌هایی که «طبقه‌بندی‌شان نیاز به بررسی دارد» هم وارد شوند؛ پیش‌فرض: نه")
     args = ap.parse_args()
 
     country_map = {k.lower(): v["fa"] for k, v in json.load(open(COUNTRY_MAP_FILE, encoding="utf-8")).items()}
@@ -105,6 +132,9 @@ def main():
     ws = wb.worksheets[0]
     header = next(ws.iter_rows(min_row=1, max_row=1, values_only=True))
     rows = [dict(zip(header, r)) for r in ws.iter_rows(min_row=2, values_only=True) if r[1]]
+    verified_layout = "ایمیل (تأییدشده)" in header
+    if verified_layout:
+        rows = [normalize_verified_row(r) for r in rows]
 
     companies = json.load(open(COMPANIES_FILE, encoding="utf-8"))
     ex_emails = {extract_email(c.get("email"))[0] for c in companies} - {None}
@@ -113,9 +143,14 @@ def main():
     next_id = max(int(c["id"].split("-")[1]) for c in companies) + 1
 
     stats = {"rows": len(rows), "no_email": 0, "no_official_site": 0, "dup_existing": 0, "dup_in_file": 0,
-             "unmapped_country": {}}
+             "class_review": 0, "unmapped_country": {}}
     new, seen = [], set()
+    held_back = []
     for r in rows:
+        if verified_layout and not args.include_class_review and str(r.get("_review") or "").startswith("طبقه‌بندی"):
+            stats["class_review"] += 1
+            held_back.append(r.get("نام شرکت"))
+            continue
         email, _ = extract_email(r.get("ایمیل"))
         if not email:
             stats["no_email"] += 1
@@ -149,6 +184,8 @@ def main():
             note_parts.append(str(stand))
         if profile:
             note_parts.append(str(profile))
+        if verified_layout and r.get("_email_conf"):
+            note_parts.append(f"ایمیل: {r['_email_conf']}")
         record = {
             "country": fa_country,
             "english_name": name,
@@ -157,6 +194,7 @@ def main():
             "phone": str(r["واتساپ/تلفن"]).strip() if r.get("واتساپ/تلفن") else None,
             "email": email,
             "website": site,
+            "address": str(r["شهر/آدرس"]).strip() if r.get("شهر/آدرس") else None,
             "source_note": " · ".join(note_parts),
             "id": f"company-{next_id}",
         }
@@ -166,6 +204,8 @@ def main():
 
     print(f"ردیف‌های فایل: {stats['rows']}")
     print(f"  بدون ایمیل معتبر (وارد نمی‌شن): {stats['no_email']}")
+    if verified_layout:
+        print(f"  طبقه‌بندی نیازمند بررسی دستی (وارد نشدند): {stats['class_review']} {held_back}")
     print(f"  بدون وب‌سایت رسمی: {stats['no_official_site']}")
     print(f"  تکراری با بانک فعلی: {stats['dup_existing']}  | تکراری داخل فایل: {stats['dup_in_file']}")
     print(f"  کشور بدون نگاشت فارسی: {stats['unmapped_country']}")
