@@ -82,7 +82,7 @@ const raw = (from, subject, body, extra = "") =>
 const msgs = new Map();
 const add = (uid, from, subject, body, hdr = "") =>
   msgs.set(uid, { uid, from, subject, headers: Buffer.from(hdr + `Message-ID: <m${uid}@x>\r\n`), source: raw(from, subject, body, hdr), internalDate: new Date() });
-const mailbox = { uidValidity: 1, uidNext: 5 };
+const mailbox = { uidValidity: 1n, uidNext: 5 }; // ImapFlow: uidValidity از نوع BigInt است
 const client = {
   mailbox,
   connect: async () => {},

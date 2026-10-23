@@ -167,9 +167,11 @@ export async function pollReplies({ deps = {} } = {}) {  // deps: فقط برا�
     try {
       const mb = client.mailbox;
       const st = readFollowupState().reply_forward || {};
-      if (st.uidvalidity !== mb.uidValidity || st.last_uid == null) {
+      // ImapFlow مقدار uidValidity را BigInt می‌دهد و JSON.stringify آن را نمی‌پذیرد → به رشته تبدیل می‌شود.
+      const uidValidity = String(mb.uidValidity);
+      if (st.uidvalidity !== uidValidity || st.last_uid == null) {
         // اولین اجرا (یا صندوق عوض شده): فقط خط پایه — پاسخ‌های قدیمی فوروارد نمی‌شوند.
-        patch((r) => { r.uidvalidity = mb.uidValidity; r.last_uid = (mb.uidNext || 1) - 1; r.baseline_at = nowIso(); r.last_run = nowIso(); r.last_error = null; });
+        patch((r) => { r.uidvalidity = uidValidity; r.last_uid = Number(mb.uidNext || 1) - 1; r.baseline_at = nowIso(); r.last_run = nowIso(); r.last_error = null; });
         console.log(`[outreach-followup] خط پایه‌ی صندوق ورودی ثبت شد (UID ${(mb.uidNext || 1) - 1})؛ از این به بعد پاسخ‌های جدید فوروارد می‌شوند.`);
         return { ...result, baselined: true };
       }
