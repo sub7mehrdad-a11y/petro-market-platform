@@ -26,6 +26,7 @@
 - **قفل‌ها:** قفل اضطراری `outreach_halt.json` هر دو را متوقف می‌کند؛ حالت تست (`OUTREACH_TEST_REDIRECT`) هر دو را به آدرس تست می‌برد. هیچ فلگی روشن نشد.
 - **تست:** `node --test web/lib/outreachFollowupCore.test.mjs` (۹ مورد) و `node --import ./scripts/alias-loader.mjs scripts/test-followup.mjs` (از پوشه‌ی web؛ IMAP جعلی + سینک SMTP محلی: خط پایه، فوروارد، پاسخ خودکار/بی‌ارتباط/داخلی، بدون تکرار، خطای SMTP، یادآوری در حالت تست) — همه گذشت. اتصال واقعی به صندوق/SMTP تست نشده (عمداً).
 - **برای فعال‌سازی روی لیارا:** `OUTREACH_FORWARD_TO=<ایمیل همکار>` + `OUTREACH_FORWARD_ENABLED=true` (اول با `OUTREACH_TEST_REDIRECT` امتحان شود)، بعد پس از تأیید متن: `OUTREACH_REMINDER_ENABLED=true`. وابستگی جدید: `mailparser`.
+- **بدون CC (۲۰۲۶-۱۰-۲۳، درخواست کاربر):** ایمیل یادآوری دیگر `OUTREACH_CC_EMAILS` را نمی‌گیرد (اینباکس همکاران شلوغ نشود)؛ فقط به خود شرکت می‌رود. ایمیل معرفی همچنان CC دارد. گیرنده‌ی فوروارد روی لیارا: `sales1@parssoda.com`.
 - **مرج (۲۰۲۶-۱۰-۲۳):** با تأیید کاربر مرج شد به `main` (کامیت `5f248e9`) و لیارا از GitHub دیپلوی می‌کند. مرج را کاربر دستی کامیت/پوش کرد (ابزار اجازه‌ی مرج به main نداد). هیچ فلگی روشن نیست؛ رفتار ارسال تا روشن‌شدن `OUTREACH_FORWARD_ENABLED` / `OUTREACH_REMINDER_ENABLED` تغییری ندارد.
 
 ---

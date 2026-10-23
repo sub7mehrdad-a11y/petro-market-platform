@@ -284,17 +284,16 @@ export async function sendItem(item) {
     target_grade: company.target_grade,
   });
 
-  // یادآوری: همان رشته‌ی ایمیل اول (Re: + In-Reply-To/References)، بدون پیوست.
+  // یادآوری: همان رشته‌ی ایمیل اول (Re: + In-Reply-To/References)، بدون پیوست و بدون CC
+  // (به درخواست کاربر: اینباکس همکاران شلوغ نشود).
   if (item.kind === "reminder") {
     const reminder = buildReminderEmail({ originalSubject: rendered.subject, companyName: company.english_name });
     const fromAddress = process.env.SMTP_FROM || process.env.SMTP_USER;
     const fromName = process.env.SMTP_FROM_NAME || "Pars Baking Soda Group";
     const redirect = settings.testRedirect;
-    const cc = redirect ? [] : ccList();
     const info = await transport.sendMail({
       from: `"${fromName}" <${fromAddress}>`,
       to: redirect || item.email,
-      ...(cc.length ? { cc } : {}),
       subject: redirect ? `[TEST → ${item.email}] ${reminder.subject}` : reminder.subject,
       text: reminder.body,
       ...(item.orig_message_id ? { inReplyTo: item.orig_message_id, references: item.orig_message_id } : {}),
