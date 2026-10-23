@@ -5,7 +5,9 @@ import {
   getIranExports, getIranExportToCountry, getPerCapitaConsumption, getCompetitorForCountry,
   getMarketShareHistory, getUnionsForCountry, getCountryPopulation,
 } from "@/lib/data";
-import CompanyTable from "../../components/CompanyTable";
+import CompaniesEntryBox from "../../components/CompaniesEntryBox";
+import { countByGrade } from "@/lib/companyGrades";
+import { isValidEmail } from "@/lib/outreachTemplate";
 import ExhibitionTable from "../../components/ExhibitionTable";
 import WorldRouteMap from "../../components/WorldRouteMap";
 import PageHeader from "../../components/PageHeader";
@@ -488,10 +490,20 @@ export default async function CountryPage({ params }) {
         </section>
       )}
 
-      <section className="card p-5">
-        <h2 className="text-lg font-bold mb-3">شرکت‌ها ({companies.length})</h2>
-        <CompanyTable companies={companies} />
-      </section>
+      {/* فهرست کامل شرکت‌ها طولانی است؛ به‌جایش یک باکس خلاصه + ورود به صفحه‌ی شرکت‌های همین کشور */}
+      {companies.length > 0 ? (
+        <CompaniesEntryBox
+          country={country}
+          total={companies.length}
+          withEmail={companies.filter((c) => isValidEmail(c.email)).length}
+          gradeCounts={countByGrade(companies)}
+        />
+      ) : (
+        <section className="card p-5">
+          <h2 className="text-lg font-bold mb-1">شرکت‌ها</h2>
+          <p className="text-sm text-text-muted">هنوز شرکتی برای این کشور ثبت نشده است.</p>
+        </section>
+      )}
 
       <section className="card p-5">
         <h2 className="text-lg font-bold mb-3">نمایشگاه‌ها ({sortedExhibitions.length}) — نزدیک‌ترین نمایشگاه آینده اول</h2>

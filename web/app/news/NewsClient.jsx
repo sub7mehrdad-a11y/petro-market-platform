@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import PageHeader from "../components/PageHeader";
+import ImpactBadge from "../components/ImpactBadge";
 
 /**
  * صفحه‌ی اخبار — گرید سه‌ستونی کارت، طبق طرح مرجع (ui/03-news.png).
@@ -53,14 +54,7 @@ function NewsGridCard({ entry }) {
               {entry.topic}
             </span>
           ) : null}
-          {impactLabel && (
-            <span
-              className={`text-[11px] font-semibold rounded-full px-2.5 py-1 ${impactLabel.className}`}
-              title="برآورد اثر این خبر بر جایگاه رقابتی ما"
-            >
-              {impactLabel.text}
-            </span>
-          )}
+          {impactLabel && <ImpactBadge impact={entry.impact} />}
         </div>
         <span className="text-[11px] text-text-muted shrink-0">{timeAgo(entry.date)}</span>
       </div>

@@ -5,7 +5,8 @@ import {
 } from "@/lib/data";
 import PriceSection from "./components/PriceSection";
 import IntratecSampleCard from "./components/IntratecSampleCard";
-import NewsCard from "./components/NewsCard";
+import NewsBoxCard from "./components/NewsBoxCard";
+import ImpactBadge from "./components/ImpactBadge";
 import KpiRow from "./components/KpiRow";
 import PageHeader from "./components/PageHeader";
 import PrintButton from "./components/PrintButton";
@@ -32,7 +33,7 @@ const SODA_ASH_HIGHLIGHTS = [
 export default function DashboardPage() {
   const rows = getFlatPriceRecords();
   const news = getNewsAnalysis();
-  const latestNews = news.slice(0, 5);
+  const latestNews = news.slice(0, 6);
 
   // آمار کلیدی — همه از داده‌ی واقعی؛ اگر منبعی نبود، کارتش ساخته نمی‌شود.
   const turkey = getTradeMapForCountry("ترکیه");
@@ -137,14 +138,22 @@ export default function DashboardPage() {
         <MarketShareTrend data={globalShareHistory} title="روند سهم صادرکنندگان بزرگ از بازار جهانی" />
       )}
 
-      <section className="card p-5">
-        <h2 className="text-lg font-bold mb-3">مهم‌ترین تحلیل‌های خبری</h2>
+      <section aria-labelledby="home-news-title">
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+          <h2 id="home-news-title" className="text-lg font-bold">مهم‌ترین تحلیل‌های خبری</h2>
+          <div className="flex flex-wrap items-center gap-2 text-[11px] text-text-muted" aria-label="راهنمای رنگ‌ها">
+            <ImpactBadge impact="opportunity" withHint={false} />
+            <ImpactBadge impact="threat" withHint={false} />
+            <ImpactBadge impact="neutral" withHint={false} />
+            <span>برآورد اثر هر خبر بر جایگاه ما</span>
+          </div>
+        </div>
         {latestNews.length === 0 ? (
-          <p className="text-sm text-text-muted">هنوز تحلیلی ثبت نشده.</p>
+          <div className="card p-5 text-sm text-text-muted">هنوز تحلیلی ثبت نشده.</div>
         ) : (
-          <div>
+          <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
             {latestNews.map((entry, i) => (
-              <NewsCard key={i} entry={entry} compact />
+              <NewsBoxCard key={i} entry={entry} />
             ))}
           </div>
         )}
