@@ -526,7 +526,7 @@ def find_contact_links(homepage_html: str, base_url: str) -> list[str]:
 
 
 def enrich_company_contacts(client: httpx.Client, profile_url: str, name: str = "",
-                             country: str = "", browser=None) -> dict:
+                             country: str = "", browser=None, known_website: str | None = None) -> dict:
     """
     از پروفایل نمایشگاه لینک سایت رو می‌گیره (یا اگه نبود، با جست‌وجوی وب حدس
     می‌زنه)، بعد خودِ صفحه‌ی اصلی سایت را می‌خونه (هم مستقیم برای ایمیل/تماس، هم
@@ -540,8 +540,11 @@ def enrich_company_contacts(client: httpx.Client, profile_url: str, name: str = 
     result = {"website": None, "email": None, "whatsapp": None, "contact_note": None,
               "website_source": None}
 
-    website = fetch_exhibitor_website(client, profile_url)
-    website_source = "exhibitor_profile"
+    # known_website: وقتی خودِ فهرست رسمی نمایشگاه آدرس سایت رو مستقیم داده (مثل
+    # Global Ingredients Show که JSON هر شرکت فیلد Site داره)، نه نیاز به باز کردن
+    # صفحه‌ی پروفایل هست نه جست‌وجوی وب (که حدسیه).
+    website = known_website or fetch_exhibitor_website(client, profile_url)
+    website_source = "exhibitor_directory" if known_website else "exhibitor_profile"
     if not website:
         website = search_company_website(client, name, country)
         website_source = "web_search"
@@ -711,7 +714,35 @@ def extract_json_array(text: str) -> list:
     array_match = re.search(r"\[.*\]", raw, re.DOTALL)
     if not array_match:
         raise ValueError("پاسخ مدل شامل JSON array نبود:\n" + text[:500])
-    return json.loads(array_match.group(0))
+    try:
+        return json.loads(array_match.group(0))
+    except json.JSONDecodeError:
+        # ۲۰۲۶-۱۰-۲۲: مدل (Groq) در حدود نیمی از بچ‌ها داخل متن «reason» گیومه‌ی
+        # بدون escape می‌ذاشت و کل JSON می‌شکست (Expecting ',' delimiter). به‌جای
+        # دور انداختن کل بچ، هر آبجکت را جداگانه با regex تحمل‌پذیر استخراج می‌کنیم.
+        return _lenient_parse_verdicts(array_match.group(0))
+
+
+def _lenient_parse_verdicts(text: str) -> list:
+    out = []
+    for m in re.finditer(r'"index"\s*:\s*(\d+)(.*?)(?="index"\s*:|\Z)', text, re.DOTALL):
+        body = m.group(2)
+        rel = re.search(r'"relevant"\s*:\s*(true|false)', body)
+        ctype = re.search(r'"company_type"\s*:\s*(?:"(manufacturer|trader)"|null)', body)
+        grade = re.search(r'"grade"\s*:\s*(?:null|"(.*?)"\s*,\s*"reason")', body, re.DOTALL)
+        reason = re.search(r'"reason"\s*:\s*"(.*)$', body.strip(), re.DOTALL)
+        if not rel:
+            continue
+        out.append({
+            "index": int(m.group(1)),
+            "relevant": rel.group(1) == "true",
+            "company_type": ctype.group(1) if ctype and ctype.group(1) else None,
+            "grade": grade.group(1) if grade and grade.group(1) else None,
+            "reason": (reason.group(1).strip().rstrip('"}],{ \n') if reason else None),
+        })
+    if not out:
+        raise ValueError("پارس تحمل‌پذیر هم هیچ آبجکتی پیدا نکرد:\n" + text[:300])
+    return out
 
 
 def candidate_key(item: dict) -> str:
@@ -757,12 +788,13 @@ def write_xlsx(companies: list[dict], event_name: str) -> str:
 
     headers = ["ردیف", "نام شرکت", "کشور", "نوع", "گرید پیشنهادی", "وب‌سایت", "منبع وب‌سایت",
                "ایمیل", "واتساپ/تلفن", "وضعیت تماس", "دلیل (مدل)", "دسته‌بندی‌های سایت",
-               "توضیحات", "غرفه", "لینک پروفایل"]
+               "توضیحات", "غرفه", "لینک پروفایل", "شهر/آدرس"]
     ws.append(headers)
     for cell in ws[1]:
         cell.font = Font(bold=True)
 
-    website_source_fa = {"exhibitor_profile": "پروفایل نمایشگاه", "web_search": "جست‌وجوی وب (حدسی)"}
+    website_source_fa = {"exhibitor_profile": "پروفایل نمایشگاه", "exhibitor_directory": "فهرست رسمی نمایشگاه",
+                         "web_search": "جست‌وجوی وب (حدسی)"}
 
     for i, c in enumerate(companies, start=1):
         ws.append([
@@ -781,9 +813,10 @@ def write_xlsx(companies: list[dict], event_name: str) -> str:
             (c.get("description") or "")[:300],
             c.get("stand", ""),
             c.get("profile_url", ""),
+            c.get("region_address", ""),
         ])
 
-    widths = [6, 32, 16, 16, 30, 30, 18, 26, 20, 30, 40, 40, 55, 20, 45]
+    widths = [6, 32, 16, 16, 30, 30, 18, 26, 20, 30, 40, 40, 55, 20, 45, 30]
     for idx, w in enumerate(widths, start=1):
         ws.column_dimensions[openpyxl.utils.get_column_letter(idx)].width = w
     for row in ws.iter_rows(min_row=2):
