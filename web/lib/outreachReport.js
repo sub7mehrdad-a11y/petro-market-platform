@@ -16,6 +16,7 @@
 
 import { ImapFlow } from "imapflow";
 import { classifyGrade } from "./outreachTemplate.js";
+import { extractBounceReason, describeBounce } from "./outreachBounceCore.js";
 
 export const FREE_MAIL = new Set([
   "gmail.com", "googlemail.com", "yahoo.com", "ymail.com", "hotmail.com", "outlook.com", "live.com", "msn.com",
@@ -60,7 +61,8 @@ function parseDsn(subject, sourceText, sentSet) {
       if (sentSet.has(a)) recipients.add(a);
     }
   }
-  return { kind, recipients: [...recipients] };
+  // علت واقعی (پاسخ سرور مقصد) فقط برای برگشتی قطعی لازم است؛ کلاس‌بندی‌اش در outreachBounceCore.js
+  return { kind, recipients: [...recipients], reason: kind === "failed" ? extractBounceReason(sourceText) : "" };
 }
 
 // اولویت وضعیت یک گیرنده وقتی چند پیام داره: failed > delivered > relayed > delayed
@@ -105,6 +107,7 @@ export async function buildOutreachReport({ sentRecords, companies, days = 7 }) 
     logger: false,
   });
   const dsnState = new Map(); // email -> kind (failed|delivered|relayed|delayed)
+  const dsnReason = new Map(); // email -> پاسخ سرور مقصد برای برگشتی قطعی (آخرین)
   const replied = new Map(); // email|domain-key -> record
   const autoReplied = new Set();
   let inboxScanned = 0;
@@ -145,6 +148,7 @@ export async function buildOutreachReport({ sentRecords, companies, days = 7 }) 
           for (const e of matched) {
             const prev = dsnState.get(e);
             if (!prev || KIND_RANK[parsed.kind] > KIND_RANK[prev]) dsnState.set(e, parsed.kind);
+            if (parsed.kind === "failed" && parsed.reason) dsnReason.set(e, parsed.reason);
           }
         }
       }
@@ -204,6 +208,7 @@ export async function buildOutreachReport({ sentRecords, companies, days = 7 }) 
     grade: r._grade,
     sent_at: r.sent_at,
     status: dsnState.get(r.email) || "none", // failed | delivered | relayed | delayed | none
+    bounce: dsnState.get(r.email) === "failed" ? describeBounce(dsnReason.get(r.email) || "") : null,
     replied: replied.has(r.email),
     auto_replied: autoReplied.has(r.email),
   }));
