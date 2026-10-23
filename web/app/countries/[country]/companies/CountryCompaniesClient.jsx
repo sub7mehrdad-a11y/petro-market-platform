@@ -53,10 +53,71 @@ function RepliedBadge() {
 }
 
 // وضعیت ایمیل: سبز = ارسال/یادآوری انجام شده؛ زرد = در صف؛ قرمز = برگشتی. متن همیشه کنار رنگ هست.
-function EmailStatus({ s }) {
+// بلوک اصلاح ایمیل برگشتی: علت برگشت + ایمیل پیشنهادی (از سایت خود شرکت) با تأیید/رد، یا جست‌وجوی ایمیل صحیح
+function RepairBlock({ s, id, onRepair, busy }) {
+  const rp = s.repair;
+  const isBusy = busy === id;
+  const btn = "text-xs font-semibold text-primary hover:underline disabled:opacity-50";
+  return (
+    <div className="mt-2 rounded-lg border border-danger/30 bg-danger-soft/50 p-2.5 text-xs leading-6">
+      {s.bounce && (
+        <div className="text-danger" title={s.bounce.reason || undefined}>
+          علت برگشت: <b>{s.bounce.label_fa}</b>
+        </div>
+      )}
+      {rp?.status === "suggested" && rp.suggestion && (
+        <div className="mt-1 space-y-1">
+          <div>
+            ایمیل پیشنهادی: <bdi dir="ltr" className="font-bold text-text">{rp.suggestion.email}</bdi>{" "}
+            <span className="text-text-muted">
+              ({rp.suggestion.confidence === "same_domain" ? "هم‌دامنه با سایت شرکت" : "دامنه‌ی دیگر — با دقت تأیید کنید"})
+            </span>
+            {rp.suggestion.source_url && (
+              <>
+                {" "}
+                <a href={rp.suggestion.source_url} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">منبع ↗</a>
+              </>
+            )}
+          </div>
+          <div className="flex gap-4">
+            <button type="button" className={btn} disabled={isBusy} onClick={() => onRepair("approve", id)}>✓ تأیید و جایگزین کن</button>
+            <button type="button" className="text-xs text-text-muted hover:text-danger disabled:opacity-50" disabled={isBusy} onClick={() => onRepair("reject", id)}>رد</button>
+          </div>
+        </div>
+      )}
+      {rp?.status === "none_found" && (
+        <div className="mt-1 text-text-muted">
+          ایمیل جایگزین پیدا نشد{rp.reason ? ` — ${rp.reason}` : ""}.{" "}
+          <button type="button" className={btn} disabled={isBusy} onClick={() => onRepair("search", id)}>{isBusy ? "در حال جست‌وجو…" : "جست‌وجوی دوباره"}</button>
+        </div>
+      )}
+      {rp?.status === "rejected" && (
+        <div className="mt-1 text-text-muted">
+          پیشنهاد رد شد.{" "}
+          <button type="button" className={btn} disabled={isBusy} onClick={() => onRepair("search", id)}>{isBusy ? "در حال جست‌وجو…" : "جست‌وجوی ایمیل دیگر"}</button>
+        </div>
+      )}
+      {(!rp || rp.status === "searching") && (
+        <div className="mt-1 text-text-muted">
+          {rp?.status === "searching" ? "در حال جست‌وجوی ایمیل صحیح…" : "ایمیل صحیح هنوز بررسی نشده."}{" "}
+          <button type="button" className={btn} disabled={isBusy} onClick={() => onRepair("search", id)}>{isBusy ? "در حال جست‌وجو…" : "جست‌وجوی ایمیل صحیح"}</button>
+        </div>
+      )}
+    </div>
+  );
+}
+
+function EmailStatus({ s, id, onRepair, busy }) {
   if (!s) return null;
   if (!s.has_email) return <span className="text-xs text-text-muted">ایمیل معتبر ندارد</span>;
   const chips = [];
+  if (s.email_overridden) {
+    chips.push(
+      <span key="fix" className="badge badge-primary" title={s.previous_email ? `ایمیل قبلی (برگشتی): ${s.previous_email}` : undefined}>
+        ✓ ایمیل اصلاح شد
+      </span>
+    );
+  }
   if (s.bounced) chips.push(<span key="b" className="badge badge-danger">✕ ایمیل برگشت خورد</span>);
   if (s.sent) {
     chips.push(
@@ -76,7 +137,15 @@ function EmailStatus({ s }) {
   }
   if (s.queued) chips.push(<span key="q" className="badge badge-warning">در صف ارسال</span>);
   if (!s.sent && !s.queued) chips.push(<span key="n" className="badge badge-neutral">ارسال نشده</span>);
-  return <div className="flex flex-wrap gap-1.5">{chips}</div>;
+  return (
+    <>
+      <div className="flex flex-wrap gap-1.5">{chips}</div>
+      {s.bounced && s.bounce?.wrong_address && !s.email_overridden && <RepairBlock s={s} id={id} onRepair={onRepair} busy={busy} />}
+      {s.bounced && s.bounce && !s.bounce.wrong_address && (
+        <p className="mt-1.5 text-xs text-warning" title={s.bounce.reason || undefined}>علت برگشت: {s.bounce.label_fa} (آدرس احتمالاً درست است)</p>
+      )}
+    </>
+  );
 }
 
 function Contact({ c }) {
@@ -106,6 +175,31 @@ export default function CountryCompaniesClient({ country, companies }) {
   const [sending, setSending] = useState(false);
   const [sendResult, setSendResult] = useState(null);
   const [preview, setPreview] = useState(null); // { loading, items, cc, missing, error }
+  const [repairBusy, setRepairBusy] = useState(null); // id شرکتی که جست‌وجو/تأیید ایمیلش در جریان است
+  const [repairMsg, setRepairMsg] = useState(null);
+
+  // ایمیل مؤثر (بعد از اصلاح) برای ستون تماس؛ ایمیل استاتیک صفحه ممکن است همان ایمیل برگشتی باشد.
+  const withEmail = (c) => (statuses[c.id]?.has_email && statuses[c.id].email ? { ...c, email: statuses[c.id].email } : c);
+
+  async function repair(action, id) {
+    setRepairBusy(id);
+    setRepairMsg(null);
+    try {
+      const res = await fetch("/api/outreach/email-repair", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action, companyId: id }),
+      });
+      const d = await res.json();
+      if (!res.ok) throw new Error(d.error || "ناموفق");
+      setRepairMsg({ ok: true, text: action === "approve" ? "ایمیل جایگزین شد؛ حالا می‌توانید ایمیل معرفی را برای این شرکت در صف بگذارید." : action === "search" ? "جست‌وجو انجام شد." : "پیشنهاد رد شد." });
+      await reload();
+    } catch (err) {
+      setRepairMsg({ ok: false, text: String(err.message || err) });
+    } finally {
+      setRepairBusy(null);
+    }
+  }
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -268,6 +362,12 @@ export default function CountryCompaniesClient({ country, companies }) {
         </section>
       )}
 
+      {repairMsg && (
+        <div role="status" className={`rounded-lg border px-4 py-2.5 text-sm ${repairMsg.ok ? "border-success bg-success-soft text-success" : "border-danger bg-danger-soft text-danger"}`}>
+          {repairMsg.text}
+        </div>
+      )}
+
       {preview && (
         <section className="card p-5" aria-label="پیش‌نمایش ایمیل">
           <div className="mb-3 flex items-center justify-between gap-3">
@@ -316,13 +416,13 @@ export default function CountryCompaniesClient({ country, companies }) {
                         {c.arabic_name && <div className="text-xs text-text-muted">{c.arabic_name}</div>}
                       </div>
                     </div>
-                    {emailReady && <div className="mt-2"><EmailStatus s={s} /></div>}
+                    {emailReady && <div className="mt-2"><EmailStatus s={s} id={c.id} onRepair={repair} busy={repairBusy} /></div>}
                     <dl className="mt-3 grid grid-cols-[auto_1fr] gap-x-3 gap-y-1 text-xs">
                       {c.industry && (<><dt className="text-text-muted">صنعت</dt><dd>{c.industry}</dd></>)}
                       <dt className="text-text-muted">گرید هدف</dt><dd>{GRADE_LABELS_FA[c.grade]}</dd>
                       {c.purchasing_potential && (<><dt className="text-text-muted">پتانسیل خرید</dt><dd>{c.purchasing_potential}</dd></>)}
                     </dl>
-                    <div className="mt-3 border-t border-border pt-2 text-xs"><Contact c={c} /></div>
+                    <div className="mt-3 border-t border-border pt-2 text-xs"><Contact c={withEmail(c)} /></div>
                     {emailReady && canSelect(s) && (
                       <button type="button" className="mt-2 text-xs text-primary hover:underline" onClick={() => openPreview(c.id)}>پیش‌نمایش ایمیل</button>
                     )}
@@ -366,7 +466,7 @@ export default function CountryCompaniesClient({ country, companies }) {
                         </td>
                         {emailReady && (
                           <td className="px-3 py-3">
-                            <EmailStatus s={s} />
+                            <EmailStatus s={s} id={c.id} onRepair={repair} busy={repairBusy} />
                             {canSelect(s) && (
                               <button type="button" className="mt-1.5 text-xs text-primary hover:underline" onClick={() => openPreview(c.id)}>پیش‌نمایش ایمیل</button>
                             )}
@@ -375,7 +475,7 @@ export default function CountryCompaniesClient({ country, companies }) {
                         <td className="px-3 py-3">{c.industry}</td>
                         <td className="px-3 py-3">{GRADE_LABELS_FA[c.grade]}</td>
                         <td className="px-3 py-3">{c.purchasing_potential}</td>
-                        <td className="px-3 py-3 text-xs"><Contact c={c} /></td>
+                        <td className="px-3 py-3 text-xs"><Contact c={withEmail(c)} /></td>
                       </tr>
                     );
                   })}

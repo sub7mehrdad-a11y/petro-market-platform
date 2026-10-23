@@ -8,5 +8,7 @@ export async function register() {
     startOutreachAuto();
     const { startOutreachFollowup } = await import("./lib/outreachFollowup.js");
     startOutreachFollowup();
+    const { startEmailRepair } = await import("./lib/outreachEmailRepair.js");
+    startEmailRepair();
   }
 }

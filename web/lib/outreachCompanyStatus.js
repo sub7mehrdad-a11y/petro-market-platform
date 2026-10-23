@@ -24,7 +24,7 @@ const smtpConfigured = () => !!(process.env.SMTP_HOST && process.env.SMTP_USER &
 
 async function loadReplyMap() {
   const report = await buildOutreachReport({ sentRecords: getEmailOutreachSent(), companies: getCompanies(), days: null });
-  return new Map(report.rows.map((r) => [String(r.email).toLowerCase(), { replied: !!r.replied, auto_replied: !!r.auto_replied, status: r.status }]));
+  return new Map(report.rows.map((r) => [String(r.email).toLowerCase(), { replied: !!r.replied, auto_replied: !!r.auto_replied, status: r.status, bounce: r.bounce || null }]));
 }
 
 /** نقشه‌ی email → {replied, auto_replied, status} یا null اگر خواندن صندوق ممکن نباشد. */
@@ -68,7 +68,10 @@ export async function getCompanyEmailStatuses({ country = null } = {}) {
   const queueItems = readQueue().items.filter((i) => i.status === "queued");
   const introQueued = new Set(queueItems.filter((i) => i.kind !== "reminder").map((i) => i.email));
   const reminderQueued = new Set(queueItems.filter((i) => i.kind === "reminder").map((i) => i.email));
-  const reminders = readFollowupState().reminders || {};
+  const fu = readFollowupState();
+  const reminders = fu.reminders || {};
+  const repairs = fu.repairs || {};
+  const overrides = fu.email_overrides || {};
   const replyMap = await getReplyMap();
 
   const out = {};
@@ -84,8 +87,14 @@ export async function getCompanyEmailStatuses({ country = null } = {}) {
     const sent = sentByEmail.get(email);
     const rem = reminders[email];
     const rep = replyMap?.get(email);
+    const rp = repairs[c.id];
     const s = {
       has_email: true,
+      email, // ایمیل مؤثر (بعد از جایگزینی تأییدشده)
+      email_overridden: !!c.email_overridden,
+      previous_email: c.email_overridden ? overrides[c.id]?.bad_email || null : null,
+      bounce: rep?.bounce || null,
+      repair: rp ? { status: rp.status, suggestion: rp.suggestion || null, reason: rp.reason || null, checked_at: rp.checked_at || null, by: rp.by || null } : null,
       sent: !!sent,
       sent_at: sent?.sent_at || null,
       legacy: !!sent && sent.source !== "outreach-queue",

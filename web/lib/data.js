@@ -100,8 +100,25 @@ export function getManifestFile() {
   return MANIFEST_FILE;
 }
 
+// اصلاح ایمیل‌های برگشتی (outreachEmailRepair.js): ایمیل تأییدشده‌ی جایگزین روی دیسک دائمی کنار وضعیت پیگیری نگه‌داری
+// می‌شود (نه در مخزن)، تا بدون دیپلوی اعمال شود. فقط وقتی اعمال می‌شود که ایمیل مخزن هنوز همان ایمیل غلط (bad_email)
+// باشد — اگر بعداً خودِ مخزن اصلاح شد، این لایه کنار می‌رود و چیزی را پایمال نمی‌کند.
+function readEmailOverrides() {
+  // همان مسیر outreachFollowupState.js (کنار لاگ ارسال)
+  const file = path.join(path.dirname(getOutreachSentStatePath()), "outreach_followup_state.json");
+  return readJsonSafe(file, {}).email_overrides || {};
+}
+
 export function getCompanies() {
-  return readJsonSafe(path.join(DATA_DIR, "companies.json"), []);
+  const base = readJsonSafe(path.join(DATA_DIR, "companies.json"), []);
+  const ov = readEmailOverrides();
+  if (Object.keys(ov).length === 0) return base;
+  const norm = (e) => String(e || "").trim().toLowerCase();
+  return base.map((c) => {
+    const o = ov[c.id];
+    if (!o?.email || norm(c.email) !== norm(o.bad_email)) return c;
+    return { ...c, email: o.email, email_overridden: true };
+  });
 }
 
 // اسم رسمی ISO توی country_name_map.json برای بعضی کشورها توی یک ایمیل

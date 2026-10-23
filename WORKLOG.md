@@ -17,6 +17,25 @@
 
 ## ورودی‌ها
 
+### ۲۰۲۶-۱۰-۲۳ — برگشتی‌های ایمیل: علت، اصلاح خودکار ایمیل، فایل اصلاحیه، ورود شرکت‌های نمایشگاه روسیه (شاخه‌ی `data/email-corrections-ingredients-show`)
+
+درخواست کاربر: دلیل برگشتی‌ها؛ اگر ایمیل غلط است سیستم چک کند و ایمیل صحیح بدهد؛ داده‌ی نمایشگاه روسیه + فایل اصلاحیه (پوشه‌ی «نمایشگاه دارها») بررسی و وارد پلتفرم شود.
+
+**علت برگشتی‌ها (خواندن فقط‌خواندنیِ DSNهای صندوق ورودی از ۱ اکتبر، ۳۳ مورد):** ۱۷ «صندوق این آدرس وجود ندارد» (User not found/No such user/حساب غیرفعال)، ۱۱ «دامنه وجود ندارد/سرور ایمیل ندارد» (No DNS/No MX)، ۱ «حجم» (`farovon.tj`: سقف مقصد ۱٫۱۵MB، ایمیل ما ۲٫۷MB — پیوست پروفایل شرکت)، ۲ «اسپم» (`avesto.tj`, `shirin.tj` — Yandex: «rejected under suspicion of SPAM»)، ۲ نامشخص (`agrokush.kg`: Connection refused؛ `ataman.kg`: بدون علت). یعنی ~۸۵٪ آدرس غلط بود؛ بیشترشان از فهرست‌ها/دایرکتوری‌ها (yellowpages، tradeatlas، spyur…) یا placeholder (`example@gmail.com`). DNS دامنه‌ی ما: SPF دارد و DMARC=`p=reject` (strict)؛ رکورد DKIM روی selectorهای معمول (default/mail/smtp) پیدا نشد — باید در SmarterMail بررسی شود.
+
+**فایل اصلاحیه (`platform_email_corrections.json`، ۱۲۲ ردیف) اعمال شد** با `scripts/apply_email_corrections.py` (جدید؛ dry-run پیش‌فرض، فقط اگر ایمیل فعلی هنوز همان ایمیل غلط باشد، قدیمی در `email_history` می‌ماند): ۷۲ حذف + ۴۵ جایگزینی (+۱۵ تلفن) + ۵ ردیف «بررسی دستی» (ایمیل غلطشان حذف شد، ایمیل پیشنهادی فقط در `email_history.suggested_email` است: company-688، 1348، 1680، 1892، 1928). نسخه‌ی فایل در `data/email_corrections/2026-10-23-verified-exhibitor-cleanup.json`.
+**برگشتی‌های واقعی هم اصلاح شد** (`data/email_corrections/2026-10-23-bounces.json`): ۱۷ حذف و ۲ جایگزینی هم‌دامنه با سایت (company-191 → `export@tamaragroup.am`، company-551 → `bokhtar@osonpharm.tj`) با `verify_company_contacts.py` نشست دیگر (فقط اجرا، دست‌نخورده). ۹ مورد از ۳۳ از قبل در فایل اصلاحیه بود؛ برگشتی‌های «حجم/اسپم/نامشخص» دست‌نخورد (آدرس احتمالاً درست است).
+**نمایشگاه روسیه (Global Ingredients Show 2026، اکسل «(تأییدشده)»):** `import_gulfood_companies.py` حالا ستون‌های اکسل تأییدشده را هم می‌فهمد (+ نگاشت `russia`→روسیه، ستون آدرس). ۹۴ شرکت جدید وارد شد (چین ۷۷، روسیه ۱۴، هند ۲، مالزی ۱ — company-2052..2145؛ کل بانک ۲٬۱۳۸). وارد نشد: ۹ مورد «طبقه‌بندی نیاز به بررسی دارد» (DAIRY، EUROPEAN TECHNOLOGIES، HEALTANG، WEINAN RIGEL، ROBIOS، CLOUD AND CHEM، FIPHARM، HUBEI XINGFA، QINGDAO GATHER GREAT OCEAN)، ۳۵ مورد با ایمیل ولی بدون وب‌سایت رسمی (قاعده‌ی ۲۰۲۶-۱۰-۰۴)، ۴ بدون ایمیل، ۱۶ تکراری.
+
+**قابلیت جدید در پلتفرم (پیش‌فرض بی‌خطر؛ هیچ ایمیلی ارسال نمی‌کند):**
+- `lib/outreachBounceCore.js`: علت برگشتی از متن DSN (`Remote Server returned: …`) → کلاس `no_mailbox | no_domain | size | blocked | other`؛ روی ۳۳ DSN واقعی تست شد. `outreachReport.js` حالا `bounce` را در ردیف‌ها می‌دهد.
+- صفحه‌ی شرکت‌های کشور: کنار «ایمیل برگشت خورد» علت نوشته می‌شود («صندوق وجود ندارد»، «حجم…»…).
+- `lib/outreachEmailRepair.js` + `outreachEmailRepairCore.js` + `POST /api/outreach/email-repair`: برای برگشتی با «آدرس غلط»، سایت خودِ شرکت (نه دایرکتوری؛ نام شرکت باید روی صفحه باشد) با صفحه‌های تماس خوانده می‌شود؛ ایمیل واقعی دیده‌شده با دامنه‌ی دارای MX/A، غیر از ایمیل خراب/ردشده، **پیشنهاد** می‌شود (هم‌دامنه با سایت = اطمینان بالا؛ دامنه‌ی دیگر فقط با mailto رایگان یا واژه‌ی نام شرکت). در صفحه‌ی شرکت‌های کشور: «تأیید و جایگزین کن / رد / جست‌وجوی ایمیل صحیح». تأیید → `email_overrides` روی دیسک دائم (کنار وضعیت پیگیری؛ `getCompanies()` اعمال می‌کند فقط اگر ایمیل مخزن هنوز همان ایمیل غلط باشد) → شرکت «ارسال‌نشده» می‌شود و می‌تواند ایمیل معرفی بگیرد. زمان‌بند هر ۳۰ دقیقه حداکثر ۳ شرکت را خودکار جست‌وجو می‌کند. env: `OUTREACH_EMAIL_REPAIR_ENABLED` (پیش‌فرض روشن؛ فقط وقتی `OUTREACH_UI_ENABLED=true`)، `OUTREACH_EMAIL_REPAIR_AUTO` (پیش‌فرض **خاموش**: اعمال خودکار فقط برای هم‌دامنه)، `OUTREACH_EMAIL_REPAIR_PER_RUN`.
+- **تست:** `node --test lib/outreachFollowupCore.test.mjs lib/outreachBounceCore.test.mjs lib/outreachEmailRepairCore.test.mjs` (۱۷ مورد) و `scripts/test-followup.mjs`, `test-company-status.mjs`, `test-email-repair.mjs` (با alias-loader) گذشت؛ بیلد کامل؛ UI با پاسخ جعلی API در مرورگر (دسکتاپ/موبایل، بدون سرریز)؛ کلیک «تأیید» به API واقعی رسید. **تست نشده:** جست‌وجوی واقعی روی سایت‌های شرکت‌ها از لیارا (فقط با fetch/DNS جعلی)، و بیلد روی لیارا.
+- ⚠ برای تحلیل از `.env` محلی به صندوق وصل شدم (فقط‌خواندنی، فقط DSNها)؛ `.env` محلی `OUTREACH_SENDING_ENABLED=true` دارد — سرور محلی را بدون override اجرا نکن.
+
+---
+
 ### ۲۰۲۶-۱۰-۲۳ — صفحه‌ی شرکت‌های هر کشور (با وضعیت/ارسال ایمیل) + باکس خلاصه + باکس‌های خبر صفحه‌ی اصلی (شاخه‌ی `feature/country-companies-page`)
 
 درخواست کاربر: بخش «شرکت‌ها» در صفحه‌ی کشور خیلی طولانی بود؛ باکس خلاصه + صفحه‌ی جدا برای شرکت‌ها، با ارسال ایمیل از همان‌جا، نشان سبز «ارسال شد/یادآوری»، نوشتن «پاسخ داده» کنار نام؛ و خبرهای صفحه‌ی اصلی هر کدام یک باکس با رنگ/علامت خبر خوب/بد.
