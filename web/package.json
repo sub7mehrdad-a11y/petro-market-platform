@@ -10,6 +10,7 @@
   "dependencies": {
     "exceljs": "^4.4.0",
     "imapflow": "^2.2.5",
+    "mailparser": "^3.12.2",
     "next": "16.3.0",
     "nodemailer": "^10.0.0",
     "react": "19.2.8",

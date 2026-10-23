@@ -23,3 +23,6 @@ scripts/_*.log
 # صف ارسال ایمیل (وضعیت اجرایی، نه داده‌ی پروژه)
 data/outreach_queue.json
 data/outreach_queue.json.tmp
+
+# وضعیت پیگیری ایمیل در توسعه‌ی محلی (روی سرور داخل OUTREACH_STATE_DIR است)
+data/outreach_followup_state.json

@@ -6,6 +6,7 @@ import { jalaliFa } from "@/lib/dateFormat";
 import QueuePanel from "./QueuePanel";
 import ReportPanel from "./ReportPanel";
 import AutoPanel from "./AutoPanel";
+import FollowupPanel from "./FollowupPanel";
 
 const GRADE_LABELS = {
   food: "خوراکی",
@@ -349,6 +350,8 @@ export default function OutreachClient({ companies, countries, sendingEnabled, h
       </section>
 
       <AutoPanel halted={halted} />
+
+      <FollowupPanel />
 
       <QueuePanel refreshKey={queueRefresh} halted={halted} />
 
