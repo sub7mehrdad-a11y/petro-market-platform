@@ -3,40 +3,40 @@
     "ok": true,
     "exit_code": 0,
     "timed_out": false,
-    "started_at": "2026-10-25T09:57:43.408959+00:00",
-    "finished_at": "2026-10-25T09:58:56.855769+00:00",
+    "started_at": "2026-10-26T11:20:09.662363+00:00",
+    "finished_at": "2026-10-26T11:21:34.946356+00:00",
     "output_tail": "[OK] fetched https://www.echemi.com/productsInformation/pd20150901033-sodium-bicarbonate.html (6000 chars)\n[WARN] failed to fetch https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186: HTTP Error 403: Forbidden\n[OK] fetched https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends (6000 chars)\n[OK] fetched https://tradingeconomics.com/commodity/soda-ash (6000 chars)\n[WARN] failed to fetch https://www.chemanalyst.com/Pricing-data/soda-ash-76: HTTP Error 403: Forbidden\n[OK] fetched https://www.procurementresource.com/resource-center/soda-ash-price-trends (6000 chars)\n[WARN] failed to fetch http://board.himtrade.ru/: HTTP Error 403: Forbidden\n[OK] fetched https://flagma.ru/ (137 chars)\n[OK] fetched https://www.soda.ru/ru/ (1579 chars)\n[OK] 11/15 رکورد با عدد واقعی ثبت شد.\n"
   },
   "news": {
     "ok": true,
     "exit_code": 0,
     "timed_out": false,
-    "started_at": "2026-10-25T09:58:56.888883+00:00",
-    "finished_at": "2026-10-25T10:05:15.534973+00:00",
-    "output_tail": "[OK] fetched https://www.dailysabah.com/business (7375 chars)\n[OK] fetched https://tradingeconomics.com/commodity/soda-ash (6722 chars)\n[OK] fetched https://chemxplore.com/countries/turkey (5971 chars)\n[OK] fetched https://www.chemeurope.com/en/news/ (12000 chars)\n[OK] fetched https://oilprice.com/Latest-Energy-News/World-News/ (12000 chars)\n[OK] fetched https://www.freightos.com/freightos-baltic-index/ (12000 chars)\n[OK] fetched https://www.drewry.co.uk/world-container-index (12000 chars)\n[OK] fetched https://tradingeconomics.com/commodity/baltic (9965 chars)\n[OK] fetched https://rupec.ru/ (3876 chars)\n[OK] fetched https://rccnews.ru/ (4470 chars)\n[OK] fetched https://www.soda.ru/ru/ (1579 chars)\n[OK] fetched https://www.rzd-partner.ru/ (12000 chars)\n[OK] fetched https://trans.ru/ (3387 chars)\n[OK] fetched https://flagma.ru/ (137 chars)\n[WARN] failed to fetch http://board.himtrade.ru/: HTTP Error 403: Forbidden\n[OK] fetched https://www.caixinglobal.com/ (12000 chars)\n[OK] fetched https://www.scmp.com/business (7581 chars)\n[OK] fetched https://www.globaltimes.cn/ (5417 chars)\n[OK] fetched http://www.news.cn/english/ (3919 chars)\n[OK] fetched http://english.customs.gov.cn/newsroom/news (2044 chars)\n[OK] fetched https://economic.mfa.ir/ (12000 chars)\n[OK] RSS Container News: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS The Loadstar: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Splash247: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Hellenic Shipping News: 12 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS gCaptain: 12 آیتم خوانده شد، 5 آیتم مرتبط\n[INFO] مدل 2 آیتم برگرداند.\n[OK] ثبت شد [ترانزیت، کرایه‌ی حمل و لجستیک]: وضع سرشارژ اضطراری کشتیرانی MSC بر صادرات از ترکیه و مدیترانه شرقی\n[OK] ثبت شد [انرژی، ارز و ژئوپلیتیک]: جهش قیمت گاز طبیعی در اروپا به مرز ۹۰ یورو در پی کاهش عرضه LNG\n[OK] مجموعاً 2 خبر تازه‌ی 2026-10-25 ذخیره شد.\n"
+    "started_at": "2026-10-26T11:21:34.980420+00:00",
+    "finished_at": "2026-10-26T11:23:04.465378+00:00",
+    "output_tail": "[OK] fetched https://www.dailysabah.com/business (7424 chars)\n[OK] fetched https://tradingeconomics.com/commodity/soda-ash (6665 chars)\n[OK] fetched https://chemxplore.com/countries/turkey (5971 chars)\n[OK] fetched https://www.chemeurope.com/en/news/ (12000 chars)\n[OK] fetched https://oilprice.com/Latest-Energy-News/World-News/ (12000 chars)\n[OK] fetched https://www.freightos.com/freightos-baltic-index/ (12000 chars)\n[OK] fetched https://www.drewry.co.uk/world-container-index (12000 chars)\n[OK] fetched https://tradingeconomics.com/commodity/baltic (9930 chars)\n[OK] fetched https://rupec.ru/ (3900 chars)\n[OK] fetched https://rccnews.ru/ (4470 chars)\n[OK] fetched https://www.soda.ru/ru/ (1579 chars)\n[OK] fetched https://www.rzd-partner.ru/ (12000 chars)\n[OK] fetched https://trans.ru/ (3387 chars)\n[OK] fetched https://flagma.ru/ (137 chars)\n[WARN] failed to fetch http://board.himtrade.ru/: HTTP Error 403: Forbidden\n[OK] fetched https://www.caixinglobal.com/ (12000 chars)\n[OK] fetched https://www.scmp.com/business (7385 chars)\n[OK] fetched https://www.globaltimes.cn/ (5623 chars)\n[RETRY] http://www.news.cn/english/\n[WARN] failed to fetch http://www.news.cn/english/: <urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate has expired (_ssl.c:1016)>\n[OK] fetched http://english.customs.gov.cn/newsroom/news (2044 chars)\n[OK] fetched https://economic.mfa.ir/ (12000 chars)\n[OK] RSS Container News: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS The Loadstar: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Splash247: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Hellenic Shipping News: 12 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS gCaptain: 12 آیتم خوانده شد، 5 آیتم مرتبط\n[INFO] مدل 3 آیتم برگرداند.\n[OK] ثبت شد [صنعت جوش شیرین و رقبا]: سرمایه‌گذاری ۱.۵ میلیارد روبلی شرکت باشتکیر سودا (BSK) برای مدرن‌سازی خطوط تولید\n[OK] ثبت شد [ترانزیت، کرایه‌ی حمل و لجستیک]: تشدید ناامنی در دریای سیاه و ثبت رکورد جدید در حملات به شناورهای تجاری\n[OK] ثبت شد [انرژی، ارز و ژئوپلیتیک]: عبور قیمت گاز طبیعی در بازار اروپا از مرز ۹۵ یورو در پی افت عرضه LNG\n[OK] مجموعاً 3 خبر تازه‌ی 2026-10-26 ذخیره شد.\n"
   },
   "turkey": {
     "ok": true,
     "exit_code": 0,
     "timed_out": false,
-    "started_at": "2026-10-25T10:05:15.569731+00:00",
-    "finished_at": "2026-10-25T10:05:48.872731+00:00",
-    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.wesoda.com/media/ (2449 chars)\n[OK] fetched https://www.wesoda.com/investors/ (2573 chars)\n[OK] fetched https://www.etisoda.com/ (2036 chars)\n[OK] fetched https://www.kazansoda.com/ (2059 chars)\n--- منابع لجستیک/اقتصاد ---\n[OK] fetched https://www.utikad.org.tr/en (5000 chars)\n[OK] fetched https://www.hurriyetdailynews.com/index/economy (3426 chars)\n[OK] fetched https://www.dailysabah.com/business (5000 chars)\n\n[OK] رصد ترکیه 2026-10-25 ذخیره شد — 0 خبر شرکتی، 1 خبر لجستیکی.\n"
+    "started_at": "2026-10-26T11:23:04.501302+00:00",
+    "finished_at": "2026-10-26T11:23:35.315103+00:00",
+    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.wesoda.com/media/ (2449 chars)\n[OK] fetched https://www.wesoda.com/investors/ (2573 chars)\n[OK] fetched https://www.etisoda.com/ (2036 chars)\n[OK] fetched https://www.kazansoda.com/ (2059 chars)\n--- منابع لجستیک/اقتصاد ---\n[OK] fetched https://www.utikad.org.tr/en (5000 chars)\n[OK] fetched https://www.hurriyetdailynews.com/index/economy (3426 chars)\n[OK] fetched https://www.dailysabah.com/business (5000 chars)\n\n[OK] رصد ترکیه 2026-10-26 ذخیره شد — 0 خبر شرکتی، 1 خبر لجستیکی.\n"
   },
   "china": {
     "ok": true,
     "exit_code": 0,
     "timed_out": false,
-    "started_at": "2026-10-25T10:05:48.905578+00:00",
-    "finished_at": "2026-10-25T10:06:30.416153+00:00",
-    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.shandong-haihua.net/news.html (5000 chars)\n[OK] fetched http://en.haihua.com.cn/product_1/4.html (5000 chars)\n[OK] fetched http://www.en.chinayuhuagroup.com/ (4895 chars)\n--- منابع لجستیک/اقتصاد صادراتی ---\n[OK] fetched https://www.globaltimes.cn/business/ (5000 chars)\n[OK] fetched https://gcaptain.com/tag/container-freight-rates/ (5000 chars)\n[WARN] failed to fetch https://www.container-news.com/: HTTP Error 403: Forbidden\n\n[OK] رصد چین 2026-10-25 ذخیره شد — 3 خبر شرکتی، 2 خبر لجستیکی.\n"
+    "started_at": "2026-10-26T11:23:35.348191+00:00",
+    "finished_at": "2026-10-26T11:24:20.780853+00:00",
+    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.shandong-haihua.net/news.html (5000 chars)\n[OK] fetched http://en.haihua.com.cn/product_1/4.html (5000 chars)\n[OK] fetched http://www.en.chinayuhuagroup.com/ (4895 chars)\n--- منابع لجستیک/اقتصاد صادراتی ---\n[OK] fetched https://www.globaltimes.cn/business/ (5000 chars)\n[OK] fetched https://gcaptain.com/tag/container-freight-rates/ (5000 chars)\n[WARN] failed to fetch https://www.container-news.com/: HTTP Error 403: Forbidden\n\n[OK] رصد چین 2026-10-26 ذخیره شد — 2 خبر شرکتی، 2 خبر لجستیکی.\n"
   },
   "transit": {
     "ok": true,
     "exit_code": 0,
     "timed_out": false,
-    "started_at": "2026-10-25T10:06:30.449385+00:00",
-    "finished_at": "2026-10-25T10:06:39.607694+00:00",
-    "output_tail": "[OK] amintara50: 12 پست استخراج شد\n[OK] jadeh_app: 7 پست استخراج شد\n\n[DONE] 19 پست (9 با قیمت صریح) در /home/runner/work/petro-market-platform/petro-market-platform/data/transit_log.json ذخیره شد.\n"
+    "started_at": "2026-10-26T11:24:20.813340+00:00",
+    "finished_at": "2026-10-26T11:24:29.171576+00:00",
+    "output_tail": "[OK] amintara50: 10 پست استخراج شد\n[OK] jadeh_app: 8 پست استخراج شد\n\n[DONE] 18 پست (10 با قیمت صریح) در /home/runner/work/petro-market-platform/petro-market-platform/data/transit_log.json ذخیره شد.\n"
   }
 }
