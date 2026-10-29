@@ -9,7 +9,7 @@
     "region_address": "Lipetsk",
     "website": "https://www.itstime.group",
     "website_source": "exhibitor_directory",
-    "email": "info@itstime.group",
+    "email": "",
     "email_source": "exhibitor_directory",
     "relevant": true,
     "company_type": "trader",
@@ -17,7 +17,13 @@
     "llm_reason": "نماینده تامین‌کننده مواد اولیه غذایی",
     "_order": 6,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": false,
+    "email_rejected": [
+      {
+        "email": "info@itstime.group",
+        "reason": "دامنه وجود ندارد یا ایمیل نمی‌گیرد"
+      }
+    ]
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113480": {
     "name": "AVANGARD GROUP OF COMPANIES",
@@ -37,7 +43,8 @@
     "llm_reason": "تولیدکننده افزودنی‌ها و طعم‌دهنده‌های غذایی",
     "_order": 9,
     "whatsapp": "+74952301497",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114604": {
     "name": "ACADEMY-T, LLC",
@@ -58,7 +65,8 @@
     "_order": 10,
     "whatsapp": "74951398993",
     "email_alt": "info@act-ingredients.ru",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114318": {
     "name": "ALLIANCE SERVICE, LLC",
@@ -80,7 +88,8 @@
     "_order": 11,
     "whatsapp": "+74997033176",
     "email_alt": "info@ascorbic.ru",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113491": {
     "name": "AMETIS",
@@ -100,7 +109,8 @@
     "llm_reason": "تولیدکننده مواد استخراج‌شده طبیعی برای صنایع غذایی",
     "_order": 12,
     "whatsapp": "+78007700696",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113139": {
     "name": "AMURSKY OIL EXTRACTION PLANT, LLC",
@@ -121,7 +131,8 @@
     "_order": 13,
     "whatsapp": "+74162201000",
     "email_alt": "aac@amuragro.ru",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113691": {
     "name": "BIOZEVTIKA",
@@ -140,7 +151,8 @@
     "suggested_grade": "گرید غذایی – طعم‌دهنده طبیعی",
     "llm_reason": "تولیدکننده طعم‌دهنده‌های طبیعی از ادویه‌جات و گیاهان دارویی",
     "_order": 15,
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113166": {
     "name": "VIDYA RUS LLC",
@@ -161,7 +173,8 @@
     "_order": 16,
     "whatsapp": "+79215910819",
     "email_alt": "info@vidyarus.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113072": {
     "name": "VKUSAROMA MC LLC",
@@ -182,7 +195,8 @@
     "_order": 17,
     "whatsapp": "+78123264812",
     "email_alt": "info@khpa.ru",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113456": {
     "name": "GCD GROUP, LTD",
@@ -202,7 +216,8 @@
     "llm_reason": "تولیدکننده طعم‌دهنده‌های مخصوص فرآورده‌های گوشتی",
     "_order": 18,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113163": {
     "name": "DINAMIC",
@@ -222,7 +237,8 @@
     "llm_reason": "نماینده تولیدکننده رنگ‌های مصنوعی خوراکی",
     "_order": 19,
     "whatsapp": "+78122411238",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113452": {
     "name": "DON-AGRO, LLC",
@@ -243,7 +259,8 @@
     "llm_reason": "تولیدکننده و فرآورده‌های میوه‌ای (پلی) برای بازار غذایی",
     "_order": 20,
     "email_alt": "dary.sadov@yandex.ru",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114644": {
     "name": "RAMIX",
@@ -263,7 +280,8 @@
     "llm_reason": "تامین‌گر کاسینگ‌های طبیعی برای صنایع گوشتی",
     "_order": 37,
     "whatsapp": "79185932978",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114487": {
     "name": "RUSEXTRACT",
@@ -283,7 +301,8 @@
     "llm_reason": "تولید و فروش عصاره‌های گیاهی برای صنایع غذایی",
     "_order": 40,
     "whatsapp": "+79001019900",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113227": {
     "name": "SELL-SERVICE LTD.",
@@ -303,7 +322,8 @@
     "llm_reason": "واردکننده مستقیم مواد اولیه و افزودنی‌های غذایی",
     "_order": 43,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113444": {
     "name": "SELL-SERVICE",
@@ -323,7 +343,8 @@
     "llm_reason": "واردکننده مستقیم مواد اولیه و افزودنی‌های غذایی",
     "_order": 44,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113851": {
     "name": "CITI IMPEX COMPANY LTD",
@@ -342,7 +363,8 @@
     "suggested_grade": "گرید غذایی – مواد گیاهی",
     "llm_reason": "تامین مواد گیاهی و گیاه‌دار برای صنایع غذایی",
     "_order": 45,
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113307": {
     "name": "FORMULA FOOD",
@@ -362,7 +384,8 @@
     "llm_reason": "شرکت تجاری در زمینه نشاسته و افزودنی‌های غذایی",
     "_order": 50,
     "whatsapp": "+74952976662",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113382": {
     "name": "DEOSEN BIOCHEMICAL (ORDOS) LTD",
@@ -383,7 +406,8 @@
     "_order": 69,
     "whatsapp": "0533-7220853",
     "email_alt": "Grace.dou@deosen.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113587": {
     "name": "DIXIANG(DALI) BIOTECHNOLOGY CO., LTD.",
@@ -405,7 +429,8 @@
     "whatsapp": "+86-17717633275",
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
     "email_alt": "info@wingengroup.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113236": {
     "name": "DONGGUAN BELLA BIOTECH CO., LTD.",
@@ -425,7 +450,8 @@
     "llm_reason": "تولیدکننده‌ی طعم، عطر و عصاره‌های طبیعی برای صنایع غذایی",
     "_order": 71,
     "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113235": {
     "name": "DONGXIAO BIOTECHNOLOGY CO., LTD",
@@ -445,7 +471,8 @@
     "llm_reason": "تولیدکننده‌ی فرآورده‌های ذرت با کاربرد در صنایع خوراکی",
     "_order": 72,
     "whatsapp": "0536-6528866",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114114": {
     "name": "ENCAPSCIFI LIFESCIENCES PRIVATE LIMITED",
@@ -466,7 +493,8 @@
     "_order": 73,
     "whatsapp": "+91 8075673248",
     "email_alt": "admin@encapscifi.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113538": {
     "name": "FOODCHEM INTERNATIONAL CORPORATION",
@@ -486,7 +514,8 @@
     "llm_reason": "تولیدکننده‌ی افزودنی‌ها و مواد اولیه غذایی",
     "_order": 75,
     "whatsapp": "+19121036353",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113262": {
     "name": "FORTWAY CHEMICALS",
@@ -506,7 +535,8 @@
     "llm_reason": "توزیع‌کننده‌ی اسیدها، ویتامین‌ها و شیرین‌کننده‌های خوراکی",
     "_order": 76,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113827": {
     "name": "FUJIAN GLOBAL OCEAN BIOTECHNOLOGY CO., LTD.",
@@ -526,7 +556,8 @@
     "llm_reason": "تولیدکننده‌ی هیدروکلوئیدهای خوراکی",
     "_order": 77,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113385": {
     "name": "GANSU LIRCON BIOLOGICAL CO.,LTD.",
@@ -546,7 +577,8 @@
     "llm_reason": "تولیدکننده‌ی اینولین و دیگر فیبرهای خوراکی",
     "_order": 80,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114410": {
     "name": "LIANYUNGANG KEDE FOOD INGREDIENTS CO.,LTD",
@@ -566,7 +598,8 @@
     "llm_reason": "تولیدکنندهٔ افزودنی‌های غذایی",
     "_order": 111,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113553": {
     "name": "LIANYUNGANG NUOXIN FOOD INGREDIENT CO., LTD",
@@ -586,7 +619,8 @@
     "llm_reason": "تولیدکنندهٔ افزودنی‌های غذایی و خوراکی",
     "_order": 112,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113611": {
     "name": "LIANYUNGANG SHUREN KECHUANG FOOD ADDITIVE CO., LTD.",
@@ -606,7 +640,8 @@
     "llm_reason": "تولیدکنندهٔ افزودنی‌های غذایی",
     "_order": 113,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113649": {
     "name": "LTW (JIANGSU) LLC",
@@ -626,7 +661,8 @@
     "llm_reason": "تولیدکنندهٔ بزرگ افزودنی‌های غذایی",
     "_order": 114,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113799": {
     "name": "NEWTREND GROUP HOLDING CO., LTD.",
@@ -647,7 +683,8 @@
     "_order": 116,
     "whatsapp": "0755-86322798",
     "email_alt": "csm-nanchang@300.cn",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113549": {
     "name": "QINGDAO PENGYUAN KANGHUA NATURAL SOURCE CO., LTD.",
@@ -668,7 +705,8 @@
     "_order": 119,
     "whatsapp": "8613658653371",
     "email_alt": "asen.zhan@qdpy.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113682": {
     "name": "QINGDAO SAMIN CHEMICAL CO.,LTD.",
@@ -688,7 +726,8 @@
     "llm_reason": "تولیدکنندهٔ مواد شیمیایی خوراکی و افزودنی‌های غذایی",
     "_order": 120,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114327": {
     "name": "QINGDAO SHENGDA COMMERCIAL & TRADE CO.,LTD",
@@ -708,7 +747,8 @@
     "llm_reason": "صادرکننده و توزیع‌کننده محصولات مرتبط با ذرت و افزودنی‌های غذایی",
     "_order": 121,
     "whatsapp": "+86-532-8501-0535",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114129": {
     "name": "QINGDAO Z & F SUNGOLD INTERNATIONAL TRADE CO., LTD",
@@ -728,7 +768,8 @@
     "llm_reason": "توزیع‌کنندهٔ افزودنی‌های خوراکی و ترکیبات دارویی",
     "_order": 122,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113914": {
     "name": "QINHUANGDAO LIHUA STARCH CO. LTD.",
@@ -748,7 +789,8 @@
     "llm_reason": "تولیدکنندهٔ محصولات نشاسته‌ای و شکرهای خوراکی",
     "_order": 123,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "a_only"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113663": {
     "name": "QZU Co.,Ltd.",
@@ -768,7 +810,8 @@
     "llm_reason": "تولیدکنندهٔ پیش‌مخلوط‌های تغذیه‌ای و نوکلئوتیدها",
     "_order": 124,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113232": {
     "name": "RUNDA FOOD TECHNOLOGY (SHANDONG) CO., LTD",
@@ -788,7 +831,8 @@
     "llm_reason": "تولیدکنندهٔ مواد نگهدارنده و افزودنی‌های غذایی",
     "_order": 125,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113305": {
     "name": "RZBC(JUXIAN) CO., LTD.",
@@ -808,7 +852,8 @@
     "llm_reason": "تولید کننده‌ی اسید سیتریک و دیگر مواد افزودنی غذایی",
     "_order": 126,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113153": {
     "name": "SATGURU GUM INDUSTRIES",
@@ -820,7 +865,7 @@
     "region_address": "Wadhwan, 502-B, G.I.D.C Phase III",
     "website": "https://www.sgaind.com",
     "website_source": "exhibitor_directory",
-    "email": "www.satguruind.com",
+    "email": "",
     "email_source": "exhibitor_directory",
     "relevant": true,
     "company_type": "manufacturer",
@@ -828,7 +873,13 @@
     "llm_reason": "تولید کننده‌ی گام‌های خوراکی و مواد افزودنی",
     "_order": 127,
     "email_alt": "rmehta@satguruind.com",
-    "contact_checked": true
+    "contact_checked": false,
+    "email_rejected": [
+      {
+        "email": "www.satguruind.com",
+        "reason": "ساختار نامعتبر"
+      }
+    ]
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113627": {
     "name": "SEVEN STAR LEMON TECHNOLOGY CO., LTD.",
@@ -848,7 +899,8 @@
     "llm_reason": "تولید کننده‌ی اسید سیتریک برای صنایع غذایی",
     "_order": 128,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113228": {
     "name": "SHANDONG BAILONG CHUANGYUAN BIO-TECH CO.,LTD",
@@ -867,7 +919,8 @@
     "suggested_grade": "گرید غذایی – افزودنی",
     "llm_reason": "تولید کننده‌ی بیوتکنولوژی مواد غذایی",
     "_order": 129,
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113313": {
     "name": "SHANDONG BIGTREE DREYFUS SPECIAL MEALS FOOD CO., LTD",
@@ -887,7 +940,8 @@
     "llm_reason": "تولید کننده‌ی کرم‌های غیر لبنی، طعم‌دهنده‌ها و مواد غذایی دیگر",
     "_order": 130,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113476": {
     "name": "SHANDONG ENSIGN INDUSTRY CO., LTD.",
@@ -907,7 +961,8 @@
     "llm_reason": "تولید کننده‌ی اسید سیتریک، سیترات و سایر افزودنی‌ها",
     "_order": 131,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114430": {
     "name": "SHANDONG STARLIGHT SO TRUE BIOLOGICAL TECHNOLOGY CO., LTD",
@@ -927,7 +982,8 @@
     "llm_reason": "تولید کننده‌ی فناوری‌های بیولوژیکی مرتبط با غذا",
     "_order": 132,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113846": {
     "name": "SHANGHAI MERRY YANG ENTERPRISE CO., LTD.",
@@ -948,7 +1004,8 @@
     "_order": 133,
     "whatsapp": "86-21-62601306",
     "email_alt": "dm-pudong@300.cn",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113268": {
     "name": "SHANGHAI NATURE BIOTECHNOLOGY CO.,LTD.",
@@ -968,7 +1025,8 @@
     "llm_reason": "دفتر فروش گروهی مواد غذایی و توزیع‌کننده",
     "_order": 134,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113230": {
     "name": "SHANGHAI PINRAN HEALTH TECHNOLOGY CO., LTD.",
@@ -988,7 +1046,8 @@
     "llm_reason": "توزیع‌کننده و شریک زنجیره ارزش هیدروکلوئیدها و مواد تغذیه‌ای",
     "_order": 135,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114666": {
     "name": "SHANGHAI QUEZHIYOU FOOD CO., LTD.",
@@ -1008,7 +1067,8 @@
     "llm_reason": "تولید کننده‌ی طعم‌دهنده‌ها و مواد غذایی مخصوص",
     "_order": 136,
     "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114411": {
     "name": "SHANGHAI YINONG BIOLOGICAL TECHNOLOGY CO., LTD.",
@@ -1028,7 +1088,8 @@
     "llm_reason": "توسعه و تولید میکروارگانیسم‌های کاربردی در صنایع غذایی",
     "_order": 137,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113357": {
     "name": "SHANXI HENGQIANG CHEMICAL CO.,LTD.",
@@ -1048,7 +1109,8 @@
     "llm_reason": "تولید کننده‌ی اسیدهای مختلف و نمک‌های خوراکی",
     "_order": 138,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113659": {
     "name": "SHAOXING WEILE BIOTECHNOLOGY CO., LTD.",
@@ -1068,7 +1130,8 @@
     "llm_reason": "تولید کننده‌ی ویتامین‌ها، کاروتنوئیدها و رنگ‌های خوراکی",
     "_order": 139,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113800": {
     "name": "SHIFANG ZHIXIN CHEMICAL CO., LTD",
@@ -1088,7 +1151,8 @@
     "llm_reason": "تولید کننده‌ی فسفات‌ها و مواد شیمیایی خوراکی",
     "_order": 140,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114331": {
     "name": "SUIZHOU SHILIDA BIOTECHNOLOGY CO., LTD.",
@@ -1108,7 +1172,8 @@
     "llm_reason": "تولیدکننده مواد شیمیایی خوراکی و عصاره‌های گیاهی برای صنایع غذایی",
     "_order": 142,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114431": {
     "name": "SUNRISE FOOD INGREDIENTS (HUAINAN) CO., LTD.",
@@ -1129,7 +1194,8 @@
     "_order": 143,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
     "email_alt": "info@sunacetate.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113359": {
     "name": "TIANJIN HEXIYUAN LECITHIN TECHNOLOGY CO., LTD",
@@ -1149,7 +1215,8 @@
     "llm_reason": "تولیدکننده لسیثین سویا برای صنایع غذایی",
     "_order": 144,
     "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد و جست‌وجوی وب هم چیزی نداد",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114459": {
     "name": "VITAJOY (JIAXING) NUTRITION CO., LTD",
@@ -1169,7 +1236,8 @@
     "llm_reason": "شرکت محصولات تغذیه‌ای و مکمل‌های بهداشتی تولید می‌کند",
     "_order": 145,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113623": {
     "name": "WECARE PROBIOTICS CO., LTD.",
@@ -1190,7 +1258,8 @@
     "_order": 146,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
     "email_alt": "sales@wecare-life.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114130": {
     "name": "WEIFANG CENTURY-LIGHT BIOLOGY SCIENCE CO.,LTD.",
@@ -1212,7 +1281,8 @@
     "whatsapp": "0536-2185399",
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
     "email_alt": "office@grainmills.cn",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113231": {
     "name": "WEIKUANG（JINING）NEW MATERIALS CO., LTD",
@@ -1233,7 +1303,8 @@
     "_order": 148,
     "whatsapp": "+862168580751",
     "email_alt": "info@sourceingredients.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "a_only"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113935": {
     "name": "WEISHAN HENGXIN  FOODS CO.,LTD.",
@@ -1253,7 +1324,8 @@
     "llm_reason": "شرکت فعال در تولید مواد غذایی",
     "_order": 149,
     "whatsapp": "+8619508463685",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113264": {
     "name": "WUHAN LANDMARK INDUSTRIAL CO.,LTD.",
@@ -1274,7 +1346,8 @@
     "_order": 150,
     "whatsapp": "+86-18062520447",
     "email_alt": "dm-wuhan@300.cn",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113830": {
     "name": "WUHAN WAKING LION CHEMICALS CO.,LTD.",
@@ -1294,7 +1367,8 @@
     "llm_reason": "تولیدکننده فسفات‌ها و مواد شیمیایی خوراکی",
     "_order": 151,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113988": {
     "name": "WUXI HUIDE FOOD CO., LTD",
@@ -1313,7 +1387,8 @@
     "suggested_grade": "گرید غذایی – شکلات/قهوه",
     "llm_reason": "تولیدکننده محصولات کاکائویی خوراکی",
     "_order": 152,
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113909": {
     "name": "WUXI JINNONG BIOTECHNOLOGY CO., LTD.",
@@ -1333,7 +1408,8 @@
     "llm_reason": "تولیدکننده پروتئین برنج و سایر پروتئین‌های خوراکی",
     "_order": 153,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113233": {
     "name": "WUXI XINJINGYUAN FOOD TECHNOLOGY CO., LTD.",
@@ -1354,7 +1430,8 @@
     "_order": 154,
     "whatsapp": "0086-137-7106-28",
     "email_alt": "info@skyswancocoa.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114398": {
     "name": "XINGHUA FULLWEALTH FOODS CO., LTD",
@@ -1374,7 +1451,8 @@
     "llm_reason": "تولیدکننده سبزیجات خشک و ادویه‌های خوراکی",
     "_order": 155,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=112961": {
     "name": "CHEMBROKER",
@@ -1394,7 +1472,8 @@
     "llm_reason": "تامین‌کننده مواد اولیه غذایی",
     "_order": 111,
     "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113189": {
     "name": "ECO RESOURCE, JSC",
@@ -1414,7 +1493,8 @@
     "llm_reason": "تولید کننده افزودنی‌های غذایی",
     "_order": 113,
     "whatsapp": "5114630054",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113446": {
     "name": "ECOCOLOR TK, LLC",
@@ -1434,7 +1514,8 @@
     "llm_reason": "تولید کننده مواد طبیعی و افزودنی برای صنایع غذایی",
     "_order": 114,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113086": {
     "name": "ECOS",
@@ -1455,7 +1536,8 @@
     "_order": 115,
     "whatsapp": "+7 499 940 56 86",
     "email_alt": "hello@ecosgp.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114127": {
     "name": "ADASI GROUP SDN BHD",
@@ -1475,7 +1557,8 @@
     "llm_reason": "شرکت تجاری واردکننده و توزیع‌کننده مواد غذایی",
     "_order": 118,
     "whatsapp": "60123984430",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113962": {
     "name": "ALASHANKOU DEHUI INTERNATIONAL TRADE CO.,LTD",
@@ -1515,7 +1598,8 @@
     "llm_reason": "تولید کننده ترکیبات شیمیایی مصرفی در صنایع غذایی",
     "_order": 120,
     "email_alt": "customerservice@xingzhoupharma.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113761": {
     "name": "BEIJING HERONSBILL FOOD MATERIAL CO. ,LTD",
@@ -1535,7 +1619,8 @@
     "llm_reason": "تولید و فروش مواد غذایی و افزودنی‌ها",
     "_order": 121,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113487": {
     "name": "BIOAMIN LIMITED",
@@ -1556,7 +1641,8 @@
     "llm_reason": "تأمین‌کننده مواد غذایی و مکمل‌های ویتامینی",
     "_order": 122,
     "email_alt": "info@bioamingroup.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114032": {
     "name": "BIOGGROWING CO., LTD",
@@ -1576,7 +1662,8 @@
     "llm_reason": "تولید کننده پروبیوتیک‌های غذایی",
     "_order": 123,
     "email_alt": "cs@Biogrowing.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113911": {
     "name": "HENAN WEICHUANG BIO-TECH CO., LTD.",
@@ -1596,7 +1683,8 @@
     "llm_reason": "تولیدکننده‌ی افزودنی‌های غذایی مانند سرکه و نگهدارنده",
     "_order": 141,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113715": {
     "name": "HENAN YACH GELATIN CO.,LTD.",
@@ -1616,7 +1704,8 @@
     "llm_reason": "تولیدکننده‌ی ژلاتین برای صنایع غذایی",
     "_order": 142,
     "email_alt": "henanboom@boomgelatin.com.cn",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113239": {
     "name": "HENAN ZHENGTONG FOOD TECHNOLOGY CO., LTD.",
@@ -1636,7 +1725,8 @@
     "llm_reason": "توسعه و تولید امولسیفایرهای غذایی",
     "_order": 143,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113845": {
     "name": "HENAN ZHONGDA HENGYUAN BIOTECHNOLOGY STOCK CO., LTD",
@@ -1656,7 +1746,8 @@
     "llm_reason": "تولید رنگ‌های طبیعی، شیرین‌کننده‌های طبیعی و عصاره‌های گیاهی برای مواد غذایی",
     "_order": 144,
     "whatsapp": "+86-18135628101",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113879": {
     "name": "HIGH HOPE FOODS (NANJING) CO., LTD.",
@@ -1675,7 +1766,8 @@
     "suggested_grade": "گرید غذایی – هیدروکلوئید",
     "llm_reason": "تولید هیدروکلوئیدهای خوراکی مانند کاراژن و آلژینات سدیم",
     "_order": 145,
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113500": {
     "name": "HUNAN NEW MSTAR BIOTECHNOLOGY CO., LTD",
@@ -1695,7 +1787,8 @@
     "llm_reason": "استخراج ترکیبات فعال از گیاهان برای کاربردهای خوراکی",
     "_order": 147,
     "whatsapp": "8617673604532",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114068": {
     "name": "HUNAN SUNFULL BIO-TECH CO., LTD",
@@ -1715,7 +1808,8 @@
     "llm_reason": "تولید عصاره‌های گیاهی با کاربردهای خوراکی",
     "_order": 148,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113610": {
     "name": "JIANGSU BENEFIT OCEAN TECHNOLOGY CO., LTD.",
@@ -1735,7 +1829,8 @@
     "llm_reason": "تولید سدیم آلژینات و کاراژن برای صنایع غذایی",
     "_order": 149,
     "whatsapp": "+86 518 86780077",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114132": {
     "name": "JIANGSU GUOXIN UNION ENERGY CO., LTD",
@@ -1755,7 +1850,8 @@
     "llm_reason": "تولید اسید سیتریک و محصولات مشتق‌شده برای کاربردهای خوراکی",
     "_order": 150,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113959": {
     "name": "JIANGSU QISONG FOOD TECHNOLOGY CO., LTD.",
@@ -1775,7 +1871,8 @@
     "llm_reason": "تولید افزودنی‌های سدیم دیاسیتات برای صنایع غذایی",
     "_order": 152,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113527": {
     "name": "JIANGSU ZIPIN BIOTECH CO.,LTD.",
@@ -1795,7 +1892,8 @@
     "llm_reason": "ارائه راهکارهای بهبود بافت و ماندگاری برای صنایع غذایی",
     "_order": 153,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113710": {
     "name": "KINGHERBS LIMITED",
@@ -1816,7 +1914,8 @@
     "_order": 155,
     "whatsapp": "+86 731 89865683",
     "email_alt": "info@kingherbs.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113913": {
     "name": "AUSEN CHEMICAL GROUP CO., LTD",
@@ -1836,7 +1935,8 @@
     "llm_reason": "تولید کننده افزودنی‌های غذایی",
     "_order": 171,
     "email_alt": "info@ausenchem.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113499": {
     "name": "HYLEN CO.,LTD.",
@@ -1856,7 +1956,8 @@
     "llm_reason": "تولید کننده مواد اولیه غذایی",
     "_order": 172,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113234": {
     "name": "JIANGSU KOLOD FOOD INGREDIENTS CO., LTD",
@@ -1876,7 +1977,8 @@
     "llm_reason": "تولید کننده افزودنی‌های غذایی",
     "_order": 174,
     "email_alt": "sales3239@jskolod.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113960": {
     "name": "CHONGQING LIHONG FINE CHEMICALS CO., LTD.",
@@ -1896,7 +1998,8 @@
     "llm_reason": "تولید کننده افزودنی‌های غذایی",
     "_order": 176,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113492": {
     "name": "SHANDONG JIANYUAN BIOENGINEERING CO., LTD.",
@@ -1916,7 +2019,8 @@
     "llm_reason": "تولید و توزیع مواد اولیه غذایی",
     "_order": 178,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113437": {
     "name": "ETON FOOD CO.,LTD",
@@ -1936,7 +2040,8 @@
     "llm_reason": "تولید کننده افزودنی‌های غذایی",
     "_order": 179,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113548": {
     "name": "YANTAI SHUANGTA FOOD CO.,LTD",
@@ -1956,7 +2061,8 @@
     "llm_reason": "تولید کننده پروتئین‌های غذایی",
     "_order": 180,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113495": {
     "name": "YANTAI ZHAOYI BIOCHNOLOGY CO., LTD.",
@@ -1976,7 +2082,8 @@
     "llm_reason": "تولید کننده افزودنی‌های شیمیایی غذایی",
     "_order": 181,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114488": {
     "name": "UTS GROUP",
@@ -1996,7 +2103,8 @@
     "llm_reason": "توزیع‌کننده مواد افزودنی غذایی",
     "_order": 137,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113468": {
     "name": "INVITA",
@@ -2017,7 +2125,8 @@
     "_order": 138,
     "whatsapp": "+74952870733",
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114420": {
     "name": "COMPONENT-LACTIS, LLC",
@@ -2039,7 +2148,8 @@
     "_order": 141,
     "whatsapp": "79991060932",
     "email_alt": "sale@provita-lactis.ru",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113539": {
     "name": "LEKO STYLE TPC",
@@ -2059,7 +2169,8 @@
     "llm_reason": "تأمین‌کنندهٔ مواد اولیه و افزودنی‌های خوراکی",
     "_order": 142,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114159": {
     "name": "NATURAFOLICA",
@@ -2079,7 +2190,8 @@
     "llm_reason": "تأمین‌کنندهٔ عصاره‌ها و مواد افزودنی غذایی",
     "_order": 145,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113461": {
     "name": "OCHAKOVO FACTORY OF FOOD INGREDIENTS CO., LTD",
@@ -2100,7 +2212,8 @@
     "_order": 149,
     "whatsapp": "+74952691010",
     "email_alt": "alexandr.savkov@okpi.ru",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113684": {
     "name": "GUANGDONG WINCOM FLAVORS & FRAGRANCES CO.,LTD.",
@@ -2120,7 +2233,8 @@
     "llm_reason": "تولیدکننده‌ی افزودنی‌های غذایی (عطر و طعم)",
     "_order": 152,
     "email_alt": "wincom@wincomff.com.cn",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114451": {
     "name": "GUANGXI JINYUAN BIOCHEMICAL INDUSTRIAL CO.,LTD",
@@ -2140,7 +2254,8 @@
     "llm_reason": "تولیدکننده‌ی افزودنی‌های غذایی و حلال‌های شیمیایی",
     "_order": 153,
     "email_alt": "jybc@jinyuan-biochem.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113650": {
     "name": "GUANGYE L&P FOOD INGREDIENT CORP., LTD.",
@@ -2160,7 +2275,8 @@
     "llm_reason": "تولیدکننده‌ی شیرین‌کننده‌ها و آنتی‌اکسیدان‌های غذایی",
     "_order": 154,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114457": {
     "name": "HANGZHOU GREENSKY BIOLOGICAL TECH. CO., LTD",
@@ -2180,7 +2296,8 @@
     "llm_reason": "تولیدکننده‌ی مکمل‌های تغذیه‌ای و عصاره‌های گیاهی",
     "_order": 156,
     "email_alt": "sales@greenskybio.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113370": {
     "name": "HANGZHOU SKYHERB TECHNOLOGIES CO.,LTD.",
@@ -2200,7 +2317,8 @@
     "llm_reason": "تولیدکننده‌ی عصاره‌های گیاهی برای کاربردهای غذایی",
     "_order": 157,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114096": {
     "name": "HEBEI FINUTRA BIOTECH CO., LTD",
@@ -2220,7 +2338,8 @@
     "llm_reason": "تامین‌کننده‌ی مواد خام و افزودنی‌های عملکردی غذایی",
     "_order": 158,
     "whatsapp": "0086-(0)311-86900072",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113931": {
     "name": "HEBEIHUAHENG BIOLOGICAL TECHNOLOGY CO., LTD.",
@@ -2240,7 +2359,8 @@
     "llm_reason": "تولیدکننده‌ی اسیدهای آمینه و مواد اولیه غذایی",
     "_order": 160,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113717": {
     "name": "HEBEI HUAYU YONGCHENG FOOD CO., LTD",
@@ -2260,7 +2380,8 @@
     "llm_reason": "شرکت فعال در صنایع فرآوری غذایی",
     "_order": 161,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113940": {
     "name": "HENAN CHEMSINO INDUSTRY CO., LTD",
@@ -2280,7 +2401,8 @@
     "llm_reason": "تولیدکننده‌ی امولسیون‌کننده‌های غذایی",
     "_order": 162,
     "whatsapp": "8618837171591",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113655": {
     "name": "HENAN CHIA TAI BIOCHEMISTRY TRADING CO., LTD",
@@ -2300,7 +2422,8 @@
     "llm_reason": "بازرگانی و توزیع مواد بیوتکنولوژی غذایی",
     "_order": 163,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113493": {
     "name": "HENAN HONEST INDUSTRIAL CO.,LTD",
@@ -2320,7 +2443,8 @@
     "llm_reason": "شرکت فعال در تحقیق و تولید مواد غذایی",
     "_order": 164,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113311": {
     "name": "HENAN JINDAN LACTIC ACID TECHNOLOGY CO., LTD",
@@ -2340,7 +2464,8 @@
     "llm_reason": "تولیدکننده‌ی اسید لاکتیک برای کاربردهای غذایی",
     "_order": 165,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113829": {
     "name": "HENAN TIANMIMI SUGAR INDUSTRY CO., LTD",
@@ -2361,7 +2486,8 @@
     "_order": 166,
     "whatsapp": "+8613523526587",
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114326": {
     "name": "XINGHUA LIANFU FOOD CO., LTD.",
@@ -2381,7 +2507,8 @@
     "llm_reason": "شرکت فعال در تولید مواد غذایی است",
     "_order": 167,
     "contact_note": "لینک وب‌سایت در پروفایل نمایشگاه پیدا نشد و جست‌وجوی وب هم چیزی نداد",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114011": {
     "name": "YANTAI HONGRI BIOTECH CO., LTD.",
@@ -2403,7 +2530,8 @@
     "whatsapp": "0535-3881999",
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
     "email_alt": "haiyanghonmao@163.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113964": {
     "name": "YANTAI OUGUO PEANUT OIL CO.,LTD",
@@ -2423,7 +2551,8 @@
     "llm_reason": "تولید روغن و پروتئین بادام زمینی به عنوان ماده اولیه غذایی",
     "_order": 169,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "a_only"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114008": {
     "name": "YANTAI ZHOUJI MARINE BIOTECHNOLOGY CO.,LTD",
@@ -2443,7 +2572,8 @@
     "llm_reason": "تولید آلژینات و سایر افزودنی‌های دریایی",
     "_order": 170,
     "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113435": {
     "name": "YUSWEET CO.,LTD.",
@@ -2463,7 +2593,8 @@
     "llm_reason": "تولید پلیول‌های خوراکی برای صنایع قنادی",
     "_order": 172,
     "email_alt": "yuxin_donny@ayyuxin.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113778": {
     "name": "ZHEJIANG HUAKANG PHARMACEUTICAL CO., LTD",
@@ -2483,7 +2614,8 @@
     "llm_reason": "تولید پلیول‌ها و مواد پایه گیاهی برای مواد خوراکی",
     "_order": 173,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113314": {
     "name": "ZHEJIANG QILI XINGGUANG COCOA PRODUCTS CORP., LTD",
@@ -2504,7 +2636,8 @@
     "_order": 174,
     "whatsapp": "86-0575-88172219",
     "email_alt": "dm-shaoxing@300.cn",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113621": {
     "name": "ZHEJIANG ZANCHENG LIFE SCIENCES LTD.",
@@ -2524,7 +2657,8 @@
     "llm_reason": "تولید و تامین افزودنی‌های غذایی و خوراکی",
     "_order": 176,
     "whatsapp": "8615579137947",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113683": {
     "name": "ZHOUKOU ZHIYUAN GELATIN TRADE CO., LTD",
@@ -2544,7 +2678,8 @@
     "llm_reason": "تولید ژلاتین برای کاربردهای غذایی",
     "_order": 177,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114397": {
     "name": "LIANYUNGANG TIANTIAN SEAWEED INDUSTRIAL CO.,LTD.",
@@ -2564,7 +2699,8 @@
     "llm_reason": "تولید محصولات دریایی برای صنایع غذایی",
     "_order": 178,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114329": {
     "name": "LINYI ZENITH IMPORT AND EXPORT CO., LTD.",
@@ -2585,7 +2721,8 @@
     "_order": 179,
     "whatsapp": "+1-855-374-1199",
     "email_alt": "media@importgenius.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113321": {
     "name": "ZHONGNUO BIOTECHNOLOGY DEVELOPMENT JIANGSU CO., LTD",
@@ -2605,7 +2742,8 @@
     "llm_reason": "تولید آنزیم‌های غذایی برای صنایع مختلف",
     "_order": 180,
     "email_alt": "admin@znsw.cn",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113371": {
     "name": "XIAMEN ADDFUN BIOTECHNOLOGY CO.. LTD",
@@ -2625,7 +2763,8 @@
     "llm_reason": "تولید هیدروکلوئیدهای خوراکی برای کاربردهای غذایی",
     "_order": 181,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114381": {
     "name": "MILKNEWS",
@@ -2655,7 +2794,7 @@
     "region_address": "",
     "website": "https://dairylandllc.com/o-kompanii",
     "website_source": "web_search",
-    "email": "inofo@dairygrup.ru",
+    "email": "",
     "email_source": "exhibitor_directory",
     "relevant": true,
     "company_type": null,
@@ -2665,7 +2804,13 @@
     "needs_review": true,
     "whatsapp": "79935075859",
     "email_alt": "info@dairylandllc.com",
-    "contact_checked": true
+    "contact_checked": false,
+    "email_rejected": [
+      {
+        "email": "inofo@dairygrup.ru",
+        "reason": "دامنه وجود ندارد یا ایمیل نمی‌گیرد"
+      }
+    ]
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=112960": {
     "name": "EUROPEAN TECHNOLOGIES",
@@ -2686,7 +2831,8 @@
     "_order": 132,
     "needs_review": true,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113261": {
     "name": "HEALTANG BIOTECH CO.,LTD.",
@@ -2707,7 +2853,8 @@
     "_order": 133,
     "needs_review": true,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114396": {
     "name": "WEINAN RIGEL TRADING CO., LTD.",
@@ -2728,7 +2875,8 @@
     "_order": 134,
     "needs_review": true,
     "whatsapp": "15909136633",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "a_only"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113524": {
     "name": "JIA",
@@ -2841,7 +2989,8 @@
     "_order": 140,
     "whatsapp": "79101303221",
     "email_alt": "manager@kzg-nn.ru",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114373": {
     "name": "MILKLIFE.RU",
@@ -2881,7 +3030,8 @@
     "_order": 142,
     "whatsapp": "+78001008087",
     "email_alt": "Purchase@agrohold.ru",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113157": {
     "name": "NOVAPRODUKT AG",
@@ -2901,7 +3051,8 @@
     "llm_reason": "تولید محصولات غذایی ویژه و مکمل",
     "_order": 143,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114345": {
     "name": "OSNOVNOY PRODUCT",
@@ -2922,7 +3073,8 @@
     "_order": 144,
     "whatsapp": "79272072441",
     "email_alt": "mm@o-produkt.ru",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114378": {
     "name": "OTRASLEVIYE VEDOMOSTY PUBLISHING HOUSE",
@@ -2979,7 +3131,8 @@
     "_order": 147,
     "whatsapp": "+(375)257-127-884",
     "email_alt": "gtn@nt-rt.ru",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114266": {
     "name": "PROTEK-SVM, FIRM",
@@ -3018,7 +3171,8 @@
     "_order": 149,
     "whatsapp": "+74959552442",
     "email_alt": "Andrey.maklyuk@revada-group.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114423": {
     "name": "ROBIOS",
@@ -3040,7 +3194,8 @@
     "manual_override": true,
     "needs_review": true,
     "whatsapp": "79036126479",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113207": {
     "name": "SYREN",
@@ -3189,7 +3344,8 @@
     "llm_reason": "تامین مواد اولیه و ингредиентهای غذایی برای صنعت غذایی",
     "_order": 158,
     "contact_note": "سایت باز شد ولی ایمیل/تماس مستقیم رویش پیدا نشد",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113801": {
     "name": "ACCOBIO (WUXI) BIOTECH INC",
@@ -3228,7 +3384,8 @@
     "_order": 160,
     "manual_override": true,
     "whatsapp": "862154220256",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114291": {
     "name": "CHAOZHOU CHAOAN GUOQIANG PRINTING CO., LTD.",
@@ -3285,7 +3442,8 @@
     "_order": 163,
     "manual_override": true,
     "email_alt": "wxsq@cd1958.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113695": {
     "name": "CLOUD AND CHEM CO., LTD.",
@@ -3307,7 +3465,8 @@
     "manual_override": true,
     "needs_review": true,
     "whatsapp": "+86-13876025636",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113394": {
     "name": "FIPHARM (GROUP) CO., LTD",
@@ -3329,7 +3488,8 @@
     "manual_override": true,
     "needs_review": true,
     "whatsapp": "+86-13876025636",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113343": {
     "name": "FUZHOU RIXING AQUATIC FOOD CO., LTD.",
@@ -3350,7 +3510,8 @@
     "_order": 166,
     "whatsapp": "86-591-26771688",
     "email_alt": "rixinghxj@163.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113961": {
     "name": "GANSU DUNHUANG SEED FRUIT & VEGETABLE PRODUCTS CO., LTD",
@@ -3390,7 +3551,8 @@
     "manual_override": true,
     "whatsapp": "+86-13976677748",
     "email_alt": "Jxu@nicepal.com.cn",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113861": {
     "name": "HEBEI GUANGXIANG PHARMACEUTICAL CO., LTD.",
@@ -3430,7 +3592,8 @@
     "manual_override": true,
     "needs_review": true,
     "email_alt": "600141@xingfagroup.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113831": {
     "name": "JIANGSU LIHONG TECHNOLOGY DEVELOPMENT CO., LTD.",
@@ -3451,7 +3614,8 @@
     "_order": 171,
     "manual_override": true,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113899": {
     "name": "JIANGXI HENGDING FOOD  CO.LTD.,",
@@ -3471,7 +3635,8 @@
     "llm_reason": "تولید و فرآوری عمیق غلات",
     "_order": 172,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114665": {
     "name": "MVK CHINA",
@@ -3509,7 +3674,8 @@
     "llm_reason": "تولید و پردازش محصولات دریایی",
     "_order": 174,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114514": {
     "name": "QINGDAO GATHER GREAT OCEAN ALGAE INDUSTRY GROUP CO.,LTD.",
@@ -3532,7 +3698,8 @@
     "needs_review": true,
     "whatsapp": "0532-86157066",
     "email_alt": "info@judayang.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113762": {
     "name": "SICHUAN KINDIA MAY SCIENCE AND TECH CO.,LTD",
@@ -3553,7 +3720,8 @@
     "_order": 176,
     "manual_override": true,
     "contact_note": "سایت شرکت در دسترس نبود (تایم‌اوت/خطا)",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113429": {
     "name": "YUCMC CO., LTD",
@@ -3592,7 +3760,8 @@
     "_order": 178,
     "manual_override": true,
     "email_alt": "csm-kjjinhua@300.cn",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113739": {
     "name": "JIANGSU TIANJIANG BIOTECHNOLOGY CO., LTD.",
@@ -3614,7 +3783,8 @@
     "manual_override": true,
     "whatsapp": "8618662737387",
     "email_alt": "mjenergy.cn@gmail.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113497": {
     "name": "QINGDAO VLAND BIOTECH GROUP CO., LTD",
@@ -3636,7 +3806,8 @@
     "manual_override": true,
     "whatsapp": "8618866298185",
     "email_alt": "lev@vlandgroup.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113417": {
     "name": "SHANDONG KUNDA BIOTECHNOLOGY COMPANY LIMITED",
@@ -3658,6 +3829,7 @@
     "manual_override": true,
     "whatsapp": "0539-2237968",
     "email_alt": "Info@hongdabio.com",
-    "contact_checked": true
+    "contact_checked": true,
+    "email_status": "mx"
   }
 }

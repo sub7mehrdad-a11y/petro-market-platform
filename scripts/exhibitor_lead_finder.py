@@ -499,11 +499,55 @@ def fetch_exhibitor_website(client: httpx.Client, profile_url: str) -> str | Non
     return href or None
 
 
+# ۲۰۲۶-۱۰-۲۳: بررسی اعتبارسنجی نشون داد حدود ۱۰٪ «ایمیل»های گلفود اصلاً ایمیل نبودن:
+# شناسه‌ی ردیابی Wix/Sentry (۳۲ کاراکتر هگز @sentry*.wixpress.com)، placeholder قالب‌ها
+# (example@company.com, Yourmail@your.mail.com, abc@abc.abc)، و دامنه‌های خراب. چون
+# لیست مرتب‌شده‌ی الفبایی بود و عددها قبل از حروف می‌آن، شناسه‌های هگز همیشه «اولین
+# ایمیل» می‌شدن و جای ایمیل واقعی رو می‌گرفتن.
+JUNK_EMAIL_DOMAIN_RE = re.compile(
+    r"(wixpress\.com|sentry(-next)?\.io|sentry\.|(^|\.)example\.(com|org|net)|(^|\.)domain\.com|"
+    r"(^|\.)company\.com|yoursite\.|your\.mail|yourdomain|businessname|ejemplo\.|(^|\.)abc\.abc|"
+    r"(^|\.)test\.com|(^|\.)mysite\.|(^|\.)email\.com$|(^|\.)webmail\.com$|"
+    r"(^|\.)google\.com$|gstatic|schema\.org|w3\.org|godaddy|squarespace|shopify|cloudflare|"
+    r"wordpress\.(com|org)|gravatar|sentry)", re.IGNORECASE)
+JUNK_EMAIL_LOCAL_RE = re.compile(
+    r"^([0-9a-f]{24,}|your(name|email|mail)?|name|email|user(name)?|test|abc|example|"
+    r"no-?reply|do-?not-?reply|dpo.*|privacy|webmaster|postmaster|abuse)$", re.IGNORECASE)
+
+
+def is_junk_email(email: str) -> bool:
+    if "@" not in email:
+        return True
+    local, domain = email.rsplit("@", 1)
+    tld = domain.rsplit(".", 1)[-1]
+    if len(tld) >= 7 and tld != tld.lower() and tld != tld.upper():  # TLD درهم‌ریخته مثل gaBwxp
+        return True
+    return bool(JUNK_EMAIL_DOMAIN_RE.search(domain) or JUNK_EMAIL_LOCAL_RE.match(local))
+
+
+def rank_emails(emails: list[str], website: str | None) -> list[str]:
+    """ایمیل هم‌دامنه با وب‌سایت شرکت اول؛ بعد نقش‌های تجاری (sales/info/contact...)؛
+    ایمیل‌های رایگان (gmail/163...) آخر."""
+    site_dom = (urlparse(website or "").netloc.lower().removeprefix("www.")) if website else ""
+    free = {"gmail.com", "yahoo.com", "hotmail.com", "outlook.com", "qq.com", "163.com", "126.com",
+            "vip.163.com", "mail.ru", "yandex.ru", "live.com", "icloud.com", "foxmail.com"}
+
+    def score(e: str) -> tuple:
+        local, domain = e.rsplit("@", 1)
+        domain = domain.lower()
+        same = bool(site_dom) and (domain == site_dom or domain.endswith("." + site_dom) or site_dom.endswith("." + domain))
+        role = bool(re.match(r"(info|sales|export|contact|enquir|inquir|office|hello|marketing|trade|commercial)", local, re.I))
+        return (not same, domain in free, not role, e.lower())
+
+    return sorted(emails, key=score)
+
+
 def extract_contacts_from_html(html: str) -> dict:
-    emails = sorted({m for m in EMAIL_RE.findall(html) if not EMAIL_JUNK_SUFFIX.search(m)})
+    emails = sorted({m for m in EMAIL_RE.findall(html)
+                     if not EMAIL_JUNK_SUFFIX.search(m) and not is_junk_email(m)})
     whatsapp = sorted({m for m in WHATSAPP_RE.findall(html)} | {m for m in WHATSAPP_LINK_RE.findall(html)})
     phones = sorted(set(TEL_RE.findall(html)))
-    return {"emails": emails[:3], "whatsapp": whatsapp[:2], "phones": phones[:3]}
+    return {"emails": emails[:8], "whatsapp": whatsapp[:2], "phones": phones[:3]}
 
 
 def find_contact_links(homepage_html: str, base_url: str) -> list[str]:
@@ -613,7 +657,7 @@ def render_with_playwright(browser, url: str) -> str | None:
 
 def _finalize_contacts(result: dict, found: dict, checked_any: bool) -> dict:
     if found["emails"]:
-        result["email"] = found["emails"][0]
+        result["email"] = rank_emails(found["emails"], result.get("website"))[0]
     if found["whatsapp"]:
         result["whatsapp"] = found["whatsapp"][0]
     elif found["phones"]:
