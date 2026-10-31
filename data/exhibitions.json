@@ -822,5 +822,45 @@
     "location": "New Delhi, India",
     "date": "دوره ۲۰۲۷: ۱۰ و ۱۱ ژوئن",
     "id": "exhibition-83"
+  },
+  {
+    "country": "عربستان سعودی",
+    "source_file": "لیست_نمایشگاههای_تجاری_عربستان.xlsx",
+    "name": "Saudi Food Show",
+    "focus": "مواد غذایی و نوشیدنی",
+    "location": "جده، عربستان سعودی",
+    "date": "سالانه؛ نسخهٔ ۲۰۲۶: ۲۷ تا ۲۹ سپتامبر در Jeddah Superdome (برگزار شده)؛ تاریخ نسخهٔ بعد منتشر نشده",
+    "id": "exhibition-84",
+    "website": "https://www.thesaudifoodshow.com"
+  },
+  {
+    "country": "عربستان سعودی",
+    "source_file": "لیست_نمایشگاههای_تجاری_عربستان.xlsx",
+    "name": "Saudi Agriculture",
+    "focus": "کشاورزی، دام و طیور، خوراک",
+    "location": "ریاض، عربستان سعودی",
+    "date": "سالانه؛ نسخهٔ ۴۳ام: ۱۹ تا ۲۲ اکتبر ۲۰۲۶ (برگزار شده)",
+    "id": "exhibition-85",
+    "website": "https://saudi-agriculture.com/"
+  },
+  {
+    "country": "عربستان سعودی",
+    "source_file": "لیست_نمایشگاههای_تجاری_عربستان.xlsx",
+    "name": "SaudiFood Manufacturing",
+    "focus": "فرآوری و تولید مواد غذایی، مواد اولیه",
+    "location": "عربستان سعودی",
+    "date": "سالانه؛ تاریخ نسخهٔ ۲۰۲۷ هنوز قطعی نیست",
+    "id": "exhibition-86",
+    "website": "https://www.saudifoodmanufacturing.com/"
+  },
+  {
+    "country": "امارات",
+    "source_file": "لیست_نمایشگاههای_تجاری_عربستان.xlsx",
+    "name": "Gulfood",
+    "focus": "مواد غذایی و ابزار تأمین",
+    "location": "دبی، امارات",
+    "date": "سالانه؛ نسخهٔ ۲۰۲۷: ۱۵ تا ۱۹ مارس",
+    "id": "exhibition-87",
+    "website": "https://www.gulfood.com"
   }
 ]

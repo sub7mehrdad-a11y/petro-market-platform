@@ -1,0 +1,629 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta name="color-scheme" content="light">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>گزارش جامع تحلیلی بازار واردات جوش‌شیرین کشور عربستان سعودی</title>
+<link rel="stylesheet" href="/report-assets/report-fonts.css">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F5F8FC;
+    --bg-soft: #FFFFFF;
+    --ink: #263B50;
+    --ink-soft: #52687D;
+    --muted: #52687D;
+    --line: #D2DEEB;
+    --line-soft: #E2EEFB;
+    --petrol-900: #193D5B;
+    --petrol-700: #205B8A;
+    --petrol-600: #286DA6;
+    --petrol-500: #478DCA;
+    --petrol-300: #A2C7EC;
+    --petrol-100: #E2EEFB;
+    --petrol-50: #F1F7FD;
+    --copper-700: #1D4A70;
+    --copper-600: #205B8A;
+    --copper-500: #286DA6;
+    --copper-400: #478DCA;
+    --copper-300: #77ACDE;
+    --copper-100: #E2EEFB;
+    --copper-50: #F1F7FD;
+    --good: #176C4C;
+    --good-bg: #EAF7EF;
+    --bad: #A52E4A;
+    --bad-bg: #FFF0F3;
+    --card-shadow: 0 1px 2px rgba(38,59,80,0.05), 0 10px 24px -14px rgba(38,59,80,0.35);
+    --hero-ink: #F1F7FD;
+    --hero-ink-soft: #E2EEFB;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  
+  
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(40,109,166,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(24px,3.6vw,36px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 66ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(4, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:700px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#E2EEFB); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 76ch; }
+  strong{ color: var(--ink); font-weight:700; }
+  ul.plain{ margin:0 0 12px; padding-inline-start:0; list-style:none; }
+  ul.plain li{ position:relative; padding-inline-end:18px; margin-bottom:8px; color:var(--ink-soft); max-width:76ch; }
+  ul.plain li::before{ content:'•'; position:absolute; right:0; top:0; color:var(--copper-500); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout p + p{ margin-top:8px; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  .card .tag.bad{ background: var(--bad-bg); color: var(--bad); }
+  .card .tag.good{ background: var(--good-bg); color: var(--good); }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:14.5px; color:var(--ink); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); vertical-align:top; }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); white-space:nowrap; }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  figure{ margin: 16px 0; }
+  figure img{ border-radius: 12px; border: 1px solid var(--line); display:block; box-shadow: var(--card-shadow); width:100%; }
+  figcaption{ font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+
+  .pill-row{ display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0; }
+  .pill{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 12px;
+    padding: 12px 20px; min-width: 120px; box-shadow: var(--card-shadow); flex:1;
+  }
+  .pill .p{ font-family:"Fira Code"; font-size:20px; font-weight:700; color:var(--petrol-700); }
+  .pill .p.bad{ color: var(--bad); }
+  .pill .p.good{ color: var(--good); }
+  .pill .n{ font-size:12.5px; color:var(--muted); margin-top:2px; text-align:center; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0 0 8px; max-width:none; }
+
+  a{ color: var(--copper-600); }
+
+  p.src{ font-size:12.5px; color:var(--muted); margin-top:-4px; }
+  .tcap{ font-weight:800; font-size:15px; color:var(--petrol-700); margin:26px 0 8px; }
+  .t-wrap tbody td:first-child{ white-space:normal; min-width:150px; }
+  .t-wrap table{ min-width: 760px; }
+  .grade{ font-size:12px; color:var(--muted); font-weight:600; white-space:nowrap; }
+  sup.cite{ font-size:11px; line-height:0; margin-inline:1px; }
+  sup.cite a{ text-decoration:none; font-weight:700; color:var(--copper-600); }
+  .formula{ direction:rtl; font-size:16px; text-align:center; }
+  .formula p{ text-align:center; font-weight:700; color:var(--ink); }
+  td.st-ok{ background:var(--good-bg) !important; color:var(--good) !important; font-weight:700; }
+  td.st-unk{ background:#FFF3CF !important; color:#8A6410 !important; font-weight:700; }
+  td.st-bad{ background:var(--bad-bg) !important; color:var(--bad) !important; font-weight:700; }
+  
+  ol.srcs{ list-style:none; padding:0; margin:0; counter-reset:s; }
+  ol.srcs li{ position:relative; padding-inline-start:44px; margin-bottom:9px; font-size:14px; color:var(--ink-soft); max-width:none; }
+  ol.srcs li .n{ position:absolute; right:0; top:0; font-family:"Fira Code"; font-weight:600; font-size:12px;
+    background:var(--petrol-50); color:var(--petrol-700); border:1px solid var(--line-soft); border-radius:7px; padding:1px 8px; }
+  ol.srcs li a{ direction:ltr; unicode-bidi:embed; word-break:break-all; }
+
+  .tcap{ font-weight:800; font-size:15px; color:var(--petrol-700); margin:26px 0 8px; }
+  .t-wrap tbody td:first-child{ white-space:normal; min-width:150px; }
+  .t-wrap table{ min-width: 760px; }
+  td.neg{ background:var(--bad-bg) !important; color:var(--bad) !important; font-weight:700; }
+  td.pos{ background:var(--good-bg) !important; color:var(--good) !important; font-weight:700; }
+  ul.pts{ margin:10px 0 14px; padding-inline-start:22px; }
+  ul.pts li{ margin-bottom:8px; max-width:none; }
+  ol.srcs{ list-style:none; padding:0; margin:0; }
+  ol.srcs li{ position:relative; padding-inline-start:44px; margin-bottom:9px; font-size:14px; color:var(--ink-soft); max-width:none; }
+  ol.srcs li .n{ position:absolute; right:0; top:0; font-family:"Fira Code"; font-weight:600; font-size:12px;
+    background:var(--petrol-50); color:var(--petrol-700); border:1px solid var(--line-soft); border-radius:7px; padding:1px 8px; }
+  ol.srcs li a{ direction:ltr; unicode-bidi:embed; word-break:break-all; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>گزارش جامع تحلیلی بازار واردات جوش‌شیرین کشور عربستان سعودی</h1>
+    <p class="lead">(ارزیابی قیمت‌های FOB مبدأ، CIF بندر دمام و رقابت‌پذیری «جوش شیرین پارس»)</p>
+    <div class="meta"><span>تاریخ تنظیم: مهر ۱۴۰۵ (اکتبر ۲۰۲۶)</span></div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="v">۳۱٬۳۶۵ <small>تن</small></div><div class="l">واردات ثبت‌شدهٔ ۲۰۲۵ — ۱۲٫۸۱ میلیون دلار (میانگین ۴۰۸ دلار در تن CIF)</div></div>
+      <div class="kpi"><div class="v">≈ ۳۴٬۰۰۰ <small>تن</small></div><div class="l">مصرف ظاهری ۲۰۲۵ (دامنهٔ ۳۱٬۰۰۰ تا ۳۷٬۵۰۰؛ سرانه ≈ ۰٫۹۶ کیلوگرم)</div></div>
+      <div class="kpi"><div class="v">۴۶ <small>٪</small></div><div class="l">سهم چین از حجم واردات (۱۴٬۴۲۸ تن، ۲۹۱ دلار CIF)</div></div>
+      <div class="kpi"><div class="v">۲۹۲–۳۲۴ <small>دلار</small></div><div class="l">CIF برآوردی «جوش شیرین پارس» در دمام (شرایط عادی؛ ریسک جنگی ۳۰۹–۳۶۱)</div></div>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section id="s1">
+<div class="sec-head"><span class="sec-num">۱</span><h2>خلاصه مدیریتی</h2></div>
+<p>این گزارش بازار واردات جوش‌شیرین (بی‌کربنات سدیم، ردیف تعرفه ۲۸۳۶۳۰) عربستان سعودی را از نظر حجم واردات، برآورد مصرف، شرکای تجاری، قیمت‌های رقابتی، مسیرهای حمل، تعرفه و الزامات مقرراتی و موقعیت «جوش شیرین پارس» بررسی می‌کند. قیمت مرجع FOB برای محاسبات ۲۵۰ دلار بر تن در بنادر ایران فرض شده است.</p>
+<ul class="pts">
+<li>حجم واردات ثبت‌شده در سال ۲۰۲۵ برابر ۳۱٬۳۶۵ تن و به ارزش ۱۲٫۸۱ میلیون دلار بوده است. حجم واردات از سال ۲۰۱۸ (۲۹٬۶۴۵ تن) با نرخ رشد مرکب سالانه ۰٫۸٪ تقریباً ثابت مانده، اما ارزش به‌دلیل افزایش قیمت با نرخ ۳٫۶٪ در سال رشد کرده است.</li>
+<li>مصرف ظاهری سال ۲۰۲۵ با اصلاح کم‌ثبتی آمار حدود ۳۴٬۰۰۰ تن (دامنهٔ ۳۱٬۰۰۰ تا ۳۷٬۵۰۰ تن) برآورد می‌شود؛ معادل سرانهٔ تقریبی ۰٫۹۶ کیلوگرم برای جمعیت ۳۵٫۳ میلیون نفری.</li>
+<li>چین با ۴۶٪ حجم (۱۴٬۴۲۸ تن) و قیمت CIF ثبت‌شدهٔ ۲۹۱ دلار بر تن بزرگ‌ترین تأمین‌کننده است. هند با ۲۴٪ (۷٬۵۹۹ تن، ۴۰۳ دلار بر تن) و ترکیه با ۱۴٪ (۴٬۵۲۶ تن، ۴۱۳ دلار بر تن) در رتبه‌های بعدی قرار دارند.</li>
+<li>سهم هند از ۰٫۱٪ در سال ۲۰۱۸ به ۲۴٪ در سال ۲۰۲۵ رسیده است؛ این روند نشان می‌دهد ورود تأمین‌کنندهٔ جدید به بازار عربستان عملی است. در مقابل، سهم ترکیه از ۵۴٪ (۲۰۱۹) به ۱۴٪ کاهش یافته است.</li>
+<li>در عربستان تولید تجاری جوش‌شیرین شناسایی نشد و بازار عملاً وابسته به واردات است؛ بنابراین قیمت کف داخلی وجود ندارد. صادرات مجدد ناچیز است (حدود ۵۴ هزار دلار در ۲۰۲۳).</li>
+<li>قیمت CIF برآوردی «جوش شیرین پارس» در دمام در شرایط عادی ۲۹۲ تا ۳۲۴ دلار بر تن است؛ یعنی نزدیک به چین (۲۹۱) و پایین‌تر از هند، ترکیه، بوسنی و بلغارستان. در شرایط ریسک جنگی کنونی برآورد ۳۰۹ تا ۳۶۱ دلار بر تن است.</li>
+<li>تعرفهٔ گمرکی اعمال‌شده حدود ۵٪ (برآورد ITC Trade Map برای ردیف ۲۸۳۶۳۰؛ حداقل تعرفهٔ مشترک شورای همکاری خلیج فارس) و مالیات بر ارزش افزوده ۱۵٪ است؛ برای هیچ مبدأی ترجیح تعرفه‌ای برای ایران شناسایی نشد. گواهی انطباق SASO/SABER برای ورود الزامی است.</li>
+</ul>
+<p><strong>محدودیت اصلی:</strong> از ۲۸ فوریه ۲۰۲۶ جنگ منطقه‌ای و بحران تنگه هرمز، دسترسی دریایی بنادر جنوبی ایران را مختل کرده است. پس از ۱۳ آوریل ۲۰۲۶ بنادر جنوبی ایران تحت محاصرهٔ دریایی آمریکا قرار گرفته‌اند، روابط ایران و عربستان تنش‌آلود شده و آمار گمرکی عربستان در هیچ‌یک از سال‌های ۲۰۱۸ تا ۲۰۲۵ واردات از ایران را ثبت نکرده است. بنابراین بازار از نظر اندازه و قیمت جذاب است، اما ورود عملی منوط به عادی‌سازی شرایط امنیتی و سیاسی است.</p>
+</section>
+<section id="s2">
+<div class="sec-head"><span class="sec-num">۲</span><h2>آمار واردات و سهم بازار مبادی تأمین</h2></div>
+<h3><bdi>۲٫۱</bdi> روند واردات ۲۰۱۸ تا ۲۰۲۵</h3>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>سال</th><th>وزن واردات (تن)</th><th>ارزش (دلار)</th><th>میانگین قیمت واحد (دلار/تن)</th><th>تغییر حجم</th></tr></thead>
+<tbody>
+<tr><td class="num-cell">۲۰۱۸</td><td class="num-cell">۲۹٬۶۴۵</td><td class="num-cell">۹٬۹۷۵٬۰۹۰</td><td class="num-cell">۳۳۶</td><td>—</td></tr>
+<tr><td class="num-cell">۲۰۱۹</td><td class="num-cell">۳۳٬۷۶۶</td><td class="num-cell">۱۲٬۱۳۷٬۳۲۰</td><td class="num-cell">۳۵۹</td><td class="num-cell">+۱۳٫۹٪</td></tr>
+<tr><td class="num-cell">۲۰۲۰</td><td class="num-cell">۳۰٬۸۶۶</td><td class="num-cell">۱۲٬۰۵۹٬۱۸۰</td><td class="num-cell">۳۹۱</td><td class="num-cell">−۸٫۶٪</td></tr>
+<tr><td>۲۰۲۱ (آمار ناقص)</td><td>گزارش نشده (جمع مبادی: ۱۸٬۴۳۲)</td><td class="num-cell">۷٬۴۰۳٬۱۱۰</td><td>—</td><td>—</td></tr>
+<tr><td class="num-cell">۲۰۲۲</td><td class="num-cell">۳۸٬۴۵۲</td><td class="num-cell">۱۹٬۵۶۵٬۳۷۰</td><td class="num-cell">۵۰۹</td><td>+۲۴٫۶٪ نسبت به ۲۰۲۰</td></tr>
+<tr><td class="num-cell">۲۰۲۳</td><td class="num-cell">۲۲٬۳۸۷</td><td class="num-cell">۱۲٬۱۱۵٬۱۴۰</td><td class="num-cell">۵۴۱</td><td class="num-cell">−۴۱٫۸٪</td></tr>
+<tr><td class="num-cell">۲۰۲۴</td><td class="num-cell">۳۲٬۰۹۳</td><td class="num-cell">۱۳٬۱۴۰٬۷۲۰</td><td class="num-cell">۴۰۹</td><td class="num-cell">+۴۳٫۴٪</td></tr>
+<tr><td class="num-cell"><strong>۲۰۲۵</strong></td><td class="num-cell"><strong>۳۱٬۳۶۵</strong></td><td class="num-cell"><strong>۱۲٬۸۰۸٬۷۰۰</strong></td><td class="num-cell"><strong>۴۰۸</strong></td><td class="num-cell"><strong>−۲٫۳٪</strong></td></tr>
+</tbody>
+</table></div>
+<p><em>ارزش‌های ثبت‌شده در گمرک عربستان بر پایهٔ ارزش گمرکی CIF است (تعرفه بر مبنای ارزش CIF محاسبه می‌شود)؛ بنابراین قیمت واحد محاسبه‌شده شامل کرایه و بیمه است و نباید با قیمت FOB مقایسه مستقیم شود. سال ۲۰۲۱ ناقص است: حجم کل گزارش نشده و ترکیه در فهرست مبادی نیامده است.</em></p>
+<div class="chart-box"><div class="chart-h" style="height:380px"><canvas id="chVol"></canvas></div><div class="cap">نمودار ۱: حجم و قیمت واحد واردات جوش‌شیرین عربستان (منبع: UN Comtrade/WITS)</div></div>
+<h3><bdi>۲٫۲</bdi> مبادی تأمین در سال ۲۰۲۵</h3>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>مبدأ</th><th>حجم (تن)</th><th>سهم حجمی</th><th>ارزش (هزار دلار)</th><th>قیمت واحد (دلار/تن)</th><th>تغییر حجم نسبت به ۲۰۲۴</th></tr></thead>
+<tbody>
+<tr><td>چین</td><td class="num-cell">۱۴٬۴۲۸</td><td class="num-cell">۴۶٫۰٪</td><td class="num-cell">۴٬۱۹۶</td><td class="num-cell">۲۹۱</td><td class="num-cell">+۱۰۱٪</td></tr>
+<tr><td>هند</td><td class="num-cell">۷٬۵۹۹</td><td class="num-cell">۲۴٫۲٪</td><td class="num-cell">۳٬۰۶۳</td><td class="num-cell">۴۰۳</td><td class="num-cell">+۱٫۶٪</td></tr>
+<tr><td>ترکیه</td><td class="num-cell">۴٬۵۲۶</td><td class="num-cell">۱۴٫۴٪</td><td class="num-cell">۱٬۸۷۱</td><td class="num-cell">۴۱۳</td><td class="num-cell">−۳۶٫۹٪</td></tr>
+<tr><td>بلغارستان</td><td class="num-cell">۱٬۶۵۳</td><td class="num-cell">۵٫۳٪</td><td class="num-cell">۵۶۴</td><td class="num-cell">۳۴۱</td><td class="num-cell">−۳۸٫۴٪</td></tr>
+<tr><td>بوسنی و هرزگوین</td><td class="num-cell">۱٬۳۹۶</td><td class="num-cell">۴٫۵٪</td><td class="num-cell">۴۵۴</td><td class="num-cell">۳۲۵</td><td class="num-cell">−۷۵٫۴٪</td></tr>
+<tr><td>آمریکا</td><td class="num-cell">۵۹۰</td><td class="num-cell">۱٫۹٪</td><td class="num-cell">۱٬۲۵۱</td><td class="num-cell">۲٬۱۲۲</td><td class="num-cell">+۷۰٫۵٪</td></tr>
+<tr><td>سنگاپور</td><td class="num-cell">۴۷۸</td><td class="num-cell">۱٫۵٪</td><td class="num-cell">۳۳۵</td><td class="num-cell">۷۰۲</td><td class="num-cell">−۲۸٫۴٪</td></tr>
+<tr><td>چک</td><td class="num-cell">۲۴۱</td><td class="num-cell">۰٫۸٪</td><td class="num-cell">۳۶۰</td><td class="num-cell">۱٬۴۹۲</td><td class="num-cell">−۳٫۲٪</td></tr>
+<tr><td>بریتانیا</td><td class="num-cell">۲۳۵</td><td class="num-cell">۰٫۷٪</td><td class="num-cell">۳۲۴</td><td class="num-cell">۱٬۳۷۸</td><td class="num-cell">−۵۰٫۹٪</td></tr>
+<tr><td>آلمان</td><td class="num-cell">۱۳۹</td><td class="num-cell">۰٫۴٪</td><td class="num-cell">۳۰۶</td><td class="num-cell">۲٬۱۹۵</td><td class="num-cell">+۸۸٫۶٪</td></tr>
+<tr><td>سایر</td><td class="num-cell">۸۰</td><td class="num-cell">۰٫۳٪</td><td class="num-cell">۸۵</td><td>—</td><td>—</td></tr>
+<tr class="hl"><td><strong>جمع کل</strong></td><td class="num-cell"><strong>۳۱٬۳۶۵</strong></td><td class="num-cell"><strong>۱۰۰٪</strong></td><td class="num-cell"><strong>۱۲٬۸۰۹</strong></td><td class="num-cell"><strong>۴۰۸</strong></td><td class="num-cell"><strong>−۲٫۳٪</strong></td></tr>
+</tbody>
+</table></div>
+<p><em>قیمت‌های بالای ۱٬۳۰۰ دلار بر تن (آمریکا، چک، بریتانیا، آلمان) به گریدهای دارویی (USP، یعنی استاندارد داروسازی آمریکا) و خرده‌فروشی بسته‌بندی‌شده مربوط است و با بازار فله‌ای قابل مقایسه نیست.</em></p>
+<div class="chart-box"><div class="chart-h" style="height:400px"><canvas id="chShare"></canvas></div><div class="cap">نمودار ۲: سهم مبادی تأمین از حجم واردات</div></div>
+<h3><bdi>۲٫۳</bdi> جهت‌گیری سهم مبادی در طول زمان (سهم از حجم)</h3>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>مبدأ</th><th>۲۰۱۸</th><th>۲۰۱۹</th><th>۲۰۲۲</th><th>۲۰۲۳</th><th>۲۰۲۴</th><th>۲۰۲۵</th><th>روند</th></tr></thead>
+<tbody>
+<tr><td>چین</td><td class="num-cell">۲۵٫۴٪</td><td class="num-cell">۱۶٫۶٪</td><td class="num-cell">۴۴٫۶٪</td><td class="num-cell">۳۳٫۷٪</td><td class="num-cell">۲۲٫۴٪</td><td class="num-cell">۴۶٫۰٪</td><td>پرنوسان؛ در ۲۰۲۵ غالب</td></tr>
+<tr><td>هند</td><td class="num-cell">۰٫۱٪</td><td class="num-cell">۰٫۶٪</td><td class="num-cell">۴٫۷٪</td><td class="num-cell">۹٫۷٪</td><td class="num-cell">۲۳٫۳٪</td><td class="num-cell">۲۴٫۲٪</td><td>ورودی جدید؛ صعودی</td></tr>
+<tr><td>ترکیه</td><td class="num-cell">۴۶٫۳٪</td><td class="num-cell">۵۳٫۹٪</td><td class="num-cell">۵٫۵٪</td><td class="num-cell">۱۰٫۹٪</td><td class="num-cell">۲۲٫۴٪</td><td class="num-cell">۱۴٫۴٪</td><td>نزولی نسبت به ۲۰۱۹</td></tr>
+<tr><td>بوسنی</td><td class="num-cell">۰٫۱٪</td><td class="num-cell">۰٫۵٪</td><td class="num-cell">۱۸٫۷٪</td><td class="num-cell">۲۲٫۷٪</td><td class="num-cell">۱۷٫۷٪</td><td class="num-cell">۴٫۵٪</td><td>اوج ۲۰۲۲–۲۰۲۴؛ سقوط ۲۰۲۵</td></tr>
+<tr><td>بلغارستان</td><td class="num-cell">۹٫۹٪</td><td class="num-cell">۱۰٫۸٪</td><td class="num-cell">۹٫۸٪</td><td class="num-cell">۵٫۹٪</td><td class="num-cell">۸٫۴٪</td><td class="num-cell">۵٫۳٪</td><td>نزولی ملایم</td></tr>
+</tbody>
+</table></div>
+<ul class="pts">
+<li>مجموعهٔ شرکت شیشه‌جام (Şişecam) ترکیه با کارخانه‌های ترکیه و بوسنی (Sisecam Soda Lukavac) از ۵۴٫۵٪ حجم در ۲۰۱۹ به ۱۸٫۹٪ در ۲۰۲۵ رسیده است. کارخانهٔ بلغارستان (Solvay Sodi در Devnya) نیز به‌صورت مشارکت ۷۵٪ سولوی و ۲۵٪ شیشه‌جام اداره می‌شود؛ بنابراین بخش مهمی از عرضه اروپایی-ترکیه‌ای در اختیار دو گروه صنعتی است.</li>
+<li>رقابت قیمتی عمدتاً با چین و سپس هند است. افت سهم تأمین‌کنندگان اروپایی-ترکیه‌ای و افزایش سهم هند نشان می‌دهد خریداران عربستانی نسبت به قیمت حساس‌اند و مبدأ تأمین را در کوتاه‌مدت تغییر می‌دهند.</li>
+<li>پاکستان در ۲۰۲۲ حدود ۳٬۰۲۳ تن و در ۲۰۲۳ حدود ۱٬۴۶۵ تن تأمین کرد، اما از ۲۰۲۴ در آمار دیده نمی‌شود؛ ورود و خروج سریع تأمین‌کنندگان کوچک در این بازار پدیده‌ای عادی است.</li>
+<li>در هیچ‌یک از جداول ۲۰۱۸ تا ۲۰۲۵ ایران به‌عنوان مبدأ واردات جوش‌شیرین عربستان ثبت نشده است. به گزارش گمرک ایران، کل تجارت غیرنفتی ایران و عربستان در سال ۱۴۰۳ حدود ۲۵ میلیون دلار (۶۱ هزار تن) بوده است.</li>
+</ul>
+<p><strong>یادداشت داده‌ای:</strong> پایگاه Volza برای کد ۲۸۳۶۳۰۰۰ در عربستان ۲۲۶ محموله، ۵۸ خریدار و ۲۴ تأمین‌کننده ثبت کرده و هند، ترکیه و آمریکا را مبادی اصلی معرفی می‌کند؛ این رتبه‌بندی بر پایهٔ تعداد محموله است و با رتبه‌بندی گمرکی بر پایهٔ تناژ (چین نخست) تفاوت دارد.</p>
+</section>
+<section id="s3">
+<div class="sec-head"><span class="sec-num">۳</span><h2>تولید داخلی، صادرات و برآورد مصرف</h2></div>
+<h3><bdi>۳٫۱</bdi> تولید داخلی</h3>
+<p>در جست‌وجوهای انجام‌شده، تولیدکنندهٔ تجاری جوش‌شیرین در عربستان شناسایی نشد. شرکت ISACC (Idea Soda Ash and Calcium Chloride) در گزارش‌های سال‌های ۲۰۱۲ تا ۲۰۱۴ به‌عنوان طرح کارخانهٔ کربنات سدیم و کلرید کلسیم با ظرفیت تا ۸۰۰ هزار تن در سال در جبیل و سرمایهٔ ۲۹۳٫۳ میلیون دلار معرفی شده است؛ در این گزارش‌ها از جوش‌شیرین نام برده نشده و وضعیت بهره‌برداری فعلی راستی‌آزمایی نشد. همچنین وزارت سرمایه‌گذاری عربستان فرصتی با عنوان تأسیس کارخانهٔ جوش‌شیرین حدود ۱۰۰ هزار تن در سال را در فهرست فرصت‌های سرمایه‌گذاری شیمیایی خود آورده است (محتوای تفصیلی بررسی نشد).</p>
+<p>نتیجه: بازار عملاً بدون تولید داخلی است و قیمت‌گذاری را واردکنندگان و توزیع‌کنندگان تعیین می‌کنند. در صورت راه‌اندازی تولید داخلی مبتنی بر کربنات سدیم محلی، رقابت در بخش فله و صنعتی تشدید خواهد شد. صادرات جوش‌شیرین عربستان ناچیز است (حدود ۵۴ هزار دلار در ۲۰۲۳؛ عمدتاً به امارات).</p>
+<h3><bdi>۳٫۲</bdi> برآورد مصرف</h3>
+<p>مصرف ظاهری برابر واردات منهای صادرات است. با توجه به نبود تولید داخلی و ناچیز بودن صادرات، واردات ثبت‌شده مبنای اصلی برآورد قرار گرفت و سپس با آمار آینه‌ای (آمار صادرکنندگان) تعدیل شد.</p>
+<div class="table-wrap"><table>
+<thead><tr><th>روش</th><th>برآورد ۲۰۲۵ (تن)</th><th>توضیح</th></tr></thead>
+<tbody>
+<tr><td>الف) واردات ثبت‌شده</td><td class="num-cell">۳۱٬۳۶۵</td><td>مبنای پایه؛ میانگین ۲۰۲۲–۲۰۲۵: ۳۱٬۰۷۴ تن</td></tr>
+<tr><td>ب) تعدیل کم‌ثبتی</td><td class="num-cell">۳۴٬۵۰۰</td><td>چین در ۲۰۲۴ حدود ۱۰٬۵۵۰ تن صادرات به عربستان گزارش کرده، در حالی که عربستان ۷٬۱۸۲ تن ثبت کرده است (اختلاف ۴۷٪)؛ با فرض اختلاف مشابه فقط برای سهم چین، حدود ۱۰٪ به کل افزوده می‌شود</td></tr>
+<tr><td>ج) دامنهٔ منطقی</td><td class="num-cell">۳۱٬۰۰۰ تا ۳۷٬۵۰۰</td><td>کران پایین: واردات ثبت‌شده؛ کران بالا: ۲۰٪ تعدیل</td></tr>
+<tr><td><strong>برآورد مرکزی</strong></td><td class="num-cell"><strong>حدود ۳۴٬۰۰۰</strong></td><td><strong>سرانه ≈ ۰٫۹۶ کیلوگرم (جمعیت ۳۵٫۳ میلیون نفر در ۲۰۲۴ طبق GASTAT)</strong></td></tr>
+</tbody>
+</table></div>
+<p>سرانهٔ مصرف عربستان حدود ۲٫۶ تا ۴ برابر کشورهای آسیای مرکزی مطالعه‌شده (مثلاً قرقیزستان حدود ۳۳۸ گرم) است. این تفاوت با شهرنشینی حدود ۸۵٪، سطح درآمد بالا، بخش بزرگ خدمات غذایی و صنایع لبنی و طیور، آب‌شیرین‌کن‌ها و جمعیت مهاجر (۴۴٫۴٪ جمعیت) سازگار است.</p>
+<h3><bdi>۳٫۳</bdi> سهم تقریبی بخش‌های مصرف‌کننده (برآورد تحلیلی)</h3>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>بخش</th><th>سهم تقریبی</th><th>مبنای برآورد</th></tr></thead>
+<tbody>
+<tr><td>صنایع غذایی و نانوایی (بیکینگ‌پودر، شیرینی، نوشیدنی)</td><td class="num-cell">۳۵ تا ۴۰٪</td><td>رشد پایدار صنایع غذایی و وجود تولیدکنندگان بزرگ؛ بدون آمار مستقیم</td></tr>
+<tr><td>خوراک دام، طیور و لبنیات (بافر شکمبه و مکمل)</td><td class="num-cell">۲۰ تا ۲۵٪</td><td>تولید گوشت طیور ۵۵۸ هزار تن در نیمهٔ اول ۲۰۲۴ (رشد ۹٪)</td></tr>
+<tr><td>مصرف خانگی و خرده‌فروشی</td><td class="num-cell">۱۲ تا ۱۵٪</td><td>برآورد بر پایهٔ ساختار مصرف کشورهای مشابه</td></tr>
+<tr><td>صنعتی (آب‌شیرین‌کن، تصفیهٔ گاز دودکش، شوینده، نساجی)</td><td class="num-cell">۱۵ تا ۲۰٪</td><td>برآورد تحلیلی</td></tr>
+<tr><td>دارویی و همودیالیز</td><td class="num-cell">۳ تا ۵٪</td><td>بیش از ۲۷٬۰۰۰ بیمار نارسایی کلیوی (پایان ۲۰۲۳)؛ با فرض ۳۵ تا ۶۰ کیلوگرم بر بیمار در سال حدود ۹۵۰ تا ۱٬۶۰۰ تن</td></tr>
+</tbody>
+</table></div>
+<p><em>این تفکیک بر مبنای برآورد تحلیلی است و آمار رسمی مصرف بخشی در دسترس نیست. سهم‌ها باید با پایش واردکنندگان و مذاکرات تجاری به‌روزرسانی شود.</em></p>
+</section>
+<section id="s4">
+<div class="sec-head"><span class="sec-num">۴</span><h2>بررسی قیمت‌های FOB در بنادر مبدأ</h2></div>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>مبدأ و بندر</th><th>گرید</th><th>FOB اسپات (دلار/تن)</th><th>قیمت واقعی ورود به عربستان (CIF ثبت‌شده ۲۰۲۵)</th><th>روند و ملاحظات</th></tr></thead>
+<tbody>
+<tr><td>چین (شانگهای)</td><td>خوراکی</td><td>حدود ۱۷۸ (اوت ۲۰۲۶)</td><td class="num-cell">۲۹۱</td><td>گمرک چین در ۲۰۲۴ ارزش صادرات به عربستان را حدود ۲۲۷ دلار بر تن ثبت کرده است</td></tr>
+<tr><td>هند (مومبای)</td><td>خوراکی</td><td>۲۶۵ تا ۲۹۵ (فصل ۴ ۲۰۲۵)</td><td class="num-cell">۴۰۳</td><td>مازاد عرضه؛ </td></tr>
+<tr><td>ترکیه (مرسین)</td><td>خوراکی</td><td>۳۱۵ تا ۳۵۵ (فصل ۴ ۲۰۲۵)</td><td class="num-cell">۴۱۳</td><td>افزایش ۱۵٪ در فصل ۲ ۲۰۲۶ به‌دلیل هزینه‌های انرژی و لجستیک</td></tr>
+<tr><td>بوسنی (لوکاواتس) و بلغارستان (دونیا)</td><td>متنوع</td><td>قیمت اسپات یافت نشد</td><td class="num-cell">۳۲۵ / ۳۴۱</td><td>قیمت اسپات اروپا: بارسلونا ۳۸۰–۴۲۰ و آنتورپ ۳۵۰–۳۹۵ (تحویل در اروپا)</td></tr>
+<tr><td><strong>ایران (پایهٔ جوش شیرین پارس)</strong></td><td><strong>خوراکی/صنعتی</strong></td><td class="num-cell"><strong>۲۵۰</strong></td><td><strong>نامشخص (ثبت نشده)</strong></td><td><strong>قیمت مرجع محاسبات شرکت</strong></td></tr>
+</tbody>
+</table></div>
+<p><strong>نکتهٔ کلیدی:</strong> قیمت اسپات به‌طور معمول پایین‌تر از ارزش واقعاً ثبت‌شده در گمرک است. ارزش صادراتی گمرک چین ۲۲۷ و ارزش CIF ثبت‌شدهٔ عربستان ۲۹۱ دلار بر تن است. ارزش ثبت‌شدهٔ هند (۴۰۳) نیز حدود ۱۱۰ تا ۱۴۰ دلار از قیمت اسپات بالاتر است که بخشی از آن به گریدهای گران‌تر و بسته‌بندی‌های کوچک برمی‌گردد.</p>
+<p><em>منابع قیمت اسپات: Price-Watch و Procurement Resource. قیمت‌های اسپات خاورمیانه (عربستان/امارات) در این منابع ارائه نشده است.</em></p>
+</section>
+<section id="s5">
+<div class="sec-head"><span class="sec-num">۵</span><h2>مسیرهای دریایی و فواصل</h2></div>
+<div class="chart-box"><iframe title="نقشه‌ی تعاملی مسیرهای دریایی و جاده‌ای به دمام" loading="lazy" style="width:100%;height:620px;border:0;border-radius:10px;background:#fff" srcdoc="&lt;!doctype html&gt;&lt;html lang=&quot;fa&quot; dir=&quot;rtl&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;نقشهٔ تعاملی مسیرهای دریایی جوش‌شیرین به دمام&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/leaflet@1.9.4/dist/leaflet.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;html,body{margin:0;height:100%;font-family:Tahoma,Arial}#m{height:100%}.box{position:absolute;z-index:1000;top:10px;left:50px;background:#fffffff2;padding:8px 12px;border-radius:6px;box-shadow:0 1px 6px #0004;font-size:13px;max-width:330px}.leaflet-tooltip{direction:rtl;font-family:Tahoma}&lt;/style&gt;&lt;/head&gt;&lt;body&gt;
+&lt;div class=&quot;box&quot;&gt;&lt;b&gt;مسیرهای دریایی تأمین جوش‌شیرین (HS 283630) به بندر دمام&lt;/b&gt;&lt;br&gt;با نگه‌داشتن نشانگر روی هر مسیر یا بندر، نام و طول مسیر نمایش داده می‌شود. فاصله‌های دریایی تقریبی‌اند؛ مسیرهای جاده‌ای (خط‌چین) از دادهٔ جاده‌ای OpenStreetMap استخراج شده و کرایه، برآورد تحلیلی است.&lt;/div&gt;&lt;div id=&quot;m&quot;&gt;&lt;/div&gt;
+&lt;script&gt;
+var R={&quot;bandar&quot;: {&quot;name&quot;: &quot;بندرعباس (شهید رجایی)&quot;, &quot;en&quot;: &quot;Bandar Abbas (Shahid Rajaee)&quot;, &quot;nm&quot;: 340, &quot;km&quot;: 630, &quot;days&quot;: 1.1, &quot;waypoints&quot;: [[27.1, 56.06], [26.75, 56.0], [26.5, 55.2], [26.3, 54.0], [26.3, 52.5], [26.5, 51.3], [26.65, 50.6], [26.52, 50.2]], &quot;color&quot;: &quot;#B03A2E&quot;}, &quot;bushehr&quot;: {&quot;name&quot;: &quot;بوشهر&quot;, &quot;en&quot;: &quot;Bushehr&quot;, &quot;nm&quot;: 152, &quot;km&quot;: 281, &quot;days&quot;: 0.5, &quot;waypoints&quot;: [[28.95, 50.82], [28.2, 50.6], [27.4, 50.4], [26.8, 50.4], [26.52, 50.2]], &quot;color&quot;: &quot;#E0675A&quot;}, &quot;china&quot;: {&quot;name&quot;: &quot;شانگهای (چین)&quot;, &quot;en&quot;: &quot;Shanghai (China)&quot;, &quot;nm&quot;: 5965, &quot;km&quot;: 11048, &quot;days&quot;: 19.1, &quot;waypoints&quot;: [[31.23, 122.0], [28.0, 122.6], [25.0, 120.0], [22.0, 116.5], [18.0, 112.5], [13.0, 111.5], [9.0, 109.5], [6.0, 106.5], [3.0, 105.2], [1.2, 104.2], [1.2, 103.5], [2.0, 102.3], [3.0, 101.0], [4.5, 99.5], [5.8, 97.5], [6.5, 94.0], [6.0, 88.0], [5.2, 82.5], [5.3, 80.0], [6.0, 77.0], [8.5, 74.0], [12.0, 70.0], [17.0, 66.0], [21.0, 62.0], [24.0, 60.4], [25.6, 57.6], [26.55, 56.45], [26.5, 55.2], [26.3, 54.0], [26.3, 52.5], [26.5, 51.3], [26.65, 50.6], [26.52, 50.2]], &quot;color&quot;: &quot;#1F5C8B&quot;}, &quot;india&quot;: {&quot;name&quot;: &quot;نوا شوا (هند)&quot;, &quot;en&quot;: &quot;Nhava Sheva (India)&quot;, &quot;nm&quot;: 1375, &quot;km&quot;: 2547, &quot;days&quot;: 4.4, &quot;waypoints&quot;: [[18.95, 72.9], [19.5, 70.0], [21.5, 65.0], [23.5, 61.0], [25.6, 57.6], [26.55, 56.45], [26.5, 55.2], [26.3, 54.0], [26.3, 52.5], [26.5, 51.3], [26.65, 50.6], [26.52, 50.2]], &quot;color&quot;: &quot;#C8791B&quot;}, &quot;turkey&quot;: {&quot;name&quot;: &quot;مرسین (ترکیه)&quot;, &quot;en&quot;: &quot;Mersin (Turkey)&quot;, &quot;nm&quot;: 3736, &quot;km&quot;: 6919, &quot;days&quot;: 12.0, &quot;waypoints&quot;: [[36.8, 34.6], [36.4, 35.2], [35.2, 35.6], [34.0, 34.4], [32.5, 33.0], [32.0, 32.3], [31.3, 32.35], [29.95, 32.55], [28.5, 33.0], [27.5, 34.0], [26.0, 35.2], [22.0, 37.8], [18.0, 40.2], [14.5, 42.5], [12.7, 43.3], [12.0, 45.0], [12.6, 48.0], [13.5, 52.0], [15.5, 56.5], [19.0, 60.5], [21.5, 61.2], [24.0, 60.4], [25.6, 57.6], [26.55, 56.45], [26.5, 55.2], [26.3, 54.0], [26.3, 52.5], [26.5, 51.3], [26.65, 50.6], [26.52, 50.2]], &quot;color&quot;: &quot;#1F7A3F&quot;}, &quot;bosnia&quot;: {&quot;name&quot;: &quot;پلوچه (بوسنی)&quot;, &quot;en&quot;: &quot;Ploče (Bosnia)&quot;, &quot;nm&quot;: 4502, &quot;km&quot;: 8338, &quot;days&quot;: 14.4, &quot;waypoints&quot;: [[43.05, 17.43], [42.6, 17.1], [41.5, 17.9], [40.0, 19.2], [37.5, 19.0], [36.2, 21.8], [34.2, 24.0], [34.2, 26.5], [33.5, 30.0], [32.2, 32.2], [31.3, 32.35], [29.95, 32.55], [28.5, 33.0], [27.5, 34.0], [26.0, 35.2], [22.0, 37.8], [18.0, 40.2], [14.5, 42.5], [12.7, 43.3], [12.0, 45.0], [12.6, 48.0], [13.5, 52.0], [15.5, 56.5], [19.0, 60.5], [21.5, 61.2], [24.0, 60.4], [25.6, 57.6], [26.55, 56.45], [26.5, 55.2], [26.3, 54.0], [26.3, 52.5], [26.5, 51.3], [26.65, 50.6], [26.52, 50.2]], &quot;color&quot;: &quot;#7B5EA7&quot;}, &quot;bulgaria&quot;: {&quot;name&quot;: &quot;وارنا (بلغارستان)&quot;, &quot;en&quot;: &quot;Varna (Bulgaria)&quot;, &quot;nm&quot;: 4295, &quot;km&quot;: 7954, &quot;days&quot;: 13.8, &quot;waypoints&quot;: [[43.2, 27.95], [41.15, 29.05], [40.8, 28.3], [40.5, 27.3], [40.2, 26.4], [39.8, 25.9], [38.5, 25.5], [36.0, 27.0], [34.5, 31.0], [32.2, 32.2], [31.3, 32.35], [29.95, 32.55], [28.5, 33.0], [27.5, 34.0], [26.0, 35.2], [22.0, 37.8], [18.0, 40.2], [14.5, 42.5], [12.7, 43.3], [12.0, 45.0], [12.6, 48.0], [13.5, 52.0], [15.5, 56.5], [19.0, 60.5], [21.5, 61.2], [24.0, 60.4], [25.6, 57.6], [26.55, 56.45], [26.5, 55.2], [26.3, 54.0], [26.3, 52.5], [26.5, 51.3], [26.65, 50.6], [26.52, 50.2]], &quot;color&quot;: &quot;#2A9D8F&quot;}};
+var m=L.map(&#x27;m&#x27;).setView([24,52],5);
+L.tileLayer(&#x27;https://tile.openstreetmap.org/{z}/{x}/{y}.png&#x27;,{maxZoom:12,attribution:&#x27;&amp;copy; OpenStreetMap contributors&#x27;}).addTo(m);
+Object.keys(R).forEach(function(k){var r=R[k];
+ var line=L.polyline(r.waypoints,{color:r.color,weight:4,opacity:.85}).addTo(m);
+ line.bindTooltip(&#x27;&lt;b&gt;&#x27;+r.name+&#x27; ← دمام&lt;/b&gt;&lt;br&gt;طول مسیر: &#x27;+r.km.toLocaleString(&#x27;en&#x27;)+&#x27; کیلومتر (&#x27;+r.nm.toLocaleString(&#x27;en&#x27;)+&#x27; مایل دریایی)&lt;br&gt;زمان دریانوردی تقریبی: &#x27;+r.days+&#x27; روز (سرعت ۱۳ گره)&#x27;,{sticky:true});
+ var o=r.waypoints[0];
+ L.circleMarker(o,{radius:7,color:r.color,fillColor:&#x27;#fff&#x27;,fillOpacity:1,weight:3}).addTo(m).bindTooltip(r.name+&#x27; (بندر مبدأ)&#x27;);
+});
+L.marker([26.52,50.2]).addTo(m).bindTooltip(&#x27;&lt;b&gt;بندر دمام (مقصد)&lt;/b&gt;&lt;br&gt;بندر ملک عبدالعزیز، استان شرقی&#x27;);
+L.marker([27.03,49.7]).addTo(m).bindTooltip(&#x27;بندر جبیل&#x27;);
+L.marker([21.5,39.17]).addTo(m).bindTooltip(&#x27;بندر جده (دریای سرخ)&#x27;);
+[[&#x27;تنگه هرمز&#x27;,26.55,56.45],[&#x27;باب‌المندب&#x27;,12.7,43.3],[&#x27;کانال سوئز&#x27;,29.95,32.55],[&#x27;تنگه مالاکا&#x27;,2.5,101.5]].forEach(function(c){L.circleMarker([c[1],c[2]],{radius:5,color:&#x27;#333&#x27;,fillColor:&#x27;#333&#x27;,fillOpacity:1}).addTo(m).bindTooltip(c[0]+&#x27; (گذرگاه)&#x27;);});
+
+var RD={&quot;routes&quot;: [{&quot;port&quot;: &quot;دمام&quot;, &quot;centre&quot;: &quot;ریاض&quot;, &quot;km&quot;: 432, &quot;h&quot;: 4.2, &quot;pts&quot;: [[26.5, 50.2], [26.389, 50.084], [26.231, 49.546], [25.574, 48.397], [25.156, 47.628], [24.94, 46.974], [24.839, 46.849], [24.762, 46.648], [24.71, 46.68]], &quot;lo&quot;: 35, &quot;hi&quot;: 52}, {&quot;port&quot;: &quot;دمام&quot;, &quot;centre&quot;: &quot;الاحساء (هفوف)&quot;, &quot;km&quot;: 159, &quot;h&quot;: 1.9, &quot;pts&quot;: [[26.5, 50.2], [26.317, 50.055], [26.067, 49.806], [25.924, 49.613], [25.77, 49.562], [25.635, 49.509], [25.519, 49.543], [25.38, 49.59]], &quot;lo&quot;: 13, &quot;hi&quot;: 19}, {&quot;port&quot;: &quot;دمام&quot;, &quot;centre&quot;: &quot;بریده (قصیم)&quot;, &quot;km&quot;: 765, &quot;h&quot;: 7.3, &quot;pts&quot;: [[26.5, 50.2], [26.231, 49.546], [25.574, 48.397], [25.157, 47.631], [24.763, 46.65], [25.126, 46.461], [25.398, 46.165], [25.832, 45.459], [26.052, 44.997], [26.216, 44.034], [26.33, 43.97]], &quot;lo&quot;: 61, &quot;hi&quot;: 92}, {&quot;port&quot;: &quot;دمام&quot;, &quot;centre&quot;: &quot;جده&quot;, &quot;km&quot;: 1379, &quot;h&quot;: 14.5, &quot;pts&quot;: [[26.5, 50.2], [26.231, 49.546], [25.574, 48.397], [25.156, 47.628], [24.839, 46.849], [24.574, 46.528], [24.447, 46.008], [24.048, 45.242], [23.704, 44.596], [23.407, 43.666], [22.712, 42.158], [22.362, 41.564], [21.478, 40.566], [21.627, 40.194], [21.412, 39.725], [21.351, 39.544], [21.54, 39.17]], &quot;lo&quot;: 110, &quot;hi&quot;: 165}, {&quot;port&quot;: &quot;دمام&quot;, &quot;centre&quot;: &quot;مکه&quot;, &quot;km&quot;: 1297, &quot;h&quot;: 13.6, &quot;pts&quot;: [[26.5, 50.2], [26.231, 49.546], [25.574, 48.397], [25.156, 47.628], [24.839, 46.849], [24.574, 46.528], [24.447, 46.008], [24.048, 45.242], [23.407, 43.666], [22.362, 41.564], [21.478, 40.566], [21.613, 40.455], [21.528, 40.124], [21.42, 39.83]], &quot;lo&quot;: 104, &quot;hi&quot;: 156}, {&quot;port&quot;: &quot;دمام&quot;, &quot;centre&quot;: &quot;مدینه&quot;, &quot;km&quot;: 1245, &quot;h&quot;: 11.7, &quot;pts&quot;: [[26.5, 50.2], [26.231, 49.546], [25.574, 48.397], [24.763, 46.652], [25.4, 46.163], [26.052, 44.997], [26.218, 44.057], [25.819, 42.65], [25.228, 41.346], [24.983, 40.852], [24.461, 39.801], [24.47, 39.61]], &quot;lo&quot;: 100, &quot;hi&quot;: 149}, {&quot;port&quot;: &quot;دمام&quot;, &quot;centre&quot;: &quot;طائف&quot;, &quot;km&quot;: 1216, &quot;h&quot;: 12.7, &quot;pts&quot;: [[26.5, 50.2], [26.231, 49.546], [25.574, 48.397], [24.839, 46.849], [24.447, 46.008], [23.704, 44.596], [23.407, 43.666], [22.362, 41.563], [21.452, 40.505], [21.27, 40.42]], &quot;lo&quot;: 97, &quot;hi&quot;: 146}, {&quot;port&quot;: &quot;جبیل&quot;, &quot;centre&quot;: &quot;ریاض&quot;, &quot;km&quot;: 460, &quot;h&quot;: 4.7, &quot;pts&quot;: [[27.022, 49.662], [26.78, 49.614], [26.283, 49.762], [26.231, 49.546], [25.574, 48.397], [24.94, 46.974], [24.762, 46.648], [24.71, 46.68]], &quot;lo&quot;: 37, &quot;hi&quot;: 55}, {&quot;port&quot;: &quot;جبیل&quot;, &quot;centre&quot;: &quot;الاحساء (هفوف)&quot;, &quot;km&quot;: 224, &quot;h&quot;: 2.6, &quot;pts&quot;: [[27.022, 49.662], [26.859, 49.777], [26.533, 49.957], [26.31, 50.042], [26.187, 49.947], [25.924, 49.613], [25.635, 49.509], [25.38, 49.59]], &quot;lo&quot;: 18, &quot;hi&quot;: 27}, {&quot;port&quot;: &quot;جبیل&quot;, &quot;centre&quot;: &quot;دمام/خبر&quot;, &quot;km&quot;: 89, &quot;h&quot;: 1.1, &quot;pts&quot;: [[27.022, 49.662], [26.859, 49.777], [26.671, 49.923], [26.495, 49.985], [26.43, 50.1]], &quot;lo&quot;: 7, &quot;hi&quot;: 11}, {&quot;port&quot;: &quot;جده&quot;, &quot;centre&quot;: &quot;ریاض&quot;, &quot;km&quot;: 949, &quot;h&quot;: 10.5, &quot;pts&quot;: [[21.48, 39.171], [21.527, 40.123], [21.646, 40.398], [21.454, 40.506], [22.361, 41.563], [23.406, 43.667], [23.823, 44.973], [24.274, 45.633], [24.451, 46.287], [24.678, 46.69], [24.71, 46.68]], &quot;lo&quot;: 76, &quot;hi&quot;: 114}, {&quot;port&quot;: &quot;جده&quot;, &quot;centre&quot;: &quot;دمام/خبر&quot;, &quot;km&quot;: 1359, &quot;h&quot;: 14.3, &quot;pts&quot;: [[21.48, 39.171], [21.527, 40.123], [21.454, 40.506], [22.361, 41.563], [23.406, 43.667], [24.048, 45.242], [24.447, 46.008], [24.839, 46.85], [25.574, 48.397], [26.229, 49.543], [26.43, 50.1]], &quot;lo&quot;: 109, &quot;hi&quot;: 163}, {&quot;port&quot;: &quot;جده&quot;, &quot;centre&quot;: &quot;الاحساء (هفوف)&quot;, &quot;km&quot;: 1270, &quot;h&quot;: 14.1, &quot;pts&quot;: [[21.48, 39.171], [21.454, 40.506], [22.361, 41.563], [23.406, 43.667], [24.048, 45.242], [24.447, 46.008], [24.736, 46.59], [25.084, 48.041], [25.385, 49.202], [25.38, 49.59]], &quot;lo&quot;: 102, &quot;hi&quot;: 152}, {&quot;port&quot;: &quot;جده&quot;, &quot;centre&quot;: &quot;بریده (قصیم)&quot;, &quot;km&quot;: 907, &quot;h&quot;: 9.3, &quot;pts&quot;: [[21.48, 39.171], [22.27, 39.124], [23.079, 39.956], [24.027, 39.549], [24.528, 39.991], [25.129, 41.229], [25.856, 42.748], [26.33, 43.97]], &quot;lo&quot;: 73, &quot;hi&quot;: 109}, {&quot;port&quot;: &quot;جده&quot;, &quot;centre&quot;: &quot;مکه&quot;, &quot;km&quot;: 81, &quot;h&quot;: 1.0, &quot;pts&quot;: [[21.48, 39.171], [21.458, 39.21], [21.4, 39.375], [21.354, 39.535], [21.412, 39.725], [21.42, 39.83]], &quot;lo&quot;: 6, &quot;hi&quot;: 10}, {&quot;port&quot;: &quot;جده&quot;, &quot;centre&quot;: &quot;مدینه&quot;, &quot;km&quot;: 416, &quot;h&quot;: 4.8, &quot;pts&quot;: [[21.48, 39.171], [21.708, 39.115], [22.27, 39.124], [22.676, 39.676], [23.079, 39.956], [23.73, 39.775], [24.027, 39.549], [24.47, 39.61]], &quot;lo&quot;: 33, &quot;hi&quot;: 50}, {&quot;port&quot;: &quot;جده&quot;, &quot;centre&quot;: &quot;طائف&quot;, &quot;km&quot;: 168, &quot;h&quot;: 2.1, &quot;pts&quot;: [[21.48, 39.171], [21.424, 39.312], [21.35, 39.543], [21.42, 39.827], [21.326, 39.97], [21.364, 40.224], [21.27, 40.42]], &quot;lo&quot;: 13, &quot;hi&quot;: 20}], &quot;centres&quot;: [{&quot;name&quot;: &quot;ریاض&quot;, &quot;lat&quot;: 24.71, &quot;lon&quot;: 46.68}, {&quot;name&quot;: &quot;دمام/خبر&quot;, &quot;lat&quot;: 26.43, &quot;lon&quot;: 50.1}, {&quot;name&quot;: &quot;الاحساء (هفوف)&quot;, &quot;lat&quot;: 25.38, &quot;lon&quot;: 49.59}, {&quot;name&quot;: &quot;بریده (قصیم)&quot;, &quot;lat&quot;: 26.33, &quot;lon&quot;: 43.97}, {&quot;name&quot;: &quot;جده&quot;, &quot;lat&quot;: 21.54, &quot;lon&quot;: 39.17}, {&quot;name&quot;: &quot;مکه&quot;, &quot;lat&quot;: 21.42, &quot;lon&quot;: 39.83}, {&quot;name&quot;: &quot;مدینه&quot;, &quot;lat&quot;: 24.47, &quot;lon&quot;: 39.61}, {&quot;name&quot;: &quot;طائف&quot;, &quot;lat&quot;: 21.27, &quot;lon&quot;: 40.42}]};
+var cols={&#x27;دمام&#x27;:&#x27;#c0392b&#x27;,&#x27;جبیل&#x27;:&#x27;#8e44ad&#x27;,&#x27;جده&#x27;:&#x27;#16a085&#x27;};
+var roadLayer=L.layerGroup().addTo(m);
+RD.routes.forEach(function(r){
+ var l=L.polyline(r.pts,{color:cols[r.port],weight:3,opacity:.9,dashArray:&#x27;7,6&#x27;}).addTo(roadLayer);
+ l.bindTooltip(&#x27;&lt;b&gt;جاده: &#x27;+r.port+&#x27; ← &#x27;+r.centre+&#x27;&lt;/b&gt;&lt;br&gt;طول مسیر جاده‌ای: &#x27;+r.km.toLocaleString(&#x27;en&#x27;)+&#x27; کیلومتر&lt;br&gt;زمان رانندگی تقریبی: &#x27;+r.h+&#x27; ساعت&lt;br&gt;برآورد کرایه کامیون: &#x27;+r.lo+&#x27; تا &#x27;+r.hi+&#x27; دلار بر تن&#x27;,{sticky:true});
+});
+RD.centres.forEach(function(c){
+ L.circleMarker([c.lat,c.lon],{radius:7,color:&#x27;#1f2d3d&#x27;,fillColor:&#x27;#f1c40f&#x27;,fillOpacity:1,weight:2}).addTo(m).bindTooltip(&#x27;&lt;b&gt;مرکز مصرف: &#x27;+c.name+&#x27;&lt;/b&gt;&#x27;);
+});
+L.control.layers(null,{&#x27;مسیرهای جاده‌ای بندر تا مراکز مصرف&#x27;:roadLayer},{collapsed:false,position:&#x27;bottomleft&#x27;}).addTo(m);
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe><div class="cap">نقشهٔ ۱: مسیرهای دریایی اصلی به بندر دمام (نقشهٔ تعاملی: با نگه‌داشتن نشانگر روی هر مسیر، نام و طول آن نمایش داده می‌شود)</div></div>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>مسیر به دمام</th><th>مایل دریایی</th><th>کیلومتر</th><th>دریانوردی خالص (روز، ۱۳ گره)</th><th>گذرگاه‌ها</th></tr></thead>
+<tbody>
+<tr><td><strong>بوشهر</strong></td><td class="num-cell"><strong>۱۵۲</strong></td><td class="num-cell"><strong>۲۸۱</strong></td><td class="num-cell"><strong>۰٫۵</strong></td><td><strong>درون خلیج فارس</strong></td></tr>
+<tr><td><strong>بندرعباس (شهید رجایی)</strong></td><td class="num-cell"><strong>۳۴۰</strong></td><td class="num-cell"><strong>۶۳۰</strong></td><td class="num-cell"><strong>۱٫۱</strong></td><td><strong>خروجی تنگه هرمز و ورود به خلیج فارس</strong></td></tr>
+<tr><td>نوا شوا (هند)</td><td class="num-cell">۱٬۳۷۵</td><td class="num-cell">۲٬۵۴۷</td><td class="num-cell">۴٫۴</td><td>دریای عرب و تنگه هرمز</td></tr>
+<tr><td>مرسین (ترکیه)</td><td class="num-cell">۳٬۷۳۶</td><td class="num-cell">۶٬۹۱۹</td><td class="num-cell">۱۲٫۰</td><td>سوئز، دریای سرخ، باب‌المندب، هرمز</td></tr>
+<tr><td>وارنا (بلغارستان)</td><td class="num-cell">۴٬۲۹۵</td><td class="num-cell">۷٬۹۵۴</td><td class="num-cell">۱۳٫۸</td><td>بسفر، دردانل، سوئز، باب‌المندب، هرمز</td></tr>
+<tr><td>پلوچه (بوسنی)</td><td class="num-cell">۴٬۵۰۲</td><td class="num-cell">۸٬۳۳۸</td><td class="num-cell">۱۴٫۴</td><td>مدیترانه، سوئز، باب‌المندب، هرمز</td></tr>
+<tr><td>شانگهای (چین)</td><td class="num-cell">۵٬۹۶۵</td><td class="num-cell">۱۱٬۰۴۸</td><td class="num-cell">۱۹٫۱</td><td>مالاکا، اقیانوس هند، هرمز</td></tr>
+</tbody>
+</table></div>
+<p><em>فاصله‌ها مجموع مسافت دایرهٔ عظیمه روی نقاط عبور تجاری و تقریبی‌اند؛ زمان دریانوردی خالص شامل توقف بندری و انتقال بین کشتی‌ها (ترانشیپمنت) نیست.</em></p>
+<p><strong>برتری فاصله و محدودیت امنیتی:</strong> در شرایط عادی، فاصلهٔ بوشهر و بندرعباس تا دمام (۱۵۲ تا ۳۴۰ مایل) ۴ تا ۳۹ برابر کوتاه‌تر از رقباست و امکان سرویس مستقیم فیدر (کشتی کوچک خطی) وجود دارد. شرکت هاپاگ-لوید رزرو مقصدهای دمام و جبیل را از طریق جده و حمل زمینی انجام می‌دهد. عبور از دریای سرخ و باب‌المندب برای مبادی اروپایی-ترکیه‌ای نیز با تهدید حملات حوثی‌ها همراه است؛ بنابراین همهٔ رقبا با اختلال روبه‌رو هستند.</p>
+<h3><bdi>۵٫۱</bdi> فاصلهٔ بنادر ورودی تا مراکز مصرف</h3>
+<p>بنادر ورودی اصلی برای محموله‌های ایرانی دمام و جبیل در خلیج فارس‌اند؛ بندر جده در دریای سرخ دروازهٔ منطقهٔ غربی و مبدأ ورودی رقبای مدیترانه‌ای است. فاصله‌ها و زمان رانندگی از دادهٔ جاده‌ای OpenStreetMap (سرویس مسیریابی OSRM) استخراج شده و مسیرها در نقشهٔ تعاملی بالا (لایهٔ «مسیرهای جاده‌ای بندر تا مراکز مصرف») با خط‌چین نمایش داده می‌شوند.</p>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>بندر ورودی</th><th>مرکز مصرف</th><th>فاصلهٔ جاده‌ای (کیلومتر)</th><th>زمان رانندگی (ساعت)</th><th>کرایهٔ برآوردی کامیون (دلار بر تن)</th></tr></thead>
+<tbody>
+<tr><td><strong>بندر دمام</strong></td><td><strong>ریاض</strong></td><td class="num-cell"><strong>۴۳۲</strong></td><td class="num-cell"><strong>۴٫۲</strong></td><td class="num-cell"><strong>۳۵ تا ۵۲</strong></td></tr>
+<tr><td>بندر دمام</td><td>الاحساء (هفوف)</td><td class="num-cell">۱۵۹</td><td class="num-cell">۱٫۹</td><td class="num-cell">۱۳ تا ۱۹</td></tr>
+<tr><td>بندر دمام</td><td>بریده (قصیم)</td><td class="num-cell">۷۶۵</td><td class="num-cell">۷٫۳</td><td class="num-cell">۶۱ تا ۹۲</td></tr>
+<tr><td><strong>بندر دمام</strong></td><td><strong>جده</strong></td><td class="num-cell"><strong>۱٬۳۷۹</strong></td><td class="num-cell"><strong>۱۴٫۵</strong></td><td class="num-cell"><strong>۱۱۰ تا ۱۶۵</strong></td></tr>
+<tr><td>بندر دمام</td><td>مکه</td><td class="num-cell">۱٬۲۹۷</td><td class="num-cell">۱۳٫۶</td><td class="num-cell">۱۰۴ تا ۱۵۶</td></tr>
+<tr><td>بندر دمام</td><td>مدینه</td><td class="num-cell">۱٬۲۴۵</td><td class="num-cell">۱۱٫۷</td><td class="num-cell">۱۰۰ تا ۱۴۹</td></tr>
+<tr><td>بندر دمام</td><td>طائف</td><td class="num-cell">۱٬۲۱۶</td><td class="num-cell">۱۲٫۷</td><td class="num-cell">۹۷ تا ۱۴۶</td></tr>
+<tr><td>بندر جبیل</td><td>ریاض</td><td class="num-cell">۴۶۰</td><td class="num-cell">۴٫۷</td><td class="num-cell">۳۷ تا ۵۵</td></tr>
+<tr><td>بندر جبیل</td><td>الاحساء (هفوف)</td><td class="num-cell">۲۲۴</td><td class="num-cell">۲٫۶</td><td class="num-cell">۱۸ تا ۲۷</td></tr>
+<tr><td>بندر جبیل</td><td>دمام/خبر</td><td class="num-cell">۸۹</td><td class="num-cell">۱٫۱</td><td class="num-cell">۷ تا ۱۱</td></tr>
+<tr><td>بندر جده</td><td>ریاض</td><td class="num-cell">۹۴۹</td><td class="num-cell">۱۰٫۵</td><td class="num-cell">۷۶ تا ۱۱۴</td></tr>
+<tr><td>بندر جده</td><td>مکه</td><td class="num-cell">۸۱</td><td class="num-cell">۱٫۰</td><td class="num-cell">۶ تا ۱۰</td></tr>
+<tr><td>بندر جده</td><td>مدینه</td><td class="num-cell">۴۱۶</td><td class="num-cell">۴٫۸</td><td class="num-cell">۳۳ تا ۵۰</td></tr>
+<tr><td>بندر جده</td><td>طائف</td><td class="num-cell">۱۶۸</td><td class="num-cell">۲٫۱</td><td class="num-cell">۱۳ تا ۲۰</td></tr>
+<tr><td>بندر جده</td><td>بریده (قصیم)</td><td class="num-cell">۹۰۷</td><td class="num-cell">۹٫۳</td><td class="num-cell">۷۳ تا ۱۰۹</td></tr>
+<tr><td>بندر جده</td><td>دمام/خبر</td><td class="num-cell">۱٬۳۵۹</td><td class="num-cell">۱۴٫۳</td><td class="num-cell">۱۰۹ تا ۱۶۳</td></tr>
+</tbody>
+</table></div>
+<p><em>کرایهٔ داخلی برآورد تحلیلی است: تنها نرخ مستند یافت‌شده ۸۰۰ تا ۹۰۰ دلار برای هر کانتینر ۲۰ فوتی (حدود ۲۱ تن بار) در مسیر دمام تا ریاض است (حدود ۳۸ تا ۴۳ دلار بر تن). نرخ بر تن-کیلومتر ۰٫۰۸ تا ۰٫۱۲ دلار فرض شده و برای مسیرهای بلندتر به همان نسبت خطی گسترش یافته است؛ برای مسیرهای بیش از ۱٬۰۰۰ کیلومتر ممکن است نرخ واقعی کمتر باشد و باید با استعلام شرکت‌های حمل‌ونقل تأیید شود. راه‌آهن دمام–ریاض (حدود ۴۰۰ کیلومتر) جایگزین است، اما سقف بار هر کانتینر ۲۰ فوتی حدود ۲۱ تا ۲۱٫۵ تن است.</em></p>
+<p><strong>پیامد برای ورود به بازار:</strong> ریاض (۴۳۲ کیلومتر از دمام) بزرگ‌ترین مرکز مصرف صنعتی در دسترس است و هزینهٔ حمل داخلی آن حدود ۳۵ تا ۵۲ دلار بر تن برآورد می‌شود. منطقهٔ غربی (جده، مکه، مدینه، طائف) از دمام حدود ۱٬۲۰۰ تا ۱٬۳۸۰ کیلومتر فاصله دارد و حمل داخلی آن ۹۷ تا ۱۶۵ دلار بر تن اضافه می‌کند؛ بنابراین مشتریان غربی برای محموله‌های ایرانی در شرایط عادی کم‌رقابت‌ترند و رقبای مدیترانه‌ای که از طریق جده وارد می‌شوند در آن منطقه برتری دارند. از ۳۰ شرکت تأییدشدهٔ فهرست هدف، ۱۱ شرکت در ریاض، ۱۰ شرکت در جده، ۷ شرکت در منطقهٔ شرقی و ۲ شرکت در سایر مناطق مستقرند.</p>
+</section>
+<section id="s6">
+<div class="sec-head"><span class="sec-num">۶</span><h2>تخمین قیمت تمام‌شده (CIF) «جوش شیرین پارس»</h2></div>
+<ul class="pts">
+<li>مبنای قیمت: FOB برابر ۲۵۰ دلار بر تن در بوشهر یا بندرعباس؛ کانتینر ۲۰ فوتی استاندارد (۲0GP) با ۲۵ تن بار کیسه‌ای و پالتی.</li>
+<li>مسیر: سرویس مستقیم فیدر بوشهر/بندرعباس به دمام یا جبیل (بدون ترانشیپمنت در شرایط عادی).</li>
+<li>کرایه و بیمه: نرخ مستند برای این مسیر یافت نشد؛ مبنای برآورد، ۱٬۰۰۰ تا ۱٬۸۰۰ دلار برای هر کانتینر (۴۰ تا ۷۲ دلار بر تن) و بیمه ۲ دلار بر تن است. در شرایط جنگی، افزایش ۳۵ تا ۴۰٪ نسبت به پایه (طبق گزارش ایران اینترنشنال برای بندر شهید رجایی) و بیمهٔ ریسک جنگی ۵ تا ۱۰ دلار بر تن فرض شده است. این ارقام برآورد تحلیلی‌اند و باید با استعلام فورواردر (شرکت حمل‌ونقل) تأیید شوند.</li>
+</ul>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>سناریو</th><th>FOB</th><th>حمل و بیمه</th><th>CIF دمام</th></tr></thead>
+<tbody>
+<tr><td><strong>شرایط عادی (پیش از بحران)</strong></td><td class="num-cell"><strong>۲۵۰</strong></td><td class="num-cell"><strong>۴۲ تا ۷۴</strong></td><td class="num-cell"><strong>۲۹۲ تا ۳۲۴</strong></td></tr>
+<tr><td><strong>شرایط ریسک جنگی (کنونی)</strong></td><td class="num-cell"><strong>۲۵۰</strong></td><td class="num-cell"><strong>۵۹ تا ۱۱۱</strong></td><td class="num-cell"><strong>۳۰۹ تا ۳۶۱</strong></td></tr>
+<tr><td>مرجع: چین (ثبت‌شده در عربستان)</td><td>—</td><td>—</td><td class="num-cell">۲۹۱</td></tr>
+</tbody>
+</table></div>
+<div class="chart-box"><div class="chart-h" style="height:400px"><canvas id="chCif"></canvas></div><div class="cap">نمودار ۳: مقایسهٔ قیمت CIF</div></div>
+<p><em>سناریوی مسیر زمینی از راه عراق به دلیل نبود نرخ مستند در این گزارش قیمت‌گذاری نشده است.</em></p>
+<h3><bdi>۶٫۱</bdi> قیمت تحویلی در مراکز مصرف (از دمام)</h3>
+<div class="table-wrap"><table>
+<thead><tr><th>مرکز مصرف</th><th>فاصله از دمام (کیلومتر)</th><th>تحویلی، شرایط عادی (دلار بر تن)</th><th>تحویلی، ریسک جنگی (دلار بر تن)</th></tr></thead>
+<tbody>
+<tr><td>الاحساء (هفوف)</td><td class="num-cell">۱۵۹</td><td class="num-cell">۳۰۵ تا ۳۴۳</td><td class="num-cell">۳۲۲ تا ۳۸۰</td></tr>
+<tr><td><strong>ریاض</strong></td><td class="num-cell"><strong>۴۳۲</strong></td><td class="num-cell"><strong>۳۲۷ تا ۳۷۶</strong></td><td class="num-cell"><strong>۳۴۴ تا ۴۱۳</strong></td></tr>
+<tr><td>بریده (قصیم)</td><td class="num-cell">۷۶۵</td><td class="num-cell">۳۵۳ تا ۴۱۶</td><td class="num-cell">۳۷۰ تا ۴۵۳</td></tr>
+<tr><td>مدینه</td><td class="num-cell">۱٬۲۴۵</td><td class="num-cell">۳۹۲ تا ۴۷۳</td><td class="num-cell">۴۰۹ تا ۵۱۰</td></tr>
+<tr><td>جده</td><td class="num-cell">۱٬۳۷۹</td><td class="num-cell">۴۰۲ تا ۴۸۹</td><td class="num-cell">۴۱۹ تا ۵۲۶</td></tr>
+</tbody>
+</table></div>
+<p><em>قیمت تحویلی = CIF دمام + کرایهٔ داخلی (برآورد جدول ۵-۱). هزینهٔ تخلیه، انبارداری و ترخیص و همچنین تعرفه و مالیات بر ارزش افزوده در این جدول لحاظ نشده است. آمار گمرک عربستان بندر ورود را تفکیک نمی‌کند؛ بنابراین مقایسهٔ مستقیم قیمت تحویلی با قیمت رقبا در هر شهر ممکن نیست.</em></p>
+</section>
+<section id="s7">
+<div class="sec-head"><span class="sec-num">۷</span><h2>تعرفه، مالیات و الزامات مقرراتی</h2></div>
+<div class="table-wrap"><table>
+<thead><tr><th>مورد</th><th>وضعیت</th><th>ملاحظه</th></tr></thead>
+<tbody>
+<tr><td>تعرفهٔ گمرکی</td><td>۵٪ بر ارزش CIF (برآورد ITC Trade Map)</td><td>حداقل تعرفهٔ مشترک شورای همکاری خلیج فارس (GCC) برای بیشتر کالاها؛ ITC Trade Map نرخ اعمال‌شده را ۵٪ برای ایران، چین، هند، ترکیه و بیشتر مبادی و صفر برای اعضای شورای همکاری، عمان، مصر، اردن و سنگاپور برآورد کرده است؛ تطبیق با جدول رسمی سازمان زکات، مالیات و گمرک (ZATCA) توصیه می‌شود</td></tr>
+<tr><td>تغییرات اخیر تعرفه</td><td>اصلاحیه از ۲۷ نوامبر ۲۰۲۵</td><td>افزایش نرخ در بخش‌های صنعتی از جمله مواد شیمیایی (نرخ ردیف‌ها منتشر نشده)</td></tr>
+<tr><td>مالیات بر ارزش افزوده</td><td class="num-cell">۱۵٪</td><td>بر ارزش گمرکی در زمان واردات؛ معمولاً برای واردکنندهٔ ثبت‌نام‌شده قابل استرداد است</td></tr>
+<tr><td>ترجیح تعرفه‌ای برای ایران</td><td>یافت نشد</td><td>هیچ موافقتنامهٔ ترجیحی با ایران شناسایی نشد؛ ITC برای ایران نیز نرخ ۵٪ را برآورد کرده است</td></tr>
+<tr><td>ضد دامپینگ</td><td>مورد مرتبط یافت نشد</td><td>در جست‌وجوی انجام‌شده اقدام ضد دامپینگ برای این کالا مشاهده نشد</td></tr>
+</tbody>
+</table></div>
+<h3>الزامات ثبت و گواهی</h3>
+<ul class="pts">
+<li>گواهی انطباق سازمان استاندارد عربستان (SASO) از طریق پورتال SABER و برنامهٔ Saleem، با ثبت توسط واردکننده و نهاد گواهی‌دهندهٔ مورد تأیید.</li>
+<li>گرید غذایی: رعایت مقررات فنی افزودنی‌های مجاز غذایی SFDA.FD ۲۵۰۰ (سازمان غذا و دارو عربستان)، گواهی آنالیز (CoA) و برگهٔ اطلاعات ایمنی (SDS) به زبان عربی یا انگلیسی.</li>
+<li>گرید دارویی: ثبت و مجوز مستقل سازمان غذا و دارو و تطبیق با فارماکوپه؛ پیش از ورود به این بخش نیازمند بررسی جداگانه است.</li>
+</ul>
+<h3>برآورد هزینهٔ تمام‌شدهٔ رسیده به انبار (دلار بر تن)</h3>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>سناریو</th><th>CIF</th><th>تعرفه ۵٪</th><th>مالیات ارزش افزوده ۱۵٪</th><th>جمع</th></tr></thead>
+<tbody>
+<tr><td>شرایط عادی</td><td class="num-cell">۲۹۲ تا ۳۲۴</td><td class="num-cell">۱۴٫۶ تا ۱۶٫۲</td><td class="num-cell">۴۶٫۰ تا ۵۱٫۰</td><td class="num-cell">۳۵۲٫۶ تا ۳۹۱٫۲</td></tr>
+<tr><td>ریسک جنگی</td><td class="num-cell">۳۰۹ تا ۳۶۱</td><td class="num-cell">۱۵٫۵ تا ۱۸٫۱</td><td class="num-cell">۴۸٫۷ تا ۵۶٫۹</td><td class="num-cell">۳۷۳٫۱ تا ۴۳۵٫۹</td></tr>
+</tbody>
+</table></div>
+<p><em>مالیات ارزش افزوده روی مجموع CIF و تعرفه محاسبه شده است؛ هزینهٔ ترخیص و حمل داخلی (دمام تا ریاض حدود ۴۰۰ کیلومتر) افزوده نشده است.</em></p>
+</section>
+<section id="s8">
+<div class="sec-head"><span class="sec-num">۸</span><h2>جدول مقایسه‌ای جامع بازار</h2></div>
+<div class="table-wrap t-wrap"><table>
+<thead><tr><th>تأمین‌کننده</th><th>FOB مبدأ</th><th>حمل و بیمه تا دمام (برآورد)</th><th>CIF تمام‌شده</th><th>سهم بازار (۲۰۲۵)</th></tr></thead>
+<tbody>
+<tr><td>چین</td><td>۲۲۷ گمرکی (۲۰۲۴)</td><td class="num-cell">حدود ۶۴</td><td class="num-cell">۲۹۱</td><td class="num-cell">۴۶٫۰٪</td></tr>
+<tr><td>هند</td><td class="num-cell">۲۶۵ تا ۲۹۵</td><td class="num-cell">حدود ۱۰۸–۱۳۸</td><td class="num-cell">۴۰۳</td><td class="num-cell">۲۴٫۲٪</td></tr>
+<tr><td>ترکیه</td><td class="num-cell">۳۱۵ تا ۳۵۵</td><td class="num-cell">حدود ۵۸–۹۸</td><td class="num-cell">۴۱۳</td><td class="num-cell">۱۴٫۴٪</td></tr>
+<tr><td>بلغارستان</td><td>نامشخص</td><td>نامشخص</td><td class="num-cell">۳۴۱</td><td class="num-cell">۵٫۳٪</td></tr>
+<tr><td>بوسنی</td><td>نامشخص</td><td>نامشخص</td><td class="num-cell">۳۲۵</td><td class="num-cell">۴٫۵٪</td></tr>
+<tr class="hl"><td><strong>جوش شیرین پارس</strong></td><td class="num-cell"><strong>۲۵۰</strong></td><td><strong>۴۲ تا ۷۴ (عادی)</strong></td><td><strong>۲۹۲ تا ۳۲۴ (عادی)</strong></td><td class="num-cell"><strong>۰٪</strong></td></tr>
+</tbody>
+</table></div>
+<p><em>حمل و بیمهٔ رقبا از تفاضل CIF ثبت‌شده و FOB اسپات یا گمرکی محاسبه شده و به‌دلیل تفاوت گرید و سال تقریبی است.</em></p>
+<ul class="pts">
+<li>در شرایط عادی، قیمت CIF پارس ۱ تا ۳۳ دلار از چین بالاتر، ۸۹ تا ۱۲۱ دلار از ترکیه پایین‌تر و ۷۹ تا ۱۱۱ دلار از هند پایین‌تر است.</li>
+<li>در برابر بوسنی (۳۲۵) پارس ۱ تا ۳۳ دلار و در برابر بلغارستان (۳۴۱) ۱۷ تا ۴۹ دلار ارزان‌تر است؛ رقابت‌پذیری در بخش فله به کنترل کرایه وابسته است.</li>
+<li>در شرایط ریسک جنگی پارس ۱۸ تا ۷۰ دلار از چین گران‌تر و با بوسنی و بلغارستان تقریباً هم‌سطح است (از ۳۲ دلار ارزان‌تر تا ۳۶ دلار گران‌تر)، ولی همچنان ۴۲ تا ۹۴ دلار از هند و بیشتر از ترکیه ارزان‌تر است.</li>
+</ul>
+</section>
+<section id="s9">
+<div class="sec-head"><span class="sec-num">۹</span><h2>جمع‌بندی و توصیه‌های اجرایی</h2></div>
+<h3>فرصت‌ها</h3>
+<ul class="pts">
+<li>بازار با مصرف حدود ۳۴ هزار تن و ارزش واردات ۱۲٫۸ میلیون دلار بازاری قابل‌توجه است و تولید داخلی ندارد.</li>
+<li>ورود سریع هند (۰٫۱٪ تا ۲۴٪ در شش سال) نشان می‌دهد خریداران به تأمین‌کنندهٔ جدید باز هستند.</li>
+<li>فاصلهٔ بسیار کوتاه ایران تا دمام و جبیل در شرایط عادی مزیت هزینه و زمان ایجاد می‌کند.</li>
+</ul>
+<h3>ریسک‌ها</h3>
+<ul class="pts">
+<li>جنگ منطقه‌ای، محاصرهٔ بنادر جنوبی ایران، اختلال تنگه هرمز و تنش در روابط ایران و عربستان؛ این مهم‌ترین مانع ورود است.</li>
+<li>رقابت قیمتی چین (۲۹۱ دلار CIF) و نوسان شدید سهم مبادی از سالی به سال دیگر.</li>
+<li>ضرورت ثبت SASO/SABER و احتمال افزایش تعرفه‌های صنعتی پس از اصلاحیهٔ نوامبر ۲۰۲۵.</li>
+<li>نبود ثبت واردات از ایران در آمار گمرکی عربستان؛ شناسایی خریدار و کانال پرداخت باید با رعایت کامل مقررات تحریمی و گمرکی انجام شود.</li>
+</ul>
+</section>
+<section id="srcs">
+<div class="sec-head"><h2>منابع</h2></div>
+<ol class="srcs">
+<li id="src-1"><span class="n">۱</span>UN Comtrade / WITS (بانک جهانی): واردات HS ۲۸۳۶۳۰ عربستان، سال‌های ۲۰۱۸ تا ۲۰۲۵ و صادرات چین ۲۰۲۴ — wits.worldbank.org</li>
+<li id="src-2"><span class="n">۲</span>Trendeconomy: تجارت جهانی HS ۲۸۳۶۳۰ (۲۰۲۳)</li>
+<li id="src-3"><span class="n">۳</span>Volza: Sodium Bicarbonate Imports in Saudi Arabia (داده تا نوامبر ۲۰۲۵)</li>
+<li id="src-4"><span class="n">۴</span>Price-Watch و Procurement Resource: قیمت جوش‌شیرین (۲۰۲۵–۲۰۲۶)</li>
+<li id="src-5"><span class="n">۵</span>Tehran Times: تجارت غیرنفتی ایران و عربستان در سال ۱۴۰۳ (آمار گمرک ایران)</li>
+<li id="src-6"><span class="n">۶</span>Wikipedia: ۲۰۲۶ Strait of Hormuz crisis؛ Saudi Arabia in the ۲۰۲۶ Iran war؛ Iran–Saudi Arabia relations</li>
+<li id="src-7"><span class="n">۷</span>Al Jazeera (۱۷ اکتبر ۲۰۲۶) و Straits Live (۲۰ اکتبر ۲۰۲۶): وضعیت تنگه هرمز</li>
+<li id="src-8"><span class="n">۸</span>Hapag-Lloyd: اطلاعیهٔ رزرو مقصدهای خلیج فارس (به‌روزرسانی ۲۸ ژوئیه ۲۰۲۶)؛ Iran International (۲۰ اوت ۲۰۲۶)</li>
+<li id="src-9"><span class="n">۹</span>U.S. Commercial Service (trade.gov): Saudi Arabia Import Tariffs؛ EY Tax News: اصلاحیهٔ تعرفهٔ یکپارچهٔ عربستان (نوامبر ۲۰۲۵)؛ ClearTax: VAT on imports</li>
+<li id="src-10"><span class="n">۱۰</span>ITC Trade Map: فهرست بازارهای تأمین‌کنندهٔ ردیف ۲۸۳۶۳۰ برای عربستان (۲۰۲۱ تا ۲۰۲۵) و تعرفهٔ اعمال‌شدهٔ برآوردی؛ آمار گمرک جمهوری اسلامی ایران: صادرات بی‌کربنات سدیم سال ۱۴۰۴</li>
+<li id="src-11"><span class="n">۱۱</span>SFDA: مقررات فنی SFDA.FD ۲۵۰۰</li>
+<li id="src-12"><span class="n">۱۲</span>OpenStreetMap/OSRM: فاصله و مسیر جاده‌ای بنادر تا مراکز مصرف (استخراج ۲۷ اکتبر ۲۰۲۶)؛ Gerudo Logistics: هزینهٔ کامیون و راه‌آهن دمام–ریاض؛ Rome2rio: تطبیق فاصله‌های جاده‌ای</li>
+<li id="src-13"><span class="n">۱۳</span>وب‌سایت‌های رسمی شرکت‌ها (صفحات تماس): Riyadh Foods، Ahmad A. Abed، Halwani، NBCC، Sunbulah، Herfy، Savola، Jamjoom Pharma، SPIMACO، Hakeem Pharma، Feedco، Azelis، BCI، Atlad Chemical؛ سایت رسمی Saudi Food Show</li>
+<li id="src-14"><span class="n">۱۴</span>GASTAT (از طریق Argaam): جمعیت ۲۰۲۴؛ Wikipedia/CIA World Factbook: شهرنشینی</li>
+<li id="src-15"><span class="n">۱۵</span>IFC Disclosure (Sisecam Soda Lukavac)؛ Solvay (Solvay SODI, Devnya)؛ Glass International (طرح ISACC در جبیل)</li>
+<li id="src-16"><span class="n">۱۶</span>Gulf News: بیماران نارسایی کلیوی؛ IMARC: بازار خوراک طیور عربستان</li>
+<li id="src-17"><span class="n">۱۷</span>Austrade، Agroberichten Buitenland، Dairy News Today: تاریخ نمایشگاه‌ها</li>
+</ol>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p>تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس &middot; تاریخ تنظیم: مهر ۱۴۰۵ (اکتبر ۲۰۲۶)</p>
+</footer>
+
+<script src="/report-assets/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var D = {"vol": {"years": [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], "vol": [29645.0, 33766.0, 30866.0, 18432.0, 38452.0, 22387.0, 32093.0, 31365.0], "price": [336.0, 359.0, 391.0, null, 509.0, 541.0, 409.0, 408.0], "partial": [false, false, false, true, false, false, false, false]}, "share": {"years": [2018, 2019, 2022, 2023, 2024, 2025], "series": [{"name": "چین", "data": [25.4, 16.6, 44.6, 33.7, 22.4, 46.0]}, {"name": "هند", "data": [0.1, 0.6, 4.7, 9.7, 23.3, 24.2]}, {"name": "ترکیه", "data": [46.3, 53.9, 5.5, 10.9, 22.4, 14.4]}, {"name": "بوسنی", "data": [0.1, 0.5, 18.7, 22.7, 17.7, 4.5]}, {"name": "بلغارستان", "data": [9.9, 10.8, 9.8, 5.9, 8.4, 5.3]}, {"name": "سایر", "data": [18.2, 17.6, 16.7, 17.1, 5.8, 5.6]}]}, "cif": [{"name": "چین", "lo": 291.0, "hi": 291.0, "kind": "cn"}, {"name": "بوسنی", "lo": 325.0, "hi": 325.0, "kind": "ba"}, {"name": "بلغارستان", "lo": 341.0, "hi": 341.0, "kind": "bg"}, {"name": "هند", "lo": 403.0, "hi": 403.0, "kind": "in"}, {"name": "ترکیه", "lo": 413.0, "hi": 413.0, "kind": "tr"}, {"name": "پارس: سناریوی عادی", "lo": 292.0, "hi": 324.0, "kind": "pars"}, {"name": "پارس: سناریوی ریسک جنگی", "lo": 309.0, "hi": 361.0, "kind": "war"}]};
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){ return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; }); }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US").replace(/,/g, "٬")); }
+  function pct(n){ return toFa(Number(n).toFixed(1).replace(".", "٫")) + '٪'; }
+  function cssVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  var charts = [];
+  function colors(){
+    return { ink: cssVar('--ink-soft'), grid: cssVar('--line-soft'), petrol: '#536779', petrolDark: '#193D5B',
+             copper: cssVar('--copper-500'), copperDark: cssVar('--copper-600'), copperLight: cssVar('--copper-300'),
+             bad: cssVar('--bad'), good: cssVar('--good'), bg: cssVar('--bg-soft') };
+  }
+  function tip(fn){ return { rtl: true, textDirection: 'rtl', callbacks: { label: fn } }; }
+  function el(id){ return document.getElementById(id); }
+  function mk(id, cfg){ if (el(id)) charts.push(new Chart(el(id), cfg)); }
+  function legend(c){ return { position: 'bottom', rtl: true, labels: { color: c.ink, font: { size: 12 } } }; }
+
+  function build(){
+    var c = colors();
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif"; Chart.defaults.color = c.ink; Chart.defaults.borderColor = c.grid;
+    charts.forEach(function(ch){ ch.destroy(); }); charts = [];
+
+    // ۱) حجم (ستون) و قیمت واحد (خط)؛ ۲۰۲۱ آمار ناقص (ستون کم‌رنگ)
+    var V = D.vol;
+    mk('chVol', { type: 'bar',
+      data: { labels: V.years.map(toFa), datasets: [
+        { type: 'bar', label: 'حجم واردات (تن)', data: V.vol, yAxisID: 'y', borderRadius: 5, order: 2,
+          backgroundColor: V.partial.map(function(p){ return p ? c.copperLight : c.petrol; }) },
+        { type: 'line', label: 'قیمت واحد (دلار بر تن)', data: V.price, yAxisID: 'y1', order: 1, borderColor: c.copper, backgroundColor: c.copper, pointRadius: 4, tension: 0.2, spanGaps: false } ] },
+      options: { responsive: true, maintainAspectRatio: false,
+        plugins: { legend: legend(c), tooltip: tip(function(x){
+          if (x.dataset.type === 'line') return x.dataset.label + ': ' + fmt(x.parsed.y);
+          return x.dataset.label + ': ' + fmt(x.parsed.y) + (V.partial[x.dataIndex] ? ' (آمار ناقص: جمع مبادی مشخص‌شده)' : ''); }) },
+        scales: { x: { grid: { display: false }, ticks: { color: c.ink } },
+                  y: { position: 'right', grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } }, title: { display: true, text: 'حجم (تن)', color: c.ink } },
+                  y1: { position: 'left', grid: { display: false }, ticks: { color: c.copper, callback: function(v){ return fmt(v); } }, title: { display: true, text: 'دلار بر تن', color: c.copper } } } } });
+
+    // ۲) ترکیب مبادی تأمین به تفکیک سال (انباشته، درصد حجم)
+    var S = D.share, pal = [c.petrolDark, c.copper, c.good, '#7B5EA7', '#2A9D8F', c.ink + '55'];
+    mk('chShare', { type: 'bar',
+      data: { labels: S.years.map(toFa), datasets: S.series.map(function(s, i){ return { label: s.name, data: s.data, backgroundColor: pal[i], borderWidth: 0 }; }) },
+      options: { responsive: true, maintainAspectRatio: false,
+        plugins: { legend: legend(c), tooltip: tip(function(x){ return x.dataset.label + ': ' + pct(x.parsed.y); }) },
+        scales: { x: { stacked: true, grid: { display: false }, ticks: { color: c.ink } },
+                  y: { stacked: true, max: 100, grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return toFa(v) + '٪'; } }, title: { display: true, text: 'سهم از حجم واردات (درصد)', color: c.ink } } } } });
+
+    // ۳) مقایسه‌ی CIF: رقبا (ثبت‌شده ۲۰۲۵) و پارس (بازه‌ی برآوردی)
+    var P = D.cif, col = { cn: c.petrolDark, ba: '#7B5EA7', bg: '#2A9D8F', 'in': c.copper, tr: c.good, pars: c.bad, war: c.bad };
+    var rangePlugin = { id: 'cifLabels', afterDatasetsDraw: function(chart){
+      var ctx = chart.ctx, meta = chart.getDatasetMeta(1), xs = chart.scales.x;
+      ctx.save(); ctx.font = '600 12px Vazirmatn, Tahoma'; ctx.textBaseline = 'middle'; ctx.textAlign = 'left'; ctx.direction = 'ltr'; ctx.fillStyle = c.ink;
+      meta.data.forEach(function(bar, i){ var p = P[i]; ctx.fillText(p.lo === p.hi ? fmt(p.lo) : fmt(p.lo) + ' – ' + fmt(p.hi), xs.getPixelForValue(p.hi) + 8, bar.y); });
+      ctx.restore(); } };
+    mk('chCif', { type: 'bar', plugins: [rangePlugin],
+      data: { labels: P.map(function(p){ return p.name; }), datasets: [
+        { label: 'قیمت CIF (کران پایین)', data: P.map(function(p){ return p.lo; }), backgroundColor: P.map(function(p){ return col[p.kind]; }), borderRadius: 3 },
+        { label: 'دامنهٔ برآورد', data: P.map(function(p){ return p.hi - p.lo; }), backgroundColor: P.map(function(p){ return col[p.kind] + '55'; }), borderRadius: 3 } ] },
+      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: tip(function(x){ var p = P[x.dataIndex]; return p.lo === p.hi ? fmt(p.lo) + ' دلار بر تن' : fmt(p.lo) + ' تا ' + fmt(p.hi) + ' دلار بر تن'; }) },
+        scales: { x: { stacked: true, suggestedMax: 440, grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return toFa(v); } }, title: { display: true, text: 'دلار بر تن (CIF)', color: c.ink } },
+                  y: { stacked: true, grid: { display: false }, ticks: { color: c.ink } } } } });
+  }
+  build();
+  if (window.matchMedia){ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', build); }
+})();
+</script>
+
+</body>
+</html>
