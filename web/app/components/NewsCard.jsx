@@ -1,3 +1,4 @@
+import ExpandableText from "./ExpandableText";
 import { sourceDateFa, gregorianFa, jalaliFa } from "@/lib/dateFormat";
 function fallbackHeadline(analysisFa) {
   const firstLine = (analysisFa || "").split("\n")[0];
@@ -36,9 +37,11 @@ export default function NewsCard({ entry, compact = false }) {
         </span>
       )}
 
-      <p className={`text-sm text-text leading-7 whitespace-pre-line ${compact ? "line-clamp-3" : ""}`}>
-        {entry.analysis_fa}
-      </p>
+      {compact ? (
+        <ExpandableText text={entry.analysis_fa} lines={3} className="text-sm text-text leading-7 whitespace-pre-line" />
+      ) : (
+        <p className="text-sm text-text leading-7 whitespace-pre-line">{entry.analysis_fa}</p>
+      )}
 
       {entry.sources?.length > 0 && (
         <div className="text-xs text-text-muted flex flex-wrap gap-x-3 gap-y-1 mt-2">
