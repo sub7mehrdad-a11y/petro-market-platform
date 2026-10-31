@@ -12,6 +12,7 @@ import ExhibitionTable from "../../components/ExhibitionTable";
 import WorldRouteMap from "../../components/WorldRouteMap";
 import PageHeader from "../../components/PageHeader";
 import PrintButton from "../../components/PrintButton";
+import InteractiveMapFrame from "../../components/InteractiveMapFrame";
 import CountryStatStrip from "../../components/CountryStatStrip";
 import CountryEconomicProfile from "../../components/CountryEconomicProfile";
 import SupplierBreakdown from "../../components/SupplierBreakdown";
@@ -69,8 +70,11 @@ export default async function CountryPage({ params }) {
   // کشورهای تولیدکننده‌ای که آمار ITC‌شان صحیح است (مثل هند): تولید/ظرفیت/مصرف ظاهری از گزارش، بدون
   // «اصلاح» واردات. مصرف سرانه از مصرف ظاهری (نه واردات) محاسبه می‌شه.
   const supply = profile?.supply_stats || null;
+  // رقم سرانه‌ی خودِ گزارش (per_capita_kg؛ بر پایه‌ی جمعیت همان گزارش) اولویت دارد؛ وگرنه از جمعیت بانک جهانی محاسبه می‌شود.
   const supplyPerCapitaKg =
-    supply?.apparent_consumption_tons != null && econProfile?.population
+    supply?.per_capita_kg != null
+      ? supply.per_capita_kg
+      : supply?.apparent_consumption_tons != null && econProfile?.population
       ? (supply.apparent_consumption_tons * 1000) / econProfile.population
       : null;
   const unions = getUnionsForCountry(country);
@@ -417,6 +421,14 @@ export default async function CountryPage({ params }) {
               </div>
             ))}
           </div>
+        </section>
+      )}
+
+      {profile?.interactive_map && (
+        <section className="card p-5">
+          <h2 className="text-lg font-bold mb-1">نقشهٔ تعاملی مسیرها</h2>
+          <p className="text-xs text-text-muted mb-4">{profile.interactive_map.title}</p>
+          <InteractiveMapFrame src={profile.interactive_map.src} title={profile.interactive_map.title} />
         </section>
       )}
 
