@@ -2637,5 +2637,54 @@
         "url": "https://www.dailysabah.com/business"
       }
     ]
+  },
+  {
+    "date": "2026-10-31",
+    "generated_at": "2026-10-31T11:04:35.574116+00:00",
+    "headline_fa": "توقف عبور کامیون‌داران ترکیه‌ای و برنامه‌ریزی برای ارتقای توان لجستیکی ترکیه",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "توقف عبور مرزی کامیون‌داران ترکیه‌ای به دلیل محدودیت‌های شنگن",
+        "summary": "رانندگان کامیون در ترکیه به دلیل محدودیت‌های ویزای شنگن، تردد و عبور مرزی خود را متوقف کرده‌اند.",
+        "source_url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "headline": "هدف‌گذاری ۲۰۰ میلیارد دلاری صنعت لجستیک ترکیه در اجلاس ۲۰۲۵",
+        "summary": "انجمن شرکت‌های خدمات لجستیک ترکیه (UTİKAD) در اجلاس لجستیک ۲۰۲۵ دستیابی به بازار ۲۰۰ میلیارد دلاری و قرار گرفتن در بین ۱۰ کشور برتر جهان را هدف‌گذاری کرد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      }
+    ],
+    "market_note": "امروز هیچ خبر یا اطلاعیه جدیدی درباره تغییر ظرفیت تولید، قیمت‌گذاری یا گزارش مالی شرکت‌های اتی سودا و کازان سودا در متن‌های دریافتی وجود نداشت. در حوزه لجستیک، اعتصاب و توقف حرکت کامیون‌داران ترکیه‌ای به دلیل محدودیت‌های ویزای شنگن، تمرکز اصلی اخبار ناوگان جاده‌ای ترکیه است؛ اگرچه این چالش عمدتاً بر ترانزیت اروپایی فشار می‌آورد و مستقیماً مسیر زمینی هابور به عراق را درگیر نکرده است. بنابراین موقعیت رقابتی ما با قیمت پایه ۲۵۰ دلار در بازار عراق تغییر آنی نداشته و برتری هزینه‌ای تولیدکنندگان ترونای ترکیه همچنان برجاست.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTIKAD",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hurriyet Daily News",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]
