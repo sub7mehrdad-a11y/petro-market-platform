@@ -1,5 +1,6 @@
 import ImpactBadge, { IMPACT_META, impactOf } from "./ImpactBadge";
 import { gregorianFa } from "@/lib/dateFormat";
+import ExpandableText from "./ExpandableText";
 
 // باکس خبر برای صفحه‌ی اصلی: کادر و پس‌زمینه‌ی سبز (خبر خوب) / قرمز (خبر بد) / خنثی + آیکون و برچسب متنی.
 export default function NewsBoxCard({ entry }) {
@@ -20,7 +21,7 @@ export default function NewsBoxCard({ entry }) {
       )}
 
       <h3 className="mb-2 font-bold leading-7 text-text">{headline}</h3>
-      <p className="line-clamp-4 text-sm leading-7 text-text">{entry.analysis_fa}</p>
+      <ExpandableText text={entry.analysis_fa} lines={4} className="text-sm leading-7 text-text" />
 
       {entry.sources?.length > 0 && (
         <div className="mt-auto flex flex-wrap gap-x-3 gap-y-1 pt-3 text-[11px] text-text-muted">

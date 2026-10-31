@@ -2,6 +2,7 @@
 
 import { useMemo, useState } from "react";
 import PageHeader from "../components/PageHeader";
+import ExpandableText from "../components/ExpandableText";
 import ImpactBadge from "../components/ImpactBadge";
 
 /**
@@ -63,7 +64,7 @@ function NewsGridCard({ entry }) {
         {entry.headline_fa || "یادداشت تحلیلی"}
       </h3>
 
-      <p className="text-sm text-text leading-7 line-clamp-5">{entry.analysis_fa}</p>
+      <ExpandableText text={entry.analysis_fa} lines={5} className="text-sm text-text leading-7" />
 
       {facts.length > 0 && (
         <ul className="mt-4 bg-canvas/60 rounded-lg p-3 space-y-1.5">
