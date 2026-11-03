@@ -26,3 +26,6 @@ data/outreach_queue.json.tmp
 
 # وضعیت پیگیری ایمیل در توسعه‌ی محلی (روی سرور داخل OUTREACH_STATE_DIR است)
 data/outreach_followup_state.json
+
+# داده‌ی محرمانه‌ی فروش در توسعه‌ی محلی (روی سرور در دیسک دائمی است؛ هرگز در گیت نباید باشد)
+.local-state/

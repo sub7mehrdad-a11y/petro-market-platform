@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 import PageHeader from "../components/PageHeader";
+import RichText from "../components/RichText";
 
 const TYPE_STYLE = {
   report: "bg-primary-soft text-primary-hover",
@@ -180,7 +181,7 @@ export default function AskClient({ index, brainPanel }) {
               <span className="text-[11px] text-warning">مغز الان در دسترس نبود؛ پاسخ ساده داده شد</span>
             )}
           </div>
-          <p className="text-sm leading-8 whitespace-pre-line text-text">{t.a.answer}</p>
+          <RichText text={t.a.answer} />
 
           {t.a.ungrounded_numbers?.length > 0 && (
             <p className="mt-3 rounded-lg border border-warning bg-warning-soft px-3 py-2 text-xs leading-6 text-warning">

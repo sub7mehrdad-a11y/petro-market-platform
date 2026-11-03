@@ -21,7 +21,7 @@ const PUBLIC_PATHS = ["/login", "/api/auth/login", "/api/auth/logout"];
 
 // مسیرهایی که فقط نقش «بازرگانی» بهشون دسترسی داره — نقش «مشاهده‌گر»
 // (مثلاً مدیران) حتی با لاگین معتبر هم از این‌ها رد می‌شه.
-const COMMERCIAL_ONLY_PREFIXES = ["/outreach", "/api/outreach"];
+const COMMERCIAL_ONLY_PREFIXES = ["/outreach", "/api/outreach", "/sales", "/api/sales"];
 
 function isPublicPath(pathname) {
   return PUBLIC_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`));
