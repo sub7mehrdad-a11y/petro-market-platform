@@ -1,5 +1,6 @@
 import { buildSearchIndex } from "@/lib/searchIndex";
 import AskClient from "./AskClient";
+import BrainPanel from "./BrainPanel";
 
 export default function AskPage() {
   // ایندکس در زمان build ساخته و به کلاینت فرستاده می‌شود، تا جست‌وجوی فوری
@@ -17,5 +18,5 @@ export default function AskPage() {
     _norm: it._norm.slice(0, 3000),
   }));
 
-  return <AskClient index={index} />;
+  return <AskClient index={index} brainPanel={<BrainPanel />} />;
 }

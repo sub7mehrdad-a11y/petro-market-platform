@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { buildSearchIndex, searchIndex } from "@/lib/searchIndex";
+import { askBrain, resolveBrainKey } from "@/lib/brain";
 import { generateGroqContent, resolveGroqApiKey } from "@/lib/groqFetch";
 // موتور پشتیبان: اگر سهمیه‌ی روزانه‌ی Groq تمام شود، «پاسخ هوشمند» خاموش نمی‌شود.
 import { generateContent as generateGeminiContent, resolveApiKey as resolveGeminiApiKey } from "@/lib/geminiFetch";
@@ -33,15 +34,44 @@ const SYSTEM_PROMPT = `
 `;
 
 export async function POST(request) {
-  let question;
+  let question, history;
   try {
-    ({ question } = await request.json());
+    ({ question, history } = await request.json());
   } catch {
     return NextResponse.json({ error: "درخواست نامعتبر است." }, { status: 400 });
   }
 
   if (!question || !question.trim()) {
     return NextResponse.json({ error: "سؤالی وارد نشده." }, { status: 400 });
+  }
+
+  // --- مسیر «مغز پلتفرم»: خلاصه‌ی جامع کل داده‌ها + قطعه‌های مرتبط، با کلید اختصاصی Gemini ---
+  // اگر کلید مغز نباشد یا سرویس موقتاً در دسترس نباشد، به همان پاسخ‌دهنده‌ی قدیمی (Groq) برمی‌گردیم تا بخش پرسش خاموش نشود.
+  const brainKey = resolveBrainKey();
+  let brainFailure = null;
+  if (brainKey) {
+    try {
+      const hits = searchIndex(buildSearchIndex(), question, 6);
+      const picked = hits.map((h, i) => ({
+        hit: h,
+        piece: `### قطعه [${i + 1}] — ${h.typeLabel}: ${h.title}\n(${h.subtitle})\n${(h.body || "").slice(0, 1800)}`,
+      }));
+      const { answer, ungrounded } = await askBrain({
+        apiKey: brainKey,
+        question: question.trim(),
+        history,
+        retrievedContext: picked.map((p) => p.piece).join("\n\n"),
+      });
+      return NextResponse.json({
+        mode: "brain",
+        answer,
+        ungrounded_numbers: ungrounded,
+        sources: picked.map((p, i) => ({ n: i + 1, title: p.hit.title, typeLabel: p.hit.typeLabel, url: p.hit.url })),
+      });
+    } catch (err) {
+      brainFailure = String(err?.message || err).slice(0, 160);
+      console.warn(`[ask] مغز پلتفرم پاسخ نداد (${brainFailure})؛ پاسخ‌دهنده‌ی ساده جایگزین می‌شود.`);
+    }
   }
 
   const apiKey = resolveGroqApiKey();
@@ -128,6 +158,8 @@ export async function POST(request) {
     }
 
     return NextResponse.json({
+      mode: "basic",
+      ...(brainFailure ? { brain_unavailable: brainFailure } : {}),
       answer,
       // فقط قطعه‌هایی که واقعاً به مدل داده شدند به‌عنوان منبع اعلام می‌شوند،
       // وگرنه شماره‌ی ارجاع‌های داخل جواب با فهرست منابع نمی‌خواند.

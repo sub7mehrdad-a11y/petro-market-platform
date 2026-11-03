@@ -51,7 +51,9 @@ function getDispatcher() {
   return proxy ? new ProxyAgent(proxy) : undefined;
 }
 
-export async function generateContent({ apiKey, model, systemInstruction, input }) {
+// contents: برای گفت‌وگوی چندنوبتی [{role:"user"|"model", parts:[{text}]}] (اگر نباشد، یک نوبت از input ساخته می‌شود).
+// generationConfig: مثلاً {temperature, maxOutputTokens, responseMimeType} — اختیاری؛ بدون آن رفتار قبلی حفظ می‌شود.
+export async function generateContent({ apiKey, model, systemInstruction, input, contents, generationConfig }) {
   const dispatcher = getDispatcher();
 
   const res = await undiciFetch(`${BASE}/models/${model}:generateContent`, {
@@ -64,7 +66,8 @@ export async function generateContent({ apiKey, model, systemInstruction, input 
     },
     body: JSON.stringify({
       systemInstruction: { parts: [{ text: systemInstruction }] },
-      contents: [{ role: "user", parts: [{ text: input }] }],
+      contents: contents || [{ role: "user", parts: [{ text: input }] }],
+      ...(generationConfig ? { generationConfig } : {}),
     }),
     ...(dispatcher ? { dispatcher } : {}),
   });

@@ -15,11 +15,11 @@ const TYPE_STYLE = {
 };
 
 const EXAMPLES = [
-  "هزینه تولید ترکیه چقدر است؟",
-  "بزرگ‌ترین واردکنندگان جوش شیرین از ترکیه",
-  "شرکت‌های خوراکی برزیل",
-  "نمایشگاه‌های ترکیه",
-  "چرا ترکیه در عراق برنده است؟",
+  "با توجه به شرایط الان روی کدام کشورها و با چه شرایطی کار کنیم؟",
+  "چرا عراق اولویت دارد و برای ورود به آن چه قیمتی بدهیم؟",
+  "کدام کشور جدید ارزش تحقیق دارد؟",
+  "برای ازبکستان چه گریدی و با چه مسیری پیشنهاد می‌کنی؟",
+  "ترکیه کجا قابل‌شکست است؟",
 ];
 
 function highlight(text, tokens) {
@@ -57,9 +57,10 @@ function snippet(body, tokens, len = 240) {
   return (start > 0 ? "…" : "") + body.slice(start, start + len) + (body.length > start + len ? "…" : "");
 }
 
-export default function AskClient({ index }) {
+export default function AskClient({ index, brainPanel }) {
   const [query, setQuery] = useState("");
-  const [answer, setAnswer] = useState(null);
+  // گفت‌وگو: هر نوبت {q, a} — برای سؤال‌های پیگیری، آخرین نوبت‌ها به مغز فرستاده می‌شود.
+  const [turns, setTurns] = useState([]);
   const [asking, setAsking] = useState(false);
   const [askError, setAskError] = useState("");
 
@@ -94,16 +95,25 @@ export default function AskClient({ index }) {
     if (!query.trim()) return;
     setAsking(true);
     setAskError("");
-    setAnswer(null);
     try {
+      const history = turns
+        .slice(0, 3)
+        .reverse()
+        .flatMap((t) => [
+          { role: "user", text: t.q },
+          { role: "model", text: t.a.answer },
+        ]);
       const res = await fetch("/api/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ question: query }),
+        body: JSON.stringify({ question: query, history }),
       });
       const data = await res.json();
       if (!res.ok) setAskError(data.error || "خطایی رخ داد.");
-      else setAnswer(data);
+      else {
+        setTurns((prev) => [{ q: query, a: data }, ...prev]);
+        setQuery("");
+      }
     } catch (err) {
       setAskError(`ارتباط با سرور برقرار نشد: ${err.message}`);
     } finally {
@@ -114,9 +124,11 @@ export default function AskClient({ index }) {
   return (
     <div className="space-y-6">
       <PageHeader
-        title="جست‌وجو و پرسش از پلتفرم"
-        subtitle="همه‌ی محتوای سایت (گزارش‌ها، شرکت‌ها، نمایشگاه‌ها، اخبار تحلیلی، تحلیل رقبا و قیمت‌ها) یکجا جست‌وجو می‌شود. نتایج فوری بدون نیاز به اینترنت کار می‌کنند؛ برای «پاسخ هوشمند» سؤالتان به هوش مصنوعی داده می‌شود که فقط از همین محتوا جواب بسازد."
+        title="مغز پلتفرم"
+        subtitle="همه‌ی داده‌های پلتفرم (قیمت‌ها، رقبا، پرونده‌ی کشورها، شرکت‌ها، نمایشگاه‌ها، اخبار و حمل) یک‌جا خوانده، رتبه‌بندی و جمع‌بندی می‌شود. هر سؤالی بپرسید (مثلاً «الان روی کدام کشورها و با چه شرایطی کار کنیم؟») تا تحلیل و توصیه‌ی عملی بگیرید؛ جست‌وجوی کلیدواژه‌ای هم پایین همین صفحه است."
       />
+
+      {brainPanel}
 
       <form onSubmit={handleAsk} className="card p-4">
         <div className="flex flex-col sm:flex-row gap-2">
@@ -125,7 +137,7 @@ export default function AskClient({ index }) {
             autoFocus
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="مثلاً: هزینه تولید ترکیه چقدر است؟"
+            placeholder="مثلاً: با توجه به شرایط الان روی کدام کشورها کار کنیم؟"
             className="flex-1 border border-border rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
           />
           <button
@@ -133,7 +145,7 @@ export default function AskClient({ index }) {
             disabled={asking || !query.trim()}
             className="bg-primary text-white text-sm font-medium rounded-lg px-5 py-2.5 shadow-sm hover:bg-primary-hover hover:shadow-md transition-all disabled:opacity-50 cursor-pointer whitespace-nowrap"
           >
-            {asking ? "در حال پاسخ..." : "پاسخ هوشمند"}
+            {asking ? "مغز در حال تحلیل..." : "بپرس از مغز"}
           </button>
         </div>
 
@@ -158,19 +170,30 @@ export default function AskClient({ index }) {
         </div>
       )}
 
-      {answer && (
-        <section className="card border-border p-5">
+      {turns.map((t, ti) => (
+        <section key={turns.length - ti} className="card border-border p-5">
+          <div className="mb-3 rounded-lg bg-canvas px-3 py-2 text-sm font-semibold text-text">{t.q}</div>
           <div className="flex items-center gap-2 mb-3">
             <span className="inline-block w-2 h-2 rounded-full bg-primary" />
-            <h2 className="text-sm font-bold text-text">پاسخ هوشمند</h2>
+            <h2 className="text-sm font-bold text-text">{t.a.mode === "brain" ? "پاسخ مغز پلتفرم" : "پاسخ هوشمند (ساده)"}</h2>
+            {t.a.mode === "basic" && t.a.brain_unavailable && (
+              <span className="text-[11px] text-warning">مغز الان در دسترس نبود؛ پاسخ ساده داده شد</span>
+            )}
           </div>
-          <p className="text-sm leading-8 whitespace-pre-line text-text">{answer.answer}</p>
+          <p className="text-sm leading-8 whitespace-pre-line text-text">{t.a.answer}</p>
 
-          {answer.sources?.length > 0 && (
+          {t.a.ungrounded_numbers?.length > 0 && (
+            <p className="mt-3 rounded-lg border border-warning bg-warning-soft px-3 py-2 text-xs leading-6 text-warning">
+              ⚠ این عددها در داده‌های پلتفرم پیدا نشدند و برآورد/محاسبه‌ی مدل‌اند؛ پیش از تصمیم تأیید شوند:{" "}
+              <span dir="ltr" className="font-semibold">{t.a.ungrounded_numbers.slice(0, 14).join("، ")}</span>
+            </p>
+          )}
+
+          {t.a.sources?.length > 0 && (
             <div className="mt-4 pt-3 border-t border-border">
-              <div className="text-xs font-bold text-text-muted mb-2">منابع استفاده‌شده در پاسخ</div>
+              <div className="text-xs font-bold text-text-muted mb-2">قطعه‌های مرتبط استفاده‌شده در پاسخ</div>
               <ul className="space-y-1.5">
-                {answer.sources.map((s) => (
+                {t.a.sources.map((s) => (
                   <li key={s.n} className="text-xs">
                     <span className="text-primary font-bold">[{s.n}]</span>{" "}
                     <Link href={s.url} className="text-primary hover:underline">{s.title}</Link>{" "}
@@ -181,7 +204,7 @@ export default function AskClient({ index }) {
             </div>
           )}
         </section>
-      )}
+      ))}
 
       <section className="card p-5">
         <h2 className="text-sm font-bold text-text mb-3">
