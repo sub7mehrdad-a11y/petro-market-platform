@@ -74,13 +74,30 @@ jobs:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: python scripts/run_agent.py transit scripts/transit_watch_bot.py
 
+      # «مغز پلتفرم»: بعد از ربات‌های بالا، همه‌ی داده‌ها دوباره خوانده و امتیاز کشورها + خلاصه‌ی جامع ساخته می‌شود
+      # (بدون مدل هوش مصنوعی؛ همیشه می‌شود اجرایش کرد). فقط داده‌ی عمومی — داده‌ی فروش هرگز در مخزن نیست.
+      - name: Build platform brain digest and country scores
+        if: always()
+        continue-on-error: true
+        run: python scripts/build_brain.py
+
+      # «توصیه‌ی هفته»: فقط با کلید اختصاصی GEMINI_API_KEY_BRAIN (سهمیه‌ی جدا از ربات‌های بالا) و حداکثر هفته‌ای
+      # یک‌بار (اسکریپت خودش اگر کمتر از ۶ روز گذشته باشد رد می‌شود). بدون کلید، بی‌سروصدا رد می‌شود.
+      - name: Generate weekly brain briefing
+        if: always()
+        continue-on-error: true
+        timeout-minutes: 20
+        env:
+          GEMINI_API_KEY_BRAIN: ${{ secrets.GEMINI_API_KEY_BRAIN }}
+        run: python scripts/brain_briefing.py
+
       # always(): حتی اگه یک استپ بالا گیر کرد/cancel شد، داده‌ی ربات‌های سالم commit بشه.
       - name: Commit updated data files
         if: always()
         run: |
           git config user.name "market-data-bot"
           git config user.email "actions@github.com"
-          git add data/agent_status.json data/price_history.json data/news_analysis_log.json data/turkey_watch_log.json data/china_watch_log.json data/transit_log.json
+          git add data/agent_status.json data/price_history.json data/news_analysis_log.json data/turkey_watch_log.json data/china_watch_log.json data/transit_log.json data/brain/digest.md data/brain/country_scores.json data/brain/radar.json data/brain/briefing.json
           git diff --quiet --cached || git commit -m "به‌روزرسانی داده‌های روزانه‌ی بازار"
           git pull --rebase --autostash
           git push

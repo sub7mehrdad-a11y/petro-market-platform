@@ -1,0 +1,32 @@
+{
+  "_comment": "تنظیمات امتیازدهی «مغز پلتفرم» (scripts/build_brain.py). وزن‌ها جمعشان ۱ است. هر مؤلفه ۰ تا ۱ نرمال می‌شود و امتیاز نهایی ۰ تا ۱۰۰ است. عددها را اینجا عوض کن، نه در کد؛ با اجرای دوباره‌ی اسکریپت (یا ربات روزانه) رتبه‌بندی بازمحاسبه می‌شود.",
+  "reference_price_fob_usd_per_ton": 250,
+  "weights": {
+    "market_size": 0.28,
+    "price_room": 0.14,
+    "competition": 0.14,
+    "proximity": 0.14,
+    "growth": 0.10,
+    "tariff_and_union": 0.10,
+    "company_pool": 0.10
+  },
+  "exclude_from_ranking": ["ترکیه"],
+  "exclude_note": "ترکیه رقیب اصلی و تولیدکننده است، نه بازار هدف؛ پرونده دارد ولی در رتبه‌بندی نیست.",
+  "market_size": {"log_min_tons": 500, "log_max_tons": 60000},
+  "price_room": {"unit_value_min": 200, "unit_value_max": 450, "neutral_when_missing": 0.4},
+  "growth": {"min_pct": -10, "max_pct": 60, "neutral_when_missing": 0.4},
+  "proximity": {"max_km": 6000},
+  "tariff": {"max_pct": 10},
+  "union_bonus": {"fta_full": 1.0, "preferential": 0.7, "partial": 0.5, "default": 0.3},
+  "company_pool": {"log_min": 5, "log_max": 120},
+  "tier_thresholds": {"A": 62, "B": 48},
+  "radar": {"min_import_tons": 3000, "top_n": 15},
+  "iran_ports_latlon": {
+    "بندرعباس": [27.18, 56.27],
+    "بوشهر": [28.97, 50.84],
+    "انزلی": [37.47, 49.46],
+    "آستارا": [38.43, 48.87],
+    "سرخس": [36.54, 61.16],
+    "خرمشهر": [30.43, 48.19]
+  }
+}

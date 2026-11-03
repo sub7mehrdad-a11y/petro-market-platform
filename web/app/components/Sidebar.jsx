@@ -45,7 +45,7 @@ function buildNavGroups(showOutreach, role) {
         { href: "/exhibitions", label: "نمایشگاه‌ها", icon: IconExhibition },
       ],
     },
-    { items: [{ href: "/ask", label: "جست‌وجو و پرسش", icon: IconSearch }] },
+    { items: [{ href: "/ask", label: "مغز پلتفرم", icon: IconSearch }] },
     ...(showOutreach && role === "commercial"
       ? [{ title: "ابزارهای بازرگانی", items: [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }] }]
       : []),
@@ -316,7 +316,7 @@ export default function AppShell({ children, footer }) {
           className="flex min-h-11 items-center gap-2 rounded-xl border border-border bg-canvas px-3 py-2 text-[13px] text-text-muted hover:no-underline"
         >
           <IconSearch />
-          <span>جست‌وجو و پرسش</span>
+          <span>مغز پلتفرم</span>
         </Link>
       </div>
 
