@@ -46,8 +46,14 @@ function buildNavGroups(showOutreach, role) {
       ],
     },
     { items: [{ href: "/ask", label: "مغز پلتفرم", icon: IconSearch }] },
-    ...(showOutreach && role === "commercial"
-      ? [{ title: "ابزارهای بازرگانی", items: [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }] }]
+    ...(role === "commercial"
+      ? [{
+          title: "ابزارهای بازرگانی",
+          items: [
+            { href: "/sales", label: "عملکرد فروش", icon: IconReport },
+            ...(showOutreach ? [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }] : []),
+          ],
+        }]
       : []),
   ];
 }

@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { buildSearchIndex, searchIndex } from "@/lib/searchIndex";
-import { askBrain, resolveBrainKey } from "@/lib/brain";
+import { askBrain, getBrainScores, resolveBrainKey } from "@/lib/brain";
+import { SESSION_COOKIE_NAME, verifySessionToken } from "@/lib/auth";
+import { salesContextForBrain, summarizeSales } from "@/lib/salesAnalytics";
+import { readSalesReports, salesAiEnabled } from "@/lib/salesStore";
 import { generateGroqContent, resolveGroqApiKey } from "@/lib/groqFetch";
 // موتور پشتیبان: اگر سهمیه‌ی روزانه‌ی Groq تمام شود، «پاسخ هوشمند» خاموش نمی‌شود.
 import { generateContent as generateGeminiContent, resolveApiKey as resolveGeminiApiKey } from "@/lib/geminiFetch";
@@ -56,11 +59,21 @@ export async function POST(request) {
         hit: h,
         piece: `### قطعه [${i + 1}] — ${h.typeLabel}: ${h.title}\n(${h.subtitle})\n${(h.body || "").slice(0, 1800)}`,
       }));
+      // عملکرد فروش (محرمانه) فقط برای نقش بازرگانی و فقط وقتی مدیریت صریحاً SALES_AI_ENABLED را روشن کرده؛ بدون نام مشتری.
+      let salesContext = null;
+      const session = verifySessionToken(request.cookies.get(SESSION_COOKIE_NAME)?.value);
+      if (session?.role === "commercial" && salesAiEnabled()) {
+        const scores = getBrainScores();
+        salesContext = salesContextForBrain(
+          summarizeSales(readSalesReports(), { countryScores: (scores?.countries || []).map((c) => ({ country: c.country, tier: c.tier, rank: c.rank })) })
+        );
+      }
       const { answer, ungrounded } = await askBrain({
         apiKey: brainKey,
         question: question.trim(),
         history,
         retrievedContext: picked.map((p) => p.piece).join("\n\n"),
+        salesContext,
       });
       return NextResponse.json({
         mode: "brain",
