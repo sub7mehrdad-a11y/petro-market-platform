@@ -212,6 +212,11 @@ export default function SalesClient() {
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
       {data?.storage_problem && <div className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-sm text-warning">⚠ {data.storage_problem}</div>}
 
+      <div className="flex flex-wrap items-center gap-3 rounded-xl border border-border bg-surface p-3 text-sm">
+        <span className="text-text-muted">حسابداری فروش:</span>
+        <Link href="/sales/accounts" className="rounded-lg bg-primary px-4 py-2 text-xs font-medium text-white hover:bg-primary-hover">حساب‌ها و پرداخت‌ها (قرارداد · مشتری · مانده) ←</Link>
+      </div>
+
       <UploadPanel onSaved={load} />
 
       {s && !s.empty && (

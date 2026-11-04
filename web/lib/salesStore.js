@@ -51,7 +51,7 @@ export function readSalesSnapshots() {
   }
 }
 
-function writeAtomic(file, text) {
+export function writeAtomic(file, text) {
   const tmp = `${file}.${process.pid}.tmp`;
   fs.writeFileSync(tmp, text, "utf-8");
   fs.renameSync(tmp, file);

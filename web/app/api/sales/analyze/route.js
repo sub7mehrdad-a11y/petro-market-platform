@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { askBrain, getBrainScores, resolveBrainKey } from "@/lib/brain";
 import { salesContextForBrain, summarizeSales } from "@/lib/salesAnalytics";
 import { readSalesSnapshots, salesAiEnabled, writeSalesAnalysis } from "@/lib/salesStore";
+import { ledgerContextForBrain } from "@/lib/salesLedger";
+import { loadAccounts } from "@/lib/salesLedgerStore";
 
 // «تحلیل هوشمند عملکرد هفته»: مغز، خلاصه‌ی بدون نام مشتری فروش را کنار دانش کل پلتفرم می‌خواند و نتیجه می‌گیرد.
 // پیش‌فرض خاموش (SALES_AI_ENABLED) چون داده‌ی قراردادها محرمانه است. نتیجه هر هفته یک‌بار ذخیره می‌شود. فقط نقش «بازرگانی».
@@ -34,7 +36,8 @@ export async function POST() {
   if (summary.empty) return NextResponse.json({ error: "هنوز گزارشی بارگذاری نشده." }, { status: 400 });
 
   try {
-    const { answer, ungrounded } = await askBrain({ apiKey: key, question: QUESTION, salesContext: salesContextForBrain(summary) });
+    const salesContext = [salesContextForBrain(summary), ledgerContextForBrain(loadAccounts().accounts)].filter(Boolean).join("\n");
+    const { answer, ungrounded } = await askBrain({ apiKey: key, question: QUESTION, salesContext });
     const analysis = { as_of: summary.as_of, generated_at: new Date().toISOString(), text: answer, ungrounded_numbers: ungrounded };
     writeSalesAnalysis(analysis);
     return NextResponse.json({ ok: true, analysis });
