@@ -3,7 +3,7 @@ import { buildSearchIndex, searchIndex } from "@/lib/searchIndex";
 import { askBrain, getBrainScores, resolveBrainKey } from "@/lib/brain";
 import { SESSION_COOKIE_NAME, verifySessionToken } from "@/lib/auth";
 import { salesContextForBrain, summarizeSales } from "@/lib/salesAnalytics";
-import { readSalesReports, salesAiEnabled } from "@/lib/salesStore";
+import { readSalesSnapshots, salesAiEnabled } from "@/lib/salesStore";
 import { generateGroqContent, resolveGroqApiKey } from "@/lib/groqFetch";
 // موتور پشتیبان: اگر سهمیه‌ی روزانه‌ی Groq تمام شود، «پاسخ هوشمند» خاموش نمی‌شود.
 import { generateContent as generateGeminiContent, resolveApiKey as resolveGeminiApiKey } from "@/lib/geminiFetch";
@@ -65,7 +65,7 @@ export async function POST(request) {
       if (session?.role === "commercial" && salesAiEnabled()) {
         const scores = getBrainScores();
         salesContext = salesContextForBrain(
-          summarizeSales(readSalesReports(), { countryScores: (scores?.countries || []).map((c) => ({ country: c.country, tier: c.tier, rank: c.rank })) })
+          summarizeSales(readSalesSnapshots(), { countryScores: (scores?.countries || []).map((c) => ({ country: c.country, tier: c.tier, rank: c.rank })) })
         );
       }
       const { answer, ungrounded } = await askBrain({

@@ -1,25 +1,11 @@
-// تاریخ و ستون‌های قالب گزارش فروش — مشترک بین قالب اکسل، تجزیه‌گر و تحلیل.
+// تاریخ، نرمال‌سازی و ثابت‌های گزارش فروش — مشترک بین تجزیه‌گر، قالب و تحلیل.
+// فرمت مرجع: فایل «Sales Report 2026» تیم بازرگانی (سرستون‌های انگلیسی، فایل تجمعی از اول سال).
 
-export const COLUMNS = [
-  { key: "date", header: "تاریخ", width: 14, note: "تاریخ قرارداد/فاکتور؛ شمسی (۱۴۰۵/۰۸/۱۲) یا میلادی (2026-11-03) هر دو قبول است" },
-  { key: "doc_no", header: "شماره قرارداد/فاکتور", width: 20, note: "اختیاری" },
-  { key: "buyer", header: "شرکت طرف قرارداد", width: 30, note: "نام شرکت خریدار (الزامی)" },
-  { key: "country", header: "کشور مقصد", width: 16, note: "فارسی (عراق) یا انگلیسی (Iraq)" },
-  { key: "grade", header: "گرید", width: 14, note: "خوراکی / دامی / صنعتی / دارویی / سایر" },
-  { key: "tons", header: "تناژ (تن)", width: 12, note: "عدد؛ بزرگ‌تر از صفر (الزامی)" },
-  { key: "price", header: "قیمت واحد (بر تن)", width: 16, note: "عدد؛ به همان ارزِ ستون ارز (الزامی)" },
-  { key: "incoterm", header: "اینکوترمز", width: 12, note: "FOB / CIF / CFR / EXW / FCA / DAP / DDP" },
-  { key: "currency", header: "ارز", width: 9, note: "USD پیش‌فرض" },
-  { key: "amount", header: "مبلغ کل", width: 14, note: "اختیاری؛ خالی باشد = تناژ × قیمت" },
-  { key: "status", header: "وضعیت", width: 14, note: "پیش‌فاکتور / قرارداد / ارسال‌شده / تحویل‌شده / تسویه‌شده" },
-  { key: "payment_terms", header: "شرایط پرداخت", width: 22, note: "اختیاری، مثلاً LC یا ۳۰٪ پیش‌پرداخت" },
-  { key: "notes", header: "توضیحات", width: 30, note: "اختیاری" },
-];
-
-export const GRADES = ["خوراکی", "دامی", "صنعتی", "دارویی", "سایر"];
-export const INCOTERMS = ["FOB", "CIF", "CFR", "EXW", "FCA", "DAP", "DDP"];
-export const STATUSES = ["پیش‌فاکتور", "قرارداد", "ارسال‌شده", "تحویل‌شده", "تسویه‌شده"];
 export const FOB_LIKE = ["FOB", "EXW", "FCA"]; // قیمت‌هایی که با «قیمت مرجع ۲۵۰ دلار FOB» قابل‌مقایسه‌اند
+export const INCOTERMS = ["FOB", "EXW", "FCA", "CIF", "CFR", "CPT", "DAP", "DDP"];
+
+export const STAGE_LABEL = { firm: "سفارش قطعی (PI صادرشده)", quote: "پیشنهاد/استعلام (هنوز سفارش نیست)", unknown: "نامشخص" };
+export const PAYMENT_LABEL = { paid: "پرداخت‌شده", unpaid: "منتظر پرداخت", partial: "پیش‌پرداخت دریافت‌شد", unknown: "نامشخص" };
 
 const P2A = "۰۱۲۳۴۵۶۷۸۹";
 const A2A = "٠١٢٣٤٥٦٧٨٩";
@@ -99,19 +85,56 @@ export function addDays(iso, n) {
   return isoDate(dt.getUTCFullYear(), dt.getUTCMonth() + 1, dt.getUTCDate());
 }
 
+export function daysBetween(aIso, bIso) {
+  const t = (s) => Date.UTC(...s.split("-").map((x, i) => (i === 1 ? Number(x) - 1 : Number(x))));
+  return Math.round((t(bIso) - t(aIso)) / 86400000);
+}
+
+export function todayIso() {
+  const d = new Date();
+  return isoDate(d.getUTCFullYear(), d.getUTCMonth() + 1, d.getUTCDate());
+}
+
 export function normalizeGrade(v) {
   const t = normalizeText(v).toLowerCase();
   if (!t) return "";
-  if (/دام|طیور|feed|لبنیات|مرغ/.test(t)) return "دامی";
+  if (/دام|طیور|feed|لبنیات|مرغ|poultry|dairy/.test(t)) return "دامی";
   if (/دارو|pharma/.test(t)) return "دارویی";
   if (/صنعت|industrial|tech/.test(t)) return "صنعتی";
   if (/خوراک|غذا|food/.test(t)) return "خوراکی";
   return "سایر";
 }
 
-export function normalizeStatus(v) {
-  const t = normalizeText(v);
-  if (!t) return "";
-  const hit = STATUSES.find((s) => t.replace(/[\s‌]/g, "").includes(s.replace(/[\s‌]/g, "")));
-  return hit || t;
+/** «PI issued» = سفارش قطعی؛ «Just quoted» = فقط پیشنهاد؛ خالی = نامشخص */
+export function normalizeStage(v) {
+  const t = normalizeText(v).toLowerCase();
+  if (!t) return "unknown";
+  if (/pi\s*issued|issued|صادر|قطعی|قرارداد|contract/.test(t)) return "firm";
+  if (/quot|offer|proposal|استعلام|پیشنهاد/.test(t)) return "quote";
+  return "unknown";
+}
+
+export function normalizePayment(v) {
+  const t = normalizeText(v).toLowerCase();
+  if (!t) return "unknown";
+  if (/yet\s*to\s*pay|unpaid|not paid|منتظر|پرداخت نشده/.test(t)) return "unpaid";
+  if (/prepay|partial|advance received|پیش.?پرداخت/.test(t)) return "partial";
+  if (/^done|paid|received|تسویه|پرداخت شده|پرداخت‌شده/.test(t)) return "paid";
+  return "unknown";
+}
+
+export function extractIncoterm(v) {
+  const m = String(v ?? "").toUpperCase().match(/\b(FCA|FOB|CIF|CFR|CPT|DAP|DDP|EXW)\b/);
+  return m ? m[1] : "";
+}
+
+// فاصله‌ی ویرایشی (برای تصحیح غلط‌های املایی نام کشور مثل Aremenai → Armenia)
+export function editDistance(a, b) {
+  const m = a.length, n = b.length;
+  const dp = Array.from({ length: m + 1 }, (_, i) => [i, ...Array(n).fill(0)]);
+  for (let j = 1; j <= n; j++) dp[0][j] = j;
+  for (let i = 1; i <= m; i++) {
+    for (let j = 1; j <= n; j++) dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+  }
+  return dp[m][n];
 }

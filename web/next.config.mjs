@@ -16,6 +16,9 @@ const nextConfig = {
     "/api/reports/**": ["../reports/**/*"],
     "/**": ["../data/**/*"],
   },
+  // روی ماشین‌های کم‌حافظه (لپ‌تاپ ۸ گیگ با چند برنامه‌ی باز) ساخت صفحه‌ها با ۷ کارگر موازی به OOM می‌خورد؛
+  // با NEXT_BUILD_CPUS=2 تعداد کارگرها کم می‌شود. بدون این متغیر رفتار پیش‌فرض (لیارا) دست‌نخورده است.
+  ...(Number(process.env.NEXT_BUILD_CPUS) > 0 ? { experimental: { cpus: Number(process.env.NEXT_BUILD_CPUS) } } : {}),
 };
 
 export default nextConfig;
