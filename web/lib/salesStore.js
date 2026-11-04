@@ -1,7 +1,10 @@
 import fs from "fs";
 import path from "path";
 
-// ذخیره‌ی گزارش‌های هفتگی فروش تیم بازرگانی.
+// ذخیره‌ی گزارش فروش تیم بازرگانی.
+//
+// مدل: فایل «Sales Report» تیم تجمعی است (از اول سال)، پس هر بارگذاری یک «عکس لحظه‌ای» (snapshot) کامل با تاریخ گزارش
+// (as_of) است و آخرین عکس مبنای تحلیل است؛ عکس‌های قبلی برای مقایسه (سفارش جدید، پرداخت تازه‌دریافت‌شده) و ممیزی می‌مانند.
 //
 // ⚠ این داده محرمانه است (مشتری، قیمت، تناژ) و مخزن گیت عمومی است: هیچ‌وقت داخل data/ یا هر پوشه‌ی داخل مخزن
 // ذخیره نمی‌شود. روی سرور باید روی دیسک دائمی باشد (SALES_STATE_DIR، یا زیرپوشه‌ی sales داخل OUTREACH_STATE_DIR که
@@ -37,60 +40,59 @@ export function salesStorageProblem() {
  */
 export const salesAiEnabled = () => process.env.SALES_AI_ENABLED === "true";
 
-const dataFile = () => path.join(getSalesDir(), "sales_reports.json");
+const dataFile = () => path.join(getSalesDir(), "sales_snapshots.json");
 
-export function readSalesReports() {
+export function readSalesSnapshots() {
   try {
     const parsed = JSON.parse(fs.readFileSync(dataFile(), "utf-8"));
-    return Array.isArray(parsed.reports) ? parsed.reports : [];
+    return Array.isArray(parsed.snapshots) ? parsed.snapshots.sort((a, b) => a.as_of.localeCompare(b.as_of)) : [];
   } catch {
     return [];
   }
 }
 
-function writeAtomic(file, text) {
+export function writeAtomic(file, text) {
   const tmp = `${file}.${process.pid}.tmp`;
   fs.writeFileSync(tmp, text, "utf-8");
   fs.renameSync(tmp, file);
 }
 
-/** گزارش یک هفته را ذخیره می‌کند؛ اگر همان هفته قبلاً بود جایگزین می‌شود (نسخه‌ی قبل در replaced_count می‌شمارد). */
-export function saveSalesReport({ weekStart, rows, filename, uploadedBy, rawBuffer }) {
+/** عکس لحظه‌ای جدید؛ اگر برای همان تاریخ گزارش (as_of) قبلاً بود جایگزین می‌شود. */
+export function saveSalesSnapshot({ asOf, rows, filename, uploadedBy, rawBuffer, warningCount }) {
   const problem = salesStorageProblem();
   if (problem) throw new Error(problem);
-  const reports = readSalesReports();
-  const prev = reports.find((r) => r.week_start === weekStart);
-  const report = {
-    id: `${weekStart}`,
-    week_start: weekStart,
+  const snaps = readSalesSnapshots();
+  const prev = snaps.find((s) => s.as_of === asOf);
+  const snap = {
+    as_of: asOf,
     uploaded_at: new Date().toISOString(),
     uploaded_by: uploadedBy || null,
     filename: filename || null,
+    warning_count: warningCount || 0,
     replaced_count: (prev?.replaced_count || 0) + (prev ? 1 : 0),
     rows,
   };
-  const next = [...reports.filter((r) => r.week_start !== weekStart), report].sort((a, b) => a.week_start.localeCompare(b.week_start));
-  writeAtomic(dataFile(), JSON.stringify({ reports: next }, null, 1));
+  writeAtomic(dataFile(), JSON.stringify({ snapshots: [...snaps.filter((s) => s.as_of !== asOf), snap] }, null, 1));
   if (rawBuffer) {
     // نسخه‌ی اصلی فایل برای ممیزی (اگر بعداً سؤالی پیش آمد، همان فایلی که تیم فرستاده در دسترس است)
     const dir = path.join(getSalesDir(), "uploads");
     fs.mkdirSync(dir, { recursive: true });
-    fs.writeFileSync(path.join(dir, `${weekStart}_${Date.now()}.xlsx`), rawBuffer);
+    fs.writeFileSync(path.join(dir, `${asOf}_${Date.now()}.xlsx`), rawBuffer);
   }
-  return report;
+  return snap;
 }
 
-export function deleteSalesReport(weekStart) {
+export function deleteSalesSnapshot(asOf) {
   const problem = salesStorageProblem();
   if (problem) throw new Error(problem);
-  const reports = readSalesReports();
-  const next = reports.filter((r) => r.week_start !== weekStart);
-  if (next.length === reports.length) return false;
-  writeAtomic(dataFile(), JSON.stringify({ reports: next }, null, 1));
+  const snaps = readSalesSnapshots();
+  const next = snaps.filter((s) => s.as_of !== asOf);
+  if (next.length === snaps.length) return false;
+  writeAtomic(dataFile(), JSON.stringify({ snapshots: next }, null, 1));
   return true;
 }
 
-// تحلیل هوشمند هر هفته (متن مدل) برای اینکه با هر بازدید دوباره هزینه نشود
+// تحلیل هوشمند (متن مدل) برای هر گزارش یک‌بار ذخیره می‌شود تا با هر بازدید دوباره هزینه نشود
 const analysisFile = () => path.join(getSalesDir(), "sales_analysis.json");
 
 export function readSalesAnalysis() {

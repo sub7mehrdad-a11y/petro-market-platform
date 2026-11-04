@@ -3,7 +3,9 @@ import { buildSearchIndex, searchIndex } from "@/lib/searchIndex";
 import { askBrain, getBrainScores, resolveBrainKey } from "@/lib/brain";
 import { SESSION_COOKIE_NAME, verifySessionToken } from "@/lib/auth";
 import { salesContextForBrain, summarizeSales } from "@/lib/salesAnalytics";
-import { readSalesReports, salesAiEnabled } from "@/lib/salesStore";
+import { readSalesSnapshots, salesAiEnabled } from "@/lib/salesStore";
+import { ledgerContextForBrain } from "@/lib/salesLedger";
+import { loadAccounts } from "@/lib/salesLedgerStore";
 import { generateGroqContent, resolveGroqApiKey } from "@/lib/groqFetch";
 // موتور پشتیبان: اگر سهمیه‌ی روزانه‌ی Groq تمام شود، «پاسخ هوشمند» خاموش نمی‌شود.
 import { generateContent as generateGeminiContent, resolveApiKey as resolveGeminiApiKey } from "@/lib/geminiFetch";
@@ -64,9 +66,12 @@ export async function POST(request) {
       const session = verifySessionToken(request.cookies.get(SESSION_COOKIE_NAME)?.value);
       if (session?.role === "commercial" && salesAiEnabled()) {
         const scores = getBrainScores();
-        salesContext = salesContextForBrain(
-          summarizeSales(readSalesReports(), { countryScores: (scores?.countries || []).map((c) => ({ country: c.country, tier: c.tier, rank: c.rank })) })
-        );
+        salesContext = [
+          salesContextForBrain(
+            summarizeSales(readSalesSnapshots(), { countryScores: (scores?.countries || []).map((c) => ({ country: c.country, tier: c.tier, rank: c.rank })) })
+          ),
+          ledgerContextForBrain(loadAccounts().accounts),
+        ].filter(Boolean).join("\n") || null;
       }
       const { answer, ungrounded } = await askBrain({
         apiKey: brainKey,
