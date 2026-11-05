@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-04T13:18:57+00:00",
+  "generated_at": "2026-11-05T13:41:14+00:00",
   "config": "data/brain/scoring_config.json",
   "weights": {
     "market_size": 0.28,

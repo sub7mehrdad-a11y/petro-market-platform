@@ -2816,5 +2816,50 @@
         "url": "https://www.hurriyetdailynews.com/index/economy"
       }
     ]
+  },
+  {
+    "date": "2026-11-05",
+    "generated_at": "2026-11-05T13:32:48.165926+00:00",
+    "headline_fa": "توقف عبور مرزی کامیون‌داران ترک و هدف‌گذاری توسعه لجستیک ترکیه",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "توقف عبور مرزی کامیون‌داران ترکیه‌ای در پی محدودیت‌های شنگن",
+        "summary": "رانندگان کامیون در ترکیه عبور و حرکت از مرزها را در اعتراض به محدودیت‌های ویزای شنگن متوقف کرده‌اند.",
+        "source_url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "headline": "هدف‌گذاری ۲۰۰ میلیارد دلاری برای صنعت لجستیک ترکیه",
+        "summary": "انجمن بین‌المللی ارائه‌دهندگان خدمات حمل‌ونقل و لجستیک ترکیه (UTIKAD) برنامه‌ریزی این کشور برای رساندن حجم بازار لجستیک به ۲۰۰ میلیارد دلار و قرار گرفتن در جمع ۱۰ کشور برتر جهان را اعلام کرد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      }
+    ],
+    "market_note": "امروز هیچ تغییر قیمت، توسعه ظرفیت یا اطلاعیه جدیدی از سوی شرکت‌های رقیب ترک (اتی‌سودا، کازان‌سودا و شیشه‌جام) در متن‌های بررسی‌شده ثبت نشده است. با این حال، دو خبر لجستیکی قابل توجه است: نخست، توقف مرزی کامیون‌داران ترک به دلیل محدودیت‌های شنگن که در صورت تداوم می‌تواند ناوگان حمل جاده‌ای ترکیه را دچار اختلال مقطعی کند و فرصت‌های کوتاه‌مدتی را در بازار عراق برای سپهران شیمی (با قیمت پایه ۲۵۰ دلار) ایجاد نماید. دوم، هدف‌گذاری کلان ۲۰۰ میلیارد دلاری لجستیک ترکیه که نشان‌دهنده برنامه‌ریزی رقیب برای کاهش بیشتر هزینه‌های ترانزیت و تقویت مزیت لجستیکی در منطقه در بلندمدت است.",
+    "sources": [
+      {
+        "name": "Hürriyet Daily News - Economy",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "UTİKAD - Association of International Forwarding and Logistics Service Providers",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda",
+        "url": "https://www.kazansoda.com/"
+      }
+    ]
   }
 ]
