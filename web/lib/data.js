@@ -22,14 +22,28 @@ function readJsonSafe(filePath, fallback) {
 // اولویت با env «PLATFORM_USERS_JSON» (آرایه‌ی JSON همان قالب فایل): هش رمزها بیرون از مخزن عمومی
 // نگه داشته می‌شن. اگه env نبود یا نامعتبر بود، به فایل برمی‌گرده.
 export function getUsers() {
+  let base = null;
   const fromEnv = process.env.PLATFORM_USERS_JSON;
   if (fromEnv) {
     try {
       const parsed = JSON.parse(fromEnv);
-      if (Array.isArray(parsed) && parsed.length > 0) return parsed;
+      if (Array.isArray(parsed) && parsed.length > 0) base = parsed;
     } catch {}
   }
-  return readJsonSafe(path.join(DATA_DIR, "users.json"), []);
+  if (!base) base = readJsonSafe(path.join(DATA_DIR, "users.json"), []);
+  // کاربران افزوده (مثلاً کارشناسان بازرگانی) در env «PLATFORM_EXTRA_USERS_JSON»: بدون دست‌زدن به متغیر اصلی ادغام می‌شوند؛
+  // اگر نام کاربری تکراری بود نسخه‌ی افزوده جایگزین می‌شود. ساخت مقدار: node scripts/make-users-env.mjs
+  const extraRaw = process.env.PLATFORM_EXTRA_USERS_JSON;
+  if (extraRaw) {
+    try {
+      const extra = JSON.parse(extraRaw);
+      if (Array.isArray(extra) && extra.length > 0) {
+        const names = new Set(extra.map((u) => String(u.username).toLowerCase()));
+        return [...base.filter((u) => !names.has(String(u.username).toLowerCase())), ...extra];
+      }
+    } catch {}
+  }
+  return base;
 }
 
 export function findUserByUsername(username) {

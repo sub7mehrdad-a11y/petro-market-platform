@@ -10,5 +10,7 @@ export async function register() {
     startOutreachFollowup();
     const { startEmailRepair } = await import("./lib/outreachEmailRepair.js");
     startEmailRepair();
+    const { startBrainForecastAuto } = await import("./lib/brain2/forecastAuto.js");
+    startBrainForecastAuto();
   }
 }
