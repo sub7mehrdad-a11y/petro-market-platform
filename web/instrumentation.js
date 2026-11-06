@@ -12,5 +12,7 @@ export async function register() {
     startEmailRepair();
     const { startBrainForecastAuto } = await import("./lib/brain2/forecastAuto.js");
     startBrainForecastAuto();
+    const { startMemoryAuto } = await import("./lib/brain2/memoryAuto.js");
+    startMemoryAuto();
   }
 }

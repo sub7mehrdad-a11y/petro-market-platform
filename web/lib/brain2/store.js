@@ -75,7 +75,14 @@ export function appendEvent(repo, event) {
   cache.delete(repo);
 }
 
-export const newId = (prefix) => `${prefix}_${Date.now().toString(36)}${crypto.randomBytes(4).toString("hex")}`;
+/** فایل خالی مخزن را (اگر نبود) می‌سازد؛ هرگز چیزی را کوتاه یا بازنویسی نمی‌کند ("a" = افزودن). */
+export function ensureRepoFile(repo) {
+  const problem = brainStorageProblem();
+  if (problem) throw new Error(problem);
+  fs.closeSync(fs.openSync(fileOf(repo), "a"));
+}
+
+export const newId =(prefix) => `${prefix}_${Date.now().toString(36)}${crypto.randomBytes(4).toString("hex")}`;
 
 /** فیلدهای مشترک همه‌ی مخزن‌ها (بخش ۴-۱ سند): دو خط زمانی، جایگزینی و دلیل تغییر. */
 export function stampRow(prefix, fields = {}, now = new Date().toISOString()) {
@@ -99,8 +106,8 @@ export function putRow(repo, row) {
 }
 
 /** بستن ردیف (نه حذف): recorded_to پر می‌شود. ردیف قدیمی در فایل می‌ماند. */
-export function closeRow(repo, id, { reason, by, valid_to } = {}) {
-  appendEvent(repo, { op: "close", id, at: new Date().toISOString(), reason: reason || null, by: by || null, valid_to: valid_to || null });
+export function closeRow(repo, id, { reason, by, valid_to, at } = {}) {
+  appendEvent(repo, { op: "close", id, at: at || new Date().toISOString(), reason: reason || null, by: by || null, valid_to: valid_to || null });
 }
 
 /** حالت جاری: Map(id → ردیف). ردیف‌های بسته‌شده با recorded_to پر برمی‌گردند (تا بشود «در تاریخ X چه باور داشتیم» پرسید). */
