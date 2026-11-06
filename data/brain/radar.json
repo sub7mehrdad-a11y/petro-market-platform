@@ -1,22 +1,13 @@
 {
-  "generated_at": "2026-11-05T13:41:14+00:00",
+  "generated_at": "2026-11-06T11:33:25+00:00",
   "candidates": [
-    {
-      "country": "بریتانیا",
-      "name_en": "United Kingdom",
-      "score": 94.2,
-      "import_tons": 41447.0,
-      "unit_value_usd": 569.0,
-      "growth_5y_pct": 53.0,
-      "avg_tariff_pct": 0.19,
-      "companies_in_bank": 29
-    },
     {
       "country": "مکزیک",
       "name_en": "Mexico",
       "score": 86.5,
       "import_tons": 54107.0,
       "unit_value_usd": 508.0,
+      "unit_value_suspect": false,
       "growth_5y_pct": 21.0,
       "avg_tariff_pct": 0.93,
       "companies_in_bank": 5
@@ -27,6 +18,7 @@
       "score": 84.3,
       "import_tons": 164744.0,
       "unit_value_usd": 501.0,
+      "unit_value_suspect": false,
       "growth_5y_pct": 6.0,
       "avg_tariff_pct": 0.18,
       "companies_in_bank": 31
@@ -37,6 +29,7 @@
       "score": 84.1,
       "import_tons": 15904.0,
       "unit_value_usd": 412.0,
+      "unit_value_suspect": false,
       "growth_5y_pct": 119.0,
       "avg_tariff_pct": 0.28,
       "companies_in_bank": 0
@@ -47,19 +40,10 @@
       "score": 83.9,
       "import_tons": 148545.0,
       "unit_value_usd": 449.0,
+      "unit_value_suspect": false,
       "growth_5y_pct": 5.0,
       "avg_tariff_pct": 0.2,
       "companies_in_bank": 88
-    },
-    {
-      "country": "لهستان",
-      "name_en": "Poland",
-      "score": 83.9,
-      "import_tons": 54732.0,
-      "unit_value_usd": 514.0,
-      "growth_5y_pct": 8.0,
-      "avg_tariff_pct": 0.23,
-      "companies_in_bank": 59
     },
     {
       "country": "هلند",
@@ -67,29 +51,21 @@
       "score": 83.3,
       "import_tons": 149426.0,
       "unit_value_usd": 434.0,
+      "unit_value_suspect": false,
       "growth_5y_pct": 7.0,
       "avg_tariff_pct": 0.19,
       "companies_in_bank": 35
     },
     {
-      "country": "فرانسه",
-      "name_en": "France",
-      "score": 82.9,
-      "import_tons": 229617.0,
-      "unit_value_usd": 587.0,
-      "growth_5y_pct": 2.0,
-      "avg_tariff_pct": 0.33,
-      "companies_in_bank": 39
-    },
-    {
-      "country": "کانادا",
-      "name_en": "Canada",
-      "score": 81.8,
-      "import_tons": 80480.0,
-      "unit_value_usd": 641.0,
-      "growth_5y_pct": 0.0,
-      "avg_tariff_pct": 0.72,
-      "companies_in_bank": 22
+      "country": "بریتانیا",
+      "name_en": "United Kingdom",
+      "score": 82.2,
+      "import_tons": 41447.0,
+      "unit_value_usd": 569.0,
+      "unit_value_suspect": true,
+      "growth_5y_pct": 53.0,
+      "avg_tariff_pct": 0.19,
+      "companies_in_bank": 29
     },
     {
       "country": "مصر",
@@ -97,6 +73,7 @@
       "score": 79.4,
       "import_tons": 39042.0,
       "unit_value_usd": 501.0,
+      "unit_value_suspect": false,
       "growth_5y_pct": 4.0,
       "avg_tariff_pct": 0.4,
       "companies_in_bank": 41
@@ -107,19 +84,10 @@
       "score": 79.3,
       "import_tons": 74200.0,
       "unit_value_usd": 438.0,
+      "unit_value_suspect": false,
       "growth_5y_pct": -7.0,
       "avg_tariff_pct": 0.4,
       "companies_in_bank": 132
-    },
-    {
-      "country": "آمریکا",
-      "name_en": "United States of America",
-      "score": 78.7,
-      "import_tons": 35176.0,
-      "unit_value_usd": 1381.0,
-      "growth_5y_pct": 5.0,
-      "avg_tariff_pct": 0.35,
-      "companies_in_bank": 44
     },
     {
       "country": "آفریقای جنوبی",
@@ -127,29 +95,76 @@
       "score": 77.2,
       "import_tons": 35664.0,
       "unit_value_usd": 508.0,
+      "unit_value_suspect": false,
       "growth_5y_pct": -2.0,
       "avg_tariff_pct": 0.16,
       "companies_in_bank": 14
     },
     {
-      "country": "دانمارک",
-      "name_en": "Denmark",
-      "score": 76.9,
-      "import_tons": 28067.0,
-      "unit_value_usd": 562.0,
-      "growth_5y_pct": 6.0,
-      "avg_tariff_pct": 0.33,
-      "companies_in_bank": 19
+      "country": "بلژیک",
+      "name_en": "Belgium",
+      "score": 75.1,
+      "import_tons": 169471.0,
+      "unit_value_usd": 351.0,
+      "unit_value_suspect": false,
+      "growth_5y_pct": 2.0,
+      "avg_tariff_pct": 0.26,
+      "companies_in_bank": 18
     },
     {
-      "country": "سوئیس",
-      "name_en": "Switzerland",
-      "score": 75.8,
-      "import_tons": 23342.0,
-      "unit_value_usd": 681.0,
-      "growth_5y_pct": 8.0,
+      "country": "ژاپن",
+      "name_en": "Japan",
+      "score": 74.7,
+      "import_tons": 37361.0,
+      "unit_value_usd": 406.0,
+      "unit_value_suspect": false,
+      "growth_5y_pct": 1.0,
       "avg_tariff_pct": 0.3,
+      "companies_in_bank": 4
+    },
+    {
+      "country": "مراکش",
+      "name_en": "Morocco",
+      "score": 73.3,
+      "import_tons": 20977.0,
+      "unit_value_usd": 444.0,
+      "unit_value_suspect": false,
+      "growth_5y_pct": 4.0,
+      "avg_tariff_pct": 0.21,
       "companies_in_bank": 6
+    },
+    {
+      "country": "تایوان",
+      "name_en": "Chinese Taipei",
+      "score": 72.8,
+      "import_tons": 46386.0,
+      "unit_value_usd": 316.0,
+      "unit_value_suspect": false,
+      "growth_5y_pct": 12.0,
+      "avg_tariff_pct": 0.22,
+      "companies_in_bank": 8
+    },
+    {
+      "country": "فیلیپین",
+      "name_en": "Philippines",
+      "score": 72.2,
+      "import_tons": 31312.0,
+      "unit_value_usd": 363.0,
+      "unit_value_suspect": false,
+      "growth_5y_pct": 10.0,
+      "avg_tariff_pct": 0.29,
+      "companies_in_bank": 8
+    },
+    {
+      "country": "مالزی",
+      "name_en": "Malaysia",
+      "score": 72.2,
+      "import_tons": 27310.0,
+      "unit_value_usd": 406.0,
+      "unit_value_suspect": false,
+      "growth_5y_pct": 2.0,
+      "avg_tariff_pct": 0.24,
+      "companies_in_bank": 35
     }
   ]
 }

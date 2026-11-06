@@ -1,138 +1,19 @@
 {
-  "generated_at": "2026-11-05T13:41:14+00:00",
+  "generated_at": "2026-11-06T11:33:25+00:00",
+  "digest_version": "s1-2026-11-06",
   "config": "data/brain/scoring_config.json",
   "weights": {
-    "market_size": 0.28,
-    "price_room": 0.14,
-    "competition": 0.14,
-    "proximity": 0.14,
-    "growth": 0.1,
-    "tariff_and_union": 0.1,
-    "company_pool": 0.1
+    "market_size": 0.31,
+    "price_room": 0.16,
+    "competition": 0.16,
+    "proximity": 0.15,
+    "growth": 0.11,
+    "tariff_and_union": 0.11
   },
   "countries": [
     {
-      "country": "هند",
-      "score": 71.3,
-      "tier": "A",
-      "components": {
-        "market_size": 0.93,
-        "price_room": 0.51,
-        "competition": 0.44,
-        "proximity": 0.68,
-        "growth": 0.56,
-        "tariff_and_union": 0.71,
-        "company_pool": 1.0
-      },
-      "notes": {
-        "market_size": "واردات حدود 42,455 تن (گزارش اختصاصی)",
-        "price_room": "ارزش واحد واردات 327 دلار/تن",
-        "competition": "سهم ترکیه+چین 57٪، سهم ایران 1٪",
-        "proximity": "1,950 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
-        "growth": "رشد ۵‌ساله‌ی حجم واردات +29٪",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.22٪",
-        "company_pool": "212 شرکت در بانک"
-      },
-      "strengths": [
-        "بازار بزرگ",
-        "بانک شرکت‌های غنی",
-        "نزدیک به ایران"
-      ],
-      "weaknesses": [],
-      "raw": {
-        "import_tons": 42455,
-        "distance_km": 1950,
-        "unit_value_usd": 327.0
-      },
-      "pool": {
-        "companies": 212,
-        "with_email": 207,
-        "grades": [
-          [
-            "خوراکی",
-            148
-          ],
-          [
-            "نامشخص",
-            31
-          ],
-          [
-            "Unclear",
-            3
-          ],
-          [
-            "Food Grade",
-            3
-          ]
-        ],
-        "sent": 0
-      },
-      "rank": 1
-    },
-    {
-      "country": "ازبکستان",
-      "score": 69.3,
-      "tier": "A",
-      "components": {
-        "market_size": 0.68,
-        "price_room": 0.25,
-        "competition": 1.0,
-        "proximity": 0.92,
-        "growth": 1.0,
-        "tariff_and_union": 0.7,
-        "company_pool": 0.28
-      },
-      "notes": {
-        "market_size": "واردات حدود 13,000 تن (گزارش اختصاصی)",
-        "price_room": "ارزش واحد واردات 263 دلار/تن",
-        "competition": "سهم ترکیه+چین 8٪، سهم ایران 26٪",
-        "proximity": "459 کیلومتر از ایران (برآورد هوایی تا نزدیک‌ترین مرز/بندر ایران)",
-        "growth": "رشد ۵‌ساله‌ی حجم واردات +80٪",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.38٪",
-        "company_pool": "37 شرکت در بانک"
-      },
-      "strengths": [
-        "بازار بزرگ",
-        "رقابت کم",
-        "نزدیک به ایران"
-      ],
-      "weaknesses": [
-        "قیمت واردات پایین",
-        "بانک شرکت‌ها کم‌عمق"
-      ],
-      "raw": {
-        "import_tons": 13000,
-        "distance_km": 459,
-        "unit_value_usd": 263.0
-      },
-      "pool": {
-        "companies": 37,
-        "with_email": 32,
-        "grades": [
-          [
-            "خوراکی",
-            13
-          ],
-          [
-            "خوراکی (E500ii)، دام و طیور، صنعتی و دارویی",
-            1
-          ],
-          [
-            "صنعتی، خوراکی و ساختمانی",
-            1
-          ],
-          [
-            "صنعتی - فرمولاسیون پودر و مایعات شوینده، صابون‌سازی و خنثی‌سازی",
-            1
-          ]
-        ],
-        "sent": 8
-      },
-      "rank": 2
-    },
-    {
       "country": "عربستان سعودی",
-      "score": 68.8,
+      "score": 70.8,
       "tier": "A",
       "components": {
         "market_size": 0.86,
@@ -140,27 +21,27 @@
         "competition": 0.4,
         "proximity": 0.9,
         "growth": 0.27,
-        "tariff_and_union": 0.71,
-        "company_pool": 0.5
+        "tariff_and_union": 0.71
       },
       "notes": {
         "market_size": "واردات حدود 31,365 تن (گزارش اختصاصی)",
-        "price_room": "ارزش واحد واردات 408 دلار/تن",
-        "competition": "سهم ترکیه+چین 60٪",
+        "price_room": "ارزش واحد واردات 408 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
+        "competition": "سهم ترکیه+چین+روسیه 60٪ (منبع: تفکیک گزارش اختصاصی)",
         "proximity": "585 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
         "growth": "رشد ۵‌ساله‌ی حجم واردات +9٪",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.2٪",
-        "company_pool": "62 شرکت در بانک"
+        "tariff_and_union": "تعرفه‌ی متوسط 0.2٪"
       },
       "strengths": [
         "بازار بزرگ",
         "نزدیک به ایران",
-        "قیمت واردات بالا (حاشیه‌ی قیمتی)"
+        "ارزش واحد واردات بالا (نشانه‌ی سطح قیمت مقصد، نه فوب)"
       ],
       "weaknesses": [
         "رشد کند",
-        "رقابت شدید ترکیه/چین"
+        "رقابت شدید رقبا (ترکیه/چین/روسیه)"
       ],
+      "flags": [],
+      "data_gaps": [],
       "raw": {
         "import_tons": 31365,
         "distance_km": 585,
@@ -189,72 +70,75 @@
         ],
         "sent": 0
       },
-      "rank": 3
+      "pool_depth": 0.5,
+      "rank": 1
     },
     {
-      "country": "قزاقستان",
-      "score": 67.2,
+      "country": "ازبکستان",
+      "score": 70.2,
       "tier": "A",
       "components": {
-        "market_size": 0.64,
-        "price_room": 1.0,
-        "competition": 0.5,
-        "proximity": 0.85,
-        "growth": 0.33,
-        "tariff_and_union": 0.96,
-        "company_pool": 0.35
+        "market_size": 0.68,
+        "price_room": 0.25,
+        "competition": 0.78,
+        "proximity": 0.92,
+        "growth": 1.0,
+        "tariff_and_union": 0.7
       },
       "notes": {
-        "market_size": "واردات حدود 10,676 تن (گزارش اختصاصی)",
-        "price_room": "ارزش واحد واردات 578 دلار/تن",
-        "competition": "سهم تأمین‌کنندگان نامشخص (امتیاز خنثی)",
-        "proximity": "885 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
-        "growth": "رشد ۵‌ساله‌ی حجم واردات +13٪",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.6٪؛ عضو اوراسیا (EAEU)",
-        "company_pool": "45 شرکت در بانک"
+        "market_size": "واردات حدود 13,000 تن (گزارش اختصاصی)",
+        "price_room": "ارزش واحد واردات 263 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
+        "competition": "سهم ترکیه+چین+روسیه 35٪، سهم ایران 26٪ (منبع: تفکیک گزارش اختصاصی)",
+        "proximity": "459 کیلومتر از ایران (برآورد هوایی تا نزدیک‌ترین مرز/بندر ایران)",
+        "growth": "رشد ۵‌ساله‌ی حجم واردات +80٪",
+        "tariff_and_union": "تعرفه‌ی متوسط 0.38٪"
       },
       "strengths": [
         "بازار بزرگ",
-        "قیمت واردات بالا (حاشیه‌ی قیمتی)",
-        "نزدیک به ایران"
+        "نزدیک به ایران",
+        "رقابت کم"
       ],
       "weaknesses": [
-        "رشد کند",
-        "بانک شرکت‌ها کم‌عمق"
+        "ارزش واحد واردات پایین"
       ],
+      "flags": [
+        "distance_estimated"
+      ],
+      "data_gaps": [],
       "raw": {
-        "import_tons": 10676,
-        "distance_km": 885,
-        "unit_value_usd": 578.0
+        "import_tons": 13000,
+        "distance_km": 459,
+        "unit_value_usd": 263.0
       },
       "pool": {
-        "companies": 45,
-        "with_email": 37,
+        "companies": 37,
+        "with_email": 32,
         "grades": [
           [
-            "خوراکی (E500ii) - بافر امولسیون گوشت و عامل پف‌دهنده در روکش خمیری (Batter) ناگت",
-            2
+            "خوراکی",
+            13
           ],
           [
-            "خوراکی (E500ii) - پوک‌کننده خمیر، بافر pH در بیسکویت، ویفر، کیک و کارامل",
+            "خوراکی (E500ii)، دام و طیور، صنعتی و دارویی",
             1
           ],
           [
-            "خوراکی (E500ii) - عامل حجم‌دهنده و پوک‌کننده در خطوط بیسکویت، کراکر و ویفر",
+            "صنعتی، خوراکی و ساختمانی",
             1
           ],
           [
-            "خوراکی (E500ii) - عامل ورآورنده خمیر در محصولات آردی، کیک اسفنجی و ویفر",
+            "صنعتی - فرمولاسیون پودر و مایعات شوینده، صابون‌سازی و خنثی‌سازی",
             1
           ]
         ],
-        "sent": 0
+        "sent": 8
       },
-      "rank": 4
+      "pool_depth": 0.28,
+      "rank": 2
     },
     {
       "country": "عراق",
-      "score": 64.7,
+      "score": 69.0,
       "tier": "A",
       "components": {
         "market_size": 0.68,
@@ -262,27 +146,26 @@
         "competition": 0.69,
         "proximity": 0.86,
         "growth": 0.19,
-        "tariff_and_union": 0.66,
-        "company_pool": 0.27
+        "tariff_and_union": 0.66
       },
       "notes": {
         "market_size": "واردات حدود 13,000 تن (گزارش اختصاصی)",
-        "price_room": "ارزش واحد واردات 429 دلار/تن",
-        "competition": "سهم ترکیه+چین 54٪، سهم ایران 46٪",
+        "price_room": "ارزش واحد واردات 429 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
+        "competition": "سهم ترکیه+چین+روسیه 54٪، سهم ایران 46٪ (منبع: تفکیک گزارش اختصاصی)",
         "proximity": "858 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
         "growth": "رشد ۵‌ساله‌ی حجم واردات +3٪",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.92٪",
-        "company_pool": "36 شرکت در بانک"
+        "tariff_and_union": "تعرفه‌ی متوسط 0.92٪"
       },
       "strengths": [
         "بازار بزرگ",
-        "قیمت واردات بالا (حاشیه‌ی قیمتی)",
+        "ارزش واحد واردات بالا (نشانه‌ی سطح قیمت مقصد، نه فوب)",
         "نزدیک به ایران"
       ],
       "weaknesses": [
-        "رشد کند",
-        "بانک شرکت‌ها کم‌عمق"
+        "رشد کند"
       ],
+      "flags": [],
+      "data_gaps": [],
       "raw": {
         "import_tons": 13000,
         "distance_km": 858,
@@ -311,38 +194,166 @@
         ],
         "sent": 27
       },
+      "pool_depth": 0.27,
+      "rank": 3
+    },
+    {
+      "country": "هند",
+      "score": 67.7,
+      "tier": "A",
+      "components": {
+        "market_size": 0.93,
+        "price_room": 0.51,
+        "competition": 0.42,
+        "proximity": 0.68,
+        "growth": 0.56,
+        "tariff_and_union": 0.71
+      },
+      "notes": {
+        "market_size": "واردات حدود 42,455 تن (گزارش اختصاصی)",
+        "price_room": "ارزش واحد واردات 327 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
+        "competition": "سهم ترکیه+چین+روسیه 58٪، سهم ایران 1٪ (منبع: تفکیک گزارش اختصاصی)",
+        "proximity": "1,950 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
+        "growth": "رشد ۵‌ساله‌ی حجم واردات +29٪",
+        "tariff_and_union": "تعرفه‌ی متوسط 0.22٪"
+      },
+      "strengths": [
+        "بازار بزرگ",
+        "نزدیک به ایران"
+      ],
+      "weaknesses": [],
+      "flags": [
+        "dual_role"
+      ],
+      "data_gaps": [],
+      "raw": {
+        "import_tons": 42455,
+        "distance_km": 1950,
+        "unit_value_usd": 327.0
+      },
+      "pool": {
+        "companies": 212,
+        "with_email": 207,
+        "grades": [
+          [
+            "خوراکی",
+            148
+          ],
+          [
+            "نامشخص",
+            31
+          ],
+          [
+            "Unclear",
+            3
+          ],
+          [
+            "Food Grade",
+            3
+          ]
+        ],
+        "sent": 0
+      },
+      "pool_depth": 1.0,
+      "rank": 4
+    },
+    {
+      "country": "روسیه",
+      "score": 66.9,
+      "tier": "A",
+      "components": {
+        "market_size": 0.77,
+        "price_room": 0.61,
+        "competition": 1.0,
+        "proximity": 0.3,
+        "growth": 0.17,
+        "tariff_and_union": 0.97
+      },
+      "notes": {
+        "market_size": "واردات حدود 20,400 تن (گزارش اختصاصی)",
+        "price_room": "ارزش واحد واردات 353 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
+        "competition": "سهم ترکیه+چین 19٪، سهم ایران 78٪ (منبع: تفکیک گزارش اختصاصی)",
+        "proximity": "فاصله نامشخص (امتیاز خنثی)",
+        "growth": "رشد ۵‌ساله‌ی حجم واردات +2٪",
+        "tariff_and_union": "تعرفه‌ی متوسط 0.42٪؛ عضو اوراسیا (EAEU)"
+      },
+      "strengths": [
+        "بازار بزرگ",
+        "رقابت کم",
+        "تعرفه/توافق تجاری مناسب"
+      ],
+      "weaknesses": [
+        "رشد کند"
+      ],
+      "flags": [
+        "dual_role",
+        "from_competitor_doc"
+      ],
+      "data_gaps": [
+        "فاصله/بندر"
+      ],
+      "raw": {
+        "import_tons": 20400,
+        "distance_km": null,
+        "unit_value_usd": 353.0
+      },
+      "pool": {
+        "companies": 122,
+        "with_email": 117,
+        "grades": [
+          [
+            "خوراکی",
+            56
+          ],
+          [
+            "خوراکی (E500ii)، صنعتی، تصفیه آب و شوینده",
+            1
+          ],
+          [
+            "خوراکی (E500ii / GOST)، صنعتی، دارویی",
+            1
+          ],
+          [
+            "خوراکی (E500)، دام و طیور، صنعتی",
+            1
+          ]
+        ],
+        "sent": 0
+      },
+      "pool_depth": 1.0,
       "rank": 5
     },
     {
       "country": "برزیل",
-      "score": 60.7,
+      "score": 58.8,
       "tier": "B",
       "components": {
         "market_size": 1.0,
         "price_room": 0.39,
-        "competition": 0.52,
+        "competition": 0.29,
         "proximity": 0.0,
         "growth": 0.83,
-        "tariff_and_union": 0.71,
-        "company_pool": 0.45
+        "tariff_and_union": 0.71
       },
       "notes": {
         "market_size": "واردات حدود 68,313 تن (گزارش اختصاصی)",
-        "price_room": "ارزش واحد واردات 298 دلار/تن",
-        "competition": "سهم ترکیه+چین 48٪",
+        "price_room": "ارزش واحد واردات 298 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
+        "competition": "سهم ترکیه+چین+روسیه 71٪ (منبع: تفکیک گزارش اختصاصی)",
         "proximity": "12,352 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
         "growth": "رشد ۵‌ساله‌ی حجم واردات +48٪",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.23٪",
-        "company_pool": "57 شرکت در بانک"
+        "tariff_and_union": "تعرفه‌ی متوسط 0.23٪"
       },
       "strengths": [
         "بازار بزرگ",
-        "بازار رو به رشد"
+        "بازار رو به رشد",
+        "تعرفه/توافق تجاری مناسب"
       ],
       "weaknesses": [
         "دور از ایران",
-        "قیمت واردات پایین"
+        "رقابت شدید رقبا (ترکیه/چین/روسیه)"
       ],
+      "flags": [],
+      "data_gaps": [],
       "raw": {
         "import_tons": 68313,
         "distance_km": 12352,
@@ -371,38 +382,229 @@
         ],
         "sent": 0
       },
+      "pool_depth": 0.45,
       "rank": 6
     },
     {
+      "country": "ارمنستان",
+      "score": 55.8,
+      "tier": "B",
+      "components": {
+        "market_size": 0.18,
+        "price_room": 0.68,
+        "competition": 0.82,
+        "proximity": 0.93,
+        "growth": 0.14,
+        "tariff_and_union": 0.98
+      },
+      "notes": {
+        "market_size": "واردات حدود 1,180 تن (پروفایل)",
+        "price_room": "ارزش واحد واردات 369 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
+        "competition": "سهم ترکیه+چین+روسیه 43٪، سهم ایران 50٪ (منبع: آمار آینه‌ی WITS 2024 (سهم ارزشی))",
+        "proximity": "423 کیلومتر از ایران (برآورد هوایی تا نزدیک‌ترین مرز/بندر ایران)",
+        "growth": "رشد ۵‌ساله‌ی حجم واردات +0٪",
+        "tariff_and_union": "تعرفه‌ی متوسط 0.38٪؛ عضو اوراسیا (EAEU)"
+      },
+      "strengths": [
+        "نزدیک به ایران",
+        "رقابت کم",
+        "ارزش واحد واردات بالا (نشانه‌ی سطح قیمت مقصد، نه فوب)"
+      ],
+      "weaknesses": [
+        "رشد کند",
+        "بازار کوچک"
+      ],
+      "flags": [
+        "distance_estimated"
+      ],
+      "data_gaps": [],
+      "raw": {
+        "import_tons": 1180,
+        "distance_km": 423,
+        "unit_value_usd": 369.0
+      },
+      "pool": {
+        "companies": 38,
+        "with_email": 30,
+        "grades": [
+          [
+            "Food",
+            7
+          ],
+          [
+            "Food Grade",
+            6
+          ],
+          [
+            "Feed Grade",
+            6
+          ],
+          [
+            "خوراکی",
+            5
+          ]
+        ],
+        "sent": 0
+      },
+      "pool_depth": 0.29,
+      "rank": 7
+    },
+    {
+      "country": "قزاقستان",
+      "score": 53.6,
+      "tier": "B",
+      "components": {
+        "market_size": 0.64,
+        "price_room": 0.4,
+        "competition": 0.02,
+        "proximity": 0.85,
+        "growth": 0.33,
+        "tariff_and_union": 0.96
+      },
+      "notes": {
+        "market_size": "واردات حدود 10,676 تن (گزارش اختصاصی)",
+        "price_room": "ارزش واحد واردات 578 دلار/تن (مشکوک: بیش از 1.5 برابر دور از میانه‌ی همتاها 327؛ نیازمند تأیید با ITC؛ امتیاز خنثی)",
+        "competition": "سهم ترکیه+چین+روسیه 98٪ (منبع: درصد نوشته‌شده در متن شرکای پرونده)",
+        "proximity": "885 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
+        "growth": "رشد ۵‌ساله‌ی حجم واردات +13٪",
+        "tariff_and_union": "تعرفه‌ی متوسط 0.6٪؛ عضو اوراسیا (EAEU)"
+      },
+      "strengths": [
+        "بازار بزرگ",
+        "نزدیک به ایران",
+        "تعرفه/توافق تجاری مناسب"
+      ],
+      "weaknesses": [
+        "رقابت شدید رقبا (ترکیه/چین/روسیه)",
+        "رشد کند"
+      ],
+      "flags": [
+        "unit_value_suspect",
+        "shares_from_text"
+      ],
+      "data_gaps": [],
+      "raw": {
+        "import_tons": 10676,
+        "distance_km": 885,
+        "unit_value_usd": 578.0
+      },
+      "pool": {
+        "companies": 45,
+        "with_email": 37,
+        "grades": [
+          [
+            "خوراکی (E500ii) - بافر امولسیون گوشت و عامل پف‌دهنده در روکش خمیری (Batter) ناگت",
+            2
+          ],
+          [
+            "خوراکی (E500ii) - پوک‌کننده خمیر، بافر pH در بیسکویت، ویفر، کیک و کارامل",
+            1
+          ],
+          [
+            "خوراکی (E500ii) - عامل حجم‌دهنده و پوک‌کننده در خطوط بیسکویت، کراکر و ویفر",
+            1
+          ],
+          [
+            "خوراکی (E500ii) - عامل ورآورنده خمیر در محصولات آردی، کیک اسفنجی و ویفر",
+            1
+          ]
+        ],
+        "sent": 0
+      },
+      "pool_depth": 0.35,
+      "rank": 8
+    },
+    {
+      "country": "کنیا",
+      "score": 51.5,
+      "tier": "B",
+      "components": {
+        "market_size": 0.65,
+        "price_room": 0.48,
+        "competition": 0.51,
+        "proximity": 0.35,
+        "growth": 0.24,
+        "tariff_and_union": 0.69
+      },
+      "notes": {
+        "market_size": "واردات حدود 10,987 تن (پروفایل)",
+        "price_room": "ارزش واحد واردات 320 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
+        "competition": "سهم ترکیه+چین+روسیه 49٪ (منبع: آمار آینه‌ی WITS 2024 (سهم ارزشی))",
+        "proximity": "3,886 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
+        "growth": "رشد ۵‌ساله‌ی حجم واردات +7٪",
+        "tariff_and_union": "تعرفه‌ی متوسط 0.42٪"
+      },
+      "strengths": [
+        "بازار بزرگ"
+      ],
+      "weaknesses": [
+        "رشد کند",
+        "دور از ایران"
+      ],
+      "flags": [],
+      "data_gaps": [],
+      "raw": {
+        "import_tons": 10987,
+        "distance_km": 3886,
+        "unit_value_usd": 320.0
+      },
+      "pool": {
+        "companies": 48,
+        "with_email": 43,
+        "grades": [
+          [
+            "خوراکی",
+            18
+          ],
+          [
+            "صنعتی",
+            5
+          ],
+          [
+            "صنعتی / خوراکی",
+            4
+          ],
+          [
+            "دامی (Feed Grade)",
+            4
+          ]
+        ],
+        "sent": 0
+      },
+      "pool_depth": 0.37,
+      "rank": 9
+    },
+    {
       "country": "اردن",
-      "score": 53.1,
+      "score": 51.3,
       "tier": "B",
       "components": {
         "market_size": 0.64,
         "price_room": 0.21,
-        "competition": 0.5,
+        "competition": 0.42,
         "proximity": 0.65,
         "growth": 0.36,
-        "tariff_and_union": 0.7,
-        "company_pool": 0.56
+        "tariff_and_union": 0.7
       },
       "notes": {
         "market_size": "واردات حدود 10,725 تن (پروفایل)",
-        "price_room": "ارزش واحد واردات 252 دلار/تن",
-        "competition": "سهم تأمین‌کنندگان نامشخص (امتیاز خنثی)",
+        "price_room": "ارزش واحد واردات 252 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
+        "competition": "سهم ترکیه+چین+روسیه 58٪، سهم ایران 0٪ (منبع: آمار آینه‌ی WITS 2024 (سهم ارزشی))",
         "proximity": "2,076 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
         "growth": "رشد ۵‌ساله‌ی حجم واردات +15٪",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.39٪",
-        "company_pool": "69 شرکت در بانک"
+        "tariff_and_union": "تعرفه‌ی متوسط 0.39٪"
       },
       "strengths": [
         "بازار بزرگ",
-        "نزدیک به ایران"
+        "نزدیک به ایران",
+        "تعرفه/توافق تجاری مناسب"
       ],
       "weaknesses": [
-        "قیمت واردات پایین",
+        "ارزش واحد واردات پایین",
         "رشد کند"
       ],
+      "flags": [],
+      "data_gaps": [],
       "raw": {
         "import_tons": 10725,
         "distance_km": 2076,
@@ -431,98 +633,40 @@
         ],
         "sent": 0
       },
-      "rank": 7
-    },
-    {
-      "country": "قرقیزستان",
-      "score": 52.2,
-      "tier": "B",
-      "components": {
-        "market_size": 0.34,
-        "price_room": 0.4,
-        "competition": 0.8,
-        "proximity": 0.78,
-        "growth": 0.4,
-        "tariff_and_union": 0.98,
-        "company_pool": 0.14
-      },
-      "notes": {
-        "market_size": "واردات حدود 2,500 تن (گزارش اختصاصی)",
-        "price_room": "ارزش واحد نامشخص (امتیاز خنثی)",
-        "competition": "سهم ترکیه+چین 24٪، سهم ایران 7٪",
-        "proximity": "1,344 کیلومتر از ایران (برآورد هوایی تا نزدیک‌ترین مرز/بندر ایران)",
-        "growth": "رشد نامشخص",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.26٪؛ عضو اوراسیا (EAEU)",
-        "company_pool": "21 شرکت در بانک"
-      },
-      "strengths": [
-        "رقابت کم",
-        "نزدیک به ایران",
-        "تعرفه/توافق تجاری مناسب"
-      ],
-      "weaknesses": [
-        "بانک شرکت‌ها کم‌عمق",
-        "بازار کوچک"
-      ],
-      "raw": {
-        "import_tons": 2500,
-        "distance_km": 1344,
-        "unit_value_usd": null
-      },
-      "pool": {
-        "companies": 21,
-        "with_email": 18,
-        "grades": [
-          [
-            "خوراکی (Food Grade)",
-            5
-          ],
-          [
-            "دارویی (Pharma Grade)",
-            4
-          ],
-          [
-            "خوراکی (Food Grade) — کیسه ۲۵ کیلوگرمی",
-            3
-          ],
-          [
-            "دام و طیور (Feed Grade)",
-            2
-          ]
-        ],
-        "sent": 0
-      },
-      "rank": 8
+      "pool_depth": 0.56,
+      "rank": 10
     },
     {
       "country": "تاجیکستان",
-      "score": 51.4,
+      "score": 51.1,
       "tier": "B",
       "components": {
         "market_size": 0.4,
-        "price_room": 0.1,
-        "competition": 1.0,
+        "price_room": 0.4,
+        "competition": 0.44,
         "proximity": 0.88,
         "growth": 0.4,
-        "tariff_and_union": 0.69,
-        "company_pool": 0.16
+        "tariff_and_union": 0.69
       },
       "notes": {
         "market_size": "واردات حدود 3,411 تن (گزارش اختصاصی)",
-        "price_room": "ارزش واحد واردات 225 دلار/تن",
-        "competition": "سهم ترکیه+چین 0٪، سهم ایران 28٪",
+        "price_room": "ارزش واحد واردات 225 دلار/تن (مشکوک: بیش از 1.5 برابر دور از میانه‌ی همتاها 353؛ نیازمند تأیید با ITC؛ امتیاز خنثی)",
+        "competition": "سهم ترکیه+چین+روسیه 70٪، سهم ایران 28٪ (منبع: تفکیک گزارش اختصاصی)",
         "proximity": "709 کیلومتر از ایران (برآورد هوایی تا نزدیک‌ترین مرز/بندر ایران)",
         "growth": "رشد نامشخص",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.51٪",
-        "company_pool": "23 شرکت در بانک"
+        "tariff_and_union": "تعرفه‌ی متوسط 0.51٪"
       },
       "strengths": [
-        "رقابت کم",
-        "نزدیک به ایران"
+        "نزدیک به ایران",
+        "تعرفه/توافق تجاری مناسب"
       ],
-      "weaknesses": [
-        "قیمت واردات پایین",
-        "بانک شرکت‌ها کم‌عمق"
+      "weaknesses": [],
+      "flags": [
+        "unit_value_suspect",
+        "distance_estimated"
+      ],
+      "data_gaps": [
+        "رشد واردات"
       ],
       "raw": {
         "import_tons": 3411,
@@ -552,159 +696,107 @@
         ],
         "sent": 0
       },
-      "rank": 9
-    },
-    {
-      "country": "کنیا",
-      "score": 49.8,
-      "tier": "B",
-      "components": {
-        "market_size": 0.65,
-        "price_room": 0.48,
-        "competition": 0.5,
-        "proximity": 0.35,
-        "growth": 0.24,
-        "tariff_and_union": 0.69,
-        "company_pool": 0.37
-      },
-      "notes": {
-        "market_size": "واردات حدود 10,987 تن (پروفایل)",
-        "price_room": "ارزش واحد واردات 320 دلار/تن",
-        "competition": "سهم تأمین‌کنندگان نامشخص (امتیاز خنثی)",
-        "proximity": "3,886 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
-        "growth": "رشد ۵‌ساله‌ی حجم واردات +7٪",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.42٪",
-        "company_pool": "48 شرکت در بانک"
-      },
-      "strengths": [
-        "بازار بزرگ",
-        "تعرفه/توافق تجاری مناسب"
-      ],
-      "weaknesses": [
-        "رشد کند",
-        "دور از ایران"
-      ],
-      "raw": {
-        "import_tons": 10987,
-        "distance_km": 3886,
-        "unit_value_usd": 320.0
-      },
-      "pool": {
-        "companies": 48,
-        "with_email": 43,
-        "grades": [
-          [
-            "خوراکی",
-            18
-          ],
-          [
-            "صنعتی",
-            5
-          ],
-          [
-            "صنعتی / خوراکی",
-            4
-          ],
-          [
-            "دامی (Feed Grade)",
-            4
-          ]
-        ],
-        "sent": 0
-      },
-      "rank": 10
-    },
-    {
-      "country": "ارمنستان",
-      "score": 48.6,
-      "tier": "B",
-      "components": {
-        "market_size": 0.18,
-        "price_room": 0.68,
-        "competition": 0.5,
-        "proximity": 0.93,
-        "growth": 0.14,
-        "tariff_and_union": 0.98,
-        "company_pool": 0.29
-      },
-      "notes": {
-        "market_size": "واردات حدود 1,180 تن (پروفایل)",
-        "price_room": "ارزش واحد واردات 369 دلار/تن",
-        "competition": "سهم تأمین‌کنندگان نامشخص (امتیاز خنثی)",
-        "proximity": "423 کیلومتر از ایران (برآورد هوایی تا نزدیک‌ترین مرز/بندر ایران)",
-        "growth": "رشد ۵‌ساله‌ی حجم واردات +0٪",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.38٪؛ عضو اوراسیا (EAEU)",
-        "company_pool": "38 شرکت در بانک"
-      },
-      "strengths": [
-        "نزدیک به ایران",
-        "تعرفه/توافق تجاری مناسب",
-        "قیمت واردات بالا (حاشیه‌ی قیمتی)"
-      ],
-      "weaknesses": [
-        "رشد کند",
-        "بازار کوچک"
-      ],
-      "raw": {
-        "import_tons": 1180,
-        "distance_km": 423,
-        "unit_value_usd": 369.0
-      },
-      "pool": {
-        "companies": 38,
-        "with_email": 30,
-        "grades": [
-          [
-            "Food",
-            7
-          ],
-          [
-            "Food Grade",
-            6
-          ],
-          [
-            "Feed Grade",
-            6
-          ],
-          [
-            "خوراکی",
-            5
-          ]
-        ],
-        "sent": 0
-      },
+      "pool_depth": 0.16,
       "rank": 11
     },
     {
-      "country": "سوریه",
-      "score": 48.4,
+      "country": "قرقیزستان",
+      "score": 50.0,
       "tier": "B",
       "components": {
+        "market_size": 0.34,
+        "price_room": 0.4,
+        "competition": 0.4,
+        "proximity": 0.78,
+        "growth": 0.4,
+        "tariff_and_union": 0.98
+      },
+      "notes": {
+        "market_size": "واردات حدود 2,500 تن (گزارش اختصاصی)",
+        "price_room": "ارزش واحد نامشخص (امتیاز خنثی)",
+        "competition": "سهم ترکیه+چین+روسیه 64٪، سهم ایران 7٪ (منبع: تفکیک گزارش اختصاصی)",
+        "proximity": "1,344 کیلومتر از ایران (برآورد هوایی تا نزدیک‌ترین مرز/بندر ایران)",
+        "growth": "رشد نامشخص",
+        "tariff_and_union": "تعرفه‌ی متوسط 0.26٪؛ عضو اوراسیا (EAEU)"
+      },
+      "strengths": [
+        "نزدیک به ایران",
+        "تعرفه/توافق تجاری مناسب"
+      ],
+      "weaknesses": [
+        "بازار کوچک",
+        "رقابت شدید رقبا (ترکیه/چین/روسیه)"
+      ],
+      "flags": [
+        "distance_estimated"
+      ],
+      "data_gaps": [
+        "ارزش واحد واردات",
+        "رشد واردات"
+      ],
+      "raw": {
+        "import_tons": 2500,
+        "distance_km": 1344,
+        "unit_value_usd": null
+      },
+      "pool": {
+        "companies": 21,
+        "with_email": 18,
+        "grades": [
+          [
+            "خوراکی (Food Grade)",
+            5
+          ],
+          [
+            "دارویی (Pharma Grade)",
+            4
+          ],
+          [
+            "خوراکی (Food Grade) — کیسه ۲۵ کیلوگرمی",
+            3
+          ],
+          [
+            "دام و طیور (Feed Grade)",
+            2
+          ]
+        ],
+        "sent": 0
+      },
+      "pool_depth": 0.14,
+      "rank": 12
+    },
+    {
+      "country": "سوریه",
+      "score": 42.2,
+      "tier": "C",
+      "components": {
         "market_size": 0.35,
-        "price_room": 1.0,
+        "price_room": 0.4,
         "competition": 0.0,
         "proximity": 0.64,
         "growth": 0.73,
-        "tariff_and_union": 0.66,
-        "company_pool": 0.17
+        "tariff_and_union": 0.66
       },
       "notes": {
         "market_size": "واردات حدود 2,655 تن (گزارش اختصاصی)",
-        "price_room": "ارزش واحد واردات 509 دلار/تن",
-        "competition": "سهم ترکیه+چین 100٪",
+        "price_room": "ارزش واحد واردات 509 دلار/تن (مشکوک: بیش از 1.5 برابر دور از میانه‌ی همتاها 327؛ نیازمند تأیید با ITC؛ امتیاز خنثی)",
+        "competition": "سهم ترکیه+چین+روسیه 100٪ (منبع: تفکیک گزارش اختصاصی)",
         "proximity": "2,135 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
         "growth": "رشد ۵‌ساله‌ی حجم واردات +41٪",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.94٪",
-        "company_pool": "25 شرکت در بانک"
+        "tariff_and_union": "تعرفه‌ی متوسط 0.94٪"
       },
       "strengths": [
-        "قیمت واردات بالا (حاشیه‌ی قیمتی)",
-        "نزدیک به ایران"
+        "نزدیک به ایران",
+        "بازار رو به رشد"
       ],
       "weaknesses": [
-        "رقابت شدید ترکیه/چین",
-        "بانک شرکت‌ها کم‌عمق"
+        "رقابت شدید رقبا (ترکیه/چین/روسیه)",
+        "بازار کوچک"
       ],
+      "flags": [
+        "unit_value_suspect"
+      ],
+      "data_gaps": [],
       "raw": {
         "import_tons": 2655,
         "distance_km": 2135,
@@ -733,7 +825,8 @@
         ],
         "sent": 0
       },
-      "rank": 12
+      "pool_depth": 0.17,
+      "rank": 13
     }
   ]
 }

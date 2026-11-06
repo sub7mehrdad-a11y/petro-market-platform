@@ -40,6 +40,11 @@ SYSTEM = """
 2. عددها را دقیقاً همان‌طور که آمده نقل کن؛ FOB/CIF/ارزش واحد واردات را قاطی نکن.
 2.5. هر عدد باید عیناً در خلاصه‌ی جامع باشد و متعلق به همان کشور/موضوعی که کنارش می‌نویسی. هیچ عددی را خودت محاسبه نکن
    (نه تفریق، نه درصد، نه «باقیمانده»)، و در headline/summary عددی که فقط برای بعضی کشورها صادق است را به همه نسبت نده.
+2.6. «ارزش واحد واردات» نشانه‌ی سطح قیمت مقصد است، نه قیمت فوب؛ هرگز آن را با قیمت مرجع ۲۵۰ فوب مقایسه نکن و از آن «حاشیه‌ی فروش» نساز.
+   ارزشی که «مشکوک» برچسب خورده را به‌عنوان مزیت نیاور (فقط در data_gaps بنویس که نیاز به تأیید دارد).
+   آمار گمرک ایران کم‌اظهار است و قیمت فوب نیست. قیمتی که «کهنه» برچسب خورده را به‌عنوان وضع فعلی بازار معرفی نکن.
+2.7. فقط نمایشگاه‌هایی را پیشنهاد کن که در خلاصه‌ی جامع زیر «پیش‌رو (قابل‌پیشنهاد)» آمده‌اند؛ گذشته یا بدون تاریخ روشن ممنوع.
+2.8. کشوری با برچسب «بازار و رقیب هم‌زمان» یا «پرونده از سند رقیب» را با احتیاط و فقط با ذکر همین محدودیت اولویت بده.
 3. رتبه‌بندی خلاصه‌ی جامع نقطه‌ی شروع است؛ اگر از روی اخبار/ریسک‌ها تعدیل می‌کنی، صریح بگو چرا.
    مسیر/مرز/بندر را فقط اگر در پرونده‌ی همان کشور آمده ذکر کن؛ فاصله‌ی «برآورد هوایی» مسیر واقعی نیست.
 4. هر کشور اولویت‌دار: چرا (با عدد)، شرایط (گرید، مسیر/بندر، بازه‌ی قیمت نسبت به ۲۵۰ FOB، رقیب)، ریسک، قدم بعدی مشخص.
@@ -112,13 +117,20 @@ def main():
         return
 
     out_path = os.path.join(BRAIN, "briefing.json")
+    cur_version = None
+    try:
+        cur_version = json.load(open(os.path.join(BRAIN, "country_scores.json"), encoding="utf-8")).get("digest_version")
+    except Exception:
+        pass
     if not args.force and os.path.exists(out_path):
         try:
             prev = json.load(open(out_path, encoding="utf-8"))
             age = (datetime.datetime.now(datetime.timezone.utc) - datetime.datetime.fromisoformat(prev["generated_at"])).days
-            if age < MIN_AGE_DAYS:
-                print(f"[SKIP] آخرین توصیه {age} روز پیش ساخته شده (کمتر از {MIN_AGE_DAYS}).")
+            if age < MIN_AGE_DAYS and prev.get("digest_version") == cur_version:
+                print(f"[SKIP] آخرین توصیه {age} روز پیش و با همین نسخه‌ی خلاصه ({cur_version}) ساخته شده.")
                 return
+            if prev.get("digest_version") != cur_version:
+                print(f"[INFO] نسخه‌ی خلاصه عوض شده ({prev.get('digest_version')} → {cur_version})؛ توصیه دوباره ساخته می‌شود.")
         except Exception:
             pass
 
@@ -177,6 +189,7 @@ def main():
     result["generated_at"] = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
     result["model"] = MODEL
     result["based_on_scores_at"] = scores.get("generated_at")
+    result["digest_version"] = cur_version
     with open(out_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
         f.write("\n")
