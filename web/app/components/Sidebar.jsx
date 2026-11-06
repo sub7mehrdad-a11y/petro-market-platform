@@ -51,6 +51,7 @@ function buildNavGroups(showOutreach, role) {
           title: "ابزارهای بازرگانی",
           items: [
             { href: "/sales", label: "عملکرد فروش", icon: IconReport },
+            { href: "/brain/forecasts", label: "دفتر پیش‌بینی", icon: IconSearch },
             ...(showOutreach ? [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }] : []),
           ],
         }]

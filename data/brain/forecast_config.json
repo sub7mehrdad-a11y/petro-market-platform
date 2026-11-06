@@ -1,0 +1,59 @@
+{
+    "_comment":  "تنظیمات دفتر پیش‌بینی (مرحله‌ی ۰ مغز). فایل تنظیمات است نه کد: منطقه‌ها، گریدها، تعریف قیمت، منبع واقعیت و کهنگی مجاز. عمومی است؛ هیچ راز یا داده‌ی محرمانه‌ای اینجا نمی‌آید. تغییر منبع واقعیت یا تعریف قیمت = پرسش جدید (نه ویرایش پرسش‌های ثبت‌شده).",
+    "version":  1,
+    "cycle":  {
+                  "horizon_months":  1,
+                  "submit_days":  7,
+                  "auto_hour_tehran":  10,
+                  "note":  "دور هر ماه (YYYY-MM) باز می‌شود و برای قیمت فوب ماه بعد پیش‌بینی می‌گیرد؛ مهلت ثبت submit_days روز از زمان باز شدن دور است. سررسید هر پیش‌بینی = پایان ماه هدف + lag_days منبع واقعیت."
+              },
+    "interval_level":  0.8,
+    "limits":  {
+                   "min_price":  50,
+                   "max_price":  2000,
+                   "max_interval_ratio":  3,
+                   "rationale_max_chars":  600
+               },
+    "price_definition_fa":  "قیمت فوب (FOB، قیمت مبدأ روی عرشه در بندر/مرز صادرات) به دلار آمریکا بر تن متریک. با قیمت سی‌آی‌اف (مقصد) یا ارزش واحد واردات قابل‌مقایسه نیست. پیش‌بینی = یک عدد (بهترین حدس) + بازه‌ی ۸۰٪ (کف و سقفی که ۸۰٪ احتمال دارد مقدار واقعی بینشان بیفتد).",
+    "questions":  [
+                      {
+                          "key":  "china_fob",
+                          "region_fa":  "چین",
+                          "grade_fa":  "عمومی (بدون تفکیک گرید در منبع)",
+                          "price_type":  "FOB",
+                          "package_fa":  "طبق گزارش منبع",
+                          "port_or_region_fa":  "صادرات چین (فوب)",
+                          "unit":  "USD/t",
+                          "truth":  {
+                                        "source_id":  "procurement_resource_china_fob",
+                                        "kind":  "price_history",
+                                        "series":  {
+                                                       "product":  "sodium bicarbonate",
+                                                       "country_or_region":  "China",
+                                                       "price_type":  "FOB"
+                                                   },
+                                        "lag_days":  60,
+                                        "max_staleness_days":  75,
+                                        "confidential":  false
+                                    }
+                      },
+                      {
+                          "key":  "iran_food_fob",
+                          "region_fa":  "ایران",
+                          "grade_fa":  "خوراکی (Food Grade)",
+                          "price_type":  "FOB",
+                          "package_fa":  "بسته‌بندی صادراتی استاندارد",
+                          "port_or_region_fa":  "ایران؛ سفارش‌های قطعی با شرایط FOB/FCA/EXW",
+                          "unit":  "USD/t",
+                          "truth":  {
+                                        "source_id":  "internal_sales_iran_fob_food",
+                                        "kind":  "internal_sales",
+                                        "lag_days":  15,
+                                        "max_staleness_days":  45,
+                                        "confidential":  true,
+                                        "note":  "میانگین وزنی قیمت سفارش‌های قطعی خوراکی FOB/FCA/EXW با تاریخ PI در ماه هدف، از گزارش فروش داخلی. فقط جزء سنجش (کد، بدون مدل) آن را می‌خواند (مرحله‌ی ۴)."
+                                    }
+                      }
+                  ],
+    "deferred_questions_note":  "ترکیه، روسیه و هند (فوب): تا وقتی منبع واقعیت قیمت فوب ماهانه برایشان تعریف نشده، پرسشی ساخته نمی‌شود (price_history برای فوب ترکیه و روسیه مقدار ندارد). سنگاپور (فوب، ChemAnalyst) فقط یک عدد فصلی دارد (فصل ۲ ۲۰۲۶ = ۲۴۷٫۶۷) و ماهانه به‌روز نمی‌شود، پس پرسش ماهانه نمی‌گیرد. چین فوب (Procurement Resource) سری ماهانه‌ی واقعی است با تأخیر انتشار حدود ۳۵ تا ۶۰ روز."
+}
