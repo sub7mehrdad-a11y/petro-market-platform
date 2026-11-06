@@ -7,14 +7,18 @@
 
 ورودی: data/*.json  (+ data/brain/scoring_config.json برای وزن‌ها)
 خروجی (data/brain/):
-  - country_scores.json : رتبه‌بندی کشورهای دارای پرونده + مؤلفه‌های امتیاز و دلیل‌های خودکار
+  - country_scores.json : رتبه‌بندی کشورهای دارای پرونده + مؤلفه‌های امتیاز، برچسب‌ها و خلأهای داده
   - radar.json          : کشورهای بدون پرونده که از روی آمار Trade Map ارزش تحقیق دارند
   - digest.md           : خلاصه‌ی جامع فارسی از کل پلتفرم (قیمت‌ها، رقبا، کشورها، شرکت‌ها، نمایشگاه‌ها، اخبار)
 
 داده‌ی فروش تیم بازرگانی (محرمانه) هرگز اینجا نیست: مخزن عمومی است و آن داده فقط روی دیسک سرور می‌ماند
 (web/lib/sales*.js).
 
+مرحله‌ی ۱ مغز جدید (۲۰۲۶-۱۱-۰۶): هشت اصلاح فوری بخش ۱۵-۵ سند پروتکل. منطق خالص در scripts/brain_core.py،
+آزمون‌ها در scripts/test_brain_fixes.py.
+
 اجرا:  python scripts/build_brain.py
+برای آزمون (داده‌ی جدا و تاریخ ثابت): BRAIN_DATA_DIR، BRAIN_OUT_DIR، BRAIN_TODAY=YYYY-MM-DD
 """
 
 import collections
@@ -25,12 +29,15 @@ import os
 import re
 import sys
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import brain_core as core  # noqa: E402
+
 if hasattr(sys.stdout, "reconfigure"):
     sys.stdout.reconfigure(encoding="utf-8")
 
 BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(BASE, "data")
-OUT = os.path.join(DATA, "brain")
+DATA = os.environ.get("BRAIN_DATA_DIR") or os.path.join(BASE, "data")
+OUT = os.environ.get("BRAIN_OUT_DIR") or os.path.join(DATA, "brain")
 
 
 def load(name, default=None):
@@ -92,6 +99,7 @@ companies = load("companies.json", [])
 sent_log = load("email_outreach_sent.json", [])
 exhibitions = load("exhibitions.json", [])
 competitors = load("competitors.json", {})
+mirror = (load("market_share_history.json", {}) or {}).get("markets", {})
 unions = (load("trade_unions.json", {}) or {}).get("unions", [])
 if isinstance(unions, dict):  # شناسه → اتحادیه
     unions = [{"id": k, **v} for k, v in unions.items()]
@@ -103,13 +111,37 @@ china_watch = first_list(load("china_watch_log.json", []))
 iran_exports = load("iran_exports.json", {})
 per_capita = load("per_capita_consumption.json", {})
 exh_reports = load("exhibition_reports.json", [])
-reports_manifest = (
-    json.load(open(os.path.join(BASE, "reports", "manifest.json"), encoding="utf-8"))
-    if os.path.exists(os.path.join(BASE, "reports", "manifest.json"))
-    else []
-)
+_manifest = os.path.join(BASE, "reports", "manifest.json")
+reports_manifest = json.load(open(_manifest, encoding="utf-8")) if os.path.exists(_manifest) else []
 
-TODAY = datetime.date.today()
+TODAY = datetime.date.fromisoformat(os.environ["BRAIN_TODAY"]) if os.environ.get("BRAIN_TODAY") else datetime.date.today()
+
+# نسخه‌ی روش ساخت خلاصه‌ی جامع. هر وقت منطق امتیاز/برچسب عوض شد بالا ببر: توصیه‌ی هفته‌ای که با نسخه‌ی قدیمی ساخته شده
+# (brain_briefing.py) بدون انتظار برای ۶ روز، با اولین اجرای بعدی دوباره ساخته می‌شود.
+DIGEST_VERSION = "s1-2026-11-06"
+
+
+# ---------------------------------------------------------------- پرونده‌ی بازار (اصلاح ۸)
+def market_profiles():
+    """پرونده‌های واقعی + بازارهایی که فقط در تحلیل رقبا داده‌ی واردات دارند (مثل روسیه با ۲۰٬۴۰۰ تن واردات و سهم ۷۸٪ ایران).
+    ورودی تازه‌ای حدس زده نمی‌شود: فقط از real_trade_stats و report_import_breakdown خودِ سند رقیب خوانده می‌شود."""
+    out = dict(profiles)
+    for cid, c in competitors.items():
+        name = c.get("name")
+        if not name or name in out:
+            continue
+        if (c.get("real_trade_stats") or {}).get("imports_tons") and (c.get("report_import_breakdown") or {}).get("suppliers"):
+            out[name] = {
+                "country": name,
+                "real_trade_stats": c["real_trade_stats"],
+                "report_import_breakdown": c["report_import_breakdown"],
+                "distances_km": {},
+                "_synthetic_from": f"competitors.json:{cid}",
+            }
+    return out
+
+
+all_profiles = market_profiles()
 
 
 # ---------------------------------------------------------------- آمار شرکت‌ها و ارسال
@@ -171,19 +203,11 @@ def iran_distance(prof):
     return None, None
 
 
-def supplier_shares(prof):
-    rb = prof.get("report_import_breakdown") or {}
-    sup = rb.get("suppliers") or []
-    total = rb.get("total_tons") or sum(s.get("tons", 0) for s in sup)
-    if not sup:
-        return None
-    out = {}
-    for s in sup:
-        if s.get("share_pct") is not None:
-            out[s["country"]] = s["share_pct"] / 100
-        elif s.get("tons") is not None and total:
-            out[s["country"]] = s["tons"] / total
-    return out or None
+def mirror_market(country):
+    for m in mirror.values():
+        if m.get("importer_fa") == country:
+            return m
+    return None
 
 
 def union_score(country):
@@ -196,40 +220,82 @@ def union_score(country):
     return best, label
 
 
+def ranked_names():
+    return [c for c in all_profiles if c not in cfg["exclude_from_ranking"]]
+
+
+# ارزش‌های واحد همتاها (میانه برای تشخیص عدد مشکوک؛ برای هر کشور بدون خودش حساب می‌شود)
+UNIT_VALUES = {c: ((trade_map.get(c) or {}).get("imports_2025") or {}).get("unit_value_usd") for c in ranked_names()}
+
+
+def peer_values(country=None):
+    return [v for c, v in UNIT_VALUES.items() if v is not None and c != country]
+
+
 def score_country(country, prof):
     tm = trade_map.get(country) or {}
     imp = tm.get("imports_2025") or {}
     w = cfg["weights"]
-    comp = {}
-    notes = {}
+    comp, notes, flags, gaps = {}, {}, [], []
+    neutral = set()  # مؤلفه‌هایی که چون داده نبود/مشکوک بود خنثی شده‌اند؛ نه قوت حساب می‌شوند نه ضعف
 
     tons, tsrc = market_tons(prof, tm)
     comp["market_size"] = log_scale(tons, cfg["market_size"]["log_min_tons"], cfg["market_size"]["log_max_tons"])
     notes["market_size"] = f"واردات حدود {fmt(tons)} تن ({tsrc})" if tons else "حجم واردات نامشخص"
+    if not tons:
+        gaps.append("حجم واردات")
 
+    # اصلاح ۴: ارزش واحد واردات سطح قیمت CIF-محور مقصد را نشان می‌دهد، نه قیمت فوب؛ عدد دور از همتاها «مشکوک» و خنثی می‌شود
     uv = imp.get("unit_value_usd")
     pr = cfg["price_room"]
-    comp["price_room"] = lin(uv, pr["unit_value_min"], pr["unit_value_max"]) if uv else pr["neutral_when_missing"]
-    notes["price_room"] = f"ارزش واحد واردات {fmt(uv)} دلار/تن" if uv else "ارزش واحد نامشخص (امتیاز خنثی)"
+    peers = peer_values(country)
+    suspect = core.unit_value_suspect(uv, peers, pr["suspect_ratio"])
+    if suspect:
+        comp["price_room"] = pr["neutral_when_missing"]
+        notes["price_room"] = f"ارزش واحد واردات {fmt(uv)} دلار/تن (مشکوک: بیش از {pr['suspect_ratio']} برابر دور از میانه‌ی همتاها {fmt(core.median(peers))}؛ نیازمند تأیید با ITC؛ امتیاز خنثی)"
+        flags.append("unit_value_suspect")
+        neutral.add("price_room")
+    elif uv:
+        comp["price_room"] = lin(uv, pr["unit_value_min"], pr["unit_value_max"])
+        notes["price_room"] = f"ارزش واحد واردات {fmt(uv)} دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)"
+    else:
+        comp["price_room"] = pr["neutral_when_missing"]
+        notes["price_room"] = "ارزش واحد نامشخص (امتیاز خنثی)"
+        gaps.append("ارزش واحد واردات")
+        neutral.add("price_room")
 
-    shares = supplier_shares(prof)
+    # اصلاح ۱ و ۲: رقبا طبق تنظیمات (ترکیه، چین، روسیه) و سهم تأمین‌کنندگان از چند منبع
+    shares, ssrc = core.resolve_supplier_shares(prof, mirror_market(country))
+    rivals = cfg["competition"]["rivals"]
     if shares is None:
         comp["competition"] = 0.5
         notes["competition"] = "سهم تأمین‌کنندگان نامشخص (امتیاز خنثی)"
+        gaps.append("تفکیک تأمین‌کنندگان")
+        neutral.add("competition")
     else:
-        rivals = sum(shares.get(k, 0) for k in ("ترکیه", "چین"))
-        iran = shares.get("ایران", 0)
-        comp["competition"] = clamp01(1 - rivals + 0.5 * iran)
-        notes["competition"] = f"سهم ترکیه+چین {rivals * 100:.0f}٪" + (f"، سهم ایران {iran * 100:.0f}٪" if iran else "")
+        score, rs, ir = core.competition_score(shares, rivals, country)
+        comp["competition"] = score
+        parts = "+".join(r for r in rivals if r != country)
+        notes["competition"] = f"سهم {parts} {rs * 100:.0f}٪" + (f"، سهم ایران {ir * 100:.0f}٪" if ir else "") + f" (منبع: {ssrc})"
+        if ssrc and "متن" in ssrc:
+            flags.append("shares_from_text")
 
     km, ksrc = iran_distance(prof)
     comp["proximity"] = clamp01(1 - km / cfg["proximity"]["max_km"]) if km is not None else 0.3
-    notes["proximity"] = (f"{fmt(km)} کیلومتر از ایران ({ksrc})" if km is not None else "فاصله نامشخص")
+    notes["proximity"] = (f"{fmt(km)} کیلومتر از ایران ({ksrc})" if km is not None else "فاصله نامشخص (امتیاز خنثی)")
+    if km is None:
+        gaps.append("فاصله/بندر")
+        neutral.add("proximity")
+    elif "هوایی" in (ksrc or ""):
+        flags.append("distance_estimated")
 
     g = imp.get("growth_qty_5y_pct")
     gc = cfg["growth"]
     comp["growth"] = lin(g, gc["min_pct"], gc["max_pct"]) if g is not None else gc["neutral_when_missing"]
     notes["growth"] = f"رشد ۵‌ساله‌ی حجم واردات {g:+.0f}٪" if g is not None else "رشد نامشخص"
+    if g is None:
+        gaps.append("رشد واردات")
+        neutral.add("growth")
 
     tar = imp.get("avg_tariff_pct")
     us, ulabel = union_score(country)
@@ -237,43 +303,54 @@ def score_country(country, prof):
     comp["tariff_and_union"] = 0.6 * tar_score + 0.4 * us
     notes["tariff_and_union"] = (f"تعرفه‌ی متوسط {tar}٪" if tar is not None else "تعرفه نامشخص") + (f"؛ عضو {ulabel}" if ulabel else "")
 
-    pool = len(by_country_companies.get(country, []))
-    pc = cfg["company_pool"]
-    comp["company_pool"] = lin(pool, pc["log_min"], pc["log_max"]) if pool else 0.0
-    notes["company_pool"] = f"{pool} شرکت در بانک"
+    # اصلاح ۸: بازار و رقیب هم‌زمان (روسیه، هند): فرمول فقط واردات را می‌بیند؛ تا تصمیم سند بخش ۱۸-۶ برچسب می‌خورد
+    if country in cfg.get("dual_role_markets", []):
+        flags.append("dual_role")
+    if prof.get("_synthetic_from"):
+        flags.append("from_competitor_doc")
 
     total = sum(comp[k] * w[k] for k in w) * 100
-    return round(total, 1), comp, notes, {"tons": tons, "km": km, "unit_value": uv, "shares": shares}
+    return round(total, 1), comp, notes, {"tons": tons, "km": km, "unit_value": uv, "shares": shares, "flags": flags, "gaps": gaps, "neutral": neutral}
 
 
 LABEL = {
-    "market_size": "بازار بزرگ", "price_room": "قیمت واردات بالا (حاشیه‌ی قیمتی)", "competition": "رقابت کم",
+    "market_size": "بازار بزرگ", "price_room": "ارزش واحد واردات بالا (نشانه‌ی سطح قیمت مقصد، نه فوب)", "competition": "رقابت کم",
     "proximity": "نزدیک به ایران", "growth": "بازار رو به رشد", "tariff_and_union": "تعرفه/توافق تجاری مناسب",
-    "company_pool": "بانک شرکت‌های غنی",
 }
 WEAK = {
-    "market_size": "بازار کوچک", "price_room": "قیمت واردات پایین", "competition": "رقابت شدید ترکیه/چین",
+    "market_size": "بازار کوچک", "price_room": "ارزش واحد واردات پایین", "competition": "رقابت شدید رقبا (ترکیه/چین/روسیه)",
     "proximity": "دور از ایران", "growth": "رشد کند", "tariff_and_union": "تعرفه/موانع تجاری",
-    "company_pool": "بانک شرکت‌ها کم‌عمق",
 }
+FLAG_FA = {
+    "unit_value_suspect": "ارزش واحد مشکوک", "shares_from_text": "سهم از متن پرونده", "distance_estimated": "فاصله برآوردی هوایی",
+    "dual_role": "بازار و رقیب هم‌زمان", "from_competitor_doc": "پرونده از سند رقیب (بدون پروفایل کشور)",
+}
+
+
+def pool_depth(country):
+    """عمق تحقیق/بانک شرکت‌ها (۰..۱). فقط نمایشی است و در امتیاز جذابیت بازار نیست (اصلاح ۳)."""
+    pool = len(by_country_companies.get(country, []))
+    pc = cfg["company_pool"]
+    return round(lin(pool, pc["log_min"], pc["log_max"]), 2) if pool else 0.0
 
 
 def build_scores():
     rows = []
-    for country, prof in profiles.items():
-        if country in cfg["exclude_from_ranking"]:
-            continue
+    for country in ranked_names():
+        prof = all_profiles[country]
         score, comp, notes, raw = score_country(country, prof)
-        order = sorted(comp, key=lambda k: comp[k] * cfg["weights"][k], reverse=True)
-        strengths = [LABEL[k] for k in order[:3] if comp[k] >= 0.6]
-        weak = [WEAK[k] for k in sorted(comp, key=lambda k: comp[k])[:2] if comp[k] < 0.4]
+        known = {k: v for k, v in comp.items() if k not in raw["neutral"]}  # فقط مؤلفه‌های با داده‌ی واقعی قوت/ضعف می‌شوند
+        order = sorted(known, key=lambda k: known[k] * cfg["weights"][k], reverse=True)
+        strengths = [LABEL[k] for k in order[:3] if known[k] >= 0.6]
+        weak = [WEAK[k] for k in sorted(known, key=lambda k: known[k])[:2] if known[k] < 0.4]
         rows.append({
             "country": country, "score": score,
             "tier": "A" if score >= cfg["tier_thresholds"]["A"] else ("B" if score >= cfg["tier_thresholds"]["B"] else "C"),
             "components": {k: round(v, 2) for k, v in comp.items()}, "notes": notes,
             "strengths": strengths, "weaknesses": weak,
+            "flags": raw["flags"], "data_gaps": raw["gaps"],
             "raw": {"import_tons": raw["tons"], "distance_km": raw["km"], "unit_value_usd": raw["unit_value"]},
-            "pool": pool_stats(country),
+            "pool": pool_stats(country), "pool_depth": pool_depth(country),
         })
     rows.sort(key=lambda r: r["score"], reverse=True)
     for i, r in enumerate(rows, 1):
@@ -282,7 +359,7 @@ def build_scores():
 
 
 def build_radar(scored):
-    known = set(profiles)
+    known = set(all_profiles)
     rc = cfg["radar"]
     out = []
     for name, t in trade_map.items():
@@ -294,15 +371,16 @@ def build_radar(scored):
             continue
         g = imp.get("growth_qty_5y_pct")
         uv = imp.get("unit_value_usd")
+        uv_ok = uv and not core.unit_value_suspect(uv, peer_values(), cfg["price_room"]["suspect_ratio"])
         s = (
             0.45 * log_scale(q, cfg["market_size"]["log_min_tons"], cfg["market_size"]["log_max_tons"])
             + 0.20 * (lin(g, cfg["growth"]["min_pct"], cfg["growth"]["max_pct"]) if g is not None else cfg["growth"]["neutral_when_missing"])
-            + 0.20 * (lin(uv, cfg["price_room"]["unit_value_min"], cfg["price_room"]["unit_value_max"]) if uv else cfg["price_room"]["neutral_when_missing"])
+            + 0.20 * (lin(uv, cfg["price_room"]["unit_value_min"], cfg["price_room"]["unit_value_max"]) if uv_ok else cfg["price_room"]["neutral_when_missing"])
             + 0.15 * (clamp01(1 - imp["avg_tariff_pct"] / cfg["tariff"]["max_pct"]) if imp.get("avg_tariff_pct") is not None else 0.5)
         ) * 100
         out.append({
             "country": name, "name_en": t.get("name_en"), "score": round(s, 1), "import_tons": q,
-            "unit_value_usd": uv, "growth_5y_pct": g, "avg_tariff_pct": imp.get("avg_tariff_pct"),
+            "unit_value_usd": uv, "unit_value_suspect": bool(uv and not uv_ok), "growth_5y_pct": g, "avg_tariff_pct": imp.get("avg_tariff_pct"),
             "companies_in_bank": len(by_country_companies.get(name, [])),
         })
     out.sort(key=lambda r: r["score"], reverse=True)
@@ -311,28 +389,43 @@ def build_radar(scored):
 
 # ---------------------------------------------------------------- متن خلاصه‌ی جامع
 def price_section():
+    """اصلاح ۷: هر قیمت با «دوره‌ی داده‌ی استاندارد» و سن نسبت به امروز؛ روند نسبت به دوره‌ی قبلِ همان سری (نه روز جمع‌آوری)."""
     if not price_days:
         return ["(داده‌ی قیمت موجود نیست)"]
-    latest = price_days[-1]
-    lines = [f"آخرین جمع‌آوری: {latest.get('date')}"]
-    # روند: مقدار هر (کشور، نوع قیمت، محصول) نسبت به قدیمی‌ترین مقدار ثبت‌شده در ~۳۰ روز اخیر
-    old = {}
-    cutoff = (TODAY - datetime.timedelta(days=35)).isoformat()
+    limits = cfg["price_staleness_days"]
+    series = collections.defaultdict(dict)  # سری → {برچسب دوره: (پایان دوره، مقدار)}
     for day in price_days:
-        if day.get("date", "") >= cutoff:
-            for r in day.get("records", []):
-                if r.get("value") is not None:
-                    old.setdefault((r["product"], r["country_or_region"], r["price_type"]), r["value"])
+        for r in day.get("records", []):
+            if r.get("value") is None:
+                continue
+            kind, label, end = core.period_of(r.get("source_reported_date"))
+            if end is None:
+                continue
+            series[(r["product"], r["country_or_region"], r["price_type"])][label] = (end, r["value"])
+    latest = price_days[-1]
+    lines = [f"آخرین جمع‌آوری ربات: {latest.get('date')}؛ هر قیمت با «دوره‌ی داده» (نه روز جمع‌آوری) و سنش نسبت به {TODAY.isoformat()} آمده است."]
+    done = set()
     for r in latest.get("records", []):
         if r.get("value") is None:
             continue
         k = (r["product"], r["country_or_region"], r["price_type"])
+        if k in done:
+            continue
+        done.add(k)
+        label, age, stale, kind = core.staleness(r.get("source_reported_date"), TODAY, limits)
+        if label is None:
+            period = f"دوره‌ی نامشخص («{r.get('source_reported_date')}»)"
+        else:
+            period = f"دوره‌ی داده {label}، {age} روز پیش از امروز" + (f" — **کهنه** (بیش از {limits.get(kind)} روز)" if stale else "")
         trend = ""
-        if k in old and old[k]:
-            d = (r["value"] - old[k]) / old[k] * 100
-            if abs(d) >= 0.5:
-                trend = f" ({d:+.1f}٪ نسبت به ~۳۰ روز قبل)"
-        lines.append(f"- {r['product']} | {r['country_or_region']} | {r['price_type']}: {r['value']:g} {r.get('currency', '')}/{r.get('unit', '')} (گزارش {r.get('source_reported_date')}, منبع {r.get('source_name')}){trend}")
+        ps = sorted(series.get(k, {}).items(), key=lambda kv: kv[1][0])
+        if label and len(ps) >= 2:
+            cur = next((i for i, (lb, _) in enumerate(ps) if lb == label), None)
+            if cur and cur > 0 and ps[cur - 1][1][1]:
+                prev_label, (_, prev_val) = ps[cur - 1]
+                d = (r["value"] - prev_val) / prev_val * 100
+                trend = f"؛ نسبت به دوره‌ی قبل ({prev_label}): {d:+.1f}٪"
+        lines.append(f"- {r['product']} | {r['country_or_region']} | {r['price_type']}: {r['value']:g} {r.get('currency', '')}/{r.get('unit', '')} ({period}؛ منبع {r.get('source_name')}){trend}")
     ref = cfg["reference_price_fob_usd_per_ton"]
     lines.append(f"- قیمت مرجع سپهران شیمی (پایه): حدود {ref} دلار بر تن FOB.")
     return lines
@@ -379,6 +472,30 @@ def watch_section(rows, title, n=4):
     return out
 
 
+def exhibition_lines(country):
+    """اصلاح ۵: فقط نمایشگاه‌های پیش‌رو پیشنهادپذیرند؛ گذشته‌ها فقط شمرده می‌شوند و تاریخ نامعلوم جدا برچسب می‌خورد."""
+    up, unk, past = [], [], 0
+    for e in exhibitions:
+        if e.get("country") != country:
+            continue
+        status, end = core.event_status(e.get("date") or "", TODAY)
+        if status == "upcoming":
+            up.append((end, e))
+        elif status == "past":
+            past += 1
+        else:
+            unk.append(e)
+    up.sort(key=lambda x: x[0])
+    out = []
+    if up:
+        out.append("- نمایشگاه‌های پیش‌رو (قابل‌پیشنهاد): " + "؛ ".join(f"{e['name']} (پایان {end.isoformat()})" for end, e in up[:4]))
+    if unk:
+        out.append("- نمایشگاه با تاریخ نامعلوم (پیش از پیشنهاد باید تاریخ‌شان روشن شود): " + "؛ ".join(f"{e['name']} ({e.get('date', '')})" for e in unk[:3]))
+    if past:
+        out.append(f"- {past} نمایشگاه با تاریخ گذشته در بانک هست (قابل‌پیشنهاد نیست).")
+    return out
+
+
 def country_section(r, prof, recent):
     c = r["country"]
     L = [f"### {c} — رتبه {r['rank']} از {len(scored)}، امتیاز {r['score']}، ردهٔ {r['tier']}"]
@@ -388,6 +505,12 @@ def country_section(r, prof, recent):
         L.append("- نقاط قوت: " + "، ".join(r["strengths"]))
     if r["weaknesses"]:
         L.append("- نقاط ضعف: " + "، ".join(r["weaknesses"]))
+    if r["flags"]:
+        L.append("- برچسب‌ها: " + "، ".join(FLAG_FA.get(f, f) for f in r["flags"]))
+    if "dual_role" in r["flags"]:
+        L.append("- ⚠ این کشور هم بازار است هم رقیب (تولید داخلی/صادرات)؛ امتیاز فقط واردات را می‌سنجد و تا تصمیم بخش ۱۸-۶ سند با احتیاط خوانده شود.")
+    if r["data_gaps"]:
+        L.append("- خلأ داده: " + "، ".join(r["data_gaps"]))
     port = (prof.get("port") or {}).get("name")
     if port:
         L.append(f"- بندر/ورودی اصلی: {port}")
@@ -407,20 +530,20 @@ def country_section(r, prof, recent):
     rs = prof.get("real_trade_stats") or {}
     if rs.get("imports_note"):
         L.append(f"- نکته‌ی آمار: {trunc(rs['imports_note'], 450)}")
+    if rs.get("domestic_production_tons"):
+        L.append(f"- تولید داخلی: حدود {fmt(rs['domestic_production_tons'])} تن (در امتیاز رقابت دیده نمی‌شود)")
     us = unions_of.get(c, [])
     if us:
         L.append("- اتحادیه/توافق: " + "؛ ".join(f"{u.get('short_fa')} ({trunc(u.get('iran_status_fa'), 90)})" for u in us[:3]))
     pc = pc_by_country(c)
     pool = r["pool"]
     L.append(
-        f"- بانک شرکت‌ها: {pool['companies']} شرکت ({pool['with_email']} با ایمیل)"
+        f"- بانک شرکت‌ها (عمق تحقیق ما، نه جذابیت بازار؛ در امتیاز نیست): {pool['companies']} شرکت ({pool['with_email']} با ایمیل)"
         + (f"؛ گریدها: " + "، ".join(f"{g} {n}" for g, n in pool["grades"]) if pool["grades"] else "")
         + f"؛ ایمیل معرفی ارسال‌شده: {pool['sent']}"
         + (f"؛ مصرف سرانه {pc}" if pc else "")
     )
-    ex = [e for e in exhibitions if e.get("country") == c]
-    if ex:
-        L.append("- نمایشگاه‌ها: " + "؛ ".join(f"{e['name']} ({e.get('date', '')})" for e in ex[:4]))
+    L += exhibition_lines(c)
     rep = [m for m in reports_manifest if m.get("country") == c]
     if rep:
         L.append("- گزارش‌های موجود: " + "؛ ".join(sorted({trunc(m.get('title'), 60) for m in rep})[:3]))
@@ -449,10 +572,31 @@ def transit_section():
 
 
 def iran_export_section():
-    out = []
+    """اصلاح ۶: آمار گمرک ایران کم‌اظهار است و سال‌هایش شمسی؛ ارزش واحدش قیمت فوب نیست."""
+    lo, hi = cfg["iran_customs"]["real_fob_range"]
+    out = [
+        f"آمار گمرک ایران (کد 28363090) **کم‌اظهار** است: ارزش واحد گمرکی با قیمت واقعی صادراتی ({lo} تا {hi} دلار بر تن فوب) نمی‌خواند و "
+        "**هرگز به‌عنوان قیمت فوب به کار نمی‌رود**. سال‌ها **شمسی**‌اند (سال ۱۴۰۴ ≈ مارس ۲۰۲۵ تا مارس ۲۰۲۶)؛ با سال میلادی ارقام دیگر مقایسه نکن."
+    ]
     for y in (iran_exports.get("annual_totals") or [])[-4:]:
-        out.append(f"- سال {y.get('year_fa')}{' (ناقص)' if y.get('is_partial_year') else ''}: {fmt(y.get('tons'))} تن، {fmt(y.get('value_usd'))} دلار")
+        start, end = core.shamsi_span(y["year_fa"])
+        uv = y["value_usd"] / y["tons"] if y.get("tons") and y.get("value_usd") else None
+        part = f"، فقط {y['months_covered']} ماه" if y.get("months_covered") else (" (ناقص)" if y.get("is_partial_year") else "")
+        out.append(
+            f"- سال شمسی {y.get('year_fa')} ({start} تا {end}{part}): {fmt(y.get('tons'))} تن، {fmt(y.get('value_usd'))} دلار"
+            + (f"؛ ارزش واحد گمرکی ≈ {uv:,.0f} دلار/تن (کم‌اظهار؛ قیمت واقعی نیست)" if uv else "")
+        )
     return out
+
+
+def legend_section():
+    return [
+        "## راهنمای برچسب‌ها (برای خواننده‌ی این خلاصه)",
+        "- **ارزش واحد واردات** = ارزش÷تناژ آمار Trade Map؛ نشانه‌ی سطح قیمت مقصد (CIF-محور) است، **نه قیمت فوب** و با قیمت مرجع ۲۵۰ فوب مقایسه نمی‌شود. «مشکوک» یعنی از میانه‌ی همتاها بسیار دور است و باید با ITC بررسی شود.",
+        "- **دوره‌ی داده** قیمت‌ها با قالب استاندارد (YYYY-MM یا YYYY-Qn) و سن نسبت به امروز آمده؛ «کهنه» = از حد مجاز قدیمی‌تر.",
+        "- **کم‌اظهار** (آمار گمرک ایران)، **سال شمسی**، **فاصله برآوردی هوایی**، **سهم از متن پرونده**، **بازار و رقیب هم‌زمان**: برچسب‌هایی که اعتماد به عدد را محدود می‌کنند.",
+        "- نمایشگاه فقط وقتی «پیش‌رو» باشد پیشنهادپذیر است؛ گذشته یا بدون تاریخ روشن پیشنهاد نمی‌شود.",
+    ]
 
 
 def build_digest(scored, radar):
@@ -461,9 +605,12 @@ def build_digest(scored, radar):
     L.append("# خلاصه‌ی جامع پلتفرم تحقیق و توسعه — سپهران شیمی (جوش شیرین، HS 283630)")
     L.append(f"ساخته‌شده: {TODAY.isoformat()} — همه‌ی اعداد از داده‌ی ثبت‌شده‌ی پلتفرم‌اند؛ «—» یا «نامشخص» یعنی داده نداریم.")
     L.append("")
+    L += legend_section()
+    L.append("")
     L.append("## ۱. رتبه‌بندی کشورهای هدف (امتیاز ۰ تا ۱۰۰، فرمول شفاف؛ وزن‌ها: " + "، ".join(f"{LABEL[k]} {v:.2f}" for k, v in cfg["weights"].items()) + ")")
     for r in scored:
-        L.append(f"{r['rank']}. {r['country']} — {r['score']} (ردهٔ {r['tier']}): " + ("؛ ".join(r["strengths"]) or "—") + (" | ضعف: " + "، ".join(r["weaknesses"]) if r["weaknesses"] else ""))
+        extra = f" [برچسب: {'، '.join(FLAG_FA.get(f, f) for f in r['flags'])}]" if r["flags"] else ""
+        L.append(f"{r['rank']}. {r['country']} — {r['score']} (ردهٔ {r['tier']}): " + ("؛ ".join(r["strengths"]) or "—") + (" | ضعف: " + "، ".join(r["weaknesses"]) if r["weaknesses"] else "") + extra)
     L.append("")
     L.append("## ۲. قیمت‌های بازار")
     L += price_section()
@@ -478,7 +625,7 @@ def build_digest(scored, radar):
     L.append("")
     L.append("## ۵. کشورهای دارای پرونده")
     by = {r["country"]: r for r in scored}
-    for country, prof in profiles.items():
+    for country, prof in all_profiles.items():
         if country in by:
             L += country_section(by[country], prof, recent)
             L.append("")
@@ -487,7 +634,8 @@ def build_digest(scored, radar):
         L.append("")
     L.append("## ۶. رادار: کشورهای بدون پرونده‌ی تحقیقاتی که از روی Trade Map ارزش بررسی دارند")
     for i, r in enumerate(radar, 1):
-        L.append(f"{i}. {r['country']} ({r['name_en']}) — امتیاز اولیه {r['score']}: واردات {fmt(r['import_tons'])} تن، ارزش واحد {fmt(r['unit_value_usd'])} دلار/تن، رشد ۵ساله {r['growth_5y_pct']}٪، تعرفه {r['avg_tariff_pct']}٪، شرکت در بانک: {r['companies_in_bank']}")
+        sus = " [ارزش واحد مشکوک]" if r.get("unit_value_suspect") else ""
+        L.append(f"{i}. {r['country']} ({r['name_en']}) — امتیاز اولیه {r['score']}: واردات {fmt(r['import_tons'])} تن، ارزش واحد واردات {fmt(r['unit_value_usd'])} دلار/تن{sus}، رشد ۵ساله {r['growth_5y_pct']}٪، تعرفه {r['avg_tariff_pct']}٪، شرکت در بانک: {r['companies_in_bank']}")
     L.append("")
     L.append("## ۷. اخبار تحلیلی ۱۴ روز اخیر")
     for n in recent_news(14)[-14:]:
@@ -505,21 +653,29 @@ def build_digest(scored, radar):
 
 
 # ---------------------------------------------------------------- اجرا
-scored = build_scores()
-radar = build_radar(scored)
-digest = build_digest(scored, radar)
+def main():
+    global scored
+    scored = build_scores()
+    radar = build_radar(scored)
+    digest = build_digest(scored, radar)
 
-os.makedirs(OUT, exist_ok=True)
-stamp = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
-with open(os.path.join(OUT, "country_scores.json"), "w", encoding="utf-8") as f:
-    json.dump({"generated_at": stamp, "config": "data/brain/scoring_config.json", "weights": cfg["weights"], "countries": scored}, f, ensure_ascii=False, indent=2)
-    f.write("\n")
-with open(os.path.join(OUT, "radar.json"), "w", encoding="utf-8") as f:
-    json.dump({"generated_at": stamp, "candidates": radar}, f, ensure_ascii=False, indent=2)
-    f.write("\n")
-with open(os.path.join(OUT, "digest.md"), "w", encoding="utf-8", newline="\n") as f:
-    f.write(digest)
+    os.makedirs(OUT, exist_ok=True)
+    stamp = datetime.datetime.now(datetime.timezone.utc).isoformat(timespec="seconds")
+    with open(os.path.join(OUT, "country_scores.json"), "w", encoding="utf-8") as f:
+        json.dump({"generated_at": stamp, "digest_version": DIGEST_VERSION, "config": "data/brain/scoring_config.json", "weights": cfg["weights"], "countries": scored}, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    with open(os.path.join(OUT, "radar.json"), "w", encoding="utf-8") as f:
+        json.dump({"generated_at": stamp, "candidates": radar}, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    with open(os.path.join(OUT, "digest.md"), "w", encoding="utf-8", newline="\n") as f:
+        f.write(digest)
 
-print(f"[OK] {len(scored)} کشور امتیاز گرفت | رادار: {len(radar)} | digest: {len(digest):,} نویسه (~{len(digest) // 3:,} توکن)")
-for r in scored:
-    print(f"  {r['rank']:>2}. {r['country']:<14} {r['score']:>5}  {r['tier']}  {'؛ '.join(r['strengths'])}")
+    print(f"[OK] {len(scored)} کشور امتیاز گرفت | رادار: {len(radar)} | digest: {len(digest):,} نویسه (~{len(digest) // 3:,} توکن)")
+    for r in scored:
+        print(f"  {r['rank']:>2}. {r['country']:<14} {r['score']:>5}  {r['tier']}  {'؛ '.join(r['strengths'])}")
+
+
+scored = []
+
+if __name__ == "__main__":
+    main()

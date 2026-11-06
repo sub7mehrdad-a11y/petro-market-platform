@@ -2,7 +2,8 @@ import fs from "fs";
 import path from "path";
 import { generateContent } from "../geminiFetch";
 import { BRAIN_MODEL, getBrainDigest, resolveBrainKey } from "../brain";
-import { getRound, predictionsOf, recordBrainForecast, checkForecastNumbers } from "./forecast";
+import { checkForecastNumbers, currentVersion, getRound, isBrain, isRoundOpen, loadConfig, predictionsOf, recordBrainForecast, reviseBrainForecast } from "./forecast";
+import { currentRows, putRow, stampRow } from "./store";
 
 // پیش‌بینی ماهانه‌ی «مغز فعلی» برای همان پرسش‌های دفتر (مرحله‌ی ۰). روش ۰: خلاصه‌ی جامع عمومی + آخرین مقدار سری قیمت.
 // ⚠ قید محرمانگی: ورودی مدل فقط داده‌ی عمومی است (خلاصه‌ی جامع و price_history). هیچ داده‌ی فروش/تجار/قرارداد و
@@ -74,6 +75,70 @@ async function defaultGenerate({ system, input }) {
   throw last;
 }
 
+const REVIEW_SYSTEM = `
+تو همان پیش‌بین قیمت هستی که پیش‌تر برای این پرسش پیش‌بینی ثبت کرده‌ای. حالا «بازبینی دوره‌ای» است: خلاصه‌ی جامع تازه را بخوان و
+فقط اگر **رویداد یا داده‌ی تازه و مشخصی** (نه حدس) دلیلی برای تغییر می‌دهد، پیش‌بینی را به‌روز کن. تغییر بدون دلیلِ مستند ممنوع است؛
+اگر چیزی عوض نشده، همان عددها را با changed=false برگردان.
+خروجی فقط یک JSON معتبر: {"changed": true|false, "point": عدد, "lo": عدد, "hi": عدد, "reason": "حداکثر ۳۰۰ نویسه: کدام رویداد/داده‌ی تازه و چقدر اثر داد؛ اگر changed=false بنویس چه چیزی بررسی شد"}
+قانون‌ها مثل قبل: نقطه‌ی شروع نرخ پایه، تعدیل فقط با رویداد ثبت‌شده، فوب با سی‌آی‌اف و ارزش واحد واردات قاطی نمی‌شود، کف/سقف بازه‌ی ۸۰٪.
+`.trim();
+
+const changedEnough = (prev, next, pct) =>
+  ["point", "lo", "hi"].some((k) => Math.abs(Number(next[k]) - prev[k]) / prev[k] * 100 >= pct);
+
+/**
+ * بازبینی دوره‌ای پیش‌بینی مغز (سند ۸-۶): برای هر پرسشِ دورِ باز، اگر آخرین نسخه یا آخرین بازبینی از brain_review_every_days
+ * روز قدیمی‌تر است، مدل با خلاصه‌ی جامع تازه و پیش‌بینی قبلی خودش دوباره می‌پرسد. فقط تغییر بیش از brain_min_change_pct درصد
+ * (عدد یا کف/سقف) و با دلیل، نسخه‌ی تازه می‌سازد؛ در هر حال «بازبینی» در reviews.jsonl ثبت می‌شود تا هر ساعت دوباره مدل صدا نشود.
+ * ورودی مدل فقط خلاصه‌ی جامع عمومی و پیش‌بینی خودِ مغز است (هیچ پیش‌بینی انسانی/داده‌ی فروش).
+ */
+export async function runBrainReviews(roundId, { generate = defaultGenerate, digest, now = new Date(), force = false } = {}) {
+  const round = getRound(roundId);
+  if (!round) return { ok: false, error: "دور پیدا نشد.", results: [] };
+  if (!isRoundOpen(round, now)) return { ok: true, results: [], skipped: "locked" };
+  const cfg = loadConfig().cycle;
+  const dg = digest ?? getBrainDigest();
+  if (!dg) return { ok: false, error: "خلاصه‌ی جامع (data/brain/digest.md) پیدا نشد.", results: [] };
+  const lastReview = new Map();
+  for (const r of currentRows("reviews").values()) if (!lastReview.has(r.question_id) || r.at > lastReview.get(r.question_id)) lastReview.set(r.question_id, r.at);
+  const results = [];
+  for (const q of round.questions) {
+    const cur = currentVersion(roundId, q.id, isBrain);
+    if (!cur) { results.push({ question: q.id, status: "no_forecast" }); continue; }
+    const since = [cur.made_at, lastReview.get(q.id)].filter(Boolean).sort().pop();
+    if (!force && (now.getTime() - new Date(since).getTime()) < cfg.brain_review_every_days * 86400000) { results.push({ question: q.id, status: "not_due" }); continue; }
+    const hint = latestSeriesValue(q.target.truth_source);
+    const input = [
+      `پرسش: ${q.text}`,
+      `ماه هدف: ${q.target.target_month}؛ واحد: ${q.target.unit}`,
+      `پیش‌بینی قبلی شما (نسخه‌ی ${cur.revision_no || 1}، ثبت ${cur.made_at}): عدد ${cur.forecast.point}، بازه‌ی ۸۰٪ [${cur.forecast.lo}, ${cur.forecast.hi}]. دلیل قبلی: ${cur.rationale || "—"}`,
+      hint ? `آخرین مقدار ثبت‌شده‌ی این سری: ${hint.value} ${hint.currency || ""}/${hint.unit || ""} (دوره‌ی گزارش: ${hint.reported}؛ منبع: ${hint.source})` : "برای این سری مقدار عمومی ثبت‌شده‌ای نداریم.",
+      "",
+      "===== خلاصه‌ی جامع تازه =====",
+      dg,
+    ].join("\n");
+    try {
+      const j = parseJson(await generate({ system: REVIEW_SYSTEM, input }));
+      if (!j) { results.push({ question: q.id, status: "failed", error: "خروجی JSON نبود" }); continue; }
+      let status = "unchanged";
+      if (j.changed === true) {
+        const bad = checkForecastNumbers(j, round.limits);
+        if (bad) { results.push({ question: q.id, status: "failed", error: bad }); continue; }
+        if (changedEnough(cur.forecast, j, cfg.brain_min_change_pct)) {
+          const r = reviseBrainForecast({ roundId, questionId: q.id, point: j.point, lo: j.lo, hi: j.hi, reason: j.reason, rationale: j.reason, model: BRAIN_MODEL, method_version: METHOD_VERSION }, { now });
+          if (!r.ok) { results.push({ question: q.id, status: "failed", error: r.error }); continue; }
+          status = "revised";
+        } else status = "change_too_small";
+      }
+      putRow("reviews", stampRow("review", { question_id: q.id, round_id: roundId, at: now.toISOString(), outcome: status, reason: String(j.reason || "").slice(0, 300), model: BRAIN_MODEL }, now.toISOString()));
+      results.push({ question: q.id, status });
+    } catch (err) {
+      results.push({ question: q.id, status: "failed", error: String(err?.message || err).slice(0, 160) });
+    }
+  }
+  return { ok: results.every((r) => r.status !== "failed"), results };
+}
+
 /**
  * برای هر پرسشِ دورِ داده‌شده که پیش‌بینی مغز ندارد، یکی می‌گیرد و ثبت می‌کند.
  * generate قابل‌تزریق است (آزمون بدون شبکه). هیچ خطایی دور را نمی‌اندازد؛ گزارش برمی‌گردد.
@@ -81,7 +146,7 @@ async function defaultGenerate({ system, input }) {
 export async function runBrainForecasts(roundId, { generate = defaultGenerate, digest, priceDays, now = new Date() } = {}) {
   const round = getRound(roundId);
   if (!round) return { ok: false, error: "دور پیدا نشد.", results: [] };
-  const have = new Set(predictionsOf(roundId).filter((p) => p.forecaster.startsWith("brain:")).map((p) => p.question_id));
+  const have = new Set(predictionsOf(roundId).filter(isBrain).map((p) => p.question_id));
   const dg = digest ?? getBrainDigest();
   if (!dg) return { ok: false, error: "خلاصه‌ی جامع (data/brain/digest.md) پیدا نشد.", results: [] };
   const results = [];
