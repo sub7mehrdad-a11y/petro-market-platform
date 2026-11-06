@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { commercialSession, isBrainAdmin } from "@/lib/brain2/access";
 import { ensureRound, tehranClock } from "@/lib/brain2/forecast";
-import { runBrainForecasts } from "@/lib/brain2/brainForecaster";
+import { runBrainForecasts, runBrainReviews } from "@/lib/brain2/brainForecaster";
 import { brainStorageProblem } from "@/lib/brain2/store";
 
 // کارهای مدیر: باز کردن دور ماه و (دوباره‌)گرفتن پیش‌بینی مغز. فقط مدیر (BRAIN_ADMINS).
@@ -23,6 +23,10 @@ export async function POST(request) {
     if (b.action === "brain_forecasts") {
       const rep = await runBrainForecasts(roundId);
       return NextResponse.json({ ok: rep.ok, error: rep.error, results: rep.results });
+    }
+    if (b.action === "brain_reviews") {
+      const rep = await runBrainReviews(roundId, { force: true });
+      return NextResponse.json({ ok: rep.ok, error: rep.error, results: rep.results, skipped: rep.skipped });
     }
   } catch (err) {
     return NextResponse.json({ error: String(err?.message || err).slice(0, 200) }, { status: 500 });
