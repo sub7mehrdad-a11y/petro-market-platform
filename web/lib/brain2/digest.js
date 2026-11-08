@@ -33,7 +33,7 @@ const py = (v) => (typeof v === "boolean" ? (v ? "True" : "False") : v === null 
 function openClaims() {
   const bySubject = new Map();
   for (const c of currentRows("claims").values()) {
-    if (c.recorded_to) continue;
+    if (c.recorded_to || c.status === "بسته‌شده") continue; // ادعای ردشده در بازبینی انسانی در خلاصه نمی‌آید
     if (!bySubject.has(c.subject)) bySubject.set(c.subject, []);
     bySubject.get(c.subject).push(c);
   }
@@ -159,6 +159,13 @@ export function buildShadowDigest({ today }) {
   ];
   for (const a of analyses.sort((x, y) => x.payload.country.localeCompare(y.payload.country, "fa"))) {
     L.push(...countryLines(a, all.get(a.payload.country) || []), "");
+  }
+  // تناقض‌های بررسی‌نشده (مرحله‌ی ۵): مدل باید بداند کدام عددها بین منابع اختلاف دارند و نباید یکی را قطعی بگیرد
+  const open = [...currentRows("queue").values()].filter((r) => !r.recorded_to && r.status === "open" && r.kind === "contradiction");
+  L.push("## ۱۰. تناقض‌های بازِ بررسی‌نشده (منابع مستقل اختلاف دارند؛ هیچ‌کدام قطعی نیست)");
+  if (!open.length) L.push("- (مورد بازی نیست)");
+  for (const q of open.sort((a, b) => a.subject.localeCompare(b.subject, "fa"))) {
+    L.push(`- ${q.subject} (${q.period}): ${q.label} — ${q.members.map((m) => `${m.source}=${m.value}`).join(" در برابر ")}`);
   }
   return L.join("\n") + "\n";
 }

@@ -20,6 +20,7 @@ export default function MemoryClient() {
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState("");
   const [rules, setRules] = useState(null);
+  const [queue, setQueue] = useState(null);
 
   async function loadCounts() {
     const r = await api("/api/brain/memory", { cache: "no-store" });
@@ -30,7 +31,20 @@ export default function MemoryClient() {
     const r = await api("/api/brain/memory?rules=1", { cache: "no-store" });
     if (r.ok) setRules(r.rules);
   }
-  useEffect(() => { loadCounts(); loadRules(); }, []);
+  async function loadQueue() {
+    const r = await api("/api/brain/queue", { cache: "no-store" });
+    if (r.ok) setQueue(r);
+  }
+  async function decide(id, decision, claimKey) {
+    const note = decision === "dismiss" || decision === "reject" ? prompt("یادداشت (اختیاری):") || "" : "";
+    if (!confirm("تصمیم ثبت می‌شود (ردیف تازه؛ چیزی پاک نمی‌شود). ادامه؟")) return;
+    setBusy(true);
+    const r = await api("/api/brain/queue", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "resolve", id, decision, claim_key: claimKey, note }) });
+    setBusy(false);
+    if (!r.ok) { setError(r.error || "انجام نشد"); return; }
+    setError(""); setQueue(r); loadCounts();
+  }
+  useEffect(() => { loadCounts(); loadRules(); loadQueue(); }, []);
 
   async function ask() {
     setBusy(true);
@@ -47,7 +61,7 @@ export default function MemoryClient() {
     const r = await api("/api/brain/memory", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "migrate" }) });
     setBusy(false);
     setMsg(r.ok ? `ادعای تازه ${r.stats.claims_new}، تغییریافته ${r.stats.claims_changed}، بدون تغییر ${r.stats.claims_unchanged}` : r.error || "انجام نشد");
-    loadCounts(); loadRules();
+    loadCounts(); loadRules(); loadQueue();
   }
 
   return (
@@ -61,6 +75,48 @@ export default function MemoryClient() {
           <div className="flex flex-wrap gap-x-4 text-text-muted">
             {Object.entries(counts).map(([k, v]) => <span key={k}>{k}: <b className="text-text" dir="ltr">{v.total} / {v.open}</b></span>)}
           </div>
+        </section>
+      )}
+
+      {queue && (
+        <section className="card p-4">
+          <div className="mb-2 text-sm font-bold text-text">
+            صف بازبینی: {queue.counts.open} مورد باز
+            {queue.counts.overdue > 0 && <span className="ms-2 text-danger">({queue.counts.overdue} مورد بیش از ۱۴ روز بی‌تصمیم)</span>}
+          </div>
+          {queue.open.length === 0 && <p className="text-xs text-text-muted">مورد بازی نیست.</p>}
+          <ul className="space-y-3">
+            {queue.open.map((q) => (
+              <li key={q.id} className={`rounded-lg border p-3 text-xs leading-6 ${q.overdue ? "border-danger" : "border-border"}`}>
+                <div className="flex flex-wrap items-center gap-2">
+                  <b className="text-text">{q.subject}</b>
+                  <span className="text-text-muted">{q.kind === "sanity" ? "ادعای مشکوک" : "تناقض"} · {q.period || "—"} · {q.age_days} روز پیش</span>
+                  {q.spread && <span className="text-text-muted" dir="ltr">×{q.spread}</span>}
+                </div>
+                <p className="text-text-muted">{q.label}</p>
+                <ul className="mt-1 space-y-1">
+                  {q.members.map((m) => (
+                    <li key={m.claim_key} className="flex flex-wrap items-center gap-2">
+                      <span dir="ltr" className="text-text">{typeof m.value === "number" ? m.value.toLocaleString("en-US") : m.value} {m.unit || ""}</span>
+                      <span className="text-text-muted" dir="ltr">{m.source} · {m.metric}</span>
+                      <button type="button" disabled={busy} onClick={() => decide(q.id, "accept", m.claim_key)} className="rounded border border-border px-2 py-0.5 cursor-pointer disabled:opacity-50">{q.kind === "sanity" ? "درست است" : "این مقدار درست است"}</button>
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-2 flex flex-wrap gap-2">
+                  {q.kind === "contradiction" && <button type="button" disabled={busy} onClick={() => decide(q.id, "both_valid")} className="rounded border border-border px-2 py-0.5 cursor-pointer disabled:opacity-50">هر دو درست (تعریف متفاوت)</button>}
+                  {q.kind === "sanity" && <button type="button" disabled={busy} onClick={() => decide(q.id, "reject")} className="rounded border border-border px-2 py-0.5 cursor-pointer disabled:opacity-50">رد (غلط است)</button>}
+                  <button type="button" disabled={busy} onClick={() => decide(q.id, "dismiss")} className="rounded border border-border px-2 py-0.5 cursor-pointer disabled:opacity-50">نادیده</button>
+                </div>
+              </li>
+            ))}
+          </ul>
+          {queue.resolved.length > 0 && (
+            <details className="mt-3 text-[11px] text-text-muted">
+              <summary className="cursor-pointer">تصمیم‌های اخیر ({queue.resolved.length})</summary>
+              <ul className="mt-1 space-y-0.5">{queue.resolved.map((r) => <li key={r.id}>{r.subject} ({r.period}) — {r.resolution?.decision} · {r.resolution?.by} · {String(r.resolution?.at).slice(0, 10)}</li>)}</ul>
+            </details>
+          )}
         </section>
       )}
 

@@ -2,6 +2,7 @@ import fs from "fs";
 import path from "path";
 import { backupBrain } from "./backup";
 import { buildShadowDigest } from "./digest";
+import { runKnowledgeCycle } from "./knowledge/cycle";
 import { runMigration } from "./migrate";
 import { brainStorageProblem, getBrainDir } from "./store";
 
@@ -25,10 +26,12 @@ export function memoryTick({ now = new Date() } = {}) {
     if (problem) return { skipped: problem };
     const backup = backupBrain({ now }); // پیش از نوشتن تازه
     const mig = runMigration({ now });
+    const kc = runKnowledgeCycle({ now }); // چرخه‌ی دانش: بررسی ساده، تناقض، اعتماد (مرحله‌ی ۵)
     const shadow = refreshShadowDigest(now);
     const s = mig.stats;
-    console.log(`[brain-memory] انتقال: ${s.claims_new} ادعای تازه، ${s.claims_changed} تغییریافته، ${s.claims_unchanged} بدون تغییر؛ خلاصه‌ی سایه ${shadow} نویسه؛ پشتیبان ${backup.skipped || backup.files + " فایل"}.`);
-    return { backup, migration: mig, shadow_chars: shadow };
+    const q = kc.queue ? `${kc.queue.new} تازه، ${kc.queue.reopened} بازگشوده` : "—";
+    console.log(`[brain-memory] انتقال: ${s.claims_new} ادعای تازه، ${s.claims_changed} تغییریافته، ${s.claims_unchanged} بدون تغییر؛ صف بازبینی: ${q}، اعتماد بازمحاسبه ${kc.confidence_rewritten ?? 0}؛ خلاصه‌ی سایه ${shadow} نویسه؛ پشتیبان ${backup.skipped || backup.files + " فایل"}.`);
+    return { backup, migration: mig, knowledge: kc, shadow_chars: shadow };
   } catch (err) {
     console.warn(`[brain-memory] خطا: ${String(err?.message || err).slice(0, 200)}`);
     return { error: String(err?.message || err) };

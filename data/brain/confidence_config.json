@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "_note": "ضرایب فرمول اعتماد (پروتکل ۶-۳) و بررسی‌های چرخه‌ی روزانه‌ی دانش (مرحله‌ی ۵). عمومی و بدون راز؛ بعداً با سابقه کالیبره می‌شود. اعتبار منبع تا ساخته‌شدن مخزن اعتبار (مرحله‌ی ۸) از «نوع منبع» می‌آید.",
+  "source_base": {
+    "profile:": 0.8,
+    "competitor:": 0.7,
+    "trade_map_2025": 0.9,
+    "wits_mirror": 0.75,
+    "price:": 0.7,
+    "iran_customs": 0.5,
+    "news:": 0.3,
+    "watch:": 0.3,
+    "transit:": 0.4,
+    "per_capita": 0.7,
+    "trade_unions": 0.8,
+    "derived:": 0.4,
+    "default": 0.5
+  },
+  "metric_class": {
+    "price": "price",
+    "freight_rate": "price",
+    "signal": "signal",
+    "distance_km": "static",
+    "port_name": "static",
+    "tariff_note": "static",
+    "union_membership": "static",
+    "trade_partner_note": "static",
+    "per_capita_kg": "annual",
+    "default": "annual"
+  },
+  "half_life_days": { "price": 60, "signal": 21, "annual": 540, "static": 3650 },
+  "freshness_floor": 0.7,
+  "confirmation": { "boost_per_source": 0.05, "max_boost": 0.1, "tolerance": 0.1, "signal_window_days": 3, "signal_similarity": 0.45, "signal_boost": 0.2 },
+  "rule_penalty": { "applies_to_statuses": ["پذیرفته"], "per_flag": 0.15 },
+  "bounds": { "min": 0.05, "max": 0.99 },
+  "rewrite_threshold": 0.1,
+  "contradiction": {
+    "overdue_days": 14,
+    "groups": [
+      { "key": "import_volume_tons", "label": "حجم واردات کشور (تن)", "metrics": ["total_import_volume", "import_total_tons", "trade_map.imports.quantity"], "unit_regex": "تن|tons?", "tolerance": 0.25 }
+    ],
+    "iran_to_importer": { "label": "صادرات ایران به کشور در برابر واردات آن کشور از ایران (تن)", "exporter_metric": "iran_export_destination_tons", "importer_metric": "import_supplier_tons", "supplier": "ایران", "ratio_band": [0.5, 1.5] }
+  },
+  "sanity": {
+    "price_usd": [20, 3000],
+    "price_cny": [100, 20000],
+    "share_pct": [0, 100],
+    "tons": [0, 100000000],
+    "distance_km": [0, 20000],
+    "tariff_pct": [0, 200],
+    "unit_value_usd": [1, 20000],
+    "year": [1990, 2040]
+  }
+}
