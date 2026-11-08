@@ -53,6 +53,11 @@ const SOURCE_DECISIONS = new Set(["accept", "reject", "both_valid"]);
 export function sourceEvidence(queueRows, sourceOf = null) {
   const out = [];
   for (const q of queueRows) {
+    // کالبدشکافیِ «داده‌ی غلط» که مدیر تأیید کرد: منبعِ ادعای اصلاح‌شده نتیجه‌ی ۰ می‌گیرد (۹-۱)
+    if (q.kind === "autopsy" && q.status === "resolved" && q.resolution?.decision === "accept" && q.category === "data_wrong") {
+      for (const s of q.implicated_sources || []) out.push({ source: s, outcome: 0, at: q.resolution.at, metric: "price" });
+      continue;
+    }
     if (q.status !== "resolved" || !q.resolution || !SOURCE_DECISIONS.has(q.resolution.decision)) continue;
     const d = q.resolution.decision;
     for (const m of q.members || []) {

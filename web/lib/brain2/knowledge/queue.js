@@ -62,6 +62,7 @@ export function syncClaimStatuses(idx, { at }) {
   };
   let changed = 0;
   for (const q of openQueue().values()) {
+    if (!["contradiction", "sanity", "human_flag"].includes(q.kind)) continue; // سایر آیتم‌ها (اختلاف تحلیل‌گرها، کالبدشکافی، ...) وضعیت ادعا را عوض نمی‌کنند
     const keys = q.members.map((m) => m.claim_key);
     if (q.status === "open") {
       for (const k of keys) changed += set(k, ["sanity", "human_flag"].includes(q.kind) ? "در صف بررسی" : "متناقض", `صف بازبینی: ${q.label || q.kind}`);
