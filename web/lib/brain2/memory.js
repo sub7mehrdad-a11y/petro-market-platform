@@ -115,6 +115,15 @@ export function flagStaleAnalyses(idx, { at = new Date().toISOString() } = {}) {
   return n;
 }
 
+/** نسخه‌ی تازه‌ی یک ادعا با تغییر فیلدهای «قضاوتی» (اعتماد، وضعیت): ردیف تازه با supersedes + بستن قبلی؛ مقدار و کلید طبیعی ثابت می‌ماند. */
+export function reviseClaim(idx, claim, patch, reason, { at = new Date().toISOString(), by = "knowledge-cycle" } = {}) {
+  const { id, created_at, recorded_from, recorded_to, closed_reason, ...keep } = claim;
+  const row = putRow("claims", makeRow("claims", { ...keep, ...patch, supersedes: id, change_reason: reason, created_at: new Date().toISOString() }, at));
+  closeRow("claims", id, { reason, by, at });
+  idx.claims.set(claim.natural_key, row);
+  return row;
+}
+
 // -------------------------------------------------------------------------------- پرسش (بخش ۴-۱: «در تاریخ فلان سیستم چه باور داشت؟»)
 const toMs = (x) => (x ? new Date(x).getTime() : null);
 
@@ -147,7 +156,7 @@ export function queryClaims({ subject, metric, period, knownAt, validAtTime, lim
 
 export function memoryCounts() {
   const out = {};
-  for (const repo of ["sources", "claims", "analyses", "rules", "methods", "predictions", "feedback", "reputation"]) {
+  for (const repo of ["sources", "claims", "analyses", "rules", "methods", "predictions", "feedback", "reputation", "queue"]) {
     const rows = [...currentRows(repo).values()];
     out[repo] = { total: rows.length, open: rows.filter(isOpen).length };
   }

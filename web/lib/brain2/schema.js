@@ -32,6 +32,11 @@ export const REPOS = {
     required: ["analyst", "version"],
     defaults: { steps: [], data_pack: [], parent_version: null, backtest_score: null, status: "فعال" },
   },
+  // صف بازبینی (مرحله‌ی ۵): فهرست عملیاتی تناقض‌ها و ادعاهای مشکوک؛ جزو هشت مخزن دانش نیست ولی همان قالب افزودنی را دارد.
+  queue: {
+    required: ["kind", "subject"],
+    defaults: { group: null, period: null, members: [], spread: null, status: "open", resolution: null, detected_at: null, natural_key: null },
+  },
   predictions: { required: [], defaults: {} }, // ساخت و اعتبارسنجی در forecast.js (مرحله‌ی ۰؛ فیلدهای ۰٫۲ همان‌جا هست)
   feedback: {
     required: ["giver", "target_id", "kind"],
