@@ -6,6 +6,7 @@ import { raiseItem } from "./knowledge/queue";
 import { loadAnalystsConfig } from "./knowledge/retrieval";
 import { loadIndex, upsertAnalysis } from "./memory";
 import { reputationWeights } from "./reputation";
+import { METHOD_ROLES, activeMethod, ensureMethods, experimentalMethods, methodObject } from "./learning/methods";
 
 // هماهنگ‌کننده‌ی پیش‌بین‌های ماشینی (مرحله‌ی ۶): دو تحلیل‌گر مستقل ← ثبت در دفتر (هرکدام پیش از دیدن خروجی دیگری) ← داور.
 // بازبینی هفتگی مثل «مغز فعلی»: نسخه‌ی تازه فقط با تغییر معنادار و دلیل. خروجی هر تحلیل‌گر و داور علاوه بر دفتر، در مخزن «تحلیل‌ها»ی حافظه
@@ -26,6 +27,7 @@ export async function runMachineForecasts(roundId, { now = new Date(), generator
   const at = now.toISOString();
   const idx = loadIndex();
   const results = [];
+  ensureMethods({ at });
 
   for (const q of round.questions) {
     const res = { question: q.id };
@@ -38,7 +40,7 @@ export async function runMachineForecasts(roundId, { now = new Date(), generator
       const due = force || !prev || now.getTime() - new Date(prev.made_at).getTime() >= cfg.analysts.review_every_days * DAY;
       cur[role] = prev;
       if (!due) { res[role] = "not_due"; continue; }
-      const out = await runAnalyst(role, { question: q, limits: round.limits, now, generate: generators[role] });
+      const out = await runAnalyst(role, { question: q, limits: round.limits, now, generate: generators[role], method: methodObject(activeMethod(role)) }); // روش «فعال» (v1 یا نسخه‌ی ارتقایافته)
       if (!out.ok) { res[role] = `failed: ${out.error}`; continue; }
       if (prev && !changedEnough(prev.forecast, out, cfg.analysts.min_change_pct)) { res[role] = "unchanged"; continue; }
       const rec = recordMachineForecast({
@@ -54,6 +56,20 @@ export async function runMachineForecasts(roundId, { now = new Date(), generator
       res[role] = prev ? "revised" : "recorded";
       cur[role] = rec.prediction;
       changed[role] = true;
+    }
+
+    // نسخه‌های «آزمایشی» روش (حلقه‌ی ۳): موازی با فعال، با پیش‌بین جدا (…@vN)؛ هرگز وارد داور نمی‌شوند.
+    for (const role of METHOD_ROLES) {
+      for (const exp of experimentalMethods(role)) {
+        const expName = forecasterName(role, ANALYSTS[role].model()) + `@${exp.version}`;
+        const prevE = currentVersion(roundId, q.id, (p) => p.forecaster === expName);
+        if (prevE && !force && now.getTime() - new Date(prevE.made_at).getTime() < cfg.analysts.review_every_days * DAY) { res[`${role}${exp.version}`] = "not_due"; continue; }
+        const probe = await runAnalyst(role, { question: q, limits: round.limits, now, generate: (generators.experimental || generators)[role], method: methodObject(exp) });
+        if (!probe.ok) { res[`${role}${exp.version}`] = `failed: ${probe.error}`; continue; }
+        if (prevE && !changedEnough(prevE.forecast, probe, cfg.analysts.min_change_pct)) { res[`${role}${exp.version}`] = "unchanged"; continue; }
+        const recE = recordMachineForecast({ roundId, questionId: q.id, forecaster: probe.forecaster, point: probe.point, lo: probe.lo, hi: probe.hi, rationale: probe.rationale, reason: prevE ? "بازبینی دوره‌ای (روش آزمایشی)" : undefined, model: probe.model, method_version: probe.method_version, retrieved_ids: probe.retrieved_ids, claim_ids: probe.claim_ids, rule_ids: probe.rule_ids }, { now });
+        res[`${role}${exp.version}`] = recE.ok ? (prevE ? "revised" : "recorded") : `failed: ${recE.error}`;
+      }
     }
 
     // داور: فقط وقتی هر دو تحلیل‌گر ثبت شده‌اند (هرکدام پیش از دیدن خروجی دیگری ثبت شد)

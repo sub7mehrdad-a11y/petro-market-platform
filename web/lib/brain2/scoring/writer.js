@@ -2,6 +2,7 @@ import { appendScoreEvent, currentRows, stampRow } from "../store";
 import { listRounds, predictionsOf, versionsOf, roundLockAt } from "../forecast";
 import { readBaseline, readTruth } from "./truth";
 import { inInterval, relErr, round4, skill, steps, surpriseInterval, weightedMean, windows } from "./math";
+import { experimentRows } from "../learning/experiments";
 
 // جزء سنجش (پروتکل ۸-۵): تنها کدی که در scores.jsonl می‌نویسد (outcome، score، مهارت، غافلگیری). مغز و دفتر پیش‌بینی نه آن را
 // import می‌کنند و نه می‌توانند در scores بنویسند (store.appendEvent برای مخزن scores خطا می‌دهد؛ آزمون جداسازی ایمپورت‌ها را اسکن می‌کند).
@@ -31,6 +32,20 @@ function write(existing, row, nowIso, stats) {
     stats.changed += 1;
   } else stats.written += 1;
   existing.set(row.natural_key, saved);
+}
+
+/** آزمایش‌های فعالِ تمام‌شده (۹-۶): نرخ پاسخ مشاهده‌شده در برابر بازه‌ی ثبت‌شده پیش از اجرا؛ همان غافلگیریِ بازه‌ای. */
+function scoreExperiments(existing, nowIso, stats) {
+  for (const e of experimentRows()) {
+    if (e.status !== "تمام‌شده" || !e.observed || !e.prior) continue;
+    const { point, lo, hi } = e.prior;
+    const actual = e.observed.rate;
+    write(existing, {
+      natural_key: `experiment|${e.key}`, kind: "experiment", experiment_key: e.key, forecaster: "brain:experiments", outcome: actual, outcome_as_of: e.observed.at.slice(0, 10),
+      outcome_source: `experiments:${e.key}`, forecast: { point, lo, hi }, sample: { sent: e.observed.sent, replied: e.observed.replied },
+      abs_rel_err: actual ? round4(relErr(point, actual)) : null, inside: inInterval(actual, lo, hi), surprise: round4(surpriseInterval(actual, lo, hi)),
+    }, nowIso, stats);
+  }
 }
 
 /** سنجش همه‌ی پرسش‌های سررسیدشده. برمی‌گرداند {written, changed, unchanged, unresolved:[{question_id, reason}]}. */
@@ -88,6 +103,7 @@ export function runScoring({ now = new Date() } = {}) {
       }
     }
   }
+  scoreExperiments(existing, nowIso, stats);
   return stats;
 }
 

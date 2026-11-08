@@ -1,3 +1,4 @@
+import { runLearningCycle } from "./learning/cycle";
 import { ensureRound, getRound, isBrain, isRoundOpen, listRounds, loadConfig, predictionsOf, tehranClock } from "./forecast";
 import { runBrainForecasts, runBrainReviews } from "./brainForecaster";
 import { runMachineForecasts } from "./machineForecaster";
@@ -63,6 +64,10 @@ export async function brainForecastTick({ now = new Date() } = {}) {
     const au = await runAutopsies({ now, useModel: !!resolveBrainKey() });
     if (au.new) console.log(`[brain-autopsy] ${au.new} کالبدشکافی تازه (${JSON.stringify(au.by_category)})، ${au.queued} مورد به صف بازبینی.`);
     out.autopsy = au;
+    // یادگیری (مرحله‌ی ۱۰): اجرای تصمیم‌های مدیر، ارزیابی ارتقای روش؛ ماهانه تثبیت، آزمایش و بازبینی روش
+    out.learning = await runLearningCycle({ now });
+    if (out.learning.applied?.length) console.log(`[brain-learning] اجرای تصمیم‌های مدیر: ${out.learning.applied.join("، ")}`);
+    if (out.learning.monthly === "ran") console.log(`[brain-learning] چرخه‌ی ماهانه ${out.learning.month}: تثبیت ${JSON.stringify(out.learning.consolidation)}، بازبینی روش ${JSON.stringify(out.learning.revisions)}.`);
     return out;
   } catch (err) {
     console.warn(`[brain-forecast] خطا: ${String(err?.message || err).slice(0, 200)}`);

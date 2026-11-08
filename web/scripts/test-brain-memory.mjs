@@ -23,7 +23,7 @@ const lines = (repo) => fs.readFileSync(path.join(S.getBrainDir(), `${repo}.json
 
 // ------------------------------------------------------------------ قالب هشت مخزن و فیلدهای ۰٫۲
 Sch.ensureRepos();
-assert.deepEqual(Sch.REPO_NAMES.filter((r) => r !== "queue").sort(), ["analyses", "claims", "feedback", "methods", "predictions", "reputation", "rules", "sources"], "هر هشت مخزن دانش");
+assert.deepEqual(Sch.REPO_NAMES.filter((r) => r !== "queue" && r !== "experiments").sort(), ["analyses", "claims", "feedback", "methods", "predictions", "reputation", "rules", "sources"], "هر هشت مخزن دانش");
 assert.ok(Sch.REPO_NAMES.includes("queue"), "صف بازبینی (مخزن عملیاتی) هم ساخته می‌شود");
 for (const r of Sch.REPO_NAMES) assert.ok(fs.existsSync(path.join(stateA, `${r}.jsonl`)), `فایل ${r} ساخته شد`);
 const T0 = "2026-09-01T10:00:00.000Z";

@@ -67,10 +67,10 @@ async function defaultGenerate(engine, { system, input }) {
  * {ok, role, forecaster, model, method_version, point, lo, hi, rationale, retrieved_ids, claim_ids, rule_ids, input}
  * یا {ok:false, role, error}. generate قابل‌تزریق است (آزمون بدون شبکه).
  */
-export async function runAnalyst(role, { question, limits, now = new Date(), generate }) {
+export async function runAnalyst(role, { question, limits, now = new Date(), generate, method = null, asOf = null }) {
   const A = ANALYSTS[role];
   try {
-    const r = retrieve({ question, pack: A.pack, now });
+    const r = retrieve({ question, pack: A.pack, now, asOf });
     const st = seriesStats(r.series);
     const head = [
       `پرسش: ${question.text}`,
@@ -82,13 +82,13 @@ export async function runAnalyst(role, { question, limits, now = new Date(), gen
     ].join("\n");
     const input = `${head}\n\n===== قطعه‌های بازیابی‌شده =====\n${r.text || "(قطعه‌ی مرتبطی پیدا نشد)"}`;
     const gen = generate || ((a) => defaultGenerate(A.engine, a));
-    const j = parseJson(await gen({ system: SYSTEM[role], input }));
+    const j = parseJson(await gen({ system: method?.system || SYSTEM[role], input })); // نسخه‌ی تازه‌ی روش می‌تواند دستور سیستمی خودش را بیاورد (حلقه‌ی ۳)
     if (!j) return { ok: false, role, error: "خروجی JSON نبود" };
     const bad = checkForecastNumbers(j, limits);
     if (bad) return { ok: false, role, error: bad };
     const model = A.model();
     return {
-      ok: true, role, forecaster: forecasterName(role, model), model, method_version: A.method,
+      ok: true, role, forecaster: forecasterName(role, model) + (method?.suffix || ""), model, method_version: method?.method_version || A.method,
       point: Number(j.point), lo: Number(j.lo), hi: Number(j.hi), rationale: String(j.rationale || "").slice(0, limits.rationale_max_chars),
       retrieved_ids: r.retrieved_ids, claim_ids: r.claim_ids, rule_ids: r.rule_ids, input, stats: r.stats,
     };

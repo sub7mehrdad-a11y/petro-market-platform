@@ -78,12 +78,16 @@ export function syncClaimStatuses(idx, { at }) {
 }
 
 /** تصمیم انسان. decision: accept (با claim_key؛ در تناقض مقدارهای دیگر «بسته‌شده» می‌شوند) | reject (فقط ادعای مشکوک) | both_valid | dismiss. */
+// پیشنهادهای حلقه‌ی ۳ و تثبیت و آزمایش فعال (مرحله‌ی ۱۰): فقط پذیرش یا نادیده؛ اجرا با خواندنِ تصمیم در learning/*
+export const LEARNING_KINDS = ["method_proposal", "method_promotion", "consolidation", "experiment_proposal"];
+
 export function resolveItem(idx, { id, decision, claimKey, by, note, at = new Date().toISOString() }) {
   const q = [...openQueue().values()].find((r) => r.id === id);
   if (!q) return { ok: false, error: "آیتم صف پیدا نشد یا قبلاً نسخه‌ی تازه گرفته است." };
   if (q.status !== "open") return { ok: false, error: "این آیتم قبلاً بسته شده است." };
   if (!["accept", "reject", "both_valid", "dismiss"].includes(decision)) return { ok: false, error: "تصمیم نامعتبر است." };
   if (decision === "accept" && !q.members.some((m) => m.claim_key === claimKey)) return { ok: false, error: "برای پذیرش باید یکی از مقدارهای آیتم انتخاب شود." };
+  if (LEARNING_KINDS.includes(q.kind) && !["accept", "dismiss"].includes(decision)) return { ok: false, error: "برای پیشنهاد یادگیری فقط «بپذیر» یا «رد/نادیده» ممکن است." };
   if (decision === "reject" && !["sanity", "human_flag"].includes(q.kind)) return { ok: false, error: "رد فقط برای ادعای مشکوک است؛ در تناقض یک مقدار را بپذیرید." };
   if (decision === "both_valid" && q.kind !== "contradiction") return { ok: false, error: "«هر دو درست» فقط برای تناقض است." };
   if (["disagreement", "rule_critique", "analysis_flag"].includes(q.kind) && decision !== "dismiss") return { ok: false, error: "اختلاف تحلیل‌گرها فقط «بررسی شد» (نادیده) می‌شود؛ تصمیم دربارهٔ عدد در پیش‌بینی خودتان ثبت می‌شود." };

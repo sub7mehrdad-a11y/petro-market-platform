@@ -37,6 +37,11 @@ export const REPOS = {
     required: ["kind", "subject"],
     defaults: { group: null, period: null, members: [], spread: null, status: "open", resolution: null, detected_at: null, natural_key: null },
   },
+  // آزمایش فعال (مرحله‌ی ۱۰، ۹-۶): فهرست عملیاتی آزمایش‌های کوچک با پیش‌بینیِ ثبت‌شده پیش از اجرا؛ جزو هشت مخزن دانش نیست.
+  experiments: {
+    required: ["key", "title"],
+    defaults: { hypothesis: null, metric: "reply_rate", unit: "%", prior: null, window_days: 30, quota_share: 0, status: "فعال", started_at: null, ends_at: null, observed: null, verdict: null, decided_by: null, natural_key: null },
+  },
   predictions: { required: [], defaults: {} }, // ساخت و اعتبارسنجی در forecast.js (مرحله‌ی ۰؛ فیلدهای ۰٫۲ همان‌جا هست)
   feedback: {
     required: ["giver", "target_id", "kind"],

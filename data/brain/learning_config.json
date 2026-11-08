@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "_note": "حلقه‌ی ۳ (بازبینی روش)، تثبیت ماهانه و آزمایش فعال (پروتکل ۹-۲، ۹-۳، ۹-۶، ۹-۷). همه‌ی تغییرها فقط پیشنهادند و با تأیید مدیر اجرا می‌شوند. عمومی و بدون راز؛ با سابقه کالیبره می‌شود.",
+  "methods": {
+    "min_method_errors": 8,
+    "max_changes_per_month": 1,
+    "backtest": { "min_cases": 8, "max_cases": 40, "improvement_se_multiple": 1.0 },
+    "parallel": { "min_weeks": 4, "min_resolved": 3, "margin": 0.02 },
+    "max_system_chars": 4000
+  },
+  "consolidation": {
+    "merge_similarity": 0.7,
+    "abstract_min_group": 3,
+    "abstract_similarity": 0.45,
+    "retire_unused_days": 180,
+    "retire_min_negative_votes": 2,
+    "importance": { "base": 0.3, "usage": 0.4, "votes": 0.3, "rewrite_threshold": 0.1 },
+    "performance_drop": { "recent": 3, "min_total": 6, "threshold": 0.15 }
+  },
+  "experiments": {
+    "quota_share": 0.15,
+    "fallback_monthly_emails": 200,
+    "window_days": 30,
+    "prior_reply_rate": { "point": 10, "lo": 5, "hi": 15, "unit": "%" },
+    "max_open_proposals": 5
+  }
+}
