@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta name="color-scheme" content="light">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>پژوهش بازار و فناوری بکینگ پودر</title>
+<link rel="stylesheet" href="/report-assets/report-fonts.css">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F5F8FC;
+    --bg-soft: #FFFFFF;
+    --ink: #263B50;
+    --ink-soft: #52687D;
+    --muted: #52687D;
+    --line: #D2DEEB;
+    --line-soft: #E2EEFB;
+    --petrol-900: #193D5B;
+    --petrol-700: #205B8A;
+    --petrol-600: #286DA6;
+    --petrol-500: #478DCA;
+    --petrol-300: #A2C7EC;
+    --petrol-100: #E2EEFB;
+    --petrol-50: #F1F7FD;
+    --copper-700: #1D4A70;
+    --copper-600: #205B8A;
+    --copper-500: #286DA6;
+    --copper-400: #478DCA;
+    --copper-300: #77ACDE;
+    --copper-100: #E2EEFB;
+    --copper-50: #F1F7FD;
+    --good: #176C4C;
+    --good-bg: #EAF7EF;
+    --bad: #A52E4A;
+    --bad-bg: #FFF0F3;
+    --card-shadow: 0 1px 2px rgba(38,59,80,0.05), 0 10px 24px -14px rgba(38,59,80,0.35);
+    --hero-ink: #F1F7FD;
+    --hero-ink-soft: #E2EEFB;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  
+  
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(40,109,166,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(24px,3.6vw,36px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 66ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(4, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:700px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#E2EEFB); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 76ch; }
+  strong{ color: var(--ink); font-weight:700; }
+  ul.plain{ margin:0 0 12px; padding-inline-start:0; list-style:none; }
+  ul.plain li{ position:relative; padding-inline-end:18px; margin-bottom:8px; color:var(--ink-soft); max-width:76ch; }
+  ul.plain li::before{ content:'•'; position:absolute; right:0; top:0; color:var(--copper-500); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout p + p{ margin-top:8px; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  .card .tag.bad{ background: var(--bad-bg); color: var(--bad); }
+  .card .tag.good{ background: var(--good-bg); color: var(--good); }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:14.5px; color:var(--ink); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); vertical-align:top; }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); white-space:nowrap; }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  figure{ margin: 16px 0; }
+  figure img{ border-radius: 12px; border: 1px solid var(--line); display:block; box-shadow: var(--card-shadow); width:100%; }
+  figcaption{ font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+
+  .pill-row{ display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0; }
+  .pill{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 12px;
+    padding: 12px 20px; min-width: 120px; box-shadow: var(--card-shadow); flex:1;
+  }
+  .pill .p{ font-family:"Fira Code"; font-size:20px; font-weight:700; color:var(--petrol-700); }
+  .pill .p.bad{ color: var(--bad); }
+  .pill .p.good{ color: var(--good); }
+  .pill .n{ font-size:12.5px; color:var(--muted); margin-top:2px; text-align:center; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0 0 8px; max-width:none; }
+
+  a{ color: var(--copper-600); }
+
+  p.src{ font-size:12.5px; color:var(--muted); margin-top:-4px; }
+  .tcap{ font-weight:800; font-size:15px; color:var(--petrol-700); margin:26px 0 8px; }
+  .t-wrap tbody td:first-child{ white-space:normal; min-width:150px; }
+  .t-wrap table{ min-width: 760px; }
+  .grade{ font-size:12px; color:var(--muted); font-weight:600; white-space:nowrap; }
+  sup.cite{ font-size:11px; line-height:0; margin-inline:1px; }
+  sup.cite a{ text-decoration:none; font-weight:700; color:var(--copper-600); }
+  .formula{ direction:rtl; font-size:16px; text-align:center; }
+  .formula p{ text-align:center; font-weight:700; color:var(--ink); }
+  td.st-ok{ background:var(--good-bg) !important; color:var(--good) !important; font-weight:700; }
+  td.st-unk{ background:#FFF3CF !important; color:#8A6410 !important; font-weight:700; }
+  td.st-bad{ background:var(--bad-bg) !important; color:var(--bad) !important; font-weight:700; }
+  
+  ol.srcs{ list-style:none; padding:0; margin:0; counter-reset:s; }
+  ol.srcs li{ position:relative; padding-inline-start:44px; margin-bottom:9px; font-size:14px; color:var(--ink-soft); max-width:none; }
+  ol.srcs li .n{ position:absolute; right:0; top:0; font-family:"Fira Code"; font-weight:600; font-size:12px;
+    background:var(--petrol-50); color:var(--petrol-700); border:1px solid var(--line-soft); border-radius:7px; padding:1px 8px; }
+  ol.srcs li a{ direction:ltr; unicode-bidi:embed; word-break:break-all; }
+
+  .tcap{ font-weight:800; font-size:15px; color:var(--petrol-700); margin:26px 0 8px; }
+  .t-wrap tbody td:first-child{ white-space:normal; min-width:150px; }
+  .t-wrap table{ min-width: 760px; }
+  td.neg{ background:var(--bad-bg) !important; color:var(--bad) !important; font-weight:700; }
+  td.pos{ background:var(--good-bg) !important; color:var(--good) !important; font-weight:700; }
+  ul.pts{ margin:10px 0 14px; padding-inline-start:22px; }
+  ul.pts li{ margin-bottom:8px; max-width:none; }
+  ol.srcs{ list-style:none; padding:0; margin:0; }
+  ol.srcs li{ position:relative; padding-inline-start:44px; margin-bottom:9px; font-size:14px; color:var(--ink-soft); max-width:none; }
+  ol.srcs li .n{ position:absolute; right:0; top:0; font-family:"Fira Code"; font-weight:600; font-size:12px;
+    background:var(--petrol-50); color:var(--petrol-700); border:1px solid var(--line-soft); border-radius:7px; padding:1px 8px; }
+  ol.srcs li a{ direction:ltr; unicode-bidi:embed; word-break:break-all; }
+</style>
+<style>ol.pts{list-style-type:persian}</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">گزارش پژوهشی – واحد تحقیق و توسعه</span>
+    <h1>پژوهش بازار و فناوری بکینگ پودر</h1>
+    <p class="lead">فناوری و هزینه‌ی تولید، تفاوت با جوش‌شیرین، مصرف در فرمولاسیون، بازار و تجارت جهانی (HS 2102.30) و بازار ایران</p>
+    <div class="meta"><span>تاریخ گزارش: ۱۶ آبان ۱۴۰۵ (۷ نوامبر ۲۰۲۶)</span></div>
+    <div class="kpi-row"><div class="kpi"><div class="v">۶۳۰–۸۹۰ <small>دلار/تن</small></div><div class="l">هزینه‌ی مواد اولیه‌ی برآوردی یک تن بکینگ پودر</div></div><div class="kpi"><div class="v">۰٫۷۸–۴٫۶ <small>میلیارد دلار</small></div><div class="l">برآوردهای اندازه‌ی بازار جهانی ۲۰۲۵ (ناشران مختلف)</div></div><div class="kpi"><div class="v">۲۶۲–۲۷۱ <small>میلیون دلار</small></div><div class="l">ارزش صادرات جهانی ۲۰۲۵ (HS 2102.30)</div></div><div class="kpi"><div class="v">۷۸۹ <small>تن</small></div><div class="l">صادرات ایران، ۱۴۰۴ (ده‌ماهه؛ گمرک)</div></div></div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section id="s0">
+<div class="sec-head"><span class="sec-num">★</span><h2>خلاصه‌ی اجرایی</h2></div>
+<p>بکینگ پودر محصولی با فناوری تولید ساده و هزینه‌ی مواد اولیه‌ی برآوردی ۶۳۰ تا ۸۹۰ دلار در هر تن است که در تجارت جهانی با میانگین وزنی حدود ۲٫۵ دلار بر کیلوگرم (محدوده‌ی قیمت صادرات کشورهای عمده: ۱٫۳ تا ۴٫۹) معامله می‌شود. بزرگ‌ترین مشتری بالقوه‌ی آن در ایران، صنایع شیرینی، بیسکویت و کیک است.</p>
+<ul class="pts"><li><strong>ماهیت:</strong> مخلوط خشک جوش شیرین (حدود ۲۸ تا ۳۰٪)، اسید خوراکی و نشاسته؛ تولید آن اختلاط فیزیکی است و اسید ۶۵ تا ۷۰٪ هزینه‌ی مواد اولیه را تشکیل می‌دهد.</li><li><strong>تفاوت با جوش شیرین:</strong> جوش شیرین به ماده‌ی اسیدی در دستور نیاز دارد و نیز قهوه‌ای‌شدن را افزایش می‌دهد؛ بکینگ پودر سامانه‌ی کامل با نتیجه‌ی پیش‌بینی‌پذیرتر است. برای جایگزینی جوش شیرین، سه تا چهار برابر بکینگ پودر لازم است.</li><li><strong>دوز مصرف:</strong> ۱٫۵ تا ۶٪ وزن آرد بسته به نوع محصول؛ حدود ۰٫۵ تا ۲٪ وزن محصول نهایی.</li><li><strong>بازار جهانی:</strong> برآوردهای ۲۰۲۵ بین ۰٫۷۸ تا ۴٫۶ میلیارد دلار و رشد سالانه ۳٫۸ تا ۵٫۶٪؛ ارزش صادرات جهانی در ۲۰۲۵ حدود ۲۶۲ تا ۲۷۱ میلیون دلار بوده و مصر با ۶۲ میلیون دلار بزرگ‌ترین صادرکننده است. ترکیه، رقیب منطقه‌ای، حدود ۲٫۸ هزار تن (۲۰۲۵) با قیمت حدود ۲٫۱ دلار بر کیلوگرم صادر می‌کند.</li><li><strong>ایران:</strong> مصرف کل حدود ۵ تا ۲۰ هزار تن در سال (برآورد تحلیلی؛ آمار رسمی مصرف منتشر نشده)؛ طبق آمار گمرک، صادرات ایران از ۳۸۰ تن (۱۴۰۲) به ۷۸۹ تن (ده ماهه‌ی ۱۴۰۴) رسیده، حدود ۸۸٪ آن به افغانستان، و واردات ثبت‌شده‌ای وجود ندارد. مصرف سرانه‌ی برآورد کشورهای پیشرفته بین ۰٫۱۶ تا ۰٫۸۰ کیلوگرم است.</li><li><strong>روش فروش:</strong> ابتدا فروش صنعتی مستقیم به کارخانه‌های کیک و بیسکویت با پشتیبانی فنی، سپس قنادی‌ها و خرده‌فروشی، و در مرحله‌ی بعد برند خصوصی و صادرات.</li></ul>
+</section>
+<section id="s۱">
+<div class="sec-head"><span class="sec-num">۱</span><h2>تعریف و ترکیب بکینگ پودر</h2></div>
+<p>بکینگ پودر (Baking Powder؛ پودر حجم‌دهنده شیمیایی) مخلوطی خشک و آماده‌مصرف است که پس از تماس با آب، گاز دی‌اکسید کربن (CO₂) آزاد می‌کند و به خمیر یا مایه‌ی کیک حجم و بافت متخلخل می‌بخشد. این محصول سه جزء دارد: یک ترکیب بازی (معمولاً جوش شیرین یا بی‌کربنات سدیم)، یک یا چند اسید خوراکی ضعیف، و یک پرکننده یا بافر (معمولاً نشاسته ذرت) که از واکنش زودهنگام اسید و باز جلوگیری می‌کند. واکنش پایه چنین است: NaHCO₃ + H⁺ ← Na⁺ + CO₂ + H₂O.</p>
+<p>انتخاب اسید، سرعت آزادسازی گاز و در نتیجه رفتار محصول در فر را تعیین می‌کند. «ارزش خنثی‌سازی» (Neutralizing Value یا NV) نشان می‌دهد هر ۱۰۰ گرم اسید چند گرم جوش شیرین را خنثی می‌کند و مبنای محاسبه‌ی فرمول است.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>اسید</th><th>اختصار</th><th>ارزش خنثی‌سازی (NV)</th><th>رفتار در خمیر</th></tr></thead><tbody><tr><td>مونوکلسیم فسفات</td><td>MCP</td><td class="num-cell">۸۰</td><td>سریع‌اثر؛ بیشتر در مرحله‌ی اختلاط و در دمای پایین</td></tr><tr><td>کرم تارتار (پتاسیم هیدروژن تارتارات)</td><td class="num-cell">—</td><td class="num-cell">۴۵</td><td>سریع‌اثر؛ در دمای پایین</td></tr><tr><td>سدیم اسید پیروفسفات</td><td>SAPP</td><td class="num-cell">۷۲</td><td>کندتر؛ عمدتاً با گرمای فر فعال می‌شود</td></tr><tr><td>سدیم آلومینیوم فسفات</td><td>SALP</td><td class="num-cell">۱۰۰</td><td>وابسته به گرما؛ آزادسازی گاز در فر</td></tr><tr><td>سدیم آلومینیوم سولفات</td><td>SAS</td><td class="num-cell">۱۰۰</td><td>وابسته به گرما؛ آزادسازی گاز در فر</td></tr></tbody></table></div>
+<p>بر پایه‌ی سرعت واکنش، سه گروه وجود دارد. بکینگ پودر تندعمل (مانند جوش شیرین با MCP) هنگام اختلاط و ایستادن خمیر واکنش می‌دهد. بکینگ پودر کندعمل (مانند جوش شیرین با SAPP) عمدتاً در دمای بالای پخت گاز تولید می‌کند. بکینگ پودر دوعمله (Double-Acting) مخلوطی از دو اسید با سرعت متفاوت است که یک‌بار هنگام اختلاط و بار دوم در فر گاز آزاد می‌کند؛ این نوع رایج‌ترین گونه‌ی تجاری است.</p>
+<p>نمونه‌ی فرمول متداول بر پایه‌ی وزن حدود ۳۰٪ جوش شیرین، ۵ تا ۱۲٪ مونوکلسیم فسفات و ۲۱ تا ۲۶٪ سدیم آلومینیوم سولفات است و مابقی را نشاسته و پرکننده تشکیل می‌دهد. استاندارد هند (IS 1159) حداقل ۱۲٪ وزنی CO₂ قابل‌آزادسازی را الزامی می‌داند. استاندارد ملی ایران نیز با شماره‌ی ۲۸۷۹ برای این محصول وجود دارد؛ پژوهش‌های دانشگاهی ایران (دانشگاه تبریز) نمونه‌های بازار ایران را از نظر قدرت تولید گاز به سه دسته‌ی تندعمل، کندعمل و متوسط تقسیم کرده‌اند.</p>
+</section>
+<section id="s۲">
+<div class="sec-head"><span class="sec-num">۲</span><h2>فرایند تولید</h2></div>
+<p>تولید بکینگ پودر واکنش شیمیایی ندارد و اختلاط فیزیکی خشک سه جزء است؛ مزیت رقابتی نه در تجهیزات پیچیده، بلکه در تأمین اسید خوراکی، طراحی فرمول و جلوگیری از جذب رطوبت است.</p>
+<h3>مواد اولیه و منشأ آن‌ها</h3>
+<ul class="pts"><li><strong>جوش شیرین:</strong> از فرایند سولوی (Solvay) تهیه می‌شود. در این فرایند آمونیاک و گاز CO₂ از محلول آب‌نمک عبور می‌کنند، بلورهای بی‌کربنات با سانتریفیوج جدا و شسته می‌شوند، و برای جوش شیرین خوراکی، کربنات سدیم حل‌شده دوباره کربناته و سرد می‌شود تا بلور بی‌کربنات حاصل شود.</li><li><strong>اسید خوراکی:</strong> فسفات‌ها از سنگ فسفات و اسید فسفریک (به روش خشک یا تر) ساخته می‌شوند. برای تولید SAPP، اسید فسفریک به‌صورت جزئی خنثی و به مونوسدیم فسفات تبدیل می‌شود و سپس در حدود ۲۵۰ درجه‌ی سانتی‌گراد آب‌گیری می‌شود. کرم تارتار و اسید تارتاریک از پسماند شراب‌سازی به دست می‌آیند.</li><li><strong>پرکننده:</strong> نشاسته ذرت (گاهی با کربنات کلسیم، سولفات کلسیم یا لاکتات کلسیم ترکیب می‌شود). نشاسته رطوبت را می‌گیرد، اسید و باز را از هم جدا نگه می‌دارد و قدرت محصول را یکنواخت می‌سازد.</li></ul>
+<h3>مراحل اختلاط و بسته‌بندی</h3>
+<ol class="pts"><li>پذیرش و آزمون مواد اولیه (خلوص، رطوبت، دانه‌بندی).</li><li>خشک‌کردن در صورت نیاز و الک کردن اجزا.</li><li>توزین دقیق اجزا بر پایه‌ی فرمول.</li><li>پیش‌اختلاط اسید و نشاسته (اختیاری) و سپس افزودن جوش شیرین.</li><li>اختلاط در میکسر نواری (Ribbon Blender) تا رسیدن به مخلوط همگن.</li><li>الک نهایی برای حذف توده‌ها.</li><li>آزمون کیفیت: مقدار CO₂ قابل آزادسازی (با دستگاه چیتیک یا روش فشارسنجی)، رطوبت، سرعت واکنش و آزمون پخت نمونه.</li><li>بسته‌بندی در پوشش مانع رطوبت (کیسه‌ی پلی‌اتیلنی و کارتن)، زیرا نفوذ رطوبت همان واکنش را زودهنگام آغاز می‌کند.</li></ol>
+<p>تجهیزات لازم شامل الک، میکسر نواری و دستگاه بسته‌بندی است که از سازندگان استاندارد تجهیزات قابل تهیه است.</p>
+<h3>برآورد هزینه‌ی مواد اولیه‌ی یک تن بکینگ پودر</h3>
+<p>اسید مهم‌ترین اقلام هزینه است: در فرمول مبنای زیر، اسید ۶۵ تا ۷۰٪ هزینه‌ی مواد اولیه و جوش شیرین کمتر از ۱۱٪ آن را تشکیل می‌دهد. فرمول مبنا با محاسبه‌ی ارزش خنثی‌سازی به دست آمده است: با ۲۸٪ جوش شیرین، مقدار SAPP برابر ۲۸ تقسیم بر ۰٫۷۲ یعنی حدود ۳۸٫۹٪ برای خنثی‌سازی کامل است و مابقی (۳۳٫۱٪) نشاسته است. ۲۸٪ جوش شیرین از نظر نظری حدود ۱۴٫۷٪ وزنی CO₂ دارد (نسبت ۴۴ به ۸۴) که با حداقل ۱۲٪ استاندارد هند سازگار است.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>جزء</th><th>سهم وزنی</th><th>قیمت مبنا (دلار بر تن)</th><th>هزینه در هر تن محصول (دلار)</th></tr></thead><tbody><tr><td>جوش شیرین</td><td class="num-cell">۲۸٪</td><td>۲۵۰ (قیمت مرجع FOB)</td><td class="num-cell">۷۰</td></tr><tr><td>سدیم اسید پیروفسفات (SAPP)</td><td class="num-cell">۳۸٫۹٪</td><td>۱٬۰۵۰ تا ۱٬۶۰۰</td><td>۴۰۸ تا ۶۲۲</td></tr><tr><td>نشاسته ذرت</td><td class="num-cell">۳۳٫۱٪</td><td>۴۵۰ تا ۶۰۰</td><td>۱۴۹ تا ۱۹۹</td></tr><tr class="hl"><td>جمع</td><td class="num-cell">۱۰۰٪</td><td class="num-cell">—</td><td>حدود ۶۲۷ تا ۸۹۱</td></tr></tbody></table></div>
+<div class="chart-box"><div class="chart-h" style="height:280px"><canvas id="chCost"></canvas></div><div class="cap">نمودار ۱: سهم هزینه‌ی اجزای فرمول مبنا در یک تن بکینگ پودر (بازه‌ی برآوردی؛ جدول بالا)</div></div>
+<p>قیمت SAPP بر پایه‌ی نرخ FOB آسیا (شانگهای حدود ۱٬۰۵۲ تا ۱٬۱۵۵ دلار در ماه مه ۲۰۲۶ و تایلند حدود ۱٬۵۸۹ دلار در سه‌ماهه‌ی اول ۲۰۲۶) است و هزینه‌ی حمل، تعرفه و تأمین از مسیر واردات را دربر نمی‌گیرد. هزینه‌ی بسته‌بندی، سربار کارخانه و ضایعات نیز به این عدد افزوده می‌شود.</p>
+</section>
+<section id="s۳">
+<div class="sec-head"><span class="sec-num">۳</span><h2>مقایسه‌ی جوش شیرین و بکینگ پودر</h2></div>
+<p>جوش شیرین تنها یک ماده‌ی بازی است و برای فعال‌شدن به ماده‌ی اسیدی در دستور نیاز دارد؛ بکینگ پودر سامانه‌ی کامل حجم‌دهی است که اسید را همراه دارد و فقط به رطوبت و گرما نیاز دارد.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>ویژگی</th><th>جوش شیرین</th><th>بکینگ پودر</th></tr></thead><tbody><tr><td>ترکیب</td><td>بی‌کربنات سدیم خالص</td><td>جوش شیرین + اسید خوراکی + نشاسته</td></tr><tr><td>نیاز به ماده‌ی اسیدی در دستور</td><td>دارد (ماست، دوغ، آب‌لیمو، کاکائوی طبیعی)</td><td>ندارد</td></tr><tr><td>قدرت حجم‌دهی</td><td>بالاتر؛ یک بخش جوش شیرین معادل حدود ۳ تا ۴ بخش بکینگ پودر است</td><td>پایین‌تر؛ به اندازه‌ی سهم جوش شیرین در آن</td></tr><tr><td>زمان آزادشدن گاز</td><td>یک‌مرحله‌ای و فوری پس از تماس با اسید</td><td>معمولاً دومرحله‌ای: هنگام اختلاط و در فر</td></tr><tr><td>اثر بر رنگ و طعم</td><td>افزایش pH و قهوه‌ای‌شدن بیشتر؛ در صورت خنثی نشدن می‌تواند طعم فلزی دهد</td><td>رنگ روشن‌تر و طعم خنثی‌تر</td></tr><tr><td>تحمل زمان انتظار خمیر قبل از پخت</td><td>کم؛ باید سریع پخته شود</td><td>بیشتر؛ می‌توان خمیر را مدتی قبل آماده کرد</td></tr><tr><td>ماندگاری</td><td>بلند</td><td>کمتر؛ با جذب رطوبت از دست می‌دهد؛ آزمون تازگی: یک قاشق چای‌خوری در یک‌سوم فنجان آب داغ باید حباب بدهد</td></tr><tr><td>هزینه‌ی مواد اولیه در هر واحد وزن</td><td>پایین</td><td>بالاتر (هزینه‌ی اسید اصلی است)</td></tr><tr><td>کاربرد غیر پخت</td><td>چندمنظوره (تمیزکاری، خنثی‌سازی اسید و غیره)</td><td>عملاً محدود به پخت</td></tr></tbody></table></div>
+<h3>موارد مصرف</h3>
+<ul class="pts"><li><strong>جوش شیرین:</strong> وقتی دستور ماده‌ی اسیدی دارد؛ وقتی هدف قهوه‌ای‌شدن و پخش‌شدن بیشتر است (کلوچه و بیسکویت نانی، نان‌های سریع)؛ و برای خنثی‌کردن اسیدیته‌ی اضافی.</li><li><strong>بکینگ پودر:</strong> وقتی دستور ماده‌ی اسیدی ندارد؛ وقتی بافت بلند، سبک و کرکی مطلوب است (کیک، مافین، پنکیک، بیسکویت نرم)؛ و وقتی خمیر از پیش آماده می‌شود. در آزمایش مقایسه‌ای کلوچه، نمونه‌های با بکینگ پودر ضخیم‌تر، پفک‌دارتر و کم‌جویدنی‌تر شدند.</li><li><strong>هر دو با هم:</strong> در دستورهایی که ماده‌ی اسیدی دارند و به بالابری ضمانت‌شده هم نیاز دارند؛ جوش شیرین اسیدیته را تنظیم و طعم را شکل می‌دهد و بکینگ پودر اطمینان از رشد را تأمین می‌کند.</li><li><strong>در صنعت:</strong> برای فرآورده‌های کم‌رطوبت مانند کراکر از بی‌کربنات آمونیوم، و برای محصولات کم‌سدیم از بی‌کربنات پتاسیم نیز استفاده می‌شود.</li></ul>
+<h3>مزایای نسبی</h3>
+<ul class="pts"><li><strong>مزایای بکینگ پودر نسبت به جوش شیرین:</strong> نیاز نداشتن به ماده‌ی اسیدی، نتیجه‌ی پیش‌بینی‌پذیرتر، تحمل زمان انتظار خمیر، بافت سبک‌تر و طعم خنثی‌تر.</li><li><strong>مزایای جوش شیرین نسبت به بکینگ پودر:</strong> قدرت بیشتر در هر گرم، هزینه‌ی کمتر، ماندگاری بیشتر، کنترل رنگ و پخش‌شدن محصول، و نبودن فسفات یا آلومینیوم در آن.</li><li><strong>تبدیل متقابل:</strong> برای ساخت بکینگ پودر خانگی یک بخش جوش شیرین با دو بخش کرم تارتار مخلوط می‌شود؛ برای استفاده از بکینگ پودر به جای جوش شیرین، مقدار آن باید حدود سه تا چهار برابر شود.</li></ul>
+</section>
+<section id="s۴">
+<div class="sec-head"><span class="sec-num">۴</span><h2>میزان مصرف در فرمولاسیون</h2></div>
+<p>دوز مصرف بکینگ پودر در عمل بین ۱٫۵ تا ۶٪ وزن آرد است و با نوع محصول تغییر می‌کند.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>محصول</th><th>دوز (درصد وزن آرد)</th><th>منبع</th></tr></thead><tbody><tr><td>کیک</td><td>حدود ۵٪، حداکثر ۶٪</td><td>برگه‌ی فنی کوربیون</td></tr><tr><td>بیسکویت و برخی خمیرها</td><td>۲ تا ۳٪</td><td>برگه‌ی فنی کوربیون</td></tr><tr><td>نان‌های سریع (مافین، پنکیک، اسکون، بیسکویت نرم)</td><td>۳ تا ۶٪</td><td>دائرة‌المعارف بریتانیکا</td></tr><tr><td>کلوچه‌ی کره‌ای و بیسکویت کره‌ای</td><td>۱٫۵٪ (۱۵ گرم در هر کیلوگرم آرد)</td><td>مشخصات فنی محصول اروپایی</td></tr><tr><td>نان خامه‌ای شیرین</td><td>۲٪ (۲۰ گرم در هر کیلوگرم آرد)</td><td>مشخصات فنی محصول اروپایی</td></tr><tr><td>دستور خانگی</td><td>۱ قاشق چای‌خوری (۵ گرم) برای هر فنجان آرد (۱۲۵ گرم) معادل ۴٪</td><td>ویکی‌پدیا</td></tr><tr><td>دستورهای آموزشی آشپزی (برانی، پنکیک، بیسکویت نرم، کیک زرد)</td><td>۳٫۳ تا ۵٫۸٪ (محاسبه‌شده از وزن‌های دستور)</td><td>برگه‌ی آموزشی آژانس آموزش تگزاس</td></tr></tbody></table></div>
+<p>برای تبدیل به درصد وزن محصول نهایی: آرد معمولاً بخش بزرگی از وزن خمیر یا مایه را تشکیل می‌دهد. با فرض سهم آرد بین ۳۰ تا ۶۰٪ وزن خمیر (فرض گزارش، نه آمار منتشرشده)، مصرف بکینگ پودر در محصول نهایی به حدود ۰٫۵ تا ۲٪ وزن آن می‌رسد. کمبود بکینگ پودر بافت سخت و فشرده می‌سازد؛ مصرف بیش از حد باعث فرونشستن محصول و طعم تلخ می‌شود، و وزن‌کشی دقیق و الک‌کردن هم‌زمان با آرد برای یکنواختی ضروری است.</p>
+</section>
+<section id="s۵">
+<div class="sec-head"><span class="sec-num">۵</span><h2>بازار جهانی</h2></div>
+<p>برآوردهای اندازه‌ی بازار جهانی بکینگ پودر در سال ۲۰۲۵ بین ۰٫۷۸ تا ۴٫۶ میلیارد دلار متغیر است (شش برابر اختلاف)، اما همه‌ی ناشران رشد سالانه‌ی ملایم حدود ۳٫۸ تا ۵٫۶ درصد را پیش‌بینی می‌کنند. به دلیل این پراکندگی، هیچ عدد واحدی قابل اتکا نیست و دامنه‌ی ۱٫۲ تا ۴٫۶ میلیارد دلار باید به‌عنوان محدوده‌ی مرجع به کار برده شود. نرخ رشد مرکب سالانه (CAGR) یعنی متوسط رشد سالانه‌ی اندازه‌ی بازار با احتساب اثر مرکب.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>ناشر (برآورد برای سال ۲۰۲۵)</th><th>اندازه‌ی بازار (میلیارد دلار)</th><th>نرخ رشد مرکب سالانه</th></tr></thead><tbody><tr><td>Maia Research</td><td class="num-cell">۰٫۷۸</td><td>۳٫۷۶٪ (۲۰۲۵ تا ۲۰۳۳)</td></tr><tr><td>Marketintelo</td><td class="num-cell">۱٫۲</td><td>۵٫۲٪ (۲۰۲۵ تا ۲۰۳۴)</td></tr><tr><td>Market Data Forecast</td><td class="num-cell">۳٫۹۷</td><td>۵٫۳٪ (۲۰۲۶ تا ۲۰۳۴)</td></tr><tr><td>Market Glass</td><td class="num-cell">۴٫۱</td><td>۴٫۳٪ (۲۰۲۵ تا ۲۰۳۲)</td></tr><tr><td>Knowledge Sourcing</td><td class="num-cell">۴٫۲۳</td><td>۴٫۷۹٪ (۲۰۲۵ تا ۲۰۳۰)</td></tr><tr><td>Coherent Market Insights</td><td class="num-cell">۴٫۶۲</td><td>۵٫۵۵٪ (۲۰۲۵ تا ۲۰۳۲)</td></tr></tbody></table></div>
+<div class="chart-box"><div class="chart-h" style="height:300px"><canvas id="chMkt"></canvas></div><div class="cap">نمودار ۲: برآورد اندازه‌ی بازار جهانی بکینگ پودر در سال ۲۰۲۵ به تفکیک ناشر (پراکندگی ششبرابری)</div></div>
+<p>سهم مناطق نیز یکسان گزارش نشده است. یکی از ناشران آسیا-اقیانوسیه را با ۳۵٫۲٪ در صدر، و سپس اروپا (۲۸٫۴٪)، آمریکای شمالی (۱۸٫۶٪)، آمریکای لاتین (۱۱٫۹٪) و خاورمیانه و آفریقا (۵٫۹٪) می‌داند؛ گزارش دیگری که دامنه را به «بکینگ پودر و میکس‌ها» گسترده است، آمریکای شمالی را با ۳۴٫۷٪ بزرگ‌ترین منطقه می‌داند. این تضاد بیشتر از آنکه نشانه‌ی خطا باشد، ناشی از تفاوت در تعریف دامنه است. نوع مغلبه نیز مشخص است: بکینگ پودر فسفاتی بزرگ‌ترین بخش است و نوع دوعمله حدود ۳۸٫۵٪ سهم دارد. محرک‌های رشد شامل شهرنشینی، گسترش صنایع نانوایی و شیرینی‌پزی و نفوذ سبک زندگی غربی در کشورهایی مانند هند و چین است؛ محدودیت‌ها شامل جایگزین بودن جوش شیرین، نگرانی‌های سلامتی مرتبط با آلومینیوم و نوسان قیمت مواد اولیه است.</p>
+<h3>تجارت بین‌المللی (کد تعرفه‌ی HS 2102.30)</h3>
+<p>کد HS 2102.30 شامل «بکینگ پودرهای آماده» است (HS نظام طبقه‌بندی جهانی کالاها است). ارقام زیر از داده‌های بازاریابی تجارت جهانی (ITC Trade Map، سال میلادی) است. ارزش صادرات جهانی این کالا از ۱۳۱٫۵ میلیون دلار در سال ۲۰۱۶ به ۲۵۲٫۸ میلیون در ۲۰۲۴ و ۲۶۲٫۴ میلیون دلار در ۲۰۲۵ رسیده است و رشد مرکب سالانه‌ی آن در این ده سال حدود ۸٪ بوده است.</p>
+<p>نکته‌ی داده: جمع کل جهان در فایل سری زمانی ۲۶۲٫۴ میلیون دلار است . با مقایسه‌ی این عدد با برآوردهای اندازه‌ی بازار (۱٫۲ تا ۴٫۶ میلیارد دلار)، صادرات بین‌المللی حدود ۶ تا ۲۲ درصد مصرف جهانی است؛ بیشتر بکینگ پودر در همان کشورهای مصرف‌کننده تولید می‌شود.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>صادرکننده (۲۰۲۵)</th><th>ارزش (میلیون دلار)</th><th>حجم (هزار تن)</th><th>ارزش هر کیلوگرم (دلار)</th><th>سهم جهانی (درصد)</th><th>رشد ارزش در پنج سال (درصد سالانه)</th></tr></thead><tbody><tr><td>مصر</td><td class="num-cell">۶۲٫۱</td><td class="num-cell">۱۷٫۹</td><td class="num-cell">۳٫۴۶</td><td class="num-cell">۲۲٫۹</td><td class="num-cell">۱۳</td></tr><tr><td>آمریکا</td><td class="num-cell">۲۶٫۶</td><td class="num-cell">۷٫۶</td><td class="num-cell">۳٫۴۹</td><td class="num-cell">۹٫۸</td><td class="num-cell">۹</td></tr><tr><td>چین</td><td class="num-cell">۲۱٫۹</td><td class="num-cell">۱۶٫۶</td><td class="num-cell">۱٫۳۲</td><td class="num-cell">۸٫۱</td><td class="num-cell">۱۰</td></tr><tr><td>آلمان</td><td class="num-cell">۱۶٫۰</td><td class="num-cell">۵٫۲</td><td class="num-cell">۳٫۰۷</td><td class="num-cell">۵٫۹</td><td class="num-cell">۱۱</td></tr><tr><td>کنیا</td><td class="num-cell">۱۴٫۲</td><td class="num-cell">۹٫۵</td><td class="num-cell">۱٫۴۹</td><td class="num-cell">۵٫۲</td><td class="num-cell">۹</td></tr><tr><td>تایلند</td><td class="num-cell">۱۳٫۳</td><td class="num-cell">۸٫۶</td><td class="num-cell">۱٫۵۴</td><td class="num-cell">۴٫۹</td><td class="num-cell">۹</td></tr><tr><td>مالت</td><td class="num-cell">۱۲٫۸</td><td class="num-cell">۲٫۶</td><td class="num-cell">۴٫۸۶</td><td class="num-cell">۴٫۷</td><td class="num-cell">۱۴</td></tr><tr><td>آفریقای جنوبی</td><td class="num-cell">۸٫۸</td><td class="num-cell">۱٫۹</td><td class="num-cell">۴٫۶۲</td><td class="num-cell">۳٫۲</td><td class="num-cell">۱۰</td></tr><tr><td>مالزی</td><td class="num-cell">۶٫۹</td><td class="num-cell">۲٫۳</td><td class="num-cell">۳٫۰۵</td><td class="num-cell">۲٫۵</td><td class="num-cell">۱۵</td></tr><tr><td>سنگاپور</td><td class="num-cell">۶٫۵</td><td class="num-cell">۰٫۸</td><td class="num-cell">۷٫۸۶</td><td class="num-cell">۲٫۴</td><td class="num-cell">۳۶</td></tr><tr><td>ترکیه (رتبه‌ی ۱۴)</td><td class="num-cell">۵٫۸</td><td class="num-cell">۲٫۸</td><td class="num-cell">۲٫۰۶</td><td class="num-cell">۲٫۱</td><td class="num-cell">۷</td></tr><tr class="hl"><td>ایران</td><td class="num-cell">۰٫۲۱</td><td class="num-cell">۰٫۱۶</td><td class="num-cell">۱٫۳۴</td><td class="num-cell">۰٫۱</td><td class="num-cell">—</td></tr></tbody></table></div>
+<div class="chart-box"><div class="chart-h" style="height:420px"><canvas id="chExp"></canvas></div><div class="cap">نمودار ۳: صادرکنندگان نخست بکینگ پودر در ۲۰۲۵ (HS 2102.30) به‌همراه ترکیه و ایران؛ ایران با رنگ متمایز</div></div>
+<p>ده صادرکننده‌ی نخست حدود ۱۸۹ میلیون دلار یعنی ۷۰٪ صادرات جهانی را در اختیار دارند. مصر در سال ۲۰۱۹ فقط ۱٫۵ میلیون دلار صادرات داشت و در شش سال به ۶۲ میلیون دلار رسید؛ این جهش نشان می‌دهد بازار برای تازه‌واردانِ با قیمت و کیفیت مناسب باز است. ارزش هر کیلوگرم صادرات در بین همین کشورها از ۱٫۳ تا ۴٫۹ دلار متغیر است (سنگاپور با ۷٫۹ دلار کانون صادرات مجدد است و مبنا قرار نمی‌گیرد). ترکیه، نزدیک‌ترین رقیب منطقه‌ای، با ۲٫۸ هزار تن و حدود ۲٫۱ دلار بر کیلوگرم، ارزان‌تر از مصر و آمریکا و در حجم کمتر عرضه می‌کند. روسیه با ۶٫۲ میلیون دلار و رشد ۱۹۰٪ در دو سال در حال تبدیل‌شدن به یک صادرکننده‌ی منطقه‌ای است. صادرات ایران در سال ۲۰۲۵ فقط ۲۱۰ هزار دلار (حدود ۱۵۷ تن، ۰٫۰۸٪ سهم جهانی) با قیمت حدود ۱٫۳ دلار بر کیلوگرم بوده است. یعنی ایران هم‌اکنون حضور صادراتی قابل‌اشاره ندارد و این عدد باید با آمار گمرکی داخلی تطبیق داده شود.</p>
+<h3>واردکنندگان بزرگ</h3>
+<p>داده‌ی جدول زیر از گزارش مستقیم کشورهای واردکننده به مرکز تجارت جهانی (سال ۲۰۲۵) است. جمع واردات گزارش‌شده ۲۷۲٫۵ میلیون دلار است. حجم تجارت جهانی حدود ۱۰۷ هزار تن و میانگین وزنی قیمت حدود ۲٫۵۴ دلار بر کیلوگرم است؛ حجم صادرات گزارش‌شده از سوی صادرکنندگان (۱۱۱ هزار تن) با این رقم هم‌خوان است، پس مبنای حجم و قیمت جهانی قابل اتکاست. ده واردکننده‌ی نخست ۴۶٫۴٪ ارزش را در اختیار دارند.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>واردکننده (۲۰۲۵)</th><th>ارزش (میلیون دلار)</th><th>حجم (هزار تن)</th><th>قیمت (دلار بر کیلوگرم)</th><th>سهم از ارزش</th></tr></thead><tbody><tr><td>عربستان سعودی</td><td class="num-cell">۴۰٫۵</td><td class="num-cell">۱۵٫۰</td><td class="num-cell">۲٫۷۰</td><td class="num-cell">۱۴٫۹٪</td></tr><tr><td>کانادا</td><td class="num-cell">۲۱٫۹</td><td class="num-cell">۶٫۰</td><td class="num-cell">۳٫۶۱</td><td class="num-cell">۸٫۰٪</td></tr><tr><td>فیلیپین</td><td class="num-cell">۱۴٫۲</td><td class="num-cell">۸٫۱</td><td class="num-cell">۱٫۷۵</td><td class="num-cell">۵٫۲٪</td></tr><tr><td>آمریکا</td><td class="num-cell">۱۱٫۳</td><td class="num-cell">۵٫۹</td><td class="num-cell">۱٫۹۳</td><td class="num-cell">۴٫۲٪</td></tr><tr><td>آنگولا</td><td class="num-cell">۹٫۰</td><td class="num-cell">۳٫۶</td><td class="num-cell">۲٫۵۱</td><td class="num-cell">۳٫۳٪</td></tr><tr><td>اندونزی</td><td class="num-cell">۸٫۱</td><td class="num-cell">۲٫۰</td><td class="num-cell">۴٫۱۰</td><td class="num-cell">۳٫۰٪</td></tr><tr><td>اوگاندا</td><td class="num-cell">۵٫۶</td><td class="num-cell">۳٫۴</td><td class="num-cell">۱٫۶۱</td><td class="num-cell">۲٫۰٪</td></tr><tr><td>نیجریه</td><td class="num-cell">۵٫۶</td><td class="num-cell">۴٫۹</td><td class="num-cell">۱٫۱۳</td><td class="num-cell">۲٫۰٪</td></tr><tr><td>لهستان</td><td class="num-cell">۵٫۴</td><td class="num-cell">۱٫۹</td><td class="num-cell">۲٫۷۸</td><td class="num-cell">۲٫۰٪</td></tr><tr><td>آلمان</td><td class="num-cell">۵٫۰</td><td class="num-cell">۲٫۱</td><td class="num-cell">۲٫۴۳</td><td class="num-cell">۱٫۸٪</td></tr></tbody></table></div>
+<div class="chart-box"><div class="chart-h" style="height:360px"><canvas id="chImp"></canvas></div><div class="cap">نمودار ۴: ده واردکننده‌ی بزرگ بکینگ پودر در ۲۰۲۵</div></div>
+<p>عربستان سعودی با ۴۰٫۵ میلیون دلار و ۱۵ هزار تن (۱۴٫۹٪ ارزش واردات جهان) بزرگ‌ترین واردکننده است و بر خلاف بیشتر مقصدهای اصلی، نزدیک به ایران است. در همسایگی ایران، واردات گزارش‌شده‌ی امارات ۴٫۱ میلیون دلار (۱٫۲۳ هزار تن، ۳٫۳۴ دلار بر کیلوگرم)، عراق ۲٫۱ میلیون دلار (۱٫۳۶ هزار تن، ۱٫۵۴ دلار بر کیلوگرم)، قزاقستان ۱٫۱ میلیون دلار (بدون ثبت وزن) و ازبکستان ۰٫۵ میلیون دلار (۱۶۹ تن، ۲٫۸۸ دلار بر کیلوگرم) است؛ افغانستان فقط ۴ هزار دلار گزارش کرده است. قیمت وارداتی عراق تقریباً نصف امارات است و از نظر رقابت قیمتی، عراق بازاری حساس به قیمت است. نشانه‌های قیمت تکمیلی کشورهای هم‌مرز: واردات آذربایجان از ترکیه در سال ۲۰۲۴ بین ۲٫۸۴ تا ۲٫۹۲ دلار بر کیلوگرم بوده (<a href="https://dir.tridge.com/prices/baking-powder/AZ" target="_blank" rel="noopener">Tridge</a>)؛ یک تراکنش نمونه‌ی صادرات ترکیه به قزاقستان در ژانویه‌ی ۲۰۲۶ ۶٫۱۸ دلار بر کیلوگرم ثبت شده (<a href="https://www.tridge.com/market-overview/baking-powder/TR" target="_blank" rel="noopener">Tridge</a>). این دو نشانه موردی هستند و میانگین بازار نیستند.</p>
+<p>تأمین‌کنندگان پنج واردکننده‌ی منتخب (داده‌ی واردات هر کشور به تفکیک صادرکننده، ۲۰۲۵؛ سهم از ارزش و قیمت به دلار بر کیلوگرم):</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>واردکننده</th><th>تأمین‌کنندگان اصلی</th></tr></thead><tbody><tr><td>عربستان سعودی (۴۰٫۵ میلیون دلار)</td><td>فرانسه ۲۱٪ (۳٫۸۰)، مصر ۱۴٪ (۱٫۸۲)، چین ۱۳٪ (۴٫۰۸)، روسیه ۱۲٪ (۲٫۴۱)، آمریکا ۱۱٪ (۴٫۸۱)</td></tr><tr><td>کانادا (۲۱٫۹ میلیون دلار)</td><td>آمریکا ۹۴٪ (۳٫۷۱)، چین ۳٪ (۱٫۷۴)، مکزیک ۱٪ (۳٫۴۲)</td></tr><tr><td>فیلیپین (۱۴٫۲ میلیون دلار)</td><td>تایلند ۹۷٪ (۱٫۷۴)، مالزی ۱٪ (۱٫۴۱)، چین ۱٪ (۱٫۱۸)</td></tr><tr><td>آمریکا (۱۱٫۳ میلیون دلار)</td><td>مکزیک ۵۳٪ (۲٫۸۴)، چین ۱۳٪ (۰٫۶۰)، مصر ۹٪ (۱٫۸۱)، کانادا ۶٪ (۲٫۵۵)، ایتالیا ۵٪ (۶٫۱۸)</td></tr><tr><td>آنگولا (۹٫۰ میلیون دلار)</td><td>چین ۴۷٪ (۲٫۰۷)، ترکیه ۳۸٪ (۳٫۰۰)، هند ۵٪ (۲٫۵۲)، آفریقای جنوبی ۴٪ (۵٫۹۵)</td></tr></tbody></table></div>
+<p>نتیجه: بازارهای کوچک‌تر معمولاً به یک تأمین‌کننده‌ی همسایه یا ارزان وابسته‌اند (تایلند برای فیلیپین، آمریکا برای کانادا)؛ اما عربستان و آنگولا چند تأمین‌کننده‌ی رقیب دارند و ورود تازه‌واردان با قیمت رقابتی در آن‌ها آسان‌تر است. ایران در فهرست تأمین‌کنندگان این پنج کشور دیده نمی‌شود.</p>
+<h3>صنایع مصرف‌کننده</h3>
+<ul class="pts"><li><strong>شیرینی، شکلات و بیسکویت:</strong> تولید این صنعت حدود ۱٫۷ میلیون تن در سال و ظرفیت اسمی آن ۲٫۴ میلیون تن گزارش شده است؛ مصرف سرانه‌ی شیرینی و شکلات پیش از شیوع کرونا حدود ۲۱ کیلوگرم در سال بوده است (<a href="https://www.eghtesadonline.com/en/news/749935/irans-chocolate-pastry-exports-at-450m" target="_blank" rel="noopener">اقتصاد آنلاین</a>). این ارقام مربوط به گزارش‌های سال‌های حدود ۲۰۱۹ تا ۲۰۲۱ است و به سال مالی ایران (نه سال میلادی) اشاره دارد. تعداد واحدها نیز یکسان گزارش نشده: ۳۵۰ واحد تولید شکلات و شیرینی در یک گزارش، و حدود ۱٬۱۰۰ واحد فعال صنایع قنادی در گزارشی دیگر (<a href="https://www.eghtesadonline.com/en/news/779314/private-sector-dominates-confectionery-industry" target="_blank" rel="noopener">اقتصاد آنلاین</a>) که احتمالاً به تفاوت در تعریف برمی‌گردد.</li><li><strong>پودرهای کیک و پنکیک نیمه‌آماده:</strong> این محصولات خود سامانه‌ی حجم‌دهی دارند و سازندگان آن‌ها خریدار بکینگ پودر یا اجزای آن‌اند (نمونه‌های متعدد از محصولات داخلی در <a href="https://emalls.ir/%d9%85%d8%b4%d8%ae%d8%b5%d8%a7%d8%aa_%d9%be%d9%88%d8%af%d8%b1-%da%86%db%8c%d8%b2-%da%a9%db%8c%da%a9-265-%da%af%d8%b1%d9%85%db%8c-%d8%a8%d9%86%e2%80%8c%d8%b3%d8%a7~id~964577" target="_blank" rel="noopener">فهرست فروشگاه‌های اینترنتی</a> دیده می‌شود).</li><li><strong>قنادی‌ها، نانوایی‌های صنعتی و مصرف خانگی:</strong> در بسته‌های ۱۰۰ تا ۱۵۰ گرمی و یک کیلوگرمی به فروش می‌رسد.</li><li><strong>صادرات شیرینی و شکلات:</strong> عراق، افغانستان و آذربایجان مقاصد اصلی صادرات شیرینی ایران هستند؛ این مسیر تقاضای غیرمستقیم برای ماده‌ی حجم‌دهنده ایجاد می‌کند.</li></ul>
+<h3>برآورد حجم مصرف</h3>
+<p>مصرف صنعتی بر پایه‌ی فرمول زیر برآورد شد: ۱٫۷ میلیون تن تولید × ۴۰ تا ۶۰٪ سهم محصولات دارای حجم‌دهی شیمیایی (کیک، بیسکویت، کلوچه) × ۰٫۵ تا ۱٫۵٪ مصرف در وزن محصول ≈ ۳٬۴۰۰ تا ۱۵٬۳۰۰ تن در سال. سهم کیک و بیسکویت و دوز مصرف فرض هستند و باید با پیمایش سازندگان اصلی اصلاح شوند. با افزودن مصرف قنادی‌ها، نانوایی‌ها، محصولات نیمه‌آماده و مصرف خانگی (فرض: ۱٬۰۰۰ تا ۵٬۰۰۰ تن)، مصرف کل حدود ۵٬۰۰۰ تا ۲۰٬۰۰۰ تن در سال می‌شود. اگر این حجم با قیمت‌های وارداتی جهانی (۱٫۹ تا ۳٫۵ دلار بر کیلوگرم) ارزش‌گذاری شود، ارزش بازار حدود ۱۰ تا ۷۰ میلیون دلار می‌شود؛ قیمت واقعی فروش عمده در ایران احتمالاً پایین‌تر است.</p>
+<h3>وضعیت تولید، استاندارد و تجارت</h3>
+<p>پژوهش‌های داخلی بکینگ پودرهای موجود در بازار ایران را با دستگاه چیتیک بر اساس قدرت تولید گاز به سه گروهِ تندعمل، کندعمل و متوسط تقسیم کرده‌اند  آمار گمرکی رسمی ایران برای کد تعرفه‌ی «۲۱۰۲۳۰۰۰» برای سه دوره‌ی ۱۴۰۲، ۱۴۰۳ و ده ماهه‌ی ۱۴۰۴ در ادامه آمده است.</p>
+<p>بر اساس داده‌های تجارت جهانی ۲۰۲۵، صادرات ایران از این کالا فقط ۲۱۰ هزار دلار (حدود ۱۵۷ تن، با قیمت حدود ۱٫۳ دلار بر کیلوگرم) بوده است؛ یعنی صادرات موجود کوچک است و نمی‌تواند مبنای ارزیابی ظرفیت بازار داخلی قرار گیرد.</p>
+<h3>آمار گمرک ایران (کد تعرفه‌ی ۲۱۰۲۳۰۰۰)</h3>
+<p>آمار رسمی گمرک جمهوری اسلامی ایران بر پایه‌ی سال هجری شمسی است (۱۴۰۲ تقریباً مارس ۲۰۲۳ تا مارس ۲۰۲۴ و ۱۴۰۳ مارس ۲۰۲۴ تا مارس ۲۰۲۵)؛ تبدیل آن به سال میلادی ممکن نیست و ارقام زیر به‌صورت سال هجری شمسی آورده شده است.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>دوره</th><th>وزن صادرات (تن)</th><th>ارزش (هزار دلار)</th><th>قیمت (دلار بر کیلوگرم)</th></tr></thead><tbody><tr><td>۱۴۰۲ (کامل)</td><td class="num-cell">۳۸۰</td><td class="num-cell">۷۴۷</td><td class="num-cell">۱٫۹۶</td></tr><tr><td>۱۴۰۳ (کامل)</td><td class="num-cell">۶۶۲</td><td class="num-cell">۱٬۱۴۲</td><td class="num-cell">۱٫۷۲</td></tr><tr><td>۱۴۰۴ (ده ماهه، نه قطعی)</td><td class="num-cell">۷۸۹</td><td class="num-cell">۱٬۰۶۴</td><td class="num-cell">۱٫۳۵</td></tr></tbody></table></div>
+<div class="chart-box"><div class="chart-h" style="height:280px"><canvas id="chIran"></canvas></div><div class="cap">نمودار ۵: وزن صادرات ایران به تفکیک دوره (گمرک؛ ۱۴۰۴ ده‌ماهه و غیرقطعی)</div></div>
+<p>واردات این کالا در هیچ‌یک از سه دوره ثبت نشده است؛ یعنی بازار ایران به‌طور کامل از تولید داخلی تأمین می‌شود و قیمت وارداتی به‌عنوان مرجع قیمت داخلی وجود ندارد. وزن صادرات از ۱۴۰۲ به ۱۴۰۳ حدود ۷۴٪ رشد کرده و در ده ماه نخست ۱۴۰۴ به ۷۸۹ تن رسیده است (حدود ۱۹٪ بیشتر از کل سال ۱۴۰۳ با دو ماه کمتر). مقصد غالب افغانستان است (۶۹۳ تن، ۸۸٪ وزن در ۱۴۰۴) و پس از آن ترکمنستان (۴۵ تن)، عراق (۱۹ تن)، تاجیکستان (۱۹ تن) و موزامبیک (۱۰ تن) هستند؛ آذربایجان، آلمان، ترکیه و امارات ناچیز هستند. بیشترین صادرات از گمرک مشهد (۵۹۰ تن) و دوغارون (۱۲۷ تن) انجام شده است.</p>
+<p>دو نکته‌ی مهم در کیفیت داده:</p>
+<ul class="pts"><li><strong>اختلاف با آمار جهانی:</strong> در پایگاه تجارت جهانی صادرات ایران در ۲۰۲۵ فقط ۱۵۷ تن ثبت شده؛ آمار گمرک حدود پنج برابر این مقدار را نشان می‌دهد. دلیل احتمالی آن این است که مقصد عمده (افغانستان) واردات خود را به این پایگاه گزارش نمی‌دهد. برای این کالا، آمار گمرک ایران معتبرتر از آمار بین‌المللی است.</li><li><strong>قیمت اظهارشده:</strong> ارزش هر کیلوگرم صادرات ۱٫۳۵ تا ۱٫۹۶ دلار است؛ کمتر از ارزش صادرات ترکیه (۲٫۱۱) و بسیار کمتر از مصر (۳٫۵). این قیمت از هزینه‌ی مواد اولیه (۰٫۶۳ تا ۰٫۸۹ دلار بر کیلوگرم) نیز فاصله کمی دارد و با احتمال زیاد کم‌اظهاری یا فروش کم‌کیفیت به افغانستان همراه است</li><li>نتیجه: صادرات ایران همچنان کمتر از ۱٬۰۰۰ تن در سال است و به یک مقصد متمرکز؛ اما رشد سریع آن نشان می‌دهد محصول در داخل تولید می‌شود و رقبای داخلی در بازار صادراتی همسایه‌ها فعالند. این آمار مصرف داخلی را نشان نمی‌دهد و برآورد ۵ تا ۲۰ هزار تن مصرف به همان صورت باقی می‌ماند.</li></ul>
+<h3>قیمت قفسه‌ی خرده‌فروشی (ایران و بازارهای هدف)</h3>
+<div class="table-wrap t-wrap"><table><thead><tr><th>بازار و منبع</th><th>بسته‌ی بررسی‌شده</th><th>قیمت قفسه (دلار بر کیلوگرم)</th><th>قیمت واردات ۲۰۲۵ (دلار بر کیلوگرم)</th><th>ضریب قفسه به واردات</th></tr></thead><tbody><tr><td>ایران، دیجی‌کالا</td><td>۹ برند، ۲۰۰ گرم تا ۱ کیلوگرم</td><td>۱٫۱ تا ۲٫۳ (میانه‌ی حدود ۱٫۷)</td><td>واردات ثبت‌شده‌ی گمرکی ندارد</td><td>قابل محاسبه نیست</td></tr><tr><td>ایران، ترب</td><td>۱ تا ۱۰ کیلوگرم</td><td>۱٫۰ تا ۲٫۵ (بیشتر ۲٫۲ تا ۲٫۵)</td><td>واردات ثبت‌شده‌ی گمرکی ندارد</td><td>قابل محاسبه نیست</td></tr><tr><td>قزاقستان، کاسپی (فروشندگان از جمله مگنوم)</td><td>۵۰۰ گرم تا ۱ کیلوگرم</td><td>۶٫۱ تا ۷٫۷</td><td>۱٫۱ میلیون دلار واردات، بدون ثبت وزن</td><td>قابل محاسبه نیست</td></tr><tr><td>قزاقستان، کاسپی</td><td>ساشه‌ی ۱۰ تا ۳۰ گرم</td><td>۱۳ تا ۳۵</td><td class="num-cell">—</td><td class="num-cell">—</td></tr><tr><td>امارات (کارفور)</td><td>چند بسته‌ی نمونه</td><td>۶٫۹۵ تا ۱۰٫۳۲</td><td class="num-cell">۳٫۳۴</td><td>۲٫۱ تا ۳٫۱ برابر</td></tr><tr><td>عربستان (لولو)</td><td>چند بسته‌ی نمونه</td><td>۱۱٫۶ تا ۱۳٫۷</td><td class="num-cell">۲٫۷۰</td><td>۴٫۳ تا ۵٫۱ برابر</td></tr><tr><td>عراق (فروشگاه آنلاین طلبات‌مارت)</td><td>چند بسته‌ی نمونه</td><td>۲٫۶۸ تا ۳٫۵۸</td><td class="num-cell">۱٫۵۴</td><td>۱٫۷ تا ۲٫۳ برابر</td></tr></tbody></table></div>
+<p>روش: قیمت‌های ایران و قزاقستان در آبان ۱۴۰۵ (نوامبر ۲۰۲۶) مستقیم از صفحه‌ی جست‌وجوی دیجی‌کالا، ترب و کاسپی خوانده شد. در دیجی‌کالا بیست محصول با نام بکینگ پودر بود؛ برای محاسبه‌ی قیمت هر کیلوگرم فقط بسته‌های ۲۰۰ گرم و بزرگ‌تر (نه ساشه‌های کوچک) و حدود ۲۷۱ هزار تومان برای هر دلار در نظر گرفته شد، و برای قزاقستان نرخ رسمی ۴۶۵٫۱۴ تنگه برای هر دلار (۶ نوامبر ۲۰۲۶). قیمت ساشه‌ها و بسته‌های ۷۵ تا ۱۲۰ گرمی چند برابر است (در دیجی‌کالا بین ۰٫۶ تا ۵ دلار برای هر ۱۰۰ گرم برآورد می‌شود) و نباید با قیمت قفسه‌ی بسته‌های بزرگ مقایسه شود. بسته‌ی ۱ کیلوگرمی سرمد ۳۰۰ هزار تومان (حدود ۱٫۱ دلار)، ۱ کیلوگرمی مهسا از ۶۴۰ هزار تومان (حدود ۲٫۴ دلار) و ۱ کیلوگرمی فریمان از ۵۹۰ هزار تومان (حدود ۲٫۲ دلار) است. قیمت امارات، عربستان و عراق از صفحه‌ی فروشگاه‌ها در یک زمان و برای چند بسته‌ی نمونه است و با نرخ‌های ثابت درهم (۳٫۶۷۲۵) و ریال سعودی (۳٫۷۵) و حدود ۱٬۵۵۳ دینار عراقی برای هر دلار تبدیل شد.</p>
+<p>نتیجه‌ی کاربردی: قیمت قفسه‌ی بسته‌ی ۱ کیلوگرمی در ایران (حدود ۱ تا ۲٫۵ دلار) پایین‌تر از قفسه‌ی عراق، امارات و عربستان و حدود یک‌سوم تا یک‌چهارم قفسه‌ی قزاقستان (۶ تا ۷٫۷ دلار) است. این یعنی حاشیه‌ی توزیع و خرده‌فروشی در عربستان بالاترین (۴ تا ۵ برابر واردات) و در عراق کمترین (کمتر از ۲٫۵ برابر) است؛ و بازار قزاقستان با قیمت قفسه‌ی ۶ دلار به بالا، در صورت تأمین از ایران با قیمت کمتر از ۲ دلار در ایران، فضای رقابتی روشنی دارد. این برآورد فقط از چند بسته‌ی نمونه است؛ برای قیمت‌گذاری قطعی پیمایش میدانی قفسه یا استعلام از خریداران لازم است.</p>
+</section>
+<section id="s۶">
+<div class="sec-head"><span class="sec-num">۶</span><h2>مصرف سرانه</h2></div>
+<p>آمار رسمی یا منتشرشده‌ی مصرف سرانه‌ی بکینگ پودر برای کشورهای توسعه‌یافته در منابع قابل دسترس یافت نشد؛ ارقام زیر برآوردهای تحلیلی است که روش محاسبه و فرض‌های آن‌ها شفاف نشان داده شده است. مصرف سرانه محصولات کیک و شیرینی در ایران حدود ۲۱ کیلوگرم در سال گزارش شده است؛ این عدد مصرف محصول نهایی است و شکلات را هم در برمی‌گیرد.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>منطقه</th><th>مصرف سرانه‌ی بکینگ پودر (کیلوگرم در سال)</th><th>روش برآورد</th></tr></thead><tbody><tr><td>کشورهای دارای صنعت پخت پیشرفته</td><td>۰٫۱۶ تا ۰٫۸۰ (میانه حدود ۰٫۴۲)</td><td>آرد مصرفی در محصولات حجم‌دار شیمیایی (۸ تا ۱۶ کیلوگرم بر نفر، فرض) × دوز ۲ تا ۵٪</td></tr><tr><td>میانگین جهان</td><td>۰٫۰۴ تا ۰٫۲۸</td><td>بازار ۱٫۲ تا ۴٫۶ میلیارد دلار ÷ قیمت ۲ تا ۳٫۵ دلار بر کیلوگرم ÷ جمعیت حدود ۸٫۲ میلیارد</td></tr><tr class="hl"><td>ایران</td><td>۰٫۰۶ تا ۰٫۲۲</td><td>۵٬۰۰۰ تا ۲۰٬۰۰۰ تن ÷ جمعیت حدود ۹۰ میلیون نفر</td></tr><tr><td>عربستان، کانادا، آنگولا، فیلیپین (حداقل مبتنی بر واردات)</td><td>۰٫۳۹ ، ۰٫۱۵ ، ۰٫۱۰ ، ۰٫۰۷</td><td>واردات ۲۰۲۵ ÷ جمعیت تقریبی هر کشور؛ تولید داخلی لحاظ نشده است، پس مصرف واقعی بیشتر است</td></tr></tbody></table></div>
+</section>
+<section id="s۷">
+<div class="sec-head"><span class="sec-num">۷</span><h2>منابع</h2></div>
+<p>داده‌های تجارت جهانی کد ۲۱۰۲۳۰ ۲۰۱۶ تا ۲۰۲۵ (دو فایل اکسل ارائه‌شده برای این پژوهش: «کشورهای صادرکننده در ۲۰۲۵» و «اقتصادهای صادرکننده»).</p>
+<p>آمار رسمی گمرک جمهوری اسلامی ایران برای تعرفه‌ی ۲۱۰۲۳۰۰۰: صادرات و واردات سال‌های ۱۴۰۲ و ۱۴۰۳ و صادرات و واردات ده ماهه‌ی ۱۴۰۴ (شش فایل اکسل ارائه‌شده برای این پژوهش؛ بر پایه‌ی سال هجری شمسی).</p>
+<p>داده‌های تکمیلی مرکز تجارت جهانی (۲۰۲۵): فهرست واردکنندگان و صادرکنندگان به تفکیک کشور و واردات پنج کشور عربستان، آمریکا، کانادا، آنگولا و فیلیپین به تفکیک صادرکننده. نکات کیفیت داده: (۱) رکورد چاد حذف شد؛ (۲) مرکز تجارت جهانی واردات ایران را ۱۴۷ تن (۲۵۶ هزار دلار) ثبت کرده، اما آمار گمرک ایران برای تعرفه‌ی ۲۱۰۲۳۰۰۰ واردات صفر نشان می‌دهد؛ این اختلاف باید روشن شود؛ (۳) جمعیت‌های مورد استفاده در مصرف سرانه تقریبی و بدون ذکر منبع رسمی است؛ (۴) آمار تولید داخلی اغلب کشورها در دسترس نیست و مصرف سرانه‌ی مبتنی بر واردات حداقل مصرف است؛ (۵) قیمت قفسه فقط نمونه‌ای از چند فروشگاه است و قیمت قزاقستان فقط از کاسپی گرفته شد (فروشگاه‌های آربوز و مگنوم در این بررسی قابل خواندن نبودند).</p>
+<p>صفحه‌هایی که متن کامل آن‌ها باز و بررسی شد:</p>
+<ul class="pts"><li><a href="https://www.tridge.com/ko/market-overview/organic-baking-powder" target="_blank" rel="noopener">Tridge: بازار بکینگ پودر بر پایه‌ی HS 2102.30 (داده‌های ۲۰۲۴)</a></li><li><a href="https://en.amwalalghad.com/?p=211204" target="_blank" rel="noopener">Amwal Al Ghad: صادرات مصر؛ گزارش شورای صادرات مواد غذایی مصر</a></li></ul>
+<p>منابعی که فقط چکیده‌ی نتایج جست‌وجوی آن‌ها بررسی شد (اعتماد به ارقام آن‌ها باید با احتیاط همراه باشد):</p>
+<ul class="pts"><li>فناوری و شیمی: <a href="https://bakerpedia.com/?p=3640" target="_blank" rel="noopener">BakerPedia</a>، <a href="https://asbe.org/article/baking-powder/" target="_blank" rel="noopener">American Society of Baking</a>، <a href="https://en.wikipedia.org/wiki/Baking_powder" target="_blank" rel="noopener">Wikipedia</a>، <a href="https://www.cftri.res.in/kweb/technologies/BP/bp.pdf" target="_blank" rel="noopener">CFTRI هند</a>، <a href="https://www.britannica.com/topic/baking/Chemically-leavened-products" target="_blank" rel="noopener">Britannica</a></li><li>دوز مصرف: <a href="https://www.tilleydistributionproducts.com/products/134403-ci-baking-corbion" target="_blank" rel="noopener">برگه‌ی فنی کوربیون</a>، <a href="https://classicfinefoods.co.uk/uploads/specifications/LOU210B.pdf" target="_blank" rel="noopener">مشخصات محصول اروپایی</a>، <a href="https://www.txcte.org/sites/default/files/resources/documents/Calculating-Bakers-Percentages.pdf" target="_blank" rel="noopener">آموزش تگزاس</a></li><li>مقایسه‌ی جوش شیرین و بکینگ پودر: <a href="https://handletheheat.com/baking-soda-vs-baking-powder/" target="_blank" rel="noopener">Handle the Heat</a>، <a href="https://www.browneyedbaker.com/?p=35192" target="_blank" rel="noopener">Brown Eyed Baker</a>، <a href="https://www.today.com/food/difference-between-baking-soda-baking-powder-t127409" target="_blank" rel="noopener">TODAY</a>، <a href="https://chowhound.com/1759721/baking-soda-vs-baking-powder-difference" target="_blank" rel="noopener">Chowhound</a>، <a href="https://restaurantware.ae/blogs/bakery-resources/baking-soda-vs-baking-powder" target="_blank" rel="noopener">Restaurantware</a></li><li>بازار جهانی: <a href="https://www.marketresearch.com/Maia-Research-v4212/Global-Baking-Powder-Trends-Forecast-42425727" target="_blank" rel="noopener">Maia Research</a>، <a href="https://marketintelo.com/report/baking-powder-market" target="_blank" rel="noopener">Marketintelo</a>، <a href="https://www.marketdataforecast.com/market-reports/baking-powder-market-4281/" target="_blank" rel="noopener">Market Data Forecast</a>، <a href="https://www.marketresearch.com/Market-Glass-Inc-v1039/Baking-Powder-44883445/" target="_blank" rel="noopener">Market Glass</a>، <a href="https://www.knowledge-sourcing.com/report/baking-powder-market" target="_blank" rel="noopener">Knowledge Sourcing</a>، <a href="https://www.giiresearch.com/report/coh1863931-baking-powder-market-by-product-type-by.html" target="_blank" rel="noopener">Coherent Market Insights</a>، <a href="https://www.databridgemarketresearch.com/reports/global-baking-powder-and-mixes-market" target="_blank" rel="noopener">Databridge</a>، <a href="https://www.alliedmarketresearch.com/baking-powder-market" target="_blank" rel="noopener">Allied Market Research</a></li><li>قیمت مواد اولیه: <a href="https://www.expertmarketresearch.com/price-forecast/sodium-acid-pyrophosphate-sapp-price-trends" target="_blank" rel="noopener">Expert Market Research: SAPP</a>، <a href="https://youdontneedwp.com/chemanalyst/sodium-acid-pyrophosphate-sapp-prices-q1-2026-global-trends-chart-news-and-demand" target="_blank" rel="noopener">ChemAnalyst: SAPP</a></li><li>قیمت و تجارت منطقه‌ای: <a href="https://dir.tridge.com/prices/baking-powder/AZ" target="_blank" rel="noopener">Tridge آذربایجان</a>، <a href="https://www.tridge.com/market-overview/baking-powder/TR" target="_blank" rel="noopener">Tridge ترکیه</a></li><li>کانال‌های فروش: <a href="https://www.futuremarketinsights.com/articles/route-to-market-split-in-bakery-mixes-why-b2b-direct-foodservice-retail-and-online-do-not-behave-the-same" target="_blank" rel="noopener">FMI: مسیر فروش مخلوط‌های نانوایی</a>، <a href="https://www.futuremarketinsights.com/reports/private-label-bakery-mix-market" target="_blank" rel="noopener">FMI: برند خصوصی</a>، <a href="https://yourstory.com/smbstory/weikfield-custard-brown-and-polson-pune-entrepreneur" target="_blank" rel="noopener">YourStory</a>، <a href="https://www.360researchreports.com/market-reports/baking-powder-market-203120" target="_blank" rel="noopener">360 Research Reports</a></li><li>ایران: <a href="https://www.eghtesadonline.com/en/news/749935/irans-chocolate-pastry-exports-at-450m" target="_blank" rel="noopener">اقتصاد آنلاین: صادرات شیرینی و شکلات و مصرف سرانه</a>، <a href="https://www.eghtesadonline.com/en/news/750737/pastry-chocolate-biscuit-exports-exceed-150m-in-four-months" target="_blank" rel="noopener">اقتصاد آنلاین: تولید ۱٫۷ میلیون تن و ظرفیت ۲٫۴ میلیون تن</a>، <a href="https://www.eghtesadonline.com/en/news/779314/private-sector-dominates-confectionery-industry" target="_blank" rel="noopener">اقتصاد آنلاین: واحدهای قنادی</a>، <a href="https://civilica.com/doc/148555/" target="_blank" rel="noopener">Civilica</a>، <a href="https://indexbox.co.uk/store/iran-prepared-baking-powders-market-analysis-forecast-size-trends-and-insights/" target="_blank" rel="noopener">IndexBox: ایران</a>، <a href="https://emalls.ir/%d9%85%d8%b4%d8%ae%d8%b5%d8%a7%d8%aa_%d8%a8%da%a9%db%8c%d9%86%da%af-%d9%be%d9%88%d8%af%d8%b1-%d9%81%d9%84%d9%87-%d8%a7%db%8c~id~5898256" target="_blank" rel="noopener">ایمالز</a></li></ul>
+<p>آخرین به‌روزرسانی اطلاعات: آبان ۱۴۰۵ (نوامبر ۲۰۲۶). نرخ تبدیل ارز برای تومان مبنا قرار نگرفته است.</p>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <p>تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس &middot; تاریخ گزارش: ۱۶ آبان ۱۴۰۵ (۷ نوامبر ۲۰۲۶)</p>
+</footer>
+
+<script src="/report-assets/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var D = {"chExp": {"labels": ["مصر", "آمریکا", "چین", "آلمان", "کنیا", "تایلند", "مالت", "آفریقای جنوبی", "مالزی", "سنگاپور", "ترکیه (رتبه‌ی ۱۴)", "ایران"], "values": [62.1, 26.6, 21.9, 16.0, 14.2, 13.3, 12.8, 8.8, 6.9, 6.5, 5.8, 0.21], "hl": [11], "title": "ارزش صادرات ۲۰۲۵ (میلیون دلار)", "dec": 1}, "chImp": {"labels": ["عربستان سعودی", "کانادا", "فیلیپین", "آمریکا", "آنگولا", "اندونزی", "اوگاندا", "نیجریه", "لهستان", "آلمان"], "values": [40.5, 21.9, 14.2, 11.3, 9.0, 8.1, 5.6, 5.6, 5.4, 5.0], "hl": [], "title": "ارزش واردات ۲۰۲۵ (میلیون دلار)", "dec": 1}, "chMkt": {"labels": ["Maia Research", "Marketintelo", "Market Data Forecast", "Market Glass", "Knowledge Sourcing", "Coherent Market Insights"], "values": [0.78, 1.2, 3.97, 4.1, 4.23, 4.62], "hl": [], "title": "برآورد اندازه‌ی بازار جهانی ۲۰۲۵ (میلیارد دلار)", "dec": 2}, "chCost": {"labels": ["جوش شیرین", "سدیم اسید پیروفسفات (SAPP)", "نشاسته ذرت"], "lo": [70.0, 408.0, 149.0], "hi": [70.0, 622.0, 199.0], "title": "هزینه‌ی هر جزء در یک تن محصول (دلار)"}, "chIran": {"labels": ["۱۴۰۲ (کامل)", "۱۴۰۳ (کامل)", "۱۴۰۴ (ده ماهه، نه قطعی)"], "values": [380.0, 662.0, 789.0], "hl": [], "title": "وزن صادرات ایران (تن)", "dec": 0}};
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){ return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; }); }
+  function fmt(n, dec){ return toFa(Number(n).toFixed(dec).replace(".", "٫").replace(/\B(?=(\d{3})+(?!\d))/g, "٬")); }
+  function cssVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  var charts = [];
+  function el(id){ return document.getElementById(id); }
+  function mk(id, cfg){ if (el(id)) charts.push(new Chart(el(id), cfg)); }
+  function build(){
+    var c = { ink: cssVar('--ink-soft'), grid: cssVar('--line-soft'), petrol: '#536779', petrolDark: '#193D5B', copper: cssVar('--copper-500'), copperLight: cssVar('--copper-300') };
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif"; Chart.defaults.color = c.ink; Chart.defaults.borderColor = c.grid;
+    charts.forEach(function(ch){ ch.destroy(); }); charts = [];
+    function hbar(id, S){
+      var labelPlugin = { id: id + 'L', afterDatasetsDraw: function(chart){
+        var ctx = chart.ctx, meta = chart.getDatasetMeta(0), xs = chart.scales.x;
+        ctx.save(); ctx.font = '600 11.5px Vazirmatn, Tahoma'; ctx.textBaseline = 'middle'; ctx.textAlign = 'left'; ctx.direction = 'ltr'; ctx.fillStyle = c.ink;
+        meta.data.forEach(function(bar, i){ ctx.fillText(fmt(S.values[i], S.dec), xs.getPixelForValue(S.values[i]) + 8, bar.y); });
+        ctx.restore(); } };
+      mk(id, { type: 'bar', plugins: [labelPlugin],
+        data: { labels: S.labels, datasets: [{ data: S.values, backgroundColor: S.values.map(function(_, i){ return S.hl.indexOf(i) >= 0 ? c.copper : c.petrol; }), borderRadius: 5, barThickness: 16 }] },
+        options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, layout: { padding: { left: 44 } },
+          plugins: { legend: { display: false }, tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(x){ return fmt(x.parsed.x, S.dec); } } } },
+          scales: { x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return toFa(v); } }, title: { display: true, text: S.title, color: c.ink } },
+                    y: { grid: { display: false }, ticks: { color: c.ink } } } } });
+    }
+    hbar('chExp', D.chExp); hbar('chImp', D.chImp); hbar('chMkt', D.chMkt);
+    var I = D.chIran;
+    mk('chIran', { type: 'bar', data: { labels: I.labels, datasets: [{ data: I.values, backgroundColor: c.copper, borderRadius: 6, barThickness: 46 }] },
+      options: { responsive: true, maintainAspectRatio: false, layout: { padding: { top: 20 } },
+        plugins: { legend: { display: false }, tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(x){ return fmt(x.parsed.y, 0) + ' تن'; } } } },
+        scales: { x: { grid: { display: false }, ticks: { color: c.ink } }, y: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return toFa(v); } }, title: { display: true, text: I.title, color: c.ink } } } },
+      plugins: [{ id: 'iranL', afterDatasetsDraw: function(chart){ var ctx = chart.ctx; ctx.save(); ctx.fillStyle = c.ink; ctx.textAlign = 'center'; ctx.font = '600 12px Vazirmatn, Tahoma';
+        chart.getDatasetMeta(0).data.forEach(function(bar, i){ ctx.fillText(fmt(I.values[i], 0), bar.x, bar.y - 8); }); ctx.restore(); } }] });
+    var C = D.chCost;
+    mk('chCost', { type: 'bar', data: { labels: C.labels, datasets: [{ data: C.labels.map(function(_, i){ return [C.lo[i], C.hi[i]]; }), backgroundColor: [c.petrolDark, c.copper, c.petrol], borderRadius: 4, borderSkipped: false, barThickness: 22, minBarLength: 6 }] },
+      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false, layout: { padding: { left: 56 } },
+        plugins: { legend: { display: false }, tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(x){ var i = x.dataIndex; return C.lo[i] === C.hi[i] ? fmt(C.lo[i], 0) + ' دلار' : fmt(C.lo[i], 0) + ' تا ' + fmt(C.hi[i], 0) + ' دلار'; } } } },
+        scales: { x: { min: 0, grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return toFa(v); } }, title: { display: true, text: C.title, color: c.ink } }, y: { grid: { display: false }, ticks: { color: c.ink, font: { size: 11 } } } } },
+      plugins: [{ id: 'costL', afterDatasetsDraw: function(chart){ var ctx = chart.ctx, xs = chart.scales.x; ctx.save(); ctx.font = '600 11.5px Vazirmatn, Tahoma'; ctx.textBaseline = 'middle'; ctx.textAlign = 'left'; ctx.direction = 'ltr'; ctx.fillStyle = c.ink;
+        chart.getDatasetMeta(0).data.forEach(function(bar, i){ ctx.fillText(C.lo[i] === C.hi[i] ? fmt(C.lo[i], 0) : fmt(C.lo[i], 0) + ' – ' + fmt(C.hi[i], 0), xs.getPixelForValue(C.hi[i]) + 8, bar.y); }); ctx.restore(); } }] });
+  }
+  build();
+  if (window.matchMedia){ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', build); }
+})();
+</script>
+
+</body>
+</html>
