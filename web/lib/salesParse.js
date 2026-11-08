@@ -67,27 +67,31 @@ export function normalizeCountry(v) {
 // خواندن اکسل. فایل‌های واقعی گاهی «اعتبارسنجی داده»ی تمام‌ستونی دارند که exceljs را می‌ترکاند
 // ("Too many properties to enumerate")؛ در آن حالت بلوک dataValidations از XML حذف و دوباره خوانده می‌شود
 // (فقط در حافظه؛ هیچ داده‌ای از سلول‌ها عوض نمی‌شود).
-async function loadWorkbook(buffer) {
-  try {
-    const wb = new ExcelJS.Workbook();
-    await wb.xlsx.load(buffer);
-    return wb;
-  } catch (firstErr) {
-    const zip = await JSZip.loadAsync(buffer);
-    for (const name of Object.keys(zip.files)) {
-      if (/^xl\/worksheets\/[^/]+\.xml$/.test(name)) {
-        const xml = await zip.file(name).async("string");
-        zip.file(name, xml.replace(/<dataValidations[\s\S]*?<\/dataValidations>/g, "").replace(/<conditionalFormatting[\s\S]*?<\/conditionalFormatting>/g, ""));
-      }
+//
+// ⚠ حافظه: خودِ خواندن اعتبارسنجی تمام‌ستونی قبل از شکست آن، حدود ۸۵۰ مگابایت حافظه و ۱۳ ثانیه می‌خواهد (هر سلول میلیون‌ردیفی
+// یک شیء می‌شود). روی لیارا سقف heap حدود ۲۴۰ مگابایت است و پردازش با «JavaScript heap out of memory» می‌مرد (۲۰۲۶-۱۱-۰۷).
+// پس بلوک‌ها همیشه پیش از خواندن حذف می‌شوند، نه فقط بعد از شکست.
+async function stripHeavyBlocks(buffer) {
+  const zip = await JSZip.loadAsync(buffer);
+  for (const name of Object.keys(zip.files)) {
+    if (/^xl\/worksheets\/[^/]+\.xml$/.test(name)) {
+      const xml = await zip.file(name).async("string");
+      zip.file(name, xml.replace(/<dataValidations[\s\S]*?<\/dataValidations>/g, "").replace(/<conditionalFormatting[\s\S]*?<\/conditionalFormatting>/g, ""));
     }
-    const wb = new ExcelJS.Workbook();
-    try {
-      await wb.xlsx.load(await zip.generateAsync({ type: "nodebuffer" }));
-    } catch {
-      throw firstErr;
-    }
-    return wb;
   }
+  return zip.generateAsync({ type: "nodebuffer" });
+}
+
+async function loadWorkbook(buffer) {
+  let source = buffer;
+  try {
+    source = await stripHeavyBlocks(buffer);
+  } catch {
+    // zip خراب است؛ خود exceljs پیام درست را می‌دهد
+  }
+  const wb = new ExcelJS.Workbook();
+  await wb.xlsx.load(source);
+  return wb;
 }
 
 function cellValue(cell) {
