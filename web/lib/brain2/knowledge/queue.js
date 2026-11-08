@@ -37,11 +37,20 @@ export function syncQueue(detected, { at }) {
     } else stats.unchanged += 1;
   }
   for (const [key, old] of open) {
-    if (seen.has(key) || old.status !== "open") continue;
+    if (seen.has(key) || old.status !== "open" || !["contradiction", "sanity"].includes(old.kind)) continue; // اختلاف تحلیل‌گرها را چرخه‌ی دانش همگرا نمی‌کند
     supersede(old, { status: "resolved", resolution: { decision: "auto_converged", by: "system", at, note: "مقدارها دیگر متناقض نیستند" } }, "تناقض خودبه‌خود برطرف شد", at);
     stats.converged += 1;
   }
   return stats;
+}
+
+/** یک آیتم را (بدون همگرایی خودکار سایر آیتم‌ها) به صف می‌آورد: تازه، بازگشوده با مقدار تغییرکرده، یا بدون تغییر. برای اختلاف تحلیل‌گرها (۷-۴). */
+export function raiseItem(item, { at }) {
+  const old = openQueue().get(item.natural_key);
+  if (!old) { putRow("queue", makeRow("queue", { ...item, status: "open", detected_at: at }, at)); return "new"; }
+  if (itemSignature(old) === itemSignature(item)) return "unchanged";
+  supersede(old, { members: item.members, spread: item.spread, label: item.label, status: "open", resolution: null }, "مقدارها تغییر کرد؛ دوباره به صف آمد", at);
+  return "reopened";
 }
 
 /** وضعیت ادعاها را با صف هماهنگ می‌کند: باز ← «متناقض/در صف بررسی»؛ تصمیم انسان ← «تأییدشده/بسته‌شده»؛ همگرایی/نادیده ← «تازه». */
@@ -76,6 +85,7 @@ export function resolveItem(idx, { id, decision, claimKey, by, note, at = new Da
   if (decision === "accept" && !q.members.some((m) => m.claim_key === claimKey)) return { ok: false, error: "برای پذیرش باید یکی از مقدارهای آیتم انتخاب شود." };
   if (decision === "reject" && q.kind !== "sanity") return { ok: false, error: "رد فقط برای ادعای مشکوک است؛ در تناقض یک مقدار را بپذیرید." };
   if (decision === "both_valid" && q.kind !== "contradiction") return { ok: false, error: "«هر دو درست» فقط برای تناقض است." };
+  if (q.kind === "disagreement" && decision !== "dismiss") return { ok: false, error: "اختلاف تحلیل‌گرها فقط «بررسی شد» (نادیده) می‌شود؛ تصمیم دربارهٔ عدد در پیش‌بینی خودتان ثبت می‌شود." };
   const row = supersede(q, { status: "resolved", resolution: { decision, claim_key: claimKey || null, by, note: String(note || "").slice(0, 300), at } }, `تصمیم انسانی: ${decision}`, at);
   const changed = syncClaimStatuses(idx, { at });
   return { ok: true, item: row, claims_changed: changed };

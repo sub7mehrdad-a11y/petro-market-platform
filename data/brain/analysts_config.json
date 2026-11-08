@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "_note": "تنظیمات تحلیل‌گرها، بازیابی انتخابی و داور (مرحله‌ی ۶؛ پروتکل ۶-۴ و ۷). عمومی و بدون راز؛ ضرایب بعداً با سابقه کالیبره می‌شوند.",
+  "retrieval": {
+    "weights": { "relevance": 0.4, "importance": 0.15, "recency": 0.25, "confidence": 0.2 },
+    "keywords_base": ["جوش شیرین", "جوش‌شیرین", "بی‌کربنات", "بی کربنات", "سودا", "کربنات سدیم", "فوب", "FOB", "کرایه", "تعرفه", "تحریم", "bicarbonate", "soda ash"],
+    "packs": {
+      "statistical": { "label": "تحلیل‌گر آماری", "budget_chars": 6000, "max_items": 24, "series_points": 12, "include": ["series", "annual_claims"], "note": "جدول‌ها، روندها و سابقه (نگاه بیرونی)؛ کوتاه تا با سقف سرویس Groq جور باشد." },
+      "event": { "label": "تحلیل‌گر رویدادمحور", "budget_chars": 14000, "max_items": 40, "series_points": 3, "include": ["series", "signals", "open_contradictions"], "note": "اخبار، رویدادها و رصد (نگاه درونی)." }
+    }
+  },
+  "analysts": {
+    "review_every_days": 7,
+    "min_change_pct": 0.5
+  },
+  "judge": {
+    "history_min_scored": 3,
+    "weight_floor": 0.1,
+    "disagreement_high": 0.05,
+    "interval_widen_factor": 0.25,
+    "must_say_when_high": "تحلیل‌گرها هم‌نظر نیستند."
+  }
+}

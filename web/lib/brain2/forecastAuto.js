@@ -1,5 +1,7 @@
 import { ensureRound, getRound, isBrain, isRoundOpen, listRounds, loadConfig, predictionsOf, tehranClock } from "./forecast";
 import { runBrainForecasts, runBrainReviews } from "./brainForecaster";
+import { runMachineForecasts } from "./machineForecaster";
+import { resolveGroqApiKey } from "../groqFetch";
 import { brainStorageProblem } from "./store";
 import { resolveBrainKey } from "../brain";
 
@@ -45,6 +47,17 @@ export async function brainForecastTick({ now = new Date() } = {}) {
       }
       out.reviews.push({ round: r.round_id, results: rv.results });
     }
+    // تحلیل‌گرها و داور (مرحله‌ی ۶): فقط وقتی هر دو کلید (Groq برای آماری، Gemini برای رویدادمحور) هست
+    out.machines = [];
+    if (resolveGroqApiKey()) {
+      for (const r of listRounds()) {
+        if (!isRoundOpen(r, now)) continue;
+        const mf = await runMachineForecasts(r.round_id, { now });
+        const done = (mf.results || []).filter((x) => /recorded|revised/.test(`${x.stat}${x.event}${x.judge}`)).length;
+        if (done || (mf.results || []).some((x) => String(x.stat).startsWith("failed") || String(x.event).startsWith("failed"))) console.log(`[brain-forecast] تحلیل‌گرها و داور، دور ${r.round_id}: ${JSON.stringify((mf.results || []).map((x) => [x.stat, x.event, x.judge]))}`);
+        out.machines.push({ round: r.round_id, results: mf.results });
+      }
+    } else out.machines = "no_groq_key";
     return out;
   } catch (err) {
     console.warn(`[brain-forecast] خطا: ${String(err?.message || err).slice(0, 200)}`);

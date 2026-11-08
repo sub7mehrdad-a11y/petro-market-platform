@@ -263,6 +263,32 @@ export function reviseBrainForecast({ roundId, questionId, point, lo, hi, reason
   return { ok: true, prediction: writeVersion(row, prev, prev.forecaster) };
 }
 
+// -------------------------------------------------------------------------------- پیش‌بین‌های ماشینی (مرحله‌ی ۶)
+// تحلیل‌گر آماری، تحلیل‌گر رویدادمحور و داور هرکدام یک «پیش‌بین» جدا با سابقه‌ی جدا هستند (forecaster = machine:<نقش>:<مدل>) و کنار «مغز
+// فعلی» (brain:*، روش ۰) ثبت می‌شوند. هیچ‌کدام پیش‌بینی انسان‌ها را نمی‌بینند. به کاربران عادی نشان داده نمی‌شوند (فقط مدیر، بعد از قفل).
+export const isMachine = (p) => p.forecaster.startsWith("machine:");
+
+/** ثبت یا نسخه‌ی تازه‌ی یک پیش‌بین ماشینی. نخستین بار نسخه‌ی ۱؛ بعد از آن دلیل (reason) لازم است. */
+export function recordMachineForecast({ roundId, questionId, forecaster, point, lo, hi, rationale, reason, model, method_version, retrieved_ids = [], claim_ids = [], rule_ids = [] }, { now = new Date() } = {}) {
+  const round = getRound(roundId);
+  if (!round) return { ok: false, error: "دور پیدا نشد." };
+  if (!isRoundOpen(round, now)) return { ok: false, error: "مهلت قفل گذشته است." };
+  const question = round.questions.find((q) => q.id === questionId);
+  if (!question) return { ok: false, error: "پرسش پیدا نشد." };
+  if (!String(forecaster || "").startsWith("machine:")) return { ok: false, error: "نام پیش‌بین ماشینی باید با machine: شروع شود." };
+  const bad = checkForecastNumbers({ point, lo, hi }, round.limits);
+  if (bad) return { ok: false, error: `خروجی نامعتبر: ${bad}` };
+  const prev = currentVersion(roundId, questionId, (p) => p.forecaster === forecaster);
+  const why = String(reason || "").trim();
+  if (prev && why.length < 3) return { ok: false, error: "دلیل به‌روزرسانی لازم است." };
+  const row = buildPrediction({
+    round, question, forecaster, point, lo, hi, rationale: String(rationale || prev?.rationale || "").slice(0, round.limits.rationale_max_chars), made_at: now.toISOString(),
+    method_version, model, blind: true, revision_of: prev?.id || null, revision_reason: prev ? why : null, revision_no: (prev?.revision_no || 0) + 1,
+  });
+  row.retrieved_ids = retrieved_ids; row.claim_ids = claim_ids; row.rule_ids = rule_ids;
+  return { ok: true, prediction: writeVersion(row, prev, forecaster), revision: !!prev };
+}
+
 // -------------------------------------------------------------------------------- نمای هر کاربر (قانون دید کور اینجاست)
 const publicPred = (p) => ({
   id: p.id, forecaster: p.forecaster, made_at: p.made_at, rationale: p.rationale, forecast: p.forecast, model: p.model, method_version: p.method_version,
@@ -296,8 +322,17 @@ export function viewRound({ username, isAdmin, roundId, now = new Date() }) {
             return cur ? { ...publicPred(cur), revisions: versionsOf(roundId, q.id, (p) => p.forecaster === f).length - 1 } : null;
           }).filter(Boolean)
       : [];
+    // پیش‌بین‌های ماشینی (تحلیل‌گرها و داور): فقط مدیر و فقط بعد از مهلت قفل (استقلال پیش از تجمیع)
+    const machines = !open && isAdmin
+      ? [...new Set(predictionsOf(roundId).filter((p) => p.question_id === q.id && isMachine(p)).map((p) => p.forecaster))].sort()
+          .map((f) => {
+            const cur = currentVersion(roundId, q.id, (p) => p.forecaster === f);
+            return cur ? { ...publicPred(cur), retrieved: (cur.retrieved_ids || []).length, revisions: versionsOf(roundId, q.id, (p) => p.forecaster === f).length - 1 } : null;
+          }).filter(Boolean)
+      : [];
     return {
       id: q.id, key: q.key, text: q.text, target: q.target, resolves_at: q.resolves_at, lock_at: q.lock_at || lock_at,
+      machines,
       mine: mine ? publicPred(mine) : null,
       history: mineVersions.filter((p) => !mine || p.id !== mine.id).map(publicPred),
       brain: visibleBrain ? publicPred(visibleBrain) : null, // کور: بدون ثبت خودِ کاربر نمایش داده نمی‌شود
