@@ -154,6 +154,20 @@ function QuestionCard({ q, round, onSaved }) {
           </ul>
         </div>
       )}
+      {q.machines?.length > 0 && (
+        <div className="mt-3 rounded-lg border border-primary p-3 text-xs">
+          <div className="mb-1 font-bold text-text">پیش‌بین‌های ماشینی (تحلیل‌گرها و داور؛ فقط مدیر، بعد از قفل)</div>
+          <ul className="space-y-1.5">
+            {q.machines.map((m) => (
+              <li key={m.id}>
+                <b>{m.forecaster.startsWith("machine:judge") ? "داور" : m.forecaster.startsWith("machine:stat") ? "تحلیل‌گر آماری" : m.forecaster.startsWith("machine:event") ? "تحلیل‌گر رویدادمحور" : m.forecaster}</b>: <Interval f={m.forecast} />
+                <span className="text-text-muted"> · {m.model} · {m.retrieved} قطعه‌ی بازیابی‌شده · {m.revisions} به‌روزرسانی</span>
+                {m.rationale && <p className="leading-6 text-text-muted">{m.rationale}</p>}
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
       <div className="mt-2 text-[11px] text-text-muted">وضعیت داوری: <b>{q.status}</b> (نمره‌دهی خودکار در مرحله‌ی بعد؛ هر نسخه به‌اندازه‌ی مدتی که معتبر بوده وزن می‌گیرد؛ اگر مقدار واقعی نرسد، بدون نمره می‌ماند)</div>
     </section>
   );
@@ -179,6 +193,7 @@ export default function ForecastClient() {
     setBusy(false);
     if (!r.ok && !r.results) { setAdminMsg(r.error || "انجام نشد"); }
     else if (action === "open_round") setAdminMsg(r.created ? `دور ${r.round_id} باز شد.` : `دور ${r.round_id} از قبل باز بود.`);
+    else if (action === "machine_forecasts") setAdminMsg(`نتیجه: ${(r.results || []).map((x) => `${x.question.split(":")[1]}: آماری=${x.stat} رویدادمحور=${x.event} داور=${x.judge}${x.disagreement !== undefined ? ` (اختلاف ${(x.disagreement * 100).toFixed(1)}٪)` : ""}`).join("؛ ") || r.skipped || "—"}`);
     else setAdminMsg(`نتیجه: ${(r.results || []).map((x) => `${x.question.split(":")[1]}=${x.status}${x.error ? ` (${x.error})` : ""}`).join("؛ ") || r.skipped || "—"}`);
     load(roundId);
   }
@@ -224,6 +239,7 @@ export default function ForecastClient() {
           <div className="flex flex-wrap gap-2">
             <button type="button" disabled={busy} onClick={() => admin("open_round")} className="rounded-lg border border-border px-4 py-2 text-xs cursor-pointer disabled:opacity-50">باز کردن دور این ماه</button>
             <button type="button" disabled={busy || !round} onClick={() => admin("brain_forecasts")} className="rounded-lg border border-border px-4 py-2 text-xs cursor-pointer disabled:opacity-50">ثبت پیش‌بینی مغز برای پرسش‌های بدون پیش‌بینی</button>
+            <button type="button" disabled={busy || !round} onClick={() => admin("machine_forecasts")} className="rounded-lg border border-border px-4 py-2 text-xs cursor-pointer disabled:opacity-50">اجرای تحلیل‌گرها و داور (آماری، رویدادمحور، تجمیع)</button>
             <button type="button" disabled={busy || !round} onClick={() => admin("brain_reviews")} className="rounded-lg border border-border px-4 py-2 text-xs cursor-pointer disabled:opacity-50">بازبینی همین الان پیش‌بینی مغز (به‌روزرسانی در صورت دلیل)</button>
           </div>
           {adminMsg && <p className="mt-2 text-xs leading-6 text-text">{adminMsg}</p>}

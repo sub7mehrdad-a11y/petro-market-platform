@@ -3,7 +3,8 @@ import path from "path";
 import { ProxyAgent, fetch as undiciFetch } from "undici";
 import { aiTimeoutMs, netError, upstream } from "./aiRelay";
 
-const DEFAULT_MODEL = "openai/gpt-oss-120b";
+export const GROQ_DEFAULT_MODEL = "openai/gpt-oss-120b";
+const DEFAULT_MODEL = GROQ_DEFAULT_MODEL;
 
 /**
  * کلید Groq برای «پاسخ هوشمند» سایت.

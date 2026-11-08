@@ -5,7 +5,7 @@ import PageHeader from "../../components/PageHeader";
 
 const pct = (x) => (x === null || x === undefined ? "—" : `${(x * 100).toFixed(1)}٪`);
 const num = (x, d = 2) => (x === null || x === undefined ? "—" : Number(x).toLocaleString("en-US", { maximumFractionDigits: d }));
-const who = (f) => (f.startsWith("brain:") ? `مغز (${f.slice(6)})` : f.replace("human:", ""));
+const who = (f) => (f.startsWith("brain:") ? `مغز فعلی (${f.slice(6)})` : f.startsWith("machine:judge") ? "داور" : f.startsWith("machine:stat") ? `تحلیل‌گر آماری (${f.split(":").slice(2).join(":")})` : f.startsWith("machine:event") ? `تحلیل‌گر رویدادمحور (${f.split(":").slice(2).join(":")})` : f.replace("human:", ""));
 
 async function api(url, opts) {
   const res = await fetch(url, opts);
