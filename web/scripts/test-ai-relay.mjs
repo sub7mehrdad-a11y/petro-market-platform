@@ -42,6 +42,19 @@ assert.equal(seen[1].token, "tok123");
 assert.equal(seen[1].auth, "Bearer K2");
 delete process.env.AI_RELAY_URL; delete process.env.AI_RELAY_TOKEN;
 
+// رله یا شبکه‌ای که هرگز جواب نمی‌دهد: پس از مهلت خطای فارسی می‌آید، نه انتظار بی‌پایان
+const hang = http.createServer(() => {}); // اتصال را می‌پذیرد و هیچ‌وقت پاسخ نمی‌دهد
+await new Promise((r) => hang.listen(0, "127.0.0.1", r));
+process.env.AI_RELAY_URL = `http://127.0.0.1:${hang.address().port}`;
+process.env.AI_RELAY_TOKEN = "t";
+process.env.AI_TIMEOUT_MS = "400";
+const t0 = Date.now();
+await assert.rejects(() => generateContent({ apiKey: "K", model: "m", systemInstruction: "s", input: "q" }), /Gemini: پاسخی در مهلت مجاز نیامد.*رله/);
+await assert.rejects(() => generateGroqContent({ apiKey: "K", systemInstruction: "s", input: "q", maxTokens: 100 }), /Groq: پاسخی در مهلت مجاز نیامد/);
+assert.ok(Date.now() - t0 < 5000, "گیر نکرد");
+hang.closeAllConnections?.(); hang.close();
+delete process.env.AI_RELAY_URL; delete process.env.AI_RELAY_TOKEN; delete process.env.AI_TIMEOUT_MS;
+
 // منطق Worker (بدون شبکه)
 const calls = [];
 const fakeFetch = async (url, init) => { calls.push({ url, headers: Object.fromEntries(init.headers) }); return new Response('{"ok":1}', { status: 200, headers: { "content-type": "application/json" } }); };

@@ -21,3 +21,20 @@ export function locationErrorFa(msg) {
     "و در لیارا AI_RELAY_URL و AI_RELAY_TOKEN را بگذارید (یا یک HTTPS_PROXY بیرون از ایران)."
   );
 }
+
+/** سقف زمان یک درخواست مدل (میلی‌ثانیه). بدون سقف، اگر رله/شبکه گیر کند صفحه تا ابد «در حال تحلیل» می‌ماند. AI_TIMEOUT_MS برای هر دو. */
+export function aiTimeoutMs(service) {
+  const env = Number(process.env.AI_TIMEOUT_MS);
+  if (env > 0) return env;
+  return service === "groq" ? 40000 : 70000;
+}
+
+/** خطای شبکه/زمان را به پیام فارسی روشن تبدیل می‌کند (علت واقعی را پنهان نمی‌کند: کد خطا هم می‌آید). */
+export function netError(label, e) {
+  const code = e?.cause?.code || e?.cause?.errors?.[0]?.code || e?.code || "";
+  if (e?.name === "TimeoutError" || e?.name === "AbortError") {
+    const relay = process.env.AI_RELAY_URL ? " (از راه رله‌ی Cloudflare)" : "";
+    return new Error(`${label}: پاسخی در مهلت مجاز نیامد${relay}؛ اتصال سرور به سرویس هوش مصنوعی گیر کرده است.`);
+  }
+  return new Error(`${label}: اتصال برقرار نشد (${code || String(e?.cause?.message || e?.message || e).slice(0, 80)})`);
+}

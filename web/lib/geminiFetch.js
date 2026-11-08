@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { ProxyAgent, fetch as undiciFetch } from "undici";
 import { resolveProxyUrl } from "./groqFetch";
-import { upstream } from "./aiRelay";
+import { aiTimeoutMs, netError, upstream } from "./aiRelay";
 
 
 /**
@@ -58,6 +58,7 @@ export async function generateContent({ apiKey, model, systemInstruction, input,
 
   const up = upstream("gemini", `/v1beta/models/${model}:generateContent`);
   const res = await undiciFetch(up.url, {
+    signal: AbortSignal.timeout(aiTimeoutMs("gemini")),
     method: "POST",
     headers: {
       ...up.headers,
@@ -72,7 +73,7 @@ export async function generateContent({ apiKey, model, systemInstruction, input,
       ...(generationConfig ? { generationConfig } : {}),
     }),
     ...(dispatcher ? { dispatcher } : {}),
-  });
+  }).catch((e) => { throw netError("Gemini", e); });
 
   const raw = await res.text();
 
