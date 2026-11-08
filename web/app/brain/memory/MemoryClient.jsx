@@ -19,13 +19,18 @@ export default function MemoryClient() {
   const [res, setRes] = useState(null);
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState("");
+  const [rules, setRules] = useState(null);
 
   async function loadCounts() {
     const r = await api("/api/brain/memory", { cache: "no-store" });
     if (!r.ok) { setError(r.error || "خطا"); return; }
     setError(""); setCounts(r.counts);
   }
-  useEffect(() => { loadCounts(); }, []);
+  async function loadRules() {
+    const r = await api("/api/brain/memory?rules=1", { cache: "no-store" });
+    if (r.ok) setRules(r.rules);
+  }
+  useEffect(() => { loadCounts(); loadRules(); }, []);
 
   async function ask() {
     setBusy(true);
@@ -42,7 +47,7 @@ export default function MemoryClient() {
     const r = await api("/api/brain/memory", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "migrate" }) });
     setBusy(false);
     setMsg(r.ok ? `ادعای تازه ${r.stats.claims_new}، تغییریافته ${r.stats.claims_changed}، بدون تغییر ${r.stats.claims_unchanged}` : r.error || "انجام نشد");
-    loadCounts();
+    loadCounts(); loadRules();
   }
 
   return (
@@ -56,6 +61,29 @@ export default function MemoryClient() {
           <div className="flex flex-wrap gap-x-4 text-text-muted">
             {Object.entries(counts).map(([k, v]) => <span key={k}>{k}: <b className="text-text" dir="ltr">{v.total} / {v.open}</b></span>)}
           </div>
+        </section>
+      )}
+
+      {rules && (
+        <section className="card p-4">
+          <div className="mb-2 text-sm font-bold text-text">قاعده‌ها (همه «پیشنهادی» = فقط برچسب، بدون اثر روی امتیاز)</div>
+          <ul className="space-y-3">
+            {rules.map((r) => (
+              <li key={r.key} className="rounded-lg border border-border p-3 text-xs leading-6">
+                <div className="flex flex-wrap items-center gap-2">
+                  <b className="text-text">{r.label}</b>
+                  <span className="rounded-full bg-canvas px-2 py-0.5 text-text-muted">{r.status || "ثبت نشده"}</span>
+                  <span className="text-text-muted" dir="ltr">{r.key}</span>
+                  {r.level === "claim"
+                    ? <span className="text-text-muted">ادعای برچسب‌خورده: <b className="text-text">{r.flagged}</b></span>
+                    : <span className={r.result?.violations?.length ? "text-danger" : "text-text-muted"}>{r.result?.statement || "هنوز بررسی نشده"}</span>}
+                </div>
+                <p className="mt-1 text-text-muted">{r.text}</p>
+                {r.level === "output" && r.result?.violations?.map((v, i) => <div key={i} className="text-danger">⚠ {v.item}: {v.problem}</div>)}
+                {r.samples.length > 0 && <div className="mt-1 text-text-muted" dir="ltr">{r.samples.map((x) => `${x.subject} · ${x.metric} · ${x.period || ""}`).join("  |  ")}</div>}
+              </li>
+            ))}
+          </ul>
         </section>
       )}
 

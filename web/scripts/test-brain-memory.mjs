@@ -115,7 +115,7 @@ const tMig1 = new Date("2026-11-06T12:00:00Z");
 const mig1 = Mig.runMigration({ now: tMig1 });
 assert.ok(mig1.stats.claims_new > 3000, `ادعاهای تازه: ${mig1.stats.claims_new}`);
 assert.equal(mig1.stats.claims_changed, 0);
-assert.equal(mig1.stats.analyses_new, 13, "یک تحلیل برای هر کشور رتبه‌بندی‌شده");
+assert.equal(mig1.stats.analyses_new, 15, "۱۳ تحلیل رتبه‌بندی + ۲ نتیجه‌ی بررسی قاعده‌های خروجی");
 const sizeAfter1 = ["sources", "claims", "analyses"].map((r) => fs.statSync(path.join(stateB, `${r}.jsonl`)).size);
 const mig2 = Mig.runMigration({ now: new Date("2026-11-06T13:00:00Z") });
 assert.equal(mig2.stats.claims_new + mig2.stats.claims_changed + mig2.stats.analyses_new + mig2.stats.analyses_changed + mig2.stats.sources, 0, "اجرای دوباره = بدون تغییر");

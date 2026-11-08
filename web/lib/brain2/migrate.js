@@ -3,6 +3,7 @@ import path from "path";
 import { flagStaleAnalyses, loadIndex, upsertAnalysis, upsertClaim, upsertSource } from "./memory";
 import { periodOf } from "./periods";
 import { ensureRepos } from "./schema";
+import { applyClaimRules, ensureRules, runOutputChecks } from "./rules";
 
 // انتقال داده‌های فعلی پلتفرم (data/*.json) به «منبع» و «ادعا» (مرحله‌ی ۲؛ دستور ساخت و برنامه‌ی R1 بخش ۶).
 // idempotent است: کلید طبیعی از دوباره‌نویسی جلوگیری می‌کند؛ مقدار تغییرکرده = بستن ردیف قدیمی + ردیف تازه با دلیل.
@@ -19,7 +20,14 @@ function load(name, fallback) {
     return fallback;
   }
 }
-const firstList = (x) => (Array.isArray(x) ? x : Object.values(x || {}).find(Array.isArray) || []);
+function readText(name) {
+  try {
+    return fs.readFileSync(/* turbopackIgnore: true */ path.join(/* turbopackIgnore: true */ DATA_DIR(), name), "utf-8").split("\r").join("");
+  } catch {
+    return null;
+  }
+}
+const firstList =(x) => (Array.isArray(x) ? x : Object.values(x || {}).find(Array.isArray) || []);
 const isScalar = (v) => v === null || ["string", "number", "boolean"].includes(typeof v);
 const numeric = (v) => typeof v === "number" && Number.isFinite(v);
 const dayOf = (iso) => (iso && /^\d{4}-\d{2}-\d{2}/.test(iso) ? iso.slice(0, 10) : null);
@@ -37,6 +45,7 @@ export const METRIC = {
   PRICE: "price",
   IRAN_TONS: "iran_export_tons",
   IRAN_VALUE: "iran_export_value_usd",
+  IRAN_DEST_TONS: "iran_export_destination_tons",
 };
 
 export function runMigration({ now = new Date() } = {}) {
@@ -189,6 +198,29 @@ export function runMigration({ now = new Date() } = {}) {
       if (numeric(y.tons)) claim({ subject: "ایران", metric: METRIC.IRAN_TONS, value: y.tons, unit: "تن", period: String(y.year_fa), qualifiers: q, source_key: k, confidence: 0.5 });
       if (numeric(y.value_usd)) claim({ subject: "ایران", metric: METRIC.IRAN_VALUE, value: y.value_usd, unit: "USD", period: String(y.year_fa), qualifiers: q, source_key: k, confidence: 0.5 });
     }
+    // مقصد صادرات (۱۴۰۴، ده ماهه): subject = کشور مقصد؛ با آمار واردکننده‌ی همان کشور مقایسه می‌شود (قاعده‌ی «آمار واردکننده معتبرتر»)
+    for (const dst of ie.destinations_1404_10m || []) {
+      if (dst.country_fa && numeric(dst.tons)) claim({ subject: dst.country_fa, metric: METRIC.IRAN_DEST_TONS, value: dst.tons, unit: "تن", period: "1404", qualifiers: { calendar: "شمسی", months_covered: 10, exporter: "ایران" }, source_key: k, confidence: 0.5 });
+    }
+  });
+
+  // فاصله‌ی هوایی برآوردی تا نزدیک‌ترین مرز/بندر ایران برای کشورهایی که فاصله‌ی ثبت‌شده ندارند (همان منطق build_brain.iran_distance)
+  count("derived_distance", () => {
+    const cfg = load("brain/scoring_config.json", {});
+    const ports = Object.values(cfg.iran_ports_latlon || {});
+    if (!ports.length) return;
+    const rad = (x) => (x * Math.PI) / 180;
+    const hav = (a, b) => {
+      const dp = rad(b[0] - a[0]), dl = rad(b[1] - a[1]);
+      const h = Math.sin(dp / 2) ** 2 + Math.cos(rad(a[0])) * Math.cos(rad(b[0])) * Math.sin(dl / 2) ** 2;
+      return 2 * 6371 * Math.asin(Math.sqrt(h));
+    };
+    const k = src("derived:air-distance", { kind: "گزارش داخلی", origin: "برآورد هوایی از مختصات بندر (محاسبه‌ی پلتفرم)", url_or_ref: "scripts/build_brain.py#iran_distance", agent: "migrate" });
+    for (const [country, prof] of Object.entries(profiles)) {
+      if (prof.distances_km?.["ایران"] || prof.port?.lat == null) continue;
+      const best = Math.min(...ports.map((p) => hav([prof.port.lat, prof.port.lon], p)));
+      claim({ subject: country, metric: METRIC.DISTANCE, value: Math.round(best), unit: "km", qualifiers: { to: "ایران", method: "air" }, source_key: k, confidence: 0.4 });
+    }
   });
 
   // ---------------------------------------------------------------- خبر و رصد: منبع + سیگنال با اعتماد پایین، بدون مدل
@@ -226,6 +258,10 @@ export function runMigration({ now = new Date() } = {}) {
     }
   });
 
+  // ---------------------------------------------------------------- قاعده‌ها (مرحله‌ی ۳): ثبت و اعمال بررسی‌های خودکار روی ادعاها (فقط برچسب)
+  ensureRules({ at: nowIso });
+  report.rules = applyClaimRules(idx, { at: nowIso });
+
   // ---------------------------------------------------------------- تحلیل: رتبه‌بندی قطعی‌ی کشورها (خروجی build_brain.py)
   const scores = load("brain/country_scores.json", null);
   const KEEP = new Set([METRIC.IMPORT_VOLUME, METRIC.SUPPLIER_TONS, METRIC.SUPPLIER_SHARE, METRIC.DISTANCE, METRIC.UNION, "trade_map.imports.quantity", "trade_map.imports.unit_value_usd", "trade_map.imports.growth_qty_5y_pct", "trade_map.imports.avg_tariff_pct", "mirror.supplier_share_pct"]);
@@ -246,6 +282,14 @@ export function runMigration({ now = new Date() } = {}) {
   }
   flagStaleAnalyses(idx, { at: nowIso });
   // پس از علامت کهنگی، تحلیل‌هایی که همین حالا بازسازی شدند تازه‌اند (بالا با claim_ids جدید upsert شده)
+
+  // بررسی‌های «خروجی»: قاعده‌هایی که روی رتبه‌بندی/خلاصه‌ی ساخته‌شده اجرا می‌شوند، نه روی یک ادعا
+  report.checks = runOutputChecks(idx, {
+    today: nowIso.slice(0, 10),
+    digestText: readText("brain/digest.md"),
+    scoringConfig: load("brain/scoring_config.json", {}),
+    at: nowIso,
+  });
 
   report.finished_at = new Date().toISOString();
   report.stats = idx.stats;

@@ -25,7 +25,7 @@ export const REPOS = {
     required: ["text", "status"],
     defaults: {
       check: null, scope: null, origin: "مغز", evidence: [], track_record: { better: 0, worse: 0 },
-      importance: 0.5, votes: [], merged_into: null, // نسخه‌ی ۰٫۲ (بخش ۴-۵)
+      importance: 0.5, votes: [], merged_into: null, natural_key: null, // نسخه‌ی ۰٫۲ (بخش ۴-۵)
     },
   },
   methods: {
