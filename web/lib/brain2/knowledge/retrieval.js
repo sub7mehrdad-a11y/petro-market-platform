@@ -41,7 +41,9 @@ export function questionContext(question) {
  * pack: «statistical» | «event». برمی‌گرداند {text, items, retrieved_ids, claim_ids, rule_ids, series, stats}.
  * series: نقطه‌های همان سری قیمتِ پرسش (قدیمی→جدید) برای محاسبه‌ی روند توسط کد.
  */
-export function retrieve({ question, pack, now = new Date() }) {
+export function retrieve({ question, pack, now = new Date(), asOf = null }) {
+  // asOf: بازگشت زمانی حافظه (آزمون روی سابقه در حلقه‌ی ۳): فقط ردیف‌هایی که سیستم در آن لحظه باور داشت
+  if (asOf) now = new Date(asOf);
   const acfg = loadAnalystsConfig();
   const kcfg = loadKnowledgeConfig();
   const pcfg = acfg.retrieval.packs[pack];
@@ -53,7 +55,8 @@ export function retrieve({ question, pack, now = new Date() }) {
   const keywords = [...acfg.retrieval.keywords_base, ctx.region].filter(Boolean).map((k) => k.toLowerCase());
   const regionKw = [ctx.region, ...ctx.subjects].filter(Boolean).map((k) => k.toLowerCase());
 
-  const claims = [...currentRows("claims").values()].filter((c) => !c.recorded_to && c.status !== "بسته‌شده");
+  const asMs = asOf ? new Date(asOf).getTime() : null;
+  const claims = [...currentRows("claims").values()].filter((c) => (asMs === null ? !c.recorded_to && c.status !== "بسته‌شده" : new Date(c.recorded_from).getTime() <= asMs && (!c.recorded_to || new Date(c.recorded_to).getTime() > asMs) && c.status !== "بسته‌شده"));
   const cand = [];
   const seriesPts = [];
   for (const c of claims) {
@@ -107,7 +110,7 @@ export function retrieve({ question, pack, now = new Date() }) {
     if (n >= pcfg.max_items) break;
     if (push({ kind: x.kind, id: x.c.id, score: Math.round(x.score * 1000) / 1000, line: lineOf(x.c, x.kind === "signal" ? "s" : "c") })) n += 1;
   }
-  if (pcfg.include.includes("open_contradictions")) {
+  if (pcfg.include.includes("open_contradictions") && !asOf) {
     for (const q of currentRows("queue").values()) {
       if (q.recorded_to || q.status !== "open" || q.kind !== "contradiction" || !ctx.subjects.includes(q.subject)) continue;
       push({ kind: "contradiction", id: q.id, score: 1, line: `- [x:${q.id.slice(-6)}] هشدار: ${q.label} (${q.subject}، ${q.period}) — منبع‌ها اختلاف دارند: ${q.members.map((m) => `${m.source}=${m.value}`).join(" در برابر ")}` });

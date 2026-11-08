@@ -90,7 +90,7 @@ export default function MemoryClient() {
               <li key={q.id} className={`rounded-lg border p-3 text-xs leading-6 ${q.overdue ? "border-danger" : "border-border"}`}>
                 <div className="flex flex-wrap items-center gap-2">
                   <b className="text-text">{q.subject}</b>
-                  <span className="text-text-muted">{{ sanity: "ادعای مشکوک", disagreement: "اختلاف تحلیل‌گرها", human_flag: "عدد غلط (گزارش کارشناس)", rule_critique: "نقد قاعده", autopsy: "کالبدشکافی خطا (پیشنهاد)", analysis_flag: "داده‌ی تحلیل غلط (گزارش کارشناس)" }[q.kind] || "تناقض"} · {q.period || "—"} · {q.age_days} روز پیش</span>
+                  <span className="text-text-muted">{{ sanity: "ادعای مشکوک", disagreement: "اختلاف تحلیل‌گرها", human_flag: "عدد غلط (گزارش کارشناس)", rule_critique: "نقد قاعده", autopsy: "کالبدشکافی خطا (پیشنهاد)", analysis_flag: "داده‌ی تحلیل غلط (گزارش کارشناس)", method_proposal: "نسخه‌ی تازه‌ی روش (پیشنهاد)", method_promotion: "ارتقای روش آزمایشی", consolidation: "تثبیت ماهانه (پیشنهاد)", experiment_proposal: "آزمایش فعال (پیشنهاد)" }[q.kind] || "تناقض"} · {q.period || "—"} · {q.age_days} روز پیش</span>
                   {q.spread && <span className="text-text-muted" dir="ltr">×{q.spread}</span>}
                 </div>
                 <p className="text-text-muted">{q.label}</p>
@@ -99,14 +99,14 @@ export default function MemoryClient() {
                     <li key={m.claim_key} className="flex flex-wrap items-center gap-2">
                       <span dir="ltr" className="text-text">{typeof m.value === "number" ? m.value.toLocaleString("en-US") : m.value} {m.unit || ""}</span>
                       <span className="text-text-muted" dir="ltr">{m.source} · {m.metric}</span>
-                      {!["disagreement", "rule_critique", "analysis_flag"].includes(q.kind) && <button type="button" disabled={busy} onClick={() => decide(q.id, "accept", m.claim_key)} className="rounded border border-border px-2 py-0.5 cursor-pointer disabled:opacity-50">{["sanity", "human_flag"].includes(q.kind) ? "درست است" : q.kind === "autopsy" ? "کالبدشکافی درست است" : "این مقدار درست است"}</button>}
+                      {!["disagreement", "rule_critique", "analysis_flag"].includes(q.kind) && !(q.kind === "consolidation" && q.action === "performance_drop") && <button type="button" disabled={busy} onClick={() => decide(q.id, "accept", m.claim_key)} className="rounded border border-border px-2 py-0.5 cursor-pointer disabled:opacity-50">{["sanity", "human_flag"].includes(q.kind) ? "درست است" : ["method_proposal", "method_promotion", "consolidation", "experiment_proposal"].includes(q.kind) ? "تأیید و اجرا" : q.kind === "autopsy" ? "کالبدشکافی درست است" : "این مقدار درست است"}</button>}
                     </li>
                   ))}
                 </ul>
                 <div className="mt-2 flex flex-wrap gap-2">
                   {q.kind === "contradiction" && <button type="button" disabled={busy} onClick={() => decide(q.id, "both_valid")} className="rounded border border-border px-2 py-0.5 cursor-pointer disabled:opacity-50">هر دو درست (تعریف متفاوت)</button>}
                   {["sanity", "human_flag"].includes(q.kind) && <button type="button" disabled={busy} onClick={() => decide(q.id, "reject")} className="rounded border border-border px-2 py-0.5 cursor-pointer disabled:opacity-50">رد (غلط است)</button>}
-                  <button type="button" disabled={busy} onClick={() => decide(q.id, "dismiss")} className="rounded border border-border px-2 py-0.5 cursor-pointer disabled:opacity-50">{["disagreement", "rule_critique", "analysis_flag"].includes(q.kind) ? "بررسی شد" : "نادیده"}</button>
+                  <button type="button" disabled={busy} onClick={() => decide(q.id, "dismiss")} className="rounded border border-border px-2 py-0.5 cursor-pointer disabled:opacity-50">{["disagreement", "rule_critique", "analysis_flag"].includes(q.kind) || (q.kind === "consolidation" && q.action === "performance_drop") ? "بررسی شد" : ["method_proposal", "method_promotion", "consolidation", "experiment_proposal"].includes(q.kind) ? "رد" : "نادیده"}</button>
                 </div>
               </li>
             ))}

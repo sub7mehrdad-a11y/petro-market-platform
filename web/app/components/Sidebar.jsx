@@ -54,6 +54,7 @@ function buildNavGroups(showOutreach, role) {
             { href: "/brain/forecasts", label: "دفتر پیش‌بینی", icon: IconSearch },
             { href: "/brain/skill", label: "مهارت‌سنجی", icon: IconSearch },
             { href: "/brain/review", label: "بازبینی روزانه", icon: IconSearch },
+            { href: "/brain/learning", label: "یادگیری مغز (مدیر)", icon: IconSearch },
             ...(showOutreach ? [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }] : []),
           ],
         }]
