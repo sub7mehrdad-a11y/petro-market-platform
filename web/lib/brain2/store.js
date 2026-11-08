@@ -69,6 +69,8 @@ export function readEvents(repo) {
 
 /** تنها راه نوشتن: افزودن یک خط. (همگام است، پس در یک پردازش Node نوشتن‌ها پشت‌سرهم و بدون تداخل‌اند.) */
 export function appendEvent(repo, event) {
+  // نمره‌ها (scores.jsonl) را فقط جزء سنجش می‌نویسد (پروتکل ۸-۵)؛ از مسیر عمومی مغز نوشتنشان ممنوع است.
+  if (repo === SCORES_REPO) throw new Error("نوشتن در scores فقط برای جزء سنجش (lib/brain2/scoring/writer.js) مجاز است.");
   const problem = brainStorageProblem();
   if (problem) throw new Error(problem);
   fs.appendFileSync(fileOf(repo), JSON.stringify(event) + "\n", "utf-8");
@@ -82,7 +84,17 @@ export function ensureRepoFile(repo) {
   fs.closeSync(fs.openSync(fileOf(repo), "a"));
 }
 
-export const newId =(prefix) => `${prefix}_${Date.now().toString(36)}${crypto.randomBytes(4).toString("hex")}`;
+export const SCORES_REPO = "scores";
+
+/** تنها راه نوشتن در scores.jsonl. فقط scoring/writer.js آن را import می‌کند (آزمون جداسازی این را می‌سنجد). خواندن از readEvents/currentRows آزاد است. */
+export function appendScoreEvent(event) {
+  const problem = brainStorageProblem();
+  if (problem) throw new Error(problem);
+  fs.appendFileSync(fileOf(SCORES_REPO), JSON.stringify(event) + "\n", "utf-8");
+  cache.delete(SCORES_REPO);
+}
+
+export const newId = (prefix) => `${prefix}_${Date.now().toString(36)}${crypto.randomBytes(4).toString("hex")}`;
 
 /** فیلدهای مشترک همه‌ی مخزن‌ها (بخش ۴-۱ سند): دو خط زمانی، جایگزینی و دلیل تغییر. */
 export function stampRow(prefix, fields = {}, now = new Date().toISOString()) {
