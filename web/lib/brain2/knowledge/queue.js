@@ -64,7 +64,7 @@ export function syncClaimStatuses(idx, { at }) {
   for (const q of openQueue().values()) {
     const keys = q.members.map((m) => m.claim_key);
     if (q.status === "open") {
-      for (const k of keys) changed += set(k, q.kind === "sanity" ? "در صف بررسی" : "متناقض", `صف بازبینی: ${q.label || q.kind}`);
+      for (const k of keys) changed += set(k, ["sanity", "human_flag"].includes(q.kind) ? "در صف بررسی" : "متناقض", `صف بازبینی: ${q.label || q.kind}`);
       continue;
     }
     const d = q.resolution?.decision;
@@ -83,9 +83,9 @@ export function resolveItem(idx, { id, decision, claimKey, by, note, at = new Da
   if (q.status !== "open") return { ok: false, error: "این آیتم قبلاً بسته شده است." };
   if (!["accept", "reject", "both_valid", "dismiss"].includes(decision)) return { ok: false, error: "تصمیم نامعتبر است." };
   if (decision === "accept" && !q.members.some((m) => m.claim_key === claimKey)) return { ok: false, error: "برای پذیرش باید یکی از مقدارهای آیتم انتخاب شود." };
-  if (decision === "reject" && q.kind !== "sanity") return { ok: false, error: "رد فقط برای ادعای مشکوک است؛ در تناقض یک مقدار را بپذیرید." };
+  if (decision === "reject" && !["sanity", "human_flag"].includes(q.kind)) return { ok: false, error: "رد فقط برای ادعای مشکوک است؛ در تناقض یک مقدار را بپذیرید." };
   if (decision === "both_valid" && q.kind !== "contradiction") return { ok: false, error: "«هر دو درست» فقط برای تناقض است." };
-  if (q.kind === "disagreement" && decision !== "dismiss") return { ok: false, error: "اختلاف تحلیل‌گرها فقط «بررسی شد» (نادیده) می‌شود؛ تصمیم دربارهٔ عدد در پیش‌بینی خودتان ثبت می‌شود." };
+  if (["disagreement", "rule_critique", "analysis_flag"].includes(q.kind) && decision !== "dismiss") return { ok: false, error: "اختلاف تحلیل‌گرها فقط «بررسی شد» (نادیده) می‌شود؛ تصمیم دربارهٔ عدد در پیش‌بینی خودتان ثبت می‌شود." };
   const row = supersede(q, { status: "resolved", resolution: { decision, claim_key: claimKey || null, by, note: String(note || "").slice(0, 300), at } }, `تصمیم انسانی: ${decision}`, at);
   const changed = syncClaimStatuses(idx, { at });
   return { ok: true, item: row, claims_changed: changed };
