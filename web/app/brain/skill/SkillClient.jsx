@@ -33,6 +33,14 @@ export default function SkillClient() {
   }
   useEffect(() => { load(); api("/api/brain/reputation", { cache: "no-store" }).then((r) => { if (r.ok) setRep(r); }); }, []);
 
+  async function autopsyNow() {
+    setBusy(true); setMsg("");
+    const r = await api("/api/brain/skill", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "autopsy_now" }) });
+    setBusy(false);
+    setMsg(r.ok ? `کالبدشکافی تازه ${r.new}، موجود ${r.unchanged}، به صف بازبینی ${r.queued}` : r.error || "انجام نشد");
+    load();
+  }
+
   async function scoreNow() {
     setBusy(true); setMsg("");
     const r = await api("/api/brain/skill", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "score_now" }) });
@@ -113,10 +121,28 @@ export default function SkillClient() {
         </section>
       )}
 
+      {data?.autopsies && data.autopsies.list.length > 0 && (
+        <section className="card p-5">
+          <h2 className="mb-1 text-sm font-bold text-text">کالبدشکافی خطاها (حلقه‌ی ۲؛ به ترتیب غافلگیری)</h2>
+          <p className="mb-2 text-[11px] leading-6 text-text-muted">فقط خطای سنجیده‌شده در برابر واقعیت؛ علت را کد با نشانه‌های قطعی تعیین می‌کند و مدل فقط روایت/پیشنهاد می‌دهد. هیچ قاعده‌ای خودکار عوض نمی‌شود.{data.autopsies.coverage.map((c) => ` · ${c.month}: ${c.done} از ${c.selected} (${Math.round(c.coverage * 100)}٪)`).join("")}</p>
+          <ul className="space-y-2 text-xs leading-6">
+            {data.autopsies.list.map((a) => (
+              <li key={a.key} className="rounded-lg border border-border p-2">
+                <b className="text-text">{a.category_fa || "غافلگیری معکوس"}</b> · <span dir="ltr">{a.forecaster}</span> · {a.month}{a.surprise_rank ? ` · رتبه‌ی غافلگیری ${a.surprise_rank}` : ""}{a.disputed ? " · ⚠ مدل دسته‌ی دیگری پیشنهاد کرد" : ""}
+                <p className="text-text-muted">{a.statement}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {data?.me.is_admin && (
         <section className="card border-primary p-4">
           <h2 className="mb-2 text-sm font-bold text-text">مدیر</h2>
-          <button type="button" disabled={busy} onClick={scoreNow} className="rounded-lg border border-border px-4 py-2 text-xs cursor-pointer disabled:opacity-50">سنجش همین الان</button>
+          <div className="flex flex-wrap gap-2">
+            <button type="button" disabled={busy} onClick={scoreNow} className="rounded-lg border border-border px-4 py-2 text-xs cursor-pointer disabled:opacity-50">سنجش همین الان</button>
+            <button type="button" disabled={busy} onClick={autopsyNow} className="rounded-lg border border-border px-4 py-2 text-xs cursor-pointer disabled:opacity-50">کالبدشکافی خطاها همین الان</button>
+          </div>
           {msg && <p className="mt-2 text-xs text-text-muted">{msg}</p>}
         </section>
       )}

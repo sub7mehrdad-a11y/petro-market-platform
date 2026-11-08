@@ -1,6 +1,7 @@
 import { ensureRound, getRound, isBrain, isRoundOpen, listRounds, loadConfig, predictionsOf, tehranClock } from "./forecast";
 import { runBrainForecasts, runBrainReviews } from "./brainForecaster";
 import { runMachineForecasts } from "./machineForecaster";
+import { runAutopsies } from "./autopsy";
 import { resolveGroqApiKey } from "../groqFetch";
 import { brainStorageProblem } from "./store";
 import { resolveBrainKey } from "../brain";
@@ -58,6 +59,10 @@ export async function brainForecastTick({ now = new Date() } = {}) {
         out.machines.push({ round: r.round_id, results: mf.results });
       }
     } else out.machines = "no_groq_key";
+    // کالبدشکافی خطاهای سنجیده‌شده (حلقه‌ی ۲): با کلید مغز روایت مدل، بدون آن قالبی
+    const au = await runAutopsies({ now, useModel: !!resolveBrainKey() });
+    if (au.new) console.log(`[brain-autopsy] ${au.new} کالبدشکافی تازه (${JSON.stringify(au.by_category)})، ${au.queued} مورد به صف بازبینی.`);
+    out.autopsy = au;
     return out;
   } catch (err) {
     console.warn(`[brain-forecast] خطا: ${String(err?.message || err).slice(0, 200)}`);

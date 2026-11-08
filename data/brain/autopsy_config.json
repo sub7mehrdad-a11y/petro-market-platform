@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "_note": "کالبدشکافی خطا (پروتکل ۹-۱ و ۹-۵؛ حلقه‌ی ۲). عمومی و بدون راز. فقط با خطای سنجیده‌شده در برابر واقعیت شروع می‌شود (۹-۴).",
+  "per_month": 10,
+  "large_error": 0.08,
+  "stale_days": 75,
+  "min_series_points": 3,
+  "shock_baseline_error": 0.1,
+  "data_wrong_min_change": 0.01,
+  "reverse": { "width_ratio": 0.25, "max_error": 0.05, "per_month": 3 },
+  "categories": {
+    "data_wrong": "داده‌ی غلط",
+    "data_stale": "داده‌ی کهنه یا ناکافی",
+    "rule_wrong": "قاعده‌ی غلط",
+    "method_wrong": "روش غلط",
+    "retrieval_gap": "بازیابی ناقص",
+    "unpredictable": "رویداد پیش‌بینی‌ناپذیر"
+  },
+  "actions": {
+    "data_wrong": "اعتبار منبعِ ادعای اصلاح‌شده کم شود (با تأیید مدیر).",
+    "data_stale": "ایجنت یا منبع تازه برای این سنجه پیشنهاد شود.",
+    "rule_wrong": "قاعده به صف بررسی قاعده می‌رود.",
+    "method_wrong": "برای حلقه‌ی ۳ (بازبینی روش) ثبت می‌شود.",
+    "retrieval_gap": "ضرایب بازیابی (بخش ۶-۴) بازبینی شود.",
+    "unpredictable": "چیزی تغییر نمی‌کند؛ فقط ثبت می‌شود."
+  },
+  "actionable_for_human": ["data_wrong", "data_stale", "rule_wrong", "retrieval_gap"]
+}
