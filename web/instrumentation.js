@@ -14,5 +14,7 @@ export async function register() {
     startBrainForecastAuto();
     const { startMemoryAuto } = await import("./lib/brain2/memoryAuto.js");
     startMemoryAuto();
+    const { startScoringAuto } = await import("./lib/brain2/scoringAuto.js");
+    startScoringAuto();
   }
 }
