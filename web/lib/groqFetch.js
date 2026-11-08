@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { ProxyAgent, fetch as undiciFetch } from "undici";
-import { upstream } from "./aiRelay";
+import { aiTimeoutMs, netError, upstream } from "./aiRelay";
 
 const DEFAULT_MODEL = "openai/gpt-oss-120b";
 
@@ -91,6 +91,7 @@ export async function generateGroqContent({ apiKey, model = DEFAULT_MODEL, syste
 
   const up = upstream("groq", "/openai/v1/chat/completions");
   const res = await undiciFetch(up.url, {
+    signal: AbortSignal.timeout(aiTimeoutMs("groq")),
     method: "POST",
     headers: {
       ...up.headers,
@@ -100,7 +101,7 @@ export async function generateGroqContent({ apiKey, model = DEFAULT_MODEL, syste
     // max_tokens صریح چون پیش‌فرض Groq برای خروجی‌های طولانی کافی نیست.
     body: JSON.stringify({ model, messages, max_tokens: maxTokens }),
     ...(dispatcher ? { dispatcher } : {}),
-  });
+  }).catch((e) => { throw netError("Groq", e); });
 
   const raw = await res.text();
   if (!res.ok) {
