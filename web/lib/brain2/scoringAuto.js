@@ -1,4 +1,5 @@
 import { runScoring } from "./scoring/writer";
+import { computeReputation } from "./reputation";
 import { brainStorageProblem } from "./store";
 
 // زمان‌بند جزء سنجش (مرحله‌ی ۴): هر ۶ ساعت (و ۲ دقیقه پس از بالا آمدن سرور) پرسش‌های سررسیدشده را می‌سنجد. بدون فراخوانی مدل.
@@ -14,7 +15,9 @@ export function scoringTick({ now = new Date() } = {}) {
     const problem = brainStorageProblem();
     if (problem) return { skipped: problem };
     const r = runScoring({ now });
-    if (r.written || r.changed) console.log(`[brain-scoring] ${r.written} نمره‌ی تازه، ${r.changed} تغییریافته، ${r.unresolved.length} پرسش بدون داوری.`);
+    const rep = computeReputation({ now }); // اعتبار از نتیجه‌ی سنجش و تصمیم‌های انسانی (مرحله‌ی ۸)
+    r.reputation = rep;
+    if (r.written || r.changed || rep.new || rep.changed) console.log(`[brain-scoring] ${r.written} نمره‌ی تازه، ${r.changed} تغییریافته، ${r.unresolved.length} پرسش بدون داوری؛ اعتبار: ${rep.new} تازه، ${rep.changed} به‌روز.`);
     return r;
   } catch (err) {
     console.warn(`[brain-scoring] خطا: ${String(err?.message || err).slice(0, 200)}`);

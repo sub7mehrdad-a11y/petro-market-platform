@@ -4,6 +4,7 @@ import { brainStorageProblem } from "../store";
 import { findContradictions, sanityProblem } from "./checks";
 import { computeConfidence, buildConfirmationIndex } from "./confidence";
 import { loadKnowledgeConfig } from "./config";
+import { sourceAdjustments } from "../reputation";
 import { syncClaimStatuses, syncQueue } from "./queue";
 
 // چرخه‌ی روزانه‌ی دانش (پروتکل ۶-۱، مرحله‌ی ۵). بدون مدل. استخراج و قاعده‌ها در migrate.js انجام شده‌اند؛ اینجا:
@@ -39,9 +40,10 @@ export function runKnowledgeCycle({ now = new Date() } = {}) {
   const ruleStatus = new Map(listRules().map((r) => [r.natural_key, r.status]));
   const claims = live();
   const ix = buildConfirmationIndex(claims, cfg, sourceKeyOf, originOf);
+  const adjust = sourceAdjustments();
   let rewritten = 0;
   for (const c of claims) {
-    const next = computeConfidence(c, { today, cfg, sourceKeyOf, ix, ruleStatus });
+    const next = computeConfidence(c, { today, cfg, sourceKeyOf, ix, ruleStatus, adjust });
     if (Math.abs(next - c.confidence) >= cfg.rewrite_threshold) {
       reviseClaim(idx, c, { confidence: next }, `اعتماد بازمحاسبه شد: ${c.confidence} ← ${next} (اعتبار منبع، تازگی، تأیید مستقل)`, { at });
       rewritten += 1;

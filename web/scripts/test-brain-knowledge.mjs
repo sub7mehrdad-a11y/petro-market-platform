@@ -210,7 +210,7 @@ for (const f of fs.readdirSync(path.join(process.cwd(), "lib", "brain2", "knowle
 const dataCopy = path.join(tmp, "data");
 fs.mkdirSync(path.join(dataCopy, "brain"), { recursive: true });
 for (const f of fs.readdirSync(REAL)) if (f.endsWith(".json") && !/email|outreach|users|companies|exhibition/.test(f)) fs.copyFileSync(path.join(REAL, f), path.join(dataCopy, f));
-for (const f of ["country_scores.json", "scoring_config.json", "confidence_config.json", "digest.md"]) fs.copyFileSync(path.join(REAL, "brain", f), path.join(dataCopy, "brain", f));
+for (const f of ["country_scores.json", "scoring_config.json", "confidence_config.json", "reputation_config.json", "digest.md"]) fs.copyFileSync(path.join(REAL, "brain", f), path.join(dataCopy, "brain", f));
 process.env.BRAIN_DATA_DIR = dataCopy;
 process.env.BRAIN_STATE_DIR = path.join(tmp, "real");
 Mig.runMigration({ now: NOW });

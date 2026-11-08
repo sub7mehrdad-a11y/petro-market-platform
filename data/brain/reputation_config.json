@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "_note": "سازوکار اعتبار (پروتکل ۱۱). اعتبار فقط از مقایسه با واقعیت ساخته می‌شود؛ توافق با مغز و جایگاه سازمانی در آن نقشی ندارند. عمومی و بدون راز.",
+  "shrinkage_k": 20,
+  "half_life_days": 365,
+  "neutral": 0.5,
+  "accuracy": { "error_tolerance": 0.25, "inside_weight": 0.3 },
+  "source_adjust": 0.3,
+  "topic_family": { "china_fob": "price", "iran_food_fob": "price" },
+  "write_threshold": 0.01
+}

@@ -1,11 +1,11 @@
 import { BRAIN_MODEL } from "../brain";
 import { ANALYSTS, forecasterName, runAnalyst } from "./analysts";
 import { currentVersion, getRound, isRoundOpen, recordMachineForecast } from "./forecast";
-import { JUDGE_FORECASTER, JUDGE_METHOD, analystWeights, combine, writeSummary } from "./judge";
+import { JUDGE_FORECASTER, JUDGE_METHOD, combine, writeSummary } from "./judge";
 import { raiseItem } from "./knowledge/queue";
 import { loadAnalystsConfig } from "./knowledge/retrieval";
 import { loadIndex, upsertAnalysis } from "./memory";
-import { readScores } from "./scoring/read";
+import { reputationWeights } from "./reputation";
 
 // هماهنگ‌کننده‌ی پیش‌بین‌های ماشینی (مرحله‌ی ۶): دو تحلیل‌گر مستقل ← ثبت در دفتر (هرکدام پیش از دیدن خروجی دیگری) ← داور.
 // بازبینی هفتگی مثل «مغز فعلی»: نسخه‌ی تازه فقط با تغییر معنادار و دلیل. خروجی هر تحلیل‌گر و داور علاوه بر دفتر، در مخزن «تحلیل‌ها»ی حافظه
@@ -60,8 +60,7 @@ export async function runMachineForecasts(roundId, { now = new Date(), generator
     if (!cur.stat || !cur.event) { res.judge = "waiting_for_analysts"; results.push(res); continue; }
     const prevJ = currentVersion(roundId, q.id, (p) => p.forecaster === JUDGE_FORECASTER);
     if (prevJ && !changed.stat && !changed.event && !force) { res.judge = "not_due"; results.push(res); continue; }
-    const sc = readScores();
-    const { weights, basis, info } = analystWeights([cur.stat.forecaster, cur.event.forecaster], q.key, sc, cfg.judge);
+    const { weights, basis, info } = reputationWeights([cur.stat.forecaster, cur.event.forecaster], q.key); // وزن از اعتبار همان موضوع (۷-۳ و ۱۱)
     const a = { point: cur.stat.forecast.point, lo: cur.stat.forecast.lo, hi: cur.stat.forecast.hi, rationale: cur.stat.rationale };
     const b = { point: cur.event.forecast.point, lo: cur.event.forecast.lo, hi: cur.event.forecast.hi, rationale: cur.event.rationale };
     const combined = combine(a, b, weights, cfg.judge);

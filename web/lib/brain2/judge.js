@@ -47,7 +47,7 @@ const numbersIn = (t) => new Set((String(t).replace(/[۰-۹]/g, (d) => FA.indexO
 /** متن قطعی (بدون مدل): پشتوانه‌ی «نوشتار» وقتی مدل در دسترس نیست یا عدد بی‌پشتوانه نوشته است. */
 export function templateSummary(a, b, c, weights, basis, cfg = loadAnalystsConfig().judge) {
   const w = (x) => `${Math.round(x * 100)}٪`;
-  const base = `تحلیل‌گر آماری ${a.point} (بازه‌ی ${a.lo} تا ${a.hi}) و تحلیل‌گر رویدادمحور ${b.point} (بازه‌ی ${b.lo} تا ${b.hi}) را با وزن ${w(weights[0])} و ${w(weights[1])} (${basis === "history" ? "از سابقه" : "برابر؛ هنوز سابقه‌ی سنجیده‌شده‌ی کافی نیست"}) ترکیب کردم: ${c.point} با بازه‌ی ${c.lo} تا ${c.hi}.`;
+  const base = `تحلیل‌گر آماری ${a.point} (بازه‌ی ${a.lo} تا ${a.hi}) و تحلیل‌گر رویدادمحور ${b.point} (بازه‌ی ${b.lo} تا ${b.hi}) را با وزن ${w(weights[0])} و ${w(weights[1])} (${basis !== "equal" ? "از اعتبار (سابقه‌ی سنجیده‌شده)" : "برابر؛ هنوز سابقه‌ی سنجیده‌شده‌ی کافی نیست"}) ترکیب کردم: ${c.point} با بازه‌ی ${c.lo} تا ${c.hi}.`;
   return c.high ? `${cfg.must_say_when_high} اختلاف دو عدد ${c.spread} (${Math.round(c.disagreement * 1000) / 10}٪) است. ${base}` : base;
 }
 
@@ -76,7 +76,7 @@ export async function writeSummary({ question, a, b, combined, weights, basis, g
   const input = [
     `پرسش: ${question.text}`,
     ...items,
-    `نتیجه‌ی کد: عدد ${combined.point}، بازه‌ی ${combined.lo} تا ${combined.hi}؛ وزن‌ها ${weights.map((w) => Math.round(w * 100) + "٪").join(" و ")} (${basis === "history" ? "از سابقه" : "برابر"})؛ اختلاف ${combined.spread} (${Math.round(combined.disagreement * 1000) / 10}٪)؛ ${combined.high ? "اختلاف بالا است" : "اختلاف کم است"}.`,
+    `نتیجه‌ی کد: عدد ${combined.point}، بازه‌ی ${combined.lo} تا ${combined.hi}؛ وزن‌ها ${weights.map((w) => Math.round(w * 100) + "٪").join(" و ")} (${basis !== "equal" ? "از اعتبار" : "برابر"})؛ اختلاف ${combined.spread} (${Math.round(combined.disagreement * 1000) / 10}٪)؛ ${combined.high ? "اختلاف بالا است" : "اختلاف کم است"}.`,
   ].join("\n");
   let text;
   try {
