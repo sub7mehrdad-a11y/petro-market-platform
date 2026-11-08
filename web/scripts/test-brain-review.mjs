@@ -11,7 +11,7 @@ const REAL = path.join(process.cwd(), "..", "data");
 const dataDir = path.join(tmp, "data");
 fs.mkdirSync(path.join(dataDir, "brain"), { recursive: true });
 for (const f of fs.readdirSync(REAL)) if (f.endsWith(".json") && !/email|outreach|users|companies|exhibition/.test(f)) fs.copyFileSync(path.join(REAL, f), path.join(dataDir, f));
-for (const f of ["country_scores.json", "scoring_config.json", "confidence_config.json", "analysts_config.json", "digest.md"]) fs.copyFileSync(path.join(REAL, "brain", f), path.join(dataDir, "brain", f));
+for (const f of ["country_scores.json", "scoring_config.json", "confidence_config.json", "analysts_config.json", "reputation_config.json", "digest.md"]) fs.copyFileSync(path.join(REAL, "brain", f), path.join(dataDir, "brain", f));
 process.env.BRAIN_DATA_DIR = dataDir;
 process.env.BRAIN_STATE_DIR = path.join(tmp, "state");
 process.env.SALES_STATE_DIR = path.join(tmp, "sales");

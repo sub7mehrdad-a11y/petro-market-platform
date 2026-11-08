@@ -68,8 +68,9 @@ function signalConfirmed(c, ix) {
 }
 
 /** اعتماد محاسبه‌شده‌ی یک ادعا (۰٫۰۵ تا ۰٫۹۹). ruleStatus: Map(کلید قاعده → وضعیت). */
-export function computeConfidence(c, { today, cfg, sourceKeyOf, ix, ruleStatus }) {
-  const base = sourceBase(sourceKeyOf(c), cfg);
+export function computeConfidence(c, { today, cfg, sourceKeyOf, ix, ruleStatus, adjust = null }) {
+  // اعتبار پایه‌ی منبع + تعدیل از سابقه‌ی واقعی (تصمیم‌های انسانی)؛ منبع بی‌سابقه تغییری نمی‌کند (۱۱-۳ شروع منصفانه)
+  const base = Math.min(0.99, Math.max(0.05, sourceBase(sourceKeyOf(c), cfg) + (adjust?.get(sourceKeyOf(c)) || 0)));
   let conf = base * freshness(c, today, cfg);
   if (metricClass(c.metric, cfg) === "signal") {
     if (signalConfirmed(c, ix)) conf += cfg.confirmation.signal_boost;

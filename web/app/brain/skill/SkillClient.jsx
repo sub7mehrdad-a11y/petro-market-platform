@@ -24,13 +24,14 @@ export default function SkillClient() {
   const [error, setError] = useState("");
   const [msg, setMsg] = useState("");
   const [busy, setBusy] = useState(false);
+  const [rep, setRep] = useState(null);
 
   async function load() {
     const r = await api("/api/brain/skill", { cache: "no-store" });
     if (!r.ok) { setError(r.error || "خطا"); return; }
     setError(""); setData(r);
   }
-  useEffect(() => { load(); }, []);
+  useEffect(() => { load(); api("/api/brain/reputation", { cache: "no-store" }).then((r) => { if (r.ok) setRep(r); }); }, []);
 
   async function scoreNow() {
     setBusy(true); setMsg("");
@@ -92,6 +93,23 @@ export default function SkillClient() {
               <li key={i} className="text-text-muted"><b className="text-text">{who(p.forecaster)}</b> · {p.text} — سررسید {p.resolves_at}: <span className={p.status.startsWith("بدون داوری") ? "text-warning" : ""}>{p.status}</span></li>
             ))}
           </ul>
+        </section>
+      )}
+
+      {rep && rep.rows.length > 0 && (
+        <section className="card p-5">
+          <h2 className="mb-1 text-sm font-bold text-text">اعتبار{rep.me.is_admin ? " (همه؛ دید مدیر)" : " شما"}</h2>
+          <p className="mb-2 text-[11px] leading-6 text-text-muted">اعتبار فقط از مقایسه با واقعیت ساخته می‌شود (نه موافقت با مغز و نه جایگاه). وزن = (n×دقت + {rep.rule.k}×میانگین گروه) ÷ (n + {rep.rule.k}) با کهنگی (نیمه‌عمر {Math.round(rep.rule.half_life_days / 30)} ماه)؛ تا نتیجه‌ها کم است وزن به میانگین گروه نزدیک می‌ماند.</p>
+          <div className="overflow-x-auto">
+            <table className="w-full text-[11px]">
+              <thead><tr className="text-text-muted"><th className="p-1 text-start">پیش‌بین / منبع / روش</th><th className="p-1 text-start">نوع</th><th className="p-1 text-start">موضوع</th><th className="p-1 text-start">نتیجه‌ها</th><th className="p-1 text-start">دقت</th><th className="p-1 text-start">میانگین گروه</th><th className="p-1 text-start">وزن</th></tr></thead>
+              <tbody>
+                {rep.rows.map((r) => (
+                  <tr key={`${r.entity}|${r.topic}`} className="border-t border-border"><td className="p-1" dir="ltr">{r.entity}</td><td className="p-1">{{ forecaster: "پیش‌بین", method: "روش", source: "منبع", reviewer: "بازبین" }[r.entity_type] || r.entity_type}</td><td className="p-1" dir="ltr">{r.topic}</td><td className="p-1">{r.n_resolved}</td><td className="p-1">{Math.round(r.score * 100)}٪</td><td className="p-1">{Math.round(r.group_mean * 100)}٪</td><td className="p-1"><b>{Math.round(r.weight * 100)}٪</b></td></tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </section>
       )}
 
