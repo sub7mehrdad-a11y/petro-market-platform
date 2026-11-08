@@ -7,6 +7,7 @@ import { readSalesSnapshots, salesAiEnabled } from "@/lib/salesStore";
 import { ledgerContextForBrain } from "@/lib/salesLedger";
 import { loadAccounts } from "@/lib/salesLedgerStore";
 import { generateGroqContent, resolveGroqApiKey } from "@/lib/groqFetch";
+import { locationErrorFa } from "@/lib/aiRelay";
 // موتور پشتیبان: اگر سهمیه‌ی روزانه‌ی Groq تمام شود، «پاسخ هوشمند» خاموش نمی‌شود.
 import { generateContent as generateGeminiContent, resolveApiKey as resolveGeminiApiKey } from "@/lib/geminiFetch";
 
@@ -190,6 +191,9 @@ export async function POST(request) {
     });
   } catch (err) {
     const msg = String(err?.message || err);
+
+    const blocked = locationErrorFa(msg);
+    if (blocked) return NextResponse.json({ error: blocked }, { status: 502 });
 
     // خطاهای رایج را به پیام فارسی قابل‌فهم تبدیل می‌کنیم، چون کاربر نهایی
     // متن انگلیسی خام Groq برایش معنایی ندارد.

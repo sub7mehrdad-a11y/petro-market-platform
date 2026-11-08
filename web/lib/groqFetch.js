@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { ProxyAgent, fetch as undiciFetch } from "undici";
+import { upstream } from "./aiRelay";
 
-const BASE = "https://api.groq.com/openai/v1/chat/completions";
 const DEFAULT_MODEL = "openai/gpt-oss-120b";
 
 /**
@@ -89,9 +89,11 @@ export async function generateGroqContent({ apiKey, model = DEFAULT_MODEL, syste
   }
   if (maxTokens > budget) maxTokens = budget;
 
-  const res = await undiciFetch(BASE, {
+  const up = upstream("groq", "/openai/v1/chat/completions");
+  const res = await undiciFetch(up.url, {
     method: "POST",
     headers: {
+      ...up.headers,
       "Content-Type": "application/json",
       Authorization: `Bearer ${apiKey}`,
     },

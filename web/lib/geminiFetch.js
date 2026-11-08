@@ -2,8 +2,8 @@ import fs from "fs";
 import path from "path";
 import { ProxyAgent, fetch as undiciFetch } from "undici";
 import { resolveProxyUrl } from "./groqFetch";
+import { upstream } from "./aiRelay";
 
-const BASE = "https://generativelanguage.googleapis.com/v1beta";
 
 /**
  * کلید API را پیدا می‌کند — مخصوص بخش «پاسخ هوشمند» توی /ask، عمداً از یک توکن
@@ -56,9 +56,11 @@ function getDispatcher() {
 export async function generateContent({ apiKey, model, systemInstruction, input, contents, generationConfig }) {
   const dispatcher = getDispatcher();
 
-  const res = await undiciFetch(`${BASE}/models/${model}:generateContent`, {
+  const up = upstream("gemini", `/v1beta/models/${model}:generateContent`);
+  const res = await undiciFetch(up.url, {
     method: "POST",
     headers: {
+      ...up.headers,
       "Content-Type": "application/json",
       // احراز هویت حتماً باید هدر باشد؛ کلیدهای جدید با فرمت "AQ." روی
       // پارامتر ?key= کار نمی‌کنند.
