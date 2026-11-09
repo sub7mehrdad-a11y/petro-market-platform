@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { commercialSession, isBrainAdmin } from "@/lib/brain2/access";
 import { ensureRound, tehranClock } from "@/lib/brain2/forecast";
-import { runBrainForecasts, runBrainReviews } from "@/lib/brain2/brainForecaster";
+import { getDomain } from "@/lib/brain2/domain/index";
 import { runMachineForecasts } from "@/lib/brain2/machineForecaster";
 import { brainStorageProblem } from "@/lib/brain2/store";
 
@@ -22,7 +22,7 @@ export async function POST(request) {
       return NextResponse.json({ ok: true, created: r.created, round_id: r.round.round_id });
     }
     if (b.action === "brain_forecasts") {
-      const rep = await runBrainForecasts(roundId);
+      const rep = await getDomain().legacyForecaster.runBrainForecasts(roundId);
       return NextResponse.json({ ok: rep.ok, error: rep.error, results: rep.results });
     }
     if (b.action === "machine_forecasts") {
@@ -30,7 +30,7 @@ export async function POST(request) {
       return NextResponse.json({ ok: rep.ok, error: rep.error, results: rep.results, skipped: rep.skipped });
     }
     if (b.action === "brain_reviews") {
-      const rep = await runBrainReviews(roundId, { force: true });
+      const rep = await getDomain().legacyForecaster.runBrainReviews(roundId, { force: true });
       return NextResponse.json({ ok: rep.ok, error: rep.error, results: rep.results, skipped: rep.skipped });
     }
   } catch (err) {

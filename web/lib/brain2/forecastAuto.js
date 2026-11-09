@@ -1,6 +1,6 @@
 import { runLearningCycle } from "./learning/cycle";
 import { ensureRound, getRound, isBrain, isRoundOpen, listRounds, loadConfig, predictionsOf, tehranClock } from "./forecast";
-import { runBrainForecasts, runBrainReviews } from "./brainForecaster";
+import { getDomain } from "./domain/index";
 import { runMachineForecasts } from "./machineForecaster";
 import { runAutopsies } from "./autopsy";
 import { resolveGroqApiKey } from "../groqFetch";
@@ -34,7 +34,7 @@ export async function brainForecastTick({ now = new Date() } = {}) {
     const out = { round: round.round_id };
     const missing = round.questions.filter((q) => !predictionsOf(clock.month).some((p) => p.question_id === q.id && isBrain(p)));
     if (missing.length) {
-      const rep = await runBrainForecasts(clock.month, { now });
+      const rep = await getDomain().legacyForecaster.runBrainForecasts(clock.month, { now });
       const ok = rep.results.filter((r) => r.status === "recorded").length;
       console.log(`[brain-forecast] پیش‌بینی مغز برای دور ${clock.month}: ${ok} ثبت، ${rep.results.filter((r) => r.status === "failed").length} ناموفق.`);
       out.brain = rep.results;
@@ -42,7 +42,7 @@ export async function brainForecastTick({ now = new Date() } = {}) {
     out.reviews = [];
     for (const r of listRounds()) {
       if (!isRoundOpen(r, now)) continue;
-      const rv = await runBrainReviews(r.round_id, { now });
+      const rv = await getDomain().legacyForecaster.runBrainReviews(r.round_id, { now });
       const changed = (rv.results || []).filter((x) => x.status === "revised").length;
       if ((rv.results || []).some((x) => x.status !== "not_due" && x.status !== "no_forecast")) {
         console.log(`[brain-forecast] بازبینی دور ${r.round_id}: ${changed} نسخه‌ی تازه، ${(rv.results || []).filter((x) => x.status === "failed").length} ناموفق.`);

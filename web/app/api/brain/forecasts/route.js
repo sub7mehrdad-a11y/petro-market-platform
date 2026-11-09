@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { commercialSession, isBrainAdmin } from "@/lib/brain2/access";
 import { getRound, listRounds, participationOf, roundLockAt, submitForecast, tehranClock, viewRound } from "@/lib/brain2/forecast";
-import { latestSeriesValue } from "@/lib/brain2/brainForecaster";
+import { getDomain } from "@/lib/brain2/domain/index";
 import { brainStorageProblem } from "@/lib/brain2/store";
 
 // دفتر پیش‌بینی: نمای دور (با قانون دید کور سمت سرور) و ثبت پیش‌بینی. فقط نقش «بازرگانی» (proxy.js + اینجا).
@@ -17,7 +17,7 @@ export async function GET(request) {
   const view = roundId ? viewRound({ username: s.username, isAdmin: admin, roundId }) : null;
   if (view) {
     // آخرین مقدار عمومی هر سری برای زمینه‌ی کاربر (سری محرمانه چیزی نمی‌دهد)
-    for (const q of view.questions) q.last_value = latestSeriesValue(q.target.truth_source);
+    for (const q of view.questions) q.last_value = getDomain().legacyForecaster.latestSeriesValue(q.target.truth_source);
   }
   return NextResponse.json({
     me: { username: s.username, is_admin: admin },
@@ -42,6 +42,6 @@ export async function POST(request) {
   if (!r.ok) return NextResponse.json({ error: r.error, code: r.code }, { status: r.code === "closed" ? 410 : ["need_reason", "unchanged", "invalid"].includes(r.code) ? 422 : 409 });
   // بعد از ثبت، نمای جدید (با پیش‌بینی مغز) برگردانده می‌شود
   const view = viewRound({ username: s.username, isAdmin: isBrainAdmin(s.username), roundId: b.round_id });
-  for (const q of view.questions) q.last_value = latestSeriesValue(q.target.truth_source);
+  for (const q of view.questions) q.last_value = getDomain().legacyForecaster.latestSeriesValue(q.target.truth_source);
   return NextResponse.json({ ok: true, round: view });
 }

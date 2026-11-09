@@ -1,9 +1,8 @@
 import fs from "fs";
 import path from "path";
 import { backupBrain } from "./backup";
-import { buildShadowDigest } from "./digest";
 import { runKnowledgeCycle } from "./knowledge/cycle";
-import { runMigration } from "./migrate";
+import { getDomain } from "./domain/index";
 import { brainStorageProblem, getBrainDir } from "./store";
 
 // زمان‌بند حافظه (مرحله‌ی ۲): بعد از بالا آمدن سرور (داده‌ی data/*.json داخل ایمیج هر دیپلوی تازه می‌شود) و سپس هر ۶ ساعت،
@@ -13,7 +12,7 @@ let timer = null;
 let busy = false;
 
 export function refreshShadowDigest(now = new Date()) {
-  const text = buildShadowDigest({ today: now.toISOString().slice(0, 10) });
+  const text = getDomain().digest({ today: now.toISOString().slice(0, 10) });
   fs.writeFileSync(path.join(getBrainDir(), "digest_shadow.md"), text, "utf-8");
   return text.length;
 }
@@ -25,7 +24,7 @@ export function memoryTick({ now = new Date() } = {}) {
     const problem = brainStorageProblem();
     if (problem) return { skipped: problem };
     const backup = backupBrain({ now }); // پیش از نوشتن تازه
-    const mig = runMigration({ now });
+    const mig = getDomain().migrate({ now });
     const kc = runKnowledgeCycle({ now }); // چرخه‌ی دانش: بررسی ساده، تناقض، اعتماد (مرحله‌ی ۵)
     const shadow = refreshShadowDigest(now);
     const s = mig.stats;

@@ -14,7 +14,7 @@ delete process.env.BRAIN_ADMINS;
 
 const F = await import("../lib/brain2/forecast.js");
 const S = await import("../lib/brain2/store.js");
-const BF = await import("../lib/brain2/brainForecaster.js");
+const BF = await import("../lib/brain2/domain/baking-soda/brainForecaster.js");
 const A = await import("../lib/brain2/access.js");
 const Auto = await import("../lib/brain2/forecastAuto.js");
 const auth = await import("../lib/auth.js");

@@ -1,9 +1,9 @@
 import fs from "fs";
 import path from "path";
-import { flagStaleAnalyses, loadIndex, upsertAnalysis, upsertClaim, upsertSource } from "./memory";
-import { periodOf } from "./periods";
-import { ensureRepos } from "./schema";
-import { applyClaimRules, ensureRules, runOutputChecks } from "./rules";
+import { flagStaleAnalyses, loadIndex, upsertAnalysis, upsertClaim, upsertSource } from "../../memory";
+import { periodOf } from "../../periods";
+import { ensureRepos } from "../../schema";
+import { applyClaimRules, ensureRules, runOutputChecks } from "../../rules";
 
 // انتقال داده‌های فعلی پلتفرم (data/*.json) به «منبع» و «ادعا» (مرحله‌ی ۲؛ دستور ساخت و برنامه‌ی R1 بخش ۶).
 // idempotent است: کلید طبیعی از دوباره‌نویسی جلوگیری می‌کند؛ مقدار تغییرکرده = بستن ردیف قدیمی + ردیف تازه با دلیل.

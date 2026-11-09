@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { currentRows } from "../store";
-import { listRules, RULES } from "../rules";
+import { getRules, listRules } from "../rules";
 import { asciiDigits, daysBetween, loadKnowledgeConfig, metricClass, periodEnd } from "./config";
 import { periodOf } from "../periods";
 
@@ -20,7 +20,7 @@ export function loadAnalystsConfig() {
   return cfg;
 }
 
-const FLAG_LABEL = Object.fromEntries(RULES.map((r) => [r.key, r.label]));
+const flagLabel = (k) => getRules().find((r) => r.key === k)?.label;
 const recency = (claim, today, kcfg) => {
   const end = periodEnd(claim);
   if (!end) return 1;
@@ -86,7 +86,7 @@ export function retrieve({ question, pack, now = new Date(), asOf = null }) {
   const series = ordered.map((x) => ({ period: x.c.period, value: x.c.value, unit: x.c.unit, source: sources.get(x.c.source_ids?.[0])?.origin || null }));
 
   const lineOf = (c, tag) => {
-    const flags = (c.rule_flags || []).map((k) => FLAG_LABEL[k]).filter(Boolean);
+    const flags = (c.rule_flags || []).map((k) => flagLabel(k)).filter(Boolean);
     const q = c.qualifiers && Object.keys(c.qualifiers).length && c.metric !== "signal" ? ` {${Object.entries(c.qualifiers).filter(([k]) => ["price_type", "product", "supplier", "to"].includes(k)).map(([k, v]) => `${k}=${v}`).join(",")}}` : "";
     const src = sources.get(c.source_ids?.[0])?.origin || "";
     return c.metric === "signal"
