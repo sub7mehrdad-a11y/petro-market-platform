@@ -13,24 +13,25 @@ delete process.env.OUTREACH_STATE_DIR;
 const S = await import("../lib/brain2/store.js");
 const M = await import("../lib/brain2/memory.js");
 const R = await import("../lib/brain2/rules.js");
-const Mig = await import("../lib/brain2/migrate.js");
+const DR = await import("../lib/brain2/domain/baking-soda/rules.js");
+const Mig = await import("../lib/brain2/domain/baking-soda/migrate.js");
 const Sch = await import("../lib/brain2/schema.js");
 
 Sch.ensureRepos();
 const T0 = "2026-11-08T10:00:00.000Z";
 
 // ------------------------------------------------------------------ ثبت قاعده‌ها
-assert.equal(R.RULES.length, 7, "هفت قاعده‌ی ۱۵-۳");
-assert.equal(R.RULES.filter((r) => r.level === "claim").length, 5);
-assert.equal(R.RULES.filter((r) => r.level === "output").length, 2);
-for (const r of R.RULES) assert.ok(r.text && r.check && r.label && r.scope, `قاعده ${r.key} متن و بررسی خودکار دارد`);
+assert.equal(DR.RULES.length, 7, "هفت قاعده‌ی ۱۵-۳");
+assert.equal(DR.RULES.filter((r) => r.level === "claim").length, 5);
+assert.equal(DR.RULES.filter((r) => r.level === "output").length, 2);
+for (const r of DR.RULES) assert.ok(r.text && r.check && r.label && r.scope, `قاعده ${r.key} متن و بررسی خودکار دارد`);
 assert.deepEqual(R.ensureRules({ at: T0 }), { created: 7, changed: 0 });
 assert.deepEqual(R.ensureRules({ at: T0 }), { created: 0, changed: 0 }, "اجرای دوباره = بدون تغییر");
 const rows = R.listRules();
 assert.equal(rows.length, 7);
 assert.ok(rows.every((r) => r.status === "پیشنهادی" && r.origin === "پروتکل ۱۵-۳" && r.votes.length === 0 && r.merged_into === null && "importance" in r), "همه «پیشنهادی» با فیلدهای ۰٫۲");
 // تغییر متن = ردیف تازه، وضعیت (مثلاً «آزمایشی» که انسان داده) حفظ می‌شود، قبلی بسته می‌شود
-const rule0 = R.RULES[0];
+const rule0 = DR.RULES[0];
 const origText = rule0.text;
 const cur = rows.find((r) => r.natural_key === rule0.key);
 const { id: _i, created_at: _c, recorded_from: _f, recorded_to: _t, closed_reason: _r, ...keep } = cur;
@@ -136,12 +137,12 @@ const cl = [
   { metric: "import_supplier_tons", subject: "عراق", qualifiers: { supplier: "روسیه" }, value: 0 },
 ];
 const okCfg = { competition: { rivals: ["ترکیه", "چین", "روسیه"] } };
-const ruNeg = R.checkRussiaInCompetition({ analyses: [scoring("ازبکستان", "سهم ترکیه+چین+روسیه 60٪"), scoring("قزاقستان", "سهم ترکیه+چین+روسیه 80٪"), scoring("عراق", "سهم ترکیه+چین 10٪")], claims: cl, scoringConfig: okCfg });
+const ruNeg = DR.checkRussiaInCompetition({ analyses: [scoring("ازبکستان", "سهم ترکیه+چین+روسیه 60٪"), scoring("قزاقستان", "سهم ترکیه+چین+روسیه 80٪"), scoring("عراق", "سهم ترکیه+چین 10٪")], claims: cl, scoringConfig: okCfg });
 assert.deepEqual(ruNeg.violations, [], "روسیه دیده شده؛ سهم صفر روسیه (عراق) نقض نیست");
-const ruPos = R.checkRussiaInCompetition({ analyses: [scoring("ازبکستان", "سهم ترکیه+چین 5٪")], claims: cl, scoringConfig: okCfg });
+const ruPos = DR.checkRussiaInCompetition({ analyses: [scoring("ازبکستان", "سهم ترکیه+چین 5٪")], claims: cl, scoringConfig: okCfg });
 assert.equal(ruPos.violations.length, 1);
 assert.equal(ruPos.violations[0].item, "ازبکستان", "همان خطای مرحله‌ی ۱ (امتیاز کامل رقابت کم)");
-assert.equal(R.checkRussiaInCompetition({ analyses: [], claims: [], scoringConfig: { competition: { rivals: ["ترکیه", "چین"] } } }).violations.length, 1, "روسیه از فهرست رقبا افتاده");
+assert.equal(DR.checkRussiaInCompetition({ analyses: [], claims: [], scoringConfig: { competition: { rivals: ["ترکیه", "چین"] } } }).violations.length, 1, "روسیه از فهرست رقبا افتاده");
 
 const digest = [
   "### اردن — رتبه ۱۰ از ۱۳",
@@ -150,11 +151,11 @@ const digest = [
   "- نمایشگاه‌های پیش‌رو (قابل‌پیشنهاد): CPHI (پایان ۲۰۲۶-۱۱-۲۵)",
   "- 3 نمایشگاه با تاریخ گذشته در بانک هست (قابل‌پیشنهاد نیست).",
 ].join("\n");
-const evPos = R.checkUpcomingEvents({ digestText: digest, today: "2026-11-08" });
+const evPos = DR.checkUpcomingEvents({ digestText: digest, today: "2026-11-08" });
 assert.equal(evPos.checked, 3);
 assert.deepEqual(evPos.violations.map((v) => v.item), ["اردن: Old Fair"], "فقط رویداد گذشته نقض است");
-assert.equal(R.checkUpcomingEvents({ digestText: digest, today: "2026-12-30" }).violations.length, 3, "با گذشت زمان همان خلاصه نقض می‌شود");
-assert.ok(R.checkUpcomingEvents({ digestText: null, today: "2026-11-08" }).skipped);
+assert.equal(DR.checkUpcomingEvents({ digestText: digest, today: "2026-12-30" }).violations.length, 3, "با گذشت زمان همان خلاصه نقض می‌شود");
+assert.ok(DR.checkUpcomingEvents({ digestText: null, today: "2026-11-08" }).skipped);
 
 // ثبت نتیجه‌ی بررسی خروجی در حافظه (تحلیل rule-check)، idempotent
 const idx2 = M.loadIndex();

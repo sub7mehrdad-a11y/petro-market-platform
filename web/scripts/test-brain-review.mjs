@@ -18,7 +18,7 @@ process.env.SALES_STATE_DIR = path.join(tmp, "sales");
 delete process.env.OUTREACH_STATE_DIR;
 
 const S = await import("../lib/brain2/store.js");
-const Mig = await import("../lib/brain2/migrate.js");
+const Mig = await import("../lib/brain2/domain/baking-soda/migrate.js");
 const K = await import("../lib/brain2/knowledge/cycle.js");
 const Q = await import("../lib/brain2/knowledge/queue.js");
 const M = await import("../lib/brain2/memory.js");

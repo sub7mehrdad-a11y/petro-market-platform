@@ -15,7 +15,7 @@ import crypto from "crypto";
 // حجم داده کوچک است. این لایه طوری است که بعداً می‌شود موتور را عوض کرد بدون تغییر بقیه‌ی کد.
 
 const REPO_ROOT = path.join(process.cwd(), "..");
-export const DOMAIN = "baking-soda";
+export const DOMAIN = process.env.BRAIN_DOMAIN || "baking-soda";
 
 export function getBrainDir() {
   if (process.env.BRAIN_STATE_DIR) return process.env.BRAIN_STATE_DIR;

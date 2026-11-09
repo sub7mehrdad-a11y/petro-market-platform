@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
-import { currentRows } from "./store";
+import { currentRows } from "../../store";
 import { METRIC } from "./migrate";
-import { periodOf, shamsiSpan, staleness } from "./periods";
+import { periodOf, shamsiSpan, staleness } from "../../periods";
 
 // خلاصه‌ی جامع «سایه»: ساخته‌شده از حافظه (ادعاها و تحلیل‌ها)، نه از فایل‌های خام (مرحله‌ی ۲).
 // پوشش: بخش ۱ (رتبه‌بندی، از تحلیل‌های scoring-v1)، ۲ (قیمت‌ها)، ۳ (صادرات ایران) و خطوط ساخت‌یافته‌ی هر کشور در بخش ۵

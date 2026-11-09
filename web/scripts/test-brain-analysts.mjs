@@ -20,6 +20,7 @@ const S = await import("../lib/brain2/store.js");
 const M = await import("../lib/brain2/memory.js");
 const F = await import("../lib/brain2/forecast.js");
 const R = await import("../lib/brain2/rules.js");
+const DR = await import("../lib/brain2/domain/baking-soda/rules.js");
 const Ret = await import("../lib/brain2/knowledge/retrieval.js");
 const Q = await import("../lib/brain2/knowledge/queue.js");
 const An = await import("../lib/brain2/analysts.js");

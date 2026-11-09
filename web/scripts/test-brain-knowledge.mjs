@@ -15,11 +15,12 @@ const S = await import("../lib/brain2/store.js");
 const M = await import("../lib/brain2/memory.js");
 const Sch = await import("../lib/brain2/schema.js");
 const R = await import("../lib/brain2/rules.js");
+const DR = await import("../lib/brain2/domain/baking-soda/rules.js");
 const K = await import("../lib/brain2/knowledge/cycle.js");
 const Q = await import("../lib/brain2/knowledge/queue.js");
 const C = await import("../lib/brain2/knowledge/config.js");
 const Ch = await import("../lib/brain2/knowledge/checks.js");
-const Mig = await import("../lib/brain2/migrate.js");
+const Mig = await import("../lib/brain2/domain/baking-soda/migrate.js");
 
 const cfg = C.loadKnowledgeConfig();
 const near = (a, b, eps = 0.011) => assert.ok(Math.abs(a - b) <= eps, `${a} ≉ ${b}`);

@@ -15,8 +15,8 @@ const S = await import("../lib/brain2/store.js");
 const Sch = await import("../lib/brain2/schema.js");
 const M = await import("../lib/brain2/memory.js");
 const P = await import("../lib/brain2/periods.js");
-const Mig = await import("../lib/brain2/migrate.js");
-const D = await import("../lib/brain2/digest.js");
+const Mig = await import("../lib/brain2/domain/baking-soda/migrate.js");
+const D = await import("../lib/brain2/domain/baking-soda/digest.js");
 const B = await import("../lib/brain2/backup.js");
 
 const lines = (repo) => fs.readFileSync(path.join(S.getBrainDir(), `${repo}.jsonl`), "utf-8").split("\n").filter(Boolean);
