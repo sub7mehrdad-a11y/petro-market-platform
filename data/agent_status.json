@@ -3,40 +3,40 @@
     "ok": true,
     "exit_code": 0,
     "timed_out": false,
-    "started_at": "2026-11-10T13:39:19.153474+00:00",
-    "finished_at": "2026-11-10T13:40:12.700409+00:00",
-    "output_tail": "[OK] fetched https://www.echemi.com/productsInformation/pd20150901033-sodium-bicarbonate.html (6000 chars)\n[OK] fetched https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186 (6000 chars)\n[OK] fetched https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends (6000 chars)\n[OK] fetched https://tradingeconomics.com/commodity/soda-ash (6000 chars)\n[OK] fetched https://www.chemanalyst.com/Pricing-data/soda-ash-76 (6000 chars)\n[OK] fetched https://www.procurementresource.com/resource-center/soda-ash-price-trends (6000 chars)\n[RETRY] http://board.himtrade.ru/\n[WARN] failed to fetch http://board.himtrade.ru/: <urlopen error [Errno -2] Name or service not known>\n[OK] fetched https://flagma.ru/ (137 chars)\n[OK] fetched https://www.soda.ru/ru/ (1579 chars)\n[DEDUP] ('sodium bicarbonate', 'China', 'FOB'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-10)\n[DEDUP] ('sodium bicarbonate', 'India', 'CIF'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-10)\n[DEDUP] ('soda ash', 'China', 'FOB'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-10)\n[INFO] 3 رکورد هم‌پوشان در همین اجرا حذف شد.\n[OK] 12/16 رکورد با عدد واقعی ثبت شد.\n"
+    "started_at": "2026-11-11T12:51:29.012098+00:00",
+    "finished_at": "2026-11-11T13:04:15.605361+00:00",
+    "output_tail": "[OK] fetched https://www.echemi.com/productsInformation/pd20150901033-sodium-bicarbonate.html (6000 chars)\n[OK] fetched https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186 (6000 chars)\n[OK] fetched https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends (6000 chars)\n[OK] fetched https://tradingeconomics.com/commodity/soda-ash (6000 chars)\n[OK] fetched https://www.chemanalyst.com/Pricing-data/soda-ash-76 (6000 chars)\n[OK] fetched https://www.procurementresource.com/resource-center/soda-ash-price-trends (6000 chars)\n[RETRY] http://board.himtrade.ru/\n[WARN] failed to fetch http://board.himtrade.ru/: <urlopen error [Errno -2] Name or service not known>\n[OK] fetched https://flagma.ru/ (137 chars)\n[OK] fetched https://www.soda.ru/ru/ (1579 chars)\n[DEDUP] ('sodium bicarbonate', 'China', 'FOB'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-10)\n[DEDUP] ('sodium bicarbonate', 'India', 'CIF'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-10)\n[DEDUP] ('soda ash', 'China', 'FOB'): 2 رکورد هم‌پوشان → نگه‌داشتن Procurement Resource (2026-10)\n[DEDUP] ('sodium bicarbonate', 'Germany', 'CIF'): 2 رکورد هم‌پوشان → نگه‌داشتن ChemAnalyst (2026-09)\n[INFO] 4 رکورد هم‌پوشان در همین اجرا حذف شد.\n[OK] 14/18 رکورد با عدد واقعی ثبت شد.\n"
   },
   "news": {
-    "ok": true,
-    "exit_code": 0,
-    "timed_out": false,
-    "started_at": "2026-11-10T13:40:12.738736+00:00",
-    "finished_at": "2026-11-10T13:47:48.728139+00:00",
-    "output_tail": "[OK] fetched https://www.dailysabah.com/business (7365 chars)\n[OK] fetched https://tradingeconomics.com/commodity/soda-ash (6791 chars)\n[OK] fetched https://chemxplore.com/countries/turkey (6279 chars)\n[OK] fetched https://www.chemeurope.com/en/news/ (12000 chars)\n[OK] fetched https://oilprice.com/Latest-Energy-News/World-News/ (12000 chars)\n[OK] fetched https://www.freightos.com/freightos-baltic-index/ (12000 chars)\n[OK] fetched https://www.drewry.co.uk/world-container-index (12000 chars)\n[OK] fetched https://tradingeconomics.com/commodity/baltic (9983 chars)\n[OK] fetched https://rupec.ru/ (4058 chars)\n[OK] fetched https://rccnews.ru/ (4450 chars)\n[OK] fetched https://www.soda.ru/ru/ (1579 chars)\n[OK] fetched https://www.rzd-partner.ru/ (9574 chars)\n[OK] fetched https://trans.ru/ (3253 chars)\n[OK] fetched https://flagma.ru/ (137 chars)\n[RETRY] http://board.himtrade.ru/\n[WARN] failed to fetch http://board.himtrade.ru/: <urlopen error [Errno -2] Name or service not known>\n[OK] fetched https://www.caixinglobal.com/ (12000 chars)\n[OK] fetched https://www.scmp.com/business (7181 chars)\n[OK] fetched https://www.globaltimes.cn/ (5686 chars)\n[OK] fetched http://www.news.cn/english/ (4262 chars)\n[OK] fetched http://english.customs.gov.cn/newsroom/news (2044 chars)\n[OK] fetched https://economic.mfa.ir/ (12000 chars)\n[WARN] failed to fetch RSS https://container-news.com/feed/: The read operation timed out\n[OK] RSS The Loadstar: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Splash247: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Hellenic Shipping News: 12 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS gCaptain: 12 آیتم خوانده شد، 5 آیتم مرتبط\n[INFO] مدل 3 آیتم برگرداند.\n[OK] ثبت شد [صنعت جوش شیرین و رقبا]: به‌روزرسانی برنامه اقدام سبز ترکیه جهت همراستایی با اتحادیه اروپا\n[OK] ثبت شد [ترانزیت، کرایه‌ی حمل و لجستیک]: پیش‌بینی رشد ۵۰ درصدی ظرفیت ناوگان کشتیرانی کانتینری تا سال ۲۰۳۰\n[OK] ثبت شد [انرژی، ارز و ژئوپلیتیک]: سقوط قیمت نفت برنت به زیر ۹۰ دلار پس از فروکش تنش‌های سیاسی\n[OK] مجموعاً 3 خبر تازه‌ی 2026-11-10 ذخیره شد.\n"
+    "ok": false,
+    "exit_code": 124,
+    "timed_out": true,
+    "started_at": "2026-11-11T13:04:15.654036+00:00",
+    "finished_at": "2026-11-11T13:38:17.616235+00:00",
+    "output_tail": "[OK] fetched https://www.dailysabah.com/business (7333 chars)\n[OK] fetched https://tradingeconomics.com/commodity/soda-ash (6752 chars)\n[OK] fetched https://chemxplore.com/countries/turkey (6273 chars)\n[OK] fetched https://www.chemeurope.com/en/news/ (12000 chars)\n[OK] fetched https://oilprice.com/Latest-Energy-News/World-News/ (12000 chars)\n[OK] fetched https://www.freightos.com/freightos-baltic-index/ (12000 chars)\n[OK] fetched https://www.drewry.co.uk/world-container-index (12000 chars)\n[OK] fetched https://tradingeconomics.com/commodity/baltic (9884 chars)\n[OK] fetched https://rupec.ru/ (3985 chars)\n[OK] fetched https://rccnews.ru/ (4448 chars)\n[OK] fetched https://www.soda.ru/ru/ (1579 chars)\n[OK] fetched https://www.rzd-partner.ru/ (8902 chars)\n[OK] fetched https://trans.ru/ (3280 chars)\n[OK] fetched https://flagma.ru/ (137 chars)\n[RETRY] http://board.himtrade.ru/\n[WARN] failed to fetch http://board.himtrade.ru/: <urlopen error [Errno -2] Name or service not known>\n[OK] fetched https://www.caixinglobal.com/ (12000 chars)\n[OK] fetched https://www.scmp.com/business (7384 chars)\n[OK] fetched https://www.globaltimes.cn/ (5359 chars)\n[OK] fetched http://www.news.cn/english/ (4276 chars)\n[OK] fetched http://english.customs.gov.cn/newsroom/news (2044 chars)\n[OK] fetched https://economic.mfa.ir/ (12000 chars)\n[OK] RSS Container News: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS The Loadstar: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Splash247: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Hellenic Shipping News: 12 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS gCaptain: 12 آیتم خوانده شد، 5 آیتم مرتبط\n\n[TIMEOUT] ربات «news» بعد از 900 ثانیه پاسخ نداد (تلاش 3).\n"
   },
   "turkey": {
-    "ok": true,
-    "exit_code": 0,
-    "timed_out": false,
-    "started_at": "2026-11-10T13:47:48.766206+00:00",
-    "finished_at": "2026-11-10T13:48:30.076690+00:00",
-    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.wesoda.com/media/ (2449 chars)\n[OK] fetched https://www.wesoda.com/investors/ (2573 chars)\n[OK] fetched https://www.etisoda.com/ (2036 chars)\n[OK] fetched https://www.kazansoda.com/ (2059 chars)\n--- منابع لجستیک/اقتصاد ---\n[OK] fetched https://www.utikad.org.tr/en (5000 chars)\n[OK] fetched https://www.hurriyetdailynews.com/index/economy (3485 chars)\n[OK] fetched https://www.dailysabah.com/business (5000 chars)\n\n[OK] رصد ترکیه 2026-11-10 ذخیره شد — 2 خبر شرکتی، 3 خبر لجستیکی.\n"
+    "ok": false,
+    "exit_code": 124,
+    "timed_out": true,
+    "started_at": "2026-11-11T13:38:17.668599+00:00",
+    "finished_at": "2026-11-11T14:08:17.878724+00:00",
+    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.wesoda.com/media/ (2449 chars)\n[OK] fetched https://www.wesoda.com/investors/ (2573 chars)\n[OK] fetched https://www.etisoda.com/ (2036 chars)\n[OK] fetched https://www.kazansoda.com/ (2059 chars)\n--- منابع لجستیک/اقتصاد ---\n[OK] fetched https://www.utikad.org.tr/en (5000 chars)\n[OK] fetched https://www.hurriyetdailynews.com/index/economy (3517 chars)\n[OK] fetched https://www.dailysabah.com/business (5000 chars)\n\n[TIMEOUT] ربات «turkey» بعد از 900 ثانیه پاسخ نداد (تلاش 2).\n"
   },
   "china": {
-    "ok": true,
-    "exit_code": 0,
-    "timed_out": false,
-    "started_at": "2026-11-10T13:48:30.113084+00:00",
-    "finished_at": "2026-11-10T13:51:36.613778+00:00",
-    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.shandong-haihua.net/news.html (5000 chars)\n[OK] fetched http://en.haihua.com.cn/product_1/4.html (5000 chars)\n[OK] fetched http://www.en.chinayuhuagroup.com/ (4895 chars)\n--- منابع لجستیک/اقتصاد صادراتی ---\n[OK] fetched https://www.globaltimes.cn/business/ (5000 chars)\n[OK] fetched https://gcaptain.com/tag/container-freight-rates/ (5000 chars)\n[RETRY] https://www.container-news.com/\n[WARN] failed to fetch https://www.container-news.com/: HTTP Error 504: Gateway Timeout\n\n[OK] رصد چین 2026-11-10 ذخیره شد — 2 خبر شرکتی، 2 خبر لجستیکی.\n"
+    "ok": false,
+    "exit_code": 124,
+    "timed_out": true,
+    "started_at": "2026-11-11T14:08:17.925831+00:00",
+    "finished_at": "2026-11-11T14:38:18.070790+00:00",
+    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.shandong-haihua.net/news.html (5000 chars)\n[OK] fetched http://en.haihua.com.cn/product_1/4.html (5000 chars)\n[OK] fetched http://www.en.chinayuhuagroup.com/ (4895 chars)\n--- منابع لجستیک/اقتصاد صادراتی ---\n[OK] fetched https://www.globaltimes.cn/business/ (5000 chars)\n[OK] fetched https://gcaptain.com/tag/container-freight-rates/ (5000 chars)\n[OK] fetched https://www.container-news.com/ (5000 chars)\n\n[TIMEOUT] ربات «china» بعد از 900 ثانیه پاسخ نداد (تلاش 2).\n"
   },
   "transit": {
     "ok": true,
     "exit_code": 0,
     "timed_out": false,
-    "started_at": "2026-11-10T13:51:36.651605+00:00",
-    "finished_at": "2026-11-10T13:51:45.587864+00:00",
-    "output_tail": "[OK] amintara50: 9 پست استخراج شد\n[OK] jadeh_app: 8 پست استخراج شد\n\n[DONE] 17 پست (9 با قیمت صریح) در /home/runner/work/petro-market-platform/petro-market-platform/data/transit_log.json ذخیره شد.\n"
+    "started_at": "2026-11-11T14:38:18.120133+00:00",
+    "finished_at": "2026-11-11T14:38:25.844860+00:00",
+    "output_tail": "[OK] amintara50: 8 پست استخراج شد\n[OK] jadeh_app: 8 پست استخراج شد\n\n[DONE] 16 پست (9 با قیمت صریح) در /home/runner/work/petro-market-platform/petro-market-platform/data/transit_log.json ذخیره شد.\n"
   }
 }
