@@ -18,6 +18,7 @@ import path from "path";
 import nodemailer from "nodemailer";
 import { getCompanies, getCountryEnglishName, getOutreachSentStatePath, getOutreachSentStateOnly } from "@/lib/data";
 import { renderOutreachEmail, FIXED_ATTACHMENTS, isValidEmail } from "@/lib/outreachTemplate";
+import { checkEmailDeliverable } from "@/lib/outreachEmailCheck";
 import { buildReminderEmail } from "@/lib/outreachFollowupCore.js";
 import { recordReminderResult } from "@/lib/outreachFollowupState";
 
@@ -331,6 +332,27 @@ async function processOne() {
   const sentLast24h = state.items.filter((i) => i.status === "sent" && !i.test && Date.parse(i.sent_at) >= now - DAY_MS).length;
   if (!settings.testRedirect && sentLast24h >= settings.dailyLimit) {
     return { delayMs: 10 * 60 * 1000, idle: true, limitReached: true };
+  }
+
+  // بررسی پیش از ارسال (آدرس ساختگی، دامنه‌ی بدون MX): ارسال نمی‌شود و برگشتی نمی‌سازد. در حالت تست (ارسال به آدرس تست) لازم نیست.
+  if (!settings.testRedirect) {
+    const chk = await checkEmailDeliverable(item.email);
+    if (!chk.ok) {
+      console.warn(`[outreach-worker] ${chk.permanent ? "رد پیش از ارسال" : "تعویق (بررسی DNS)"} — ${item.id}: ${chk.reason}`);
+      mutateQueue((s) => {
+        const it = s.items.find((x) => x.id === item.id);
+        if (!it) return;
+        it.error = `پیش‌ازارسال: ${chk.reason}`;
+        if (chk.permanent) { it.status = "failed"; it.failed_at = new Date().toISOString(); it.precheck_failed = true; }
+        else {
+          it.precheck_defers = (it.precheck_defers || 0) + 1; // DNS پایدار خراب (مثلاً SERVFAIL همیشگی) ≈ دامنه‌ی خراب: بعد از ۶ تعویق رد می‌شود
+          if (it.precheck_defers >= 6) { it.status = "failed"; it.failed_at = new Date().toISOString(); it.precheck_failed = true; }
+          else it.retry_after = new Date(Date.now() + RETRY_DELAY_MS).toISOString();
+        }
+      });
+      if (chk.permanent && item.kind === "reminder") recordReminderResult(item.email, { status: "failed", failed_at: new Date().toISOString(), error: `پیش‌ازارسال: ${chk.reason}` });
+      return { delayMs: 1000, idle: false };
+    }
   }
 
   let outcome;
