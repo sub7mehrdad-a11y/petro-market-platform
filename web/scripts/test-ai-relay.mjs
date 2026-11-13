@@ -81,4 +81,16 @@ assert.ok(!("x-goog-api-key" in calls[1].headers));
 assert.match(locationErrorFa("Gemini 400: User location is not supported for the API use."), /AI_RELAY_URL/);
 assert.equal(locationErrorFa("Groq 429: rate limit"), null);
 
+// تلاش دوباره‌ی یک‌باره برای قطع سوکت (keep-alive کهنه)؛ خطای غیرسوکتی بی‌تلاش دوباره برمی‌گردد
+const { retryOnSocketError, isSocketError } = await import("../lib/aiRelay.js");
+let sockCalls = 0;
+assert.equal(await retryOnSocketError(async () => { sockCalls += 1; if (sockCalls === 1) throw Object.assign(new Error("fetch failed"), { cause: { code: "UND_ERR_SOCKET" } }); return "ok"; }, { delayMs: 1 }), "ok");
+assert.equal(sockCalls, 2);
+sockCalls = 0;
+await assert.rejects(retryOnSocketError(async () => { sockCalls += 1; throw new Error("Gemini 400"); }, { delayMs: 1 }), /400/);
+assert.equal(sockCalls, 1, "خطای غیرسوکتی دوباره امتحان نمی‌شود");
+sockCalls = 0;
+await assert.rejects(retryOnSocketError(async () => { sockCalls += 1; throw Object.assign(new Error("x"), { cause: { code: "UND_ERR_SOCKET" } }); }, { delayMs: 1 }));
+assert.equal(sockCalls, 2, "فقط یک بار دوباره");
+assert.equal(isSocketError({ code: "ECONNRESET" }), true);
 console.log("✔ تست رله‌ی هوش مصنوعی گذشت");

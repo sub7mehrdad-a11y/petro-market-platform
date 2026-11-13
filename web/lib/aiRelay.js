@@ -22,6 +22,21 @@ export function locationErrorFa(msg) {
   );
 }
 
+/** خطاهای «اتصال قطع شد» که معمولاً از سوکت keep-alive کهنه می‌آیند (طرف مقابل اتصال بیکار را بسته) و یک بار تلاش دوباره جوابشان را می‌دهد. */
+const SOCKET_CODES = new Set(["UND_ERR_SOCKET", "ECONNRESET", "EPIPE", "UND_ERR_CLOSED"]);
+export const isSocketError = (e) => SOCKET_CODES.has(e?.cause?.code || e?.code || "");
+
+/** fn را اجرا می‌کند؛ اگر با خطای سوکت قطع شد، یک بار دوباره (با اتصال تازه) امتحان می‌کند. fn هر بار باید signal تازه بسازد. */
+export async function retryOnSocketError(fn, { delayMs = 300 } = {}) {
+  try {
+    return await fn();
+  } catch (e) {
+    if (!isSocketError(e)) throw e;
+    await new Promise((r) => setTimeout(r, delayMs));
+    return fn();
+  }
+}
+
 /** سقف زمان یک درخواست مدل (میلی‌ثانیه). بدون سقف، اگر رله/شبکه گیر کند صفحه تا ابد «در حال تحلیل» می‌ماند. AI_TIMEOUT_MS برای هر دو. */
 export function aiTimeoutMs(service) {
   const env = Number(process.env.AI_TIMEOUT_MS);
