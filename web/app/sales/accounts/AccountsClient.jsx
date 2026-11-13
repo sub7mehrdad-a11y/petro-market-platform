@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
 import PageHeader from "../../components/PageHeader";
+import { SalesNav } from "../salesUi";
 
 const fa = (n, d = 0) => (n == null ? "—" : Number(n).toLocaleString("fa-IR", { maximumFractionDigits: d }));
 const usd = (n) => (n == null ? "—" : `${n < 0 ? "-" : ""}$${Math.abs(Number(n)).toLocaleString("en-US", { maximumFractionDigits: 0 })}`);
@@ -314,11 +315,11 @@ export default function AccountsClient() {
   return (
     <div className="space-y-6">
       <PageHeader title="حساب‌ها و پرداخت‌ها" subtitle="هر قرارداد (سفارش قطعی گزارش فروش) با پرداخت‌ها و مانده‌اش، و حساب جدا برای هر مشتری با جمع خرید و صورت‌حساب. پرداخت‌ها جدا از گزارش فروش ذخیره می‌شوند و با بارگذاری گزارش جدید گم نمی‌شوند. فقط نقش بازرگانی؛ داده روی دیسک سرور است، نه در گیت." />
-      <div><Link href="/sales" className="text-xs text-primary hover:underline">→ بازگشت به عملکرد فروش</Link></div>
+      <SalesNav active="/sales/accounts" />
 
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
       {res?.storage_problem && <div className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-sm text-warning">⚠ {res.storage_problem}</div>}
-      {a?.empty && <section className="card p-5 text-sm text-text-muted">اول فایل «Sales Report» را در صفحه‌ی <Link href="/sales" className="text-primary hover:underline">عملکرد فروش</Link> بارگذاری کنید؛ قراردادها از آن ساخته می‌شوند.</section>}
+      {a?.empty && <section className="card p-5 text-sm text-text-muted">اول یک قرارداد <Link href="/sales/contracts/new" className="text-primary hover:underline">ثبت کنید</Link> یا فایل «Sales Report» را در <Link href="/sales/reports" className="text-primary hover:underline">گزارش‌ها</Link> بارگذاری کنید؛ قراردادها از آن ساخته می‌شوند.</section>}
 
       {t && (
         <>

@@ -1,9 +1,10 @@
-import SalesClient from "./SalesClient";
+import SalesHome from "./SalesHome";
 
-// عملکرد فروش تیم بازرگانی — فقط نقش «بازرگانی» (proxy.js). داده از /api/sales/summary خوانده می‌شود (دیسک دائمی سرور).
+// پلتفرم جامع بازرگانی (صفحه‌ی اصلی): خلاصه‌ی عملکرد، نمودار فروش، هشدارها و ورود به «مدیریت قراردادها و حسابداری».
+// فقط نقش «بازرگانی» (proxy.js). گزارش‌های تفصیلی در /sales/reports و از داخل بخش مدیریت قراردادها باز می‌شوند.
 export const dynamic = "force-dynamic";
-export const metadata = { title: "عملکرد فروش" };
+export const metadata = { title: "پلتفرم جامع بازرگانی" };
 
 export default function SalesPage() {
-  return <SalesClient />;
+  return <SalesHome />;
 }

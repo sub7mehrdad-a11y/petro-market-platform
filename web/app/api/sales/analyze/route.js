@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { askBrain, getBrainScores, resolveBrainKey } from "@/lib/brain";
 import { salesContextForBrain, summarizeSales } from "@/lib/salesAnalytics";
-import { readSalesSnapshots, salesAiEnabled, writeSalesAnalysis } from "@/lib/salesStore";
+import { salesAiEnabled, writeSalesAnalysis } from "@/lib/salesStore";
+import { readEffectiveSnapshots } from "@/lib/salesContractsStore";
 import { ledgerContextForBrain } from "@/lib/salesLedger";
 import { loadAccounts } from "@/lib/salesLedgerStore";
 
@@ -30,7 +31,7 @@ export async function POST() {
   if (!key) return NextResponse.json({ error: "کلید مغز (GEMINI_API_KEY_BRAIN) تنظیم نشده." }, { status: 503 });
 
   const scores = getBrainScores();
-  const summary = summarizeSales(readSalesSnapshots(), {
+  const summary = summarizeSales(readEffectiveSnapshots(), {
     countryScores: (scores?.countries || []).map((c) => ({ country: c.country, tier: c.tier, rank: c.rank })),
   });
   if (summary.empty) return NextResponse.json({ error: "هنوز گزارشی بارگذاری نشده." }, { status: 400 });

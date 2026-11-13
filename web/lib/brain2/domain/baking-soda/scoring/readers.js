@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { periodOf } from "../../../periods";
-import { readSalesSnapshots } from "../../../../salesStore";
+import { readEffectiveSnapshots as readSalesSnapshots } from "../../../../salesContractsStore"; // اکسل + قراردادهای ثبت‌شده در پلتفرم
 
 // خواندن «مقدار واقعی» و «خط مبنا» از منبع از پیش تعریف‌شده‌ی هر پرسش (پروتکل ۸-۵). فقط جزء سنجش این ماژول را import می‌کند.
 // ⚠ سری «internal_sales» محرمانه است (گزارش فروش تیم بازرگانی): فقط همین‌جا و بدون مدل خوانده می‌شود، و به بیرون فقط
