@@ -9,7 +9,7 @@
 //
 // تنظیمات (env):
 //   OUTREACH_SEND_INTERVAL_SEC  فاصله‌ی دو ارسال، پیش‌فرض ۶۰ ثانیه (با ±۲۵٪ نوسان تصادفی)
-//   OUTREACH_DAILY_LIMIT        سقف ارسال در هر ۲۴ ساعت، پیش‌فرض ۱۵۰
+//   OUTREACH_DAILY_LIMIT        سقف ارسال در هر ۲۴ ساعت، پیش‌فرض ۱۵
 //   OUTREACH_TEST_REDIRECT      اگه ست باشه، همه‌ی ایمیل‌ها فقط به همین آدرس می‌رن (بدون CC و
 //                               بدون ثبت در لاگ ارسال) — برای تست امن بدون ایمیل به شرکت واقعی
 
@@ -99,7 +99,7 @@ export function getQueueSettings() {
   const limit = Number(process.env.OUTREACH_DAILY_LIMIT);
   return {
     intervalSec: Number.isFinite(interval) && interval >= 5 ? interval : 60,
-    dailyLimit: Number.isFinite(limit) && limit > 0 ? limit : 150,
+    dailyLimit: Number.isFinite(limit) && limit > 0 ? limit : 15,
     testRedirect: (process.env.OUTREACH_TEST_REDIRECT || "").trim() || null,
   };
 }
