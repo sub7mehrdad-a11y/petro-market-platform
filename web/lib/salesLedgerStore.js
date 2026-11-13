@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
-import { getSalesDir, readSalesSnapshots, salesStorageProblem, writeAtomic } from "./salesStore";
+import { getSalesDir, salesStorageProblem, writeAtomic } from "./salesStore";
+import { readEffectiveSnapshots } from "./salesContractsStore";
 import { buildAccounts, checkPayment, customerIdOf } from "./salesLedger";
 import { parseDateCell } from "./salesFormat";
 
@@ -31,7 +32,7 @@ const log = (ledger, by, action, detail) => ledger.audit.push({ at: new Date().t
 
 /** حساب‌ها از آخرین گزارش فروش + دفتر. */
 export function loadAccounts() {
-  const snaps = readSalesSnapshots();
+  const snaps = readEffectiveSnapshots(); // آخرین عکس اکسل + قراردادهای ثبت‌شده در پلتفرم
   const latest = snaps[snaps.length - 1] || null;
   const ledger = readLedger();
   return { accounts: buildAccounts(latest, ledger), ledger };

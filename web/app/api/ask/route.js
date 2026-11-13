@@ -3,7 +3,8 @@ import { buildSearchIndex, searchIndex } from "@/lib/searchIndex";
 import { askBrain, getBrainScores, resolveBrainKey } from "@/lib/brain";
 import { SESSION_COOKIE_NAME, verifySessionToken } from "@/lib/auth";
 import { salesContextForBrain, summarizeSales } from "@/lib/salesAnalytics";
-import { readSalesSnapshots, salesAiEnabled } from "@/lib/salesStore";
+import { salesAiEnabled } from "@/lib/salesStore";
+import { readEffectiveSnapshots } from "@/lib/salesContractsStore";
 import { ledgerContextForBrain } from "@/lib/salesLedger";
 import { loadAccounts } from "@/lib/salesLedgerStore";
 import { generateGroqContent, resolveGroqApiKey } from "@/lib/groqFetch";
@@ -69,7 +70,7 @@ export async function POST(request) {
         const scores = getBrainScores();
         salesContext = [
           salesContextForBrain(
-            summarizeSales(readSalesSnapshots(), { countryScores: (scores?.countries || []).map((c) => ({ country: c.country, tier: c.tier, rank: c.rank })) })
+            summarizeSales(readEffectiveSnapshots(), { countryScores: (scores?.countries || []).map((c) => ({ country: c.country, tier: c.tier, rank: c.rank })) })
           ),
           ledgerContextForBrain(loadAccounts().accounts),
         ].filter(Boolean).join("\n") || null;

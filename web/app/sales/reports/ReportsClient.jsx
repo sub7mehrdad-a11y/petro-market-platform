@@ -2,62 +2,10 @@
 
 import Link from "next/link";
 import { useCallback, useEffect, useRef, useState } from "react";
-import PageHeader from "../components/PageHeader";
-import RichText from "../components/RichText";
+import PageHeader from "../../components/PageHeader";
+import RichText from "../../components/RichText";
 
-const fa = (n, d = 0) => (n == null ? "—" : Number(n).toLocaleString("fa-IR", { maximumFractionDigits: d }));
-const usd = (n) => (n == null ? "—" : `$${Number(n).toLocaleString("en-US", { maximumFractionDigits: 0 })}`);
-const price = (n) => (n == null ? "—" : `$${fa(n, 1)}`);
-
-function Delta({ pct }) {
-  if (pct == null) return null;
-  const up = pct > 0;
-  return (
-    <span className={`text-[11px] font-semibold ${pct === 0 ? "text-text-muted" : up ? "text-success" : "text-danger"}`} dir="ltr">
-      {up ? "▲" : pct < 0 ? "▼" : "•"} {Math.abs(pct)}٪
-    </span>
-  );
-}
-
-function Kpi({ label, value, sub, delta, tone }) {
-  return (
-    <div className="card p-4">
-      <div className="text-xs text-text-muted">{label}</div>
-      <div className={`mt-1 text-2xl font-bold ${tone || "text-text"}`}>{value}</div>
-      <div className="mt-1 flex flex-wrap items-center gap-2 text-[11px] text-text-muted">
-        {sub}
-        <Delta pct={delta} />
-      </div>
-    </div>
-  );
-}
-
-// نمودار میله‌ای تناژ هفتگی سفارش‌های قطعی + خط میانگین قیمت (SVG بدون وابستگی)
-function WeeklyChart({ weekly }) {
-  const data = weekly.slice(-26);
-  const W = 700, H = 200, padL = 8, padB = 30, padT = 14;
-  const maxT = Math.max(...data.map((w) => w.tons), 1);
-  const prices = data.map((w) => w.avg_price).filter((p) => p != null);
-  const minP = prices.length ? Math.min(...prices) * 0.95 : 0;
-  const maxP = prices.length ? Math.max(...prices) * 1.05 : 1;
-  const bw = (W - padL * 2) / data.length;
-  const y = (t) => padT + (H - padT - padB) * (1 - t / maxT);
-  const py = (p) => padT + (H - padT - padB) * (1 - (p - minP) / (maxP - minP || 1));
-  const pts = data.map((w, i) => (w.avg_price == null ? null : [padL + bw * i + bw / 2, py(w.avg_price)])).filter(Boolean);
-  return (
-    <svg viewBox={`0 0 ${W} ${H}`} className="w-full" role="img" aria-label="روند هفتگی تناژ سفارش‌های قطعی و میانگین قیمت" direction="ltr">
-      {data.map((w, i) => (
-        <g key={w.week}>
-          <rect x={padL + bw * i + bw * 0.12} y={y(w.tons)} width={bw * 0.76} height={Math.max(0, H - padB - y(w.tons))} rx="2" fill="var(--color-primary, #1f6feb)" opacity={w.in_progress ? 0.4 : 0.85} />
-          {w.tons > 0 && bw > 16 && <text x={padL + bw * i + bw / 2} y={y(w.tons) - 3} textAnchor="middle" fontSize="8.5" fill="currentColor">{Math.round(w.tons)}</text>}
-          {i % Math.ceil(data.length / 13) === 0 && <text x={padL + bw * i + bw / 2} y={H - 12} textAnchor="middle" fontSize="8.5" fill="currentColor" opacity="0.6">{w.week.slice(5)}</text>}
-        </g>
-      ))}
-      {pts.length > 1 && <polyline points={pts.map((p) => p.join(",")).join(" ")} fill="none" stroke="#d97706" strokeWidth="1.8" />}
-      {pts.map((p, i) => <circle key={i} cx={p[0]} cy={p[1]} r="2.5" fill="#d97706" />)}
-    </svg>
-  );
-}
+import { Kpi, SalesNav, WeeklyChart, fa, price, usd } from "../salesUi";
 
 function Table({ title, rows, cols, note }) {
   if (!rows?.length) return null;
@@ -170,7 +118,7 @@ function UploadPanel({ onSaved }) {
   );
 }
 
-export default function SalesClient() {
+export default function ReportsClient() {
   const [data, setData] = useState(null);
   const [error, setError] = useState("");
   const [analyzing, setAnalyzing] = useState(false);
@@ -207,15 +155,12 @@ export default function SalesClient() {
   const w30 = s?.window30;
   return (
     <div className="space-y-6">
-      <PageHeader title="عملکرد فروش تیم بازرگانی" subtitle="فایل «Sales Report» تیم (سفارش‌ها، تناژ، قیمت، کشور مقصد، شرکت‌های طرف قرارداد، پرداخت) اینجا بارگذاری و تحلیل می‌شود. این بخش فقط برای نقش بازرگانی دیده می‌شود و داده‌ها روی دیسک دائمی سرور می‌مانند، نه در گیت." />
+      <PageHeader title="گزارش‌گیری فروش" subtitle="گزارش‌های تفصیلی، بارگذاری فایل «Sales Report» تیم، تحلیل هوشمند مغز و جدول‌های کشور/مشتری/گرید. این بخش فقط برای نقش بازرگانی دیده می‌شود و داده‌ها روی دیسک دائمی سرور می‌مانند، نه در گیت." />
+
+      <SalesNav active="/sales/reports" />
 
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
       {data?.storage_problem && <div className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-sm text-warning">⚠ {data.storage_problem}</div>}
-
-      <div className="flex flex-wrap items-center gap-3 rounded-xl border border-border bg-surface p-3 text-sm">
-        <span className="text-text-muted">حسابداری فروش:</span>
-        <Link href="/sales/accounts" className="rounded-lg bg-primary px-4 py-2 text-xs font-medium text-white hover:bg-primary-hover">حساب‌ها و پرداخت‌ها (قرارداد · مشتری · مانده) ←</Link>
-      </div>
 
       <UploadPanel onSaved={load} />
 
