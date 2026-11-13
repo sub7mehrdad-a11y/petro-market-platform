@@ -163,8 +163,10 @@ export async function POST(request) {
       // فقط خطاهای مربوط به خود درخواست (مثل ۴۱۳) نباید fallback بگیرند، چون با
       // موتور دیگر هم همان مشکل تکرار می‌شود.
       const msg = String(groqErr?.message || groqErr);
-      const geminiKey = resolveGeminiApiKey();
-      const retryable = /\b(429|403|500|502|503|504)\b|rate.?limit|quota|forbidden/i.test(msg);
+      // کلید پشتیبان: کلید «پاسخ هوشمند» Gemini، وگرنه کلید مغز (همان کلید جدید)
+      const geminiKey = resolveGeminiApiKey() || brainKey;
+      // خطای شبکه/تایم‌اوت (مثل UND_ERR_SOCKET که لیارا گاهی از Groq می‌گیرد) هم یعنی «Groq الان در دسترس نیست»
+      const retryable = /\b(429|403|500|502|503|504)\b|rate.?limit|quota|forbidden|اتصال برقرار نشد|در مهلت مجاز نیامد|UND_ERR|ECONN|ETIMEDOUT|fetch failed/i.test(msg);
       if (!retryable || !geminiKey) throw groqErr;
 
       console.warn(`[ask] Groq در دسترس نبود (${msg.slice(0, 80)})؛ پاسخ با Gemini داده می‌شود.`);
@@ -236,7 +238,7 @@ export async function POST(request) {
     }
 
     return NextResponse.json(
-      { error: `خطا در ارتباط با سرویس هوش مصنوعی: ${msg.slice(0, 300)}` },
+      { error: `خطا در ارتباط با سرویس هوش مصنوعی: ${msg.slice(0, 300)}${brainFailure ? ` | مغز پلتفرم هم پاسخ نداد: ${brainFailure}` : ""}` },
       { status: 502 }
     );
   }
