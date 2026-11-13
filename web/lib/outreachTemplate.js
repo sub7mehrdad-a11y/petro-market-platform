@@ -1,3 +1,4 @@
+import { isPlaceholderEmail } from "./outreachEmailCheck.js";
 // رندر ایمیل معرفی — متن پایه عیناً از «ایمیل بازاریابی/Email Marketing.docx»ه
 // (همونی که قبلاً واقعاً برای عراق فرستاده شده)، فقط با سه محور شخصی‌سازی
 // (نام شرکت، کشور، گرید) طبق خواسته‌ی صریح کاربر. هیچ جمله‌ی دیگه‌ای از خودمون
@@ -23,7 +24,7 @@
 const EMAIL_FORMAT_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 export function isValidEmail(email) {
-  return typeof email === "string" && EMAIL_FORMAT_RE.test(email.trim());
+  return typeof email === "string" && EMAIL_FORMAT_RE.test(email.trim()) && !isPlaceholderEmail(email);
 }
 
 // هر گرید یک یا چند لینک داره — «دامی» چون صفحه‌ی عمومی‌اش (Products/Feed-Grade)
