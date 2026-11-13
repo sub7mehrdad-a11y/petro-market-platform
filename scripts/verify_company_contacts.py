@@ -517,16 +517,7 @@ def finalize_contacts(res: dict, all_emails: dict, all_phones: list, root: str, 
         res["email_best"] = best
         res["email_confidence"] = "site_confirmed_same_domain" if best_conf == 0 else "site_confirmed_other_domain"
         res["email_source_url"] = all_emails[best]["source_url"]
-    elif rec.get("directory_email"):
-        d = rec["directory_email"].strip().lower()
-        if cl.SYNTAX_RE.match(d) and not efl.is_junk_email(d):
-            st = cl.domain_status(d.rsplit("@", 1)[-1])
-            if st in ("mx", "a_only"):
-                res["email_best"] = d
-                res["email_confidence"] = "directory_only"
-                res["email_source_url"] = "فهرست رسمی نمایشگاه (روی سایت شرکت دیده نشد)"
-            else:
-                res["notes"].append(f"ایمیل فهرست ({d}) رد شد: دامنه {st}")
+    # ایمیل/تلفن ثبت‌شده در فهرست نمایشگاه معیار نیست؛ فقط چیزی که روی سایت رسمی خودِ شرکت دیده شود.
     if all_phones:
         pr = {"tel": 0, "whatsapp": 1, "text": 2}
         all_phones.sort(key=lambda p: pr[p["kind"]])
@@ -592,6 +583,8 @@ def main():
     ap.add_argument("--limit", type=int)
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--no-render", action="store_true")
+    ap.add_argument("--render-only", action="store_true",
+                    help="فقط پاس دوم (Playwright) روی شرکت‌هایی که needs_render دارن و هنوز رندر نشدن")
     args = ap.parse_args()
 
     if args.slug:
@@ -604,9 +597,11 @@ def main():
     store = efl.load_progress(out_path) if os.path.exists(out_path) else {}
     todo = [(k, r) for k, r in recs.items() if k not in store]
     print(f"{len(recs)} شرکت، {len(store)} قبلاً بررسی شده، {len(todo)} مانده")
+    if args.render_only:
+        todo = []
     if args.limit:
         todo = todo[:args.limit]
-    if not todo:
+    if not todo and not args.render_only:
         return
 
     fetcher = Fetcher()
@@ -631,24 +626,33 @@ def main():
                 efl.atomic_write_json(out_path, store)
                 print(f"  [OK] {done}/{len(todo)}")
 
-    pending = [(k, store[k]) for k, _ in todo if store[k].get("needs_render") and store[k].get("website")]
+    if args.render_only:
+        pending = [(k, v) for k, v in store.items() if v.get("needs_render") and v.get("website") and k in recs]
+    else:
+        pending = [(k, store[k]) for k, _ in todo if store[k].get("needs_render") and store[k].get("website")]
     if pending and not args.no_render:
         try:
             from playwright.sync_api import sync_playwright
             pw = sync_playwright().start()
             browser = pw.chromium.launch()
             print(f"  پاس دوم با مرورگر برای {len(pending)} سایت")
-            for k, res in pending:
+            for n_done, (k, res) in enumerate(pending, 1):
                 try:
                     render_second_pass(res, recs[k], browser)
                 except Exception as e:  # noqa: BLE001
                     res["notes"].append(f"رندر ناموفق: {type(e).__name__}")
+                    res["needs_render"] = False  # دوباره تلاش نشود
+                if n_done % 8 == 0:  # ذخیره‌ی تدریجی: قطع نشست دیگر نتیجه‌ی رندر را از بین نمی‌برد
+                    efl.atomic_write_json(out_path, store)
+                    print(f"  [رندر] {n_done}/{len(pending)}")
             browser.close()
             pw.stop()
         except Exception as e:  # noqa: BLE001
             print(f"  [INFO] Playwright در دسترس نبود: {e}")
     efl.atomic_write_json(out_path, store)
 
+    if args.render_only:
+        todo = [(k, None) for k in store]
     n = len(todo)
     ok_site = sum(1 for k, _ in todo if store[k].get("website"))
     ok_mail = sum(1 for k, _ in todo if store[k].get("email_best") and str(store[k].get("email_confidence", "")).startswith("site"))

@@ -24,7 +24,6 @@ if hasattr(sys.stdout, "reconfigure"):
 EMAIL_CONF_FA = {
     "site_confirmed_same_domain": "تأییدشده روی سایت شرکت",
     "site_confirmed_other_domain": "روی سایت شرکت دیده شد (دامنه‌ی ایمیل متفاوت)",
-    "directory_only": "ثبت‌شده توسط نمایشگاه — روی سایت دیده نشد (دامنه معتبر)",
 }
 SITE_FA = {"verified_official": "فهرست رسمی نمایشگاه + باز می‌شود",
            "verified_name_match": "باز می‌شود + نام شرکت روی صفحه تأیید شد"}
@@ -36,7 +35,7 @@ def main():
     prog = efl.load_progress(os.path.join(efl.OUTPUT_DIR, f"{slug}.progress.json"))
     ver = efl.load_progress(os.path.join(efl.OUTPUT_DIR, f"{slug}.verified.json"))
     companies = [(k, v) for k, v in prog.items() if v.get("relevant")]
-    companies.sort(key=lambda kv: kv[1].get("_order", 0))
+    companies.sort(key=lambda kv: (kv[1].get("fit", "قوی") != "قوی", kv[1].get("_order", 0)))
 
     wb = openpyxl.Workbook()
     ws = wb.active
@@ -44,7 +43,7 @@ def main():
     ws.sheet_view.rightToLeft = True
     headers = ["ردیف", "نام شرکت", "کشور", "نوع", "گرید پیشنهادی", "وب‌سایت (تأییدشده)", "وضعیت وب‌سایت",
                "ایمیل (تأییدشده)", "اعتبار ایمیل", "صفحه‌ی منبع ایمیل", "تلفن/واتساپ (معتبر)", "صفحه‌ی منبع تلفن",
-               "وضعیت تماس", "نیاز به بررسی دستی؟", "دلیل (مدل)", "توضیحات شرکت", "غرفه", "شهر/آدرس"]
+               "وضعیت تماس", "نیاز به بررسی دستی؟", "ربط به جوش شیرین", "دلیل ربط", "دلیل (مدل)", "توضیحات شرکت", "غرفه", "شهر/آدرس"]
     ws.append(headers)
     for c in ws[1]:
         c.font = Font(bold=True, color="FFFFFF")
@@ -54,6 +53,8 @@ def main():
     for i, (k, c) in enumerate(companies, start=1):
         v = ver.get(k, {})
         email, econf = v.get("email_best"), v.get("email_confidence")
+        if not str(econf or "").startswith("site"):  # فقط ایمیلِ دیده‌شده روی سایت رسمی شرکت
+            email, econf = None, None
         phone = v.get("phone_best")
         site = v.get("website")
         status_site = SITE_FA.get(v.get("website_status"), "")
@@ -77,7 +78,7 @@ def main():
             c.get("suggested_grade", ""), site or "", status_site if site else "",
             email or "", EMAIL_CONF_FA.get(econf, "") if email else "",
             (v.get("email_source_url") or "") if email else "", phone or "", (v.get("phone_source_url") or "") if phone else "",
-            st, "؛ ".join(weak), c.get("llm_reason", ""), (c.get("description") or "")[:300], c.get("stand", ""),
+            st, "؛ ".join(weak), c.get("fit", ""), c.get("fit_reason", ""), c.get("llm_reason", ""), (c.get("description") or "")[:300], c.get("stand", ""),
             c.get("region_address", ""),
         ])
         stats["total"] += 1
@@ -87,7 +88,7 @@ def main():
         stats["site"] += bool(site)
         stats["unverified"] += (k not in ver)
 
-    widths = [6, 32, 14, 16, 30, 30, 26, 30, 34, 44, 20, 40, 22, 28, 40, 55, 20, 30]
+    widths = [6, 32, 14, 16, 30, 30, 26, 30, 34, 44, 20, 40, 22, 28, 18, 30, 40, 55, 20, 30]
     for idx, w in enumerate(widths, start=1):
         ws.column_dimensions[get_column_letter(idx)].width = w
     for row in ws.iter_rows(min_row=2):
