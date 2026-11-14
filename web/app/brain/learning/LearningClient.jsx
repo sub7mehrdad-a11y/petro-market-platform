@@ -119,6 +119,7 @@ function BacktestSection() {
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState("");
   const [log, setLog] = useState([]);
+  const [withLessons, setWithLessons] = useState(false);
   const load = useCallback(async () => {
     const r = await api("/api/brain/backtest", { cache: "no-store" });
     if (!r.ok) { setErr(r.error || "خطا"); return; }
@@ -127,7 +128,7 @@ function BacktestSection() {
   useEffect(() => { load(); }, [load]);
   async function runOne(country) {
     setBusy(country);
-    const r = await api("/api/brain/backtest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "run", country }) });
+    const r = await api("/api/brain/backtest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "run", country, lessons: withLessons }) });
     setLog((l) => [...l, r.ok ? `${country}: ${r.scored} از ${r.total} هدف سنجیده شد` : `${country}: ${r.error || "ناموفق"}`]);
     setBusy("");
   }
@@ -160,6 +161,21 @@ function BacktestSection() {
               </table>
             </div>
           )}
+          <div className="rounded-lg border border-border p-3 space-y-2">
+            <div className="flex flex-wrap items-center gap-3">
+              <b className="text-sm">یادگیری از اشتباه</b>
+              <button type="button" disabled={!!busy} onClick={async () => { setBusy("تحلیل خطاها"); const r = await api("/api/brain/backtest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "autopsy" }) }); setLog((l) => [...l, r.ok ? `کالبدشکافی: ${r.new} تازه، ${r.lessons_proposed} درس پیشنهادی (به صف بازبینی رفت)` : r.error || "ناموفق"]); setBusy(""); load(); }} className="rounded border border-border px-3 py-1 text-xs cursor-pointer disabled:opacity-50">تحلیل خطاها و استخراج درس</button>
+              <label className="flex items-center gap-1 text-xs"><input type="checkbox" checked={withLessons} onChange={(e) => setWithLessons(e.target.checked)} /> اجرا با درس‌های پذیرفته‌شده</label>
+              <Link href="/brain/memory" className="text-xs underline">صف بازبینی ({d.lessons?.open_proposals ?? 0} درس باز)</Link>
+            </div>
+            {d.lessons?.effect?.pairs > 0 && <p className="text-xs">اثر درس‌ها روی {d.lessons.effect.pairs} هدف (کشورهایی که درس از آن‌ها نیامده): بهتر {d.lessons.effect.better}، بدتر {d.lessons.effect.worse}، بی‌تغییر {d.lessons.effect.same}؛ مهارت {n2(d.lessons.effect.mean_skill_without)} ← {n2(d.lessons.effect.mean_skill_with)}</p>}
+            {d.lessons?.lessons?.length > 0 && <ul className="text-xs space-y-1">{d.lessons.lessons.map((l) => <li key={l.id}><b className={l.status === "پذیرفته" ? "text-success" : "text-text-muted"}>{l.status}</b> — {l.text}</li>)}</ul>}
+            {d.lessons?.autopsies?.length > 0 && (
+              <details className="text-xs"><summary className="cursor-pointer">{d.lessons.autopsies.length} کالبدشکافی خطا</summary>
+                <ul className="mt-1 space-y-1">{d.lessons.autopsies.map((a) => <li key={a.key}><b>{a.country} / {a.target}</b> — {a.category_fa}: {a.statement}</li>)}</ul>
+              </details>
+            )}
+          </div>
           <div className="flex flex-wrap gap-2 text-xs">
             {d.countries.map((c) => {
               const row = s?.by_country?.find((x) => x.country === c);

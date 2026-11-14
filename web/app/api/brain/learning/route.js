@@ -12,7 +12,7 @@ import { methodsOverview, proposeRevision } from "@/lib/brain2/learning/revision
 export const dynamic = "force-dynamic";
 export const maxDuration = 300;
 
-const LEARNING_KINDS = ["method_proposal", "method_promotion", "consolidation", "experiment_proposal"];
+const LEARNING_KINDS = ["method_proposal", "method_promotion", "consolidation", "experiment_proposal", "country_lesson"];
 
 export async function GET(request) {
   const s = commercialSession(request);
