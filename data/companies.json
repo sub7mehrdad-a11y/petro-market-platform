@@ -14166,10 +14166,18 @@
     "industry": "تولیدکننده — Spreads، Honey & Jams، Specialty Food، Private Label",
     "target_grade": "خوراکی – کنسرو و مربا",
     "phone": "37034771014",
-    "email": "info@kitchenmasters.eu",
+    "email": "info@kkf.lt",
     "website": "https://kitchenmasters.eu/",
     "source_note": "نمایشگاه Gulfood 2026 · Stand No- 13-67, South Hall 2 · https://exhibitors.gulfood.com/gulfood-2026/Exhibitor/ExbDetails/kedainiu-konservu-fabrikas",
-    "id": "company-1099"
+    "id": "company-1099",
+    "email_history": [
+      {
+        "email": "info@kitchenmasters.eu",
+        "reason": "دامنه‌ی kitchenmasters.eu وجود ندارد (NXDOMAIN)؛ info@kkf.lt روی صفحه‌ی تماس سایت رسمی UAB Kėdainių konservų fabrikas (kkf.lt/kontaktai) دیده شد",
+        "date": "2026-11-14",
+        "action": "replace"
+      }
+    ]
   },
   {
     "country": "آلمان",
@@ -17063,7 +17071,8 @@
         "needs_human_review": true,
         "note": "روی سایت شرکت دیده شد؛ دامنه‌ی متفاوت"
       }
-    ]
+    ],
+    "email": "moondatestunisie@gmail.com"
   },
   {
     "country": "دانمارک",
@@ -22381,9 +22390,15 @@
         "reason": "آشغال/placeholder/شناسه‌ی ردیابی (ایمیل واقعی نیست)",
         "date": "2026-10-23",
         "action": "remove"
+      },
+      {
+        "email": "info@swissmountainspring.ch",
+        "reason": "روی سایت رسمی sygama.ch (Sygama SA، تولیدکننده‌ی نوشیدنی پریمیوم) دیده شد؛ دامنه‌ی swissmountainspring.ch قابل‌تأیید نبود (۴۰۳) و نامی از شرکت روی آن نیست",
+        "date": "2026-11-14",
+        "action": "replace"
       }
     ],
-    "email": "info@swissmountainspring.ch",
+    "email": "info@sygama.ch",
     "phone": "+41 61 281 87 00"
   },
   {
