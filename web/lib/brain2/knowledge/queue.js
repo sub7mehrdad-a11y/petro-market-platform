@@ -79,7 +79,7 @@ export function syncClaimStatuses(idx, { at }) {
 
 /** تصمیم انسان. decision: accept (با claim_key؛ در تناقض مقدارهای دیگر «بسته‌شده» می‌شوند) | reject (فقط ادعای مشکوک) | both_valid | dismiss. */
 // پیشنهادهای حلقه‌ی ۳ و تثبیت و آزمایش فعال (مرحله‌ی ۱۰): فقط پذیرش یا نادیده؛ اجرا با خواندنِ تصمیم در learning/*
-export const LEARNING_KINDS = ["method_proposal", "method_promotion", "consolidation", "experiment_proposal"];
+export const LEARNING_KINDS = ["method_proposal", "method_promotion", "consolidation", "experiment_proposal", "country_lesson"];
 
 export function resolveItem(idx, { id, decision, claimKey, by, note, at = new Date().toISOString() }) {
   const q = [...openQueue().values()].find((r) => r.id === id);

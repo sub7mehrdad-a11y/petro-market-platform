@@ -3,6 +3,7 @@ import { generateContent } from "../../geminiFetch";
 import { getDomain } from "../domain/index";
 import { currentRows, putRow } from "../store";
 import { makeRow } from "../schema";
+import { compareLessonEffect, lessonsPromptFor } from "./countryLessons";
 import { brier, inInterval, relErr, round4, skill, surpriseInterval, surpriseProbability } from "../scoring/math";
 
 // آزمون بازپخش کشورها (مرحله‌ی ۱۰-ب): مغز برای کشوری که «هنوز پژوهش نشده» چند کمیت را پیش‌بینی می‌کند و بعد با نتیجه‌ی واقعیِ پژوهش
@@ -14,6 +15,7 @@ import { brier, inInterval, relErr, round4, skill, surpriseInterval, surprisePro
 // محتوای دامنه (هدف‌ها، استخراج مقدار واقعی، متن معرفی) از getDomain().countryBacktest می‌آید.
 
 export const BACKTEST_SUFFIX = "@bt";
+export const LESSONS_SUFFIX = "+lessons";
 const fmtNum = (v) => (v === null || v === undefined ? "؟" : typeof v === "number" ? Number(v.toLocaleString("en-US", { maximumFractionDigits: 2 }).replace(/,/g, "")) : String(v));
 
 const dom = () => getDomain().countryBacktest;
@@ -85,7 +87,7 @@ async function defaultGenerate({ system, input }) {
  * یک کشور را پیش‌بینی و بلافاصله می‌سنجد. generate({system,input}) قابل‌تزریق؛ model نام برای ثبت.
  * برمی‌گرداند {ok, country, run_id, rows:[{target, forecast, truth, baseline, result}], error?}.
  */
-export async function runCountryBacktest(country, { generate = defaultGenerate, model = BRAIN_MODEL, now = new Date(), runId = null } = {}) {
+export async function runCountryBacktest(country, { generate = defaultGenerate, model = BRAIN_MODEL, now = new Date(), runId = null, lessons = false } = {}) {
   const d = dom();
   const table = d.loadCountryTable();
   const row = table.find((r) => r.country === country);
@@ -95,15 +97,16 @@ export async function runCountryBacktest(country, { generate = defaultGenerate, 
   if (!targets.length) return { ok: false, country, error: "برای این کشور مقدار واقعیِ قابل‌سنجش نیست." };
   const run = runId || `bt_${now.getTime().toString(36)}`;
   const at = now.toISOString();
+  const les = lessons ? lessonsPromptFor(country) : { ids: [], text: "" }; // درس‌های پذیرفته‌شده (به‌جز آنچه از خود همین کشور آمده؛ leave-one-out)
   let parsed;
   try {
-    parsed = parseJson(await generate({ system: systemPrompt(), input: buildInput({ country: row.country, indicators: row.indicators }, others, d.targets, targets) }));
+    parsed = parseJson(await generate({ system: systemPrompt() + les.text, input: buildInput({ country: row.country, indicators: row.indicators }, others, d.targets, targets) }));
   } catch (err) {
     return { ok: false, country, error: String(err?.message || err).slice(0, 200) };
   }
   const tg = parsed?.targets;
   if (!tg || typeof tg !== "object") return { ok: false, country, error: "خروجی مدل JSON هدف‌ها نبود." };
-  const forecaster = `machine:country:${model}${BACKTEST_SUFFIX}`;
+  const forecaster = `machine:country:${model}${BACKTEST_SUFFIX}${lessons ? LESSONS_SUFFIX : ""}`;
   const rows = [];
   for (const t of targets) {
     const f = tg[t.id];
@@ -114,11 +117,11 @@ export async function runCountryBacktest(country, { generate = defaultGenerate, 
     const forecast = bad ? null : t.kind === "probability" ? { p: Number(f.p) } : { point: Number(f.point), lo: Number(f.lo), hi: Number(f.hi) };
     const stored = putRow("backtests", makeRow("backtests", {
       run_id: run, country, target: t.id, kind: t.kind, forecaster, model, made_at: at, forecast, truth, baseline, result, reason: String(f?.reason || "").slice(0, 200) || null,
-      natural_key: `bt|${run}|${country}|${t.id}|${model}`, created_at: at,
+      with_lessons: !!lessons, lesson_ids: les.ids, natural_key: `bt|${run}|${country}|${t.id}|${model}|${lessons ? "L" : "B"}`, created_at: at,
     }, at));
-    rows.push({ id: stored.id, target: t.id, forecast, truth, baseline, result, reason: stored.reason });
+    rows.push({ id: stored.id, with_lessons: !!lessons, target: t.id, forecast, truth, baseline, result, reason: stored.reason });
   }
-  return { ok: true, country, run_id: run, forecaster, rows };
+  return { ok: true, country, run_id: run, forecaster, with_lessons: !!lessons, lessons_used: les.ids.length, rows };
 }
 
 /** آخرین ردیفِ هر (کشور، هدف، پیش‌بین). */
@@ -147,11 +150,13 @@ function agg(rows) {
 }
 
 /** خلاصه‌ی آخرین اجراها: کل، به‌تفکیک هدف و به‌تفکیک کشور. coverage = سهم هدف‌های عددی که واقعی داخل بازه‌ی ۸۰٪ بود (هدف ≈ ۰٫۸). */
-export function summarizeBacktests(rows = latestBacktestRows()) {
+export function summarizeBacktests(allRows = latestBacktestRows()) {
+  const rows = allRows.filter((r) => !r.with_lessons); // آمار اصلی فقط اجرای «بدون درس»؛ اثر درس‌ها جدا (lessons_effect)
   const labels = new Map(backtestTargets().map((t) => [t.id, t.label]));
   const by = (key) => [...new Set(rows.map((r) => r[key]))];
   return {
     overall: agg(rows),
+    lessons_effect: compareLessonEffect(allRows),
     by_target: by("target").map((id) => ({ id, label: labels.get(id) || id, ...agg(rows.filter((r) => r.target === id)) })),
     by_country: by("country").map((c) => ({ country: c, ...agg(rows.filter((r) => r.country === c)) })).sort((a, b) => String(a.country).localeCompare(String(b.country), "fa")),
     rows: rows.map((r) => ({ country: r.country, target: r.target, label: labels.get(r.target) || r.target, forecast: r.forecast, truth: r.truth, baseline: r.baseline, result: r.result, reason: r.reason, made_at: r.made_at, model: r.model })),
