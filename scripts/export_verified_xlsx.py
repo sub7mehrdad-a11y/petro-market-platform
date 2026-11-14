@@ -51,7 +51,7 @@ def main():
 
     stats = {"total": 0, "email": 0, "email_site": 0, "phone": 0, "site": 0, "unverified": 0}
     for i, (k, c) in enumerate(companies, start=1):
-        v = ver.get(k, {})
+        v = ver.get(k) or ver.get(k.split(":", 1)[-1], {})  # کلید progress ممکن است «khimia:<id>» باشد
         email, econf = v.get("email_best"), v.get("email_confidence")
         if not str(econf or "").startswith("site"):  # فقط ایمیلِ دیده‌شده روی سایت رسمی شرکت
             email, econf = None, None
@@ -86,7 +86,7 @@ def main():
         stats["email_site"] += bool(email and str(econf).startswith("site"))
         stats["phone"] += bool(phone)
         stats["site"] += bool(site)
-        stats["unverified"] += (k not in ver)
+        stats["unverified"] += (k not in ver and k.split(":", 1)[-1] not in ver)
 
     widths = [6, 32, 14, 16, 30, 30, 26, 30, 34, 44, 20, 40, 22, 28, 18, 30, 40, 55, 20, 30]
     for idx, w in enumerate(widths, start=1):

@@ -86,7 +86,7 @@ COUNTRY_REGION = {
     "argentina": "AR", "mexico": "MX", "indonesia": "ID", "malaysia": "MY", "thailand": "TH", "vietnam": "VN",
     "kazakhstan": "KZ", "ukraine": "UA", "greece": "GR", "morocco": "MA", "south africa": "ZA", "kenya": "KE",
     "nigeria": "NG", "sri lanka": "LK", "bangladesh": "BD", "philippines": "PH", "south korea": "KR", "japan": "JP",
-    "australia": "AU", "canada": "CA", "united states": "US", "usa": "US", "cyprus": "CY", "uzbekistan": "UZ",
+    "australia": "AU", "canada": "CA", "russian federation": "RU", "belarus": "BY", "singapore": "SG", "иран": "IR", "united states": "US", "usa": "US", "cyprus": "CY", "uzbekistan": "UZ",
 }
 PHONE_KEYWORDS = re.compile(
     r"(tel|phone|mobile|mob\b|call|whatsapp|contact|hotline|office|sales|т[её]л|телефон|电话|电話|手机|تلفن|هاتف|جوال)",
@@ -101,6 +101,7 @@ NON_BUSINESS_SUBSTR = re.compile(
     r"(selecci|recluta|rrhh|talent|vacan|empleo|trabaj|candidat|karriere|bewerb|recrut|emploi|career|jobs?\b|"
     r"resume|(^|[._-])cvs?($|[._-])|(^|[._-])hr($|[._-])|personale|lavora|stellen|human\.?resources|reclam|"
     r"datenschutz|privacidad|dpo|gdpr)", re.I)
+EXTRA_CONTACT_PATHS = ["/contacts", "/contacts/", "/kontakty", "/kontakt", "/kontakte", "/about/contacts", "/ru/contacts", "/en/contacts", "/lianxiwomen"]
 FAX_WORDS = re.compile(r"(fax|факс|传真)", re.I)
 SSL_ERRORS = ("SSL", "CERTIFICATE", "certificate")
 
@@ -307,35 +308,50 @@ def _throttle_search():
         _last_search[0] = time.time()
 
 
+def _yahoo_results(client: httpx.Client, query: str) -> list[str]:
+    """جست‌وجوی Yahoo (۲۰۲۶-۱۱-۱۴: DuckDuckGo با ۴۰۳/کپچا بلاک شد و Bing نتایج بی‌ربط می‌داد؛ Yahoo
+    نتایج دقیق می‌دهد). لینک‌ها از پارامتر RU= آدرس ریدایرکت Yahoo رمزگشایی می‌شوند."""
+    for attempt in range(3):
+        _throttle_search()
+        try:
+            r = client.get("https://search.yahoo.com/search", params={"p": query, "ei": "UTF-8", "vl": "lang_en"},
+                           headers=BROWSER_HEADERS, timeout=30)
+            if r.status_code != 200:
+                time.sleep(3 * (attempt + 1))
+                continue
+            out = []
+            for a in BeautifulSoup(r.text, "html.parser").select("div.algo a[href], div#web li a[href]"):
+                m = re.search(r"/RU=([^/]+)/RK=", a["href"])
+                url = unquote(m.group(1)) if m else a["href"]
+                if url.startswith("http") and "yahoo." not in url:
+                    out.append(url)
+            return out
+        except Exception:  # noqa: BLE001
+            time.sleep(3 * (attempt + 1))
+    return []
+
+
 def search_candidates(client: httpx.Client, name: str, country: str, n: int = 4) -> list[str]:
     out = []
-    for query in (f"{name} {country or ''} official website".strip(), f"{name} {country or ''} contact email".strip()):
-        html = None
-        for attempt in range(2):
-            _throttle_search()
-            try:
-                r = client.get("https://html.duckduckgo.com/html/", params={"q": query}, headers=BROWSER_HEADERS, timeout=45)
-                if r.status_code == 200 and "result__a" in r.text:
-                    html = r.text
-                    break
-            except Exception:  # noqa: BLE001
-                pass
-            time.sleep(2)
-        if not html:
-            continue
-        for a in BeautifulSoup(html, "html.parser").select("a.result__a")[:10]:
-            target = parse_qs(urlparse(a.get("href") or "").query).get("uddg", [None])[0]
-            if not target:
-                continue
-            target = unquote(target)
+    for query in (f"{name} {country or ''}".strip(), f"{name} official website".strip()):
+        for target in _yahoo_results(client, query):
             domain = urlparse(target).netloc.lower().removeprefix("www.")
             if any(b in domain for b in efl.DIRECTORY_DOMAIN_BLOCKLIST) or any(m in target.lower() for m in efl.DIRECTORY_PATH_MARKERS):
+                continue
+            if re.search(r"(marketinsidedata|zoominfo|dnb\.com|opencorporates|rusprofile|list-org|b2b|tradeindia|made-in-china|alibaba|"
+                         r"indiamart|exportersindia|globalsources|ec21|tradekey|wikipedia|linkedin|facebook|instagram|youtube|vk\.com|"
+                         r"twitter|x\.com|bloomberg|crunchbase|yellowpages|europages|kompass|panjiva|importyeti|volza|zauba|"
+                         r"companieslist|emis|moneycontrol|justdial|yelp|glassdoor|indeed|rocketreach|apollo\.io|cbinsights|guidechem|"
+                         r"chemicalbook|lookchem|echemi|ecplaza|tradekorea|chemnet|molbase|made-in|go4worldbusiness|exporthub|"
+                         r"tradewheel|thomasnet|cylex|hotfrog|yell\.com|2gis|zoon|orgpage|spark-interfax|checko|audit-it|sbis)", domain):
                 continue
             root = f"{urlparse(target).scheme}://{urlparse(target).netloc}"
             if root not in out:
                 out.append(root)
             if len(out) >= n:
                 return out
+        if out:
+            break  # پرسش اول جواب داد؛ دومی لازم نیست (کم‌کردن بار روی موتور جست‌وجو)
     return out
 
 
@@ -422,6 +438,16 @@ def verify_company(rec: dict, fetcher: Fetcher, search_client: httpx.Client) -> 
     res["website"] = root
     res["website_status"] = "verified_official" if official else "verified_name_match"
     res["website_evidence"] = evidence
+    try:  # خلاصه‌ی صفحه‌ی اصلی برای طبقه‌بندی (عنوان + meta + ابتدای متن)
+        _bs = BeautifulSoup(home_html, "html.parser")
+        _meta = _bs.find("meta", attrs={"name": re.compile("^description$", re.I)})
+        _title = _bs.title.get_text(" ", strip=True) if _bs.title else ""
+        for _t in _bs(["script", "style", "noscript", "nav", "header", "footer"]):
+            _t.decompose()
+        _desc = (_meta.get("content") if _meta else "") or ""
+        res["site_blurb"] = re.sub(r"\s+", " ", f"{_title}. {_desc}. {_bs.get_text(' ', strip=True)[:500]}").strip()[:700]
+    except Exception:  # noqa: BLE001
+        res["site_blurb"] = ""
     if status in (401, 403):
         res["notes"].append(f"سایت کد {status} داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه")
 
@@ -461,7 +487,7 @@ def verify_company(rec: dict, fetcher: Fetcher, search_client: httpx.Client) -> 
             absorb(h2, f2)
             res["pages_checked"].append(f2)
     if not all_emails:
-        for path in efl.CONTACT_PATHS[1:7]:
+        for path in efl.CONTACT_PATHS[1:7] + EXTRA_CONTACT_PATHS:
             f2, st2, h2, _ = fetcher.get(root.rstrip("/") + path)
             if h2 and st2 and st2 < 400 and len(h2) > 800:
                 absorb(h2, f2)

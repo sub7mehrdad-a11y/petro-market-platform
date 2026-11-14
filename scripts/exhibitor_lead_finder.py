@@ -154,6 +154,7 @@ markdown fence و بدون توضیح اضافه.
 """
 
 LLM_BATCH_SIZE = 15
+LLM_DESC_MAX = 160  # نمایشگاه‌های دیگر (مثل KHIMIA) این را بزرگ‌تر می‌کنند؛ متن کوتاه = «اطلاعات کافی نیست»
 GEMINI_MODEL = "gemini-3.6-flash"
 
 
@@ -562,7 +563,8 @@ def find_contact_links(homepage_html: str, base_url: str) -> list[str]:
     for a in soup.find_all("a", href=True):
         href = a["href"].strip()
         text = a.get_text(" ", strip=True).lower()
-        if "contact" in href.lower() or "contact" in text or "تماس" in text:
+        if ("contact" in href.lower() or "contact" in text or "تماس" in text or "контакт" in text
+                or "kontakt" in href.lower() or "联系" in text or "контакт" in href.lower()):
             if href.startswith(("mailto:", "tel:", "javascript:", "#")):
                 continue
             links.add(urljoin(base_url, href))
@@ -965,7 +967,7 @@ def llm_refine(items: list[dict], progress: dict, progress_path: str,
                 "index": i,
                 "name": it["name"],
                 "categories": it.get("categories", [])[:5],
-                "description": (it.get("description") or "")[:160],
+                "description": (it.get("description") or "")[:LLM_DESC_MAX],
             }
             for i, it in enumerate(batch)
         ]
