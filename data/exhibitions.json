@@ -468,22 +468,26 @@
   {
     "name": "VIV MEA",
     "country": "امارات",
-    "location": "ابوظبی",
-    "date": "۲۳ تا ۲۵ نوامبر ۲۰۲۷",
+    "location": "ابوظبی؛ مرکز ملی نمایشگاه‌های ابوظبی (ADNEC)",
+    "date": "گزارش‌شده: ۲۳ تا ۲۵ نوامبر ۲۰۲۷",
     "focus": "مرکز اتصال تجار و تولیدکنندگان خوراک دام در خاورمیانه که بستری قدرتمند برای توزیع منطقه‌ای افزودنی‌های خوراکی مانند جوش شیرین دامی ایجاد می‌کند.",
-    "website": "vivmea.nl",
+    "website": "https://www.vivmea.nl",
     "source_file": "گزارش تفصیلی اطلس نمایشگاه‌های بین‌المللی تخصصی (۲۰۲۶ - ۲۰۲۷).docx",
-    "id": "exhibition-45"
+    "id": "exhibition-45",
+    "date_status": "تأییدنشده (در این دور از سایت برگزارکننده بررسی نشد)",
+    "relevance_to_baking_soda": "متوسط؛ افزودنی بافر در خوراک دام"
   },
   {
     "name": "Gulfood Manufacturing",
     "country": "امارات",
-    "location": "دبی، مرکز تجارت جهانی دبی (DWTC)",
-    "date": "۳ تا ۵ نوامبر ۲۰۲۶",
+    "location": "دبی؛ مرکز نمایشگاه‌های دبی (اکسپو سیتی)",
+    "date": "۱ تا ۳ نوامبر ۲۰۲۷",
     "focus": "بزرگترین نمایشگاه مواد اولیه غذایی در منطقه که فرصتی استراتژیک برای تامین جوش شیرین خوراکی صنایع پخت‌وپز و مواد غذایی ارائه می‌دهد.",
-    "website": "gulfoodmanufacturing.com",
+    "website": "https://www.gulfoodmanufacturing.com",
     "source_file": "گزارش تفصیلی اطلس نمایشگاه‌های بین‌المللی تخصصی (۲۰۲۶ - ۲۰۲۷).docx",
-    "id": "exhibition-46"
+    "id": "exhibition-46",
+    "date_status": "تأییدشده با دو منبع مستقل؛ سایت برگزارکننده در دسترس نبود",
+    "relevance_to_baking_soda": "بالا؛ تولیدکنندگان صنعتی غذا و مسئولان خرید و تأمین مواد اولیه"
   },
   {
     "name": "Fi India",
@@ -858,9 +862,59 @@
     "source_file": "لیست_نمایشگاههای_تجاری_عربستان.xlsx",
     "name": "Gulfood",
     "focus": "مواد غذایی و ابزار تأمین",
-    "location": "دبی، امارات",
-    "date": "سالانه؛ نسخهٔ ۲۰۲۷: ۱۵ تا ۱۹ مارس",
+    "location": "دبی؛ مرکز تجارت جهانی دبی و مرکز نمایشگاه‌های اکسپو سیتی",
+    "date": "۱۵ تا ۱۹ مارس ۲۰۲۷",
     "id": "exhibition-87",
-    "website": "https://www.gulfood.com"
+    "website": "https://www.gulfood.com",
+    "date_status": "تأییدشده در سایت برگزارکننده",
+    "relevance_to_baking_soda": "بالا؛ مشتریان نهایی نانوایی، شیرینی‌پزی، لبنیات و نوشیدنی و توزیع‌کنندگان مواد اولیه حضور دارند"
+  },
+  {
+    "country": "امارات",
+    "source_file": "لیست_نمایشگاههای_تجاری_امارات.xlsx",
+    "name": "WHX Dubai (شامل بخش آزمایشگاه؛ پیش‌تر WHX Labs / MEDLAB)",
+    "focus": "سلامت، دارو، آزمایشگاه و تشخیص",
+    "location": "دبی؛ مرکز نمایشگاه‌های دبی و مرکز تجارت جهانی دبی",
+    "date": "۲۵ تا ۲۸ ژانویه ۲۰۲۷",
+    "id": "exhibition-88",
+    "date_status": "تأییدشده در سایت برگزارکننده",
+    "relevance_to_baking_soda": "متوسط؛ گرید دارویی و دیالیز و خریداران آزمایشگاهی",
+    "website": "https://www.worldhealthexpo.com"
+  },
+  {
+    "country": "امارات",
+    "source_file": "لیست_نمایشگاههای_تجاری_امارات.xlsx",
+    "name": "Intersec Global",
+    "focus": "ایمنی، آتش‌نشانی، امنیت و امداد؛ پنج حوزه از جمله «آتش، نجات و پاسخ اضطراری»",
+    "location": "دبی؛ مرکز تجارت جهانی دبی",
+    "date": "۱۲ تا ۱۴ ژانویه ۲۰۲۷",
+    "id": "exhibition-89",
+    "date_status": "تأییدشده در سایت برگزارکننده",
+    "relevance_to_baking_soda": "متوسط تا پایین؛ تأمین‌کنندگان پودر خاموش‌کنندهٔ BC (مصرف‌کنندهٔ بی‌کربنات)",
+    "website": "https://intersecglobal.ae.messefrankfurt.com"
+  },
+  {
+    "country": "امارات",
+    "source_file": "لیست_نمایشگاههای_تجاری_امارات.xlsx",
+    "name": "ISM Middle East و Private Label Middle East",
+    "focus": "شیرینی و تنقلات؛ برند خصوصی و تولید قراردادی",
+    "location": "دبی؛ مرکز تجارت جهانی دبی",
+    "date": "تقریباً نوامبر ۲۰۲۷",
+    "id": "exhibition-90",
+    "date_status": "تأییدنشده؛ فقط فهرست تجمیعی با برچسب «پیش‌بینی‌شده»",
+    "relevance_to_baking_soda": "متوسط؛ تولیدکنندگان شیرینی و محصولات برند خصوصی",
+    "website": "https://www.tradefairdates.com"
+  },
+  {
+    "country": "امارات",
+    "source_file": "لیست_نمایشگاههای_تجاری_امارات.xlsx",
+    "name": "WETEX",
+    "focus": "آب، انرژی، فناوری و محیط‌زیست",
+    "location": "دبی؛ مرکز تجارت جهانی دبی",
+    "date": "دورهٔ ۲۰۲۶ برگزار شد (۲۰ تا ۲۲ اکتبر ۲۰۲۶)؛ تاریخ دورهٔ بعد اعلام‌شده نیافت",
+    "id": "exhibition-91",
+    "date_status": "دورهٔ بعد تأییدنشده",
+    "relevance_to_baking_soda": "پایین تا متوسط؛ تنظیم pH و استخر",
+    "website": "https://www.wetex.ae"
   }
 ]
