@@ -86,7 +86,7 @@ COUNTRY_REGION = {
     "argentina": "AR", "mexico": "MX", "indonesia": "ID", "malaysia": "MY", "thailand": "TH", "vietnam": "VN",
     "kazakhstan": "KZ", "ukraine": "UA", "greece": "GR", "morocco": "MA", "south africa": "ZA", "kenya": "KE",
     "nigeria": "NG", "sri lanka": "LK", "bangladesh": "BD", "philippines": "PH", "south korea": "KR", "japan": "JP",
-    "australia": "AU", "canada": "CA", "united states": "US", "usa": "US", "cyprus": "CY", "uzbekistan": "UZ",
+    "australia": "AU", "canada": "CA", "russian federation": "RU", "belarus": "BY", "singapore": "SG", "иран": "IR", "united states": "US", "usa": "US", "cyprus": "CY", "uzbekistan": "UZ",
 }
 PHONE_KEYWORDS = re.compile(
     r"(tel|phone|mobile|mob\b|call|whatsapp|contact|hotline|office|sales|т[её]л|телефон|电话|电話|手机|تلفن|هاتف|جوال)",
@@ -101,6 +101,7 @@ NON_BUSINESS_SUBSTR = re.compile(
     r"(selecci|recluta|rrhh|talent|vacan|empleo|trabaj|candidat|karriere|bewerb|recrut|emploi|career|jobs?\b|"
     r"resume|(^|[._-])cvs?($|[._-])|(^|[._-])hr($|[._-])|personale|lavora|stellen|human\.?resources|reclam|"
     r"datenschutz|privacidad|dpo|gdpr)", re.I)
+EXTRA_CONTACT_PATHS = ["/contacts", "/contacts/", "/kontakty", "/kontakt", "/kontakte", "/about/contacts", "/ru/contacts", "/en/contacts", "/lianxiwomen"]
 FAX_WORDS = re.compile(r"(fax|факс|传真)", re.I)
 SSL_ERRORS = ("SSL", "CERTIFICATE", "certificate")
 
@@ -307,35 +308,50 @@ def _throttle_search():
         _last_search[0] = time.time()
 
 
+def _yahoo_results(client: httpx.Client, query: str) -> list[str]:
+    """جست‌وجوی Yahoo (۲۰۲۶-۱۱-۱۴: DuckDuckGo با ۴۰۳/کپچا بلاک شد و Bing نتایج بی‌ربط می‌داد؛ Yahoo
+    نتایج دقیق می‌دهد). لینک‌ها از پارامتر RU= آدرس ریدایرکت Yahoo رمزگشایی می‌شوند."""
+    for attempt in range(3):
+        _throttle_search()
+        try:
+            r = client.get("https://search.yahoo.com/search", params={"p": query, "ei": "UTF-8", "vl": "lang_en"},
+                           headers=BROWSER_HEADERS, timeout=30)
+            if r.status_code != 200:
+                time.sleep(3 * (attempt + 1))
+                continue
+            out = []
+            for a in BeautifulSoup(r.text, "html.parser").select("div.algo a[href], div#web li a[href]"):
+                m = re.search(r"/RU=([^/]+)/RK=", a["href"])
+                url = unquote(m.group(1)) if m else a["href"]
+                if url.startswith("http") and "yahoo." not in url:
+                    out.append(url)
+            return out
+        except Exception:  # noqa: BLE001
+            time.sleep(3 * (attempt + 1))
+    return []
+
+
 def search_candidates(client: httpx.Client, name: str, country: str, n: int = 4) -> list[str]:
     out = []
-    for query in (f"{name} {country or ''} official website".strip(), f"{name} {country or ''} contact email".strip()):
-        html = None
-        for attempt in range(2):
-            _throttle_search()
-            try:
-                r = client.get("https://html.duckduckgo.com/html/", params={"q": query}, headers=BROWSER_HEADERS, timeout=45)
-                if r.status_code == 200 and "result__a" in r.text:
-                    html = r.text
-                    break
-            except Exception:  # noqa: BLE001
-                pass
-            time.sleep(2)
-        if not html:
-            continue
-        for a in BeautifulSoup(html, "html.parser").select("a.result__a")[:10]:
-            target = parse_qs(urlparse(a.get("href") or "").query).get("uddg", [None])[0]
-            if not target:
-                continue
-            target = unquote(target)
+    for query in (f"{name} {country or ''}".strip(), f"{name} official website".strip()):
+        for target in _yahoo_results(client, query):
             domain = urlparse(target).netloc.lower().removeprefix("www.")
             if any(b in domain for b in efl.DIRECTORY_DOMAIN_BLOCKLIST) or any(m in target.lower() for m in efl.DIRECTORY_PATH_MARKERS):
+                continue
+            if re.search(r"(marketinsidedata|zoominfo|dnb\.com|opencorporates|rusprofile|list-org|b2b|tradeindia|made-in-china|alibaba|"
+                         r"indiamart|exportersindia|globalsources|ec21|tradekey|wikipedia|linkedin|facebook|instagram|youtube|vk\.com|"
+                         r"twitter|x\.com|bloomberg|crunchbase|yellowpages|europages|kompass|panjiva|importyeti|volza|zauba|"
+                         r"companieslist|emis|moneycontrol|justdial|yelp|glassdoor|indeed|rocketreach|apollo\.io|cbinsights|guidechem|"
+                         r"chemicalbook|lookchem|echemi|ecplaza|tradekorea|chemnet|molbase|made-in|go4worldbusiness|exporthub|"
+                         r"tradewheel|thomasnet|cylex|hotfrog|yell\.com|2gis|zoon|orgpage|spark-interfax|checko|audit-it|sbis)", domain):
                 continue
             root = f"{urlparse(target).scheme}://{urlparse(target).netloc}"
             if root not in out:
                 out.append(root)
             if len(out) >= n:
                 return out
+        if out:
+            break  # پرسش اول جواب داد؛ دومی لازم نیست (کم‌کردن بار روی موتور جست‌وجو)
     return out
 
 
@@ -422,6 +438,16 @@ def verify_company(rec: dict, fetcher: Fetcher, search_client: httpx.Client) -> 
     res["website"] = root
     res["website_status"] = "verified_official" if official else "verified_name_match"
     res["website_evidence"] = evidence
+    try:  # خلاصه‌ی صفحه‌ی اصلی برای طبقه‌بندی (عنوان + meta + ابتدای متن)
+        _bs = BeautifulSoup(home_html, "html.parser")
+        _meta = _bs.find("meta", attrs={"name": re.compile("^description$", re.I)})
+        _title = _bs.title.get_text(" ", strip=True) if _bs.title else ""
+        for _t in _bs(["script", "style", "noscript", "nav", "header", "footer"]):
+            _t.decompose()
+        _desc = (_meta.get("content") if _meta else "") or ""
+        res["site_blurb"] = re.sub(r"\s+", " ", f"{_title}. {_desc}. {_bs.get_text(' ', strip=True)[:500]}").strip()[:700]
+    except Exception:  # noqa: BLE001
+        res["site_blurb"] = ""
     if status in (401, 403):
         res["notes"].append(f"سایت کد {status} داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه")
 
@@ -461,7 +487,7 @@ def verify_company(rec: dict, fetcher: Fetcher, search_client: httpx.Client) -> 
             absorb(h2, f2)
             res["pages_checked"].append(f2)
     if not all_emails:
-        for path in efl.CONTACT_PATHS[1:7]:
+        for path in efl.CONTACT_PATHS[1:7] + EXTRA_CONTACT_PATHS:
             f2, st2, h2, _ = fetcher.get(root.rstrip("/") + path)
             if h2 and st2 and st2 < 400 and len(h2) > 800:
                 absorb(h2, f2)
@@ -517,16 +543,7 @@ def finalize_contacts(res: dict, all_emails: dict, all_phones: list, root: str, 
         res["email_best"] = best
         res["email_confidence"] = "site_confirmed_same_domain" if best_conf == 0 else "site_confirmed_other_domain"
         res["email_source_url"] = all_emails[best]["source_url"]
-    elif rec.get("directory_email"):
-        d = rec["directory_email"].strip().lower()
-        if cl.SYNTAX_RE.match(d) and not efl.is_junk_email(d):
-            st = cl.domain_status(d.rsplit("@", 1)[-1])
-            if st in ("mx", "a_only"):
-                res["email_best"] = d
-                res["email_confidence"] = "directory_only"
-                res["email_source_url"] = "فهرست رسمی نمایشگاه (روی سایت شرکت دیده نشد)"
-            else:
-                res["notes"].append(f"ایمیل فهرست ({d}) رد شد: دامنه {st}")
+    # ایمیل/تلفن ثبت‌شده در فهرست نمایشگاه معیار نیست؛ فقط چیزی که روی سایت رسمی خودِ شرکت دیده شود.
     if all_phones:
         pr = {"tel": 0, "whatsapp": 1, "text": 2}
         all_phones.sort(key=lambda p: pr[p["kind"]])
@@ -592,6 +609,8 @@ def main():
     ap.add_argument("--limit", type=int)
     ap.add_argument("--workers", type=int, default=6)
     ap.add_argument("--no-render", action="store_true")
+    ap.add_argument("--render-only", action="store_true",
+                    help="فقط پاس دوم (Playwright) روی شرکت‌هایی که needs_render دارن و هنوز رندر نشدن")
     args = ap.parse_args()
 
     if args.slug:
@@ -604,9 +623,11 @@ def main():
     store = efl.load_progress(out_path) if os.path.exists(out_path) else {}
     todo = [(k, r) for k, r in recs.items() if k not in store]
     print(f"{len(recs)} شرکت، {len(store)} قبلاً بررسی شده، {len(todo)} مانده")
+    if args.render_only:
+        todo = []
     if args.limit:
         todo = todo[:args.limit]
-    if not todo:
+    if not todo and not args.render_only:
         return
 
     fetcher = Fetcher()
@@ -631,24 +652,33 @@ def main():
                 efl.atomic_write_json(out_path, store)
                 print(f"  [OK] {done}/{len(todo)}")
 
-    pending = [(k, store[k]) for k, _ in todo if store[k].get("needs_render") and store[k].get("website")]
+    if args.render_only:
+        pending = [(k, v) for k, v in store.items() if v.get("needs_render") and v.get("website") and k in recs]
+    else:
+        pending = [(k, store[k]) for k, _ in todo if store[k].get("needs_render") and store[k].get("website")]
     if pending and not args.no_render:
         try:
             from playwright.sync_api import sync_playwright
             pw = sync_playwright().start()
             browser = pw.chromium.launch()
             print(f"  پاس دوم با مرورگر برای {len(pending)} سایت")
-            for k, res in pending:
+            for n_done, (k, res) in enumerate(pending, 1):
                 try:
                     render_second_pass(res, recs[k], browser)
                 except Exception as e:  # noqa: BLE001
                     res["notes"].append(f"رندر ناموفق: {type(e).__name__}")
+                    res["needs_render"] = False  # دوباره تلاش نشود
+                if n_done % 8 == 0:  # ذخیره‌ی تدریجی: قطع نشست دیگر نتیجه‌ی رندر را از بین نمی‌برد
+                    efl.atomic_write_json(out_path, store)
+                    print(f"  [رندر] {n_done}/{len(pending)}")
             browser.close()
             pw.stop()
         except Exception as e:  # noqa: BLE001
             print(f"  [INFO] Playwright در دسترس نبود: {e}")
     efl.atomic_write_json(out_path, store)
 
+    if args.render_only:
+        todo = [(k, None) for k in store]
     n = len(todo)
     ok_site = sum(1 for k, _ in todo if store[k].get("website"))
     ok_mail = sum(1 for k, _ in todo if store[k].get("email_best") and str(store[k].get("email_confidence", "")).startswith("site"))

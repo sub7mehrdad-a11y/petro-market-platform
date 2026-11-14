@@ -3159,5 +3159,54 @@
         "url": "https://www.utikad.org.tr/en"
       }
     ]
+  },
+  {
+    "date": "2026-11-14",
+    "generated_at": "2026-11-14T12:25:42.567073+00:00",
+    "headline_fa": "توقف عبور مرزی کامیون‌های ترکیه‌ای و هدف‌گذاری لجستیک این کشور",
+    "company_updates": [],
+    "logistics_updates": [
+      {
+        "headline": "توقف عبور مرزی کامیون‌داران ترکیه‌ای",
+        "summary": "رانندگان کامیون در ترکیه حرکت و عبور از مرزها را به دلیل محدودیت‌های ویزای شینگن متوقف کرده‌اند.",
+        "source_url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "headline": "هدف‌گذاری بازار ۲۰۰ میلیارد دلاری برای لجستیک ترکیه",
+        "summary": "انجمن حمل‌ونقل و لجستیک ترکیه (UTİKAD) در همایش ۲۰۲۵ از برنامه خود برای ارتقای حجم بازار لجستیک این کشور به ۲۰۰ میلیارد دلار خبر داد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      }
+    ],
+    "market_note": "در متون خام امروز، هیچ خبر یا اطلاعیه جدیدی درباره تغییر ظرفیت، قیمت‌گذاری یا نتایج مالی شرکت‌های رقیب ترک (اتی‌سودا و کازان‌سودا) منتشر نشده است. تنها اخبار مهم به حوزه لجستیک مربوط می‌شود؛ از جمله توقف عبور مرزی کامیون‌داران ترک به دلیل روادید شینگن و برنامه‌های کلان ترکیه برای توسعه زیرساخت‌های لجستیکی. عدم تغییر در جبهه رقبای ترک نشان می‌دهد شرایط قیمتی بازار فعلاً باثبات است. با این حال، اختلال جاده‌ای ترکیه به سمت اروپا ممکن است ناوگان صادراتی آن‌ها را موقتاً به سمت بازارهای همسایه مانند عراق معطوف کند. پیشنهاد می‌شود سپهران شیمی با حفظ نرخ مرجع ۲۵۰ دلار FOB، وضعیت زنجیره تامین ناوگان زمینی ترکیه به عراق را زیر نظر داشته باشد.",
+    "sources": [
+      {
+        "name": "WE Soda Media",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investors",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "Eti Soda",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "UTİKAD",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Hürriyet Daily News",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      }
+    ]
   }
 ]

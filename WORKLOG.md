@@ -33,6 +33,36 @@
 **فایل‌ها:** `data/{companies,exhibitions,country_profiles,import_suppliers}.json`، `scripts/{import_uae_lists,ingest_reports}.py`، `reports/` (manifest، parsed، `امارات/`، `نقشه‌های تعاملی/امارات/`)، `گزارش/…امارات*`، `web/public/{report-html,country-maps}/…`، `WORKLOG.md`.
 
 ---
+### ۲۰۲۶-۱۱-۱۴ — KHIMIA 2026 (نمایشگاه شیمی مسکو) + تعویض موتور جست‌وجوی سایت‌یاب
+
+**KHIMIA 2026:** ۴۳۴ شرکت (فقط نام/کشور/سالن/غرفه، بدون سایت و تماس) از جدول HTML صفحه (`khimia_exhibitor_finder.py`).
+سایت رسمی هر شرکت با جست‌وجو پیدا و صحت‌سنجی شد: **۳۰۶ از ۴۳۴ (۷۰٪)** سایت تأییدشده؛ ۱۲۸ بدون سایت (حدس نزدم).
+طبقه‌بندی Groq روی خلاصه‌ی صفحه‌ی اصلی (`khimia_classify.py`) → ۱۲۳ مرتبط (۷۴ «قوی»، ۴۹ «شیمی عمومی»)،
+همگی سایت تأییدشده؛ ۱۰۶ ایمیل، ۱۱۹ تلفن. اصلاح‌های دستی ردیابی‌پذیر در `khimia_finalize.py`.
+**نتیجه‌ی مهم:** *شرکت خودمان (PARS BAKING SODA GROUP) در لیست غرفه‌داران KHIMIA بود* و مدل «فروشنده‌ی مستقیم/رقیب»
+برچسبش زده بود؛ حذف شد. همچنین سازنده‌ی سانتریفیوژ/تجهیزات پزشکی که مدل مرتبط گرفته بود رد شد.
+دو خطای مدل که اصلاح شد: (۱) متن توضیح ۱۶۰ کاراکتر بریده می‌شد → `LLM_DESC_MAX` (برای شیمی ۴۵۰)؛ (۲) پرامپت
+مخصوص غذا برای نمایشگاه شیمی زیادی سخت‌گیر بود («اطلاعات کافی نیست» برای شرکت‌هایی مثل Kirns Chemical).
+
+**موتور جست‌وجو:** DuckDuckGo بلاک شد (۴۰۳ با پراکسی، کپچا مستقیم)، Bing نتایج بی‌ربط می‌داد → **Yahoo**
+(`_yahoo_results` در `verify_company_contacts.py`؛ لینک‌ها از `RU=` رمزگشایی، throttle ۲ ثانیه، دایرکتوری‌های B2B
+بلاک). نرخ پیدا شدن سایت در ۲۰ نمونه‌ی KHIMIA از ۳ به ۱۹ رسید.
+**هشدار:** نتایج «سایت پیدا نشد» در گلفود/هند/روسیه که با DuckDuckGo بلاک‌شده تولید شدن ممکنه ناقص باشن؛
+باید دوباره با Yahoo اجرا بشن (`not_found`/`unreachable` را از `<slug>.verified.json` حذف و دوباره اجرا کن).
+ماژول‌های جدید: مسیرهای تماس روسی/چینی (`/contacts`, `/kontakty`)، «контакт»/«联系» در `find_contact_links`،
+منطقه‌ی تلفن روسیه/بلاروس/سنگاپور، ذخیره‌ی `site_blurb` در خروجی صحت‌سنجی.
+
+### ۲۰۲۶-۱۱-۱۴ — بررسی اِعمال اصلاحات ایمیل روی پلتفرم (`data/companies.json`)
+
+کاربر خواست لیست اصلاحات (`platform_email_corrections.json`) روی پلتفرم اعمال شود. قبل از دست‌زدن مقایسه شد:
+اصلاحات از ۲۰۲۶-۱۰-۲۳ از قبل اعمال شده بود (با ثبت در `email_history`): ۴۵/۴۵ جایگزینی و ۷۰/۷۲ حذف عیناً مطابق
+لیست؛ ایمیل آشغال/placeholder فعلی ۰؛ ساختار نامعتبر ۰. پس چیزی دوباره اعمال نشد. ۸ مورد مرزی با
+`verify_company_contacts.py` روی سایت خود شرکت‌ها دوباره بررسی شد: ۵ مورد درست بود و ۳ مورد اصلاح شد (فقط همین ۳ رکورد):
+- `company-1788` Sygama SA: `info@swissmountainspring.ch` (سایت ۴۰۳ و بی‌ربط به نام) → `info@sygama.ch` (روی sygama.ch دیده شد).
+- `company-1099` Kėdainių konservų fabrikas: `info@kitchenmasters.eu` (دامنه NXDOMAIN) → `info@kkf.lt` (kkf.lt/kontaktai).
+- `company-1348` Moon Dates: ایمیل خالی → `moondatestunisie@gmail.com` (moon-dates.com/contact-us).
+**تأییدنشده، دست‌نخورده:** `company-694` Acai Petruz — `izabella@petruz.com` روی petruz.com دیده نشد (سایت واقعی است).
+فیلد `website` این رکوردها (مثلاً 1099 و 1788 که به دامنه‌ی مرده/بی‌ربط اشاره می‌کنند) تغییر نکرد.
 
 ### ۲۰۲۶-۱۱-۱۳ — پلتفرم جامع بازرگانی: صفحه‌ی اصلی تازه، ثبت قرارداد، مراحل، مشتریان (شاخه‌ی `feature/sales-platform`)
 
@@ -304,6 +334,24 @@
 **فایل‌ها:** `data/{companies,exhibitions,country_profiles,import_suppliers}.json`، `scripts/{import_saudi_lists,ingest_reports}.py`، `reports/` (manifest، parsed، `عربستان سعودی/`، `نقشه‌های تعاملی/عربستان/`)، `گزارش/…عربستان*`، `web/public/{report-html,country-maps}/…`، `web/app/countries/[country]/page.jsx`، `web/app/components/InteractiveMapFrame.jsx`، `WORKLOG.md`.
 
 ---
+
+---
+
+### ۲۰۲۶-۱۱-۱۳ — نمایشگاه هند (Indusfood) + قاعده‌ی «فقط سایت رسمی خود شرکت»
+
+**Indusfood 2026** (`scripts/indusfood_exhibitor_finder.py`): ۹۸۹ غرفه‌دار از API عمومی JSON خود سایت
+(`/api/exhibitor-list.php` + `/api/exhibitor-detail.php`)، طبقه‌بندی Groq با کلید اختصاصی → ۸۲۳ مرتبط
+(۷۳۰ تولیدکننده، ۸۳ بازرگان). درجه‌ی ربط با قانون شفاف (`FIT_GROUPS`): ۶۲۹ «قوی»، ۱۹۴ «غذایی عمومی».
+نتیجه‌ی صحت‌سنجی: وب‌سایت ۷۳۶، ایمیل روی سایت شرکت ۴۰۲، تلفن معتبر ۴۵۰.
+
+**قاعده‌ی صریح کاربر:** اطلاعات تماس ثبت‌شده در فهرست نمایشگاه (ایمیل/واتساپ) اصلاً معیار نیست؛ فقط چیزی
+که روی سایت رسمی خودِ شرکت دیده شود. حذف شد: fallback `directory_only` در `verify_company_contacts.py`،
+ستون واتساپ ثبت‌شده در اکسل، و ۷۳ ایمیل فقط-فهرست روسیه. آدرس سایتِ ثبت‌شده در نمایشگاه فقط نقطه‌ی شروع
+پیدا کردن سایت رسمی است (بعد باز می‌شود و نام شرکت روی صفحه چک می‌شود).
+
+**پایداری:** `--render-only` + ذخیره‌ی تدریجی هر ۸ سایت برای پاس Playwright (قبلاً با قطع نشست کل نتیجه‌ی
+رندر گم می‌شد). بعد از تعویض SSD، `phonenumbers`/`dnspython`/Playwright دوباره نصب شد.
+KHIMIA 2026 (روسیه، ۴۳۴ شرکت، فقط نام/کشور/غرفه، بدون سایت): فقط لیست خام ذخیره شد (`scripts/khimia_exhibitor_finder.py`).
 
 ### ۲۰۲۶-۱۰-۲۵ — گزارش «بازار و اقتصاد تولید جوش‌شیرین بسته‌بندی ۵۰۰ گرمی» (HTML) در آرشیو گزارش‌ها (شاخه‌ی `feature/report-500g-packaging`)
 

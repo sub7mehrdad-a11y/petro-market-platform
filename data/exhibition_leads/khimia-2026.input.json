@@ -1,0 +1,4342 @@
+[
+ {
+  "id": "khimia-4a36382cf1",
+  "name": "ADDE TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C116",
+  "raw_name": "ADDE TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-aec99a426a",
+  "name": "ADVANCE PETROCHEMICALS LTD",
+  "country": "India",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16D80",
+  "raw_name": "ADVANCE PETROCHEMICALS LTD"
+ },
+ {
+  "id": "khimia-78d495e570",
+  "name": "AFINE CHEMICALS LIMITED",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F105",
+  "raw_name": "AFINE CHEMICALS LIMITED"
+ },
+ {
+  "id": "khimia-e21edaf1ed",
+  "name": "AGETT, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C65",
+  "raw_name": "AGETT, LLC"
+ },
+ {
+  "id": "khimia-492fef7a5d",
+  "name": "AMINES & PLASTICIZERS LTD.",
+  "country": "India",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C86",
+  "raw_name": "AMINES & PLASTICIZERS LTD."
+ },
+ {
+  "id": "khimia-4174f73368",
+  "name": "ANHUI SHUGUANG CATALYST TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D154",
+  "raw_name": "ANHUI SHUGUANG CATALYST TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-6880a20141",
+  "name": "ANHUI TENGLONG PUMP AND VALVE MANUFACTURING CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F130",
+  "raw_name": "ANHUI TENGLONG PUMP AND VALVE MANUFACTURING CO. LTD"
+ },
+ {
+  "id": "khimia-32ec3292e4",
+  "name": "ARLEX CHEMI PRIVATE LTD",
+  "country": "India",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16D77",
+  "raw_name": "ARLEX CHEMI PRIVATE LTD"
+ },
+ {
+  "id": "khimia-e18f73d931",
+  "name": "BASIC CHEMICAL, COSMETICS & DYES EXPORT PROMOTION COUNCIL (CHEMEXCIL)",
+  "country": "India",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B81",
+  "raw_name": "BASIC CHEMICAL, COSMETICS & DYES EXPORT PROMOTION COUNCIL (CHEMEXCIL)"
+ },
+ {
+  "id": "khimia-e096454919",
+  "name": "BEIJING ASNAIL BIOTECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C124",
+  "raw_name": "BEIJING ASNAIL BIOTECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-d794b32fb4",
+  "name": "CHANGZHOU HESILI CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B125",
+  "raw_name": "CHANGZHOU HESILI CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-976e00cc27",
+  "name": "CHEMEQUIP INDUSTRIES LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D118",
+  "raw_name": "CHEMEQUIP INDUSTRIES LTD"
+ },
+ {
+  "id": "khimia-28efb30ca4",
+  "name": "CHONGQING CHANGFENG CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C150",
+  "raw_name": "CHONGQING CHANGFENG CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-a2b892e707",
+  "name": "CHONGQING JIANGBEIMACH CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F125",
+  "raw_name": "CHONGQING JIANGBEIMACH CO. LTD"
+ },
+ {
+  "id": "khimia-3d6f10c287",
+  "name": "CRONX HEAT TRANSFER",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F100",
+  "raw_name": "CRONX HEAT TRANSFER"
+ },
+ {
+  "id": "khimia-b6e3f1e174",
+  "name": "DALIAN LOGISTICS EQUIPMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D142",
+  "raw_name": "DALIAN LOGISTICS EQUIPMENT CO. LTD"
+ },
+ {
+  "id": "khimia-1644c2edc3",
+  "name": "DCW LIMITED",
+  "country": "India",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B81",
+  "raw_name": "DCW LIMITED"
+ },
+ {
+  "id": "khimia-2dbb654752",
+  "name": "DEZHOU CHEMTICS CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D170",
+  "raw_name": "DEZHOU CHEMTICS CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-5c6d0e7ad7",
+  "name": "DHALOP CHEMICALS",
+  "country": "India",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B008",
+  "raw_name": "DHALOP CHEMICALS"
+ },
+ {
+  "id": "khimia-b70460cd15",
+  "name": "DONGGUAN DELUN NEW MATERIALS CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D156",
+  "raw_name": "DONGGUAN DELUN NEW MATERIALS CO. LTD"
+ },
+ {
+  "id": "khimia-d7031124c4",
+  "name": "DONGYING KNT CHEMICAL CO. LIMITED",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E128",
+  "raw_name": "DONGYING KNT CHEMICAL CO. LIMITED"
+ },
+ {
+  "id": "khimia-2cd65bda61",
+  "name": "ECOD SPECIALITIES (WUHAN) CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F115",
+  "raw_name": "ECOD SPECIALITIES (WUHAN) CO. LTD"
+ },
+ {
+  "id": "khimia-da57052389",
+  "name": "EFIRM NEW MATERIAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D102",
+  "raw_name": "EFIRM NEW MATERIAL CO. LTD"
+ },
+ {
+  "id": "khimia-a71be4d163",
+  "name": "FARMASINO CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E112",
+  "raw_name": "FARMASINO CO. LTD"
+ },
+ {
+  "id": "khimia-1995724f5c",
+  "name": "FENIX PROCESS TECHNOLOGIES PVT. LTD.",
+  "country": "India",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16A30",
+  "raw_name": "FENIX PROCESS TECHNOLOGIES PVT. LTD."
+ },
+ {
+  "id": "khimia-f367d7c392",
+  "name": "FESCO",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B050",
+  "raw_name": "FESCO"
+ },
+ {
+  "id": "khimia-6ab03ffeb3",
+  "name": "HARBIN FREM CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E070",
+  "raw_name": "HARBIN FREM CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-fb49b713cf",
+  "name": "FUSHUN HENGYI PETROLEUM & CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E130",
+  "raw_name": "FUSHUN HENGYI PETROLEUM & CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-98be8e1abc",
+  "name": "GRAPHITE TECHNOLOGY LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B060",
+  "raw_name": "GRAPHITE TECHNOLOGY LTD"
+ },
+ {
+  "id": "khimia-8141fc2117",
+  "name": "GUANGDONG HUANA CHEMISTRY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C110",
+  "raw_name": "GUANGDONG HUANA CHEMISTRY CO. LTD"
+ },
+ {
+  "id": "khimia-077f7ff01b",
+  "name": "HANERTECH (SUZHOU) ENERGY SAVING TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B100",
+  "raw_name": "HANERTECH (SUZHOU) ENERGY SAVING TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-23fbcb9313",
+  "name": "HANGZHOU OWE NEW MATERIALS TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E114",
+  "raw_name": "HANGZHOU OWE NEW MATERIALS TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-4cec9a03d8",
+  "name": "HANGZHOU XINGYUAN ENVIRONMENTAL PROTECTION EQUIPMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E112",
+  "raw_name": "HANGZHOU XINGYUAN ENVIRONMENTAL PROTECTION EQUIPMENT CO. LTD"
+ },
+ {
+  "id": "khimia-4da7d4f100",
+  "name": "HEBEI DAPENG PHARM & CHEM CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B138",
+  "raw_name": "HEBEI DAPENG PHARM & CHEM CO. LTD"
+ },
+ {
+  "id": "khimia-0e9f3879bd",
+  "name": "HEBEI PENGFA CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F120",
+  "raw_name": "HEBEI PENGFA CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-d6fa36ae80",
+  "name": "HEBEI XIONGAN FAIRSKY TECHNOLOGY DEVELOPMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C118",
+  "raw_name": "HEBEI XIONGAN FAIRSKY TECHNOLOGY DEVELOPMENT CO. LTD"
+ },
+ {
+  "id": "khimia-53593277d2",
+  "name": "HONGYE HOLDING GROUP CORPORATION LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E150",
+  "raw_name": "HONGYE HOLDING GROUP CORPORATION LTD"
+ },
+ {
+  "id": "khimia-53f31987fc",
+  "name": "HUAWEI CHEMICAL & BIOLOGIC ENGINEERING CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C108",
+  "raw_name": "HUAWEI CHEMICAL & BIOLOGIC ENGINEERING CO. LTD"
+ },
+ {
+  "id": "khimia-6faf422c7b",
+  "name": "HUBEI HUIFU NANOMATERIAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D124",
+  "raw_name": "HUBEI HUIFU NANOMATERIAL CO. LTD"
+ },
+ {
+  "id": "khimia-f121df6fb2",
+  "name": "HUBEI SANFENG TURBINE EQUIPMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D101",
+  "raw_name": "HUBEI SANFENG TURBINE EQUIPMENT CO. LTD"
+ },
+ {
+  "id": "khimia-f8f3dca5bd",
+  "name": "INNER MONGOLIA JIUMAO CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E141",
+  "raw_name": "INNER MONGOLIA JIUMAO CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-237aa84e6a",
+  "name": "INNOAS CHEMICAL CO. LIMITED",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E110",
+  "raw_name": "INNOAS CHEMICAL CO. LIMITED"
+ },
+ {
+  "id": "khimia-4d1abb22a9",
+  "name": "JIANGSU HUADA CENTRIFUGE CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D128",
+  "raw_name": "JIANGSU HUADA CENTRIFUGE CO. LTD"
+ },
+ {
+  "id": "khimia-b6ce872658",
+  "name": "JIANGSU JUMING CHEMICAL TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C152",
+  "raw_name": "JIANGSU JUMING CHEMICAL TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-a652844bb6",
+  "name": "JIANGSU KOLOD FOOD INGREDIENTS CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E135",
+  "raw_name": "JIANGSU KOLOD FOOD INGREDIENTS CO. LTD"
+ },
+ {
+  "id": "khimia-7480ffa59a",
+  "name": "JIANGSU OLYMSPAN EQUIPMENT TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F040",
+  "raw_name": "JIANGSU OLYMSPAN EQUIPMENT TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-c8e9f4d1bc",
+  "name": "JIANGSU SAIDELI PHARMACEUTICAL MACHINERY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D100",
+  "raw_name": "JIANGSU SAIDELI PHARMACEUTICAL MACHINERY CO. LTD"
+ },
+ {
+  "id": "khimia-cd114e96b4",
+  "name": "JIANGSU SOMTRUE AUTOMATION TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C116",
+  "raw_name": "JIANGSU SOMTRUE AUTOMATION TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-c4c1aabbb1",
+  "name": "JIANGSU TINGSZE MACHINERY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E148",
+  "raw_name": "JIANGSU TINGSZE MACHINERY CO. LTD"
+ },
+ {
+  "id": "khimia-2e8bd4093a",
+  "name": "JIANGSU ZHENGHENG LIGHT INDUSTRIAL MACHINERY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F115",
+  "raw_name": "JIANGSU ZHENGHENG LIGHT INDUSTRIAL MACHINERY CO. LTD"
+ },
+ {
+  "id": "khimia-b9bea0bbaf",
+  "name": "JIANGXI FUERXIN MEDICINE CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B081",
+  "raw_name": "JIANGXI FUERXIN MEDICINE CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-87575c07d0",
+  "name": "JINAN MTL CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C124",
+  "raw_name": "JINAN MTL CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-e8760cd83c",
+  "name": "JINDUICHENG MOLYBDENUM CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A130",
+  "raw_name": "JINDUICHENG MOLYBDENUM CO. LTD"
+ },
+ {
+  "id": "khimia-8d559d9e2b",
+  "name": "JINGGONG VALVES GROUP CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E040",
+  "raw_name": "JINGGONG VALVES GROUP CO. LTD"
+ },
+ {
+  "id": "khimia-80f17ab58c",
+  "name": "JINING YUANLIAN CHEMICAL TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D146",
+  "raw_name": "JINING YUANLIAN CHEMICAL TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-f1f18c1350",
+  "name": "JIYUAN QINGYUAN WATER TREATMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C114",
+  "raw_name": "JIYUAN QINGYUAN WATER TREATMENT CO. LTD"
+ },
+ {
+  "id": "khimia-2b5bed9789",
+  "name": "PARS BAKING SODA GROUP",
+  "country": "Иран",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F098",
+  "raw_name": "PARS BAKING SODA GROUP"
+ },
+ {
+  "id": "khimia-e298c3ce43",
+  "name": "KIRNS CHEMICAL LIMITED",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E129",
+  "raw_name": "KIRNS CHEMICAL LIMITED"
+ },
+ {
+  "id": "khimia-17536c1ad0",
+  "name": "LEACHE CHEM LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C130",
+  "raw_name": "LEACHE CHEM LTD"
+ },
+ {
+  "id": "khimia-e30653aee4",
+  "name": "LI&LI MECHANICAL (GUANGZHOU) CORPORATION",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D124",
+  "raw_name": "LI&LI MECHANICAL (GUANGZHOU) CORPORATION"
+ },
+ {
+  "id": "khimia-ec44ee9789",
+  "name": "LIANYUNGANG JUNGE ENVIRONMENTAL TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16D51",
+  "raw_name": "LIANYUNGANG JUNGE ENVIRONMENTAL TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-7b2b182a19",
+  "name": "LIAONING ARMCO TECHNICAL LUBRICANT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B140",
+  "raw_name": "LIAONING ARMCO TECHNICAL LUBRICANT CO. LTD"
+ },
+ {
+  "id": "khimia-3e01379180",
+  "name": "LINYI GUOLI CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F138",
+  "raw_name": "LINYI GUOLI CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-d3a018ccfb",
+  "name": "LINYI HONGYE CHEMICAL EQUIPMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B125",
+  "raw_name": "LINYI HONGYE CHEMICAL EQUIPMENT CO. LTD"
+ },
+ {
+  "id": "khimia-66b24b1a92",
+  "name": "JIANGSU LONGXIN SMART DRYING TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E040",
+  "raw_name": "JIANGSU LONGXIN SMART DRYING TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-f10e18314f",
+  "name": "AIHG Petro Trading",
+  "country": "Иран",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C106",
+  "raw_name": "AIHG Petro Trading"
+ },
+ {
+  "id": "khimia-4cbd5ff91a",
+  "name": "MCHEM ENERGY DEVELOPMENT (QINGDAO) CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A115",
+  "raw_name": "MCHEM ENERGY DEVELOPMENT (QINGDAO) CO. LTD"
+ },
+ {
+  "id": "khimia-0fa1306a50",
+  "name": "MIANYANG LIUNENG POWDER EQUIPMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D132",
+  "raw_name": "MIANYANG LIUNENG POWDER EQUIPMENT CO. LTD"
+ },
+ {
+  "id": "khimia-bc2c37def5",
+  "name": "MIKEM CHEMICAL (SHANDONG) CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C145",
+  "raw_name": "MIKEM CHEMICAL (SHANDONG) CO. LTD"
+ },
+ {
+  "id": "khimia-5b576be703",
+  "name": "MOHINI ORGANICS PVT. LTD., Private Li",
+  "country": "India",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16D75",
+  "raw_name": "MOHINI ORGANICS PVT. LTD., Private Li"
+ },
+ {
+  "id": "khimia-cb7af7ca54",
+  "name": "MUDANJIANG FENGDA CHEMICALS IMP. & EXP. CORP.",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D140",
+  "raw_name": "MUDANJIANG FENGDA CHEMICALS IMP. & EXP. CORP."
+ },
+ {
+  "id": "khimia-ced8bd07c0",
+  "name": "MYANDE GROUP CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E100",
+  "raw_name": "MYANDE GROUP CO. LTD"
+ },
+ {
+  "id": "khimia-102ab17864",
+  "name": "NANJING HUAXI CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D126",
+  "raw_name": "NANJING HUAXI CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-ba17ecca47",
+  "name": "NANJING PARON TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D140",
+  "raw_name": "NANJING PARON TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-19ef3eb106",
+  "name": "NANJING SKYFLY CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E140",
+  "raw_name": "NANJING SKYFLY CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-7dfed72282",
+  "name": "NCI SPECIALTY CHEMICALS PRIVATE LIMITED",
+  "country": "India",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C83",
+  "raw_name": "NCI SPECIALTY CHEMICALS PRIVATE LIMITED"
+ },
+ {
+  "id": "khimia-1ad16eff19",
+  "name": "NINGBO MOS CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D110",
+  "raw_name": "NINGBO MOS CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-db5031baea",
+  "name": "NIX CATALYSTS CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E138",
+  "raw_name": "NIX CATALYSTS CO. LTD"
+ },
+ {
+  "id": "khimia-871a5e520f",
+  "name": "NUTORK CORP.",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B148",
+  "raw_name": "NUTORK CORP."
+ },
+ {
+  "id": "khimia-9d5687007d",
+  "name": "PROMXIM IMPEX",
+  "country": "Uzbekistan",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C108",
+  "raw_name": "PROMXIM IMPEX"
+ },
+ {
+  "id": "khimia-41dd540d13",
+  "name": "QINGDAO KAIQI XINYE IMPORT AND EXPORT TRADING CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F110",
+  "raw_name": "QINGDAO KAIQI XINYE IMPORT AND EXPORT TRADING CO. LTD"
+ },
+ {
+  "id": "khimia-cddc421a11",
+  "name": "QINGDAO LONGSHORE CHEMICAL CO., LTD.",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C150",
+  "raw_name": "QINGDAO LONGSHORE CHEMICAL CO., LTD."
+ },
+ {
+  "id": "khimia-7dd0515cbe",
+  "name": "QINGDAO LUHONG CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E144",
+  "raw_name": "QINGDAO LUHONG CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-80308be9eb",
+  "name": "QINGDAO RITOS INTERNQTIONAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C130",
+  "raw_name": "QINGDAO RITOS INTERNQTIONAL CO. LTD"
+ },
+ {
+  "id": "khimia-99015548f8",
+  "name": "QINGDAO SEABOND CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D138",
+  "raw_name": "QINGDAO SEABOND CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-4fafed18aa",
+  "name": "QINGDAO SODA ASH INDUSTRIAL DEVELOPMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F140",
+  "raw_name": "QINGDAO SODA ASH INDUSTRIAL DEVELOPMENT CO. LTD"
+ },
+ {
+  "id": "khimia-51526b0483",
+  "name": "ROBUST INDIA",
+  "country": "India",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C80",
+  "raw_name": "ROBUST INDIA"
+ },
+ {
+  "id": "khimia-4713c61383",
+  "name": "XI’AN SHAANGU POWER CO. LTD ENGINEERING & TECHNOLOGY BRANCH",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B130",
+  "raw_name": "XI’AN SHAANGU POWER CO. LTD ENGINEERING & TECHNOLOGY BRANCH"
+ },
+ {
+  "id": "khimia-630454b77d",
+  "name": "SHAANXI HENGRUN LINONG BIOTECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A105",
+  "raw_name": "SHAANXI HENGRUN LINONG BIOTECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-7d6dbf79bf",
+  "name": "SHAANXI JIADE GROUP CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A045",
+  "raw_name": "SHAANXI JIADE GROUP CO. LTD"
+ },
+ {
+  "id": "khimia-e129fee5b6",
+  "name": "SHAANXI NUOYING AUTOMATION INSTRUMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A046",
+  "raw_name": "SHAANXI NUOYING AUTOMATION INSTRUMENT CO. LTD"
+ },
+ {
+  "id": "khimia-e423bd5bd4",
+  "name": "SHAANXI WONDER NEW MATERIALS CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A090",
+  "raw_name": "SHAANXI WONDER NEW MATERIALS CO. LTD"
+ },
+ {
+  "id": "khimia-0790650a0a",
+  "name": "SHAANXI YUYANG PETROLEUM TECHNOLOGY ENGINEERING CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A110",
+  "raw_name": "SHAANXI YUYANG PETROLEUM TECHNOLOGY ENGINEERING CO. LTD"
+ },
+ {
+  "id": "khimia-5a865e6850",
+  "name": "SHACHI ENGINEERING PVT. LTD",
+  "country": "India",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B058",
+  "raw_name": "SHACHI ENGINEERING PVT. LTD"
+ },
+ {
+  "id": "khimia-7ec70cb8af",
+  "name": "SHANDONG DESHANG CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B104",
+  "raw_name": "SHANDONG DESHANG CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-4d31743c4c",
+  "name": "SHANDONG GREEN TECHNOLOGIES CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E116",
+  "raw_name": "SHANDONG GREEN TECHNOLOGIES CO. LTD"
+ },
+ {
+  "id": "khimia-47e56f3aaf",
+  "name": "SHANDONG HAIZE HEAVY INDUSTRY TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F110",
+  "raw_name": "SHANDONG HAIZE HEAVY INDUSTRY TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-f46cb784fa",
+  "name": "SHANDONG KERUI CHEMICALS CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D150",
+  "raw_name": "SHANDONG KERUI CHEMICALS CO. LTD"
+ },
+ {
+  "id": "khimia-b82ccf7c96",
+  "name": "SHANDONG LEGEND CHEMICAL INDUSTRIES CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E118",
+  "raw_name": "SHANDONG LEGEND CHEMICAL INDUSTRIES CO. LTD"
+ },
+ {
+  "id": "khimia-9d24160e24",
+  "name": "SHANDONG LIANMENG INTERNATIONAL TRADE CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F120",
+  "raw_name": "SHANDONG LIANMENG INTERNATIONAL TRADE CO. LTD"
+ },
+ {
+  "id": "khimia-9897768b08",
+  "name": "SHANDONG LONGZE CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E116",
+  "raw_name": "SHANDONG LONGZE CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-bc26f2a03b",
+  "name": "SHANDONG NEAR CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C138",
+  "raw_name": "SHANDONG NEAR CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-f811fa1226",
+  "name": "SHANDONG RONGHAI NEW MATERIAL TECH CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F105",
+  "raw_name": "SHANDONG RONGHAI NEW MATERIAL TECH CO. LTD"
+ },
+ {
+  "id": "khimia-0a70b2015e",
+  "name": "SHANDONG S-SAILING CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C128",
+  "raw_name": "SHANDONG S-SAILING CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-fb15767370",
+  "name": "SHANDONG SENSM CHEMICAL TECH CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C120",
+  "raw_name": "SHANDONG SENSM CHEMICAL TECH CO. LTD"
+ },
+ {
+  "id": "khimia-73fc38be0a",
+  "name": "SHANDONG THFINE CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C136",
+  "raw_name": "SHANDONG THFINE CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-ad1ddaf22e",
+  "name": "SHANDONG WINTECH TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E125",
+  "raw_name": "SHANDONG WINTECH TECHNOLOGY CO. LTD, ООО"
+ },
+ {
+  "id": "khimia-9828dd010d",
+  "name": "SHANDONG XINFA RUIJIE NEW MATERIAL TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B088",
+  "raw_name": "SHANDONG XINFA RUIJIE NEW MATERIAL TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-af934e5804",
+  "name": "SHANDONG XINTAI CHEMICALS CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D120",
+  "raw_name": "SHANDONG XINTAI CHEMICALS CO. LTD"
+ },
+ {
+  "id": "khimia-df056e31c0",
+  "name": "SHANDONG YUNYI HEAVY INDUSTRY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E148",
+  "raw_name": "SHANDONG YUNYI HEAVY INDUSTRY CO. LTD"
+ },
+ {
+  "id": "khimia-e40cf1df25",
+  "name": "SHANGHAI BAOFENG MACHINERY MANUFACTURE CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F130",
+  "raw_name": "SHANGHAI BAOFENG MACHINERY MANUFACTURE CO. LTD"
+ },
+ {
+  "id": "khimia-e69c532fba",
+  "name": "SHANGHAI BAYUE CHEMICALS CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E127",
+  "raw_name": "SHANGHAI BAYUE CHEMICALS CO. LTD"
+ },
+ {
+  "id": "khimia-34ac5481b2",
+  "name": "SHANGHAI E-TECH PETRO. EQUIPMENT MANUFACTURING CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B120",
+  "raw_name": "SHANGHAI E-TECH PETRO. EQUIPMENT MANUFACTURING CO. LTD"
+ },
+ {
+  "id": "khimia-cce243f506",
+  "name": "SHANGHAI FLOWX VALVE CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D128",
+  "raw_name": "SHANGHAI FLOWX VALVE CO. LTD"
+ },
+ {
+  "id": "khimia-17b20e9f3f",
+  "name": "SHANGHAI LINBEL INSTRUMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A100",
+  "raw_name": "SHANGHAI LINBEL INSTRUMENT CO. LTD"
+ },
+ {
+  "id": "khimia-4c389a4902",
+  "name": "SHANGHAI RUANG ULTRASONIC EQUIPMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A105",
+  "raw_name": "SHANGHAI RUANG ULTRASONIC EQUIPMENT CO. LTD"
+ },
+ {
+  "id": "khimia-863370edb1",
+  "name": "SHANGHAI SUNWISE CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D103",
+  "raw_name": "SHANGHAI SUNWISE CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-6c6d6a1a81",
+  "name": "SHENYANG JIUFANG TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B015",
+  "raw_name": "SHENYANG JIUFANG TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-a033b9f32d",
+  "name": "SHENYANG RISE SURFACE TECHNOLOGIES CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E114",
+  "raw_name": "SHENYANG RISE SURFACE TECHNOLOGIES CO. LTD"
+ },
+ {
+  "id": "khimia-b7e562f4d3",
+  "name": "SHENYANG XINGZHENGHE CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B106",
+  "raw_name": "SHENYANG XINGZHENGHE CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-5b8ff0b3e9",
+  "name": "SHENYANG YIHUA NEW MATERIAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D100",
+  "raw_name": "SHENYANG YIHUA NEW MATERIAL CO. LTD"
+ },
+ {
+  "id": "khimia-b348508d29",
+  "name": "SHIJIAZHUANG CHAOCHI IMPORT AND EXPORT TRADING CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E118",
+  "raw_name": "SHIJIAZHUANG CHAOCHI IMPORT AND EXPORT TRADING CO. LTD"
+ },
+ {
+  "id": "khimia-07f208a702",
+  "name": "SHIJIAZHUANG JACKCHEM CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A080",
+  "raw_name": "SHIJIAZHUANG JACKCHEM CO. LTD"
+ },
+ {
+  "id": "khimia-eca5103ddd",
+  "name": "SICHUAN JINGFENG ADVANCED MATERIALS CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B120",
+  "raw_name": "SICHUAN JINGFENG ADVANCED MATERIALS CO. LTD"
+ },
+ {
+  "id": "khimia-a8587e11bc",
+  "name": "SICHUAN SUNDIA CHEMICAL LIMITED COMPANY",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F140",
+  "raw_name": "SICHUAN SUNDIA CHEMICAL LIMITED COMPANY"
+ },
+ {
+  "id": "khimia-af2f3ca35f",
+  "name": "SICHUAN TIANYU OLEOCHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B174",
+  "raw_name": "SICHUAN TIANYU OLEOCHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-f13337f80b",
+  "name": "SIEHE GROUP CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D105",
+  "raw_name": "SIEHE GROUP CO. LTD"
+ },
+ {
+  "id": "khimia-c9a40cccce",
+  "name": "SIGMA ROTO LINING PRIVATE LIMITED",
+  "country": "India",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B74",
+  "raw_name": "SIGMA ROTO LINING PRIVATE LIMITED"
+ },
+ {
+  "id": "khimia-81fa6ed7f4",
+  "name": "SINOMORE (INTERNATIONAL) NEW MATERIAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C102",
+  "raw_name": "SINOMORE (INTERNATIONAL) NEW MATERIAL CO. LTD"
+ },
+ {
+  "id": "khimia-f5046e616b",
+  "name": "SINORIGHT INTERNATIONAL TRADE CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D130",
+  "raw_name": "SINORIGHT INTERNATIONAL TRADE CO. LTD"
+ },
+ {
+  "id": "khimia-94bbff256f",
+  "name": "SINOWISDOM CHEMICALS (DALIAN) CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B108",
+  "raw_name": "SINOWISDOM CHEMICALS (DALIAN) CO. LTD"
+ },
+ {
+  "id": "khimia-c6b7add9f4",
+  "name": "SIXIN GLOBAL",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B152",
+  "raw_name": "SIXIN GLOBAL"
+ },
+ {
+  "id": "khimia-87b38afcc3",
+  "name": "TAIZHOU LINUO AOLLY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B158",
+  "raw_name": "TAIZHOU LINUO AOLLY CO. LTD"
+ },
+ {
+  "id": "khimia-aaad1bb798",
+  "name": "TANYUN AEROSPACE MATERIALS (HUBEI) AEROSPACE TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E100",
+  "raw_name": "TANYUN AEROSPACE MATERIALS (HUBEI) AEROSPACE TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-e2c6a48a3b",
+  "name": "TIANJIN PUKAI INTERNATIONAL TRADE COMPANY LIMITED",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C170",
+  "raw_name": "TIANJIN PUKAI INTERNATIONAL TRADE COMPANY LIMITED"
+ },
+ {
+  "id": "khimia-d3c9fbff48",
+  "name": "TIANJIN XINZE FINE CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C175",
+  "raw_name": "TIANJIN XINZE FINE CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-83c5c8e60d",
+  "name": "TIANJIN YUFENG CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C155",
+  "raw_name": "TIANJIN YUFENG CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-84c5b6d877",
+  "name": "TIANJIN ZHOUSHANG IMPORT & EXPORT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D150",
+  "raw_name": "TIANJIN ZHOUSHANG IMPORT & EXPORT CO. LTD"
+ },
+ {
+  "id": "khimia-018b97c77c",
+  "name": "ULIDA CHEMICAL LIMITED",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D158",
+  "raw_name": "ULIDA CHEMICAL LIMITED"
+ },
+ {
+  "id": "khimia-752e910ea0",
+  "name": "ZHEJIANG VNOR ENVIRONMENTAL PROTECTION TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C100",
+  "raw_name": "ZHEJIANG VNOR ENVIRONMENTAL PROTECTION TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-c7dd1afe91",
+  "name": "YANTAI VOLM VACUUM TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D144",
+  "raw_name": "YANTAI VOLM VACUUM TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-6396aa89b4",
+  "name": "WEIFANG HENGFENG ZINC INDUSTRY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C120",
+  "raw_name": "WEIFANG HENGFENG ZINC INDUSTRY CO. LTD"
+ },
+ {
+  "id": "khimia-006041f739",
+  "name": "WEIFANG TAINUO CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C104",
+  "raw_name": "WEIFANG TAINUO CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-ee004c98da",
+  "name": "WENZHOU TIANLONG MACHINERY TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D164",
+  "raw_name": "WENZHOU TIANLONG MACHINERY TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-83c6033596",
+  "name": "WUXI HIGH MOUNTAIN HI-TECH DEVELOPMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B080",
+  "raw_name": "WUXI HIGH MOUNTAIN HI-TECH DEVELOPMENT CO. LTD"
+ },
+ {
+  "id": "khimia-387d72a440",
+  "name": "XI'AN DELAN HI-TECH MATERIALS CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A115",
+  "raw_name": "XI'AN DELAN HI-TECH MATERIALS CO. LTD"
+ },
+ {
+  "id": "khimia-fd21fc7fcf",
+  "name": "XI'AN FILTER METAL MATERIALS CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B118",
+  "raw_name": "XI'AN FILTER METAL MATERIALS CO. LTD"
+ },
+ {
+  "id": "khimia-8762a970e7",
+  "name": "XI'AN HEMOT INTERNATIONAL CORPORATION LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A125",
+  "raw_name": "XI'AN HEMOT INTERNATIONAL CORPORATION LTD"
+ },
+ {
+  "id": "khimia-9b18e09104",
+  "name": "XI'AN TAICHENG CHEM CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A120",
+  "raw_name": "XI'AN TAICHENG CHEM CO. LTD"
+ },
+ {
+  "id": "khimia-81a2a63afe",
+  "name": "XI’AN UNITED PRESSURE VESSEL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B102",
+  "raw_name": "XI’AN UNITED PRESSURE VESSEL CO. LTD"
+ },
+ {
+  "id": "khimia-6873000c4d",
+  "name": "XI'AN WONDER ENERGY CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A095",
+  "raw_name": "XI'AN WONDER ENERGY CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-18095f410c",
+  "name": "XI'AN YUANFAR INTERNATIONAL TRADE COMPANY",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C140",
+  "raw_name": "XI'AN YUANFAR INTERNATIONAL TRADE COMPANY"
+ },
+ {
+  "id": "khimia-11c39f9634",
+  "name": "XI’AN AEROSPACE YUANZHENG FLUID CONTROL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A100",
+  "raw_name": "XI’AN AEROSPACE YUANZHENG FLUID CONTROL CO. LTD"
+ },
+ {
+  "id": "khimia-fd34597900",
+  "name": "XIANGTAN HUIBO CENTRIFUGE CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E110",
+  "raw_name": "XIANGTAN HUIBO CENTRIFUGE CO. LTD"
+ },
+ {
+  "id": "khimia-735e269ff4",
+  "name": "XINJIANG ZHONGTAI IMPORT & EXPORT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B100",
+  "raw_name": "XINJIANG ZHONGTAI IMPORT & EXPORT CO. LTD"
+ },
+ {
+  "id": "khimia-bf5e91d32d",
+  "name": "YANTAI BILLION THAI CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C126",
+  "raw_name": "YANTAI BILLION THAI CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-903574c65a",
+  "name": "YANTAI CHENPING MINERALS CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B150",
+  "raw_name": "YANTAI CHENPING MINERALS CO. LTD"
+ },
+ {
+  "id": "khimia-d0ee2f12b6",
+  "name": "YANTAI LONGGANG PUMP INDUSTRY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C148",
+  "raw_name": "YANTAI LONGGANG PUMP INDUSTRY CO. LTD"
+ },
+ {
+  "id": "khimia-75f095dfb7",
+  "name": "ZHEJIANG BOKE HEAT EXCHANGE TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A050",
+  "raw_name": "ZHEJIANG BOKE HEAT EXCHANGE TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-27e5927a2e",
+  "name": "ZHEJIANG JHENTEN MACHINERY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D108",
+  "raw_name": "ZHEJIANG JHENTEN MACHINERY CO. LTD"
+ },
+ {
+  "id": "khimia-52905b526a",
+  "name": "ZHEJIANG JK TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D144",
+  "raw_name": "ZHEJIANG JK TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-16f57b67d8",
+  "name": "ZHEJIANG LIANG GAO VALVE CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D120",
+  "raw_name": "ZHEJIANG LIANG GAO VALVE CO. LTD"
+ },
+ {
+  "id": "khimia-2420f78fdd",
+  "name": "ZHEJIANG SHUANGZI INTELLIGENT EQUIPMENT CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E158",
+  "raw_name": "ZHEJIANG SHUANGZI INTELLIGENT EQUIPMENT CO. LTD"
+ },
+ {
+  "id": "khimia-6fb4eddfac",
+  "name": "ZHEJIANG TANLET MACHINERY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D114",
+  "raw_name": "ZHEJIANG TANLET MACHINERY CO. LTD"
+ },
+ {
+  "id": "khimia-3c9c1c0535",
+  "name": "ZHEJIANG TONGCHEM INDUSTRY GROUP CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B135",
+  "raw_name": "ZHEJIANG TONGCHEM INDUSTRY GROUP CO. LTD"
+ },
+ {
+  "id": "khimia-bc9d830f9f",
+  "name": "ZHEJIANG WANJIADE CONTROL VALVE CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B108",
+  "raw_name": "ZHEJIANG WANJIADE CONTROL VALVE CO. LTD"
+ },
+ {
+  "id": "khimia-a0773429e3",
+  "name": "ZHEJIANG YONJOU TECHNOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C134",
+  "raw_name": "ZHEJIANG YONJOU TECHNOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-da5170fad0",
+  "name": "ZHENGZHOU CHORUS LUBRICANT ADDITIVE CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C156",
+  "raw_name": "ZHENGZHOU CHORUS LUBRICANT ADDITIVE CO. LTD"
+ },
+ {
+  "id": "khimia-979c4f9ba5",
+  "name": "ZHUCHENG KANGTAI CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D148",
+  "raw_name": "ZHUCHENG KANGTAI CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-326b4cd563",
+  "name": "ZIBO ANHAO CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E160",
+  "raw_name": "ZIBO ANHAO CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-dcd2d3da69",
+  "name": "SHANDONG PIONEER HEAVY INDUSTRY TECHINOLOGY CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F030",
+  "raw_name": "SHANDONG PIONEER HEAVY INDUSTRY TECHINOLOGY CO. LTD"
+ },
+ {
+  "id": "khimia-1c80f01488",
+  "name": "ZIBO YUDUO CHEMICAL CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F041",
+  "raw_name": "ZIBO YUDUO CHEMICAL CO. LTD"
+ },
+ {
+  "id": "khimia-ff331dad58",
+  "name": "A-VAGO, LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C060",
+  "raw_name": "A-VAGO, LTD"
+ },
+ {
+  "id": "khimia-68c68f7b27",
+  "name": "AMN, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C54",
+  "raw_name": "AMN, LLC"
+ },
+ {
+  "id": "khimia-fd904d3130",
+  "name": "AZOS",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D062",
+  "raw_name": "AZOS"
+ },
+ {
+  "id": "khimia-c5df3dea40",
+  "name": "IBP",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C082",
+  "raw_name": "IBP"
+ },
+ {
+  "id": "khimia-167f935931",
+  "name": "AQUA-A",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A010",
+  "raw_name": "AQUA-A"
+ },
+ {
+  "id": "khimia-3da115794c",
+  "name": "AQUACHROM",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B091",
+  "raw_name": "AQUACHROM"
+ },
+ {
+  "id": "khimia-f7f667313e",
+  "name": "AKTITEK",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A080",
+  "raw_name": "AKTITEK"
+ },
+ {
+  "id": "khimia-d7c3480009",
+  "name": "AKTO LLC (Salyut™)",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C020",
+  "raw_name": "AKTO LLC (Salyut™)"
+ },
+ {
+  "id": "khimia-56d6cae695",
+  "name": "ALKHITEKH NPP",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C060",
+  "raw_name": "ALKHITEKH NPP"
+ },
+ {
+  "id": "khimia-da9a8ec5bf",
+  "name": "ALLIANCE-ENERGIA",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E040",
+  "raw_name": "ALLIANCE-ENERGIA"
+ },
+ {
+  "id": "khimia-0a3d0c6469",
+  "name": "ANKAR, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C18",
+  "raw_name": "ANKAR, LLC"
+ },
+ {
+  "id": "khimia-e02c48c1ae",
+  "name": "RUSSIAN CHEMICAL BULLETIN",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B60",
+  "raw_name": "RUSSIAN CHEMICAL BULLETIN"
+ },
+ {
+  "id": "khimia-bcebcb34ac",
+  "name": "RUSSIAN CHEMICAL REVIEWS",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B60",
+  "raw_name": "RUSSIAN CHEMICAL REVIEWS"
+ },
+ {
+  "id": "khimia-50d39e6bbc",
+  "name": "ANOD RESEARCH & PRODUCTION CENTER, LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16D56",
+  "raw_name": "ANOD RESEARCH & PRODUCTION CENTER, LTD"
+ },
+ {
+  "id": "khimia-357b492b65",
+  "name": "ANSER, LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F020",
+  "raw_name": "ANSER, LTD"
+ },
+ {
+  "id": "khimia-3b1080400a",
+  "name": "1C:Aprel Soft",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A074",
+  "raw_name": "1C:Aprel Soft"
+ },
+ {
+  "id": "khimia-944614d3ef",
+  "name": "RCLIGHT",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C77",
+  "raw_name": "RCLIGHT"
+ },
+ {
+  "id": "khimia-998f4699df",
+  "name": "ARSKA TECH",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16A30",
+  "raw_name": "ARSKA TECH"
+ },
+ {
+  "id": "khimia-3f9e51bcb1",
+  "name": "ARTCHEM, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16A10",
+  "raw_name": "ARTCHEM, LLC"
+ },
+ {
+  "id": "khimia-e60831cf71",
+  "name": "ASOS",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E050",
+  "raw_name": "ASOS"
+ },
+ {
+  "id": "khimia-bbcd998396",
+  "name": "ATTIKA PACKAGING, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D060",
+  "raw_name": "ATTIKA PACKAGING, LLC"
+ },
+ {
+  "id": "khimia-8b046f5f9e",
+  "name": "AFAYA",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E044",
+  "raw_name": "AFAYA"
+ },
+ {
+  "id": "khimia-b42c4544c2",
+  "name": "AFIVA, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E095",
+  "raw_name": "AFIVA, LLC"
+ },
+ {
+  "id": "khimia-bc4f272506",
+  "name": "BAZA No.1 CHEMREAKTIVOV, JSC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B075",
+  "raw_name": "BAZA No.1 CHEMREAKTIVOV, JSC"
+ },
+ {
+  "id": "khimia-6ee33a78e1",
+  "name": "AZBUKA ROSTA",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B001",
+  "raw_name": "AZBUKA ROSTA"
+ },
+ {
+  "id": "khimia-67641bdf7c",
+  "name": "BARRUS PROJECTS",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B046",
+  "raw_name": "BARRUS PROJECTS"
+ },
+ {
+  "id": "khimia-9810168763",
+  "name": "BD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F050",
+  "raw_name": "BD"
+ },
+ {
+  "id": "khimia-aeedafb3dc",
+  "name": "BELNEFTEKHIM-ROS, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D040",
+  "raw_name": "BELNEFTEKHIM-ROS, LLC"
+ },
+ {
+  "id": "khimia-d4b4c71b04",
+  "name": "BELSHINA, JSC",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D040",
+  "raw_name": "BELSHINA, JSC"
+ },
+ {
+  "id": "khimia-4b2ea636fa",
+  "name": "A90B",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C055",
+  "raw_name": "A90B"
+ },
+ {
+  "id": "khimia-d2883abc0d",
+  "name": "BINOM",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C088",
+  "raw_name": "BINOM"
+ },
+ {
+  "id": "khimia-38e2639aa4",
+  "name": "BIOHIM",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C28",
+  "raw_name": "BIOHIM"
+ },
+ {
+  "id": "khimia-38debed5d2",
+  "name": "BALTIC CONTAINER SERVICE, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A090",
+  "raw_name": "BALTIC CONTAINER SERVICE, LLC"
+ },
+ {
+  "id": "khimia-a4f41192c1",
+  "name": "BLM SYNERGY",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A025",
+  "raw_name": "BLM SYNERGY"
+ },
+ {
+  "id": "khimia-6c73490f9d",
+  "name": "WISETECH ENGINEERING, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B042",
+  "raw_name": "WISETECH ENGINEERING, LLC"
+ },
+ {
+  "id": "khimia-6d18cb8fee",
+  "name": "VASTECO TRADE HOUSE, LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E065",
+  "raw_name": "VASTECO TRADE HOUSE, LTD"
+ },
+ {
+  "id": "khimia-6d813a1a29",
+  "name": "SYREN",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B114",
+  "raw_name": "SYREN"
+ },
+ {
+  "id": "khimia-0e24ec573a",
+  "name": "VYAZEMSKY PLANT OF SYNTHETIC PRODUCTS, JSC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C010",
+  "raw_name": "VYAZEMSKY PLANT OF SYNTHETIC PRODUCTS, JSC"
+ },
+ {
+  "id": "khimia-38a9e66c52",
+  "name": "VODOOBRABOTKA, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D085",
+  "raw_name": "VODOOBRABOTKA, LLC"
+ },
+ {
+  "id": "khimia-6ebdbfc9b6",
+  "name": "VSMPO-AVISMA Corporation PSC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E020",
+  "raw_name": "VSMPO-AVISMA Corporation PSC"
+ },
+ {
+  "id": "khimia-bdbd99181e",
+  "name": "GART-URAL, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C102",
+  "raw_name": "GART-URAL, LLC"
+ },
+ {
+  "id": "khimia-7872e3f6de",
+  "name": "GLOBAL INDUSTRY GROUP OF COMPANIES, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B088",
+  "raw_name": "GLOBAL INDUSTRY GROUP OF COMPANIES, LLC"
+ },
+ {
+  "id": "khimia-28dfd9e1d4",
+  "name": "KIP-Group",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B057",
+  "raw_name": "KIP-Group"
+ },
+ {
+  "id": "khimia-688f39f3e0",
+  "name": "GK HIMALYANS",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E065",
+  "raw_name": "GK HIMALYANS"
+ },
+ {
+  "id": "khimia-d180317cb9",
+  "name": "GLEXOR, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B114",
+  "raw_name": "GLEXOR, LLC"
+ },
+ {
+  "id": "khimia-29209e4739",
+  "name": "GLIKOLI.RU",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E119",
+  "raw_name": "GLIKOLI.RU"
+ },
+ {
+  "id": "khimia-e266c58b32",
+  "name": "GLYCERINE.RU",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B090",
+  "raw_name": "GLYCERINE.RU"
+ },
+ {
+  "id": "khimia-b1c7033bd1",
+  "name": "GLOBAL PRINTING SYSTEMS",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B025",
+  "raw_name": "GLOBAL PRINTING SYSTEMS"
+ },
+ {
+  "id": "khimia-287e4e0ded",
+  "name": "GO MOTORS, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C072",
+  "raw_name": "GO MOTORS, LLC"
+ },
+ {
+  "id": "khimia-c58f1f9cf9",
+  "name": "MOUNTAIN WAX PLANT, JSC",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D040",
+  "raw_name": "MOUNTAIN WAX PLANT, JSC"
+ },
+ {
+  "id": "khimia-e9a33d7b07",
+  "name": "STATE SCIENTIFIC RESEARCH INSTITUTE OF ORGANIC CHEMISTRY AND TECHNOLOGY (FGUP GosNIIOKhT)",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E030",
+  "raw_name": "STATE SCIENTIFIC RESEARCH INSTITUTE OF ORGANIC CHEMISTRY AND TECHNOLOGY (FGUP GosNIIOKhT)"
+ },
+ {
+  "id": "khimia-3da7253fad",
+  "name": "GRAULAB",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B085",
+  "raw_name": "GRAULAB"
+ },
+ {
+  "id": "khimia-3392e1ab4f",
+  "name": "GREENLIFE FACTORY, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D085",
+  "raw_name": "GREENLIFE FACTORY, LLC"
+ },
+ {
+  "id": "khimia-5568201095",
+  "name": "TECHPRIBOR",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C087",
+  "raw_name": "TECHPRIBOR"
+ },
+ {
+  "id": "khimia-6df5c1d3a4",
+  "name": "WILMAR — DELTA COMMODITIES",
+  "country": "Singapore",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E050",
+  "raw_name": "WILMAR — DELTA COMMODITIES"
+ },
+ {
+  "id": "khimia-bbea60066a",
+  "name": "DZHINGDZHIN, JSC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B010",
+  "raw_name": "DZHINGDZHIN, JSC"
+ },
+ {
+  "id": "khimia-fc85b0508c",
+  "name": "DIA-M",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D095",
+  "raw_name": "DIA-M"
+ },
+ {
+  "id": "khimia-6cfd30ac5a",
+  "name": "DIPAUL-Manufacturing Company Limited",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E090",
+  "raw_name": "DIPAUL-Manufacturing Company Limited"
+ },
+ {
+  "id": "khimia-3a07b8f73d",
+  "name": "DOMANOVO PRODUCTION AND TRADE PLANT, JSC",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A030",
+  "raw_name": "DOMANOVO PRODUCTION AND TRADE PLANT, JSC"
+ },
+ {
+  "id": "khimia-9edac40345",
+  "name": "EUROPUMPS, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A010",
+  "raw_name": "EUROPUMPS, LLC"
+ },
+ {
+  "id": "khimia-3d4a30d2cd",
+  "name": "EZOCM",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B060",
+  "raw_name": "EZOCM"
+ },
+ {
+  "id": "khimia-37d090b49f",
+  "name": "UTS GROUP",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C030",
+  "raw_name": "UTS GROUP"
+ },
+ {
+  "id": "khimia-24b0269eef",
+  "name": "ZAVKOM-ENGINEERING, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E040",
+  "raw_name": "ZAVKOM-ENGINEERING, LLC"
+ },
+ {
+  "id": "khimia-a40cc8d15d",
+  "name": "GRODNO AZOT, OJSC",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D040",
+  "raw_name": "GRODNO AZOT, OJSC"
+ },
+ {
+  "id": "khimia-bd498f08ae",
+  "name": "ENAMELED PIPE PLANT TRADING HOUSE",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F035",
+  "raw_name": "ENAMELED PIPE PLANT TRADING HOUSE"
+ },
+ {
+  "id": "khimia-6c83b5a3cc",
+  "name": "ZTI GROUP",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E030",
+  "raw_name": "ZTI GROUP"
+ },
+ {
+  "id": "khimia-e95e106ee5",
+  "name": "IIL — INTELLIGENT SYSTEMS, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B02",
+  "raw_name": "IIL — INTELLIGENT SYSTEMS, LLC"
+ },
+ {
+  "id": "khimia-0098b4fd44",
+  "name": "POLYMER MATERIALS MAGAZINE",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C070",
+  "raw_name": "POLYMER MATERIALS MAGAZINE"
+ },
+ {
+  "id": "khimia-46a77d54b5",
+  "name": "Enginerika",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B065",
+  "raw_name": "Enginerika"
+ },
+ {
+  "id": "khimia-7920d7d53d",
+  "name": "ENGINEERING TITAN, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C084",
+  "raw_name": "ENGINEERING TITAN, LLC"
+ },
+ {
+  "id": "khimia-2f2a275fca",
+  "name": "Kurnakov Institute of General and Inorganic Chemistry of the Russian Academy of Sciences (IGIC RAS)",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C32",
+  "raw_name": "Kurnakov Institute of General and Inorganic Chemistry of the Russian Academy of Sciences (IGIC RAS)"
+ },
+ {
+  "id": "khimia-edb41aa759",
+  "name": "INTERCHEM",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D030",
+  "raw_name": "INTERCHEM"
+ },
+ {
+  "id": "khimia-f8816f4dbe",
+  "name": "INTERPACK, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B110",
+  "raw_name": "INTERPACK, LLC"
+ },
+ {
+  "id": "khimia-33feb8e13c",
+  "name": "INTECHNOBIOMED",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C090",
+  "raw_name": "INTECHNOBIOMED"
+ },
+ {
+  "id": "khimia-40a8f15faf",
+  "name": "PLASTIKS MAGAZINE",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B16",
+  "raw_name": "PLASTIKS MAGAZINE"
+ },
+ {
+  "id": "khimia-04dd601340",
+  "name": "INFOTECH-BALTIKA M",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E020",
+  "raw_name": "INFOTECH-BALTIKA M"
+ },
+ {
+  "id": "khimia-e5924fffec",
+  "name": "404 STUDIO",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C088",
+  "raw_name": "404 STUDIO"
+ },
+ {
+  "id": "khimia-74d6663951",
+  "name": "IT GARANT",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C088",
+  "raw_name": "IT GARANT"
+ },
+ {
+  "id": "khimia-67188269db",
+  "name": "NATIONAL RESEARCH TOMSK STATE UNIVERSITY",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B025",
+  "raw_name": "NATIONAL RESEARCH TOMSK STATE UNIVERSITY"
+ },
+ {
+  "id": "khimia-d6b8941a93",
+  "name": "KAZPROM",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C010",
+  "raw_name": "KAZPROM"
+ },
+ {
+  "id": "khimia-8967587c2b",
+  "name": "CAMELOT PUBLISHING",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B10",
+  "raw_name": "CAMELOT PUBLISHING"
+ },
+ {
+  "id": "khimia-ccb95d4b69",
+  "name": "CAMOZZI PNEUMATIC, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F070",
+  "raw_name": "CAMOZZI PNEUMATIC, LLC"
+ },
+ {
+  "id": "khimia-0118d9cf28",
+  "name": "KAPRON",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C045",
+  "raw_name": "KAPRON"
+ },
+ {
+  "id": "khimia-a57369dd90",
+  "name": "KAUCHUK I REZINA IZDATELSTVO",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B18",
+  "raw_name": "KAUCHUK I REZINA IZDATELSTVO"
+ },
+ {
+  "id": "khimia-a43b6d9fe9",
+  "name": "QUADRA LOGIC, JSC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B095",
+  "raw_name": "QUADRA LOGIC, JSC"
+ },
+ {
+  "id": "khimia-7f23de0393",
+  "name": "QUARZWERKE ULYANOVSK",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16D50",
+  "raw_name": "QUARZWERKE ULYANOVSK"
+ },
+ {
+  "id": "khimia-38be73dab3",
+  "name": "KZSP",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D065",
+  "raw_name": "KZSP"
+ },
+ {
+  "id": "khimia-9a7db9f52e",
+  "name": "KOYDA NOVA LLC",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C095",
+  "raw_name": "KOYDA NOVA LLC"
+ },
+ {
+  "id": "khimia-234cf7229f",
+  "name": "KHIMAVANGARD, PKF, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D001",
+  "raw_name": "KHIMAVANGARD, PKF, LLC"
+ },
+ {
+  "id": "khimia-0de17947ca",
+  "name": "COLORTERM, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16D60",
+  "raw_name": "COLORTERM, LLC"
+ },
+ {
+  "id": "khimia-1900d4ef32",
+  "name": "NV-LAB",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E080",
+  "raw_name": "NV-LAB"
+ },
+ {
+  "id": "khimia-6941f4a146",
+  "name": "COMPANY HIMKO, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D080",
+  "raw_name": "COMPANY HIMKO, LLC"
+ },
+ {
+  "id": "khimia-29ba1cfc36",
+  "name": "KREATOR GROUP OF COMPANIES",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C001",
+  "raw_name": "KREATOR GROUP OF COMPANIES"
+ },
+ {
+  "id": "khimia-f753f4f1dd",
+  "name": "KSE",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B30",
+  "raw_name": "KSE"
+ },
+ {
+  "id": "khimia-eaff10c7af",
+  "name": "Lab316",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E095",
+  "raw_name": "Lab316"
+ },
+ {
+  "id": "khimia-e6be1d66c0",
+  "name": "LABCONCEPT",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D075",
+  "raw_name": "LABCONCEPT"
+ },
+ {
+  "id": "khimia-2f7eee515d",
+  "name": "LABPRO MEDIA",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "",
+  "stand": "",
+  "raw_name": "LABPRO MEDIA"
+ },
+ {
+  "id": "khimia-7d6faccd60",
+  "name": "LABSPACE",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B085",
+  "raw_name": "LABSPACE"
+ },
+ {
+  "id": "khimia-9d9e99c979",
+  "name": "LABTEST RCC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E060",
+  "raw_name": "LABTEST RCC"
+ },
+ {
+  "id": "khimia-9228ef8c37",
+  "name": "LAKOKRASKA, JSC",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D040",
+  "raw_name": "LAKOKRASKA, JSC"
+ },
+ {
+  "id": "khimia-142da38ed6",
+  "name": "LAMEL-777",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B045",
+  "raw_name": "LAMEL-777"
+ },
+ {
+  "id": "khimia-7d38509406",
+  "name": "LANHIT, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A020",
+  "raw_name": "LANHIT, LLC"
+ },
+ {
+  "id": "khimia-9dab787fe2",
+  "name": "LESOHIMIK",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E090",
+  "raw_name": "LESOHIMIK"
+ },
+ {
+  "id": "khimia-5671fc70de",
+  "name": "RUSSIAN COATINGS JOURNAL",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E120",
+  "raw_name": "RUSSIAN COATINGS JOURNAL"
+ },
+ {
+  "id": "khimia-07ee72ded6",
+  "name": "LOGISTICS 1520, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E120",
+  "raw_name": "LOGISTICS 1520, LLC"
+ },
+ {
+  "id": "khimia-18c9a9a0bb",
+  "name": "LOGOSIB, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A050",
+  "raw_name": "LOGOSIB, LLC"
+ },
+ {
+  "id": "khimia-5e8bb99a14",
+  "name": "LTB",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B035",
+  "raw_name": "LTB"
+ },
+ {
+  "id": "khimia-c301c36bc3",
+  "name": "LTM",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D060",
+  "raw_name": "LTM"
+ },
+ {
+  "id": "khimia-9de60dd7ac",
+  "name": "MABAR",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C086",
+  "raw_name": "MABAR"
+ },
+ {
+  "id": "khimia-fda4ca1852",
+  "name": "MACROMER",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C040",
+  "raw_name": "MACROMER"
+ },
+ {
+  "id": "khimia-873932b859",
+  "name": "MANGUS, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A070",
+  "raw_name": "MANGUS, LLC"
+ },
+ {
+  "id": "khimia-a881ddc60f",
+  "name": "VSELUG",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F070",
+  "raw_name": "VSELUG"
+ },
+ {
+  "id": "khimia-6ec64227ad",
+  "name": "AKTIVATOR MZ",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C70",
+  "raw_name": "AKTIVATOR MZ"
+ },
+ {
+  "id": "khimia-3471ba0752",
+  "name": "MILLAB, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F010",
+  "raw_name": "MILLAB, LLC"
+ },
+ {
+  "id": "khimia-5873ecf186",
+  "name": "MINISTRY OF INDUSTRY AND TRADE OF THE RUSSIAN FEDERATION",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E010",
+  "raw_name": "MINISTRY OF INDUSTRY AND TRADE OF THE RUSSIAN FEDERATION"
+ },
+ {
+  "id": "khimia-d0f377c118",
+  "name": "MIPOL, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C58",
+  "raw_name": "MIPOL, LLC"
+ },
+ {
+  "id": "khimia-631d37bc84",
+  "name": "WORLD OF PETROLEUM PRODUCTS",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B37",
+  "raw_name": "WORLD OF PETROLEUM PRODUCTS"
+ },
+ {
+  "id": "khimia-8d48715ef8",
+  "name": "MIREA — RUSSIAN TECHNOLOGICAL UNIVERSITY",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16D48",
+  "raw_name": "MIREA — RUSSIAN TECHNOLOGICAL UNIVERSITY"
+ },
+ {
+  "id": "khimia-2f16237f34",
+  "name": "MITO, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B058",
+  "raw_name": "MITO, LLC"
+ },
+ {
+  "id": "khimia-739b65d3d9",
+  "name": "MIKHAILOVSKY CHEMICAL REAGENTS PLANT (MZHR), LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B40",
+  "raw_name": "MIKHAILOVSKY CHEMICAL REAGENTS PLANT (MZHR), LLC"
+ },
+ {
+  "id": "khimia-0efc5f6d88",
+  "name": "MOGILEVKHIMVOLOKNO, OJSC",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D040",
+  "raw_name": "MOGILEVKHIMVOLOKNO, OJSC"
+ },
+ {
+  "id": "khimia-a3a6c90f0a",
+  "name": "MODUL",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C100",
+  "raw_name": "MODUL"
+ },
+ {
+  "id": "khimia-cdd5a706ed",
+  "name": "MOZYR OIL REFINERY, JSC",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D040",
+  "raw_name": "MOZYR OIL REFINERY, JSC"
+ },
+ {
+  "id": "khimia-97409a24c1",
+  "name": "LOW-TONNAGE CHEMISTRY",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A088",
+  "raw_name": "LOW-TONNAGE CHEMISTRY"
+ },
+ {
+  "id": "khimia-203318cd1c",
+  "name": "NAFTAN, OJSC",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D040",
+  "raw_name": "NAFTAN, OJSC"
+ },
+ {
+  "id": "khimia-6caacb0476",
+  "name": "NEXTHIM, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E108",
+  "raw_name": "NEXTHIM, LLC"
+ },
+ {
+  "id": "khimia-c1692ef18a",
+  "name": "NEOMASH",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F040",
+  "raw_name": "NEOMASH"
+ },
+ {
+  "id": "khimia-8838b1889e",
+  "name": "NEOSTAT",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F052",
+  "raw_name": "NEOSTAT"
+ },
+ {
+  "id": "khimia-a7a3b9d53f",
+  "name": "NEOHIM, LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E085",
+  "raw_name": "NEOHIM, LTD"
+ },
+ {
+  "id": "khimia-fc655184d1",
+  "name": "TEFOS™ (TD NEFTEKHIMMASH KO)",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D070",
+  "raw_name": "TEFOS™ (TD NEFTEKHIMMASH KO)"
+ },
+ {
+  "id": "khimia-87aae82e33",
+  "name": "V.A. KARGIN POLYMER RESEARCH INSTITUTE",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A020",
+  "raw_name": "V.A. KARGIN POLYMER RESEARCH INSTITUTE"
+ },
+ {
+  "id": "khimia-f147482b05",
+  "name": "NIIPAV",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E080",
+  "raw_name": "NIIPAV"
+ },
+ {
+  "id": "khimia-b608047c4c",
+  "name": "NIICHIMMASH, JSC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16D72",
+  "raw_name": "NIICHIMMASH, JSC"
+ },
+ {
+  "id": "khimia-f7a5232e58",
+  "name": "NOVOTROITSK PLANT OF CHROMIUM COMPOUNDS (NPCC)",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D104",
+  "raw_name": "NOVOTROITSK PLANT OF CHROMIUM COMPOUNDS (NPCC)"
+ },
+ {
+  "id": "khimia-b10d1511b1",
+  "name": "NPI, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D001",
+  "raw_name": "NPI, LLC"
+ },
+ {
+  "id": "khimia-285be4036a",
+  "name": "BASOIL",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D090",
+  "raw_name": "BASOIL"
+ },
+ {
+  "id": "khimia-d1aa1d0aa5",
+  "name": "NOVEMBER, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B055",
+  "raw_name": "NOVEMBER, LLC"
+ },
+ {
+  "id": "khimia-266622b1fd",
+  "name": "NHP NPO",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A060",
+  "raw_name": "NHP NPO"
+ },
+ {
+  "id": "khimia-0933da5dd3",
+  "name": "NPP-TEHNOAVTOMAT",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16D70",
+  "raw_name": "NPP-TEHNOAVTOMAT"
+ },
+ {
+  "id": "khimia-04c21623b7",
+  "name": "ANLES, LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D060",
+  "raw_name": "ANLES, LTD"
+ },
+ {
+  "id": "khimia-9dd01da3e9",
+  "name": "NT-PROM",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A030",
+  "raw_name": "NT-PROM"
+ },
+ {
+  "id": "khimia-6e0f37385d",
+  "name": "OKTB-KRISTALL",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A035",
+  "raw_name": "OKTB-KRISTALL"
+ },
+ {
+  "id": "khimia-074a72f85f",
+  "name": "OLEOKAM CO., LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16E80",
+  "raw_name": "OLEOKAM CO., LTD"
+ },
+ {
+  "id": "khimia-f67d7bbb3a",
+  "name": "OLRION LAB, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B70",
+  "raw_name": "OLRION LAB, LLC"
+ },
+ {
+  "id": "khimia-a19869a44f",
+  "name": "OTEX",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C005",
+  "raw_name": "OTEX"
+ },
+ {
+  "id": "khimia-36b372e4ca",
+  "name": "OYATSKAYA KERAMIKA",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D060",
+  "raw_name": "OYATSKAYA KERAMIKA"
+ },
+ {
+  "id": "khimia-19a4e38185",
+  "name": "SAINT PETERSBURG INTERNATIONAL MERCANTILE EXCHANGE",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F030",
+  "raw_name": "SAINT PETERSBURG INTERNATIONAL MERCANTILE EXCHANGE"
+ },
+ {
+  "id": "khimia-9f6df1f544",
+  "name": "PIGMENT",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D050",
+  "raw_name": "PIGMENT"
+ },
+ {
+  "id": "khimia-f6eb68385c",
+  "name": "PIONER TRADE",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C050",
+  "raw_name": "PIONER TRADE"
+ },
+ {
+  "id": "khimia-f35f71ea10",
+  "name": "POLYPLAST Group of Companies",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "",
+  "stand": "",
+  "raw_name": "POLYPLAST Group of Companies"
+ },
+ {
+  "id": "khimia-94bee89d50",
+  "name": "POLIPLAST, LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B64",
+  "raw_name": "POLIPLAST, LTD"
+ },
+ {
+  "id": "khimia-29f4df156b",
+  "name": "REFRAKT",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B020",
+  "raw_name": "REFRAKT"
+ },
+ {
+  "id": "khimia-3781371824",
+  "name": "PRAGMATECH (TM FINDLAB)",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D060",
+  "raw_name": "PRAGMATECH (TM FINDLAB)"
+ },
+ {
+  "id": "khimia-f1ec416d14",
+  "name": "PROGRESSURALINGENGINEERING, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B040",
+  "raw_name": "PROGRESSURALINGENGINEERING, LLC"
+ },
+ {
+  "id": "khimia-7f44cd2068",
+  "name": "PROM TEX CO., LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16D40",
+  "raw_name": "PROM TEX CO., LTD"
+ },
+ {
+  "id": "khimia-7e91757a67",
+  "name": "PROMGRAPHITE NPP, LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B111",
+  "raw_name": "PROMGRAPHITE NPP, LTD"
+ },
+ {
+  "id": "khimia-d2cf561993",
+  "name": "PROMIXTECH, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B090",
+  "raw_name": "PROMIXTECH, LLC"
+ },
+ {
+  "id": "khimia-eea94a6494",
+  "name": "PROMPOTOK",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A078",
+  "raw_name": "PROMPOTOK"
+ },
+ {
+  "id": "khimia-5363ffc7bc",
+  "name": "PROMSTROI ENGINEERING",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16A35",
+  "raw_name": "PROMSTROI ENGINEERING"
+ },
+ {
+  "id": "khimia-51f9ac9032",
+  "name": "PROMTEKHFILTR",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A040",
+  "raw_name": "PROMTEKHFILTR"
+ },
+ {
+  "id": "khimia-430477e19d",
+  "name": "PROMCHIMPERM, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C010",
+  "raw_name": "PROMCHIMPERM, LLC"
+ },
+ {
+  "id": "khimia-0e0e0f1f53",
+  "name": "PROMKHIMTEKH",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A075",
+  "raw_name": "PROMKHIMTEKH"
+ },
+ {
+  "id": "khimia-bc01fc8bb9",
+  "name": "INDUSTRIAL COATING JOURNAL",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B17",
+  "raw_name": "INDUSTRIAL COATING JOURNAL"
+ },
+ {
+  "id": "khimia-95949f1f26",
+  "name": "INDUSTRIAL ENVIRONMENTAL LABORATORIES, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C010",
+  "raw_name": "INDUSTRIAL ENVIRONMENTAL LABORATORIES, LLC"
+ },
+ {
+  "id": "khimia-1e87413c84",
+  "name": "PROHIM, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A065",
+  "raw_name": "PROHIM, LLC"
+ },
+ {
+  "id": "khimia-daa758ed9b",
+  "name": "RUSSIAN TRADING HOLDING, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D001",
+  "raw_name": "RUSSIAN TRADING HOLDING, LLC"
+ },
+ {
+  "id": "khimia-c3e3896751",
+  "name": "RUSNAFTA, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D001",
+  "raw_name": "RUSNAFTA, LLC"
+ },
+ {
+  "id": "khimia-d37f59d27e",
+  "name": "RHINESTONE TRADING, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B081",
+  "raw_name": "RHINESTONE TRADING, LLC"
+ },
+ {
+  "id": "khimia-60625e490e",
+  "name": "REVADA-NEVA, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B070",
+  "raw_name": "REVADA-NEVA, LLC"
+ },
+ {
+  "id": "khimia-151e3b316c",
+  "name": "RHS Group",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C40",
+  "raw_name": "RHS Group"
+ },
+ {
+  "id": "khimia-553f1f3719",
+  "name": "TECHNOSPHERA RITZ",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C10",
+  "raw_name": "TECHNOSPHERA RITZ"
+ },
+ {
+  "id": "khimia-5387798278",
+  "name": "RCO TECHNOALLIANCE",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C075",
+  "raw_name": "RCO TECHNOALLIANCE"
+ },
+ {
+  "id": "khimia-814ef685ce",
+  "name": "THE RUSSIAN UNION OF CHEMISTS",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16D10",
+  "raw_name": "THE RUSSIAN UNION OF CHEMISTS"
+ },
+ {
+  "id": "khimia-30c687b113",
+  "name": "RUSCHEM",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D030",
+  "raw_name": "RUSCHEM"
+ },
+ {
+  "id": "khimia-6ebfc2b6c0",
+  "name": "ROSKHIMREAKTIV ASSOCIATION",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C010",
+  "raw_name": "ROSKHIMREAKTIV ASSOCIATION"
+ },
+ {
+  "id": "khimia-d7fbe9c421",
+  "name": "RT LAB, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C010",
+  "raw_name": "RT LAB, LLC"
+ },
+ {
+  "id": "khimia-19a1e4e364",
+  "name": "RUSKHIMSET",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C060",
+  "raw_name": "RUSKHIMSET"
+ },
+ {
+  "id": "khimia-b7065dc4c0",
+  "name": "S-TECHNICS, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4A040",
+  "raw_name": "S-TECHNICS, LLC"
+ },
+ {
+  "id": "khimia-24944ee85d",
+  "name": "SVETLOGORSKKHIMVOLOKNO, OJSC",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D040",
+  "raw_name": "SVETLOGORSKKHIMVOLOKNO, OJSC"
+ },
+ {
+  "id": "khimia-75c85b36f3",
+  "name": "SIMEX, LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16A48",
+  "raw_name": "SIMEX, LTD"
+ },
+ {
+  "id": "khimia-9287822b0f",
+  "name": "NPP SINTEZ",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C010",
+  "raw_name": "NPP SINTEZ"
+ },
+ {
+  "id": "khimia-3f872d2f1f",
+  "name": "SINTEZ OKA, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C090",
+  "raw_name": "SINTEZ OKA, LLC"
+ },
+ {
+  "id": "khimia-21146b836c",
+  "name": "SINTEZ CVETA, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E075",
+  "raw_name": "SINTEZ CVETA, LLC"
+ },
+ {
+  "id": "khimia-3ff6d35cdc",
+  "name": "SPECIAL LOGISTIC COMPANY",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B54",
+  "raw_name": "SPECIAL LOGISTIC COMPANY"
+ },
+ {
+  "id": "khimia-47b49cdf3f",
+  "name": "SAMARA STROMMASHINA PLANT",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A110",
+  "raw_name": "SAMARA STROMMASHINA PLANT"
+ },
+ {
+  "id": "khimia-99fe6df73a",
+  "name": "SMARTCHEM, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C085",
+  "raw_name": "SMARTCHEM, LLC"
+ },
+ {
+  "id": "khimia-ff889912bb",
+  "name": "SMARTMETALL, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E062",
+  "raw_name": "SMARTMETALL, LLC"
+ },
+ {
+  "id": "khimia-f33938dfb6",
+  "name": "SOLIGORSK INSTITUTE OF RESOURCES SAVING PROBLEMS WITH PILOT PRODUCTION, JSC",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C045",
+  "raw_name": "SOLIGORSK INSTITUTE OF RESOURCES SAVING PROBLEMS WITH PILOT PRODUCTION, JSC"
+ },
+ {
+  "id": "khimia-7acd3f8e5c",
+  "name": "SPEKTR-KHIM",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D080",
+  "raw_name": "SPEKTR-KHIM"
+ },
+ {
+  "id": "khimia-d51e975c3c",
+  "name": "SPECTRON NPO",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B092",
+  "raw_name": "SPECTRON NPO"
+ },
+ {
+  "id": "khimia-c8899b076b",
+  "name": "SPETSKHIMMASH, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E010",
+  "raw_name": "SPETSKHIMMASH, LLC"
+ },
+ {
+  "id": "khimia-1ec8053b40",
+  "name": "STALTA, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C080",
+  "raw_name": "STALTA, LLC"
+ },
+ {
+  "id": "khimia-1c504159fc",
+  "name": "STiM group of companies",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C60",
+  "raw_name": "STiM group of companies"
+ },
+ {
+  "id": "khimia-9f7aedb108",
+  "name": "STROYTEHNOLOGIA, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16A15",
+  "raw_name": "STROYTEHNOLOGIA, LLC"
+ },
+ {
+  "id": "khimia-692232fb8b",
+  "name": "STRONG PRODUCTION UNION, JSC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A052",
+  "raw_name": "STRONG PRODUCTION UNION, JSC"
+ },
+ {
+  "id": "khimia-f5c80da5a7",
+  "name": "SHT-TRADE",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D090",
+  "raw_name": "SHT-TRADE"
+ },
+ {
+  "id": "khimia-7f2548c540",
+  "name": "RAW MATERIALS & PACKAGING",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C15",
+  "raw_name": "RAW MATERIALS & PACKAGING"
+ },
+ {
+  "id": "khimia-7e5a84ee05",
+  "name": "TAMBOVSKIY ZAVOD KOMSOMOLETS",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E040",
+  "raw_name": "TAMBOVSKIY ZAVOD KOMSOMOLETS"
+ },
+ {
+  "id": "khimia-c421fd82f6",
+  "name": "TANK CONTAINER WORLD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B112",
+  "raw_name": "TANK CONTAINER WORLD"
+ },
+ {
+  "id": "khimia-786a2b7286",
+  "name": "TANK-CONTAINER PETROCHEMICAL COMPANY (TPC), LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B030",
+  "raw_name": "TANK-CONTAINER PETROCHEMICAL COMPANY (TPC), LTD"
+ },
+ {
+  "id": "khimia-e97748dea2",
+  "name": "TANKMASTER, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D067",
+  "raw_name": "TANKMASTER, LLC"
+ },
+ {
+  "id": "khimia-713758be73",
+  "name": "TECSA",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C050",
+  "raw_name": "TECSA"
+ },
+ {
+  "id": "khimia-6bbf234ad3",
+  "name": "TECHNOVIS GROUP, LCC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F045",
+  "raw_name": "TECHNOVIS GROUP, LCC"
+ },
+ {
+  "id": "khimia-0c83b2bcfe",
+  "name": "TECHNOLOGY ENGINEERING",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E105",
+  "raw_name": "TECHNOLOGY ENGINEERING"
+ },
+ {
+  "id": "khimia-ffea65ce6d",
+  "name": "TECHNOSIBECO, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F080",
+  "raw_name": "TECHNOSIBECO, LLC"
+ },
+ {
+  "id": "khimia-4eefc1cf6c",
+  "name": "TECHWASH & HEAT LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16A50",
+  "raw_name": "TECHWASH & HEAT LTD"
+ },
+ {
+  "id": "khimia-f8dd293802",
+  "name": "TITAN GC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D010",
+  "raw_name": "TITAN GC"
+ },
+ {
+  "id": "khimia-226d6e2b5e",
+  "name": "VTK TK",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16A55",
+  "raw_name": "VTK TK"
+ },
+ {
+  "id": "khimia-3787995545",
+  "name": "TOSOL-SINTEZ",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E070",
+  "raw_name": "TOSOL-SINTEZ"
+ },
+ {
+  "id": "khimia-ae43776d2a",
+  "name": "TRIO LOGISTIC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F090",
+  "raw_name": "TRIO LOGISTIC"
+ },
+ {
+  "id": "khimia-f8ab684fda",
+  "name": "SHANGHAI KEYONTECHS CO. LTD",
+  "country": "China",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A070",
+  "raw_name": "SHANGHAI KEYONTECHS CO. LTD"
+ },
+ {
+  "id": "khimia-79596d062a",
+  "name": "TEC OPERATOR",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E060",
+  "raw_name": "TEC OPERATOR"
+ },
+ {
+  "id": "khimia-56e69a9c5d",
+  "name": "UBC, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D080",
+  "raw_name": "UBC, LLC"
+ },
+ {
+  "id": "khimia-331112c095",
+  "name": "URAL PLANT OF TECHNOLOGICAL EQUIPMENT",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2E077",
+  "raw_name": "URAL PLANT OF TECHNOLOGICAL EQUIPMENT"
+ },
+ {
+  "id": "khimia-b9372ac744",
+  "name": "URALS PLANT OF CHEMICAL PRODUCTS",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B060",
+  "raw_name": "URALS PLANT OF CHEMICAL PRODUCTS"
+ },
+ {
+  "id": "khimia-fe7687d26c",
+  "name": "PHARMACEUTICAL TECHNOLOGIES AND PACKAGING MAGAZINE",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B12",
+  "raw_name": "PHARMACEUTICAL TECHNOLOGIES AND PACKAGING MAGAZINE"
+ },
+ {
+  "id": "khimia-879e795494",
+  "name": "N. D. ZELINSKY INSTITUTE OF ORGANIC CHEMISTRY, RUSSIAN ACADEMY OF SCIENCES",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B60",
+  "raw_name": "N. D. ZELINSKY INSTITUTE OF ORGANIC CHEMISTRY, RUSSIAN ACADEMY OF SCIENCES"
+ },
+ {
+  "id": "khimia-ee429c8852",
+  "name": "FRC PCPMC RAS",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C30",
+  "raw_name": "FRC PCPMC RAS"
+ },
+ {
+  "id": "khimia-61274e61b7",
+  "name": "FORVACUUM, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F055",
+  "raw_name": "FORVACUUM, LLC"
+ },
+ {
+  "id": "khimia-7c0611a74b",
+  "name": "PHORTIS, LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2A015",
+  "raw_name": "PHORTIS, LTD"
+ },
+ {
+  "id": "khimia-f314638b3b",
+  "name": "PHOSAGRO JSC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D010",
+  "raw_name": "PHOSAGRO JSC"
+ },
+ {
+  "id": "khimia-abe7445247",
+  "name": "FREM",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E070",
+  "raw_name": "FREM"
+ },
+ {
+  "id": "khimia-38070ec30a",
+  "name": "FREM PLANT OF ADDITIVES AND GREASINGS, CJSC",
+  "country": "Belarus",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E070",
+  "raw_name": "FREM PLANT OF ADDITIVES AND GREASINGS, CJSC"
+ },
+ {
+  "id": "khimia-12cd740b6c",
+  "name": "FUMATECH",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D082",
+  "raw_name": "FUMATECH"
+ },
+ {
+  "id": "khimia-c51880544f",
+  "name": "CHEMBROKER, JSC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F010",
+  "raw_name": "CHEMBROKER, JSC"
+ },
+ {
+  "id": "khimia-cce4bc82a9",
+  "name": "CHEMENGINEERING",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C01",
+  "raw_name": "CHEMENGINEERING"
+ },
+ {
+  "id": "khimia-293b412f9d",
+  "name": "KHIMMANUFAKTURA",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C055",
+  "raw_name": "KHIMMANUFAKTURA"
+ },
+ {
+  "id": "khimia-9556d8832b",
+  "name": "CHIMMED, TD, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B065",
+  "raw_name": "CHIMMED, TD, LLC"
+ },
+ {
+  "id": "khimia-c430a005c4",
+  "name": "CHEMMET, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D060",
+  "raw_name": "CHEMMET, LLC"
+ },
+ {
+  "id": "khimia-eccc951aff",
+  "name": "CHEMPRODUCT",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D060",
+  "raw_name": "CHEMPRODUCT"
+ },
+ {
+  "id": "khimia-e3cb8692ce",
+  "name": "GROUP ORGSYNTEZ, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C040",
+  "raw_name": "GROUP ORGSYNTEZ, LLC"
+ },
+ {
+  "id": "khimia-88c811755b",
+  "name": "CHEMPACK",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C070",
+  "raw_name": "CHEMPACK"
+ },
+ {
+  "id": "khimia-ab7645330c",
+  "name": "KHIMTEKHNOLOGIYA",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D080",
+  "raw_name": "KHIMTEKHNOLOGIYA"
+ },
+ {
+  "id": "khimia-0065fb385a",
+  "name": "ChemPharmTech Association",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16A28",
+  "raw_name": "ChemPharmTech Association"
+ },
+ {
+  "id": "khimia-1025346fd7",
+  "name": "NOVAROLL™ (Chimex Limited JSC)",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D095",
+  "raw_name": "NOVAROLL™ (Chimex Limited JSC)"
+ },
+ {
+  "id": "khimia-fecd58c2e5",
+  "name": "CEMENT AND ITS APPLICATIONS JOURNAL",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C20",
+  "raw_name": "CEMENT AND ITS APPLICATIONS JOURNAL"
+ },
+ {
+  "id": "khimia-5f35491c1f",
+  "name": "CENTER FOR ENGAGEMENT WITH INDUSTRY ASSOCIATIONS",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C111",
+  "raw_name": "CENTER FOR ENGAGEMENT WITH INDUSTRY ASSOCIATIONS"
+ },
+ {
+  "id": "khimia-be2ae315cb",
+  "name": "INDUSTRY DEVELOPMENT CENTER OF THE LENINGRAD REGION",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2D060",
+  "raw_name": "INDUSTRY DEVELOPMENT CENTER OF THE LENINGRAD REGION"
+ },
+ {
+  "id": "khimia-d876204e5d",
+  "name": "ZINCO Trade",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B030",
+  "raw_name": "ZINCO Trade"
+ },
+ {
+  "id": "khimia-fc9f0fe411",
+  "name": "OXIDE CHELYABINSK CHEMICAL PLANT, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B030",
+  "raw_name": "OXIDE CHELYABINSK CHEMICAL PLANT, LLC"
+ },
+ {
+  "id": "khimia-6d6cb3367c",
+  "name": "CherAZ JSC (TOM™)",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C08",
+  "raw_name": "CherAZ JSC (TOM™)"
+ },
+ {
+  "id": "khimia-11aefdee76",
+  "name": "SHARK INTERMODAL SYSTEMS, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B015",
+  "raw_name": "SHARK INTERMODAL SYSTEMS, LLC"
+ },
+ {
+  "id": "khimia-ee09e38eba",
+  "name": "EVOSERT KM LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2F080",
+  "raw_name": "EVOSERT KM LLC"
+ },
+ {
+  "id": "khimia-ff414d17a8",
+  "name": "EKOS-1",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C065",
+  "raw_name": "EKOS-1"
+ },
+ {
+  "id": "khimia-7c03103f82",
+  "name": "EKROSKHIM",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4C030",
+  "raw_name": "EKROSKHIM"
+ },
+ {
+  "id": "khimia-34c8e0c785",
+  "name": "EXITON TEST, LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B50",
+  "raw_name": "EXITON TEST, LTD"
+ },
+ {
+  "id": "khimia-238de13a3c",
+  "name": "EKSPRESS-EKO-FILTR",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F050",
+  "raw_name": "EKSPRESS-EKO-FILTR"
+ },
+ {
+  "id": "khimia-d53d9ad3c6",
+  "name": "ELMA TRADE LTD.",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B070",
+  "raw_name": "ELMA TRADE LTD."
+ },
+ {
+  "id": "khimia-2c0b19642a",
+  "name": "ELMON PROIZVODSTVENNOE PREDPRIYATIE",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4F060",
+  "raw_name": "ELMON PROIZVODSTVENNOE PREDPRIYATIE"
+ },
+ {
+  "id": "khimia-8a937d5535",
+  "name": "ELTEMIKS LAB",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16B01",
+  "raw_name": "ELTEMIKS LAB"
+ },
+ {
+  "id": "khimia-3fccc57973",
+  "name": "EMK SPA, JSC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2C110",
+  "raw_name": "EMK SPA, JSC"
+ },
+ {
+  "id": "khimia-5894e33446",
+  "name": "RHS ICC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C40",
+  "raw_name": "RHS ICC"
+ },
+ {
+  "id": "khimia-747279ef34",
+  "name": "NWC CARBON",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C40",
+  "raw_name": "NWC CARBON"
+ },
+ {
+  "id": "khimia-22624b5a48",
+  "name": "ENERGOLAB",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4E075",
+  "raw_name": "ENERGOLAB"
+ },
+ {
+  "id": "khimia-b0f117b3d2",
+  "name": "ERSTVAK, LTD",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B010",
+  "raw_name": "ERSTVAK, LTD"
+ },
+ {
+  "id": "khimia-f5c0a1b4a2",
+  "name": "FMG TRANSPORT SERVICE, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4B040",
+  "raw_name": "FMG TRANSPORT SERVICE, LLC"
+ },
+ {
+  "id": "khimia-25a7fd0b14",
+  "name": "ESHELON GK",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "CHAYANOV",
+  "stand": "4D050",
+  "raw_name": "ESHELON GK"
+ },
+ {
+  "id": "khimia-42ad813044",
+  "name": "UVMILK",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16E50",
+  "raw_name": "UVMILK"
+ },
+ {
+  "id": "khimia-e4a1c876da",
+  "name": "UVS PLANT OF NON-STANDARD EQUIPMENT",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16A40",
+  "raw_name": "UVS PLANT OF NON-STANDARD EQUIPMENT"
+ },
+ {
+  "id": "khimia-f7355574d8",
+  "name": "SOUTHERN FEDERAL UNIVERSITY",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "NEMCHINOV",
+  "stand": "16C75",
+  "raw_name": "SOUTHERN FEDERAL UNIVERSITY"
+ },
+ {
+  "id": "khimia-852bd45020",
+  "name": "UNI AIR, LLC",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B116",
+  "raw_name": "UNI AIR, LLC"
+ },
+ {
+  "id": "khimia-0d4b9b4445",
+  "name": "UTG",
+  "country": "Russian Federation",
+  "website": null,
+  "website_official": false,
+  "hall": "VAVILOV",
+  "stand": "2B020",
+  "raw_name": "UTG"
+ }
+]
