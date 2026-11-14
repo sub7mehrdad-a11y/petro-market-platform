@@ -5,6 +5,7 @@ import { proposeExperiments, syncExperimentDecisions } from "./experiments";
 import { METHOD_ROLES, ensureMethods } from "./methods";
 import { evaluatePromotion, proposeRevision, syncMethodDecisions } from "./revision";
 import { syncLessonDecisions } from "./countryLessons";
+import { startSelfImprovement } from "./countrySelfLearning";
 
 // چرخه‌ی یادگیری (مرحله‌ی ۱۰). هر ساعت (ارزان، بدون مدل): اجرای تصمیم‌های مدیر + ارزیابی ارتقای روش‌های آزمایشی.
 // ماهی یک‌بار: تثبیت، پیشنهاد آزمایش، و بازبینی روش (آزمون روی سابقه مدل می‌خواهد؛ بدون کلید پرش می‌شود و ماه «انجام‌شده» ثبت نمی‌شود).
@@ -19,6 +20,8 @@ export async function runLearningCycle({ now = new Date(), generate = {} } = {})
   if (st.last_monthly === out.month) return { ...out, monthly: "done_this_month" };
   out.consolidation = await runConsolidation({ now, generate: generate.abstract });
   out.experiments = proposeExperiments({ now });
+  // یادگیری خودکار پیش‌بین کشور (پس‌زمینه، بدون تأیید انسان)؛ خاموش: BRAIN_COUNTRY_LEARNING_AUTO=false
+  if (process.env.BRAIN_COUNTRY_LEARNING_AUTO !== "false" && !generate.propose && resolveBrainKey()) out.country_learning = startSelfImprovement().started ? "started" : "busy";
   const hasModel = !!generate.propose || (!!resolveBrainKey() && !!resolveGroqApiKey());
   if (!hasModel) return { ...out, monthly: "no_model_key" };
   out.revisions = {};

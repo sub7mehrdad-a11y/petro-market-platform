@@ -119,7 +119,6 @@ function BacktestSection() {
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState("");
   const [log, setLog] = useState([]);
-  const [withLessons, setWithLessons] = useState(false);
   const load = useCallback(async () => {
     const r = await api("/api/brain/backtest", { cache: "no-store" });
     if (!r.ok) { setErr(r.error || "خطا"); return; }
@@ -128,7 +127,7 @@ function BacktestSection() {
   useEffect(() => { load(); }, [load]);
   async function runOne(country) {
     setBusy(country);
-    const r = await api("/api/brain/backtest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "run", country, lessons: withLessons }) });
+    const r = await api("/api/brain/backtest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "run", country }) });
     setLog((l) => [...l, r.ok ? `${country}: ${r.scored} از ${r.total} هدف سنجیده شد` : `${country}: ${r.error || "ناموفق"}`]);
     setBusy("");
   }
@@ -161,21 +160,7 @@ function BacktestSection() {
               </table>
             </div>
           )}
-          <div className="rounded-lg border border-border p-3 space-y-2">
-            <div className="flex flex-wrap items-center gap-3">
-              <b className="text-sm">یادگیری از اشتباه</b>
-              <button type="button" disabled={!!busy} onClick={async () => { setBusy("تحلیل خطاها"); const r = await api("/api/brain/backtest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "autopsy" }) }); setLog((l) => [...l, r.ok ? `کالبدشکافی: ${r.new} تازه، ${r.lessons_proposed} درس پیشنهادی (به صف بازبینی رفت)` : r.error || "ناموفق"]); setBusy(""); load(); }} className="rounded border border-border px-3 py-1 text-xs cursor-pointer disabled:opacity-50">تحلیل خطاها و استخراج درس</button>
-              <label className="flex items-center gap-1 text-xs"><input type="checkbox" checked={withLessons} onChange={(e) => setWithLessons(e.target.checked)} /> اجرا با درس‌های پذیرفته‌شده</label>
-              <Link href="/brain/memory" className="text-xs underline">صف بازبینی ({d.lessons?.open_proposals ?? 0} درس باز)</Link>
-            </div>
-            {d.lessons?.effect?.pairs > 0 && <p className="text-xs">اثر درس‌ها روی {d.lessons.effect.pairs} هدف (کشورهایی که درس از آن‌ها نیامده): بهتر {d.lessons.effect.better}، بدتر {d.lessons.effect.worse}، بی‌تغییر {d.lessons.effect.same}؛ مهارت {n2(d.lessons.effect.mean_skill_without)} ← {n2(d.lessons.effect.mean_skill_with)}</p>}
-            {d.lessons?.lessons?.length > 0 && <ul className="text-xs space-y-1">{d.lessons.lessons.map((l) => <li key={l.id}><b className={l.status === "پذیرفته" ? "text-success" : "text-text-muted"}>{l.status}</b> — {l.text}</li>)}</ul>}
-            {d.lessons?.autopsies?.length > 0 && (
-              <details className="text-xs"><summary className="cursor-pointer">{d.lessons.autopsies.length} کالبدشکافی خطا</summary>
-                <ul className="mt-1 space-y-1">{d.lessons.autopsies.map((a) => <li key={a.key}><b>{a.country} / {a.target}</b> — {a.category_fa}: {a.statement}</li>)}</ul>
-              </details>
-            )}
-          </div>
+          <SelfLearning d={d} reload={load} />
           <div className="flex flex-wrap gap-2 text-xs">
             {d.countries.map((c) => {
               const row = s?.by_country?.find((x) => x.country === c);
@@ -185,5 +170,56 @@ function BacktestSection() {
         </>
       )}
     </section>
+  );
+}
+
+// یادگیری خودکار پیش‌بین کشور: کالبدشکافی چندزاویه ← قاعده‌ی کلی ← نسخه‌ی تازه ← سنجش روی کشورهای دیده‌نشده ← فعال یا بایگانی؛ بدون تأیید انسان.
+function SelfLearning({ d, reload }) {
+  const L = d.learning;
+  const st = L?.status || {};
+  useEffect(() => {
+    if (!st.running) return undefined;
+    const t = setInterval(reload, 6000);
+    return () => clearInterval(t);
+  }, [st.running, reload]);
+  async function start() {
+    const r = await api("/api/brain/backtest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "learn_start" }) });
+    if (!r.ok) alert(r.error || "شروع نشد");
+    reload();
+  }
+  const active = L?.methods?.find((m) => m.status === "فعال");
+  return (
+    <div className="rounded-lg border border-border p-3 space-y-3">
+      <div className="flex flex-wrap items-center gap-3">
+        <b className="text-sm">یادگیری خودکار از اشتباه</b>
+        <button type="button" disabled={st.running || !d.has_key} onClick={start} className="rounded border border-border px-3 py-1 text-xs cursor-pointer disabled:opacity-50">{st.running ? "در حال یادگیری…" : "شروع یادگیری خودکار"}</button>
+        {active && <span className="text-xs text-text-muted">روش فعال: {active.version} ({active.rules.length} قاعده)</span>}
+      </div>
+      <p className="text-xs leading-6 text-text-muted">مغز خطاهای بزرگ را از چند زاویه می‌پرسد (اطلاعات اولیه، قاعده، روش، عامل ویژه‌ی کشور، کالیبراسیون)، قاعده‌ی استدلال کلی می‌نویسد (نه «۲۰٪ پایین‌تر بگیر»، نه نام کشور)، نسخه‌ی تازه‌ی روش را روی کشورهایی که از خطایشان درس نگرفته می‌سنجد و فقط اگر بهتر بود فعالش می‌کند؛ وگرنه بایگانی. نیازی به تأیید شما نیست.</p>
+      {st.error && <div className="text-xs text-danger">{st.error}</div>}
+      {st.summary && <p className="text-xs">آخرین اجرا: {st.summary.promoted} نسخه فعال شد؛ خطای نسبی کل {st.summary.initial?.mean_abs_rel_err != null ? `${Math.round(st.summary.initial.mean_abs_rel_err * 100)}٪` : "—"} ← {st.summary.final?.mean_abs_rel_err != null ? `${Math.round(st.summary.final.mean_abs_rel_err * 100)}٪` : "—"} (روی همه‌ی کشورها؛ خوش‌بینانه چون بخشی از آن‌ها آموزش بوده‌اند).</p>}
+      {st.log?.length > 0 && <details open={st.running} className="text-xs"><summary className="cursor-pointer">گزارش پیشرفت ({st.log.length} خط)</summary><pre className="mt-1 max-h-60 overflow-auto whitespace-pre-wrap rounded bg-canvas p-2 leading-5">{st.log.join("\n")}</pre></details>}
+      {L?.methods?.length > 0 && (
+        <ul className="space-y-1.5 text-xs">
+          {L.methods.map((m) => (
+            <li key={m.version} className="rounded border border-border p-2">
+              <b>{m.version}</b> — <span className={m.status === "فعال" ? "text-success" : "text-text-muted"}>{m.status}</span>{m.comparables?.mode === "nearest" && <span> · مقایسه با {m.comparables.k} کشور نزدیک</span>}
+              {m.validation?.pairs > 0 && <span> · آزمون روی {m.validation.pairs} هدف دیده‌نشده: خطا {n2(m.validation.err_current * 100, 0)}٪ ← {n2(m.validation.err_candidate * 100, 0)}٪ (بهتر {m.validation.better}، بدتر {m.validation.worse})</span>}
+              {m.reason && <div className="text-text-muted">{m.reason}</div>}
+              {m.rules.length > 0 && <ol className="mt-1 list-decimal ps-5">{m.rules.map((r, i) => <li key={i}>{r}</li>)}</ol>}
+            </li>
+          ))}
+        </ul>
+      )}
+      {L?.autopsies?.length > 0 && (
+        <details className="text-xs"><summary className="cursor-pointer">{L.autopsies.length} کالبدشکافی چندزاویه</summary>
+          <ul className="mt-1 space-y-2">{L.autopsies.map((a, i) => (
+            <li key={i}><b>{a.country} / {a.target}</b> — {a.root_cause_fa || "علت نامعلوم"}
+              <ul className="ps-4 text-text-muted"><li>اطلاعات اولیه: {a.answers.info}</li><li>قاعده: {a.answers.rule}</li><li>روش: {a.answers.method}</li><li>عامل ویژه‌ی کشور: {a.answers.country_factor}</li><li>کالیبراسیون: {a.answers.calibration}</li></ul>
+              {a.fix && <div>← قاعده‌ی کلی: {a.fix}</div>}{a.rejected && <div className="text-warning">قاعده‌ی پیشنهادی رد شد: {a.rejected}</div>}
+            </li>))}</ul>
+        </details>
+      )}
+    </div>
   );
 }

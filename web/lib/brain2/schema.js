@@ -45,7 +45,7 @@ export const REPOS = {
   // آزمون بازپخش کشورها (مرحله‌ی ۱۰-ب): پیش‌بینی چند کمیت یک کشور بدون داده‌ی همان کشور و سنجش با نتیجه‌ی پژوهش؛ جدا از نمره‌ی زنده.
   backtests: {
     required: ["run_id", "country", "target"],
-    defaults: { kind: "number", forecaster: null, model: null, made_at: null, forecast: null, truth: null, baseline: null, result: null, reason: null, with_lessons: false, lesson_ids: [], natural_key: null },
+    defaults: { kind: "number", forecaster: null, model: null, made_at: null, forecast: null, truth: null, baseline: null, result: null, reason: null, with_lessons: false, lesson_ids: [], method_version: null, natural_key: null },
   },
   // درس‌های آموخته‌شده از اشتباه‌های آزمون بازپخش کشورها (۱۰-ب)؛ فقط درس «پذیرفته» به دستور پیش‌بین کشور افزوده می‌شود.
   lessons: {
