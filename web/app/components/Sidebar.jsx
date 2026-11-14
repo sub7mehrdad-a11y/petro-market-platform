@@ -51,9 +51,9 @@ function buildNavGroups(showOutreach, role) {
           title: "ابزارهای بازرگانی",
           items: [
             { href: "/sales", label: "پلتفرم جامع بازرگانی", icon: IconReport },
-            { href: "/brain/forecasts", label: "دفتر پیش‌بینی", icon: IconSearch },
+            // دفتر پیش‌بینی و بازبینی روزانه‌ی انسانی از منو برداشته شد (۱۴۰۵/۰۸/۲۳: تیم بازرگانی وقت ندارد؛ صفحه‌ها و تاریخچه می‌مانند)؛
+            // مغز با آزمون بازپخش کشورها در «یادگیری مغز» سنجیده می‌شود.
             { href: "/brain/skill", label: "مهارت‌سنجی", icon: IconSearch },
-            { href: "/brain/review", label: "بازبینی روزانه", icon: IconSearch },
             { href: "/brain/learning", label: "یادگیری مغز (مدیر)", icon: IconSearch },
             ...(showOutreach ? [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }] : []),
           ],
