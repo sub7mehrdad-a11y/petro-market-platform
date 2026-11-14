@@ -4,8 +4,16 @@
   "methods": {
     "min_method_errors": 8,
     "max_changes_per_month": 1,
-    "backtest": { "min_cases": 8, "max_cases": 40, "improvement_se_multiple": 1.0 },
-    "parallel": { "min_weeks": 4, "min_resolved": 3, "margin": 0.02 },
+    "backtest": {
+      "min_cases": 8,
+      "max_cases": 40,
+      "improvement_se_multiple": 1.0
+    },
+    "parallel": {
+      "min_weeks": 4,
+      "min_resolved": 3,
+      "margin": 0.02
+    },
     "max_system_chars": 4000
   },
   "consolidation": {
@@ -14,14 +22,38 @@
     "abstract_similarity": 0.45,
     "retire_unused_days": 180,
     "retire_min_negative_votes": 2,
-    "importance": { "base": 0.3, "usage": 0.4, "votes": 0.3, "rewrite_threshold": 0.1 },
-    "performance_drop": { "recent": 3, "min_total": 6, "threshold": 0.15 }
+    "importance": {
+      "base": 0.3,
+      "usage": 0.4,
+      "votes": 0.3,
+      "rewrite_threshold": 0.1
+    },
+    "performance_drop": {
+      "recent": 3,
+      "min_total": 6,
+      "threshold": 0.15
+    }
   },
   "experiments": {
     "quota_share": 0.15,
     "fallback_monthly_emails": 200,
     "window_days": 30,
-    "prior_reply_rate": { "point": 10, "lo": 5, "hi": 15, "unit": "%" },
+    "prior_reply_rate": {
+      "point": 10,
+      "lo": 5,
+      "hi": 15,
+      "unit": "%"
+    },
     "max_open_proposals": 5
+  },
+  "country_learning": {
+    "min_pairs": 6,
+    "min_gain_err": 0.02,
+    "max_iterations": 4,
+    "plateau": 2,
+    "max_rules": 6,
+    "bad_err": 0.25,
+    "max_fix_chars": 260,
+    "_note": "یادگیری خودکار پیش‌بین کشور (۱۰-ب): نسخه‌ی تازه‌ی روش فقط اگر روی کشورهای دیده‌نشده (نیمه‌ی مقابل) دست‌کم min_pairs هدف، بهبود خطای نسبی ≥ min_gain_err و بدتر ≤ بهتر داشته باشد فعال می‌شود."
   }
 }
