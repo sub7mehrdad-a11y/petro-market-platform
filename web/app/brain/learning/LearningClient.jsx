@@ -102,8 +102,72 @@ export default function LearningClient() {
               ))}
             </ul>
           </section>
+
+          <BacktestSection />
         </>
       )}
     </div>
+  );
+}
+
+const pct = (x) => (x === null || x === undefined ? "—" : `${(x * 100).toFixed(0)}٪`);
+const n2 = (x, d = 2) => (x === null || x === undefined ? "—" : Number(x).toLocaleString("en-US", { maximumFractionDigits: d }));
+
+// آزمون بازپخش کشورها (۱۰-ب): مغز با پنهان‌کردن کشور هدف، کمیت‌های آن را پیش‌بینی می‌کند و با نتیجه‌ی پژوهش خودمان سنجیده می‌شود.
+function BacktestSection() {
+  const [d, setD] = useState(null);
+  const [err, setErr] = useState("");
+  const [busy, setBusy] = useState("");
+  const [log, setLog] = useState([]);
+  const load = useCallback(async () => {
+    const r = await api("/api/brain/backtest", { cache: "no-store" });
+    if (!r.ok) { setErr(r.error || "خطا"); return; }
+    setErr(""); setD(r);
+  }, []);
+  useEffect(() => { load(); }, [load]);
+  async function runOne(country) {
+    setBusy(country);
+    const r = await api("/api/brain/backtest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "run", country }) });
+    setLog((l) => [...l, r.ok ? `${country}: ${r.scored} از ${r.total} هدف سنجیده شد` : `${country}: ${r.error || "ناموفق"}`]);
+    setBusy("");
+  }
+  async function runAll() {
+    setLog([]);
+    for (const c of d.countries) await runOne(c);
+    await load();
+  }
+  const s = d?.summary;
+  return (
+    <section className="card p-5 space-y-3 text-sm">
+      <h2 className="font-bold">آزمون بازپخش کشورها</h2>
+      <p className="text-xs text-text-muted leading-6">مغز بدون دیدن هیچ‌چیز از خودِ کشور هدف (فقط شاخص‌های عمومی و کشورهای دیگرِ پژوهش‌شده) چند کمیت را پیش‌بینی می‌کند و با نتیجه‌ی پژوهش همان کشور سنجیده می‌شود. خط مبنا: میانه‌ی کشورهای دیگر. نتیجه جدا از نمره‌ی زنده است. «مقدار واقعی» برآورد پژوهش خودمان است، نه آمار بیرونی.</p>
+      {err && <div className="text-danger text-xs">{err}</div>}
+      {d && (
+        <>
+          <div className="flex flex-wrap items-center gap-3">
+            <button type="button" disabled={!!busy || !d.has_key} onClick={runAll} className="rounded border border-border px-3 py-1 cursor-pointer disabled:opacity-50">{busy ? `در حال اجرا: ${busy}…` : "اجرای همه‌ی کشورها"}</button>
+            {!d.has_key && <span className="text-xs text-danger">کلید مغز تنظیم نشده</span>}
+            {s?.overall?.n > 0 && <span className="text-xs text-text-muted">{s.overall.n} هدف سنجیده؛ مهارت میانگین {n2(s.overall.mean_skill)}؛ بهتر از خط مبنا در {s.overall.beats_baseline_pct ?? "—"}٪؛ پوشش بازه‌ی ۸۰٪: {pct(s.overall.coverage)} (هدف ≈ ۸۰٪)</span>}
+          </div>
+          {log.length > 0 && <ul className="text-xs text-text-muted">{log.map((l, i) => <li key={i}>• {l}</li>)}</ul>}
+          {s?.by_target?.length > 0 && (
+            <div className="overflow-x-auto">
+              <table className="w-full text-xs">
+                <thead><tr className="border-b border-border text-text-muted">{["هدف", "n", "مهارت", "بهتر از مبنا", "پوشش بازه", "خطای نسبی"].map((h) => <th key={h} className="px-2 py-1 text-start font-medium">{h}</th>)}</tr></thead>
+                <tbody>{s.by_target.map((t) => (
+                  <tr key={t.id} className="border-b border-border last:border-0"><td className="px-2 py-1">{t.label}</td><td className="px-2 py-1">{t.n}</td><td className={`px-2 py-1 ${t.mean_skill > 0 ? "text-success" : "text-danger"}`}>{n2(t.mean_skill)}</td><td className="px-2 py-1">{t.beats_baseline_pct ?? "—"}٪</td><td className="px-2 py-1">{pct(t.coverage)}</td><td className="px-2 py-1">{pct(t.mean_abs_rel_err)}</td></tr>
+                ))}</tbody>
+              </table>
+            </div>
+          )}
+          <div className="flex flex-wrap gap-2 text-xs">
+            {d.countries.map((c) => {
+              const row = s?.by_country?.find((x) => x.country === c);
+              return <button key={c} type="button" disabled={!!busy || !d.has_key} onClick={async () => { await runOne(c); await load(); }} className="rounded-full border border-border px-3 py-1 cursor-pointer disabled:opacity-50">{c}{row ? ` · مهارت ${n2(row.mean_skill)}` : ""}</button>;
+            })}
+          </div>
+        </>
+      )}
+    </section>
   );
 }

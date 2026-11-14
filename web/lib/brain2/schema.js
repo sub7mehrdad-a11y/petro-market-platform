@@ -42,6 +42,11 @@ export const REPOS = {
     required: ["key", "title"],
     defaults: { hypothesis: null, metric: "reply_rate", unit: "%", prior: null, window_days: 30, quota_share: 0, status: "فعال", started_at: null, ends_at: null, observed: null, verdict: null, decided_by: null, natural_key: null },
   },
+  // آزمون بازپخش کشورها (مرحله‌ی ۱۰-ب): پیش‌بینی چند کمیت یک کشور بدون داده‌ی همان کشور و سنجش با نتیجه‌ی پژوهش؛ جدا از نمره‌ی زنده.
+  backtests: {
+    required: ["run_id", "country", "target"],
+    defaults: { kind: "number", forecaster: null, model: null, made_at: null, forecast: null, truth: null, baseline: null, result: null, reason: null, natural_key: null },
+  },
   predictions: { required: [], defaults: {} }, // ساخت و اعتبارسنجی در forecast.js (مرحله‌ی ۰؛ فیلدهای ۰٫۲ همان‌جا هست)
   feedback: {
     required: ["giver", "target_id", "kind"],
