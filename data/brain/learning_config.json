@@ -35,6 +35,8 @@
     }
   },
   "experiments": {
+    "enabled": false,
+    "_note": "آزمایش فعال متوقف است (دستور مدیر ۱۴۰۵/۰۸/۲۴: هیچ ایمیلی با قیمت یا آزمایش روی متن ایمیل نمی‌رود). برای روشن‌کردن enabled را true کنید.",
     "quota_share": 0.15,
     "fallback_monthly_emails": 200,
     "window_days": 30,
