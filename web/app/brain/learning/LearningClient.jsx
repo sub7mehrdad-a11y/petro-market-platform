@@ -46,7 +46,7 @@ export default function LearningClient() {
         <summary className="cursor-pointer font-bold">راهنمای ساده‌ی این صفحه</summary>
         <ul className="mt-2 list-disc ps-5 space-y-1 text-text-muted">
           <li><b className="text-text">روش‌ها (حلقه‌ی ۳):</b> «دستور کار» مغز برای پیش‌بینی قیمت. وقتی چند بار اشتباه کند، خودش نسخه‌ی تازه‌ی دستور را می‌نویسد، روی گذشته آزمایش می‌کند و اگر بهتر بود پیشنهادش را برای تأیید شما می‌گذارد.</li>
-          <li><b className="text-text">آزمایش فعال:</b> آزمایش‌های کوچک ایمیل (مثلاً موضوع با قیمت در برابر بی‌قیمت). هیچ‌چیز بدون تأیید شما شروع نمی‌شود.</li>
+          <li><b className="text-text">آزمایش فعال:</b> <b className="text-danger">متوقف است.</b> (طرح‌هایی برای آزمایش روی ایمیل بود؛ به دستور شما خاموش شد و هیچ ایمیلی با قیمت نمی‌رود.)</li>
           <li><b className="text-text">آزمون بازپخش کشورها:</b> امتحان مغز با کشورهایی که جوابشان را داریم. هر کشور را موقتاً «پنهان» می‌کنیم، مغز حدس می‌زند، بعد حدس را با گزارش خودمان مقایسه می‌کنیم. هدف: ببینیم مغز چقدر خوب حدس می‌زند.</li>
           <li><b className="text-text">یادگیری خودکار از اشتباه:</b> مغز اشتباه‌های بزرگ را بررسی می‌کند، قاعده‌ی تازه می‌نویسد و فقط اگر روی کشورهای دیده‌نشده بهتر شد نگهش می‌دارد. نیازی به تأیید شما ندارد.</li>
           <li><b className="text-text">پیش‌بینی برای کشور تازه:</b> امتحان واقعی: قبل از پژوهش یک کشور، مغز حدس می‌زند و حدس ثبت و قفل می‌شود. وقتی گزارش کشور را وارد کردید، خودکار با واقعیت مقایسه می‌شود.</li>
@@ -93,6 +93,7 @@ export default function LearningClient() {
 
           <section className="card p-5 space-y-3 text-sm">
             <h2 className="font-bold">آزمایش فعال</h2>
+            {data.config?.experiments?.enabled !== true && <p className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-xs leading-6 text-warning">⛔ آزمایش فعال متوقف است (به دستور مدیر). هیچ آزمایشی پیشنهاد یا شروع نمی‌شود و هیچ ایمیلی با قیمت یا متن آزمایشی نمی‌رود.</p>}
             <p className="text-xs text-text-muted">سهم ظرفیت آزمایش: {Math.round(data.experiments.quota.share * 100)}٪ (حدود {data.experiments.quota.quota} از {data.experiments.quota.capacity} ایمیل در ماه). این صفحه ایمیلی نمی‌فرستد؛ نتیجه‌ی آزمایش را خودتان ثبت می‌کنید.</p>
             {data.experiments.experiments.length === 0 && <p className="text-xs text-text-muted">هنوز آزمایشی تأیید نشده است.</p>}
             <ul className="space-y-3">

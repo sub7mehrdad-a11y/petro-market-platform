@@ -12,8 +12,11 @@ const REAL = path.join(process.cwd(), "..", "data");
 const dataDir = path.join(tmp, "data");
 fs.mkdirSync(path.join(dataDir, "brain"), { recursive: true });
 for (const f of ["confidence_config.json", "analysts_config.json", "scoring_config.json", "reputation_config.json", "autopsy_config.json", "experiment_candidates.json"]) fs.copyFileSync(path.join(REAL, "brain", f), path.join(dataDir, "brain", f));
+// نامزدهای آزمون (شامل نمونه‌ی «ذکر قیمت» که از فایل واقعی حذف شده؛ اینجا فقط ابزار آزمون است)
+fs.writeFileSync(path.join(dataDir, "brain", "experiment_candidates.json"), JSON.stringify({ candidates: [{ key: "subject-with-price", title: "آزمون موضوع با قیمت", hypothesis: "x", metric: "reply_rate", min_sample: 40 }, { key: "followup-day-5-vs-10", title: "یادآوری ۵ یا ۱۰ روز", hypothesis: "x", metric: "reply_rate", min_sample: 40 }, { key: "segment-traders-vs-manufacturers", title: "بازرگان یا تولیدکننده", hypothesis: "x", metric: "reply_rate", min_sample: 40 }] }));
 const lcfg = JSON.parse(fs.readFileSync(path.join(REAL, "brain", "learning_config.json"), "utf-8"));
 lcfg.methods.min_method_errors = 3;
+lcfg.experiments.enabled = true; // خود آزمون آزمایش فعال را روشن می‌کند (در پیکربندی واقعی خاموش است)
 lcfg.methods.backtest.min_cases = 3;
 lcfg.consolidation.merge_similarity = 0.8;
 lcfg.consolidation.abstract_similarity = 0.3;
@@ -321,6 +324,17 @@ assert.equal(es.forecast.hi, 15);
 assert.equal(W.runScoring({ now: NOW1 }).written, 0, "idempotent");
 void sc2;
 assert.ok(!SR.summarize(SR.readScores()).some((s) => s.forecaster === "brain:experiments"), "نمره‌ی آزمایش در رتبه‌بندی پیش‌بین‌ها نمی‌آید");
+
+// ------------------------------------------------------------------ آزمایش فعال خاموش (دستور مدیر): هیچ پیشنهاد/فعال‌سازی تازه‌ای نیست
+assert.ok([...Q.openQueue().values()].some((q) => q.kind === "experiment_proposal" && q.status === "open"), "پیش‌شرط: پیشنهاد باز مانده");
+const cfgFile = path.join(dataDir, "brain", "learning_config.json");
+const cfgOn = fs.readFileSync(cfgFile, "utf-8");
+fs.writeFileSync(cfgFile, JSON.stringify({ ...lcfg, experiments: { ...lcfg.experiments, enabled: false } }, null, 2));
+assert.equal(Ex.experimentsEnabled(), false);
+assert.deepEqual(Ex.proposeExperiments({ now: NOWC }), []);
+assert.deepEqual(Ex.syncExperimentDecisions({ now: NOWC }), []);
+assert.ok(![...Q.openQueue().values()].some((q) => q.kind === "experiment_proposal" && q.status === "open"), "پیشنهادهای باز نادیده شدند");
+fs.writeFileSync(cfgFile, cfgOn);
 
 // ------------------------------------------------------------------ چرخه‌ی کامل ماهانه
 const cyc1 = await Cy.runLearningCycle({ now: new Date("2027-01-05T00:00:00Z"), generate: { propose: async () => "bad", abstract: abstractGen } });

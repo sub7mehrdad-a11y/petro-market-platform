@@ -1,6 +1,7 @@
 import { closeRow, currentRows, putRow } from "../store";
 import { makeRow } from "../schema";
-import { raiseItem } from "../knowledge/queue";
+import { openQueue, raiseItem, resolveItem } from "../knowledge/queue";
+import { loadIndex } from "../memory";
 import { getDomain } from "../domain/index";
 import { DAY, loadLearningConfig } from "./config";
 
@@ -19,10 +20,25 @@ export function experimentQuota(monthlyCapacity = null) {
   return { capacity: cap, share: cfg.quota_share, quota: Math.max(1, Math.floor(cap * cfg.quota_share)) };
 }
 
+/** آزمایش فعال روشن است؟ (learning_config.json ← experiments.enabled؛ پیش‌فرض خاموش). */
+export const experimentsEnabled = () => loadLearningConfig().experiments?.enabled === true;
+
+/** وقتی آزمایش فعال خاموش است، پیشنهادهای بازِ مانده در صف «نادیده» می‌شوند (فقط‌افزودنی؛ چیزی پاک نمی‌شود). */
+function dismissOpenProposals({ at }) {
+  const idx = loadIndex();
+  let n = 0;
+  for (const q of openQueue().values()) {
+    if (q.kind !== "experiment_proposal" || q.status !== "open") continue;
+    if (resolveItem(idx, { id: q.id, decision: "dismiss", by: "system", note: "آزمایش فعال متوقف شد (دستور مدیر)", at }).ok) n += 1;
+  }
+  return n;
+}
+
 /** نامزدهای منبع دامنه را (حداکثر max_open_proposals باز/فعال) به صف می‌آورد. idempotent. */
 export function proposeExperiments({ now = new Date(), candidates = null } = {}) {
   const cfg = loadLearningConfig().experiments;
   const at = now.toISOString();
+  if (!experimentsEnabled()) { dismissOpenProposals({ at }); return []; }
   const list = candidates || getDomain().experimentCandidates();
   const known = new Set(experimentRows().map((r) => r.key));
   const asked = new Set([...currentRows("queue").values()].filter((q) => !q.recorded_to && q.kind === "experiment_proposal").map((q) => q.experiment_key));
@@ -47,6 +63,7 @@ export function proposeExperiments({ now = new Date(), candidates = null } = {})
 
 /** تصمیم مدیر ← ردیف آزمایش «فعال» با پیش‌بینیِ ثابتِ پیش از اجرا. idempotent. */
 export function syncExperimentDecisions({ now = new Date() } = {}) {
+  if (!experimentsEnabled()) return []; // متوقف: هیچ آزمایشی تازه فعال نمی‌شود
   const cfg = loadLearningConfig().experiments;
   const at = now.toISOString();
   const applied = [];
