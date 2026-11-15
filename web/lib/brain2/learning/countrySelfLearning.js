@@ -295,6 +295,7 @@ export function countryLearningOverview() {
   return {
     status: countryLearningStatus(),
     methods: countryMethodRows().map((m) => ({ version: m.version, status: m.status, rules: m.rules || [], comparables: m.comparables, parent: m.parent_version, rationale: (m.steps || [])[0] || null, validation: m.backtest_score, reason: m.change_reason, since: m.status_since })).sort((a, b) => Number(a.version.slice(1)) - Number(b.version.slice(1))),
-    autopsies: [...currentRows("analyses").values()].filter((a) => !a.recorded_to && a.analyst === ANALYST && a.method_version === "country-autopsy-v2").map((a) => ({ country: a.payload.country, target: a.payload.target, root_cause_fa: a.payload.root_cause_fa, fix: a.payload.general_fix, rejected: a.payload.fix_rejected, answers: a.payload.answers })).slice(-60),
+    autopsies: [...currentRows("analyses").values()].filter((a) => !a.recorded_to && a.analyst === ANALYST && a.method_version === "country-autopsy-v2").map((a) => ({ country: a.payload.country, target: a.payload.target, target_label: labelOf(a.payload.target), root_cause: a.payload.root_cause, root_cause_fa: a.payload.root_cause_fa, category_fa: a.payload.category_fa, fix: a.payload.general_fix, rejected: a.payload.fix_rejected, answers: a.payload.answers, method_version: a.payload.method_version })).slice(-80),
+    scores: countryMethodRows().map((m) => ({ version: m.version, status: m.status, ...scoreMethod(m.version, backtestCountries()) })),
   };
 }
