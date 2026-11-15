@@ -76,7 +76,7 @@ export const foldOf = (country, countries) => [...countries].sort((a, b) => a.lo
 function rowsOfMethod(version) {
   const best = new Map();
   for (const r of latestBacktestRows()) {
-    if (r.with_lessons || (r.method_version || "v1") !== version) continue;
+    if (r.forward || r.with_lessons || (r.method_version || "v1") !== version) continue;
     const k = `${r.country}|${r.target}`;
     if (!best.has(k) || String(r.made_at) > String(best.get(k).made_at)) best.set(k, r);
   }

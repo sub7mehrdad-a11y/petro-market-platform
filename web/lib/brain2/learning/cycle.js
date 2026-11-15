@@ -6,6 +6,7 @@ import { METHOD_ROLES, ensureMethods } from "./methods";
 import { evaluatePromotion, proposeRevision, syncMethodDecisions } from "./revision";
 import { syncLessonDecisions } from "./countryLessons";
 import { startSelfImprovement } from "./countrySelfLearning";
+import { resolveForwardPredictions } from "./countryBacktest";
 
 // چرخه‌ی یادگیری (مرحله‌ی ۱۰). هر ساعت (ارزان، بدون مدل): اجرای تصمیم‌های مدیر + ارزیابی ارتقای روش‌های آزمایشی.
 // ماهی یک‌بار: تثبیت، پیشنهاد آزمایش، و بازبینی روش (آزمون روی سابقه مدل می‌خواهد؛ بدون کلید پرش می‌شود و ماه «انجام‌شده» ثبت نمی‌شود).
@@ -15,6 +16,7 @@ export async function runLearningCycle({ now = new Date(), generate = {} } = {})
   const out = { month: at.slice(0, 7) };
   ensureMethods({ at });
   out.applied = [...syncMethodDecisions({ now }), ...syncConsolidationDecisions({ now }), ...syncExperimentDecisions({ now }).map((k) => `experiment:${k}`), ...syncLessonDecisions({ now })];
+  out.forward_resolved = resolveForwardPredictions({ now }); // پیش‌بینی‌های پیش‌ثبتِ کشورهای تازه‌پژوهش‌شده
   out.promotion = METHOD_ROLES.flatMap((role) => evaluatePromotion(role, { now }));
   const st = readLearningState();
   if (st.last_monthly === out.month) return { ...out, monthly: "done_this_month" };
