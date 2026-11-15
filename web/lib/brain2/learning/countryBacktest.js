@@ -161,13 +161,15 @@ export function summarizeBacktests(allRows = latestBacktestRows()) {
   const rows = allRows.filter((r) => !r.forward && !r.with_lessons && (hasActive ? r.method_version === act : !r.method_version));
   const labels = new Map(backtestTargets().map((t) => [t.id, t.label]));
   const by = (key) => [...new Set(rows.map((r) => r[key]))];
+  const view = (r) => ({ country: r.country, target: r.target, label: labels.get(r.target) || r.target, forecast: r.forecast, truth: r.truth, baseline: r.baseline, result: r.result, reason: r.reason, made_at: r.made_at, resolved_at: r.resolved_at || null, model: r.model, method_version: r.method_version || null, forward: !!r.forward, pending: !!r.forward && !r.result?.scored });
   return {
     overall: agg(rows),
     lessons_effect: compareLessonEffect(allRows.filter((r) => !r.forward)),
     forward: { pending: fwRows.filter((r) => !r.result?.scored).length, ...agg(fwRows), countries: [...new Set(fwRows.map((r) => r.country))] },
     by_target: by("target").map((id) => ({ id, label: labels.get(id) || id, ...agg(rows.filter((r) => r.target === id)) })),
     by_country: by("country").map((c) => ({ country: c, ...agg(rows.filter((r) => r.country === c)) })).sort((a, b) => String(a.country).localeCompare(String(b.country), "fa")),
-    rows: rows.map((r) => ({ country: r.country, target: r.target, label: labels.get(r.target) || r.target, forecast: r.forecast, truth: r.truth, baseline: r.baseline, result: r.result, reason: r.reason, made_at: r.made_at, model: r.model, method_version: r.method_version || null, forward: !!r.forward, pending: !!r.forward && !r.result?.scored })),
+    rows: rows.map(view),
+    forward_rows: fwRows.map(view),
   };
 }
 
