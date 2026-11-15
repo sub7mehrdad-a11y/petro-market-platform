@@ -42,6 +42,16 @@ export default function LearningClient() {
       <PageHeader title="یادگیری مغز" subtitle="نسخه‌های روش هر تحلیل‌گر، آزمایش‌های فعال و تثبیت ماهانه. هیچ تغییری خودکار نیست: هر پیشنهاد در صف بازبینی منتظر تأیید مدیر می‌ماند." />
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
       {msg && <div className="rounded-lg border border-border px-3 py-2 text-sm">{msg}</div>}
+      <details open className="card p-4 text-sm leading-7">
+        <summary className="cursor-pointer font-bold">راهنمای ساده‌ی این صفحه</summary>
+        <ul className="mt-2 list-disc ps-5 space-y-1 text-text-muted">
+          <li><b className="text-text">روش‌ها (حلقه‌ی ۳):</b> «دستور کار» مغز برای پیش‌بینی قیمت. وقتی چند بار اشتباه کند، خودش نسخه‌ی تازه‌ی دستور را می‌نویسد، روی گذشته آزمایش می‌کند و اگر بهتر بود پیشنهادش را برای تأیید شما می‌گذارد.</li>
+          <li><b className="text-text">آزمایش فعال:</b> آزمایش‌های کوچک ایمیل (مثلاً موضوع با قیمت در برابر بی‌قیمت). هیچ‌چیز بدون تأیید شما شروع نمی‌شود.</li>
+          <li><b className="text-text">آزمون بازپخش کشورها:</b> امتحان مغز با کشورهایی که جوابشان را داریم. هر کشور را موقتاً «پنهان» می‌کنیم، مغز حدس می‌زند، بعد حدس را با گزارش خودمان مقایسه می‌کنیم. هدف: ببینیم مغز چقدر خوب حدس می‌زند.</li>
+          <li><b className="text-text">یادگیری خودکار از اشتباه:</b> مغز اشتباه‌های بزرگ را بررسی می‌کند، قاعده‌ی تازه می‌نویسد و فقط اگر روی کشورهای دیده‌نشده بهتر شد نگهش می‌دارد. نیازی به تأیید شما ندارد.</li>
+          <li><b className="text-text">پیش‌بینی برای کشور تازه:</b> امتحان واقعی: قبل از پژوهش یک کشور، مغز حدس می‌زند و حدس ثبت و قفل می‌شود. وقتی گزارش کشور را وارد کردید، خودکار با واقعیت مقایسه می‌شود.</li>
+        </ul>
+      </details>
 
       {data && (
         <>
@@ -184,8 +194,8 @@ function BacktestSection() {
                   <tbody>{d.forward_rows.map((r, i) => (
                     <tr key={i} className="border-b border-border last:border-0">
                       <td className="px-2 py-1">{r.country}</td><td className="px-2 py-1">{r.label}</td>
-                      <td className="px-2 py-1" dir="ltr">{r.forecast ? (r.forecast.p !== undefined ? `p=${n2(r.forecast.p)}` : `${n2(r.forecast.point)} [${n2(r.forecast.lo)}–${n2(r.forecast.hi)}]`) : "—"}</td>
-                      <td className="px-2 py-1" dir="ltr">{r.truth ?? "—"}</td>
+                      <td className="px-2 py-1" dir="ltr">{r.forecast ? (r.forecast.p !== undefined ? `${n2(r.forecast.p * 100, 0)}٪ احتمال` : `${showVal(d, r.target, r.forecast.point)} (بازه: ${showVal(d, r.target, r.forecast.lo)} تا ${showVal(d, r.target, r.forecast.hi)})`) : "—"}</td>
+                      <td className="px-2 py-1" dir="ltr">{r.truth === null || r.truth === undefined ? "—" : r.forecast?.p !== undefined ? (r.truth ? "بله" : "خیر") : showVal(d, r.target, r.truth)}</td>
                       <td className="px-2 py-1">{r.result?.scored ? `${r.result.brier !== undefined ? `brier ${n2(r.result.brier)}` : `خطا ${pct(r.result.abs_rel_err)} ${r.result.inside ? "داخل بازه" : "بیرون بازه"}`}` : "منتظر پژوهش کشور"}</td>
                     </tr>))}</tbody>
                 </table>
@@ -253,4 +263,14 @@ function SelfLearning({ d, reload }) {
       )}
     </div>
   );
+}
+
+// مقدار با واحدش (٪ / تن / کیلوگرم)؛ واحد هر هدف از خود API می‌آید.
+function showVal(d, target, v) {
+  if (v === null || v === undefined) return "—";
+  const u = d.targets?.find((t) => t.id === target)?.unit || "";
+  if (u === "درصد") return `${n2(v)}٪`;
+  if (u === "تن") return `${n2(v, 0)} تن`;
+  if (u.startsWith("کیلوگرم")) return `${n2(v)} کیلوگرم`;
+  return n2(v);
 }
