@@ -119,6 +119,7 @@ function BacktestSection() {
   const [err, setErr] = useState("");
   const [busy, setBusy] = useState("");
   const [log, setLog] = useState([]);
+  const [newCountry, setNewCountry] = useState("");
   const load = useCallback(async () => {
     const r = await api("/api/brain/backtest", { cache: "no-store" });
     if (!r.ok) { setErr(r.error || "خطا"); return; }
@@ -161,6 +162,36 @@ function BacktestSection() {
             </div>
           )}
           <SelfLearning d={d} reload={load} />
+          <div className="rounded-lg border border-border p-3 space-y-2">
+            <b className="text-sm">پیش‌بینی برای کشور تازه (پیش از پژوهش)</b>
+            <p className="text-xs leading-6 text-text-muted">نام کشوری را بنویسید که هنوز پژوهش نشده؛ مغز فقط با شاخص‌های عمومی آن (جمعیت، درآمد) و همه‌ی کشورهای پژوهش‌شده حدس می‌زند. پیش‌بینی همان لحظه ثبت می‌شود و بعد از دیدن جواب قابل‌تغییر نیست. وقتی گزارش آن کشور وارد پروفایل‌ها شد، خودکار سنجیده می‌شود.</p>
+            <form className="flex flex-wrap items-center gap-2" onSubmit={async (e) => {
+              e.preventDefault();
+              const country = newCountry.trim();
+              if (!country) return;
+              setBusy(country);
+              const r = await api("/api/brain/backtest", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ action: "predict_new", country }) });
+              setLog((l) => [...l, r.ok ? `${country}: ${r.rows} پیش‌بینی پیش‌ثبت شد` : `${country}: ${r.error || "ناموفق"}`]);
+              setBusy(""); setNewCountry(""); load();
+            }}>
+              <input value={newCountry} onChange={(e) => setNewCountry(e.target.value)} placeholder="نام کشور (مثلاً کویت)" className="rounded border border-border bg-surface px-3 py-1 text-sm" />
+              <button type="submit" disabled={!!busy || !d.has_key || !newCountry.trim()} className="rounded border border-border px-3 py-1 text-xs cursor-pointer disabled:opacity-50">ثبت پیش‌بینی</button>
+            </form>
+            {s?.rows?.length >= 0 && d.forward_rows?.length > 0 && (
+              <div className="overflow-x-auto">
+                <table className="w-full text-xs">
+                  <thead><tr className="border-b border-border text-text-muted">{["کشور", "هدف", "پیش‌بینی", "واقعی", "وضعیت"].map((h) => <th key={h} className="px-2 py-1 text-start font-medium">{h}</th>)}</tr></thead>
+                  <tbody>{d.forward_rows.map((r, i) => (
+                    <tr key={i} className="border-b border-border last:border-0">
+                      <td className="px-2 py-1">{r.country}</td><td className="px-2 py-1">{r.label}</td>
+                      <td className="px-2 py-1" dir="ltr">{r.forecast ? (r.forecast.p !== undefined ? `p=${n2(r.forecast.p)}` : `${n2(r.forecast.point)} [${n2(r.forecast.lo)}–${n2(r.forecast.hi)}]`) : "—"}</td>
+                      <td className="px-2 py-1" dir="ltr">{r.truth ?? "—"}</td>
+                      <td className="px-2 py-1">{r.result?.scored ? `${r.result.brier !== undefined ? `brier ${n2(r.result.brier)}` : `خطا ${pct(r.result.abs_rel_err)} ${r.result.inside ? "داخل بازه" : "بیرون بازه"}`}` : "منتظر پژوهش کشور"}</td>
+                    </tr>))}</tbody>
+                </table>
+              </div>
+            )}
+          </div>
           <div className="flex flex-wrap gap-2 text-xs">
             {d.countries.map((c) => {
               const row = s?.by_country?.find((x) => x.country === c);

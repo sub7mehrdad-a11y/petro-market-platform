@@ -5,6 +5,7 @@ import { currentRows, putRow } from "../store";
 import { makeRow } from "../schema";
 import { compareLessonEffect, lessonsPromptFor } from "./countryLessons";
 import { activeCountryMethod, methodPromptText, selectComparables } from "./countryMethod";
+import { closeRow } from "../store";
 import { brier, inInterval, relErr, round4, skill, surpriseInterval, surpriseProbability } from "../scoring/math";
 
 // آزمون بازپخش کشورها (مرحله‌ی ۱۰-ب): مغز برای کشوری که «هنوز پژوهش نشده» چند کمیت را پیش‌بینی می‌کند و بعد با نتیجه‌ی واقعیِ پژوهش
@@ -131,7 +132,7 @@ export function latestBacktestRows() {
   const best = new Map();
   for (const r of currentRows("backtests").values()) {
     if (r.recorded_to || !r.natural_key) continue;
-    const k = `${r.country}|${r.target}|${r.forecaster}|${r.method_version || ""}`;
+    const k = `${r.country}|${r.target}|${r.forecaster}|${r.method_version || ""}|${r.forward ? "fw" : ""}`;
     if (!best.has(k) || String(r.made_at) > String(best.get(k).made_at)) best.set(k, r);
   }
   return [...best.values()];
@@ -156,14 +157,78 @@ export function summarizeBacktests(allRows = latestBacktestRows()) {
   // آمار اصلی: اجرای «بدون درس» با روش فعال (اگر ردیفی با آن نسخه هست)، وگرنه ردیف‌های بدون نسخه؛ اثر درس‌ها جدا (lessons_effect)
   const act = activeCountryMethod()?.version || null;
   const hasActive = act && allRows.some((r) => r.method_version === act && !r.with_lessons);
-  const rows = allRows.filter((r) => !r.with_lessons && (hasActive ? r.method_version === act : !r.method_version));
+  const fwRows = allRows.filter((r) => r.forward);
+  const rows = allRows.filter((r) => !r.forward && !r.with_lessons && (hasActive ? r.method_version === act : !r.method_version));
   const labels = new Map(backtestTargets().map((t) => [t.id, t.label]));
   const by = (key) => [...new Set(rows.map((r) => r[key]))];
   return {
     overall: agg(rows),
-    lessons_effect: compareLessonEffect(allRows),
+    lessons_effect: compareLessonEffect(allRows.filter((r) => !r.forward)),
+    forward: { pending: fwRows.filter((r) => !r.result?.scored).length, ...agg(fwRows), countries: [...new Set(fwRows.map((r) => r.country))] },
     by_target: by("target").map((id) => ({ id, label: labels.get(id) || id, ...agg(rows.filter((r) => r.target === id)) })),
     by_country: by("country").map((c) => ({ country: c, ...agg(rows.filter((r) => r.country === c)) })).sort((a, b) => String(a.country).localeCompare(String(b.country), "fa")),
-    rows: rows.map((r) => ({ country: r.country, target: r.target, label: labels.get(r.target) || r.target, forecast: r.forecast, truth: r.truth, baseline: r.baseline, result: r.result, reason: r.reason, made_at: r.made_at, model: r.model, method_version: r.method_version || null })),
+    rows: rows.map((r) => ({ country: r.country, target: r.target, label: labels.get(r.target) || r.target, forecast: r.forecast, truth: r.truth, baseline: r.baseline, result: r.result, reason: r.reason, made_at: r.made_at, model: r.model, method_version: r.method_version || null, forward: !!r.forward, pending: !!r.forward && !r.result?.scored })),
   };
+}
+
+/**
+ * پیش‌بینی «پیش از پژوهش» برای کشوری که هنوز پروفایل ندارد (پیش‌ثبت): فقط شاخص‌های عمومی کشور + جدول همه‌ی کشورهای پژوهش‌شده.
+ * ثبت‌شده «تغییرناپذیر» است: برای کشوری که پیش‌بینی قبلی دارد، دوباره پیش‌بینی نمی‌شود (وگرنه می‌شد بعد از دیدن جواب عوضش کرد).
+ * وقتی پژوهش آن کشور وارد پروفایل‌ها شد، resolveForwardPredictions آن را می‌سنجد.
+ */
+export async function predictNewCountry(country, { generate = defaultGenerate, model = BRAIN_MODEL, now = new Date(), method } = {}) {
+  const d = dom();
+  const table = d.loadCountryTable();
+  if (table.some((r) => r.country === country)) return { ok: false, country, error: "این کشور قبلاً پژوهش شده؛ برای آن از «آزمون بازپخش» استفاده کنید." };
+  if (latestBacktestRows().some((r) => r.forward && r.country === country)) return { ok: false, country, error: "برای این کشور پیش‌بینی پیش‌ثبت‌شده هست و تغییر نمی‌کند." };
+  const indicators = d.indicatorsFor(country);
+  if (!indicators) return { ok: false, country, error: "شاخص‌های عمومی (جمعیت، درآمد) این کشور در داده‌ی جهانی نیست." };
+  const m = method === undefined ? activeCountryMethod() : method;
+  const row = { country, indicators };
+  const at = now.toISOString();
+  const run = `fw_${now.getTime().toString(36)}`;
+  let parsed;
+  try {
+    parsed = parseJson(await generate({ system: systemPrompt() + methodPromptText(m), input: buildInput(row, selectComparables(row, table, m?.comparables), d.targets, d.targets) }));
+  } catch (err) {
+    return { ok: false, country, error: String(err?.message || err).slice(0, 200) };
+  }
+  const tg = parsed?.targets;
+  if (!tg || typeof tg !== "object") return { ok: false, country, error: "خروجی مدل JSON هدف‌ها نبود." };
+  const forecaster = `machine:country:${model}${BACKTEST_SUFFIX}`;
+  const rows = [];
+  for (const t of d.targets) {
+    const f = tg[t.id];
+    const bad = checkForecast(t, f);
+    const forecast = bad ? null : t.kind === "probability" ? { p: Number(f.p) } : { point: Number(f.point), lo: Number(f.lo), hi: Number(f.hi) };
+    const baseline = d.baselineFor(t.id, row, table);
+    const stored = putRow("backtests", makeRow("backtests", {
+      run_id: run, country, target: t.id, kind: t.kind, forecaster, model, made_at: at, forecast, truth: null, baseline, forward: true, method_version: m?.version || null,
+      result: { scored: false, reason: bad ? `پیش‌بینی نامعتبر: ${bad}` : "منتظر پژوهش کشور", pending: !bad }, reason: String(f?.reason || "").slice(0, 200) || null,
+      natural_key: `fw|${country}|${t.id}|${model}|${m?.version || "-"}`, created_at: at,
+    }, at));
+    rows.push({ id: stored.id, target: t.id, forecast, baseline, reason: stored.reason, invalid: bad || null });
+  }
+  return { ok: true, country, run_id: run, forecaster, method_version: m?.version || null, rows };
+}
+
+/** پیش‌بینی‌های پیش‌ثبت‌شده‌ای که مقدار واقعی‌شان حالا (پژوهش وارد پروفایل شده) در دسترس است سنجیده می‌شوند. برمی‌گرداند تعداد سنجیده‌شده. */
+export function resolveForwardPredictions({ now = new Date() } = {}) {
+  const d = dom();
+  const table = d.loadCountryTable();
+  const at = now.toISOString();
+  let n = 0;
+  for (const r of latestBacktestRows()) {
+    if (!r.forward || r.result?.scored || !r.forecast) continue;
+    const t = d.targets.find((x) => x.id === r.target);
+    const row = table.find((x) => x.country === r.country);
+    const truth = row?.truth?.[r.target];
+    if (!t || truth === null || truth === undefined) continue;
+    const result = scoreBacktestTarget(t, r.forecast, truth, r.baseline);
+    const { id, created_at, recorded_from, recorded_to, closed_reason, ...keep } = r;
+    putRow("backtests", makeRow("backtests", { ...keep, truth, result, resolved_at: at, supersedes: id, change_reason: "مقدار واقعی از پژوهش کشور رسید", created_at: at }, at));
+    closeRow("backtests", id, { reason: "سنجیده شد", by: "country-backtest", at });
+    n += 1;
+  }
+  return n;
 }

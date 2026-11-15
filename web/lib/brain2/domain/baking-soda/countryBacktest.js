@@ -60,6 +60,14 @@ function truthOf(profile, pop, suppliers) {
   };
 }
 
+const indicatorsOf = (pop) => (pop ? { population: pop.population ?? null, income_level: pop.income_level ?? null, tier: pop.tier ?? null, urban_pct: num(pop.urban_pct) !== null ? Math.round(pop.urban_pct * 10) / 10 : null, gdp_per_capita_usd: num(pop.gdp_per_capita_usd) !== null ? Math.round(pop.gdp_per_capita_usd) : null } : {});
+
+/** شاخص‌های عمومی یک کشور (جمعیت، درآمد…) برای پیش‌بینی پیش از پژوهش؛ null اگر در داده‌ی جهانی نیست. */
+export function indicatorsFor(country) {
+  const pop = readJson("country_population.json", {})[country];
+  return pop?.population ? indicatorsOf(pop) : null;
+}
+
 /** ردیف هر کشورِ پروفایل‌دار: شاخص‌های عمومی + مقدارهای واقعیِ قابل‌استخراج (null = موجود نیست). کشوری که هیچ مقداری ندارد (مثل رقیب صادرکننده) نمی‌آید. */
 export function loadCountryTable() {
   const profiles = readJson("country_profiles.json", {});
@@ -72,7 +80,7 @@ export function loadCountryTable() {
     if (Object.values(truth).every((v) => v === null)) continue;
     rows.push({
       country,
-      indicators: pop ? { population: pop.population ?? null, income_level: pop.income_level ?? null, tier: pop.tier ?? null, urban_pct: num(pop.urban_pct) !== null ? Math.round(pop.urban_pct * 10) / 10 : null, gdp_per_capita_usd: num(pop.gdp_per_capita_usd) !== null ? Math.round(pop.gdp_per_capita_usd) : null } : {},
+      indicators: indicatorsOf(pop),
       truth,
     });
   }
