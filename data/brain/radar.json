@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-14T12:27:00+00:00",
+  "generated_at": "2026-11-15T12:56:05+00:00",
   "candidates": [
     {
       "country": "مکزیک",
@@ -44,6 +44,17 @@
       "growth_5y_pct": 5.0,
       "avg_tariff_pct": 0.2,
       "companies_in_bank": 88
+    },
+    {
+      "country": "لهستان",
+      "name_en": "Poland",
+      "score": 83.9,
+      "import_tons": 54732.0,
+      "unit_value_usd": 514.0,
+      "unit_value_suspect": false,
+      "growth_5y_pct": 8.0,
+      "avg_tariff_pct": 0.23,
+      "companies_in_bank": 59
     },
     {
       "country": "هلند",
@@ -154,17 +165,6 @@
       "growth_5y_pct": 10.0,
       "avg_tariff_pct": 0.29,
       "companies_in_bank": 8
-    },
-    {
-      "country": "مالزی",
-      "name_en": "Malaysia",
-      "score": 72.2,
-      "import_tons": 27310.0,
-      "unit_value_usd": 406.0,
-      "unit_value_suspect": false,
-      "growth_5y_pct": 2.0,
-      "avg_tariff_pct": 0.24,
-      "companies_in_bank": 35
     }
   ]
 }
