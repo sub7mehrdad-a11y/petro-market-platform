@@ -7,6 +7,7 @@ import QueuePanel from "./QueuePanel";
 import ReportPanel from "./ReportPanel";
 import AutoPanel from "./AutoPanel";
 import FollowupPanel from "./FollowupPanel";
+import WhatsAppPanel from "./WhatsAppPanel";
 
 const GRADE_LABELS = {
   food: "خوراکی",
@@ -143,7 +144,7 @@ export default function OutreachClient({ companies, countries, sendingEnabled, h
     <div className="space-y-6">
       <PageHeader
         title="ایمیل معرفی"
-        subtitle="ارسال دسته‌ای ایمیل معرفی شرکت + کاتالوگ محصول، بر اساس کشور/صنعت/گرید هر شرکت."
+        subtitle="ارسال دسته‌ای ایمیل معرفی شرکت + کاتالوگ محصول، بر اساس کشور/صنعت/گرید هر شرکت. پایین‌تر: پیام واتساپ نیمه‌خودکار."
       />
 
       {halted && (
@@ -348,6 +349,8 @@ export default function OutreachClient({ companies, countries, sendingEnabled, h
           </div>
         )}
       </section>
+
+      <WhatsAppPanel />
 
       <AutoPanel halted={halted} />
 
