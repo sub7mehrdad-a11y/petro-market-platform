@@ -52,47 +52,100 @@ function writeWhatsAppState(state) {
 }
 
 /** ثبت وضعیت یک شرکت. opened: واتساپ باز شد؛ sent: کاربر تأیید کرد فرستاده؛ reset: پاک شدن وضعیت. */
-export function recordWhatsApp(id, action, { text, at = new Date() } = {}) {
+export function recordWhatsApp(id, action, { text, lang, at = new Date() } = {}) {
   const state = readWhatsAppState();
   const iso = at.toISOString();
   if (action === "reset") {
     delete state.items[id];
   } else {
     const prev = state.items[id] || { history: [] };
-    const history = [...prev.history, { at: iso, action, ...(text ? { text: String(text).slice(0, MAX_TEXT) } : {}) }].slice(-MAX_HISTORY);
+    const history = [...prev.history, { at: iso, action, ...(lang ? { lang } : {}), ...(text ? { text: String(text).slice(0, MAX_TEXT) } : {}) }].slice(-MAX_HISTORY);
     state.items[id] = { status: action, opened_at: action === "opened" ? iso : prev.opened_at || null, sent_at: action === "sent" ? iso : prev.sent_at || null, history };
   }
   writeWhatsAppState(state);
   return state.items[id] || null;
 }
 
-const GRADE_LINE = {
-  food: "We understand you may be sourcing Food Grade sodium bicarbonate. Ours is backed by SGS and COA certification.",
-  feed: "We understand you may be sourcing Feed Grade sodium bicarbonate for animal nutrition.",
-  industrial: "We understand you may be sourcing Industrial Grade sodium bicarbonate.",
-  unclear: null,
+export const WA_LANGS = ["en", "ru", "ar"];
+export const WA_LANG_LABEL_FA = { en: "انگلیسی", ru: "روسی", ar: "عربی" };
+
+// زبان محلیِ کشورهایی که پیام به زبان خودشان برایشان معنی دارد. بقیه (هند، چین، ترکیه …) فقط انگلیسی.
+// اوکراین و قفقاز عمداً روسی نیستند. کاربر در رابط می‌تواند برای هر شرکت زبان را دستی عوض کند.
+const RU_COUNTRIES = new Set(["russia", "russian federation", "belarus", "kazakhstan", "kyrgyzstan", "uzbekistan", "tajikistan"]);
+const AR_COUNTRIES = new Set([
+  "united arab emirates", "saudi arabia", "egypt", "kuwait", "syria", "bahrain", "jordan", "lebanon", "morocco", "palestine",
+  "qatar", "oman", "iraq", "yemen", "libya", "tunisia", "algeria", "sudan",
+]);
+
+/** "ru" | "ar" | null (null = فقط انگلیسی) */
+export function localLanguageFor(countryEn) {
+  const c = String(countryEn || "").trim().toLowerCase();
+  if (RU_COUNTRIES.has(c)) return "ru";
+  if (AR_COUNTRIES.has(c)) return "ar";
+  return null;
+}
+
+// فقط ادعاهای متن تأییدشده‌ی ایمیل (تا ۱۵٬۰۰۰ تن در ماه، سه گرید، SGS و COA برای خوراکی). قیمت نیست.
+const T = {
+  en: {
+    hello: (n) => `Hello ${n} team,`,
+    intro: "I am Mehrdad Abutalebi, Export Marketing at Pars Baking Soda Group (Iran). We are a direct producer of sodium bicarbonate, with capacity of up to 15,000 metric tons per month, in Food, Feed and Industrial grades.",
+    grade: {
+      food: "We understand you may be sourcing Food Grade sodium bicarbonate. Ours is backed by SGS and COA certification.",
+      feed: "We understand you may be sourcing Feed Grade sodium bicarbonate for animal nutrition.",
+      industrial: "We understand you may be sourcing Industrial Grade sodium bicarbonate.",
+    },
+    catalog: { food: "Food Grade Catalogue", industrial: "Industrial Grade Catalogue" },
+    ask: "Could you share your required grade, packaging and estimated quantity? We will prepare our best quotation.",
+    bye: ["Thank you,", "Mehrdad Abutalebi", "Export Marketing, Pars Baking Soda Group"],
+  },
+  ru: {
+    hello: (n) => `Здравствуйте, команда ${n}!`,
+    intro: "Меня зовут Мехрдад Абуталеби, я отвечаю за экспортный маркетинг в Pars Baking Soda Group (Иран). Мы — прямой производитель гидрокарбоната натрия (пищевой соды) мощностью до 15 000 тонн в месяц; выпускаем пищевой, кормовой и технический сорта.",
+    grade: {
+      food: "Насколько мы понимаем, вас может интересовать гидрокарбонат натрия пищевого сорта. Наша продукция подтверждена сертификатами SGS и COA.",
+      feed: "Насколько мы понимаем, вас может интересовать гидрокарбонат натрия кормового сорта для питания животных.",
+      industrial: "Насколько мы понимаем, вас может интересовать гидрокарбонат натрия технического сорта.",
+    },
+    catalog: { food: "Каталог (пищевой сорт)", industrial: "Каталог (технический сорт)" },
+    ask: "Не могли бы вы сообщить, какой сорт, фасовка и ориентировочный объём вам нужны? Мы подготовим для вас лучшее коммерческое предложение.",
+    bye: ["С уважением,", "Мехрдад Абуталеби", "Экспортный маркетинг, Pars Baking Soda Group"],
+  },
+  ar: {
+    hello: (n) => `السادة فريق ${n} المحترمون،`,
+    intro: "أنا مهرداد أبوطالبي، مسؤول التسويق التصديري في مجموعة بارس لصودا الخبز (Pars Baking Soda Group) في إيران. نحن منتج مباشر لبيكربونات الصوديوم بطاقة إنتاجية تصل إلى 15,000 طن متري شهريًا، بالدرجات الغذائية والعلفية والصناعية.",
+    grade: {
+      food: "نتفهم أنكم قد تبحثون عن بيكربونات الصوديوم بالدرجة الغذائية. منتجنا حاصل على شهادتي SGS وCOA.",
+      feed: "نتفهم أنكم قد تبحثون عن بيكربونات الصوديوم بالدرجة العلفية لتغذية الحيوان.",
+      industrial: "نتفهم أنكم قد تبحثون عن بيكربونات الصوديوم بالدرجة الصناعية.",
+    },
+    catalog: { food: "كتالوج الدرجة الغذائية", industrial: "كتالوج الدرجة الصناعية" },
+    ask: "هل يمكنكم تزويدنا بالدرجة المطلوبة ونوع التعبئة والكمية التقديرية؟ سنعدّ لكم أفضل عرض سعر.",
+    bye: ["مع خالص التحية،", "مهرداد أبوطالبي", "التسويق التصديري، مجموعة بارس لصودا الخبز"],
+  },
 };
 
-/** متن کوتاه انگلیسی بر پایه‌ی متن تأییدشده‌ی ایمیل معرفی (فقط ادعاهای همان متن). گرید نامعلوم ← جمله‌ی گرید نمی‌آید. */
-export function renderWhatsAppMessage(lead) {
+// عنوان کاتالوگ به زبان پیام. کاتالوگ‌های دامی (فقط انگلیسی در env) برچسب انگلیسی می‌مانند.
+function catalogLabel(lang, label) {
+  if (/^Food Grade/i.test(label)) return T[lang].catalog.food;
+  if (/^Industrial Grade/i.test(label)) return T[lang].catalog.industrial;
+  return label;
+}
+
+/**
+ * متن کوتاه بر پایه‌ی متن تأییدشده‌ی ایمیل معرفی (فقط ادعاهای همان متن). گرید نامعلوم ← جمله‌ی گرید نمی‌آید.
+ * lang: en | ru | ar (پیش‌فرض انگلیسی).
+ */
+export function renderWhatsAppMessage(lead, lang = "en") {
+  const L = T[WA_LANGS.includes(lang) ? lang : "en"];
+  const lg = WA_LANGS.includes(lang) ? lang : "en";
   const grade = classifyGrade(lead.target_grade);
   const catalogs = getCatalogLinks(grade).links.filter((l) => l.url);
-  const lines = [
-    `Hello ${lead.name || "Sir/Madam"} team,`,
-    "",
-    "I am Mehrdad Abutalebi, Export Marketing at Pars Baking Soda Group (Iran). We are a direct producer of sodium bicarbonate, with capacity of up to 15,000 metric tons per month, in Food, Feed and Industrial grades.",
-  ];
-  if (GRADE_LINE[grade]) lines.push("", GRADE_LINE[grade]);
-  if (catalogs.length) lines.push("", ...catalogs.map((l) => `${l.label}: ${l.url}`));
-  lines.push(
-    "",
-    "Could you share your required grade, packaging and estimated quantity? We will prepare our best quotation.",
-    "",
-    "Thank you,",
-    "Mehrdad Abutalebi",
-    "Export Marketing, Pars Baking Soda Group",
-  );
-  return { text: lines.join("\n"), grade, missing_catalog: getCatalogLinks(grade).missing };
+  const lines = [L.hello(lead.name || "Sir/Madam"), "", L.intro];
+  if (L.grade[grade]) lines.push("", L.grade[grade]);
+  if (catalogs.length) lines.push("", ...catalogs.map((l) => `${catalogLabel(lg, l.label)}: ${l.url}`));
+  lines.push("", L.ask, "", ...L.bye);
+  return { text: lines.join("\n"), grade, lang: lg, missing_catalog: getCatalogLinks(grade).missing };
 }
 
 /** لینک باز‌کردن واتساپ با متن آماده. شماره فقط رقم. */

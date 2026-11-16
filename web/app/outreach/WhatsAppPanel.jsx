@@ -12,6 +12,7 @@ const STATUS = {
   opened: { label: "واتساپ باز شد", cls: "bg-warning-soft text-warning" },
   sent: { label: "ارسال شد ✓", cls: "bg-success-soft text-success" },
 };
+const LANG_FA = { en: "انگلیسی", ru: "روسی", ar: "عربی" };
 const GRADE_FA = { food: "خوراکی", feed: "دامی", industrial: "صنعتی", unclear: "نامشخص" };
 
 async function call(url, opts) {
@@ -29,7 +30,9 @@ export default function WhatsAppPanel() {
   const [q, setQ] = useState("");
   const [page, setPage] = useState(0);
   const [openId, setOpenId] = useState(null);
-  const [drafts, setDrafts] = useState({}); // id -> متن ویرایش‌شده
+  const [drafts, setDrafts] = useState({}); // "id:زبان" -> متن ویرایش‌شده
+  const [langMode, setLangMode] = useState("en"); // en = همه انگلیسی | local = زبان محلی هر کشور (روسی/عربی؛ بقیه انگلیسی)
+  const [langOverride, setLangOverride] = useState({}); // id -> زبانی که کاربر دستی انتخاب کرده
   const [busy, setBusy] = useState("");
 
   const load = useCallback(async () => {
@@ -52,9 +55,11 @@ export default function WhatsAppPanel() {
 
   const canSend = !!data?.sending_enabled && !data?.state_problem;
 
-  async function act(id, action, text) {
+  const langOf = (r) => langOverride[r.id] || (langMode === "local" && r.local_lang ? r.local_lang : "en");
+
+  async function act(id, action, text, lang) {
     setBusy(id);
-    const r = await call("/api/outreach/whatsapp", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id, action, text }) });
+    const r = await call("/api/outreach/whatsapp", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ id, action, text, lang }) });
     if (!r.ok) setError(r.error || "ثبت نشد");
     setBusy("");
     await load();
@@ -62,13 +67,13 @@ export default function WhatsAppPanel() {
   }
 
   async function openWhatsApp(r) {
-    const text = drafts[r.id] ?? r.message;
-    const digits = r.link?.match(/wa\.me\/(\d+)/)?.[1];
-    if (!digits) { setError("شماره‌ی این شرکت نامعتبر است."); return; }
+    const lang = langOf(r);
+    const text = drafts[`${r.id}:${lang}`] ?? r.messages[lang];
+    if (!r.wa) { setError("شماره‌ی این شرکت نامعتبر است."); return; }
     // پنجره‌ی خالی همان لحظه‌ی کلیک باز می‌شود (وگرنه مرورگر بعد از await آن را مسدود می‌کند)؛ بعد از ثبت موفق، آدرس واتساپ در آن می‌نشیند.
     const w = window.open("", "_blank");
-    const ok = await act(r.id, "opened", text);
-    if (ok && w) { w.opener = null; w.location.href = `https://wa.me/${digits}?text=${encodeURIComponent(text.slice(0, 2000))}`; }
+    const ok = await act(r.id, "opened", text, lang);
+    if (ok && w) { w.opener = null; w.location.href = `https://wa.me/${r.wa}?text=${encodeURIComponent(text.slice(0, 2000))}`; }
     else if (w) w.close();
   }
 
@@ -110,6 +115,13 @@ export default function WhatsAppPanel() {
             <input type="text" value={q} onChange={(e) => setQ(e.target.value)} placeholder="جست‌وجوی نام شرکت…" className="input flex-1 min-w-[160px]" />
           </div>
 
+          <div className="flex flex-wrap items-center gap-3 rounded-xl border border-border bg-canvas p-3 text-sm">
+            <span className="font-medium">زبان پیام‌ها:</span>
+            <label className="flex items-center gap-1.5"><input type="radio" name="wa-lang" checked={langMode === "en"} onChange={() => setLangMode("en")} /> همه انگلیسی (پیش‌فرض)</label>
+            <label className="flex items-center gap-1.5"><input type="radio" name="wa-lang" checked={langMode === "local"} onChange={() => setLangMode("local")} /> زبان کشور مقصد ({fa(rows.filter((r) => r.local_lang === "ru").length)} روسی، {fa(rows.filter((r) => r.local_lang === "ar").length)} عربی؛ بقیه انگلیسی)</label>
+            <span className="text-xs text-text-muted">برای هر شرکت می‌توانید زبان را جدا عوض کنید.</span>
+          </div>
+
           <p className="text-sm">{fa(filtered.length)} شرکت مطابق این فیلتر</p>
 
           <div className="overflow-x-auto">
@@ -123,14 +135,16 @@ export default function WhatsAppPanel() {
                 {view.map((r) => {
                   const st = STATUS[r.status] || STATUS.new;
                   const open = openId === r.id;
-                  const text = drafts[r.id] ?? r.message;
+                  const lang = langOf(r);
+                  const dk = `${r.id}:${lang}`;
+                  const text = drafts[dk] ?? r.messages[lang];
                   return (
                     <Fragment key={r.id}>
                       <tr className="border-b border-border align-top">
                         <td className="py-2 pe-3">
                           <div className="font-medium">{r.name}</div>
                           <div className="text-[11px] text-text-muted">
-                            {r.exhibition} · گرید: {GRADE_FA[r.grade]}
+                            {r.exhibition} · گرید: {GRADE_FA[r.grade]} · زبان پیام: {LANG_FA[lang]}
                             {r.match === "medium" && <span className="ms-1 rounded-full bg-warning-soft px-1.5 text-warning">تطبیق سایت متوسط</span>}
                             {r.emailed && <span className="ms-1 rounded-full bg-canvas px-1.5">قبلاً ایمیل شده</span>}
                             {r.same_number_as.length > 0 && <span className="ms-1 rounded-full bg-canvas px-1.5" title={r.same_number_as.join("، ")}>شماره‌ی مشترک با {fa(r.same_number_as.length)} شرکت</span>}
@@ -148,12 +162,19 @@ export default function WhatsAppPanel() {
                       {open && (
                         <tr key={`${r.id}-d`} className="border-b border-border bg-canvas">
                           <td colSpan={5} className="p-3 space-y-3">
-                            <textarea dir="ltr" rows={11} value={text} onChange={(e) => setDrafts({ ...drafts, [r.id]: e.target.value })} className="input w-full font-mono text-xs leading-6" />
+                            <div className="flex flex-wrap items-center gap-2 text-xs">
+                              <span className="text-text-muted">زبان این پیام:</span>
+                              {["en", "ru", "ar"].map((l) => (
+                                <button key={l} type="button" onClick={() => setLangOverride({ ...langOverride, [r.id]: l })} className={`rounded-full border px-3 py-1 ${l === lang ? "border-primary bg-primary text-white" : "border-border bg-surface"}`}>{LANG_FA[l]}{r.local_lang === l ? " (زبان کشور)" : ""}</button>
+                              ))}
+                              {r.local_lang === null && <span className="text-text-muted">برای این کشور زبان محلی (روسی/عربی) تعریف نشده؛ پیش‌فرض انگلیسی است.</span>}
+                            </div>
+                            <textarea dir="auto" rows={12} value={text} onChange={(e) => setDrafts({ ...drafts, [dk]: e.target.value })} className="input w-full text-sm leading-7" />
                             <div className="flex flex-wrap items-center gap-3">
-                              <button type="button" className="btn" disabled={!canSend || busy === r.id || !r.link} onClick={() => openWhatsApp(r)}>{busy === r.id ? "…" : "ارسال در واتساپ"}</button>
+                              <button type="button" className="btn" disabled={!canSend || busy === r.id || !r.wa} onClick={() => openWhatsApp(r)}>{busy === r.id ? "…" : "ارسال در واتساپ"}</button>
                               {r.status === "opened" && <button type="button" className="btn btn-secondary" disabled={busy === r.id} onClick={() => act(r.id, "sent")}>ارسال شد ✓</button>}
                               {r.status !== "new" && <button type="button" className="text-xs text-danger hover:underline" disabled={busy === r.id} onClick={() => act(r.id, "reset")}>بازنشانی وضعیت</button>}
-                              {drafts[r.id] !== undefined && <button type="button" className="text-xs text-text-muted hover:underline" onClick={() => { const d = { ...drafts }; delete d[r.id]; setDrafts(d); }}>برگشت به متن اصلی</button>}
+                              {drafts[dk] !== undefined && <button type="button" className="text-xs text-text-muted hover:underline" onClick={() => { const d = { ...drafts }; delete d[dk]; setDrafts(d); }}>برگشت به متن اصلی</button>}
                               {r.status === "opened" && <span className="text-xs text-text-muted">بعد از زدن Send در واتساپ، «ارسال شد» را بزنید.</span>}
                             </div>
                           </td>
