@@ -6135,140 +6135,6 @@
     "website_match": "official",
     "checked_at": "2026-10-23"
   },
-  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114317": {
-    "name": "COFCO BIOTECHNOLOGY",
-    "country": "Russia",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [
-      "https://www.itstime.group → 503"
-    ],
-    "needs_render": false,
-    "checked_at": "2026-10-23"
-  },
-  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113456": {
-    "name": "GCD GROUP, LTD",
-    "country": "Russia",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [
-      "https://www.komeszflavour.com → 503"
-    ],
-    "needs_render": false,
-    "checked_at": "2026-10-23"
-  },
-  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114644": {
-    "name": "RAMIX",
-    "country": "Russia",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
-    "needs_render": false,
-    "checked_at": "2026-10-23"
-  },
-  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113851": {
-    "name": "CITI IMPEX COMPANY LTD",
-    "country": "Russia",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
-    "needs_render": false,
-    "checked_at": "2026-10-23"
-  },
-  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113587": {
-    "name": "DIXIANG(DALI) BIOTECHNOLOGY CO., LTD.",
-    "country": "China",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [
-      "https://www.wingengroup.com → 503"
-    ],
-    "needs_render": false,
-    "checked_at": "2026-10-23"
-  },
-  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113236": {
-    "name": "DONGGUAN BELLA BIOTECH CO., LTD.",
-    "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
-    "needs_render": false,
-    "checked_at": "2026-10-23"
-  },
-  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113827": {
-    "name": "FUJIAN GLOBAL OCEAN BIOTECHNOLOGY CO., LTD.",
-    "country": "China",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [
-      "https://www.globalocean-agar.com → 504"
-    ],
-    "needs_render": false,
-    "checked_at": "2026-10-23"
-  },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113553": {
     "name": "LIANYUNGANG NUOXIN FOOD INGREDIENT CO., LTD",
     "country": "China",
@@ -6292,6 +6158,270 @@
     "website_match": "official",
     "checked_at": "2026-10-23"
   },
+  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114317": {
+    "name": "COFCO BIOTECHNOLOGY",
+    "country": "Russia",
+    "website": "https://www.cofco.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/2 واژه‌ی نام (cofco) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.cofco.com"
+    ],
+    "notes": [
+      "https://www.itstime.group → 503",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "中粮集团有限公司. 中粮集团是中国最大的粮油食品进出口公司和实力雄厚的食品生产商。在与大众生活息息相关的农产品贸易、生物质能源开发、食品生产加工、地产、物业、酒店经营以及金融服务等领域成绩卓著. ﻿ 中粮集团有限公司",
+    "checked_at": "2026-11-14"
+  },
+  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113456": {
+    "name": "GCD GROUP, LTD",
+    "country": "Russia",
+    "website": "https://www.gcd-russia.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (gcd) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "ethic@gcd-russia.com",
+        "kind": "mailto",
+        "source_url": "https://www.gcd-russia.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "ethic@gcd-russia.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.gcd-russia.com",
+    "phones": [
+      {
+        "e164": "+78129266001",
+        "display": "+7 812 926-60-01",
+        "kind": "tel",
+        "source_url": "https://www.gcd-russia.com"
+      }
+    ],
+    "phone_best": "+7 812 926-60-01",
+    "phone_source_url": "https://www.gcd-russia.com",
+    "pages_checked": [
+      "https://www.gcd-russia.com",
+      "https://www.gcd-russia.com/contacts/"
+    ],
+    "notes": [
+      "https://www.komeszflavour.com → 503",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "Менеджмент клинических исследований | Global Clinical Decisions. GLOBAL CLINICAL DECISIONS: услуги независимого этического комитета и создание исследовательских центров в медицинских учреждениях России.. Менеджмент клинических исследований | Global Clinical Decisions Главная Конструктор резюме НЭК Клиникам Спонсорам GCP тренинг Вакансии Контакты Консультация +7 (812) 926-60-01 Адрес Россия, Санкт-Петербург 197374 ул. Савушкина, д. 104, стр. 1, пом. 382-Н График работы Пн-Пт 10:00 – 18:00 Email ethic@gcd-russia.com Войти в личный кабинет Обратный звонок Оставьте свой номер телефона и мы свяжемся с вами в ближайшее время Телефон Отправить заявку Даю согласие на обработку персональных данных Ко",
+    "checked_at": "2026-11-14"
+  },
+  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114644": {
+    "name": "RAMIX",
+    "country": "Russia",
+    "website": "https://ramix-official.ru",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (ramix) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "ramixna246@mail.ru",
+        "kind": "mailto",
+        "source_url": "https://ramix-official.ru",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": "ramixna246@mail.ru",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://ramix-official.ru",
+    "phones": [
+      {
+        "e164": "+79185932978",
+        "display": "+7 918 593-29-78",
+        "kind": "tel",
+        "source_url": "https://ramix-official.ru/contacts"
+      },
+      {
+        "e164": "+79885143755",
+        "display": "+7 988 514-37-55",
+        "kind": "tel",
+        "source_url": "https://ramix-official.ru/contacts"
+      },
+      {
+        "e164": "+79264079885",
+        "display": "+7 926 407-98-85",
+        "kind": "tel",
+        "source_url": "https://ramix-official.ru/contacts"
+      }
+    ],
+    "phone_best": "+7 918 593-29-78",
+    "phone_source_url": "https://ramix-official.ru/contacts",
+    "pages_checked": [
+      "https://ramix-official.ru",
+      "https://ramix-official.ru/contacts"
+    ],
+    "notes": [
+      "https://remixfm.ru → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Натуральные оболочки и пищевые ингредиенты для мясной промышленности | Рамикс. Надежный поставщик натуральных и искусственных оболочек, специй и пищевых ингредиентов. Черева свиная, баранья, говяжья, синюга, фабиос, фиброуз, КПД. Высокое качество, оптовая и розничная торговля. Скидка 10% на первый заказ!. Натуральные оболочки и пищевые ингредиенты для мясной промышленности | Рамикс Натуральная продукция Натуральные оболочки, специи и ингредиенты — в одной поставке Разные категории в одном заказе Быстрая обратная связь Внимание к деталям заказа Запросить оптовые условия Скачать прайс Подберём натуральную и искусственную оболочку, специи и комплексные смеси под ваш ассортимент и объём закупки.",
+    "checked_at": "2026-11-14"
+  },
+  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113851": {
+    "name": "CITI IMPEX COMPANY LTD",
+    "country": "Russia",
+    "website": "http://www.citiimpex.ru",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (citi, impex) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@citiimpex.ru",
+        "kind": "text",
+        "source_url": "http://www.citiimpex.ru/?page_id=26",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@citiimpex.ru",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "http://www.citiimpex.ru/?page_id=26",
+    "phones": [
+      {
+        "e164": "+78314349749",
+        "display": "+7 831 434-97-49",
+        "kind": "text",
+        "source_url": "http://www.citiimpex.ru/?page_id=26"
+      }
+    ],
+    "phone_best": "+7 831 434-97-49",
+    "phone_source_url": "http://www.citiimpex.ru/?page_id=26",
+    "pages_checked": [
+      "http://www.citiimpex.ru",
+      "http://www.citiimpex.ru/?page_id=26"
+    ],
+    "notes": [
+      "https://catalog.expocentr.ru → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "citiimpex — Ингредиенты со всего мира. . citiimpex — Ингредиенты со всего мира Перейти к содержимому Олеорезины Эфирные масла Гуаровая камедь Масла цитрусовых Стерилизованные специи Натуральные красители Микрокапсулированная продукция СО² экстракты",
+    "checked_at": "2026-11-14"
+  },
+  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113587": {
+    "name": "DIXIANG(DALI) BIOTECHNOLOGY CO., LTD.",
+    "country": "China",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://www.wingengroup.com → 503",
+      "https://www.ingredientsnetwork.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.cnverify.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://digital.eurotier.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://synapse.patsnap.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-14"
+  },
+  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113236": {
+    "name": "DONGGUAN BELLA BIOTECH CO., LTD.",
+    "country": "China",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://www.cnverify.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.qcc.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://baike.baidu.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-14"
+  },
+  "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113827": {
+    "name": "FUJIAN GLOBAL OCEAN BIOTECHNOLOGY CO., LTD.",
+    "country": "China",
+    "website": "http://en.globalocean-agar.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "3/3 واژه‌ی نام (fujian, ocean, biotechnology) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@globalocean-agar.com",
+        "kind": "mailto",
+        "source_url": "http://en.globalocean-agar.com/blank421.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@globalocean-agar.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "http://en.globalocean-agar.com/blank421.html",
+    "phones": [
+      {
+        "e164": "+8613599156106",
+        "display": "+86 135 9915 6106",
+        "kind": "tel",
+        "source_url": "http://en.globalocean-agar.com/blank421.html"
+      },
+      {
+        "e164": "+865963558688",
+        "display": "+86 596 355 8688",
+        "kind": "tel",
+        "source_url": "http://en.globalocean-agar.com/blank421.html"
+      },
+      {
+        "e164": "+8618695751290",
+        "display": "+86 186 9575 1290",
+        "kind": "tel",
+        "source_url": "http://en.globalocean-agar.com/blank421.html"
+      }
+    ],
+    "phone_best": "+86 135 9915 6106",
+    "phone_source_url": "http://en.globalocean-agar.com/blank421.html",
+    "pages_checked": [
+      "http://en.globalocean-agar.com",
+      "http://en.globalocean-agar.com/blank421.html"
+    ],
+    "notes": [
+      "https://www.globalocean-agar.com → 504",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Fujian Huanhai Biotechnology Co., Ltd.-Carrageenan Professional. A Sino-foreign joint venture technology enterprise specializing in the R&D, production, and sales of seaweed hydrophilic colloids.. Fujian Huanhai Biotechnology Co., Ltd.-Carrageenan Professional Home About Us Company Profile Corporate History Social responsibility Qualifications and Honors News Company News Industry News Product Showcase Agar Instant Agar Agar oligosaccharides Agar oligosaccharides Silver ear oligosaccharides Agar medium Agarose Carrageenan Red algae powder Organic red algae powder Chitosan oligosaccharide Compound product Subsidiary Company Introduction Product Showcase Contact Information 中文 Agar-agar & C",
+    "checked_at": "2026-11-14"
+  },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113611": {
     "name": "LIANYUNGANG SHUREN KECHUANG FOOD ADDITIVE CO., LTD.",
     "country": "China",
@@ -6306,65 +6436,125 @@
     "phone_best": null,
     "phone_source_url": null,
     "pages_checked": [],
-    "notes": [],
+    "notes": [
+      "https://www.lygshuren.com → نام شرکت با صفحه نمی‌خواند (1/4 واژه‌ی نام (shuren) در عنوان/متن/دامنه)",
+      "http://en.lygshuren.com → نام شرکت با صفحه نمی‌خواند (1/4 واژه‌ی نام (shuren) در عنوان/متن/دامنه)",
+      "https://www.ingredientsnetwork.com → نام شرکت با صفحه نمی‌خواند (1/4 واژه‌ی نام (additive) در عنوان/متن/دامنه)",
+      "https://www.chemball.com → نام شرکت با صفحه نمی‌خواند (1/4 واژه‌ی نام (additive) در عنوان/متن/دامنه)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113649": {
     "name": "LTW (JIANGSU) LLC",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
+    "website": "http://www.ltwfood.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/2 واژه‌ی نام (ltw) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "49190043@qq.com",
+        "kind": "text",
+        "source_url": "http://www.ltwfood.com/Ch/index.asp",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
     "email_best": null,
     "email_confidence": null,
     "email_source_url": null,
     "phones": [],
     "phone_best": null,
     "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "pages_checked": [
+      "http://www.ltwfood.com/Ch/index.asp",
+      "http://www.ltwfood.com/Ch/contact.asp"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "49190043@qq.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "medium",
+    "site_blurb": "龙泰威（江苏）食品科技有限公司【官网】-食品级硫酸亚铁_食品级七水硫酸亚铁_电池级硫酸亚铁. 龙泰威（江苏）食品科技有限公司为您提供食品级硫酸亚铁厂家直销价格,电池级硫酸亚铁行情资讯,硫酸亚铁知识.. 龙泰威（江苏）食品科技有限公司【官网】-食品级硫酸亚铁_食品级七水硫酸亚铁_电池级硫酸亚铁 欢迎访问龙泰威（江苏）食品科技公司官网！ 网站首页 公司简介 新闻中心 产品介绍 品质保证 人力资源 联系我们 公司简介 组织架构 企业文化 企业掠影 服务理念 联系我们 网站公告 公司新闻 行业动态 硫酸盐系列 磷酸盐系列 碳酸盐系列 盐酸盐系列 柠檬酸盐系列 葡萄糖酸盐系列 甘氨酸系列 氧化物系列 其他产品 认证体系 研发检测中心 车间设备 人才理念 招聘职位 简历中心 硫酸盐系列 磷酸盐系列 碳酸盐系列 盐酸盐系列 柠檬酸盐系列 葡萄糖酸盐系列 甘氨酸系列 氧化物系列 其他产品 友情连接 Link 友情连接 龙泰威食品配料 工商网监 推荐产品 Product 柠檬酸锌 葡萄糖酸锌 柠檬酸钾 氯化钙 氯化钾 硫酸亚铁 硫酸锰 硫酸锌 硫酸铜 公司动态 News MEET US IN Frankfurt！龙泰威邀您… MEET US IN Frankfurt！龙泰威邀您共赴 Fi Europe 2026 >>详细 中秋月圆 | 以科技之力守护中秋味道 金秋助学 筑梦远航｜龙泰威2026年员工子",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114327": {
     "name": "QINGDAO SHENGDA COMMERCIAL & TRADE CO.,LTD",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://shengdatrade.com.cn",
+    "website_status": "verified_name_match",
+    "website_evidence": "3/3 واژه‌ی نام (qingdao, shengda, commercial) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@shengdatrade.com.cn",
+        "kind": "mailto",
+        "source_url": "https://shengdatrade.com.cn",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@shengdatrade.com.cn",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://shengdatrade.com.cn",
+    "phones": [
+      {
+        "e164": "+8653285010535",
+        "display": "+86 532 8501 0535",
+        "kind": "tel",
+        "source_url": "https://shengdatrade.com.cn"
+      }
+    ],
+    "phone_best": "+86 532 8501 0535",
+    "phone_source_url": "https://shengdatrade.com.cn",
+    "pages_checked": [
+      "https://shengdatrade.com.cn",
+      "https://shengdatrade.com.cn/contact.html"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "SHENGDA | Food Ingredients-Feed Ingredients. Qingdao Shengda Commercial & Trading Co., Ltd. is rooted in corn deep processing industry, Achieve annual sales of more than 2 million tons of corn deep processing products, with an output value of more than 8 billion CNY.. SHENGDA | Food Ingredients-Feed Ingredients We are committed to become a Trusted Partner for Customers in Food, Feed, Pharm and Industry Fields! 13 Which sets up 13 factories in three main corn production areas of China 1300 Processing 13 million tons corn annually 30 30 years of experience in corn deep processing industry 20 20 years of experience in exporting food/feed ingredients ABOUT US Who We Are Serving the world's TOP 5",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113914": {
     "name": "QINHUANGDAO LIHUA STARCH CO. LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
+    "website": "https://www.lihua-starch.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "3/3 واژه‌ی نام (qinhuangdao, lihua, starch) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales2@lihua-starch.com",
+        "kind": "mailto",
+        "source_url": "https://www.lihua-starch.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales2@lihua-starch.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.lihua-starch.com",
     "phones": [],
     "phone_best": null,
     "phone_source_url": null,
-    "pages_checked": [],
+    "pages_checked": [
+      "https://www.lihua-starch.com",
+      "https://www.lihua-starch.com/contact_us.html"
+    ],
     "notes": [
-      "https://www.qhdlihua.com → 504"
+      "https://www.qhdlihua.com → 504",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Qinhuangdao Lihua Starch Co.,Ltd. Professional food ingredients & additives China manufacturer /supplier with over 30 years experience, provide the best Corn Starch series for food & beverage, baking, confectionery and food processing industry bulk orders.. Qinhuangdao Lihua Starch Co.,Ltd Innovative Solutions For You Explore More Quality Chemicals Worldwide Explore More Where Minds Catalyze Explore More Culture Provide customers with more valuable chemical supply solutions Values Empathy & mutual benefits for employees, customers and shareholders. Philosophy Take the market as the navigation mark and the customer as the center Mission Create value for customers, employees, and shareholders ",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113230": {
     "name": "SHANGHAI PINRAN HEALTH TECHNOLOGY CO., LTD.",
@@ -6381,48 +6571,103 @@
     "phone_source_url": null,
     "pages_checked": [],
     "notes": [
-      "https://www.nfiglobal.com → 404"
+      "https://www.nfiglobal.com → 404",
+      "https://www.cnverify.com → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.ingredientsnetwork.com → نام شرکت با صفحه نمی‌خواند (1/4 واژه‌ی نام (health) در عنوان/متن/دامنه)",
+      "https://www.qcc.com/web/cms/overseaApply?opsriskcountry=%E4%BC%8A%E6%9C%97&ip=151.238.137.237&back=/ → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://freshdi.com → نام شرکت با صفحه نمی‌خواند (1/4 واژه‌ی نام (health) در عنوان/متن/دامنه)"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113357": {
     "name": "SHANXI HENGQIANG CHEMICAL CO.,LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
+    "website": "https://www.hengqiangchem.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "3/3 واژه‌ی نام (shanxi, hengqiang, chemical) در عنوان/متن/دامنه",
     "emails": [],
     "email_best": null,
     "email_confidence": null,
     "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
+    "phones": [
+      {
+        "e164": "+8618796968862",
+        "display": "+86 187 9696 8862",
+        "kind": "text",
+        "source_url": "https://www.hengqiangchem.com"
+      },
+      {
+        "e164": "+8618861761802",
+        "display": "+86 188 6176 1802",
+        "kind": "text",
+        "source_url": "https://www.hengqiangchem.com"
+      }
+    ],
+    "phone_best": "+86 187 9696 8862",
+    "phone_source_url": "https://www.hengqiangchem.com",
+    "pages_checked": [
+      "https://www.hengqiangchem.com",
+      "https://www.hengqiangchem.com/contact-us.html?ID_150905_830_9814691=1",
+      "https://www.hengqiangchem.com/contact-us.html?ID_150905_830_9814692=1",
+      "https://www.hengqiangchem.com/contact-us.html",
+      "https://www.hengqiangchem.com/contact-us.html"
+    ],
     "notes": [
-      "https://www.sxhqhg.com → 404"
+      "https://www.sxhqhg.com → 404",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Industrial Chemicals Supplier, Industrial Acids Exporter. Shanxi Hengqiang Chemical Co., Ltd. is the Supplier, and Exporter of Industrial Chemicals and Industrial Acids, etc at the latest price from Yuncheng, Shanxi, China.. Industrial Chemicals Supplier, Industrial Acids Exporter SHANXI HENGQIANG CHEMICAL CO.,LTD. Call us now Home Page Company Profile Our Products Chemicals and Acid Disodium Malate DL- Malic Acid Fumaric acid Contact Us DL- Malic Acid Send Inquiry Disodium Malate Send Inquiry Your preferred partner to get reasonably priced and international quality Industrial Chemicals and Industrial Acids. Shanxi Hengqiang Chemical Co., Ltd. is a new company with dreams of establishing its",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113359": {
     "name": "TIANJIN HEXIYUAN LECITHIN TECHNOLOGY CO., LTD",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://www.lecithinsoya.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "4/4 واژه‌ی نام (tianjin, hexiyuan, lecithin, technology) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "admin@lecithinsoya.com",
+        "kind": "mailto",
+        "source_url": "https://www.lecithinsoya.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "admin@lecithinsoya.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.lecithinsoya.com",
+    "phones": [
+      {
+        "e164": "+862283973911",
+        "display": "+86 22 8397 3911",
+        "kind": "text",
+        "source_url": "https://www.lecithinsoya.com"
+      },
+      {
+        "e164": "+8618522609603",
+        "display": "+86 185 2260 9603",
+        "kind": "text",
+        "source_url": "https://www.lecithinsoya.com"
+      }
+    ],
+    "phone_best": "+86 22 8397 3911",
+    "phone_source_url": "https://www.lecithinsoya.com",
+    "pages_checked": [
+      "https://www.lecithinsoya.com",
+      "https://www.lecithinsoya.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Soya Lecithin Powder and Phosphatidylcholine in Non Gmo Soya Lecithin Powder Factory. Our company supply Water Soluble Soya Lecithin Powder, we have a whole set of quality management system on Soya Lecithin Liquid. If you have interested in our Brown Yellow Solid Phosphatidylcholine, pls feel free to contact us.. Soya Lecithin Powder and Phosphatidylcholine in Non Gmo Soya Lecithin Powder Factory Home About Us Products Food Grade Pharmaceutical Grade Feed and Industrial Grade News Contact Us Our advantages 7000 square meters workshop Our factory have a 7000 square meters GMP standard production workshop lecithin products over 10 years Both of us are specialized in lecithin products over 10 y",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113231": {
     "name": "WEIKUANG（JINING）NEW MATERIALS CO., LTD",
@@ -6438,29 +6683,57 @@
     "phone_best": null,
     "phone_source_url": null,
     "pages_checked": [],
-    "notes": [],
+    "notes": [
+      "https://www.cnverify.com → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://sourceingredients.com → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.qcc.com/web/cms/overseaApply?opsriskcountry=%E4%BC%8A%E6%9C%97&ip=151.238.137.237&back=/ → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.cfaa.cn → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113446": {
     "name": "ECOCOLOR TK, LLC",
     "country": "Russia",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
+    "website": "https://ecocolor.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/2 واژه‌ی نام (ecocolor) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@ecocolor.com",
+        "kind": "mailto",
+        "source_url": "https://ecocolor.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@ecocolor.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://ecocolor.com",
+    "phones": [
+      {
+        "e164": "+74957770008",
+        "display": "+7 495 777-00-08",
+        "kind": "tel",
+        "source_url": "https://ecocolor.com"
+      }
+    ],
+    "phone_best": "+7 495 777-00-08",
+    "phone_source_url": "https://ecocolor.com",
+    "pages_checked": [
+      "https://ecocolor.com",
+      "https://ecocolor.com/contacts",
+      "https://ecocolor.com/#contact"
+    ],
     "notes": [
-      "https://www.ecocolor.com → 503"
+      "https://www.ecocolor.com → 503",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "ЭкоКолор — пищевые ингредиенты и технологические решения. ЭкоКолор: красители, ароматизаторы, стабилизационные системы и ингредиенты для пищевой промышленности. Подбор ингредиентов и технологическая поддержка.. ЭкоКолор — пищевые ингредиенты и технологические решения К содержанию Пищевые ингредиенты и технологические решения для производств Красители, ароматизаторы, стабилизационные системы и ингредиенты для пищевой промышленности. Смотреть продукцию О КОМПАНИИ ЭкоКолор — ингредиенты и технологические решения для пищевой промышленности С 2001 года работаем с производителями продуктов питания в России и СНГ. Поставляем пищевые ингредиенты, разрабатываем функциональные решения и помогаем адапт",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113962": {
     "name": "ALASHANKOU DEHUI INTERNATIONAL TRADE CO.,LTD",
@@ -6476,16 +6749,21 @@
     "phone_best": null,
     "phone_source_url": null,
     "pages_checked": [],
-    "notes": [],
+    "notes": [
+      "https://www.cnverify.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.trademo.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://en.52wmb.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.qcc.com/web/cms/overseaApply?opsriskcountry=%E4%BC%8A%E6%9C%97&ip=151.238.137.237&back=/ → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113911": {
     "name": "HENAN WEICHUANG BIO-TECH CO., LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
+    "website": "https://www.synaturalvinegar.com",
+    "website_status": "verified_official",
+    "website_evidence": "0/4 واژه‌ی نام (-) در عنوان/متن/دامنه (از فهرست رسمی نمایشگاه)",
     "emails": [],
     "email_best": null,
     "email_confidence": null,
@@ -6493,68 +6771,239 @@
     "phones": [],
     "phone_best": null,
     "phone_source_url": null,
-    "pages_checked": [],
+    "pages_checked": [
+      "https://www.synaturalvinegar.com"
+    ],
     "notes": [
-      "https://www.synaturalvinegar.com → 503"
+      "support@synaturalvinegar.com نقش غیرتجاری است (کنار گذاشته شد)"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "official",
+    "site_blurb": "爱游戏官方网站-爱游戏(中国). 爱游戏官方网站【www.synaturalvinegar.com】专注绿茵场值得一看再看的进球与解读：即时比分、五大联赛关键战、世界杯经典战役，以及 C罗、梅西、姆巴佩、哈兰德、贝林厄姆、罗德里、亚马尔等球星内容，网页版与手机端同一套内容，全天更新。. 爱游戏官方网站-爱游戏(中国) 爱游戏官方网站 · 高位防线的代价，写在丢球后的前三秒 焦点对决、比分变化、球员状态与数据模型，爱游戏 官方内容团队在同一页面里对齐呈现，不用在多个来源之间来回切换。 网页端入口 下载APP 补赛窗口 每日更新 · 首发与伤停一次看全 新星上强度 赛程与积分榜 · 关键场次提前标记 季军战选 球员档案 · 进球助攻与跑动数据 荣誉与成就 爱游戏官方网站 在多个国际赛事科技平台评比中脱颖而出，持续提升安全性与观赛体验。 亚洲体育服务平台大奖 2022 年度综合类数字体育平台荣誉奖项，肯定平台服务能力。 数据合规卓越平台 平台顺利通过 GDPR 与 ISO 多项认证，建立技术安全新标准。 用户满意度大奖 爱游戏官方网站-爱游戏(中国) 用户活跃度与续访率连续三年领先，综合评分稳定保持高位。 我们的使命与愿景 爱游戏官方网站 以全球化视角推进数字体育服务，专注构建一个可信赖、体验出众的综合赛事平台。 安全为本 坚持业界领先的数据保护机制，用户隐私永远第一位。 科技驱动 将创新技术融入爱游戏官方网站-爱游戏(中国)各项服务，持续刷新体验上限。 用户至上 每一次更",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113845": {
     "name": "HENAN ZHONGDA HENGYUAN BIOTECHNOLOGY STOCK CO., LTD",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://www.zdextract.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "5/5 واژه‌ی نام (henan, zhongda, hengyuan, biotechnology, stock) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "jane.liu@hazhongda.com",
+        "kind": "mailto",
+        "source_url": "https://www.zdextract.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "sales02@hazhongda.com",
+        "kind": "text",
+        "source_url": "https://www.zdextract.com/contact-us/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "maruchadol@gmail.com",
+        "kind": "text",
+        "source_url": "https://www.zdextract.com/contact-us/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      },
+      {
+        "email": "maruchadol@hazhongda.com",
+        "kind": "text",
+        "source_url": "https://www.zdextract.com/contact-us/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "admin@foodrgb.com",
+        "kind": "text",
+        "source_url": "https://www.zdextract.com/contact-us/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales02@hazhongda.com",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://www.zdextract.com/contact-us/",
+    "phones": [
+      {
+        "e164": "+8618135626255",
+        "display": "+86 181 3562 6255",
+        "kind": "tel",
+        "source_url": "https://www.zdextract.com"
+      },
+      {
+        "e164": "+8618135622262",
+        "display": "+86 181 3562 2262",
+        "kind": "text",
+        "source_url": "https://www.zdextract.com/contact-us/"
+      },
+      {
+        "e164": "+821096226097",
+        "display": "+82 10-9622-6097",
+        "kind": "text",
+        "source_url": "https://www.zdextract.com/contact-us/"
+      },
+      {
+        "e164": "+14088887023",
+        "display": "+1 408-888-7023",
+        "kind": "text",
+        "source_url": "https://www.zdextract.com/contact-us/"
+      }
+    ],
+    "phone_best": "+86 181 3562 6255",
+    "phone_source_url": "https://www.zdextract.com",
+    "pages_checked": [
+      "https://www.zdextract.com",
+      "https://www.zdextract.com/contact-us/"
+    ],
+    "notes": [
+      "https://en.hazhongda.com → نام شرکت با صفحه نمی‌خواند (2/5 واژه‌ی نام (zhongda, hengyuan) در عنوان/متن/دامنه)",
+      "https://www.hazhongda.com → نام شرکت با صفحه نمی‌خواند (1/5 واژه‌ی نام (zhongda) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "admin@foodrgb.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Sweeteners, Allulose, Stevia Extract, Natural colors - Zhongda. Zhongda has a complete product system, covering plant extracts, fruit and vegetable powders (juices), sweeteners and other products, serving numerous well-known domestic and foreign brand customers.. Sweeteners, Allulose, Stevia Extract, Natural colors - Zhongda PRODUCT CENTER Rare Sugar natural sweeteners Natural colors Fruit & Vegetable Powder/Juice Functional extracts natural antioxidants APPLICATION SOLUTION Ice cream industry application solutions Application solutions for meat products industry Application solutions for the dairy industry Application solutions for baking industry Application solutions for seasoning industr",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113610": {
     "name": "JIANGSU BENEFIT OCEAN TECHNOLOGY CO., LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://www.benefitocean.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "4/4 واژه‌ی نام (jiangsu, benefit, ocean, technology) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@benefitocean.com",
+        "kind": "mailto",
+        "source_url": "https://www.benefitocean.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "frank.liu@benefitocean.com",
+        "kind": "mailto",
+        "source_url": "https://www.benefitocean.com/contact-us",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@benefitocean.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.benefitocean.com",
+    "phones": [
+      {
+        "e164": "+8651886780077",
+        "display": "+86 518 8678 0077",
+        "kind": "tel",
+        "source_url": "https://www.benefitocean.com"
+      },
+      {
+        "e164": "+8651886987766",
+        "display": "+86 518 8698 7766",
+        "kind": "tel",
+        "source_url": "https://www.benefitocean.com"
+      },
+      {
+        "e164": "+18188773767",
+        "display": "+1 818-877-3767",
+        "kind": "tel",
+        "source_url": "https://www.benefitocean.com/contact-us"
+      },
+      {
+        "e164": "+6282187166166",
+        "display": "+62 821-8716-6166",
+        "kind": "tel",
+        "source_url": "https://www.benefitocean.com/contact-us"
+      }
+    ],
+    "phone_best": "+86 518 8678 0077",
+    "phone_source_url": "https://www.benefitocean.com",
+    "pages_checked": [
+      "https://www.benefitocean.com",
+      "https://www.benefitocean.com/contact-us"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Benefit Ocean | Industrial & Food Grade Sodium Alginate Supplier. Benefit Ocean specializes in producing high-quality industrial and food grade Sodium Alginate and carrageenan-Kappa, ensuring strict quality control and reliable export.. Benefit Ocean | Industrial & Food Grade Sodium Alginate Supplier product Food & Industrial Grade Sodium Alginate Sodium Alginate Sodium Alginate Sodium Alginate Carrageenan-Kappa More>> ABOUT BENEFIT OCEAN Jiangsu Benefit Ocean Technology Co., Ltd. We began to produce industrial grade sodium alginate from Year 2005, food grade sodium alginate from Year 2017, and carrageenan-kappa in Year 2024. Currently, the company covers an area of 105000 square meters and ",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113437": {
     "name": "ETON FOOD CO.,LTD",
     "country": "China",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
+    "website": "http://en.etonfood.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (eton) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@etonfood.com",
+        "kind": "mailto",
+        "source_url": "http://en.etonfood.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "export@etonfood.com",
+        "kind": "mailto",
+        "source_url": "http://en.etonfood.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "export@etonfood.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "http://en.etonfood.com",
+    "phones": [
+      {
+        "e164": "+866325956199",
+        "display": "+86 632 595 6199",
+        "kind": "tel",
+        "source_url": "http://en.etonfood.com"
+      },
+      {
+        "e164": "+8613062073072",
+        "display": "+86 130 6207 3072",
+        "kind": "tel",
+        "source_url": "http://en.etonfood.com"
+      },
+      {
+        "e164": "+866325561919",
+        "display": "+86 632 556 1919",
+        "kind": "tel",
+        "source_url": "http://en.etonfood.com"
+      }
+    ],
+    "phone_best": "+86 632 595 6199",
+    "phone_source_url": "http://en.etonfood.com",
+    "pages_checked": [
+      "http://en.etonfood.com",
+      "http://en.etonfood.com/contact_us.html"
+    ],
     "notes": [
-      "https://www.etonfood.com → 504"
+      "https://www.etonfood.com → 504",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Calcium Propionate_Sodium Propionate_Eton Food Co., Ltd. Eton Food is a Hitech company focus on producing, developing, and sales preservatives.. Calcium Propionate_Sodium Propionate_Eton Food Co., Ltd Home About us Company Profile Enterprise Style R&D Center Honor Product Box Social Care Products Calcium Propionate Sodium Propionate Sodium Benzoate Calcium Acetate Sodium Acetate Sodium Diacetate News Company News Industry News Contact us 中文版 Inquiry ENTERPRISE ETON FOOD, FOCUS ON FOOD SAFETY Eton Food is a Hitech company focus on producing, developing, and sales preservatives. MORE + SCIENCE AND TECHNOLOGY ETON FOOD, TO BE THE UNICORNS I",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114451": {
     "name": "GUANGXI JINYUAN BIOCHEMICAL INDUSTRIAL CO.,LTD",
@@ -6570,9 +7019,14 @@
     "phone_best": null,
     "phone_source_url": null,
     "pages_checked": [],
-    "notes": [],
+    "notes": [
+      "http://www.jinyuanbiochem.com → نام شرکت با صفحه نمی‌خواند (1/4 واژه‌ی نام (jinyuan) در عنوان/متن/دامنه)",
+      "https://www.chemball.com → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.chempricehub.com → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://sourceingredients.com → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113650": {
     "name": "GUANGYE L&P FOOD INGREDIENT CORP., LTD.",
@@ -6589,28 +7043,90 @@
     "phone_source_url": null,
     "pages_checked": [],
     "notes": [
-      "https://www.lpfoods.com → ConnectTimeout"
+      "https://www.lpfoods.com → ConnectTimeout",
+      "https://www.cnverify.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.lpfoods-global.com → نام شرکت با صفحه نمی‌خواند (1/2 واژه‌ی نام (ingredient) در عنوان/متن/دامنه)",
+      "https://www.lpfoods-wy.com → ConnectTimeout",
+      "https://www.ingredientsnetwork.com → نام شرکت با صفحه نمی‌خواند (1/2 واژه‌ی نام (ingredient) در عنوان/متن/دامنه)"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114457": {
     "name": "HANGZHOU GREENSKY BIOLOGICAL TECH. CO., LTD",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://www.greenskybio.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "4/4 واژه‌ی نام (hangzhou, greensky, biological, tech) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@greenskybio.com",
+        "kind": "cfemail",
+        "source_url": "https://www.greenskybio.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "korea@greenskybio.com",
+        "kind": "cfemail",
+        "source_url": "https://www.greenskybio.com/lianxi/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "youngchemical@naver.com",
+        "kind": "cfemail",
+        "source_url": "https://www.greenskybio.com/lianxi/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@greenskybio.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.greenskybio.com",
+    "phones": [
+      {
+        "e164": "+8657185302990",
+        "display": "+86 571 8530 2990",
+        "kind": "text",
+        "source_url": "https://www.greenskybio.com/lianxi/"
+      },
+      {
+        "e164": "+8613588853252",
+        "display": "+86 135 8885 3252",
+        "kind": "text",
+        "source_url": "https://www.greenskybio.com/lianxi/"
+      },
+      {
+        "e164": "+825052822578",
+        "display": "+82 50-5282-2578",
+        "kind": "text",
+        "source_url": "https://www.greenskybio.com/lianxi/"
+      },
+      {
+        "e164": "+821055132578",
+        "display": "+82 10-5513-2578",
+        "kind": "text",
+        "source_url": "https://www.greenskybio.com/lianxi/"
+      }
+    ],
+    "phone_best": "+86 571 8530 2990",
+    "phone_source_url": "https://www.greenskybio.com/lianxi/",
+    "pages_checked": [
+      "https://www.greenskybio.com",
+      "https://www.greenskybio.com/lianxi/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "youngchemical@naver.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Natural Plant Extract Manufacturer | Greensky - Since 2004. . Natural Plant Extract Manufacturer | Greensky - Since 2004 Home About About Us Manufacturing Facilities Honor R & D Expert introduction Products Red Yeast Rice Hot Products Plant extracts New Product Fruit Juice Powder News Company News Product Information Exhibition Technical healthy News Our Advantages FAQ Hesperidin Citrus Bioflavonoids Plant Extract lycopene Diosmin Grape seed extract Sea buckthorn Juice Powder Fruit Juice Powder Hops Extract Artichoke Extract Mushroom extract Astaxanthin Gr",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113717": {
     "name": "HEBEI HUAYU YONGCHENG FOOD CO., LTD",
@@ -6627,84 +7143,211 @@
     "phone_source_url": null,
     "pages_checked": [],
     "notes": [
-      "https://www.hyycfood.com → ConnectTimeout"
+      "https://www.hyycfood.com → ConnectTimeout",
+      "http://english.hyycfood.com → ConnectTimeout",
+      "https://www.ingredientsnetwork.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "http://www.hyycfood.com → ConnectTimeout"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113493": {
     "name": "HENAN HONEST INDUSTRIAL CO.,LTD",
     "country": "China",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
+    "website": "https://en.zzhonest.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "3/3 واژه‌ی نام (henan, honest, industrial) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@zzhonest.com",
+        "kind": "mailto",
+        "source_url": "https://en.zzhonest.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@zzhonest.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://en.zzhonest.com",
+    "phones": [
+      {
+        "e164": "+8613673631187",
+        "display": "+86 136 7363 1187",
+        "kind": "tel",
+        "source_url": "https://en.zzhonest.com"
+      },
+      {
+        "e164": "+8637167770889",
+        "display": "+86 371 6777 0889",
+        "kind": "tel",
+        "source_url": "https://en.zzhonest.com/contact.html"
+      },
+      {
+        "e164": "+8615515937205",
+        "display": "+86 155 1593 7205",
+        "kind": "text",
+        "source_url": "https://en.zzhonest.com"
+      }
+    ],
+    "phone_best": "+86 136 7363 1187",
+    "phone_source_url": "https://en.zzhonest.com",
+    "pages_checked": [
+      "https://en.zzhonest.com",
+      "https://en.zzhonest.com/contact.html"
+    ],
     "notes": [
-      "https://www.en.zzhonest.com → ConnectTimeout"
+      "https://www.en.zzhonest.com → ConnectTimeout",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Honest Food_Food Emulsifier_Compound Food Improver. Honest Food Co., Ltd. was founded in 2003,which integrated in research, production, processing and trade as one of the high-tech joint-stock enterprises.. Honest Food_Food Emulsifier_Compound Food Improver info@zzhonest.com 86-13673631187 Wechat/Whatsapp： 86-15515937205 Home Products Food Emulsifier ACETEM CITREM CMG CSL DATEM DMG GMS GMS40 LACTEM PGMS PGPR SMG SSL Compound Food Improver Crispy Agent Emulsifying Oil Emulsifying Ointment Baking Powder Bread Improver Sesame Ball Improver Spicy Strip Improver Cake Gel Ice cream Stabilizer Flour Improver Dough Sticks Improver Quick-frozen Sweet Dumpling Improver Dumpling Improver Noodle Improve",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114326": {
     "name": "XINGHUA LIANFU FOOD CO., LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://www.lianfufoods.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (xinghua, lianfu) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "qingzhengliu@jslianfu.com",
+        "kind": "mailto",
+        "source_url": "https://www.lianfufoods.com/contact-us",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "coco@jslianfu.com",
+        "kind": "text",
+        "source_url": "https://www.lianfufoods.com/contact-us",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "coco@jslianfu.com",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://www.lianfufoods.com/contact-us",
+    "phones": [
+      {
+        "e164": "+8652383894339",
+        "display": "+86 523 8389 4339",
+        "kind": "text",
+        "source_url": "https://www.lianfufoods.com/contact-us"
+      },
+      {
+        "e164": "+8613905269425",
+        "display": "+86 139 0526 9425",
+        "kind": "text",
+        "source_url": "https://www.lianfufoods.com/contact-us"
+      },
+      {
+        "e164": "+8618252639458",
+        "display": "+86 182 5263 9458",
+        "kind": "text",
+        "source_url": "https://www.lianfufoods.com/contact-us"
+      }
+    ],
+    "phone_best": "+86 523 8389 4339",
+    "phone_source_url": "https://www.lianfufoods.com/contact-us",
+    "pages_checked": [
+      "https://www.lianfufoods.com",
+      "https://www.lianfufoods.com/contact-us"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "China Dried Vegetables, Dried Vegetables Powder, Fruits Chips Suppliers & Manufacturers - Xinghua Lianfu Food Co.,Ltd. Founded in 1999, Lianfu is one of the leading dried vegetables, dried vegetables powder, fruits chips, vegetables chips manufacturers and suppliers in China. We warmly welcome you to wholesale bulk products in stock here from our factory.. China Dried Vegetables, Dried Vegetables Powder, Fruits Chips Suppliers & Manufacturers - Xinghua Lianfu Food Co.,Ltd About Us Founded in 1999 with twenty years of experience, Lianfu Food is a professional manufacturer and exporter located in Xinghua, Jiangsu, China. Our products include dehydrated vegetables, vegetable powder, herbs and s",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114008": {
     "name": "YANTAI ZHOUJI MARINE BIOTECHNOLOGY CO.,LTD",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://en.zjalgin.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "4/4 واژه‌ی نام (yantai, zhouji, marine, biotechnology) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "zhouji@zhoujichem.com",
+        "kind": "mailto",
+        "source_url": "https://en.zjalgin.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "zhouji@zhoujichem.com",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://en.zjalgin.com",
+    "phones": [
+      {
+        "e164": "+8653268986999",
+        "display": "+86 532 6898 6999",
+        "kind": "tel",
+        "source_url": "https://en.zjalgin.com"
+      }
+    ],
+    "phone_best": "+86 532 6898 6999",
+    "phone_source_url": "https://en.zjalgin.com",
+    "pages_checked": [
+      "https://en.zjalgin.com",
+      "https://en.zjalgin.com/contact.html"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Yantai Zhouji Marine Biotechnology Co., Ltd--Specialized Alginate Manufacturer. Zhouji Seaweed has been focusing on the seaweed bio-industry for more than 25 years, specializing in the research, development and production of Sodium Alginate, Propylene Glycol Alginate, and Seaweed Dietary Fiber.. Yantai Zhouji Marine Biotechnology Co., Ltd--Specialized Alginate Manufacturer Home About Us About Us Profile Culture Qualifications Photos Equipments Products Products Sodium Alginate Calcium Alginate Potassium Alginate Ammonium Alginate Alginate Propylene Glycol Esters Alginate Functional Food Ingredients Printing Paste R&D Blog Blog Company News Industry News Contact Us language Alginate professio",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113435": {
     "name": "YUSWEET CO.,LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
+    "website": "https://www.yusweetsales.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (yusweet) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "yuxin_donny@ayyuxin.com",
+        "kind": "mailto",
+        "source_url": "https://www.yusweetsales.com/contact-us/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
     "email_best": null,
     "email_confidence": null,
     "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "phones": [
+      {
+        "e164": "+8618854226983",
+        "display": "+86 188 5422 6983",
+        "kind": "text",
+        "source_url": "https://www.yusweetsales.com"
+      }
+    ],
+    "phone_best": "+86 188 5422 6983",
+    "phone_source_url": "https://www.yusweetsales.com",
+    "pages_checked": [
+      "https://www.yusweetsales.com",
+      "https://www.yusweetsales.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "yuxin_donny@ayyuxin.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Xylose, Xylitol, Erythritol, Maltitol And L-Arabinose - Yusweet. Yusweet focuses on sweeteners industry more than 25 years, such as xylose, xylitol, erythritol, maltitol and L-arabinose.. Xylose, Xylitol, Erythritol, Maltitol And L-Arabinose - Yusweet Granular performance Xylitol is a common ingredient in many products, from sugar-free chewing gum to toothpaste. Read More Candy application Xylitol is a common ingredient in many products, from sugar-free chewing gum to toothpaste. Read More Yusweet You Trust Taste sweet sugar alcohols Enjoy Yusweet high quality Learn More Maltitol crystal/powder/P200/P35 Erythritol crystal/ organic erythritol with no ... Refined D-xylose/food grad",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113683": {
     "name": "ZHOUKOU ZHIYUAN GELATIN TRADE CO., LTD",
@@ -6721,30 +7364,71 @@
     "phone_source_url": null,
     "pages_checked": [],
     "notes": [
-      "https://www.fygelatin.cn → 502"
+      "https://www.fygelatin.cn → 502",
+      "https://www.ingredientsnetwork.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.cnverify.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.qcc.com/web/cms/overseaApply?opsriskcountry=%E4%BC%8A%E6%9C%97&ip=151.238.137.237&back=/ → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://sialinterfood.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114397": {
     "name": "LIANYUNGANG TIANTIAN SEAWEED INDUSTRIAL CO.,LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
+    "website": "http://www.lygtthz.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "3/4 واژه‌ی نام (lianyungang, tiantian, seaweed) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "lygseaweed@126.com",
+        "kind": "text",
+        "source_url": "http://www.lygtthz.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      },
+      {
+        "email": "88888xxxx@qq.com",
+        "kind": "mailto",
+        "source_url": "http://www.lygtthz.com/contact",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": "88888xxxx@qq.com",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "http://www.lygtthz.com/contact",
+    "phones": [
+      {
+        "e164": "+8613961394804",
+        "display": "+86 139 6139 4804",
+        "kind": "text",
+        "source_url": "http://www.lygtthz.com"
+      },
+      {
+        "e164": "+8613851206696",
+        "display": "+86 138 5120 6696",
+        "kind": "text",
+        "source_url": "http://www.lygtthz.com"
+      }
+    ],
+    "phone_best": "+86 139 6139 4804",
+    "phone_source_url": "http://www.lygtthz.com",
+    "pages_checked": [
+      "http://www.lygtthz.com",
+      "http://www.lygtthz.com/contact"
+    ],
     "notes": [
-      "https://www.lygtthz.com → 404"
+      "https://www.lygtthz.com → 404",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "lygseaweed@126.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "连云港天天海藻工业有限公司. 网站描述. 连云港天天海藻工业有限公司 连云港天天海藻工业有限公司 Lianyungang Tiantian Seaweed Industry Co., Ltd. 简体中文 English 首页 海藻酸钠 关于我们 产品中心 新闻动态 联系方式 招商加盟 在线留言 网上商城 诚 则立 ，信 则胜 Manufacturing quality sincere cooperation 名称 描述 内容 全国服务热线： 0518-87119777/87119588 连云港天天海藻工业有限公司 企业简介 联系方式 留言反馈 工业级海藻酸钠 工业级海藻酸钠 市场价: 0.00 价格: 0.00 海藻酸钠食品级颗粒 海藻酸钠食品级颗粒 市场价: 0.00 价格: 0.00 海藻酸钠食品级粉末 海藻酸钠食品级粉末 市场价: 0.00 价格: 0.00 海藻酸钾 海藻酸钾 市场价: 0.00 价格: 0.00 更多产品 产品中心 新闻动态 公司新闻 连云港天天海藻工业有限公司网站测试 连云港天天海藻工业有限公司食品级海藻酸钠试生产 连云港天天海藻工业有限公司食品级海藻酸钠验收通过 留 言反馈 请留下您的宝贵意见，以",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114329": {
     "name": "LINYI ZENITH IMPORT AND EXPORT CO., LTD.",
@@ -6760,155 +7444,486 @@
     "phone_best": null,
     "phone_source_url": null,
     "pages_checked": [],
-    "notes": [],
+    "notes": [
+      "https://www.importgenius.com → نام شرکت با صفحه نمی‌خواند (2/4 واژه‌ی نام (import, export) در عنوان/متن/دامنه)",
+      "https://zenithimportsandexports.com → نام شرکت با صفحه نمی‌خواند (3/4 واژه‌ی نام (zenith, import, export) در عنوان/متن/دامنه)",
+      "https://www.tendata.com → نام شرکت با صفحه نمی‌خواند (2/4 واژه‌ی نام (import, export) در عنوان/متن/دامنه)",
+      "https://www.cnverify.com → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113321": {
     "name": "ZHONGNUO BIOTECHNOLOGY DEVELOPMENT JIANGSU CO., LTD",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://en.znsw.cn",
+    "website_status": "verified_name_match",
+    "website_evidence": "4/4 واژه‌ی نام (zhongnuo, biotechnology, development, jiangsu) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "admin@znsw.cn",
+        "kind": "text",
+        "source_url": "https://en.znsw.cn/contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "admin@znsw.cn",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://en.znsw.cn/contact.html",
+    "phones": [
+      {
+        "e164": "+8651569686579",
+        "display": "+86 515 6968 6579",
+        "kind": "text",
+        "source_url": "https://en.znsw.cn"
+      },
+      {
+        "e164": "+8651569686555",
+        "display": "+86 515 6968 6555",
+        "kind": "text",
+        "source_url": "https://en.znsw.cn/contact.html"
+      },
+      {
+        "e164": "+8651569686578",
+        "display": "+86 515 6968 6578",
+        "kind": "text",
+        "source_url": "https://en.znsw.cn/contact.html"
+      }
+    ],
+    "phone_best": "+86 515 6968 6579",
+    "phone_source_url": "https://en.znsw.cn",
+    "pages_checked": [
+      "https://en.znsw.cn",
+      "https://en.znsw.cn/contact.html"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Zhongnuo Biotechnology Development Jiangsu Co., Ltd.. . Zhongnuo Biotechnology Development Jiangsu Co., Ltd. Zhongnuo Biotechnology Development Jiangsu Co., Ltd.: Consultation hotline： 0515-6968 6579 中文 Copyright © Zhongnuo Biotechnology Development Jiangsu Co., Ltd. Power ByD-codingCloud Platform Admin login Terms of use",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114591": {
     "name": "DAIRY, LLC",
     "country": "Russia",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
+    "website": "https://pavlov-company.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (dairy) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@pavlov-company.ru",
+        "kind": "text",
+        "source_url": "https://pavlov-company.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
     "email_best": null,
     "email_confidence": null,
     "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "phones": [
+      {
+        "e164": "+74959825096",
+        "display": "+7 495 982-50-96",
+        "kind": "text",
+        "source_url": "https://pavlov-company.com"
+      }
+    ],
+    "phone_best": "+7 495 982-50-96",
+    "phone_source_url": "https://pavlov-company.com",
+    "pages_checked": [
+      "https://pavlov-company.com"
+    ],
+    "notes": [
+      "https://www.olamgroup.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://dairylandllc.com → 402",
+      "https://www.trademo.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "info@pavlov-company.ru دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Pavlov Company. . Pavlov Company RU High quality ingredients for your dairy production Pavlov Company LLC is one of the leading Russian suppliers of dairy ingredients and integrated solutions for the food industry Using scientific knowledge as our starting point, we always go one step further to develop and improve new or existing dairy products.Today the leading producers of dairy in Russia choose us Pavlov Company LCC has been an exclusive agent of Dutch company DSM food enrichment since 2003 The overall produc",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=112960": {
     "name": "EUROPEAN TECHNOLOGIES",
     "country": "Russia",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
+    "website": "https://www.politico.eu",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/2 واژه‌ی نام (european) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "editorial@politico.eu",
+        "kind": "cfemail",
+        "source_url": "https://www.politico.eu/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "opinion@politico.eu",
+        "kind": "cfemail",
+        "source_url": "https://www.politico.eu/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "sales@politico.eu",
+        "kind": "cfemail",
+        "source_url": "https://www.politico.eu/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "pro@politico.eu",
+        "kind": "cfemail",
+        "source_url": "https://www.politico.eu/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "subscriptions@politico.eu",
+        "kind": "cfemail",
+        "source_url": "https://www.politico.eu/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@politico.eu",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.politico.eu/contact-us/",
+    "phones": [
+      {
+        "e164": "+3225409090",
+        "display": "+32 2 540 90 90",
+        "kind": "text",
+        "source_url": "https://www.politico.eu/contact-us/"
+      },
+      {
+        "e164": "+3225481520",
+        "display": "+32 2 548 15 20",
+        "kind": "text",
+        "source_url": "https://www.politico.eu/contact-us/"
+      },
+      {
+        "e164": "+3228920800",
+        "display": "+32 2 892 08 00",
+        "kind": "text",
+        "source_url": "https://www.politico.eu/contact-us/"
+      }
+    ],
+    "phone_best": "+32 2 540 90 90",
+    "phone_source_url": "https://www.politico.eu/contact-us/",
+    "pages_checked": [
+      "https://www.politico.eu",
+      "https://www.politico.eu/contact-us/",
+      "https://www.politico.eu/contact-us/"
+    ],
     "notes": [
-      "https://www.betica.ru → 503"
+      "https://www.betica.ru → 503",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "recruitment@politico.eu نقش غیرتجاری است (کنار گذاشته شد)"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "medium",
+    "site_blurb": "POLITICO – European Politics, Policy, Government News. POLITICO Europe covers the politics, policy and personalities of the European Union. Our coverage includes breaking news, opinion pieces, and features.. POLITICO – European Politics, Policy, Government News Skip to main content Advertisement Analysis Why Europe failed to find a superhero to take on Putin Around the world EU deal on Ukraine talks overshadows AI-focused summit in Dublin Column What Vladimir Putin won in Abu Dhabi Ukraine peace talks Cut off from Europe, Russia will have to rewire its Arctic gas trade Exclusive EU countries to announce deportation hub deal with Rwanda Latest news Finland rejects reported Russian demand to l",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113261": {
     "name": "HEALTANG BIOTECH CO.,LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://e.shengquan.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (healtang, biotech) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "zacktang@shengquan.com",
+        "kind": "text",
+        "source_url": "https://e.shengquan.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "zacktang@shengquan.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://e.shengquan.com",
+    "phones": [
+      {
+        "e164": "+8613969029659",
+        "display": "+86 139 6902 9659",
+        "kind": "text",
+        "source_url": "https://e.shengquan.com"
+      },
+      {
+        "e164": "+8653183501888",
+        "display": "+86 531 8350 1888",
+        "kind": "text",
+        "source_url": "https://e.shengquan.com/lxwm.html"
+      },
+      {
+        "e164": "+8653183501280",
+        "display": "+86 531 8350 1280",
+        "kind": "text",
+        "source_url": "https://e.shengquan.com/lxwm.html"
+      },
+      {
+        "e164": "+8653183511609",
+        "display": "+86 531 8351 1609",
+        "kind": "text",
+        "source_url": "https://e.shengquan.com/lxwm.html"
+      },
+      {
+        "e164": "+8653183501287",
+        "display": "+86 531 8350 1287",
+        "kind": "text",
+        "source_url": "https://e.shengquan.com/lxwm.html"
+      },
+      {
+        "e164": "+8653161320432",
+        "display": "+86 531 6132 0432",
+        "kind": "text",
+        "source_url": "https://e.shengquan.com/lxwm.html"
+      },
+      {
+        "e164": "+8653183511076",
+        "display": "+86 531 8351 1076",
+        "kind": "text",
+        "source_url": "https://e.shengquan.com/lxwm.html"
+      },
+      {
+        "e164": "+8653183501353",
+        "display": "+86 531 8350 1353",
+        "kind": "text",
+        "source_url": "https://e.shengquan.com/lxwm.html"
+      }
+    ],
+    "phone_best": "+86 139 6902 9659",
+    "phone_source_url": "https://e.shengquan.com",
+    "pages_checked": [
+      "https://e.shengquan.com",
+      "https://e.shengquan.com/lxwm.html"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Shengquan Group|Globa|Furan Resin| Furan Resin| Furan Resin|Biomass and Chemical New Material Solutions Provider. Shengquan Group|Globa|Furan Resin| Furan Resin| Furan Resin|Biomass and Chemical New Material Solutions Provider Dedicated to be the world's leading provider of biomass and chemical new material solutions, Shengquan Group has been awarded as a national manufacturing single champion demonstration enterprise. Its leading products furan resin and phenolic resin rank in the forefront of the world and have achieved many technological breakthroughs in the fields of aerospace, electronic materials, foundry materials, rail transportation, new energy, etc.. Shengquan Group|Globa|Furan Res",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114396": {
     "name": "WEINAN RIGEL TRADING CO., LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://www.rigel-china.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (weinan, rigel) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sourcechina@vip.163.com",
+        "kind": "mailto",
+        "source_url": "https://www.rigel-china.com",
+        "domain_status": "a_only",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": "sourcechina@vip.163.com",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://www.rigel-china.com",
+    "phones": [
+      {
+        "e164": "+8615909136633",
+        "display": "+86 159 0913 6633",
+        "kind": "tel",
+        "source_url": "https://www.rigel-china.com"
+      }
+    ],
+    "phone_best": "+86 159 0913 6633",
+    "phone_source_url": "https://www.rigel-china.com",
+    "pages_checked": [
+      "https://www.rigel-china.com",
+      "https://www.rigel-china.com/pages/contactus"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Enjoy the quality products from Rigel. Specializing in food ingredients supplying since 2007. Enjoy the quality products from Rigel Sign In Login Register Inquiry List Home Product Categories Dehydrated Vegetables Flavor Products Retail Product All Products Contact Us High-quality ceramic coverings require a compltely secure surface underneath. For this reason High-quality ceramic coverings require a compltely secure surface underneath. For this reason High-quality ceramic coverings require a compltely secure surface underneath. For this reason High-quality ceramic coverings require a co",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=112971": {
     "name": "PRO GRANAT",
     "country": "Russia",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://progrant.ru",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/2 واژه‌ی نام (pro) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "toriknatalia@gmail.com",
+        "kind": "mailto",
+        "source_url": "https://progrant.ru",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": "toriknatalia@gmail.com",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://progrant.ru",
+    "phones": [
+      {
+        "e164": "+79251200270",
+        "display": "+7 925 120-02-70",
+        "kind": "tel",
+        "source_url": "https://progrant.ru"
+      }
+    ],
+    "phone_best": "+7 925 120-02-70",
+    "phone_source_url": "https://progrant.ru",
+    "pages_checked": [
+      "https://progrant.ru",
+      "https://progrant.ru/#contacts"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "medium",
+    "site_blurb": "ProGRant | Стратегический консалтинг в сфере Government Relations и инструментов государственной поддержки бизнеса.. ProGRant | Мы сопровождаем компании на всех этапах инвестиционного цикла — от разработки стратегии до реализации проекта, помогая использовать существующие государственные инструменты развития для достижения бизнес-целей.. ProGRant | Стратегический консалтинг в сфере Government Relations и инструментов государственной поддержки бизнеса. Обсудить проект Контакты Авторские материалы Обучение GR ProGRant Monitoring Команда Меры поддержки Услуги Подать заявку → Идёт набор в Школу государственных связей. Ближайший поток — апрель 2027 Идёт набор в Школу государственных связей — спец",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113343": {
     "name": "FUZHOU RIXING AQUATIC FOOD CO., LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://www.fzrixing.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "3/3 واژه‌ی نام (fuzhou, rixing, aquatic) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "rixingrx@163.com",
+        "kind": "mailto",
+        "source_url": "https://www.fzrixing.com",
+        "domain_status": "a_only",
+        "same_domain": false,
+        "free_mail": true
+      },
+      {
+        "email": "rixinghxj@163.com",
+        "kind": "mailto",
+        "source_url": "https://www.fzrixing.com",
+        "domain_status": "a_only",
+        "same_domain": false,
+        "free_mail": true
+      },
+      {
+        "email": "rixingrx163@163.com",
+        "kind": "mailto",
+        "source_url": "https://www.fzrixing.com",
+        "domain_status": "a_only",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": "rixinghxj@163.com",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://www.fzrixing.com",
+    "phones": [
+      {
+        "e164": "+8659126771688",
+        "display": "+86 591 2677 1688",
+        "kind": "tel",
+        "source_url": "https://www.fzrixing.com"
+      },
+      {
+        "e164": "+8659188089177",
+        "display": "+86 591 8808 9177",
+        "kind": "tel",
+        "source_url": "https://www.fzrixing.com"
+      }
+    ],
+    "phone_best": "+86 591 2677 1688",
+    "phone_source_url": "https://www.fzrixing.com",
+    "pages_checked": [
+      "https://www.fzrixing.com",
+      "https://www.fzrixing.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Abalone, Fish roe, Sea cucumber, Fotiaoqiang - Captain Jiang. Fuzhou Rixing Aquatic Food Co., Ltd, a subsidiary of Captain Jiang Industrial Group.The company brings into play the advantages of marine industry…. Abalone, Fish roe, Sea cucumber, Fotiaoqiang - Captain Jiang Featured Products FROZEN ABALONE fresh, with shell and viscera FROZEN BOILED ABALONE MEAT remove shell and vis... Frozen Seasoned Flying Fish Roe – Tobiko Dried Sea Cucumber Fresh abalone Black Truffle abalone canned Frozen Fotiaoqiang – Buddha jumps over the wall... DRIED ABALONE Marine Bioactive Oyster Peptide Collagen Powder... About Us to become a leading enterprise in the national marine high-tech industry Fuzhou Rixing",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113582": {
     "name": "HUBEI XINGFA CHEMICALS GROUP CO.,LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://www.xingfa-chemicals.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "3/3 واژه‌ی نام (hubei, xingfa, chemicals) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales5@liwei-chem.com",
+        "kind": "mailto",
+        "source_url": "https://www.xingfa-chemicals.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "1596114151@qq.com",
+        "kind": "mailto",
+        "source_url": "https://www.xingfa-chemicals.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      },
+      {
+        "email": "sales3@liwei-chem.comwebsite",
+        "kind": "text",
+        "source_url": "https://www.xingfa-chemicals.com",
+        "domain_status": "dead",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "1596114151@qq.com",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://www.xingfa-chemicals.com",
+    "phones": [
+      {
+        "e164": "+8618115175568",
+        "display": "+86 181 1517 5568",
+        "kind": "tel",
+        "source_url": "https://www.xingfa-chemicals.com"
+      }
+    ],
+    "phone_best": "+86 181 1517 5568",
+    "phone_source_url": "https://www.xingfa-chemicals.com",
+    "pages_checked": [
+      "https://www.xingfa-chemicals.com",
+      "https://www.xingfa-chemicals.com/contact_us.html"
+    ],
+    "notes": [
+      "https://www.xingfagroup.com → نام شرکت با صفحه نمی‌خواند (1/3 واژه‌ی نام (xingfa) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "sales5@liwei-chem.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Hubei Xingfa Chemicals Group Co., Ltd. | STPP, SHMP & DMSO Supplier. Hubei Xingfa Chemicals Group Co., Ltd. supplies sodium tripolyphosphate (STPP), sodium hexametaphosphate (SHMP), and dimethyl sulfoxide (DMSO) for global industrial applications.. Hubei Xingfa Chemicals Group Co., Ltd. | STPP, SHMP & DMSO Supplier Home Sustainability Conservation Social Responsibility Sustainable Production Products Phosphoric Products Electronic Chemicals Basic Chemicals Herbicides Organic Silicone Fertilizers New Energy Series Technologies R&D Technical Advantages Quality Control Service Partnerships Recruitment Talent Development News Trends Industry Exhibitions Product Knowledge About Us Profile Culture",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113899": {
     "name": "JIANGXI HENGDING FOOD  CO.LTD.,",
@@ -6924,82 +7939,452 @@
     "phone_best": null,
     "phone_source_url": null,
     "pages_checked": [],
-    "notes": [],
+    "notes": [
+      "http://www.jxhdsp.com/ch/ → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.cnverify.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113612": {
     "name": "PENGLAI MARINE(SHANDONG)CO.,LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "unreachable_or_unmatched",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
+    "website": "https://en.penglaimarine.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (penglai, marine, shandong) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@penglaimarine.com",
+        "kind": "mailto",
+        "source_url": "https://en.penglaimarine.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@penglaimarine.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://en.penglaimarine.com",
+    "phones": [
+      {
+        "e164": "+865355989237",
+        "display": "+86 535 598 9237",
+        "kind": "tel",
+        "source_url": "https://en.penglaimarine.com"
+      }
+    ],
+    "phone_best": "+86 535 598 9237",
+    "phone_source_url": "https://en.penglaimarine.com",
+    "pages_checked": [
+      "https://en.penglaimarine.com",
+      "https://en.penglaimarine.com/contact.html",
+      "https://en.penglaimarine.com/contact.html?#c_static_722_P_022-17012190149260"
+    ],
     "notes": [
-      "https://www.en.penglaimarine.com/news/3/ → 503"
+      "https://www.en.penglaimarine.com/news/3/ → 503",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
     ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Penglai Marine-calcium, magnesium, and zinc salt minerals. Penglai Marine (Shandong) Co., Ltd., is a high-tech enterprise integrating the research, development, production, and sales of nutritional enhancers and pharmaceutical intermediates.. Penglai Marine-calcium, magnesium, and zinc salt minerals +86-535-5989237 sales@penglaimarine.com 搜索历史 清除全部记录 最多显示8条历史搜索记录噢~ Product Management All Product Management Inquiry Home About Us Company Culture Qualifications & Honors History Environment Products Calcium Salts Magnesium Salts Zinc Salts R&D Technology Center Manufacturing Workshop Customer Scale News Join us Talent Philosophy Job Positions Contact Us English 中文 All All Product Management Buil",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=114514": {
     "name": "QINGDAO GATHER GREAT OCEAN ALGAE INDUSTRY GROUP CO.,LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://en.judayang.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "5/5 واژه‌ی نام (qingdao, gather, great, ocean, algae) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@judayang.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "zhangzhenji@judayang.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "wangrundong@judayang.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "menggang@judayang.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "wuqiang@judayang.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "qufan@judayang.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "jukangjian@judayang.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "shinfo@goodcapsule.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "ivanwang@goodcapsule.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "helenzhang@goodcapsule.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "dingfengli@judayang.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "pangyunling@judayang.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "dianshang@judayang.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "hzb@judayang.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "zhangyuqiang@judayang.com",
+        "kind": "mailto",
+        "source_url": "https://en.judayang.com/contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@judayang.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://en.judayang.com",
+    "phones": [
+      {
+        "e164": "+8653286157066",
+        "display": "+86 532 8615 7066",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com"
+      },
+      {
+        "e164": "+8618661684779",
+        "display": "+86 186 6168 4779",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8618561690900",
+        "display": "+86 185 6169 0900",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8613697659002",
+        "display": "+86 136 9765 9002",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8613792870878",
+        "display": "+86 137 9287 0878",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8613356394356",
+        "display": "+86 133 5639 4356",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8618663918638",
+        "display": "+86 186 6391 8638",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8615898855967",
+        "display": "+86 158 9885 5967",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8618754203480",
+        "display": "+86 187 5420 3480",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8613687625059",
+        "display": "+86 136 8762 5059",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8617882179556",
+        "display": "+86 178 8217 9556",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8613573800919",
+        "display": "+86 135 7380 0919",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8615866859252",
+        "display": "+86 158 6685 9252",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8615653247621",
+        "display": "+86 156 5324 7621",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8618560643836",
+        "display": "+86 185 6064 3836",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      },
+      {
+        "e164": "+8615726262469",
+        "display": "+86 157 2626 2469",
+        "kind": "tel",
+        "source_url": "https://en.judayang.com/contact.html"
+      }
+    ],
+    "phone_best": "+86 532 8615 7066",
+    "phone_source_url": "https://en.judayang.com",
+    "pages_checked": [
+      "https://en.judayang.com",
+      "https://en.judayang.com/contact.html",
+      "https://en.judayang.com/contact.html#map",
+      "https://en.judayang.com/contact.html#message"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "shinfo@goodcapsule.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)",
+      "ivanwang@goodcapsule.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)",
+      "helenzhang@goodcapsule.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Qingdao Gather Great Ocean Algae Industry Group CO., LTD. Qingdao Gather Great Ocean Algae Industry Group CO., LTD. Qingdao Gather Great Ocean Algae Industry Group CO., LTD Home About Us Group Introduction Entrepreneur Biography Company Culture Development Plan Enterprise Honor Staff Style Responsibility News Corporate News Industry News Video News Media Focus Product Hydrocolloid Alginate Alginic Acid Carrageenan Agar Medical Supplements Seaweed Food Seaweed Feed Seaweed Fertilizer Alginate Oligosaccharide Innovation Scientific Research Results System Certification Talent Demand Talent Demand Campus Recruiti",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113760": {
     "name": "ZHEJIANG WANGLIN BIO-TECH CO., LTD",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://en.wanglin-bio.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "4/4 واژه‌ی نام (zhejiang, wanglin, bio, tech) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "hongcai.cheng@wanglin-bio.com",
+        "kind": "text",
+        "source_url": "https://en.wanglin-bio.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "jing.xu@wanglin-bio.com",
+        "kind": "text",
+        "source_url": "https://en.wanglin-bio.com/Contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "daming.zhang@wanglin-bio.com",
+        "kind": "text",
+        "source_url": "https://en.wanglin-bio.com/Contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "service@wanglin-bio.com",
+        "kind": "text",
+        "source_url": "https://en.wanglin-bio.com/Contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "fengjiao.li@wanglin-bio.com",
+        "kind": "text",
+        "source_url": "https://en.wanglin-bio.com/Contact.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "daming.zhang@wanglin-bio.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://en.wanglin-bio.com/Contact.html",
+    "phones": [
+      {
+        "e164": "+8613967006292",
+        "display": "+86 139 6700 6292",
+        "kind": "text",
+        "source_url": "https://en.wanglin-bio.com"
+      },
+      {
+        "e164": "+865704322301",
+        "display": "+86 570 432 2301",
+        "kind": "text",
+        "source_url": "https://en.wanglin-bio.com"
+      },
+      {
+        "e164": "+8613511417925",
+        "display": "+86 135 1141 7925",
+        "kind": "text",
+        "source_url": "https://en.wanglin-bio.com/Contact.html"
+      },
+      {
+        "e164": "+8617395709809",
+        "display": "+86 173 9570 9809",
+        "kind": "text",
+        "source_url": "https://en.wanglin-bio.com/Contact.html"
+      },
+      {
+        "e164": "+8613511417966",
+        "display": "+86 135 1141 7966",
+        "kind": "text",
+        "source_url": "https://en.wanglin-bio.com/Contact.html"
+      },
+      {
+        "e164": "+8618367000164",
+        "display": "+86 183 6700 0164",
+        "kind": "text",
+        "source_url": "https://en.wanglin-bio.com/Contact.html"
+      }
+    ],
+    "phone_best": "+86 139 6700 6292",
+    "phone_source_url": "https://en.wanglin-bio.com",
+    "pages_checked": [
+      "https://en.wanglin-bio.com",
+      "https://en.wanglin-bio.com/Contact.html"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Zhejiang Wanglin Biotechnology Co., Ltd.. Zhejiang Wanglin Biotechnology Co., Ltd.We specialize in the research, development, production, and sales of edible melanin, squid ink powder, cosmetic-grade melanin, bamboo-derived melanin, and plant-based ultrafine powders.. Zhejiang Wanglin Biotechnology Co., Ltd. Home About Us About Us Company Profile Culture History Honors Enterprise view Business Certification Products Products Food Black color Cuttlefish Juice powder Black color for cosmetics Bamboo Black color Edible Plant Powder Applications Applications Food Black color Cuttlefish Juice powder Edible Plant Powder R&D Bolg Bolg Company News Company Announcement Industry News Social Responsib",
+    "checked_at": "2026-11-14"
   },
   "https://new.ingred.ru/en-GB/about/exhibitor-list/exhibitorpopup.aspx?id=113739": {
     "name": "JIANGSU TIANJIANG BIOTECHNOLOGY CO., LTD.",
     "country": "China",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [],
+    "website": "https://tianjiangmodifiedstarch.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "3/3 واژه‌ی نام (jiangsu, tianjiang, biotechnology) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@tianjiangmodifiedstarch.com",
+        "kind": "mailto",
+        "source_url": "https://tianjiangmodifiedstarch.com/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@tianjiangmodifiedstarch.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://tianjiangmodifiedstarch.com/contact/",
+    "phones": [
+      {
+        "e164": "+8618662737387",
+        "display": "+86 186 6273 7387",
+        "kind": "whatsapp",
+        "source_url": "https://tianjiangmodifiedstarch.com"
+      },
+      {
+        "e164": "+8617327630726",
+        "display": "+86 173 2763 0726",
+        "kind": "text",
+        "source_url": "https://tianjiangmodifiedstarch.com"
+      }
+    ],
+    "phone_best": "+86 186 6273 7387",
+    "phone_source_url": "https://tianjiangmodifiedstarch.com",
+    "pages_checked": [
+      "https://tianjiangmodifiedstarch.com",
+      "https://tianjiangmodifiedstarch.com/contact/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
     "needs_render": false,
-    "checked_at": "2026-10-23"
+    "website_match": "strong",
+    "site_blurb": "Modified Starch Manufacturer & Supplier in China | Tianjiang. Tianjiang is a professional Modified Starch Manufacturer in China, producing modified & clean-label starch for food with strong R&D and global supply.. Modified Starch Manufacturer & Supplier in China | Tianjiang Skip to content MODIFIED STARCH MANUFACTURER & SUPPLIER IN CHINA | TIANJIANG CONTACT US FREE SAMPLE QUALITY INNOVATION RELIABILITY TIANJIANG · MODIFIED STARCH MANUFACTURER 29 NUMBER OF PATENTS 21 EXPORT MARKETS 79,000,000 2025 ANNUAL SALES (USD) 160,000 SQM FACTORY AREA 100,000 TONS ANNUAL CAPACITY ABOUT US MODIFIED STARCH MANUFACTURER TIANJIANG BIOTECHNOLOGY Jiangsu Tianjiang Biotechnology Co., Ltd. is a professional man",
+    "checked_at": "2026-11-14"
   }
 }
