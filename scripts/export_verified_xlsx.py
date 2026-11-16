@@ -12,6 +12,7 @@ import os
 import sys
 
 import openpyxl
+import phonenumbers
 from openpyxl.styles import Alignment, Font, PatternFill
 from openpyxl.utils import get_column_letter
 
@@ -30,6 +31,25 @@ SITE_FA = {"verified_official": "فهرست رسمی نمایشگاه + باز �
 COMPANY_TYPE_FA = efl.COMPANY_TYPE_FA
 
 
+def whatsapp_cols(phones):
+    """(شماره‌ی واتساپ با لینک wa.me روی سایت شرکت, صفحه‌ی منبع, موبایل احتمالی بدون لینک واتساپ).
+    ستون سوم فقط برچسب است: شماره‌ی موبایل است ولی ثبت‌بودنش در واتساپ تأیید نشده."""
+    wa = next((p for p in phones if p.get("kind") == "whatsapp"), None)
+    wa_num = wa["display"] if wa else ""
+    mobile = ""
+    for p in phones:
+        if wa and p.get("e164") == wa.get("e164"):
+            continue
+        try:
+            t = phonenumbers.number_type(phonenumbers.parse(p["e164"], None))
+        except Exception:
+            continue
+        if t in (phonenumbers.PhoneNumberType.MOBILE, phonenumbers.PhoneNumberType.FIXED_LINE_OR_MOBILE):
+            mobile = p["display"]
+            break
+    return wa_num, (wa.get("source_url", "") if wa else ""), mobile
+
+
 def main():
     slug, event = sys.argv[1], sys.argv[2]
     prog = efl.load_progress(os.path.join(efl.OUTPUT_DIR, f"{slug}.progress.json"))
@@ -43,7 +63,7 @@ def main():
     ws.sheet_view.rightToLeft = True
     headers = ["ردیف", "نام شرکت", "کشور", "نوع", "گرید پیشنهادی", "وب‌سایت (تأییدشده)", "وضعیت وب‌سایت",
                "ایمیل (تأییدشده)", "اعتبار ایمیل", "صفحه‌ی منبع ایمیل", "تلفن/واتساپ (معتبر)", "صفحه‌ی منبع تلفن",
-               "وضعیت تماس", "نیاز به بررسی دستی؟", "ربط به جوش شیرین", "دلیل ربط", "دلیل (مدل)", "توضیحات شرکت", "غرفه", "شهر/آدرس"]
+               "وضعیت تماس", "نیاز به بررسی دستی؟", "واتساپ (لینک روی سایت شرکت)", "صفحه‌ی منبع واتساپ", "موبایل احتمالی (واتساپ تأییدنشده)", "ربط به جوش شیرین", "دلیل ربط", "دلیل (مدل)", "توضیحات شرکت", "غرفه", "شهر/آدرس"]
     ws.append(headers)
     for c in ws[1]:
         c.font = Font(bold=True, color="FFFFFF")
@@ -78,17 +98,19 @@ def main():
             c.get("suggested_grade", ""), site or "", status_site if site else "",
             email or "", EMAIL_CONF_FA.get(econf, "") if email else "",
             (v.get("email_source_url") or "") if email else "", phone or "", (v.get("phone_source_url") or "") if phone else "",
-            st, "؛ ".join(weak), c.get("fit", ""), c.get("fit_reason", ""), c.get("llm_reason", ""), (c.get("description") or "")[:300], c.get("stand", ""),
+            st, "؛ ".join(weak), *whatsapp_cols(v.get("phones", [])), c.get("fit", ""), c.get("fit_reason", ""), c.get("llm_reason", ""), (c.get("description") or "")[:300], c.get("stand", ""),
             c.get("region_address", ""),
         ])
         stats["total"] += 1
+        stats["wa_link"] = stats.get("wa_link", 0) + bool(ws.cell(row=ws.max_row, column=15).value)
+        stats["mobile_guess"] = stats.get("mobile_guess", 0) + bool(ws.cell(row=ws.max_row, column=17).value)
         stats["email"] += bool(email)
         stats["email_site"] += bool(email and str(econf).startswith("site"))
         stats["phone"] += bool(phone)
         stats["site"] += bool(site)
         stats["unverified"] += (k not in ver and k.split(":", 1)[-1] not in ver)
 
-    widths = [6, 32, 14, 16, 30, 30, 26, 30, 34, 44, 20, 40, 22, 28, 18, 30, 40, 55, 20, 30]
+    widths = [6, 32, 14, 16, 30, 30, 26, 30, 34, 44, 20, 40, 22, 28, 22, 40, 24, 18, 30, 40, 55, 20, 30]
     for idx, w in enumerate(widths, start=1):
         ws.column_dimensions[get_column_letter(idx)].width = w
     for row in ws.iter_rows(min_row=2):
