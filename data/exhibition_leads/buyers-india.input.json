@@ -1,0 +1,1059 @@
+[
+  {
+    "id": "buyers:1",
+    "name": "Ryan International",
+    "country": "India",
+    "website": "https://www.ryan-international.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:2",
+    "name": "Daivatlifesciences",
+    "country": "India",
+    "website": "https://www.daivatlifesciences.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:3",
+    "name": "Needsinfo",
+    "country": "India",
+    "website": "https://www.needsinfo.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:4",
+    "name": "Akshar International",
+    "country": "India",
+    "website": "https://aksharinternational.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:5",
+    "name": "pearlchemicals.in",
+    "country": "India",
+    "website": "https://www.pearlchemicals.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:6",
+    "name": "Vinipulchemicals",
+    "country": "India",
+    "website": "https://www.vinipulchemicals.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:7",
+    "name": "Rajvichemical",
+    "country": "India",
+    "website": "https://www.rajvichemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:8",
+    "name": "Unitedimpex Mumbai",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:9",
+    "name": "Techstarindialtd",
+    "country": "India",
+    "website": "https://www.techstarindialtd.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:10",
+    "name": "Vcarechemicals",
+    "country": "India",
+    "website": "https://www.vcarechemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:11",
+    "name": "Ganesh Enterprise",
+    "country": "India",
+    "website": "https://www.ganesh-enterprise.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:12",
+    "name": "Sanskarchemtrade",
+    "country": "India",
+    "website": "https://www.sanskarchemtrade.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:13",
+    "name": "Thechemtech",
+    "country": "India",
+    "website": "https://www.thechemtech.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:14",
+    "name": "Jigschemical",
+    "country": "India",
+    "website": "https://www.jigschemical.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:15",
+    "name": "Karanchemicals",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:16",
+    "name": "Dinkarchemicals",
+    "country": "India",
+    "website": "https://www.dinkarchemicals.co.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:17",
+    "name": "Amarchemicals",
+    "country": "India",
+    "website": "https://www.amarchemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:18",
+    "name": "Somnath Sales",
+    "country": "India",
+    "website": "https://somnathsales.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:19",
+    "name": "Chaudharichemicals",
+    "country": "India",
+    "website": "https://www.chaudharichemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:20",
+    "name": "Meeratradelink",
+    "country": "India",
+    "website": "https://www.meeratradelink.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:21",
+    "name": "Cp Shah Company",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:22",
+    "name": "Akshat Rasayan",
+    "country": "India",
+    "website": "https://akshatrasayan.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:23",
+    "name": "Rimaan Royal",
+    "country": "India",
+    "website": "https://www.rimaanroyal.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:24",
+    "name": "Delhichem",
+    "country": "India",
+    "website": "https://www.delhichem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:25",
+    "name": "Rb Enterprises Delhi",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:26",
+    "name": "Madaaninternational",
+    "country": "India",
+    "website": "https://www.madaaninternational.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:27",
+    "name": "Bnstradingcompany Newdelhi",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:28",
+    "name": "Dial4Trade",
+    "country": "India",
+    "website": "https://www.dial4trade.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:29",
+    "name": "Acuro",
+    "country": "India",
+    "website": "https://www.acuro.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:30",
+    "name": "Radsshbchemicals",
+    "country": "India",
+    "website": "https://www.radsshbchemicals.biz",
+    "website_official": false
+  },
+  {
+    "id": "buyers:31",
+    "name": "SPC",
+    "country": "India",
+    "website": "https://www.supremepetrochemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:32",
+    "name": "Rhmarketing",
+    "country": "India",
+    "website": "https://www.rhmarketing.co.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:33",
+    "name": "Sodiumcarbonate",
+    "country": "India",
+    "website": "https://www.sodiumcarbonate.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:34",
+    "name": "Wholesaler ...",
+    "country": "India",
+    "website": "https://www.sririshabhchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:35",
+    "name": "Kiranchemicals",
+    "country": "India",
+    "website": "https://www.kiranchemicals.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:36",
+    "name": "Kamalachemicals",
+    "country": "India",
+    "website": "https://www.kamalachemicals.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:37",
+    "name": "Prchemicals",
+    "country": "India",
+    "website": "https://www.prchemicals.co.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:38",
+    "name": "Bakery Ingredients",
+    "country": "India",
+    "website": "https://www.rmchemicalsindia.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:39",
+    "name": "Redsquareindia",
+    "country": "India",
+    "website": "https://www.redsquareindia.co.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:40",
+    "name": "Grkchemicals",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:41",
+    "name": "Redsquareindia",
+    "country": "India",
+    "website": "https://www.redsquareindia.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:42",
+    "name": "Amit Internationalkolkata",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:43",
+    "name": "Chembazer",
+    "country": "India",
+    "website": "https://www.chembazer.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:44",
+    "name": "Hyperpure",
+    "country": "India",
+    "website": "https://www.hyperpure.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:45",
+    "name": "Standard Prodct Pvt Ltd",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:46",
+    "name": "Srilaxmichemicals",
+    "country": "India",
+    "website": "https://www.srilaxmichemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:47",
+    "name": "Mpchemicals",
+    "country": "India",
+    "website": "https://www.mpchemicals.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:48",
+    "name": "Mahalaxmipharmachem",
+    "country": "India",
+    "website": "https://www.mahalaxmipharmachem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:49",
+    "name": "Rmdistributor",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:50",
+    "name": "Retailer from Hyderabad",
+    "country": "India",
+    "website": "https://www.watertreatmentservices.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:51",
+    "name": "Mschems",
+    "country": "India",
+    "website": "https://www.mschems.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:52",
+    "name": "Wholesaler ...",
+    "country": "India",
+    "website": "https://www.malanigrp.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:53",
+    "name": "Grandiana",
+    "country": "India",
+    "website": "https://www.grandiana.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:54",
+    "name": "Samarchemicals Bengaluru",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:55",
+    "name": "Paraschemicals",
+    "country": "India",
+    "website": "https://www.paraschemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:56",
+    "name": "Surabhiindustries Pune",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:57",
+    "name": "Shreeji Chem",
+    "country": "India",
+    "website": "https://www.shreeji-chem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:58",
+    "name": "Neerajchem",
+    "country": "India",
+    "website": "https://www.neerajchem.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:59",
+    "name": "Wholesaler ...",
+    "country": "India",
+    "website": "https://www.3dmasale.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:60",
+    "name": "Omkarindustries",
+    "country": "India",
+    "website": "https://www.omkarindustries.org",
+    "website_official": false
+  },
+  {
+    "id": "buyers:61",
+    "name": "J H Corporation",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:62",
+    "name": "Dkmenterprise",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:63",
+    "name": "Rameshtradingco Surat",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:64",
+    "name": "Latest ...",
+    "country": "India",
+    "website": "https://www.umiyatradingco.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:65",
+    "name": "Shivdhara Sales Surat",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:66",
+    "name": "Drashtichemicals",
+    "country": "India",
+    "website": "https://www.drashtichemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:67",
+    "name": "Shreemarutiimpexindia",
+    "country": "India",
+    "website": "https://www.shreemarutiimpexindia.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:68",
+    "name": "Sgsandchemical",
+    "country": "India",
+    "website": "https://www.sgsandchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:69",
+    "name": "Drashti Chemicals",
+    "country": "India",
+    "website": "https://www.drashtichemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:70",
+    "name": "Vertexchemicalcorp",
+    "country": "India",
+    "website": "https://www.vertexchemicalcorp.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:71",
+    "name": "Shreenathjichemicals",
+    "country": "India",
+    "website": "https://www.shreenathjichemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:72",
+    "name": "Ashapuraintermediates",
+    "country": "India",
+    "website": "https://www.ashapuraintermediates.co.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:73",
+    "name": "Umiyachemical",
+    "country": "India",
+    "website": "https://www.umiyachemical.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:74",
+    "name": "Ronitofoods",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:75",
+    "name": "Annexechem",
+    "country": "India",
+    "website": "https://www.annexechem.net",
+    "website_official": false
+  },
+  {
+    "id": "buyers:76",
+    "name": "Tatachemicalsltd",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:77",
+    "name": "Evergreenchemicalscompany",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:78",
+    "name": "dir.inquirybazaar.com",
+    "country": "India",
+    "website": "https://dir.inquirybazaar.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:79",
+    "name": "Imimg",
+    "country": "India",
+    "website": "https://m-gke.imimg.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:80",
+    "name": "Euroasiabiochemicals",
+    "country": "India",
+    "website": "https://www.euroasiabiochemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:81",
+    "name": "Washing Powder Raw Material",
+    "country": "India",
+    "website": "https://www.parasenterprisess.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:82",
+    "name": "Nrp Chemicals International",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:83",
+    "name": "Shivamtraders",
+    "country": "India",
+    "website": "https://www.shivamtraders.co.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:84",
+    "name": "Rc Traders India",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:85",
+    "name": "Himanifoodcorporation",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:86",
+    "name": "Savla Group Companies",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:87",
+    "name": "Agro Lab Services",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:88",
+    "name": "Productchemicals",
+    "country": "India",
+    "website": "https://www.productchemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:89",
+    "name": "Jbdiamondchemicals",
+    "country": "India",
+    "website": "https://www.jbdiamondchemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:90",
+    "name": "Pankajtraders Jaipur",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:91",
+    "name": "Shri Vardhman Agency",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:92",
+    "name": "Medissonhealthcare",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:93",
+    "name": "Vjrr Chemicls Company",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:94",
+    "name": "Bsinghsons Ludhiana",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:95",
+    "name": "Singhania Resources Private Limited",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:96",
+    "name": "Dpsalesgroup",
+    "country": "India",
+    "website": "https://www.dpsalesgroup.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:97",
+    "name": "Umiyachemicals",
+    "country": "India",
+    "website": "https://www.umiyachemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:98",
+    "name": "Dpsalescorporation Ludhiana",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:99",
+    "name": "Finefoods",
+    "country": "India",
+    "website": "https://www.finefoods.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:100",
+    "name": "Fertichem Industrial Corporation",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:101",
+    "name": "Ernakulam",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:102",
+    "name": "Mass Solutions Tradingkochi",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:103",
+    "name": "Ssenterprisesindore",
+    "country": "India",
+    "website": "https://www.ssenterprisesindore.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:104",
+    "name": "Ddandcompanyindia",
+    "country": "India",
+    "website": "https://www.ddandcompanyindia.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:105",
+    "name": "Juzer Nawaz And Company",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:106",
+    "name": "Nakodacorporation",
+    "country": "India",
+    "website": "https://www.nakodacorporation.co.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:107",
+    "name": "Tara Corporation",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:108",
+    "name": "chemicals",
+    "country": "India",
+    "website": "https://www.gbsalescorporation.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:109",
+    "name": "Bushchemicals",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:110",
+    "name": "Onkar Traders Indore",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:111",
+    "name": "Hishresourcesgroup",
+    "country": "India",
+    "website": "https://www.hishresourcesgroup.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:112",
+    "name": "Magautampurawala",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:113",
+    "name": "Rajlaxmichemicalindustries",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:114",
+    "name": "Chandak Enterprises Nagpur",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:115",
+    "name": "Prime Biotrust ...",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:116",
+    "name": "Larkdyechem",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:117",
+    "name": "Anjaliagencies",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:118",
+    "name": "Bfsmresources",
+    "country": "India",
+    "website": "https://www.bfsmresources.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:119",
+    "name": "Noren Biopharm Private Limited",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:120",
+    "name": "Tamil Nadu",
+    "country": "India",
+    "website": "https://spccbe.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:121",
+    "name": "Prasad ...",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:122",
+    "name": "Vvn Health Care",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:123",
+    "name": "Vitalecotech Coimbatore",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:124",
+    "name": "Sunchemicalsindia",
+    "country": "India",
+    "website": "https://www.sunchemicalsindia.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:125",
+    "name": "Kr Sons Coimbatore",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:126",
+    "name": "Riya Chemicals",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:127",
+    "name": "Raj Chem Industry",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:128",
+    "name": "Shri Nath Enterprises Gondal",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:129",
+    "name": "Suresh Confectionery Works",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:130",
+    "name": "Vizag Chemicals",
+    "country": "India",
+    "website": "https://www.vizagchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:131",
+    "name": "Sai Dakshayani Enterprises",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:132",
+    "name": "Jj Chemicals Visakhapatnam",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:133",
+    "name": "Aditi Lucknow",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:134",
+    "name": "Hagnosmed Enterprises",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:135",
+    "name": "Arora Brothers Lucknow",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:136",
+    "name": "Ktpchemicals",
+    "country": "India",
+    "website": "https://www.ktpchemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:137",
+    "name": "getdistributors.com",
+    "country": "India",
+    "website": "https://www.getdistributors.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:138",
+    "name": "GHCL",
+    "country": "India",
+    "website": "https://ghcl.co.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:139",
+    "name": "Paraschemindia",
+    "country": "India",
+    "website": "https://www.paraschemindia.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:140",
+    "name": "Arham Chem Impex",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:141",
+    "name": "Aksharchemicals",
+    "country": "India",
+    "website": "https://www.aksharchemicals.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:142",
+    "name": "Wholesaler ...",
+    "country": "India",
+    "website": "https://www.pareshimpex.co.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:143",
+    "name": "Maharashtrastatechemicalsandfertilizers",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:144",
+    "name": "Theonenesstrading",
+    "country": "India",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:145",
+    "name": "Chemicalbook",
+    "country": "India",
+    "website": "https://www.chemicalbook.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:146",
+    "name": "ensun",
+    "country": "India",
+    "website": "https://ensun.io",
+    "website_official": false
+  },
+  {
+    "id": "buyers:147",
+    "name": "Volza",
+    "country": "India",
+    "website": "https://www.volza.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:148",
+    "name": "Buyers & Importers List",
+    "country": "India",
+    "website": "https://www.seair.co.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:149",
+    "name": "Globaltradeplaza",
+    "country": "India",
+    "website": "https://globaltradeplaza.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:150",
+    "name": "Kabirchemicals",
+    "country": "India",
+    "website": "https://www.kabirchemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:151",
+    "name": "Rajtraderschemicals",
+    "country": "India",
+    "website": "https://rajtraderschemicals.com",
+    "website_official": false
+  }
+]
