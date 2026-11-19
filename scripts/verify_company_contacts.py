@@ -79,7 +79,7 @@ TLD_REGION = {
     "hk": "HK", "tw": "TW", "ie": "IE", "us": "US", "cl": "CL", "pe": "PE", "co": "CO", "ec": "EC", "uy": "UY",
 }
 COUNTRY_REGION = {
-    "united arab emirates": "AE", "uae": "AE", "saudi arabia": "SA", "india": "IN", "turkey": "TR", "türkiye": "TR",
+    "united arab emirates": "AE", "uae": "AE", "iraq": "IQ", "saudi arabia": "SA", "india": "IN", "turkey": "TR", "türkiye": "TR",
     "china": "CN", "russia": "RU", "egypt": "EG", "pakistan": "PK", "jordan": "JO", "lebanon": "LB", "kuwait": "KW",
     "qatar": "QA", "oman": "OM", "bahrain": "BH", "iran": "IR", "united kingdom": "GB", "germany": "DE",
     "france": "FR", "italy": "IT", "spain": "ES", "netherlands": "NL", "poland": "PL", "brazil": "BR",

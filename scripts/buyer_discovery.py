@@ -40,27 +40,54 @@ PY = sys.executable
 
 COUNTRIES = {
     "india": {
-        "country": "India",
-        "title": "Buyers India",
-        "templates": ["sodium bicarbonate distributor {p}", "sodium bicarbonate importer {p}",
-                      "sodium bicarbonate supplier {p}", "sodium bicarbonate trader {p}",
-                      "baking soda wholesale {p}", "sodium bicarbonate manufacturer {p}"],
-        "places": ["Mumbai", "Ahmedabad", "Delhi", "Chennai", "Kolkata", "Hyderabad", "Bangalore", "Pune", "Surat",
-                   "Vadodara", "Kanpur", "Jaipur", "Ludhiana", "Kochi", "Indore", "Nagpur", "Coimbatore", "Rajkot",
-                   "Visakhapatnam", "Lucknow", "Gujarat", "Maharashtra", "India"],
+        "country": "India", "title": "Buyers India", "dial": "+91", "tlds": ["in"],
+        "groups": [(["sodium bicarbonate distributor {p}", "sodium bicarbonate importer {p}",
+                     "sodium bicarbonate supplier {p}", "sodium bicarbonate trader {p}",
+                     "baking soda wholesale {p}", "sodium bicarbonate manufacturer {p}"],
+                    ["Mumbai", "Ahmedabad", "Delhi", "Chennai", "Kolkata", "Hyderabad", "Bangalore", "Pune", "Surat",
+                     "Vadodara", "Kanpur", "Jaipur", "Ludhiana", "Kochi", "Indore", "Nagpur", "Coimbatore", "Rajkot",
+                     "Visakhapatnam", "Lucknow", "Gujarat", "Maharashtra", "India"])],
+    },
+    "uae": {
+        "country": "United Arab Emirates", "title": "Buyers UAE", "dial": "+971", "tlds": ["ae"],
+        "groups": [(["sodium bicarbonate distributor {p}", "sodium bicarbonate importer {p}",
+                     "sodium bicarbonate supplier {p}", "sodium bicarbonate trading company {p}",
+                     "baking soda wholesale {p}", "food additives chemicals trading {p} sodium bicarbonate"],
+                    ["Dubai", "Sharjah", "Abu Dhabi", "Ajman", "Ras Al Khaimah", "Jebel Ali", "Deira", "Al Quoz",
+                     "Fujairah", "Umm Al Quwain", "UAE", "United Arab Emirates"]),
+                   (["بيكربونات الصوديوم {p}", "موزع بيكربونات الصوديوم {p}", "استيراد بيكربونات الصوديوم {p}",
+                     "صودا الخبز جملة {p}"],
+                    ["دبي", "الشارقة", "أبوظبي", "الإمارات"])],
+    },
+    "iraq": {
+        "country": "Iraq", "title": "Buyers Iraq", "dial": "+964", "tlds": ["iq"],
+        "groups": [(["sodium bicarbonate distributor {p}", "sodium bicarbonate importer {p}",
+                     "sodium bicarbonate supplier {p}", "sodium bicarbonate trading company {p}",
+                     "baking soda wholesale {p}", "food additives chemicals trading {p} sodium bicarbonate"],
+                    ["Baghdad", "Erbil", "Basra", "Sulaymaniyah", "Mosul", "Najaf", "Karbala", "Kirkuk", "Duhok",
+                     "Kurdistan", "Iraq"]),
+                   (["بيكربونات الصوديوم {p}", "موزع بيكربونات الصوديوم {p}", "استيراد بيكربونات الصوديوم {p}",
+                     "تجارة المواد الكيمياوية بيكربونات {p}", "صودا الخبز جملة {p}"],
+                    ["بغداد", "أربيل", "البصرة", "السليمانية", "الموصل", "النجف", "كربلاء", "كركوك", "دهوك", "العراق"])],
     },
 }
 
-BICARB_RE = re.compile(r"(sodium\s*bi-?\s*carbonate|bicarbonate\s+of\s+soda|baking\s+soda|nahco3|sodium\s+hydrogen\s*carbonate)", re.I)
+BICARB_RE = re.compile(r"(sodium\s*bi-?\s*carbonate|bicarbonate\s+of\s+soda|baking\s+soda|nahco3|sodium\s+hydrogen\s*carbonate|"
+                       r"بيكربونات\s*الصوديوم|بيكاربونات\s*الصوديوم|بايكربونات|صودا\s*الخبز|bicarbonato\s+de\s+sodio)", re.I)
 NOISE_RE = re.compile(r"(recipe|benefits?\b|\buses?\b|how\s+to|side\s+effects?|health|msds|\bsds\b|safety\s+data|wikipedia|"
                       r"what\s+is|vs\.?|difference|price\s+trend|pdf\b|news|blog|review|buy\s+online|amazon|flipkart)", re.I)
-MFR_RE = re.compile(r"(manufacturer|producer|manufacturing|maker|factory)", re.I)
-TRADER_RE = re.compile(r"(distributor|importer|trader|trading|wholesal|stockist|dealer|exporter|supplier|agency|agencies|impex)", re.I)
+MFR_RE = re.compile(r"(manufacturer|producer|manufacturing|maker|factory|مصنع|منتج)", re.I)
+TRADER_RE = re.compile(r"(distributor|importer|trader|trading|wholesal|stockist|dealer|exporter|supplier|agency|agencies|impex|موزع|مستورد|تاجر|تجارة|مورد|جملة)", re.I)
 EXTRA_DIRECTORY_RE = re.compile(
     r"(globallinker|exportersindia|tradeindia|indiamart|elchemy|pharmaoffer|justdial|sulekha|amazon|flipkart|ebay|"
     r"walmart|reddit|quora|pinterest|healthline|webmd|medium\.com|scribd|slideshare|alibaba|aliexpress|dhgate|"
     r"made-in-china|tradekey|ec21|go4world|exporthub|tradewheel|ecplaza|indotrading|bigbasket|jiomart|1mg|netmeds|"
-    r"pharmeasy|snapdeal|meesho|youtube|facebook|instagram|linkedin|wikipedia|\.gov\.|\.edu|\.ac\.)")
+    r"pharmeasy|snapdeal|meesho|youtube|facebook|instagram|linkedin|wikipedia|\.gov\.|\.edu|\.ac\.|"
+    r"yellowpages|dubaiyellow|connect\.?ae|zawya|kompass|tradeford|noon\.com|souq|carrefour|lulu|dubizzle|"
+    r"talabat|iraqbusiness|arabsmarket|arabianfirms|yellow-?pages|opensooq|iqdirect|iraqdirectory|dalilak|"
+    r"yaoota|jumia|ubuy|desertcart|pharmacy|supermarket|hypermarket|grocery|webstaurant|bjs\.com|bulkapothecary|"
+    r"glorybee|volza|accio|haraj|edarabia|bakersbulk|mounthopewholesale|bulkfoods|info-clipper|sharjahcoop|"
+    r"gomruky|importyeti|zauba|seair|panjiva|tridge|made-in|alibaba|1688)")
 DIRECT_NAME_STOP = set("sodium bicarbonate baking soda manufacturer manufacturers supplier suppliers exporter exporters "
                        "distributor importer trader price buy india home welcome nahco3 food grade industrial pharma "
                        "wholesale dealer in of and the for best top".split())
@@ -109,7 +136,8 @@ def yahoo_search(client: httpx.Client, query: str) -> list[dict]:
     for attempt in range(3):
         vcc._throttle_search()
         try:
-            r = client.get("https://search.yahoo.com/search", params={"p": query, "ei": "UTF-8", "vl": "lang_en"},
+            r = client.get("https://search.yahoo.com/search", params=({"p": query, "ei": "UTF-8"} if re.search(r"[^\x00-\x7F]", query)
+                                   else {"p": query, "ei": "UTF-8", "vl": "lang_en"}),
                            headers=vcc.BROWSER_HEADERS, timeout=30)
             if r.status_code != 200:
                 time.sleep(3 * (attempt + 1))
@@ -144,7 +172,7 @@ def brand_from_title(title: str, domain: str) -> str:
     best = None
     for s in segs:
         words = re.findall(r"[A-Za-z0-9&.']+", s)
-        if not words or len(words) > 5:
+        if not words or len(words) > 5 or not s.isascii() or BICARB_RE.search(s) or re.search(r"\b(CAS|HS|NaHCO)|\d{3}", s):
             continue
         if sum(1 for w in words if w.lower() in DIRECT_NAME_STOP) >= 1:
             continue
@@ -154,10 +182,14 @@ def brand_from_title(title: str, domain: str) -> str:
     return domain.split(".")[0].replace("-", " ").title()
 
 
-MARKETPLACE_RE = re.compile(r"(b2b\s+(marketplace|portal|platform)|marketplace|market\s*place|(business|suppliers?|company|online|trade|b2b)\s+directory|buyers?\s+and\s+sellers|post\s+(your\s+)?(buy|requirement)|"
+RETAIL_RE = re.compile(r"(supermarket|hypermarket|co-?operative\s+society|add\s+to\s+cart|online\s+(store|shop)|"
+                       r"free\s+shipping|webstaurant|shop\s+now|متجر|مكملات|e-?shop|education|universities|schools)", re.I)
+
+MARKETPLACE_RE = re.compile(r"(b2b\s+(marketplace|portal|platform)|سوق\s+الجملة|موردين\s+ومشترين|suppliers?\s+and\s+buyers|marketplace|market\s*place|(business|suppliers?|company|online|trade|b2b)\s+directory|buyers?\s+and\s+sellers|post\s+(your\s+)?(buy|requirement)|"
                             r"list\s+your\s+(product|compan)|chemicalbook|dial4trade|chembazer|tradeinn|trade\s*portal|sourcing\s+platform)", re.I)
 
-PLACE_WORDS = set("""mumbai delhi chennai kolkata hyderabad bangalore bengaluru pune surat vadodara kanpur jaipur ludhiana kochi
+PLACE_WORDS = set("""dubai sharjah abu dhabi ajman ras khaimah jebel ali deira quoz fujairah umm quwain uae united arab emirates
+baghdad erbil basra sulaymaniyah mosul najaf karbala kirkuk duhok kurdistan iraq mumbai delhi chennai kolkata hyderabad bangalore bengaluru pune surat vadodara kanpur jaipur ludhiana kochi
 indore nagpur coimbatore rajkot visakhapatnam lucknow ahmedabad gujarat maharashtra india new delhi tamil nadu karnataka
 kerala punjab haryana rajasthan uttar pradesh west bengal telangana andhra pradesh gujrat""".split())
 
@@ -204,7 +236,7 @@ def stage_discover(slug, cfg, limit_q=None):
     P = paths(slug)
     state = json.load(open(P["disc"], encoding="utf-8")) if os.path.exists(P["disc"]) else {"queries_done": [], "found": {}}
     known_dom, known_names = known_sets()
-    queries = [t.format(p=pl) for pl in cfg["places"] for t in cfg["templates"]]
+    queries = [t.format(p=pl) for tpls, places in cfg["groups"] for pl in places for t in tpls]
     todo = [q for q in queries if q not in state["queries_done"]]
     if limit_q:
         todo = todo[:limit_q]
@@ -257,6 +289,8 @@ def stage_discover(slug, cfg, limit_q=None):
         if key.startswith("n:") and key[2:] in known_names:
             skipped += 1
             continue
+        if key.startswith("d:"):  # نام را با قاعده‌ی فعلی از عنوان دوباره بساز (نام‌های بد قدیمی اصلاح شوند)
+            e["name"] = brand_from_title(e["title"], key[2:])
         idx = f"buyers:{len(inp) + 1}"
         inp.append({"id": idx, "name": e["name"], "country": cfg["country"], "website": e["website"], "website_official": False})
         roles = e["roles"]
@@ -293,7 +327,13 @@ def stage_export(slug, cfg):
     known_dom, _ = known_sets()
     for pr in prog.values():  # هر بار از نو فیلتر می‌شود (اجرای قبلی relevant را False نگذارد)
         pr["relevant"] = True
-    dropped = dup = nosite = market = 0
+    found = json.load(open(P["disc"], encoding="utf-8"))["found"]
+    for k, pr in prog.items():  # نام برند سایت‌های خود شرکت را با قاعده‌ی فعلی از عنوان بساز
+        site = (ver.get(k) or {}).get("website")
+        e = found.get("d:" + reg_domain(site)) if site else None
+        if e:
+            pr["name"] = brand_from_title(e["title"], reg_domain(site))
+    dropped = dup = nosite = market = unconf = retail = nobicarb = 0
     seen = {}
     for k, v in ver.items():
         site = v.get("website")
@@ -303,6 +343,14 @@ def stage_export(slug, cfg):
                 nosite += 1
             continue
         blurb = f"{v.get('site_blurb', '')} {v.get('name', '')} {site}"
+        if k in prog and EXTRA_DIRECTORY_RE.search(reg_domain(site)):   # دامنه‌ی دایرکتوری/فروشگاه/غیرشرکتی
+            prog[k]["relevant"] = False
+            market += 1
+            continue
+        if k in prog and RETAIL_RE.search(blurb):       # فروشگاه/خرده‌فروش، نه تاجر B2B
+            prog[k]["relevant"] = False
+            retail += 1
+            continue
         if k in prog and MARKETPLACE_RE.search(blurb):  # بازارچه/دایرکتوری B2B است نه شرکت
             prog[k]["relevant"] = False
             market += 1
@@ -316,8 +364,22 @@ def stage_export(slug, cfg):
             dup += 1
         else:
             seen[d] = k
+            # کشور فقط با شواهد تأیید می‌شود: شماره‌ی تلفنِ همان کشور یا دامنه‌ی ملی (.in/.ae/.iq)
+            # (نتیجه‌ی جست‌وجوی «Dubai» ممکن است شرکتی از کشور دیگر باشد)
+            tld = urlparse(site).netloc.lower().rsplit(".", 1)[-1]
+            phones_ok = any(str(ph.get("e164", "")).startswith(cfg["dial"]) for ph in v.get("phones", []))
+            if k in prog and not (phones_ok or tld in cfg["tlds"]):
+                prog[k]["relevant"] = False             # کشور تأیید نشد → در لیست این کشور نیاید
+                unconf += 1
+            elif k in prog:
+                prog[k]["country"] = cfg["country"]
+                # سایت‌هایی که از جست‌وجو آمدند خودشان در نتیجه بی‌کربنات داشتند؛ برای نام‌های برداشته‌شده از
+                # بازارچه، ربط فقط با ذکر بی‌کربنات در صفحه‌ی سایت رسمی تأیید می‌شود
+                if "بازارچه" in prog[k].get("llm_reason", "") and not BICARB_RE.search(blurb):
+                    prog[k]["needs_review"] = True
+                    nobicarb += 1
     efl.atomic_write_json(P["prog"], prog)
-    print(f"  بعد از صحت‌سنجی: بدون سایت {nosite}، بازارچه/دایرکتوری {market}، از قبل در داده {dropped}، تکراری {dup} حذف شد")
+    print(f"  بعد از صحت‌سنجی: بدون سایت {nosite}، بازارچه/دایرکتوری {market}، از قبل در داده {dropped}، تکراری {dup} حذف شد؛ کشور تأییدنشده (حذف شد) {unconf}، خرده‌فروشی {retail}، بدون ذکر بی‌کربنات در صفحه‌ی اصلی (علامت بررسی) {nobicarb}")
     run(os.path.join(HERE, "export_verified_xlsx.py"), f"buyers-{slug}", cfg["title"])
 
 

@@ -26,7 +26,7 @@
     "description": "Sodium hydrogen carbonate supplier , exporter, distributors & importer in Mumbai , India. White crystalline powder, pH ~8.3, used in baking, cleaning & industrial applications.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 2
   },
   "buyers:3": {
@@ -41,7 +41,7 @@
     "description": "Get contact address of Sodium Bicarbonate manufacturing and supplying companies. Find here Sodium Bicarbonate manufacturers, Sodium Bicarbonate suppliers, Sodium Bicarbonate exporters, Sodium Bicarbonate importers of mumbai .",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 3
   },
   "buyers:4": {
@@ -56,7 +56,7 @@
     "description": "Akshar International is a Mumbai -based supplier and exporter shipping Sodium Bicarbonate to 9+ countries including Nepal and other international markets. Partner with Akshar Group to unlock reliable business opportunities in the industrial chemical sector with trusted support and consistent product",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 4
   },
   "buyers:5": {
@@ -71,7 +71,7 @@
     "description": "Sodium Bicarbonate Wholesaler in Mumbai Maharashtra India - Pearl Chemicals is well established Wholesale Supplier of Sodium Bicarbonate in Mumbai , Sodium Bicarbonate Distributor from Mumbai , Sodium Bicarbonate Trader.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 5
   },
   "buyers:6": {
@@ -86,7 +86,7 @@
     "description": "We are manufacturer, supplier , and exporter of specialty chemicals based in India, takes pride in providing high-purity Sodium Bicarbonate (CAS No. 144-55-8).",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 6
   },
   "buyers:7": {
@@ -116,13 +116,13 @@
     "description": "Wholesale Distributor of Baking Soda - Purix Baking Soda offered by Unico Food Limited Liability, Mumbai , Maharashtra.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 8
   },
   "buyers:9": {
     "name": "Techstarindialtd",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "ضعیف‌تر",
@@ -146,7 +146,7 @@
     "description": "Q: Where is this sodium bicarbonate manufactured and exported from? A: Our sodium bicarbonate is manufactured in India and distributed to both domestic and international pharmaceutical markets as a high-grade ingredient.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 10
   },
   "buyers:11": {
@@ -161,7 +161,7 @@
     "description": "Exporter & Trader - Wholesaler / Distributor of Sodium Bicarbonate - Sodium Bicarbonate Powder, Sodium Bicarbonate Food Grade offered by Ganesh Enterprise, Ahmedabad , Gujarat.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 11
   },
   "buyers:12": {
@@ -191,7 +191,7 @@
     "description": "We are a leading Authorized Wholesale Dealer of sodium bicarbonate powder from Ahmedabad , India. The primary ingredient of Sodium Bicarbonate is available as both oral and parenteral forms. This medicine is used as an antacid which helps in neutralizing stomach acid during indigestion and heartburn",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 13
   },
   "buyers:14": {
@@ -206,7 +206,7 @@
     "description": "Exporter & Trader - Wholesaler / Distributor of Sodium Bicarbonate - Ammonium Carbonate Powder, SODIUM TETRA POLY PHOSPHATE offered by Jigs Chemical Limited, Ahmedabad , Gujarat.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 14
   },
   "buyers:15": {
@@ -221,7 +221,7 @@
     "description": "We are the leading organization in the industry, highly engaged in offering the best grade Sodium Bicarbonate . The provided compound is precisely processed by our experienced professionals using the best quality chemicals and modern processing techniques.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 15
   },
   "buyers:16": {
@@ -251,13 +251,13 @@
     "description": "Prominent & Leading Manufacturer from Ahmedabad , we offer sodium bicarbonate powder. Established in the year 1990, we “Amar Chemicals, Ahmadabad ” possess a vast knowledge and expertise in the domain of processing and supplying Industrial Chemicals which includes Sodium Metabisulfite, Sodium Sulpha",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 17
   },
   "buyers:18": {
     "name": "Somnath Sales",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -266,13 +266,13 @@
     "description": "Sodakarb ® is India’s first FSSAI certified, food grade Sodium Bicarbonate . It is used as a raising agent in biscuits, cookies, bread, cakes, farsans, jaggery, and confectionery.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 18
   },
   "buyers:19": {
     "name": "Chaudharichemicals",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -281,7 +281,7 @@
     "description": "Trader - Wholesaler / Distributor of Sodium Bicarbonate - Sodium Bicarbonate Powder offered by Chaudhari Chemicals Corporation, Ahmedabad , Gujarat.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 19
   },
   "buyers:20": {
@@ -296,13 +296,13 @@
     "description": "Trader - Wholesaler / Distributor of Sodium Bicarbonate - Sodium Bicarbonate Powder offered by Meera Tradelink, Ahmedabad , Gujarat.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 20
   },
   "buyers:21": {
     "name": "Cp Shah Company",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -311,7 +311,7 @@
     "description": "Trader - Wholesaler / Distributor of Baking Soda - Soda Bicarb offered by C P Shah And Co., Ahmedabad , Gujarat.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 21
   },
   "buyers:22": {
@@ -326,7 +326,7 @@
     "description": "Akshat Rasayan is a trusted supplier and trader of high-quality sodium bicarbonate trader in Delhi . We offer premium-grade sodium bicarbonate suitable for food, pharmaceutical, and industrial applications.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 22
   },
   "buyers:23": {
@@ -341,7 +341,7 @@
     "description": "Buy Sodium Bicarbonate in Delhi from Rimaan Royal. Available in Food Grade, Pharma Grade, Feed Grade grades, used in Food & Beverage, Pharmaceutical, Animal Feed. Pan-India delivery with COA, MSDS, and TDS.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 23
   },
   "buyers:24": {
@@ -356,13 +356,13 @@
     "description": "Sodium Bicarbonate ( Bicarbonate of Soda, Sodium Hydrogen Carbonate, Carbonic Acid Monosodium Salt or Baking Soda) is processed and refined into a range of products of varying particle size as pharmaceutical, food and technical grades.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 24
   },
   "buyers:25": {
     "name": "Rb Enterprises Delhi",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -371,7 +371,7 @@
     "description": "Sodium Bicarbonate Prominent & Leading Wholesale Trader from New Delhi , we offer Food Grade Sodium Bicarbonate .",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 25
   },
   "buyers:26": {
@@ -386,7 +386,7 @@
     "description": "We are a leading of sodium bicarbonate powder, soda bi carbonate and sodium bicarbonate food grade sodakarb from New Delhi , India. Sodium Bicarbonate Powder (Baking Soda) is a versatile, high-purity chemical compound essential for a wide range of industrial, professional, and domestic applications.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 26
   },
   "buyers:27": {
@@ -431,7 +431,7 @@
     "description": "Sodium bicarbonate is a white, odourless and crystalline powder material, used as a water softening agent in water treatment process. It is utilized in softening water by eliminating calcium and magnesium impurities from it.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 29
   },
   "buyers:30": {
@@ -446,13 +446,13 @@
     "description": "SHB Chemicals Ltd. is a well-known Manufacturer Exporter & Supplier of Sodium Bicarbonate in Delhi , Sodium Bicarbonate Exporter , Sodium Bicarbonate Supplier Delhi , Sodium Bicarbonate Manufacturing & Export company in India.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 30
   },
   "buyers:31": {
     "name": "SPC",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -461,7 +461,7 @@
     "description": "Technical-grade sodium bicarbonate (NaHCO3, 99.0% min) in 25 kg bags from a Chennai bulk distributor . TDS and SDS online; batch CoA with every delivery.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 31
   },
   "buyers:32": {
@@ -476,7 +476,7 @@
     "description": "Buy Sodium Bicarbonate Food Grade 99% Purity in Chennai at attractive price. Quality powder supplied in 25 kg bags. ISO 9001:2015 certified distributor . Ideal for food and industrial use.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 32
   },
   "buyers:33": {
@@ -491,7 +491,7 @@
     "description": "If you are looking for a reliable Sodium Bicarbonate Exporters in Chennai , we are your one-stop solution. Whether it's bulk inquiries, long-term supply contracts, or new partnerships, we are open to all.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 33
   },
   "buyers:34": {
@@ -506,7 +506,7 @@
     "description": "Exporter & Trader - Wholesaler / Distributor of Sodium Bicarbonate Powder, Soda Ash Light, Soda Ash Powder offered by Sri Rishabh Chemicals Corporation, Chennai , Tamil Nadu.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 34
   },
   "buyers:35": {
@@ -536,7 +536,7 @@
     "description": "Our range of products include sodium bicarbonate food grade and sodium carbonate. Welcome to Kamala Chemicals, your trusted supplier of Sodium Bicarbonate , a versatile industrial chemical with numerous applications across various industries.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 36
   },
   "buyers:37": {
@@ -551,7 +551,7 @@
     "description": "Exporter & Trader - Wholesaler / Distributor of Baking Soda - Sodium Bicarbonate Food Grade offered by P R Marketing, Chennai , Tamil Nadu.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 37
   },
   "buyers:38": {
@@ -566,7 +566,7 @@
     "description": "Pioneers in the industry, we offer baking soda , baking powder and double acting baking powder from India.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 38
   },
   "buyers:39": {
@@ -611,11 +611,11 @@
     "description": "Sodium Bicarbonate is an essential component in various industrial applications. There is no doubt that many of our products today would not be possible without this versatile chemical compound at their core.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 41
   },
   "buyers:42": {
-    "name": "Amit Internationalkolkata",
+    "name": "Redsquareindia",
     "country": "India",
     "relevant": false,
     "company_type": "trader",
@@ -646,8 +646,8 @@
   },
   "buyers:44": {
     "name": "Hyperpure",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -656,7 +656,7 @@
     "description": "Hyperpure powers 100,000+ restaurants, hotels, cloud kitchens, and quick-commerce brands with quality ingredients and kitchen essentials at wholesale prices. It also provides central kitchen and supply chain solutions for efficient scaling.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 44
   },
   "buyers:45": {
@@ -671,7 +671,7 @@
     "description": "Manufacturer of Sodium Bicarbonate offered by Standard Products Private Limited, Kolkata , West Bengal.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 45
   },
   "buyers:46": {
@@ -686,7 +686,7 @@
     "description": "Sodium Bicarbonate And Products Leading Wholesale Trader of 99.9% tata sodium bicarbonate from Hyderabad .",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 46
   },
   "buyers:47": {
@@ -706,8 +706,8 @@
   },
   "buyers:48": {
     "name": "Mahalaxmipharmachem",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -716,7 +716,7 @@
     "description": "Looking for Sodium Bicarbonate ? Trader - Wholesaler / Distributor of Sodium Bicarbonate - 25kg Food Grade Sodium Bicarbonate offered by Mahalaxmi Pharma Chem, Hyderabad , Telangana.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 48
   },
   "buyers:49": {
@@ -746,7 +746,7 @@
     "description": "Looking for Sodium Bicarbonate ? Trader - Retailer of Sodium Bicarbonate offered by Universal Water Chemicals Private Limited, Hyderabad , Telangana.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 50
   },
   "buyers:51": {
@@ -791,7 +791,7 @@
     "description": "sodium bicarbonate Manufacturer Exporter & Supplier in Bengaluru India- Grandiana Universal Private Limited is a best Manufacturer Exporter & Supplier of sodium bicarbonate in Bengaluru, sodium bicarbonate Supplier Karnataka, sodium bicarbonate Manufacturing Company in India.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 53
   },
   "buyers:54": {
@@ -836,7 +836,7 @@
     "description": "Trader - Wholesaler / Distributor of Sodium Bicarbonate offered by Surabhi Industries, Pune , Maharashtra.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 56
   },
   "buyers:57": {
@@ -871,8 +871,8 @@
   },
   "buyers:59": {
     "name": "Wholesaler ...",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -881,7 +881,7 @@
     "description": "Trader - Wholesaler / Distributor of Baking Soda - Green Leaf Baking Soda offered by 3D Masale And Dryfruits, Pune , Maharashtra.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 59
   },
   "buyers:60": {
@@ -956,13 +956,13 @@
     "description": "Get Sodium Bicarbonate Powder at the best price. UMIYA TRADING CO is a leading Wholesaler, Trader , Supplier of Sodium Bicarbonate Powder in Surat , Gujarat, India.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 64
   },
   "buyers:65": {
     "name": "Shivdhara Sales Surat",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -971,7 +971,7 @@
     "description": "Wholesaler of Baking Soda - Baking Soda Powder offered by Shivdhara Sales, Surat , Gujarat.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 65
   },
   "buyers:66": {
@@ -1001,7 +1001,7 @@
     "description": "Buy Sodium Bicarbonate based in Vadodara , Gujarat, India. We are dealing only in Bulk Quantity Orders. Contact us to order now.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 67
   },
   "buyers:68": {
@@ -1016,7 +1016,7 @@
     "description": "Sodium Bicarbonate Manufacturer Exporter & Supplier in Vadodara India- SGS & Company is a best Manufacturer Exporter & Supplier of Sodium Bicarbonate in Vadodara , Sodium Bicarbonate Supplier Gujarat, Sodium Bicarbonate Manufacturing Company in India.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 68
   },
   "buyers:69": {
@@ -1031,7 +1031,7 @@
     "description": "Drashti Chemicals supplies SODIUM BICARBONATE (Industrial / Technical / Commercial / Food Grade) for international export from Gujarat. We handle container-load and LCL shipments (HS code 28363000) via FOB Mundra / Nhava Sheva.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 69
   },
   "buyers:70": {
@@ -1046,7 +1046,7 @@
     "description": "We are a leading Manufacturer, Exporter, and Supplier offering high-quality Sodium Bicarbonate Powder with a minimum purity of 99.0% (Dry Basis). Our product comes in 1 Kg HDPE bags with an inner liner, ensuring safe and secure packaging.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 70
   },
   "buyers:71": {
@@ -1076,7 +1076,7 @@
     "description": "Trader - Wholesaler / Distributor of Industrial Chemicals - Sodium Bicarbonate Technical Grade, Sodium Nitrate Powder, Soda Ash Light and Liquid Thionyl Chloride offered by Ashapura Intermediates, Vadodara , Gujarat.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 72
   },
   "buyers:73": {
@@ -1091,7 +1091,7 @@
     "description": "Trader - Wholesaler / Distributor of Sodium Bicarbonate - White Sodium Bicarbonate offered by Umiya Chemical Industries, Vadodara , Gujarat.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 73
   },
   "buyers:74": {
@@ -1121,7 +1121,7 @@
     "description": "Buy high-quality food grade baking soda powder with a shelf life of 5 years for all your baking needs. Our revolutionary product is perfect for quick breads, cakes, cookies, and more.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 75
   },
   "buyers:76": {
@@ -1196,7 +1196,7 @@
     "description": "EURO ASIA BIO CHEMICALS PRIVATE LIMITED is a leading Manufacturer, Supplier and Exporter of Sodium Bicarbonate at best price. Our office is based in Kanpur , Uttar Pradesh, India.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 80
   },
   "buyers:81": {
@@ -1211,7 +1211,7 @@
     "description": "Trader - Retailer of Washing Powder Raw Material - Sodium Bicarbonate offered by Paras Enterprises, Kanpur , Uttar Pradesh.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 81
   },
   "buyers:82": {
@@ -1241,13 +1241,13 @@
     "description": "Sodium Bicarbonate Powder We are a leading Wholesaler of 25 kg sodium bicarbonate powder from Kanpur , India.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 83
   },
   "buyers:84": {
     "name": "Rc Traders India",
     "country": "India",
-    "relevant": true,
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -1286,7 +1286,7 @@
     "description": "Manufacturer of Sodium Bicarbonate offered by Savla International Private Limited, Kanpur , Uttar Pradesh.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 86
   },
   "buyers:87": {
@@ -1301,7 +1301,7 @@
     "description": "Manufacturer of Sodium Bicarbonate - SODIUM BICARBONATE offered by Agro Lab Services, Kanpur , Uttar Pradesh.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 87
   },
   "buyers:88": {
@@ -1316,7 +1316,7 @@
     "description": "SHARMA CHEMICALS - is one of the renowned Wholesaler, Supplier and Trader of Sodium Bicarbonate based in Jaipur , Rajasthan, India. We provide best quality product such as Sodium Bicarbonate in all over India.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 88
   },
   "buyers:89": {
@@ -1331,13 +1331,13 @@
     "description": "Sodium Bicarbonate is an industrial-grade powder known for its exceptional purity of 98%. It is supplied in secure packets designed to maintain its quality over its one-year shelf life.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 89
   },
   "buyers:90": {
     "name": "Pankajtraders Jaipur",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -1346,7 +1346,7 @@
     "description": "Pankaj Traders - Wholesale Trader of Sodium Bicarbonate Powder, Monosodium Glutamate & Sodium Bicarbonate from Jaipur , Rajasthan, India",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 90
   },
   "buyers:91": {
@@ -1376,7 +1376,7 @@
     "description": "We supply premium-quality Sodium Bicarbonate IP with reliable packaging, competitive pricing, and timely delivery across India and international markets.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 92
   },
   "buyers:93": {
@@ -1421,7 +1421,7 @@
     "description": "Trader - Wholesaler / Distributor of Sodium Bicarbonate offered by Singhania Resources Private Limited, Ludhiana , Punjab.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 95
   },
   "buyers:96": {
@@ -1451,7 +1451,7 @@
     "description": "That's why we've dedicated ourselves to being the premier Manufacturers, Suppliers , and Wholesalers of top-quality Sodium Bi Carbonate in Ludhiana . With a legacy of expertise spanning several years, our commitment to excellence has made us the go-to choice for businesses throughout Ludhiana .",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 97
   },
   "buyers:98": {
@@ -1496,7 +1496,7 @@
     "description": "Manufacturer of Sodium Bicarbonate offered by Fertichem Industrial Corporation, Ludhiana , Punjab.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 100
   },
   "buyers:101": {
@@ -1511,7 +1511,7 @@
     "description": "Find here Sodium Bicarbonate , NaHCO3, 144-55-8, suppliers , manufacturers, wholesalers, traders with Sodium Bicarbonate prices for buying.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 101
   },
   "buyers:102": {
@@ -1526,7 +1526,7 @@
     "description": "Retail Trader of Sodium Bicarbonate And Products - Sodium Bicarbonate offered by Mass Solutions & Trading, Kochi , Kerala.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 102
   },
   "buyers:103": {
@@ -1556,7 +1556,7 @@
     "description": "Service Provider, Trader, Supplier of Sodium Bicarbonate offered by D. D. & COMPANY at latest price from Indore , Madhya Pradesh, India.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 104
   },
   "buyers:105": {
@@ -1571,7 +1571,7 @@
     "description": "Trader - Wholesaler / Distributor of Sodium Bicarbonate - Ammonium Bicarbonate offered by Juzer Nawaz And Co., Indore , Madhya Pradesh.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 105
   },
   "buyers:106": {
@@ -1586,7 +1586,7 @@
     "description": "Wholesale Sodium Bicarbonate supplier Madhya Pradesh India - Nakoda Corporation is well known supplier of Sodium Bicarbonate in Indore , Sodium Bicarbonate Wholesaler, Best Sodium Bicarbonate Wholesale company in India.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 106
   },
   "buyers:107": {
@@ -1601,13 +1601,13 @@
     "description": "Wholesale Trader of Sodium Bicarbonate - sodium bicarbonate offered by Tara Corporation, Indore , Madhya Pradesh.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 107
   },
   "buyers:108": {
     "name": "chemicals",
     "country": "India",
-    "relevant": true,
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -1616,7 +1616,7 @@
     "description": "Trader - Wholesaler / Distributor of chemicals - Caustic Soda Flakes 50 Kg, 50 Kg Sodium Bicarbonate , Swimming Pool Chemicals offered by G B Sales Corporation, Indore , Madhya Pradesh.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 108
   },
   "buyers:109": {
@@ -1646,7 +1646,7 @@
     "description": "Wholesale Trader of Baking Soda - 1 Kg Safal Baking Soda Powder offered by Onkar Traders, Indore , Madhya Pradesh.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 110
   },
   "buyers:111": {
@@ -1661,7 +1661,7 @@
     "description": "We offer high-quality Sodium Bicarbonate Baking Soda , a white powder with food standard purity from India. Our versatile product is perfect for baking, food preparation, and cleaning tasks.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 111
   },
   "buyers:112": {
@@ -1721,7 +1721,7 @@
     "description": "Get Sodium Bicarbonate in Nagpur , Maharashtra at best price by Prime Biotrust. Also find Sodium Bicarbonate price list from verified suppliers with contact number | ID: 2860016234148",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 115
   },
   "buyers:116": {
@@ -1781,7 +1781,7 @@
     "description": "Manufacturer of Sodium Bicarbonate offered by Noren Biopharm Private Limited, Nagpur , Maharashtra.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 119
   },
   "buyers:120": {
@@ -1796,13 +1796,13 @@
     "description": "Reliable supplier of high-quality sodium bicarbonate for industrial and commercial use. Offers bulk and customized packaging options to meet client requirements.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 120
   },
   "buyers:121": {
     "name": "Prasad ...",
     "country": "India",
-    "relevant": true,
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -1811,7 +1811,7 @@
     "description": "Get Sodium Bicarbonate in Siddhapudur, Coimbatore , Tamil Nadu at best price by Prasad Associate. Also find Sodium Bicarbonate price list from verified suppliers with contact number | ID: 2859775244688",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 121
   },
   "buyers:122": {
@@ -1886,7 +1886,7 @@
     "description": "Our range of products include Sodium Bicarbonate and Soda Bicarbonate. Wholesaler / Distributor of Sodium Bicarbonate - Soda Bicarbonate offered by Riya Chemicals, Rajkot , Gujarat.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 126
   },
   "buyers:127": {
@@ -1901,7 +1901,7 @@
     "description": "Wholesaler / Distributor of Sodium Bicarbonate - Sodakarb Sodium Bicarbonate offered by Raj Chem Industry, Rajkot , Gujarat.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 127
   },
   "buyers:128": {
@@ -1916,7 +1916,7 @@
     "description": "Trader - Wholesaler / Distributor of Soda Bicarbonate - Bicarbonate Soda, Tata Sodium Bicarbonate , Tata Soda Bicarbonate and Soda Bicarbonate Powder offered by Shri Nath Enterprises, Rajkot , Gujarat.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 128
   },
   "buyers:129": {
@@ -1961,7 +1961,7 @@
     "description": "Trader - Retailer of Sodium Bicarbonate - Technical Grade Sodium Bicarbonate offered by Sai Dakshayani Enterprises, Visakhapatnam , Andhra Pradesh.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 131
   },
   "buyers:132": {
@@ -1976,7 +1976,7 @@
     "description": "J & J Chemicals - Wholesale Trader of sodium chloride, sodium bicarbonate & other products in Visakhapatnam , Andhra Pradesh.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 132
   },
   "buyers:133": {
@@ -2036,7 +2036,7 @@
     "description": "We are a leading Sodium Bicarbonate manufacturer, supplier & exporter in Gujarat and India, delivering bulk supply, consistent quality, and competitive pricing for domestic and global markets.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 136
   },
   "buyers:137": {
@@ -2066,7 +2066,7 @@
     "description": "GHCL operates one of India’s leading soda ash manufacturing facilities at Sutrapada, Gujarat , with an annual production capacity of 1.2 MTPA and over 95% capacity utilisation.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 138
   },
   "buyers:139": {
@@ -2081,7 +2081,7 @@
     "description": "Trader - Wholesaler / Distributor of Sodium Carbonate - Tata Sodium Bicarbonate , Soda Ash Rspl offered by Paras Chem (India), Mumbai, Maharashtra .",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 139
   },
   "buyers:140": {
@@ -2096,7 +2096,7 @@
     "description": "Importer of Sodium Bicarbonate - sodium - bicarbonate offered by Arham Chem Impex, Mumbai, Maharashtra .",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 140
   },
   "buyers:141": {
@@ -2111,7 +2111,7 @@
     "description": "Exporter & Trader - Retailer of Sodium Bicarbonate - Sodium Bi Carbonate, TATA Sodium Bicarbonate , GHCL Sodium Bicarbonate and Nirma Sodium Bicarbonate offered by Akshar Chemicals, Mumbai, Maharashtra .",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 141
   },
   "buyers:142": {
@@ -2176,8 +2176,8 @@
   },
   "buyers:146": {
     "name": "ensun",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -2186,13 +2186,13 @@
     "description": "Identify and compare relevant B2B manufacturers , suppliers and retailers. Specializing in fresh, never-frozen protein solutions, delivering extended shelf life and an unmatched food safety record.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 146
   },
   "buyers:147": {
     "name": "Volza",
-    "country": "India",
-    "relevant": true,
+    "country": "India (کشور تأییدنشده)",
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -2201,13 +2201,13 @@
     "description": "Analyze 65 sodium bicarbonate import shipments into India till Apr-26. See 10 Indian buyers, 18 suppliers, prices, HSN codes and ports.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 147
   },
   "buyers:148": {
     "name": "Buyers & Importers List",
     "country": "India",
-    "relevant": true,
+    "relevant": false,
     "company_type": "trader",
     "suggested_grade": "",
     "fit": "قوی",
@@ -2216,7 +2216,7 @@
     "description": "Seair Exim Solutions offers a comprehensive database of sodium bicarbonate imports data, focusing on several key fields such as importer names, ports, destinations, volumes, prices, product types (sodium bicarbonate , yarn, fabrics) and more.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 148
   },
   "buyers:149": {
@@ -2261,7 +2261,7 @@
     "description": "Raj Traders supplies Sodium Bicarbonate (commonly known as Baking Soda) in bulk to industrial buyers, food manufacturers, and pharmaceutical companies across India.",
     "stand": "",
     "region_address": "",
-    "needs_review": false,
+    "needs_review": true,
     "_order": 151
   }
 }

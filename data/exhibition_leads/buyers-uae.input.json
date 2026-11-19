@@ -1,0 +1,373 @@
+[
+  {
+    "id": "buyers:1",
+    "name": "Alchemoraltd",
+    "country": "United Arab Emirates",
+    "website": "https://www.alchemoraltd.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:2",
+    "name": "Chemiekimyaltd",
+    "country": "United Arab Emirates",
+    "website": "https://www.chemiekimyaltd.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:3",
+    "name": "Skchemicaltraders",
+    "country": "United Arab Emirates",
+    "website": "https://www.skchemicaltraders.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:4",
+    "name": "Janah Al-Amal ...",
+    "country": "United Arab Emirates",
+    "website": "https://janahalamalchem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:5",
+    "name": "NaHCO₃, CAS 144-55-8",
+    "country": "United Arab Emirates",
+    "website": "https://www.rnjtrd.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:6",
+    "name": "Chimisrl",
+    "country": "United Arab Emirates",
+    "website": "https://www.chimisrl.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:7",
+    "name": "Golive",
+    "country": "United Arab Emirates",
+    "website": "https://golive.ae",
+    "website_official": false
+  },
+  {
+    "id": "buyers:8",
+    "name": "Global Chemicals Plus",
+    "country": "United Arab Emirates",
+    "website": "https://www.gobalchemicalsplus.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:9",
+    "name": "Alkemist",
+    "country": "United Arab Emirates",
+    "website": "https://ksa.alkemist.org",
+    "website_official": false
+  },
+  {
+    "id": "buyers:10",
+    "name": "Gabecotradinggroup",
+    "country": "United Arab Emirates",
+    "website": "https://www.gabecotradinggroup.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:11",
+    "name": "HEMMA CHEMICALS FZE UAE",
+    "country": "United Arab Emirates",
+    "website": "https://www.hemmaglobal.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:12",
+    "name": "Raya Shimi Parsian Co.",
+    "country": "United Arab Emirates",
+    "website": "https://globaltradeplaza.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:13",
+    "name": "Foodstuff Distribution",
+    "country": "United Arab Emirates",
+    "website": "https://www.foodstuffdistribution.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:14",
+    "name": "Fyind",
+    "country": "United Arab Emirates",
+    "website": "https://www.fyind.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:15",
+    "name": "Asamschemical",
+    "country": "United Arab Emirates",
+    "website": "https://www.asamschemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:16",
+    "name": "SAFWA",
+    "country": "United Arab Emirates",
+    "website": "https://shop.safwatrading.ae",
+    "website_official": false
+  },
+  {
+    "id": "buyers:17",
+    "name": "Bjs",
+    "country": "United Arab Emirates",
+    "website": "https://www.bjs.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:18",
+    "name": "Chemfertchemical",
+    "country": "United Arab Emirates",
+    "website": "https://ae.chemfertchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:19",
+    "name": "Al Nahda International ...",
+    "country": "United Arab Emirates",
+    "website": "https://gather.tracegains.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:20",
+    "name": "United Arab Emirates ...",
+    "country": "United Arab Emirates",
+    "website": "https://ae.bizdirlib.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:21",
+    "name": "GloryBee",
+    "country": "United Arab Emirates",
+    "website": "https://glorybee.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:22",
+    "name": "jinbeifood.com",
+    "country": "United Arab Emirates",
+    "website": "https://jinbeifood.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:23",
+    "name": "Berganochem",
+    "country": "United Arab Emirates",
+    "website": "https://berganochem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:24",
+    "name": "Volza",
+    "country": "United Arab Emirates",
+    "website": "https://www.volza.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:25",
+    "name": "Jam Group Company",
+    "country": "United Arab Emirates",
+    "website": "https://jamgroupco.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:26",
+    "name": "Guidechem",
+    "country": "United Arab Emirates",
+    "website": "https://www.guidechem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:27",
+    "name": "Harcros Chemicals",
+    "country": "United Arab Emirates",
+    "website": "https://www.harcros.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:28",
+    "name": "Bulk Apothecary",
+    "country": "United Arab Emirates",
+    "website": "https://www.bulkapothecary.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:29",
+    "name": "Bulkfoods.com",
+    "country": "United Arab Emirates",
+    "website": "https://bulkfoods.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:30",
+    "name": "accio.com",
+    "country": "United Arab Emirates",
+    "website": "https://www.accio.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:31",
+    "name": "Bakersbulk",
+    "country": "United Arab Emirates",
+    "website": "https://bakersbulk.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:32",
+    "name": "Mounthopewholesale",
+    "country": "United Arab Emirates",
+    "website": "https://www.mounthopewholesale.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:33",
+    "name": "WebstaurantStore",
+    "country": "United Arab Emirates",
+    "website": "https://www.webstaurantstore.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:34",
+    "name": "Sodiumcarbonate",
+    "country": "United Arab Emirates",
+    "website": "https://www.sodiumcarbonate.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:35",
+    "name": "Fujairah Chemical",
+    "country": "United Arab Emirates",
+    "website": "https://fujairahchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:36",
+    "name": "Eximnext",
+    "country": "United Arab Emirates",
+    "website": "https://eximnext.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:37",
+    "name": "اطلب الآن ...",
+    "country": "United Arab Emirates",
+    "website": "https://dubaistore36.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:38",
+    "name": "التسوق ...",
+    "country": "United Arab Emirates",
+    "website": "https://www.baladifoodstuff.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:39",
+    "name": "ZSCM",
+    "country": "United Arab Emirates",
+    "website": "https://zscm.ae",
+    "website_official": false
+  },
+  {
+    "id": "buyers:40",
+    "name": "بيكربونات الصوديوم 99٪ NaHCO₃",
+    "country": "United Arab Emirates",
+    "website": "https://www.xrdchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:41",
+    "name": "Haraj",
+    "country": "United Arab Emirates",
+    "website": "https://haraj.com.sa",
+    "website_official": false
+  },
+  {
+    "id": "buyers:42",
+    "name": "Yurongchemical",
+    "country": "United Arab Emirates",
+    "website": "https://www.yurongchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:43",
+    "name": "Beroilenergy",
+    "country": "United Arab Emirates",
+    "website": "https://www.beroilenergy.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:44",
+    "name": "بيكربونات الصوديوم CAS 144‎-55‎-8",
+    "country": "United Arab Emirates",
+    "website": "https://industrochem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:45",
+    "name": "Sharjah Co-operative Society",
+    "country": "United Arab Emirates",
+    "website": "https://www.sharjahcoop.ae",
+    "website_official": false
+  },
+  {
+    "id": "buyers:46",
+    "name": "سعر 250 جرامًا من صودا الخبز النقية في جمعية الشارقة ...",
+    "country": "United Arab Emirates",
+    "website": "https://fattuta.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:47",
+    "name": "sma company",
+    "country": "United Arab Emirates",
+    "website": "https://smaco.ae",
+    "website_official": false
+  },
+  {
+    "id": "buyers:48",
+    "name": "رمز HS 283630",
+    "country": "United Arab Emirates",
+    "website": "https://www.gomruky.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:49",
+    "name": "Aboarab Ics",
+    "country": "United Arab Emirates",
+    "website": "https://aboarab-ics.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:50",
+    "name": "بيكربونات الصوديوم: الاستخدامات، الآثار الجانبية، الاحتياطات ...",
+    "country": "United Arab Emirates",
+    "website": "https://www.medanta.org",
+    "website_official": false
+  },
+  {
+    "id": "buyers:51",
+    "name": "Edarabia",
+    "country": "United Arab Emirates",
+    "website": "https://www.edarabia.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:52",
+    "name": "Bchem",
+    "country": "United Arab Emirates",
+    "website": "https://www.bchem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:53",
+    "name": "Hammaddeler",
+    "country": "United Arab Emirates",
+    "website": "https://www.hammaddeler.com",
+    "website_official": false
+  }
+]

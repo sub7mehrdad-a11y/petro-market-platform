@@ -1,0 +1,3765 @@
+{
+  "buyers:1": {
+    "name": "Chimisrl",
+    "country": "Iraq",
+    "website": "https://www.chimisrl.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (chimisrl) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@chimisrl.com",
+        "kind": "mailto",
+        "source_url": "https://www.chimisrl.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "info@chimisrl.com",
+        "kind": "mailto",
+        "source_url": "https://www.chimisrl.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@chimisrl.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.chimisrl.com",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.chimisrl.com",
+      "https://www.chimisrl.com/contact-us.htm"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Industrial Chemicals Suppliers Italy | Food Chemicals Manufacturers Italy | Chimi S.R.L. Chimi S.R.L is a global manufacturer, supplier, and exporter of industrial, food, mining, and water treatment chemicals, serving worldwide industries.. Industrial Chemicals Suppliers Italy | Food Chemicals Manufacturers Italy | Chimi S.R.L Chimi S.R.L Leading Supplier of Industrial & Specialty Chemicals in Italy Trusted Global Source for Quality Industrial & Specialty Chemicals at Competitive Prices Contact Us Contact Us Mining and Special use Chemicals Suppliers in Italy High-Quality Mining Chemicals for Sale in Italy – Reliable Supply for Mining & Metallurgy Industries Contact Us Contact Us Wide Range ",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:2": {
+    "name": "Global Chemicals Plus",
+    "country": "Iraq",
+    "website": "https://www.gobalchemicalsplus.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (chemicals, plus) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@gobalchemicalsplus.com",
+        "kind": "cfemail",
+        "source_url": "https://www.gobalchemicalsplus.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@gobalchemicalsplus.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.gobalchemicalsplus.com",
+    "phones": [
+      {
+        "e164": "+639458332302",
+        "display": "+63 945 833 2302",
+        "kind": "whatsapp",
+        "source_url": "https://www.gobalchemicalsplus.com"
+      }
+    ],
+    "phone_best": "+63 945 833 2302",
+    "phone_source_url": "https://www.gobalchemicalsplus.com",
+    "pages_checked": [
+      "https://www.gobalchemicalsplus.com",
+      "https://www.gobalchemicalsplus.com/contact"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Industrial Chemical Manufacturer & Supplier | Global Chemicals Plus. Global Chemicals Plus is an industrial chemical manufacturer and bulk supplier offering quality chemicals for industrial, commercial and manufacturing applications. Request a quote today.. Industrial Chemical Manufacturer & Supplier | Global Chemicals Plus The right chemistry. For what you make. From high-purity laboratory chemicals to industrial-grade materials, find the right supply for your work. Discuss your requirements Browse categories From laboratory bench to production line. Explore Product Categories Browse categories and sub-categories to find the right chemical grade for your lab or industrial needs. Chemicals S",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:3": {
+    "name": "Albaher Scientific CO.",
+    "country": "Iraq",
+    "website": "https://www.albaher-sci.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (albaher, scientific) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@albaher-sci.com",
+        "kind": "mailto",
+        "source_url": "https://www.albaher-sci.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@albaher-sci.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.albaher-sci.com",
+    "phones": [
+      {
+        "e164": "+9647713090743",
+        "display": "+964 771 309 0743",
+        "kind": "text",
+        "source_url": "https://www.albaher-sci.com"
+      },
+      {
+        "e164": "+9647906725918",
+        "display": "+964 790 672 5918",
+        "kind": "text",
+        "source_url": "https://www.albaher-sci.com/contact-us/"
+      }
+    ],
+    "phone_best": "+964 771 309 0743",
+    "phone_source_url": "https://www.albaher-sci.com",
+    "pages_checked": [
+      "https://www.albaher-sci.com",
+      "https://www.albaher-sci.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "HOME - Albaher Scientific CO.. Premium chemicals for laboratories and industries, ensuring quality, consistency, and reliable performance.. HOME - Albaher Scientific CO. Skip to content Generic selectors Exact matches only Search in title Search in content Post Type Selectors Slide 1 Your Trusted Source for Laboratory Chemicals We supply a vast collection of high-purity materials from world-class producers to keep your production running. Browse Our Product Range Slide 2 Precision Glassware for Trusted Results Every measurement matters. Our certified Class A and borosilicate glassware ensures volumetric accuracy and chemical resista",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:4": {
+    "name": "jinbeifood.com",
+    "country": "Iraq",
+    "website": "https://jinbeifood.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (jinbeifood, com) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "ander@jinbeichemical.cn",
+        "kind": "cfemail",
+        "source_url": "https://jinbeifood.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+8615066644086",
+        "display": "+86 150 6664 4086",
+        "kind": "whatsapp",
+        "source_url": "https://jinbeifood.com"
+      }
+    ],
+    "phone_best": "+86 150 6664 4086",
+    "phone_source_url": "https://jinbeifood.com",
+    "pages_checked": [
+      "https://jinbeifood.com",
+      "https://jinbeifood.com/contact/",
+      "https://jinbeifood.com/contact/#contact-form"
+    ],
+    "notes": [
+      "ander@jinbeichemical.cn دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Jinbei Chemical | Sodium Bicarbonate Supplier for Global Markets. Jinbei Chemical offers ammonium bicarbonate E503 food grade, baking/feed grade sodium bicarbonate E500(ii), industrial light soda ash 99.2% & Haihua soda ash. Competitive sodium bicarbonate price, bulk carbonate powder wholesale for food and factory use.. Jinbei Chemical | Sodium Bicarbonate Supplier for Global Markets ❮ ❯ GLOBAL SODIUM BICARBONATE SUPPLIER Jinbei Chemical Reliable Supply for International Buyers Jinbei Chemical has over two decades of sodium bicarbonate manufacturing experience. We maintain dedicated process management for different grades to ensure consistency from raw material selection to final packaging. ",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:5": {
+    "name": "Berganochem",
+    "country": "Iraq",
+    "website": "https://berganochem.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (berganochem) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@berganochem.com",
+        "kind": "mailto",
+        "source_url": "https://berganochem.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@berganochem.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://berganochem.com",
+    "phones": [
+      {
+        "e164": "+8615650172320",
+        "display": "+86 156 5017 2320",
+        "kind": "whatsapp",
+        "source_url": "https://berganochem.com"
+      }
+    ],
+    "phone_best": "+86 156 5017 2320",
+    "phone_source_url": "https://berganochem.com",
+    "pages_checked": [
+      "https://berganochem.com",
+      "https://berganochem.com/contact/",
+      "https://berganochem.com/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Bergano Chemical Solutions: Excellence in Industrial & Food Additives. Bergano Chemical is a China professional sodium metabisulfite/ bicarbonate & sulfite manufacturer with ISO, KOSHER & HALAL certification.. Bergano Chemical Solutions: Excellence in Industrial & Food Additives BE SUCCESSFUL WITH US China B2B Chemical Supplier for Sodium Bicarbonate, Food Additives & Feed Additives GET A QUOTE VIEW PRODUCTS WELCOME TO BERGANO About Bergano Chemicals - A Legacy of Quality and Innovation Bergano Chemical is a Qingdao-based chemical supplier and exporter specializing in sodium bicarbonate, food additives, feed additives and industrial chemicals. Built on 20+ years of chemical export experience",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:6": {
+    "name": "Nandrlon",
+    "country": "Iraq",
+    "website": "https://nandrlon.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (nandrlon) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "ismael.mussa@nandrlon.com",
+        "kind": "text",
+        "source_url": "https://nandrlon.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "ismael.mussa@nandrlon.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://nandrlon.com",
+    "phones": [
+      {
+        "e164": "+9647509292000",
+        "display": "+964 750 929 2000",
+        "kind": "tel",
+        "source_url": "https://nandrlon.com"
+      }
+    ],
+    "phone_best": "+964 750 929 2000",
+    "phone_source_url": "https://nandrlon.com",
+    "pages_checked": [
+      "https://nandrlon.com",
+      "https://nandrlon.com/contact-2/",
+      "https://nandrlon.com/contact-2/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Nandrlon – Pharmaceutical Co. . Nandrlon – Pharmaceutical Co Iraq, Erbil, 30M street, physician street, building number 111, postal code 44001 +(964) 750 929 2000 ismael.mussa@nandrlon.com Empowering Pharmaceutical Business in Iraq and Kurdistan Region The Trusted Bridge To Modern Medicine At Nandrlon, we serve as The Trusted Bridge to Modern Medicine, closing the gap between global pharmaceutical breakthroughs and the healthcare needs of Iraq. We understand that a medicine is only as effective as the supply chain that delive",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:7": {
+    "name": "Gabecotradinggroup",
+    "country": "Iraq",
+    "website": "https://www.gabecotradinggroup.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (gabecotradinggroup) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "gabecotradinggroup@gmail.com",
+        "kind": "mailto",
+        "source_url": "https://www.gabecotradinggroup.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": "gabecotradinggroup@gmail.com",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://www.gabecotradinggroup.com",
+    "phones": [
+      {
+        "e164": "+27785163711",
+        "display": "+27 78 516 3711",
+        "kind": "tel",
+        "source_url": "https://www.gabecotradinggroup.com"
+      }
+    ],
+    "phone_best": "+27 78 516 3711",
+    "phone_source_url": "https://www.gabecotradinggroup.com",
+    "pages_checked": [
+      "https://www.gabecotradinggroup.com",
+      "https://www.gabecotradinggroup.com/contact-us.htm"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Gabeco SA – Global Supplier of Chemicals | South Africa Exporter. Gabeco SA Global Trading Group supplies agricultural, food, industrial, mining, and water treatment chemicals worldwide. Trusted South Africa-based chemical exporter.. Gabeco SA – Global Supplier of Chemicals | South Africa Exporter Contact Info 6 Heckroodt Street, Springfontein, 9917, Free State +27 78 516 3711 gabecotradinggroup@gmail.com Subscribe & Follow Leading Worldwide Supplier of Agricultural, Industrial & Specialty Chemicals Explore More - Explore More - Trusted Worldwide Chemical Distributor – Organic, Inorganic, Solvents & Water Treatment Chemicals Explore More - Explore More - South Africa’s Leading Chemical Expor",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:8": {
+    "name": "Dscchem",
+    "country": "Iraq",
+    "website": "https://www.dscchem.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (dscchem) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@dscchem.com",
+        "kind": "mailto",
+        "source_url": "https://www.dscchem.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@dscchem.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.dscchem.com",
+    "phones": [
+      {
+        "e164": "+8617369893711",
+        "display": "+86 173 6989 3711",
+        "kind": "tel",
+        "source_url": "https://www.dscchem.com"
+      }
+    ],
+    "phone_best": "+86 173 6989 3711",
+    "phone_source_url": "https://www.dscchem.com",
+    "pages_checked": [
+      "https://www.dscchem.com",
+      "https://www.dscchem.com/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "DSC trading co., Ltd.-Professional Chemical Exporter | Caustic Soda_Soda Ash_Citric Acid_Sodium Hexametaphosphate Export. DSC trading co., Ltd. is a professional chemical exporter, mainly engaged in caustic soda (flakes/pearls), soda ash, citric acid, sodium hexametaphosphate, sodium metabisulfite and other chemical raw materials, with qualified quality, global distribution, one-stop foreign trade service, honest cooperation and trustworthy!. DSC trading co., Ltd.-Professional Chemical Exporter | Caustic Soda_Soda Ash_Citric Acid_Sodium Hexametaphosphate Export Home Products Shipments News About Us Get Quote Leading Chemical Exporter Reliable Supply Chain for Global Industry. Professional di",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:9": {
+    "name": "Allanchem",
+    "country": "Iraq",
+    "website": "https://allanchem.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (allanchem) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@allanchem.com",
+        "kind": "mailto",
+        "source_url": "https://allanchem.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@allanchem.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://allanchem.com",
+    "phones": [
+      {
+        "e164": "+19739624014",
+        "display": "+1 973-962-4014",
+        "kind": "tel",
+        "source_url": "https://allanchem.com"
+      }
+    ],
+    "phone_best": "+1 973-962-4014",
+    "phone_source_url": "https://allanchem.com",
+    "pages_checked": [
+      "https://allanchem.com",
+      "https://allanchem.com/contact-us-page/",
+      "https://allanchem.com/contact-us-page/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Leading chemical distributor of high quality chemicals & ingredients. Leading chemical distributor of high quality chemicals and ingredients. Industry's include pharma, nutraceuticals, cosmetics, personal care, food, fragrance, lab, plasticizers.. Leading chemical distributor of high quality chemicals & ingredients Leading chemical distributor of high quality chemicals & ingredients (973) 962-4014 info@allanchem.com Home Products All Products Ceramics & Glass Cosmetic and Personal Care Food & Beverage Fragrances Lab Reagents, BioChemicals, Catalysts, R&D Pharmaceuticals and Nutraceuticals Plasticizers, Adhesives & Lubricants About Our Story Our Suppliers Meet Our Amazing Team Contact Us Blog",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:10": {
+    "name": "Independent Chemical",
+    "country": "Iraq",
+    "website": "https://independentchemical.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (independent, chemical) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "purchasing@independentchemical.com",
+        "kind": "mailto",
+        "source_url": "https://independentchemical.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "purchasing@independentchemical.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://independentchemical.com",
+    "phones": [
+      {
+        "e164": "+17188940700",
+        "display": "+1 718-894-0700",
+        "kind": "tel",
+        "source_url": "https://independentchemical.com"
+      }
+    ],
+    "phone_best": "+1 718-894-0700",
+    "phone_source_url": "https://independentchemical.com",
+    "pages_checked": [
+      "https://independentchemical.com",
+      "https://independentchemical.com/contact-us"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Industrial Chemical Manufacturer & Supplier | Independent Chemical Corporation. The most trusted name in the manufacture & distribution of industrial, food, pharmaceutical and beauty products for nearly 70 years.. Industrial Chemical Manufacturer & Supplier | Independent Chemical Corporation The most trusted name in distribution and value added services for the: Pharmaceutical, nutritional, food & beverage, flavor & fragrance, cosmetic, cleaning & water treatment chemical-related industries. What We Offer With over 75 years of unparalleled success. We strive for improvement through continuous study of Purpose, Principle, People, and Performance, in all of our business operations. F lavor & F",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:11": {
+    "name": "Niran Biochemical",
+    "country": "Iraq",
+    "website": "https://www.niranchemical.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (niran, biochemical) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@niranbio.com",
+        "kind": "cfemail",
+        "source_url": "https://www.niranchemical.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@niranbio.com",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://www.niranchemical.com",
+    "phones": [
+      {
+        "e164": "+8651085229221",
+        "display": "+86 510 8522 9221",
+        "kind": "tel",
+        "source_url": "https://www.niranchemical.com"
+      },
+      {
+        "e164": "+8618921130987",
+        "display": "+86 189 2113 0987",
+        "kind": "whatsapp",
+        "source_url": "https://www.niranchemical.com"
+      }
+    ],
+    "phone_best": "+86 510 8522 9221",
+    "phone_source_url": "https://www.niranchemical.com",
+    "pages_checked": [
+      "https://www.niranchemical.com",
+      "https://www.niranchemical.com/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Chemical Supplier | Detergents, Personal Care & Water Treatment | Niran Biochemical. Chemical supplier providing ingredients and industrial chemicals for detergents, personal care, water treatment, and formulation applications worldwide.. Chemical Supplier | Detergents, Personal Care & Water Treatment | Niran Biochemical Skip to content No results Your Reliable Chemical Supplier Through our deep technical expertise, leading manufacturing partnerships, flexible specifications, and reliable export supply, we streamline procurement and ensure a fully controlled supply chain for global manufacturers. Comprehensive Supplier of Personal Care Ingredients & Detergent Chemicals 23+ Years of Global In",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:12": {
+    "name": "Products",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://elementrachemicals.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.worldstopexports.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.productfrom.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.accio.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://cdn2.hubspot.net → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:13": {
+    "name": "Harcros Chemicals",
+    "country": "Iraq",
+    "website": "https://www.harcros.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (harcros, chemicals) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.harcros.com",
+      "https://www.harcros.com/contact-harcros-chemicals/",
+      "https://www.harcros.com/contact-harcros-chemicals/",
+      "https://www.harcros.com/contact-harcros-chemicals/"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Home | Harcros Chemicals. Over a century of experience and expertise of putting chemicals together. Harcros Chemicals has solutions for every industry. See home page →. Home | Harcros Chemicals beaker steering-wheel water paw user phone Gauge Candle Clock Interface-Share Award percentage box distribution-network Interface-Arrows-Button-Down-Double facebook twitter instagram youtube pinterest checkbox checkbox-checked radio radio-selected chevron-up chevron-down chevron-right chevron-left send location right-arrow left-arrow quotation minus plus user phone close plus minus Gauge Candle Clock Interface-Share Award percentage box distribution-network Interface-Arr",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:14": {
+    "name": "Modern Chemical Co.",
+    "country": "Iraq",
+    "website": "https://modernchemical.co",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (modern, chemical) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://modernchemical.co",
+      "https://modernchemical.co/contact-us/",
+      "https://modernchemical.co/contact-us/",
+      "https://modernchemical.co/contact-us/",
+      "https://modernchemical.co/contact-us/"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Bulk Chemical Distributor & Supplier - Chemical Contract Manufacturing Company | Modern Chemical Co.. Modern Chemical is your top bulk chemical distributor & supplier. Partner with us for expert chemical contract manufacturing. Contact us today to learn more!. Bulk Chemical Distributor & Supplier - Chemical Contract Manufacturing Company | Modern Chemical Co. GO Chemical Distribution & Manufacturing Company Modern Chemical is a turnkey chemical custom manufacturing , chemical packaging company, and chemical distributor in Houston. Whether your need is large or small, custom or generic, Modern Chemical will reliably serve your needs. View Services Request a Quote Manufacturing Capabilities As",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:15": {
+    "name": "Xanero USA",
+    "country": "Iraq",
+    "website": "https://xanero.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (xanero, usa) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "direct@xanero.com",
+        "kind": "mailto",
+        "source_url": "https://xanero.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "direct@xanero.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://xanero.com",
+    "phones": [
+      {
+        "e164": "+18004976021",
+        "display": "+1 800-497-6021",
+        "kind": "tel",
+        "source_url": "https://xanero.com"
+      }
+    ],
+    "phone_best": "+1 800-497-6021",
+    "phone_source_url": "https://xanero.com",
+    "pages_checked": [
+      "https://xanero.com",
+      "https://xanero.com/contact/",
+      "https://xanero.com/contact/?type=sample"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Bulk Chemical & Food-Grade Ingredient Supplier | Xanero USA. Bulk food-grade ingredients, sweeteners, supplement actives, and oilfield additives shipping FOB Houston, Los Angeles, and New Jersey. COA on every lot.. Bulk Chemical & Food-Grade Ingredient Supplier | Xanero USA Skip to main content Xanero USA is a bulk ingredient distributor supplying food-grade ingredients, supplement actives, cosmetic ingredients, and proprietary oilfield additives in pallet through container quantities. Founded in 2016, shipping FOB Houston, Texas, Los Angeles, California, and New Jersey. Sourced through a global network of producing manufacturers for near-at-cost volume pricing, with evaluation samples avail",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:16": {
+    "name": "Volza",
+    "country": "Iraq",
+    "website": "https://www.volza.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (volza) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.volza.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Attention Required! | Cloudflare. . Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access volza.com Why have I been blocked? This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data. What can I do to resolve this? You can email the site owner to let them know",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:17": {
+    "name": "Buyers & Importers List",
+    "country": "Iraq",
+    "website": "https://www.seair.co.in",
+    "website_status": "verified_name_match",
+    "website_evidence": "3/3 واژه‌ی نام (buyers, importers, list) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@seair.co.in",
+        "kind": "cfemail",
+        "source_url": "https://www.seair.co.in",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@seair.co.in",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.seair.co.in",
+    "phones": [
+      {
+        "e164": "+919667735607",
+        "display": "+91 96677 35607",
+        "kind": "tel",
+        "source_url": "https://www.seair.co.in"
+      }
+    ],
+    "phone_best": "+91 96677 35607",
+    "phone_source_url": "https://www.seair.co.in",
+    "pages_checked": [
+      "https://www.seair.co.in",
+      "https://www.seair.co.in/contact-us.aspx"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Seair – Trusted Global Export Import Data for 100+ Countries. Explore verified import export data, profitable buyers, suppliers, markets, products, Hs codes and competitor’s data for 100+ Countries boost profits with Seair.. Seair – Trusted Global Export Import Data for 100+ Countries +91 9667735607 [email protected] G 文 Enquire Now Search Select Analyse Analyse Multi countries trade data on a single platform Subscribe Now Request a demo Search Import Export Data of Global Countries Import Export Search Watch Video We have successfully served 20000+ happy clients across the globe. We rapidly update our data bank of import-export from the shipment record of over 100+ countries. Seair is the f",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:18": {
+    "name": "Anatoliakimya",
+    "country": "Iraq",
+    "website": "https://www.anatoliakimya.net",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (anatoliakimya) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@anatoliakimya.net",
+        "kind": "mailto",
+        "source_url": "https://www.anatoliakimya.net/Tr/default.aspx",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@anatoliakimya.net",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.anatoliakimya.net/Tr/default.aspx",
+    "phones": [
+      {
+        "e164": "+905376001153",
+        "display": "+90 537 600 11 53",
+        "kind": "text",
+        "source_url": "https://www.anatoliakimya.net/Tr/default.aspx"
+      }
+    ],
+    "phone_best": "+90 537 600 11 53",
+    "phone_source_url": "https://www.anatoliakimya.net/Tr/default.aspx",
+    "pages_checked": [
+      "https://www.anatoliakimya.net/Tr/default.aspx"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Chemical Supplier , kimyasal tedarikçileri , Hammadde Tedariği , Caustic Soda , Payet Kostik , Activated Bleaching Earth , Ağartma Toprakları , soda ash , plastic granules , High Density Polyethylene , Low Density Polyethylene , polypropylene , Sulfonic Acid , TEXAPON N70 , PARAFFINE WAX. KIMYASAL HAMMADDE , Caustic Soda 98% , Payet Kostik , Plastik Hammadde , Ağartma Toprakları , RO antiscalant ,PARAFFINE WAX , soda ash , LABSA , Sulfonic Acid , TEXAPON N70 , Baking Soda , PETROLEUM JELLY (VASELINE) , chemical supply chain , klor alkali ,. Chemical Supplier , kimyasal tedarikçileri , Hammadde Tedariği , Caustic Soda , Payet Kostik , Activated Bleaching Earth , Ağartma Toprakları , soda ash ",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:19": {
+    "name": "Bulkfoods.com",
+    "country": "Iraq",
+    "website": "https://bulkfoods.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/2 واژه‌ی نام (bulkfoods) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "vip@bulkfoods.com",
+        "kind": "mailto",
+        "source_url": "https://bulkfoods.com/contact",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "vip@bulkfoods.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://bulkfoods.com/contact",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://bulkfoods.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Just a moment.... . Just a moment...",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:20": {
+    "name": "Rawsource",
+    "country": "Iraq",
+    "website": "https://rawsource.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (rawsource) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "solutions@rawsource.com",
+        "kind": "cfemail",
+        "source_url": "https://rawsource.com/contact-us/#contact-form",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "solutions@rawsource.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://rawsource.com/contact-us/#contact-form",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://rawsource.com",
+      "https://rawsource.com/contact-us/#contact-form",
+      "https://rawsource.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Bulk Industrial Chemicals & Ingredients | RawSource. Global sourcing for bulk chemicals and ingredients — sourced to your spec, with domestic stock on common grades, VMI for recurring needs, and technical support.. Bulk Industrial Chemicals & Ingredients | RawSource Bulk chemicals and ingredients, globally sourced. On-demand sourcing worldwide, with technical support — from development through production scale. × Try: 63148-62-9 MDEA antifoam flotation collector 1,000+ Chemicals & Ingredients 10 Market Segments 18 Product Families Global Sourcing Network Find what you need, your way Browse our catalog by the industry you serve or the chemistry you need. Both paths lead to the same products. ",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:21": {
+    "name": "WebstaurantStore",
+    "country": "Iraq",
+    "website": "https://www.webstaurantstore.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (webstaurantstore) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.webstaurantstore.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Just a moment.... . Just a moment...",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:22": {
+    "name": "GloryBee",
+    "country": "Iraq",
+    "website": "https://glorybee.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (glorybee) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://glorybee.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Attention Required! | Cloudflare. . Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access glorybee.com Why have I been blocked? This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data. What can I do to resolve this? You can email the site owner to let them k",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:23": {
+    "name": "Wholesalesuppliesplus",
+    "country": "Iraq",
+    "website": "https://www.wholesalesuppliesplus.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (wholesalesuppliesplus) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.wholesalesuppliesplus.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Access denied. . Access denied You do not have permission to access this website Your request was blocked.",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:24": {
+    "name": "Bakersbulk",
+    "country": "Iraq",
+    "website": "https://bakersbulk.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (bakersbulk) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://bakersbulk.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Access denied. . Access denied You do not have permission to access this website Your request was blocked.",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:25": {
+    "name": "Ingredi",
+    "country": "Iraq",
+    "website": "https://ingredi.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (ingredi) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+18338221151",
+        "display": "+1 833-822-1151",
+        "kind": "tel",
+        "source_url": "https://ingredi.com"
+      }
+    ],
+    "phone_best": "+1 833-822-1151",
+    "phone_source_url": "https://ingredi.com",
+    "pages_checked": [
+      "https://ingredi.com",
+      "https://ingredi.com/contact-us",
+      "https://ingredi.com/contact-us"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Ingredi | Ingredients Made Easy - Wholesale Ingredient Supplier. Ingredi is your premium supplier and distributor of high-quality bulk ingredients satisfying a wide range of industries including beverage, bakery, meat, personal care, and equipment care. Fast shipping, bulk pricing discounts.. Ingredi | Ingredients Made Easy - Wholesale Ingredient Supplier Video background is not supported by your browser/device Bakery Beverage Wine Beer Meat Fragrances & Flavors Personal Care Equipment Care Nutra Bakery Beverage Wine Beer Meat Fragrances & Flavors Personal Care Equipment Care Nutra Close × ! OK Cancel ​",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:26": {
+    "name": "Foodsweeteners",
+    "country": "Iraq",
+    "website": "https://www.foodsweeteners.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (foodsweeteners) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@foodsweeteners.com",
+        "kind": "mailto",
+        "source_url": "https://www.foodsweeteners.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@foodsweeteners.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.foodsweeteners.com",
+    "phones": [
+      {
+        "e164": "+862168580751",
+        "display": "+86 21 6858 0751",
+        "kind": "text",
+        "source_url": "https://www.foodsweeteners.com"
+      },
+      {
+        "e164": "+862132221832",
+        "display": "+86 21 3222 1832",
+        "kind": "text",
+        "source_url": "https://www.foodsweeteners.com"
+      }
+    ],
+    "phone_best": "+86 21 6858 0751",
+    "phone_source_url": "https://www.foodsweeteners.com",
+    "pages_checked": [
+      "https://www.foodsweeteners.com",
+      "https://www.foodsweeteners.com/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Food Additives & Ingredients Supplier - Newseed Chemical Co., Limited. Distributor of food/feed additives in Shanghai for 20 years. Products cover Sweeteners, Vitamins, Thickeners and so on. Trusted by quality. Progressed by knowledage. Sustained by commitment.. Food Additives & Ingredients Supplier - Newseed Chemical Co., Limited NewSeed ✕ About Us Products Blog Contact Mix Container Inquiry Your Partner for Food Ingredient Sourcing from China We source, verify, and export bulk food and feed ingredients like sweeteners, vitamins, preservatives, herbal extracts directly from top Chinese manufacturers to your port. Request a Quote Browse Products 20+ Years Experience 100+ Products 90+ Countri",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:27": {
+    "name": "American International Foods, Inc.",
+    "country": "Iraq",
+    "website": "https://www.americaninternationalfoods.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (american) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.americaninternationalfoods.com",
+      "https://www.americaninternationalfoods.com/contact/warehouse-locations/",
+      "https://www.americaninternationalfoods.com/contact/",
+      "https://www.americaninternationalfoods.com/contact/price-request/",
+      "https://www.americaninternationalfoods.com/contact/document-request/",
+      "https://www.americaninternationalfoods.com/contact/",
+      "https://www.americaninternationalfoods.com/contact/",
+      "https://www.americaninternationalfoods.com/contact/"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Food Ingredient Supplier | AIFI. AIFI is a reliable industrial food ingredient supplier offering stable nationwide distribution on over 2500+ ingredients at competitive prices.. Food Ingredient Supplier | AIFI Food Ingredient Supplier | AIFI Featured Ingredient: Oats This month, AIFI is featuring our highest quality oats, including baby rolled oats, flaked oats, oat bran, oat fiber, quick oats, rolled oats, and many more. Our bulk oats selection includes Non-GMO, Organic, Gluten Free, and RTE options at competitive prices with continuity of supply. Contact our sales representatives to learn more! View Our Oats Product Line Leading The Way With Innovative Solutions We ar",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:28": {
+    "name": "Connection ...",
+    "country": "Iraq",
+    "website": "https://connectionchemical.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (connection) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+12154934240",
+        "display": "+1 215-493-4240",
+        "kind": "tel",
+        "source_url": "https://connectionchemical.com"
+      },
+      {
+        "e164": "+19252842275",
+        "display": "+1 925-284-2275",
+        "kind": "tel",
+        "source_url": "https://connectionchemical.com"
+      },
+      {
+        "e164": "+12154700007",
+        "display": "+1 215-470-0007",
+        "kind": "tel",
+        "source_url": "https://connectionchemical.com/contact-us/"
+      },
+      {
+        "e164": "+14159872275",
+        "display": "+1 415-987-2275",
+        "kind": "tel",
+        "source_url": "https://connectionchemical.com/contact-us/"
+      },
+      {
+        "e164": "+12153270019",
+        "display": "+1 215-327-0019",
+        "kind": "tel",
+        "source_url": "https://connectionchemical.com/contact-us/"
+      },
+      {
+        "e164": "+15084938151",
+        "display": "+1 508-493-8151",
+        "kind": "tel",
+        "source_url": "https://connectionchemical.com/sales-contacts-2/"
+      },
+      {
+        "e164": "+17704688251",
+        "display": "+1 770-468-8251",
+        "kind": "tel",
+        "source_url": "https://connectionchemical.com/sales-contacts-2/"
+      },
+      {
+        "e164": "+17138588192",
+        "display": "+1 713-858-8192",
+        "kind": "tel",
+        "source_url": "https://connectionchemical.com/sales-contacts-2/"
+      }
+    ],
+    "phone_best": "+1 215-493-4240",
+    "phone_source_url": "https://connectionchemical.com",
+    "pages_checked": [
+      "https://connectionchemical.com",
+      "https://connectionchemical.com/contact-us/",
+      "https://connectionchemical.com/contact-us/",
+      "https://connectionchemical.com/sales-contacts-2/",
+      "https://connectionchemical.com/contact-us/",
+      "https://connectionchemical.com/contact-us/",
+      "https://connectionchemical.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Connection Chemical - Industrial Chemical Supplier & Distributor. Connection Chemical, LP connects customers with chemicals from around the globe. World-class manufacturers choose us to represent their brand in North America. Our expertise in chemical distribution, logistics, and supply chain optimization promises dynamic solutions, delivering distinctive results and sustainable advantages to customers and suppliers alike.. Connection Chemical - Industrial Chemical Supplier & Distributor Skip to content Corporate Headquarters 215-493-4240 Contact Us KEEPING CUSTOMERS CHEMICALLY CONNECTED World-Class Suppliers. Quality Product. CONNECTING GLOBAL SUPPLIERS TO LOCAL MARKETS National Footprint. ",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:29": {
+    "name": "Skchemicaltraders",
+    "country": "Iraq",
+    "website": "https://www.skchemicaltraders.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (skchemicaltraders) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@skchemicaltraders.com",
+        "kind": "mailto",
+        "source_url": "https://www.skchemicaltraders.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@skchemicaltraders.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.skchemicaltraders.com",
+    "phones": [
+      {
+        "e164": "+8562095006765",
+        "display": "+856 20 95 006 765",
+        "kind": "tel",
+        "source_url": "https://www.skchemicaltraders.com"
+      },
+      {
+        "e164": "+8562096983887",
+        "display": "+856 20 96 983 887",
+        "kind": "tel",
+        "source_url": "https://www.skchemicaltraders.com"
+      },
+      {
+        "e164": "+66930706514",
+        "display": "+66 93 070 6514",
+        "kind": "text",
+        "source_url": "https://www.skchemicaltraders.com"
+      }
+    ],
+    "phone_best": "+856 20 95 006 765",
+    "phone_source_url": "https://www.skchemicaltraders.com",
+    "pages_checked": [
+      "https://www.skchemicaltraders.com",
+      "https://www.skchemicaltraders.com/contact-us.htm"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "S K Chemical Traders – Global Supplier of Industrial, Food, Pharmaceutical & Specialty Chemicals. S K Chemical Traders is a trusted global chemical supplier offering high-quality industrial, food, pharmaceutical, and specialty chemicals. Reliable supply, consistent purity, and technical support worldwide.. S K Chemical Traders – Global Supplier of Industrial, Food, Pharmaceutical & Specialty Chemicals Global Chemical Solutions for Every Industry High-quality general chemicals for agriculture, pharmaceuticals, water treatment, plastics, and more More About Contact Us Global Manufacturer & Supplier of High-Quality Industrial and General Chemicals Delivering reliable, ISO-certified chemical sol",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:30": {
+    "name": "Alchemoraltd",
+    "country": "Iraq",
+    "website": "https://www.alchemoraltd.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (alchemoraltd) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@alchemoraltd.com",
+        "kind": "mailto",
+        "source_url": "https://www.alchemoraltd.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@alchemoraltd.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.alchemoraltd.com",
+    "phones": [
+      {
+        "e164": "+27786715106",
+        "display": "+27 78 671 5106",
+        "kind": "tel",
+        "source_url": "https://www.alchemoraltd.com"
+      }
+    ],
+    "phone_best": "+27 78 671 5106",
+    "phone_source_url": "https://www.alchemoraltd.com",
+    "pages_checked": [
+      "https://www.alchemoraltd.com",
+      "https://www.alchemoraltd.com/contact-us.htm"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Alchemora Ltd. | Global Chemical Supplier & Exporter South Africa. Alchemora Ltd. supplies agricultural, food, industrial, mining, solvent, and water treatment chemicals worldwide with reliable delivery and competitive pricing.. Alchemora Ltd. | Global Chemical Supplier & Exporter South Africa Global Chemical Solutions for Every Industry Alchemora Ltd. is a trusted South African supplier and exporter of agricultural, food, industrial, mining, organic, inorganic, solvent, and water treatment chemicals, delivering premium-quality products to customers worldwide. Get a Quote View More Your Reliable Worldwide Chemical Supply Partner From bulk chemical sourcing to international distribution, Alch",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:31": {
+    "name": "E Spirit",
+    "country": "Iraq",
+    "website": "https://brenntag-pwa-saudi-arabia-nuxt3.e-spirit.cloud",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (spirit) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://brenntag-pwa-saudi-arabia-nuxt3.e-spirit.cloud/en-sa/",
+      "https://brenntag-pwa-saudi-arabia-nuxt3.e-spirit.cloud/en-sa/contact.html"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Chemical Distribution in Saudi Arabia | Brenntag. Brenntag is the global market leader in chemical and ingredients distribution. The Germany based international company manages complex supply chains for both chemical manufacturers and consumers by simplifying market access to thousands of products and services. . Chemical Distribution in Saudi Arabia | Brenntag Welcome to Brenntag in Saudi Arabia Brenntag Saudi Arabia is a subsidiary of Brenntag SE, the global market leader in chemical and ingredients distribution. We offer comprehensive solutions as well as individual chemical products throughout Saudi Arabia. Learn more about us Everything you need in chemicals and ingredients Our focus in",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:32": {
+    "name": "Chemiekimyaltd",
+    "country": "Iraq",
+    "website": "https://www.chemiekimyaltd.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (chemiekimyaltd) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@chemiekimyaltd.com",
+        "kind": "mailto",
+        "source_url": "https://www.chemiekimyaltd.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@chemiekimyaltd.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.chemiekimyaltd.com",
+    "phones": [
+      {
+        "e164": "+351927443965",
+        "display": "+351 927 443 965",
+        "kind": "tel",
+        "source_url": "https://www.chemiekimyaltd.com"
+      }
+    ],
+    "phone_best": "+351 927 443 965",
+    "phone_source_url": "https://www.chemiekimyaltd.com",
+    "pages_checked": [
+      "https://www.chemiekimyaltd.com",
+      "https://www.chemiekimyaltd.com/contact-us.htm"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Chemie Kimya Limited Sirketi | Global Chemical Supplier & Exporter from Turkey. Chemie Kimya Limited Sirketi is a Turkey-based global supplier and exporter of agricultural, food, industrial, inorganic, mining, organic, solvent, and water treatment chemicals, delivering premium-quality products, competitive pricing, and reliable worldwide shipping.. Chemie Kimya Limited Sirketi | Global Chemical Supplier & Exporter from Turkey Chemie Kimya Limited Sirketi Your Trusted Worldwide Chemical Manufacturing & Export Partner Turkey Read More Chemie Kimya Limited Sirketi Global Supplier of Premium Chemical Solutions in Turkey Read More Reliability Transparency Service Materials 100% Quality Product Ex",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:33": {
+    "name": "ADAMCO",
+    "country": "Iraq",
+    "website": "http://www.adamco.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (adamco) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+9651888866",
+        "display": "+965 1888 866",
+        "kind": "text",
+        "source_url": "http://www.adamco.com/innerpages.aspx?id=23&Root=no"
+      }
+    ],
+    "phone_best": "+965 1888 866",
+    "phone_source_url": "http://www.adamco.com/innerpages.aspx?id=23&Root=no",
+    "pages_checked": [
+      "http://www.adamco.com",
+      "http://www.adamco.com/innerpages.aspx?id=23&Root=no"
+    ],
+    "notes": [
+      "https://www.falholdings.com/english → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Adamco. . Adamco Sitemap | Home About Us Our Strategy Our Vision Our Professional Principles Our Work Team Board of Directors & Top Management Shariah Supervisory Board Annual & Financial Reports Our Policies Organization Structure Services Asset Management Investment Portfolios Investment Fund AlDarRealEstateFund AlDarMoneyMarketFund AlDarSecuritiesFund AlDarFundofFunds AlNokhbaFund Financial Derivatives Follow-Up and Customers Relations Global Investment Local & Arabic Investment Business Development Fi",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:34": {
+    "name": "Yizhou Chem",
+    "country": "Iraq",
+    "website": "https://yizhouchem.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (yizhou, chem) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@yizhouchem.com",
+        "kind": "mailto",
+        "source_url": "https://yizhouchem.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@yizhouchem.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://yizhouchem.com",
+    "phones": [
+      {
+        "e164": "+85264017131",
+        "display": "+852 6401 7131",
+        "kind": "whatsapp",
+        "source_url": "https://yizhouchem.com"
+      }
+    ],
+    "phone_best": "+852 6401 7131",
+    "phone_source_url": "https://yizhouchem.com",
+    "pages_checked": [
+      "https://yizhouchem.com",
+      "https://yizhouchem.com/#inquiry"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Soda Ash & Sodium Bicarbonate Supplier, China | Yizhou Chem. Trading company exporting soda ash and sodium bicarbonate from Inner Mongolia. Dense, light, food, feed, industrial grades. FOB Tianjin, MOQ 1 × 20′ FCL.. Soda Ash & Sodium Bicarbonate Supplier, China | Yizhou Chem Skip to content Inner Mongolia, China · FOB Tianjin Soda Ash Na 2 CO 3 & Sodium Bicarbonate NaHCO 3 from a supplier in China, shipped with the paperwork your QA team asks for first. Inner Mongolia Yizhou Trading Co., Ltd. is a trading company and exporter in Hohhot and an authorized distributor of Berun ( SZSE: 000683 ). We export dense and light soda ash and food, feed and industrial sodium bicarbonate bought direct fro",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:35": {
+    "name": "jumla-iq.com",
+    "country": "Iraq",
+    "website": "https://www.jumla-iq.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (jumla, iq, com) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@jumla-iq.com",
+        "kind": "mailto",
+        "source_url": "https://www.jumla-iq.com/contact",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@jumla-iq.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.jumla-iq.com/contact",
+    "phones": [
+      {
+        "e164": "+9647751055353",
+        "display": "+964 775 105 5353",
+        "kind": "whatsapp",
+        "source_url": "https://www.jumla-iq.com/contact"
+      }
+    ],
+    "phone_best": "+964 775 105 5353",
+    "phone_source_url": "https://www.jumla-iq.com/contact",
+    "pages_checked": [
+      "https://www.jumla-iq.com",
+      "https://www.jumla-iq.com/contact"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "جملة العراق | سوق الجملة والتجارة بين التجار. سوق الجملة والتجارة بين التجار في العراق: اعثر على موردين ومشترين موثوقين لمواد البناء والكهرباء والسباكة والأجهزة المنزلية والزراعة والصناعة. انشر طلب عرض سعر واحصل على عروض مباشرة.. جملة العراق | سوق الجملة والتجارة بين التجار جملة العراق — سوق تجارة بين الشركات يربط الشركات العراقية. جملة العراق — سوق الشركات العراقية للبيع بالجملة كل ما تحتاجه شركتك من موردين محليين في جميع أنحاء العراق. بيع وشراء بالجملة على جملة العراق. تصفح المنتجات ابدأ الآن بحث الفئات عرض الكل البنية التحتية والإنشاءات المنتجات الصناعية معدات ومواد التعبئة والتغليف الأجهزة المنزلية والإلكترونيات الأثاث والتجهيزات الزراعة والغذاء الآلات والأدوات والمعدات السلامة والأمن ال",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:36": {
+    "name": "Borong.com",
+    "country": "Iraq",
+    "website": "https://market.borong.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (borong, com) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "contact@borong.com",
+        "kind": "text",
+        "source_url": "https://www.borong.com/company/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "contact@borong.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.borong.com/company/contact/",
+    "phones": [
+      {
+        "e164": "+60162994484",
+        "display": "+60 16-299 4484",
+        "kind": "whatsapp",
+        "source_url": "https://www.borong.com/company/contact/"
+      }
+    ],
+    "phone_best": "+60 16-299 4484",
+    "phone_source_url": "https://www.borong.com/company/contact/",
+    "pages_checked": [
+      "https://market.borong.com/my",
+      "https://www.borong.com/company/contact/",
+      "https://www.borong.com/company/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Borong Marketplace. Source direct from Wholesalers, Key Distributors, and Manufacturers. Types: Drinks, Confectionary & Snacks, Event Supplies, Office Supplies. 3-5 days delivery. Borong Marketplace log in with your account forgot your password? New user? Sign up to buy here Your Location: All States Trending Products Products curated to match your local needs View All BINTANG Tepung Jagung 400g (20 Units Per Carton) [KLANG VALLEY ONLY] MYR 40.00 /Carton RRP MYR 45.00/Carton Available PJ Grocer Sdn Bhd Selangor 500G Minni HALAL Yellow Pea Puff - Korean Spicy Flavor Baked | High Protein Crispy Snacks MYR",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:37": {
+    "name": "accio.com",
+    "country": "Iraq",
+    "website": "https://www.accio.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (accio, com) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.accio.com",
+      "https://www.accio.com/contact",
+      "https://www.accio.com/contact-us",
+      "https://www.accio.com/contactus",
+      "https://www.accio.com/contact.html",
+      "https://www.accio.com/contact-us.html",
+      "https://www.accio.com/pages/contact",
+      "https://www.accio.com/contacts",
+      "https://www.accio.com/contacts/",
+      "https://www.accio.com/kontakty",
+      "https://www.accio.com/kontakt",
+      "https://www.accio.com/kontakte",
+      "https://www.accio.com/about/contacts",
+      "https://www.accio.com/ru/contacts",
+      "https://www.accio.com/en/contacts",
+      "https://www.accio.com/lianxiwomen"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Accio Work - Your AI Business Team That Turns Ideas Into Profits. Accio Work is the agentic team that runs your business. It connects major e-commerce platforms and automates store operations with built-in tools and expert skills, at over 50% lower cost than other AI.. Accio Work - Your AI Business Team That Turns Ideas Into Profits",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:38": {
+    "name": "Nationalstocknumber",
+    "country": "Iraq",
+    "website": "https://nationalstocknumber.info",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (nationalstocknumber) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://nationalstocknumber.info"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Attention Required! | Cloudflare. . Attention Required! | Cloudflare Please enable cookies. Sorry, you have been blocked You are unable to access nationalstocknumber.info Why have I been blocked? This website is using a security service to protect itself from online attacks. The action you just performed triggered the security solution. There are several actions that could trigger this block including submitting a certain word or phrase, a SQL command or malformed data. What can I do to resolve this? You can email the site owner t",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:39": {
+    "name": "Theonenesstrading",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://merchant.mot.gov.iq → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.arqam.one → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://rs.iq → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://tasjeel.mot.gov.iq → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:40": {
+    "name": "ETK",
+    "country": "Iraq",
+    "website": "http://www.etk.su",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (etk) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@pvx.ru",
+        "kind": "text",
+        "source_url": "http://www.etk.su/node/4",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+74957750255",
+        "display": "+7 495 775-02-55",
+        "kind": "text",
+        "source_url": "http://www.etk.su/node/4"
+      }
+    ],
+    "phone_best": "+7 495 775-02-55",
+    "phone_source_url": "http://www.etk.su/node/4",
+    "pages_checked": [
+      "http://www.etk.su",
+      "http://www.etk.su/node/4"
+    ],
+    "notes": [
+      "info@pvx.ru دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "О КОМПАНИИ | Единая Торговая Компания. . О КОМПАНИИ | Единая Торговая Компания О КОМПАНИИ Продукция Каустическая сода Предприятия Контакты : РУС ENG EUR 90.8136 -0.38 USD 82.4529 -0.06 По состоянию на 17.11.2026 г. Москва, 127473, Краснопролетарская ул., дом 30, стр.1 О КОМПАНИИ АО «Единая торговая компания» является одним из крупнейших трейдеров российского рынка химической продукции. Компания создана в 2003 году и за время своей работы зарекомендовала себя как надежный деловой партнер. АО «Единая торговая компания» активно работает с",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:41": {
+    "name": "50 lb bags",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://corecheminc.com → نام شرکت با صفحه نمی‌خواند (1/3 واژه‌ی نام (50) در عنوان/متن/دامنه)",
+      "https://www.amazon.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.homedepot.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.sandbagstore.com → نام شرکت با صفحه نمی‌خواند (1/3 واژه‌ی نام (bags) در عنوان/متن/دامنه)",
+      "https://www.mcmaster.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:42": {
+    "name": "Ecfr",
+    "country": "Iraq",
+    "website": "https://www.ecfr.gov",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (ecfr) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.ecfr.gov"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "eCFR :: Home. . eCFR :: Home Site Feedback You are using an unsupported browser × You are using an unsupported browser. This web site is designed for the current versions of Microsoft Edge, Google Chrome, Mozilla Firefox, or Safari. × Site Feedback The Office of the Federal Register publishes documents on behalf of Federal agencies but does not have any authority over their programs. We recommend you directly contact the agency associated with the content in question. If you have comments or suggestio",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:43": {
+    "name": "Sure Chemical",
+    "country": "Iraq",
+    "website": "https://www.surechemical.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (sure, chemical) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@surechemical.com",
+        "kind": "mailto",
+        "source_url": "https://www.surechemical.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@surechemical.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.surechemical.com",
+    "phones": [
+      {
+        "e164": "+8613803391435",
+        "display": "+86 138 0339 1435",
+        "kind": "whatsapp",
+        "source_url": "https://www.surechemical.com/send-on-line/index.html"
+      }
+    ],
+    "phone_best": "+86 138 0339 1435",
+    "phone_source_url": "https://www.surechemical.com/send-on-line/index.html",
+    "pages_checked": [
+      "https://www.surechemical.com",
+      "https://www.surechemical.com/send-on-line/index.html"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Sure Chem - Professional Chinese supplier of Chemicals. Sure Chemical is Professional Chinese supplier of Chemicals. We serve the international chemical market as a producer and exporter and are experts in the field of concrete admixture, mining chemicals,food additives, pigment, water treament chemicals, etc.. Sure Chem - Professional Chinese supplier of Chemicals Sure Chemical Co., Ltd. Shijiazhuang Home About Products News Contact us Chinese Chemical Partner Concrete Admixtures Mining Chemicals Agricultural Fertilizers Personal Care Ingredients Good Choice & Better Service More >> Here you can learn more about Sure Chemical Welcome To Sure Chem Sure Chem is one of the leading chemical com",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:44": {
+    "name": "Sodiumcarbonate",
+    "country": "Iraq",
+    "website": "https://www.sodiumcarbonate.in",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (sodiumcarbonate) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@silverlinechemicals.com",
+        "kind": "mailto",
+        "source_url": "https://www.sodiumcarbonate.in",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+919810339289",
+        "display": "+91 98103 39289",
+        "kind": "tel",
+        "source_url": "https://www.sodiumcarbonate.in"
+      }
+    ],
+    "phone_best": "+91 98103 39289",
+    "phone_source_url": "https://www.sodiumcarbonate.in",
+    "pages_checked": [
+      "https://www.sodiumcarbonate.in",
+      "https://www.sodiumcarbonate.in/contact-us.html"
+    ],
+    "notes": [
+      "sales@silverlinechemicals.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Sodium Iodide Manufacturers | Sodium Picosulfate | Saccharin. Silverline Chemicals is leading Sodium Iodide Manufacturers in India. A well known Sodium Picosulfate, Sodium Saccharin Exporters and Suppliers.. Sodium Iodide Manufacturers | Sodium Picosulfate | Saccharin Trusted Sodium Carbonate & Industrial Chemical Supplier In India! Premium Quality Sodium Carbonate Delivering high-grade Sodium Carbonate for detergent, glass, chemical and industrial applications with assured purity, consistent quality and bulk supply across India. Book A Visit View Products Bulk Industrial Supply High Purity Chemicals Pan India Distribution Leading Chemical Solutions For Multiple Industrie",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:45": {
+    "name": "Natrium",
+    "country": "Iraq",
+    "website": "https://www.natrium.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (natrium) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@natrium.com",
+        "kind": "mailto",
+        "source_url": "https://www.natrium.com/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@natrium.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.natrium.com/contact-us/",
+    "phones": [
+      {
+        "e164": "+16077539829",
+        "display": "+1 607-753-9829",
+        "kind": "tel",
+        "source_url": "https://www.natrium.com/contact-us/"
+      }
+    ],
+    "phone_best": "+1 607-753-9829",
+    "phone_source_url": "https://www.natrium.com/contact-us/",
+    "pages_checked": [
+      "https://www.natrium.com",
+      "https://www.natrium.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Leading Sodium Bicarbonate Supplier | Buy Sodium Bicarb in Bulk. Order Sodium Bicarbonate from Natrium Products - leading manufacturer of packaged standard & specialty-grade sodium bicarbonate. Sold in bulk. Leading Sodium Bicarbonate Supplier | Buy Sodium Bicarb in Bulk Leading Manufacturer Natrium Products is a leading manufacturer of specialty sodium bicarbonate for the North American market. Natrium manufactures and distributes standard and specialty grade sodium bicarbonate/baking soda in package and bulk. Learn More Unparalleled Product Knowledge & Customer Service Tell us about your application! We strive to learn about your unique needs enabling us to provide precise product recommen",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:46": {
+    "name": "Niranbio",
+    "country": "Iraq",
+    "website": "https://www.niranbio.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (niranbio) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "export@niranbio.com",
+        "kind": "cfemail",
+        "source_url": "https://www.niranbio.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "export@niranbio.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.niranbio.com",
+    "phones": [
+      {
+        "e164": "+8651085229221",
+        "display": "+86 510 8522 9221",
+        "kind": "tel",
+        "source_url": "https://www.niranbio.com"
+      },
+      {
+        "e164": "+8618921130987",
+        "display": "+86 189 2113 0987",
+        "kind": "whatsapp",
+        "source_url": "https://www.niranbio.com"
+      }
+    ],
+    "phone_best": "+86 510 8522 9221",
+    "phone_source_url": "https://www.niranbio.com",
+    "pages_checked": [
+      "https://www.niranbio.com",
+      "https://www.niranbio.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Food Ingredients Supplier | Bulk Food Additives | Niran Bio. NiranBio is a global food ingredients supplier offering bulk food additives, including acidulants, antioxidants, preservatives, sweeteners, and emulsifiers for food manufacturers and distributors worldwide.. Food Ingredients Supplier | Bulk Food Additives | Niran Bio Skip to content No results Your Reliable Food Ingredients Supplier Your Reliable Food Ingredients Supplier Through our capabilities in owned factories, local sourcing, factory audits, warehousing, and after-sales support, we ensure a stable and fully controlled supply chain for our customers. Core Supplier of Citric Acid, Citrates, Sweeteners, and Phosphates 23+ Years ",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:47": {
+    "name": "Nazer Trading Co",
+    "country": "Iraq",
+    "website": "https://nazertrading.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (nazer) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@nazertrading.com",
+        "kind": "text",
+        "source_url": "https://nazertrading.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@nazertrading.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://nazertrading.com",
+    "phones": [
+      {
+        "e164": "+96891289538",
+        "display": "+968 9128 9538",
+        "kind": "whatsapp",
+        "source_url": "https://nazertrading.com"
+      }
+    ],
+    "phone_best": "+968 9128 9538",
+    "phone_source_url": "https://nazertrading.com",
+    "pages_checked": [
+      "https://nazertrading.com",
+      "https://nazertrading.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Nazer Trading Co. . Nazer Trading Co Chemicals Aluminum Sulfate, Calcium Chloride, Carbon Black, Caustic Soda, Poly Aluminum Chloride, Soda Ash, Sodium Silicate, Sodium Sulfide &... View Products Polymers Granulate View Products Paraffin Wax Paraffin Wax Flake, Chlorinated Paraffin, Micro Crystalline Wax, Granule Paraffin Wax &... View Products Minerals Ammonium Sulfate, Ball Clay, Bentonite, Calcium Carbonate, Calcium Lime, Iron Oxide, Gypsum, Magnesite & ... View Products About US Nazer Trading co. Nazer trading",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:48": {
+    "name": "Manahoortrading",
+    "country": "Iraq",
+    "website": "https://manahoortrading.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (manahoortrading) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@manahoortrading.com",
+        "kind": "mailto",
+        "source_url": "https://manahoortrading.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "business@portotheme.com",
+        "kind": "mailto",
+        "source_url": "https://manahoortrading.com/contact-us/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@manahoortrading.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://manahoortrading.com",
+    "phones": [
+      {
+        "e164": "+989120695676",
+        "display": "+98 912 069 5676",
+        "kind": "whatsapp",
+        "source_url": "https://manahoortrading.com"
+      },
+      {
+        "e164": "+982146138295",
+        "display": "+98 21 4613 8295",
+        "kind": "text",
+        "source_url": "https://manahoortrading.com/contact-us/"
+      }
+    ],
+    "phone_best": "+98 912 069 5676",
+    "phone_source_url": "https://manahoortrading.com",
+    "pages_checked": [
+      "https://manahoortrading.com",
+      "https://manahoortrading.com/contact-us/"
+    ],
+    "notes": [
+      "business@portotheme.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Home - ManaHoor Engineering and Trading Co.. Manahoor Engineering and Trading Co. is proud to provide technical and engineering consulting services as well as import and export of goods and services .... Home - ManaHoor Engineering and Trading Co. Home ManaHoor 2021-11-02T10:20:12+03:30 Previous Next Your welcome Manahoor Engineering and Trading Co. is proud to provide import and export of goods and services with quality and price guarantees and also technical consulting and engineering services with the help of the experience of its specialists and employees. What we do? Department of Food and Agriculture Products Department of Chemical and Plastic Products Department of Products and Constr",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:49": {
+    "name": "Bulk Distributors ...",
+    "country": "Iraq",
+    "website": "https://www.americanchemicalsuppliers.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (bulk, distributors) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@americanchemicalsuppliers.com",
+        "kind": "cfemail",
+        "source_url": "https://www.americanchemicalsuppliers.com/content/page/contact-us",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@americanchemicalsuppliers.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.americanchemicalsuppliers.com/content/page/contact-us",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.americanchemicalsuppliers.com/list/a",
+      "https://www.americanchemicalsuppliers.com/content/page/contact-us"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "USA Chemical Suppliers. Finding a new supplier starts here. | Browse 300,000+ products. | Request quotes. | Compare manufacturers, specialty suppliers and distributors.. USA Chemical Suppliers American Chemical Suppliers A directory of where to buy chemicals in the USA . Find American chemical suppliers, distributors, industrial manufacturers, bulk supplies and wholesalers of raw ingredients & finished goods in the United States. Search 300,000+ products or services , then visit the suppliers’ websites for prices or more information. Search by keyword Filter by first letter Search Tips Categories A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3 4 5 6",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:50": {
+    "name": "Ishtarcompany",
+    "country": "Iraq",
+    "website": "https://ishtarcompany.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (ishtarcompany) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@ishtarcompany.com",
+        "kind": "text",
+        "source_url": "https://ishtarcompany.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "sales@ishtarcompany.com",
+        "kind": "text",
+        "source_url": "https://ishtarcompany.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@ishtarcompany.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://ishtarcompany.com",
+    "phones": [
+      {
+        "e164": "+79655912225",
+        "display": "+7 965 591-22-25",
+        "kind": "text",
+        "source_url": "https://ishtarcompany.com"
+      },
+      {
+        "e164": "+989027356677",
+        "display": "+98 902 735 6677",
+        "kind": "text",
+        "source_url": "https://ishtarcompany.com/contact-us/"
+      },
+      {
+        "e164": "+905353944012",
+        "display": "+90 535 394 40 12",
+        "kind": "text",
+        "source_url": "https://ishtarcompany.com/contact-us/"
+      },
+      {
+        "e164": "+37491472300",
+        "display": "+374 91 472300",
+        "kind": "text",
+        "source_url": "https://ishtarcompany.com/contact-us/"
+      }
+    ],
+    "phone_best": "+7 965 591-22-25",
+    "phone_source_url": "https://ishtarcompany.com",
+    "pages_checked": [
+      "https://ishtarcompany.com",
+      "https://ishtarcompany.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Ishtar Company LLC | Trusted Global Exporter of Petrochemical , Chemical and Mineral Products. Ishtar Company LLC, part of Barus Holding Group, supplies and exports Petrochemical products, Chemical, and minerals to global markets with efficiency, integrity, and reliability.. Ishtar Company LLC | Trusted Global Exporter of Petrochemical , Chemical and Mineral Products Skip to content ISHTAR ISHTAR COMPANY supplying and distribution of different kinds of Petroleum Products, Petrochemicals and Minerals in the international markets products contact us ABOUT ISHTAR ABOUT OUR COMPANY Ishtar is a subsidiary to a bigger holding group, Barus Holding Group , founded in 2007. This group deals in supply",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:51": {
+    "name": "Behin Trading",
+    "country": "Iraq",
+    "website": "https://behintrading.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (behin) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@behintrading.com",
+        "kind": "text",
+        "source_url": "https://behintrading.com/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "head.uae@behintrading.com",
+        "kind": "text",
+        "source_url": "https://behintrading.com/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "tony@behintrading.com",
+        "kind": "text",
+        "source_url": "https://behintrading.com/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "nasseri@behintrading.com",
+        "kind": "text",
+        "source_url": "https://behintrading.com/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "sales@behintrading.com",
+        "kind": "text",
+        "source_url": "https://behintrading.com/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@behintrading.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://behintrading.com/contact/",
+    "phones": [
+      {
+        "e164": "+989900976005",
+        "display": "+98 990 097 6005",
+        "kind": "text",
+        "source_url": "https://behintrading.com/contact/"
+      },
+      {
+        "e164": "+985137662336",
+        "display": "+98 51 3766 2336",
+        "kind": "text",
+        "source_url": "https://behintrading.com/contact/"
+      }
+    ],
+    "phone_best": "+98 990 097 6005",
+    "phone_source_url": "https://behintrading.com/contact/",
+    "pages_checked": [
+      "https://behintrading.com",
+      "https://behintrading.com/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Iran Chemicals & Petrochemicals Supplier | Behin Trading. Leading exporter and supplier of chemicals, fertilizers, and petrochemicals from Iran. Explore technical specifications and request a quotation today.. Iran Chemicals & Petrochemicals Supplier | Behin Trading Skip to content FERTILIZERS Delivering High-Performance Chemical Fertilizers. Expertly Sourced and Manufactured Through Trusted Partners in Over 10 Countries to Boost Global Agricultural Success. Get Started CHEMICALS Powering Industrial Performance with High-Quality Chemicals. As Trusted Suppliers and Manufacturers, We Deliver Essential Ingredients to Leading Production Facilities Worldwide. Get Started MINERALS Sourcing Premium",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:52": {
+    "name": "Jinbeichemical",
+    "country": "Iraq",
+    "website": "https://jinbeichemical.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (jinbeichemical) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@jinbeichemical.cn",
+        "kind": "mailto",
+        "source_url": "https://jinbeichemical.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@jinbeichemical.cn",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://jinbeichemical.com",
+    "phones": [
+      {
+        "e164": "+8615066644086",
+        "display": "+86 150 6664 4086",
+        "kind": "whatsapp",
+        "source_url": "https://jinbeichemical.com"
+      }
+    ],
+    "phone_best": "+86 150 6664 4086",
+    "phone_source_url": "https://jinbeichemical.com",
+    "pages_checked": [
+      "https://jinbeichemical.com",
+      "https://jinbeichemical.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Food Additives Manufacturers/Suppliers -. Food Additives Manufacturers/Suppliers. Food Additives Manufacturers/Suppliers - Skip to content Food Ingredients Manufacturers We have factories in Shandong , Sichuan and Nigeria . Our Products JINBEI JINBEI CHEMICAL (SHANDONG) CO.,LTD Jinbei Chemical is an export company specializing in the field of food ingredients. Headquartered in China, it is committed to providing high-quality, safe and reliable raw material solutions for the global food industry. Our business covers multiple core categories, including: preservatives, acidulant",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:53": {
+    "name": "Kimiapars",
+    "country": "Iraq",
+    "website": "https://kimiapars.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (kimiapars) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@kimiapars.com",
+        "kind": "text",
+        "source_url": "https://kimiapars.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@kimiapars.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://kimiapars.com",
+    "phones": [
+      {
+        "e164": "+982188961941",
+        "display": "+98 21 8896 1941",
+        "kind": "text",
+        "source_url": "https://kimiapars.com/contact-us"
+      },
+      {
+        "e164": "+989121083929",
+        "display": "+98 912 108 3929",
+        "kind": "text",
+        "source_url": "https://kimiapars.com/contact-us"
+      },
+      {
+        "e164": "+989361083929",
+        "display": "+98 936 108 3929",
+        "kind": "text",
+        "source_url": "https://kimiapars.com/contact-us"
+      }
+    ],
+    "phone_best": "+98 21 8896 1941",
+    "phone_source_url": "https://kimiapars.com/contact-us",
+    "pages_checked": [
+      "https://kimiapars.com",
+      "https://kimiapars.com/contact-us",
+      "https://kimiapars.com/contact-us"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Kimia Pars | Chemicals | Caustic Soda | Minerals. Kimia Pars Co. ,established in 1995 and is headquartered at Tehran is a global manufacturing and supply organization providing integrated chemical procurement services with a level of certainty and trust, which makes Kimia Pars Co. stands unique.. Kimia Pars | Chemicals | Caustic Soda | Minerals PRODUCTS READY-TO-SHIP CHEMICALS MINERALS FERTILIZERS Agricultural Fertilizers and Nutrition To Amendand and Strengthen the Soil Product Type: Chemicals Minerals Fertilizers Product Name: 5 10 15 20 25 50 75 100 Unit: Tons Liters Kilograms Packing: Bulk Bag Pallet Big-Bag Barrel Tanker ISO Tank IBC Tank Flexi Tank Submit Order READY-TO-SHIP PRODUCTS R",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:54": {
+    "name": "M M Chemicals",
+    "country": "Iraq",
+    "website": "https://www.malbraychemicals.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (chemicals) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.malbraychemicals.com"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "malbray chemicals. . malbray chemicals Malbray Fertilizers Zeeno Pesticides",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:55": {
+    "name": "Zauba",
+    "country": "Iraq",
+    "website": "https://www.zauba.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (zauba) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@zauba.com",
+        "kind": "cfemail",
+        "source_url": "https://www.zauba.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@zauba.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.zauba.com",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.zauba.com",
+      "https://www.zauba.com/contact-us"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "AI Meets Trade Data | Zauba. Zauba provides comprehensive import and export trade data. Access, search, and analyze shipment records, exporter/importer information, and trade statistics.. AI Meets Trade Data | Zauba Skip to content Search USA Import Data × Search USA Ocean Bills of Lading 210M+ U.S. import shipments arriving by sea since 2012, across all products. Search by product, HS code, importer, exporter, address or bill of lading number. Search for Shipments by product Shipments by HS code Shipments by exporter Shipments by importer Exporters by product Exporters by HS code Exporters by name Exporters by customer name Exporters by address Importers by product Importers by",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:56": {
+    "name": "Kabirchemicals",
+    "country": "Iraq",
+    "website": "https://www.kabirchemicals.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (kabirchemicals) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+919729745099",
+        "display": "+91 97297 45099",
+        "kind": "text",
+        "source_url": "https://www.kabirchemicals.com"
+      },
+      {
+        "e164": "+918045800574",
+        "display": "+91 80 4580 0574",
+        "kind": "text",
+        "source_url": "https://www.kabirchemicals.com/contact-us.html"
+      }
+    ],
+    "phone_best": "+91 97297 45099",
+    "phone_source_url": "https://www.kabirchemicals.com",
+    "pages_checked": [
+      "https://www.kabirchemicals.com",
+      "https://www.kabirchemicals.com/contact-us.html",
+      "https://www.kabirchemicals.com/contact-us.html"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Sodium Bicarbonate Chemicals Supplier,Sodium Carbonate Chemicals Trader in Panipat,India. Leading Supplier and Trader standard quality of Industrial Chemicals, Sodium Bicarbonate Chemicals,Sodium Carbonate Chemicals, Sodium Hydrosulphite Chemicals offered by KABIR ALKALIES & CHEMICALS PVT. LTD, Established in the year 2005 based in Panipat, Haryana, India. buy quality range of Sodium Bicarbonate Chemicals Supplier,Sodium Carbonate Chemicals Trader,India. Sodium Bicarbonate Chemicals Supplier,Sodium Carbonate Chemicals Trader in Panipat,India Home Page Company Profile Our Products Industrial Chemicals SERVICES More Info Application Areas Contact Us Send Inquiry ABOUT US SERVING WITH EXCELLENC",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:57": {
+    "name": "Akbari ...",
+    "country": "Iraq",
+    "website": "https://akbarimandilahore.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (akbari) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+923013002246",
+        "display": "+92 301 3002246",
+        "kind": "tel",
+        "source_url": "https://akbarimandilahore.com"
+      },
+      {
+        "e164": "+923008034174",
+        "display": "+92 300 8034174",
+        "kind": "tel",
+        "source_url": "https://akbarimandilahore.com"
+      }
+    ],
+    "phone_best": "+92 301 3002246",
+    "phone_source_url": "https://akbarimandilahore.com",
+    "pages_checked": [
+      "https://akbarimandilahore.com",
+      "https://akbarimandilahore.com/contact",
+      "https://akbarimandilahore.com/contact"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Akbari Mandi Lahore | Wholesale Pansar & Dryfruit Trader. Wholesale pansar, herbs, spices and dry fruits from Shahbaz Ali in Akbari Mandi Lahore. Delivery across Pakistan. Browse prices or send your order list.. Akbari Mandi Lahore | Wholesale Pansar & Dryfruit Trader Skip to content 24 hour phone and WhatsApp contact availability · Proprietor: Shahbaz Ali 03013002246 03008034174 WhatsApp AKBARI MANDI LAHORE • SHAHBAZ ALI Wholesale Pansar & Dryfruit Trader پنسار اور خشک میوہ جات کے ہول سیل تاجر About our shop From Akbari Mandi Lahore, Shahbaz Ali supplies pansar ingredients, herbs, spices and dry fruits at wholesale prices throughout Pakistan. We serve shopkeepers, businesses and households,",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:58": {
+    "name": "Enerjiya Beroil",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://beroilenergy.com → نام شرکت با صفحه نمی‌خواند (1/2 واژه‌ی نام (beroil) در عنوان/متن/دامنه)",
+      "https://electriciraq.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://iraqem.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.oil.gov.iq/verify/index.php?url=/ → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:59": {
+    "name": "Medikonda",
+    "country": "Iraq",
+    "website": "https://www.medikonda.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (medikonda) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.medikonda.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Access denied. . Access denied You do not have permission to access this website Your request was blocked.",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:60": {
+    "name": "Mounthopewholesale",
+    "country": "Iraq",
+    "website": "https://www.mounthopewholesale.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (mounthopewholesale) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.mounthopewholesale.com",
+      "https://www.mounthopewholesale.com/contact-us/",
+      "https://www.mounthopewholesale.com/contact-us/",
+      "https://www.mounthopewholesale.com/contact-us/",
+      "https://www.mounthopewholesale.com/contact-us/",
+      "https://www.mounthopewholesale.com/contact-us/"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Mount Hope Wholesale - Our Products. . Mount Hope Wholesale - Our Products Our Products Beans & Peas Cereals & Granolas Chiles Extracts & Flavor ing s Flours Fruits Grains & Pasta Miscellaneous Mushrooms Nuts & Seeds Nut & Fruit Mixes Nut Butters Organic Rices Spices & Herbs Superfoods Sweeteners Vegetables Business Login Email Password Forgot password? Verified Business Customers are eligible for resale pricing with low minimums. Register today. Register Your Business SALE INGREDIENTS Check Out Our Sale Items Top Shelf Vanilla Offer",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:61": {
+    "name": "Sahirasa",
+    "country": "Iraq",
+    "website": "https://sahirasa.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (sahirasa) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "ask@sahirasa.com",
+        "kind": "mailto",
+        "source_url": "https://sahirasa.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "ask@sahirasa.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://sahirasa.com",
+    "phones": [
+      {
+        "e164": "+982141406268",
+        "display": "+98 21 4140 6268",
+        "kind": "tel",
+        "source_url": "https://sahirasa.com"
+      },
+      {
+        "e164": "+982112345678",
+        "display": "+98 21 1234 5678",
+        "kind": "tel",
+        "source_url": "https://sahirasa.com/contact-us/"
+      },
+      {
+        "e164": "+989220673851",
+        "display": "+98 922 067 3851",
+        "kind": "whatsapp",
+        "source_url": "https://sahirasa.com"
+      }
+    ],
+    "phone_best": "+98 21 4140 6268",
+    "phone_source_url": "https://sahirasa.com",
+    "pages_checked": [
+      "https://sahirasa.com",
+      "https://sahirasa.com/contact-us/",
+      "https://sahirasa.com/production-flow/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Sahi Rasa Company | Industrial and Technology | شرکت مهندسی تجارت ساهی راسا. Sahi Rasa Company provides industrial and technology solutions, equipment, engineering and turnkey services from Iran to Iraq, Kurdistan Region, Afghanistan, Oman, Uzbekistan, Tajikistan. Sahi Rasa Company | Industrial and Technology | شرکت مهندسی تجارت ساهی راسا Skip to navigation Skip to main content From Concept to Production One Partner, One Complete Solution Turn-Key Projects Sahi Rasa delivers complete turn-key industrial solutions, managing every stage of a project from feasibility studies and engineering to procurement, installation, commissioning, and production start-up. We bring technology, equipment, exp",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:62": {
+    "name": "Royalbagiq",
+    "country": "Iraq",
+    "website": "https://royalbagiq.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (royalbagiq) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@royalbagiq.com",
+        "kind": "cfemail",
+        "source_url": "https://royalbagiq.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@royalbagiq.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://royalbagiq.com",
+    "phones": [
+      {
+        "e164": "+9647709633221",
+        "display": "+964 770 963 3221",
+        "kind": "tel",
+        "source_url": "https://royalbagiq.com"
+      },
+      {
+        "e164": "+9647714221155",
+        "display": "+964 771 422 1155",
+        "kind": "tel",
+        "source_url": "https://royalbagiq.com"
+      },
+      {
+        "e164": "+9647814221155",
+        "display": "+964 781 422 1155",
+        "kind": "tel",
+        "source_url": "https://royalbagiq.com"
+      },
+      {
+        "e164": "+9647901368273",
+        "display": "+964 790 136 8273",
+        "kind": "whatsapp",
+        "source_url": "https://royalbagiq.com"
+      }
+    ],
+    "phone_best": "+964 770 963 3221",
+    "phone_source_url": "https://royalbagiq.com",
+    "pages_checked": [
+      "https://royalbagiq.com",
+      "https://royalbagiq.com/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "ROYAL BAG IRAQ — مطيبات سيد ناصر – ROYAL BAG IRAQ — مطيبات سيد ناصر. . ROYAL BAG IRAQ — مطيبات سيد ناصر – ROYAL BAG IRAQ — مطيبات سيد ناصر الرجوع إلى البداية العودة إلى الصفحة الرئيسية وكيل لشركة أروما • نوفا • بحر الشوكولاتة حلول متكاملة للصناعات الغذائية مكونات موثوقة لمنتجات أفضل تصفح المنتجات حلول متكاملة للصناعات الغذائية مكونات موثوقة لمنتجات أفضل تصفح المنتجات التوصيل لمحافظات العراق دفع الكتروني آمن دعم 24/7 التوصيل لمحافظات العراق توصيل سريع وآمن إلى جميع المحافظات الاتصال والواتساب واتساب 00964 790 136 8273 اتصال 0770 963 3221 0771 422 1155 0781 422 1155",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:63": {
+    "name": "Worldbank",
+    "country": "Iraq",
+    "website": "https://wits.worldbank.org",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (worldbank) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "wits@worldbank.org",
+        "kind": "mailto",
+        "source_url": "https://wits.worldbank.org/contactwits.html",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "wits@worldbank.org",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://wits.worldbank.org/contactwits.html",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://wits.worldbank.org",
+      "https://wits.worldbank.org/contactwits.html"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "World Integrated Trade Solution (WITS) | Data on Export, Import, Tariff, NTM. Use WITS to obtain merchandise trade (exports, imports), tariff and non-tariff (NTM) data, perform tariff cut simulation and analyze trade competitiveness of countries.. World Integrated Trade Solution (WITS) | Data on Export, Import, Tariff, NTM Go To Exports Imports Trade % of GDP MRV Trade Trade Indicators Tariff Developement Indicators Top Exports Top Imports Products Share Facebook Twitter Linkedin Google Plus Reddit Stumble Upon Delicious Email whatsapp Custom Query Partners: Introduction The World Integrated Trade Solution (WITS) software provides access to international merchandise trade , tariff and non-ta",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:64": {
+    "name": "Klyomo",
+    "country": "Iraq",
+    "website": "https://www.klyomo.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (klyomo) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@klyomo.com",
+        "kind": "mailto",
+        "source_url": "https://www.klyomo.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "manager@klyomo.com",
+        "kind": "mailto",
+        "source_url": "https://www.klyomo.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "klyomo@klyomo.com",
+        "kind": "mailto",
+        "source_url": "https://www.klyomo.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "logistic@klyomo.com",
+        "kind": "mailto",
+        "source_url": "https://www.klyomo.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "joanna@klyomo.com",
+        "kind": "mailto",
+        "source_url": "https://www.klyomo.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@klyomo.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.klyomo.com",
+    "phones": [
+      {
+        "e164": "+8653268063018",
+        "display": "+86 532 6806 3018",
+        "kind": "tel",
+        "source_url": "https://www.klyomo.com"
+      }
+    ],
+    "phone_best": "+86 532 6806 3018",
+    "phone_source_url": "https://www.klyomo.com",
+    "pages_checked": [
+      "https://www.klyomo.com",
+      "https://www.klyomo.com/contact.html?isPreview=true"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "QINGDAO KLYOMO CHEMICAL COMPANY LIMITED-Calcium formate,Sorbitol. QINGDAO KLYOMO CHEMICAL COMPANY LIMITED company limitedKlyomo company limited,can supply Food Ingredient,Feed Ingredient,API,Industry Products.. QINGDAO KLYOMO CHEMICAL COMPANY LIMITED-Calcium formate,Sorbitol HOME PRODUCTS Food Ingredient Feed Ingredient Pharma & Nutraceuticals Industry products Agriculture products Egg Products NEWS Company news Industry information ABOUT KLYOMO Company profile Company culture Development path CONTACT EN | 日本語 scroll down Our offer Our products Include of blew series: The product conform the HACCP/ISO/KOSHER/HALAL/GMP standard Read more Klyomo Food Ingredient Klyomo Feed Ingredient Klyomo Ph",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:65": {
+    "name": "Prices, Size ...",
+    "country": "Iraq",
+    "website": "https://www.indexbox.io",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (prices, size) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.indexbox.io"
+    ],
+    "notes": [
+      "support@indexbox.io نقش غیرتجاری است (کنار گذاشته شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "IndexBox - Market Intelligence Platform - Data, Tools, and Analytics. IndexBox is an Ai-driven market intelligence platform. It collects data from dozens of official sources, applies AI-driven algorithms to re-check data accuracy, restores missing statistics, and calculates economic indicators. Here you can find a market size, consumption, production, trade, and prices for more than 10K+ different products.. IndexBox - Market Intelligence Platform - Data, Tools, and Analytics Search IndexBox Search across reports, market insights, and blog stories. × Search All Reports Market insights Blog Type at least 3 characters to see fast results. Press / or ⌘K anytime. Searching… No fast matches found",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:66": {
+    "name": "Competitive ...",
+    "country": "Iraq",
+    "website": "https://marketresearchiraq.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (competitive) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@marketresearchiraq.com",
+        "kind": "mailto",
+        "source_url": "https://marketresearchiraq.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@marketresearchiraq.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://marketresearchiraq.com",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://marketresearchiraq.com",
+      "https://marketresearchiraq.com/contact-us/"
+    ],
+    "notes": [
+      "https://www.6wresearch.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.tamimi.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.rand.org → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.state.gov → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "#1 Market Research Iraq | Trusted Consulting Firm. Gain strategic advantage with expert market research in Iraq. We help businesses across industries make informed, data-driven decisions.. #1 Market Research Iraq | Trusted Consulting Firm Menu Market Research Iraq Discovering Opportunities in Iraq Eurogroup Consulting, drawing on its 40 years of unrivaled expertise, specializes in top-tier strategic consulting services, with a newly focused attention on market research in Iraq. Our devoted team delivers superior insights and deep analysis, positioning us as your quintessential partner for exploring and succeeding in Iraq’s dynamic and diverse market scenario. Explore Introduction",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:67": {
+    "name": "مجموعة كاملة من موردي بيكربونات الصوديوم عالية الجودة في ...",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://www.iyiboronnitride.com.tr → 503",
+      "https://www.jumla-iq.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://raivaco.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://www.trchemical.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:68": {
+    "name": "بيكربونات الصوديوم: الفوائد، الاستخدامات، الأضرار، وهل هي ...",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://www.curevexa.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://altibbi.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:69": {
+    "name": "ما هي صودا الخبز أو بيكربونات الصوديوم؟ تعرف على 20 استخدام لها",
+    "country": "Iraq",
+    "website": "https://www.edarabia.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (20) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "admin@edarabia.com",
+        "kind": "mailto",
+        "source_url": "https://www.edarabia.com/feedback/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "admin@edarabia.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.edarabia.com/feedback/",
+    "phones": [
+      {
+        "e164": "+97143453033",
+        "display": "+971 4 345 3033",
+        "kind": "tel",
+        "source_url": "https://www.edarabia.com/feedback/"
+      }
+    ],
+    "phone_best": "+971 4 345 3033",
+    "phone_source_url": "https://www.edarabia.com/feedback/",
+    "pages_checked": [
+      "https://www.edarabia.com",
+      "https://www.edarabia.com/feedback/"
+    ],
+    "notes": [
+      "press@edarabia.com نقش غیرتجاری است (کنار گذاشته شد)"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "Education, Universities, Schools, Nurseries | Dubai, UAE, MENA. Edarabia - #1 Education site in Middle East, ranking top institutions, universities, colleges & nurseries. Blogs, forums for teachers, parents & students.. Education, Universities, Schools, Nurseries | Dubai, UAE, MENA Your #1 Education Guide Connect with Top Educators Universities Schools Nurseries Training Centers Special Educational Needs Courses News Events Jobs Tutors Guide Online Universities After School Activities Art Galleries Education Suppliers Language Institutes Government Agencies Music & Performing Arts Recruitment Agencies Sports & Fitness Clubs Abroad Study Popular Searches: Schools | Universities | Courses | Jo",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:70": {
+    "name": "Bawabatdayaatna",
+    "country": "Iraq",
+    "website": "https://bawabatdayaatna.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (bawabatdayaatna) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+963988585188",
+        "display": "+963 988 585 188",
+        "kind": "whatsapp",
+        "source_url": "https://bawabatdayaatna.com"
+      }
+    ],
+    "phone_best": "+963 988 585 188",
+    "phone_source_url": "https://bawabatdayaatna.com",
+    "pages_checked": [
+      "https://bawabatdayaatna.com"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "متجر بوابة ضيعتنا - تسوق أون لاين. تسوق أونلاين من متجر بوابة ضيعتنا واحصل على أفضل المنتجات الطازجة والجافة بأسرع توصيل.. متجر بوابة ضيعتنا - تسوق أون لاين بوابة ضيعتنا حمّل التطبيق للتجربة الكاملة حمّل التطبيق بحث البحث في المنتجات التنقل بوابة ضيعتنا الرئيسية المنتجات الأقسام الماركات السلة AR EN حمّل التطبيق مجاناً أهلاً بك في متجرنا أهلاً بك في متجر بوابة ضيعتنا كل ما تحتاجه لبيتك من مكان واحد، بجودة عالية وأسعار منافسة تصفح المنتجات فتح السلة 18 الأقسام النشطة 70 الماركات الموثوقة 8 وصل حديثاً وعد المتجر تسوق أنيق بخيارات واضحة تسلسل بصري أفضل وبطاقات أنظف واكتشاف أسرع عبر الأقسام والماركات وصفحات المنتجات. ال",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:71": {
+    "name": "Hammaddeler",
+    "country": "Iraq",
+    "website": "https://www.hammaddeler.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (hammaddeler) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+908504410022",
+        "display": "+90 850 441 0022",
+        "kind": "whatsapp",
+        "source_url": "https://www.hammaddeler.com"
+      }
+    ],
+    "phone_best": "+90 850 441 0022",
+    "phone_source_url": "https://www.hammaddeler.com",
+    "pages_checked": [
+      "https://www.hammaddeler.com"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Hammaddeler.com | Yenilikçi Ürünlere Açılan Kapınız. Yenilikçi ürünlere açılan kapınız Hammaddeler.com. Hammaddeler.com | Yenilikçi Ürünlere Açılan Kapınız ÇOK SATANLAR Sirke Tozu E267 100 g 218,40 TL Anadolu Çiçekleri Mum Esans Seti 12 parça 623,42 TL Premium Anadolu Çiçekleri Mum Esans Seti 12 parça 934,80 TL YENİ Premium Çiçek Parfümü Esans Seti 6 parça 467,07 TL VİTRİNDEKİLER Sitrik Asit HD25 5 l 1.086,04 TL Yapay Kar Tozu Yılbaşı Dekoru 5 kg 3.135,31 TL Kadeh (Çan) Çiçeği Tohumu 100 adet 59,90 TL Sitronella Sivrisinek Kovucu Mum Esansı 250 ml 312,71 TL Ana Arı Üretim Seti Jenter 100 1.564,03",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:72": {
+    "name": "Elbelad",
+    "country": "Iraq",
+    "website": "https://elbelad.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (elbelad) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@elbelad.com",
+        "kind": "cfemail",
+        "source_url": "https://elbelad.com/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@elbelad.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://elbelad.com/contact-us/",
+    "phones": [
+      {
+        "e164": "+962782398860",
+        "display": "+962 7 8239 8860",
+        "kind": "tel",
+        "source_url": "https://elbelad.com/contact-us/"
+      }
+    ],
+    "phone_best": "+962 7 8239 8860",
+    "phone_source_url": "https://elbelad.com/contact-us/",
+    "pages_checked": [
+      "https://elbelad.com",
+      "https://elbelad.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "متجر البلاد للعطارة | متجر البلاد للعطارة. متجر البلاد للعطارة والأعشاب الطبيعة والمواد التجميلية الطبيعية والمواد الخام ومواد تصنبع الطعام والزيوت الطبيعة. متجر البلاد للعطارة | متجر البلاد للعطارة Skip to main content توصيل مجاني لجميع الطلبات التي تزيد عن 19,99 دينار داخل الأردن القائمة بهارات أعشاب نكهات بذور وبقوليات زيوت طبيعية العناية بالجسم العناية بالشعر Vegetables & Fruits Get Discounts on Frash Vegetables & Fruits To Shop اضافة الى قائمة الأمنيات (عشبة الحباسة (أوراق الحلبة أعشاب طبيعية 1.990 د.ا – 15.990 د.ا نطاق السعر: من ⁦1.990 د.ا⁩ خلال ⁦15.990 د.ا⁩ تحديد أحد الخيارات هناك العديد من الأشكال المختلفة لهذا المنتج. يمكن اختيار الخيارات ع",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:73": {
+    "name": "Centerstarchem",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://centerstarchem.com → 503"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:74": {
+    "name": "(430 جم±)",
+    "country": "Iraq",
+    "website": "https://shop.alamer-market.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (430) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@alamer-co.com.sa",
+        "kind": "mailto",
+        "source_url": "https://shop.alamer-market.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://shop.alamer-market.com"
+    ],
+    "notes": [
+      "https://qassimherb.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://wiki.dorar-aliraq.net → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.alhabeebmarket.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://iq.mikesport.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "info@alamer-co.com.sa دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "العامر للتسوق | الصفحة الرئيسية. . ﻿ العامر للتسوق | الصفحة الرئيسية تنبيه × الطلب متوفر عن طريق تطبيق العامر اغلاق كل الأقسام العروض منتجات مقترحة في العروض حبه x1 ذبيحة غنم نعيمي كامل 1299 $ 1399 + اضافة حبه x1 ريان شراب لومي حساوي 1.5لتر 8.95 $ 9.95 + اضافة 1.3لتر ندى نكتار رمان 1.3لتر 7.5 $ 8.95 + اضافة 2+1مجانا3*300مل جليد معطر جو لافندر+زهور استوائية 2+1مجانا3*300مل 22.95 $ 27 + اضافة المخبوزات منتجات مقترحة في المخبوزات 5*30جم لوبو دريم بار شوكو كيك محشوة بالشوكولاتة 5*30جم 9.5 $ + اضافة 30جم اوزمو كيك اوجوبوجو مع حليب",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:75": {
+    "name": "بيكربونات الصوديوم CAS 144‎-55‎-8",
+    "country": "Iraq",
+    "website": "https://ar.lhychem.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "3/3 واژه‌ی نام (cas, 144, 55) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "admin@lhychem.com",
+        "kind": "mailto",
+        "source_url": "https://ar.lhychem.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "admin@lhychem.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://ar.lhychem.com",
+    "phones": [
+      {
+        "e164": "+8615275418711",
+        "display": "+86 152 7541 8711",
+        "kind": "whatsapp",
+        "source_url": "https://ar.lhychem.com"
+      }
+    ],
+    "phone_best": "+86 152 7541 8711",
+    "phone_source_url": "https://ar.lhychem.com",
+    "pages_checked": [
+      "https://ar.lhychem.com",
+      "https://ar.lhychem.com/contact-us.html"
+    ],
+    "notes": [
+      "https://industrochem.com → نام شرکت با صفحه نمی‌خواند (1/3 واژه‌ی نام (cas) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "المواد الكيميائية العضوية_المواد الكيميائية غير العضوية_المادة المضافة - شركة ليهوايي الكيميائية. Jinan Lihuayi Chemical Co., Ltd. specializes in the production of Organic Chemicals, Inorganic Chemicals，additives, and more. Please feel free to contact us if you have any requirements.. المواد الكيميائية العضوية_المواد الكيميائية غير العضوية_المادة المضافة - شركة ليهوايي الكيميائية شركة جينان ليهواي الكيميائية المحدودة شركة كيميائية محترفة تدمج الإنتاج والتصدير. شركة جينان ليهواي الكيميائية المحدودة عرض المنتجات خدمة العملاء في أكثر من 60 دولة ومنطقة تشمل الصادرات الرئيسية البتروكيماويات والمواد الكيميائية العضوية وغير العضوية والإضافات والمواد الكيميائية الدقيقة لتطبيقات الطاقة الجديدة. خدمة ",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:76": {
+    "name": "استيراد ...",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "http://ribasgroup.net → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://eximdatahub.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://landing.ecor.iq → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://ecor.iq/ar → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://iraqbussinessgate.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:77": {
+    "name": "43 شركات مصنعة, تجار, متعهدون",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://www.industrystock.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:78": {
+    "name": "بيكربونات الصوديوم 99٪ NaHCO₃",
+    "country": "Iraq",
+    "website": "https://www.xrdchemical.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (99, nahco) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@xrdchemical.com",
+        "kind": "cfemail",
+        "source_url": "https://www.xrdchemical.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@xrdchemical.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.xrdchemical.com",
+    "phones": [
+      {
+        "e164": "+865368953288",
+        "display": "+86 536 895 3288",
+        "kind": "tel",
+        "source_url": "https://www.xrdchemical.com"
+      },
+      {
+        "e164": "+8613356799699",
+        "display": "+86 133 5679 9699",
+        "kind": "whatsapp",
+        "source_url": "https://www.xrdchemical.com"
+      }
+    ],
+    "phone_best": "+86 536 895 3288",
+    "phone_source_url": "https://www.xrdchemical.com",
+    "pages_checked": [
+      "https://www.xrdchemical.com",
+      "https://www.xrdchemical.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "XRD - Chemicals Manufacturer & Supplier In China For Global Markets. XRD Chemical - Trusted Chemicals Supplier & Manufacturer. We provide high-quality chemicals for mining, water treatment, oil & gas, and more. ISO-certified, global shipping, and technical support.. XRD - Chemicals Manufacturer & Supplier In China For Global Markets Skip to content [email protected] +86-13356799699 Language بالعربية English Español Français 日本語 한국어 Русский язык XRD CHEMICAL China Calcium Chloride & Industrial Chemicals Manufacturer View Products Request a quote Request a sample Our Services Premium Quality Our CaCl₂, MgCl₂, Na₂S₂O₅, and NaHCO₃ meet international standards, with rigorous multi-stage QC ensuri",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:79": {
+    "name": "بيكربونات الصوديوم: الاستخدامات، الآثار الجانبية، الاحتياطات ...",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://www.medanta.org → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://www.medicoverhospitals.in → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://eltibbi.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://altibbi.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:80": {
+    "name": "Webteb",
+    "country": "Iraq",
+    "website": "https://www.webteb.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (webteb) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@webteb.net",
+        "kind": "cfemail",
+        "source_url": "https://www.webteb.com/contactus",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@webteb.net",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://www.webteb.com/contactus",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.webteb.com",
+      "https://www.webteb.com/contactus"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "ويب طب - WebTeb - معلومة أثق بها. ويب طب موقع طبي وصحة شامل. اخر المعلومات عن التغذية, الريجيم, الحمل والولادة, صحة الاطفال, امراض السرطان, القلب, السكري, الجنس والزواج وكافة طرق العلاج والادوية.. ويب طب - WebTeb - معلومة أثق بها لانك الأهم احجزي موعدك مع طبيب النسائية في عيادة ويب طب الإلكترونية احجز الآن احجزي الآن احجزي موعد في عيادة ويب طب الإلكترونية × إبر التنحيف للتخسيس: كيف تعمل؟ تعرف على الية عمل إبر التنحيف في حرق الدهون وتنظيم الشهية، وكيف.. من الإبر إلى الحبوب: مستقبل علاجات فقدان الوزن في عام 2026 متى يبدأ مفعول إبر التنحيف؟ إبر التخلص من السمنة: ثورة في العلاج الطبي حاسبة الحمل مشخص الأعراض فيديو جميع الحاسبات",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:81": {
+    "name": "بيكربونات الصوديوم: دواعي الاستعمال والجرعة والآثار الجانبية ...",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://tebplus.net → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://www.medanta.org → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://eltibbi.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://altibbi.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:82": {
+    "name": "Hlcchemical",
+    "country": "Iraq",
+    "website": "https://ar.hlcchemical.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (hlcchemical) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+8618763511733",
+        "display": "+86 187 6351 1733",
+        "kind": "text",
+        "source_url": "https://ar.hlcchemical.com/contact"
+      }
+    ],
+    "phone_best": "+86 187 6351 1733",
+    "phone_source_url": "https://ar.hlcchemical.com/contact",
+    "pages_checked": [
+      "https://ar.hlcchemical.com",
+      "https://ar.hlcchemical.com/Contact-Us.html",
+      "https://ar.hlcchemical.com/contact-us",
+      "https://ar.hlcchemical.com/contact-us.html"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "الرئيسية. . ﻿ الرئيسية مزوّد عالمي للحلول الكيميائية نُمكّن الصناعات حول العالم بمنتجات كيميائية عالية الجودة وخدمات مخصصة اعرف المزيد مزوّد عالمي للمواد الخام الكيميائية حلول كيميائية شاملة للصناعات التحويلية حول العالم اعرف المزيد تركيبات منخفضة التكلفة ومراقبة جودة صارمة دعم البحث والتطوير المخصص لتمكين الارتقاء الصناعي اعرف المزيد   الرؤية دمج البحث والتطوير، والتصنيع الذكي، والتجارة العالمية، وتوفير مواد كيميائية موثوقة وصديقة للبيئة وحلول مخصصة شاملة، وخلق قيمة مستدامة للشركاء العالميين. الرسالة نسع",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:83": {
+    "name": "REHN BIOTECH",
+    "country": "Iraq",
+    "website": "https://www.rehnbio.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (rehn, biotech) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+8613602030663",
+        "display": "+86 136 0203 0663",
+        "kind": "whatsapp",
+        "source_url": "https://www.rehnbio.com"
+      }
+    ],
+    "phone_best": "+86 136 0203 0663",
+    "phone_source_url": "https://www.rehnbio.com",
+    "pages_checked": [
+      "https://www.rehnbio.com"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Food & Feed Ingredient Supplier | REHN BIOTECH. REHN BIOTECH supplies food and feed ingredients for formulation needs. Compare plant proteins, additives and minerals; request technical documents and a quote.. Food & Feed Ingredient Supplier | REHN BIOTECH Skip to content Reliable ingredients · Responsible supply Food & feed ingredients for your formulation. REHN BIOTECH connects food and feed manufacturers with dependable plant proteins, preservation systems, minerals and functional additives. Explore Products Request a Quote Food first Application-focused sourcing Feed expertise Animal nutrition solutions Export ready Documentation and logistics support Responsive Clear, practical communica",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:84": {
+    "name": "نقية وعديمة ...",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://www.trchemical.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://www.worldhistory.org → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:85": {
+    "name": "Eltibbi",
+    "country": "Iraq",
+    "website": "https://eltibbi.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (eltibbi) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://eltibbi.com"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "الطبي | eltibbi. الطبي - أكبر مكتبة محتوى صحي باللغة العربية. معلومات طبية موثوقة عن الأمراض والأدوية والأعراض والعلاجات.. الطبي | eltibbi أكبر مكتبة صحية باللغة العربية معلومات طبية موثوقة ومراجعة من أطباء متخصصين، عن الأمراض والأدوية والأعراض والعلاجات. 2000000+ مقال طبي 10 قسم متخصص 1 مراجع من أطباء أحدث المقالات الأدوية أباتاسيبت: الاستخدامات والجرعات والآثار الجانبية دليل شامل عن أباتاسيبت (Abatacept) - دواعي الاستعمال، الجرعات، الآثار الجانبية، موانع الاستعمال والتفاعلات الدوائية. الأعراض ألم البطن: الأسباب المحتملة ومتى تزور الطبيب تعرف على أسباب ألم البطن والأعراض المصاحبة وطرق التشخيص والعلاج ومتى يجب زيارة",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:86": {
+    "name": "Medicoverhospitals",
+    "country": "Iraq",
+    "website": "https://www.medicoverhospitals.in",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (medicoverhospitals) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@medicoverhospitals.in",
+        "kind": "mailto",
+        "source_url": "https://www.medicoverhospitals.in",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@medicoverhospitals.in",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.medicoverhospitals.in",
+    "phones": [
+      {
+        "e164": "+914068334455",
+        "display": "+91 40 6833 4455",
+        "kind": "tel",
+        "source_url": "https://www.medicoverhospitals.in"
+      },
+      {
+        "e164": "+917075493806",
+        "display": "+91 70754 93806",
+        "kind": "whatsapp",
+        "source_url": "https://www.medicoverhospitals.in"
+      }
+    ],
+    "phone_best": "+91 40 6833 4455",
+    "phone_source_url": "https://www.medicoverhospitals.in",
+    "pages_checked": [
+      "https://www.medicoverhospitals.in",
+      "https://www.medicoverhospitals.in/contact-us"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Best Hospital in Hyderabad, India | Best Multispeciality Hospital in India | Medicover Hospitals. Book Appointment Online - 26 Hospitals - 1000+ Doctors with Best multispeciality hospital in India offering advanced medical care, cashless treatment, 24×7 emergency services, and expert specialists. NABH-accredited hospitals providing comprehensive care in cardiology, orthopaedics, neurology, oncology, maternity, and family healthcare.. Best Hospital in Hyderabad, India | Best Multispeciality Hospital in India | Medicover Hospitals Find & Book the Right Doctor Near You Hospital City Hospital Location Hitech City – Multi-Speciality Financial District, Hyderabad – Multi-Speciality Hitex City, Hyd",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:87": {
+    "name": "Altibbi",
+    "country": "Iraq",
+    "website": "https://altibbi.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (altibbi) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://altibbi.com"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "موقع الطبي للمعلومات الصحية والاستشارات الطبية | أمراض، أدوية وعلاج. الطبي - المنصة التفاعلية الطبية الأكبر للاستشارات الطبية للتواصل بين المرضى والأطباء لتوفير المعلومات الطبية والصحية الموثوقة لمن يبحث عنها. انضم الآن.. موقع الطبي للمعلومات الصحية والاستشارات الطبية | أمراض، أدوية وعلاج الأسئلة المقالات المصطلحات الأخبار الأدوية الأماكن الفيديوهات المختبرات عمليات البحث الأخيرة المواضيع الشائعة الصحة الجنسية الحمل والولادة صحة المرأة صحة الرجل أمراض نسائية تغذية أمراض المسالك البولية والتناسلية اقرأ الجديد في عالم الطب اكتشف الجديد في عالم الطب عرض الكل تغذية فوائد الشاي الاخضر منزوع الكافيين إذا كنت تحب الشاي الأخضر، لكنك تحاول تقليل الكافيين، فقد يناسبك النوع منزوع الكافيين. فهو يتيح لك ",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:88": {
+    "name": "Mawdoo3",
+    "country": "Iraq",
+    "website": "https://mawdoo3.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (mawdoo3) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://mawdoo3.com"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "موضوع، أكبر موقع عربي بالعالم. موضوع، أكبر موقع عربي بالعالم. موضوع، أكبر موقع عربي بالعالم التصنيفات أجدد المقالات الأكثر رواجاً معايير التدقيق عن موضوع اتصل بنا موضوع التصنيفات أجدد المقالات الأكثر رواجاً معايير التدقيق عن موضوع أهلاً بك في موضوع، أكبر موقع عربي بالعالم. متداول الحياة والمجتمع عائلة كاديلاك إسكاليد: مميزات عصرية تجمع بين القوة والفخامة والأمان إذا كنت تبحث عن أفضل سيارة عائلية في الخليج بسعة تتراوح بين 7-8 ركاب فإن سيارات كاديلاك إسكاليد 2026 أكلات خفيفة وجبات عشاء خفيفة وسهلة تغذية نقصان فيتامين د العناية بالذات ما هي الألوان التي تناسب",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:89": {
+    "name": "Hyatok",
+    "country": "Iraq",
+    "website": "https://hyatok.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (hyatok) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://hyatok.com"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "حياتكَ. حياتكَ، عش زخم التجربة. حياتكَ الرئيسية الأحدث الأكثر مشاهدة كل ما تود معرفته عن ريجيم اللقيمات بالتفصيل ما هو ريجيم اللقيمات؟ ينتمي رجيم اللقيمات Bite Diet إلى فئة الحميات الغذائية منخفضة السعرات الحرارية ويعود الفضل في الحديث عنه لأول مرة للطبيب ألوين لويس الذي أدرجها ضمن كتابه ?Why Weight Around عام 2007 ويتميز رجيم اللقيمات بعدم حاجة متبعيه إلى حساب المزيد كل ما تود معرفته حول بطولة كأس العالم للأندية متى يقام كأس العالم للأندية؟ كأس العالم للأندية هو مسابقة لكرة القدم تُعقد سنويًا يتنافس فيها الفائزون من قبل في ال",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:90": {
+    "name": "بيكربونات الصوديوم 8.4%",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://alsalampharma.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://alpharabi.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://altibbi.com → 429",
+      "https://medicalguidelines.msf.org/en → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:91": {
+    "name": "Sayidaty",
+    "country": "Iraq",
+    "website": "https://www.sayidaty.net",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (sayidaty) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "contact@sayidaty.net",
+        "kind": "cfemail",
+        "source_url": "https://www.sayidaty.net/contact/feedback",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "contact@sayidaty.net",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.sayidaty.net/contact/feedback",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.sayidaty.net",
+      "https://www.sayidaty.net/contact/feedback"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "سيدتي | مجلة الأسرة العصرية تعنى بدعم الشباب وتمكين المرأة وأسلوب الحياة. مجلة سيدتي، سيدة المجلات العربية للأسرة العصرية منذ 1981 تعنى بدعم الشباب وتمكين المرأة وأسلوب الحياة من أزياء وجمال ومجوهرات وسفر وثقافة وفنون وصحة ومطبخ سيدتي. سيدتي | مجلة الأسرة العصرية تعنى بدعم الشباب وتمكين المرأة وأسلوب الحياة مجلة سيدتي مجوهرات وساعات جلسة تصوير خاصة بـ سيدتي.. بريق لغدٍ أجمل قصص ملهمة الأميرة لولوة بنت نواف بن محمد آل سعود: رسالة أمان ومودة إطلالات المشاهير أجملهن جينيفر لورنس.. نجمات يحولن فساتينهن إلى تحف فنية مشاهير العرب في يوم واحد.. انطلاق تصوير 3 مسلسلات مصرية تمهيدًا لعرض... تكنولوجيا السعودية تطلق المرحلة الثانية من برنامج تأهيل خبراء الم... مشاهير العالم فتاة جيمس بوند القادمة.. من ",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:92": {
+    "name": "Attar Sa",
+    "country": "Iraq",
+    "website": "https://attar-sa.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (attar) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@attar-sa.com",
+        "kind": "cfemail",
+        "source_url": "https://attar-sa.com/contact",
+        "domain_status": "a_only",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@attar-sa.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://attar-sa.com/contact",
+    "phones": [
+      {
+        "e164": "+966555142365",
+        "display": "+966 55 514 2365",
+        "kind": "whatsapp",
+        "source_url": "https://attar-sa.com"
+      }
+    ],
+    "phone_best": "+966 55 514 2365",
+    "phone_source_url": "https://attar-sa.com",
+    "pages_checked": [
+      "https://attar-sa.com",
+      "https://attar-sa.com/contact"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "متجر عطار. متجر عطار يقدم لكم مجموعة من المنتجات الصحية عالية الجودة، نتخصص بالأعشاب و البهارات مثل الحناء والسدر وأعشاب الشعر الهندية والزيوت وكذلك المكملات الغذائية والصمغ العربي الهشاب العضوي والبهارات وسناكات الكيتو. متجر عطار اطلب بـ 199 ريال والشحن بيكون مجاني × Your Cart متجر عطار الأقسام اللبان و الصمغ العربي البهارات والحبوب والبقوليات الأعشاب الشاي والقهوة والماتشا الوجبات الخفيفة الزيوت الطبيعية التمور ومشتقاتها العناية الشخصية آراء العملاء عرض الكل متجر جميل ورا ئع والمنتجات اصليه 100٪ مريم الامير قام بالشراء Ahmed Hassan قام بالشراء جودة الاعشاب جداً ممتازة الله يسعدكم وكمان جاتني مبرده 4 تعامل معاهم اثق فيهم صراحة ناديه الدعيجي قام بالشراء رائعين حتى الطلب نسيت أضيف له شي وعدلو",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:93": {
+    "name": "أودن حلا ...",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://sup-oden.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://mahally.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-17"
+  },
+  "buyers:94": {
+    "name": "Tengerchemical",
+    "country": "Iraq",
+    "website": "https://www.tengerchemical.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (tengerchemical) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "yanzhe@tengerchemical.com",
+        "kind": "mailto",
+        "source_url": "https://www.tengerchemical.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "yanzhe@tengerchemical.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.tengerchemical.com",
+    "phones": [
+      {
+        "e164": "+8631188862036",
+        "display": "+86 311 8886 2036",
+        "kind": "tel",
+        "source_url": "https://www.tengerchemical.com"
+      },
+      {
+        "e164": "+8613673136186",
+        "display": "+86 136 7313 6186",
+        "kind": "tel",
+        "source_url": "https://www.tengerchemical.com"
+      }
+    ],
+    "phone_best": "+86 311 8886 2036",
+    "phone_source_url": "https://www.tengerchemical.com",
+    "pages_checked": [
+      "https://www.tengerchemical.com",
+      "https://www.tengerchemical.com/contactus.html"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Water Treatment Chemicals & Hydroxy Benzotriazole & Antacids Supplier | TENGER Chemical. Reliable water treatment chemicals suppliers offering a wide range of industrial chemicals, including 1 hydroxy benzotriazole and aluminum hydroxide antacid. We also provide options for antacid without aluminum hydroxide, tailored to meet various industry and health needs.. Water Treatment Chemicals & Hydroxy Benzotriazole & Antacids Supplier | TENGER Chemical TEL: 0086-311-88862036 English English Home Products Industrial Chemcials Mining Chemicals Fertilizer Food Additives Solvents Water Treatment Rubber Chemicals Concrete Admixtures Hot Products About Us News Contact featuredproducts HOT PRODUCTS Hebe",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:95": {
+    "name": "Aozun Chemical",
+    "country": "Iraq",
+    "website": "https://www.aozunchem.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (aozun, chemical) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "lisa@aozunchem.com",
+        "kind": "mailto",
+        "source_url": "https://www.aozunchem.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "arvin@aozunchem.com",
+        "kind": "mailto",
+        "source_url": "https://www.aozunchem.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "lisa@czqidi.com",
+        "kind": "mailto",
+        "source_url": "https://www.aozunchem.com/contactus.html",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "arvin@aozunchem.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.aozunchem.com",
+    "phones": [
+      {
+        "e164": "+8651983382137",
+        "display": "+86 519 8338 2137",
+        "kind": "tel",
+        "source_url": "https://www.aozunchem.com"
+      },
+      {
+        "e164": "+8618651215887",
+        "display": "+86 186 5121 5887",
+        "kind": "tel",
+        "source_url": "https://www.aozunchem.com"
+      },
+      {
+        "e164": "+8651986316850",
+        "display": "+86 519 8631 6850",
+        "kind": "text",
+        "source_url": "https://www.aozunchem.com"
+      }
+    ],
+    "phone_best": "+86 519 8338 2137",
+    "phone_source_url": "https://www.aozunchem.com",
+    "pages_checked": [
+      "https://www.aozunchem.com",
+      "https://www.aozunchem.com/contactus.html"
+    ],
+    "notes": [
+      "lisa@czqidi.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "High-Quality Chemicals Manufacturer & Supplier in China - Changzhou AoZun Composite Material Co.Ltd. Our business covers organic chemicals, inorganic chemicals, and fine chemicals. Changzhou AoZun Composite Material Co.Ltd products are highly functional and widely used in industries including ink, printing and dyeing, electronics, medicine, water treatment and food additives, etc.. High-Quality Chemicals Manufacturer & Supplier in China - Changzhou AoZun Composite Material Co.Ltd As a leading manufacturer over 20 years. Our exquisite craftsmanship can meet all your requirements! Home Products Ammonium Persulfate Sodium Persulfate Potassium Persulfate Organic Chemicals Inorganic Chemicals Fin",
+    "checked_at": "2026-11-17"
+  },
+  "buyers:96": {
+    "name": "Dorar Aliraq",
+    "country": "Iraq",
+    "website": "https://www.dorar-aliraq.net",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (dorar, aliraq) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.dorar-aliraq.net"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "درر العراق. موقع درر العراق: مجتمع إلكتروني عراقي متطور عام يهتم بالثقافة ونشر المعلومات ويحافظ على الضوابط. ﻿ درر العراق إنشاء حساب تسجيل الدخول درر العراق الرئيسية فن ثقافة سياحة وسفر علوم دروس عراقنا اسلاميات ديانات سياسة صور كارتون هنا وهناك أدب وشعر ألعاب برامج تكنولوجيا برمجة طلبة المدارس أكاديمي تعيينات اقتصاد قانون هندسة صحة إنجليزية كوردستان آدم حواء إسرة مطبخ أبراج وميتافيزيقا ريــــاضة المنتدى المدونات MP3 سوالف عراقية ما الجديد؟ » خيارات الصفحة الصفحة الرئيسية آخر مقاطع الـ MP3 ابا تراب - لأجلك أبكيت القمر - مشروع قصيدة تحت الانشاء نشرت بواسطة Mohamed Awad ـ منذ 18 ساعات العدو بالحيل قرب و",
+    "checked_at": "2026-11-18"
+  },
+  "buyers:97": {
+    "name": "Mafahem",
+    "country": "Iraq",
+    "website": "https://mafahem.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (mafahem) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://mafahem.com",
+      "https://mafahem.com/contact",
+      "https://mafahem.com/contact"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "مفاهيم - موقع مفاهيم. مفاهيم موقع شامل للمقالات المعرفية والثقافية يهتم بتثقيف القارئ العربي بكل المعلومات الصحيحة في العديد من المجالات. مفاهيم - موقع مفاهيم مواضيع جديدة شرح قصيدة العلماء الصغار الصف الخامس وإعرابها كاملة المكان الذي تتوفر فيه المعلومات بمصادرها المختلفة، وتعالج، وتحفظ وتسترجع، وتبث، يسمى: مشغل خطوط الشعر في السعودية كيف تجعلين الرجل يحبك ولا يستطيع الاستغناء عنك؟ الاستعداد للزوج بعد الدورة تفسير رؤية تقطيع الكرشة في المنام لابن سيرين والنابلسي معركة ذات الصواري معركة بحرية انتصر فيها المسلمون؟ تهنئة رمضان وأجمل العبارات والرسائل بمناسبة شهر رمضان المبارك أفضل دهانات غرف اطفال.. ألوان آمنة وقابلة للغسل معنى اسم",
+    "checked_at": "2026-11-18"
+  },
+  "buyers:98": {
+    "name": "Gnfchem",
+    "country": "Iraq",
+    "website": "https://ar.gnfchem.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (gnfchem) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@gnfchem.com",
+        "kind": "mailto",
+        "source_url": "https://ar.gnfchem.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@gnfchem.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://ar.gnfchem.com",
+    "phones": [
+      {
+        "e164": "+8655163500087",
+        "display": "+86 551 6350 0087",
+        "kind": "tel",
+        "source_url": "https://ar.gnfchem.com"
+      },
+      {
+        "e164": "+8618201901842",
+        "display": "+86 182 0190 1842",
+        "kind": "whatsapp",
+        "source_url": "https://ar.gnfchem.com"
+      },
+      {
+        "e164": "+8619201901842",
+        "display": "+86 192 0190 1842",
+        "kind": "whatsapp",
+        "source_url": "https://ar.gnfchem.com"
+      }
+    ],
+    "phone_best": "+86 551 6350 0087",
+    "phone_source_url": "https://ar.gnfchem.com",
+    "pages_checked": [
+      "https://ar.gnfchem.com",
+      "https://ar.gnfchem.com/contact-us"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "مصنّعو مكونات الأغذية والمشروبات وإضافات الأعلاف | جي إن إف كيميكال. شركة GNF Chemical Co.,Ltd. هي مورد ومصنع للمواد الكيميائية الغذائية، وتنتج جميع أنواع إضافات الطعام ومكونات المشروبات وإضافات الأعلاف، وتبيعها بالجملة من المصنع.. مصنّعو مكونات الأغذية والمشروبات وإضافات الأعلاف | جي إن إف كيميكال قدّم طلبك للحصول على خدمة التدقيق اللغوي المجانية يرجى استكمال المعلومات التالية وسنتصل بك في غضون يوم عمل واحد يُقدِّم الفئات الشائعة للاستفسار عن منتجاتنا أو قائمة الأسعار، يرجى ترك بريدك الإلكتروني وسنتواصل معك في غضون 24 ساعة. المحليات تقدم GNF مجموعة واسعة من المحليات لتلبية احتياجات تركيباتك: الأسبارتام، أسيسولفام ك، الألولوز (د-ألولوز، د-بسيكوز)، البلوري، أحادي هيدرات الدكستروز، الإريثريتول",
+    "checked_at": "2026-11-18"
+  },
+  "buyers:99": {
+    "name": "فوائد صحية مذهلة لصودا الخبز... تعرَّف عليها",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://aawsat.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://www.tadawi.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://nabd.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://www.emiratesvoice.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-18"
+  },
+  "buyers:100": {
+    "name": "هل بيكربونات الصوديوم هي نفسها الكربونة وما هي أستخداماتها ...",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://ujeeb.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://altibbi.com → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://www.medicoverhospitals.in → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)",
+      "https://www.medanta.org → نام شرکت با صفحه نمی‌خواند (نام لاتین برای تطبیق ندارد)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-18"
+  },
+  "buyers:101": {
+    "name": "125 جرام",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://yamamahstore.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://gold21price.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://iraqprices.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://pricex.gold → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://goldiraq.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-18"
+  },
+  "buyers:102": {
+    "name": "HUGE ROC",
+    "country": "Iraq",
+    "website": "https://www.hugeroc.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (huge, roc) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sale@hugeroc.com",
+        "kind": "mailto",
+        "source_url": "https://www.hugeroc.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sale@hugeroc.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.hugeroc.com",
+    "phones": [
+      {
+        "e164": "+8613602030663",
+        "display": "+86 136 0203 0663",
+        "kind": "whatsapp",
+        "source_url": "https://www.hugeroc.com"
+      }
+    ],
+    "phone_best": "+86 136 0203 0663",
+    "phone_source_url": "https://www.hugeroc.com",
+    "pages_checked": [
+      "https://www.hugeroc.com"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Food & Feed Ingredient Supplier | HUGE ROC. HUGE ROC supplies food, feed and specialty ingredients from China. Explore plant proteins, preservatives and phosphates; request specifications and a quote.. Food & Feed Ingredient Supplier | HUGE ROC Skip to content Reliable ingredients · Responsible supply Food & feed ingredients for global sourcing. HUGE ROC connects food and feed manufacturers with dependable plant proteins, preservation systems, minerals and functional additives. Explore Products Request a Quote Food first Application-focused sourcing Feed expertise Animal nutrition solutions Export ready Documentation and logistics support Responsive Clear, practical communication About HUGE ",
+    "checked_at": "2026-11-18"
+  },
+  "buyers:103": {
+    "name": "Raivaco",
+    "country": "Iraq",
+    "website": "https://raivaco.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (raivaco) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+96878407278",
+        "display": "+968 7840 7278",
+        "kind": "tel",
+        "source_url": "https://raivaco.com"
+      },
+      {
+        "e164": "+96891252031",
+        "display": "+968 9125 2031",
+        "kind": "tel",
+        "source_url": "https://raivaco.com"
+      },
+      {
+        "e164": "+989131516689",
+        "display": "+98 913 151 6689",
+        "kind": "tel",
+        "source_url": "https://raivaco.com"
+      },
+      {
+        "e164": "+983536262080",
+        "display": "+98 35 3626 2080",
+        "kind": "tel",
+        "source_url": "https://raivaco.com"
+      },
+      {
+        "e164": "+989191142266",
+        "display": "+98 919 114 2266",
+        "kind": "whatsapp",
+        "source_url": "https://raivaco.com"
+      }
+    ],
+    "phone_best": "+968 7840 7278",
+    "phone_source_url": "https://raivaco.com",
+    "pages_checked": [
+      "https://raivaco.com",
+      "https://raivaco.com/contact",
+      "https://raivaco.com/contact",
+      "https://raivaco.com/contact",
+      "https://raivaco.com/contact",
+      "https://raivaco.com/contact"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Raivaco | Global B2B Trading — Minerals & Chemical Products. Raiva International Trading Group (RAIVACO) supplies and exports premium minerals and chemical products from Oman & Iran to 20+ countries.. Raivaco | Global B2B Trading — Minerals & Chemical Products Skip to main content Premium Minerals & Chemicals, Direct From the Source Raivaco supplies industrial minerals straight from certified quarries and mines — no middlemen, better FOB/CIF prices for your business. Export-Grade Quality, Certified Every Batch Every shipment is processed, refined, and lab-tested to international standards, with a Certificate of Analysis (CoA) issued per batch. Reliable Bulk Delivery to 20+ Countries We load ",
+    "checked_at": "2026-11-18"
+  },
+  "buyers:104": {
+    "name": "iHerb",
+    "country": "Iraq",
+    "website": "https://sa.iherb.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (iherb) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://sa.iherb.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Just a moment.... . Just a moment...",
+    "checked_at": "2026-11-18"
+  },
+  "buyers:105": {
+    "name": "4Best Life",
+    "country": "Iraq",
+    "website": "https://4best-life.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (4best, life) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "4bestlifeiraq@gmail.com",
+        "kind": "cfemail",
+        "source_url": "https://4best-life.com/contact/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": "4bestlifeiraq@gmail.com",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://4best-life.com/contact/",
+    "phones": [
+      {
+        "e164": "+9647803427347",
+        "display": "+964 780 342 7347",
+        "kind": "whatsapp",
+        "source_url": "https://4best-life.com"
+      }
+    ],
+    "phone_best": "+964 780 342 7347",
+    "phone_source_url": "https://4best-life.com",
+    "pages_checked": [
+      "https://4best-life.com",
+      "https://4best-life.com/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "أفضل متجر شحن مكملات غذائية عضوية في العراق - 4Best Life. افضل متجر مكملات غذائية في العراق لبيع المنتجات الأمريكية الأصلية بأفضل الأسعار. توصيل سريع لبغداد وكافة المحافظات. منتجاتنا طبيعية 100% ومضمونة المصدر.. أفضل متجر شحن مكملات غذائية عضوية في العراق - 4Best Life تخطي إلى المحتوى Facebook Whatsapp Instagram #معاً_لحياة_افضل هنا لأجلك، قدمنا خبرتنا في شحن أفضل مكملات غذائية والمواد العضوية من المواقع الأمريكية الى العراق. تصفح المنتجات تخفيضات و توصيل مجاني الشراء ب 75 الف = 3 الاف توصيل مجاني. الشراء ب 150 = توصيل مجاني. جودة المعروض منتجاتنا طبيعية 100% اسعار مناسبة وكاشباك عند الشراء بمبلغ 150 الف كاشباك 1%, وعند الشراء فوق 300 الف كاشباك3% خدمة العميل قبل وبعد عملية الشراء لا يفوتك ع",
+    "checked_at": "2026-11-18"
+  },
+  "buyers:106": {
+    "name": "شكل علبة صودا الخبز في العراق Archives",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://alrakia.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.ma3lomat.news → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://elmaqah.net → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://m7et.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-18"
+  }
+}

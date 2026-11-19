@@ -1,0 +1,744 @@
+[
+  {
+    "id": "buyers:1",
+    "name": "Chimisrl",
+    "country": "Iraq",
+    "website": "https://www.chimisrl.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:2",
+    "name": "Global Chemicals Plus",
+    "country": "Iraq",
+    "website": "https://www.gobalchemicalsplus.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:3",
+    "name": "Albaher Scientific CO.",
+    "country": "Iraq",
+    "website": "https://www.albaher-sci.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:4",
+    "name": "jinbeifood.com",
+    "country": "Iraq",
+    "website": "https://jinbeifood.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:5",
+    "name": "Berganochem",
+    "country": "Iraq",
+    "website": "https://berganochem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:6",
+    "name": "Nandrlon",
+    "country": "Iraq",
+    "website": "https://nandrlon.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:7",
+    "name": "Gabecotradinggroup",
+    "country": "Iraq",
+    "website": "https://www.gabecotradinggroup.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:8",
+    "name": "Dscchem",
+    "country": "Iraq",
+    "website": "https://www.dscchem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:9",
+    "name": "Allanchem",
+    "country": "Iraq",
+    "website": "https://allanchem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:10",
+    "name": "Independent Chemical",
+    "country": "Iraq",
+    "website": "https://independentchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:11",
+    "name": "Niran Biochemical",
+    "country": "Iraq",
+    "website": "https://www.niranchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:12",
+    "name": "Products",
+    "country": "Iraq",
+    "website": "https://elementrachemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:13",
+    "name": "Harcros Chemicals",
+    "country": "Iraq",
+    "website": "https://www.harcros.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:14",
+    "name": "Modern Chemical Co.",
+    "country": "Iraq",
+    "website": "https://modernchemical.co",
+    "website_official": false
+  },
+  {
+    "id": "buyers:15",
+    "name": "Xanero USA",
+    "country": "Iraq",
+    "website": "https://xanero.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:16",
+    "name": "Volza",
+    "country": "Iraq",
+    "website": "https://www.volza.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:17",
+    "name": "Buyers & Importers List",
+    "country": "Iraq",
+    "website": "https://www.seair.co.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:18",
+    "name": "Anatoliakimya",
+    "country": "Iraq",
+    "website": "https://www.anatoliakimya.net",
+    "website_official": false
+  },
+  {
+    "id": "buyers:19",
+    "name": "Bulkfoods.com",
+    "country": "Iraq",
+    "website": "https://bulkfoods.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:20",
+    "name": "Rawsource",
+    "country": "Iraq",
+    "website": "https://rawsource.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:21",
+    "name": "WebstaurantStore",
+    "country": "Iraq",
+    "website": "https://www.webstaurantstore.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:22",
+    "name": "GloryBee",
+    "country": "Iraq",
+    "website": "https://glorybee.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:23",
+    "name": "Wholesalesuppliesplus",
+    "country": "Iraq",
+    "website": "https://www.wholesalesuppliesplus.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:24",
+    "name": "Bakersbulk",
+    "country": "Iraq",
+    "website": "https://bakersbulk.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:25",
+    "name": "Ingredi",
+    "country": "Iraq",
+    "website": "https://ingredi.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:26",
+    "name": "Foodsweeteners",
+    "country": "Iraq",
+    "website": "https://www.foodsweeteners.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:27",
+    "name": "American International Foods, Inc.",
+    "country": "Iraq",
+    "website": "https://www.americaninternationalfoods.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:28",
+    "name": "Connection ...",
+    "country": "Iraq",
+    "website": "https://connectionchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:29",
+    "name": "Skchemicaltraders",
+    "country": "Iraq",
+    "website": "https://www.skchemicaltraders.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:30",
+    "name": "Alchemoraltd",
+    "country": "Iraq",
+    "website": "https://www.alchemoraltd.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:31",
+    "name": "E Spirit",
+    "country": "Iraq",
+    "website": "https://brenntag-pwa-saudi-arabia-nuxt3.e-spirit.cloud",
+    "website_official": false
+  },
+  {
+    "id": "buyers:32",
+    "name": "Chemiekimyaltd",
+    "country": "Iraq",
+    "website": "https://www.chemiekimyaltd.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:33",
+    "name": "ADAMCO",
+    "country": "Iraq",
+    "website": "https://www.falholdings.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:34",
+    "name": "Yizhou Chem",
+    "country": "Iraq",
+    "website": "https://yizhouchem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:35",
+    "name": "jumla-iq.com",
+    "country": "Iraq",
+    "website": "https://www.jumla-iq.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:36",
+    "name": "Borong.com",
+    "country": "Iraq",
+    "website": "https://market.borong.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:37",
+    "name": "accio.com",
+    "country": "Iraq",
+    "website": "https://www.accio.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:38",
+    "name": "Nationalstocknumber",
+    "country": "Iraq",
+    "website": "https://nationalstocknumber.info",
+    "website_official": false
+  },
+  {
+    "id": "buyers:39",
+    "name": "Theonenesstrading",
+    "country": "Iraq",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:40",
+    "name": "ETK",
+    "country": "Iraq",
+    "website": "http://www.etk.su",
+    "website_official": false
+  },
+  {
+    "id": "buyers:41",
+    "name": "50 lb bags",
+    "country": "Iraq",
+    "website": "https://corecheminc.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:42",
+    "name": "Ecfr",
+    "country": "Iraq",
+    "website": "https://www.ecfr.gov",
+    "website_official": false
+  },
+  {
+    "id": "buyers:43",
+    "name": "Sure Chemical",
+    "country": "Iraq",
+    "website": "https://www.surechemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:44",
+    "name": "Sodiumcarbonate",
+    "country": "Iraq",
+    "website": "https://www.sodiumcarbonate.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:45",
+    "name": "Natrium",
+    "country": "Iraq",
+    "website": "https://www.natrium.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:46",
+    "name": "Niranbio",
+    "country": "Iraq",
+    "website": "https://www.niranbio.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:47",
+    "name": "Nazer Trading Co",
+    "country": "Iraq",
+    "website": "https://nazertrading.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:48",
+    "name": "Manahoortrading",
+    "country": "Iraq",
+    "website": "https://manahoortrading.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:49",
+    "name": "Bulk Distributors ...",
+    "country": "Iraq",
+    "website": "https://www.americanchemicalsuppliers.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:50",
+    "name": "Ishtarcompany",
+    "country": "Iraq",
+    "website": "https://ishtarcompany.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:51",
+    "name": "Behin Trading",
+    "country": "Iraq",
+    "website": "https://behintrading.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:52",
+    "name": "Jinbeichemical",
+    "country": "Iraq",
+    "website": "https://jinbeichemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:53",
+    "name": "Kimiapars",
+    "country": "Iraq",
+    "website": "https://kimiapars.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:54",
+    "name": "M M Chemicals",
+    "country": "Iraq",
+    "website": null,
+    "website_official": false
+  },
+  {
+    "id": "buyers:55",
+    "name": "Zauba",
+    "country": "Iraq",
+    "website": "https://www.zauba.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:56",
+    "name": "Kabirchemicals",
+    "country": "Iraq",
+    "website": "https://www.kabirchemicals.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:57",
+    "name": "Akbari ...",
+    "country": "Iraq",
+    "website": "https://akbarimandilahore.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:58",
+    "name": "Enerjiya Beroil",
+    "country": "Iraq",
+    "website": "https://beroilenergy.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:59",
+    "name": "Medikonda",
+    "country": "Iraq",
+    "website": "https://www.medikonda.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:60",
+    "name": "Mounthopewholesale",
+    "country": "Iraq",
+    "website": "https://www.mounthopewholesale.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:61",
+    "name": "Sahirasa",
+    "country": "Iraq",
+    "website": "https://sahirasa.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:62",
+    "name": "Royalbagiq",
+    "country": "Iraq",
+    "website": "https://royalbagiq.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:63",
+    "name": "Worldbank",
+    "country": "Iraq",
+    "website": "https://wits.worldbank.org",
+    "website_official": false
+  },
+  {
+    "id": "buyers:64",
+    "name": "Klyomo",
+    "country": "Iraq",
+    "website": "https://www.klyomo.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:65",
+    "name": "Prices, Size ...",
+    "country": "Iraq",
+    "website": "https://www.indexbox.io",
+    "website_official": false
+  },
+  {
+    "id": "buyers:66",
+    "name": "Competitive ...",
+    "country": "Iraq",
+    "website": "https://www.6wresearch.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:67",
+    "name": "مجموعة كاملة من موردي بيكربونات الصوديوم عالية الجودة في ...",
+    "country": "Iraq",
+    "website": "https://www.iyiboronnitride.com.tr",
+    "website_official": false
+  },
+  {
+    "id": "buyers:68",
+    "name": "بيكربونات الصوديوم: الفوائد، الاستخدامات، الأضرار، وهل هي ...",
+    "country": "Iraq",
+    "website": "https://www.curevexa.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:69",
+    "name": "ما هي صودا الخبز أو بيكربونات الصوديوم؟ تعرف على 20 استخدام لها",
+    "country": "Iraq",
+    "website": "https://www.edarabia.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:70",
+    "name": "Bawabatdayaatna",
+    "country": "Iraq",
+    "website": "https://bawabatdayaatna.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:71",
+    "name": "Hammaddeler",
+    "country": "Iraq",
+    "website": "https://www.hammaddeler.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:72",
+    "name": "Elbelad",
+    "country": "Iraq",
+    "website": "https://elbelad.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:73",
+    "name": "Centerstarchem",
+    "country": "Iraq",
+    "website": "https://centerstarchem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:74",
+    "name": "(430 جم±)",
+    "country": "Iraq",
+    "website": "https://qassimherb.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:75",
+    "name": "بيكربونات الصوديوم CAS 144‎-55‎-8",
+    "country": "Iraq",
+    "website": "https://industrochem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:76",
+    "name": "استيراد ...",
+    "country": "Iraq",
+    "website": "http://ribasgroup.net",
+    "website_official": false
+  },
+  {
+    "id": "buyers:77",
+    "name": "43 شركات مصنعة, تجار, متعهدون",
+    "country": "Iraq",
+    "website": "https://www.industrystock.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:78",
+    "name": "بيكربونات الصوديوم 99٪ NaHCO₃",
+    "country": "Iraq",
+    "website": "https://www.xrdchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:79",
+    "name": "بيكربونات الصوديوم: الاستخدامات، الآثار الجانبية، الاحتياطات ...",
+    "country": "Iraq",
+    "website": "https://www.medanta.org",
+    "website_official": false
+  },
+  {
+    "id": "buyers:80",
+    "name": "Webteb",
+    "country": "Iraq",
+    "website": "https://www.webteb.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:81",
+    "name": "بيكربونات الصوديوم: دواعي الاستعمال والجرعة والآثار الجانبية ...",
+    "country": "Iraq",
+    "website": "https://tebplus.net",
+    "website_official": false
+  },
+  {
+    "id": "buyers:82",
+    "name": "Hlcchemical",
+    "country": "Iraq",
+    "website": "https://ar.hlcchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:83",
+    "name": "REHN BIOTECH",
+    "country": "Iraq",
+    "website": "https://www.rehnbio.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:84",
+    "name": "نقية وعديمة ...",
+    "country": "Iraq",
+    "website": "https://www.trchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:85",
+    "name": "Eltibbi",
+    "country": "Iraq",
+    "website": "https://eltibbi.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:86",
+    "name": "Medicoverhospitals",
+    "country": "Iraq",
+    "website": "https://www.medicoverhospitals.in",
+    "website_official": false
+  },
+  {
+    "id": "buyers:87",
+    "name": "Altibbi",
+    "country": "Iraq",
+    "website": "https://altibbi.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:88",
+    "name": "Mawdoo3",
+    "country": "Iraq",
+    "website": "https://mawdoo3.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:89",
+    "name": "Hyatok",
+    "country": "Iraq",
+    "website": "https://hyatok.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:90",
+    "name": "بيكربونات الصوديوم 8.4%",
+    "country": "Iraq",
+    "website": "https://alsalampharma.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:91",
+    "name": "Sayidaty",
+    "country": "Iraq",
+    "website": "https://www.sayidaty.net",
+    "website_official": false
+  },
+  {
+    "id": "buyers:92",
+    "name": "Attar Sa",
+    "country": "Iraq",
+    "website": "https://attar-sa.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:93",
+    "name": "أودن حلا ...",
+    "country": "Iraq",
+    "website": "https://sup-oden.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:94",
+    "name": "Tengerchemical",
+    "country": "Iraq",
+    "website": "https://www.tengerchemical.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:95",
+    "name": "Aozun Chemical",
+    "country": "Iraq",
+    "website": "https://www.aozunchem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:96",
+    "name": "Dorar Aliraq",
+    "country": "Iraq",
+    "website": "https://www.dorar-aliraq.net",
+    "website_official": false
+  },
+  {
+    "id": "buyers:97",
+    "name": "Mafahem",
+    "country": "Iraq",
+    "website": "https://mafahem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:98",
+    "name": "Gnfchem",
+    "country": "Iraq",
+    "website": "https://ar.gnfchem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:99",
+    "name": "فوائد صحية مذهلة لصودا الخبز... تعرَّف عليها",
+    "country": "Iraq",
+    "website": "https://aawsat.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:100",
+    "name": "هل بيكربونات الصوديوم هي نفسها الكربونة وما هي أستخداماتها ...",
+    "country": "Iraq",
+    "website": "https://ujeeb.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:101",
+    "name": "125 جرام",
+    "country": "Iraq",
+    "website": "https://yamamahstore.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:102",
+    "name": "HUGE ROC",
+    "country": "Iraq",
+    "website": "https://www.hugeroc.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:103",
+    "name": "Raivaco",
+    "country": "Iraq",
+    "website": "https://raivaco.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:104",
+    "name": "iHerb",
+    "country": "Iraq",
+    "website": "https://sa.iherb.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:105",
+    "name": "4Best Life",
+    "country": "Iraq",
+    "website": "https://4best-life.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:106",
+    "name": "شكل علبة صودا الخبز في العراق Archives",
+    "country": "Iraq",
+    "website": "https://alrakia.com",
+    "website_official": false
+  }
+]
