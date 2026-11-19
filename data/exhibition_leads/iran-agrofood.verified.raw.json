@@ -1,0 +1,3414 @@
+{
+  "iraqagro:1": {
+    "name": "BEHPOO MACHINE",
+    "country": "Iran",
+    "website": "https://behpoo.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (behpoo, machine) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "behpoomachine@behpoo.com",
+        "kind": "mailto",
+        "source_url": "https://behpoo.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "behpoomachine@behpoo.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://behpoo.com",
+    "phones": [
+      {
+        "e164": "+982165582334",
+        "display": "+98 21 6558 2334",
+        "kind": "tel",
+        "source_url": "https://behpoo.com"
+      },
+      {
+        "e164": "+989196789767",
+        "display": "+98 919 678 9767",
+        "kind": "tel",
+        "source_url": "https://behpoo.com"
+      },
+      {
+        "e164": "+989026996077",
+        "display": "+98 902 699 6077",
+        "kind": "tel",
+        "source_url": "https://behpoo.com"
+      },
+      {
+        "e164": "+982165582337",
+        "display": "+98 21 6558 2337",
+        "kind": "tel",
+        "source_url": "https://behpoo.com"
+      },
+      {
+        "e164": "+982140440433",
+        "display": "+98 21 4044 0433",
+        "kind": "tel",
+        "source_url": "https://behpoo.com/contact-us/"
+      },
+      {
+        "e164": "+989024373391",
+        "display": "+98 902 437 3391",
+        "kind": "tel",
+        "source_url": "https://behpoo.com/contact-us/"
+      },
+      {
+        "e164": "+982165582341",
+        "display": "+98 21 6558 2341",
+        "kind": "tel",
+        "source_url": "https://behpoo.com/contact-us/"
+      },
+      {
+        "e164": "+989904959624",
+        "display": "+98 990 495 9624",
+        "kind": "tel",
+        "source_url": "https://behpoo.com/contact-us/"
+      },
+      {
+        "e164": "+982165582335",
+        "display": "+98 21 6558 2335",
+        "kind": "tel",
+        "source_url": "https://behpoo.com/contact-us/"
+      },
+      {
+        "e164": "+982165582336",
+        "display": "+98 21 6558 2336",
+        "kind": "tel",
+        "source_url": "https://behpoo.com/contact-us/"
+      }
+    ],
+    "phone_best": "+98 21 6558 2334",
+    "phone_source_url": "https://behpoo.com",
+    "pages_checked": [
+      "https://behpoo.com",
+      "https://behpoo.com/contact-fa/",
+      "https://behpoo.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "بهپو | تولیدکننده دستگاه بسته‌بندی و ماشین‌آلات صنعتی. بهپو، تولیدکننده انواع دستگاه بسته‌بندی، دستگاه توزین و ماشین‌آلات صنعتی با کیفیت بالا و خدمات پس از فروش مطمئن. برای مشاوره و سفارش تماس بگیرید.. بهپو | تولیدکننده دستگاه بسته‌بندی و ماشین‌آلات صنعتی پرش به محتوا سریع، دقیق، مطمئن بهپو | تولیدکننده دستگاه بسته بندی و ماشین آلات صنعتی شناخت بهپو بهترین های شرکت بهپو تولیدکننده دستگاه بسته بندی و ماشین آلات صنعتی ماشین آلات بسته بندی سری E با طراحی بهینه از نظر کارایی، فضا و هزینه و به منظور پاسخگویی به نیازهای بسته‌بندی کارگاه‌ها و کارخانجات تولید شده‌اند. این دستگاه‌ها به همراه توزین‌های سری E بهپو ماشین یک پکیج یکپارچه و اقتصادی و ایده‌ال می‌باشد که فرآیند توزین و بسته بندی را کامل انج",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:2": {
+    "name": "DORNIKA",
+    "country": "Iran",
+    "website": "https://dornikamed.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (dornika) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "dornikamed123@gmail.com",
+        "kind": "text",
+        "source_url": "https://dornikamed.com/en/home-en/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+982188206932",
+        "display": "+98 21 8820 6932",
+        "kind": "text",
+        "source_url": "https://dornikamed.com/en/home-en/"
+      }
+    ],
+    "phone_best": "+98 21 8820 6932",
+    "phone_source_url": "https://dornikamed.com/en/home-en/",
+    "pages_checked": [
+      "https://dornikamed.com/en/home-en/",
+      "https://dornikamed.com/en/contact-us-en/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "dornikamed123@gmail.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Dornika – Dornika Pharmed Asia. . Dornika – Dornika Pharmed Asia Skip to content Search Close this search box. Manifesting creativity in health and beauty Dornika Pharmed Group, using world-class technology, seeks to create a new development in the health and beauty industry of Iran. This group, with the benefit of young and experienced professionals, specialized production departments, and establishing international relations, is trying to take a big step toward improving the Iran’s health industry. Contact Us The activity of t",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:3": {
+    "name": "HAMADAN GLASS",
+    "country": "Iran",
+    "website": "https://hamadanglass.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (hamadan, glass) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "general@hamadanglass.com",
+        "kind": "mailto",
+        "source_url": "https://hamadanglass.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "info@hamadanglass.com",
+        "kind": "mailto",
+        "source_url": "https://hamadanglass.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@hamadanglass.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://hamadanglass.com",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://hamadanglass.com",
+      "https://hamadanglass.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "صفحه اصلی - شرکت شیشه همدان. . صفحه اصلی - شرکت شیشه همدان جایی که نـــــــــور طعم را لمســـ می کند Hamadan Glass Co. سبد محصولات شیشه همدان سبد محصولات شیشه همدان شامل دو گروه اصلی شیشه‌های جار و بطری است که در ابعاد، ظرفیت‌ها و طراحی‌های متنوع تولید می‌شوند و به‌گونه‌ای طراحی شده‌اند که پاسخگوی نیاز طیف وسیعی از صنایع مختلف باشند. این محصولات با استفاده از مواد اولیه باکیفیت و فرآیندهای تولید استاندارد، از شفافیت، دوام و مقاومت بالایی برخوردار هستند و در کنار ویژگی‌های فنی خود، از الزامات بهداشتی لازم برای بسته‌بندی انواع",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:4": {
+    "name": "IRAN ROLL",
+    "country": "Iran",
+    "website": "http://www.iranroll.co",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (iran, roll) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@iranroll.co",
+        "kind": "mailto",
+        "source_url": "http://www.iranroll.co",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@iranroll.co",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "http://www.iranroll.co",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "http://www.iranroll.co"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "ایران رول | تولید رول و بسته‌بندی آلومینیومی صنایع غذایی و دارویی. ایران رول تولیدکننده راهکارهای آلومینیومی شامل پوشش لبنیات، شروف آلومینیومی، بسته‌بندی دارویی، ظروف آلومینیومی و رول مادر آلومینیوم برای کارخانه‌های چاپ است.. ایران رول | تولید رول و بسته‌بندی آلومینیومی صنایع غذایی و دارویی IranRoll.co تولید محصولات آلومینیومی تخصصی برای صنایع لبنی، دارویی، غذایی و چاپ ایران رول با الهام از استانداردهای تولیدکنندگان جهانی بسته‌بندی و نیازهای واقعی کارخانه‌های ایرانی، راهکارهای قابل سفارش در حوزه پوشش آلومینیومی، ظروف، بلیستر دارویی و رول مادر چاپ ارائه می‌کند. مشاهده محصولات آلومینیومی چرا ایران رول انتخاب کارخانه‌هاست؟ تمرکز ما روی کیفیت سطح، یکنواختی ضخامت، قابلیت چاپ‌پذیری و تحویل منظم اس",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:5": {
+    "name": "KERMAN CHAMBER OF COMMERCE, INDUSTRIES, MINES, AND AGRICULTURE",
+    "country": "Iran",
+    "website": "https://kerman.com.au",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/5 واژه‌ی نام (kerman, agriculture) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+61893648466",
+        "display": "+61 8 9364 8466",
+        "kind": "tel",
+        "source_url": "https://kerman.com.au"
+      }
+    ],
+    "phone_best": "+61 8 9364 8466",
+    "phone_source_url": "https://kerman.com.au",
+    "pages_checked": [
+      "https://kerman.com.au",
+      "https://kerman.com.au/contact-us/",
+      "https://kerman.com.au/contact-us/",
+      "https://kerman.com.au/contact-us/",
+      "https://kerman.com.au/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "- Kerman. We specialise in the design and construction of bulk storage and materials handling facilities, non-process infrastructure and the SMP erection of processing plants.. - Kerman Contact Us (08) 9364 8466 Home About Us Who We Are Our Vision and Values History Board of Directors Management Team Community Engagement Our Commitment Health Safety Environment Quality Assurance Diversity and Inclusion Our Capabilities What We Do Our Expertise Projects Current Projects View All Current Projects Mining & Resources Bulk Storage and Materials Handling Structural, Mechanical, Piping Non-Process Infrastructure Agriculture Bulk Storage and Materials Handling Structural, Mech",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:6": {
+    "name": "KERMANSHAH PETROCHEMICAL INDUSTRIES CO",
+    "country": "Iran",
+    "website": "https://krccima.directory",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/2 واژه‌ی نام (kermanshah) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@krccima.ir",
+        "kind": "mailto",
+        "source_url": "https://krccima.directory/fa/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+989181303026",
+        "display": "+98 918 130 3026",
+        "kind": "whatsapp",
+        "source_url": "https://krccima.directory/fa/"
+      },
+      {
+        "e164": "+988338228131",
+        "display": "+98 83 3822 8131",
+        "kind": "text",
+        "source_url": "https://krccima.directory/fa/"
+      },
+      {
+        "e164": "+988338228141",
+        "display": "+98 83 3822 8141",
+        "kind": "text",
+        "source_url": "https://krccima.directory/fa/"
+      },
+      {
+        "e164": "+988338228151",
+        "display": "+98 83 3822 8151",
+        "kind": "text",
+        "source_url": "https://krccima.directory/fa/"
+      }
+    ],
+    "phone_best": "+98 918 130 3026",
+    "phone_source_url": "https://krccima.directory/fa/",
+    "pages_checked": [
+      "https://krccima.directory/fa/"
+    ],
+    "notes": [
+      "https://sanctions-finder.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.kpic.ir → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "info@krccima.ir دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "اتاق بازرگانی کرمانشاه - خانه. دایرکتوری اعضای اتاق بازرگانی، صنایع، معادن و کشاورزی کرمانشاه شما می توانید اطلاعات اعضای اتاق که دارنده کارت عضویت یا بازرگانی می باشند را جستجو کرده و نتیجه را در همین بخش مشاهده نمایید.. اتاق بازرگانی کرمانشاه - خانه فهرست راهنمای اعضای اتاق بازرگانی صنایع معادن و کشاورزی کرمانشاه KERMANSHAH CHAMBER OF COMMERCE, INDUSTRIES, MINES AND AGRICULTURE دایرکتوری اعضای اتاق بازرگانی، صنایع، معادن و کشاورزی کرمانشاه شما می توانید در این صفحه با وارد نمودن کلمه مورد نظر خود در باکس جستجوی فوق، بر روی فیلدهای زیر از اطلاعات اعضای اتاق که دارنده کارت عضویت یا بازرگانی می باشند، جستجوی هوشمند انجام دهید و نتیجه را در همین بخش مشاهده نمایید ورود اعضا به سامانه ثبت نام اع",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:7": {
+    "name": "KIMIA KALA",
+    "country": "Iran",
+    "website": "https://kimia-kala.org",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (kimia, kala) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@kimia-kala.org",
+        "kind": "text",
+        "source_url": "https://kimia-kala.org",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@kimia-kala.org",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://kimia-kala.org",
+    "phones": [
+      {
+        "e164": "+982188715858",
+        "display": "+98 21 8871 5858",
+        "kind": "text",
+        "source_url": "https://kimia-kala.org"
+      }
+    ],
+    "phone_best": "+98 21 8871 5858",
+    "phone_source_url": "https://kimia-kala.org",
+    "pages_checked": [
+      "https://kimia-kala.org",
+      "https://kimia-kala.org/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "شرکت کیمیا کالا. . شرکت کیمیا کالا Skip to content کیمیاکالا خدمات ما تولید انواع لفاف آلمینیومی پانچی و رولی ، لفاف دارویی و آلو آلو ، لفاف آلمینیومی لمینیتی دو لایه و سه لایه ، لفاف کاغذ کره لمینت کوتینگ انواع لاک چاپ(فلکسو و هلیو 10 رنگ) امباس برش پانچ مشتریان ما تولید انواع لفاف آلمینیومی پانچی و رولی ، لفاف دارویی و آلو آلو ، لفاف آلمینیومی لمینیتی دو لایه و سه لایه ، لفاف کاغذ کره سه دهه سابقه خدمت در صنعت چاپ صفحه اصلی درباره ما محصولات گالری تماس با ما ورود نام کاربری یا آدرس ایمیل * گذرواژه * مرا به خاطر",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:8": {
+    "name": "MINA GLASS",
+    "country": "Iran",
+    "website": "http://minaglass.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (mina, glass) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "marketing@minaglass.com",
+        "kind": "text",
+        "source_url": "http://minaglass.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "marketing@minaglass.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "http://minaglass.com",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "http://minaglass.com"
+    ],
+    "notes": [
+      "https://hormuz.group → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "شرکت شیشه سازی مینا. . شرکت شیشه سازی مینا کشیدگی ردیف و محتوا اینتر را برای جستجو و یا ESC برای بستن بفشارید جستجو شیشه سازی مینا بطری جار سربطری تولید کننده‌ی محصولات Jar-250 Jar-700 Jar-330-(square) jar-90 General Chargosh Pepsi Erfan Shabi Vitamin-C Sundis Type-2 دیدن همه محصولات کاتالوگ 40 تعداد کل محصولات 650 تعداد کارگران 61430 تن تولید از ابتدای 1404 اخبار شرکت All اخبار اخبار شرکت اخبار صنعت اطلاعیه های بورسی گزارش های تصویری حضور شرکت شیشه مینا در کیش اکسپو 2025 حضور شرکت شیشه مینا در کیش اکسپو 2025 حضور شرک",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:9": {
+    "name": "POLFILM",
+    "country": "Iran",
+    "website": "https://www.polfilm.net",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (polfilm) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@polfilm.net",
+        "kind": "text",
+        "source_url": "https://www.polfilm.net",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "sales@polfilm.net",
+        "kind": "text",
+        "source_url": "https://www.polfilm.net/en/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "sales@nfpfilm.com",
+        "kind": "text",
+        "source_url": "https://www.polfilm.net/en/contact/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "marketing@polfilm.net",
+        "kind": "text",
+        "source_url": "https://www.polfilm.net/en/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "crm@polfilm.net",
+        "kind": "text",
+        "source_url": "https://www.polfilm.net/en/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "marketing2@polfilm.net",
+        "kind": "text",
+        "source_url": "https://www.polfilm.net/en/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "n.abedi@polfilm.net",
+        "kind": "text",
+        "source_url": "https://www.polfilm.net/en/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "elham.t@pet-co.co",
+        "kind": "text",
+        "source_url": "https://www.polfilm.net/en/contact/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@polfilm.net",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.polfilm.net",
+    "phones": [
+      {
+        "e164": "+982144634400",
+        "display": "+98 21 4463 4400",
+        "kind": "text",
+        "source_url": "https://www.polfilm.net/en/contact/"
+      },
+      {
+        "e164": "+982832846240",
+        "display": "+98 28 3284 6240",
+        "kind": "text",
+        "source_url": "https://www.polfilm.net/en/contact/"
+      },
+      {
+        "e164": "+982832846244",
+        "display": "+98 28 3284 6244",
+        "kind": "text",
+        "source_url": "https://www.polfilm.net/en/contact/"
+      }
+    ],
+    "phone_best": "+98 21 4463 4400",
+    "phone_source_url": "https://www.polfilm.net/en/contact/",
+    "pages_checked": [
+      "https://www.polfilm.net",
+      "https://www.polfilm.net/en/contact/",
+      "https://www.polfilm.net/en/contact/factory-location/",
+      "https://www.polfilm.net/en/contact/head-office-location/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "sales@nfpfilm.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)",
+      "elham.t@pet-co.co دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "POLFILM. POLFILM. POLFILM × POLFILM is the first and largest film producer in Iran and has been producing BOPP film since 1993, having consistently focused on producing a diverse range of high-quality products to provide effective solutions. [...] MORE Companies BOPP FILM BOPP FILM BOPET FILM LAMINATION ADHESIVE PE STRETCH BOPP FILM PRINTING INK Events AgroPack Iraq 2026: The 9th International Trade Fair for Food Processing and Packaging 10/31/2026 We are pleased to announce the upcoming 9th International Trade F",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:10": {
+    "name": "TAK MAKARON",
+    "country": "Iran",
+    "website": "https://takmakaron.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (tak, makaron) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@takmakaron.com",
+        "kind": "mailto",
+        "source_url": "https://takmakaron.com/contact-us/",
+        "domain_status": "a_only",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@takmakaron.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://takmakaron.com/contact-us/",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://takmakaron.com",
+      "https://takmakaron.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Tak makaron - The first exporter of pasta in Iran, تک ماکارون. Tak Makaron Company has been manufacturing different types of pasta and spaghetti. Tak makaron - The first exporter of pasta in Iran, تک ماکارون Skip to navigation Skip to main content Tak Makaron Alone at the top Read More TAK MAKARON About us Tak Makaron Co ,stands at the forefront of pasta and spaghetti manufacturing, blending cutting-edge technology with the skill and dedication of industry experts with over three decades of expertise. Upholding the highest standards and principles of the food industry, we are committed to crafting nutritious, high-quality products that ca",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:11": {
+    "name": "AFTAB URMIA SPOOTA",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://spoota.co → نام شرکت با صفحه نمی‌خواند (1/3 واژه‌ی نام (spoota) در عنوان/متن/دامنه)",
+      "https://iranifair.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://balad.ir → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:12": {
+    "name": "ANA SHISHE ZANJAN",
+    "country": "Iran",
+    "website": "https://anashishe.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/3 واژه‌ی نام (ana, shishe) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@anashishe.com",
+        "kind": "mailto",
+        "source_url": "https://anashishe.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "info@vestaluxe.com.tr",
+        "kind": "mailto",
+        "source_url": "https://anashishe.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "sales@vestaluxe.com.tr",
+        "kind": "mailto",
+        "source_url": "https://anashishe.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@anashishe.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://anashishe.com",
+    "phones": [
+      {
+        "e164": "+902128122220",
+        "display": "+90 212 812 22 20",
+        "kind": "tel",
+        "source_url": "https://anashishe.com"
+      },
+      {
+        "e164": "+905016334030",
+        "display": "+90 501 633 40 30",
+        "kind": "whatsapp",
+        "source_url": "https://anashishe.com"
+      }
+    ],
+    "phone_best": "+90 212 812 22 20",
+    "phone_source_url": "https://anashishe.com",
+    "pages_checked": [
+      "https://anashishe.com",
+      "https://anashishe.com/contact-us/",
+      "https://anashishe.com/contact-us"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "info@vestaluxe.com.tr دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)",
+      "sales@vestaluxe.com.tr دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Home - ANA SHISHE GLASS. ANA SHISHE is a leading glass packaging manufacturer specializing in premium glass bottles and jars for the food, beverage, cosmetics. Home - ANA SHISHE GLASS Premium Glass Bottles & Jars ANA SHISHE View Products Request a consultation Life Insurance Business Insurance Family Insurance Select Some option Another option A disabled option Potato Get a quote Select Some option Another option A disabled option Potato Get a quote Select Some option Another option A disabled option Potato Get a quote Get a amazing solution with us. Get In Touch Why Choose ANA SISHE Learn about our premium glass jar and bottle production Glass Bottle",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:13": {
+    "name": "BANAVI TRADING GROUP",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://sabahi.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.iranwatch.org → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.listcompany.org → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.opensanctions.org → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:14": {
+    "name": "BEHESHT",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://wanderlog.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.findagrave.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://qualla.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://mapcarta.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:15": {
+    "name": "FARADID",
+    "country": "Iran",
+    "website": "https://faradidtech.ir",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (faradid) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@faradidtech.ir",
+        "kind": "mailto",
+        "source_url": "https://faradidtech.ir",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@faradidtech.ir",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://faradidtech.ir",
+    "phones": [
+      {
+        "e164": "+982191308510",
+        "display": "+98 21 9130 8510",
+        "kind": "tel",
+        "source_url": "https://faradidtech.ir"
+      },
+      {
+        "e164": "+989351238510",
+        "display": "+98 935 123 8510",
+        "kind": "tel",
+        "source_url": "https://faradidtech.ir"
+      }
+    ],
+    "phone_best": "+98 21 9130 8510",
+    "phone_source_url": "https://faradidtech.ir",
+    "pages_checked": [
+      "https://faradidtech.ir",
+      "https://faradidtech.ir/contact.html"
+    ],
+    "notes": [
+      "https://faradidatlas.com → 503",
+      "https://faradeed.ir → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "شرکت فرادید پردیس کاوش | رگیاب نوری VENIX و تجهیزات پزشکی. وب‌سایت رسمی شرکت فرادید پردیس کاوش؛ تولید و توسعه تجهیزات پزشکی و رگیاب نوری VENIX، محصول ایرانی با تمرکز بر فناوری و نوآوری.. شرکت فرادید پردیس کاوش | رگیاب نوری VENIX و تجهیزات پزشکی فناوری برای نسل بعدی راهکارهای پزشکی FARADID فراتر از امروز، دیدی به فردا فرادید پردیس کاوش، مجموعه‌ای فناورمحور با تمرکز بر طراحی، توسعه و نمونه‌سازی راهکارهای نوآورانه و تبدیل ایده‌های مهندسی به راهکارهای کاربردی در حوزه فناوری است. مشاهده VENIX ← آشنایی با شرکت FARADID توسعه راهکارهای نوآورانه VENIX رگیاب نوری PRODUCT از ایده تا نمونه‌سازی FARADID · INNOVATION & PRODUCT DEVELOPMENT برند شرکت FARADID FARADID PARDIS KAVOSH",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:16": {
+    "name": "JAHANGIRI TRADING",
+    "country": "Iran",
+    "website": "https://jahanpistachio.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (jahangiri) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@jahanpistachio.com",
+        "kind": "text",
+        "source_url": "https://jahanpistachio.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "jahan.pistachio@gmail.com",
+        "kind": "text",
+        "source_url": "https://jahanpistachio.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": "info@jahanpistachio.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://jahanpistachio.com",
+    "phones": [
+      {
+        "e164": "+989137140464",
+        "display": "+98 913 714 0464",
+        "kind": "text",
+        "source_url": "https://jahanpistachio.com"
+      },
+      {
+        "e164": "+983491660137",
+        "display": "+98 34 9166 0137",
+        "kind": "text",
+        "source_url": "https://jahanpistachio.com"
+      }
+    ],
+    "phone_best": "+98 913 714 0464",
+    "phone_source_url": "https://jahanpistachio.com",
+    "pages_checked": [
+      "https://jahanpistachio.com"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "jahan.pistachio@gmail.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Jahangiri Trading. . Jahangiri Trading Jahangiri Trading Export Of Dried Fruits “Jahangiri Trading” has been trading in pistachio field for more 40 years. Read more “Jahangiri Trading” has been trading in pistachio field for more 40 years. Our complex has located in Sirjan as one of main origin of Pistachio in Iran. We have been able to supply a variety of high-quality pistachios(Round, Jumbo, Long, Super Long), Dates and fig. All of our activities are based on our commitments. In these years, “Jahangiri Trading”",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:17": {
+    "name": "KAMEL BARCHASB",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://gerehmarket.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.irantalent.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://jobinja.ir → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:18": {
+    "name": "KAVEH MAYSA",
+    "country": "Iran",
+    "website": "https://kavehmachinery.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/2 واژه‌ی نام (kaveh) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@kavehmachinery.com",
+        "kind": "text",
+        "source_url": "https://kavehmachinery.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@kavehmachinery.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://kavehmachinery.com",
+    "phones": [
+      {
+        "e164": "+982144989259",
+        "display": "+98 21 4498 9259",
+        "kind": "text",
+        "source_url": "https://kavehmachinery.com"
+      },
+      {
+        "e164": "+982188651994",
+        "display": "+98 21 8865 1994",
+        "kind": "text",
+        "source_url": "https://kavehmachinery.com"
+      }
+    ],
+    "phone_best": "+98 21 4498 9259",
+    "phone_source_url": "https://kavehmachinery.com",
+    "pages_checked": [
+      "https://kavehmachinery.com",
+      "https://kavehmachinery.com/contact-us/",
+      "https://kavehmachinery.com/fa/%d8%a7%d8%b7%d9%84%d8%a7%d8%b9%d8%a7%d8%aa-%d8%aa%d9%85%d8%a7%d8%b3/"
+    ],
+    "notes": [
+      "https://www.aljazeera.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.forbes.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "Home - Kaveh Machinery. WHO WE ARE. Home - Kaveh Machinery Skip to content Our Innovative Ideas Our Innovative Ideas and unyielding spirit of challenge have served as the foundation of our extraordinary accomplishments. Find Out Industrial Area Development In the aim of strategic development plan we are implementing a huge plan which consists of a fully modernized Industrial Shed by thousands of tons production / warehouse capacity. Find Out WHO WE ARE Quality & Integrity Service Enterprise KMC in Brief KMC in the aim of Country’",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:19": {
+    "name": "KEYHAN GOSTAR SIRJAN COMPANY",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://sirjangostar.com/fa → نام شرکت با صفحه نمی‌خواند (2/3 واژه‌ی نام (gostar, sirjan) در عنوان/متن/دامنه)",
+      "https://www.info-clipper.com/en/ → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.irantalent.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://keyhan-co.com → نام شرکت با صفحه نمی‌خواند (1/3 واژه‌ی نام (keyhan) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:20": {
+    "name": "KIAN VARAGH",
+    "country": "Iran",
+    "website": "https://kianpet.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/2 واژه‌ی نام (kian) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@kianpet.com",
+        "kind": "mailto",
+        "source_url": "https://kianpet.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@kianpet.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://kianpet.com",
+    "phones": [
+      {
+        "e164": "+982191030976",
+        "display": "+98 21 9103 0976",
+        "kind": "tel",
+        "source_url": "https://kianpet.com"
+      }
+    ],
+    "phone_best": "+98 21 9103 0976",
+    "phone_source_url": "https://kianpet.com",
+    "pages_checked": [
+      "https://kianpet.com",
+      "https://kianpet.com/contact/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "کیان پت | تولیدکننده ظروف یکبار مصرف و PET پلاستیکی. کیان پت (کیان ورق سپهر) تولیدکننده پیشرو ظروف یکبار مصرف و PET با استاندارد ISO 22000؛ سینی، لیوان، پریفرم و ظروف دربدار برای صنایع غذایی. تأمین عمده کارخانجات.. کیان پت | تولیدکننده ظروف یکبار مصرف و PET پلاستیکی پرش به محتوا Info@KianPet.com ۰۲۱-۹۱۰۳۰۹۷۶ EN AR FA دارای استاندارد ISO 22000 و پروانه بهداشت تولیدکننده پیشرو ظروف یکبار مصرف و پت پلاستیکی با بهره گیری از مواد اولیه درجه یک و ماشین آلات پیشرفته تزریق تضمین‌کننده کیفیت و تحویل به‌موقع سفارش‌های عمده شما مشاهده محصولات واحد فروش ۰۲۱-۹۱۰۳۰۹۷۶ ISO 22000 ۱۵۰+ کارخانه و برند معتبر ۱۰+ سال تجربه تولید ۱۵۰+ کارخانه و برند معتبر ISO 22000 استاندارد ایمنی غذا 1 گروه مواد PET محصولات ما ",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:21": {
+    "name": "KILLOS FOOD INDUSTRIES",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://kilosco.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://foodexiran.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.irantalent.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:22": {
+    "name": "KOOSHESH KARAN CO",
+    "country": "Iran",
+    "website": "https://koosheshkaran.ir",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (kooshesh, karan) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@koosheshkaran.ir",
+        "kind": "mailto",
+        "source_url": "https://koosheshkaran.ir/fa/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "info@koosheshkaran.com",
+        "kind": "mailto",
+        "source_url": "https://koosheshkaran.ir/fa/contact/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@koosheshkaran.ir",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://koosheshkaran.ir/fa/",
+    "phones": [
+      {
+        "e164": "+982146824240",
+        "display": "+98 21 4682 4240",
+        "kind": "tel",
+        "source_url": "https://koosheshkaran.ir/fa/"
+      },
+      {
+        "e164": "+982644240023",
+        "display": "+98 26 4424 0023",
+        "kind": "tel",
+        "source_url": "https://koosheshkaran.ir/fa/"
+      },
+      {
+        "e164": "+982146851956",
+        "display": "+98 21 4685 1956",
+        "kind": "tel",
+        "source_url": "https://koosheshkaran.ir/fa/contact/"
+      },
+      {
+        "e164": "+982146820215",
+        "display": "+98 21 4682 0215",
+        "kind": "tel",
+        "source_url": "https://koosheshkaran.ir/fa/contact/"
+      },
+      {
+        "e164": "+982644240030",
+        "display": "+98 26 4424 0030",
+        "kind": "tel",
+        "source_url": "https://koosheshkaran.ir/fa/contact/"
+      }
+    ],
+    "phone_best": "+98 21 4682 4240",
+    "phone_source_url": "https://koosheshkaran.ir/fa/",
+    "pages_checked": [
+      "https://koosheshkaran.ir/fa/",
+      "https://koosheshkaran.ir/fa/contact/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "شرکت ماشین سازی کوشش کاران – سازنده ماشین آلات بسته بندی مواد غذایی و دارویی. . شرکت ماشین سازی کوشش کاران – سازنده ماشین آلات بسته بندی مواد غذایی و دارویی محصولات درباره ما متخصص در صنعت ماشین سازی دارنده گواهینامه های بین المللی بیش از 20 سال سابقه صادرات ادامه… ویدیو رویدادها و مقالات مشاهده آرشیو مقالات اطلاعیه انصراف با سلام و احترام بدینوسیله به استحضار می رساند به دلیل شیوع ویروس کرونا در کشور و با توجه به تصمیم انجمن ماشین سازان… رویدادها ادامه مطلب 1400/04/31 نمایشگاه بین المللی ایران آگرافود 1398 بیست و ششمین دوره نمایشگاه بین المللی ایران آگروفود، صنایع کشاورزی،",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:23": {
+    "name": "LUXSTAR INDUSTRY",
+    "country": "Iran",
+    "website": "https://luxstartrading.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (luxstar) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://luxstartrading.com",
+      "https://luxstartrading.com/contact",
+      "https://luxstartrading.com/contact-us",
+      "https://luxstartrading.com/contactus",
+      "https://luxstartrading.com/contact.html",
+      "https://luxstartrading.com/contact-us.html",
+      "https://luxstartrading.com/pages/contact",
+      "https://luxstartrading.com/contacts",
+      "https://luxstartrading.com/contacts/",
+      "https://luxstartrading.com/kontakty",
+      "https://luxstartrading.com/kontakt",
+      "https://luxstartrading.com/kontakte",
+      "https://luxstartrading.com/about/contacts",
+      "https://luxstartrading.com/ru/contacts",
+      "https://luxstartrading.com/en/contacts",
+      "https://luxstartrading.com/lianxiwomen"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Luxstar — International Sourcing & Logistics. Factory sourcing, quality control and international logistics from China.. Luxstar — International Sourcing & Logistics ⌕ ✓ ↗ ✈ ↗ ≈ 1 2 3 LUXSTAR INTERNATIONAL TRADING • BUSINESS WITH CHINA",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:24": {
+    "name": "MOUSAVI FOOD INDUSTRY",
+    "country": "Iran",
+    "website": "https://mousavifood.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (mousavi) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@mousavifood.com",
+        "kind": "text",
+        "source_url": "https://mousavifood.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@mousavifood.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://mousavifood.com",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://mousavifood.com"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "صنایع غذایی موسوی – محصولات مربایی و حلوا شکری موسوی. . صنایع غذایی موسوی – محصولات مربایی و حلوا شکری موسوی موسوی صبحانه ای که طعمش می‌ماند مربا ، حلوا ارده و عسل موسوی طعمی اصیل در کنار خانواده شما مشاهده محصولات درباره موسوی سال‌ها اعتماد خانواده کیفیت ماندگار مواد اولیه طبیعی دسته بندی محصولات برای هر سلیقه ، یک طعم خوب مربا طعم شیرین میوه‌های تازه عسل عسل طبیعی، منبع انرژی روزانه حلوا ارده شکری انوع حلوا ارده با طعم‌های اصیل هرروز یک طعم مرباهای موسوی از بهترین و با کیفیت ترین میوه‌ها ، برای لحظات شیرین زندگی مربای پرتغال مربای تمشک مربای هویج ز",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:25": {
+    "name": "NIAM PLASTIC",
+    "country": "Iran",
+    "website": "http://niamplastic.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (niam, plastic) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+982533348101",
+        "display": "+98 25 3334 8101",
+        "kind": "tel",
+        "source_url": "http://niamplastic.com"
+      }
+    ],
+    "phone_best": "+98 25 3334 8101",
+    "phone_source_url": "http://niamplastic.com",
+    "pages_checked": [
+      "http://niamplastic.com"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "نیام پلاستیک | صنایع بسته‌بندی پیشرفته. . نیام پلاستیک | صنایع بسته‌بندی پیشرفته فیلم استرچ PVC انعطاف‌پذیر، بسیار مقاوم و شفاف. ایده‌آل برای بسته‌بندی بهداشتی مواد غذایی و محصولات صنعتی با هدف حفظ ماندگاری. ✦ حفظ کیفیت و ماندگاری حداکثری ورق‌های PVC مقاومت مکانیکی و دوام فوق‌العاده. ایده‌آل برای صنایع چاپ، بسته‌بندی‌های تخصصی، تبلیغات و کاربردهای سنگین. ✦ تنوع کامل ضخامت و رنگ‌بندی ورق‌های PET شفافیت بلورین، استحکام بالا و کاملاً قابل بازیافت. گزینه اول برای بسته‌بندی‌های استریل بهداشتی، دارویی و غذایی. ✦ دوستدار محیط زیست (Eco-Friendl",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:26": {
+    "name": "NOUSHAB",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://nooshab.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://databasesets.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.iraniantours.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.iransafar.co → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:27": {
+    "name": "OSAREH TALAEI TABRIZ(Zardineh)",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://foodexiran.com → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://zardineh.com → نام شرکت با صفحه نمی‌خواند (1/4 واژه‌ی نام (zardineh) در عنوان/متن/دامنه)",
+      "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:28": {
+    "name": "PAKBAN FOOD INDUSTRIES GROUP KILOS FOOD INDUSTRIES",
+    "country": "Iran",
+    "website": "https://pakban.ir",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/2 واژه‌ی نام (pakban) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@pakban.ir",
+        "kind": "mailto",
+        "source_url": "https://pakban.ir/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@pakban.ir",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://pakban.ir/contact/",
+    "phones": [
+      {
+        "e164": "+982142612000",
+        "display": "+98 21 4261 2000",
+        "kind": "tel",
+        "source_url": "https://pakban.ir/contact/"
+      }
+    ],
+    "phone_best": "+98 21 4261 2000",
+    "phone_source_url": "https://pakban.ir/contact/",
+    "pages_checked": [
+      "https://pakban.ir",
+      "https://pakban.ir/contact/",
+      "https://pakban.ir/contact/#B2B"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "پاکبان. . پاکبان رفتن به محتوا پاکبان، بیش از ۳۰ سال تجربه در تولید محصولات لبنی درباره پاکبان صفر تا صد صبحانه سالم با لبنیات پاکبان مشاهده محصولات بنوش و زندگی کن نوشیدنی‌ها و آبمیوه‌های جدید ماکسیتو مشاهده محصولات پاکبان، نگهبان پاکی و همراه تندرستی داستان پاکبان، روایت نگهبانی از سلامت و طعمِ خوشِ تندرستی است. ما با تکیه بر زنجیره‌ای دقیق از دانش روز و فناوری‌های نوین، «پاکبانی» را به عنوان پیمانی به سپیدی شیر، برای مراقبت از خانواده‌های ایرانی تعریف کرده‌ایم تا طراوت و پاکی را با بالاترین استانداردها",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:29": {
+    "name": "PARSCOMPLEX DELIJAN",
+    "country": "Iran",
+    "website": "https://parscomplex.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (parscomplex, delijan) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "parscomplex@yahoo.com",
+        "kind": "text",
+        "source_url": "https://parscomplex.com/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+989940341648",
+        "display": "+98 994 034 1648",
+        "kind": "whatsapp",
+        "source_url": "https://parscomplex.com/"
+      }
+    ],
+    "phone_best": "+98 994 034 1648",
+    "phone_source_url": "https://parscomplex.com/",
+    "pages_checked": [
+      "https://parscomplex.com/",
+      "https://parscomplex.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "parscomplex@yahoo.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "pars complex – پارس کمپلکس. . pars complex – پارس کمپلکس Pars Complex Factories, Delijan Manufacturer of single-layer, double-layer and multi-layer sheets Learn more About our factories Pars Delijan Factory Complex Pars Delijan Factory Complex started its operations in 2011 with the aim of producing various products made from polymer and polyester materials, located in the Delijan Industrial Park on a land area of ​​50,000 square meters and with an annual capacity of 25,000 tons. In its new phase, it has started producing va",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:30": {
+    "name": "POOLAD POOYESH PLASTIC PARTS",
+    "country": "Iran",
+    "website": "https://www.pooladpooyesh.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/4 واژه‌ی نام (poolad, pooyesh) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@pooladpooyesh.com",
+        "kind": "text",
+        "source_url": "https://www.pooladpooyesh.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@pooladpooyesh.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.pooladpooyesh.com",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.pooladpooyesh.com",
+      "https://www.pooladpooyesh.com/fa/contact-us"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "پولاد پویش. شرکت تزریق پلاستیک پولاد پویش، تولید کننده انواع قطعات پلاستیکی بطری و ظروف جدار نازک IML به روش تزریق پلاستیک با استفاده از دستگاه های تزریق پلاستیک. پولاد پویش تولید روزانه بیش از 180 تن محصولات پلیمری با همکاری افزون بر 850 نفر پرسنل توانمند در مساحتی به وسعت 82,000 متر مربع 45 سال سابقه فعالیت در صنعت پلاستیک محصولات پولاد پویش PET پریفرم بطری تولید انواع پریفرم بطری PET در دهانه‌ها و اوزان مختلف مورد استفاده در صنایع نوشیدنی، غذایی، دارویی، آرایشی، بهداشتی، و … مشاهده محصولات IML ظروف بسته بندی جدار نازک تولـید انواع ظروف بسـته بندی جدار نازک در ابعاد، حجم و اشـکال مختـلف با قابلیت چاپ IML مورد استفاده در صنایع لبنی، مواد غذایی، شیرینی و",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:31": {
+    "name": "RAHEB INDUSTRIAL GRORUP RABEE & CRYSTAL",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://rabee.com → نام شرکت با صفحه نمی‌خواند (2/5 واژه‌ی نام (industrial, rabee) در عنوان/متن/دامنه)",
+      "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/5 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://foodexiran.com → نام شرکت با صفحه نمی‌خواند (0/5 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.irantalent.com → نام شرکت با صفحه نمی‌خواند (1/5 واژه‌ی نام (industrial) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:32": {
+    "name": "RAMAK BITA DAIRY CO.",
+    "country": "Iran",
+    "website": "https://ramakdairy.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/3 واژه‌ی نام (ramak, dairy) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@ramakdairy.com",
+        "kind": "text",
+        "source_url": "https://ramakdairy.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@ramakdairy.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://ramakdairy.com",
+    "phones": [
+      {
+        "e164": "+982187212121",
+        "display": "+98 21 8721 2121",
+        "kind": "text",
+        "source_url": "https://ramakdairy.com/contact-us/"
+      }
+    ],
+    "phone_best": "+98 21 8721 2121",
+    "phone_source_url": "https://ramakdairy.com/contact-us/",
+    "pages_checked": [
+      "https://ramakdairy.com",
+      "https://ramakdairy.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "رامک. آدرس: شیراز، خیابان فلسطین، نبش اردیبهشت، ساختمان دلتا طبقه دوم. رامک رامک دوست بزرگ و کوچک محصولات ما پنیر‌ها نوشیدنی‌ها ماست‌ها کشک، کره و خامه محصولات‌پودری فوت و فن با رامک رسپی ساده سریع خوش‌مزه دوستانه با رامک صبحانه ایرانی و سلامتی: راهکارهای ساده برای تغذیه سالم در صبح من همیشه برای آماده کردن وعده صبحانه دچار مشکل بودم. بچه‌های من همیشه دوست داشتند مواد غذایی متفاوتی را برای وعده صبحانه تجربه کنند. از طرفی من مخالف خوردن مواد ادامه مطلب 10 عادت غذایی اشتباه که سلامت ما را به خطر می‌اندازد در این مقاله شما را با 10 عادت غذایی اشتباه که سلامت بدن را به",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:33": {
+    "name": "RAZI GLASS CO.",
+    "country": "Iran",
+    "website": "http://raziglass.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (razi, glass) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "alimuossa@alrafidain-pahrma.com",
+        "kind": "text",
+        "source_url": "http://raziglass.com/en/world-agency/contacts/Int-distributors",
+        "domain_status": "dead",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "ostadi_bahram@yahoo.com",
+        "kind": "text",
+        "source_url": "http://raziglass.com/en/world-agency/contacts/Int-distributors",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      },
+      {
+        "email": "margpharm@gmail.com",
+        "kind": "text",
+        "source_url": "http://raziglass.com/en/world-agency/contacts/Int-distributors",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      },
+      {
+        "email": "sales@raziglass.com",
+        "kind": "text",
+        "source_url": "http://raziglass.com/en/contact",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "nastaran.milani@raziglass.com",
+        "kind": "text",
+        "source_url": "http://raziglass.com/en/contact",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "sahar.alipour@raziglass.com",
+        "kind": "text",
+        "source_url": "http://raziglass.com/en/contact",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@raziglass.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "http://raziglass.com/en/contact",
+    "phones": [
+      {
+        "e164": "+9647801019272",
+        "display": "+964 780 101 9272",
+        "kind": "text",
+        "source_url": "http://raziglass.com/en/world-agency/contacts/Int-distributors"
+      },
+      {
+        "e164": "+9647901935838",
+        "display": "+964 790 193 5838",
+        "kind": "text",
+        "source_url": "http://raziglass.com/en/world-agency/contacts/Int-distributors"
+      },
+      {
+        "e164": "+994703881174",
+        "display": "+994 70 388 11 74",
+        "kind": "text",
+        "source_url": "http://raziglass.com/en/world-agency/contacts/Int-distributors"
+      },
+      {
+        "e164": "+989122233638",
+        "display": "+98 912 223 3638",
+        "kind": "text",
+        "source_url": "http://raziglass.com/en/world-agency/contacts/Int-distributors"
+      },
+      {
+        "e164": "+37493322390",
+        "display": "+374 93 322390",
+        "kind": "text",
+        "source_url": "http://raziglass.com/en/world-agency/contacts/Int-distributors"
+      },
+      {
+        "e164": "+982179003000",
+        "display": "+98 21 7900 3000",
+        "kind": "text",
+        "source_url": "http://raziglass.com/en/contact"
+      }
+    ],
+    "phone_best": "+964 780 101 9272",
+    "phone_source_url": "http://raziglass.com/en/world-agency/contacts/Int-distributors",
+    "pages_checked": [
+      "http://raziglass.com/en",
+      "http://raziglass.com/en/world-agency/contacts/Int-distributors",
+      "http://raziglass.com/en/contact"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "RaziGlass Company, Packaging and Glass Manufacture. The use of state of the art technologies in Glass production has given the RaziGlass ,A leader in glass bottle manufacture, an edge by offering superior products. RaziGlass Company, Packaging and Glass Manufacture Attention فارسی / Eng Excellence in Flint Glass Excellence in Pharma Glass Unique Oil & Vinegar Glass Premium Beer Bottle Glass Professional Soft Drink Bottles Scroll Down Products Food Beverage Beer Pharmaceutical Divisions Pharma Glass Containers Food & Beverages Glass Containers Glass Mold News 29th international exhibition of the packaging industry, Tüyap 2024, Istanbul 10/12/2024 28th international exhibition of the packaging",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:34": {
+    "name": "SHISHE GAZ CO",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://www.maysaco.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.tradeeasy.com → نام شرکت با صفحه نمی‌خواند (1/2 واژه‌ی نام (gaz) در عنوان/متن/دامنه)",
+      "https://madeiniran.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:35": {
+    "name": "SPCO",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "http://www.sazehpouyesh.co → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.iranspco.ir → 503",
+      "https://www.irantalent.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.spco-iran.com → 200"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:36": {
+    "name": "TEB PLASTIC NOVIN",
+    "country": "Iran",
+    "website": "https://en.tebplastic.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/3 واژه‌ی نام (teb, plastic) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@tebplastic.com",
+        "kind": "mailto",
+        "source_url": "https://en.tebplastic.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "export@tebplastic.com",
+        "kind": "mailto",
+        "source_url": "https://en.tebplastic.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "export@tebplastic.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://en.tebplastic.com",
+    "phones": [
+      {
+        "e164": "+982122846735",
+        "display": "+98 21 2284 6735",
+        "kind": "text",
+        "source_url": "https://en.tebplastic.com"
+      },
+      {
+        "e164": "+982122883629",
+        "display": "+98 21 2288 3629",
+        "kind": "text",
+        "source_url": "https://en.tebplastic.com"
+      },
+      {
+        "e164": "+982122883618",
+        "display": "+98 21 2288 3618",
+        "kind": "text",
+        "source_url": "https://en.tebplastic.com/contact-us/"
+      }
+    ],
+    "phone_best": "+98 21 2284 6735",
+    "phone_source_url": "https://en.tebplastic.com",
+    "pages_checked": [
+      "https://en.tebplastic.com",
+      "https://en.tebplastic.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "disposable containers - Tebplastic manufacturer Holding. disposable containers - Manufacturer and distributor of disposable and reusable containers in Iran and Region. disposable containers - Tebplastic manufacturer Holding رد کردن لینک ها رد کردن تا صفحه بندی اصلی پرش به محتوا Teb Plastic Company can be considered as the leader of the disposable tableware industry in the country. Teb Plastic Company can be considered as the leader of the disposable tableware industry in the country. Teb Plastic Company can be considered as the leader of the disposable tableware industry in the country. Teb plastic; as a superior national producer as well as premier provincial",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:37": {
+    "name": "ZARRIN LABAN PARS",
+    "country": "Iran",
+    "website": "https://zarrin.group",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/3 واژه‌ی نام (zarrin) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@zarrin-group.com",
+        "kind": "cfemail",
+        "source_url": "https://zarrin.group",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@zarrin-group.com",
+    "email_confidence": "site_confirmed_other_domain",
+    "email_source_url": "https://zarrin.group",
+    "phones": [
+      {
+        "e164": "+982122222761",
+        "display": "+98 21 2222 2761",
+        "kind": "tel",
+        "source_url": "https://zarrin.group"
+      },
+      {
+        "e164": "+982122222762",
+        "display": "+98 21 2222 2762",
+        "kind": "tel",
+        "source_url": "https://zarrin.group"
+      }
+    ],
+    "phone_best": "+98 21 2222 2761",
+    "phone_source_url": "https://zarrin.group",
+    "pages_checked": [
+      "https://zarrin.group",
+      "https://zarrin.group/contact/"
+    ],
+    "notes": [
+      "https://zarinlabanpars.com → نام شرکت با صفحه نمی‌خواند (2/3 واژه‌ی نام (laban, pars) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Zarrin Group. . Zarrin Group Since 1930 we have been in production, processing, local and international trade of fresh produce in Iran. About Us ... Zarrin Group Our Vision & Mission Our mission is to offer our customers a variety of high quality produce throughout the year in a timely manner and to build strong relations with our suppliers and customers based on transparency, openness and honesty. We bring our enthusiasm and dedication to work, building a strong brand that represents quality and our commitment",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:38": {
+    "name": "ANA SHISHE",
+    "country": "Iran",
+    "website": "https://anashishe.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (ana, shishe) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@anashishe.com",
+        "kind": "mailto",
+        "source_url": "https://anashishe.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "info@vestaluxe.com.tr",
+        "kind": "mailto",
+        "source_url": "https://anashishe.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "sales@vestaluxe.com.tr",
+        "kind": "mailto",
+        "source_url": "https://anashishe.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@anashishe.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://anashishe.com",
+    "phones": [
+      {
+        "e164": "+902128122220",
+        "display": "+90 212 812 22 20",
+        "kind": "tel",
+        "source_url": "https://anashishe.com"
+      },
+      {
+        "e164": "+905016334030",
+        "display": "+90 501 633 40 30",
+        "kind": "whatsapp",
+        "source_url": "https://anashishe.com"
+      }
+    ],
+    "phone_best": "+90 212 812 22 20",
+    "phone_source_url": "https://anashishe.com",
+    "pages_checked": [
+      "https://anashishe.com",
+      "https://anashishe.com/contact-us/",
+      "https://anashishe.com/contact-us"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "info@vestaluxe.com.tr دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)",
+      "sales@vestaluxe.com.tr دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Home - ANA SHISHE GLASS. ANA SHISHE is a leading glass packaging manufacturer specializing in premium glass bottles and jars for the food, beverage, cosmetics. Home - ANA SHISHE GLASS Premium Glass Bottles & Jars ANA SHISHE View Products Request a consultation Life Insurance Business Insurance Family Insurance Select Some option Another option A disabled option Potato Get a quote Select Some option Another option A disabled option Potato Get a quote Select Some option Another option A disabled option Potato Get a quote Get a amazing solution with us. Get In Touch Why Choose ANA SISHE Learn about our premium glass jar and bottle production Glass Bottle",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:39": {
+    "name": "BHE FLOW AI",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://bhe-co.com → نام شرکت با صفحه نمی‌خواند (1/3 واژه‌ی نام (bhe) در عنوان/متن/دامنه)",
+      "https://flow-ai.com → نام شرکت با صفحه نمی‌خواند (2/3 واژه‌ی نام (flow, ai) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:40": {
+    "name": "CHIN CHIN",
+    "country": "Iran",
+    "website": "https://en.chinchinco.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (chin, chin) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@chinchinco.com",
+        "kind": "text",
+        "source_url": "https://en.chinchinco.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@chinchinco.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://en.chinchinco.com",
+    "phones": [
+      {
+        "e164": "+985133920228",
+        "display": "+98 51 3392 0228",
+        "kind": "text",
+        "source_url": "https://en.chinchinco.com"
+      }
+    ],
+    "phone_best": "+98 51 3392 0228",
+    "phone_source_url": "https://en.chinchinco.com",
+    "pages_checked": [
+      "https://en.chinchinco.com",
+      "https://en.chinchinco.com/contact/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Main page - ChinChin Agricultural and Industrial Complex. Chin Chin Agricultural and Industrial Complex, Leading Manufacturer of Canned Goods, Jams, Pickles, Tomato Paste and Eggplant Meals. Main page - ChinChin Agricultural and Industrial Complex Lime Juice Lemon juice is an extremely tasty seasoning that has been noted for its properties. Lemon juice is used in preparing all kinds of drinks, food and salad. Lemon juice is rich in vitamins and minerals. ... Tomato Paste Canned Goods Pickle Jams All Products ChinChin Kitchen Marinara Sauce + recipe and history The ingredients: tomato paste 170 gr Other ingredients: Olive oil………………1 table spoon minced garlic…… 1 clove Italian spice",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:41": {
+    "name": "DAMA GOSTAR SAZAN NOVIM",
+    "country": "Iran",
+    "website": "https://damagostar.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/4 واژه‌ی نام (dama, gostar) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@damagostar.com",
+        "kind": "text",
+        "source_url": "https://damagostar.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "sales@damagostar.com",
+        "kind": "text",
+        "source_url": "https://damagostar.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@damagostar.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://damagostar.com",
+    "phones": [
+      {
+        "e164": "+989120940729",
+        "display": "+98 912 094 0729",
+        "kind": "whatsapp",
+        "source_url": "https://damagostar.com"
+      },
+      {
+        "e164": "+988634130725",
+        "display": "+98 86 3413 0725",
+        "kind": "text",
+        "source_url": "https://damagostar.com"
+      },
+      {
+        "e164": "+988634130946",
+        "display": "+98 86 3413 0946",
+        "kind": "text",
+        "source_url": "https://damagostar.com"
+      }
+    ],
+    "phone_best": "+98 912 094 0729",
+    "phone_source_url": "https://damagostar.com",
+    "pages_checked": [
+      "https://damagostar.com",
+      "https://damagostar.com/default/contact-us"
+    ],
+    "notes": [
+      "https://www.icpcredit.com → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "کباب پز تابشی. کباب پز تابشی دستگاهی است که در آشپزخانه ها صنعتی و رستورانها برای پخت انواع کباب مانند کوبیده، جوجه کباب و ماهی کباب استفاده می شود. پخت بدون دود، کباب آبدار و سرعت زیاد از مزایای کباب پز تابشی است.. کباب پز تابشی کباب پز تابشی شیدپخت تولید کننده تجهیزات آشپزخانه صنعتی، رستوران، فست فود بویژه انواع کباب پز، فر ریلی برنج ، دیگ چلو پز صنعتی ، خورشت پز صنعتی ، سرخ کن صنعتی ، خط پخت تمام اتوماتیک کباب کوبیده ، سیخ گیر هیدرولیکی ، یخچال کبابی ، فر ریلی پیتزا است. مکانیزاسیون آشپزخانه صنعتی، کاهش هزینه ها، کیفیت بالا و یکنواخت پخت، بهره وری نیروی انسانی با تجهیزات مدرن آشپزخانه صنعتی شیدپخت شیدپخت مخترع واقعی و بزرگترین تولید کننده کباب پز تابشی و تجهیزات رستوران، فست فود، آشپزخانه",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:42": {
+    "name": "Dana Sepand International Trade Co.",
+    "country": "Iran",
+    "website": "https://dana-holding.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/2 واژه‌ی نام (dana) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "marketing@dana-holding.com",
+        "kind": "text",
+        "source_url": "https://dana-holding.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "marketing@dana-holding.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://dana-holding.com",
+    "phones": [
+      {
+        "e164": "+982172856000",
+        "display": "+98 21 7285 6000",
+        "kind": "tel",
+        "source_url": "https://dana-holding.com"
+      },
+      {
+        "e164": "+989134105211",
+        "display": "+98 913 410 5211",
+        "kind": "whatsapp",
+        "source_url": "https://dana-holding.com/contact/"
+      },
+      {
+        "e164": "+989912707652",
+        "display": "+98 991 270 7652",
+        "kind": "whatsapp",
+        "source_url": "https://dana-holding.com/contact/"
+      }
+    ],
+    "phone_best": "+98 21 7285 6000",
+    "phone_source_url": "https://dana-holding.com",
+    "pages_checked": [
+      "https://dana-holding.com",
+      "https://dana-holding.com/contact/",
+      "https://dana-holding.com/wp-content/cache/wp-rocket/dana-holding.com/contact/index.html_gzip"
+    ],
+    "notes": [
+      "https://www.trademo.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.irantalent.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "Dana Holding| Supplier of food, chemical, detergent products. Dana Holding is a leading manufacturer, exporter, and importer company engaged in export and production. We are bringing you the best products.. Dana Holding| Supplier of food, chemical, detergent products Supplier of food, chemical, detergent products MAKE IT POSSIBLE GROW YOUR BUSINESS Get Started WE BREAK BOUNDARIES GROW YOUR BUSINESS Get Started Benefits of working with us Our Benefits All Benefits Access to a diverse range of products Access to a diverse range of products Dana Holding provides its clients with access to a wide array of products in the food, chemical, and detergent industries. Reliable supply chain management ",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:43": {
+    "name": "DARA ELECTRONIC",
+    "country": "Iran",
+    "website": "https://daraelectronic.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (dara, electronic) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@daraelectronic.com",
+        "kind": "text",
+        "source_url": "https://daraelectronic.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@daraelectronic.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://daraelectronic.com",
+    "phones": [
+      {
+        "e164": "+989122724597",
+        "display": "+98 912 272 4597",
+        "kind": "tel",
+        "source_url": "https://daraelectronic.com"
+      },
+      {
+        "e164": "+982177710114",
+        "display": "+98 21 7771 0114",
+        "kind": "tel",
+        "source_url": "https://daraelectronic.com"
+      },
+      {
+        "e164": "+989912706560",
+        "display": "+98 991 270 6560",
+        "kind": "whatsapp",
+        "source_url": "https://daraelectronic.com"
+      }
+    ],
+    "phone_best": "+98 912 272 4597",
+    "phone_source_url": "https://daraelectronic.com",
+    "pages_checked": [
+      "https://daraelectronic.com",
+      "https://daraelectronic.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "دارا الکترونیک | تولید کننده دستگاه‌های پُرکن و بسته بندی. شرکت دارا الکترونیک عضو گروه صنعتی پند، برند ملّی تولید دستگاه‌های پُرکن و بسته‌بندی در صنایع مختلف از جمله کشاورزی، غذایی، پتروشیمی و غیره است. دارا الکترونیک | تولید کننده دستگاه‌های پُرکن و بسته بندی مشاوره تخصصی رایگان همین الان تماس بگیرید مشاوره تخصصی رایگان با ما در ارتباط باشید 1 صنعت خوراک دام، طیور و آبزیان انواع دستگاه های تخصصی کیسه پرکن پودری ویژه مکمل های خوراک دام و دستگاه های کیسه پرکن انواع پلت ها در ظرفیت های گوناگون و با دقت بالا روغن‌های صنعتی و انواع روان‌کار‌ها انواع دستگاه های پرکن مایعات ویسکوز مانند روغن ها، روان کارها، رزین، پارافین و غیره به روش وزنی با دقت بسیار بالا و عملکرد بسیار پایدار صنایع شیمیایی، پل",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:44": {
+    "name": "DHT NUTS",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://iraniannuts.com → نام شرکت با صفحه نمی‌خواند (1/2 واژه‌ی نام (nuts) در عنوان/متن/دامنه)",
+      "https://yektamarket.com → نام شرکت با صفحه نمی‌خواند (1/2 واژه‌ی نام (nuts) در عنوان/متن/دامنه)",
+      "https://farsinuts.com → نام شرکت با صفحه نمی‌خواند (1/2 واژه‌ی نام (nuts) در عنوان/متن/دامنه)",
+      "https://impnuts.com → نام شرکت با صفحه نمی‌خواند (1/2 واژه‌ی نام (nuts) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:45": {
+    "name": "DIARA",
+    "country": "Iran",
+    "website": "https://diaraworld.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (diara) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@diaraworld.com",
+        "kind": "mailto",
+        "source_url": "https://diaraworld.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@diaraworld.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://diaraworld.com",
+    "phones": [
+      {
+        "e164": "+982144339678",
+        "display": "+98 21 4433 9678",
+        "kind": "tel",
+        "source_url": "https://diaraworld.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7-%d9%85%d8%a7/"
+      },
+      {
+        "e164": "+982645331800",
+        "display": "+98 26 4533 1800",
+        "kind": "tel",
+        "source_url": "https://diaraworld.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7-%d9%85%d8%a7/"
+      }
+    ],
+    "phone_best": "+98 21 4433 9678",
+    "phone_source_url": "https://diaraworld.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7-%d9%85%d8%a7/",
+    "pages_checked": [
+      "https://diaraworld.com",
+      "https://diaraworld.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7-%d9%85%d8%a7/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "صفحه اصلی - دنیای عطر و طعم دیارا. . صفحه اصلی - دنیای عطر و طعم دیارا Skip to content جستجو برای سمفونی شگفت‌انگیز عطر و طعم رویایی از دل عطر‌ها و طعم‌ها طعمی متفاوت برای محصولات همیشگی Previous slide Next slide چرا باید دیارا را انتخاب کرد قابل دسترس است یکی از عمده نگرانی مشتريان دیارا نبود عطر و طعم‌دهنده‌ها در داخل کشور و نداشتن فرصت آزمایش آن در خط تولید بوده است. مستقل است امروز دیارا با دسترسی آسان در داخل ایران به عطر و طعم‌ها و تولید طیف گسترده ای از مولکول ها، محصولات متنوع، کاهش هزينه ها در واردات به داخل کشور و مسیر تو",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:46": {
+    "name": "DIBA PLASTIC KAROON",
+    "country": "Iran",
+    "website": "https://diba-plastic.ir",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/3 واژه‌ی نام (diba, plastic) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@diba-plastic.com",
+        "kind": "mailto",
+        "source_url": "https://diba-plastic.ir/contact-us/",
+        "domain_status": "dead",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+982191035772",
+        "display": "+98 21 9103 5772",
+        "kind": "tel",
+        "source_url": "https://diba-plastic.ir"
+      },
+      {
+        "e164": "+989165853252",
+        "display": "+98 916 585 3252",
+        "kind": "tel",
+        "source_url": "https://diba-plastic.ir"
+      },
+      {
+        "e164": "+989163826242",
+        "display": "+98 916 382 6242",
+        "kind": "tel",
+        "source_url": "https://diba-plastic.ir"
+      }
+    ],
+    "phone_best": "+98 21 9103 5772",
+    "phone_source_url": "https://diba-plastic.ir",
+    "pages_checked": [
+      "https://diba-plastic.ir",
+      "https://diba-plastic.ir/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "دیبا پلاستیک – تولید کننده نایلون عریض کشاورزی و نوار آبیاری. . دیبا پلاستیک – تولید کننده نایلون عریض کشاورزی و نوار آبیاری حمل و نقل آسان تسهیل در بارگیری و ارسال محصولات خریداری شده از دیبا پلاستیک کارون در کمترین زمان ممکن در دسترس بودن محصولات گستردگی پوشش عرضه تولیدات در مناطق کشاورزی کشور و همچنین صادرات به خارج کشور بهترین مواد اولیه استفاده از بهترین گریدهای درجه یک پتروشیمی در تولید محصولات دیبا پلاستیک کارون بازخورد مشتریان رضایت بالای 95 درصدی مصرف کنندگان و خریداران دیبا در کیفیت و تسریع در زمان تحویل محصول محصولات دیبا پلاستیک کارون نایلون شیری",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:47": {
+    "name": "fanavaransabz",
+    "country": "Iran",
+    "website": "https://fanavaransabz.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (fanavaransabz) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "contact@fanavaransabz.com",
+        "kind": "mailto",
+        "source_url": "https://fanavaransabz.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "contact@fanavaransabz.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://fanavaransabz.com",
+    "phones": [
+      {
+        "e164": "+989103303766",
+        "display": "+98 910 330 3766",
+        "kind": "tel",
+        "source_url": "https://fanavaransabz.com"
+      },
+      {
+        "e164": "+982182808020",
+        "display": "+98 21 8280 8020",
+        "kind": "tel",
+        "source_url": "https://fanavaransabz.com"
+      },
+      {
+        "e164": "+985135090368",
+        "display": "+98 51 3509 0368",
+        "kind": "tel",
+        "source_url": "https://fanavaransabz.com"
+      },
+      {
+        "e164": "+989023339040",
+        "display": "+98 902 333 9040",
+        "kind": "tel",
+        "source_url": "https://fanavaransabz.com"
+      },
+      {
+        "e164": "+989120895567",
+        "display": "+98 912 089 5567",
+        "kind": "whatsapp",
+        "source_url": "https://fanavaransabz.com"
+      },
+      {
+        "e164": "+989120896755",
+        "display": "+98 912 089 6755",
+        "kind": "whatsapp",
+        "source_url": "https://fanavaransabz.com"
+      }
+    ],
+    "phone_best": "+98 910 330 3766",
+    "phone_source_url": "https://fanavaransabz.com",
+    "pages_checked": [
+      "https://fanavaransabz.com",
+      "https://fanavaransabz.com/pages/contact/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "ژئوممبران صادراتی و ورق ژئوممبران | تولید ژئوممبران و ژئوتکستایل فن‌آوران سبز. تولیدکننده ژئوممبران، ژئوممبران صادراتی و ورق ژئوممبران با بزرگ‌ترین عرض (۷/۸۰ متر) در ایران؛ ژئوتکستایل با فرمولاسیون اروپایی و ۱۰ تا ۱۵ سال ضمانت. مشاوره، طراحی، تولید و اجرا.. ژئوممبران صادراتی و ورق ژئوممبران | تولید ژئوممبران و ژئوتکستایل فن‌آوران سبز بزرگ‌ترین عرض ورق ژئوممبران در ایران ۷/۸۰ متر 🇩🇪 فرمولاسیون آلمانی تولید و تامین انواع ورق‌های ژئوممبران و ژئوتکستایل با فرمولاسیون اروپایی • تضمین ۱۰ تا ۱۵ ساله • استانداردهای ملی و بین‌المللی تماس با کارشناسان تماس با کارشناسان تماس با کارشناسان تماس با کارشناسان درباره ما نتیجه محاسبه نوع: - متراژ تقریبی: - متر مربع قیمت تقریبی: - تومان قیمت‌ها بر اساس تاریخ ",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:48": {
+    "name": "FIGARO FOODS",
+    "country": "Iran",
+    "website": "https://figarofoods.ir",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (figaro) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@yourwebsite.com",
+        "kind": "mailto",
+        "source_url": "https://figarofoods.ir/contact/",
+        "domain_status": "a_only",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "info@figarofoods.ir",
+        "kind": "text",
+        "source_url": "https://figarofoods.ir/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@figarofoods.ir",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://figarofoods.ir/contact/",
+    "phones": [
+      {
+        "e164": "+982191005380",
+        "display": "+98 21 9100 5380",
+        "kind": "tel",
+        "source_url": "https://figarofoods.ir"
+      },
+      {
+        "e164": "+989120447837",
+        "display": "+98 912 044 7837",
+        "kind": "text",
+        "source_url": "https://figarofoods.ir/contact/"
+      }
+    ],
+    "phone_best": "+98 21 9100 5380",
+    "phone_source_url": "https://figarofoods.ir",
+    "pages_checked": [
+      "https://figarofoods.ir",
+      "https://figarofoods.ir/contact/",
+      "https://figarofoods.ir/contact/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "info@yourwebsite.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "فیگارو. . فیگارو خوشمزه‌های فیگارو تمامی محصولات محصولات سوخاری سوسیس سیب زمینی آماده پنیر پیتزا شنیسل مرغ اطلاعات بیشتر سیب زمینی نیمه سرخ شده کلاسیک اطلاعات بیشتر ناگت مرغ کلاسیک ﷼ 0 انتخاب گزینه‌ها این محصول دارای انواع مختلفی می باشد. گزینه ها ممکن است در صفحه محصول انتخاب شوند ناگت مرغ ستاره‌ای ﷼ 0 انتخاب گزینه‌ها این محصول دارای انواع مختلفی می باشد. گزینه ها ممکن است در صفحه محصول انتخاب شوند هپی بایتز (سری داینو) اطلاعات بیشتر هپی بایتز (سری کهکشان) اطلاعات بیشتر ناگت مرغ انگشتی اطلاعات بیشتر سوسی",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:49": {
+    "name": "HARIR PIRAN",
+    "country": "Iran",
+    "website": "https://harirmobl.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/2 واژه‌ی نام (harir) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@harirmobl.com",
+        "kind": "mailto",
+        "source_url": "https://harirmobl.com/contact-us",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@harirmobl.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://harirmobl.com/contact-us",
+    "phones": [
+      {
+        "e164": "+989121930221",
+        "display": "+98 912 193 0221",
+        "kind": "tel",
+        "source_url": "https://harirmobl.com"
+      },
+      {
+        "e164": "+989120991406",
+        "display": "+98 912 099 1406",
+        "kind": "tel",
+        "source_url": "https://harirmobl.com"
+      },
+      {
+        "e164": "+982161930000",
+        "display": "+98 21 6193 0000",
+        "kind": "tel",
+        "source_url": "https://harirmobl.com"
+      },
+      {
+        "e164": "+984442323485",
+        "display": "+98 44 4232 3485",
+        "kind": "tel",
+        "source_url": "https://harirmobl.com/contact-us"
+      },
+      {
+        "e164": "+989120991407",
+        "display": "+98 912 099 1407",
+        "kind": "tel",
+        "source_url": "https://harirmobl.com/contact-us"
+      },
+      {
+        "e164": "+989120991882",
+        "display": "+98 912 099 1882",
+        "kind": "tel",
+        "source_url": "https://harirmobl.com/contact-us"
+      },
+      {
+        "e164": "+989120406455",
+        "display": "+98 912 040 6455",
+        "kind": "tel",
+        "source_url": "https://harirmobl.com/contact-us"
+      },
+      {
+        "e164": "+989143445562",
+        "display": "+98 914 344 5562",
+        "kind": "tel",
+        "source_url": "https://harirmobl.com/contact-us"
+      },
+      {
+        "e164": "+989149489563",
+        "display": "+98 914 948 9563",
+        "kind": "tel",
+        "source_url": "https://harirmobl.com/contact-us"
+      },
+      {
+        "e164": "+989143246500",
+        "display": "+98 914 324 6500",
+        "kind": "tel",
+        "source_url": "https://harirmobl.com/contact-us"
+      },
+      {
+        "e164": "+989143873298",
+        "display": "+98 914 387 3298",
+        "kind": "tel",
+        "source_url": "https://harirmobl.com/contact-us"
+      }
+    ],
+    "phone_best": "+98 912 193 0221",
+    "phone_source_url": "https://harirmobl.com",
+    "pages_checked": [
+      "https://harirmobl.com",
+      "https://harirmobl.com/contact-us"
+    ],
+    "notes": [
+      "https://wikiplast.ir → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "بزرگترین تولید کننده مبل در ایران | تولیدی مبل حریر - حریر مبل. حریر مبل، بزرگترین تولید کننده مبل در ایران و معتبرترین تولیدی مبل در غرب کشور. تولید انواع مبل راحتی، کلاسیک و میز نهارخوری با دوسال ضمانت.. بزرگترین تولید کننده مبل در ایران | تولیدی مبل حریر - حریر مبل خانه محصولات تماس با ما حریر مبل | بزرگترین تولید کننده مبل در ایران گروه تولیدی حریر مبل با بهره‌گیری از جدیدترین تکنولوژی‌ها و طراحی‌های روز دنیا، انواع مبل راحتی، کلاسیک و میز نهارخوری را تولید و عرضه می‌کند. ✅ طراحی روز دنیا ✅ کیفیت عالی ✅ معتبر و قابل اعتماد مشاهده محصولات دسته بندی های مبل حریر مبل راحتی مبل اسپورت مبل کلاسیک مبل ال ویدیوهای معرفی حریر مبل ، بزرگترین تولید کننده مبل حریرمبل کاپریس جدیدترین مبلمان تولیدی ح",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:50": {
+    "name": "HIGHSUN HITECH",
+    "country": "Iran",
+    "website": "https://en.hscc.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/2 واژه‌ی نام (highsun) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://en.hscc.com"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "HSCC. HSCCHighsun Holding Group was founded in 1984, adhering to the original intention of \"three generations only doing one thing\". Starting from a nylon rope, it has developed into a large modern multinational enterprise group integrating chemical fiber, chemical industry, and new materials. It is the world's largest producer of caprolactam.. HSCC  Homepage About HSCC Group Overview Brand Story Group Honors News Center Business Layout Chemical Fiber Business Chemical Business Electronic New Materials Compounding New Materials Fragrance & Flavor New Materials Sustainability & Circular New Materials R&D and Innovation Sustainability Join Us   Languages EN 中文  Homepage About HSCC  Group ",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:51": {
+    "name": "İSFAHAN MOGHADAM",
+    "country": "Iran",
+    "website": "https://isfahanmoghadam.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (sfahan, moghadam) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@isfahanmoghadam.com",
+        "kind": "text",
+        "source_url": "https://isfahanmoghadam.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@isfahanmoghadam.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://isfahanmoghadam.com",
+    "phones": [
+      {
+        "e164": "+989136967317",
+        "display": "+98 913 696 7317",
+        "kind": "text",
+        "source_url": "https://isfahanmoghadam.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7%d9%85%d8%a7/"
+      }
+    ],
+    "phone_best": "+98 913 696 7317",
+    "phone_source_url": "https://isfahanmoghadam.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7%d9%85%d8%a7/",
+    "pages_checked": [
+      "https://isfahanmoghadam.com",
+      "https://isfahanmoghadam.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7%d9%85%d8%a7/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "سایت رسمی اصفهان مقدم. تولید انواع مواد بسته بندی . سایت رسمی اصفهان مقدم Skip to content types-of-general-packing-envelopes 02-printed-packaging 03-polyethylene-rolls-and-envelopes 04-disposable-tablecloths 05-composite-envelopes 06-isfahan-moghadam-manufacturing-Industries 07-production-and-printing بنر-های-سایت-برای-موبایل01 بنر-های-سایت-برای-موبایل02 بنر-های-سایت-برای-موبایل03 بنر-های-سایت-برای-موبایل04 بنر-های-سایت-برای-موبایل05 بنر-های-سایت-برای-موبایل06 بنر-های-سایت-برای-موبایل07 دسته محصولات دسته محصولات پاکت های وکیوم چاپدار یا بدون چاپ",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:52": {
+    "name": "KAVIAN SANAT SEPID TOOS",
+    "country": "Iran",
+    "website": "https://kaviansanatgroup.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "4/4 واژه‌ی نام (kavian, sanat, sepid, toos) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@kaviansanatgroup.com",
+        "kind": "text",
+        "source_url": "https://kaviansanatgroup.com/en/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@kaviansanatgroup.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://kaviansanatgroup.com/en/contact-us/",
+    "phones": [
+      {
+        "e164": "+985135419810",
+        "display": "+98 51 3541 9810",
+        "kind": "tel",
+        "source_url": "https://kaviansanatgroup.com/en/home/"
+      },
+      {
+        "e164": "+989154422633",
+        "display": "+98 915 442 2633",
+        "kind": "text",
+        "source_url": "https://kaviansanatgroup.com/en/home/"
+      }
+    ],
+    "phone_best": "+98 51 3541 9810",
+    "phone_source_url": "https://kaviansanatgroup.com/en/home/",
+    "pages_checked": [
+      "https://kaviansanatgroup.com/en/home/",
+      "https://kaviansanatgroup.com/en/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "home page - کاویان صنعت سپید توس. Kavian Sanat Sepid Toos is a leading knowledge-based enterprise specializing in the design and manufacture of industrial machinery, including polypropylene. home page - کاویان صنعت سپید توس Skip to content Kavian Sanat Sepid Toos Knowledge-Based Industrial Machinery Kavian Sanat Sepid Toos is a leading knowledge-based enterprise specializing in the design and manufacture of industrial machinery, including polypropylene (PP) bag printing, cutting, and sewing lines. Download Catalog Maximum Efficiency Systematic design engineered to reduce our clients' production costs. Customer-Centric Approach Tailored designs based on feedback and the specific re",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:53": {
+    "name": "KHOSHGOVAR",
+    "country": "Iran",
+    "website": "https://khoshgovar-esfahan.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (khoshgovar) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "khoshgovar333@gmail.com",
+        "kind": "text",
+        "source_url": "https://khoshgovar-esfahan.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+983133130000",
+        "display": "+98 31 3313 0000",
+        "kind": "tel",
+        "source_url": "https://khoshgovar-esfahan.com"
+      }
+    ],
+    "phone_best": "+98 31 3313 0000",
+    "phone_source_url": "https://khoshgovar-esfahan.com",
+    "pages_checked": [
+      "https://khoshgovar-esfahan.com",
+      "https://khoshgovar-esfahan.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7-%d9%85%d8%a7/"
+    ],
+    "notes": [
+      "https://foodexiran.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://hormuz.group → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "khoshgovar333@gmail.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "محصولات غذایی بلنسی. محصولات غذایی بلنسی با استفاده از مواد اولیه مرغوب و بهترین شیوه تولید مطابق با استانداردهای ملی و جهانی، دارای بالاترین کیفیت در بین کنسروهای کشور است.. محصولات غذایی بلنسی Skip to navigation Skip to main content یه انتخاب شخصی؛ محصولات بلنسی یه انتخاب شخصی؛ محصولات بلنسی یه انتخاب شخصی؛ محصولات بلنسی یه انتخاب شخصی؛ محصولات بلنسی یه انتخاب شخصی محصولات بلنسی یه انتخاب شخصی محصولات بلنسی یه انتخاب شخصی محصولات بلنسی یه انتخاب شخصی محصولات بلنسی محصولات غذایی بلنسی بلنسی؛ حامی فرهنگ و هنر ایران زمین انواع کنسروهای بلنسی کنسرو ماهی تون با شوید در روغن گیاهی کنسرو لوبیا چیتی در سس گوجه فرنگی کنسرو ماهی تون با فلفل قرمز در روغن گیاهی کنسرو سبزی مخلو",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:54": {
+    "name": "kian varagh sepehr",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://kianpet.com → نام شرکت با صفحه نمی‌خواند (1/3 واژه‌ی نام (kian) در عنوان/متن/دامنه)",
+      "https://azfreight.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.kianrah.com → نام شرکت با صفحه نمی‌خواند (1/3 واژه‌ی نام (kian) در عنوان/متن/دامنه)",
+      "https://www.trademo.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:55": {
+    "name": "KOOSHESHKARAN",
+    "country": "Iran",
+    "website": "https://koosheshkaran.ir",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (koosheshkaran) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@koosheshkaran.ir",
+        "kind": "mailto",
+        "source_url": "https://koosheshkaran.ir/fa/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "info@koosheshkaran.com",
+        "kind": "mailto",
+        "source_url": "https://koosheshkaran.ir/fa/contact/",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@koosheshkaran.ir",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://koosheshkaran.ir/fa/",
+    "phones": [
+      {
+        "e164": "+982146824240",
+        "display": "+98 21 4682 4240",
+        "kind": "tel",
+        "source_url": "https://koosheshkaran.ir/fa/"
+      },
+      {
+        "e164": "+982644240023",
+        "display": "+98 26 4424 0023",
+        "kind": "tel",
+        "source_url": "https://koosheshkaran.ir/fa/"
+      },
+      {
+        "e164": "+982146851956",
+        "display": "+98 21 4685 1956",
+        "kind": "tel",
+        "source_url": "https://koosheshkaran.ir/fa/contact/"
+      },
+      {
+        "e164": "+982146820215",
+        "display": "+98 21 4682 0215",
+        "kind": "tel",
+        "source_url": "https://koosheshkaran.ir/fa/contact/"
+      },
+      {
+        "e164": "+982644240030",
+        "display": "+98 26 4424 0030",
+        "kind": "tel",
+        "source_url": "https://koosheshkaran.ir/fa/contact/"
+      }
+    ],
+    "phone_best": "+98 21 4682 4240",
+    "phone_source_url": "https://koosheshkaran.ir/fa/",
+    "pages_checked": [
+      "https://koosheshkaran.ir/fa/",
+      "https://koosheshkaran.ir/fa/contact/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "شرکت ماشین سازی کوشش کاران – سازنده ماشین آلات بسته بندی مواد غذایی و دارویی. . شرکت ماشین سازی کوشش کاران – سازنده ماشین آلات بسته بندی مواد غذایی و دارویی محصولات درباره ما متخصص در صنعت ماشین سازی دارنده گواهینامه های بین المللی بیش از 20 سال سابقه صادرات ادامه… ویدیو رویدادها و مقالات مشاهده آرشیو مقالات اطلاعیه انصراف با سلام و احترام بدینوسیله به استحضار می رساند به دلیل شیوع ویروس کرونا در کشور و با توجه به تصمیم انجمن ماشین سازان… رویدادها ادامه مطلب 1400/04/31 نمایشگاه بین المللی ایران آگرافود 1398 بیست و ششمین دوره نمایشگاه بین المللی ایران آگروفود، صنایع کشاورزی،",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:56": {
+    "name": "LOVELY",
+    "country": "Iran",
+    "website": "https://www.lovelywholesale.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (lovely) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.lovelywholesale.com"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "support@lovelywholesale.com نقش غیرتجاری است (کنار گذاشته شد)",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "LovelyWholesale Women's Fashion. Affordable Women's Clothing. Women's Fashion Sale.. LovelyWholesale is the top online fashion store for women and men. Shop ultra-affordable two pieces set, dresses, jeans, shoes, bodysuits, shirts and more. Cheap & affordable fashion online.. LovelyWholesale Women's Fashion. Affordable Women's Clothing. Women's Fashion Sale. Sign In / Register Your Shopping Bag Is Empty Welcome back! Shop now or sign in to check your shopping bag. FOLLOW US WE ACCEPT ©2026 LovelyWholeSale Copyright, All Rights Reserved",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:57": {
+    "name": "MEHR TAK",
+    "country": "Iran",
+    "website": "https://en.mehrnews.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/2 واژه‌ی نام (mehr) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "president@mehrnews.com",
+        "kind": "text",
+        "source_url": "https://en.mehrnews.com/news/107022",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "intl@mehrnews.com",
+        "kind": "text",
+        "source_url": "https://en.mehrnews.com/news/107022",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "intl@mehrnews.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://en.mehrnews.com/news/107022",
+    "phones": [
+      {
+        "e164": "+982143051000",
+        "display": "+98 21 4305 1000",
+        "kind": "text",
+        "source_url": "https://en.mehrnews.com/news/107022"
+      }
+    ],
+    "phone_best": "+98 21 4305 1000",
+    "phone_source_url": "https://en.mehrnews.com/news/107022",
+    "pages_checked": [
+      "https://en.mehrnews.com",
+      "https://en.mehrnews.com/news/107022"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "Mehr News Agency. Mehr News Agency. Mehr News Agency Iran strongly warns neighbors against easing US aggression TEHRAN, Nov. 19 (MNA) – Iran's Foreign Ministry condemned U.S. attacks on its southern coast, saying U.S. use of regional soil is aggression under UN Resolution 3314 and that Iran acted in self-defense by striking U.S. bases. China backs Iran’s sovereignty, calls for lifting sanctions Rights groups call for release of Shia clerics in Bahrain Iranian embassy in Athens denies allegations How media manufacture legitimacy fo",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:58": {
+    "name": "NAM AVARAN ARSHAM HYRCAN CO",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://namvaran.ir → نام شرکت با صفحه نمی‌خواند (1/4 واژه‌ی نام (nam) در عنوان/متن/دامنه)",
+      "https://www.namvaran.ir → نام شرکت با صفحه نمی‌خواند (1/4 واژه‌ی نام (nam) در عنوان/متن/دامنه)",
+      "https://www.nilanil.com/cgi-sys/suspendedpage.cgi → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://irangaah.ir → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:59": {
+    "name": "NANO GUM MEHR",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://event-gulfoodmanufacturing.expoplatform.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://iran-companies.com → نام شرکت با صفحه نمی‌خواند (2/3 واژه‌ی نام (gum, mehr) در عنوان/متن/دامنه)",
+      "https://www.irantalent.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:60": {
+    "name": "NEGAR INDUSTRIAL GROUP",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://top100irprintpack.com → نام شرکت با صفحه نمی‌خواند (1/2 واژه‌ی نام (industrial) در عنوان/متن/دامنه)",
+      "https://www.iranwatch.org → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://ang.ir → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:61": {
+    "name": "PARDAD RAND KAHROBA",
+    "country": "Iran",
+    "website": "http://pardad.ink",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/3 واژه‌ی نام (pardad, kahroba) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@pardad.ink",
+        "kind": "mailto",
+        "source_url": "http://pardad.ink/en/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "info@pardadgroup.com",
+        "kind": "text",
+        "source_url": "http://pardad.ink/en/",
+        "domain_status": "dead",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@pardad.ink",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "http://pardad.ink/en/",
+    "phones": [
+      {
+        "e164": "+989143147247",
+        "display": "+98 914 314 7247",
+        "kind": "text",
+        "source_url": "http://pardad.ink/en/"
+      },
+      {
+        "e164": "+989149916582",
+        "display": "+98 914 991 6582",
+        "kind": "text",
+        "source_url": "http://pardad.ink/en/"
+      }
+    ],
+    "phone_best": "+98 914 314 7247",
+    "phone_source_url": "http://pardad.ink/en/",
+    "pages_checked": [
+      "http://pardad.ink/en/",
+      "http://pardad.ink/en/contact-us-en.html"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Home. . Home Saturday to Thursday 08:00 to 17:00 info@pardad.ink +98 41-34321214-17 Pardad Rang Kahroba Creating qualitative differentiation with other similar products Pardad Rang Kahroba Creating qualitative differentiation with other similar products Pardad Rang Kahroba Creating qualitative differentiation with other similar products Pardad Rang Kahroba Creating qualitative differentiation with other similar products Pardad Rang Kahroba Creating qualitative differentiation with other similar products",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:62": {
+    "name": "PARGEH",
+    "country": "Iran",
+    "website": "https://pargeh.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (pargeh) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@pargeh.com",
+        "kind": "mailto",
+        "source_url": "https://pargeh.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "setarehsanat.pargeh1@gmail.com",
+        "kind": "mailto",
+        "source_url": "https://pargeh.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": "info@pargeh.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://pargeh.com",
+    "phones": [
+      {
+        "e164": "+989123257284",
+        "display": "+98 912 325 7284",
+        "kind": "tel",
+        "source_url": "https://pargeh.com"
+      },
+      {
+        "e164": "+982155603812",
+        "display": "+98 21 5560 3812",
+        "kind": "tel",
+        "source_url": "https://pargeh.com"
+      },
+      {
+        "e164": "+989121245816",
+        "display": "+98 912 124 5816",
+        "kind": "tel",
+        "source_url": "https://pargeh.com"
+      },
+      {
+        "e164": "+989123007455",
+        "display": "+98 912 300 7455",
+        "kind": "tel",
+        "source_url": "https://pargeh.com"
+      },
+      {
+        "e164": "+982155612019",
+        "display": "+98 21 5561 2019",
+        "kind": "tel",
+        "source_url": "https://pargeh.com"
+      },
+      {
+        "e164": "+989384227420",
+        "display": "+98 938 422 7420",
+        "kind": "tel",
+        "source_url": "https://pargeh.com"
+      },
+      {
+        "e164": "+989121310162",
+        "display": "+98 912 131 0162",
+        "kind": "tel",
+        "source_url": "https://pargeh.com"
+      },
+      {
+        "e164": "+989359389351",
+        "display": "+98 935 938 9351",
+        "kind": "tel",
+        "source_url": "https://pargeh.com"
+      },
+      {
+        "e164": "+989383368081",
+        "display": "+98 938 336 8081",
+        "kind": "whatsapp",
+        "source_url": "https://pargeh.com"
+      },
+      {
+        "e164": "+982632567001",
+        "display": "+98 26 3256 7001",
+        "kind": "text",
+        "source_url": "https://pargeh.com/contact-us/"
+      },
+      {
+        "e164": "+982155154110",
+        "display": "+98 21 5515 4110",
+        "kind": "text",
+        "source_url": "https://pargeh.com/contact-us/"
+      },
+      {
+        "e164": "+982155160410",
+        "display": "+98 21 5516 0410",
+        "kind": "text",
+        "source_url": "https://pargeh.com/contact-us/"
+      },
+      {
+        "e164": "+989126146385",
+        "display": "+98 912 614 6385",
+        "kind": "text",
+        "source_url": "https://pargeh.com/contact-us/"
+      }
+    ],
+    "phone_best": "+98 912 325 7284",
+    "phone_source_url": "https://pargeh.com",
+    "pages_checked": [
+      "https://pargeh.com",
+      "https://pargeh.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "پرگه تولید کننده لوازم بایگانی | خرید لوازم بایگانی و اداری. شرکت ستاره صنعت پرگه طالقان تولید کننده ملزومات اداری و بایگانی | پخش و فروش انواع لوازم بایگانی و اداری از جمله پوشه، زونکن، نگهدارنده مدارک، کلاسور، کیف اداری. پرگه تولید کننده لوازم بایگانی | خرید لوازم بایگانی و اداری Skip to main content مداد رنگی پرفروش کیفیت ثابت، انتخاب مطمئن فروشندگان نظم کاربردی پوشه‌های دکمه‌کش‌دار با دوام بالا بایگانی حرفه‌ای پوشه آویز استاندارد برای مصرف اداری انتخاب همیشگی پوشه دکمه‌دار، ساده و پرفروش پوشه های پرگه مداد رنگی های پرگه محصولات ما: کیف کش دار دسته دار کلیربوک کیف طراحی کلاسور 2 حلقه لـوازم تحـریـر پرگـه لـوازم تحـریـر پرگـه شرکت پرگه با هدف گسترش فعالیت‌ها و افزایش تنوع محصولات، بر ارتقا",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:63": {
+    "name": "POLYMER PACK ARYAN",
+    "country": "Iran",
+    "website": "https://ariapolymer.co",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/3 واژه‌ی نام (polymer, pack) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@ariapolymer.co",
+        "kind": "text",
+        "source_url": "https://ariapolymer.co/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "mohammad@ariapolymer.co",
+        "kind": "text",
+        "source_url": "https://ariapolymer.co/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@ariapolymer.co",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://ariapolymer.co/contact-us/",
+    "phones": [
+      {
+        "e164": "+989037011593",
+        "display": "+98 903 701 1593",
+        "kind": "whatsapp",
+        "source_url": "https://ariapolymer.co"
+      },
+      {
+        "e164": "+989120701632",
+        "display": "+98 912 070 1632",
+        "kind": "text",
+        "source_url": "https://ariapolymer.co/contact-us/"
+      }
+    ],
+    "phone_best": "+98 903 701 1593",
+    "phone_source_url": "https://ariapolymer.co",
+    "pages_checked": [
+      "https://ariapolymer.co",
+      "https://ariapolymer.co/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "Home - Aria Polymer. Welcome to Aria Polymer company. We believe There Is Always a Better Way.. Home - Aria Polymer Skip to content #PolymerInnovation Welcome to ARIA POLYMER Advanced Polymer Solutions for Industrial Excellence Explore Products Download Catalogue Maleic Anhydride Grafted PE PE-g-MA Anti-UV Masterbatch Masterbatch Optical Brightener Masterbatch Masterbatch Black Masterbatch Masterbatch Corrugated Pipe Adhesive Adhesive Maleic Anhydride Grafted PP PP-g-MA MFI Modifier Masterbatch Masterbatch Film & Packaging Adhesive Adhesive Cable Adhesive Adhesive Antioxidant Masterbatch M",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:64": {
+    "name": "POOLAD POOYESH",
+    "country": "Iran",
+    "website": "https://www.pooladpooyesh.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (poolad, pooyesh) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@pooladpooyesh.com",
+        "kind": "text",
+        "source_url": "https://www.pooladpooyesh.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@pooladpooyesh.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.pooladpooyesh.com",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.pooladpooyesh.com",
+      "https://www.pooladpooyesh.com/fa/contact-us"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "پولاد پویش. شرکت تزریق پلاستیک پولاد پویش، تولید کننده انواع قطعات پلاستیکی بطری و ظروف جدار نازک IML به روش تزریق پلاستیک با استفاده از دستگاه های تزریق پلاستیک. پولاد پویش تولید روزانه بیش از 180 تن محصولات پلیمری با همکاری افزون بر 850 نفر پرسنل توانمند در مساحتی به وسعت 82,000 متر مربع 45 سال سابقه فعالیت در صنعت پلاستیک محصولات پولاد پویش PET پریفرم بطری تولید انواع پریفرم بطری PET در دهانه‌ها و اوزان مختلف مورد استفاده در صنایع نوشیدنی، غذایی، دارویی، آرایشی، بهداشتی، و … مشاهده محصولات IML ظروف بسته بندی جدار نازک تولـید انواع ظروف بسـته بندی جدار نازک در ابعاد، حجم و اشـکال مختـلف با قابلیت چاپ IML مورد استفاده در صنایع لبنی، مواد غذایی، شیرینی و",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:65": {
+    "name": "POOYAN GREEN FOOD",
+    "country": "Iran",
+    "website": "https://pooyangreenfood.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (pooyan, green) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "commercial@pooyangreenfood.com",
+        "kind": "mailto",
+        "source_url": "https://pooyangreenfood.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "info@pooyangreenfood.com",
+        "kind": "text",
+        "source_url": "https://pooyangreenfood.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "commercial@pooyangreenfood.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://pooyangreenfood.com",
+    "phones": [
+      {
+        "e164": "+987137742020",
+        "display": "+98 71 3774 2020",
+        "kind": "whatsapp",
+        "source_url": "https://pooyangreenfood.com"
+      },
+      {
+        "e164": "+989170612020",
+        "display": "+98 917 061 2020",
+        "kind": "whatsapp",
+        "source_url": "https://pooyangreenfood.com"
+      }
+    ],
+    "phone_best": "+98 71 3774 2020",
+    "phone_source_url": "https://pooyangreenfood.com",
+    "pages_checked": [
+      "https://pooyangreenfood.com"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "برگه نخست - افزودنی های غذای سبزپویان-تولید کننده انواع پایدارکننده ها و طعم دهنده های صنعت غذا. . برگه نخست - افزودنی های غذای سبزپویان-تولید کننده انواع پایدارکننده ها و طعم دهنده های صنعت غذا ماندگاری بالای عطر و طعم پس از پخت مشاهده بیشتر پروفایل های طعمی متفاوت متناسب با ذائقه هر منطقه مشاهده بیشتر پایدارکننده های صنعت لبنی مشاهده بیشتر غذای سبز پویان با بیش از ۲۵ سال تجربه در صنعت افزودنی‌های غذایی، به عنوان یکی از تولیدکنندگان تخصصی این حوزه، همواره بر ارائه محصولات باکیفیت، نوآورانه و مطابق با نیاز تولیدکنندگان صنایع غذایی تمرکز داشته است. ما با بهره‌گیری از دانش فنی، مواد اولیه باکیف",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:66": {
+    "name": "REYHAN GOSTAR SAMIN TOUS",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "http://www.samingostar.com → ConnectTimeout",
+      "https://sgt-group.com → نام شرکت با صفحه نمی‌خواند (0/4 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://gostardehtoos.com → نام شرکت با صفحه نمی‌خواند (1/4 واژه‌ی نام (gostar) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:67": {
+    "name": "ROSE PLASTIC KAR",
+    "country": "Iran",
+    "website": "https://www.roseplastickar.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (rose, plastic, kar) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@tahaniprint.com",
+        "kind": "text",
+        "source_url": "https://www.roseplastickar.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      },
+      {
+        "email": "sales@roseplastickar.com",
+        "kind": "text",
+        "source_url": "https://www.roseplastickar.com/contactus",
+        "domain_status": "a_only",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@roseplastickar.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.roseplastickar.com/contactus",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.roseplastickar.com",
+      "https://www.roseplastickar.com/contactus"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "info@tahaniprint.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Tahani Print ® | Rose Plastic Kar co.. Tahani Print ® | Rose Plastic Kar co. in IRAN, provides variety of high quality flexible packaging solutions including flexo printing, roto printing, laminating, cutting and pouch making.. Tahani Print ® | Rose Plastic Kar co. FLEXIBLE PACKAGING Tahani Print ® | Rose Plastic Kar Co. 40+ years of experience in guaranteed high quality Rotogravure Printing State-of-the-art 9-colors machinery. Laminating Multiple layers with different adhesive selections. Cutting Slitting and laser on the film. Design High quality graphic design. Flexographic Printing More than 40 years of high quality experience. Cold Seal Precise application with high quality food-grade g",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:68": {
+    "name": "SANA CHEMICAL GROUP",
+    "country": "Iran",
+    "website": "https://sanagroup.ir",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (sana, chemical) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://sanagroup.ir"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "گروه شیمیایی ثنا | هلدینگ تولیدی و صنعتی. . گروه شیمیایی ثنا | هلدینگ تولیدی و صنعتی گروه شیمیایی ثنا یکی از مجموعه‌های تولیدی و صنعتی معتبر در ایران است که در زمینه تولید انواع چسب‌های صنعتی و ساختمانی ، محصولات پلیمری و قطعات لاستیکی فعالیت می‌کند. این هلدینگ تولیدی با تکیه بر دانش فنی روز و بیش از ۵۰ سال تجربه، نقش مهمی در تأمین نیازهای صنایع کشور ایفا می‌کند. صنایع چسب استحکام یکی از بزرگترین تولیدکنندگان چسب‌های صنعتی، ساختمانی، خودرویی و خانگی در کشور با کیفیت و استاندارد جهانی. مشاهده وب‌سایت نیام پلاستیک فعال در زمینه طراحی و تولی",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:69": {
+    "name": "SAPEL",
+    "country": "Iran",
+    "website": "https://sapelco.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/1 واژه‌ی نام (sapel) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@sapelco.com",
+        "kind": "mailto",
+        "source_url": "https://sapelco.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@sapelco.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://sapelco.com",
+    "phones": [
+      {
+        "e164": "+982165439272",
+        "display": "+98 21 6543 9272",
+        "kind": "tel",
+        "source_url": "https://sapelco.com"
+      },
+      {
+        "e164": "+989353615615",
+        "display": "+98 935 361 5615",
+        "kind": "whatsapp",
+        "source_url": "https://sapelco.com"
+      }
+    ],
+    "phone_best": "+98 21 6543 9272",
+    "phone_source_url": "https://sapelco.com",
+    "pages_checked": [
+      "https://sapelco.com",
+      "https://sapelco.com/contact-us/",
+      "https://sapelco.com/price-of-sapels-product/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "ساپل | تولید کننده انواع ظروف و قطعات پلاستیکی. تولید و فروش عمده گالن، بطری و درب پلاستیکی با بیش از ۴۰ سال سابقه؛ ظروف بادی و تزریقی ساپل با کیفیت تضمینی، قیمت مستقیم کارخانه و ارسال به سراسر کشور. ساپل | تولید کننده انواع ظروف و قطعات پلاستیکی Skip to navigation Skip to main content SAPEL انواع ظروف بسته‌بندی برای صنایع مختلف طراحی و ساخت قالب و تولید انواع گالن، بطری و درب پلاستیکی. خرید عمده از تولیدکننده. گالن‌های پلاستیکی بطری‌های پلاستیکی گالن آسان‌ریز ۲۰ لیتری بسته بندی نشان کیفیت محصول ظروف بسته بندی بادی و تزریقی بطری های پلاستیکی درب های پلاستیکی گالن های پلاستیکی پرطرفدارترین ظروف ساپل برای خرید عمده دسته‌بندی‌های محبوب بسته‌بندی گالن ۲۰ لیتری ۵ مدل؛ کتابی آسان‌ریز، دهانه ۱۰۰ و",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:70": {
+    "name": "SEPEHR TEJARAT PARTO",
+    "country": "Iran",
+    "website": "https://sepehrtejarattaha.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/3 واژه‌ی نام (sepehr, tejarat) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sepehrtejarattahaa@gmail.com",
+        "kind": "text",
+        "source_url": "https://sepehrtejarattaha.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+989121400141",
+        "display": "+98 912 140 0141",
+        "kind": "tel",
+        "source_url": "https://sepehrtejarattaha.com"
+      },
+      {
+        "e164": "+989125354709",
+        "display": "+98 912 535 4709",
+        "kind": "tel",
+        "source_url": "https://sepehrtejarattaha.com"
+      },
+      {
+        "e164": "+989120959610",
+        "display": "+98 912 095 9610",
+        "kind": "tel",
+        "source_url": "https://sepehrtejarattaha.com"
+      },
+      {
+        "e164": "+989120959611",
+        "display": "+98 912 095 9611",
+        "kind": "tel",
+        "source_url": "https://sepehrtejarattaha.com"
+      },
+      {
+        "e164": "+989109901552",
+        "display": "+98 910 990 1552",
+        "kind": "tel",
+        "source_url": "https://sepehrtejarattaha.com"
+      },
+      {
+        "e164": "+982176904476",
+        "display": "+98 21 7690 4476",
+        "kind": "tel",
+        "source_url": "https://sepehrtejarattaha.com"
+      },
+      {
+        "e164": "+982176904907",
+        "display": "+98 21 7690 4907",
+        "kind": "tel",
+        "source_url": "https://sepehrtejarattaha.com"
+      },
+      {
+        "e164": "+982176904870",
+        "display": "+98 21 7690 4870",
+        "kind": "tel",
+        "source_url": "https://sepehrtejarattaha.com"
+      },
+      {
+        "e164": "+982176902540",
+        "display": "+98 21 7690 2540",
+        "kind": "tel",
+        "source_url": "https://sepehrtejarattaha.com"
+      }
+    ],
+    "phone_best": "+98 912 140 0141",
+    "phone_source_url": "https://sepehrtejarattaha.com",
+    "pages_checked": [
+      "https://sepehrtejarattaha.com",
+      "https://sepehrtejarattaha.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7%d9%85%d8%a7/"
+    ],
+    "notes": [
+      "https://www.info-clipper.com/en/ → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "sepehrtejarattahaa@gmail.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "صفحه اصلی - شرکت سپهر تجارت طاها. شرکت سپهر تجارت طاها عضو رسمی انجمن FIDA تامین و عرضه ی نهاده های دام و طیور و آبزیان عاملیت مستقیم فروش در سامانه بازارگاه کشاورزی. صفحه اصلی - شرکت سپهر تجارت طاها درباره شرکت سپهر تجارت طاها شرکت سپهر تجارت طاها درسال 1397 درزمینه خدمات فنی و مکانیزاسیون تاسیس و در حوزه توزیع نهاده های کشاورزی فعالیت می کند. این شرکت عضو رسمی انجمن صنفی صنعتی توزیع کنندگان عمده نهاده های خوراک دام و طیور و آبزیان (FIDA) است. هلدینگ سپهر تجارت طاها عاملیت مستقیم فروش در سامانه بازارگاه کشاورزی را دارد و همچنین دارای گواهی عضویت در اتاق بازرگانی ، صنایع ، معادن و کشاورزی تهران است. از این رو شرکت سپهر تجارت طاها در زمینه بسته بندی و توزیع و",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:71": {
+    "name": "SHEIZAR",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://www.britannica.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:72": {
+    "name": "SUNCAP BY PARAND MACHINE CO.",
+    "country": "Iran",
+    "website": "https://parandmachine.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "4/4 واژه‌ی نام (suncap, by, parand, machine) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@parandmachine.com",
+        "kind": "cfemail",
+        "source_url": "https://parandmachine.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@parandmachine.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://parandmachine.com",
+    "phones": [
+      {
+        "e164": "+982156418800",
+        "display": "+98 21 5641 8800",
+        "kind": "tel",
+        "source_url": "https://parandmachine.com"
+      }
+    ],
+    "phone_best": "+98 21 5641 8800",
+    "phone_source_url": "https://parandmachine.com",
+    "pages_checked": [
+      "https://parandmachine.com"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "SUNCAP – Parand Machin Co. . SUNCAP – Parand Machin Co Skip to content ششمین نمایشگاه توانمندی‌های صادراتی جمهوری اسلامی ایران ABOUT US We are a family run manufacturer of plastic closures for mineral water, soft drinks, juice, edible oil and dairy products in Iran. With more than 40 years of experience in food and beverage industry. We constantly strive to offer the appropriate solution for our customers’ packaging requirements. Thanks to the high quality of SUNCAP products, we have been able to supply domestic and foreign",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:73": {
+    "name": "Tara industrial",
+    "country": "Iran",
+    "website": "https://tara-co.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "1/2 واژه‌ی نام (tara) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@tara-co.com",
+        "kind": "mailto",
+        "source_url": "https://tara-co.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@tara-co.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://tara-co.com",
+    "phones": [
+      {
+        "e164": "+982146885400",
+        "display": "+98 21 4688 5400",
+        "kind": "tel",
+        "source_url": "https://tara-co.com"
+      },
+      {
+        "e164": "+982146885401",
+        "display": "+98 21 4688 5401",
+        "kind": "tel",
+        "source_url": "https://tara-co.com"
+      },
+      {
+        "e164": "+989365542984",
+        "display": "+98 936 554 2984",
+        "kind": "whatsapp",
+        "source_url": "https://tara-co.com"
+      }
+    ],
+    "phone_best": "+98 21 4688 5400",
+    "phone_source_url": "https://tara-co.com",
+    "pages_checked": [
+      "https://tara-co.com",
+      "https://tara-co.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "medium",
+    "site_blurb": "ساخت و تولید دستگاه های بسته‌بندی | شرکت ماشین سازان تارا. شرکت ماشین سازان تارا تولید کننده دستگاه های بسته بندی مایعات گازدار، بدون گاز، رقیق و غلیظ آب معدنی و صادرات آن به کشورهای عراق ، ترکیه و کشورهای حوزه خلیج فارس توسط کارشناسان و مهندسین متخصص. ساخت و تولید دستگاه های بسته‌بندی | شرکت ماشین سازان تارا تولیدات شرکت ماشین‌سازان تارا شرکت ماشین‌سازان تارا با تکیه بر دانش فنی روز، تجربه‌ی مهندسان مجرب و بهره‌گیری از فناوری‌های نوین، به طراحی و ساخت انواع ماشین‌آلات صنعتی با کیفیت بالا می‌پردازد. تولیدات این شرکت شامل دستگاه‌های بسته‌بندی، خطوط فرآوری، ماشین‌آلات اتوماسیون صنعتی و تجهیزات سفارشی‌سازی‌شده برای صنایع مختلف است. تمرکز تارا بر دقت، دوام و بهره‌وری بالا، این مجموعه را به یکی ا",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:74": {
+    "name": "TEB PLASTIC NOVIN COMPANY",
+    "country": "Iran",
+    "website": "https://en.tebplastic.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/3 واژه‌ی نام (teb, plastic) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@tebplastic.com",
+        "kind": "mailto",
+        "source_url": "https://en.tebplastic.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "export@tebplastic.com",
+        "kind": "mailto",
+        "source_url": "https://en.tebplastic.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "export@tebplastic.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://en.tebplastic.com",
+    "phones": [
+      {
+        "e164": "+982122846735",
+        "display": "+98 21 2284 6735",
+        "kind": "text",
+        "source_url": "https://en.tebplastic.com"
+      },
+      {
+        "e164": "+982122883629",
+        "display": "+98 21 2288 3629",
+        "kind": "text",
+        "source_url": "https://en.tebplastic.com"
+      },
+      {
+        "e164": "+982122883618",
+        "display": "+98 21 2288 3618",
+        "kind": "text",
+        "source_url": "https://en.tebplastic.com/contact-us/"
+      }
+    ],
+    "phone_best": "+98 21 2284 6735",
+    "phone_source_url": "https://en.tebplastic.com",
+    "pages_checked": [
+      "https://en.tebplastic.com",
+      "https://en.tebplastic.com/contact-us/"
+    ],
+    "notes": [
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "disposable containers - Tebplastic manufacturer Holding. disposable containers - Manufacturer and distributor of disposable and reusable containers in Iran and Region. disposable containers - Tebplastic manufacturer Holding رد کردن لینک ها رد کردن تا صفحه بندی اصلی پرش به محتوا Teb Plastic Company can be considered as the leader of the disposable tableware industry in the country. Teb Plastic Company can be considered as the leader of the disposable tableware industry in the country. Teb Plastic Company can be considered as the leader of the disposable tableware industry in the country. Teb plastic; as a superior national producer as well as premier provincial",
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:75": {
+    "name": "TERAM CHAP SEPAHAN CO",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://teram-group.com → نام شرکت با صفحه نمی‌خواند (1/3 واژه‌ی نام (teram) در عنوان/متن/دامنه)",
+      "https://2026.iphexpo.com → 500",
+      "https://www.cybo.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://noortec.ir/EN → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  },
+  "iraqagro:76": {
+    "name": "ToseSanat Rakhshan Sahand",
+    "country": "Iran",
+    "website": null,
+    "website_status": "not_found",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://rakhshansahand.com → نام شرکت با صفحه نمی‌خواند (2/3 واژه‌ی نام (rakhshan, sahand) در عنوان/متن/دامنه)",
+      "https://www.iranexpo.co/fa → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-19"
+  }
+}

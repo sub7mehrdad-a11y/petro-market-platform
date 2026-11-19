@@ -1,0 +1,782 @@
+{
+  "aftab urmia spoota": {
+    "name": "AFTAB URMIA SPOOTA",
+    "sectors": "Bottled Water, Juices, Nectars & Beverages, Milk, Whipped Cream",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/CZ81"
+    ]
+  },
+  "ana shishe zanjan": {
+    "name": "ANA SHISHE ZANJAN",
+    "sectors": "Glass Bottle",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DA136"
+    ]
+  },
+  "banavi trading group": {
+    "name": "BANAVI TRADING GROUP",
+    "sectors": "Fertilizer",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/DC81"
+    ]
+  },
+  "behesht": {
+    "name": "BEHESHT",
+    "sectors": "Carton Packaging Products, Paper, Paper Packaging Materials, Paper Packaging Products (Paper Bag etc. )",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DS136"
+    ]
+  },
+  "behpoo machine": {
+    "name": "BEHPOO MACHINE",
+    "sectors": "Packaging Machinery",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)",
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DI108",
+      "87: 2/DE134"
+    ]
+  },
+  "dornika": {
+    "name": "DORNIKA",
+    "sectors": "Herbs and Spices, Legumes & Pulses, Nuts, Dried Fruit & Vegetables, Snacks",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)",
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/CZ71",
+      "87: 2/DM98"
+    ]
+  },
+  "faradid": {
+    "name": "FARADID",
+    "sectors": "Thermal Rolls",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/CS108"
+    ]
+  },
+  "hamadan glass": {
+    "name": "HAMADAN GLASS",
+    "sectors": "Glass Bottle",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)",
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DE136",
+      "87: 1/DQ68"
+    ]
+  },
+  "iran roll": {
+    "name": "IRAN ROLL",
+    "sectors": "Flexible Packaging, Label",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)",
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DL98",
+      "87: 2/CL98"
+    ]
+  },
+  "jahangiri trading": {
+    "name": "JAHANGIRI TRADING",
+    "sectors": "Pistachios",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/CZ77"
+    ]
+  },
+  "kamel barchasb": {
+    "name": "KAMEL BARCHASB",
+    "sectors": "Label",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DQ127"
+    ]
+  },
+  "kaveh maysa": {
+    "name": "KAVEH MAYSA",
+    "sectors": "Flavors, Sweeteners & Flavor Enhancers, Food Colors & Colorants, Food Ingredients, Sauces - Dressing - Pulps - Puree - Seasonings",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/DP58"
+    ]
+  },
+  "kerman chamber of commerce industries mines and agriculture": {
+    "name": "KERMAN CHAMBER OF COMMERCE, INDUSTRIES, MINES, AND AGRICULTURE",
+    "sectors": "Associations, Unions, Chambers",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)",
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/DH52",
+      "87: 1/DA52"
+    ]
+  },
+  "kermanshah petrochemical industries co": {
+    "name": "KERMANSHAH PETROCHEMICAL INDUSTRIES CO",
+    "sectors": "Petrochemical Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)",
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/DH80",
+      "87: 1/DI87"
+    ]
+  },
+  "keyhan gostar sirjan company": {
+    "name": "KEYHAN GOSTAR SIRJAN COMPANY",
+    "sectors": "** Food & Beverages",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/CU74"
+    ]
+  },
+  "kian varagh": {
+    "name": "KIAN VARAGH",
+    "sectors": "PACKAGING - PRINTING",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DQ118"
+    ]
+  },
+  "killos food industries": {
+    "name": "KILLOS FOOD INDUSTRIES",
+    "sectors": "Barley Malt, Malt & Malt Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/DC78"
+    ]
+  },
+  "kimia kala": {
+    "name": "KIMIA KALA",
+    "sectors": "Aluminium Packaging Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)",
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/CC98",
+      "87: 2/CT98"
+    ]
+  },
+  "kooshesh karan co": {
+    "name": "KOOSHESH KARAN CO",
+    "sectors": "Packaging Machinery",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/CK107"
+    ]
+  },
+  "luxstar industry": {
+    "name": "LUXSTAR INDUSTRY",
+    "sectors": "Pickles, Tomatoe Paste",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/CR74"
+    ]
+  },
+  "mina glass": {
+    "name": "MINA GLASS",
+    "sectors": "Glass Bottle, Glass Jar, Glass Packaging Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)",
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DI127",
+      "87: 2/DU134"
+    ]
+  },
+  "mousavi food industry": {
+    "name": "MOUSAVI FOOD INDUSTRY",
+    "sectors": "Dried Fruit Pulp, Honey, Jam, Tahini",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/DC77"
+    ]
+  },
+  "niam plastic": {
+    "name": "NIAM PLASTIC",
+    "sectors": "Plastic Packaging Films",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/CS98"
+    ]
+  },
+  "noushab": {
+    "name": "NOUSHAB",
+    "sectors": "Beverages",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/CR78"
+    ]
+  },
+  "osareh talaei tabriz zardineh": {
+    "name": "OSAREH TALAEI TABRIZ(Zardineh)",
+    "sectors": "Cooked & Peeled Eggs, Egg Powder, Eggs & Egg Products, Pasteurized Liquid Egg Products, Shell Eggs",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/DS58"
+    ]
+  },
+  "pakban food industries group kilos food industries": {
+    "name": "PAKBAN FOOD INDUSTRIES GROUP KILOS FOOD INDUSTRIES",
+    "sectors": "Juices, Nectars & Beverages, Milk & Dairy Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/CU78"
+    ]
+  },
+  "parscomplex delijan": {
+    "name": "PARSCOMPLEX DELIJAN",
+    "sectors": "Plastic Packaging Films",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DY118"
+    ]
+  },
+  "polfilm": {
+    "name": "POLFILM",
+    "sectors": "Flexible Packaging, Pet / Bopet Packaging Films, Stretch Film",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)",
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DA98",
+      "87: 2/DR98"
+    ]
+  },
+  "poolad pooyesh plastic parts": {
+    "name": "POOLAD POOYESH PLASTIC PARTS",
+    "sectors": "Pet Preforms, Plastic Covers and Closures (PE Closure - Pet Cover ), Plastic IML Containers, Plastic Plain Container and Bucket",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/CK98"
+    ]
+  },
+  "raheb industrial grorup rabee crystal": {
+    "name": "RAHEB INDUSTRIAL GRORUP RABEE & CRYSTAL",
+    "sectors": "Beverages, Soft Drink",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/CR71"
+    ]
+  },
+  "ramak bita dairy co": {
+    "name": "RAMAK BITA DAIRY CO.",
+    "sectors": "Milk & Dairy Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/DP52"
+    ]
+  },
+  "razi glass co": {
+    "name": "RAZI GLASS CO.",
+    "sectors": "Glass Packaging Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DA107"
+    ]
+  },
+  "shishe gaz co": {
+    "name": "SHISHE GAZ CO",
+    "sectors": "Glass Bottle, Glass Jar",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DI98"
+    ]
+  },
+  "spco": {
+    "name": "SPCO",
+    "sectors": "Stone Paper",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/CW136"
+    ]
+  },
+  "tak makaron": {
+    "name": "TAK MAKARON",
+    "sectors": "Corn Oil, Cream Patisserie Powder, Pasta, Tomatoe Paste, Wheat Flour",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)",
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/CZ52",
+      "87: 1/CS71"
+    ]
+  },
+  "teb plastic novin": {
+    "name": "TEB PLASTIC NOVIN",
+    "sectors": "Disposable Plastic Service and Storage Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 2/DI118"
+    ]
+  },
+  "zarrin laban pars": {
+    "name": "ZARRIN LABAN PARS",
+    "sectors": "Industrial Dairy Products, Industrial Fats, Oils & Lipid Ingredients, Milk Powder, Skimmed Whey Powder",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2026 (اربیل)"
+    ],
+    "stands": [
+      "109: 1/DH61"
+    ]
+  },
+  "ana shishe": {
+    "name": "ANA SHISHE",
+    "sectors": "Glass Bottle",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/CE136"
+    ]
+  },
+  "bhe flow ai": {
+    "name": "BHE FLOW AI",
+    "sectors": "PACKAGING - PRINTING",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DJ134"
+    ]
+  },
+  "chin chin": {
+    "name": "CHIN CHIN",
+    "sectors": "Canned Food, Jam, Pickles",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DD68"
+    ]
+  },
+  "dama gostar sazan novim": {
+    "name": "DAMA GOSTAR SAZAN NOVIM",
+    "sectors": "Pasteurization Systems",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DR114"
+    ]
+  },
+  "dana sepand international trade co": {
+    "name": "Dana Sepand International Trade Co.",
+    "sectors": "Beverages, Biscuits, Biscuits- Chocolate- Confectionery, Pasta",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DI71"
+    ]
+  },
+  "dara electronic": {
+    "name": "DARA ELECTRONIC",
+    "sectors": "Checkweigher, Multi-head Electronic Scales Vertical Packaging Machinery",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DG136"
+    ]
+  },
+  "dht nuts": {
+    "name": "DHT NUTS",
+    "sectors": "Nuts, Dried Fruit & Vegetables, Snacks",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DO78"
+    ]
+  },
+  "diara": {
+    "name": "DIARA",
+    "sectors": "Flavors, Sweeteners & Flavor Enhancers",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DA71"
+    ]
+  },
+  "diba plastic karoon": {
+    "name": "DIBA PLASTIC KAROON",
+    "sectors": "Garbage Trash Bags, Plastic Bags, Shrink-Sleeve",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/CL114"
+    ]
+  },
+  "fanavaransabz": {
+    "name": "fanavaransabz",
+    "sectors": "AGRICULTURE & ANIMAL HUSBANDRY",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DA68"
+    ]
+  },
+  "figaro foods": {
+    "name": "FIGARO FOODS",
+    "sectors": "Milk & Dairy Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DQ52"
+    ]
+  },
+  "harir piran": {
+    "name": "HARIR PIRAN",
+    "sectors": "Corrugated Cardboard Sheet and Box",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DM118"
+    ]
+  },
+  "highsun hitech": {
+    "name": "HIGHSUN HITECH",
+    "sectors": "Plastics Machinery & Equipment",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/CQ136"
+    ]
+  },
+  "i sfahan moghadam": {
+    "name": "İSFAHAN MOGHADAM",
+    "sectors": "Flexible Packaging",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DA136"
+    ]
+  },
+  "kavian sanat sepid toos": {
+    "name": "KAVIAN SANAT SEPID TOOS",
+    "sectors": "Packaging Machinery",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DM105"
+    ]
+  },
+  "khoshgovar": {
+    "name": "KHOSHGOVAR",
+    "sectors": "Beverages",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DD87"
+    ]
+  },
+  "kian varagh sepehr": {
+    "name": "kian varagh sepehr",
+    "sectors": "PACKAGING - PRINTING",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DR118"
+    ]
+  },
+  "koosheshkaran": {
+    "name": "KOOSHESHKARAN",
+    "sectors": "Packaging Machinery",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DB118"
+    ]
+  },
+  "lovely": {
+    "name": "LOVELY",
+    "sectors": "Plastic Packaging Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DE118"
+    ]
+  },
+  "mehr tak": {
+    "name": "MEHR TAK",
+    "sectors": "Industrial Dairy Products, Industrial Fats, Oils & Lipid Ingredients, Milk Powder, Skimmed Whey Powder",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DD68"
+    ]
+  },
+  "nam avaran arsham hyrcan co": {
+    "name": "NAM AVARAN ARSHAM HYRCAN CO",
+    "sectors": "Canned Food, Frozen Food",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DA87"
+    ]
+  },
+  "nano gum mehr": {
+    "name": "NANO GUM MEHR",
+    "sectors": "Food Ingredients, Industrial Dairy Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DI68"
+    ]
+  },
+  "negar industrial group": {
+    "name": "NEGAR INDUSTRIAL GROUP",
+    "sectors": "Printing",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DO136"
+    ]
+  },
+  "pardad rand kahroba": {
+    "name": "PARDAD RAND KAHROBA",
+    "sectors": "Printing Inks",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DK136"
+    ]
+  },
+  "pargeh": {
+    "name": "PARGEH",
+    "sectors": "Packaging Materials",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DQ125"
+    ]
+  },
+  "polymer pack aryan": {
+    "name": "POLYMER PACK ARYAN",
+    "sectors": "Flexible Packaging, Label",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DB114"
+    ]
+  },
+  "poolad pooyesh": {
+    "name": "POOLAD POOYESH",
+    "sectors": "Pet Preforms, Plastic Covers and Closures (PE Closure - Pet Cover ), Plastic IML Containers, Plastic Plain Container and Bucket",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/CD98"
+    ]
+  },
+  "pooyan green food": {
+    "name": "POOYAN GREEN FOOD",
+    "sectors": "Milk Powder, Skimmed Whey Powder",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DD71"
+    ]
+  },
+  "reyhan gostar samin tous": {
+    "name": "REYHAN GOSTAR SAMIN TOUS",
+    "sectors": "Saffron Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DT52"
+    ]
+  },
+  "rose plastic kar": {
+    "name": "ROSE PLASTIC KAR",
+    "sectors": "Flexible Packaging",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DJ114"
+    ]
+  },
+  "sana chemical group": {
+    "name": "SANA CHEMICAL GROUP",
+    "sectors": "Plastic Packaging Films",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/CT114"
+    ]
+  },
+  "sapel": {
+    "name": "SAPEL",
+    "sectors": "Jerry Can, Plastic Bottle, Plastic Covers and Closures (PE Closure - Pet Cover )",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DJ118"
+    ]
+  },
+  "sepehr tejarat parto": {
+    "name": "SEPEHR TEJARAT PARTO",
+    "sectors": "Herbs and Spices",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DL71"
+    ]
+  },
+  "sheizar": {
+    "name": "SHEIZAR",
+    "sectors": "Cold Glazes, Cream Patisserie Powder, Flavors, Sweeteners & Flavor Enhancers, Ice Cream Flavour, Industrial Dairy Products, Instant Drink / Premix, Sauces - Dressing - Pulps - Puree - Seasonings",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 1/DH78"
+    ]
+  },
+  "suncap by parand machine co": {
+    "name": "SUNCAP BY PARAND MACHINE CO.",
+    "sectors": "Plastic Covers and Closures (PE Closure - Pet Cover )",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DV114"
+    ]
+  },
+  "tara industrial": {
+    "name": "Tara industrial",
+    "sectors": "Liquid Filling Machinery",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DJ98"
+    ]
+  },
+  "teb plastic novin company": {
+    "name": "TEB PLASTIC NOVIN COMPANY",
+    "sectors": "Disposable Plastic Service and Storage Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/CD114"
+    ]
+  },
+  "teram chap sepahan co": {
+    "name": "TERAM CHAP SEPAHAN CO",
+    "sectors": "Carton Packaging Products",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DB134"
+    ]
+  },
+  "tosesanat rakhshan sahand": {
+    "name": "ToseSanat Rakhshan Sahand",
+    "sectors": "Shade Nets",
+    "editions": [
+      "Agro Pack Food Plast Iraq 2025 (اربیل)"
+    ],
+    "stands": [
+      "87: 2/DB134"
+    ]
+  }
+}
