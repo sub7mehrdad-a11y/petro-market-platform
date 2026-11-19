@@ -320,6 +320,30 @@ def stage_verify(slug, cfg):
     run(vc, "--input", P["input"], "--out", P["ver"], "--render-only")
 
 
+def region_re(cfg):
+    """کشور هدف + شهرهای فهرست پرسش‌ها (لاتین و عربی) برای دیدن اینکه سایت خود شرکت از آن‌ها نام برده."""
+    terms = {cfg["country"], cfg["country"].replace("United Arab Emirates", "UAE")}
+    for _tpls, places in cfg["groups"]:
+        terms.update(places)
+    terms.discard("")
+    return re.compile("|".join(re.escape(t) for t in sorted(terms, key=len, reverse=True)), re.I)
+
+
+def base_country(phones: list) -> str:
+    """کشور شرکت از شماره‌های تلفن سایتش (پرتکرارترین)؛ خالی اگر شماره‌ای نباشد."""
+    import phonenumbers
+    from phonenumbers import geocoder
+    names = []
+    for ph in phones:
+        try:
+            n = geocoder.country_name_for_number(phonenumbers.parse(ph["e164"], None), "en")
+        except Exception:  # noqa: BLE001
+            continue
+        if n:
+            names.append(n)
+    return max(set(names), key=names.count) if names else ""
+
+
 def stage_export(slug, cfg):
     P = paths(slug)
     ver = json.load(open(P["ver"], encoding="utf-8"))
@@ -333,7 +357,9 @@ def stage_export(slug, cfg):
         e = found.get("d:" + reg_domain(site)) if site else None
         if e:
             pr["name"] = brand_from_title(e["title"], reg_domain(site))
-    dropped = dup = nosite = market = unconf = retail = nobicarb = 0
+        if site and (not pr["name"].isascii() or BICARB_RE.search(pr["name"])):  # نام کد/محصول است نه شرکت
+            pr["name"] = reg_domain(site).split(".")[0].title()
+    dropped = dup = nosite = market = unconf = retail = nobicarb = mentioned = 0
     seen = {}
     for k, v in ver.items():
         site = v.get("website")
@@ -369,7 +395,20 @@ def stage_export(slug, cfg):
             tld = urlparse(site).netloc.lower().rsplit(".", 1)[-1]
             phones_ok = any(str(ph.get("e164", "")).startswith(cfg["dial"]) for ph in v.get("phones", []))
             if k in prog and not (phones_ok or tld in cfg["tlds"]):
-                prog[k]["relevant"] = False             # کشور تأیید نشد → در لیست این کشور نیاید
+                # کشور هدف تأیید نشد: حذف نمی‌کنیم (شرکت خارجیِ فعال در منطقه هم می‌تواند خریدار باشد)،
+                # ولی کشورِ واقعی را از شماره‌ی تلفن سایت می‌نویسیم، نه کشور جست‌وجو را.
+                base = base_country(v.get("phones", []))
+                prog[k]["country"] = base or "نامشخص"
+                if region_re(cfg).search(blurb):
+                    # خود سایت از کشور/شهر هدف نام برده (دفتر/فعالیت) → شاهد ضعیف اما واقعی
+                    prog[k]["region_address"] = f"کشور از شماره‌ی تلفن سایت؛ روی سایت از {cfg['country']} نام برده شده (دفتر/فعالیت)"
+                    prog[k]["needs_review"] = True
+                    mentioned += 1
+                else:
+                    prog[k]["region_address"] = (f"کشور از شماره‌ی تلفن سایت؛ فقط در نتیجه‌ی جست‌وجوی {cfg['country']} آمده، "
+                                                 f"دفتر/فعالیت در آن تأیید نشده")
+                    prog[k]["needs_review"] = True
+                    prog[k]["fit"] = "ضعیف‌تر"           # ته جدول می‌نشیند
                 unconf += 1
             elif k in prog:
                 prog[k]["country"] = cfg["country"]
@@ -379,7 +418,7 @@ def stage_export(slug, cfg):
                     prog[k]["needs_review"] = True
                     nobicarb += 1
     efl.atomic_write_json(P["prog"], prog)
-    print(f"  بعد از صحت‌سنجی: بدون سایت {nosite}، بازارچه/دایرکتوری {market}، از قبل در داده {dropped}، تکراری {dup} حذف شد؛ کشور تأییدنشده (حذف شد) {unconf}، خرده‌فروشی {retail}، بدون ذکر بی‌کربنات در صفحه‌ی اصلی (علامت بررسی) {nobicarb}")
+    print(f"  بعد از صحت‌سنجی: بدون سایت {nosite}، بازارچه/دایرکتوری {market}، از قبل در داده {dropped}، تکراری {dup} حذف شد؛ کشور تأییدنشده (نگه‌داشته با کشور واقعی و علامت بررسی) {unconf} که {mentioned} تایش روی سایت از کشور هدف نام برده، خرده‌فروشی {retail}، بدون ذکر بی‌کربنات در صفحه‌ی اصلی (علامت بررسی) {nobicarb}")
     run(os.path.join(HERE, "export_verified_xlsx.py"), f"buyers-{slug}", cfg["title"])
 
 
