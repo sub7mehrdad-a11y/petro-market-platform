@@ -3,40 +3,40 @@
     "ok": false,
     "exit_code": 1,
     "timed_out": false,
-    "started_at": "2026-11-18T14:23:53.548693+00:00",
-    "finished_at": "2026-11-18T14:54:17.795026+00:00",
+    "started_at": "2026-11-19T14:34:39.586167+00:00",
+    "finished_at": "2026-11-19T14:46:46.817579+00:00",
     "output_tail": "[OK] fetched https://www.echemi.com/productsInformation/pd20150901033-sodium-bicarbonate.html (6000 chars)\n[OK] fetched https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186 (6000 chars)\n[OK] fetched https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends (6000 chars)\n[OK] fetched https://tradingeconomics.com/commodity/soda-ash (6000 chars)\n[OK] fetched https://www.chemanalyst.com/Pricing-data/soda-ash-76 (6000 chars)\n[OK] fetched https://www.procurementresource.com/resource-center/soda-ash-price-trends (6000 chars)\n[RETRY] http://board.himtrade.ru/\n[WARN] failed to fetch http://board.himtrade.ru/: <urlopen error [Errno -2] Name or service not known>\n[OK] fetched https://flagma.ru/ (137 chars)\n[OK] fetched https://www.soda.ru/ru/ (1579 chars)\n[WARN] تلاش 1/3 ناموفق: TimeoutError: فراخوانی مدل بعد از 240 ثانیه پاسخ نداد\n[WARN] تلاش 2/3 ناموفق: TimeoutError: فراخوانی مدل بعد از 240 ثانیه پاسخ نداد\n[WARN] تلاش 3/3 ناموفق: TimeoutError: فراخوانی مدل بعد از 240 ثانیه پاسخ نداد\n[ERROR] هر ۳ تلاش شکست خورد: فراخوانی مدل بعد از 240 ثانیه پاسخ نداد\n"
   },
   "news": {
-    "ok": false,
-    "exit_code": 124,
-    "timed_out": true,
-    "started_at": "2026-11-18T14:54:17.843961+00:00",
-    "finished_at": "2026-11-18T15:24:18.020813+00:00",
-    "output_tail": "[OK] fetched https://www.dailysabah.com/business (7461 chars)\n[OK] fetched https://tradingeconomics.com/commodity/soda-ash (6808 chars)\n[OK] fetched https://chemxplore.com/countries/turkey (6337 chars)\n[RETRY] https://www.chemeurope.com/en/news/\n[WARN] failed to fetch https://www.chemeurope.com/en/news/: <urlopen error [Errno 104] Connection reset by peer>\n[OK] fetched https://oilprice.com/Latest-Energy-News/World-News/ (12000 chars)\n[OK] fetched https://www.freightos.com/freightos-baltic-index/ (12000 chars)\n[OK] fetched https://www.drewry.co.uk/world-container-index (12000 chars)\n[OK] fetched https://tradingeconomics.com/commodity/baltic (9700 chars)\n[OK] fetched https://rupec.ru/ (3975 chars)\n[OK] fetched https://rccnews.ru/ (3906 chars)\n[OK] fetched https://www.soda.ru/ru/ (1579 chars)\n[OK] fetched https://www.rzd-partner.ru/ (9368 chars)\n[OK] fetched https://trans.ru/ (3423 chars)\n[OK] fetched https://flagma.ru/ (137 chars)\n[RETRY] http://board.himtrade.ru/\n[WARN] failed to fetch http://board.himtrade.ru/: <urlopen error [Errno -2] Name or service not known>\n[OK] fetched https://www.caixinglobal.com/ (12000 chars)\n[OK] fetched https://www.scmp.com/business (7267 chars)\n[OK] fetched https://www.globaltimes.cn/ (5624 chars)\n[OK] fetched http://www.news.cn/english/ (4486 chars)\n[OK] fetched http://english.customs.gov.cn/newsroom/news (2044 chars)\n[OK] fetched https://economic.mfa.ir/ (12000 chars)\n[OK] RSS Container News: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS The Loadstar: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Splash247: 10 آیتم خوانده شد، 4 آیتم مرتبط\n[OK] RSS Hellenic Shipping News: 12 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS gCaptain: 12 آیتم خوانده شد، 5 آیتم مرتبط\n\n[TIMEOUT] ربات «news» بعد از 900 ثانیه پاسخ نداد (تلاش 2).\n"
-  },
-  "turkey": {
-    "ok": false,
-    "exit_code": 124,
-    "timed_out": true,
-    "started_at": "2026-11-18T15:24:18.065940+00:00",
-    "finished_at": "2026-11-18T15:54:18.190380+00:00",
-    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.wesoda.com/media/ (2449 chars)\n[OK] fetched https://www.wesoda.com/investors/ (2573 chars)\n[OK] fetched https://www.etisoda.com/ (2036 chars)\n[OK] fetched https://www.kazansoda.com/ (2059 chars)\n--- منابع لجستیک/اقتصاد ---\n[OK] fetched https://www.utikad.org.tr/en (5000 chars)\n[OK] fetched https://www.hurriyetdailynews.com/index/economy (3544 chars)\n[OK] fetched https://www.dailysabah.com/business (5000 chars)\n\n[TIMEOUT] ربات «turkey» بعد از 900 ثانیه پاسخ نداد (تلاش 2).\n"
-  },
-  "china": {
     "ok": true,
     "exit_code": 0,
     "timed_out": false,
-    "started_at": "2026-11-16T13:56:16.215508+00:00",
-    "finished_at": "2026-11-16T13:57:16.300496+00:00",
-    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.shandong-haihua.net/news.html (5000 chars)\n[OK] fetched http://en.haihua.com.cn/product_1/4.html (5000 chars)\n[OK] fetched http://www.en.chinayuhuagroup.com/ (4895 chars)\n--- منابع لجستیک/اقتصاد صادراتی ---\n[OK] fetched https://www.globaltimes.cn/business/ (5000 chars)\n[OK] fetched https://gcaptain.com/tag/container-freight-rates/ (5000 chars)\n[OK] fetched https://www.container-news.com/ (5000 chars)\n\n[OK] رصد چین 2026-11-16 ذخیره شد — 3 خبر شرکتی، 3 خبر لجستیکی.\n"
+    "started_at": "2026-11-19T14:46:46.863818+00:00",
+    "finished_at": "2026-11-19T14:51:06.274220+00:00",
+    "output_tail": "[OK] fetched https://www.dailysabah.com/business (7484 chars)\n[OK] fetched https://tradingeconomics.com/commodity/soda-ash (6785 chars)\n[OK] fetched https://chemxplore.com/countries/turkey (6337 chars)\n[OK] fetched https://www.chemeurope.com/en/news/ (12000 chars)\n[OK] fetched https://oilprice.com/Latest-Energy-News/World-News/ (12000 chars)\n[OK] fetched https://www.freightos.com/freightos-baltic-index/ (12000 chars)\n[OK] fetched https://www.drewry.co.uk/world-container-index (12000 chars)\n[OK] fetched https://tradingeconomics.com/commodity/baltic (9677 chars)\n[OK] fetched https://rupec.ru/ (3957 chars)\n[OK] fetched https://rccnews.ru/ (3908 chars)\n[OK] fetched https://www.soda.ru/ru/ (1579 chars)\n[OK] fetched https://www.rzd-partner.ru/ (8560 chars)\n[OK] fetched https://trans.ru/ (3423 chars)\n[OK] fetched https://flagma.ru/ (137 chars)\n[RETRY] http://board.himtrade.ru/\n[WARN] failed to fetch http://board.himtrade.ru/: <urlopen error [Errno -2] Name or service not known>\n[OK] fetched https://www.caixinglobal.com/ (12000 chars)\n[OK] fetched https://www.scmp.com/business (7441 chars)\n[OK] fetched https://www.globaltimes.cn/ (5126 chars)\n[OK] fetched http://www.news.cn/english/ (4329 chars)\n[OK] fetched http://english.customs.gov.cn/newsroom/news (2044 chars)\n[OK] fetched https://economic.mfa.ir/ (12000 chars)\n[OK] RSS Container News: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS The Loadstar: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Splash247: 10 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS Hellenic Shipping News: 12 آیتم خوانده شد، 5 آیتم مرتبط\n[OK] RSS gCaptain: 12 آیتم خوانده شد، 5 آیتم مرتبط\n[INFO] مدل 2 آیتم برگرداند.\n[OK] ثبت شد [ترانزیت، کرایه‌ی حمل و لجستیک]: کاهش ۳ درصدی شاخص جهانی کرایه کانتینری و افت نرخ‌های مسیر اقیانوس آرام\n[OK] ثبت شد [انرژی، ارز و ژئوپلیتیک]: گزارش آژانس بین‌المللی انرژی از خروج ۲.۸ میلیارد بشکه نفت در پی بحران هرمز\n[OK] مجموعاً 2 خبر تازه‌ی 2026-11-19 ذخیره شد.\n"
+  },
+  "turkey": {
+    "ok": true,
+    "exit_code": 0,
+    "timed_out": false,
+    "started_at": "2026-11-19T14:51:06.312119+00:00",
+    "finished_at": "2026-11-19T14:56:28.913316+00:00",
+    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.wesoda.com/media/ (2449 chars)\n[OK] fetched https://www.wesoda.com/investors/ (2573 chars)\n[OK] fetched https://www.etisoda.com/ (2036 chars)\n[OK] fetched https://www.kazansoda.com/ (2059 chars)\n--- منابع لجستیک/اقتصاد ---\n[OK] fetched https://www.utikad.org.tr/en (5000 chars)\n[OK] fetched https://www.hurriyetdailynews.com/index/economy (3568 chars)\n[OK] fetched https://www.dailysabah.com/business (5000 chars)\n\n[OK] رصد ترکیه 2026-11-19 ذخیره شد — 0 خبر شرکتی، 2 خبر لجستیکی.\n"
+  },
+  "china": {
+    "ok": false,
+    "exit_code": 124,
+    "timed_out": true,
+    "started_at": "2026-11-19T14:56:28.951374+00:00",
+    "finished_at": "2026-11-19T15:26:29.106310+00:00",
+    "output_tail": "--- منابع شرکتی ---\n[OK] fetched https://www.shandong-haihua.net/news.html (5000 chars)\n[OK] fetched http://en.haihua.com.cn/product_1/4.html (5000 chars)\n[OK] fetched http://www.en.chinayuhuagroup.com/ (4895 chars)\n--- منابع لجستیک/اقتصاد صادراتی ---\n[OK] fetched https://www.globaltimes.cn/business/ (5000 chars)\n[OK] fetched https://gcaptain.com/tag/container-freight-rates/ (5000 chars)\n[OK] fetched https://www.container-news.com/ (5000 chars)\n\n[TIMEOUT] ربات «china» بعد از 900 ثانیه پاسخ نداد (تلاش 2).\n"
   },
   "transit": {
     "ok": true,
     "exit_code": 0,
     "timed_out": false,
-    "started_at": "2026-11-16T13:57:16.338464+00:00",
-    "finished_at": "2026-11-16T13:57:24.764585+00:00",
+    "started_at": "2026-11-19T15:26:29.148471+00:00",
+    "finished_at": "2026-11-19T15:26:36.831557+00:00",
     "output_tail": "[OK] amintara50: 12 پست استخراج شد\n[OK] jadeh_app: 8 پست استخراج شد\n\n[DONE] 20 پست (10 با قیمت صریح) در /home/runner/work/petro-market-platform/petro-market-platform/data/transit_log.json ذخیره شد.\n"
   }
 }
