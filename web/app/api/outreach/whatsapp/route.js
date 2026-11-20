@@ -20,6 +20,8 @@ export async function GET() {
     return {
       id: lead.id, name: lead.name, country: lead.country_en, website: lead.website, number: lead.wa_display, wa: String(lead.wa_e164).replace(/\D/g, ""), source_url: lead.wa_source_url,
       exhibition: lead.exhibition, match: lead.match, grade: m.grade, same_number_as: lead.same_number_as || [],
+      // site_link = خودِ سایت لینک واتساپ گذاشته؛ mobile_unverified = فقط موبایل معتبر، ثبت‌بودن در واتساپ تأیید نشده
+      wa_basis: lead.wa_basis || "site_link", priority: Number.isFinite(lead.priority) ? lead.priority : null,
       emailed: !!lead.email && emailed.has(String(lead.email).trim().toLowerCase()),
       local_lang: localLanguageFor(lead.country_en), messages: Object.fromEntries(WA_LANGS.map((l) => [l, messages[l].text])),
       status: st?.status || "new", opened_at: st?.opened_at || null, sent_at: st?.sent_at || null,

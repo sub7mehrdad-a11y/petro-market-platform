@@ -28,6 +28,7 @@ export default function WhatsAppPanel() {
   const [country, setCountry] = useState("همه");
   const [status, setStatus] = useState("همه");
   const [q, setQ] = useState("");
+  const [basis, setBasis] = useState("همه"); // همه | site_link | mobile_unverified
   const [page, setPage] = useState(0);
   const [openId, setOpenId] = useState(null);
   const [drafts, setDrafts] = useState({}); // "id:زبان" -> متن ویرایش‌شده
@@ -47,11 +48,11 @@ export default function WhatsAppPanel() {
   const counts = useMemo(() => ({ total: rows.length, new: rows.filter((r) => r.status === "new").length, opened: rows.filter((r) => r.status === "opened").length, sent: rows.filter((r) => r.status === "sent").length }), [rows]);
   const filtered = useMemo(() => {
     const s = q.trim().toLowerCase();
-    return rows.filter((r) => (country === "همه" || r.country === country) && (status === "همه" || r.status === status) && (!s || r.name.toLowerCase().includes(s)));
-  }, [rows, country, status, q]);
+    return rows.filter((r) => (country === "همه" || r.country === country) && (status === "همه" || r.status === status) && (basis === "همه" || r.wa_basis === basis) && (!s || r.name.toLowerCase().includes(s)));
+  }, [rows, country, status, basis, q]);
   const pages = Math.max(1, Math.ceil(filtered.length / PAGE));
   const view = filtered.slice(page * PAGE, page * PAGE + PAGE);
-  useEffect(() => { setPage(0); }, [country, status, q]);
+  useEffect(() => { setPage(0); }, [country, status, basis, q]);
 
   const canSend = !!data?.sending_enabled && !data?.state_problem;
 
@@ -82,7 +83,7 @@ export default function WhatsAppPanel() {
       <div>
         <h2 className="text-lg font-bold">واتساپ (نیمه‌خودکار)</h2>
         <p className="mt-1 text-sm leading-7 text-text-muted">
-          شرکت‌هایی که خودِ سایتشان لینک واتساپ گذاشته. متن آماده است و قابل ویرایش. دکمه‌ی «ارسال در واتساپ» واتساپ را با شماره و متن باز می‌کند؛ دکمه‌ی Send را شما در واتساپ می‌زنید. ثبت‌بودن شماره در واتساپ از بیرون قابل بررسی نیست.
+          شرکت‌هایی که خودِ سایتشان لینک واتساپ گذاشته (و چند شرکت عراقی که فقط موبایل معتبر روی سایتشان هست؛ با برچسب «واتساپ تأییدنشده»). متن آماده است و قابل ویرایش. دکمه‌ی «ارسال در واتساپ» واتساپ را با شماره و متن باز می‌کند؛ دکمه‌ی Send را شما در واتساپ می‌زنید. ثبت‌بودن شماره در واتساپ از بیرون قابل بررسی نیست.
         </p>
       </div>
 
@@ -111,6 +112,11 @@ export default function WhatsAppPanel() {
               <option value="new">ارسال نشده</option>
               <option value="opened">واتساپ باز شد</option>
               <option value="sent">ارسال شد</option>
+            </select>
+            <select value={basis} onChange={(e) => setBasis(e.target.value)} className="input">
+              <option value="همه">همه‌ی شماره‌ها</option>
+              <option value="site_link">لینک واتساپ روی سایت شرکت</option>
+              <option value="mobile_unverified">موبایل (واتساپ تأییدنشده)</option>
             </select>
             <input type="text" value={q} onChange={(e) => setQ(e.target.value)} placeholder="جست‌وجوی نام شرکت…" className="input flex-1 min-w-[160px]" />
           </div>
@@ -146,6 +152,8 @@ export default function WhatsAppPanel() {
                           <div className="text-[11px] text-text-muted">
                             {r.exhibition} · گرید: {GRADE_FA[r.grade]} · زبان پیام: {LANG_FA[lang]}
                             {r.match === "medium" && <span className="ms-1 rounded-full bg-warning-soft px-1.5 text-warning">تطبیق سایت متوسط</span>}
+                            {r.wa_basis === "mobile_unverified" && <span className="ms-1 rounded-full bg-warning-soft px-1.5 text-warning" title="موبایل معتبر روی سایت شرکت دیده شد ولی ثبت‌بودن در واتساپ تأیید نشده">موبایل · واتساپ تأییدنشده</span>}
+                            {r.priority === 1 && <span className="ms-1 rounded-full bg-success-soft px-1.5 text-success" title="نانوایی/کیک/بیسکویت/افزودنی/بیکینگ‌پودر: مصرف مستقیم بی‌کربنات">اولویت ۱</span>}
                             {r.emailed && <span className="ms-1 rounded-full bg-canvas px-1.5">قبلاً ایمیل شده</span>}
                             {r.same_number_as.length > 0 && <span className="ms-1 rounded-full bg-canvas px-1.5" title={r.same_number_as.join("، ")}>شماره‌ی مشترک با {fa(r.same_number_as.length)} شرکت</span>}
                           </div>

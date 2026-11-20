@@ -45,6 +45,20 @@ SOURCES = [
 ]
 # شرکتی که مشتری بالقوه‌ی بی‌کربنات نیست (سینما، تحقیقات بازار، …) — تشخیص دستی از بازبینی خروجی
 NOT_BUYER_RE = re.compile(r"(cinema|market\s*research|competitive\s+intelligence|marketresearch)", re.I)
+BAKERY_RE = re.compile(r"(bakery|biscuit|cake|bread|pastr|flour|confection|baking|wafer|cone|snack|chips|pasta|noodle|cornflake|"
+                       r"corn flake|starch|custard|food ingredient|additive|preservative|flavo|sweetener|بيكنج|بيكن|مسحوق الخبز|خميرة|معجنات|كيك|بسكويت)", re.I)
+FOOD_RE = re.compile(r"(food|beverage|juice|dairy|milk|cheese|yog|meat|canned|tomato|rice|tea|coffee|sauce|legume|pulse|oat|date|"
+                     r"tahini|spice|herb|sesame|ice cream|feed)", re.I)
+PRIORITY_FA = {1: "۱ — نانوایی/کیک/بیسکویت/افزودنی (مصرف مستقیم بی‌کربنات)", 2: "۲ — صنایع غذایی/خوراک دام", 3: "۳ — سایر"}
+
+
+def priority_of(e):
+    txt = f"{e['name']} {e['desc']}"
+    if any("بیکینگ" in s for s in e["sources"]) or BAKERY_RE.search(txt):
+        return 1
+    return 2 if FOOD_RE.search(txt) else 3
+
+
 PLACEHOLDER = re.compile(r"(\d)\1{5,}|1234567|7654321|0123456|9876543|0000000")
 OUT_DIR = efl.EXTERNAL_XLSX_DIR
 HEAD = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/124 Safari/537.36"}
@@ -169,15 +183,15 @@ def main():
 
     def sortkey(e):
         bp = any("بیکینگ" in s for s in e["sources"])
-        return (not bp, e["fit"] != "قوی", not e["phones"], not e["mail"][0])
+        return (priority_of(e), not bp, e["fit"] != "قوی", not e["phones"], not e["mail"][0])
     main_rows.sort(key=sortkey)
     other_rows.sort(key=sortkey)
 
     wb = openpyxl.Workbook()
-    headers = ["ردیف", "نام شرکت", "منبع پیدا شدن", "نوع", "ربط", "وب‌سایت", "سایت امروز باز شد؟", "ایمیل (روی سایت شرکت)",
+    headers = ["ردیف", "نام شرکت", "اولویت (مصرف‌کننده‌ی بی‌کربنات)", "منبع پیدا شدن", "نوع", "ربط", "وب‌سایت", "سایت امروز باز شد؟", "ایمیل (روی سایت شرکت)",
                "صفحه‌ی منبع ایمیل", "تلفن عراقی (بهترین)", "نوع شماره", "تلفن‌های عراقی دیگر", "واتساپ (لینک روی سایت)",
                "شاهد عراقی بودن", "توضیح/نیاز به بررسی", "بخش فعالیت/توضیح", "غرفه"]
-    widths = [6, 32, 34, 16, 10, 32, 14, 32, 40, 20, 14, 32, 20, 36, 38, 50, 20]
+    widths = [6, 32, 30, 34, 16, 10, 32, 14, 32, 40, 20, 14, 32, 20, 36, 38, 50, 20]
     type_fa = efl.COMPANY_TYPE_FA
 
     def fill(ws, rows):
@@ -196,7 +210,7 @@ def main():
                 notes.append("سایت امروز باز نشد")
             if not e["site"]:
                 notes.append("سایت رسمی تأییدشده پیدا نشد")
-            ws.append([i, e["name"], "؛ ".join(dict.fromkeys(e["sources"])), type_fa.get(e["type"], e["type"] or ""),
+            ws.append([i, e["name"], PRIORITY_FA[priority_of(e)], "؛ ".join(dict.fromkeys(e["sources"])), type_fa.get(e["type"], e["type"] or ""),
                        e["fit"] or "", e["site"] or "", "" if not e["site"] else ("بله" if e["is_alive"] else "خیر"),
                        e["mail"][0], e["mail"][1], best["display"] if best else "",
                        ("موبایل" if best and best["mobile"] else "ثابت") if best else "", others,
