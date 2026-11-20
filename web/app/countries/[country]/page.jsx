@@ -190,7 +190,9 @@ export default async function CountryPage({ params }) {
           // وقتی رقم واقعی داریم، به‌جای برآورد عمومی بالا، مصرف سرانه از خودِ
           // رقم گزارش (imports_tons) تقسیم بر جمعیت واقعی کشور محاسبه می‌شه —
           // نه یک میانگین تیر درآمدی حدسی.
-          realTrade && realPerCapitaKg != null && {
+          // وقتی سرانه‌ی خودِ گزارش (از مصرف ظاهری، در supply_stats) هست، همان نشان داده می‌شود: سرانه از واردات ناخالص
+          // برای مرکز تجارت مجدد (امارات) گمراه‌کننده است و خط دوم با همان برچسب هم تکراری می‌شد.
+          realTrade && realPerCapitaKg != null && supplyPerCapitaKg == null && {
             label: "مصرف سرانه (بر پایه‌ی گزارش)",
             value: realPerCapitaKg.toLocaleString("fa-IR", { maximumFractionDigits: 3 }),
             unit: "کیلوگرم/نفر",
