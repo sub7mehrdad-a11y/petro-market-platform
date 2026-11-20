@@ -3322,5 +3322,67 @@
         "url": "https://www.dailysabah.com/business"
       }
     ]
+  },
+  {
+    "date": "2026-11-20",
+    "generated_at": "2026-11-20T14:17:01.712280+00:00",
+    "headline_fa": "توسعه زیرساخت‌های لوجستیک ترکیه و تاکید رقبای ترک بر تولید کم‌کربن",
+    "company_updates": [
+      {
+        "company": "Eti Soda (WE Soda)",
+        "headline": "تاکید بر تولید سدیم بی‌کربنات کم‌کربن از کانسار ترونا",
+        "summary": "شرکت اتی سودا بر بهره‌گیری از فناوری استخراج محلول ترونا برای تولید سدیم بی‌کربنات و کربنات سدیم با کمترین ردپای کربن و مصرف آب در سطح جهانی تاکید کرده است.",
+        "source_url": "https://www.etisoda.com/"
+      },
+      {
+        "company": "Kazan Soda (WE Soda)",
+        "headline": "عرضه محصولات بی‌کربنات با کمترین ردپای زیست‌محیطی",
+        "summary": "شرکت کازان سودا اعلام کرده که با استفاده از روش‌های مدرن استخراج محلول، سدیم بی‌کربنات و کربنات سدیم را با کمترین میزان انتشار کربن صادرات می‌کند.",
+        "source_url": "https://www.kazansoda.com/"
+      }
+    ],
+    "logistics_updates": [
+      {
+        "headline": "تصاحب شرکت لوجستیک ترکیه‌ای اکول توسط گروه آلمانی",
+        "summary": "یک گروه آلمانی شرکت Ekol Lojistik ترکیه را تصاحب کرد که نشان‌دهنده تمایل به تقویت زیرساخت‌های حمل‌ونقل و ترانزیت در ترکیه است.",
+        "source_url": "https://www.dailysabah.com/business"
+      },
+      {
+        "headline": "هدف‌گذاری صنعت لوجستیک ترکیه برای بازار ۲۰۰ میلیارد دلاری",
+        "summary": "انجمن UTIKAD در همایش لوجستیک ۲۰۲۵ ترکیه، برنامه‌های جدیدی برای تبدیل این کشور به هاب لوجستیک منطقه‌ای و دستیابی به ارزش بازار ۲۰۰ میلیارد دلاری ارائه داد.",
+        "source_url": "https://www.utikad.org.tr/en"
+      }
+    ],
+    "market_note": "در داده‌های خام امروز، خبر جدیدی درباره تغییر قیمت مرجع، تغییر ظرفیت تولید یا تغییرات مالی ناگهانی در Eti Soda، Kazan Soda یا Soda Sanayii گزارش نشده است و صفحات رقیب تنها بر مزیت ساختاری خود (تولید طبیعی کم‌کربن از ترونا) تاکید دارند. در بخش لوجستیک، واگذاری Ekol Lojistik به آلمان و هدف‌گذاری کلان ترکیه برای تبدیل شدن به هاب لوجستیک، نشان‌دهنده تقویت پیوسته زنجیره تامین صادراتی ترکیه است. برای شرکت سپهران شیمی (با قیمت پایه صادراتی ۲۵۰ دلار بر تن)، تثبیت و ارتقای زیرساخت حمل‌ونقل ترکیه به این معناست که مزیت لجستیکی این کشور در بازار عراق همچنان پررنگ باقی می‌ماند و ما باید رقابت‌پذیری قیمتی و سرعت تحویل در مرزها را حفظ کنیم.",
+    "sources": [
+      {
+        "name": "Eti Soda Official Site",
+        "url": "https://www.etisoda.com/"
+      },
+      {
+        "name": "Kazan Soda Official Site",
+        "url": "https://www.kazansoda.com/"
+      },
+      {
+        "name": "WE Soda News & Resources",
+        "url": "https://www.wesoda.com/media/"
+      },
+      {
+        "name": "WE Soda Investor Relations",
+        "url": "https://www.wesoda.com/investors/"
+      },
+      {
+        "name": "UTİKAD Association",
+        "url": "https://www.utikad.org.tr/en"
+      },
+      {
+        "name": "Daily Sabah Business",
+        "url": "https://www.dailysabah.com/business"
+      },
+      {
+        "name": "Hürriyet Daily News Economy",
+        "url": "https://www.hurriyetdailynews.com/index/economy"
+      }
+    ]
   }
 ]

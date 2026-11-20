@@ -14092,5 +14092,119 @@
         "note": "No price data available in the provided source text for Russia."
       }
     ]
+  },
+  {
+    "collected_at": "2026-11-20T14:15:19.273105+00:00",
+    "date": "2026-11-20",
+    "records": [
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "China",
+        "price_type": "FOB",
+        "value": 178.68,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "October 2026",
+        "note": "قیمت FOB چین در اکتبر 2026"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "India",
+        "price_type": "CIF",
+        "value": 304.38,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/sodium-bicarbonate-price-trends",
+        "source_reported_date": "October 2026",
+        "note": "قیمت CIF هند در اکتبر 2026"
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Turkey",
+        "price_type": "FOB",
+        "value": null,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "ChemAnalyst",
+        "source_url": "https://www.chemanalyst.com/Pricing-data/sodium-bicarbonate-1186",
+        "source_reported_date": "Q3 2026",
+        "note": "اطلاعات عددی قیمت برای جوش شیرین در ترکیه در متن یافت نشد."
+      },
+      {
+        "product": "sodium bicarbonate",
+        "country_or_region": "Russia",
+        "price_type": "domestic",
+        "value": null,
+        "currency": "RUB",
+        "unit": "mt",
+        "source_name": "himtrade.ru / flagma.ru / soda.ru",
+        "source_url": "http://board.himtrade.ru/",
+        "source_reported_date": "November 2026",
+        "note": "منبع در دسترس نبود و عددی برای روسیه در متن موجود نیست."
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "China",
+        "price_type": "domestic",
+        "value": 1010.0,
+        "currency": "CNY",
+        "unit": "mt",
+        "source_name": "Trading Economics",
+        "source_url": "https://tradingeconomics.com/commodity/soda-ash",
+        "source_reported_date": "2026-11-20",
+        "note": "قیمت داخل چین بر اساس قرارداد CFD در تاریخ 20 نوامبر 2026"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "China",
+        "price_type": "FOB",
+        "value": 156.23,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "October 2026",
+        "note": "قیمت FOB چین در اکتبر 2026"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "India",
+        "price_type": "CIF",
+        "value": 281.93,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "Procurement Resource",
+        "source_url": "https://www.procurementresource.com/resource-center/soda-ash-price-trends",
+        "source_reported_date": "September 2026",
+        "note": "قیمت CIF هند در سپتامبر 2026"
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "Turkey",
+        "price_type": "FOB",
+        "value": null,
+        "currency": "USD",
+        "unit": "mt",
+        "source_name": "ChemAnalyst",
+        "source_url": "https://www.chemanalyst.com/Pricing-data/soda-ash-76",
+        "source_reported_date": "Q3 2026",
+        "note": "اطلاعات عددی قیمت برای سودا اش در ترکیه در متن یافت نشد."
+      },
+      {
+        "product": "soda ash",
+        "country_or_region": "Russia",
+        "price_type": "domestic",
+        "value": null,
+        "currency": "RUB",
+        "unit": "mt",
+        "source_name": "soda.ru",
+        "source_url": "https://www.soda.ru/ru/",
+        "source_reported_date": "November 2026",
+        "note": "اطلاعات عددی قیمت در سایت شرکت باشکیر سودا موجود نبود."
+      }
+    ]
   }
 ]
