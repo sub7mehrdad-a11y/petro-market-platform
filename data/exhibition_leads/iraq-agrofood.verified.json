@@ -459,12 +459,6 @@
         "display": "+964 770 585 0003",
         "kind": "tel",
         "source_url": "https://safracompany.com"
-      },
-      {
-        "e164": "+533202330",
-        "display": "+53 32 02330",
-        "kind": "tel",
-        "source_url": "https://safracompany.com"
       }
     ],
     "phone_best": "+964 770 585 0003",
@@ -986,12 +980,6 @@
         "display": "+964 780 000 0235",
         "kind": "text",
         "source_url": "https://www.khdaco.com"
-      },
-      {
-        "e164": "+4915217267327",
-        "display": "+49 1521 7267327",
-        "kind": "text",
-        "source_url": "https://www.khdaco.com/contact.html"
       }
     ],
     "phone_best": "+964 780 000 0235",
@@ -1391,16 +1379,9 @@
     "email_best": null,
     "email_confidence": null,
     "email_source_url": null,
-    "phones": [
-      {
-        "e164": "+9647701234567",
-        "display": "+964 770 123 4567",
-        "kind": "text",
-        "source_url": "https://www.rasan.iq/contact-us"
-      }
-    ],
-    "phone_best": "+964 770 123 4567",
-    "phone_source_url": "https://www.rasan.iq/contact-us",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
     "pages_checked": [
       "https://www.rasan.iq",
       "https://www.rasan.iq/contact-us"
@@ -1500,12 +1481,6 @@
       {
         "e164": "+9647866205681",
         "display": "+964 786 620 5681",
-        "kind": "tel",
-        "source_url": "https://yaranco.com"
-      },
-      {
-        "e164": "+971505408226",
-        "display": "+971 50 540 8226",
         "kind": "tel",
         "source_url": "https://yaranco.com"
       }
@@ -1760,12 +1735,6 @@
         "display": "+964 780 000 0235",
         "kind": "text",
         "source_url": "https://www.khdaco.com"
-      },
-      {
-        "e164": "+4915217267327",
-        "display": "+49 1521 7267327",
-        "kind": "text",
-        "source_url": "https://www.khdaco.com/contact.html"
       }
     ],
     "phone_best": "+964 780 000 0235",
@@ -2020,7 +1989,7 @@
     "name": "IRAQI CINEMA FACTORY",
     "country": "Iraq",
     "website": null,
-    "website_status": "rejected_not_iraqi_entity",
+    "website_status": "not_found",
     "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (iraqi, cinema, factory) در عنوان/متن/دامنه",
     "emails": [],
     "email_best": null,
@@ -2034,13 +2003,14 @@
       "https://staging.iraqicinema.net/Harith/en/contact-us"
     ],
     "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "job@iraqicinema.net نقش غیرتجاری است (کنار گذاشته شد)"
+      "job@iraqicinema.net نقش غیرتجاری است (کنار گذاشته شد)",
+      "سایت با تلاش دوم (پرسش‌های عراق/اربیل/بغداد) پیدا و با شاهد عراقی تأیید شد",
+      "تلاش دوم: سایتِ بدون شاهد قوی عراقی (فقط ذکر نام عراق) رد شد"
     ],
     "needs_render": false,
     "website_match": "strong",
     "site_blurb": "Iraqi Cinema. . Iraqi Cinema Book Now Choose the branch and book now Age rating Coupons The Cheesecake Factory Bakery Now in Iraqi Cinema Qareen Showing Now Watch Trailer Zain Mamnoon حدوتة Book Now Watch Trailer About Us + Branches + Screens + Provinces + Seats Introduction Iraqi Cinema is an Iraqi movies’ theatre chain headquartered in Harthiya, Baghdad. Iraqi Cinema is well known as Iraq’s most innovative exhibitor and considered as the highest-profile business in the movies’ exhibition businesses in the reg",
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-20"
   },
   "iraqagro:50": {
     "name": "JABAL UHOD COMPANY",
@@ -2314,7 +2284,7 @@
     "name": "ZAIN SNAX",
     "country": "Iraq",
     "website": null,
-    "website_status": "rejected_not_iraqi_entity",
+    "website_status": "not_found",
     "website_evidence": "2/2 واژه‌ی نام (zain, snax) در عنوان/متن/دامنه",
     "emails": [],
     "email_best": null,
@@ -2327,12 +2297,15 @@
       "https://www.zaingroup-me.com"
     ],
     "notes": [
-      "https://www.cybo.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+      "https://www.nytimes.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.wsj.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "سایت با تلاش دوم (پرسش‌های عراق/اربیل/بغداد) پیدا و با شاهد عراقی تأیید شد",
+      "تلاش دوم: سایتِ بدون شاهد قوی عراقی (فقط ذکر نام عراق) رد شد"
     ],
     "needs_render": false,
     "website_match": "strong",
     "site_blurb": "Zain International Group for Commercial Investment – Zain Group. . Zain International Group for Commercial Investment – Zain Group ZAIN IS THE WORLD OF TRUST Chairman’s message I am delighted to share with you more than half a century of pioneering achievements of ZainGroup. Since almost five decades now, we have been operating in the Middle East region and have been able to gain a foothold in various industries by establishing numerous subsidiary companies. We can refer with pride to our significant contribution to the Iraqi economy as one of the most dynamic",
-    "checked_at": "2026-11-19"
+    "checked_at": "2026-11-20"
   }
 }

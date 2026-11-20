@@ -730,7 +730,7 @@
     "llm_reason": "غرفه‌دار نمایشگاه(های): Agro Pack Food Plast Iraq 2025 (اربیل)",
     "description": "بخش‌ها: Corn Chips",
     "stand": "87: 1/BS76",
-    "region_address": "سایتِ پیداشده شماره‌ی Iraq (+964) نداشت (احتمالاً شرکت دیگری با نام مشابه) → تماس خالی گذاشته شد",
+    "region_address": "",
     "needs_review": true,
     "_order": 49
   },
@@ -820,7 +820,7 @@
     "llm_reason": "غرفه‌دار نمایشگاه(های): Agro Pack Food Plast Iraq 2025 (اربیل)",
     "description": "بخش‌ها: Fruit Juice, Potato Chips, Seed",
     "stand": "87: 1/BC48",
-    "region_address": "سایتِ پیداشده شماره‌ی Iraq (+964) نداشت (احتمالاً شرکت دیگری با نام مشابه) → تماس خالی گذاشته شد",
+    "region_address": "",
     "needs_review": true,
     "_order": 55
   }

@@ -152,6 +152,16 @@ def sanitize():
                 prog[k]["region_address"] = f"سایتِ پیداشده شماره‌ی {COUNTRY} ({DIAL}) نداشت (احتمالاً شرکت دیگری با نام مشابه) → تماس خالی گذاشته شد"
             blanked += 1
             continue
+        # شماره‌ی ساختگی (۱۲۳۴۵۶۷ …) حذف؛ اگر شماره‌ی کشور شرکت هست، شماره‌های کشورهای دیگر کنار می‌روند
+        ok = [ph for ph in phones if not re.search(r"(\d)\1{5,}|1234567|7654321|0123456|0000000",
+                                                    re.sub(r"\D", "", str(ph.get("e164", "")))[-8:])]
+        local = [ph for ph in ok if str(ph.get("e164", "")).startswith(DIAL)]
+        ok = local or ok
+        ok.sort(key=lambda ph: (ph.get("kind") == "text",))
+        if len(ok) != len(phones) or (ok and v.get("phone_best") != ok[0].get("display")):
+            v["phones"] = ok
+            v["phone_best"] = ok[0]["display"] if ok else None
+            v["phone_source_url"] = ok[0].get("source_url") if ok else None
         reg = ".".join(host.split(".")[-2:])
         if reg in seen and k in prog:
             prog[k]["relevant"] = False

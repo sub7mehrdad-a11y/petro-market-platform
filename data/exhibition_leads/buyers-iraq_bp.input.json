@@ -1,0 +1,331 @@
+[
+  {
+    "id": "buyers:1",
+    "name": "gosupps.com",
+    "country": "Iraq",
+    "website": "https://www.gosupps.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:2",
+    "name": "Keychain",
+    "country": "Iraq",
+    "website": "https://www.keychain.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:3",
+    "name": "Kudos Blends",
+    "country": "Iraq",
+    "website": "https://kudosblends.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:4",
+    "name": "IFPC",
+    "country": "Iraq",
+    "website": "https://ifpc.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:5",
+    "name": "Sweetener Products Co.",
+    "country": "Iraq",
+    "website": "https://www.sweetenerproducts.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:6",
+    "name": "Lano Market, Sulaymaniyah",
+    "country": "Iraq",
+    "website": "https://www.lezzoo.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:7",
+    "name": "Platraw ...",
+    "country": "Iraq",
+    "website": "https://platraw.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:8",
+    "name": "Industrystock",
+    "country": "Iraq",
+    "website": "https://www.industrystock.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:9",
+    "name": "Aashi Chem",
+    "country": "Iraq",
+    "website": "https://aashichem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:10",
+    "name": "Basraasianfood",
+    "country": "Iraq",
+    "website": "https://www.basraasianfood.de",
+    "website_official": false
+  },
+  {
+    "id": "buyers:11",
+    "name": "Americanchemicalsuppliers",
+    "country": "Iraq",
+    "website": "https://www.americanchemicalsuppliers.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:12",
+    "name": "KELIFFS",
+    "country": "Iraq",
+    "website": "https://www.keliffs.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:13",
+    "name": "Blendtek Ingredients",
+    "country": "Iraq",
+    "website": "https://www.blendtek.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:14",
+    "name": "Guilin Hongxing Chemical Co., Ltd.",
+    "country": "Iraq",
+    "website": "https://www.hxbakingpowder.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:15",
+    "name": "Mtroyal",
+    "country": "Iraq",
+    "website": "https://mtroyal.com.tr",
+    "website_official": false
+  },
+  {
+    "id": "buyers:16",
+    "name": "Manufacturing",
+    "country": "Iraq",
+    "website": "https://www.khudairigroup.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:17",
+    "name": "Royalbagiq",
+    "country": "Iraq",
+    "website": "https://royalbagiq.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:18",
+    "name": "Al-Khudari",
+    "country": "Iraq",
+    "website": "https://khudari.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:19",
+    "name": "Mawdoo3",
+    "country": "Iraq",
+    "website": "https://mawdoo3.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:20",
+    "name": "Modernflourmills",
+    "country": "Iraq",
+    "website": "https://modernflourmills.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:21",
+    "name": "Babelgomla",
+    "country": "Iraq",
+    "website": "https://www.babelgomla.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:22",
+    "name": "Wiktionary",
+    "country": "Iraq",
+    "website": "https://en.wiktionary.org",
+    "website_official": false
+  },
+  {
+    "id": "buyers:23",
+    "name": "Baitfood",
+    "country": "Iraq",
+    "website": "https://baitfood.net",
+    "website_official": false
+  },
+  {
+    "id": "buyers:24",
+    "name": "Baladi Foodstuff",
+    "country": "Iraq",
+    "website": "https://www.baladifoodstuff.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:25",
+    "name": "Martoo",
+    "country": "Iraq",
+    "website": "https://martoo.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:26",
+    "name": "CEBON",
+    "country": "Iraq",
+    "website": "https://cebon.dz",
+    "website_official": false
+  },
+  {
+    "id": "buyers:27",
+    "name": "Rabha",
+    "country": "Iraq",
+    "website": "https://rabha.net",
+    "website_official": false
+  },
+  {
+    "id": "buyers:28",
+    "name": "Etabliah",
+    "country": "Iraq",
+    "website": "https://etabliah.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:29",
+    "name": "Material",
+    "country": "Iraq",
+    "website": "https://material.sa",
+    "website_official": false
+  },
+  {
+    "id": "buyers:30",
+    "name": "Bakersway",
+    "country": "Iraq",
+    "website": "https://bakersway.sa",
+    "website_official": false
+  },
+  {
+    "id": "buyers:31",
+    "name": "Mafahem",
+    "country": "Iraq",
+    "website": "https://mafahem.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:32",
+    "name": "Poodrineh",
+    "country": "Iraq",
+    "website": "https://ar.poodrineh.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:33",
+    "name": "Chemistrysources",
+    "country": "Iraq",
+    "website": "https://chemistrysources.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:34",
+    "name": "Marefa",
+    "country": "Iraq",
+    "website": "https://www.marefa.org",
+    "website_official": false
+  },
+  {
+    "id": "buyers:35",
+    "name": "Atyabtabkha",
+    "country": "Iraq",
+    "website": "https://www.atyabtabkha.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:36",
+    "name": "Hz Focus",
+    "country": "Iraq",
+    "website": "https://www.hz-focus.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:37",
+    "name": "Segmenfood",
+    "country": "Iraq",
+    "website": "https://segmenfood.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:38",
+    "name": "Gzcochool",
+    "country": "Iraq",
+    "website": "https://www.gzcochool.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:39",
+    "name": "Rawayiecake",
+    "country": "Iraq",
+    "website": "https://rawayiecake.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:40",
+    "name": "Alqaaba",
+    "country": "Iraq",
+    "website": "https://alqaaba.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:41",
+    "name": "Cake Arts Store",
+    "country": "Iraq",
+    "website": "https://cake-arts-store.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:42",
+    "name": "Aljazeera",
+    "country": "Iraq",
+    "website": "https://www.aljazeera.net",
+    "website_official": false
+  },
+  {
+    "id": "buyers:43",
+    "name": "Safasupplyksa",
+    "country": "Iraq",
+    "website": "https://safasupplyksa.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:44",
+    "name": "Tawreda",
+    "country": "Iraq",
+    "website": "https://tawreda.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:45",
+    "name": "Furdtk",
+    "country": "Iraq",
+    "website": "https://www.furdtk.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:46",
+    "name": "Kilomekyal",
+    "country": "Iraq",
+    "website": "https://kilomekyal.com",
+    "website_official": false
+  },
+  {
+    "id": "buyers:47",
+    "name": "Turkish Marketer",
+    "country": "Iraq",
+    "website": "https://turkishmarketer.com",
+    "website_official": false
+  }
+]

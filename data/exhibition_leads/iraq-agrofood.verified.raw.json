@@ -1,2419 +1,2401 @@
 {
-  "iraqagro:1": {
-    "name": "AL AKHAWAIN COMPANY",
-    "country": "Iraq",
-    "website": "https://al-akhawainco.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "2/2 واژه‌ی نام (al, akhawain) در عنوان/متن/دامنه",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [
-      "https://al-akhawainco.com"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "با رندر مرورگر (Playwright) بررسی شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Al-Akhawain - Premium Chips & Fresh Juices. Al-Akhawain's premium chips and fresh juices.. Al-Akhawain - Premium Chips & Fresh Juices",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:2": {
-    "name": "ALEN FACTORY",
-    "country": "Iraq",
-    "website": "https://alenfactory.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (alen, factory) در عنوان/متن/دامنه",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [
-      "https://alenfactory.com"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
-      "با رندر مرورگر (Playwright) بررسی شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "403 Forbidden. . 403 Forbidden Forbidden You don't have permission to access this resource. Additionally, a 403 Forbidden error was encountered while trying to use an ErrorDocument to handle the request.",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:3": {
-    "name": "ASIBEX COMPANY",
-    "country": "Iraq",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [
-      "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
-    ],
-    "needs_render": false,
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:4": {
-    "name": "ATYAF AL-GHEED COMPANY",
-    "country": "Iraq",
-    "website": "https://www.atyafalgheed.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (atyaf, al, gheed) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "contact@atyafalgheed.com",
-        "kind": "mailto",
-        "source_url": "https://www.atyafalgheed.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "contact@atyafalgheed.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://www.atyafalgheed.com",
-    "phones": [
-      {
-        "e164": "+9647830512900",
-        "display": "+964 783 051 2900",
-        "kind": "text",
-        "source_url": "https://www.atyafalgheed.com"
-      },
-      {
-        "e164": "+9647830512920",
-        "display": "+964 783 051 2920",
-        "kind": "text",
-        "source_url": "https://www.atyafalgheed.com"
-      }
-    ],
-    "phone_best": "+964 783 051 2900",
-    "phone_source_url": "https://www.atyafalgheed.com",
-    "pages_checked": [
-      "https://www.atyafalgheed.com",
-      "https://www.atyafalgheed.com"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "HOME | Mysite. . HOME | Mysite top of page Chocolate Boutique Atyaf AlGheed Buy Online WELCOME Welcome visitors to your site with a short, engaging introduction. Double click to edit and add your own text. Start Now Grow Your Vision Welcome visitors to your site with a short, engaging introduction. Double click to edit and add your own text. Start Now Empower Growth Start Now Welcome to Our Site Welcome visitors to your site with a short, engaging introduction. Double click to edit and add your own text. Read Mo",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:5": {
-    "name": "DAS FOOD INDUSTRIES",
-    "country": "Iraq",
-    "website": "https://www.dasfood.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (das) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@dasfood.com",
-        "kind": "cfemail",
-        "source_url": "https://www.dasfood.com/contact-us",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@dasfood.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://www.dasfood.com/contact-us",
-    "phones": [
-      {
-        "e164": "+9647707770700",
-        "display": "+964 770 777 0700",
-        "kind": "text",
-        "source_url": "https://www.dasfood.com/contact-us"
-      }
-    ],
-    "phone_best": "+964 770 777 0700",
-    "phone_source_url": "https://www.dasfood.com/contact-us",
-    "pages_checked": [
-      "https://www.dasfood.com",
-      "https://www.dasfood.com/contact-us"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Das | Largest Food Production Companies in Kurdistan and Iraq.. DAS Food Industries is one of the largest food production companies in Kurdistan and in Iraq. DAS Food Industries was established in 2020, it is a subsidiary of KHOSHNAW Company for commercial investments.. Das | Largest Food Production Companies in Kurdistan and Iraq. Biggest wheat flour and bulgur production industry in Iraq DAS Food Industries was established in 2020, it is a subsidiary of KHOSHNAW Company for commercial investments. Our Products Learn More Follow Us Have a question? Get help Products DAS Food Industries produces a plethora of different products across multiple state of the art factories. Our factories utiliz",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:6": {
-    "name": "DELLY GARMYAN COMPANY",
-    "country": "Iraq",
-    "website": "https://dellygarmyan.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (delly, garmyan) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "dellygarmyancompany@gmail.com",
-        "kind": "text",
-        "source_url": "https://dellygarmyan.com",
-        "domain_status": "mx",
-        "same_domain": false,
-        "free_mail": true
-      }
-    ],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [
-      {
-        "e164": "+9647709620005",
-        "display": "+964 770 962 0005",
-        "kind": "text",
-        "source_url": "https://dellygarmyan.com"
-      },
-      {
-        "e164": "+9647509620005",
-        "display": "+964 750 962 0005",
-        "kind": "text",
-        "source_url": "https://dellygarmyan.com"
-      }
-    ],
-    "phone_best": "+964 770 962 0005",
-    "phone_source_url": "https://dellygarmyan.com",
-    "pages_checked": [
-      "https://dellygarmyan.com"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "dellygarmyancompany@gmail.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Delly Garmyan Company. Free HTML Templates. Delly Garmyan Company dellygarmyancompany@gmail.com 07509620005 | 07709620005 Pioneers of Health and Innovation! Delly Garmyan Learn More Traditional & Delicious Made From Our Own Organic Milk Learn More About Delly Garmyan Delly Garmyan Company is a limited commercial and manufacturing company, established on 28/3/2021 and registered in the Companies Registration Directorate in Sulaymaniyah, with license number 30600. This company owns Shyaw Factory, which is a dairy, ice cream, Juices and choc",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:7": {
-    "name": "FOOD WAY FACTORY",
-    "country": "Iraq",
-    "website": "https://www.foodwayfactory.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (way, factory) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@foodwayfactory.com",
-        "kind": "mailto",
-        "source_url": "https://www.foodwayfactory.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@foodwayfactory.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://www.foodwayfactory.com",
-    "phones": [
-      {
-        "e164": "+9647504428700",
-        "display": "+964 750 442 8700",
-        "kind": "text",
-        "source_url": "https://www.foodwayfactory.com/contacts"
-      }
-    ],
-    "phone_best": "+964 750 442 8700",
-    "phone_source_url": "https://www.foodwayfactory.com/contacts",
-    "pages_checked": [
-      "https://www.foodwayfactory.com",
-      "https://www.foodwayfactory.com/contacts"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Home | Foodway Factory. . Home | Foodway Factory تخطي للذهاب إلى المحتوى 10 علامات تجارية هدفنا هو إنشاء نظام غذائي أكثر إنصافًا واستدامة لجميع العراقيين. جميع علاماتنا التجارية 10 علامات تجارية هدفنا هو إنشاء نظام غذائي أكثر إنصافًا واستدامة لجميع العراقيين. جميع علاماتنا التجارية السابق التالي نبذة سريعة اكثر من 40 سنة... نحن ملتزمون بإحداث فرق في العراق من خلال تجارة المواد الغذائية المستدامة. اقرأ اكثر منتجات عالية الجودة و بنكهات لا تُنسى رز هانا بسمتی 1121 هندي Foodway factory رز ازاد رایس 1121 درجة اولى هندي Foodw",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:8": {
-    "name": "NOMAGRI",
-    "country": "Iraq",
-    "website": "https://www.nomagri.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (nomagri) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@nomagri.com",
-        "kind": "mailto",
-        "source_url": "https://www.nomagri.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@nomagri.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://www.nomagri.com",
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [
-      "https://www.nomagri.com"
-    ],
-    "notes": [
-      "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "https://www.iitp.mot.gov.iq → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Ana Sayfa | Nomagri. Nomagri — çekirdek kahve, filtre kahve ve Türk kahvesi. Doğadan bardağınıza, güvenli ödeme ile.. Ana Sayfa | Nomagri İçeriğe atla 0212 235 00 37 Hakkımızda İletişim Sipariş Takip Öne Çıkanlar En Çok Satanlar Müşterilerimizin en çok tercih ettiği ürünler Tüm Ürünleri Görüntüle Fırsatları Kaçırmayın Kampanyalar Keşfedin Ürünlerimiz Doğadan sofranıza özenle seçilmiş lezzetler Tüm Ürünleri Gör Ücretsiz Kargo Tüm siparişlerde Güvenli Ödeme 256-bit SSL şifreleme Kolay İade Açılmamış ürünlerde 14 gün Müşteri Hizmetleri Sorularınız için bize ulaşın Bültenimize Katılın Yeni ürünler, kampanyalar ve ö",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:9": {
-    "name": "NOSH COMPANY",
-    "country": "Iraq",
-    "website": "https://nosh-trd.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "1/1 واژه‌ی نام (nosh) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@nosh-trd.com",
-        "kind": "mailto",
-        "source_url": "https://nosh-trd.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@nosh-trd.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://nosh-trd.com",
-    "phones": [
-      {
-        "e164": "+9647502949482",
-        "display": "+964 750 294 9482",
-        "kind": "tel",
-        "source_url": "https://nosh-trd.com"
-      },
-      {
-        "e164": "+9647704602296",
-        "display": "+964 770 460 2296",
-        "kind": "tel",
-        "source_url": "https://nosh-trd.com"
-      }
-    ],
-    "phone_best": "+964 750 294 9482",
-    "phone_source_url": "https://nosh-trd.com",
-    "pages_checked": [
-      "https://nosh-trd.com",
-      "https://nosh-trd.com/contact",
-      "https://nosh-trd.com/contact-us",
-      "https://nosh-trd.com/contactus",
-      "https://nosh-trd.com/pages/contact",
-      "https://nosh-trd.com/contacts",
-      "https://nosh-trd.com/contacts/",
-      "https://nosh-trd.com/kontakty",
-      "https://nosh-trd.com/kontakt",
-      "https://nosh-trd.com/kontakte",
-      "https://nosh-trd.com/about/contacts",
-      "https://nosh-trd.com/ru/contacts",
-      "https://nosh-trd.com/en/contacts",
-      "https://nosh-trd.com/lianxiwomen"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "با رندر مرورگر (Playwright) بررسی شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Nosh Company — Premium Food Distribution in Iraq & Kurdistan. Nosh Company delivers premium foodstuffs across Iraq & Kurdistan — cold-chain logistics, trusted brands, dependable service since 2023.. Nosh Company — Premium Food Distribution in Iraq & Kurdistan Edit with",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:10": {
-    "name": "RAMI FARM",
-    "country": "Iraq",
-    "website": "https://ramifarm.farm",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (rami, farm) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@ramifarm.farm",
-        "kind": "cfemail",
-        "source_url": "https://ramifarm.farm",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@ramifarm.farm",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://ramifarm.farm",
-    "phones": [
-      {
-        "e164": "+9647507118888",
-        "display": "+964 750 711 8888",
-        "kind": "tel",
-        "source_url": "https://ramifarm.farm"
-      },
-      {
-        "e164": "+9647507117117",
-        "display": "+964 750 711 7117",
-        "kind": "tel",
-        "source_url": "https://ramifarm.farm"
-      },
-      {
-        "e164": "+9647747117117",
-        "display": "+964 774 711 7117",
-        "kind": "tel",
-        "source_url": "https://ramifarm.farm"
-      }
-    ],
-    "phone_best": "+964 750 711 8888",
-    "phone_source_url": "https://ramifarm.farm",
-    "pages_checked": [
-      "https://ramifarm.farm"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "RamiFarm — Milk & Dairy Products | Erbil. RamiFarm is a modern dairy in Balinda, Erbil.. RamiFarm — Milk & Dairy Products | Erbil 2,500+ Dairy cows 100+ Product varieties 2006 Family-run since 24/7 Automated herd control Contact Get In Touch Call us or message us on WhatsApp. Phone & Messaging Choose how to reach us: +964 750 711 8888 Call WhatsApp Telegram Viber +964 750 711 7117 Call WhatsApp Telegram Viber +964 774 711 7117 Call WhatsApp Telegram Viber Address Iraq_Erbil_Balinda Google Maps → Email [email protected] Follow us",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:11": {
-    "name": "RAWAT AL ZUHOUR",
-    "country": "Iraq",
-    "website": "https://www.rawatalzuhour.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (rawat, al, zuhour) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "salim@rawatalzuhour.com",
-        "kind": "mailto",
-        "source_url": "https://www.rawatalzuhour.com/contact-us/",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "salim@rawatalzuhour.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://www.rawatalzuhour.com/contact-us/",
-    "phones": [
-      {
-        "e164": "+9647510348196",
-        "display": "+964 751 034 8196",
-        "kind": "tel",
-        "source_url": "https://www.rawatalzuhour.com/contact-us/"
-      }
-    ],
-    "phone_best": "+964 751 034 8196",
-    "phone_source_url": "https://www.rawatalzuhour.com/contact-us/",
-    "pages_checked": [
-      "https://www.rawatalzuhour.com",
-      "https://www.rawatalzuhour.com/contact-us/"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Rawat Al Zuhour For General Trade Company Limited. . Rawat Al Zuhour For General Trade Company Limited YOUR CREATIVE PARTNER OF FLAVOUR IS NOW AT ALL IRAQ YOUR CREATIVE PARTNER OF FLAVOUR IS NOW AT ALL IRAQ Flavours Additivies Differentiate Your Business with the Power of Flavours Rawat Al Zuhour offers a wide range of natural flavours for corporate customers. We add a unique atmosphere to your spaces with our modern, aesthetic and quality products. We are here to provide healthy, sustainable and effective solutions. Get Information About Our Prod",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:12": {
-    "name": "SAFRA COMPANY",
-    "country": "Iraq",
-    "website": "https://safracompany.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (safra) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@safracompany.com",
-        "kind": "mailto",
-        "source_url": "https://safracompany.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@safracompany.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://safracompany.com",
-    "phones": [
-      {
-        "e164": "+9647705850003",
-        "display": "+964 770 585 0003",
-        "kind": "tel",
-        "source_url": "https://safracompany.com"
-      },
-      {
-        "e164": "+533202330",
-        "display": "+53 32 02330",
-        "kind": "tel",
-        "source_url": "https://safracompany.com"
-      }
-    ],
-    "phone_best": "+964 770 585 0003",
-    "phone_source_url": "https://safracompany.com",
-    "pages_checked": [
-      "https://safracompany.com"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Safra Company. . Safra Company about us Food Products 500+ high quality food products in various ranges and 25 featured product brands from 5 different countries Employers 200+ employees and 200+ skilled representatives supervised by experienced sales managers Point of Sale Covering 12000+ POS establishments directly and approximately 1000 stores indirectly Distribution Center 9 branches with office space and warehouses networked to a head office, and We have a total of 10000m² refrigerated warehouses Sharif Ras",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:13": {
-    "name": "SAMA AL-YAQOUT FACTORY",
-    "country": "Iraq",
-    "website": "https://alfayhaaco.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "3/4 واژه‌ی نام (sama, al, factory) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "marketing@alfayhaaco.com",
-        "kind": "mailto",
-        "source_url": "https://alfayhaaco.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "marketing@alfayhaaco.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://alfayhaaco.com",
-    "phones": [
-      {
-        "e164": "+9647712679841",
-        "display": "+964 771 267 9841",
-        "kind": "tel",
-        "source_url": "https://alfayhaaco.com/contact-us/"
-      },
-      {
-        "e164": "+9647812679841",
-        "display": "+964 781 267 9841",
-        "kind": "tel",
-        "source_url": "https://alfayhaaco.com/contact-us/"
-      }
-    ],
-    "phone_best": "+964 771 267 9841",
-    "phone_source_url": "https://alfayhaaco.com/contact-us/",
-    "pages_checked": [
-      "https://alfayhaaco.com",
-      "https://alfayhaaco.com/contact-us/"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "media@alfayhaaco.com نقش غیرتجاری است (کنار گذاشته شد)"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Sama Alfayhaa – Factory. . Sama Alfayhaa – Factory Skip to content Skip to footer Close facebook-1 linkedin instagram Have Questions? marketing@alfayhaaco.com Contact us! Our Achievements 10+ Years of experience 170+ Registered Products Class A Ministry of Health in Iraq 15M Over 15 Million Dollar Invested in R&D Since 2012 Trusted Iraqi Manufacturer of Quality Medicines Discover us Our Achievements 10+ Years of experience 170+ Registered Products Class A Ministry of Health in Iraq 15M Over 15 Million Dollar Invested in R",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:14": {
-    "name": "SHARYAR COMPANY",
-    "country": "Iraq",
-    "website": "https://sharyar.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (sharyar) در عنوان/متن/دامنه",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [
-      {
-        "e164": "+92523541336",
-        "display": "+92 52 3541336",
-        "kind": "text",
-        "source_url": "https://sharyar.com"
-      },
-      {
-        "e164": "+923466104003",
-        "display": "+92 346 6104003",
-        "kind": "text",
-        "source_url": "https://sharyar.com"
-      }
-    ],
-    "phone_best": "+92 52 3541336",
-    "phone_source_url": "https://sharyar.com",
-    "pages_checked": [
-      "https://sharyar.com",
-      "https://sharyar.com/contact/",
-      "https://sharyar.com/contact/",
-      "https://sharyar.com/contact/"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Home - Sharyar Enterprises. . Home - Sharyar Enterprises Skip to content World-Class Quality & Service Apparel Manufacturers since 1977 lets grow together with longterm vision and goals. contact / 01 Products Quality with Premium Service Knitted Capacity: 4500 V Neck jerseys per day Woven Capacity: 3000 coveralls per week Gloves Capacity: 50,000 pairs of mechanical/working gloves per month Sporting Goods Capacity: Depends on specific product design and artwork Products / 03 About Us Professional Apparel Factory Sharyar Enter",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:15": {
-    "name": "ZEST FLAVORS",
-    "country": "Iraq",
-    "website": "https://zest-flavors.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (zest, flavors) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@zest-flavors.com",
-        "kind": "mailto",
-        "source_url": "https://zest-flavors.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      },
-      {
-        "email": "bhakim@zest-flavors.com",
-        "kind": "text",
-        "source_url": "https://zest-flavors.com/contact-us-en",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@zest-flavors.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://zest-flavors.com",
-    "phones": [
-      {
-        "e164": "+902129510666",
-        "display": "+90 212 951 06 66",
-        "kind": "text",
-        "source_url": "https://zest-flavors.com/contact-us-en"
-      },
-      {
-        "e164": "+905444305732",
-        "display": "+90 544 430 57 32",
-        "kind": "text",
-        "source_url": "https://zest-flavors.com/contact-us-en"
-      }
-    ],
-    "phone_best": "+90 212 951 06 66",
-    "phone_source_url": "https://zest-flavors.com/contact-us-en",
-    "pages_checked": [
-      "https://zest-flavors.com",
-      "https://zest-flavors.com/contact-us-en"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Seasoning Solutions – Zest Flavors | Middle Eastern Flavor Experts. Zest Flavors is a Middle Eastern pioneer in providing high-quality, custom seasoning solutions for snacks, meats, soups, and more. Discover our innovative approach and commitment to quality. . Seasoning Solutions – Zest Flavors | Middle Eastern Flavor Experts Zest Flavors Zest is considered a Middle Eastern pioneer in supplying savory flavors and seasonings. We emphasize our policy of providing high-quality products, Competitive prices, and delivering personalized customer care. Our Mission and Values are at the heart of everything we do. About US Zest Activities We offer a complete range of solutions for a wide range of app",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:16": {
-    "name": "ZOM COMPANY",
-    "country": "Iraq",
-    "website": "https://zom.krd",
-    "website_status": "verified_name_match",
-    "website_evidence": "1/1 واژه‌ی نام (zom) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@zom.krd",
-        "kind": "mailto",
-        "source_url": "https://zom.krd/contact",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@zom.krd",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://zom.krd/contact",
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [
-      "https://zom.krd",
-      "https://zom.krd/contact",
-      "https://zom.krd/contact-us",
-      "https://zom.krd/contactus",
-      "https://zom.krd/contact.html",
-      "https://zom.krd/contact-us.html",
-      "https://zom.krd/pages/contact",
-      "https://zom.krd/contacts",
-      "https://zom.krd/contacts/",
-      "https://zom.krd/kontakty",
-      "https://zom.krd/kontakt",
-      "https://zom.krd/kontakte",
-      "https://zom.krd/about/contacts",
-      "https://zom.krd/ru/contacts",
-      "https://zom.krd/en/contacts",
-      "https://zom.krd/lianxiwomen"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "با رندر مرورگر (Playwright) بررسی شد"
-    ],
-    "needs_render": false,
-    "website_match": "medium",
-    "site_blurb": "Zom Company - 100% Local, 100% Natural. Zom, Taste of Nature, Organic Dairy Products, Made in the heart of Kurdistan Region, Iraq. Zom Company - 100% Local, 100% Natural",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:17": {
-    "name": "AL MASAR AL JADEED",
-    "country": "Iraq",
-    "website": "https://msjd-iraq.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "4/4 واژه‌ی نام (al, masar, al, jadeed) در عنوان/متن/دامنه",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [
-      {
-        "e164": "+9647502344000",
-        "display": "+964 750 234 4000",
-        "kind": "whatsapp",
-        "source_url": "https://msjd-iraq.com"
-      },
-      {
-        "e164": "+9647502344004",
-        "display": "+964 750 234 4004",
-        "kind": "text",
-        "source_url": "https://msjd-iraq.com"
-      },
-      {
-        "e164": "+9647505929300",
-        "display": "+964 750 592 9300",
-        "kind": "text",
-        "source_url": "https://msjd-iraq.com"
-      },
-      {
-        "e164": "+9647762534222",
-        "display": "+964 776 253 4222",
-        "kind": "text",
-        "source_url": "https://msjd-iraq.com"
-      }
-    ],
-    "phone_best": "+964 750 234 4000",
-    "phone_source_url": "https://msjd-iraq.com",
-    "pages_checked": [
-      "https://msjd-iraq.com",
-      "https://msjd-iraq.com/contact-us/",
-      "https://msjd-iraq.com/contact-us/",
-      "https://msjd-iraq.com/contact-us",
-      "https://msjd-iraq.com/contact-us/"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Home - Al Masar Al Jadeed | msjd-iraq.com. . Home - Al Masar Al Jadeed | msjd-iraq.com Skip to content Menu Providing Iraq & Kurdistan with the highest quality Beef products Sea Food Products Bakery Products ​ Fries & Appetizer Al Masar Al Jadeed Food Supply is an independent General trading company located in Kurdistan, north of Iraq. With long experience in the international seafood & beef business we know the importance of supplying our customers the right quality to the right price at the right time. We have a strict focus on quality o",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:18": {
-    "name": "AL-RAI DAIRY FACTORY",
-    "country": "Iraq",
-    "website": "http://www.alrayandairies.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "3/4 واژه‌ی نام (al, dairy, factory) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@alrayandairies.com",
-        "kind": "mailto",
-        "source_url": "http://www.alrayandairies.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      },
-      {
-        "email": "demo@gmail.com",
-        "kind": "mailto",
-        "source_url": "http://www.alrayandairies.com/contact.html",
-        "domain_status": "mx",
-        "same_domain": false,
-        "free_mail": true
-      },
-      {
-        "email": "info@alrayandaires.com",
-        "kind": "text",
-        "source_url": "http://www.alrayandairies.com/contact.html",
-        "domain_status": "dead",
-        "same_domain": false,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@alrayandairies.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "http://www.alrayandairies.com",
-    "phones": [
-      {
-        "e164": "+9647821119299",
-        "display": "+964 782 111 9299",
-        "kind": "tel",
-        "source_url": "http://www.alrayandairies.com/contact.html"
-      },
-      {
-        "e164": "+9647835950069",
-        "display": "+964 783 595 0069",
-        "kind": "text",
-        "source_url": "http://www.alrayandairies.com/contact.html"
-      },
-      {
-        "e164": "+9647800099885",
-        "display": "+964 780 009 9885",
-        "kind": "text",
-        "source_url": "http://www.alrayandairies.com/contact.html"
-      }
-    ],
-    "phone_best": "+964 782 111 9299",
-    "phone_source_url": "http://www.alrayandairies.com/contact.html",
-    "pages_checked": [
-      "http://www.alrayandairies.com",
-      "http://www.alrayandairies.com/contact.html"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Al-Rayan dairies. . Al-Rayan dairies Al-Rayan Dairies Find out more ! Since 2014 YOUR TRUST HAS MADE OUR JOURNEY POSSIBLE Committed to quality Established in 2014 in the Governorate of Basra, Iraq, we began our journey at Al-Rayan Dairies inspired with a deep commitment to bring high quality dairy products that are locally produced into the Iraqi market, all at incredibly competitive prices. read more Why choose Al-Rayan Dairies ? At Al-Rayan Dairies we strive everyday to bring the highest quality dairy products to",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:19": {
-    "name": "AL-RAZI UNITED COMPANY",
-    "country": "Iraq",
-    "website": "https://alrazigroup.net",
-    "website_status": "verified_name_match",
-    "website_evidence": "2/3 واژه‌ی نام (al, razi) در عنوان/متن/دامنه",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [
-      "https://alrazigroup.net",
-      "https://alrazigroup.net/contacts",
-      "https://alrazigroup.net/contacts"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "با رندر مرورگر (Playwright) بررسی شد"
-    ],
-    "needs_render": false,
-    "website_match": "medium",
-    "site_blurb": "Al-Razi Group - Wholesale Distributor & Multi-Agency Company | Al-Razo Group. Al-Razi Group is a trusted wholesale distributor and multi-agency company, setting the benchmark for high-quality products and exceptional service. Explore our extensive range of offerings today.. Al-Razi Group - Wholesale Distributor & Multi-Agency Company | Al-Razo Group Welcome to Al-Razi Group Wholesale Distributor and Multi-Agency Company First of all About Us Al-Razi Group is a leading wholesale distributor and multi-agency company, specializing in high-quality products. With a strong commitment to excellence, we strive to set the benchmark for quality and reliability in the industry. Our extensive range of p",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:20": {
-    "name": "AL-ZAREEF FOOD INDUSTRIES FACTORY",
-    "country": "Iraq",
-    "website": "https://yafafoods.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "2/3 واژه‌ی نام (al, factory) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@yafafoods.com",
-        "kind": "cfemail",
-        "source_url": "https://yafafoods.com/contact.html",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@yafafoods.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://yafafoods.com/contact.html",
-    "phones": [
-      {
-        "e164": "+9647800311110",
-        "display": "+964 780 031 1110",
-        "kind": "text",
-        "source_url": "https://yafafoods.com/contact.html"
-      },
-      {
-        "e164": "+9647800070011",
-        "display": "+964 780 007 0011",
-        "kind": "text",
-        "source_url": "https://yafafoods.com/contact.html"
-      }
-    ],
-    "phone_best": "+964 780 031 1110",
-    "phone_source_url": "https://yafafoods.com/contact.html",
-    "pages_checked": [
-      "https://yafafoods.com",
-      "https://yafafoods.com/contact.html"
-    ],
-    "notes": [
-      "https://www.alzreef-co.com → نام شرکت با صفحه نمی‌خواند (1/3 واژه‌ی نام (al) در عنوان/متن/دامنه)",
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "medium",
-    "site_blurb": ":: Yafa Foods ::. . :: Yafa Foods :: Home About Us Mission Vision Future Products Services Gallery Gallery Photo Gallery video Contact Us عربي Natural Juice on your Taste Flavor Fruits Juice Natural Juice on your Taste Natural Juice on your Taste Natural Juice on your Taste Natural Potatoes on your Taste Welcome To Yafa Foods Company for Food Industries Was established as Ltd. Company in 1985 as one of the pioneers of Iraq Food manufacturing industry.The company is owned by Harran family a well-known family in Iraq",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:21": {
-    "name": "ALSHAHIA",
-    "country": "Iraq",
-    "website": "https://alshahia-food-iraq.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "1/1 واژه‌ی نام (alshahia) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@alshahia-food-iraq.com",
-        "kind": "cfemail",
-        "source_url": "https://alshahia-food-iraq.com/contact-us/",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@alshahia-food-iraq.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://alshahia-food-iraq.com/contact-us/",
-    "phones": [
-      {
-        "e164": "+9647507063000",
-        "display": "+964 750 706 3000",
-        "kind": "text",
-        "source_url": "https://alshahia-food-iraq.com/contact-us/"
-      },
-      {
-        "e164": "+9647508777747",
-        "display": "+964 750 877 7747",
-        "kind": "text",
-        "source_url": "https://alshahia-food-iraq.com/contact-us/"
-      }
-    ],
-    "phone_best": "+964 750 706 3000",
-    "phone_source_url": "https://alshahia-food-iraq.com/contact-us/",
-    "pages_checked": [
-      "https://alshahia-food-iraq.com",
-      "https://alshahia-food-iraq.com/contact-us/"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Alshahia Food – Factory. . Alshahia Food – Factory Loading... Skip to main content Scroll Top Bodroon Meats mouse About us mouse Alshahia Food Factory Our Exclusive Brand mouse We have more than 50 products Bodroon Legumes mouse Coffee mouse Olive mouse About Factory Alshahia Food Factory, a prestigious culinary establishment nestled in the heart of Iraqi Kurdistan, exudes an ambiance of opulence and magnificence. Throughout the years, we have solidified our position as a formidable competitor in the industry, renowned fo",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:22": {
-    "name": "Altaam Althahabi",
-    "country": "Iraq",
-    "website": "https://altaam-althahabi.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (altaam, althahabi) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@altaam-althahabi.com",
-        "kind": "mailto",
-        "source_url": "https://altaam-althahabi.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@altaam-althahabi.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://altaam-althahabi.com",
-    "phones": [
-      {
-        "e164": "+9647504464047",
-        "display": "+964 750 446 4047",
-        "kind": "text",
-        "source_url": "https://altaam-althahabi.com"
-      },
-      {
-        "e164": "+9647745030203",
-        "display": "+964 774 503 0203",
-        "kind": "text",
-        "source_url": "https://altaam-althahabi.com"
-      }
-    ],
-    "phone_best": "+964 750 446 4047",
-    "phone_source_url": "https://altaam-althahabi.com",
-    "pages_checked": [
-      "https://altaam-althahabi.com",
-      "https://altaam-althahabi.com/contact"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "با رندر مرورگر (Playwright) بررسی شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Golden wafer products | ALTAAM ALTHAHABI. Discover ALTAAM ALTHAHABI golden wafers, ice cream cones, sandwich biscuits, squares, and waffle cups made in Erbil, Iraq.. Golden wafer products | ALTAAM ALTHAHABI",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:23": {
-    "name": "CHYAW",
-    "country": "Iraq",
-    "website": "https://chyaw.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (chyaw) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@chyaw.com",
-        "kind": "text",
-        "source_url": "https://chyaw.com/n/index.html",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@chyaw.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://chyaw.com/n/index.html",
-    "phones": [
-      {
-        "e164": "+9647701009968",
-        "display": "+964 770 100 9968",
-        "kind": "text",
-        "source_url": "https://chyaw.com/n/index.html"
-      }
-    ],
-    "phone_best": "+964 770 100 9968",
-    "phone_source_url": "https://chyaw.com/n/index.html",
-    "pages_checked": [
-      "https://chyaw.com/n/index.html"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Chyaw Company. Resto. Chyaw Company × Address: Iraq – Sulaymaniyah - Industrial area 1 (+964) 07701009968 info@chyaw.com × Chyaw Company Chyaw Company is a top provider of food, dairy, ice cream, and beverages. We work with local and international partners to bring the best products to our customers. Our wide distribution network covers all Iraqi cities, reaching millions of people through our branches and agents. Fast Delivery Fresh Food 24/7 Support About Welcome to Chyaw Company Chyaw Company is one of the most ad",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:24": {
-    "name": "DAHAB KHAYRATALARD COMPANY",
-    "country": "Iraq",
-    "website": "https://www.khdaco.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "1/2 واژه‌ی نام (dahab) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@khdaco.com",
-        "kind": "text",
-        "source_url": "https://www.khdaco.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@khdaco.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://www.khdaco.com",
-    "phones": [
-      {
-        "e164": "+9647800000235",
-        "display": "+964 780 000 0235",
-        "kind": "text",
-        "source_url": "https://www.khdaco.com"
-      },
-      {
-        "e164": "+4915217267327",
-        "display": "+49 1521 7267327",
-        "kind": "text",
-        "source_url": "https://www.khdaco.com/contact.html"
-      }
-    ],
-    "phone_best": "+964 780 000 0235",
-    "phone_source_url": "https://www.khdaco.com",
-    "pages_checked": [
-      "https://www.khdaco.com",
-      "https://www.khdaco.com/contact.html"
-    ],
-    "notes": [
-      "https://www.crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "https://khyratalard.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "medium",
-    "site_blurb": "KHAIRAT ALDAHAB ALBASRA Co. | شركة خيرات ذهب البصرة للمقاولات ونقل المشتقات النفطية. . KHAIRAT ALDAHAB ALBASRA Co. | شركة خيرات ذهب البصرة للمقاولات ونقل المشتقات النفطية KHAIRAT ALDAHAB ALBASRA COMPANY KHAIRAT ALDAHAB ALBASRA COMPANY has a history of construction company working in Iraq and have been doing civil, mechanical, piping, pipe line and E&I site works for quite some times in the engineering sector, focusing mainly on oil & gas, power generation & distribution, water treatment and distribution, chemical & petro-chemical and infrastructure. Profile Company KHAIRAT ALDAHAB",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:25": {
-    "name": "ICE KING",
-    "country": "Iraq",
-    "website": "https://icekingltd.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "2/2 واژه‌ی نام (ice, king) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@icekingltd.com",
-        "kind": "cfemail",
-        "source_url": "https://icekingltd.com/contact-us/",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      },
-      {
-        "email": "sales@icekingltd.com",
-        "kind": "cfemail",
-        "source_url": "https://icekingltd.com/contact-us/",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@icekingltd.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://icekingltd.com/contact-us/",
-    "phones": [
-      {
-        "e164": "+9647507243331",
-        "display": "+964 750 724 3331",
-        "kind": "text",
-        "source_url": "https://icekingltd.com/contact-us/"
-      },
-      {
-        "e164": "+9647507243332",
-        "display": "+964 750 724 3332",
-        "kind": "text",
-        "source_url": "https://icekingltd.com/contact-us/"
-      }
-    ],
-    "phone_best": "+964 750 724 3331",
-    "phone_source_url": "https://icekingltd.com/contact-us/",
-    "pages_checked": [
-      "https://icekingltd.com",
-      "https://icekingltd.com/contact-us/"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Ice King – Best Ice cream factory in Iraq. . Ice King – Best Ice cream factory in Iraq Home Products Locations Gallery About us Contact Us English کوردی العربية Taste Heavens with Ice king! Best Ice Cream Factory In Iraq Swing up your mood! Who are we? Ice King has been making ice cream like no other in Iraq for over a decade. Our vision is to make the best ice cream that is on international standard using high quality and carefully selected ingredients. Our license is a special trademark from Ice King Company, granted since July 2002 acro",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:26": {
-    "name": "IRAQ GLOBAL COMPANY",
-    "country": "Iraq",
-    "website": "https://iraqglobal.net",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (iraq) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@iraqglobal.net",
-        "kind": "mailto",
-        "source_url": "https://iraqglobal.net",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@iraqglobal.net",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://iraqglobal.net",
-    "phones": [
-      {
-        "e164": "+9647880000023",
-        "display": "+964 788 000 0023",
-        "kind": "tel",
-        "source_url": "https://iraqglobal.net"
-      },
-      {
-        "e164": "+9647880000024",
-        "display": "+964 788 000 0024",
-        "kind": "tel",
-        "source_url": "https://iraqglobal.net"
-      },
-      {
-        "e164": "+9647880000025",
-        "display": "+964 788 000 0025",
-        "kind": "tel",
-        "source_url": "https://iraqglobal.net"
-      },
-      {
-        "e164": "+9647880000026",
-        "display": "+964 788 000 0026",
-        "kind": "tel",
-        "source_url": "https://iraqglobal.net"
-      }
-    ],
-    "phone_best": "+964 788 000 0023",
-    "phone_source_url": "https://iraqglobal.net",
-    "pages_checked": [
-      "https://iraqglobal.net"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "IRAQ GLOBAL - Paper. Description . IRAQ GLOBAL - Paper EXCELLENCE IN INNOVATION AND TECHNIQUES HOME AGRICULTURE WHO WE ARE IRAQ GLOBAL FOR AGRICULTURE & INDUSTRIAL INVESTMENTS Iraq global is one of the leading companies in iraq in the agricultural industry the company owns several factories in Iraq Global Industrial complex south iraq - wasit province with a total area of 690,000 sqm containing factories of ( Craft paper & white Paper, Starch & glucose, Woven Bags) also the company is building one of the biggest grain silos in ir",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:27": {
-    "name": "KARWANCHI GROUP",
-    "country": "Iraq",
-    "website": "https://karwanchigroup.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (karwanchi) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@karwanchigroup.com",
-        "kind": "mailto",
-        "source_url": "https://karwanchigroup.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@karwanchigroup.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://karwanchigroup.com",
-    "phones": [
-      {
-        "e164": "+9647708599559",
-        "display": "+964 770 859 9559",
-        "kind": "tel",
-        "source_url": "https://karwanchigroup.com"
-      },
-      {
-        "e164": "+9647503170999",
-        "display": "+964 750 317 0999",
-        "kind": "tel",
-        "source_url": "https://karwanchigroup.com"
-      }
-    ],
-    "phone_best": "+964 770 859 9559",
-    "phone_source_url": "https://karwanchigroup.com",
-    "pages_checked": [
-      "https://karwanchigroup.com",
-      "https://karwanchigroup.com/contact",
-      "https://karwanchigroup.com/contact.php"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Karwanchi Group | Leading Iraqi Beverage Manufacturer & Distributor. Discover Karwanchi Group’s soft drinks, bottled water, juices and energy drinks—made in Iraq since 1940 and distributed nationwide.. Karwanchi Group | Leading Iraqi Beverage Manufacturer & Distributor English Arabic Karwanchi offers a wide range of beverages, including carbonated soft drinks, energy drinks, non-alcoholic beverages, juices and nectars, and bottled water. Read More Version Malt Version Cola Version Red Strong Version Rich Previous Next Malt Cola Red Strong Rich Previous Next Made in Iraq About Us Key Insights & Performance Stats Customer Satisfaction 0% Total Products 0+ Team members 0+ Retail Stores 0+ Our B",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:28": {
-    "name": "KHAYRAT SHARAZUR COMPANY",
-    "country": "Iraq",
-    "website": "https://khayratsharazor.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "1/2 واژه‌ی نام (khayrat) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@khayratsharazor.com",
-        "kind": "cfemail",
-        "source_url": "https://khayratsharazor.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@khayratsharazor.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://khayratsharazor.com",
-    "phones": [
-      {
-        "e164": "+9647701527188",
-        "display": "+964 770 152 7188",
-        "kind": "tel",
-        "source_url": "https://khayratsharazor.com"
-      },
-      {
-        "e164": "+9647507018430",
-        "display": "+964 750 701 8430",
-        "kind": "tel",
-        "source_url": "https://khayratsharazor.com"
-      }
-    ],
-    "phone_best": "+964 770 152 7188",
-    "phone_source_url": "https://khayratsharazor.com",
-    "pages_checked": [
-      "https://khayratsharazor.com"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "medium",
-    "site_blurb": "Khayrat Sharazor - Premium Frozen Meat Supply. . Khayrat Sharazor - Premium Frozen Meat Supply Premium Quality Khayrat Sharazor is a leading influence in frozen meat supply services Delivering excellence in frozen meat products across Kurdistan Region and Iraq with unmatched quality and reliability. Get In Touch Our Main Principles 1 Quality Excellence Supporting businesses in their transition to sustainable practices through innovative cold storage solutions and premium frozen meat products. 2 Innovation Leadership Enhancing innovation throug",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:29": {
-    "name": "MANIZAN",
-    "country": "Iraq",
-    "website": "https://www.manizan.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (manizan) در عنوان/متن/دامنه",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [
-      "https://www.manizan.com",
-      "https://www.manizan.com/fa/Contact/0/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%85%D8%A7"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "با رندر مرورگر (Playwright) بررسی شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "خانه | لبنیات مانیزان. شرکت مانیزان تولید کننده لبنیات. خانه | لبنیات مانیزان خانه فرآورده های لبنی بهار دالاهو شرکت مانیزان تولید کننده لبنیات English العربی کوردی دستور غذا با فرآورده های شیر ... آگهی پذیره نویسی افزایش سرمایه شرکت فرآورده های لبنی بهار دالاهو دومین مجمع عمومی عادی سالیانه - 1405 به پیج اینستا گرام ما س ر بزنید instagram.com/manizan_official/ پنیر خامه ای شیر بدون لاکتوز پنیر سفید UF ماست سنتی شیر قهوه خامه عسلی ویتاماست(ماست پروبیوتیک) Toggle navigation امور سهام گزارشات مالی گزارش صورت‌های مالی حسابرسی شده - سال منتهی به 1404 گزا",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:30": {
-    "name": "MARAI AL RAFEDIAN",
-    "country": "Iraq",
-    "website": "https://maraialrafidain.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "3/3 واژه‌ی نام (marai, al, rafedian) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@maraialrafidain.com",
-        "kind": "cfemail",
-        "source_url": "https://maraialrafidain.com/ar",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      },
-      {
-        "email": "sales@maraialrafidain.com",
-        "kind": "cfemail",
-        "source_url": "https://maraialrafidain.com/ar",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      },
-      {
-        "email": "accounts@maraialrafidain.com",
-        "kind": "cfemail",
-        "source_url": "https://maraialrafidain.com/ar",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@maraialrafidain.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://maraialrafidain.com/ar",
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [
-      "https://maraialrafidain.com/ar"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "شركة تجارة المواد الغذائية | Marai Al Rafedian. تسعى شركة مراعي الرافدين لتجارة المواد الغذائية إلى توفير قيمة غذائية وغذائية عالية الجودة. مما يثري الحياة اليومية للمستهلكين. من خلال تركيزها المستمر على الالتزام بأعلى معايير الجودة.. شركة تجارة المواد الغذائية | Marai Al Rafedian Skip to main content لمحة عامة عن استراتيجية الشركة تسعى شركة مراعي الرافدين لتجارة المواد الغذائية إلى توفير قيمة غذائية عالية الجودة. الذي يثري الحياة اليومية للمستهلكين. من خلال تركيزها المستمر على الالتزام بأعلى معايير الجودة ، نجحت شركة مراعي الرافدين في أن تصبح الخيار المفضل للمستهلكين لتوفير منتجات متميزة تلبي جميع احتياجاتهم وتحتفظ الشركة بدورها الريادي في السوق في مختلف المنتجات الرئيسية التي تقدمها لمصلحة",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:31": {
-    "name": "MEGAL COMPANY",
-    "country": "Iraq",
-    "website": "https://megal-company.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (megal) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@megal-company.com",
-        "kind": "mailto",
-        "source_url": "https://megal-company.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@megal-company.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://megal-company.com",
-    "phones": [
-      {
-        "e164": "+9647504001800",
-        "display": "+964 750 400 1800",
-        "kind": "tel",
-        "source_url": "https://megal-company.com"
-      }
-    ],
-    "phone_best": "+964 750 400 1800",
-    "phone_source_url": "https://megal-company.com",
-    "pages_checked": [
-      "https://megal-company.com"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "با رندر مرورگر (Playwright) بررسی شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Megal. Built on approximately 1,000,000 square meters of land. word-class, private enterprise our modern facility is a new strategic and modern project planned with modern standards.. Megal",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:32": {
-    "name": "NANO GUM MEHR",
-    "country": "Iraq",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [
-      "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "https://event-gulfoodmanufacturing.expoplatform.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)"
-    ],
-    "needs_render": false,
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:33": {
-    "name": "Nawhal's Sauces",
-    "country": "Iraq",
-    "website": "https://nawhals.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (nawhal, sauces) در عنوان/متن/دامنه",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [
-      "https://nawhals.com",
-      "https://nawhals.com/pages/contact",
-      "https://nawhals.com/pages/contact"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "با رندر مرورگر (Playwright) بررسی شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Nawhal's sauces – Nawhal's Sauces. Les sauces Nawhal's, c'est avant tout une histoire de cœur, une rencontre entre deux âmes sœurs unies et réunies par l'amour des nouvelles saveurs.. Nawhal's sauces – Nawhal's Sauces Skip to content Facebook Instagram TikTok LinkedIn English English Français Nederlands Deutsch Español English English Français Nederlands Deutsch Español Login Cart 0 Recently viewed Cart Your cart is currently empty. Not sure where to start? Try these collections: OUR RECIPES 🚚 Only €30,00 more for free shipping! Shipping Estimate shipping rates --- Afghanistan Åland Islands Albania Algeria Andorra Angola Anguilla Antigua & Barbuda Argentina Armenia Aruba Asce",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:34": {
-    "name": "RASAN COMPANY",
-    "country": "Iraq",
-    "website": "https://www.rasan.iq",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (rasan) در عنوان/متن/دامنه",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [
-      {
-        "e164": "+9647701234567",
-        "display": "+964 770 123 4567",
-        "kind": "text",
-        "source_url": "https://www.rasan.iq/contact-us"
-      }
-    ],
-    "phone_best": "+964 770 123 4567",
-    "phone_source_url": "https://www.rasan.iq/contact-us",
-    "pages_checked": [
-      "https://www.rasan.iq",
-      "https://www.rasan.iq/contact-us"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Home. The brand is dedicated to preserving and promoting local produce from the heart of Halabja, nestled within the thriving nature of the Sharazur region. It offers a diverse range of dairy products, including various types of yogurt, cheese, ayran, and more, all crafted with a commitment to the highest hygiene standards, ensuring exceptional quality in taste, consistency and nutritional value of every product.. Home From our local farms to your table. Our products yoghurt CHEESE AYRAN & DOOGH OLIVE OIL ⁠Labneh & Cream 1 / 5 yoghurt Our yogurt is the foundation of our dairy craft, a symbol of health and culinary versatility. We use only the purest local milk, honoring traditional methods w",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:35": {
-    "name": "ROTAŞ",
-    "country": "Iraq",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [
-      "https://jobs.nabu-analytics.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "https://www.tiktok.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
-    ],
-    "needs_render": false,
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:36": {
-    "name": "TANAHI GROUP",
-    "country": "Iraq",
-    "website": "https://tanahigroup.co",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (tanahi) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "tanahigroup@gmail.com",
-        "kind": "text",
-        "source_url": "https://tanahigroup.co",
-        "domain_status": "mx",
-        "same_domain": false,
-        "free_mail": true
-      }
-    ],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [
-      {
-        "e164": "+9647504373709",
-        "display": "+964 750 437 3709",
-        "kind": "whatsapp",
-        "source_url": "https://tanahigroup.co"
-      }
-    ],
-    "phone_best": "+964 750 437 3709",
-    "phone_source_url": "https://tanahigroup.co",
-    "pages_checked": [
-      "https://tanahigroup.co",
-      "https://tanahigroup.co/contact.php"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "tanahigroup@gmail.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Tanahi Group. . Tanahi Group Your browser does not support the video tag. تأسست مجموعة تناهي في عام 2004 كشركة متخصصة في توريد حديد التسليح. على مر السنين، توسعنا وتطورنا لنصبح من أكثر الأسماء الموثوقة في قطاع التجارة في جميع أنحاء العراق. اقرأ المزيد من نحن تأسست مجموعة تناهي في عام 2004 كشركة متخصصة في توريد حديد التسليح. على مر السنين، توسعنا وتطورنا لنصبح من أكثر الأسماء الموثوقة في قطاع التجارة في جميع أنحاء العراق. مهمتنا تقديم منتجات عالية الجودة تدعم البناء والصناعة والحياة اليومية، والعمل كشريك موثوق ب",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:37": {
-    "name": "YARAN COMPANY",
-    "country": "Iraq",
-    "website": "https://yaranco.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "1/1 واژه‌ی نام (yaran) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "operation@yaranco.com",
-        "kind": "mailto",
-        "source_url": "https://yaranco.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "operation@yaranco.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://yaranco.com",
-    "phones": [
-      {
-        "e164": "+9647866205681",
-        "display": "+964 786 620 5681",
-        "kind": "tel",
-        "source_url": "https://yaranco.com"
-      },
-      {
-        "e164": "+971505408226",
-        "display": "+971 50 540 8226",
-        "kind": "tel",
-        "source_url": "https://yaranco.com"
-      }
-    ],
-    "phone_best": "+964 786 620 5681",
-    "phone_source_url": "https://yaranco.com",
-    "pages_checked": [
-      "https://yaranco.com",
-      "https://yaranco.com/contact",
-      "https://yaranco.com/contact-us",
-      "https://yaranco.com/contactus",
-      "https://yaranco.com/pages/contact",
-      "https://yaranco.com/contacts",
-      "https://yaranco.com/contacts/",
-      "https://yaranco.com/kontakty",
-      "https://yaranco.com/kontakt",
-      "https://yaranco.com/kontakte",
-      "https://yaranco.com/about/contacts",
-      "https://yaranco.com/ru/contacts",
-      "https://yaranco.com/en/contacts",
-      "https://yaranco.com/lianxiwomen"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "با رندر مرورگر (Playwright) بررسی شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "YARANCO | Construction & General Trading in Erbil, Iraq. Building Excellence with Systematic Precision. YARANCO delivers construction, engineering and general trading across Kurdistan and Iraq since 2005.. YARANCO | Construction & General Trading in Erbil, Iraq Edit with",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:38": {
-    "name": "AL AWRAD GROUP",
-    "country": "Iraq",
-    "website": "https://nadaalawrad.iq",
-    "website_status": "verified_name_match",
-    "website_evidence": "2/2 واژه‌ی نام (al, awrad) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@nadaalawrad.iq",
-        "kind": "cfemail",
-        "source_url": "https://nadaalawrad.iq",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@nadaalawrad.iq",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://nadaalawrad.iq",
-    "phones": [
-      {
-        "e164": "+9647838603001",
-        "display": "+964 783 860 3001",
-        "kind": "text",
-        "source_url": "https://nadaalawrad.iq"
-      }
-    ],
-    "phone_best": "+964 783 860 3001",
-    "phone_source_url": "https://nadaalawrad.iq",
-    "pages_checked": [
-      "https://nadaalawrad.iq"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Nada Al-Awrad. . Nada Al-Awrad Skip to content Menu Nada AL-Awrad General Trading and Agricultural Supplies Co, Ltd. Our Vission We aim to be leaders in delivering comprehensive agricultural solutions in Iraq, dedicated to providing top-quality products that address market demands while fostering sustainable growth in the agricultural sector. Our commitment extends to enhancing productivity, supporting innovation, and contributing to the long-term development of the industry. Our Mission Improving agricultural p",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:39": {
-    "name": "AL MAFAKHER COMPANY",
-    "country": "Iraq",
-    "website": "https://mafaco-iraq.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "2/2 واژه‌ی نام (al, mafakher) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@almafakher.iq",
-        "kind": "text",
-        "source_url": "https://mafaco-iraq.com",
-        "domain_status": "dead",
-        "same_domain": false,
-        "free_mail": false
-      }
-    ],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [
-      {
-        "e164": "+9647874487000",
-        "display": "+964 787 448 7000",
-        "kind": "tel",
-        "source_url": "https://mafaco-iraq.com/contact"
-      },
-      {
-        "e164": "+9647855599800",
-        "display": "+964 785 559 9800",
-        "kind": "tel",
-        "source_url": "https://mafaco-iraq.com/contact"
-      },
-      {
-        "e164": "+9647825400700",
-        "display": "+964 782 540 0700",
-        "kind": "whatsapp",
-        "source_url": "https://mafaco-iraq.com"
-      },
-      {
-        "e164": "+9647855599801",
-        "display": "+964 785 559 9801",
-        "kind": "text",
-        "source_url": "https://mafaco-iraq.com"
-      },
-      {
-        "e164": "+9647718111184",
-        "display": "+964 771 811 1184",
-        "kind": "text",
-        "source_url": "https://mafaco-iraq.com"
-      }
-    ],
-    "phone_best": "+964 787 448 7000",
-    "phone_source_url": "https://mafaco-iraq.com/contact",
-    "pages_checked": [
-      "https://mafaco-iraq.com",
-      "https://mafaco-iraq.com/contact"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "شركة المفاخر لخدمات الإعاشة والتجهيزات الغذائية — شركة المفاخر. شركة عراقية متخصصة في خدمات الإعاشة والتجهيزات الغذائية واستيراد وتوزيع المأكولات البحرية المجمدة عالية الجودة للمطاعم والفنادق والأسواق والعملاء في العراق.. شركة المفاخر لخدمات الإعاشة والتجهيزات الغذائية — شركة المفاخر تخطَّ إلى المحتوى شركة المفاخر لخدمات الإعاشة والتجهيزات الغذائية جودة البحر… تصل إليكم بثقة نوفر تشكيلة مختارة من المأكولات البحرية والتجهيزات الغذائية وفق معايير عالية من الجودة، وبحلول توريد موثوقة تلبي احتياجات المطاعم والفنادق والأسواق والعملاء في العراق. استعرض منتجاتنا اطلب عرض سعر تواصل معنا عبر واتساب من نحن شركة المفاخر لخدمات الإعاشة والتجهيزات الغذائية شركة المفاخر لخدمات الإعاشة والتجهيزات الغذائية ",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:40": {
-    "name": "AL MASAR AL JADED",
-    "country": "Iraq",
-    "website": "https://msjd-iraq.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "3/4 واژه‌ی نام (al, masar, al) در عنوان/متن/دامنه",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [
-      {
-        "e164": "+9647502344000",
-        "display": "+964 750 234 4000",
-        "kind": "whatsapp",
-        "source_url": "https://msjd-iraq.com"
-      },
-      {
-        "e164": "+9647502344004",
-        "display": "+964 750 234 4004",
-        "kind": "text",
-        "source_url": "https://msjd-iraq.com"
-      },
-      {
-        "e164": "+9647505929300",
-        "display": "+964 750 592 9300",
-        "kind": "text",
-        "source_url": "https://msjd-iraq.com"
-      },
-      {
-        "e164": "+9647762534222",
-        "display": "+964 776 253 4222",
-        "kind": "text",
-        "source_url": "https://msjd-iraq.com"
-      }
-    ],
-    "phone_best": "+964 750 234 4000",
-    "phone_source_url": "https://msjd-iraq.com",
-    "pages_checked": [
-      "https://msjd-iraq.com",
-      "https://msjd-iraq.com/contact-us/",
-      "https://msjd-iraq.com/contact-us/",
-      "https://msjd-iraq.com/contact-us",
-      "https://msjd-iraq.com/contact-us/"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Home - Al Masar Al Jadeed | msjd-iraq.com. . Home - Al Masar Al Jadeed | msjd-iraq.com Skip to content Menu Providing Iraq & Kurdistan with the highest quality Beef products Sea Food Products Bakery Products ​ Fries & Appetizer Al Masar Al Jadeed Food Supply is an independent General trading company located in Kurdistan, north of Iraq. With long experience in the international seafood & beef business we know the importance of supplying our customers the right quality to the right price at the right time. We have a strict focus on quality o",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:41": {
-    "name": "AL-BAWABA ALMASLA GENERAL TRADING LTD.",
-    "country": "Iraq",
-    "website": "https://bawaba-almajd.com.iq",
-    "website_status": "verified_name_match",
-    "website_evidence": "2/3 واژه‌ی نام (al, bawaba) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@bawaba-almajd.com.iq",
-        "kind": "cfemail",
-        "source_url": "https://bawaba-almajd.com.iq",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@bawaba-almajd.com.iq",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://bawaba-almajd.com.iq",
-    "phones": [
-      {
-        "e164": "+9647811503807",
-        "display": "+964 781 150 3807",
-        "kind": "text",
-        "source_url": "https://bawaba-almajd.com.iq"
-      }
-    ],
-    "phone_best": "+964 781 150 3807",
-    "phone_source_url": "https://bawaba-almajd.com.iq",
-    "pages_checked": [
-      "https://bawaba-almajd.com.iq"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "medium",
-    "site_blurb": "Bawaba Almajd. . Bawaba Almajd التجاوز إلى المحتوى شركة بوابة المجد للتجارة العامة جسر التوريد بين العالم والعراق في استيراد وتوزيع الملابس والأحذية والحقائب من نحن تواصل معنا من نحن ؟ بوابة المجد هي شركة عراقية رائدة في مجال التجارة العامة، تأسست لتكون بوابة موثوقة نحو التميز والجودة. نختص باستيراد وتوزيع الملابس بجميع أنواعها، من الكاجوال إلى الرسمية، بالإضافة إلى الأحذية والحقائب من مناشئ عالمية متنوعة، حرصًا منا على تلبية احتياجات السوق المحلي بذوق عصري وجودة عالية. نحن نسعى دائمًا إلى تقديم منتجات تجمع بين",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:42": {
-    "name": "DAHAB KHYRATALARD COMPANY",
-    "country": "Iraq",
-    "website": "https://www.khdaco.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "1/2 واژه‌ی نام (dahab) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@khdaco.com",
-        "kind": "text",
-        "source_url": "https://www.khdaco.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@khdaco.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://www.khdaco.com",
-    "phones": [
-      {
-        "e164": "+9647800000235",
-        "display": "+964 780 000 0235",
-        "kind": "text",
-        "source_url": "https://www.khdaco.com"
-      },
-      {
-        "e164": "+4915217267327",
-        "display": "+49 1521 7267327",
-        "kind": "text",
-        "source_url": "https://www.khdaco.com/contact.html"
-      }
-    ],
-    "phone_best": "+964 780 000 0235",
-    "phone_source_url": "https://www.khdaco.com",
-    "pages_checked": [
-      "https://www.khdaco.com",
-      "https://www.khdaco.com/contact.html"
-    ],
-    "notes": [
-      "https://khyratalard.com → نام شرکت با صفحه نمی‌خواند (1/2 واژه‌ی نام (khyratalard) در عنوان/متن/دامنه)",
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "medium",
-    "site_blurb": "KHAIRAT ALDAHAB ALBASRA Co. | شركة خيرات ذهب البصرة للمقاولات ونقل المشتقات النفطية. . KHAIRAT ALDAHAB ALBASRA Co. | شركة خيرات ذهب البصرة للمقاولات ونقل المشتقات النفطية KHAIRAT ALDAHAB ALBASRA COMPANY KHAIRAT ALDAHAB ALBASRA COMPANY has a history of construction company working in Iraq and have been doing civil, mechanical, piping, pipe line and E&I site works for quite some times in the engineering sector, focusing mainly on oil & gas, power generation & distribution, water treatment and distribution, chemical & petro-chemical and infrastructure. Profile Company KHAIRAT ALDAHAB",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:43": {
-    "name": "DAIRY BLEND COMPANY",
-    "country": "Iraq",
-    "website": "http://www.alrayandairies.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "1/2 واژه‌ی نام (dairy) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@alrayandairies.com",
-        "kind": "mailto",
-        "source_url": "http://www.alrayandairies.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      },
-      {
-        "email": "demo@gmail.com",
-        "kind": "mailto",
-        "source_url": "http://www.alrayandairies.com/contact.html",
-        "domain_status": "mx",
-        "same_domain": false,
-        "free_mail": true
-      },
-      {
-        "email": "info@alrayandaires.com",
-        "kind": "text",
-        "source_url": "http://www.alrayandairies.com/contact.html",
-        "domain_status": "dead",
-        "same_domain": false,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@alrayandairies.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "http://www.alrayandairies.com",
-    "phones": [
-      {
-        "e164": "+9647821119299",
-        "display": "+964 782 111 9299",
-        "kind": "tel",
-        "source_url": "http://www.alrayandairies.com/contact.html"
-      },
-      {
-        "e164": "+9647835950069",
-        "display": "+964 783 595 0069",
-        "kind": "text",
-        "source_url": "http://www.alrayandairies.com/contact.html"
-      },
-      {
-        "e164": "+9647800099885",
-        "display": "+964 780 009 9885",
-        "kind": "text",
-        "source_url": "http://www.alrayandairies.com/contact.html"
-      }
-    ],
-    "phone_best": "+964 782 111 9299",
-    "phone_source_url": "http://www.alrayandairies.com/contact.html",
-    "pages_checked": [
-      "http://www.alrayandairies.com",
-      "http://www.alrayandairies.com/contact.html"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "medium",
-    "site_blurb": "Al-Rayan dairies. . Al-Rayan dairies Al-Rayan Dairies Find out more ! Since 2014 YOUR TRUST HAS MADE OUR JOURNEY POSSIBLE Committed to quality Established in 2014 in the Governorate of Basra, Iraq, we began our journey at Al-Rayan Dairies inspired with a deep commitment to bring high quality dairy products that are locally produced into the Iraqi market, all at incredibly competitive prices. read more Why choose Al-Rayan Dairies ? At Al-Rayan Dairies we strive everyday to bring the highest quality dairy products to",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:44": {
-    "name": "DAR ALIYA FOOD DIST. COMPANY",
-    "country": "Iraq",
-    "website": "https://www.daraliraq.co",
-    "website_status": "verified_name_match",
-    "website_evidence": "2/3 واژه‌ی نام (dar, dist) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@daraliraq.co",
-        "kind": "cfemail",
-        "source_url": "https://www.daraliraq.co",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@daraliraq.co",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://www.daraliraq.co",
-    "phones": [
-      {
-        "e164": "+9647709199000",
-        "display": "+964 770 919 9000",
-        "kind": "tel",
-        "source_url": "https://www.daraliraq.co"
-      }
-    ],
-    "phone_best": "+964 770 919 9000",
-    "phone_source_url": "https://www.daraliraq.co",
-    "pages_checked": [
-      "https://www.daraliraq.co"
-    ],
-    "notes": [
-      "https://www.aldurra-worldco.com.iq → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "medium",
-    "site_blurb": "Dar al Iraq | دار العراق. Dar al Iraq — Leading Iraqi company for general trade, investment, marketing & supply, and manufacturing. Offices in Sulaymaniyah and Erbil.. Dar al Iraq | دار العراق Established 2024 · Sulaymaniyah & Erbil Dar al Iraq Leading Iraqi Company for General Trade & Investment We connect markets, drive investments, and build the future of commerce across Iraq and the Kurdistan Region. Our Services Get in Touch 2024 Founded 2 Offices 4+ Services 100+ Clients About Us A Leading Iraqi Company Built for Growth Dar al Iraq is a leading Iraqi company established in 2024, specializing in general commerce, investment, cosmetics, and market developm",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:45": {
-    "name": "DLBA COMPANY",
-    "country": "Iraq",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [
-      "https://international.krikri.gr → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "https://daliliraq.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "https://www.foodbevg.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
-    ],
-    "needs_render": false,
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:46": {
-    "name": "FIRST CAKE FACTORY",
-    "country": "Iraq",
-    "website": "https://first-cake.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (first, cake, factory) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "first-cake@support.com",
-        "kind": "text",
-        "source_url": "https://first-cake.com",
-        "domain_status": "mx",
-        "same_domain": false,
-        "free_mail": false
-      }
-    ],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [
-      {
-        "e164": "+9647504464047",
-        "display": "+964 750 446 4047",
-        "kind": "tel",
-        "source_url": "https://first-cake.com"
-      },
-      {
-        "e164": "+9647515000203",
-        "display": "+964 751 500 0203",
-        "kind": "tel",
-        "source_url": "https://first-cake.com"
-      },
-      {
-        "e164": "+9647745030203",
-        "display": "+964 774 503 0203",
-        "kind": "tel",
-        "source_url": "https://first-cake.com"
-      }
-    ],
-    "phone_best": "+964 750 446 4047",
-    "phone_source_url": "https://first-cake.com",
-    "pages_checked": [
-      "https://first-cake.com"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "first-cake@support.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Festava Live - Bootstrap 5 CSS Template. . Festava Live - Bootstrap 5 CSS Template First Cake Factory For producting sugar cone Jan 2022 Timar Indusrial Area Erbil/Iraq Your browser does not support the video tag. Products Your browser does not support the video tag. The products we have 1 2 3 About First Cake Factory is located just 20 minutes from the Erbil city center, First Cake Factory is the region’s home to the production and distribution of high quality, Italian standard and Maximum size of Sugar Cone. The factory is composed of",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:47": {
-    "name": "HAMOS COMPANY",
-    "country": "Iraq",
-    "website": "https://hamos.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (hamos) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@hamos.com",
-        "kind": "text",
-        "source_url": "https://hamos.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@hamos.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://hamos.com",
-    "phones": [
-      {
-        "e164": "+49885692610",
-        "display": "+49 8856 92610",
-        "kind": "text",
-        "source_url": "https://hamos.com"
-      }
-    ],
-    "phone_best": "+49 8856 92610",
-    "phone_source_url": "https://hamos.com",
-    "pages_checked": [
-      "https://hamos.com"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Hamos – Advanced Separation Technologies. . Hamos – Advanced Separation Technologies ✖ Elektrostatische Separatoren Elektrostatischer Separator Kunststoffe Elektrostatischer Separator Metalle Elektrostatische Mineralien Separatoren Elastomer Separatoren Recyclinganlagen Recyclinganlagen – Photovoltaikmodule Recyclinganlagen – Fensterprofile Recyclinganlagen – WEEE Metall-Detektoren Detektoren – Last Chance Detektoren – pneumatische Förderanlagen Detektoren – Metallseparatoren Freifall Optische Sortieranlagen Infocenter Unternehmen Aktuell",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:48": {
-    "name": "HAVRSIN COMPANY",
-    "country": "Iraq",
-    "website": null,
-    "website_status": "not_found",
-    "website_evidence": "",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [],
-    "notes": [
-      "https://wwwhaversin.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "https://hamrinco.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "https://www.noorsin.net → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "https://alhazimgroup.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
-    ],
-    "needs_render": false,
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:49": {
-    "name": "IRAQI CINEMA FACTORY",
-    "country": "Iraq",
-    "website": "https://staging.iraqicinema.net",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (iraqi, cinema, factory) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@iraqicinema.net",
-        "kind": "text",
-        "source_url": "https://staging.iraqicinema.net/Harith/en/contact-us",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@iraqicinema.net",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://staging.iraqicinema.net/Harith/en/contact-us",
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [
-      "https://staging.iraqicinema.net/Harith/en",
-      "https://staging.iraqicinema.net/Harith/en/contact-us"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
-      "job@iraqicinema.net نقش غیرتجاری است (کنار گذاشته شد)"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Iraqi Cinema. . Iraqi Cinema Book Now Choose the branch and book now Age rating Coupons The Cheesecake Factory Bakery Now in Iraqi Cinema Qareen Showing Now Watch Trailer Zain Mamnoon حدوتة Book Now Watch Trailer About Us + Branches + Screens + Provinces + Seats Introduction Iraqi Cinema is an Iraqi movies’ theatre chain headquartered in Harthiya, Baghdad. Iraqi Cinema is well known as Iraq’s most innovative exhibitor and considered as the highest-profile business in the movies’ exhibition businesses in the reg",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:50": {
-    "name": "JABAL UHOD COMPANY",
-    "country": "Iraq",
-    "website": "http://juhod.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "2/2 واژه‌ی نام (jabal, uhod) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@juhod.com",
-        "kind": "mailto",
-        "source_url": "http://juhod.com/english/home-page/",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@juhod.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "http://juhod.com/english/home-page/",
-    "phones": [
-      {
-        "e164": "+9647502452957",
-        "display": "+964 750 245 2957",
-        "kind": "text",
-        "source_url": "http://juhod.com/english/home-page/"
-      },
-      {
-        "e164": "+9647704338761",
-        "display": "+964 770 433 8761",
-        "kind": "text",
-        "source_url": "https://www.juhod.com/english/contact-us/"
-      }
-    ],
-    "phone_best": "+964 750 245 2957",
-    "phone_source_url": "http://juhod.com/english/home-page/",
-    "pages_checked": [
-      "http://juhod.com/english/home-page/",
-      "https://www.juhod.com/english/contact-us/"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "J.uhod Co | Scientific Laboratory & Industrial Equipment. . J.uhod Co | Scientific Laboratory & Industrial Equipment عربي | English | Kurdish Home Page Company Profile Products Projects Certificates News Contact Us News And Events Wile 55 Grain Moisture Meter Wile 55 grain moisture meter measures moisture levels of 16 different grains including wheat, co ... More Welcome to our new website Welcome to Welcome to Jabal Uhod Company Home Page | Company Profile | Products | Projects | Certificates | News | Contact Us Copyright © 2014 J.uhod Co - Erbil , Midd",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:51": {
-    "name": "KAVIN FARM",
-    "country": "Iraq",
-    "website": "https://kavin.ltd",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (kavin, farm) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@kavin.ltd",
-        "kind": "text",
-        "source_url": "https://kavin.ltd",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@kavin.ltd",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://kavin.ltd",
-    "phones": [
-      {
-        "e164": "+9647504007775",
-        "display": "+964 750 400 7775",
-        "kind": "text",
-        "source_url": "https://kavin.ltd"
-      },
-      {
-        "e164": "+9647504007776",
-        "display": "+964 750 400 7776",
-        "kind": "text",
-        "source_url": "https://kavin.ltd"
-      }
-    ],
-    "phone_best": "+964 750 400 7775",
-    "phone_source_url": "https://kavin.ltd",
-    "pages_checked": [
-      "https://kavin.ltd",
-      "https://kavin.ltd/contact/"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Kavin. . Kavin Skip to content Leading the Digital Transformation in Dairy & Agriculture Explore Our Projects Who we are Each bottle of milk, each spoon of yogurt, and every slice of cheese is a reflection of our deep commitment to nature, health, and quality. Kavin Ltd is a leading agribusiness company based in the Kurdistan Region of Iraq, specializing in dairy and agricultural production. The company operates two major projects in Duhok: Kavin Farm and Kavin Greenhouse, both designed to integrate mode",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:52": {
-    "name": "MARAI AL RAFIDAIN COMPANY",
-    "country": "Iraq",
-    "website": "https://maraialrafidain.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (marai, al, rafidain) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@maraialrafidain.com",
-        "kind": "cfemail",
-        "source_url": "https://maraialrafidain.com/ar",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      },
-      {
-        "email": "sales@maraialrafidain.com",
-        "kind": "cfemail",
-        "source_url": "https://maraialrafidain.com/ar",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      },
-      {
-        "email": "accounts@maraialrafidain.com",
-        "kind": "cfemail",
-        "source_url": "https://maraialrafidain.com/ar",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@maraialrafidain.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://maraialrafidain.com/ar",
-    "phones": [],
-    "phone_best": null,
-    "phone_source_url": null,
-    "pages_checked": [
-      "https://maraialrafidain.com/ar"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "شركة تجارة المواد الغذائية | Marai Al Rafedian. تسعى شركة مراعي الرافدين لتجارة المواد الغذائية إلى توفير قيمة غذائية وغذائية عالية الجودة. مما يثري الحياة اليومية للمستهلكين. من خلال تركيزها المستمر على الالتزام بأعلى معايير الجودة.. شركة تجارة المواد الغذائية | Marai Al Rafedian Skip to main content لمحة عامة عن استراتيجية الشركة تسعى شركة مراعي الرافدين لتجارة المواد الغذائية إلى توفير قيمة غذائية عالية الجودة. الذي يثري الحياة اليومية للمستهلكين. من خلال تركيزها المستمر على الالتزام بأعلى معايير الجودة ، نجحت شركة مراعي الرافدين في أن تصبح الخيار المفضل للمستهلكين لتوفير منتجات متميزة تلبي جميع احتياجاتهم وتحتفظ الشركة بدورها الريادي في السوق في مختلف المنتجات الرئيسية التي تقدمها لمصلحة",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:53": {
-    "name": "TEEBAT AL-BARAKA",
-    "country": "Iraq",
-    "website": "https://albarakaiq.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "3/3 واژه‌ی نام (teebat, al, baraka) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@albarakaiq.com",
-        "kind": "mailto",
-        "source_url": "https://albarakaiq.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      },
-      {
-        "email": "mohammed@albarakaiq.com",
-        "kind": "mailto",
-        "source_url": "https://albarakaiq.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      },
-      {
-        "email": "alaauldeen@albarakaiq.com",
-        "kind": "mailto",
-        "source_url": "https://albarakaiq.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@albarakaiq.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://albarakaiq.com",
-    "phones": [
-      {
-        "e164": "+9647704555186",
-        "display": "+964 770 455 5186",
-        "kind": "tel",
-        "source_url": "https://albarakaiq.com"
-      }
-    ],
-    "phone_best": "+964 770 455 5186",
-    "phone_source_url": "https://albarakaiq.com",
-    "pages_checked": [
-      "https://albarakaiq.com"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "TEEBAT ALBARAKA Co. | شركة طيبات البركة – للتجارة العامة والوكلات التجارية م.م for General Trading and Commercial Agencies Ltd. . TEEBAT ALBARAKA Co. | شركة طيبات البركة – للتجارة العامة والوكلات التجارية م.م for General Trading and Commercial Agencies Ltd تخطي إلى المحتوى حلول متخصصة لصناعة المشروبات اكتشف حلولنا نكهات ومواد أولية بجودة عالية اكتشف حلولنا شريكك في الصناعات الغذائية اكتشف حلولنا حلول متكاملة لمكونات الصناعات الغذائية والمشروبات شركة طيبات البركة للتجارة العامة والوكلات التجارية م.م هي شركة عراقية متخصصة في استيراد وتوزيع النكهات والمواد الأولية للصناعات الغذائية والعصائر والمشروبات الغازية. نعمل وفق الأطر",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:54": {
-    "name": "TIGER POWER COMPANY",
-    "country": "Iraq",
-    "website": "https://tigerpoweriq.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "2/2 واژه‌ی نام (tiger, power) در عنوان/متن/دامنه",
-    "emails": [
-      {
-        "email": "info@tigerpoweriq.com",
-        "kind": "mailto",
-        "source_url": "https://tigerpoweriq.com",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      },
-      {
-        "email": "accounting@tigerpoweriq.com",
-        "kind": "mailto",
-        "source_url": "https://tigerpoweriq.com/contact/",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      },
-      {
-        "email": "g.alkhani@tigerpoweriq.com",
-        "kind": "mailto",
-        "source_url": "https://tigerpoweriq.com/contact/",
-        "domain_status": "mx",
-        "same_domain": true,
-        "free_mail": false
-      }
-    ],
-    "email_best": "info@tigerpoweriq.com",
-    "email_confidence": "site_confirmed_same_domain",
-    "email_source_url": "https://tigerpoweriq.com",
-    "phones": [
-      {
-        "e164": "+9647509994647",
-        "display": "+964 750 999 4647",
-        "kind": "tel",
-        "source_url": "https://tigerpoweriq.com"
-      },
-      {
-        "e164": "+9647507531340",
-        "display": "+964 750 753 1340",
-        "kind": "tel",
-        "source_url": "https://tigerpoweriq.com"
-      },
-      {
-        "e164": "+9647504813557",
-        "display": "+964 750 481 3557",
-        "kind": "tel",
-        "source_url": "https://tigerpoweriq.com"
-      }
-    ],
-    "phone_best": "+964 750 999 4647",
-    "phone_source_url": "https://tigerpoweriq.com",
-    "pages_checked": [
-      "https://tigerpoweriq.com",
-      "https://tigerpoweriq.com/contact/"
-    ],
-    "notes": [
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Dotted Tiger – Food Supplier. Dotted Tiger, your trusted partner in premium Italian food supplies services in Iraq. Founded with a vision to bring the authentic taste.... Dotted Tiger – Food Supplier Skip to content info@tigerpoweriq.com +9647509994647 Shop Now Exclusive agents for many Italian and European companies O u r P r o d u c t s Quick View Read more Moreno Coffees Espresso Bar 1 Kg Quick View Read more Moreno Coffees Extra Bar 1 Kg Quick View Read more Moreno Coffees Super Bar 1 Kg Quick View Read more Moreno Coffees Gran Miscela 1 Kg Quick View Read more Zarpellon Cheese Grana Padano Parmesan Cheese Quick View Read more HOPLA Cream HOPLA Spary Cream Qu",
-    "checked_at": "2026-11-19"
-  },
-  "iraqagro:55": {
-    "name": "ZAIN SNAX",
-    "country": "Iraq",
-    "website": "https://www.zaingroup-me.com",
-    "website_status": "verified_name_match",
-    "website_evidence": "2/2 واژه‌ی نام (zain, snax) در عنوان/متن/دامنه",
-    "emails": [],
-    "email_best": null,
-    "email_confidence": null,
-    "email_source_url": null,
-    "phones": [
-      {
-        "e164": "+96265690731",
-        "display": "+962 6 569 0731",
-        "kind": "text",
-        "source_url": "https://www.zaingroup-me.com"
-      },
-      {
-        "e164": "+962796548715",
-        "display": "+962 7 9654 8715",
-        "kind": "text",
-        "source_url": "https://www.zaingroup-me.com"
-      }
-    ],
-    "phone_best": "+962 6 569 0731",
-    "phone_source_url": "https://www.zaingroup-me.com",
-    "pages_checked": [
-      "https://www.zaingroup-me.com"
-    ],
-    "notes": [
-      "https://www.cybo.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
-      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
-    ],
-    "needs_render": false,
-    "website_match": "strong",
-    "site_blurb": "Zain International Group for Commercial Investment – Zain Group. . Zain International Group for Commercial Investment – Zain Group ZAIN IS THE WORLD OF TRUST Chairman’s message I am delighted to share with you more than half a century of pioneering achievements of ZainGroup. Since almost five decades now, we have been operating in the Middle East region and have been able to gain a foothold in various industries by establishing numerous subsidiary companies. We can refer with pride to our significant contribution to the Iraqi economy as one of the most dynamic",
-    "checked_at": "2026-11-19"
-  }
+ "iraqagro:1": {
+  "name": "AL AKHAWAIN COMPANY",
+  "country": "Iraq",
+  "website": "https://al-akhawainco.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "2/2 واژه‌ی نام (al, akhawain) در عنوان/متن/دامنه",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [
+   "https://al-akhawainco.com"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "با رندر مرورگر (Playwright) بررسی شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Al-Akhawain - Premium Chips & Fresh Juices. Al-Akhawain's premium chips and fresh juices.. Al-Akhawain - Premium Chips & Fresh Juices",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:2": {
+  "name": "ALEN FACTORY",
+  "country": "Iraq",
+  "website": "https://alenfactory.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (alen, factory) در عنوان/متن/دامنه",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [
+   "https://alenfactory.com"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+   "با رندر مرورگر (Playwright) بررسی شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "403 Forbidden. . 403 Forbidden Forbidden You don't have permission to access this resource. Additionally, a 403 Forbidden error was encountered while trying to use an ErrorDocument to handle the request.",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:3": {
+  "name": "ASIBEX COMPANY",
+  "country": "Iraq",
+  "website": null,
+  "website_status": "not_found",
+  "website_evidence": "",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [],
+  "notes": [
+   "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+  ],
+  "needs_render": false,
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:4": {
+  "name": "ATYAF AL-GHEED COMPANY",
+  "country": "Iraq",
+  "website": "https://www.atyafalgheed.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (atyaf, al, gheed) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "contact@atyafalgheed.com",
+    "kind": "mailto",
+    "source_url": "https://www.atyafalgheed.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "contact@atyafalgheed.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://www.atyafalgheed.com",
+  "phones": [
+   {
+    "e164": "+9647830512900",
+    "display": "+964 783 051 2900",
+    "kind": "text",
+    "source_url": "https://www.atyafalgheed.com"
+   },
+   {
+    "e164": "+9647830512920",
+    "display": "+964 783 051 2920",
+    "kind": "text",
+    "source_url": "https://www.atyafalgheed.com"
+   }
+  ],
+  "phone_best": "+964 783 051 2900",
+  "phone_source_url": "https://www.atyafalgheed.com",
+  "pages_checked": [
+   "https://www.atyafalgheed.com",
+   "https://www.atyafalgheed.com"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "HOME | Mysite. . HOME | Mysite top of page Chocolate Boutique Atyaf AlGheed Buy Online WELCOME Welcome visitors to your site with a short, engaging introduction. Double click to edit and add your own text. Start Now Grow Your Vision Welcome visitors to your site with a short, engaging introduction. Double click to edit and add your own text. Start Now Empower Growth Start Now Welcome to Our Site Welcome visitors to your site with a short, engaging introduction. Double click to edit and add your own text. Read Mo",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:5": {
+  "name": "DAS FOOD INDUSTRIES",
+  "country": "Iraq",
+  "website": "https://www.dasfood.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (das) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@dasfood.com",
+    "kind": "cfemail",
+    "source_url": "https://www.dasfood.com/contact-us",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@dasfood.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://www.dasfood.com/contact-us",
+  "phones": [
+   {
+    "e164": "+9647707770700",
+    "display": "+964 770 777 0700",
+    "kind": "text",
+    "source_url": "https://www.dasfood.com/contact-us"
+   }
+  ],
+  "phone_best": "+964 770 777 0700",
+  "phone_source_url": "https://www.dasfood.com/contact-us",
+  "pages_checked": [
+   "https://www.dasfood.com",
+   "https://www.dasfood.com/contact-us"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Das | Largest Food Production Companies in Kurdistan and Iraq.. DAS Food Industries is one of the largest food production companies in Kurdistan and in Iraq. DAS Food Industries was established in 2020, it is a subsidiary of KHOSHNAW Company for commercial investments.. Das | Largest Food Production Companies in Kurdistan and Iraq. Biggest wheat flour and bulgur production industry in Iraq DAS Food Industries was established in 2020, it is a subsidiary of KHOSHNAW Company for commercial investments. Our Products Learn More Follow Us Have a question? Get help Products DAS Food Industries produces a plethora of different products across multiple state of the art factories. Our factories utiliz",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:6": {
+  "name": "DELLY GARMYAN COMPANY",
+  "country": "Iraq",
+  "website": "https://dellygarmyan.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (delly, garmyan) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "dellygarmyancompany@gmail.com",
+    "kind": "text",
+    "source_url": "https://dellygarmyan.com",
+    "domain_status": "mx",
+    "same_domain": false,
+    "free_mail": true
+   }
+  ],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [
+   {
+    "e164": "+9647709620005",
+    "display": "+964 770 962 0005",
+    "kind": "text",
+    "source_url": "https://dellygarmyan.com"
+   },
+   {
+    "e164": "+9647509620005",
+    "display": "+964 750 962 0005",
+    "kind": "text",
+    "source_url": "https://dellygarmyan.com"
+   }
+  ],
+  "phone_best": "+964 770 962 0005",
+  "phone_source_url": "https://dellygarmyan.com",
+  "pages_checked": [
+   "https://dellygarmyan.com"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "dellygarmyancompany@gmail.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Delly Garmyan Company. Free HTML Templates. Delly Garmyan Company dellygarmyancompany@gmail.com 07509620005 | 07709620005 Pioneers of Health and Innovation! Delly Garmyan Learn More Traditional & Delicious Made From Our Own Organic Milk Learn More About Delly Garmyan Delly Garmyan Company is a limited commercial and manufacturing company, established on 28/3/2021 and registered in the Companies Registration Directorate in Sulaymaniyah, with license number 30600. This company owns Shyaw Factory, which is a dairy, ice cream, Juices and choc",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:7": {
+  "name": "FOOD WAY FACTORY",
+  "country": "Iraq",
+  "website": "https://www.foodwayfactory.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (way, factory) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@foodwayfactory.com",
+    "kind": "mailto",
+    "source_url": "https://www.foodwayfactory.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@foodwayfactory.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://www.foodwayfactory.com",
+  "phones": [
+   {
+    "e164": "+9647504428700",
+    "display": "+964 750 442 8700",
+    "kind": "text",
+    "source_url": "https://www.foodwayfactory.com/contacts"
+   }
+  ],
+  "phone_best": "+964 750 442 8700",
+  "phone_source_url": "https://www.foodwayfactory.com/contacts",
+  "pages_checked": [
+   "https://www.foodwayfactory.com",
+   "https://www.foodwayfactory.com/contacts"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Home | Foodway Factory. . Home | Foodway Factory تخطي للذهاب إلى المحتوى 10 علامات تجارية هدفنا هو إنشاء نظام غذائي أكثر إنصافًا واستدامة لجميع العراقيين. جميع علاماتنا التجارية 10 علامات تجارية هدفنا هو إنشاء نظام غذائي أكثر إنصافًا واستدامة لجميع العراقيين. جميع علاماتنا التجارية السابق التالي نبذة سريعة اكثر من 40 سنة... نحن ملتزمون بإحداث فرق في العراق من خلال تجارة المواد الغذائية المستدامة. اقرأ اكثر منتجات عالية الجودة و بنكهات لا تُنسى رز هانا بسمتی 1121 هندي Foodway factory رز ازاد رایس 1121 درجة اولى هندي Foodw",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:8": {
+  "name": "NOMAGRI",
+  "country": "Iraq",
+  "website": "https://www.nomagri.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (nomagri) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@nomagri.com",
+    "kind": "mailto",
+    "source_url": "https://www.nomagri.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@nomagri.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://www.nomagri.com",
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [
+   "https://www.nomagri.com"
+  ],
+  "notes": [
+   "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "https://www.iitp.mot.gov.iq → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Ana Sayfa | Nomagri. Nomagri — çekirdek kahve, filtre kahve ve Türk kahvesi. Doğadan bardağınıza, güvenli ödeme ile.. Ana Sayfa | Nomagri İçeriğe atla 0212 235 00 37 Hakkımızda İletişim Sipariş Takip Öne Çıkanlar En Çok Satanlar Müşterilerimizin en çok tercih ettiği ürünler Tüm Ürünleri Görüntüle Fırsatları Kaçırmayın Kampanyalar Keşfedin Ürünlerimiz Doğadan sofranıza özenle seçilmiş lezzetler Tüm Ürünleri Gör Ücretsiz Kargo Tüm siparişlerde Güvenli Ödeme 256-bit SSL şifreleme Kolay İade Açılmamış ürünlerde 14 gün Müşteri Hizmetleri Sorularınız için bize ulaşın Bültenimize Katılın Yeni ürünler, kampanyalar ve ö",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:9": {
+  "name": "NOSH COMPANY",
+  "country": "Iraq",
+  "website": "https://nosh-trd.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "1/1 واژه‌ی نام (nosh) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@nosh-trd.com",
+    "kind": "mailto",
+    "source_url": "https://nosh-trd.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@nosh-trd.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://nosh-trd.com",
+  "phones": [
+   {
+    "e164": "+9647502949482",
+    "display": "+964 750 294 9482",
+    "kind": "tel",
+    "source_url": "https://nosh-trd.com"
+   },
+   {
+    "e164": "+9647704602296",
+    "display": "+964 770 460 2296",
+    "kind": "tel",
+    "source_url": "https://nosh-trd.com"
+   }
+  ],
+  "phone_best": "+964 750 294 9482",
+  "phone_source_url": "https://nosh-trd.com",
+  "pages_checked": [
+   "https://nosh-trd.com",
+   "https://nosh-trd.com/contact",
+   "https://nosh-trd.com/contact-us",
+   "https://nosh-trd.com/contactus",
+   "https://nosh-trd.com/pages/contact",
+   "https://nosh-trd.com/contacts",
+   "https://nosh-trd.com/contacts/",
+   "https://nosh-trd.com/kontakty",
+   "https://nosh-trd.com/kontakt",
+   "https://nosh-trd.com/kontakte",
+   "https://nosh-trd.com/about/contacts",
+   "https://nosh-trd.com/ru/contacts",
+   "https://nosh-trd.com/en/contacts",
+   "https://nosh-trd.com/lianxiwomen"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "با رندر مرورگر (Playwright) بررسی شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Nosh Company — Premium Food Distribution in Iraq & Kurdistan. Nosh Company delivers premium foodstuffs across Iraq & Kurdistan — cold-chain logistics, trusted brands, dependable service since 2023.. Nosh Company — Premium Food Distribution in Iraq & Kurdistan Edit with",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:10": {
+  "name": "RAMI FARM",
+  "country": "Iraq",
+  "website": "https://ramifarm.farm",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (rami, farm) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@ramifarm.farm",
+    "kind": "cfemail",
+    "source_url": "https://ramifarm.farm",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@ramifarm.farm",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://ramifarm.farm",
+  "phones": [
+   {
+    "e164": "+9647507118888",
+    "display": "+964 750 711 8888",
+    "kind": "tel",
+    "source_url": "https://ramifarm.farm"
+   },
+   {
+    "e164": "+9647507117117",
+    "display": "+964 750 711 7117",
+    "kind": "tel",
+    "source_url": "https://ramifarm.farm"
+   },
+   {
+    "e164": "+9647747117117",
+    "display": "+964 774 711 7117",
+    "kind": "tel",
+    "source_url": "https://ramifarm.farm"
+   }
+  ],
+  "phone_best": "+964 750 711 8888",
+  "phone_source_url": "https://ramifarm.farm",
+  "pages_checked": [
+   "https://ramifarm.farm"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "RamiFarm — Milk & Dairy Products | Erbil. RamiFarm is a modern dairy in Balinda, Erbil.. RamiFarm — Milk & Dairy Products | Erbil 2,500+ Dairy cows 100+ Product varieties 2006 Family-run since 24/7 Automated herd control Contact Get In Touch Call us or message us on WhatsApp. Phone & Messaging Choose how to reach us: +964 750 711 8888 Call WhatsApp Telegram Viber +964 750 711 7117 Call WhatsApp Telegram Viber +964 774 711 7117 Call WhatsApp Telegram Viber Address Iraq_Erbil_Balinda Google Maps → Email [email protected] Follow us",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:11": {
+  "name": "RAWAT AL ZUHOUR",
+  "country": "Iraq",
+  "website": "https://www.rawatalzuhour.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (rawat, al, zuhour) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "salim@rawatalzuhour.com",
+    "kind": "mailto",
+    "source_url": "https://www.rawatalzuhour.com/contact-us/",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "salim@rawatalzuhour.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://www.rawatalzuhour.com/contact-us/",
+  "phones": [
+   {
+    "e164": "+9647510348196",
+    "display": "+964 751 034 8196",
+    "kind": "tel",
+    "source_url": "https://www.rawatalzuhour.com/contact-us/"
+   }
+  ],
+  "phone_best": "+964 751 034 8196",
+  "phone_source_url": "https://www.rawatalzuhour.com/contact-us/",
+  "pages_checked": [
+   "https://www.rawatalzuhour.com",
+   "https://www.rawatalzuhour.com/contact-us/"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Rawat Al Zuhour For General Trade Company Limited. . Rawat Al Zuhour For General Trade Company Limited YOUR CREATIVE PARTNER OF FLAVOUR IS NOW AT ALL IRAQ YOUR CREATIVE PARTNER OF FLAVOUR IS NOW AT ALL IRAQ Flavours Additivies Differentiate Your Business with the Power of Flavours Rawat Al Zuhour offers a wide range of natural flavours for corporate customers. We add a unique atmosphere to your spaces with our modern, aesthetic and quality products. We are here to provide healthy, sustainable and effective solutions. Get Information About Our Prod",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:12": {
+  "name": "SAFRA COMPANY",
+  "country": "Iraq",
+  "website": "https://safracompany.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (safra) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@safracompany.com",
+    "kind": "mailto",
+    "source_url": "https://safracompany.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@safracompany.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://safracompany.com",
+  "phones": [
+   {
+    "e164": "+9647705850003",
+    "display": "+964 770 585 0003",
+    "kind": "tel",
+    "source_url": "https://safracompany.com"
+   },
+   {
+    "e164": "+533202330",
+    "display": "+53 32 02330",
+    "kind": "tel",
+    "source_url": "https://safracompany.com"
+   }
+  ],
+  "phone_best": "+964 770 585 0003",
+  "phone_source_url": "https://safracompany.com",
+  "pages_checked": [
+   "https://safracompany.com"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Safra Company. . Safra Company about us Food Products 500+ high quality food products in various ranges and 25 featured product brands from 5 different countries Employers 200+ employees and 200+ skilled representatives supervised by experienced sales managers Point of Sale Covering 12000+ POS establishments directly and approximately 1000 stores indirectly Distribution Center 9 branches with office space and warehouses networked to a head office, and We have a total of 10000m² refrigerated warehouses Sharif Ras",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:13": {
+  "name": "SAMA AL-YAQOUT FACTORY",
+  "country": "Iraq",
+  "website": "https://alfayhaaco.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "3/4 واژه‌ی نام (sama, al, factory) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "marketing@alfayhaaco.com",
+    "kind": "mailto",
+    "source_url": "https://alfayhaaco.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "marketing@alfayhaaco.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://alfayhaaco.com",
+  "phones": [
+   {
+    "e164": "+9647712679841",
+    "display": "+964 771 267 9841",
+    "kind": "tel",
+    "source_url": "https://alfayhaaco.com/contact-us/"
+   },
+   {
+    "e164": "+9647812679841",
+    "display": "+964 781 267 9841",
+    "kind": "tel",
+    "source_url": "https://alfayhaaco.com/contact-us/"
+   }
+  ],
+  "phone_best": "+964 771 267 9841",
+  "phone_source_url": "https://alfayhaaco.com/contact-us/",
+  "pages_checked": [
+   "https://alfayhaaco.com",
+   "https://alfayhaaco.com/contact-us/"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "media@alfayhaaco.com نقش غیرتجاری است (کنار گذاشته شد)"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Sama Alfayhaa – Factory. . Sama Alfayhaa – Factory Skip to content Skip to footer Close facebook-1 linkedin instagram Have Questions? marketing@alfayhaaco.com Contact us! Our Achievements 10+ Years of experience 170+ Registered Products Class A Ministry of Health in Iraq 15M Over 15 Million Dollar Invested in R&D Since 2012 Trusted Iraqi Manufacturer of Quality Medicines Discover us Our Achievements 10+ Years of experience 170+ Registered Products Class A Ministry of Health in Iraq 15M Over 15 Million Dollar Invested in R",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:14": {
+  "name": "SHARYAR COMPANY",
+  "country": "Iraq",
+  "website": "https://sharyar.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (sharyar) در عنوان/متن/دامنه",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [
+   {
+    "e164": "+92523541336",
+    "display": "+92 52 3541336",
+    "kind": "text",
+    "source_url": "https://sharyar.com"
+   },
+   {
+    "e164": "+923466104003",
+    "display": "+92 346 6104003",
+    "kind": "text",
+    "source_url": "https://sharyar.com"
+   }
+  ],
+  "phone_best": "+92 52 3541336",
+  "phone_source_url": "https://sharyar.com",
+  "pages_checked": [
+   "https://sharyar.com",
+   "https://sharyar.com/contact/",
+   "https://sharyar.com/contact/",
+   "https://sharyar.com/contact/"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Home - Sharyar Enterprises. . Home - Sharyar Enterprises Skip to content World-Class Quality & Service Apparel Manufacturers since 1977 lets grow together with longterm vision and goals. contact / 01 Products Quality with Premium Service Knitted Capacity: 4500 V Neck jerseys per day Woven Capacity: 3000 coveralls per week Gloves Capacity: 50,000 pairs of mechanical/working gloves per month Sporting Goods Capacity: Depends on specific product design and artwork Products / 03 About Us Professional Apparel Factory Sharyar Enter",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:15": {
+  "name": "ZEST FLAVORS",
+  "country": "Iraq",
+  "website": "https://zest-flavors.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (zest, flavors) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@zest-flavors.com",
+    "kind": "mailto",
+    "source_url": "https://zest-flavors.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   },
+   {
+    "email": "bhakim@zest-flavors.com",
+    "kind": "text",
+    "source_url": "https://zest-flavors.com/contact-us-en",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@zest-flavors.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://zest-flavors.com",
+  "phones": [
+   {
+    "e164": "+902129510666",
+    "display": "+90 212 951 06 66",
+    "kind": "text",
+    "source_url": "https://zest-flavors.com/contact-us-en"
+   },
+   {
+    "e164": "+905444305732",
+    "display": "+90 544 430 57 32",
+    "kind": "text",
+    "source_url": "https://zest-flavors.com/contact-us-en"
+   }
+  ],
+  "phone_best": "+90 212 951 06 66",
+  "phone_source_url": "https://zest-flavors.com/contact-us-en",
+  "pages_checked": [
+   "https://zest-flavors.com",
+   "https://zest-flavors.com/contact-us-en"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Seasoning Solutions – Zest Flavors | Middle Eastern Flavor Experts. Zest Flavors is a Middle Eastern pioneer in providing high-quality, custom seasoning solutions for snacks, meats, soups, and more. Discover our innovative approach and commitment to quality. . Seasoning Solutions – Zest Flavors | Middle Eastern Flavor Experts Zest Flavors Zest is considered a Middle Eastern pioneer in supplying savory flavors and seasonings. We emphasize our policy of providing high-quality products, Competitive prices, and delivering personalized customer care. Our Mission and Values are at the heart of everything we do. About US Zest Activities We offer a complete range of solutions for a wide range of app",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:16": {
+  "name": "ZOM COMPANY",
+  "country": "Iraq",
+  "website": "https://zom.krd",
+  "website_status": "verified_name_match",
+  "website_evidence": "1/1 واژه‌ی نام (zom) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@zom.krd",
+    "kind": "mailto",
+    "source_url": "https://zom.krd/contact",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@zom.krd",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://zom.krd/contact",
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [
+   "https://zom.krd",
+   "https://zom.krd/contact",
+   "https://zom.krd/contact-us",
+   "https://zom.krd/contactus",
+   "https://zom.krd/contact.html",
+   "https://zom.krd/contact-us.html",
+   "https://zom.krd/pages/contact",
+   "https://zom.krd/contacts",
+   "https://zom.krd/contacts/",
+   "https://zom.krd/kontakty",
+   "https://zom.krd/kontakt",
+   "https://zom.krd/kontakte",
+   "https://zom.krd/about/contacts",
+   "https://zom.krd/ru/contacts",
+   "https://zom.krd/en/contacts",
+   "https://zom.krd/lianxiwomen"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "با رندر مرورگر (Playwright) بررسی شد"
+  ],
+  "needs_render": false,
+  "website_match": "medium",
+  "site_blurb": "Zom Company - 100% Local, 100% Natural. Zom, Taste of Nature, Organic Dairy Products, Made in the heart of Kurdistan Region, Iraq. Zom Company - 100% Local, 100% Natural",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:17": {
+  "name": "AL MASAR AL JADEED",
+  "country": "Iraq",
+  "website": "https://msjd-iraq.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "4/4 واژه‌ی نام (al, masar, al, jadeed) در عنوان/متن/دامنه",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [
+   {
+    "e164": "+9647502344000",
+    "display": "+964 750 234 4000",
+    "kind": "whatsapp",
+    "source_url": "https://msjd-iraq.com"
+   },
+   {
+    "e164": "+9647502344004",
+    "display": "+964 750 234 4004",
+    "kind": "text",
+    "source_url": "https://msjd-iraq.com"
+   },
+   {
+    "e164": "+9647505929300",
+    "display": "+964 750 592 9300",
+    "kind": "text",
+    "source_url": "https://msjd-iraq.com"
+   },
+   {
+    "e164": "+9647762534222",
+    "display": "+964 776 253 4222",
+    "kind": "text",
+    "source_url": "https://msjd-iraq.com"
+   }
+  ],
+  "phone_best": "+964 750 234 4000",
+  "phone_source_url": "https://msjd-iraq.com",
+  "pages_checked": [
+   "https://msjd-iraq.com",
+   "https://msjd-iraq.com/contact-us/",
+   "https://msjd-iraq.com/contact-us/",
+   "https://msjd-iraq.com/contact-us",
+   "https://msjd-iraq.com/contact-us/"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Home - Al Masar Al Jadeed | msjd-iraq.com. . Home - Al Masar Al Jadeed | msjd-iraq.com Skip to content Menu Providing Iraq & Kurdistan with the highest quality Beef products Sea Food Products Bakery Products ​ Fries & Appetizer Al Masar Al Jadeed Food Supply is an independent General trading company located in Kurdistan, north of Iraq. With long experience in the international seafood & beef business we know the importance of supplying our customers the right quality to the right price at the right time. We have a strict focus on quality o",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:18": {
+  "name": "AL-RAI DAIRY FACTORY",
+  "country": "Iraq",
+  "website": "http://www.alrayandairies.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "3/4 واژه‌ی نام (al, dairy, factory) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@alrayandairies.com",
+    "kind": "mailto",
+    "source_url": "http://www.alrayandairies.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   },
+   {
+    "email": "demo@gmail.com",
+    "kind": "mailto",
+    "source_url": "http://www.alrayandairies.com/contact.html",
+    "domain_status": "mx",
+    "same_domain": false,
+    "free_mail": true
+   },
+   {
+    "email": "info@alrayandaires.com",
+    "kind": "text",
+    "source_url": "http://www.alrayandairies.com/contact.html",
+    "domain_status": "dead",
+    "same_domain": false,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@alrayandairies.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "http://www.alrayandairies.com",
+  "phones": [
+   {
+    "e164": "+9647821119299",
+    "display": "+964 782 111 9299",
+    "kind": "tel",
+    "source_url": "http://www.alrayandairies.com/contact.html"
+   },
+   {
+    "e164": "+9647835950069",
+    "display": "+964 783 595 0069",
+    "kind": "text",
+    "source_url": "http://www.alrayandairies.com/contact.html"
+   },
+   {
+    "e164": "+9647800099885",
+    "display": "+964 780 009 9885",
+    "kind": "text",
+    "source_url": "http://www.alrayandairies.com/contact.html"
+   }
+  ],
+  "phone_best": "+964 782 111 9299",
+  "phone_source_url": "http://www.alrayandairies.com/contact.html",
+  "pages_checked": [
+   "http://www.alrayandairies.com",
+   "http://www.alrayandairies.com/contact.html"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Al-Rayan dairies. . Al-Rayan dairies Al-Rayan Dairies Find out more ! Since 2014 YOUR TRUST HAS MADE OUR JOURNEY POSSIBLE Committed to quality Established in 2014 in the Governorate of Basra, Iraq, we began our journey at Al-Rayan Dairies inspired with a deep commitment to bring high quality dairy products that are locally produced into the Iraqi market, all at incredibly competitive prices. read more Why choose Al-Rayan Dairies ? At Al-Rayan Dairies we strive everyday to bring the highest quality dairy products to",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:19": {
+  "name": "AL-RAZI UNITED COMPANY",
+  "country": "Iraq",
+  "website": "https://alrazigroup.net",
+  "website_status": "verified_name_match",
+  "website_evidence": "2/3 واژه‌ی نام (al, razi) در عنوان/متن/دامنه",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [
+   "https://alrazigroup.net",
+   "https://alrazigroup.net/contacts",
+   "https://alrazigroup.net/contacts"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "با رندر مرورگر (Playwright) بررسی شد"
+  ],
+  "needs_render": false,
+  "website_match": "medium",
+  "site_blurb": "Al-Razi Group - Wholesale Distributor & Multi-Agency Company | Al-Razo Group. Al-Razi Group is a trusted wholesale distributor and multi-agency company, setting the benchmark for high-quality products and exceptional service. Explore our extensive range of offerings today.. Al-Razi Group - Wholesale Distributor & Multi-Agency Company | Al-Razo Group Welcome to Al-Razi Group Wholesale Distributor and Multi-Agency Company First of all About Us Al-Razi Group is a leading wholesale distributor and multi-agency company, specializing in high-quality products. With a strong commitment to excellence, we strive to set the benchmark for quality and reliability in the industry. Our extensive range of p",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:20": {
+  "name": "AL-ZAREEF FOOD INDUSTRIES FACTORY",
+  "country": "Iraq",
+  "website": "https://yafafoods.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "2/3 واژه‌ی نام (al, factory) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@yafafoods.com",
+    "kind": "cfemail",
+    "source_url": "https://yafafoods.com/contact.html",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@yafafoods.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://yafafoods.com/contact.html",
+  "phones": [
+   {
+    "e164": "+9647800311110",
+    "display": "+964 780 031 1110",
+    "kind": "text",
+    "source_url": "https://yafafoods.com/contact.html"
+   },
+   {
+    "e164": "+9647800070011",
+    "display": "+964 780 007 0011",
+    "kind": "text",
+    "source_url": "https://yafafoods.com/contact.html"
+   }
+  ],
+  "phone_best": "+964 780 031 1110",
+  "phone_source_url": "https://yafafoods.com/contact.html",
+  "pages_checked": [
+   "https://yafafoods.com",
+   "https://yafafoods.com/contact.html"
+  ],
+  "notes": [
+   "https://www.alzreef-co.com → نام شرکت با صفحه نمی‌خواند (1/3 واژه‌ی نام (al) در عنوان/متن/دامنه)",
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "medium",
+  "site_blurb": ":: Yafa Foods ::. . :: Yafa Foods :: Home About Us Mission Vision Future Products Services Gallery Gallery Photo Gallery video Contact Us عربي Natural Juice on your Taste Flavor Fruits Juice Natural Juice on your Taste Natural Juice on your Taste Natural Juice on your Taste Natural Potatoes on your Taste Welcome To Yafa Foods Company for Food Industries Was established as Ltd. Company in 1985 as one of the pioneers of Iraq Food manufacturing industry.The company is owned by Harran family a well-known family in Iraq",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:21": {
+  "name": "ALSHAHIA",
+  "country": "Iraq",
+  "website": "https://alshahia-food-iraq.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "1/1 واژه‌ی نام (alshahia) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@alshahia-food-iraq.com",
+    "kind": "cfemail",
+    "source_url": "https://alshahia-food-iraq.com/contact-us/",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@alshahia-food-iraq.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://alshahia-food-iraq.com/contact-us/",
+  "phones": [
+   {
+    "e164": "+9647507063000",
+    "display": "+964 750 706 3000",
+    "kind": "text",
+    "source_url": "https://alshahia-food-iraq.com/contact-us/"
+   },
+   {
+    "e164": "+9647508777747",
+    "display": "+964 750 877 7747",
+    "kind": "text",
+    "source_url": "https://alshahia-food-iraq.com/contact-us/"
+   }
+  ],
+  "phone_best": "+964 750 706 3000",
+  "phone_source_url": "https://alshahia-food-iraq.com/contact-us/",
+  "pages_checked": [
+   "https://alshahia-food-iraq.com",
+   "https://alshahia-food-iraq.com/contact-us/"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Alshahia Food – Factory. . Alshahia Food – Factory Loading... Skip to main content Scroll Top Bodroon Meats mouse About us mouse Alshahia Food Factory Our Exclusive Brand mouse We have more than 50 products Bodroon Legumes mouse Coffee mouse Olive mouse About Factory Alshahia Food Factory, a prestigious culinary establishment nestled in the heart of Iraqi Kurdistan, exudes an ambiance of opulence and magnificence. Throughout the years, we have solidified our position as a formidable competitor in the industry, renowned fo",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:22": {
+  "name": "Altaam Althahabi",
+  "country": "Iraq",
+  "website": "https://altaam-althahabi.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (altaam, althahabi) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@altaam-althahabi.com",
+    "kind": "mailto",
+    "source_url": "https://altaam-althahabi.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@altaam-althahabi.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://altaam-althahabi.com",
+  "phones": [
+   {
+    "e164": "+9647504464047",
+    "display": "+964 750 446 4047",
+    "kind": "text",
+    "source_url": "https://altaam-althahabi.com"
+   },
+   {
+    "e164": "+9647745030203",
+    "display": "+964 774 503 0203",
+    "kind": "text",
+    "source_url": "https://altaam-althahabi.com"
+   }
+  ],
+  "phone_best": "+964 750 446 4047",
+  "phone_source_url": "https://altaam-althahabi.com",
+  "pages_checked": [
+   "https://altaam-althahabi.com",
+   "https://altaam-althahabi.com/contact"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "با رندر مرورگر (Playwright) بررسی شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Golden wafer products | ALTAAM ALTHAHABI. Discover ALTAAM ALTHAHABI golden wafers, ice cream cones, sandwich biscuits, squares, and waffle cups made in Erbil, Iraq.. Golden wafer products | ALTAAM ALTHAHABI",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:23": {
+  "name": "CHYAW",
+  "country": "Iraq",
+  "website": "https://chyaw.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (chyaw) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@chyaw.com",
+    "kind": "text",
+    "source_url": "https://chyaw.com/n/index.html",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@chyaw.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://chyaw.com/n/index.html",
+  "phones": [
+   {
+    "e164": "+9647701009968",
+    "display": "+964 770 100 9968",
+    "kind": "text",
+    "source_url": "https://chyaw.com/n/index.html"
+   }
+  ],
+  "phone_best": "+964 770 100 9968",
+  "phone_source_url": "https://chyaw.com/n/index.html",
+  "pages_checked": [
+   "https://chyaw.com/n/index.html"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Chyaw Company. Resto. Chyaw Company × Address: Iraq – Sulaymaniyah - Industrial area 1 (+964) 07701009968 info@chyaw.com × Chyaw Company Chyaw Company is a top provider of food, dairy, ice cream, and beverages. We work with local and international partners to bring the best products to our customers. Our wide distribution network covers all Iraqi cities, reaching millions of people through our branches and agents. Fast Delivery Fresh Food 24/7 Support About Welcome to Chyaw Company Chyaw Company is one of the most ad",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:24": {
+  "name": "DAHAB KHAYRATALARD COMPANY",
+  "country": "Iraq",
+  "website": "https://www.khdaco.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "1/2 واژه‌ی نام (dahab) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@khdaco.com",
+    "kind": "text",
+    "source_url": "https://www.khdaco.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@khdaco.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://www.khdaco.com",
+  "phones": [
+   {
+    "e164": "+9647800000235",
+    "display": "+964 780 000 0235",
+    "kind": "text",
+    "source_url": "https://www.khdaco.com"
+   },
+   {
+    "e164": "+4915217267327",
+    "display": "+49 1521 7267327",
+    "kind": "text",
+    "source_url": "https://www.khdaco.com/contact.html"
+   }
+  ],
+  "phone_best": "+964 780 000 0235",
+  "phone_source_url": "https://www.khdaco.com",
+  "pages_checked": [
+   "https://www.khdaco.com",
+   "https://www.khdaco.com/contact.html"
+  ],
+  "notes": [
+   "https://www.crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "https://khyratalard.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "medium",
+  "site_blurb": "KHAIRAT ALDAHAB ALBASRA Co. | شركة خيرات ذهب البصرة للمقاولات ونقل المشتقات النفطية. . KHAIRAT ALDAHAB ALBASRA Co. | شركة خيرات ذهب البصرة للمقاولات ونقل المشتقات النفطية KHAIRAT ALDAHAB ALBASRA COMPANY KHAIRAT ALDAHAB ALBASRA COMPANY has a history of construction company working in Iraq and have been doing civil, mechanical, piping, pipe line and E&I site works for quite some times in the engineering sector, focusing mainly on oil & gas, power generation & distribution, water treatment and distribution, chemical & petro-chemical and infrastructure. Profile Company KHAIRAT ALDAHAB",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:25": {
+  "name": "ICE KING",
+  "country": "Iraq",
+  "website": "https://icekingltd.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "2/2 واژه‌ی نام (ice, king) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@icekingltd.com",
+    "kind": "cfemail",
+    "source_url": "https://icekingltd.com/contact-us/",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   },
+   {
+    "email": "sales@icekingltd.com",
+    "kind": "cfemail",
+    "source_url": "https://icekingltd.com/contact-us/",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@icekingltd.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://icekingltd.com/contact-us/",
+  "phones": [
+   {
+    "e164": "+9647507243331",
+    "display": "+964 750 724 3331",
+    "kind": "text",
+    "source_url": "https://icekingltd.com/contact-us/"
+   },
+   {
+    "e164": "+9647507243332",
+    "display": "+964 750 724 3332",
+    "kind": "text",
+    "source_url": "https://icekingltd.com/contact-us/"
+   }
+  ],
+  "phone_best": "+964 750 724 3331",
+  "phone_source_url": "https://icekingltd.com/contact-us/",
+  "pages_checked": [
+   "https://icekingltd.com",
+   "https://icekingltd.com/contact-us/"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Ice King – Best Ice cream factory in Iraq. . Ice King – Best Ice cream factory in Iraq Home Products Locations Gallery About us Contact Us English کوردی العربية Taste Heavens with Ice king! Best Ice Cream Factory In Iraq Swing up your mood! Who are we? Ice King has been making ice cream like no other in Iraq for over a decade. Our vision is to make the best ice cream that is on international standard using high quality and carefully selected ingredients. Our license is a special trademark from Ice King Company, granted since July 2002 acro",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:26": {
+  "name": "IRAQ GLOBAL COMPANY",
+  "country": "Iraq",
+  "website": "https://iraqglobal.net",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (iraq) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@iraqglobal.net",
+    "kind": "mailto",
+    "source_url": "https://iraqglobal.net",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@iraqglobal.net",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://iraqglobal.net",
+  "phones": [
+   {
+    "e164": "+9647880000023",
+    "display": "+964 788 000 0023",
+    "kind": "tel",
+    "source_url": "https://iraqglobal.net"
+   },
+   {
+    "e164": "+9647880000024",
+    "display": "+964 788 000 0024",
+    "kind": "tel",
+    "source_url": "https://iraqglobal.net"
+   },
+   {
+    "e164": "+9647880000025",
+    "display": "+964 788 000 0025",
+    "kind": "tel",
+    "source_url": "https://iraqglobal.net"
+   },
+   {
+    "e164": "+9647880000026",
+    "display": "+964 788 000 0026",
+    "kind": "tel",
+    "source_url": "https://iraqglobal.net"
+   }
+  ],
+  "phone_best": "+964 788 000 0023",
+  "phone_source_url": "https://iraqglobal.net",
+  "pages_checked": [
+   "https://iraqglobal.net"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "IRAQ GLOBAL - Paper. Description . IRAQ GLOBAL - Paper EXCELLENCE IN INNOVATION AND TECHNIQUES HOME AGRICULTURE WHO WE ARE IRAQ GLOBAL FOR AGRICULTURE & INDUSTRIAL INVESTMENTS Iraq global is one of the leading companies in iraq in the agricultural industry the company owns several factories in Iraq Global Industrial complex south iraq - wasit province with a total area of 690,000 sqm containing factories of ( Craft paper & white Paper, Starch & glucose, Woven Bags) also the company is building one of the biggest grain silos in ir",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:27": {
+  "name": "KARWANCHI GROUP",
+  "country": "Iraq",
+  "website": "https://karwanchigroup.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (karwanchi) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@karwanchigroup.com",
+    "kind": "mailto",
+    "source_url": "https://karwanchigroup.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@karwanchigroup.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://karwanchigroup.com",
+  "phones": [
+   {
+    "e164": "+9647708599559",
+    "display": "+964 770 859 9559",
+    "kind": "tel",
+    "source_url": "https://karwanchigroup.com"
+   },
+   {
+    "e164": "+9647503170999",
+    "display": "+964 750 317 0999",
+    "kind": "tel",
+    "source_url": "https://karwanchigroup.com"
+   }
+  ],
+  "phone_best": "+964 770 859 9559",
+  "phone_source_url": "https://karwanchigroup.com",
+  "pages_checked": [
+   "https://karwanchigroup.com",
+   "https://karwanchigroup.com/contact",
+   "https://karwanchigroup.com/contact.php"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Karwanchi Group | Leading Iraqi Beverage Manufacturer & Distributor. Discover Karwanchi Group’s soft drinks, bottled water, juices and energy drinks—made in Iraq since 1940 and distributed nationwide.. Karwanchi Group | Leading Iraqi Beverage Manufacturer & Distributor English Arabic Karwanchi offers a wide range of beverages, including carbonated soft drinks, energy drinks, non-alcoholic beverages, juices and nectars, and bottled water. Read More Version Malt Version Cola Version Red Strong Version Rich Previous Next Malt Cola Red Strong Rich Previous Next Made in Iraq About Us Key Insights & Performance Stats Customer Satisfaction 0% Total Products 0+ Team members 0+ Retail Stores 0+ Our B",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:28": {
+  "name": "KHAYRAT SHARAZUR COMPANY",
+  "country": "Iraq",
+  "website": "https://khayratsharazor.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "1/2 واژه‌ی نام (khayrat) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@khayratsharazor.com",
+    "kind": "cfemail",
+    "source_url": "https://khayratsharazor.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@khayratsharazor.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://khayratsharazor.com",
+  "phones": [
+   {
+    "e164": "+9647701527188",
+    "display": "+964 770 152 7188",
+    "kind": "tel",
+    "source_url": "https://khayratsharazor.com"
+   },
+   {
+    "e164": "+9647507018430",
+    "display": "+964 750 701 8430",
+    "kind": "tel",
+    "source_url": "https://khayratsharazor.com"
+   }
+  ],
+  "phone_best": "+964 770 152 7188",
+  "phone_source_url": "https://khayratsharazor.com",
+  "pages_checked": [
+   "https://khayratsharazor.com"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "medium",
+  "site_blurb": "Khayrat Sharazor - Premium Frozen Meat Supply. . Khayrat Sharazor - Premium Frozen Meat Supply Premium Quality Khayrat Sharazor is a leading influence in frozen meat supply services Delivering excellence in frozen meat products across Kurdistan Region and Iraq with unmatched quality and reliability. Get In Touch Our Main Principles 1 Quality Excellence Supporting businesses in their transition to sustainable practices through innovative cold storage solutions and premium frozen meat products. 2 Innovation Leadership Enhancing innovation throug",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:29": {
+  "name": "MANIZAN",
+  "country": "Iraq",
+  "website": "https://www.manizan.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (manizan) در عنوان/متن/دامنه",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [
+   "https://www.manizan.com",
+   "https://www.manizan.com/fa/Contact/0/%D8%AA%D9%85%D8%A7%D8%B3-%D8%A8%D8%A7-%D9%85%D8%A7"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "با رندر مرورگر (Playwright) بررسی شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "خانه | لبنیات مانیزان. شرکت مانیزان تولید کننده لبنیات. خانه | لبنیات مانیزان خانه فرآورده های لبنی بهار دالاهو شرکت مانیزان تولید کننده لبنیات English العربی کوردی دستور غذا با فرآورده های شیر ... آگهی پذیره نویسی افزایش سرمایه شرکت فرآورده های لبنی بهار دالاهو دومین مجمع عمومی عادی سالیانه - 1405 به پیج اینستا گرام ما س ر بزنید instagram.com/manizan_official/ پنیر خامه ای شیر بدون لاکتوز پنیر سفید UF ماست سنتی شیر قهوه خامه عسلی ویتاماست(ماست پروبیوتیک) Toggle navigation امور سهام گزارشات مالی گزارش صورت‌های مالی حسابرسی شده - سال منتهی به 1404 گزا",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:30": {
+  "name": "MARAI AL RAFEDIAN",
+  "country": "Iraq",
+  "website": "https://maraialrafidain.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "3/3 واژه‌ی نام (marai, al, rafedian) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@maraialrafidain.com",
+    "kind": "cfemail",
+    "source_url": "https://maraialrafidain.com/ar",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   },
+   {
+    "email": "sales@maraialrafidain.com",
+    "kind": "cfemail",
+    "source_url": "https://maraialrafidain.com/ar",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   },
+   {
+    "email": "accounts@maraialrafidain.com",
+    "kind": "cfemail",
+    "source_url": "https://maraialrafidain.com/ar",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@maraialrafidain.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://maraialrafidain.com/ar",
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [
+   "https://maraialrafidain.com/ar"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "شركة تجارة المواد الغذائية | Marai Al Rafedian. تسعى شركة مراعي الرافدين لتجارة المواد الغذائية إلى توفير قيمة غذائية وغذائية عالية الجودة. مما يثري الحياة اليومية للمستهلكين. من خلال تركيزها المستمر على الالتزام بأعلى معايير الجودة.. شركة تجارة المواد الغذائية | Marai Al Rafedian Skip to main content لمحة عامة عن استراتيجية الشركة تسعى شركة مراعي الرافدين لتجارة المواد الغذائية إلى توفير قيمة غذائية عالية الجودة. الذي يثري الحياة اليومية للمستهلكين. من خلال تركيزها المستمر على الالتزام بأعلى معايير الجودة ، نجحت شركة مراعي الرافدين في أن تصبح الخيار المفضل للمستهلكين لتوفير منتجات متميزة تلبي جميع احتياجاتهم وتحتفظ الشركة بدورها الريادي في السوق في مختلف المنتجات الرئيسية التي تقدمها لمصلحة",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:31": {
+  "name": "MEGAL COMPANY",
+  "country": "Iraq",
+  "website": "https://megal-company.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (megal) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@megal-company.com",
+    "kind": "mailto",
+    "source_url": "https://megal-company.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@megal-company.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://megal-company.com",
+  "phones": [
+   {
+    "e164": "+9647504001800",
+    "display": "+964 750 400 1800",
+    "kind": "tel",
+    "source_url": "https://megal-company.com"
+   }
+  ],
+  "phone_best": "+964 750 400 1800",
+  "phone_source_url": "https://megal-company.com",
+  "pages_checked": [
+   "https://megal-company.com"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "با رندر مرورگر (Playwright) بررسی شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Megal. Built on approximately 1,000,000 square meters of land. word-class, private enterprise our modern facility is a new strategic and modern project planned with modern standards.. Megal",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:32": {
+  "name": "NANO GUM MEHR",
+  "country": "Iraq",
+  "website": null,
+  "website_status": "not_found",
+  "website_evidence": "",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [],
+  "notes": [
+   "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "https://event-gulfoodmanufacturing.expoplatform.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+  ],
+  "needs_render": false,
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:33": {
+  "name": "Nawhal's Sauces",
+  "country": "Iraq",
+  "website": "https://nawhals.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (nawhal, sauces) در عنوان/متن/دامنه",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [
+   "https://nawhals.com",
+   "https://nawhals.com/pages/contact",
+   "https://nawhals.com/pages/contact"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "با رندر مرورگر (Playwright) بررسی شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Nawhal's sauces – Nawhal's Sauces. Les sauces Nawhal's, c'est avant tout une histoire de cœur, une rencontre entre deux âmes sœurs unies et réunies par l'amour des nouvelles saveurs.. Nawhal's sauces – Nawhal's Sauces Skip to content Facebook Instagram TikTok LinkedIn English English Français Nederlands Deutsch Español English English Français Nederlands Deutsch Español Login Cart 0 Recently viewed Cart Your cart is currently empty. Not sure where to start? Try these collections: OUR RECIPES 🚚 Only €30,00 more for free shipping! Shipping Estimate shipping rates --- Afghanistan Åland Islands Albania Algeria Andorra Angola Anguilla Antigua & Barbuda Argentina Armenia Aruba Asce",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:34": {
+  "name": "RASAN COMPANY",
+  "country": "Iraq",
+  "website": "https://www.rasan.iq",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (rasan) در عنوان/متن/دامنه",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [
+   {
+    "e164": "+9647701234567",
+    "display": "+964 770 123 4567",
+    "kind": "text",
+    "source_url": "https://www.rasan.iq/contact-us"
+   }
+  ],
+  "phone_best": "+964 770 123 4567",
+  "phone_source_url": "https://www.rasan.iq/contact-us",
+  "pages_checked": [
+   "https://www.rasan.iq",
+   "https://www.rasan.iq/contact-us"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Home. The brand is dedicated to preserving and promoting local produce from the heart of Halabja, nestled within the thriving nature of the Sharazur region. It offers a diverse range of dairy products, including various types of yogurt, cheese, ayran, and more, all crafted with a commitment to the highest hygiene standards, ensuring exceptional quality in taste, consistency and nutritional value of every product.. Home From our local farms to your table. Our products yoghurt CHEESE AYRAN & DOOGH OLIVE OIL ⁠Labneh & Cream 1 / 5 yoghurt Our yogurt is the foundation of our dairy craft, a symbol of health and culinary versatility. We use only the purest local milk, honoring traditional methods w",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:35": {
+  "name": "ROTAŞ",
+  "country": "Iraq",
+  "website": null,
+  "website_status": "not_found",
+  "website_evidence": "",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [],
+  "notes": [
+   "https://jobs.nabu-analytics.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "https://www.tiktok.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+  ],
+  "needs_render": false,
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:36": {
+  "name": "TANAHI GROUP",
+  "country": "Iraq",
+  "website": "https://tanahigroup.co",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (tanahi) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "tanahigroup@gmail.com",
+    "kind": "text",
+    "source_url": "https://tanahigroup.co",
+    "domain_status": "mx",
+    "same_domain": false,
+    "free_mail": true
+   }
+  ],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [
+   {
+    "e164": "+9647504373709",
+    "display": "+964 750 437 3709",
+    "kind": "whatsapp",
+    "source_url": "https://tanahigroup.co"
+   }
+  ],
+  "phone_best": "+964 750 437 3709",
+  "phone_source_url": "https://tanahigroup.co",
+  "pages_checked": [
+   "https://tanahigroup.co",
+   "https://tanahigroup.co/contact.php"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "tanahigroup@gmail.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Tanahi Group. . Tanahi Group Your browser does not support the video tag. تأسست مجموعة تناهي في عام 2004 كشركة متخصصة في توريد حديد التسليح. على مر السنين، توسعنا وتطورنا لنصبح من أكثر الأسماء الموثوقة في قطاع التجارة في جميع أنحاء العراق. اقرأ المزيد من نحن تأسست مجموعة تناهي في عام 2004 كشركة متخصصة في توريد حديد التسليح. على مر السنين، توسعنا وتطورنا لنصبح من أكثر الأسماء الموثوقة في قطاع التجارة في جميع أنحاء العراق. مهمتنا تقديم منتجات عالية الجودة تدعم البناء والصناعة والحياة اليومية، والعمل كشريك موثوق ب",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:37": {
+  "name": "YARAN COMPANY",
+  "country": "Iraq",
+  "website": "https://yaranco.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "1/1 واژه‌ی نام (yaran) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "operation@yaranco.com",
+    "kind": "mailto",
+    "source_url": "https://yaranco.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "operation@yaranco.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://yaranco.com",
+  "phones": [
+   {
+    "e164": "+9647866205681",
+    "display": "+964 786 620 5681",
+    "kind": "tel",
+    "source_url": "https://yaranco.com"
+   },
+   {
+    "e164": "+971505408226",
+    "display": "+971 50 540 8226",
+    "kind": "tel",
+    "source_url": "https://yaranco.com"
+   }
+  ],
+  "phone_best": "+964 786 620 5681",
+  "phone_source_url": "https://yaranco.com",
+  "pages_checked": [
+   "https://yaranco.com",
+   "https://yaranco.com/contact",
+   "https://yaranco.com/contact-us",
+   "https://yaranco.com/contactus",
+   "https://yaranco.com/pages/contact",
+   "https://yaranco.com/contacts",
+   "https://yaranco.com/contacts/",
+   "https://yaranco.com/kontakty",
+   "https://yaranco.com/kontakt",
+   "https://yaranco.com/kontakte",
+   "https://yaranco.com/about/contacts",
+   "https://yaranco.com/ru/contacts",
+   "https://yaranco.com/en/contacts",
+   "https://yaranco.com/lianxiwomen"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "با رندر مرورگر (Playwright) بررسی شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "YARANCO | Construction & General Trading in Erbil, Iraq. Building Excellence with Systematic Precision. YARANCO delivers construction, engineering and general trading across Kurdistan and Iraq since 2005.. YARANCO | Construction & General Trading in Erbil, Iraq Edit with",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:38": {
+  "name": "AL AWRAD GROUP",
+  "country": "Iraq",
+  "website": "https://nadaalawrad.iq",
+  "website_status": "verified_name_match",
+  "website_evidence": "2/2 واژه‌ی نام (al, awrad) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@nadaalawrad.iq",
+    "kind": "cfemail",
+    "source_url": "https://nadaalawrad.iq",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@nadaalawrad.iq",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://nadaalawrad.iq",
+  "phones": [
+   {
+    "e164": "+9647838603001",
+    "display": "+964 783 860 3001",
+    "kind": "text",
+    "source_url": "https://nadaalawrad.iq"
+   }
+  ],
+  "phone_best": "+964 783 860 3001",
+  "phone_source_url": "https://nadaalawrad.iq",
+  "pages_checked": [
+   "https://nadaalawrad.iq"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Nada Al-Awrad. . Nada Al-Awrad Skip to content Menu Nada AL-Awrad General Trading and Agricultural Supplies Co, Ltd. Our Vission We aim to be leaders in delivering comprehensive agricultural solutions in Iraq, dedicated to providing top-quality products that address market demands while fostering sustainable growth in the agricultural sector. Our commitment extends to enhancing productivity, supporting innovation, and contributing to the long-term development of the industry. Our Mission Improving agricultural p",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:39": {
+  "name": "AL MAFAKHER COMPANY",
+  "country": "Iraq",
+  "website": "https://mafaco-iraq.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "2/2 واژه‌ی نام (al, mafakher) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@almafakher.iq",
+    "kind": "text",
+    "source_url": "https://mafaco-iraq.com",
+    "domain_status": "dead",
+    "same_domain": false,
+    "free_mail": false
+   }
+  ],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [
+   {
+    "e164": "+9647874487000",
+    "display": "+964 787 448 7000",
+    "kind": "tel",
+    "source_url": "https://mafaco-iraq.com/contact"
+   },
+   {
+    "e164": "+9647855599800",
+    "display": "+964 785 559 9800",
+    "kind": "tel",
+    "source_url": "https://mafaco-iraq.com/contact"
+   },
+   {
+    "e164": "+9647825400700",
+    "display": "+964 782 540 0700",
+    "kind": "whatsapp",
+    "source_url": "https://mafaco-iraq.com"
+   },
+   {
+    "e164": "+9647855599801",
+    "display": "+964 785 559 9801",
+    "kind": "text",
+    "source_url": "https://mafaco-iraq.com"
+   },
+   {
+    "e164": "+9647718111184",
+    "display": "+964 771 811 1184",
+    "kind": "text",
+    "source_url": "https://mafaco-iraq.com"
+   }
+  ],
+  "phone_best": "+964 787 448 7000",
+  "phone_source_url": "https://mafaco-iraq.com/contact",
+  "pages_checked": [
+   "https://mafaco-iraq.com",
+   "https://mafaco-iraq.com/contact"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "شركة المفاخر لخدمات الإعاشة والتجهيزات الغذائية — شركة المفاخر. شركة عراقية متخصصة في خدمات الإعاشة والتجهيزات الغذائية واستيراد وتوزيع المأكولات البحرية المجمدة عالية الجودة للمطاعم والفنادق والأسواق والعملاء في العراق.. شركة المفاخر لخدمات الإعاشة والتجهيزات الغذائية — شركة المفاخر تخطَّ إلى المحتوى شركة المفاخر لخدمات الإعاشة والتجهيزات الغذائية جودة البحر… تصل إليكم بثقة نوفر تشكيلة مختارة من المأكولات البحرية والتجهيزات الغذائية وفق معايير عالية من الجودة، وبحلول توريد موثوقة تلبي احتياجات المطاعم والفنادق والأسواق والعملاء في العراق. استعرض منتجاتنا اطلب عرض سعر تواصل معنا عبر واتساب من نحن شركة المفاخر لخدمات الإعاشة والتجهيزات الغذائية شركة المفاخر لخدمات الإعاشة والتجهيزات الغذائية ",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:40": {
+  "name": "AL MASAR AL JADED",
+  "country": "Iraq",
+  "website": "https://msjd-iraq.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "3/4 واژه‌ی نام (al, masar, al) در عنوان/متن/دامنه",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [
+   {
+    "e164": "+9647502344000",
+    "display": "+964 750 234 4000",
+    "kind": "whatsapp",
+    "source_url": "https://msjd-iraq.com"
+   },
+   {
+    "e164": "+9647502344004",
+    "display": "+964 750 234 4004",
+    "kind": "text",
+    "source_url": "https://msjd-iraq.com"
+   },
+   {
+    "e164": "+9647505929300",
+    "display": "+964 750 592 9300",
+    "kind": "text",
+    "source_url": "https://msjd-iraq.com"
+   },
+   {
+    "e164": "+9647762534222",
+    "display": "+964 776 253 4222",
+    "kind": "text",
+    "source_url": "https://msjd-iraq.com"
+   }
+  ],
+  "phone_best": "+964 750 234 4000",
+  "phone_source_url": "https://msjd-iraq.com",
+  "pages_checked": [
+   "https://msjd-iraq.com",
+   "https://msjd-iraq.com/contact-us/",
+   "https://msjd-iraq.com/contact-us/",
+   "https://msjd-iraq.com/contact-us",
+   "https://msjd-iraq.com/contact-us/"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Home - Al Masar Al Jadeed | msjd-iraq.com. . Home - Al Masar Al Jadeed | msjd-iraq.com Skip to content Menu Providing Iraq & Kurdistan with the highest quality Beef products Sea Food Products Bakery Products ​ Fries & Appetizer Al Masar Al Jadeed Food Supply is an independent General trading company located in Kurdistan, north of Iraq. With long experience in the international seafood & beef business we know the importance of supplying our customers the right quality to the right price at the right time. We have a strict focus on quality o",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:41": {
+  "name": "AL-BAWABA ALMASLA GENERAL TRADING LTD.",
+  "country": "Iraq",
+  "website": "https://bawaba-almajd.com.iq",
+  "website_status": "verified_name_match",
+  "website_evidence": "2/3 واژه‌ی نام (al, bawaba) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@bawaba-almajd.com.iq",
+    "kind": "cfemail",
+    "source_url": "https://bawaba-almajd.com.iq",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@bawaba-almajd.com.iq",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://bawaba-almajd.com.iq",
+  "phones": [
+   {
+    "e164": "+9647811503807",
+    "display": "+964 781 150 3807",
+    "kind": "text",
+    "source_url": "https://bawaba-almajd.com.iq"
+   }
+  ],
+  "phone_best": "+964 781 150 3807",
+  "phone_source_url": "https://bawaba-almajd.com.iq",
+  "pages_checked": [
+   "https://bawaba-almajd.com.iq"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "medium",
+  "site_blurb": "Bawaba Almajd. . Bawaba Almajd التجاوز إلى المحتوى شركة بوابة المجد للتجارة العامة جسر التوريد بين العالم والعراق في استيراد وتوزيع الملابس والأحذية والحقائب من نحن تواصل معنا من نحن ؟ بوابة المجد هي شركة عراقية رائدة في مجال التجارة العامة، تأسست لتكون بوابة موثوقة نحو التميز والجودة. نختص باستيراد وتوزيع الملابس بجميع أنواعها، من الكاجوال إلى الرسمية، بالإضافة إلى الأحذية والحقائب من مناشئ عالمية متنوعة، حرصًا منا على تلبية احتياجات السوق المحلي بذوق عصري وجودة عالية. نحن نسعى دائمًا إلى تقديم منتجات تجمع بين",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:42": {
+  "name": "DAHAB KHYRATALARD COMPANY",
+  "country": "Iraq",
+  "website": "https://www.khdaco.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "1/2 واژه‌ی نام (dahab) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@khdaco.com",
+    "kind": "text",
+    "source_url": "https://www.khdaco.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@khdaco.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://www.khdaco.com",
+  "phones": [
+   {
+    "e164": "+9647800000235",
+    "display": "+964 780 000 0235",
+    "kind": "text",
+    "source_url": "https://www.khdaco.com"
+   },
+   {
+    "e164": "+4915217267327",
+    "display": "+49 1521 7267327",
+    "kind": "text",
+    "source_url": "https://www.khdaco.com/contact.html"
+   }
+  ],
+  "phone_best": "+964 780 000 0235",
+  "phone_source_url": "https://www.khdaco.com",
+  "pages_checked": [
+   "https://www.khdaco.com",
+   "https://www.khdaco.com/contact.html"
+  ],
+  "notes": [
+   "https://khyratalard.com → نام شرکت با صفحه نمی‌خواند (1/2 واژه‌ی نام (khyratalard) در عنوان/متن/دامنه)",
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "medium",
+  "site_blurb": "KHAIRAT ALDAHAB ALBASRA Co. | شركة خيرات ذهب البصرة للمقاولات ونقل المشتقات النفطية. . KHAIRAT ALDAHAB ALBASRA Co. | شركة خيرات ذهب البصرة للمقاولات ونقل المشتقات النفطية KHAIRAT ALDAHAB ALBASRA COMPANY KHAIRAT ALDAHAB ALBASRA COMPANY has a history of construction company working in Iraq and have been doing civil, mechanical, piping, pipe line and E&I site works for quite some times in the engineering sector, focusing mainly on oil & gas, power generation & distribution, water treatment and distribution, chemical & petro-chemical and infrastructure. Profile Company KHAIRAT ALDAHAB",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:43": {
+  "name": "DAIRY BLEND COMPANY",
+  "country": "Iraq",
+  "website": "http://www.alrayandairies.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "1/2 واژه‌ی نام (dairy) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@alrayandairies.com",
+    "kind": "mailto",
+    "source_url": "http://www.alrayandairies.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   },
+   {
+    "email": "demo@gmail.com",
+    "kind": "mailto",
+    "source_url": "http://www.alrayandairies.com/contact.html",
+    "domain_status": "mx",
+    "same_domain": false,
+    "free_mail": true
+   },
+   {
+    "email": "info@alrayandaires.com",
+    "kind": "text",
+    "source_url": "http://www.alrayandairies.com/contact.html",
+    "domain_status": "dead",
+    "same_domain": false,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@alrayandairies.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "http://www.alrayandairies.com",
+  "phones": [
+   {
+    "e164": "+9647821119299",
+    "display": "+964 782 111 9299",
+    "kind": "tel",
+    "source_url": "http://www.alrayandairies.com/contact.html"
+   },
+   {
+    "e164": "+9647835950069",
+    "display": "+964 783 595 0069",
+    "kind": "text",
+    "source_url": "http://www.alrayandairies.com/contact.html"
+   },
+   {
+    "e164": "+9647800099885",
+    "display": "+964 780 009 9885",
+    "kind": "text",
+    "source_url": "http://www.alrayandairies.com/contact.html"
+   }
+  ],
+  "phone_best": "+964 782 111 9299",
+  "phone_source_url": "http://www.alrayandairies.com/contact.html",
+  "pages_checked": [
+   "http://www.alrayandairies.com",
+   "http://www.alrayandairies.com/contact.html"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "medium",
+  "site_blurb": "Al-Rayan dairies. . Al-Rayan dairies Al-Rayan Dairies Find out more ! Since 2014 YOUR TRUST HAS MADE OUR JOURNEY POSSIBLE Committed to quality Established in 2014 in the Governorate of Basra, Iraq, we began our journey at Al-Rayan Dairies inspired with a deep commitment to bring high quality dairy products that are locally produced into the Iraqi market, all at incredibly competitive prices. read more Why choose Al-Rayan Dairies ? At Al-Rayan Dairies we strive everyday to bring the highest quality dairy products to",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:44": {
+  "name": "DAR ALIYA FOOD DIST. COMPANY",
+  "country": "Iraq",
+  "website": "https://www.daraliraq.co",
+  "website_status": "verified_name_match",
+  "website_evidence": "2/3 واژه‌ی نام (dar, dist) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@daraliraq.co",
+    "kind": "cfemail",
+    "source_url": "https://www.daraliraq.co",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@daraliraq.co",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://www.daraliraq.co",
+  "phones": [
+   {
+    "e164": "+9647709199000",
+    "display": "+964 770 919 9000",
+    "kind": "tel",
+    "source_url": "https://www.daraliraq.co"
+   }
+  ],
+  "phone_best": "+964 770 919 9000",
+  "phone_source_url": "https://www.daraliraq.co",
+  "pages_checked": [
+   "https://www.daraliraq.co"
+  ],
+  "notes": [
+   "https://www.aldurra-worldco.com.iq → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "medium",
+  "site_blurb": "Dar al Iraq | دار العراق. Dar al Iraq — Leading Iraqi company for general trade, investment, marketing & supply, and manufacturing. Offices in Sulaymaniyah and Erbil.. Dar al Iraq | دار العراق Established 2024 · Sulaymaniyah & Erbil Dar al Iraq Leading Iraqi Company for General Trade & Investment We connect markets, drive investments, and build the future of commerce across Iraq and the Kurdistan Region. Our Services Get in Touch 2024 Founded 2 Offices 4+ Services 100+ Clients About Us A Leading Iraqi Company Built for Growth Dar al Iraq is a leading Iraqi company established in 2024, specializing in general commerce, investment, cosmetics, and market developm",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:45": {
+  "name": "DLBA COMPANY",
+  "country": "Iraq",
+  "website": null,
+  "website_status": "not_found",
+  "website_evidence": "",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [],
+  "notes": [
+   "https://international.krikri.gr → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "https://daliliraq.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "https://crm.idos.events → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "https://www.foodbevg.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+  ],
+  "needs_render": false,
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:46": {
+  "name": "FIRST CAKE FACTORY",
+  "country": "Iraq",
+  "website": "https://first-cake.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (first, cake, factory) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "first-cake@support.com",
+    "kind": "text",
+    "source_url": "https://first-cake.com",
+    "domain_status": "mx",
+    "same_domain": false,
+    "free_mail": false
+   }
+  ],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [
+   {
+    "e164": "+9647504464047",
+    "display": "+964 750 446 4047",
+    "kind": "tel",
+    "source_url": "https://first-cake.com"
+   },
+   {
+    "e164": "+9647515000203",
+    "display": "+964 751 500 0203",
+    "kind": "tel",
+    "source_url": "https://first-cake.com"
+   },
+   {
+    "e164": "+9647745030203",
+    "display": "+964 774 503 0203",
+    "kind": "tel",
+    "source_url": "https://first-cake.com"
+   }
+  ],
+  "phone_best": "+964 750 446 4047",
+  "phone_source_url": "https://first-cake.com",
+  "pages_checked": [
+   "https://first-cake.com"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "first-cake@support.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Festava Live - Bootstrap 5 CSS Template. . Festava Live - Bootstrap 5 CSS Template First Cake Factory For producting sugar cone Jan 2022 Timar Indusrial Area Erbil/Iraq Your browser does not support the video tag. Products Your browser does not support the video tag. The products we have 1 2 3 About First Cake Factory is located just 20 minutes from the Erbil city center, First Cake Factory is the region’s home to the production and distribution of high quality, Italian standard and Maximum size of Sugar Cone. The factory is composed of",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:47": {
+  "name": "HAMOS COMPANY",
+  "country": "Iraq",
+  "website": "https://hamos.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (hamos) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@hamos.com",
+    "kind": "text",
+    "source_url": "https://hamos.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@hamos.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://hamos.com",
+  "phones": [
+   {
+    "e164": "+49885692610",
+    "display": "+49 8856 92610",
+    "kind": "text",
+    "source_url": "https://hamos.com"
+   }
+  ],
+  "phone_best": "+49 8856 92610",
+  "phone_source_url": "https://hamos.com",
+  "pages_checked": [
+   "https://hamos.com"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Hamos – Advanced Separation Technologies. . Hamos – Advanced Separation Technologies ✖ Elektrostatische Separatoren Elektrostatischer Separator Kunststoffe Elektrostatischer Separator Metalle Elektrostatische Mineralien Separatoren Elastomer Separatoren Recyclinganlagen Recyclinganlagen – Photovoltaikmodule Recyclinganlagen – Fensterprofile Recyclinganlagen – WEEE Metall-Detektoren Detektoren – Last Chance Detektoren – pneumatische Förderanlagen Detektoren – Metallseparatoren Freifall Optische Sortieranlagen Infocenter Unternehmen Aktuell",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:48": {
+  "name": "HAVRSIN COMPANY",
+  "country": "Iraq",
+  "website": null,
+  "website_status": "not_found",
+  "website_evidence": "",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [],
+  "notes": [
+   "https://wwwhaversin.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "https://hamrinco.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "https://www.noorsin.net → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "https://alhazimgroup.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+  ],
+  "needs_render": false,
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:49": {
+  "name": "IRAQI CINEMA FACTORY",
+  "country": "Iraq",
+  "website": null,
+  "website_status": "not_found",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (iraqi, cinema, factory) در عنوان/متن/دامنه",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [
+   "https://staging.iraqicinema.net/Harith/en",
+   "https://staging.iraqicinema.net/Harith/en/contact-us"
+  ],
+  "notes": [
+   "job@iraqicinema.net نقش غیرتجاری است (کنار گذاشته شد)",
+   "سایت با تلاش دوم (پرسش‌های عراق/اربیل/بغداد) پیدا و با شاهد عراقی تأیید شد",
+   "تلاش دوم: سایتِ بدون شاهد قوی عراقی (فقط ذکر نام عراق) رد شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Iraqi Cinema. . Iraqi Cinema Book Now Choose the branch and book now Age rating Coupons The Cheesecake Factory Bakery Now in Iraqi Cinema Qareen Showing Now Watch Trailer Zain Mamnoon حدوتة Book Now Watch Trailer About Us + Branches + Screens + Provinces + Seats Introduction Iraqi Cinema is an Iraqi movies’ theatre chain headquartered in Harthiya, Baghdad. Iraqi Cinema is well known as Iraq’s most innovative exhibitor and considered as the highest-profile business in the movies’ exhibition businesses in the reg",
+  "checked_at": "2026-11-20"
+ },
+ "iraqagro:50": {
+  "name": "JABAL UHOD COMPANY",
+  "country": "Iraq",
+  "website": "http://juhod.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "2/2 واژه‌ی نام (jabal, uhod) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@juhod.com",
+    "kind": "mailto",
+    "source_url": "http://juhod.com/english/home-page/",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@juhod.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "http://juhod.com/english/home-page/",
+  "phones": [
+   {
+    "e164": "+9647502452957",
+    "display": "+964 750 245 2957",
+    "kind": "text",
+    "source_url": "http://juhod.com/english/home-page/"
+   },
+   {
+    "e164": "+9647704338761",
+    "display": "+964 770 433 8761",
+    "kind": "text",
+    "source_url": "https://www.juhod.com/english/contact-us/"
+   }
+  ],
+  "phone_best": "+964 750 245 2957",
+  "phone_source_url": "http://juhod.com/english/home-page/",
+  "pages_checked": [
+   "http://juhod.com/english/home-page/",
+   "https://www.juhod.com/english/contact-us/"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "J.uhod Co | Scientific Laboratory & Industrial Equipment. . J.uhod Co | Scientific Laboratory & Industrial Equipment عربي | English | Kurdish Home Page Company Profile Products Projects Certificates News Contact Us News And Events Wile 55 Grain Moisture Meter Wile 55 grain moisture meter measures moisture levels of 16 different grains including wheat, co ... More Welcome to our new website Welcome to Welcome to Jabal Uhod Company Home Page | Company Profile | Products | Projects | Certificates | News | Contact Us Copyright © 2014 J.uhod Co - Erbil , Midd",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:51": {
+  "name": "KAVIN FARM",
+  "country": "Iraq",
+  "website": "https://kavin.ltd",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (kavin, farm) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@kavin.ltd",
+    "kind": "text",
+    "source_url": "https://kavin.ltd",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@kavin.ltd",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://kavin.ltd",
+  "phones": [
+   {
+    "e164": "+9647504007775",
+    "display": "+964 750 400 7775",
+    "kind": "text",
+    "source_url": "https://kavin.ltd"
+   },
+   {
+    "e164": "+9647504007776",
+    "display": "+964 750 400 7776",
+    "kind": "text",
+    "source_url": "https://kavin.ltd"
+   }
+  ],
+  "phone_best": "+964 750 400 7775",
+  "phone_source_url": "https://kavin.ltd",
+  "pages_checked": [
+   "https://kavin.ltd",
+   "https://kavin.ltd/contact/"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Kavin. . Kavin Skip to content Leading the Digital Transformation in Dairy & Agriculture Explore Our Projects Who we are Each bottle of milk, each spoon of yogurt, and every slice of cheese is a reflection of our deep commitment to nature, health, and quality. Kavin Ltd is a leading agribusiness company based in the Kurdistan Region of Iraq, specializing in dairy and agricultural production. The company operates two major projects in Duhok: Kavin Farm and Kavin Greenhouse, both designed to integrate mode",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:52": {
+  "name": "MARAI AL RAFIDAIN COMPANY",
+  "country": "Iraq",
+  "website": "https://maraialrafidain.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (marai, al, rafidain) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@maraialrafidain.com",
+    "kind": "cfemail",
+    "source_url": "https://maraialrafidain.com/ar",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   },
+   {
+    "email": "sales@maraialrafidain.com",
+    "kind": "cfemail",
+    "source_url": "https://maraialrafidain.com/ar",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   },
+   {
+    "email": "accounts@maraialrafidain.com",
+    "kind": "cfemail",
+    "source_url": "https://maraialrafidain.com/ar",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@maraialrafidain.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://maraialrafidain.com/ar",
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [
+   "https://maraialrafidain.com/ar"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "شركة تجارة المواد الغذائية | Marai Al Rafedian. تسعى شركة مراعي الرافدين لتجارة المواد الغذائية إلى توفير قيمة غذائية وغذائية عالية الجودة. مما يثري الحياة اليومية للمستهلكين. من خلال تركيزها المستمر على الالتزام بأعلى معايير الجودة.. شركة تجارة المواد الغذائية | Marai Al Rafedian Skip to main content لمحة عامة عن استراتيجية الشركة تسعى شركة مراعي الرافدين لتجارة المواد الغذائية إلى توفير قيمة غذائية عالية الجودة. الذي يثري الحياة اليومية للمستهلكين. من خلال تركيزها المستمر على الالتزام بأعلى معايير الجودة ، نجحت شركة مراعي الرافدين في أن تصبح الخيار المفضل للمستهلكين لتوفير منتجات متميزة تلبي جميع احتياجاتهم وتحتفظ الشركة بدورها الريادي في السوق في مختلف المنتجات الرئيسية التي تقدمها لمصلحة",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:53": {
+  "name": "TEEBAT AL-BARAKA",
+  "country": "Iraq",
+  "website": "https://albarakaiq.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "3/3 واژه‌ی نام (teebat, al, baraka) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@albarakaiq.com",
+    "kind": "mailto",
+    "source_url": "https://albarakaiq.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   },
+   {
+    "email": "mohammed@albarakaiq.com",
+    "kind": "mailto",
+    "source_url": "https://albarakaiq.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   },
+   {
+    "email": "alaauldeen@albarakaiq.com",
+    "kind": "mailto",
+    "source_url": "https://albarakaiq.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@albarakaiq.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://albarakaiq.com",
+  "phones": [
+   {
+    "e164": "+9647704555186",
+    "display": "+964 770 455 5186",
+    "kind": "tel",
+    "source_url": "https://albarakaiq.com"
+   }
+  ],
+  "phone_best": "+964 770 455 5186",
+  "phone_source_url": "https://albarakaiq.com",
+  "pages_checked": [
+   "https://albarakaiq.com"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "TEEBAT ALBARAKA Co. | شركة طيبات البركة – للتجارة العامة والوكلات التجارية م.م for General Trading and Commercial Agencies Ltd. . TEEBAT ALBARAKA Co. | شركة طيبات البركة – للتجارة العامة والوكلات التجارية م.م for General Trading and Commercial Agencies Ltd تخطي إلى المحتوى حلول متخصصة لصناعة المشروبات اكتشف حلولنا نكهات ومواد أولية بجودة عالية اكتشف حلولنا شريكك في الصناعات الغذائية اكتشف حلولنا حلول متكاملة لمكونات الصناعات الغذائية والمشروبات شركة طيبات البركة للتجارة العامة والوكلات التجارية م.م هي شركة عراقية متخصصة في استيراد وتوزيع النكهات والمواد الأولية للصناعات الغذائية والعصائر والمشروبات الغازية. نعمل وفق الأطر",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:54": {
+  "name": "TIGER POWER COMPANY",
+  "country": "Iraq",
+  "website": "https://tigerpoweriq.com",
+  "website_status": "verified_name_match",
+  "website_evidence": "2/2 واژه‌ی نام (tiger, power) در عنوان/متن/دامنه",
+  "emails": [
+   {
+    "email": "info@tigerpoweriq.com",
+    "kind": "mailto",
+    "source_url": "https://tigerpoweriq.com",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   },
+   {
+    "email": "accounting@tigerpoweriq.com",
+    "kind": "mailto",
+    "source_url": "https://tigerpoweriq.com/contact/",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   },
+   {
+    "email": "g.alkhani@tigerpoweriq.com",
+    "kind": "mailto",
+    "source_url": "https://tigerpoweriq.com/contact/",
+    "domain_status": "mx",
+    "same_domain": true,
+    "free_mail": false
+   }
+  ],
+  "email_best": "info@tigerpoweriq.com",
+  "email_confidence": "site_confirmed_same_domain",
+  "email_source_url": "https://tigerpoweriq.com",
+  "phones": [
+   {
+    "e164": "+9647509994647",
+    "display": "+964 750 999 4647",
+    "kind": "tel",
+    "source_url": "https://tigerpoweriq.com"
+   },
+   {
+    "e164": "+9647507531340",
+    "display": "+964 750 753 1340",
+    "kind": "tel",
+    "source_url": "https://tigerpoweriq.com"
+   },
+   {
+    "e164": "+9647504813557",
+    "display": "+964 750 481 3557",
+    "kind": "tel",
+    "source_url": "https://tigerpoweriq.com"
+   }
+  ],
+  "phone_best": "+964 750 999 4647",
+  "phone_source_url": "https://tigerpoweriq.com",
+  "pages_checked": [
+   "https://tigerpoweriq.com",
+   "https://tigerpoweriq.com/contact/"
+  ],
+  "notes": [
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Dotted Tiger – Food Supplier. Dotted Tiger, your trusted partner in premium Italian food supplies services in Iraq. Founded with a vision to bring the authentic taste.... Dotted Tiger – Food Supplier Skip to content info@tigerpoweriq.com +9647509994647 Shop Now Exclusive agents for many Italian and European companies O u r P r o d u c t s Quick View Read more Moreno Coffees Espresso Bar 1 Kg Quick View Read more Moreno Coffees Extra Bar 1 Kg Quick View Read more Moreno Coffees Super Bar 1 Kg Quick View Read more Moreno Coffees Gran Miscela 1 Kg Quick View Read more Zarpellon Cheese Grana Padano Parmesan Cheese Quick View Read more HOPLA Cream HOPLA Spary Cream Qu",
+  "checked_at": "2026-11-19"
+ },
+ "iraqagro:55": {
+  "name": "ZAIN SNAX",
+  "country": "Iraq",
+  "website": null,
+  "website_status": "not_found",
+  "website_evidence": "2/2 واژه‌ی نام (zain, snax) در عنوان/متن/دامنه",
+  "emails": [],
+  "email_best": null,
+  "email_confidence": null,
+  "email_source_url": null,
+  "phones": [],
+  "phone_best": null,
+  "phone_source_url": null,
+  "pages_checked": [
+   "https://www.zaingroup-me.com"
+  ],
+  "notes": [
+   "https://www.nytimes.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "https://www.wsj.com → نام شرکت با صفحه نمی‌خواند (0/2 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+   "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+   "سایت با تلاش دوم (پرسش‌های عراق/اربیل/بغداد) پیدا و با شاهد عراقی تأیید شد",
+   "تلاش دوم: سایتِ بدون شاهد قوی عراقی (فقط ذکر نام عراق) رد شد"
+  ],
+  "needs_render": false,
+  "website_match": "strong",
+  "site_blurb": "Zain International Group for Commercial Investment – Zain Group. . Zain International Group for Commercial Investment – Zain Group ZAIN IS THE WORLD OF TRUST Chairman’s message I am delighted to share with you more than half a century of pioneering achievements of ZainGroup. Since almost five decades now, we have been operating in the Middle East region and have been able to gain a foothold in various industries by establishing numerous subsidiary companies. We can refer with pride to our significant contribution to the Iraqi economy as one of the most dynamic",
+  "checked_at": "2026-11-20"
+ }
 }

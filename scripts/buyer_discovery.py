@@ -59,6 +59,16 @@ COUNTRIES = {
                      "صودا الخبز جملة {p}"],
                     ["دبي", "الشارقة", "أبوظبي", "الإمارات"])],
     },
+    "iraq_bp": {
+        "country": "Iraq", "title": "Buyers Iraq BakingPowder", "dial": "+964", "tlds": ["iq", "krd"],
+        "groups": [(["baking powder manufacturer {p}", "baking powder factory {p}", "baking powder supplier {p}",
+                     "baking powder importer distributor {p}", "baking ingredients bakery mixes manufacturer {p}"],
+                    ["Baghdad", "Erbil", "Sulaymaniyah", "Basra", "Mosul", "Najaf", "Karbala", "Kirkuk", "Duhok",
+                     "Kurdistan", "Iraq"]),
+                   (["مصنع بيكنج باودر {p}", "بيكنج باودر جملة {p}", "منتجات بيكنج باودر شركة {p}",
+                     "مسحوق الخبز مصنع {p}", "خميرة كيميائية مصنع {p}", "مواد خبز ومعجنات استيراد وتوزيع {p}"],
+                    ["بغداد", "أربيل", "البصرة", "السليمانية", "الموصل", "النجف", "كربلاء", "كركوك", "دهوك", "العراق"])],
+    },
     "iraq": {
         "country": "Iraq", "title": "Buyers Iraq", "dial": "+964", "tlds": ["iq"],
         "groups": [(["sodium bicarbonate distributor {p}", "sodium bicarbonate importer {p}",
@@ -73,7 +83,8 @@ COUNTRIES = {
 }
 
 BICARB_RE = re.compile(r"(sodium\s*bi-?\s*carbonate|bicarbonate\s+of\s+soda|baking\s+soda|nahco3|sodium\s+hydrogen\s*carbonate|"
-                       r"بيكربونات\s*الصوديوم|بيكاربونات\s*الصوديوم|بايكربونات|صودا\s*الخبز|bicarbonato\s+de\s+sodio)", re.I)
+                       r"بيكربونات\s*الصوديوم|بيكاربونات\s*الصوديوم|بايكربونات|صودا\s*الخبز|bicarbonato\s+de\s+sodio|"
+                       r"baking\s+powder|بيكنج\s*(باودر|بودر|بوودر)|بكينج\s*(باودر|بودر)|بيكن[كج]\s*باودر|مسحوق\s*(الخبز|الخبيز)|ذرور\s*الخبيز|خميرة\s*كيميائية)", re.I)
 NOISE_RE = re.compile(r"(recipe|benefits?\b|\buses?\b|how\s+to|side\s+effects?|health|msds|\bsds\b|safety\s+data|wikipedia|"
                       r"what\s+is|vs\.?|difference|price\s+trend|pdf\b|news|blog|review|buy\s+online|amazon|flipkart)", re.I)
 MFR_RE = re.compile(r"(manufacturer|producer|manufacturing|maker|factory|مصنع|منتج)", re.I)

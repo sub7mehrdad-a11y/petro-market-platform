@@ -1,0 +1,1755 @@
+{
+  "buyers:1": {
+    "name": "gosupps.com",
+    "country": "Iraq",
+    "website": "https://www.gosupps.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (gosupps, com) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "hi@gosupps.com",
+        "kind": "cfemail",
+        "source_url": "https://www.gosupps.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "hi@gosupps.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.gosupps.com",
+    "phones": [
+      {
+        "e164": "+18444678777",
+        "display": "+1 844-467-8777",
+        "kind": "whatsapp",
+        "source_url": "https://www.gosupps.com"
+      }
+    ],
+    "phone_best": "+1 844-467-8777",
+    "phone_source_url": "https://www.gosupps.com",
+    "pages_checked": [
+      "https://www.gosupps.com",
+      "https://www.gosupps.com/subcategories/health-household/eye-visual-health/contact-lenses.html"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "GoSupps.com | Global Supplies . Official Suppliers. Gosupps. GoSupps.com | Global Supplies . Official Suppliers GoSupps.com links Log In International Australia Azerbaijan Bahrain Canada France Germany India Japan Jordan Kenya Kuwait Lebanon Malaysia Morocco Netherlands New Zealand Nigeria Oman Qatar Romania Russia Saudi Arabia Singapore South Africa South Korea Spain Switzerland Turkey Ukraine United Arab Emirates United Kingdom United States 0 Search: Health Supplies Fitness & Nutrition Minerals Protein Supplements Amino Acids Nutrition Bars Herbal Supp",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:2": {
+    "name": "Keychain",
+    "country": "Iraq",
+    "website": "https://www.keychain.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (keychain) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "hello@keychain.com",
+        "kind": "cfemail",
+        "source_url": "https://www.keychain.com/contact",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "hello@keychain.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.keychain.com/contact",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.keychain.com",
+      "https://www.keychain.com/contact"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Keychain: The AI Platform for CPG. Keychain is how modern consumer brands and their manufacturers run, grow, and connect - Connect for the largest CPG network, Edge for revenue, OS for operations.. Keychain: The AI Platform for CPG A granola manufacturer in New Jersey just completed a 3,000 lb run on KeychainOS The AI Platform for CPG Powering over $10 billion in manufacturing for the world’s most innovative brands and manufacturers. Request access Find a manufacturer Keychain Connect The largest global CPG network. Connect with brands. The largest network in CPG - 28,000+ brands and manufacturers, and the intelligence between them. Explore Connect Keychain Edge The CRM Revenue Platform fo",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:3": {
+    "name": "Kudos Blends",
+    "country": "Iraq",
+    "website": "https://kudosblends.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (kudos, blends) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@kudosblends.com",
+        "kind": "cfemail",
+        "source_url": "https://kudosblends.com/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@kudosblends.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://kudosblends.com/contact-us/",
+    "phones": [
+      {
+        "e164": "+441299271333",
+        "display": "+44 1299 271333",
+        "kind": "tel",
+        "source_url": "https://kudosblends.com/contact-us/"
+      }
+    ],
+    "phone_best": "+44 1299 271333",
+    "phone_source_url": "https://kudosblends.com/contact-us/",
+    "pages_checked": [
+      "https://kudosblends.com",
+      "https://kudosblends.com/contact-us/",
+      "https://kudosblends.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Home page - Kudos Blends. The world's leading manufacturer of technically driven baking powders and leavening agents.. Home page - Kudos Blends Skip to content The world's leading manufacturer of technically driven baking powders and leavening agents Get in Touch the chemistry behind baking Our Solutions Within our extensive range of products, we have baking powders suited to any process or application, which can provide solutions to so much more than just aeration and volume. Choosing the right leavening agent blend is key to achieving all sorts of aspects from texture, appearance and shelf-life of your baked g",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:4": {
+    "name": "IFPC",
+    "country": "Iraq",
+    "website": "https://ifpc.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (ifpc) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://ifpc.com",
+      "https://ifpc.com/contact-us/",
+      "https://ifpc.com/contact-us/",
+      "https://ifpc.com/contact-us/",
+      "https://ifpc.com/contact-us/"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Home - IFPC - The Industry's Exclusive Ingredient Concierge. The industry’s exclusive Ingredient Concierge™ From quality ingredients to custom blends, IFPC is the ingredient supplier you can trust. Endless Solutions 0…. Home - IFPC - The Industry's Exclusive Ingredient Concierge Skip to content The industry’s exclusive Ingredient Concierge™ From quality ingredients to custom blends, IFPC is the ingredient supplier you can trust. Endless Solutions 0 Ingredients 0 Custom Ingredient Systems Ingredients Overview Break free from limitations and explore a world of boundless specialty solutions where food and chemistry innovate. Custom Ingredient Systems From dairy staples to flavor enhancements to",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:5": {
+    "name": "Sweetener Products Co.",
+    "country": "Iraq",
+    "website": "https://www.sweetenerproducts.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (sweetener) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@spvw.com",
+        "kind": "text",
+        "source_url": "https://www.sweetenerproducts.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+18003052200",
+        "display": "+1 800-305-2200",
+        "kind": "text",
+        "source_url": "https://www.sweetenerproducts.com"
+      }
+    ],
+    "phone_best": "+1 800-305-2200",
+    "phone_source_url": "https://www.sweetenerproducts.com",
+    "pages_checked": [
+      "https://www.sweetenerproducts.com",
+      "https://www.sweetenerproducts.com/contact"
+    ],
+    "notes": [
+      "info@spvw.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Food & Beverage Ingredient Supplier - Sweetener Products Co. Sweetener Products Co. is a specialty food & beverage ingredient supplier located in Vernon, CA with distribution centers in California & the Pacific Northwest.. Food & Beverage Ingredient Supplier - Sweetener Products Co Innovative ingredient supply and distribution The first choice in the Western United States for food ingredients for over 90 years, Sweetener Products Company sources, stores, and ships extraordinary wholesale ingredients from all around the world. See how much better buying bulk ingredients can be> MANUFACTURING DAIRY BAKERY BEVERAGE CONFECTIONERY Sweeten your products—and your profits The food industry trusts Sw",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:6": {
+    "name": "Lano Market, Sulaymaniyah",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://www.lezzoo.com → نام شرکت با صفحه نمی‌خواند (2/3 واژه‌ی نام (market, sulaymaniyah) در عنوان/متن/دامنه)",
+      "https://www.cybo.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://restaurantguru.com → نام شرکت با صفحه نمی‌خواند (0/3 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-20"
+  },
+  "buyers:7": {
+    "name": "Platraw ...",
+    "country": "Iraq",
+    "website": "https://platraw.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (platraw) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@platraw.com",
+        "kind": "cfemail",
+        "source_url": "https://platraw.com/ar",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@platraw.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://platraw.com/ar",
+    "phones": [
+      {
+        "e164": "+966599996569",
+        "display": "+966 59 999 6569",
+        "kind": "whatsapp",
+        "source_url": "https://platraw.com/ar"
+      }
+    ],
+    "phone_best": "+966 59 999 6569",
+    "phone_source_url": "https://platraw.com/ar",
+    "pages_checked": [
+      "https://platraw.com/ar"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "بلاترو - منصة المواد الغذائية والمشروبات المميزة للشركات في الرياض | المواد الخام والمزيد | Platraw. مورد واحد لجميع احتياجاتك من المأكولات والمشروبات , للتوصيل داخل مدينة الرياض. بلاترو - منصة المواد الغذائية والمشروبات المميزة للشركات في الرياض | المواد الخام والمزيد | Platraw بلاترو الآن في جدة – تقدر تطلب الحين! كل الفئات مكونات الخبز المشروبات القهوة والشاي والمنكهات الحليب ومشتقاته المجمدات البقالة والمؤن النظافة والعناية اللحوم المستلزمات المكتبية الزيوت والدهون التغليف والمستهلكات الدواجن المأكولات البحرية الوجبات الخفيفة والحلويات بلاترو - منصة المواد الغذائية والمشروبات المميزة للشركات في الرياض | المواد الخام والمزيد مورد واحد لجميع احتياجاتك من المأكولات والمش",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:8": {
+    "name": "Industrystock",
+    "country": "Iraq",
+    "website": "https://www.industrystock.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (industrystock) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.industrystock.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Just a moment.... . Just a moment...",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:9": {
+    "name": "Aashi Chem",
+    "country": "Iraq",
+    "website": "https://aashichem.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (aashi, chem) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "enquiry@aashichem.com",
+        "kind": "mailto",
+        "source_url": "https://aashichem.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "info@aashichem.com",
+        "kind": "mailto",
+        "source_url": "https://aashichem.com/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "sales@aashichem.com",
+        "kind": "mailto",
+        "source_url": "https://aashichem.com/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "enquiry@aashichem.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://aashichem.com",
+    "phones": [
+      {
+        "e164": "+919925840972",
+        "display": "+91 99258 40972",
+        "kind": "tel",
+        "source_url": "https://aashichem.com"
+      },
+      {
+        "e164": "+918160932426",
+        "display": "+91 81609 32426",
+        "kind": "tel",
+        "source_url": "https://aashichem.com/contact-us/"
+      }
+    ],
+    "phone_best": "+91 99258 40972",
+    "phone_source_url": "https://aashichem.com",
+    "pages_checked": [
+      "https://aashichem.com",
+      "https://aashichem.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Chemical Manufacturer and Exporter – Industrial Chemicals | Aashi Chem. Aashi Chem offers chemical manufacturing, contract manufacturing and customized chemical solutions with quality control and reliable bulk supply to global markets.. Chemical Manufacturer and Exporter – Industrial Chemicals | Aashi Chem SEARCH enquiry@aashichem.com Enquiry Now Brochure Enquiry Now Build Your Industry With Us Aashi Chem Your Partner in Chemical Manufacturing & Contract Solutions Build Your Industry With Us Aashi Chem From Your Requirement to Reliable Commercial Supply We achieve this through streamlined business processes that include.. Adherence to rigorous quality control systems Efficient distribution n",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:10": {
+    "name": "Basraasianfood",
+    "country": "Iraq",
+    "website": "https://www.basraasianfood.de",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (basraasianfood) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@basraasianfood.de",
+        "kind": "mailto",
+        "source_url": "https://www.basraasianfood.de/policies/contact-information",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@basraasianfood.de",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.basraasianfood.de/policies/contact-information",
+    "phones": [
+      {
+        "e164": "+4917643450410",
+        "display": "+49 176 43450410",
+        "kind": "tel",
+        "source_url": "https://www.basraasianfood.de/policies/contact-information"
+      },
+      {
+        "e164": "+491789212310",
+        "display": "+49 178 9212310",
+        "kind": "tel",
+        "source_url": "https://www.basraasianfood.de/policies/contact-information"
+      }
+    ],
+    "phone_best": "+49 176 43450410",
+    "phone_source_url": "https://www.basraasianfood.de/policies/contact-information",
+    "pages_checked": [
+      "https://www.basraasianfood.de",
+      "https://www.basraasianfood.de/policies/contact-information"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Basra Asian Food. Your Pakistani & Indian Online Grocery Store – Discounted prices, high-quality groceries, and nationwide delivery. Free shipping on orders above €39 in Germany!. Basra Asian Food Skip to content Order delivery 2-3 working days via DPD --- Free delivery order price above 39€ Item added to your cart View cart Check out Continue shopping All Products Aashirvaad Chakki Atta Flour 10 kg Sale Aashirvaad Chakki Atta Flour 10 kg Regular price €16,50 EUR Regular price €24,00 EUR Sale price €16,50 EUR Sale Fresh Dhaniya Sale Fresh Dhaniya Regular price €1,49 EUR Regular price €1,99 EUR Sale price €1,49 EUR Sale Fresh Okra 1kg Sale Fresh Okra 1kg Regular price €5,9",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:11": {
+    "name": "Americanchemicalsuppliers",
+    "country": "Iraq",
+    "website": "https://www.americanchemicalsuppliers.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (americanchemicalsuppliers) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@americanchemicalsuppliers.com",
+        "kind": "cfemail",
+        "source_url": "https://www.americanchemicalsuppliers.com/content/page/contact-us",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@americanchemicalsuppliers.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.americanchemicalsuppliers.com/content/page/contact-us",
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.americanchemicalsuppliers.com/list/a",
+      "https://www.americanchemicalsuppliers.com/content/page/contact-us"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "USA Chemical Suppliers. Finding a new supplier starts here. | Browse 300,000+ products. | Request quotes. | Compare manufacturers, specialty suppliers and distributors.. USA Chemical Suppliers American Chemical Suppliers A directory of where to buy chemicals in the USA . Find American chemical suppliers, distributors, industrial manufacturers, bulk supplies and wholesalers of raw ingredients & finished goods in the United States. Search 300,000+ products or services , then visit the suppliers’ websites for prices or more information. Search by keyword Filter by first letter Search Tips Categories A B C D E F G H I J K L M N O P Q R S T U V W X Y Z 0 1 2 3 4 5 6",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:12": {
+    "name": "KELIFFS",
+    "country": "Iraq",
+    "website": "https://www.keliffs.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (keliffs) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@keliffs.com",
+        "kind": "text",
+        "source_url": "https://www.keliffs.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "sales@keliffs.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.keliffs.com",
+    "phones": [
+      {
+        "e164": "+919675929000",
+        "display": "+91 96759 29000",
+        "kind": "text",
+        "source_url": "https://www.keliffs.com"
+      },
+      {
+        "e164": "+919569777790",
+        "display": "+91 95697 77790",
+        "kind": "text",
+        "source_url": "https://www.keliffs.com"
+      }
+    ],
+    "phone_best": "+91 96759 29000",
+    "phone_source_url": "https://www.keliffs.com",
+    "pages_checked": [
+      "https://www.keliffs.com",
+      "https://www.keliffs.com/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Home - KELIFFS. . Home - KELIFFS Skip to content With quality as the foundation, Keliff's products are engineered for superior results. Due to our vast experience and being an old manufacturer & supplier in this food industry, we are capable of innovating and providing the best solutions to the various needs of our customers. We offer a wide range of products with increasing variations. Keliff's products are of the highest quality, measured with standardized tests. Made in India our Baking Ingredients, Essential",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:13": {
+    "name": "Blendtek Ingredients",
+    "country": "Iraq",
+    "website": "https://www.blendtek.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (blendtek, ingredients) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.blendtek.com",
+      "https://www.blendtek.com/contact-us/",
+      "https://www.blendtek.com/contact-us/",
+      "https://www.blendtek.com/",
+      "https://www.blendtek.com/contact-us/",
+      "https://www.blendtek.com/"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Blendtek. . Blendtek Skip to content Ingredient distribution done differently. It's what's inside that counts. Looking for food ingredients? You’ve come to the right place. Whether you want to mix it up, stir the pot, dish it out, or just really like ingredient puns, Blendtek has you covered. Hi. We’re Blendtek. Think of us as your new BFF*. We’re a food ingredients company 100% dedicated to making your culinary creations utterly fabulous. *best food forever Ingredients Because the secret ingredient isn’t l",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:14": {
+    "name": "Guilin Hongxing Chemical Co., Ltd.",
+    "country": "Iraq",
+    "website": "https://www.hxbakingpowder.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "3/3 واژه‌ی نام (guilin, hongxing, chemical) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@glhx.com.cn",
+        "kind": "text",
+        "source_url": "https://www.hxbakingpowder.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+867733637091",
+        "display": "+86 773 363 7091",
+        "kind": "text",
+        "source_url": "https://www.hxbakingpowder.com"
+      }
+    ],
+    "phone_best": "+86 773 363 7091",
+    "phone_source_url": "https://www.hxbakingpowder.com",
+    "pages_checked": [
+      "https://www.hxbakingpowder.com",
+      "http://www.hxbakingpowder.com/contact-us.html",
+      "https://www.hxbakingpowder.com/contact-us.html"
+    ],
+    "notes": [
+      "sales@glhx.com.cn دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Guilin Hongxing Chemical Co., Ltd.. Guilin Hongxing Chemical Co., Ltd. is a well-known domestic enterprise since 1958, which specializes in producing food additives.We mainly produce “Jianshi”brand and ”Guihua”brand baking powder, we also produce and sale food grade sodium bicarbonate, sodium carbonate, potassium aluminium sulfate, calcium carbonate,premix, and caramel color.. ﻿ Guilin Hongxing Chemical Co., Ltd. Our Products Guihua brand double acting baking powder Guihua brand double acting baking powder Premixed sesame ball powder 310g Premixed rice steamed sponge cake powder Double acting baking powder 2kg/can Baking powder of sesame ball 500g/bag Youtiao Baking Powder (250g/bag) Double ",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:15": {
+    "name": "Mtroyal",
+    "country": "Iraq",
+    "website": "https://mtroyal.com.tr",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (mtroyal) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@mtroyal.com.tr",
+        "kind": "cfemail",
+        "source_url": "https://mtroyal.com.tr/tr/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@mtroyal.com.tr",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://mtroyal.com.tr/tr/",
+    "phones": [
+      {
+        "e164": "+902122582323",
+        "display": "+90 212 258 23 23",
+        "kind": "tel",
+        "source_url": "https://mtroyal.com.tr/tr/"
+      },
+      {
+        "e164": "+905377983495",
+        "display": "+90 537 798 34 95",
+        "kind": "whatsapp",
+        "source_url": "https://mtroyal.com.tr/tr/"
+      }
+    ],
+    "phone_best": "+90 212 258 23 23",
+    "phone_source_url": "https://mtroyal.com.tr/tr/",
+    "pages_checked": [
+      "https://mtroyal.com.tr/tr/",
+      "https://mtroyal.com.tr/tr/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "MT ROYAL Üretici ve Tedarikçi. Firmamızın rolü dünyanın her yerinden taleplerinizi karşılamaktır. Ticari firma olarak gıda, kimyasal, hammadde, yedek parça vs temini için. MT ROYAL Üretici ve Tedarikçi Kaliteyi sunmak Misyonumz Ürünlerimiz İletişim Başarının İlk Adımı Doğru Yolu Seçmektir Avantajlarımıza Göz Atın Neye İhtiyacınız Olduğunu Biliyoruz. Sizinle Çalışmaktan Gurur Duyarız. Neye İhtiyacınız Olduğunun Bilmeinin Tam Zamanı. Global markete bağlan (Faaliyet Alanlarımız) Hizmet Verdiğimiz Alanları İnceleyin. Gıda KARTON BARDAK İPLİK Makina İthalat İhracat Üretim Kimyasallar İlaç İSTATİSTİKLER Yaptıklarımız 130 + Müşteri Memnuniyeti 57 Fabrika 425 + Proje Ulus",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:16": {
+    "name": "Manufacturing",
+    "country": "Iraq",
+    "website": null,
+    "website_status": "unreachable_or_unmatched",
+    "website_evidence": "",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [],
+    "notes": [
+      "https://www.khudairigroup.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://worldmetrics.org → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.iraqdirectory.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.iraq-businessnews.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)",
+      "https://www.sciencedirect.com → نام شرکت با صفحه نمی‌خواند (0/1 واژه‌ی نام (-) در عنوان/متن/دامنه)"
+    ],
+    "needs_render": false,
+    "checked_at": "2026-11-20"
+  },
+  "buyers:17": {
+    "name": "Royalbagiq",
+    "country": "Iraq",
+    "website": "https://royalbagiq.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (royalbagiq) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@royalbagiq.com",
+        "kind": "cfemail",
+        "source_url": "https://royalbagiq.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@royalbagiq.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://royalbagiq.com",
+    "phones": [
+      {
+        "e164": "+9647709633221",
+        "display": "+964 770 963 3221",
+        "kind": "tel",
+        "source_url": "https://royalbagiq.com"
+      },
+      {
+        "e164": "+9647714221155",
+        "display": "+964 771 422 1155",
+        "kind": "tel",
+        "source_url": "https://royalbagiq.com"
+      },
+      {
+        "e164": "+9647814221155",
+        "display": "+964 781 422 1155",
+        "kind": "tel",
+        "source_url": "https://royalbagiq.com"
+      },
+      {
+        "e164": "+9647901368273",
+        "display": "+964 790 136 8273",
+        "kind": "whatsapp",
+        "source_url": "https://royalbagiq.com"
+      }
+    ],
+    "phone_best": "+964 770 963 3221",
+    "phone_source_url": "https://royalbagiq.com",
+    "pages_checked": [
+      "https://royalbagiq.com",
+      "https://royalbagiq.com/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "ROYAL BAG IRAQ — مطيبات سيد ناصر – ROYAL BAG IRAQ — مطيبات سيد ناصر. . ROYAL BAG IRAQ — مطيبات سيد ناصر – ROYAL BAG IRAQ — مطيبات سيد ناصر الرجوع إلى البداية العودة إلى الصفحة الرئيسية وكيل لشركة أروما • نوفا • بحر الشوكولاتة حلول متكاملة للصناعات الغذائية مكونات موثوقة لمنتجات أفضل تصفح المنتجات حلول متكاملة للصناعات الغذائية مكونات موثوقة لمنتجات أفضل تصفح المنتجات التوصيل لمحافظات العراق دفع الكتروني آمن دعم 24/7 التوصيل لمحافظات العراق توصيل سريع وآمن إلى جميع المحافظات الاتصال والواتساب واتساب 00964 790 136 8273 اتصال 0770 963 3221 0771 422 1155 0781 422 1155",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:18": {
+    "name": "Al-Khudari",
+    "country": "Iraq",
+    "website": "https://khudari.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "2/2 واژه‌ی نام (al, khudari) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@khudari.com",
+        "kind": "mailto",
+        "source_url": "https://khudari.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@khudari.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://khudari.com",
+    "phones": [
+      {
+        "e164": "+96264388400",
+        "display": "+962 6 438 8400",
+        "kind": "tel",
+        "source_url": "https://khudari.com"
+      },
+      {
+        "e164": "+96264388401",
+        "display": "+962 6 438 8401",
+        "kind": "tel",
+        "source_url": "https://khudari.com"
+      },
+      {
+        "e164": "+96264201369",
+        "display": "+962 6 420 1369",
+        "kind": "tel",
+        "source_url": "https://khudari.com"
+      },
+      {
+        "e164": "+962796400259",
+        "display": "+962 7 9640 0259",
+        "kind": "whatsapp",
+        "source_url": "https://khudari.com"
+      }
+    ],
+    "phone_best": "+962 6 438 8400",
+    "phone_source_url": "https://khudari.com",
+    "pages_checked": [
+      "https://khudari.com",
+      "https://khudari.com/Contact-us"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": ":: Al-Khudari ::. Al-Khudari. :: Al-Khudari :: Home About Us Our Products Our services News Contact us عربي Welcome to Khudari ! Adnan Khudari & Sons Trading Company is a leading food manufacturing and processing company in the region and was the first to specialize in spice packaging and wholesale distribution, offering support services such as aggregating container loads from multiple Jordanian suppliers, selling containers from Jordan and pallet loads from their Chicago warehouses, support in CPB, USDA, and FDA clearance",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:19": {
+    "name": "Mawdoo3",
+    "country": "Iraq",
+    "website": "https://mawdoo3.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (mawdoo3) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://mawdoo3.com"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "موضوع، أكبر موقع عربي بالعالم. موضوع، أكبر موقع عربي بالعالم. موضوع، أكبر موقع عربي بالعالم التصنيفات أجدد المقالات الأكثر رواجاً معايير التدقيق عن موضوع اتصل بنا موضوع التصنيفات أجدد المقالات الأكثر رواجاً معايير التدقيق عن موضوع أهلاً بك في موضوع، أكبر موقع عربي بالعالم. متداول الحياة والمجتمع عائلة كاديلاك إسكاليد: مميزات عصرية تجمع بين القوة والفخامة والأمان إذا كنت تبحث عن أفضل سيارة عائلية في الخليج بسعة تتراوح بين 7-8 ركاب فإن سيارات كاديلاك إسكاليد 2026 أكلات خفيفة وجبات عشاء خفيفة وسهلة تغذية نقصان فيتامين د العناية بالذات ما هي الألوان التي تناسب",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:20": {
+    "name": "Modernflourmills",
+    "country": "Iraq",
+    "website": "https://modernflourmills.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (modernflourmills) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@modernflourmills.com",
+        "kind": "mailto",
+        "source_url": "https://modernflourmills.com/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@modernflourmills.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://modernflourmills.com/contact-us/",
+    "phones": [
+      {
+        "e164": "+96264903001",
+        "display": "+962 6 490 3001",
+        "kind": "tel",
+        "source_url": "https://modernflourmills.com/contact-us/"
+      }
+    ],
+    "phone_best": "+962 6 490 3001",
+    "phone_source_url": "https://modernflourmills.com/contact-us/",
+    "pages_checked": [
+      "https://modernflourmills.com",
+      "https://modernflourmills.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Modern Flour Mills & Macaroni Factories. . Modern Flour Mills & Macaroni Factories Elevating grains to gourmet Perfecting recipes with every bite. Jordan's number one pasta Unleash Your Inner Pasta Lover Mix, Bake, Enjoy ! AL Ghazal AL Ghazal Elevating grains to gourmet. Perfecting recipes with every bite. MFM MFM Elevating grains to gourmet. Perfecting recipes with every bite. Samar Snacks Samar Snacks Elevating grains to gourmet. Perfecting recipes with every bite. WHO WE ARE The Modern Flour Mills and Macaroni Factories Co. Ltd., base",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:21": {
+    "name": "Babelgomla",
+    "country": "Iraq",
+    "website": "https://www.babelgomla.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (babelgomla) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "abdelrahmannazih@gmail.com",
+        "kind": "cfemail",
+        "source_url": "https://www.babelgomla.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+201097734194",
+        "display": "+20 10 97734194",
+        "kind": "whatsapp",
+        "source_url": "https://www.babelgomla.com"
+      }
+    ],
+    "phone_best": "+20 10 97734194",
+    "phone_source_url": "https://www.babelgomla.com",
+    "pages_checked": [
+      "https://www.babelgomla.com",
+      "https://www.babelgomla.com/contactus"
+    ],
+    "notes": [
+      "abdelrahmannazih@gmail.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "باب جملة. Home page title. Home page description. باب جملة. Home page title العملة : Egyptian Pound US Dollar head.language : للاسعار بالطن اتصل بنا لا يوجد منتجات فى سلة التسوق إضافات غذائية الوان طعام غذائية اسنسات اطعم غذائية اضافات كيميائية غذائية خامات الحلويات صوصات حلوة البان منتجات الشيكولاتة منتجات تزين الحلويات الكريم شانتيه ايس كريم بودر سيراب اسبريد كاكاو چيلي بسكويت اسبونچ حشوات مستلزمات المخابز دقيق زيوت خميرة فورية مكسرات و فواكة مجففة مكسرات فواكة مجففة صوصات حادقه زيوت طبيعية وتجميليه عصائر مجففه مشروبات مقرمشات وتسالي توابل وع",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:22": {
+    "name": "Wiktionary",
+    "country": "Iraq",
+    "website": "https://en.wiktionary.org",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (wiktionary) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://en.wiktionary.org/wiki/Wiktionary:Main_Page",
+      "https://en.wiktionary.org/wiki/Wiktionary:Contact_us"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Wiktionary, the free dictionary. . Wiktionary, the free dictionary Jump to content From Wiktionary, the free dictionary Wiktionary, the free dictionary 11,684,020 entries with English definitions from over 5,200 languages Browse: All languages • List of topics • Random word • New pages Appendices • Thesaurus • Rhymes • Frequency lists • Phrasebooks Welcome to the English-language Wiktionary, a collaborative project to produce a free-content multilingual dictionary. It aims to describe all words of all languages using definitions",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:23": {
+    "name": "Baitfood",
+    "country": "Iraq",
+    "website": "https://baitfood.net",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (baitfood) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "baitfood.alex@baitfood.net",
+        "kind": "text",
+        "source_url": "https://baitfood.net",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "baitfood10th@baitfood.net",
+        "kind": "text",
+        "source_url": "https://baitfood.net",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "info@baitfood.net",
+        "kind": "text",
+        "source_url": "https://baitfood.net/contact-us/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@baitfood.net",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://baitfood.net/contact-us/",
+    "phones": [
+      {
+        "e164": "+2033856831",
+        "display": "+20 3 3856831",
+        "kind": "text",
+        "source_url": "https://baitfood.net"
+      },
+      {
+        "e164": "+20554388470",
+        "display": "+20 55 4388470",
+        "kind": "text",
+        "source_url": "https://baitfood.net"
+      },
+      {
+        "e164": "+20554388460",
+        "display": "+20 55 4388460",
+        "kind": "text",
+        "source_url": "https://baitfood.net"
+      },
+      {
+        "e164": "+201115987773",
+        "display": "+20 11 15987773",
+        "kind": "text",
+        "source_url": "https://baitfood.net/contact-us/"
+      },
+      {
+        "e164": "+2034627012",
+        "display": "+20 3 4627012",
+        "kind": "text",
+        "source_url": "https://baitfood.net/contact-us/"
+      }
+    ],
+    "phone_best": "+20 3 3856831",
+    "phone_source_url": "https://baitfood.net",
+    "pages_checked": [
+      "https://baitfood.net",
+      "https://baitfood.net/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Bait Food. . Bait Food Unlimited Quality High Quality Products Fast Fleet Delivery High Productivity Levels Our Products Our Products We have many products that serve your home. Read More... Our Company Our Company We have a large area factory making a lot of products. Read More... Our News Our News We have a lot of company news and company offers. Read More... Our Products Our Products We have many products that serve your home. Read More... Our Company Our Company We have a large area factory making a lot",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:24": {
+    "name": "Baladi Foodstuff",
+    "country": "Iraq",
+    "website": "https://www.baladifoodstuff.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (baladi, foodstuff) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+97142884201",
+        "display": "+971 4 288 4201",
+        "kind": "text",
+        "source_url": "https://www.baladifoodstuff.com"
+      },
+      {
+        "e164": "+971543881884",
+        "display": "+971 54 388 1884",
+        "kind": "text",
+        "source_url": "https://www.baladifoodstuff.com"
+      },
+      {
+        "e164": "+96442884201",
+        "display": "+964 42 884 201",
+        "kind": "text",
+        "source_url": "https://www.baladifoodstuff.com/policies/contact-information"
+      }
+    ],
+    "phone_best": "+971 4 288 4201",
+    "phone_source_url": "https://www.baladifoodstuff.com",
+    "pages_checked": [
+      "https://www.baladifoodstuff.com",
+      "https://www.baladifoodstuff.com/pages/contact",
+      "https://www.baladifoodstuff.com/policies/contact-information"
+    ],
+    "notes": [
+      "support@baladifoodstuff.com نقش غیرتجاری است (کنار گذاشته شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Online Grocery Shopping UAE – Baladi Foodstuff. Shop fresh groceries online in Dubai with Baladi Foodstuff. Enjoy premium products, affordable prices, and fast delivery across UAE.. Online Grocery Shopping UAE – Baladi Foodstuff Skip to content Your cart is empty Continue shopping Have an account? Log in to check out faster. Your cart Loading... Subtotal Dhs. 0.00 AED Tax included. Shipping calculated at checkout. Check out Free delivery on orders over 100 AED in Dubai Condiments & Sauces 73+ Products Canned & Jarred Foods 52+ Products Pasta & Noodles 19+ Products Tea 14+ Products Nuts & Seeds 19+ Products Cooking Oils, Butter & Ghee 14+ Products Pastry 5+ Products Ground",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:25": {
+    "name": "Martoo",
+    "country": "Iraq",
+    "website": "https://martoo.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (martoo) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "care@martoo.com",
+        "kind": "mailto",
+        "source_url": "https://martoo.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "care@martoo.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://martoo.com",
+    "phones": [
+      {
+        "e164": "+971504496718",
+        "display": "+971 50 449 6718",
+        "kind": "whatsapp",
+        "source_url": "https://martoo.com"
+      }
+    ],
+    "phone_best": "+971 50 449 6718",
+    "phone_source_url": "https://martoo.com",
+    "pages_checked": [
+      "https://martoo.com",
+      "https://martoo.com/contact-us/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Wholesale Market - Martoo Wholesale - Buy In Bulk - Weekly Offer. Wholesale Market - Martoo wholesale online shopping offer the biggest affordable price for bulk items you need for catering or Restaurant.. Wholesale Market - Martoo Wholesale - Buy In Bulk - Weekly Offer 0 View Cart OFFERS Fruits, Fawala and vegetables Milk and Dairy Products Bakery Dates and Nuts and Dried Fruits Breakfast & Spreadable Products Coffee & Tea Water, Beverages & Juices Fresh Cheese & Appetizers Chocolates Sweets & Biscuits Chips, Crackers & Baked Snacks Meat, Poultry & Eggs Frozen and Chilled Products Canned Goods Spices, Sauces & Condiments Rice, Grains & Pasta Baking Essentials Oils, Ghee and Butter Baby Prod",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:26": {
+    "name": "CEBON",
+    "country": "Iraq",
+    "website": "https://cebon.dz",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (cebon) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "contact@cebon.dz",
+        "kind": "text",
+        "source_url": "https://cebon.dz",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "contact@cebon.dz",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://cebon.dz",
+    "phones": [
+      {
+        "e164": "+213560317178",
+        "display": "+213 560 31 71 78",
+        "kind": "text",
+        "source_url": "https://cebon.dz"
+      }
+    ],
+    "phone_best": "+213 560 31 71 78",
+    "phone_source_url": "https://cebon.dz",
+    "pages_checked": [
+      "https://cebon.dz",
+      "https://cebon.dz/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "CEBON – C'est … bon!. Discover Cebon, a leading producer of premium baking ingredients. From traditional Algerian products to international favorites, we deliver quality and innovation to elevate your culinary creations.. CEBON – C'est … bon! sans gluten sans conservateurs sans colorants sans arômes nouveauté Découvrez notre nouvelle crème de cacahuète. L'équilibre parfait entre douceur et intensité. Découvrir Découvrez l’irrésistible crème de noisettes, le trésor d’Algérie qui séduit les palais des gourmets du monde entier. Découvrir Saveur au Sommet Élus meilleurs produits de l'année pour la 3ème fois consécutive Excellence Prouvée voir plus nouveauté Découvrez nos nouveaux glaçages qui su",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:27": {
+    "name": "Rabha",
+    "country": "Iraq",
+    "website": "https://rabha.net",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (rabha) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "contact@rabha.net",
+        "kind": "text",
+        "source_url": "https://rabha.net/contact/",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "contact@rabha.net",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://rabha.net/contact/",
+    "phones": [
+      {
+        "e164": "+21341727114",
+        "display": "+213 41 72 71 14",
+        "kind": "text",
+        "source_url": "https://rabha.net/contact/"
+      },
+      {
+        "e164": "+964667236868",
+        "display": "+964 66 723 6868",
+        "kind": "text",
+        "source_url": "https://rabha.net/contact/"
+      }
+    ],
+    "phone_best": "+213 41 72 71 14",
+    "phone_source_url": "https://rabha.net/contact/",
+    "pages_checked": [
+      "https://rabha.net",
+      "https://rabha.net/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Rabha – Khibraw3achra. . Rabha – Khibraw3achra العربية #Khibra w3achra Découvrez Choki de Rabha, la préparation pour boisson chocolatée instantanée par excellence. Un goût original et réconfortant pour toute la famille. Yadra, Wesh raki me7taja lyoum? Yadra, Wesh raki me7taja lyoum? Yadra, Wesh raki me7taja lyoum? Yadra, Wesh raki me7taja lyoum? Yadra, Wesh raki me7taja lyoum? Yadra, Wesh raki me7taja lyoum? Yadra, Wesh raki me7taja lyoum? Yadra, Wesh raki me7taja lyoum? Yadra, Wesh raki me7taja lyoum? Yadra, Wesh raki",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:28": {
+    "name": "Etabliah",
+    "country": "Iraq",
+    "website": "https://etabliah.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (etabliah) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://etabliah.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "support@salla.sa نقش غیرتجاری است (کنار گذاشته شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "التحقق البشري | Salla. . التحقق البشري | Salla IP: 151.238.181.33 Ray: a5d91e0aad0cd40f Geo: IR",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:29": {
+    "name": "Material",
+    "country": "Iraq",
+    "website": "https://material.sa",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (material) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@material.sa",
+        "kind": "mailto",
+        "source_url": "https://material.sa/ar/site",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@material.sa",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://material.sa/ar/site",
+    "phones": [
+      {
+        "e164": "+966554020703",
+        "display": "+966 55 402 0703",
+        "kind": "tel",
+        "source_url": "https://material.sa/ar/site"
+      }
+    ],
+    "phone_best": "+966 55 402 0703",
+    "phone_source_url": "https://material.sa/ar/site",
+    "pages_checked": [
+      "https://material.sa/ar/site",
+      "https://material.sa/ar/site/contact"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "الرئيسية | Material. متيريال هو تطبيق يخدم مدينة الرياض ويقدم مجموعة متنوعة من المياه المحلية والمستوردة والمشروبات. اروِ تعطشك مع تجربة توصيل سلسة، حيث يأتي الانتعاش إلى باب بيتك.. الرئيسية | Material تخطَّ إلى المحتوى من نحن | سياسة الاسترجاع | سياسة التوصيل | English info@material.sa 0554020703 المياه المياه كل المياه الأنواع مياه معبأة مياه غازية مياه منكهة مياه صغيرة مياه مستوردة عروض المياه الماركات نوفا اروى مياه شهد تانيا اوسكا ايفال صفا مكة بيرين نقي بيريه سان بيليغرينو فيجي اكوابانا سبادا افا المشروبات المشروبات كل المشروبات الأنواع مشروبات غازية عصائر مشروبات الطاقة والرياضة مشروبات الشعير مشروبات مستوردة منتجات قليلة السعرات شاي مثلج عروض المشروبات الماركات بيب",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:30": {
+    "name": "Bakersway",
+    "country": "Iraq",
+    "website": "https://bakersway.sa",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (bakersway) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://bakersway.sa"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "support@salla.sa نقش غیرتجاری است (کنار گذاشته شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "التحقق البشري | Salla. . التحقق البشري | Salla IP: 45.82.161.43 Ray: a5d91e7f0dfe7ce6 Geo: US",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:31": {
+    "name": "Mafahem",
+    "country": "Iraq",
+    "website": "https://mafahem.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (mafahem) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://mafahem.com",
+      "https://mafahem.com/contact",
+      "https://mafahem.com/contact"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "مفاهيم - موقع مفاهيم. مفاهيم موقع شامل للمقالات المعرفية والثقافية يهتم بتثقيف القارئ العربي بكل المعلومات الصحيحة في العديد من المجالات. مفاهيم - موقع مفاهيم مواضيع جديدة شرح قصيدة العلماء الصغار الصف الخامس وإعرابها كاملة المكان الذي تتوفر فيه المعلومات بمصادرها المختلفة، وتعالج، وتحفظ وتسترجع، وتبث، يسمى: مشغل خطوط الشعر في السعودية كيف تجعلين الرجل يحبك ولا يستطيع الاستغناء عنك؟ الاستعداد للزوج بعد الدورة تفسير رؤية تقطيع الكرشة في المنام لابن سيرين والنابلسي معركة ذات الصواري معركة بحرية انتصر فيها المسلمون؟ تهنئة رمضان وأجمل العبارات والرسائل بمناسبة شهر رمضان المبارك أفضل دهانات غرف اطفال.. ألوان آمنة وقابلة للغسل معنى اسم",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:32": {
+    "name": "Poodrineh",
+    "country": "Iraq",
+    "website": "https://poodrineh.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (poodrineh) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://poodrineh.com",
+      "https://poodrineh.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7-%d9%85%d8%a7/",
+      "https://poodrineh.com",
+      "https://poodrineh.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7-%d9%85%d8%a7/",
+      "https://poodrineh.com/%d8%aa%d9%85%d8%a7%d8%b3-%d8%a8%d8%a7-%d9%85%d8%a7/"
+    ],
+    "notes": [
+      "https://ar.poodrineh.com → 500",
+      "وب‌سایت از جست‌وجوی وب پیدا و با تطبیق نام تأیید شد",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "پودرینه - صنایع غذایی پودرینه شمال. . پودرینه - صنایع غذایی پودرینه شمال پرش به محتوا برنج ایرانی آرد نخودچی ادویه جات آرد سوخاری پودر کیک ژله نوشیدنی سرد نوشیدنی گرم پودر مافین آرد جوانه گندم آرد برنج آرد گندم مخصوص قنادی آرد جو دو سر آرد جو آرد ذرت نشاسته ذرت پودر پروتئین سویا بهبود دهنده بیکینگ پودر آرد حلوا صنایع غذایی پودرینه شمال صنایع غذایی پودرینه شمال (احدی نژاد) با بیش از 40 سال سابقه به عنوان یکی از اولین و برترین تولید کننده محصولات سلامت محور پودری و گرانولی، مواد اولیه قنادی، عطاری، پرورش اندام و … از بهترین و مرغوب تر",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:33": {
+    "name": "Chemistrysources",
+    "country": "Iraq",
+    "website": "https://chemistrysources.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (chemistrysources) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "contact@chemistrysources.com",
+        "kind": "text",
+        "source_url": "https://chemistrysources.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "contact@chemistrysources.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://chemistrysources.com",
+    "phones": [
+      {
+        "e164": "+962785693277",
+        "display": "+962 7 8569 3277",
+        "kind": "text",
+        "source_url": "https://chemistrysources.com"
+      }
+    ],
+    "phone_best": "+962 7 8569 3277",
+    "phone_source_url": "https://chemistrysources.com",
+    "pages_checked": [
+      "https://chemistrysources.com",
+      "https://chemistrysources.com/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Home | مصادر الكيمياء. مصادر الكيمياء المشرف العام أ. أكرم أمير العلي المزيد استكشف ــــــــــــــــــــ مدونة مصادر الكيمياء كل المقالات تصنيفات المدونه 55+ كتب مؤلفمصمم 5000+. Home | مصادر الكيمياء Search for... مصادر الكيمياء المشرف العام أ. أكرم أمير العلي المزيد استكشف ــــــــــــــــــــ مدونة مصادر الكيمياء كل المقالات تصنيفات المدونه 55+ كتب مؤلف\\مصمم 5000+ مقال علمي كيميائي 60+ لوحات تعليمية 50,000+ زائر /طالب من نحن منصة تعليمية تضم مجموعة من المراجع والصور والعروض التوضيحية للمساعدة على فهم الكيمياء المزيد تصفح الكل تصنيفات مدونه مصادر الكيمياء الموسوعة الكيميائية تصفح الكيمياء العامة المبسطة تصفح الأمن والسلامة في المختبرات الكيميائية تصفح موسوعة المواد ال",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:34": {
+    "name": "Marefa",
+    "country": "Iraq",
+    "website": "https://www.marefa.org",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (marefa) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.marefa.org/%D8%A7%D9%84%D8%B5%D9%81%D8%AD%D8%A9_%D8%A7%D9%84%D8%B1%D8%A6%D9%8A%D8%B3%D9%8A%D8%A9"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "المعرفة. موسوعة المعرفة هي مشروع لجمع وخلق المحتوى العربي، لإنشاء موسوعة دقيقة تشاركية ، متكاملة، متنوعة، مفتوحة، محايدة ومجانية، يستطيع الجميع المساهمة في تحريرها، بالكتابة أو بالاقتباس من مصادر مرخـِصة بالنق. المعرفة بحث وتصفح مشاركة وتحرير مجتمع المعرفة حول المعرفة مساعدة الجمعة 20 نوفمبر 2026 9 جمادى الثانية 1448 هـ المعرفة مشروع لجمع وخلق المحتوى العربي، لإنشاء موسوعة دقيقة، متكاملة، متنوعة، مفتوحة، محايدة ومجانية، يستطيع الجميع المساهمة في تحريرها، بالكتابة أو بالاقتباس من مصادر مرخـِصة بالنقل. بدأت المعرفة في 16 فبراير 2007 ويوجد بها الآن 170٬535 مقالاً حقيقياً و2.409.583 صفحة مخطوط فيها. كبذرة استعانت المعرفة بمقالات من مواقع مصرحة بالنقل . حملوا تطبيق المعرفة على الموبايل من هنا . ح",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:35": {
+    "name": "Atyabtabkha",
+    "country": "Iraq",
+    "website": "https://www.atyabtabkha.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (atyabtabkha) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.atyabtabkha.com"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "أطيب طبخة | أطيب طبخة موقع طبخ واكلات تقليدية وجديدة. أطيب طبخة موقع طبخ واكلات تقليدية وجديدة. أطيب طبخة | أطيب طبخة موقع طبخ واكلات تقليدية وجديدة شاورما بالتوست برياني لحم هندي حلى حلى عربي حلى الكاسات بسكويت وكوكيز دونات كريب وبان كيك حلى قهوه ايس كريم كعك طريقة عمل الكنافة بالجبنة بسبوسة بالحليب المكثف المحلى كيك تشيز كيك كب كيك ومافن براونيز تيراميسو كيك اسفنجي كيكة بكريمة الخفق كيك بالبرتقال والحليب فطور كرواسون كريب وبان كيك وافل دونات اومليت أو عجة شكشوكة بيض مخفوق مناقيش مربى فرنش توست كراميل بيض عيون تركي وصفات بالفيديو خطوة بخطوة نصائح تحضير الطعام حفظ الطعام تزيين تنظيف الغذاء",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:36": {
+    "name": "Hz Focus",
+    "country": "Iraq",
+    "website": "https://www.hz-focus.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (hz, focus) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@hz-focus.com",
+        "kind": "mailto",
+        "source_url": "https://www.hz-focus.com",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@hz-focus.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.hz-focus.com",
+    "phones": [
+      {
+        "e164": "+8657128289777",
+        "display": "+86 571 2828 9777",
+        "kind": "tel",
+        "source_url": "https://www.hz-focus.com"
+      },
+      {
+        "e164": "+8615967186828",
+        "display": "+86 159 6718 6828",
+        "kind": "whatsapp",
+        "source_url": "https://www.hz-focus.com"
+      }
+    ],
+    "phone_best": "+86 571 2828 9777",
+    "phone_source_url": "https://www.hz-focus.com",
+    "pages_checked": [
+      "https://www.hz-focus.com",
+      "https://www.hz-focus.com/contact/"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Hangzhou Focus Corporation. Hangzhou Fox Company was established in 2011; by 2015, it operated two wholly-owned factories, specializing in the production and trading of various food additives.. Hangzhou Focus Corporation Food Additives More than 500 conventional food additives and raw materials READ MORE Feed Additives Sustainable solutions to improve animal performance and well-being READ MORE Customer Cooperation Served 5,000+ customers in more than 120 countries Product Category Hangzhou Focus Corporation showed our product category Food Additives Bakery Ingredients Flavorings Sweeteners Acidulants Preservatives Coloring Thickeners Canned Food Phosphates Emulsifiers Antioxidants Nut",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:37": {
+    "name": "Segmenfood",
+    "country": "Iraq",
+    "website": "https://segmenfood.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (segmenfood) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "destek@segmen.com.tr",
+        "kind": "cfemail",
+        "source_url": "https://segmenfood.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+903122671584",
+        "display": "+90 312 267 15 84",
+        "kind": "tel",
+        "source_url": "https://segmenfood.com"
+      }
+    ],
+    "phone_best": "+90 312 267 15 84",
+    "phone_source_url": "https://segmenfood.com",
+    "pages_checked": [
+      "https://segmenfood.com"
+    ],
+    "notes": [
+      "destek@segmen.com.tr دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Lezzetin Köklerini, Geleceğin Lezzetine Taşıyoruz! - Seğmen. Seğmen, sürdürülebilirlik ve sosyal sorumluluk değerlerini stratejisinin merkezine yerleştirerek, gelecek nesillere yaşanabilir bir dünya sunma taahhüdünü yerine getirir.. Lezzetin Köklerini, Geleceğin Lezzetine Taşıyoruz! - Seğmen Lezzetin Kökleri, Geleceğin Tadı Ürünlerimiz Hakkımızda Segella Ballar Reçeller Marmelatlar Baharatlar Tahin-Pekmez Lokumlar Helvalar Piknik Grubu Dondurulmuş Meyveler Keşfet Keşfet Keşfet Keşfet Keşfet Keşfet Keşfet Keşfet Keşfet Keşfet Sürdürülebilirlik & Sosyal Sorumluluk: Seğmen'in Geleceğe Yatırımı Seğmen, sürdürülebilirlik ve sosyal sorumluluk ilkelerini iş modelinin merkezine koymakta ve gelecek n",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:38": {
+    "name": "Gzcochool",
+    "country": "Iraq",
+    "website": "https://www.gzcochool.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (gzcochool) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "cochool135@gmail.com",
+        "kind": "text",
+        "source_url": "https://www.gzcochool.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      },
+      {
+        "email": "lily214550@gmail.com",
+        "kind": "text",
+        "source_url": "https://www.gzcochool.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+8618028818794",
+        "display": "+86 180 2881 8794",
+        "kind": "whatsapp",
+        "source_url": "https://www.gzcochool.com"
+      },
+      {
+        "e164": "+862086750056",
+        "display": "+86 20 8675 0056",
+        "kind": "text",
+        "source_url": "https://www.gzcochool.com"
+      }
+    ],
+    "phone_best": "+86 180 2881 8794",
+    "phone_source_url": "https://www.gzcochool.com",
+    "pages_checked": [
+      "https://www.gzcochool.com",
+      "https://www.gzcochool.com/en/support.html"
+    ],
+    "notes": [
+      "cochool135@gmail.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)",
+      "lily214550@gmail.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Bakery Emulsifiers Supplier | Specializing in Baking Ingredients for Distributors, Bakeries, and Food Industry - Offering a Range of Cake Emulsifiers, Bread/Pastry Emulsifiers, Premixes, Industrial Sauce Blends, Cream Powders, and More. Welcome to our company website! We specialize in baking emulsifiers, providing baking food additives to distributors, industrial companies, pastry shops, and more. Our product range includes high-quality emulsifiers for various types of cakes, emulsifiers for bread and pastries, premixes for pastries, industrial and long-lasting sauce premixes, as well as cream powders. Explore our comprehensive selection of baking ingredients that cater to all levels of baki",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:39": {
+    "name": "Rawayiecake",
+    "country": "Iraq",
+    "website": "https://rawayiecake.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (rawayiecake) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://rawayiecake.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "support@salla.sa نقش غیرتجاری است (کنار گذاشته شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "التحقق البشري | Salla. . التحقق البشري | Salla IP: 45.82.161.43 Ray: a5d91f8699216e9e Geo: US",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:40": {
+    "name": "Alqaaba",
+    "country": "Iraq",
+    "website": "https://alqaaba.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (alqaaba) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "abdelrhman24a@gmail.com",
+        "kind": "cfemail",
+        "source_url": "https://alqaaba.com",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": true
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+966550074999",
+        "display": "+966 55 007 4999",
+        "kind": "tel",
+        "source_url": "https://alqaaba.com"
+      }
+    ],
+    "phone_best": "+966 55 007 4999",
+    "phone_source_url": "https://alqaaba.com",
+    "pages_checked": [
+      "https://alqaaba.com"
+    ],
+    "notes": [
+      "abdelrhman24a@gmail.com دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "القباع للتمور تمرية وكليجا وشعبيات وشوكليت بلجيكي. تمور , شعبيات , مخبوزات و شوكلاتة. القباع للتمور تمرية وكليجا وشعبيات وشوكليت بلجيكي جالكسي 2 كيلو خراف سنة 1447 45.00 ر.س أضف إلى السلة ونانه رطب معرم خراف السنة 1448 25.00 ر.س أضف إلى السلة سكري مفتل مصفوف خراف السنة 1448 (1) 38.00 ر.س أضف إلى السلة تمور فاخرة وأسعار ترضيك فتيت بالعسل (2) 15.00 ر.س أضف إلى السلة بسبوسه لوتس هاش 19.00 ر.س 23.00 ر.س خصم 17% أضف إلى السلة يباع سريعًا بسبوسه نوتيلا هاش (1) 19.00 ر.س 23.00 ر.س خصم 17% أضف إلى السلة إنتاج جديد وفاخر بسكوت بالنوتيلا (1) 12.00 ر.س 15.00 ر.س خصم 20% أضف إلى ا",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:41": {
+    "name": "Cake Arts Store",
+    "country": "Iraq",
+    "website": "https://cake-arts-store.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 3/3 واژه‌ی نام (cake, arts, store) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://cake-arts-store.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "support@salla.sa نقش غیرتجاری است (کنار گذاشته شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "التحقق البشري | Salla. . التحقق البشري | Salla IP: 151.238.181.33 Ray: a5d91f6b6b5d8f40 Geo: IR",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:42": {
+    "name": "Aljazeera",
+    "country": "Iraq",
+    "website": "https://www.aljazeera.net",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (aljazeera) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://www.aljazeera.net",
+      "https://network.aljazeera.net/ar/contact?tid=145",
+      "https://network.aljazeera.net/ar/contact",
+      "https://network.aljazeera.net/ar/contact"
+    ],
+    "notes": [
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "الجزيرة نت: آخر أخبار اليوم حول العالم. الأخبار والتحليلات من الشرق الأوسط والعالم ، الوسائط المتعددة والتفاعلات ، الآراء ، الأفلام الوثائقية ، البودكاست ، القراءات الطويلة وجدول البث. الجزيرة نت: آخر أخبار اليوم حول العالم الجزيرة نت: آخر أخبار اليوم حول العالم مباشر اليمن.. التحالف يستهدف الحديدة والحوثيون يهددون موانئ السعودية تغطية مباشرة : اليمن.. التحالف يستهدف الحديدة والحوثيون يهددون موانئ السعودية منذ 31 دقائق (19:47 توقيت مكة) خبير عسكري: المرحلة المقبلة ستشهد تصعيدا كبيرا بين التحالف والحوثيين منذ ساعة واحدة (19:34 توقيت مكة) عبر الخريطة التفاعلية.. تهديدات حوثية بضرب موانئ سعودية عرض أقل تغطية مباشرة إيران.. الحرس الثوري يؤكد جاهزية قواته وترمب لا يستعجل قراره تغطي",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:43": {
+    "name": "Safasupplyksa",
+    "country": "Iraq",
+    "website": "https://safasupplyksa.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (safasupplyksa) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "info@safa.supply",
+        "kind": "mailto",
+        "source_url": "https://safasupplyksa.com/en",
+        "domain_status": "mx",
+        "same_domain": false,
+        "free_mail": false
+      }
+    ],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [
+      {
+        "e164": "+964502946176",
+        "display": "+964 50 294 6176",
+        "kind": "tel",
+        "source_url": "https://safasupplyksa.com/en"
+      },
+      {
+        "e164": "+966562673037",
+        "display": "+966 56 267 3037",
+        "kind": "whatsapp",
+        "source_url": "https://safasupplyksa.com/en/contact"
+      }
+    ],
+    "phone_best": "+964 50 294 6176",
+    "phone_source_url": "https://safasupplyksa.com/en",
+    "pages_checked": [
+      "https://safasupplyksa.com/en",
+      "https://safasupplyksa.com/en/contact"
+    ],
+    "notes": [
+      "info@safa.supply دامنه‌اش با سایت شرکت یکی نیست و ربطی به نام شرکت ندارد (رد شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Safa Supply Trading Est. | Bakery, Patisserie & Café Supplies. Safa Supply Trading Est. — wholesale supplier of cake and muffin mixes, glaze, chocolate and fruit fillings, whipped cream, compound chocolate and syrups for bakeries and cafés across Saudi Arabia.. Safa Supply Trading Est. | Bakery, Patisserie & Café Supplies Free shipping on orders above 1,000 SAR within Riyadh · Daily supply for bakeries and cafés Sales 0562673037 Free shipping on orders above 1,000 SAR within Riyadh · Daily supply for bakeries and cafés Sales 0562673037 Free shipping on orders above 1,000 SAR within Riyadh · Daily supply for bakeries and cafés 0562673037 Track your order العربية Saudi Arabia · Riyadh Daily Su",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:44": {
+    "name": "Tawreda",
+    "country": "Iraq",
+    "website": "https://tawreda.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (tawreda) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://tawreda.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "با رندر مرورگر (Playwright) بررسی شد"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Just a moment.... . Just a moment...",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:45": {
+    "name": "Furdtk",
+    "country": "Iraq",
+    "website": "https://www.furdtk.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (furdtk) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "cs@furdtk.com",
+        "kind": "mailto",
+        "source_url": "https://www.furdtk.com/en",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "cs@furdtk.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://www.furdtk.com/en",
+    "phones": [
+      {
+        "e164": "+96522202552",
+        "display": "+965 2220 2552",
+        "kind": "tel",
+        "source_url": "https://www.furdtk.com/en"
+      }
+    ],
+    "phone_best": "+965 2220 2552",
+    "phone_source_url": "https://www.furdtk.com/en",
+    "pages_checked": [
+      "https://www.furdtk.com/en",
+      "https://www.furdtk.com/en/contactus"
+    ],
+    "notes": [],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "FURDTK - فرضتك. . FURDTK - فرضتك Best Sellers Promotions Brands Categories Green Friday Offers Snacks New Arrivals Coupons Baskets & Collections Children & Baby Supplies Fruits Consumables Kashta Supplies Frozen Food Subscription Beauty & Personal Care Beverages Nuts Spices & Grains Dates & Coffee Fresh Bakery Fresh Juices Fresh Meat & Chicken Cleaning & Household Dairy & Eggs Promotions Vegetables Health & Fitness Cheese Island Home Food Supplies Best Seller Fruits Show More Orange Navel Country: South Africa 1.",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:46": {
+    "name": "Kilomekyal",
+    "country": "Iraq",
+    "website": "https://kilomekyal.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 1/1 واژه‌ی نام (kilomekyal) در عنوان/متن/دامنه",
+    "emails": [],
+    "email_best": null,
+    "email_confidence": null,
+    "email_source_url": null,
+    "phones": [],
+    "phone_best": null,
+    "phone_source_url": null,
+    "pages_checked": [
+      "https://kilomekyal.com"
+    ],
+    "notes": [
+      "سایت کد 403 داد (احتمالاً ضدربات)؛ محتوای تماس ممکنه ناقص باشه",
+      "support@salla.sa نقش غیرتجاری است (کنار گذاشته شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "التحقق البشري | Salla. . التحقق البشري | Salla IP: 151.238.181.33 Ray: a5d91fb489e51cc7 Geo: IR",
+    "checked_at": "2026-11-20"
+  },
+  "buyers:47": {
+    "name": "Turkish Marketer",
+    "country": "Iraq",
+    "website": "https://turkishmarketer.com",
+    "website_status": "verified_name_match",
+    "website_evidence": "دامنه دقیقاً برابر نام شرکت است; 2/2 واژه‌ی نام (turkish, marketer) در عنوان/متن/دامنه",
+    "emails": [
+      {
+        "email": "sales@turkishmarketer.com",
+        "kind": "cfemail",
+        "source_url": "https://turkishmarketer.com/en/contactUs",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      },
+      {
+        "email": "info@turkishmarketer.com",
+        "kind": "cfemail",
+        "source_url": "https://turkishmarketer.com/en/contactUs",
+        "domain_status": "mx",
+        "same_domain": true,
+        "free_mail": false
+      }
+    ],
+    "email_best": "info@turkishmarketer.com",
+    "email_confidence": "site_confirmed_same_domain",
+    "email_source_url": "https://turkishmarketer.com/en/contactUs",
+    "phones": [
+      {
+        "e164": "+904445194",
+        "display": "+90 4445194",
+        "kind": "whatsapp",
+        "source_url": "https://turkishmarketer.com/en"
+      }
+    ],
+    "phone_best": "+90 4445194",
+    "phone_source_url": "https://turkishmarketer.com/en",
+    "pages_checked": [
+      "https://turkishmarketer.com/en",
+      "https://turkishmarketer.com/en/contactUs"
+    ],
+    "notes": [
+      "support@turkishmarketer.com نقش غیرتجاری است (کنار گذاشته شد)"
+    ],
+    "needs_render": false,
+    "website_match": "strong",
+    "site_blurb": "Import from Turkey | Turkish Manufacturers & Suppliers | Turkish Marketer. Find trusted Turkish manufacturers, suppliers, exporters, and factories. Source products from Turkey and connect directly with verified Turkish companies. Import from Turkey | Turkish Manufacturers & Suppliers | Turkish Marketer 4445194 EN Türkçe English Français العربية Deutsch Light Dark System Log In Sign Up Import & Export Products Companies Categories Membership Tenders Partnership Clearance Auctions Investments Language Türkçe English Français العربية Deutsch Turkish Marketer Your Trusted B2B Partner Where global buyers meet Turkish manufacturers, and Turkish exporters reach the world.. Start Sourcing Start Sell",
+    "checked_at": "2026-11-20"
+  }
+}
