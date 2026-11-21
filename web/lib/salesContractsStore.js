@@ -159,17 +159,82 @@ export function setCancelled(id, cancelled, reason, by) {
   return { ok: true, contract: c };
 }
 
-export function upsertCustomer(input, by) {
-  const buyer = String(input.name || "").trim().slice(0, 160);
-  if (!buyer) return { ok: false, errors: ["نام شرکت لازم است."] };
-  const { errors, fields } = cleanContractInput({ buyer, country: input.country || "—", tons: 1, contact_person: input.person, phone: input.phone, email: input.email, address: input.address, customer_notes: input.notes }, {});
-  if (errors.length) return { ok: false, errors };
-  const store = readStore();
-  const c = upsertCustomerIn(store, { ...fields, buyer, country: String(input.country || "").trim().slice(0, 60) }, by);
-  log(store, by, "customer.upsert", { id: c.id, name: c.name });
-  persist(store);
-  return { ok: true, customer: c };
+// ---------------------------------------------------------------------------------------------- پرونده‌ی مشتری (پروفایل شرکت)
+export const CUSTOMER_STATUS = ["فعال", "بالقوه", "غیرفعال"];
+export const CONTACT_INFLUENCE = ["تصمیم‌گیرنده", "تأثیرگذار", "خرید و بازرگانی", "مالی", "فنی و کیفیت", "اجرایی و لجستیک", "سایر"];
+export const CUSTOMER_CHANNELS = ["ایمیل", "واتساپ", "تلفن", "تلگرام", "لینکدین", "حضوری"];
+const CUSTOMER_TEXT = {
+  country: 60, person: 120, phone: 160, email: 160, address: 400, notes: 2000, website: 200, city: 80, activity: 200, registration_no: 80,
+  manager: 100, whatsapp: 60, telegram: 100, linkedin: 200, language: 60,
+};
+const CUSTOMER_LABEL = {
+  name: "نام شرکت", country: "کشور", person: "شخص تماس اصلی", phone: "تلفن", email: "ایمیل", address: "آدرس", notes: "یادداشت", website: "وب‌سایت", city: "شهر",
+  activity: "حوزه‌ی فعالیت", registration_no: "شماره ثبت/شناسه", manager: "مسئول پیگیری", whatsapp: "واتساپ", telegram: "تلگرام", linkedin: "لینکدین",
+  language: "زبان مکاتبه", status: "وضعیت", preferred_channel: "کانال ترجیحی", contacts: "افراد کلیدی",
+};
+const MAX_CUSTOMER_HISTORY = 200;
+
+function cleanContacts(list) {
+  const out = [];
+  for (const [i, c] of (Array.isArray(list) ? list : []).slice(0, 30).entries()) {
+    const name = String(c?.name || "").trim().slice(0, 120);
+    const row = {
+      id: c?.id || newId("pc"), name, role: String(c?.role || "").trim().slice(0, 120) || null,
+      influence: CONTACT_INFLUENCE.includes(c?.influence) ? c.influence : null,
+      phone: String(c?.phone || "").trim().slice(0, 100) || null, whatsapp: String(c?.whatsapp || "").trim().slice(0, 60) || null,
+      email: String(c?.email || "").trim().slice(0, 160) || null, notes: String(c?.notes || "").trim().slice(0, 500) || null,
+    };
+    if (!name && !row.phone && !row.email && !row.whatsapp) continue;
+    if (!name) return { error: `فرد کلیدی ${i + 1}: نام لازم است.` };
+    if (row.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(row.email)) return { error: `فرد کلیدی ${i + 1}: ایمیل معتبر نیست.` };
+    out.push(row);
+  }
+  return { contacts: out };
 }
+
+const contactsText = (list) => (list || []).map((c) => `${c.name}${c.role ? ` (${c.role})` : ""}`).join("، ") || "—";
+
+/** ایجاد/ویرایش پرونده‌ی مشتری. input.id = ویرایش همان مشتری (حتی با تغییر نام)؛ بدون id، شناسه از نام ساخته می‌شود. */
+export function upsertCustomer(input, by) {
+  const name = String(input.name || "").trim().slice(0, 160);
+  if (!name) return { ok: false, errors: ["نام شرکت لازم است."] };
+  const errors = [];
+  const f = {};
+  for (const [k, n] of Object.entries(CUSTOMER_TEXT)) if (input[k] !== undefined) f[k] = String(input[k] ?? "").trim().slice(0, n) || null;
+  if (f.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email)) errors.push("ایمیل شرکت معتبر نیست.");
+  if (input.status !== undefined) { if (input.status && !CUSTOMER_STATUS.includes(input.status)) errors.push("وضعیت مشتری نامعتبر است."); else f.status = input.status || null; }
+  if (input.preferred_channel !== undefined) { if (input.preferred_channel && !CUSTOMER_CHANNELS.includes(input.preferred_channel)) errors.push("کانال ترجیحی نامعتبر است."); else f.preferred_channel = input.preferred_channel || null; }
+  let contacts;
+  if (input.contacts !== undefined) { const r = cleanContacts(input.contacts); if (r.error) errors.push(r.error); else contacts = r.contacts; }
+  if (errors.length) return { ok: false, errors };
+
+  const store = readStore();
+  const id = input.id && store.customers.some((x) => x.id === input.id) ? input.id : customerIdOf(name);
+  const prev = store.customers.find((x) => x.id === id);
+  const before = prev ? { ...prev } : null;
+  const now = new Date().toISOString();
+  const next = {
+    id, name, country: prev?.country ?? null, person: prev?.person ?? null, phone: prev?.phone ?? null, email: prev?.email ?? null, address: prev?.address ?? null, notes: prev?.notes ?? null,
+    ...(prev || {}), name, ...f, ...(contacts !== undefined ? { contacts } : {}), updated_at: now, updated_by: by || null, created_at: prev?.created_at || now,
+  };
+  next.contacts = next.contacts || [];
+  // فقط تغییرهای واقعی در تاریخچه
+  const changes = [];
+  for (const k of ["name", ...Object.keys(CUSTOMER_TEXT), "status", "preferred_channel"]) {
+    const a = before?.[k] ?? null, b = next[k] ?? null;
+    if (String(a ?? "") !== String(b ?? "")) changes.push({ field: k, label: CUSTOMER_LABEL[k] || k, from: a, to: b });
+  }
+  if (contacts !== undefined && contactsText(before?.contacts) !== contactsText(contacts)) changes.push({ field: "contacts", label: CUSTOMER_LABEL.contacts, from: contactsText(before?.contacts), to: contactsText(contacts) });
+  if (changes.length || !prev) {
+    next.history = [...(prev?.history || []), { id: newId("ch"), at: now, by: by || null, summary: prev ? `ویرایش: ${changes.map((x) => x.label).join("، ")}` : "ایجاد پرونده‌ی مشتری", changes }].slice(-MAX_CUSTOMER_HISTORY);
+  }
+  if (prev) Object.assign(prev, next); else store.customers.push(next);
+  log(store, by, "customer.upsert", { id, name });
+  persist(store);
+  return { ok: true, customer: prev || next };
+}
+
+export const getCustomerRecord = (id) => readStore().customers.find((c) => c.id === id) || null;
 
 // ---------------------------------------------------------------------------------------------- قرارداد اکسل ← قرارداد قابل‌ویرایش پلتفرم
 /**

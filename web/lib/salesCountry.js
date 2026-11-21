@@ -92,6 +92,55 @@ export function buildCountryTable(firmRows, asOf, windowMonths, countryNames, ma
   }).sort((a, b) => (b.tons || 0) - (a.tons || 0) || (b.market_imports_tons || 0) - (a.market_imports_tons || 0));
 }
 
+export const MAIN_RIVALS = ["ترکیه", "چین", "روسیه", "هند"];
+
+/**
+ * گزارش مقایسه‌ای یک کشور: سهم ما از صادرات ایران، ترکیب بازار، صادرات ما در برابر رقبا، قیمت ما در برابر رقبا.
+ * in: { ours (تن سالانه‌شده), ourPrice, market:{imports_tons,import_unit_value_usd}, suppliers:[{name,tons,unit_value}], rivalGlobal:{[name]:unit_value}, customs:{tons_10m,unit_price}|null }
+ */
+export function buildComparison({ ours, ourPrice, market, suppliers, rivalGlobal = {}, customs = null }) {
+  const find = (name) => (suppliers || []).find((x) => x.name === name) || null;
+  const iranRow = find("ایران");
+  const iranMarket = iranRow?.tons ?? null;
+  const customsAnnual = customs?.tons_10m != null ? round((customs.tons_10m * 12) / 10, 0) : null;
+  const share = (a, b) => (a != null && b > 0 ? round((a / b) * 100, 1) : null);
+  const iran = {
+    market_tons: iranMarket, customs_tons_10m: customs?.tons_10m ?? null, customs_tons_annual: customsAnnual, customs_unit_price: customs?.unit_price ?? null,
+    our_share_of_market_iran_pct: share(ours, iranMarket), our_share_of_customs_pct: share(ours, customsAnnual),
+    iran_share_of_market_pct: share(iranMarket, market?.imports_tons),
+    understated: (iranMarket != null && ours > iranMarket) || (customsAnnual != null && ours > customsAnnual),
+  };
+  const rivals = MAIN_RIVALS.map((name) => {
+    const r = find(name);
+    return {
+      name, tons: r?.tons ?? null, share_pct: share(r?.tons, market?.imports_tons), market_price: r?.unit_value ?? null, global_price: rivalGlobal[name] ?? null,
+      ours_vs_tons: r?.tons > 0 && ours != null ? round(ours / r.tons, 2) : null,
+    };
+  });
+  // ترکیب بازار (برای نمودار انباشته): ما، سایر ایران، رقبای اصلی، بقیه
+  const T = market?.imports_tons > 0 ? market.imports_tons : null;
+  const parts = [];
+  if (ours > 0) parts.push({ label: "ما", tons: ours, tone: "us" });
+  const iranOther = iranMarket != null ? Math.max(0, iranMarket - (ours || 0)) : null;
+  if (iranOther > 0) parts.push({ label: "سایر ایران", tons: iranOther, tone: "iran" });
+  for (const r of rivals) if (r.tons > 0) parts.push({ label: r.name, tons: r.tons, tone: "rival" });
+  const used = parts.reduce((a, x) => a + x.tons, 0);
+  const total = T != null ? Math.max(T, used) : used || null;
+  if (total && total - used > 0.5) parts.push({ label: "سایر مبدأها", tons: round(total - used, 0), tone: "other" });
+  const composition = total ? parts.map((x) => ({ ...x, tons: round(x.tons, 0), pct: round((x.tons / total) * 100, 1) })) : [];
+
+  // مرجع‌های قیمتی
+  const refs = [];
+  if (ourPrice != null) refs.push({ label: "میانگین قیمت ما", value: ourPrice, tone: "us" });
+  if (customs?.unit_price != null) refs.push({ label: "قیمت اظهاری گمرک ایران به این کشور", value: customs.unit_price, tone: "muted" });
+  if (market?.import_unit_value_usd != null) refs.push({ label: "متوسط قیمت واردات کشور (CIF)", value: market.import_unit_value_usd, tone: "ref" });
+  for (const r of rivals) {
+    if (r.market_price != null) refs.push({ label: `${r.name} در این بازار`, value: r.market_price, tone: "muted" });
+    else if (r.global_price != null) refs.push({ label: `${r.name} (قیمت صادراتی جهانی)`, value: r.global_price, tone: "muted" });
+  }
+  return { iran, rivals, composition, composition_total: total, price_refs: refs.sort((a, b) => b.value - a.value), our_tons: ours };
+}
+
 /**
  * جزئیات یک کشور. ctx: { windowMonths, market, suppliers:[{name,tons,unit_value}], competitors:[{name,unit_value,tons}] }
  *  - suppliers: تأمین‌کنندگان همین بازار (حجم/ارزش واحد، هر جا موجود)
@@ -136,5 +185,6 @@ export function buildCountryDetail(firmRows, asOf, country, ctx) {
   }
   if (m.imports_tons > 0 && annualized != null && share != null && share < 5 && m.imports_tons >= 1000) notes.push({ level: "info", text: `بازار ${m.imports_tons} تن در سال است؛ رسیدن به سهم ۱۰٪ حدود ${Math.max(0, round(m.imports_tons * 0.1 - annualized, 0))} تن در سال افزایش می‌خواهد.` });
 
-  return { country, sales: s, market: m, market_unreliable: unreliable, annualized_tons: annualized, share_pct: share, share_to_date_pct: shareToDate, position, scenarios, suppliers: ctx.suppliers || [], competitors: comp, notes };
+  const comparison = buildComparison({ ours: annualized, ourPrice: ours, market: m, suppliers: ctx.suppliers || [], rivalGlobal: ctx.rivalGlobal || {}, customs: ctx.customs || null });
+  return { country, comparison, sales: s, market: m, market_unreliable: unreliable, annualized_tons: annualized, share_pct: share, share_to_date_pct: shareToDate, position, scenarios, suppliers: ctx.suppliers || [], competitors: comp, notes };
 }

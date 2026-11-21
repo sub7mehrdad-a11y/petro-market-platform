@@ -107,3 +107,48 @@ export function SalesNav({ active }) {
     </nav>
   );
 }
+
+const STACK_COLOR = { us: "#1f6feb", iran: "#7fb2f0", rival: "#d97706", other: "#b9c0cc" };
+/** نوار انباشته‌ی ترکیب بازار: parts = [{label, tons, pct, tone}] */
+export function StackedBar({ parts }) {
+  if (!parts?.length) return null;
+  return (
+    <div>
+      <div dir="ltr" className="flex h-8 overflow-hidden rounded-lg border border-border">
+        {parts.map((p, i) => (
+          <div key={i} title={`${p.label}: ${fa(p.tons)} تن (${fa(p.pct, 1)}٪)`} style={{ width: `${Math.max(p.pct, 0.8)}%`, background: p.tone === "rival" ? ["#d97706", "#e6a23c", "#c2410c", "#f0b429"][i % 4] : STACK_COLOR[p.tone] }} className="h-full" />
+        ))}
+      </div>
+      <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-1 text-xs">
+        {parts.map((p, i) => (
+          <li key={i} className="flex items-center gap-1.5"><span className="inline-block h-2.5 w-2.5 rounded-sm" style={{ background: p.tone === "rival" ? ["#d97706", "#e6a23c", "#c2410c", "#f0b429"][i % 4] : STACK_COLOR[p.tone] }} /><span className={p.tone === "us" ? "font-bold text-text" : "text-text-muted"}>{p.label}</span><span className="text-text">{fa(p.tons)} تن · {fa(p.pct, 1)}٪</span></li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+/** روند قیمت ما (ماهانه) با خط‌های مرجع افقی: refs = [{label, value, tone}] */
+export function PriceTrendChart({ months, refs }) {
+  const pts = (months || []).filter((m) => m.avg_price != null);
+  if (!pts.length) return null;
+  const W = 700, H = 230, padL = 38, padR = 8, padT = 12, padB = 28;
+  const vals = [...pts.map((m) => m.avg_price), ...refs.map((r) => r.value)];
+  const lo = Math.min(...vals) * 0.92, hi = Math.max(...vals) * 1.05;
+  const y = (v) => padT + (H - padT - padB) * (1 - (v - lo) / (hi - lo || 1));
+  const x = (i) => padL + ((W - padL - padR) * (pts.length === 1 ? 0.5 : i / (pts.length - 1)));
+  const col = { muted: "#94a3b8", ref: "#16a34a", us: "#1f6feb" };
+  return (
+    <svg viewBox={`0 0 ${W} ${H}`} className="w-full" direction="ltr" role="img" aria-label="روند ماهانه‌ی قیمت ما در برابر مرجع‌های رقبا">
+      {[0, 0.25, 0.5, 0.75, 1].map((t) => { const v = lo + (hi - lo) * t; return <g key={t}><line x1={padL} x2={W - padR} y1={y(v)} y2={y(v)} stroke="currentColor" opacity="0.08" /><text x={padL - 4} y={y(v) + 3} textAnchor="end" fontSize="9" fill="currentColor" opacity="0.6">{Math.round(v)}</text></g>; })}
+      {refs.map((r) => (
+        <g key={r.label}>
+          <line x1={padL} x2={W - padR} y1={y(r.value)} y2={y(r.value)} stroke={col[r.tone] || col.muted} strokeWidth="1.1" strokeDasharray="5 4" opacity="0.8" />
+          <text x={W - padR} y={y(r.value) - 3} textAnchor="end" fontSize="8.5" fill={col[r.tone] || col.muted}>{r.label} {Math.round(r.value)}</text>
+        </g>
+      ))}
+      <polyline points={pts.map((m, i) => `${x(i)},${y(m.avg_price)}`).join(" ")} fill="none" stroke={col.us} strokeWidth="2.2" />
+      {pts.map((m, i) => <g key={m.month}><circle cx={x(i)} cy={y(m.avg_price)} r="3" fill={col.us} /><text x={x(i)} y={H - 10} textAnchor="middle" fontSize="8.5" fill="currentColor" opacity="0.6">{m.month.slice(2)}</text><text x={x(i)} y={y(m.avg_price) - 6} textAnchor="middle" fontSize="8.5" fill={col.us}>{Math.round(m.avg_price)}</text></g>)}
+    </svg>
+  );
+}

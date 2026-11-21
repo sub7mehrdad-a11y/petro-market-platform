@@ -134,4 +134,53 @@ assert.equal(none.sales.deals, 0);
 assert.equal(none.share_pct, null);
 assert.ok(none.notes.some((n) => /سفارش قطعی/.test(n.text)));
 
+// ------------------------------------------------------------------ پروفایل مشتری
+const CU = await import("../lib/salesCustomer.js");
+let cu = CS.upsertCustomer({ name: "Alpha LLC", country: "روسیه", status: "فعال", email: "bad" }, "amin");
+assert.equal(cu.ok, false, "ایمیل نامعتبر");
+cu = CS.upsertCustomer({ name: "Alpha LLC", country: "روسیه", status: "نامعتبر" }, "amin");
+assert.equal(cu.ok, false, "وضعیت نامعتبر");
+cu = CS.upsertCustomer({ name: "Alpha LLC", contacts: [{ name: "", phone: "+7 900" }] }, "amin");
+assert.equal(cu.ok, false, "فرد کلیدی بدون نام");
+cu = CS.upsertCustomer({ name: "Alpha LLC", country: "روسیه", status: "فعال", website: "alpha.ru", whatsapp: "+7 900 000 0000", preferred_channel: "واتساپ", contacts: [{ name: "Ivan", role: "مدیر خرید", influence: "تصمیم‌گیرنده", email: "ivan@alpha.ru" }, { name: "", phone: "", email: "" }] }, "amin");
+assert.equal(cu.ok, true);
+assert.equal(cu.customer.contacts.length, 1, "ردیف خالی حذف می‌شود");
+assert.match(cu.customer.history.at(-1).summary, /^ویرایش: .*وضعیت/, "مشتری از قرارداد اکسل از قبل بود ← ویرایش");
+assert.equal(CS.upsertCustomer({ name: "Brand New Co" }, "amin").customer.history[0].summary, "ایجاد پرونده‌ی مشتری");
+const cid = cu.customer.id;
+cu = CS.upsertCustomer({ id: cid, name: "Alpha Trading LLC", country: "روسیه", status: "غیرفعال".replace("غیرفعال", "فعال"), phone: "+7 1" }, "sara");
+assert.equal(cu.customer.id, cid, "تغییر نام شناسه را عوض نمی‌کند");
+const h2 = cu.customer.history.at(-1);
+assert.ok(h2.changes.some((x) => x.field === "name" && x.from === "Alpha LLC" && x.to === "Alpha Trading LLC") && h2.changes.some((x) => x.field === "phone"));
+assert.equal(cu.customer.contacts.length, 1, "ویرایش بدون contacts افراد را پاک نمی‌کند");
+const n = CS.getCustomerRecord(cid).history.length;
+CS.upsertCustomer({ id: cid, name: "Alpha Trading LLC", phone: "+7 1" }, "sara");
+assert.equal(CS.getCustomerRecord(cid).history.length, n, "بدون تغییر ← تاریخچه نمی‌سازد");
+
+const acc2 = LS.loadAccounts().accounts;
+const mine = acc2.contracts.filter((c) => c.customer_id === acc2.contracts.find((x) => x.key === "F-1").customer_id);
+const stats = CU.buildCustomerStats(mine, "2026-11-15", { companyAvgPrice: 250 });
+assert.equal(stats.deals, 1);
+assert.equal(stats.tons, 120);
+assert.ok(stats.avg_days_to_pay >= 0 && stats.on_time_pct != null, "رفتار پرداخت از پرداخت‌های ثبت‌شده");
+assert.ok(stats.price_vs_company_pct < 0, "قیمت ۲۴۵ زیر میانگین ۲۵۰");
+assert.equal(stats.months.length, 1);
+const bank = CU.matchBankCompanies({ name: "Alpha Trading LLC", website: "alpha.ru" }, [{ id: "c1", english_name: "ALPHA TRADING Ltd", country: "روسیه", email: "x@alpha.ru" }, { id: "c2", english_name: "Other", website: "https://www.alpha.ru/en" }, { id: "c3", english_name: "Zeta", website: "zeta.com" }], [{ name: "Alpha", website: "https://alpha.ru", wa_display: "+7 1", wa_e164: "+71", wa_source_url: "u" }]);
+assert.deepEqual(bank.bank.map((b) => b.id), ["c1", "c2"], "هم‌نام نرمال‌شده و هم‌دامنه");
+assert.equal(bank.whatsapp.length, 1);
+
+// ------------------------------------------------------------------ گزارش مقایسه‌ای کشور
+const cmp = SC.buildComparison({ ours: 3000, ourPrice: 240, market: { imports_tons: 20400, import_unit_value_usd: 353 }, suppliers: [{ name: "ایران", tons: 16000 }, { name: "چین", tons: 3868, unit_value: 190 }, { name: "ترکیه", tons: 52 }], rivalGlobal: { "ترکیه": 319, "چین": 188, "هند": 381, "روسیه": 366 }, customs: { tons_10m: 26945, unit_price: 180 } });
+assert.equal(cmp.iran.our_share_of_market_iran_pct, 18.8);
+assert.equal(cmp.iran.our_share_of_customs_pct, 9.3);
+assert.equal(cmp.iran.iran_share_of_market_pct, 78.4);
+assert.equal(cmp.iran.understated, false);
+const compSum = cmp.composition.reduce((a, x) => a + x.tons, 0);
+assert.ok(Math.abs(compSum - 20400) <= 2, "ترکیب بازار جمعش واردات کل است");
+assert.deepEqual(cmp.composition.map((x) => x.label).slice(0, 2), ["ما", "سایر ایران"]);
+assert.equal(cmp.rivals.find((r) => r.name === "چین").ours_vs_tons, 0.78);
+assert.ok(cmp.price_refs.some((r) => r.label.includes("گمرک ایران") && r.value === 180));
+assert.ok(cmp.price_refs.some((r) => r.label === "چین در این بازار" && r.value === 190) && cmp.price_refs.some((r) => r.label.startsWith("هند") && r.value === 381));
+assert.equal(SC.buildComparison({ ours: 5000, ourPrice: 240, market: { imports_tons: 4000 }, suppliers: [{ name: "ایران", tons: 3000 }], customs: null }).iran.understated, true, "صادرات ما بیش از رقم ایران ← کم‌اظهار");
+
 console.log("test-sales-v2: همه‌ی بررسی‌ها گذشت");

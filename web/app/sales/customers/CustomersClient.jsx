@@ -1,90 +1,68 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
 import PageHeader from "../../components/PageHeader";
-import { SalesNav, fa } from "../salesUi";
+import { SalesNav, fa, usd } from "../salesUi";
 
-const usd = (n) => (n == null ? "—" : `$${Number(n).toLocaleString("en-US", { maximumFractionDigits: 0 })}`);
-const inputCls = "mt-1 block w-full rounded-lg border border-border bg-surface px-3 py-2 text-sm";
-const blank = { name: "", country: "", person: "", phone: "", email: "", address: "", notes: "" };
+const STATUS_CLS = { فعال: "bg-success-soft text-success", بالقوه: "bg-warning-soft text-warning", غیرفعال: "bg-canvas text-text-muted" };
 
 export default function CustomersClient() {
   const [list, setList] = useState(null);
   const [error, setError] = useState("");
   const [q, setQ] = useState("");
-  const [form, setForm] = useState(null);
-  const [busy, setBusy] = useState(false);
-  const [msg, setMsg] = useState("");
+  const [filter, setFilter] = useState("all");
 
-  const load = useCallback(async () => {
-    const res = await fetch("/api/sales/contracts/customers", { cache: "no-store" });
-    const j = await res.json().catch(() => ({}));
-    if (!res.ok) { setError(j.error || "خطا"); return; }
-    setError(""); setList(j.customers);
+  useEffect(() => {
+    fetch("/api/sales/contracts/customers", { cache: "no-store" })
+      .then(async (r) => { const j = await r.json().catch(() => ({})); if (!r.ok) throw new Error(j.error || "خطا"); setList(j.customers); })
+      .catch((e) => setError(e.message));
   }, []);
-  useEffect(() => { load(); }, [load]);
 
   const rows = useMemo(() => {
     const t = q.trim().toLowerCase();
-    return (list || []).filter((c) => !t || `${c.name} ${c.country || ""} ${c.person || ""}`.toLowerCase().includes(t));
-  }, [list, q]);
+    return (list || [])
+      .filter((c) => (filter === "balance" ? c.account?.balance > 0 : filter === "profile" ? !c.sheet_only : filter === "noprofile" ? c.sheet_only : true))
+      .filter((c) => !t || `${c.name} ${c.country || ""} ${c.person || ""} ${(c.contacts || []).map((x) => x.name).join(" ")}`.toLowerCase().includes(t));
+  }, [list, q, filter]);
 
-  async function save(e) {
-    e.preventDefault();
-    setBusy(true); setMsg("");
-    const res = await fetch("/api/sales/contracts/customers", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(form) });
-    const j = await res.json().catch(() => ({}));
-    setBusy(false);
-    if (!res.ok) { setMsg(j.error || "ذخیره نشد."); return; }
-    setForm(null); load();
-  }
-  const set = (k) => (e) => setForm((p) => ({ ...p, [k]: e.target.value }));
+  const chips = [["all", "همه"], ["balance", "دارای مانده"], ["profile", "پرونده‌دار"], ["noprofile", "بدون پرونده‌ی تماس"]];
 
   return (
     <div className="space-y-6">
-      <PageHeader title="مشتریان" />
+      <PageHeader title="مشتریان" actions={<Link href="/sales/customers/new" className="rounded-lg bg-primary px-4 py-2 text-xs font-medium text-white hover:bg-primary-hover">+ مشتری جدید</Link>} />
       <SalesNav active="/sales/customers" />
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
+      {!list && !error && <p className="text-sm text-text-muted">در حال بارگذاری…</p>}
 
-      <section className="card space-y-3 p-4">
-        <div className="flex flex-wrap items-center gap-2">
-          <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="جست‌وجو: شرکت، کشور، شخص تماس" className="min-w-52 flex-1 rounded-lg border border-border bg-surface px-3 py-2 text-sm" />
-          <button type="button" onClick={() => setForm({ ...blank })} className="rounded-lg bg-primary px-4 py-2 text-xs font-medium text-white hover:bg-primary-hover cursor-pointer">+ مشتری جدید</button>
-        </div>
-        {list && rows.length === 0 && <p className="text-xs text-text-muted">مشتری‌ای پیدا نشد.</p>}
-        <ul className="divide-y divide-border">
-          {rows.map((c) => (
-            <li key={c.id} className="flex flex-wrap items-start justify-between gap-3 py-3 text-sm">
-              <div className="min-w-60 flex-1 space-y-0.5">
-                <div className="font-semibold text-text">{c.name} <span className="text-xs font-normal text-text-muted">{c.country || ""}</span>{c.sheet_only && <span className="ms-2 rounded-full bg-canvas px-2 py-0.5 text-[10px] text-text-muted">فقط در اکسل</span>}</div>
-                <div className="text-xs text-text-muted">{[c.person, c.phone, c.email].filter(Boolean).join(" · ") || "اطلاعات تماس ثبت نشده"}</div>
-                {c.address && <div className="text-xs text-text-muted">{c.address}</div>}
-                {c.notes && <div className="text-xs text-text">{c.notes}</div>}
-              </div>
-              <div className="text-xs text-text-muted">
-                {c.account ? <>{fa(c.account.deals)} قرارداد · کل {usd(c.account.total)} · مانده <b className={c.account.balance > 0 ? "text-warning" : "text-text"}>{usd(c.account.balance)}</b>{c.account.overdue_balance > 0 && <span className="text-danger"> · سررسیدگذشته {usd(c.account.overdue_balance)}</span>}</> : "بدون قرارداد"}
-              </div>
-              <button type="button" onClick={() => setForm({ name: c.name, country: c.country || "", person: c.person || "", phone: c.phone || "", email: c.email || "", address: c.address || "", notes: c.notes || "" })} className="rounded-lg border border-border px-3 py-1 text-xs hover:bg-canvas cursor-pointer">ویرایش</button>
-            </li>
-          ))}
-        </ul>
-      </section>
-
-      {form && (
-        <form onSubmit={save} className="card space-y-3 p-5">
-          <h2 className="text-sm font-bold text-text">{form.name ? `پرونده‌ی ${form.name}` : "مشتری جدید"}</h2>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {[["name", "نام شرکت *", "auto", true], ["country", "کشور", "auto"], ["person", "شخص تماس", "auto"], ["phone", "تلفن", "ltr"], ["email", "ایمیل", "ltr"], ["address", "آدرس", "auto"]].map(([k, l, dir, req]) => (
-              <label key={k} className="block text-xs text-text-muted">{l}<input value={form[k]} onChange={set(k)} dir={dir} required={!!req} className={inputCls} /></label>
-            ))}
-            <label className="block text-xs text-text-muted sm:col-span-2">یادداشت<textarea value={form.notes} onChange={set("notes")} rows={3} className={inputCls} /></label>
+      {list && (
+        <section className="card space-y-3 p-4">
+          <div className="flex flex-wrap items-center gap-2">
+            {chips.map(([k, l]) => <button key={k} type="button" onClick={() => setFilter(k)} className={`rounded-full border px-3 py-1 text-xs cursor-pointer ${filter === k ? "border-primary bg-primary-soft font-bold text-primary-hover" : "border-border"}`}>{l}</button>)}
+            <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="جست‌وجو: شرکت، کشور، نام فرد" className="ms-auto w-60 rounded-lg border border-border bg-surface px-3 py-1.5 text-xs" />
           </div>
-          {msg && <p className="text-sm text-danger">{msg}</p>}
-          <div className="flex gap-2">
-            <button type="submit" disabled={busy} className="rounded-lg bg-primary px-5 py-2 text-sm font-medium text-white disabled:opacity-50 cursor-pointer">{busy ? "…" : "ذخیره"}</button>
-            <button type="button" onClick={() => setForm(null)} className="rounded-lg border border-border px-5 py-2 text-sm hover:bg-canvas cursor-pointer">انصراف</button>
+          {rows.length === 0 && <p className="text-xs text-text-muted">مشتری‌ای پیدا نشد.</p>}
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs">
+              <thead><tr className="border-b border-border text-text-muted">{["شرکت", "کشور", "وضعیت", "تماس اصلی", "قرارداد", "تن", "جمع خرید", "مانده", ""].map((h) => <th key={h} className="px-2 py-1.5 text-start font-medium">{h}</th>)}</tr></thead>
+              <tbody>
+                {rows.map((c) => (
+                  <tr key={c.id} className="border-b border-border last:border-0 hover:bg-canvas">
+                    <td className="px-2 py-2"><Link href={`/sales/customers/${encodeURIComponent(c.id)}`} className="font-semibold text-primary-hover hover:underline">{c.name}</Link></td>
+                    <td className="px-2 py-2">{c.country || "—"}</td>
+                    <td className="px-2 py-2">{c.status ? <span className={`rounded-full px-2 py-0.5 text-[11px] ${STATUS_CLS[c.status] || ""}`}>{c.status}</span> : c.sheet_only ? <span className="text-[11px] text-text-muted">بدون پرونده</span> : "—"}</td>
+                    <td className="px-2 py-2">{[c.person || c.contacts?.[0]?.name, c.phone || c.contacts?.[0]?.phone, c.email].filter(Boolean).join(" · ") || "—"}</td>
+                    <td className="px-2 py-2">{fa(c.account?.deals ?? c.deals)}</td>
+                    <td className="px-2 py-2">{fa(c.account?.tons, 1)}</td>
+                    <td className="px-2 py-2">{usd(c.account?.total)}</td>
+                    <td className={`px-2 py-2 font-semibold ${c.account?.balance > 0 ? "text-warning" : ""}`}>{usd(c.account?.balance)}{c.account?.overdue_balance > 0 && <span className="ms-1 text-[10px] text-danger">سررسیدگذشته</span>}</td>
+                    <td className="px-2 py-2"><Link href={`/sales/customers/${encodeURIComponent(c.id)}`} className="rounded-lg border border-border px-3 py-1 hover:bg-canvas">پرونده و ویرایش</Link></td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
-        </form>
+        </section>
       )}
     </div>
   );
