@@ -7,6 +7,7 @@ import PageHeader from "../../components/PageHeader";
 // صفحه‌ی «یادگیری مغز» — باز‌نویسی کامل: خلاصه، پیش‌بینی کشور تازه، نتیجه‌ی آزمون کشورها با نمودار، یادگیری خودکار، بخش‌های دیگر.
 // همه‌ی نمودارها با HTML/SVG ساده‌اند (بدون کتابخانه). متن‌ها کوتاه و بی‌پیرایه.
 
+const faText = (t) => String(t).replace(/\d/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
 const fa = (n, d = 0) => (n === null || n === undefined || Number.isNaN(n) ? "—" : Number(n).toLocaleString("fa-IR", { maximumFractionDigits: d }));
 const pc = (x, d = 0) => (x === null || x === undefined ? "—" : `${fa(x * 100, d)}٪`);
 const dt = (iso) => (iso ? new Date(iso).toLocaleString("fa-IR", { dateStyle: "medium", timeStyle: "short" }) : "—");
@@ -294,7 +295,7 @@ export default function LearningClient() {
                     return cc && cc.lines.length > 0 ? (
                       <div className="rounded-lg border border-border bg-canvas p-3">
                         <h4 className="mb-1.5 text-sm font-bold text-text">نتیجه‌گیری</h4>
-                        <ul className="space-y-1 text-sm leading-7">{cc.lines.map((l, i) => <li key={i} className="flex gap-2"><span>▸</span><span>{l}</span></li>)}</ul>
+                        <ul className="space-y-1 text-sm leading-7">{cc.lines.map((l, i) => <li key={i} className="flex gap-2"><span>▸</span><span>{faText(l)}</span></li>)}</ul>
                         {cc.items.length > 0 && (
                           <div className="mt-3">
                             <Diverging items={cc.items.filter((x) => x.bias_pct != null).map((x) => ({ label: x.label, value: Math.max(-200, Math.min(200, x.bias_pct)), sub: x.inside ? "داخل بازه" : "بیرون بازه" }))} fmt={(v) => `${v > 0 ? "+" : ""}${fa(v)}٪`} posLabel="بیش‌برآورد" negLabel="کم‌برآورد" />

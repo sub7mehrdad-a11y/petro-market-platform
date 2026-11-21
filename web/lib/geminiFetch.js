@@ -67,12 +67,12 @@ export async function generateContent(opts) {
   }
 }
 
-async function generateContentOnce({ apiKey, model, systemInstruction, input, contents, generationConfig }) {
+async function generateContentOnce({ apiKey, model, systemInstruction, input, contents, generationConfig, timeoutMs }) {
   const dispatcher = getDispatcher();
 
   const up = upstream("gemini", `/v1beta/models/${model}:generateContent`);
   const res = await retryOnSocketError(() => undiciFetch(up.url, {
-    signal: AbortSignal.timeout(aiTimeoutMs("gemini")),
+    signal: AbortSignal.timeout(timeoutMs || aiTimeoutMs("gemini")),
     method: "POST",
     headers: {
       ...up.headers,
