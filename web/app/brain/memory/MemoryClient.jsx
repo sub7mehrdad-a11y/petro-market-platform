@@ -66,7 +66,7 @@ export default function MemoryClient() {
 
   return (
     <div className="space-y-6">
-      <PageHeader title="حافظه‌ی مغز" subtitle="هر ادعا دو خط زمانی دارد: «کی در جهان درست بود» و «کی سیستم باورش داشت». می‌توانید بپرسید: در تاریخ فلان، سیستم درباره‌ی فلان چه باور داشت؟" />
+      <PageHeader title="حافظه‌ی مغز" />
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
 
       {counts && (

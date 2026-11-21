@@ -51,7 +51,7 @@ export default function SkillClient() {
 
   return (
     <div className="space-y-6">
-      <PageHeader title="مهارت‌سنجی" subtitle="مهارت = ۱ − (خطای پیش‌بین ÷ خطای خط مبنا). خط مبنا: «قیمت ماه بعد برابر آخرین مقدار شناخته‌شده در لحظه‌ی ثبت است». مهارت مثبت یعنی از این حدس ساده بهتر بودید. نمره‌ی هر نسخه به‌اندازه‌ی مدتی که معتبر بوده وزن دارد." />
+      <PageHeader title="مهارت‌سنجی" />
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
 
       {data && data.summary.length === 0 && (

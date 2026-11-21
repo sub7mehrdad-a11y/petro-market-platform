@@ -53,7 +53,6 @@ export default function UnionsPage() {
       <PageHeader
         breadcrumb={[{ label: "داشبورد", href: "/" }, { label: "کشورها و اتحادیه‌ها", href: "/countries" }, { label: "اتحادیه‌ها" }]}
         title={`اتحادیه‌ها و پیمان‌های تجاری (${unions.length.toLocaleString("fa-IR")})`}
-        subtitle="نقشهٔ مرجع مهم‌ترین اتحادیه‌ها، ائتلاف‌ها و مناطق تجارت آزاد جهان — کدام کشورها عضوند، وضعیت ایران در هر کدام، و کاربرد آن برای صادرات جوش شیرین پارس."
         actions={
           <Link
             href="/countries"

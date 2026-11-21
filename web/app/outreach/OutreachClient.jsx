@@ -144,7 +144,6 @@ export default function OutreachClient({ companies, countries, sendingEnabled, h
     <div className="space-y-6">
       <PageHeader
         title="ایمیل معرفی"
-        subtitle="ارسال دسته‌ای ایمیل معرفی شرکت + کاتالوگ محصول، بر اساس کشور/صنعت/گرید هر شرکت. پایین‌تر: پیام واتساپ نیمه‌خودکار."
       />
 
       {halted && (

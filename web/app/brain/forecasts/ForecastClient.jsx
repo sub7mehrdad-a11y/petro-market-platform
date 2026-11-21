@@ -201,18 +201,15 @@ export default function ForecastClient() {
   const round = data?.round;
   return (
     <div className="space-y-6">
-      <PageHeader title="دفتر پیش‌بینی" subtitle="هر ماه برای قیمت فوب ماه بعد پیش‌بینی ثبت می‌شود: شما، همکاران و مغز؛ هرکدام مستقل. هر کس تا «مهلت قفل» می‌تواند با رسیدن خبر تازه پیش‌بینی‌اش را به‌روز کند. با گذشت زمان، مقدار واقعی هرکس را داوری می‌کند و معلوم می‌شود چه کسی (و مغز) از ساده‌ترین حدس («قیمت ماه بعد = همین ماه») بهتر است." />
+      <PageHeader title="دفتر پیش‌بینی" />
 
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
       {data?.storage_problem && <div className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-sm text-warning">⚠ {data.storage_problem}</div>}
 
-      <section className="card p-4 text-xs leading-7 text-text-muted">
-        <b className="text-text">قاعده‌ها:</b> ۱) پیش‌بینی خودتان را <b>پیش از دیدن</b> پیش‌بینی مغز ثبت کنید. ۲) هیچ نسخه‌ای پاک یا ویرایش نمی‌شود؛ «به‌روزرسانی» یعنی نسخه‌ی تازه با دلیل (نسخه‌ی قبلی می‌ماند). ۳) نسخه‌ی تازه‌ی شما هم پیش از دیدن نسخه‌ی تازه‌ی مغز ثبت می‌شود. ۴) نمره‌ی نهایی میانگین نمره‌ی نسخه‌هاست و هر نسخه به‌اندازه‌ی مدتی که معتبر بوده وزن می‌گیرد؛ پس زود و درست پیش‌بینی کردن پاداش دارد و صبر تا روز آخر سودی ندارد. ۵) «بازه‌ی ۸۰٪» یعنی کف و سقفی که ۸۰٪ مطمئنید مقدار واقعی بینشان می‌افتد. ۶) پیش‌بینی همکاران تا مهلت قفل برای هیچ‌کس دیده نمی‌شود. ۷) قیمت فوب = قیمت مبدأ؛ با سی‌آی‌اف و ارزش واحد واردات قابل‌مقایسه نیست.
-      </section>
 
       {data && !round && (
         <section className="card p-5 text-sm text-text-muted">
-          هنوز دوری باز نشده است. {data.me.is_admin ? "مدیر می‌تواند پایین «باز کردن دور این ماه» را بزند." : "منتظر باز شدن دور توسط مدیر یا زمان‌بند ماهانه باشید."}
+          هنوز دوری باز نشده است. 
         </section>
       )}
 

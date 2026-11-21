@@ -97,10 +97,21 @@ function toContents(history, finalUserText) {
   return turns;
 }
 
-export async function askBrain({ apiKey, question, history, retrievedContext, salesContext }) {
-  const digest = getBrainDigest();
-  if (!digest) throw new Error("خلاصه‌ی جامع (data/brain/digest.md) پیدا نشد؛ اول scripts/build_brain.py را اجرا کنید.");
+// خلاصه‌ی فشرده برای مسیرهایی که شبکه حساس است: فقط راهنما + رتبه‌بندی کشورها + قیمت‌های بازار (بدون پرونده‌ی تک‌تک کشورها، رقبا و اخبار).
+// درخواست کامل ≈ ۸۴ کیلوبایت بدنه دارد؛ از سرور داخل ایران به رله، بدنه‌ی بزرگ بیشتر با ECONNRESET قطع می‌شود.
+export function compactDigest(digest) {
+  const i = digest.search(/\n## ۳\./);
+  return i > 0 ? digest.slice(0, i) : digest.slice(0, 12000);
+}
 
+// خطاهای گذرا (تقاضای زیاد، قطع اتصال، مهلت) که تکرار با فاصله جوابشان را می‌دهد
+const TRANSIENT_RE = /\b(429|500|502|503|504)\b|ECONNRESET|UND_ERR|EPIPE|اتصال برقرار نشد|مهلت مجاز|پاسخ خالی/;
+
+export async function askBrain({ apiKey, question, history, retrievedContext, salesContext, compact = false }) {
+  const fullDigest = getBrainDigest();
+  if (!fullDigest) throw new Error("خلاصه‌ی جامع (data/brain/digest.md) پیدا نشد؛ اول scripts/build_brain.py را اجرا کنید.");
+
+  const digest = compact ? compactDigest(fullDigest) : fullDigest;
   const system = `${BRAIN_SYSTEM_PROMPT}\n\n===== خلاصه‌ی جامع پلتفرم =====\n${digest}`;
   const parts = [`سؤال: ${question}`];
   if (retrievedContext) parts.push(`===== قطعه‌های مرتبط (برای جزئیات بیشتر) =====\n${retrievedContext}`);
@@ -122,7 +133,7 @@ export async function askBrain({ apiKey, question, history, retrievedContext, sa
       });
       break;
     } catch (err) {
-      const transient = /\b(429|500|502|503|504)\b/.test(String(err?.message || err));
+      const transient = TRANSIENT_RE.test(String(err?.message || err));
       if (!transient || attempt >= 3) throw err;
       await new Promise((r) => setTimeout(r, 3000 * attempt));
     }

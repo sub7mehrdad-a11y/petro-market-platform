@@ -224,11 +224,11 @@ export default function LearningClient() {
         o.coverage !== null && o.coverage < 0.6 && "بازه‌ها تنگ‌اند: مغز بیش‌ازحد مطمئن است.",
         o.coverage !== null && o.coverage > 0.95 && "بازه‌ها پهن‌اند: مغز بیش‌ازحد محتاط است.",
       ].filter(Boolean)
-    : ["هنوز چیزی سنجیده نشده. «اجرای همه‌ی کشورها» را بزنید."];
+    : ["هنوز چیزی سنجیده نشده."];
 
   return (
     <div className="space-y-6">
-      <PageHeader title="یادگیری مغز" subtitle="مغز چقدر خوب حدس می‌زند؟ چطور از اشتباه یاد می‌گیرد؟ کشور تازه چه پیش‌بینی‌ای دارد؟" />
+      <PageHeader title="یادگیری مغز" />
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
       {log.length > 0 && <div className="rounded-lg border border-border bg-canvas px-3 py-2 text-xs leading-6">{log.map((l, i) => <div key={i}>• {l}</div>)}</div>}
 
@@ -305,7 +305,6 @@ export default function LearningClient() {
           <Section id="res" title="۳. نتیجه‌ی آزمون روی کشورها" lead="هر کشور را موقتاً پنهان کردیم. مغز حدس زد. حدس با گزارش خودمان مقایسه شد.">
             <div className="flex flex-wrap items-center gap-3">
               <button type="button" disabled={!!busy || !bt.has_key} onClick={runAll} className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-50 cursor-pointer">{busy && !busy.startsWith("پیش‌بینی") && busy !== "learn_start" ? `در حال اجرا: ${busy}…` : "اجرای همه‌ی کشورها"}</button>
-              <span className="text-xs text-text-muted">هر کشور یک تماس با مدل است. کشورهای قطع‌شده را دوباره بزنید.</span>
             </div>
 
             <div className="grid gap-6 lg:grid-cols-2">
@@ -374,7 +373,7 @@ export default function LearningClient() {
           </Section>
 
           {/* ۴) یادگیری خودکار */}
-          <Section id="learn" title="۴. یادگیری خودکار از اشتباه" lead="مغز اشتباه‌های بزرگش را بررسی می‌کند. قاعده‌ی تازه می‌نویسد. فقط اگر روی کشورهای دیده‌نشده بهتر شد نگهش می‌دارد. به تأیید شما نیاز ندارد.">
+          <Section id="learn" title="۴. یادگیری خودکار از اشتباه">
             <ol className="grid gap-2 text-xs sm:grid-cols-5">
               {["اجرا روی همه‌ی کشورها", "بررسی خطاها با پنج سؤال", "نوشتن قاعده‌ی کلی", "آزمون روی کشورهای دیده‌نشده", "بهتر شد؟ فعال. نشد؟ بایگانی"].map((t, i) => (
                 <li key={i} className="rounded-xl border border-border bg-canvas p-3"><div className="text-lg font-bold text-primary">{fa(i + 1)}</div><div>{t}</div></li>
@@ -396,7 +395,7 @@ export default function LearningClient() {
             )}
             {st.log?.some((l) => l.includes("مهلت") || l.includes("✗")) && (
               <div className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-xs leading-6 text-warning">
-                چند اجرا قطع شد. علت: Gemini دیر جواب می‌دهد (پیام بلند است). راه‌حل: در لیارا متغیر <b dir="ltr">AI_TIMEOUT_MS</b> را <b dir="ltr">150000</b> بگذارید.
+                چند اجرا به‌علت دیر جواب‌دادن Gemini قطع شد.
               </div>
             )}
             {st.log?.length > 0 && (
@@ -474,7 +473,7 @@ export default function LearningClient() {
                   <h3 className="text-sm font-bold">آزمایش فعال</h3>
                   {lr.config?.experiments?.enabled !== true
                     ? <p className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-xs leading-6 text-warning">⛔ متوقف است (دستور شما). هیچ ایمیلی با قیمت یا متن آزمایشی نمی‌رود.</p>
-                    : <p className="text-xs text-text-muted">روشن است. هیچ آزمایشی بدون تأیید شما شروع نمی‌شود.</p>}
+                    : <p className="text-xs text-text-muted">روشن است.</p>}
                   {lr.experiments.experiments.map((e) => (
                     <div key={e.key} className="rounded-lg border border-border p-3 text-xs">
                       <b>{e.title}</b> — <span className={STATUS_CLS[e.status] || ""}>{e.status}</span>

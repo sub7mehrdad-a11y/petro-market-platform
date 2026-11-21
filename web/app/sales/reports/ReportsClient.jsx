@@ -74,10 +74,7 @@ function UploadPanel({ onSaved }) {
   return (
     <section className="card p-5">
       <h2 className="mb-1 text-sm font-bold text-text">بارگذاری گزارش فروش (Sales Report)</h2>
-      <p className="mb-3 text-xs leading-6 text-text-muted">
-        همان فایل اکسل تجمعی تیم (از اول سال، سرستون‌ها در ردیف ۳) را هر هفته بارگذاری کنید؛ هر بارگذاری یک «عکس لحظه‌ای» است و آخرین عکس مبنای تحلیل می‌شود، عکس‌های قبلی برای مقایسه می‌مانند. اول پیش‌نمایش می‌گیرید و بعد تأیید می‌کنید.{" "}
-        <a href="/api/sales/template" className="font-semibold text-primary hover:underline">دانلود فایل خالی با همین ساختار ↓</a>
-      </p>
+      <p className="mb-3 text-xs text-text-muted"><a href="/api/sales/template" className="font-semibold text-primary hover:underline">دانلود فایل خالی با ساختار گزارش ↓</a></p>
       <div className="flex flex-col gap-2 sm:flex-row sm:items-end">
         <label className="flex-1 text-xs text-text-muted">
           فایل (.xlsx)
@@ -155,7 +152,7 @@ export default function ReportsClient() {
   const w30 = s?.window30;
   return (
     <div className="space-y-6">
-      <PageHeader title="گزارش‌گیری فروش" subtitle="گزارش‌های تفصیلی، بارگذاری فایل «Sales Report» تیم، تحلیل هوشمند مغز و جدول‌های کشور/مشتری/گرید. این بخش فقط برای نقش بازرگانی دیده می‌شود و داده‌ها روی دیسک دائمی سرور می‌مانند، نه در گیت." />
+      <PageHeader title="گزارش‌گیری فروش" />
 
       <SalesNav active="/sales/reports" />
 
@@ -166,9 +163,7 @@ export default function ReportsClient() {
 
       {s && !s.empty && (
         <>
-          <p className="text-xs text-text-muted">
-            گزارش به تاریخ <b>{s.as_of}</b> — «سفارش قطعی» = PI صادرشده؛ «پیشنهاد» (Just quoted) در فروش نمی‌آید و جداگانه به‌عنوان پایپ‌لاین دیده می‌شود. میانگین قیمت‌ها وزنی بر حسب تناژ و فقط ردیف‌های دلاری‌اند.
-          </p>
+          <p className="text-xs text-text-muted">گزارش به تاریخ <b>{s.as_of}</b></p>
 
           {s.alerts.length > 0 && (
             <section className="card p-4">
@@ -209,9 +204,7 @@ export default function ReportsClient() {
               )}
             </div>
             {!data.ai_enabled && (
-              <p className="text-xs leading-6 text-text-muted">
-                تحلیل متنی با هوش مصنوعی خاموش است، چون داده‌ی قراردادها محرمانه است و فقط با تصمیم صریح مدیریت (<code>SALES_AI_ENABLED=true</code>) خلاصه‌ی بدون نام مشتری برای مدل فرستاده می‌شود. همه‌ی نمودارها، جدول‌ها و هشدارهای این صفحه بدون هوش مصنوعی و محلی محاسبه می‌شوند.
-              </p>
+              <p className="text-xs text-text-muted">تحلیل متنی خاموش است.</p>
             )}
             {analysisError && <div className="mt-2 text-sm text-danger">{analysisError}</div>}
             {analysis && (

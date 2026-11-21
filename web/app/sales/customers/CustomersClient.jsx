@@ -42,7 +42,7 @@ export default function CustomersClient() {
 
   return (
     <div className="space-y-6">
-      <PageHeader title="مشتریان" subtitle="پرونده‌ی تماس و یادداشت هر مشتری کنار خلاصه‌ی حسابش. مشتریان فایل اکسل هم دیده می‌شوند؛ با «ویرایش» پرونده‌ی تماس برایشان بسازید." />
+      <PageHeader title="مشتریان" />
       <SalesNav active="/sales/customers" />
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
 

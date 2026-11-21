@@ -90,8 +90,7 @@ export default async function CountryPage({ params }) {
           { label: country },
         ]}
         title={country}
-        actions={<PrintButton />}
-        subtitle="پرونده‌ی کشور — آمار تجارت جهانی، شرکای تأمین، شرکت‌ها، نمایشگاه‌ها و گزارش‌های مرتبط."
+        actions={<PrintButton />}
       />
 
       {/* شناسنامه‌ی کشور — نوار تیره با مهم‌ترین اعداد، طبق طرح مرجع */}
