@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import PageHeader from "../../../components/PageHeader";
-import { HBars, Kpi, MonthlyChart, SalesNav, fa, faDigits, fdate, price, usd } from "../../salesUi";
+import { HBars, Kpi, MonthlyChart, PriceTrendChart, SalesNav, StackedBar, fa, faDigits, fdate, price, usd } from "../../salesUi";
 
 const fmtTons = (v) => `${fa(v, 0)} تن`;
 
@@ -19,16 +19,9 @@ export default function CountryClient({ country }) {
 
   const s = d?.sales;
   const m = d?.market;
+  const cmp = d?.comparison;
 
-  // مقایسه‌ی قیمتی: ما، متوسط واردات کشور و ارزش واحد صادراتی رقبا
   const ours = s?.avg_fob_price ?? s?.avg_price;
-  const priceBars = d && ours != null
-    ? [
-        { label: s.avg_fob_price != null ? "میانگین قیمت ما (FOB/FCA/EXW)" : "میانگین قیمت ما", value: ours, tone: "us" },
-        ...(m.import_unit_value_usd != null ? [{ label: "متوسط قیمت واردات کشور (CIF)", value: m.import_unit_value_usd, tone: "ref" }] : []),
-        ...d.competitors.map((c) => ({ label: `${c.name} (${c.src === "market" ? "واردات این کشور" : "صادراتی"})`, value: c.unit_value })),
-      ].sort((a, b) => b.value - a.value)
-    : [];
 
   // ساختار تأمین بازار با سهم تخمینی ما
   const supplierBars = d
@@ -71,20 +64,83 @@ export default function CountryClient({ country }) {
             </section>
           )}
 
-          <div className="grid gap-4 lg:grid-cols-2">
-            {priceBars.length > 1 && (
-              <section className="card p-5">
-                <h2 className="mb-3 text-sm font-bold text-text">جایگاه قیمت ما (دلار بر تن)</h2>
-                <HBars items={priceBars} fmt={(v) => `$${fa(v, 0)}`} />
-              </section>
-            )}
-            {supplierBars.length > 1 && (
-              <section className="card p-5">
-                <h2 className="mb-3 text-sm font-bold text-text">تأمین‌کنندگان بازار{d.breakdown_year ? ` (${fa(d.breakdown_year)})` : ""} و سهم ما</h2>
-                <HBars items={supplierBars} fmt={(v) => `${fa(v, 0)} تن`} />
-              </section>
-            )}
-          </div>
+          {/* ۱) سهم ما از صادرات ایران به این کشور و از کل واردات */}
+          {cmp && (
+            <section className="card space-y-4 p-5">
+              <h2 className="text-sm font-bold text-text">سهم ما در صادرات ایران و در کل واردات {country}</h2>
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+                <Kpi label="سهم ما از صادرات ایران (گمرک ایران)" value={cmp.iran.our_share_of_customs_pct != null ? `${fa(cmp.iran.our_share_of_customs_pct, 1)}٪` : "—"} tone={cmp.iran.our_share_of_customs_pct > 100 ? "text-warning" : undefined} sub={cmp.iran.customs_tons_annual != null ? `از ${fmtTons(cmp.iran.customs_tons_annual)} در سال (۱۴۰۴، ده‌ماهه سالانه‌شده)` : "آمار گمرک این کشور نیست"} />
+                <Kpi label="سهم ما از صادرات ایران (آمار بازار)" value={cmp.iran.our_share_of_market_iran_pct != null ? `${fa(cmp.iran.our_share_of_market_iran_pct, 1)}٪` : "—"} tone={cmp.iran.our_share_of_market_iran_pct > 100 ? "text-warning" : undefined} sub={cmp.iran.market_tons != null ? `از ${fmtTons(cmp.iran.market_tons)} ایران در بازار` : "ایران در جدول بازار نیست"} />
+                <Kpi label="سهم ایران از کل واردات کشور" value={cmp.iran.iran_share_of_market_pct != null ? `${fa(cmp.iran.iran_share_of_market_pct, 1)}٪` : "—"} />
+                <Kpi label="سهم ما از کل واردات کشور" value={d.share_pct != null ? `${fa(d.share_pct, 1)}٪` : "—"} tone={d.market_unreliable ? "text-warning" : undefined} sub={d.market_unreliable ? "آمار بازار ناقص" : undefined} />
+              </div>
+              {cmp.iran.understated && <p className="text-xs text-warning">صادرات سالانه‌شده‌ی ما از رقم ثبت‌شده‌ی ایران بیشتر است؛ آمار گمرک یا بازار این کشور کم‌اظهار است.</p>}
+              {cmp.composition.length > 0 && (
+                <div>
+                  <h3 className="mb-2 text-xs font-bold text-text-muted">ترکیب واردات سالانه‌ی کشور ({fa(cmp.composition_total)} تن)</h3>
+                  <StackedBar parts={cmp.composition} />
+                </div>
+              )}
+            </section>
+          )}
+
+          {/* ۲) صادرات ما در برابر رقبا */}
+          {cmp && cmp.rivals.some((r) => r.tons != null) && (
+            <section className="card space-y-4 p-5">
+              <h2 className="text-sm font-bold text-text">صادرات ما در برابر ترکیه، چین، روسیه و هند به {country}</h2>
+              <div className="grid gap-4 lg:grid-cols-2">
+                <HBars items={[{ label: "ما (سالانه‌شده)", value: cmp.our_tons || 0, tone: "us" }, ...cmp.rivals.filter((r) => r.tons != null).map((r) => ({ label: r.name, value: r.tons }))].sort((a, b) => b.value - a.value)} fmt={(v) => `${fa(v, 0)} تن`} />
+                <div className="overflow-x-auto">
+                  <table className="w-full text-xs">
+                    <thead><tr className="border-b border-border text-text-muted">{["صادرکننده", "تن در سال", "سهم از بازار", "نسبت ما به او"].map((h) => <th key={h} className="px-2 py-1.5 text-start font-medium">{h}</th>)}</tr></thead>
+                    <tbody>
+                      <tr className="border-b border-border bg-canvas/60 font-semibold"><td className="px-2 py-1.5">ما</td><td className="px-2 py-1.5">{cmp.our_tons != null ? fa(cmp.our_tons) : "—"}</td><td className="px-2 py-1.5">{d.share_pct != null ? `${fa(d.share_pct, 1)}٪` : "—"}</td><td className="px-2 py-1.5">—</td></tr>
+                      {cmp.rivals.map((r) => (
+                        <tr key={r.name} className="border-b border-border last:border-0"><td className="px-2 py-1.5">{r.name}</td><td className="px-2 py-1.5">{r.tons != null ? fa(r.tons) : "—"}</td><td className="px-2 py-1.5">{r.share_pct != null ? `${fa(r.share_pct, 1)}٪` : "—"}</td><td className="px-2 py-1.5">{r.ours_vs_tons != null ? `${fa(r.ours_vs_tons, 2)}×` : "—"}</td></tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </section>
+          )}
+
+          {/* ۳) قیمت ما در برابر رقبا */}
+          {cmp && cmp.price_refs.length > 1 && (
+            <section className="card space-y-4 p-5">
+              <h2 className="text-sm font-bold text-text">قیمت ما در برابر قیمت صادراتی رقبا (دلار بر تن)</h2>
+              <div className="grid gap-4 lg:grid-cols-2">
+                <HBars items={cmp.price_refs.map((r) => ({ label: r.label, value: r.value, tone: r.tone === "us" ? "us" : r.tone === "ref" ? "ref" : "muted" }))} fmt={(v) => `$${fa(v, 0)}`} />
+                <div className="overflow-x-auto">
+                  <table className="w-full text-xs">
+                    <thead><tr className="border-b border-border text-text-muted">{["صادرکننده", "قیمت در این بازار", "قیمت صادراتی جهانی", "فاصله‌ی ما با او"].map((h) => <th key={h} className="px-2 py-1.5 text-start font-medium">{h}</th>)}</tr></thead>
+                    <tbody>
+                      {cmp.rivals.map((r) => {
+                        const ref = r.market_price ?? r.global_price;
+                        const gap = ours != null && ref ? Math.round(((ours - ref) / ref) * 100) : null;
+                        return (
+                          <tr key={r.name} className="border-b border-border last:border-0"><td className="px-2 py-1.5">{r.name}</td><td className="px-2 py-1.5" dir="ltr" style={{ textAlign: "start" }}>{r.market_price != null ? `$${fa(r.market_price, 0)}` : "—"}</td><td className="px-2 py-1.5" dir="ltr" style={{ textAlign: "start" }}>{r.global_price != null ? `$${fa(r.global_price, 0)}` : "—"}</td><td className={`px-2 py-1.5 ${gap != null && gap > 0 ? "text-warning" : "text-success"}`} dir="ltr" style={{ textAlign: "start" }}>{gap != null ? `${gap > 0 ? "+" : ""}${fa(gap)}٪` : "—"}</td></tr>
+                        );
+                      })}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              {s.months.some((m) => m.avg_price != null) && (
+                <div>
+                  <h3 className="mb-2 text-xs font-bold text-text-muted">روند ماهانه‌ی قیمت ما در برابر خط‌های مرجع</h3>
+                  <PriceTrendChart months={s.months} refs={cmp.price_refs.filter((r) => r.tone !== "us")} />
+                </div>
+              )}
+            </section>
+          )}
+
+          {supplierBars.length > 1 && (
+            <section className="card p-5">
+              <h2 className="mb-3 text-sm font-bold text-text">تأمین‌کنندگان بازار{d.breakdown_year ? ` (${fa(d.breakdown_year)})` : ""} و سهم ما</h2>
+              <HBars items={supplierBars} fmt={(v) => `${fa(v, 0)} تن`} />
+            </section>
+          )}
 
           {d.scenarios.length > 0 && <section className="card p-4">
             <h2 className="mb-2 text-sm font-bold text-text">پتانسیل صادرات در سناریوهای سهم بازار</h2>

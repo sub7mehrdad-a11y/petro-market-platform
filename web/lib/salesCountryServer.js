@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { getCountryImportBreakdown, getCountryProfile, getTradeMap, getTradeMapForCountry } from "./data";
+import { getCompetitorForCountry, getCountryImportBreakdown, getCountryProfile, getIranExportToCountry, getTradeMap, getTradeMapForCountry } from "./data";
 import { readEffectiveSnapshots } from "./salesContractsStore";
 import { daysBetween } from "./salesFormat";
 import { buildCountryDetail, buildCountryTable, marketOf } from "./salesCountry";
@@ -28,7 +28,10 @@ export function loadSalesBase() {
 const marketFor = (country) => {
   const br = getCountryImportBreakdown(country);
   const tons = (br?.suppliers || []).reduce((sum, x) => sum + (Number(x.tons) || 0), 0);
-  return marketOf(getCountryProfile(country), getTradeMapForCountry(country), tons || null);
+  // برای روسیه و مانند آن، گزارش در competitors.json است نه country_profiles.json
+  const comp = getCompetitorForCountry(country);
+  const profile = { ...(comp ? { real_trade_stats: comp.real_trade_stats, report_import_breakdown: comp.report_import_breakdown } : {}), ...(getCountryProfile(country) || {}) };
+  return marketOf(profile, getTradeMapForCountry(country), tons || null);
 };
 
 export function countryTable() {
@@ -58,6 +61,11 @@ function competitorsFor(suppliers) {
   return [...own, ...mainCompetitors().filter((c) => !seen.has(c.name))];
 }
 
+function iranCustoms(country) {
+  const d = getIranExportToCountry(country);
+  return d ? { tons_10m: d.tons ?? null, unit_price: d.unit_price_usd_per_ton ?? null, value_usd: d.value_usd ?? null } : null;
+}
+
 export function countryDetail(country) {
   const base = loadSalesBase();
   if (!base) return null;
@@ -66,7 +74,7 @@ export function countryDetail(country) {
     name: s.country, tons: s.tons ?? null, share_pct: s.share_pct ?? null,
     unit_value: s.tons && s.value_usd_k != null ? Math.round((s.value_usd_k * 1000) / s.tons) : null,
   }));
-  const d = buildCountryDetail(base.firm, base.asOf, country, { windowMonths: base.windowMonths, market: marketFor(country), suppliers, competitors: competitorsFor(suppliers) });
+  const d = buildCountryDetail(base.firm, base.asOf, country, { windowMonths: base.windowMonths, market: marketFor(country), suppliers, competitors: competitorsFor(suppliers), rivalGlobal: Object.fromEntries(mainCompetitors().map((c) => [c.name, c.unit_value])), customs: iranCustoms(country) });
   const profile = getCountryProfile(country);
   return { ...d, as_of: base.asOf, window_months: base.windowMonths, breakdown_year: br?.year ?? null, port: profile?.port?.name || null, report_note: profile?.supply_stats?.note || null };
 }
