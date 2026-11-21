@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getBrainBriefing, getBrainScores, getBrainRadar } from "@/lib/brain";
 import { gregorianFa } from "@/lib/dateFormat";
+import { PerfLine, PerfProvider, PerfSummary } from "./CompanyPerf";
 
 const STANCE_STYLE = {
   "تمرکز": "bg-success-soft text-success",
@@ -55,6 +56,7 @@ export default function BrainPanel() {
   const scoreOf = Object.fromEntries((scores?.countries || []).map((c) => [c.country, c]));
 
   return (
+    <PerfProvider>
     <div className="space-y-6">
       {briefing ? (
         <section className="card border-primary p-5">
@@ -81,6 +83,7 @@ export default function BrainPanel() {
                     <span className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${STANCE_STYLE[p.stance] || "bg-canvas text-text"}`}>{p.stance}</span>
                     {s && <span className="text-[11px] text-text-muted">امتیاز {s.score} · رتبه {s.rank}</span>}
                   </div>
+                  <PerfLine country={p.country} tier={s?.tier} />
                   <Bullets title="چرا" items={p.why} />
                   <Bullets title="با چه شرایطی" items={p.conditions} />
                   <Bullets title="ریسک‌ها" items={p.risks} tone="text-warning" />
@@ -111,6 +114,10 @@ export default function BrainPanel() {
           توصیه‌ی هفته هنوز ساخته نشده است. با تنظیم کلید اختصاصی مغز (<code>GEMINI_API_KEY_BRAIN</code>) ربات روزانه آن را
           می‌سازد؛ رتبه‌بندی شفاف کشورها پایین همین‌جا آماده است.
         </section>
+      )}
+
+      {scores?.countries?.length > 0 && (
+        <PerfSummary scores={scores.countries.map((c) => ({ country: c.country, rank: c.rank, tier: c.tier, score: c.score }))} />
       )}
 
       {scores?.countries?.length > 0 && (
@@ -175,5 +182,6 @@ export default function BrainPanel() {
         </section>
       )}
     </div>
+    </PerfProvider>
   );
 }
