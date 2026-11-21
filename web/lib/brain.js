@@ -127,7 +127,7 @@ export async function askBrain({ apiKey, question, history, retrievedContext, sa
   for (let attempt = 1; ; attempt++) {
     try {
       const left = budgetMs ? budgetMs - (Date.now() - started) : null;
-      if (left !== null && left < 8000 && attempt > 1) throw new Error("اتصال برقرار نشد: مهلت مجاز کل پاسخ مغز تمام شد");
+      if (left !== null && left < 30000 && attempt > 1) throw new Error("اتصال برقرار نشد: مهلت مجاز کل پاسخ مغز تمام شد");
       answer = await generateContent({
         timeoutMs: attemptMs ? (left !== null ? Math.max(8000, Math.min(attemptMs, left)) : attemptMs) : undefined,
         apiKey,

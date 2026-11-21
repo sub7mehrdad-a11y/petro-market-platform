@@ -73,8 +73,8 @@ export async function POST(request) {
         history,
         retrievedContext: picked.map((p) => p.piece).join("\n\n"),
         salesContext: sales.text,
-        attemptMs: 45000,
-        budgetMs: 110000,
+        attemptMs: 85000, // گوگل گاهی تا ~۶۰ ثانیه برای یک «ping» وقت می‌گیرد (۲۰۲۶-۱۱-۲۱)
+        budgetMs: 130000,
       });
       return NextResponse.json({
         mode: "brain",
