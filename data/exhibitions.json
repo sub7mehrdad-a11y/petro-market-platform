@@ -916,5 +916,25 @@
     "date_status": "دورهٔ بعد تأییدنشده",
     "relevance_to_baking_soda": "پایین تا متوسط؛ تنظیم pH و استخر",
     "website": "https://www.wetex.ae"
+  },
+  {
+    "country": "کویت",
+    "source_file": "لیست_نمایشگاههای_تجاری_کویت.xlsx",
+    "name": "Kuwait International Agro Food Expo (KIAFE)",
+    "focus": "کشاورزی و صنایع غذایی",
+    "location": "مشرف، کویت",
+    "date": "سالانه، نوامبر (در فهرست‌های نمایشگاهی ۱۷ تا ۱۹ نوامبر ۲۰۲۶؛ تأیید نشده از سایت برگزارکننده)",
+    "id": "exhibition-92",
+    "date_status": "تأییدنشده (از سایت برگزارکننده)"
+  },
+  {
+    "country": "کویت",
+    "source_file": "لیست_نمایشگاههای_تجاری_کویت.xlsx",
+    "name": "HORECA Kuwait",
+    "focus": "مهمانداری و خدمات غذایی",
+    "location": "مشرف، کویت",
+    "date": "سالانه، ژانویه (دوره ۲۰۲۶: ۲۶ تا ۲۸ ژانویه)",
+    "id": "exhibition-93",
+    "website": "www.hospitalityservices.com.lb"
   }
 ]

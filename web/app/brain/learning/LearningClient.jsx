@@ -256,7 +256,7 @@ export default function LearningClient() {
           {/* ۲) کشور تازه */}
           <Section id="new" title="۲. پیش‌بینی برای کشور تازه" lead="کشوری که هنوز پژوهش نشده. مغز فقط جمعیت و درآمد آن و جدول کشورهای دیگر را می‌بیند. حدس ثبت و قفل می‌شود. بعد از ورود گزارش کشور، خودکار با واقعیت مقایسه می‌شود.">
             <form onSubmit={predictNew} className="flex flex-wrap items-center gap-2">
-              <input value={newCountry} onChange={(e) => setNewCountry(e.target.value)} placeholder="نام کشور، مثلاً کویت" className="rounded-lg border border-border bg-surface px-3 py-2 text-sm" />
+              <input value={newCountry} onChange={(e) => setNewCountry(e.target.value)} placeholder="نام کشور، مثلاً قطر" className="rounded-lg border border-border bg-surface px-3 py-2 text-sm" />
               <button type="submit" disabled={!!busy || !bt.has_key || !newCountry.trim()} className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-50 cursor-pointer">{busy.startsWith("پیش‌بینی") ? "در حال ثبت…" : "ثبت پیش‌بینی"}</button>
               {!bt.has_key && <span className="text-xs text-danger">کلید مغز تنظیم نشده.</span>}
             </form>
