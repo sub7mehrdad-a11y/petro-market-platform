@@ -39,7 +39,7 @@ export default function ContractForm({ initial = null, meta, onSaved, submitLabe
     const body = { ...f };
     const res = await fetch("/api/sales/contracts", {
       method: editing ? "PATCH" : "POST", headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(editing ? { action: "update", id: initial.id, fields: body } : body),
+      body: JSON.stringify(editing ? { action: "update", ...(initial.id ? { id: initial.id } : { contract_key: initial.file_no }), fields: body } : body),
     });
     const j = await res.json().catch(() => ({}));
     setBusy(false);

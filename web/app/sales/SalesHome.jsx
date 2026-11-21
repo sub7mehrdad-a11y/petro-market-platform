@@ -1,33 +1,57 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import PageHeader from "../components/PageHeader";
-import { Kpi, WeeklyChart, fa, price, usd } from "./salesUi";
+import { Delta, Kpi, WeeklyChart, fa, fdate, price, usd } from "./salesUi";
+
+async function get(url) {
+  const res = await fetch(url, { cache: "no-store" });
+  const j = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(j.error || "خطا");
+  return j;
+}
 
 export default function SalesHome() {
   const [data, setData] = useState(null);
+  const [countries, setCountries] = useState(null);
+  const [loading, setLoading] = useState(null);
   const [error, setError] = useState("");
+  const [allCountries, setAllCountries] = useState(false);
 
   useEffect(() => {
-    fetch("/api/sales/summary", { cache: "no-store" })
-      .then(async (res) => { const j = await res.json(); if (!res.ok) throw new Error(j.error || "خطا"); setData(j); })
-      .catch((e) => setError(e.message));
+    get("/api/sales/summary").then(setData).catch((e) => setError(e.message));
+    get("/api/sales/countries").then(setCountries).catch(() => {});
+    get("/api/sales/loading").then(setLoading).catch(() => {});
   }, []);
 
   const s = data?.summary;
   const w30 = s?.window30;
   const t = data?.accounts_totals;
   const alerts = [...(data?.contract_alerts || []).map((a) => ({ level: a.level, text: a.text })), ...(s?.alerts || [])];
+  const rows = useMemo(() => (countries?.table || []).filter((r) => allCountries || r.has_sales), [countries, allCountries]);
 
   return (
     <div className="space-y-6">
-      <PageHeader title="پلتفرم جامع بازرگانی" subtitle="قراردادها، مشتریان، پرداخت‌ها و برنامه‌ی تحویل تیم بازرگانی در یک‌جا. این بخش فقط برای نقش بازرگانی دیده می‌شود و داده‌ها روی دیسک دائمی سرور می‌مانند، نه در گیت." />
+      <PageHeader title="پلتفرم جامع بازرگانی" />
 
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
       {data?.storage_problem && <div className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-sm text-warning">⚠ {data.storage_problem}</div>}
 
-      {/* ۱) جدول گزارش کلی */}
+      {/* ۱) ورود به قراردادها و حسابداری (یک بخش) */}
+      <Link href="/sales/contracts" className="card block border-primary p-5 hover:bg-canvas" aria-label="ورود به قراردادها و حسابداری">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <div className="text-base font-bold text-text">ورود به قراردادها و حسابداری ←</div>
+          <div className="flex flex-wrap gap-x-6 gap-y-1 text-xs text-text-muted">
+            {t && <span>مانده‌ی دریافتنی <b className="text-text">{usd(t.outstanding)}</b></span>}
+            {t && t.overdue > 0 && <span>سررسیدگذشته <b className="text-danger">{usd(t.overdue)}</b></span>}
+            {loading && <span>در صف بارگیری <b className="text-text">{fa(loading.totals.queued_tons, 0)} تن</b></span>}
+            {data?.platform_contracts && <span>{fa(data.platform_contracts.active)} قرارداد ثبت‌شده در پلتفرم</span>}
+          </div>
+        </div>
+      </Link>
+
+      {/* ۲) گزارش کلی */}
       {s && !s.empty && (
         <>
           <section aria-label="گزارش کلی" className="space-y-2">
@@ -49,28 +73,19 @@ export default function SalesHome() {
             )}
           </section>
 
-          {/* ۲) نمودار میله‌ای و خطی فروش */}
           <section className="card p-5">
-            <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
-              <h2 className="text-sm font-bold text-text">روند هفتگی فروش (میله: تناژ، خط نارنجی: میانگین قیمت)</h2>
-              <span className="text-[11px] text-text-muted">هفته‌ی روشن‌تر = هفته‌ی جاری (ناتمام)</span>
-            </div>
+            <h2 className="mb-2 text-sm font-bold text-text">روند هفتگی فروش</h2>
             <WeeklyChart weekly={s.weekly} />
           </section>
         </>
       )}
-
-      {s?.empty && (
-        <section className="card p-5 text-sm leading-7 text-text-muted">
-          هنوز قرارداد یا گزارشی ثبت نشده است. از دکمه‌ی «ثبت قرارداد جدید» زیر شروع کنید، یا فایل «Sales Report» را از بخش گزارش‌ها بارگذاری کنید.
-        </section>
-      )}
+      {s?.empty && <section className="card p-5 text-sm text-text-muted">قرارداد یا گزارشی ثبت نشده است.</section>}
 
       {/* ۳) هشدارها */}
       <section className="card p-4" aria-label="هشدارها">
         <h2 className="mb-2 text-sm font-bold text-text">هشدارها</h2>
         {!data && !error && <p className="text-xs text-text-muted">در حال بارگذاری…</p>}
-        {data && alerts.length === 0 && <p className="text-xs text-text-muted">هشداری نیست؛ سررسید پرداخت یا تحویل عقب‌افتاده‌ای دیده نشد.</p>}
+        {data && alerts.length === 0 && <p className="text-xs text-text-muted">هشداری نیست.</p>}
         <ul className="space-y-1.5">
           {alerts.slice(0, 15).map((a, i) => (
             <li key={i} className={`flex gap-2 text-sm leading-7 ${a.level === "warn" ? "text-warning" : "text-text"}`}>
@@ -78,20 +93,42 @@ export default function SalesHome() {
             </li>
           ))}
         </ul>
-        {alerts.length > 15 && <p className="mt-1 text-[11px] text-text-muted">… و {fa(alerts.length - 15)} هشدار دیگر (در بخش گزارش‌ها).</p>}
+        {alerts.length > 15 && <p className="mt-1 text-[11px] text-text-muted">و {fa(alerts.length - 15)} هشدار دیگر در بخش گزارش‌ها</p>}
       </section>
 
-      {/* ۴) ورود به مدیریت قراردادها و حسابداری (گزارش‌ها از داخل همان بخش باز می‌شود) */}
-      <section className="grid gap-3 sm:grid-cols-2" aria-label="ورود به بخش‌ها">
-        <Link href="/sales/contracts" className="card block border-primary p-5 hover:bg-canvas">
-          <div className="text-base font-bold text-text">مدیریت قراردادها و حسابداری ←</div>
-          <p className="mt-1 text-xs leading-6 text-text-muted">فهرست قراردادها و مرحله‌ی هرکدام، پرداخت‌ها و مانده‌ی مشتریان، پرونده‌ی مشتریان و گزارش‌گیری.</p>
-          {data?.platform_contracts && <p className="mt-2 text-[11px] text-text-muted">{fa(data.platform_contracts.active)} قرارداد فعال ثبت‌شده در پلتفرم</p>}
-        </Link>
-        <Link href="/sales/contracts/new" className="card block p-5 hover:bg-canvas">
-          <div className="text-base font-bold text-text">+ ثبت قرارداد جدید</div>
-          <p className="mt-1 text-xs leading-6 text-text-muted">اطلاعات مشتری، مشخصات سفارش، برنامه‌ی پرداخت و تحویل را ثبت کنید و مراحل قرارداد را پیش ببرید.</p>
-        </Link>
+      {/* ۴) بررسی صادرات به کشورها */}
+      <section className="card p-4" aria-label="بررسی صادرات به کشورها">
+        <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+          <h2 className="text-sm font-bold text-text">بررسی صادرات به کشورها</h2>
+          <label className="flex items-center gap-1.5 text-xs text-text-muted"><input type="checkbox" checked={allCountries} onChange={(e) => setAllCountries(e.target.checked)} /> کشورهای بدون صادرکرد هم نمایش داده شود</label>
+        </div>
+        {!countries && <p className="text-xs text-text-muted">در حال بارگذاری…</p>}
+        {countries && rows.length === 0 && <p className="text-xs text-text-muted">کشوری برای نمایش نیست.</p>}
+        {rows.length > 0 && (
+          <div className="overflow-x-auto">
+            <table className="w-full text-xs">
+              <thead>
+                <tr className="border-b border-border text-text-muted">
+                  {["کشور", "واردات سالانه‌ی کشور", "صادرات ما (تن)", "میانگین ماهانه", "سهم از بازار", "میانگین قیمت ما", "آخرین سفارش", "روند ۹۰ روزه"].map((h) => <th key={h} className="px-2 py-1.5 text-start font-medium">{h}</th>)}
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((r) => (
+                  <tr key={r.country} className="border-b border-border last:border-0 hover:bg-canvas">
+                    <td className="px-2 py-1.5"><Link href={`/sales/countries/${encodeURIComponent(r.country)}`} className="font-semibold text-primary-hover hover:underline">{r.country}</Link></td>
+                    <td className="px-2 py-1.5">{r.market_imports_tons != null ? `${fa(r.market_imports_tons)} تن` : "—"}</td>
+                    <td className="px-2 py-1.5 font-semibold">{r.has_sales ? fa(r.tons, 1) : "—"}</td>
+                    <td className="px-2 py-1.5">{r.has_sales ? `${fa(r.monthly_avg_tons, 1)} تن` : "—"}</td>
+                    <td className="px-2 py-1.5">{r.share_pct != null && r.has_sales ? `${fa(r.share_pct, 1)}٪` : "—"}</td>
+                    <td className="px-2 py-1.5" dir="ltr" style={{ textAlign: "start" }}>{price(r.avg_price)}</td>
+                    <td className="px-2 py-1.5">{fdate(r.last_date)}</td>
+                    <td className="px-2 py-1.5">{r.trend_pct != null ? <Delta pct={r.trend_pct} /> : "—"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
       </section>
     </div>
   );

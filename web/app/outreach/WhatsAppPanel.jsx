@@ -83,12 +83,12 @@ export default function WhatsAppPanel() {
       <div>
         <h2 className="text-lg font-bold">واتساپ (نیمه‌خودکار)</h2>
         <p className="mt-1 text-sm leading-7 text-text-muted">
-          شرکت‌هایی که خودِ سایتشان لینک واتساپ گذاشته (و چند شرکت عراقی که فقط موبایل معتبر روی سایتشان هست؛ با برچسب «واتساپ تأییدنشده»). متن آماده است و قابل ویرایش. دکمه‌ی «ارسال در واتساپ» واتساپ را با شماره و متن باز می‌کند؛ دکمه‌ی Send را شما در واتساپ می‌زنید. ثبت‌بودن شماره در واتساپ از بیرون قابل بررسی نیست.
+          شرکت‌هایی که لینک واتساپ روی سایت خودشان هست، و چند شرکت با موبایل تأییدنشده.
         </p>
       </div>
 
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
-      {data && !data.sending_enabled && <div className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-sm text-warning">ارسال فعلاً غیرفعال است (در انتظار تأیید هیئت‌مدیره). متن‌ها را می‌توانید ببینید و ویرایش کنید؛ دکمه‌ی ارسال بعد از فعال‌شدن کار می‌کند.</div>}
+      {data && !data.sending_enabled && <div className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-sm text-warning">ارسال فعلاً غیرفعال است (در انتظار تأیید هیئت‌مدیره).</div>}
       {data?.state_problem && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{data.state_problem}</div>}
       {data?.missing_catalog_env?.length > 0 && <div className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-xs text-warning">لینک کاتالوگ تنظیم نشده ({data.missing_catalog_env.join("، ")})؛ تا آن موقع خط کاتالوگ در متن نمی‌آید.</div>}
 
@@ -125,7 +125,6 @@ export default function WhatsAppPanel() {
             <span className="font-medium">زبان پیام‌ها:</span>
             <label className="flex items-center gap-1.5"><input type="radio" name="wa-lang" checked={langMode === "en"} onChange={() => setLangMode("en")} /> همه انگلیسی (پیش‌فرض)</label>
             <label className="flex items-center gap-1.5"><input type="radio" name="wa-lang" checked={langMode === "local"} onChange={() => setLangMode("local")} /> زبان کشور مقصد ({fa(rows.filter((r) => r.local_lang === "ru").length)} روسی، {fa(rows.filter((r) => r.local_lang === "ar").length)} عربی؛ بقیه انگلیسی)</label>
-            <span className="text-xs text-text-muted">برای هر شرکت می‌توانید زبان را جدا عوض کنید.</span>
           </div>
 
           <p className="text-sm">{fa(filtered.length)} شرکت مطابق این فیلتر</p>
@@ -183,7 +182,6 @@ export default function WhatsAppPanel() {
                               {r.status === "opened" && <button type="button" className="btn btn-secondary" disabled={busy === r.id} onClick={() => act(r.id, "sent")}>ارسال شد ✓</button>}
                               {r.status !== "new" && <button type="button" className="text-xs text-danger hover:underline" disabled={busy === r.id} onClick={() => act(r.id, "reset")}>بازنشانی وضعیت</button>}
                               {drafts[dk] !== undefined && <button type="button" className="text-xs text-text-muted hover:underline" onClick={() => { const d = { ...drafts }; delete d[dk]; setDrafts(d); }}>برگشت به متن اصلی</button>}
-                              {r.status === "opened" && <span className="text-xs text-text-muted">بعد از زدن Send در واتساپ، «ارسال شد» را بزنید.</span>}
                             </div>
                           </td>
                         </tr>

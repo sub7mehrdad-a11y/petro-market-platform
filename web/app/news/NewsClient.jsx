@@ -127,7 +127,6 @@ export default function NewsClient({ entries }) {
     <div>
       <PageHeader
         title="اخبار تحلیلی"
-        subtitle="رصد روزانه‌ی منابع تخصصی بازار و حمل‌ونقل — هر خبر خلاصه شده و به منبع اصلی لینک است."
         actions={
           <input
             type="text"

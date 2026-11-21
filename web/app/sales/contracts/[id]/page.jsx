@@ -6,5 +6,7 @@ export const metadata = { title: "قرارداد" };
 
 export default async function ContractPage({ params }) {
   const { id } = await params;
-  return <ContractDetail id={id} />;
+  let key = id;
+  try { key = decodeURIComponent(id); } catch {}
+  return <ContractDetail id={key} />;
 }

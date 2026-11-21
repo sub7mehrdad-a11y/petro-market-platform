@@ -68,7 +68,7 @@ export function buildAccounts(snapshot, ledger = {}, opts = {}) {
       key, file_no: r.file_no || null, doc_no: r.doc_no || null, buyer: r.buyer, country: r.country, date: r.date, tons: r.tons,
       price: r.price, currency: r.currency || "USD", total, incoterm: r.incoterm, payment_terms: r.payment_terms,
       sheet_status: r.payment_status, customer_id: resolveMerge(customerIdOf(r.buyer), merges), original_customer_id: customerIdOf(r.buyer),
-      due_days: dueDaysFor(r.payment_terms),
+      due_days: dueDaysFor(r.payment_terms), loaded: !!r.loaded, production_done: !!r.production_done,
     });
   }
   const byKey = new Map(contracts.map((c) => [c.key, c]));

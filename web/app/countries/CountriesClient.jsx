@@ -91,7 +91,6 @@ export default function CountriesClient({ countries }) {
     <div>
       <PageHeader
         title={`کشورها (${filtered.length.toLocaleString("fa-IR")})`}
-        subtitle="پرونده‌ی بازارهای جهانی محصول — آمار تجارت، روند صادرات و محتوای اختصاصی هر کشور."
         actions={
           <>
             <Link

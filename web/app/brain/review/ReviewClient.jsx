@@ -129,7 +129,7 @@ export default function ReviewClient() {
   const t = data?.today;
   return (
     <div className="space-y-6">
-      <PageHeader title="بازبینی روزانه" subtitle="حداکثر ۵ مورد در روز (۳ مورد هدفمند و ۲ تصادفی برای حسابرسی). ارزیابی کور است: نمی‌دانید تحلیل را کدام تحلیل‌گر یا مدل نوشته. نمره‌ی شما برای بهبود شکل خروجی و کشف داده‌ی غلط است؛ جای سنجش با واقعیت را نمی‌گیرد." />
+      <PageHeader title="بازبینی روزانه" />
       {error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-sm text-danger">{error}</div>}
       {t && <div className="text-sm text-text-muted">امروز ({t.date}): <b className="text-text">{t.answered} از {t.total}</b> ثبت شده{t.total === 0 ? " — امروز موردی برای شما نیست." : ""}</div>}
       {t?.items.map((it) => <ItemCard key={it.ref} it={it} onDone={(today) => setData((d) => ({ ...d, today }))} />)}

@@ -2,8 +2,8 @@ import fs from "fs";
 import path from "path";
 import { NextResponse } from "next/server";
 import { SESSION_COOKIE_NAME, verifySessionToken } from "@/lib/auth";
-import { CURRENCIES, GRADES, INCOTERMS, STEPS, contractRow, contractTotal, currentStep } from "@/lib/salesContracts";
-import { addNote, createContract, getContract, readStore, setCancelled, setStep, updateContract } from "@/lib/salesContractsStore";
+import { CURRENCIES, GRADES, INCOTERMS, SHIPMENT_STATUS, STEPS, contractRow, contractTotal, currentStep, shipmentTotals } from "@/lib/salesContracts";
+import { addNote, addShipment, adoptFromSheet, createContract, deleteShipment, getContract, readStore, setCancelled, setStep, updateContract, updateShipment } from "@/lib/salesContractsStore";
 import { loadAccounts } from "@/lib/salesLedgerStore";
 import { salesStorageProblem } from "@/lib/salesStore";
 
@@ -28,7 +28,7 @@ function view(c, accountsByKey) {
   const acc = accountsByKey.get(c.file_no);
   return {
     ...c, total: contractTotal(c), current_step: currentStep(c)?.key || null, current_step_label: currentStep(c)?.label || null,
-    in_report: !!contractRow(c),
+    in_report: !!contractRow(c), shipment_totals: shipmentTotals(c), editable: true,
     account: acc ? { paid: acc.paid, balance: acc.balance, status: acc.status, overdue: acc.overdue, overdue_days: acc.overdue_days, payments: acc.payments || [], due_days: acc.due_days } : null,
   };
 }
@@ -37,12 +37,24 @@ export async function GET(request) {
   const store = readStore();
   const { accounts } = loadAccounts();
   const byKey = new Map((accounts.contracts || []).map((c) => [c.key, c]));
-  const id = new URL(request.url).searchParams.get("id");
+  const q = new URL(request.url).searchParams;
+  const id = q.get("id") || q.get("key");
   if (id) {
-    const c = store.contracts.find((x) => x.id === id);
-    if (!c) return bad("قرارداد پیدا نشد.", 404);
+    const c = store.contracts.find((x) => x.id === id || x.file_no === id);
+    if (!c) {
+      // قرارداد فقط‌اکسل: نمای فقط‌خواندنی از حساب؛ با اولین ویرایش به قرارداد پلتفرم منتقل می‌شود
+      const a = byKey.get(id);
+      if (!a) return bad("قرارداد پیدا نشد.", 404);
+      const sheet = {
+        id: null, file_no: a.file_no || a.key, key: a.key, doc_no: a.doc_no, status: "active", buyer: a.buyer, country: a.country, tons: a.tons, price: a.price, currency: a.currency, grade: null,
+        incoterm: a.incoterm, payment_terms: a.payment_terms, date: a.date, port: null, steps: {}, payment_plan: [], delivery_plan: [], shipments: [], notes: [], history: [],
+        total: a.total, current_step_label: "طبق گزارش فروش", account: { paid: a.paid, balance: a.balance, status: a.status, overdue: a.overdue, overdue_days: a.overdue_days, payments: a.payments || [], due_days: a.due_days },
+        sheet_only: true, editable: false, shipment_totals: shipmentTotals({ tons: a.tons, shipments: [] }),
+      };
+      return NextResponse.json({ contract: sheet, customer: null, steps: STEPS, shipment_status: SHIPMENT_STATUS });
+    }
     const customer = store.customers.find((x) => x.name === c.buyer) || null;
-    return NextResponse.json({ contract: view(c, byKey), customer, steps: STEPS });
+    return NextResponse.json({ contract: view(c, byKey), customer, steps: STEPS, shipment_status: SHIPMENT_STATUS });
   }
   return NextResponse.json({
     contracts: store.contracts.map((c) => view(c, byKey)).sort((a, b) => String(b.created_at).localeCompare(String(a.created_at))),
@@ -67,15 +79,25 @@ export async function POST(request) {
 export async function PATCH(request) {
   let b;
   try { b = await request.json(); } catch { return bad("درخواست نامعتبر است."); }
-  if (!b?.id || !getContract(b.id)) return bad("قرارداد پیدا نشد.", 404);
   const by = who(request);
   try {
+    // قرارداد فقط‌اکسل: پیش از هر ویرایش/مرحله/بارگیری، نسخه‌ی قابل‌ویرایش در پلتفرم ساخته می‌شود (با تاریخچه)
+    if (!b?.id && b?.contract_key) {
+      const ad = adoptFromSheet(String(b.contract_key), by);
+      if (!ad.ok) return bad(ad.errors.join(" "), 404);
+      b.id = ad.contract.id;
+    }
+    if (!b?.id || !getContract(b.id)) return bad("قرارداد پیدا نشد.", 404);
     let r;
     if (b.action === "update") r = updateContract(b.id, b.fields || {}, by);
     else if (b.action === "step") r = setStep(b.id, b.key, !!b.done, { note: b.note, date: b.date }, by);
     else if (b.action === "note") r = addNote(b.id, b.text, by);
     else if (b.action === "cancel") r = setCancelled(b.id, true, b.reason, by);
     else if (b.action === "reopen") r = setCancelled(b.id, false, null, by);
+    else if (b.action === "adopt") r = { ok: true, contract: getContract(b.id) };
+    else if (b.action === "shipment_add") r = addShipment(b.id, b.shipment || {}, by);
+    else if (b.action === "shipment_update") r = updateShipment(b.id, b.shipment_id, b.shipment || {}, by);
+    else if (b.action === "shipment_delete") r = deleteShipment(b.id, b.shipment_id, by);
     else return bad("عملیات نامعتبر است.");
     return r.ok ? NextResponse.json({ ok: true, contract: r.contract }) : bad(r.errors.join(" "), 422, { errors: r.errors });
   } catch (err) {

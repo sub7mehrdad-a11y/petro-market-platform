@@ -1,9 +1,9 @@
 import fs from "fs";
 import path from "path";
 import { getSalesDir, readSalesSnapshots, salesStorageProblem, writeAtomic } from "./salesStore";
-import { todayIso } from "./salesFormat";
+import { parseDateCell, todayIso } from "./salesFormat";
 import { customerIdOf } from "./salesLedger";
-import { STEP_KEYS, STEPS, cleanContractInput, mergeContractRows } from "./salesContracts";
+import { CURRENCIES, INCOTERMS, SHIPMENT_KEYS, STEP_KEYS, STEPS, cleanContractInput, diffContract, gradeFromSheet, mergeContractRows, shipmentTotals } from "./salesContracts";
 
 // ذخیره‌ی قراردادهای ثبت‌شده در پلتفرم و پرونده‌ی مشتریان، روی همان دیسک دائمیِ گزارش فروش (sales_contracts.json).
 // ⚠ محرمانه: هرگز داخل مخزن گیت نیست (نگاه کن salesStore.js). هر تغییر در audit ثبت می‌شود و هیچ‌چیز پاک نمی‌شود
@@ -31,6 +31,12 @@ function persist(store) {
 const log = (store, by, action, detail) => store.audit.push({ at: new Date().toISOString(), by: by || null, action, detail });
 const newId = (p) => `${p}_${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`;
 export const readContracts = () => readStore().contracts;
+
+const MAX_HISTORY = 400;
+/** تاریخچه‌ی هر قرارداد: چه کسی، کی، چه چیزی را از چه مقداری به چه مقداری تغییر داد (هیچ‌چیز پاک نمی‌شود). */
+function addHistory(c, by, action, summary, changes = []) {
+  c.history = [...(c.history || []), { id: newId("h"), at: new Date().toISOString(), by: by || null, action, summary, changes }].slice(-MAX_HISTORY);
+}
 
 /** عکس‌های مؤثر تحلیل: آخرین عکس اکسل + قراردادهای ثبت‌شده در پلتفرم. */
 export function readEffectiveSnapshots() {
@@ -79,6 +85,7 @@ export function createContract(input, by) {
   // مرحله‌ی اولیه: پیشنهاد یا قرارداد قطعی (اگر کاربر «قطعی» را انتخاب کرده)
   steps.quoted = { done: true, at: c.date, by: by || null, note: null };
   if (input.firm) steps.pi_issued = { done: true, at: c.date, by: by || null, note: null };
+  addHistory(c, by, "create", `ثبت قرارداد ${c.file_no} (${c.buyer}، ${c.tons} تن)`);
   store.contracts.push(c);
   upsertCustomerIn(store, c, by);
   log(store, by, "contract.create", { id: c.id, file_no: c.file_no, buyer: c.buyer, tons: c.tons });
@@ -98,7 +105,9 @@ export function updateContract(id, input, by) {
   const { errors, fields } = cleanContractInput(input, { partial: true });
   if (errors.length) return { ok: false, errors };
   const before = { buyer: c.buyer, tons: c.tons, price: c.price };
+  const changes = diffContract(c, fields);
   Object.assign(c, fields, { updated_at: new Date().toISOString() });
+  if (changes.length) addHistory(c, by, "update", `ویرایش: ${changes.map((x) => x.label).join("، ")}`, changes);
   upsertCustomerIn(store, c, by);
   log(store, by, "contract.update", { id, file_no: c.file_no, fields: Object.keys(fields), before });
   persist(store);
@@ -116,6 +125,7 @@ export function setStep(id, key, done, { note, date }, by) {
   c.steps[key] = done ? { done: true, at, by: by || null, note: String(note || "").slice(0, 300) || null } : { done: false, at: null, by: by || null, note: null, undone_at: new Date().toISOString() };
   if (done && key === "pi_issued" && !c.steps.quoted?.done) c.steps.quoted = { done: true, at, by: by || null, note: null };
   c.updated_at = new Date().toISOString();
+  addHistory(c, by, "step", `${done ? "انجام شد" : "برداشته شد"}: ${STEPS.find((x) => x.key === key).label}${done ? ` (${at})` : ""}${note && done ? ` — ${String(note).slice(0, 120)}` : ""}`);
   log(store, by, done ? "contract.step.done" : "contract.step.undo", { id, file_no: c.file_no, step: key, label: STEPS.find((s) => s.key === key).label });
   persist(store);
   return { ok: true, contract: c };
@@ -129,6 +139,7 @@ export function addNote(id, text, by) {
   if (!c) return { ok: false, errors: ["قرارداد پیدا نشد."] };
   c.notes.push({ id: newId("n"), at: new Date().toISOString(), by: by || null, text: t });
   c.updated_at = new Date().toISOString();
+  addHistory(c, by, "note", "یادداشت تازه");
   log(store, by, "contract.note", { id, file_no: c.file_no });
   persist(store);
   return { ok: true, contract: c };
@@ -142,6 +153,7 @@ export function setCancelled(id, cancelled, reason, by) {
   if (cancelled) c.cancel = { at: new Date().toISOString(), by: by || null, reason: String(reason || "").slice(0, 300) || null };
   else delete c.cancel;
   c.updated_at = new Date().toISOString();
+  addHistory(c, by, cancelled ? "cancel" : "reopen", cancelled ? `لغو قرارداد${reason ? `: ${String(reason).slice(0, 120)}` : ""}` : "بازگردانی قرارداد");
   log(store, by, cancelled ? "contract.cancel" : "contract.reopen", { id, file_no: c.file_no, reason: reason || null });
   persist(store);
   return { ok: true, contract: c };
@@ -157,4 +169,137 @@ export function upsertCustomer(input, by) {
   log(store, by, "customer.upsert", { id: c.id, name: c.name });
   persist(store);
   return { ok: true, customer: c };
+}
+
+// ---------------------------------------------------------------------------------------------- قرارداد اکسل ← قرارداد قابل‌ویرایش پلتفرم
+/**
+ * قراردادی که فقط در فایل «Sales Report» هست را (با همان File NO) در پلتفرم می‌سازد تا همه‌ی فیلدها، مراحل، پرداخت‌ها و بارگیری‌هایش
+ * قابل‌ویرایش و دارای تاریخچه شود. ردیف پلتفرم جای ردیف اکسل را می‌گیرد (mergeContractRows)؛ وضعیت پرداخت اکسل تا اولین پرداخت ثبت‌شده می‌ماند.
+ */
+export function adoptFromSheet(fileKey, by) {
+  const store = readStore();
+  const existing = store.contracts.find((c) => c.file_no === fileKey);
+  if (existing) return { ok: true, contract: existing, already: true };
+  const snaps = readSalesSnapshots();
+  const latest = snaps[snaps.length - 1];
+  const row = latest?.rows.find((r) => r.stage === "firm" && (r.file_no === fileKey || r.doc_no === fileKey));
+  if (!row) return { ok: false, errors: ["قرارداد در گزارش فروش پیدا نشد."] };
+  const fileNo = row.file_no || row.doc_no;
+  const dup = store.contracts.find((c) => c.file_no === fileNo);
+  if (dup) return { ok: true, contract: dup, already: true };
+  const now = new Date().toISOString();
+  const date = row.date || todayIso();
+  const done = (flag) => ({ done: !!flag, at: flag ? date : null, by: by || null, note: null });
+  const steps = { quoted: done(true), pi_issued: done(true) };
+  if (row.production_done) steps.production = done(true);
+  if (row.loaded) steps.loaded = done(true);
+  if (row.payment_status === "paid") steps.payment_received = done(true);
+  const c = {
+    id: newId("ct"), file_no: fileNo, status: "active", buyer: row.buyer, country: row.country, tons: row.tons, price: row.price ?? null,
+    currency: CURRENCIES.includes(row.currency) ? row.currency : "USD", grade: gradeFromSheet(row.grade),
+    incoterm: INCOTERMS.includes(String(row.incoterm || "").toUpperCase()) ? String(row.incoterm).toUpperCase() : null,
+    port: row.port || null, payment_terms: row.payment_terms || null, plant: row.plant || null, doc_no: row.doc_no || null,
+    packaging: null, contact_person: row.contact || null, phone: null, email: null, address: null, customer_notes: null, date,
+    payment_plan: [], delivery_plan: [], shipments: [], notes: [], steps, sheet_payment_status: row.payment_status || null,
+    adopted_from_sheet: { at: now, by: by || null, as_of: latest.as_of },
+    created_by: by || null, created_at: now, updated_at: now,
+  };
+  addHistory(c, by, "adopt", `انتقال از گزارش فروش (${latest.as_of}) برای ویرایش در پلتفرم`);
+  store.contracts.push(c);
+  upsertCustomerIn(store, c, by);
+  log(store, by, "contract.adopt", { id: c.id, file_no: fileNo });
+  persist(store);
+  return { ok: true, contract: c };
+}
+
+// ---------------------------------------------------------------------------------------------- بارگیری و ارسال (چندمرحله‌ای)
+const round2 = (n) => Math.round(n * 100) / 100;
+function shipmentFields(input, { partial = false } = {}) {
+  const errors = [];
+  const f = {};
+  if (!partial || input.tons !== undefined) {
+    const t = Number(String(input.tons ?? "").replace(/[٬,\s]/g, ""));
+    if (!(t > 0)) errors.push("تناژ بارگیری باید عددی بزرگ‌تر از صفر باشد."); else f.tons = round2(t);
+  }
+  for (const k of ["planned_date", "loaded_at", "shipped_at"]) {
+    if (input[k] === undefined) continue;
+    if (!input[k]) { f[k] = null; continue; }
+    const d = parseDateCell(input[k]);
+    if (!d) errors.push("تاریخ نامعتبر است (مثل ۱۴۰۵/۰۸/۱۳ یا 2026-11-04)."); else f[k] = d;
+  }
+  if (input.status !== undefined) { if (!SHIPMENT_KEYS.includes(input.status)) errors.push("وضعیت بارگیری نامعتبر است."); else f.status = input.status; }
+  if (input.note !== undefined) f.note = String(input.note || "").trim().slice(0, 200) || null;
+  if (input.vehicle !== undefined) f.vehicle = String(input.vehicle || "").trim().slice(0, 120) || null;
+  return { errors, f };
+}
+
+function syncStepsFromShipments(c, by) {
+  const t = shipmentTotals(c);
+  const set = (key, label) => {
+    if (c.steps[key]?.done) return;
+    c.steps[key] = { done: true, at: todayIso(), by: by || null, note: "خودکار از بارگیری‌ها" };
+    addHistory(c, by, "step", `انجام شد (خودکار): ${label}`);
+  };
+  if (c.tons > 0 && t.loaded + 0.001 >= c.tons) set("loaded", "بارگیری انجام شد");
+  if (c.tons > 0 && t.shipped + 0.001 >= c.tons) set("shipped", "ارسال و حمل شروع شد");
+}
+
+export function addShipment(id, input, by) {
+  const store = readStore();
+  const c = store.contracts.find((x) => x.id === id);
+  if (!c) return { ok: false, errors: ["قرارداد پیدا نشد."] };
+  if (c.status === "cancelled") return { ok: false, errors: ["قرارداد لغو شده است."] };
+  const { errors, f } = shipmentFields(input);
+  if (errors.length) return { ok: false, errors };
+  const rest = shipmentTotals(c).remaining;
+  if (f.tons > rest + 0.001) return { ok: false, errors: [`مجموع بارگیری‌ها از تناژ قرارداد بیشتر می‌شود (باقیمانده‌ی بدون برنامه: ${rest} تن).`] };
+  const status = f.status || "queued";
+  const s = { id: newId("sh"), tons: f.tons, planned_date: f.planned_date || null, status, loaded_at: status !== "queued" ? f.loaded_at || todayIso() : null, shipped_at: status === "shipped" ? f.shipped_at || todayIso() : null, note: f.note || null, vehicle: f.vehicle || null, created_at: new Date().toISOString(), created_by: by || null };
+  c.shipments = [...(c.shipments || []), s];
+  c.updated_at = s.created_at;
+  addHistory(c, by, "shipment", `بارگیری ${s.tons} تن ثبت شد${s.planned_date ? ` (برنامه: ${s.planned_date})` : ""}`);
+  syncStepsFromShipments(c, by);
+  log(store, by, "contract.shipment.add", { id, file_no: c.file_no, tons: s.tons });
+  persist(store);
+  return { ok: true, contract: c, shipment: s };
+}
+
+const SHIP_LABEL = { tons: "تناژ بارگیری", planned_date: "تاریخ برنامه", loaded_at: "تاریخ بارگیری", shipped_at: "تاریخ ارسال", status: "وضعیت", note: "توضیح", vehicle: "وسیله/شماره" };
+
+export function updateShipment(id, shipmentId, input, by) {
+  const store = readStore();
+  const c = store.contracts.find((x) => x.id === id);
+  const s = c?.shipments?.find((x) => x.id === shipmentId);
+  if (!s) return { ok: false, errors: ["بارگیری پیدا نشد."] };
+  const { errors, f } = shipmentFields(input, { partial: true });
+  if (errors.length) return { ok: false, errors };
+  if (f.tons !== undefined) {
+    const rest = shipmentTotals(c).remaining + s.tons;
+    if (f.tons > rest + 0.001) return { ok: false, errors: [`مجموع بارگیری‌ها از تناژ قرارداد بیشتر می‌شود (حداکثر برای این بارگیری: ${round2(rest)} تن).`] };
+  }
+  const changes = [];
+  for (const [k, v] of Object.entries(f)) if (String(s[k] ?? "") !== String(v ?? "")) changes.push({ field: k, label: SHIP_LABEL[k] || k, from: s[k] ?? null, to: v ?? null });
+  Object.assign(s, f);
+  if (s.status === "loaded" && !s.loaded_at) s.loaded_at = todayIso();
+  if (s.status === "shipped") { if (!s.loaded_at) s.loaded_at = todayIso(); if (!s.shipped_at) s.shipped_at = todayIso(); }
+  if (s.status === "queued") { s.loaded_at = null; s.shipped_at = null; }
+  c.updated_at = new Date().toISOString();
+  if (changes.length) addHistory(c, by, "shipment", `ویرایش بارگیری ${s.tons} تن: ${changes.map((x) => x.label).join("، ")}`, changes);
+  syncStepsFromShipments(c, by);
+  log(store, by, "contract.shipment.update", { id, file_no: c.file_no, shipment: shipmentId, fields: Object.keys(f) });
+  persist(store);
+  return { ok: true, contract: c, shipment: s };
+}
+
+export function deleteShipment(id, shipmentId, by) {
+  const store = readStore();
+  const c = store.contracts.find((x) => x.id === id);
+  const s = c?.shipments?.find((x) => x.id === shipmentId);
+  if (!s) return { ok: false, errors: ["بارگیری پیدا نشد."] };
+  c.shipments = c.shipments.filter((x) => x.id !== shipmentId);
+  c.updated_at = new Date().toISOString();
+  addHistory(c, by, "shipment", `حذف بارگیری ${s.tons} تن (${s.status === "queued" ? "در صف" : s.status === "loaded" ? "بارگیری‌شده" : "ارسال‌شده"})`);
+  log(store, by, "contract.shipment.delete", { id, file_no: c.file_no, shipment: { ...s } });
+  persist(store);
+  return { ok: true, contract: c };
 }

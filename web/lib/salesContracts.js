@@ -101,7 +101,7 @@ export function contractRow(c) {
     tons: c.tons, price: c.price, currency: c.currency || "USD", amount: contractTotal(c),
     incoterm: c.incoterm || null, delivery_terms: c.incoterm || null, plant: c.plant || null, port: c.port || null,
     payment_terms: c.payment_terms || null,
-    payment_status: "unpaid", // پرداخت‌های واقعی از دفتر حساب می‌آیند، نه از این فیلد
+    payment_status: c.sheet_payment_status || "unpaid", // پرداخت‌های واقعی از دفتر حساب می‌آیند؛ قرارداد منتقل‌شده از اکسل تا اولین پرداخت ثبت‌شده وضعیت اکسل را نگه می‌دارد
     production_done: !!c.steps?.production?.done, loaded: !!c.steps?.loaded?.done,
   };
 }
@@ -143,4 +143,56 @@ export function contractAlerts(contracts, accounts, today, { soonDays = 7 } = {}
     }
   }
   return alerts.sort((a, b) => (a.level === b.level ? b.days - a.days : a.level === "warn" ? -1 : 1));
+}
+
+/** وضعیت‌های یک بارگیری (محموله) */
+export const SHIPMENT_STATUS = [
+  { key: "queued", label: "در صف بارگیری" },
+  { key: "loaded", label: "بارگیری شد" },
+  { key: "shipped", label: "ارسال شد" },
+];
+export const SHIPMENT_KEYS = SHIPMENT_STATUS.map((s) => s.key);
+
+const FIELD_LABEL = {
+  buyer: "خریدار", country: "کشور", tons: "تناژ", price: "قیمت هر تن", currency: "ارز", grade: "گرید", incoterm: "شرایط تحویل", port: "بندر/تحویل",
+  payment_terms: "شرایط پرداخت", packaging: "بسته‌بندی", plant: "کارخانه", doc_no: "شماره‌ی PI", contact_person: "شخص تماس", phone: "تلفن", email: "ایمیل",
+  address: "آدرس", customer_notes: "یادداشت مشتری", date: "تاریخ قرارداد", payment_plan: "برنامه‌ی پرداخت", delivery_plan: "برنامه‌ی تحویل",
+};
+export const fieldLabel = (k) => FIELD_LABEL[k] || k;
+
+const planText = (p, kind) => (p || []).map((x) => (kind === "pay" ? `${x.due_date}: ${x.amount}` : `${x.date}: ${x.tons ?? "—"} تن${x.done ? " ✓" : ""}`)).join(" | ") || "—";
+
+/** تغییرهای واقعی بین مقدار قبلی قرارداد و فیلدهای تازه (برای تاریخچه‌ی ویرایش). */
+export function diffContract(before, fields) {
+  const changes = [];
+  for (const [k, v] of Object.entries(fields)) {
+    if (k === "payment_plan" || k === "delivery_plan") {
+      const a = planText(before[k], k === "payment_plan" ? "pay" : "del"), b = planText(v, k === "payment_plan" ? "pay" : "del");
+      if (a !== b) changes.push({ field: k, label: fieldLabel(k), from: a, to: b });
+      continue;
+    }
+    const a = before[k] ?? null, b = v ?? null;
+    if (String(a) !== String(b)) changes.push({ field: k, label: fieldLabel(k), from: a, to: b });
+  }
+  return changes;
+}
+
+/** گرید متنی گزارش فروش ← یکی از GRADES */
+export function gradeFromSheet(text) {
+  const t = String(text || "").toLowerCase();
+  if (/food|خوراک/.test(t) && !/feed|دام/.test(t)) return "خوراکی";
+  if (/feed|دام/.test(t)) return "دامی";
+  if (/industrial|صنعت/.test(t)) return "صنعتی";
+  if (/pharma|دارو/.test(t)) return "دارویی";
+  return "سایر";
+}
+
+/** تناژ بارگیری‌شده/ارسال‌شده/برنامه‌ریزی‌شده‌ی یک قرارداد از روی shipments. */
+export function shipmentTotals(c) {
+  const list = c.shipments || [];
+  const sum = (f) => Math.round(list.filter(f).reduce((s, x) => s + (x.tons || 0), 0) * 100) / 100;
+  const planned = sum(() => true);
+  const loaded = sum((x) => x.status === "loaded" || x.status === "shipped");
+  const shipped = sum((x) => x.status === "shipped");
+  return { planned, loaded, shipped, queued: Math.round((planned - loaded) * 100) / 100, remaining: Math.round(((c.tons || 0) - planned) * 100) / 100 };
 }

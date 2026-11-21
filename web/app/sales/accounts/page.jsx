@@ -1,9 +1,8 @@
-import AccountsClient from "./AccountsClient";
+import { redirect } from "next/navigation";
 
-// حساب‌ها و پرداخت‌های فروش (قرارداد ↔ پرداخت ↔ حساب مشتری) — فقط نقش «بازرگانی» (proxy.js).
+// حساب‌ها و پرداخت‌ها با قراردادها یکی شد: هر قرارداد پرداخت‌هایش را در همان صفحه‌ی «قراردادها و حسابداری» دارد.
 export const dynamic = "force-dynamic";
-export const metadata = { title: "حساب‌ها و پرداخت‌ها" };
 
-export default function AccountsPage() {
-  return <AccountsClient />;
+export default function AccountsRedirect() {
+  redirect("/sales/contracts");
 }
