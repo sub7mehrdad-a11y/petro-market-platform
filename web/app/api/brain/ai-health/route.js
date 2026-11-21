@@ -21,6 +21,12 @@ export async function GET(request) {
   const out = { model, relay_configured: !!relay, timeout_ms: Number(process.env.AI_TIMEOUT_MS) || null };
   // رله بدون رمز باید سریع ۴۰۳ بدهد؛ جواب‌ندادن یعنی مسیر سرور ← رله قطع است
   if (relay) out.relay = await timed(async () => { const r = await fetch(`${relay}/gemini/v1beta/models/x:generateContent`, { method: "POST", body: "{}", signal: AbortSignal.timeout(12000) }); return { status: r.status }; });
+  // fetch ساده‌ی Node با کلید نامعتبر: اگر سریع ۴۰۰ بدهد یعنی مسیر سرور←رله←گوگل سالم است و مشکل از undici/پراکسی است
+  if (relay) out.raw = await timed(async () => {
+    const r = await fetch(`${relay}/gemini/v1beta/models/${model}:generateContent`, { method: "POST", headers: { "content-type": "application/json", "x-relay-token": process.env.AI_RELAY_TOKEN || "", "x-goog-api-key": "invalid-key-probe" }, body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: "ping" }] }] }), signal: AbortSignal.timeout(15000) });
+    return { status: r.status, body: (await r.text()).slice(0, 120) };
+  });
+  out.proxy_env = !!(process.env.HTTPS_PROXY || process.env.https_proxy || process.env.HTTP_PROXY || process.env.http_proxy);
   const key = resolveBrainKey();
   out.gemini = key ? await timed(async () => ({ text: (await generateContent({ apiKey: request.nextUrl.searchParams.get("probe") === "badkey" ? "invalid-key-probe" : key, model, systemInstruction: "Reply with one word.", input: "ping", generationConfig: { maxOutputTokens: 32 }, timeoutMs: 25000 })).slice(0, 40) })) : { ok: false, error: "کلید مغز تنظیم نشده." };
   return NextResponse.json(out);
