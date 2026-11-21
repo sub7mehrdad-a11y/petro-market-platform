@@ -241,20 +241,20 @@ export default function LearningClient() {
       {bt && S && (
         <>
           {/* ۱) خلاصه */}
-          <Section id="sum" title="۱. خلاصه" lead="مغز برای کشورهایی که جوابشان را داریم حدس می‌زند. بعد حدس‌ها با گزارش خودمان مقایسه می‌شود. این‌ها نتیجه‌ی کلی است.">
+          <Section id="sum" title="۱. خلاصه">
             <div className="grid grid-cols-2 gap-3 lg:grid-cols-3">
               <Stat label="کشورهای سنجیده‌شده" value={`${fa(S.by_country.length)} از ${fa(bt.countries.length)}`} note="بقیه هنوز اجرا نشده یا با خطا قطع شده." />
-              <Stat label="اهداف سنجیده‌شده" value={fa(o.n)} note="هر کشور چند هدف دارد (واردات، مصرف، …)." />
-              <Stat label="مهارت میانگین" value={fa(o.mean_skill, 2)} tone={o.mean_skill > 0 ? "text-success" : "text-danger"} note="صفر = هم‌اندازه‌ی حدس ساده. یک = بی‌نقص. منفی = بدتر." />
+              <Stat label="اهداف سنجیده‌شده" value={fa(o.n)} />
+              <Stat label="مهارت میانگین" value={fa(o.mean_skill, 2)} tone={o.mean_skill > 0 ? "text-success" : "text-danger"} />
               <Stat label="بهتر از حدس ساده" value={o.beats_baseline_pct === null ? "—" : `${fa(o.beats_baseline_pct)}٪`} note="سهم موردهایی که مغز از میانه‌ی کشورهای دیگر بهتر بود." />
-              <Stat label="پوشش بازه" value={pc(o.coverage)} tone={o.coverage !== null && (o.coverage < 0.6 || o.coverage > 0.95) ? "text-warning" : "text-text"} note="هدف ۸۰٪. کمتر = زیادی مطمئن. بیشتر = زیادی محتاط." />
-              <Stat label="خطای متوسط" value={pc(o.mean_abs_rel_err)} note="فاصله‌ی حدس تا واقعی، به درصد واقعی." />
+              <Stat label="پوشش بازه" value={pc(o.coverage)} tone={o.coverage !== null && (o.coverage < 0.6 || o.coverage > 0.95) ? "text-warning" : "text-text"} />
+              <Stat label="خطای متوسط" value={pc(o.mean_abs_rel_err)} />
             </div>
             <ul className="space-y-1 text-sm">{verdict.map((v, i) => <li key={i} className="flex gap-2"><span>▸</span><span>{v}</span></li>)}</ul>
           </Section>
 
           {/* ۲) کشور تازه */}
-          <Section id="new" title="۲. پیش‌بینی برای کشور تازه" lead="کشوری که هنوز پژوهش نشده. مغز فقط جمعیت و درآمد آن و جدول کشورهای دیگر را می‌بیند. حدس ثبت و قفل می‌شود. بعد از ورود گزارش کشور، خودکار با واقعیت مقایسه می‌شود.">
+          <Section id="new" title="۲. پیش‌بینی برای کشور تازه">
             <form onSubmit={predictNew} className="flex flex-wrap items-center gap-2">
               <input value={newCountry} onChange={(e) => setNewCountry(e.target.value)} placeholder="نام کشور، مثلاً قطر" className="rounded-lg border border-border bg-surface px-3 py-2 text-sm" />
               <button type="submit" disabled={!!busy || !bt.has_key || !newCountry.trim()} className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-50 cursor-pointer">{busy.startsWith("پیش‌بینی") ? "در حال ثبت…" : "ثبت پیش‌بینی"}</button>
@@ -295,14 +295,13 @@ export default function LearningClient() {
                       <ul className="mt-1 space-y-1 text-text-muted">{rows.filter((r) => r.reason).map((r, i) => <li key={i}><b className="text-text">{r.label}:</b> {r.reason}</li>)}</ul>
                     </details>
                   )}
-                  {done < rows.length && <p className="text-xs text-text-muted">ستون «واقعی» بعد از ورود گزارش و پروفایل {country} پر می‌شود. این صفحه خودش مقایسه می‌کند.</p>}
                 </div>
               );
             })}
           </Section>
 
           {/* ۳) نتیجه‌ی آزمون */}
-          <Section id="res" title="۳. نتیجه‌ی آزمون روی کشورها" lead="هر کشور را موقتاً پنهان کردیم. مغز حدس زد. حدس با گزارش خودمان مقایسه شد.">
+          <Section id="res" title="۳. نتیجه‌ی آزمون روی کشورها">
             <div className="flex flex-wrap items-center gap-3">
               <button type="button" disabled={!!busy || !bt.has_key} onClick={runAll} className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white disabled:opacity-50 cursor-pointer">{busy && !busy.startsWith("پیش‌بینی") && busy !== "learn_start" ? `در حال اجرا: ${busy}…` : "اجرای همه‌ی کشورها"}</button>
             </div>
@@ -310,7 +309,6 @@ export default function LearningClient() {
             <div className="grid gap-6 lg:grid-cols-2">
               <div className="space-y-2">
                 <h3 className="text-sm font-bold">مهارت هر هدف</h3>
-                <p className="text-xs text-text-muted">سبز = بهتر از حدس ساده. قرمز = بدتر.</p>
                 <Diverging items={skillItems} fmt={(v) => fa(v, 2)} posLabel="بهتر" negLabel="بدتر" />
               </div>
               <div className="space-y-2">
@@ -320,7 +318,6 @@ export default function LearningClient() {
                     {numericTargets.map((t) => <option key={t.id} value={t.id}>{t.label}</option>)}
                   </select>
                 </div>
-                <p className="text-xs text-text-muted">هر میله یک کشور است. قرمز = مغز بالاتر گفته. آبی = پایین‌تر.</p>
                 {errItems.length ? (
                   <div className="space-y-1.5">
                     {(() => {
@@ -387,10 +384,10 @@ export default function LearningClient() {
             {st.error && <div className="rounded-lg border border-danger bg-danger-soft px-3 py-2 text-xs text-danger">{st.error}</div>}
             {st.summary && (
               <div className="grid grid-cols-2 gap-3 lg:grid-cols-4">
-                <Stat label="دورهای انجام‌شده" value={fa(st.summary.iterations?.length)} note="هر دور یک نسخه‌ی تازه آزمایش می‌کند." />
-                <Stat label="نسخه‌ی فعال‌شده" value={fa(st.summary.promoted)} note="نسخه‌ای که روی کشورهای دیده‌نشده بهتر بود." />
-                <Stat label="خطا، پیش از یادگیری" value={pc(st.summary.initial?.mean_abs_rel_err)} note="میانگین روی همه‌ی کشورها." />
-                <Stat label="خطا، بعد از یادگیری" value={pc(st.summary.final?.mean_abs_rel_err)} note="خوش‌بینانه است؛ بخشی از کشورها آموزش بوده‌اند." />
+                <Stat label="دورهای انجام‌شده" value={fa(st.summary.iterations?.length)} />
+                <Stat label="نسخه‌ی فعال‌شده" value={fa(st.summary.promoted)} />
+                <Stat label="خطا، پیش از یادگیری" value={pc(st.summary.initial?.mean_abs_rel_err)} />
+                <Stat label="خطا، بعد از یادگیری" value={pc(st.summary.final?.mean_abs_rel_err)} />
               </div>
             )}
             {st.log?.some((l) => l.includes("مهلت") || l.includes("✗")) && (
@@ -458,7 +455,6 @@ export default function LearningClient() {
               <>
                 <div className="space-y-2">
                   <h3 className="text-sm font-bold">پیش‌بینی قیمت: روش هر تحلیل‌گر</h3>
-                  <p className="text-xs text-text-muted">نسخه‌ی تازه فقط بعد از چند اشتباه سنجیده‌شده پیشنهاد می‌شود. هنوز نمره‌ی قیمت کم است.</p>
                   <Table
                     head={["تحلیل‌گر", "شرط بازبینی", "نسخه‌ها", ""]}
                     rows={lr.methods.map((m) => [
@@ -472,7 +468,7 @@ export default function LearningClient() {
                 <div className="space-y-2">
                   <h3 className="text-sm font-bold">آزمایش فعال</h3>
                   {lr.config?.experiments?.enabled !== true
-                    ? <p className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-xs leading-6 text-warning">⛔ متوقف است (دستور شما). هیچ ایمیلی با قیمت یا متن آزمایشی نمی‌رود.</p>
+                    ? <p className="rounded-lg border border-warning bg-warning-soft px-3 py-2 text-xs leading-6 text-warning">⛔ متوقف است. هیچ ایمیلی با قیمت یا متن آزمایشی نمی‌رود.</p>
                     : <p className="text-xs text-text-muted">روشن است.</p>}
                   {lr.experiments.experiments.map((e) => (
                     <div key={e.key} className="rounded-lg border border-border p-3 text-xs">

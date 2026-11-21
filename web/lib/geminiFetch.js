@@ -53,7 +53,21 @@ function getDispatcher() {
 
 // contents: برای گفت‌وگوی چندنوبتی [{role:"user"|"model", parts:[{text}]}] (اگر نباشد، یک نوبت از input ساخته می‌شود).
 // generationConfig: مثلاً {temperature, maxOutputTokens, responseMimeType} — اختیاری؛ بدون آن رفتار قبلی حفظ می‌شود.
-export async function generateContent({ apiKey, model, systemInstruction, input, contents, generationConfig }) {
+// retries: تعداد تلاش دوباره برای خطای گذرا (۴۲۹/۵۰۳ «تقاضای زیاد»، قطع اتصال، مهلت)، با فاصله‌ی ۴ و ۱۰ و ۲۰ ثانیه. پیش‌فرض صفر (رفتار قبلی).
+const TRANSIENT_RE = /\b(429|500|502|503|504)\b|ECONNRESET|UND_ERR|EPIPE|اتصال برقرار نشد|مهلت مجاز/;
+export async function generateContent(opts) {
+  const retries = Math.max(0, Number(opts.retries) || 0);
+  for (let attempt = 0; ; attempt++) {
+    try {
+      return await generateContentOnce(opts);
+    } catch (err) {
+      if (attempt >= retries || !TRANSIENT_RE.test(String(err?.message || err))) throw err;
+      await new Promise((r) => setTimeout(r, [4000, 10000, 20000][attempt] || 20000));
+    }
+  }
+}
+
+async function generateContentOnce({ apiKey, model, systemInstruction, input, contents, generationConfig }) {
   const dispatcher = getDispatcher();
 
   const up = upstream("gemini", `/v1beta/models/${model}:generateContent`);

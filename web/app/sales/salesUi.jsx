@@ -7,6 +7,8 @@ import Link from "next/link";
 export const fa = (n, d = 0) => (n == null ? "—" : Number(n).toLocaleString("fa-IR", { maximumFractionDigits: d }));
 export const usd = (n) => (n == null ? "—" : `${n < 0 ? "-" : ""}$${Math.abs(Number(n)).toLocaleString("en-US", { maximumFractionDigits: 0 })}`);
 export const price = (n) => (n == null ? "—" : `$${fa(n, 1)}`);
+/** ارقام لاتین داخل یک متن ← فارسی (اعشار «.» بین ارقام ← «٫»)؛ برای متن‌های ساخته‌شده در سرور */
+export const faDigits = (t) => String(t ?? "").replace(/(?<=\d)\.(?=\d)/g, "٫").replace(/[0-9]/g, (d) => "۰۱۲۳۴۵۶۷۸۹"[d]);
 export const fdate = (iso) => (iso ? new Date(`${String(iso).slice(0, 10)}T00:00:00Z`).toLocaleDateString("fa-IR", { timeZone: "UTC" }) : "—");
 
 export function Delta({ pct }) {
@@ -14,7 +16,7 @@ export function Delta({ pct }) {
   const up = pct > 0;
   return (
     <span className={`text-[11px] font-semibold ${pct === 0 ? "text-text-muted" : up ? "text-success" : "text-danger"}`} dir="ltr">
-      {up ? "▲" : pct < 0 ? "▼" : "•"} {Math.abs(pct)}٪
+      {up ? "▲" : pct < 0 ? "▼" : "•"} {fa(Math.abs(pct))}٪
     </span>
   );
 }

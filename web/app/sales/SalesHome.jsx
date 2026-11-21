@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import PageHeader from "../components/PageHeader";
-import { Delta, Kpi, WeeklyChart, fa, fdate, price, usd } from "./salesUi";
+import { Delta, Kpi, WeeklyChart, fa, faDigits, fdate, price, usd } from "./salesUi";
 
 async function get(url) {
   const res = await fetch(url, { cache: "no-store" });
@@ -55,7 +55,7 @@ export default function SalesHome() {
       {s && !s.empty && (
         <>
           <section aria-label="گزارش کلی" className="space-y-2">
-            <h2 className="text-sm font-bold text-text">گزارش کلی <span className="font-normal text-text-muted">— تا {s.as_of}</span></h2>
+            <h2 className="text-sm font-bold text-text">گزارش کلی <span className="font-normal text-text-muted">— تا {fdate(s.as_of)}</span></h2>
             <div className="grid grid-cols-2 gap-3 lg:grid-cols-5">
               <Kpi label="سفارش قطعی از ابتدای سال" value={`${fa(s.firm_totals.tons)} تن`} sub={`${fa(s.firm_totals.deals)} سفارش · ${usd(s.firm_totals.revenue_usd)}`} />
               <Kpi label="۳۰ روز اخیر" value={`${fa(w30.last.tons)} تن`} sub={`قبلش ${fa(w30.prev.tons)} تن`} delta={w30.tons_pct} />
@@ -89,7 +89,7 @@ export default function SalesHome() {
         <ul className="space-y-1.5">
           {alerts.slice(0, 15).map((a, i) => (
             <li key={i} className={`flex gap-2 text-sm leading-7 ${a.level === "warn" ? "text-warning" : "text-text"}`}>
-              <span>{a.level === "warn" ? "⚠" : "ℹ"}</span><span>{a.text}</span>
+              <span>{a.level === "warn" ? "⚠" : "ℹ"}</span><span>{faDigits(a.text)}</span>
             </li>
           ))}
         </ul>
@@ -116,7 +116,7 @@ export default function SalesHome() {
                 {rows.map((r) => (
                   <tr key={r.country} className="border-b border-border last:border-0 hover:bg-canvas">
                     <td className="px-2 py-1.5"><Link href={`/sales/countries/${encodeURIComponent(r.country)}`} className="font-semibold text-primary-hover hover:underline">{r.country}</Link></td>
-                    <td className="px-2 py-1.5">{r.market_imports_tons != null ? `${fa(r.market_imports_tons)} تن` : "—"}</td>
+                    <td className="px-2 py-1.5">{r.market_imports_tons != null ? `${fa(r.market_imports_tons)} تن` : "—"}{r.market_unreliable && <span className="ms-1 rounded-full bg-warning-soft px-1.5 text-[10px] text-warning" title="واردات ثبت‌شده کمتر از صادرات ما است">ناقص</span>}</td>
                     <td className="px-2 py-1.5 font-semibold">{r.has_sales ? fa(r.tons, 1) : "—"}</td>
                     <td className="px-2 py-1.5">{r.has_sales ? `${fa(r.monthly_avg_tons, 1)} تن` : "—"}</td>
                     <td className="px-2 py-1.5">{r.share_pct != null && r.has_sales ? `${fa(r.share_pct, 1)}٪` : "—"}</td>

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import PageHeader from "../../../components/PageHeader";
-import { HBars, Kpi, MonthlyChart, SalesNav, fa, fdate, price, usd } from "../../salesUi";
+import { HBars, Kpi, MonthlyChart, SalesNav, fa, faDigits, fdate, price, usd } from "../../salesUi";
 
 const fmtTons = (v) => `${fa(v, 0)} تن`;
 
@@ -48,7 +48,7 @@ export default function CountryClient({ country }) {
             <Kpi label="واردات سالانه‌ی کشور" value={m.imports_tons != null ? fmtTons(m.imports_tons) : "—"} sub={m.source} />
             <Kpi label="صادرات ما تا امروز" value={fmtTons(s.tons)} sub={`${fa(s.deals)} سفارش · ${usd(s.revenue_usd)}`} />
             <Kpi label="میانگین ماهانه" value={s.monthly_avg_tons != null ? fmtTons(s.monthly_avg_tons) : "—"} sub={`روی ${fa(d.window_months, 1)} ماه داده`} />
-            <Kpi label="سهم از بازار واردات" value={d.share_pct != null ? `${fa(d.share_pct, 1)}٪` : "—"} sub={d.annualized_tons != null ? `${fmtTons(d.annualized_tons)} در سال` : undefined} />
+            <Kpi label="سهم از بازار واردات" value={d.share_pct != null ? `${fa(d.share_pct, 1)}٪` : "—"} tone={d.market_unreliable ? "text-warning" : undefined} sub={d.market_unreliable ? "آمار بازار ناقص" : d.annualized_tons != null ? `${fmtTons(d.annualized_tons)} در سال` : undefined} />
             <Kpi label="میانگین قیمت ما" value={price(ours)} sub={s.avg_fob_price != null ? "FOB/FCA/EXW" : undefined} />
             <Kpi label="جایگاه قیمتی" value={d.position ? `${fa(d.position.cheaper_than)} از ${fa(d.position.of)}` : "—"} sub={d.position ? `رقیب گران‌تر از ما · میانه ${price(d.position.median_competitor)}` : undefined} />
           </div>
@@ -58,7 +58,7 @@ export default function CountryClient({ country }) {
               <h2 className="mb-2 text-sm font-bold text-text">جمع‌بندی عملکرد</h2>
               <ul className="space-y-1.5">
                 {d.notes.map((n, i) => (
-                  <li key={i} className={`flex gap-2 text-sm leading-7 ${n.level === "warn" ? "text-warning" : "text-text"}`}><span>{n.level === "warn" ? "⚠" : "•"}</span><span>{n.text}</span></li>
+                  <li key={i} className={`flex gap-2 text-sm leading-7 ${n.level === "warn" ? "text-warning" : "text-text"}`}><span>{n.level === "warn" ? "⚠" : "•"}</span><span>{faDigits(n.text)}</span></li>
                 ))}
               </ul>
             </section>
@@ -86,7 +86,7 @@ export default function CountryClient({ country }) {
             )}
           </div>
 
-          <section className="card p-4">
+          {d.scenarios.length > 0 && <section className="card p-4">
             <h2 className="mb-2 text-sm font-bold text-text">پتانسیل صادرات در سناریوهای سهم بازار</h2>
             <div className="overflow-x-auto">
               <table className="w-full text-xs">
@@ -99,7 +99,7 @@ export default function CountryClient({ country }) {
                 </tbody>
               </table>
             </div>
-          </section>
+          </section>}
 
           {(m.consumption_tons != null || m.domestic_production_tons != null || m.tariff_note || d.port) && (
             <section className="card p-4">

@@ -1,4 +1,5 @@
 import { shipmentTotals } from "./salesContracts";
+import { addDays, todayIso } from "./salesFormat";
 
 // لیست بارگیری و ارسال — تابع خالص. ترتیب صف بر پایه‌ی «زودتر پرداخت‌کننده» است:
 //   تاریخ اولویت = تاریخ اولین پرداخت ثبت‌شده‌ی همان قرارداد (قراردادی که طبق گزارش فروش «Done» است و پرداخت ثبت‌شده ندارد، تاریخ PI را می‌گیرد).
@@ -12,7 +13,7 @@ const round2 = (n) => Math.round(n * 100) / 100;
  * @param contracts قراردادهای ذخیره‌شده‌ی پلتفرم (دارای shipments)
  * @param accountContracts accounts.contracts از buildAccounts (همه‌ی قراردادها، اکسل و پلتفرم؛ کلید = file_no)
  */
-export function buildLoadingList(contracts, accountContracts) {
+export function buildLoadingList(contracts, accountContracts, { today = todayIso(), includeOld = false, oldDays = 60 } = {}) {
   const accByKey = new Map((accountContracts || []).map((a) => [a.key, a]));
   const platformByNo = new Map(contracts.map((c) => [c.file_no, c]));
   const queue = [];
@@ -20,6 +21,7 @@ export function buildLoadingList(contracts, accountContracts) {
   const shipped = [];
   const unplanned = [];
   const waiting = [];
+  let oldSheet = { count: 0, tons: 0 }; // قراردادهای فقط‌اکسل پرداخت‌شده‌ی قدیمی؛ احتمالاً قبلاً ارسال شده‌اند
 
   const priorityOf = (acc, c) => {
     const first = (acc?.payments || []).filter((p) => p.type === "payment").map((p) => p.date).sort()[0] || null;
@@ -66,7 +68,9 @@ export function buildLoadingList(contracts, accountContracts) {
       priority_date: pri.date, priority_basis: pri.basis, currency: a.currency, planned_tons: 0, remaining_tons: a.tons, platform: false,
     };
     if (a.loaded) continue;
-    if (pri.date) unplanned.push(row);
+    if (!pri.date) continue;
+    if (!includeOld && pri.date < addDays(today, -oldDays)) { oldSheet = { count: oldSheet.count + 1, tons: round2(oldSheet.tons + (a.tons || 0)) }; continue; }
+    unplanned.push(row);
   }
 
   const byPriority = (a, b) =>
@@ -83,7 +87,7 @@ export function buildLoadingList(contracts, accountContracts) {
 
   const sumTons = (rows, f) => round2(rows.reduce((s, r) => s + (f(r) || 0), 0));
   return {
-    ordered, queue, unplanned, waiting, loaded, shipped,
+    ordered, queue, unplanned, waiting, loaded, shipped, old_sheet: oldSheet, old_days: oldDays,
     totals: {
       queued_tons: sumTons(queue, (r) => r.shipment.tons),
       unplanned_tons: sumTons(unplanned, (r) => r.remaining_tons),

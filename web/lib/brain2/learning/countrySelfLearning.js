@@ -48,7 +48,7 @@ const REVISE_SYSTEM = `تو روش یک پیش‌بین کشور را بازنو
 async function defaultGenerate({ system, input }) {
   const key = resolveBrainKey();
   if (!key) throw new Error("کلید مغز تنظیم نشده.");
-  return generateContent({ apiKey: key, model: BRAIN_MODEL, systemInstruction: system, input, generationConfig: { temperature: 0.2, maxOutputTokens: 4096, responseMimeType: "application/json" } });
+  return generateContent({ retries: 3, apiKey: key, model: BRAIN_MODEL, systemInstruction: system, input, generationConfig: { temperature: 0.2, maxOutputTokens: 4096, responseMimeType: "application/json" } });
 }
 const parseJson = (t) => { const m = String(t).match(/\{[\s\S]*\}/); if (!m) return null; try { return JSON.parse(m[0]); } catch { return null; } };
 const norm = (s) => String(s || "").replace(/\s+/g, " ").trim();

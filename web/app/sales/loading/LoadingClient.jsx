@@ -55,12 +55,13 @@ export default function LoadingClient() {
   const [error, setError] = useState("");
   const [openKey, setOpenKey] = useState(null);
   const [busy, setBusy] = useState(false);
+  const [old, setOld] = useState(false);
 
   const load = useCallback(async () => {
-    const r = await api("/api/sales/loading", { cache: "no-store" });
+    const r = await api(`/api/sales/loading${old ? "?old=1" : ""}`, { cache: "no-store" });
     if (!r.ok) { setError(r.error || "خطا"); return; }
     setError(""); setD(r);
-  }, []);
+  }, [old]);
   useEffect(() => { load(); }, [load]);
 
   async function setStatus(r, status) {
@@ -98,7 +99,10 @@ export default function LoadingClient() {
 
       {d && (
         <section className="card p-4">
-          <h2 className="mb-3 text-sm font-bold text-text">صف بارگیری ({fa(d.ordered.length)})</h2>
+          <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+            <h2 className="text-sm font-bold text-text">صف بارگیری ({fa(d.ordered.length)})</h2>
+            {(d.old_sheet.count > 0 || old) && <label className="flex items-center gap-1.5 text-xs text-text-muted"><input type="checkbox" checked={old} onChange={(e) => setOld(e.target.checked)} /> قراردادهای اکسل پرداخت‌شده‌ی قدیمی‌تر از {fa(d.old_days)} روز{d.old_sheet.count > 0 ? ` (${fa(d.old_sheet.count)} قرارداد، ${fa(d.old_sheet.tons, 0)} تن)` : ""}</label>}
+          </div>
           {d.ordered.length === 0 && <p className="text-xs text-text-muted">موردی در صف نیست.</p>}
           {d.ordered.length > 0 && (
             <div className="overflow-x-auto">
