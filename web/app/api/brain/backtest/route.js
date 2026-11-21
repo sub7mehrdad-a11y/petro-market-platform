@@ -17,7 +17,7 @@ export async function GET(request) {
   if (problem) return NextResponse.json({ error: problem }, { status: 500 });
   resolveForwardPredictions(); // پژوهشی که تازه وارد شده، پیش‌بینی‌های پیش‌ثبت‌شده را می‌سنجد
   const summary = summarizeBacktests();
-  return NextResponse.json({ countries: backtestCountries(), targets: backtestTargets().map((t) => ({ id: t.id, label: t.label, unit: t.unit, kind: t.kind })), summary, forward_rows: summary.forward_rows, lessons: lessonsOverview(), learning: countryLearningOverview(), has_key: !!resolveBrainKey() });
+  return NextResponse.json({ countries: backtestCountries(), targets: backtestTargets().map((t) => ({ id: t.id, label: t.label, unit: t.unit, kind: t.kind })), summary, forward_rows: summary.forward_rows, forward_conclusions: summary.forward_conclusions, lessons: lessonsOverview(), learning: countryLearningOverview(), has_key: !!resolveBrainKey() });
 }
 
 export async function POST(request) {

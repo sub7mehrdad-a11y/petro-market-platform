@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { askBrain, getBrainScores, resolveBrainKey } from "@/lib/brain";
+import { salesBrainContext } from "@/lib/salesBrainContext";
 import { salesContextForBrain, summarizeSales } from "@/lib/salesAnalytics";
 import { salesAiEnabled, writeSalesAnalysis } from "@/lib/salesStore";
 import { readEffectiveSnapshots } from "@/lib/salesContractsStore";
@@ -38,7 +39,7 @@ export async function POST() {
   if (summary.empty) return NextResponse.json({ error: "هنوز گزارشی بارگذاری نشده." }, { status: 400 });
 
   try {
-    const salesContext = [salesContextForBrain(summary), ledgerContextForBrain(loadAccounts().accounts)].filter(Boolean).join("\n");
+    const salesContext = salesBrainContext().text || [salesContextForBrain(summary), ledgerContextForBrain(loadAccounts().accounts)].filter(Boolean).join("\n");
     const { answer, ungrounded } = await askBrain({ apiKey: key, question: QUESTION, salesContext, compact: true });
     const analysis = { as_of: summary.as_of, generated_at: new Date().toISOString(), text: answer, ungrounded_numbers: ungrounded };
     writeSalesAnalysis(analysis);

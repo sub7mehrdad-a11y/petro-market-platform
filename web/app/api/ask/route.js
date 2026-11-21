@@ -2,11 +2,7 @@ import { NextResponse } from "next/server";
 import { buildSearchIndex, searchIndex } from "@/lib/searchIndex";
 import { askBrain, getBrainScores, resolveBrainKey } from "@/lib/brain";
 import { SESSION_COOKIE_NAME, verifySessionToken } from "@/lib/auth";
-import { salesContextForBrain, summarizeSales } from "@/lib/salesAnalytics";
-import { salesAiEnabled } from "@/lib/salesStore";
-import { readEffectiveSnapshots } from "@/lib/salesContractsStore";
-import { ledgerContextForBrain } from "@/lib/salesLedger";
-import { loadAccounts } from "@/lib/salesLedgerStore";
+import { salesBrainContext } from "@/lib/salesBrainContext";
 import { generateGroqContent, resolveGroqApiKey } from "@/lib/groqFetch";
 import { locationErrorFa } from "@/lib/aiRelay";
 // موتور پشتیبان: اگر سهمیه‌ی روزانه‌ی Groq تمام شود، «پاسخ هوشمند» خاموش نمی‌شود.
@@ -34,6 +30,7 @@ const SYSTEM_PROMPT = `
    اگر می‌دانی کجا باید دنبالش گشت، همان را پیشنهاد بده. چیزی از خودت نساز.
 3. عددها را دقیقاً همان‌طور که در قطعه‌ها آمده نقل کن؛ عدد را گرد یا تغییر نده.
 4. هر ادعا را به شماره‌ی قطعه‌ی منبعش ارجاع بده، به شکل [۱] یا [۲].
+5. اگر «عملکرد فروش خودمان» داده شده، پیش از هر توصیه آن را با قطعه‌ها تطبیق بده و وضع فعلی شرکت را صریح بگو؛ اگر داده نشده، بنویس «داده‌ی فروش شرکت در این پاسخ در دسترس نبود».
 5. جواب را فارسی، کوتاه و ساختاریافته بنویس (حداکثر ۲۵۰ کلمه). اگر چند مورد هست،
    فهرست کن.
 6. تمایز FOB / CIF / قیمت داخلی را همیشه حفظ کن و این‌ها را با هم مقایسه نکن مگر
@@ -56,6 +53,12 @@ export async function POST(request) {
   // اگر کلید مغز نباشد یا سرویس موقتاً در دسترس نباشد، به همان پاسخ‌دهنده‌ی قدیمی (Groq) برمی‌گردیم تا بخش پرسش خاموش نشود.
   const brainKey = resolveBrainKey();
   let brainFailure = null;
+  const salesFor = (req) => {
+    const session = verifySessionToken(req.cookies.get(SESSION_COOKIE_NAME)?.value);
+    if (session?.role !== "commercial") return { used: false, reason: "role", text: null };
+    try { return salesBrainContext(); } catch (e) { return { used: false, reason: "error", text: null, error: String(e?.message || e).slice(0, 120) }; }
+  };
+  let sales = salesFor(request);
   if (brainKey) {
     try {
       const hits = searchIndex(buildSearchIndex(), question, 6);
@@ -63,27 +66,17 @@ export async function POST(request) {
         hit: h,
         piece: `### قطعه [${i + 1}] — ${h.typeLabel}: ${h.title}\n(${h.subtitle})\n${(h.body || "").slice(0, 1800)}`,
       }));
-      // عملکرد فروش (محرمانه) فقط برای نقش بازرگانی و فقط وقتی مدیریت صریحاً SALES_AI_ENABLED را روشن کرده؛ بدون نام مشتری.
-      let salesContext = null;
-      const session = verifySessionToken(request.cookies.get(SESSION_COOKIE_NAME)?.value);
-      if (session?.role === "commercial" && salesAiEnabled()) {
-        const scores = getBrainScores();
-        salesContext = [
-          salesContextForBrain(
-            summarizeSales(readEffectiveSnapshots(), { countryScores: (scores?.countries || []).map((c) => ({ country: c.country, tier: c.tier, rank: c.rank })) })
-          ),
-          ledgerContextForBrain(loadAccounts().accounts),
-        ].filter(Boolean).join("\n") || null;
-      }
+      // عملکرد شرکت (محرمانه، بدون نام مشتری): فقط نقش بازرگانی و فقط با SALES_AI_ENABLED؛ وضعیتش در پاسخ می‌آید تا معلوم باشد خوانده شد یا نه
       const { answer, ungrounded } = await askBrain({
         apiKey: brainKey,
         question: question.trim(),
         history,
         retrievedContext: picked.map((p) => p.piece).join("\n\n"),
-        salesContext,
+        salesContext: sales.text,
       });
       return NextResponse.json({
         mode: "brain",
+        sales_data: { used: sales.used, reason: sales.reason },
         answer,
         ungrounded_numbers: ungrounded,
         sources: picked.map((p, i) => ({ n: i + 1, title: p.hit.title, typeLabel: p.hit.typeLabel, url: p.hit.url })),
@@ -144,7 +137,9 @@ export async function POST(request) {
 
   const context = picked.map((p) => p.piece).join("\n\n");
 
-  const userInput = `سؤال کاربر: ${question}\n\n---\n\n${context}`;
+  // مسیر ساده هم داده‌ی فروش را می‌بیند (فشرده، تا سقف توکن Groq رد نشود)
+  const salesBlock = sales.text ? `\n\n===== عملکرد فروش خودمان (محرمانه) =====\n${sales.text.slice(0, 3500)}` : "";
+  const userInput = `سؤال کاربر: ${question}\n\n---\n\n${context}${salesBlock}`;
 
   try {
     let answer;
@@ -181,6 +176,7 @@ export async function POST(request) {
 
     return NextResponse.json({
       mode: "basic",
+      sales_data: { used: sales.used, reason: sales.reason },
       ...(brainFailure ? { brain_unavailable: brainFailure } : {}),
       answer,
       // فقط قطعه‌هایی که واقعاً به مدل داده شدند به‌عنوان منبع اعلام می‌شوند،

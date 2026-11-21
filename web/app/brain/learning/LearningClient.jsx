@@ -289,6 +289,20 @@ export default function LearningClient() {
                       ];
                     })}
                   />
+                  {(() => {
+                    const cc = (bt.forward_conclusions || []).find((x) => x.country === country);
+                    return cc && cc.lines.length > 0 ? (
+                      <div className="rounded-lg border border-border bg-canvas p-3">
+                        <h4 className="mb-1.5 text-sm font-bold text-text">نتیجه‌گیری</h4>
+                        <ul className="space-y-1 text-sm leading-7">{cc.lines.map((l, i) => <li key={i} className="flex gap-2"><span>▸</span><span>{l}</span></li>)}</ul>
+                        {cc.items.length > 0 && (
+                          <div className="mt-3">
+                            <Diverging items={cc.items.filter((x) => x.bias_pct != null).map((x) => ({ label: x.label, value: Math.max(-200, Math.min(200, x.bias_pct)), sub: x.inside ? "داخل بازه" : "بیرون بازه" }))} fmt={(v) => `${v > 0 ? "+" : ""}${fa(v)}٪`} posLabel="بیش‌برآورد" negLabel="کم‌برآورد" />
+                          </div>
+                        )}
+                      </div>
+                    ) : null;
+                  })()}
                   {rows.some((r) => r.reason) && (
                     <details className="text-xs">
                       <summary className="cursor-pointer">دلیل مغز برای هر حدس</summary>
