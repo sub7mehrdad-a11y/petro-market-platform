@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import { verifySessionToken, SESSION_COOKIE_NAME } from "@/lib/auth";
+import { isBrainAdmin } from "@/lib/brain2/access";
 
 // فقط برای ناوبری سمت کلاینت (Sidebar) — تا خوندن کوکی لازم نیست توی
 // layout.js (سرور) بیفته و کل سایت رو از prerender استاتیک خارج کنه.
@@ -15,6 +16,7 @@ export async function GET() {
   return NextResponse.json({
     username: session.username,
     role: session.role,
+    brainAdmin: session.role === "commercial" && isBrainAdmin(session.username),
     outreachEnabled: process.env.OUTREACH_UI_ENABLED === "true",
   });
 }

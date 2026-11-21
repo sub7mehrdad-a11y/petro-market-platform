@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { verifySessionToken, SESSION_COOKIE_NAME } from "@/lib/auth";
+import { isBrainAdmin } from "@/lib/brain2/access";
 
 /**
  * احراز هویت + کنترل دسترسی چندکاربره‌ی کل سایت.
@@ -22,6 +23,14 @@ const PUBLIC_PATHS = ["/login", "/api/auth/login", "/api/auth/logout"];
 // مسیرهایی که فقط نقش «بازرگانی» بهشون دسترسی داره — نقش «مشاهده‌گر»
 // (مثلاً مدیران) حتی با لاگین معتبر هم از این‌ها رد می‌شه.
 const COMMERCIAL_ONLY_PREFIXES = ["/outreach", "/api/outreach", "/sales", "/api/sales", "/brain", "/api/brain"];
+
+// بخش‌های «آموزش مغز» (مهارت‌سنجی، یادگیری، پیش‌بینی، بازبینی، حافظه) فقط برای مدیر مغز (BRAIN_ADMINS؛ پیش‌فرض «admin»).
+// همکاران بازرگانی فقط «مغز پلتفرم» (/ask) و «تحلیل فروش» را می‌بینند.
+const BRAIN_ADMIN_PREFIXES = ["/brain", "/api/brain"];
+
+function isBrainAdminOnly(pathname) {
+  return BRAIN_ADMIN_PREFIXES.some((p) => pathname === p || pathname.startsWith(`${p}/`));
+}
 
 function isPublicPath(pathname) {
   return PUBLIC_PATHS.some((p) => pathname === p || pathname.startsWith(`${p}/`));
@@ -52,6 +61,13 @@ export function proxy(request) {
   }
 
   if (isCommercialOnly(pathname) && session.role !== "commercial") {
+    if (isApi) {
+      return NextResponse.json({ error: "دسترسی به این بخش نداری." }, { status: 403 });
+    }
+    return NextResponse.redirect(new URL("/", request.url));
+  }
+
+  if (isBrainAdminOnly(pathname) && !isBrainAdmin(session.username)) {
     if (isApi) {
       return NextResponse.json({ error: "دسترسی به این بخش نداری." }, { status: 403 });
     }
