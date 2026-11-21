@@ -3,6 +3,10 @@ import path from "path";
 import { ProxyAgent, fetch as undiciFetch } from "undici";
 import { aiTimeoutMs, netError, retryOnSocketError, upstream } from "./aiRelay";
 
+
+// بدون پراکسی از fetch داخلی Node استفاده می‌شود: روی لیارا (۲۰۲۶-۱۱-۲۱) بسته‌ی undici درخواست POST به رله را بی‌جواب می‌گذاشت، ولی fetch داخلی فوری جواب می‌گرفت.
+const aiFetch = (dispatcher) => (dispatcher ? undiciFetch : fetch);
+
 export const GROQ_DEFAULT_MODEL = "openai/gpt-oss-120b";
 const DEFAULT_MODEL = GROQ_DEFAULT_MODEL;
 
@@ -91,7 +95,7 @@ export async function generateGroqContent({ apiKey, model = DEFAULT_MODEL, syste
   if (maxTokens > budget) maxTokens = budget;
 
   const up = upstream("groq", "/openai/v1/chat/completions");
-  const res = await retryOnSocketError(() => undiciFetch(up.url, {
+  const res = await retryOnSocketError(() => aiFetch(dispatcher)(up.url, {
     signal: AbortSignal.timeout(aiTimeoutMs("groq")),
     method: "POST",
     headers: {
