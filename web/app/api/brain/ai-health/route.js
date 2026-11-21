@@ -5,7 +5,7 @@ import { generateContent } from "@/lib/geminiFetch";
 
 // بررسی سریع اتصال سرور به هوش مصنوعی: (۱) رله‌ی Cloudflare زنده است؟ (۲) Gemini به یک درخواست کوچک جواب می‌دهد؟ فقط نقش «بازرگانی».
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+export const maxDuration = 120;
 
 async function timed(fn) {
   const t0 = Date.now();
@@ -28,6 +28,6 @@ export async function GET(request) {
   });
   out.proxy_env = !!(process.env.HTTPS_PROXY || process.env.https_proxy || process.env.HTTP_PROXY || process.env.http_proxy);
   const key = resolveBrainKey();
-  out.gemini = key ? await timed(async () => ({ text: (await generateContent({ apiKey: request.nextUrl.searchParams.get("probe") === "badkey" ? "invalid-key-probe" : key, model, systemInstruction: "Reply with one word.", input: "ping", generationConfig: { maxOutputTokens: 32 }, timeoutMs: 25000 })).slice(0, 40) })) : { ok: false, error: "کلید مغز تنظیم نشده." };
+  out.gemini = key ? await timed(async () => ({ text: (await generateContent({ apiKey: request.nextUrl.searchParams.get("probe") === "badkey" ? "invalid-key-probe" : key, model, systemInstruction: "Reply with one word.", input: "ping", generationConfig: { maxOutputTokens: 32 }, timeoutMs: Math.min(100000, Math.max(5000, Number(request.nextUrl.searchParams.get("t")) * 1000 || 25000)) })).slice(0, 40) })) : { ok: false, error: "کلید مغز تنظیم نشده." };
   return NextResponse.json(out);
 }
