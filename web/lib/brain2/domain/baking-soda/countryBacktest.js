@@ -40,6 +40,14 @@ const mode = (xs) => {
   return [...c.entries()].sort((a, b) => b[1] - a[1])[0]?.[0] ?? null;
 };
 
+const FA_DIGITS = "۰۱۲۳۴۵۶۷۸۹";
+function tariffFromNote(text) {
+  const t = String(text || "").replace(/[۰-۹]/g, (d) => FA_DIGITS.indexOf(d)).replace("٫", ".");
+  const m = /تعرفه[^%٪\d]{0,30}(\d+(?:\.\d+)?)\s*[%٪]/.exec(t);
+  const v = m ? Number(m[1]) : null;
+  return v !== null && v >= 0 && v <= 100 ? v : null;
+}
+
 function truthOf(profile, pop, suppliers) {
   const ss = profile.supply_stats || {};
   const rb = profile.report_import_breakdown || {};
@@ -53,7 +61,8 @@ function truthOf(profile, pop, suppliers) {
   const iran = list.find((s) => s.country === "ایران");
   const iranShare = iran && total ? Math.round((iran.tons / total) * 1000) / 10 : null;
   const production = num(ss.production_tons);
-  const tariff = mode((suppliers?.suppliers || []).map((s) => num(s.tariff_pct)));
+  // تعرفه: اولویت با ITC (import_suppliers)؛ اگر نبود، درصدِ همان «تعرفه‌ی …٪» که گزارش کشور در tariff_note آورده (مثل «تعرفه‌ی ۵٪ بر ارزش CIF»)
+  const tariff = mode((suppliers?.suppliers || []).map((s) => num(s.tariff_pct))) ?? tariffFromNote(profile.tariff_note);
   return {
     imports_tons: imports, consumption_tons: consumption, per_capita_kg: perCapita, top_supplier_share_pct: top, iran_share_pct: iranShare,
     domestic_production: production === null ? null : production > 0 ? 1 : 0, tariff_pct: tariff,

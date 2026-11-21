@@ -176,6 +176,11 @@ export default function AskClient({ index, brainPanel }) {
           <div className="flex items-center gap-2 mb-3">
             <span className="inline-block w-2 h-2 rounded-full bg-primary" />
             <h2 className="text-sm font-bold text-text">{t.a.mode === "brain" ? "پاسخ مغز پلتفرم" : "پاسخ هوشمند (ساده)"}</h2>
+            {t.a.sales_data && (
+              <span className={`rounded-full px-2 py-0.5 text-[11px] ${t.a.sales_data.used ? "bg-success-soft text-success" : "bg-warning-soft text-warning"}`}>
+                {t.a.sales_data.used ? "با داده‌ی فروش شرکت" : { disabled: "داده‌ی فروش خاموش است", role: "داده‌ی فروش فقط برای نقش بازرگانی", empty: "گزارش فروش بارگذاری نشده", error: "داده‌ی فروش خوانده نشد" }[t.a.sales_data.reason] || "بدون داده‌ی فروش"}
+              </span>
+            )}
             {t.a.mode === "basic" && t.a.brain_unavailable && (
               <span className="text-[11px] text-warning">مغز الان در دسترس نبود؛ پاسخ ساده داده شد</span>
             )}

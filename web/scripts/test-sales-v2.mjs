@@ -183,4 +183,17 @@ assert.ok(cmp.price_refs.some((r) => r.label.includes("گمرک ایران") && 
 assert.ok(cmp.price_refs.some((r) => r.label === "چین در این بازار" && r.value === 190) && cmp.price_refs.some((r) => r.label.startsWith("هند") && r.value === 381));
 assert.equal(SC.buildComparison({ ours: 5000, ourPrice: 240, market: { imports_tons: 4000 }, suppliers: [{ name: "ایران", tons: 3000 }], customs: null }).iran.understated, true, "صادرات ما بیش از رقم ایران ← کم‌اظهار");
 
+// ------------------------------------------------------------------ داده‌ی عملکرد شرکت برای مغز
+process.env.SALES_AI_ENABLED = "false";
+const BC = await import("../lib/salesBrainContext.js");
+assert.deepEqual([BC.salesBrainContext().used, BC.salesBrainContext().reason], [false, "disabled"]);
+process.env.SALES_AI_ENABLED = "true";
+const bctx = BC.salesBrainContext();
+assert.equal(bctx.used, true);
+assert.match(bctx.text, /عملکرد هر کشور/);
+assert.match(bctx.text, /روسیه: بازار واردات/);
+assert.match(bctx.text, /بارگیری: در صف/);
+assert.match(bctx.text, /سفارش قطعی از ابتدای سال/);
+assert.ok(!/Alpha|Beta Co|Gamma|Delta/.test(bctx.text), "نام مشتری به مدل نمی‌رود");
+
 console.log("test-sales-v2: همه‌ی بررسی‌ها گذشت");

@@ -156,13 +156,21 @@ assert.equal(BT.resolveForwardPredictions({ now: new Date("2026-11-26T00:00:00Z"
 // پژوهش قطر وارد پروفایل‌ها می‌شود ← سنجش
 const profFile = path.join(dataDir, "country_profiles.json");
 const profs = JSON.parse(fs.readFileSync(profFile, "utf-8"));
-profs["قطر"] = { country: "قطر", total_import_volume: { value: 4000, unit: "تن" }, supply_stats: { production_tons: 0, apparent_consumption_tons: 3500, per_capita_kg: 0.72 },
+profs["قطر"] = { country: "قطر", total_import_volume: { value: 4000, unit: "تن" }, supply_stats: { production_tons: 0, apparent_consumption_tons: 3500, per_capita_kg: 0.72 }, tariff_note: "تعرفه‌ی ۷٫۵٪ بر ارزش CIF؛ دارو معاف است.",
   report_import_breakdown: { year: 2025, total_tons: 4000, suppliers: [{ country: "چین", tons: 1800 }, { country: "هند", tons: 1200 }, { country: "ایران", tons: 400 }, { country: "سایر", tons: 600 }] } };
 fs.writeFileSync(profFile, JSON.stringify(profs));
 const nRes = BT.resolveForwardPredictions({ now: new Date("2026-12-10T00:00:00Z") });
 assert.ok(nRes >= 6, `سنجیده‌شده: ${nRes}`);
 sf = BT.summarizeBacktests();
-assert.equal(sf.forward.pending, 1, "تعرفه برای قطر واقعی ندارد (Trade Map نیامده) ← هنوز منتظر");
+assert.equal(sf.forward.pending, 0, "تعرفه از tariff_note پروفایل می‌آید (Trade Map لازم نیست) ← همه‌ی ۷ هدف سنجیده شد");
+const tarRow = BT.latestBacktestRows().find((r) => r.forward && r.country === "قطر" && r.target === "tariff_pct");
+assert.equal(tarRow.truth, 7.5);
+const conc = sf.forward_conclusions.find((c) => c.country === "قطر");
+assert.equal(conc.complete, true);
+assert.equal(conc.scored, 7);
+assert.ok(conc.lines[0].startsWith("7 از 7 هدف سنجیده شد"), conc.lines[0]);
+assert.ok(conc.items.length >= 4 && conc.items.every((x) => x.label && x.direction));
+assert.ok(conc.lines.some((l) => /داخل بازه/.test(l)), "نتیجه‌گیری شامل شمار داخل بازه");
 assert.ok(sf.forward.n >= 6);
 const imp = sf.rows.length; void imp;
 const fw = BT.latestBacktestRows().filter((r) => r.forward && r.country === "قطر");

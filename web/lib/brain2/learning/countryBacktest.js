@@ -152,6 +152,42 @@ function agg(rows) {
   };
 }
 
+/**
+ * نتیجه‌گیری قطعی (بدون مدل) برای هر کشورِ پیش‌ثبت‌شده: چند هدف سنجیده شد، چندتا داخل بازه، سوگیری جهت خطا، مقایسه با حدس ساده.
+ * rows: خروجی view (summarizeBacktests.forward_rows).
+ */
+export function forwardConclusions(rows) {
+  const byCountry = new Map();
+  for (const r of rows) { if (!byCountry.has(r.country)) byCountry.set(r.country, []); byCountry.get(r.country).push(r); }
+  const pct = (x) => Math.round(Math.abs(x) * 100);
+  return [...byCountry.entries()].map(([country, rs]) => {
+    const scored = rs.filter((r) => r.result?.scored);
+    const pending = rs.filter((r) => !r.result?.scored && r.forecast);
+    const invalid = rs.filter((r) => !r.forecast);
+    const num = scored.filter((r) => r.forecast && r.forecast.point !== undefined);
+    const prob = scored.filter((r) => r.forecast && r.forecast.p !== undefined);
+    const items = num.map((r) => {
+      const bias = r.truth ? (r.forecast.point - r.truth) / Math.abs(r.truth) : null;
+      return { target: r.target, label: r.label, forecast: r.forecast.point, truth: r.truth, baseline: r.baseline, err_pct: r.result.abs_rel_err != null ? Math.round(r.result.abs_rel_err * 100) : null, bias_pct: bias != null ? Math.round(bias * 100) : null, direction: bias == null ? null : bias > 0.1 ? "بیش‌برآورد" : bias < -0.1 ? "کم‌برآورد" : "نزدیک", inside: !!r.result.inside, skill: r.result.skill ?? null };
+    });
+    const inside = items.filter((x) => x.inside).length;
+    const withSkill = items.filter((x) => x.skill != null);
+    const beats = withSkill.filter((x) => x.skill > 0).length;
+    const meanErr = items.length ? Math.round((items.reduce((a, x) => a + (x.err_pct || 0), 0) / items.length)) : null;
+    const lines = [];
+    lines.push(`${scored.length} از ${rs.length} هدف سنجیده شد${pending.length ? `؛ ${pending.length} هدف هنوز مقدار واقعی ندارد (${pending.map((r) => r.label).join("، ")})` : ""}${invalid.length ? `؛ ${invalid.length} پیش‌بینی نامعتبر بود` : ""}.`);
+    if (items.length) lines.push(`${inside} از ${items.length} هدف عددی داخل بازه‌ی ۸۰٪ مغز افتاد؛ خطای متوسط ${meanErr}٪.`);
+    if (withSkill.length) lines.push(beats === withSkill.length ? "مغز در همه‌ی هدف‌های عددی از حدس ساده (میانه‌ی کشورهای دیگر) بهتر بود." : beats === 0 ? "مغز در هیچ هدف عددی از حدس ساده بهتر نبود." : `مغز در ${beats} از ${withSkill.length} هدف عددی از حدس ساده بهتر بود.`);
+    const over = items.filter((x) => x.direction === "بیش‌برآورد"), under = items.filter((x) => x.direction === "کم‌برآورد");
+    if (over.length >= 2) lines.push(`الگوی خطا: ${over.map((x) => x.label).join("، ")} همگی بیش‌برآورد شدند (${over.map((x) => `${pct(x.bias_pct / 100)}٪`).join("، ")} بالاتر از واقعی).`);
+    if (under.length >= 2) lines.push(`الگوی خطا: ${under.map((x) => x.label).join("، ")} همگی کم‌برآورد شدند.`);
+    const good = items.filter((x) => x.inside && x.direction === "نزدیک");
+    if (good.length) lines.push(`درست‌ترین هدف‌ها: ${good.map((x) => x.label).join("، ")}.`);
+    for (const r of prob) lines.push(`${r.label}: مغز ${Math.round(r.forecast.p * 100)}٪ احتمال «بله» داده بود؛ واقعی ${r.truth ? "بله" : "خیر"} بود (خطای brier ${r.result.brier != null ? r.result.brier.toFixed(2) : "—"}).`);
+    return { country, made_at: rs[0]?.made_at || null, method_version: rs[0]?.method_version || null, total: rs.length, scored: scored.length, pending: pending.length, inside, numeric: items.length, mean_err_pct: meanErr, beats_baseline: beats, items, lines, complete: pending.length === 0 && invalid.length === 0 };
+  });
+}
+
 /** خلاصه‌ی آخرین اجراها: کل، به‌تفکیک هدف و به‌تفکیک کشور. coverage = سهم هدف‌های عددی که واقعی داخل بازه‌ی ۸۰٪ بود (هدف ≈ ۰٫۸). */
 export function summarizeBacktests(allRows = latestBacktestRows()) {
   // آمار اصلی: اجرای «بدون درس» با روش فعال (اگر ردیفی با آن نسخه هست)، وگرنه ردیف‌های بدون نسخه؛ اثر درس‌ها جدا (lessons_effect)
@@ -170,6 +206,7 @@ export function summarizeBacktests(allRows = latestBacktestRows()) {
     by_country: by("country").map((c) => ({ country: c, ...agg(rows.filter((r) => r.country === c)) })).sort((a, b) => String(a.country).localeCompare(String(b.country), "fa")),
     rows: rows.map(view),
     forward_rows: fwRows.map(view),
+    forward_conclusions: forwardConclusions(fwRows.map(view)),
   };
 }
 
