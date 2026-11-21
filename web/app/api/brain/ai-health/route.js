@@ -22,6 +22,6 @@ export async function GET(request) {
   // رله بدون رمز باید سریع ۴۰۳ بدهد؛ جواب‌ندادن یعنی مسیر سرور ← رله قطع است
   if (relay) out.relay = await timed(async () => { const r = await fetch(`${relay}/gemini/v1beta/models/x:generateContent`, { method: "POST", body: "{}", signal: AbortSignal.timeout(12000) }); return { status: r.status }; });
   const key = resolveBrainKey();
-  out.gemini = key ? await timed(async () => ({ text: (await generateContent({ apiKey: key, model, systemInstruction: "Reply with one word.", input: "ping", generationConfig: { maxOutputTokens: 32 }, timeoutMs: 25000 })).slice(0, 40) })) : { ok: false, error: "کلید مغز تنظیم نشده." };
+  out.gemini = key ? await timed(async () => ({ text: (await generateContent({ apiKey: request.nextUrl.searchParams.get("probe") === "badkey" ? "invalid-key-probe" : key, model, systemInstruction: "Reply with one word.", input: "ping", generationConfig: { maxOutputTokens: 32 }, timeoutMs: 25000 })).slice(0, 40) })) : { ok: false, error: "کلید مغز تنظیم نشده." };
   return NextResponse.json(out);
 }
