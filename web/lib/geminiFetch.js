@@ -5,6 +5,10 @@ import { resolveProxyUrl } from "./groqFetch";
 import { aiTimeoutMs, netError, retryOnSocketError, upstream } from "./aiRelay";
 
 
+// بدون پراکسی از fetch داخلی Node استفاده می‌شود: روی لیارا (۲۰۲۶-۱۱-۲۱) بسته‌ی undici درخواست POST به رله را بی‌جواب می‌گذاشت، ولی fetch داخلی فوری جواب می‌گرفت.
+const aiFetch = (dispatcher) => (dispatcher ? undiciFetch : fetch);
+
+
 /**
  * کلید API را پیدا می‌کند — مخصوص بخش «پاسخ هوشمند» توی /ask، عمداً از یک توکن
  * جدا (GEMINI_API_KEY_ASK) استفاده می‌کند تا سؤال‌های کاربران سهمیه‌ی روزانه‌ی
@@ -71,7 +75,7 @@ async function generateContentOnce({ apiKey, model, systemInstruction, input, co
   const dispatcher = getDispatcher();
 
   const up = upstream("gemini", `/v1beta/models/${model}:generateContent`);
-  const res = await retryOnSocketError(() => undiciFetch(up.url, {
+  const res = await retryOnSocketError(() => aiFetch(dispatcher)(up.url, {
     signal: AbortSignal.timeout(timeoutMs || aiTimeoutMs("gemini")),
     method: "POST",
     headers: {
