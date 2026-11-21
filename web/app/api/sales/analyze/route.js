@@ -40,7 +40,7 @@ export async function POST() {
 
   try {
     const salesContext = salesBrainContext().text || [salesContextForBrain(summary), ledgerContextForBrain(loadAccounts().accounts)].filter(Boolean).join("\n");
-    const { answer, ungrounded } = await askBrain({ apiKey: key, question: QUESTION, salesContext, compact: true, attemptMs: 60000, budgetMs: 150000 });
+    const { answer, ungrounded } = await askBrain({ apiKey: key, question: QUESTION, salesContext, compact: true, attemptMs: 100000, budgetMs: 170000 });
     const analysis = { as_of: summary.as_of, generated_at: new Date().toISOString(), text: answer, ungrounded_numbers: ungrounded };
     writeSalesAnalysis(analysis);
     return NextResponse.json({ ok: true, analysis });
