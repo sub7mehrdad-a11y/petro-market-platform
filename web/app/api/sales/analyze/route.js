@@ -10,7 +10,7 @@ import { loadAccounts } from "@/lib/salesLedgerStore";
 // «تحلیل هوشمند عملکرد هفته»: مغز، خلاصه‌ی بدون نام مشتری فروش را کنار دانش کل پلتفرم می‌خواند و نتیجه می‌گیرد.
 // پیش‌فرض خاموش (SALES_AI_ENABLED) چون داده‌ی قراردادها محرمانه است. نتیجه هر هفته یک‌بار ذخیره می‌شود. فقط نقش «بازرگانی».
 export const dynamic = "force-dynamic";
-export const maxDuration = 300; // تا سه تلاش با مهلت ۷۰ ثانیه‌ای
+export const maxDuration = 200;
 
 const QUESTION = `
 عملکرد فروش تیم بازرگانی را تحلیل کن (فقط بر اساس «عملکرد فروش خودمان» و خلاصه‌ی جامع). با همین ساختار، حداکثر ۴۵۰ کلمه:
@@ -40,7 +40,7 @@ export async function POST() {
 
   try {
     const salesContext = salesBrainContext().text || [salesContextForBrain(summary), ledgerContextForBrain(loadAccounts().accounts)].filter(Boolean).join("\n");
-    const { answer, ungrounded } = await askBrain({ apiKey: key, question: QUESTION, salesContext, compact: true });
+    const { answer, ungrounded } = await askBrain({ apiKey: key, question: QUESTION, salesContext, compact: true, attemptMs: 60000, budgetMs: 150000 });
     const analysis = { as_of: summary.as_of, generated_at: new Date().toISOString(), text: answer, ungrounded_numbers: ungrounded };
     writeSalesAnalysis(analysis);
     return NextResponse.json({ ok: true, analysis });

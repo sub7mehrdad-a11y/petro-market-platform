@@ -108,7 +108,8 @@ export function compactDigest(digest) {
 // خطاهای گذرا (تقاضای زیاد، قطع اتصال، مهلت) که تکرار با فاصله جوابشان را می‌دهد
 const TRANSIENT_RE = /\b(429|500|502|503|504)\b|ECONNRESET|UND_ERR|EPIPE|اتصال برقرار نشد|مهلت مجاز|پاسخ خالی/;
 
-export async function askBrain({ apiKey, question, history, retrievedContext, salesContext, compact = false }) {
+// attemptMs: سقف هر تلاش (پرسش تعاملی نباید با AI_TIMEOUT_MS=۱۵۰ثانیه چند دقیقه گیر کند)؛ budgetMs: سقف کل (همه‌ی تلاش‌ها).
+export async function askBrain({ apiKey, question, history, retrievedContext, salesContext, compact = false, attemptMs = null, budgetMs = null }) {
   const fullDigest = getBrainDigest();
   if (!fullDigest) throw new Error("خلاصه‌ی جامع (data/brain/digest.md) پیدا نشد؛ اول scripts/build_brain.py را اجرا کنید.");
 
@@ -122,9 +123,13 @@ export async function askBrain({ apiKey, question, history, retrievedContext, sa
   let answer;
   // «تقاضای زیاد» (۵۰۳) و ۴۲۹ گذرا هستند (در بررسی دیده شد)؛ تا ۳ بار با فاصله تلاش می‌کنیم، بعد خطا می‌رود و
   // route به پاسخ‌دهنده‌ی ساده برمی‌گردد.
+  const started = Date.now();
   for (let attempt = 1; ; attempt++) {
     try {
+      const left = budgetMs ? budgetMs - (Date.now() - started) : null;
+      if (left !== null && left < 8000 && attempt > 1) throw new Error("اتصال برقرار نشد: مهلت مجاز کل پاسخ مغز تمام شد");
       answer = await generateContent({
+        timeoutMs: attemptMs ? (left !== null ? Math.max(8000, Math.min(attemptMs, left)) : attemptMs) : undefined,
         apiKey,
         model: BRAIN_MODEL,
         systemInstruction: system,
