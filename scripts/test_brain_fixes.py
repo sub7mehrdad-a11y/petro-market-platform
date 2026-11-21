@@ -222,7 +222,7 @@ class EndToEnd_RealData(unittest.TestCase):
         r = self.rows["روسیه"]
         self.assertIn("dual_role", r["flags"])
         self.assertIn("from_competitor_doc", r["flags"])
-        self.assertEqual(r["raw"]["import_tons"], 20400)
+        self.assertEqual(r["raw"]["import_tons"], 36700)
         self.assertIn("proximity", [k for k in r["components"]])
         self.assertIn("فاصله/بندر", r["data_gaps"])
         self.assertIn("بازار و رقیب هم‌زمان", self.digest)

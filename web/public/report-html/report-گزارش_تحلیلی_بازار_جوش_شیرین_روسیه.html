@@ -1,47 +1,88 @@
 <!doctype html>
 <html lang="fa" dir="rtl">
 <head>
-<meta name="color-scheme" content="light">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>بازار جوش شیرین روسیه</title>
-<link rel="stylesheet" href="/report-assets/report-fonts.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800;900&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root{
     color-scheme: light;
-    --bg: #F5F8FC;
+    --bg: #F7F3EC;
     --bg-soft: #FFFFFF;
-    --ink: #263B50;
-    --ink-soft: #52687D;
-    --muted: #52687D;
-    --line: #D2DEEB;
-    --line-soft: #E2EEFB;
-    --petrol-900: #193D5B;
-    --petrol-700: #205B8A;
-    --petrol-600: #286DA6;
-    --petrol-500: #478DCA;
-    --petrol-300: #A2C7EC;
-    --petrol-100: #E2EEFB;
-    --petrol-50: #F1F7FD;
-    --copper-700: #1D4A70;
-    --copper-600: #205B8A;
-    --copper-500: #286DA6;
-    --copper-400: #478DCA;
-    --copper-300: #77ACDE;
-    --copper-100: #E2EEFB;
-    --copper-50: #F1F7FD;
-    --good: #176C4C;
-    --good-bg: #EAF7EF;
-    --bad: #A52E4A;
-    --bad-bg: #FFF0F3;
-    --card-shadow: 0 1px 2px rgba(38,59,80,0.05), 0 10px 24px -14px rgba(38,59,80,0.35);
-    --hero-ink: #F1F7FD;
-    --hero-ink-soft: #E2EEFB;
+    --ink: #16232A;
+    --ink-soft: #4B5A61;
+    --muted: #7C8A90;
+    --line: #E4DDD0;
+    --line-soft: #EDE7DA;
+    --petrol-900: #0B2027;
+    --petrol-700: #123742;
+    --petrol-600: #17414A;
+    --petrol-500: #2A5860;
+    --petrol-300: #7FA3A9;
+    --petrol-100: #D7E2E4;
+    --petrol-50: #EAF1F2;
+    --copper-700: #8B4A1C;
+    --copper-600: #AD5F22;
+    --copper-500: #C9762E;
+    --copper-400: #DA8C42;
+    --copper-300: #EAA659;
+    --copper-100: #FAE4C7;
+    --copper-50: #FDF3E7;
+    --good: #2F7D5A;
+    --good-bg: #E7F3EC;
+    --bad: #B4472C;
+    --bad-bg: #FBEAE4;
+    --card-shadow: 0 1px 2px rgba(11,32,39,0.05), 0 10px 24px -14px rgba(11,32,39,0.35);
+    --hero-ink: #EAF1F2;
+    --hero-ink-soft: #D7E2E4;
     padding-top: env(safe-area-inset-top, 0px);
     padding-bottom: env(safe-area-inset-bottom, 0px);
   }
-  
-  
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg: #0B2027;
+      --bg-soft: #10262E;
+      --ink: #EAF1F2;
+      --ink-soft: #C4D3D6;
+      --muted: #8FA4A9;
+      --line: #1E3841;
+      --line-soft: #17313A;
+      --petrol-50: #17313A;
+      --petrol-100: #1E3841;
+      --copper-500: #E0954D;
+      --copper-400: #EAA659;
+      --copper-100: #3A2A17;
+      --copper-50: #2A1F13;
+      --good: #6FCB9E;
+      --good-bg: #12332A;
+      --bad: #E38A73;
+      --bad-bg: #3A2019;
+      --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg: #0B2027;
+    --bg-soft: #10262E;
+    --ink: #EAF1F2;
+    --ink-soft: #C4D3D6;
+    --muted: #8FA4A9;
+    --line: #1E3841;
+    --line-soft: #17313A;
+    --petrol-50: #17313A;
+    --petrol-100: #1E3841;
+    --copper-500: #E0954D;
+    --copper-400: #EAA659;
+    --copper-100: #3A2A17;
+    --copper-50: #2A1F13;
+    --good: #6FCB9E;
+    --good-bg: #12332A;
+    --bad: #E38A73;
+    --bad-bg: #3A2019;
+    --card-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 24px -14px rgba(0,0,0,0.6);
+  }
 
   *{ box-sizing: border-box; }
   html,body{ margin:0; padding:0; }
@@ -63,7 +104,7 @@
 
   .hero{
     background:
-      radial-gradient(1100px 420px at 85% -10%, rgba(40,109,166,0.16), transparent 60%),
+      radial-gradient(1100px 420px at 85% -10%, rgba(201,118,46,0.16), transparent 60%),
       linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
     color: var(--hero-ink);
     padding-block: 52px 40px;
@@ -100,7 +141,7 @@
     padding: 14px 12px;
   }
   .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
-  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#E2EEFB); }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#D7E2E4); }
   .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
   .kpi.good .v{ color: #8FE3BE; }
   .kpi.bad .v{ color: #F0A98F; }
@@ -118,6 +159,7 @@
     border-radius: 7px; padding: 3px 9px; flex-shrink:0;
   }
   h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  :root[data-theme="dark"] h2, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) h2{ color: var(--copper-400); } }
   h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
   p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 74ch; }
   strong{ color: var(--ink); font-weight:700; }
@@ -152,6 +194,7 @@
     padding: 14px 16px; box-shadow: var(--card-shadow);
   }
   .stat .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-size:22px; font-weight:600; color: var(--petrol-700); }
+  :root[data-theme="dark"] .stat .v, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) .stat .v{ color: var(--copper-400); } }
   .stat .l{ font-size:12.5px; color: var(--muted); margin-top:3px; }
   .stat .d{ font-size: 12px; margin-top:6px; font-weight:600; }
   .stat .d.up{ color: var(--good); } .stat .d.down{ color: var(--bad); }
@@ -203,6 +246,7 @@
   footer li{ margin-bottom:6px; }
 
   a{ color: var(--copper-600); }
+  :root[data-theme="dark"] a, @media (prefers-color-scheme:dark){ :root:not([data-theme="light"]) a{ color: var(--copper-400); } }
 </style>
 </head>
 <body>
@@ -215,14 +259,14 @@
     <div class="meta">
       <span>تاریخ تنظیم: شهریور ۱۴۰۵ (سپتامبر ۲۰۲۶)</span>
       <span>کد HS: ۲۸۳۶۳۰ (بی‌کربنات سدیم / جوش شیرین)</span>
-      <span>منبع اصلی: گمرک چین (GACC) و ترکیه (TÜİK) + ITC Trade Map + اطلاعات میدانی</span>
+      <span>منبع اصلی: گمرک ایران (IRICA)، گمرک چین (GACC) و ترکیه (TÜİK) + ITC Trade Map + اطلاعات میدانی</span>
     </div>
     <div class="kpi-row">
-      <div class="kpi"><div class="v">۲۰٬۴۰۰ <small>تن</small></div><div class="l">کل واردات شناخته‌شده ۲۰۲۵</div></div>
-      <div class="kpi good"><div class="v">٪۷۸.۴</div><div class="l">سهم ایران از واردات</div></div>
-      <div class="kpi good"><div class="v">۱۰٬۰۰۰ <small>تن</small></div><div class="l">جوش شیرین پارس به‌تنهایی (~٪۴۹ کل)</div></div>
+      <div class="kpi"><div class="v">۳۶٬۷۰۰ <small>تن</small></div><div class="l">کل واردات شناخته‌شده (سالانه‌شده؛ ایران بر پایه‌ی گمرک)</div></div>
+      <div class="kpi good"><div class="v">٪۸۸</div><div class="l">سهم ایران از واردات</div></div>
+      <div class="kpi good"><div class="v">۱۰٬۰۰۰ <small>تن</small></div><div class="l">جوش شیرین پارس به‌تنهایی (~٪۲۷ کل)</div></div>
       <div class="kpi"><div class="v">۱۹۳٬۹۰۰ <small>تن</small></div><div class="l">تولید داخلی BSK، ۲۰۲۴</div></div>
-      <div class="kpi"><div class="v">۱۱۵-۱۶۰ <small>هزار تن</small></div><div class="l">مصرف ظاهری کل روسیه</div></div>
+      <div class="kpi"><div class="v">۱۱۵-۱۷۵ <small>هزار تن</small></div><div class="l">مصرف ظاهری کل روسیه</div></div>
       <div class="kpi"><div class="v">۳۲۰-۴۰۰</div><div class="l">CIF کریدور خزر، پارس ($/تن)</div></div>
     </div>
   </div>
@@ -235,46 +279,48 @@
     <p>این گزارش بازار جوش شیرین (بی‌کربنات سدیم، کد HS ۲۸۳۶۳۰) در فدراسیون روسیه را از چند زاویه بررسی می‌کند: واردات واقعی کشور (بر مبنای آمار رسمی گمرک هر کشور تأمین‌کننده به‌همراه اطلاعات میدانی)، تولید و مصرف ظاهری داخلی روسیه، مسیرهای لجستیکی رقبا و ایران، و جایگاه رقابتی «جوش شیرین پارس» (FOB پایه ۲۵۰ دلار بر تن از بنادر ایران).</p>
 
     <div class="cards">
-      <div class="card"><span class="tag opp">فرصت</span><p><strong>تسلط موجود:</strong> ایران با ~۱۶٬۰۰۰ تن (~٪۷۸.۴ از کل واردات شناخته‌شده) تأمین‌کننده اصلی است؛ جوش شیرین پارس به‌تنهایی با ~۱۰٬۰۰۰ تن (~٪۴۹ از کل) بزرگ‌ترین بازیگر منفرد شناخته‌شده بازار است.</p></div>
+      <div class="card"><span class="tag opp">فرصت</span><p><strong>تسلط موجود:</strong> ایران با ~۳۲٬۳۰۰ تن در سال (آمار گمرک ایران؛ ~٪۸۸ از کل واردات شناخته‌شده) تأمین‌کننده اصلی است؛ جوش شیرین پارس با ~۱۰٬۰۰۰ تن (~٪۲۷ از کل و ~٪۳۱ از صادرات ایران به روسیه) یکی از بزرگ‌ترین بازیگران منفرد است و سهم دقیق دیگر صادرکنندگان ایرانی (~۲۲٬۳۰۰ تن) باید رصد شود.</p></div>
       <div class="card"><span class="tag opp">فرصت</span><p><strong>مزیت لجستیکی خزر:</strong> بندر انزلی کاملاً خارج از بحران تنگه هرمز است و در حال حاضر کوتاه‌ترین/ایمن‌ترین مسیر صادراتی ایران به روسیه محسوب می‌شود.</p></div>
       <div class="card"><span class="tag opp">فرصت</span><p><strong>آسیب‌پذیری رقبا:</strong> رساندن محصول چین به مسکو نیازمند کانال ریلی گران (۳۵۰-۴۹۰$/تن) است؛ مسیر ترکیه از تابستان ۲۰۲۶ هدف حملات پهپادی مکرر در دریای سیاه قرار گرفته.</p></div>
       <div class="card"><span class="tag risk">هشدار</span><p><strong>رقیب ایرانی دیگر:</strong> توزیع‌کننده «БСК Групп» با برند «БСК-Иран» محصول ایرانی را در بسته‌بندی‌های متنوع و با گواهی‌های EAC/HALAL کنار محصول داخلی BSK عرضه می‌کند — کانالی که باید رصد شود.</p></div>
     </div>
 
-    <div class="callout"><p>با ترکیب تولید داخلی، صادرات و واردات واقعی، مصرف ظاهری داخلی روسیه در محدوده <strong>۱۱۵٬۰۰۰ تا ۱۶۰٬۰۰۰ تن</strong> در سال برآورد می‌شود؛ واردات (۲۰٬۴۰۰ تن) بخش کوچک اما نه ناچیز این بازار (~٪۱۳-۱۸) را تشکیل می‌دهد. جمع‌بندی راهبردی: اولویت پارس نه ورود به یک بازار ناشناخته، بلکه <strong>تثبیت و رشد سهم قابل‌توجه موجود</strong> است — با تکیه بر مزیت لجستیکی و ایمنی کریدور خزر نسبت به آسیب‌پذیری‌های فعلی رقبا.</p></div>
+    <div class="callout"><p>با ترکیب تولید داخلی، صادرات و واردات واقعی، مصرف ظاهری داخلی روسیه در محدوده <strong>۱۱۵٬۰۰۰ تا ۱۷۵٬۰۰۰ تن</strong> در سال برآورد می‌شود؛ واردات (~۳۶٬۷۰۰ تن) بخش کوچک اما قابل‌توجه این بازار (~٪۲۱-۳۲) را تشکیل می‌دهد. جمع‌بندی راهبردی: اولویت پارس نه ورود به یک بازار ناشناخته، بلکه <strong>تثبیت و رشد سهم قابل‌توجه موجود</strong> است — با تکیه بر مزیت لجستیکی و ایمنی کریدور خزر نسبت به آسیب‌پذیری‌های فعلی رقبا.</p></div>
   </section>
 
   <section id="s2">
     <div class="sec-head"><span class="sec-num">۲</span><h2>آمار واردات واقعی و سهم بازار مبادی تأمین</h2></div>
 
     <h3>۲-۱. جدول تأمین‌کنندگان — سال ۲۰۲۵</h3>
-    <p>ارقام چین و ترکیه و ایران مستقیماً از پایگاه آمار رسمی گمرک هر کشور (به‌ترتیب GACC چین و TÜİK ترکیه، از طریق UN Comtrade) استخراج شده‌اند. سایر ارقام از ITC Trade Map (که خود از آمار خودگزارش‌شده کشورهای تأمین‌کننده تغذیه می‌شود) گرفته شده‌اند.</p>
+    <p>ارقام چین و ترکیه مستقیماً از پایگاه آمار رسمی گمرک هر کشور (به‌ترتیب GACC چین و TÜİK ترکیه، از طریق UN Comtrade) و رقم ایران از آمار صادرات گمرک جمهوری اسلامی ایران (IRICA، تعرفه ۲۸۳۶۳۰۹۰) استخراج شده است: ۲۶٬۹۴۵ تن در ۱۰ ماهه‌ی ۱۴۰۴ که برای مقایسه‌ی سالانه در ۱۲/۱۰ ضرب شده است. سایر ارقام از ITC Trade Map (که خود از آمار خودگزارش‌شده کشورهای تأمین‌کننده تغذیه می‌شود) گرفته شده‌اند. روسیه از ۲۰۲۲ آمار تفصیلی واردات منتشر نمی‌کند؛ بنابراین «کل واردات» جمع تأمین‌کنندگان شناخته‌شده و حد پایین بازار است.</p>
     <div class="two-col">
       <div class="table-wrap" style="margin:0">
         <table>
           <thead><tr><th>مبدأ</th><th>حجم (تن)</th><th>سهم از کل</th><th>ارزش (هزار$)</th><th>قیمت واحد ($/تن)</th><th>منبع</th></tr></thead>
           <tbody>
-            <tr><td>ایران (کل، همه صادرکنندگان)</td><td class="num-cell">~۱۶٬۰۰۰</td><td class="num-cell">~٪۷۸.۴</td><td>نامشخص دقیق</td><td class="num-cell">~۲۵۰ (پایه FOB)</td><td>اطلاعات میدانی</td></tr>
-            <tr><td>— که جوش شیرین پارس به‌تنهایی</td><td class="num-cell">~۱۰٬۰۰۰</td><td class="num-cell">~٪۴۹ از کل</td><td>—</td><td>—</td><td>داده داخلی شرکت</td></tr>
-            <tr><td>چین</td><td class="num-cell">۳٬۸۶۸</td><td class="num-cell">~٪۱۸.۹</td><td class="num-cell">۸۳۷.۴</td><td class="num-cell">۲۱۶.۵</td><td>GACC — رسمی</td></tr>
-            <tr><td>مالزی</td><td class="num-cell">۳۸۰</td><td class="num-cell">~٪۱.۹</td><td class="num-cell">۵۷۸</td><td class="num-cell">۱٬۵۲۱</td><td>ITC Trade Map</td></tr>
-            <tr><td>ترکیه</td><td class="num-cell">۵۲</td><td class="num-cell">~٪۰.۳</td><td class="num-cell">۶۴</td><td class="num-cell">۱٬۲۳۰.۸</td><td>TÜİK — رسمی</td></tr>
+            <tr><td>ایران (کل، همه صادرکنندگان)</td><td class="num-cell">~۳۲٬۳۰۰</td><td class="num-cell">~٪۸۸</td><td class="num-cell">~۵٬۸۲۰</td><td class="num-cell">۱۸۰.۱ (اظهاری گمرک)</td><td>گمرک ایران (IRICA) — ۱۰ ماهه‌ی ۱۴۰۴ (۲۶٬۹۴۵ تن)، سالانه‌شده</td></tr>
+            <tr><td>— که جوش شیرین پارس به‌تنهایی</td><td class="num-cell">~۱۰٬۰۰۰</td><td class="num-cell">~٪۲۷ از کل (~٪۳۱ از ایران)</td><td>—</td><td class="num-cell">~۲۵۰ (پایه FOB)</td><td>داده داخلی شرکت (۲۰۲۵)</td></tr>
+            <tr><td>چین</td><td class="num-cell">۳٬۸۶۸</td><td class="num-cell">~٪۱۰.۵</td><td class="num-cell">۸۳۷.۴</td><td class="num-cell">۲۱۶.۵</td><td>GACC — رسمی</td></tr>
+            <tr><td>مالزی</td><td class="num-cell">۳۸۰</td><td class="num-cell">~٪۱.۰</td><td class="num-cell">۵۷۸</td><td class="num-cell">۱٬۵۲۱</td><td>ITC Trade Map</td></tr>
+            <tr><td>ترکیه</td><td class="num-cell">۵۲</td><td class="num-cell">~٪۰.۱</td><td class="num-cell">۶۴</td><td class="num-cell">۱٬۲۳۰.۸</td><td>TÜİK — رسمی</td></tr>
             <tr><td>کره جنوبی</td><td class="num-cell">۲۸</td><td class="num-cell">~٪۰.۱</td><td class="num-cell">۴۹</td><td class="num-cell">۱٬۷۵۰</td><td>ITC Trade Map</td></tr>
-            <tr><td>آلمان</td><td class="num-cell">۴۲</td><td class="num-cell">~٪۰.۲</td><td class="num-cell">۴۲</td><td class="num-cell">۱٬۰۰۰</td><td>ITC Trade Map</td></tr>
-            <tr><td>مصر</td><td class="num-cell">۱۵</td><td class="num-cell">~٪۰.۱</td><td class="num-cell">۸</td><td class="num-cell">۵۳۳</td><td>ITC Trade Map</td></tr>
+            <tr><td>آلمان</td><td class="num-cell">۴۲</td><td class="num-cell">~٪۰.۱</td><td class="num-cell">۴۲</td><td class="num-cell">۱٬۰۰۰</td><td>ITC Trade Map</td></tr>
+            <tr><td>مصر</td><td class="num-cell">۱۵</td><td class="num-cell">~٪۰.۰</td><td class="num-cell">۸</td><td class="num-cell">۵۳۳</td><td>ITC Trade Map</td></tr>
             <tr><td>قزاقستان و ارمنستان</td><td class="num-cell">~۳</td><td class="num-cell">~٪۰.۰</td><td class="num-cell">~۳</td><td class="num-cell">~۱٬۰۰۰</td><td>ITC (تعرفه ٪۰، اوراسیا)</td></tr>
-            <tr class="hl"><td>جمع کل (شناخته‌شده)</td><td class="num-cell">~۲۰٬۴۰۰</td><td class="num-cell">٪۱۰۰</td><td class="num-cell">۶٬۳۶۴.۸</td><td class="num-cell">۳۱۲</td><td>—</td></tr>
+            <tr class="hl"><td>جمع کل (شناخته‌شده)</td><td class="num-cell">~۳۶٬۷۰۰</td><td class="num-cell">٪۱۰۰</td><td class="num-cell">~۷٬۴۰۰</td><td class="num-cell">~۲۰۲</td><td>—</td></tr>
           </tbody>
         </table>
       </div>
       <div class="chart-box" style="margin:0">
         <div class="chart-h" style="height:280px"><canvas id="chartShare"></canvas></div>
-        <div class="cap">ترکیب واردات شناخته‌شده ۲۰۲۵، با تفکیک سهم پارس از کل ایران</div>
+        <div class="cap">ترکیب واردات شناخته‌شده (سالانه‌شده)، با تفکیک سهم پارس از کل ایران</div>
       </div>
     </div>
 
+    <div class="callout copper"><p><strong>نکته‌ی تفسیر آمار ایران:</strong> تعرفه‌ی ۲۸۳۶۳۰۹۰ در گمرک ایران همه‌ی گریدهای «سایر بی‌کربنات سدیم» (خوراکی، خوراک دام و صنعتی) را شامل می‌شود و مقصد اظهارشده در پرونده‌ی صادراتی الزاماً مقصد مصرف نهایی نیست (بخشی از محموله‌های روسیه می‌تواند به قزاقستان و بلاروس ادامه یابد). ارزش‌گذاری گمرکی ایران (~۱۸۰ دلار بر تن) هم پایین‌تر از FOB قراردادی بازار (~۲۲۰ تا ۲۵۰) است و مبنای قیمت‌گذاری این گزارش نیست. از آن‌جا که آمار رسمی روسیه در دسترس نیست، حجم گمرک ایران (۲۶٬۹۴۵ تن در ۱۰ ماه) مبنای محاسبه‌ی سهم ایران در بازار قرار گرفته است.</p></div>
+
     <h3>۲-۲. تحلیل جایگاه ایران</h3>
-    <p>ایران با فاصله زیاد، بزرگ‌ترین منبع تأمین جوش شیرین روسیه در میان همه کشورها است. جوش شیرین پارس با ~۱۰٬۰۰۰ تن (تقریباً برابر یا بیشتر از کل واردات ثبت‌شده از تمام کشورهای دیگر روی هم) به‌تنهایی بزرگ‌ترین تأمین‌کننده منفرد شناخته‌شده این بازار است — عمدتاً از طریق کانال‌های مرزی/دریایی خزر (بندر انزلی و گذرگاه ریلی/زمینی آستارا). چین با قیمت واحد ۲۱۶.۵ دلار بر تن رقیب اصلی از نظر قیمت خام است، اما محدود به بازار شرق روسیه (نزدیک ولادی‌وستوک) است.</p>
+    <p>ایران با فاصله زیاد، بزرگ‌ترین منبع تأمین جوش شیرین روسیه در میان همه کشورها است. ایران با ~۳۲٬۳۰۰ تن در سال حدود ٪۸۸ واردات شناخته‌شده را تأمین می‌کند (حدود ۷ برابر چین). جوش شیرین پارس با ~۱۰٬۰۰۰ تن (~٪۲۷ کل و ~٪۳۱ از صادرات ایران) یکی از بزرگ‌ترین بازیگران منفرد است؛ سهم دقیق بقیه‌ی صادرکنندگان ایرانی (~۲۲٬۳۰۰ تن) روشن نیست و باید از طریق اطلاعات میدانی و رصد گمرک شفاف شود — عمدتاً از طریق کانال‌های مرزی/دریایی خزر (بندر انزلی و گذرگاه ریلی/زمینی آستارا). چین با قیمت واحد ۲۱۶.۵ دلار بر تن رقیب اصلی از نظر قیمت خام است، اما محدود به بازار شرق روسیه (نزدیک ولادی‌وستوک) است.</p>
     <div class="callout bad"><p><strong>هشدار رقابتی:</strong> یک توزیع‌کننده روسی («БСК Групп» — شرکتی متفاوت از تولیدکننده اصلی АО БСК، با نامی عمداً مشابه) از قبل محصولی با برند «БСК-Иран» می‌فروشد: جوش شیرین گرید غذایی با مبدأ ایران، در بسته‌بندی‌های ۲۵/۵۰/۶۵۰/۱۰۰۰/۱۳۰۰ کیلوگرمی و گواهی EAC/RST/ISO/HACCP/HALAL — دقیقاً کنار محصول داخلی АО БСК با همان بسته‌بندی‌ها. یعنی حداقل یک رقیب ایرانی دیگر پیش از این کانال توزیع فعالی در بازار خرده‌فروشی/عمده‌فروشی روسیه ایجاد کرده — نظارت بر این کانال برای حفظ سهم پارس ضروری است.</p></div>
 
     <h3>۲-۳. زمینه بازار مصرف و صنایع مصرف‌کننده</h3>
@@ -295,7 +341,7 @@
       </table>
     </div>
     <div class="callout"><p><strong>به‌روزرسانی (۷ سپتامبر ۲۰۲۶):</strong> در ژوئن ۲۰۲۵ دولت روسیه ٪۵۷.۴۳ سهام BSK را به هلدینگ Roskhim فروخت (٪۱۱.۷ نیز به امانت باشقیرستان رفت). با این حال، درآمد ۲۰۲۵ خود BSK با افت ٪۴.۵ به ۵۸.۲۴ میلیارد روبل رسید (از ۶۱.۰۱ میلیارد در ۲۰۲۴) — در حالی که تولید بی‌کربنات سدیم آن در ۲۰۲۴ رشد ٪۲۰ داشت. کارخانه سودای کریمه نیز راکد ماند: درآمد ۲۰۲۵ فقط ٪۰.۹ رشد کرد و ظرفیت جوش شیرین همچنان در همان سطح قدیمی (~۲۰ هزار تن/سال) باقی است.</p></div>
-    <p>نتیجه‌گیری: وجود یک تولیدکننده داخلی مسلط با دسترسی کامل به مواد اولیه بومی (سنگ آهک و نمک) به این معناست که هیچ کف قیمتی ناشی از وابستگی به واردات در روسیه وجود ندارد. با این حال، این خودکفایی مانع از وجود یک بازار واردات واقعی و قابل‌توجه (~۲۰٬۴۰۰ تن، عمدتاً ایرانی) در کنار تولید داخلی نشده است.</p>
+    <p>نتیجه‌گیری: وجود یک تولیدکننده داخلی مسلط با دسترسی کامل به مواد اولیه بومی (سنگ آهک و نمک) به این معناست که هیچ کف قیمتی ناشی از وابستگی به واردات در روسیه وجود ندارد. با این حال، این خودکفایی مانع از وجود یک بازار واردات واقعی و قابل‌توجه (~۳۶٬۷۰۰ تن، حدود ٪۸۸ ایرانی) در کنار تولید داخلی نشده است.</p>
   </section>
 
   <section id="s4">
@@ -450,11 +496,11 @@
         <tbody>
           <tr><td>تولید داخلی (BSK، ۲۰۲۴)</td><td class="num-cell">۱۹۳٬۹۰۰</td><td>اعلام مستقیم شرکت (Interfax/RBC)</td></tr>
           <tr><td>صادرات BSK (بیش از ٪۴۰ تولید)</td><td class="num-cell">~۷۸٬۰۰۰+</td><td>اعلام مستقیم شرکت</td></tr>
-          <tr><td>واردات شناخته‌شده (۲۰۲۵)</td><td class="num-cell">~۲۰٬۴۰۰</td><td>آمار گمرک چین/ترکیه + اطلاعات بازار ایران</td></tr>
+          <tr><td>واردات شناخته‌شده (سالانه‌شده)</td><td class="num-cell">~۳۶٬۷۰۰</td><td>آمار گمرک ایران (۱۰ ماهه‌ی ۱۴۰۴، سالانه‌شده) + گمرک چین/ترکیه + ITC</td></tr>
           <tr><td>— بخش غذایی (نانوایی/شیرینی‌جات)</td><td class="num-cell">۱۰٬۰۰۰ – ۳۰٬۰۰۰</td><td>تولید صنعت نان/شیرینی روسیه × نرخ مصرف استاندارد ٪۰.۵-۱.۲</td></tr>
           <tr><td>— بخش خوراک دام (بافر شکمبه)</td><td class="num-cell">~۶۰٬۰۰۰ (محتاطانه)</td><td>جمعیت گاو شیری روسیه (۷.۳ میلیون رأس) × نرخ مصرف استاندارد جهانی</td></tr>
           <tr><td>— بخش صنعتی/دارویی/سایر</td><td>باقیمانده، کمّی‌نشده</td><td>—</td></tr>
-          <tr class="hl"><td>مصرف ظاهری کل روسیه</td><td class="num-cell">۱۱۵٬۰۰۰ – ۱۶۰٬۰۰۰</td><td>تولید + واردات − صادرات، جمع‌بندی سه روش</td></tr>
+          <tr class="hl"><td>مصرف ظاهری کل روسیه</td><td class="num-cell">۱۱۵٬۰۰۰ – ۱۷۵٬۰۰۰</td><td>تولید + واردات − صادرات، جمع‌بندی سه روش</td></tr>
         </tbody>
       </table>
     </div>
@@ -470,7 +516,7 @@
       <table>
         <thead><tr><th>کشور/تأمین‌کننده</th><th>حجم (تن)</th><th>FOB مبدأ ($/تن)</th><th>حمل و بیمه تا مقصد</th><th>CIF تمام‌شده ($/تن)</th></tr></thead>
         <tbody>
-          <tr><td>ایران (کل، عمدتاً کریدور خزر)</td><td class="num-cell">~۱۶٬۰۰۰</td><td class="num-cell">۲۵۰</td><td class="num-cell">۷۰ – ۱۵۰</td><td class="num-cell">۳۲۰ – ۴۰۰</td></tr>
+          <tr><td>ایران (کل، عمدتاً کریدور خزر)</td><td class="num-cell">~۳۲٬۳۰۰</td><td class="num-cell">۲۵۰</td><td class="num-cell">۷۰ – ۱۵۰</td><td class="num-cell">۳۲۰ – ۴۰۰</td></tr>
           <tr><td>چین (فله، ولادی‌وستوک)</td><td class="num-cell">۳٬۸۶۸</td><td class="num-cell">۱۸۰</td><td>کوتاه (مرز/دریای نزدیک)</td><td class="num-cell">۲۱۶.۵ (رسمی)</td></tr>
           <tr><td>چین (رسیده به مسکو، ریل)</td><td>—</td><td class="num-cell">۱۸۰</td><td class="num-cell">۱۸۰ – ۲۳۰</td><td class="num-cell">۳۵۰ – ۴۲۰</td></tr>
           <tr><td>ترکیه — Kazan Soda (نووروسیسک)</td><td class="num-cell">۵۲</td><td class="num-cell">۳۰۰ – ۳۲۰</td><td class="num-cell">۳۰-۶۰ عادی / ۷۰-۱۲۰ پرریسک</td><td class="num-cell">۳۳۰-۳۸۰ / ۳۷۰-۴۴۰</td></tr>
@@ -489,7 +535,7 @@
     <div class="sec-head"><span class="sec-num">۱۱</span><h2>جمع‌بندی و توصیه‌های اجرایی</h2></div>
     <h3>فرصت‌ها</h3>
     <div class="cards">
-      <div class="card"><span class="tag opp">۱</span><p>ایران، و به احتمال زیاد جوش شیرین پارس، هم‌اکنون تأمین‌کننده اصلی و مسلط بازار واردات روسیه است.</p></div>
+      <div class="card"><span class="tag opp">۱</span><p>ایران (حدود ٪۸۸ واردات شناخته‌شده؛ ~۳۲٬۳۰۰ تن در سال بر پایه‌ی گمرک ایران) هم‌اکنون تأمین‌کننده اصلی و مسلط بازار واردات روسیه است؛ جوش شیرین پارس با ~۱۰٬۰۰۰ تن یکی از بزرگ‌ترین بازیگران ایرانی است.</p></div>
       <div class="card"><span class="tag opp">۲</span><p>کریدور خزر/INSTC کوتاه، رو به رشد و در حال حاضر تنها مسیر کاملاً ایمن صادرات دریایی ایران به روسیه است.</p></div>
       <div class="card"><span class="tag opp">۳</span><p>آسیب‌پذیری فعلی هر دو رقیب اصلی (کانال ریلی گران چین برای مسکو؛ ریسک پهپادی دریای سیاه ترکیه) فرصتی برای جذب سهم بیشتر بازار فراهم می‌کند.</p></div>
       <div class="card"><span class="tag opp">۴</span><p>احتمال معافیت یا کاهش تعرفه ٪۵ استاندارد از طریق موافقت‌نامه تجارت آزاد اوراسیا-ایران.</p></div>
@@ -508,6 +554,7 @@
 <footer class="wrap">
   <h3>منابع</h3>
   <ol>
+    <li>گمرک جمهوری اسلامی ایران (IRICA، irica.ir) — صادرات ایران به روسیه، تعرفه ۲۸۳۶۳۰۹۰، ۱۰ ماهه‌ی ۱۴۰۴: ۲۶٬۹۴۵ تن، ۴٫۸۵ میلیون دلار</li>
     <li>گمرک چین (GACC) از طریق UN Comtrade — صادرات چین به روسیه، HS ۲۸۳۶۳۰، ۲۰۲۵</li>
     <li>آمار ترکیه (TÜİK) از طریق UN Comtrade — صادرات ترکیه به روسیه، HS ۲۸۳۶۳۰، ۲۰۲۵</li>
     <li>ITC Trade Map — فایل‌های آمار واردات/صادرات روسیه، ۲۰۲۵ (ارائه‌شده توسط کارفرما)</li>
@@ -536,7 +583,7 @@
   </ol>
 </footer>
 
-<script src="/report-assets/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
 <script>
 (function(){
   "use strict";
@@ -555,8 +602,8 @@
     return {
       ink: cssVar('--ink-soft'),
       grid: cssVar('--line-soft'),
-      petrol: '#536779',
-      petrolDark: '#193D5B',
+      petrol: cssVar('--petrol-500'),
+      petrolDark: cssVar('--petrol-700'),
       copper: cssVar('--copper-500'),
       copperDark: cssVar('--copper-600'),
       bad: cssVar('--bad'),
@@ -581,9 +628,9 @@
     charts.push(new Chart(document.getElementById('chartShare'), {
       type: 'doughnut',
       data: {
-        labels: ['جوش شیرین پارس — ۱۰٬۰۰۰ تن', 'سایر صادرکنندگان ایرانی — ۶٬۰۰۰ تن', 'چین — ۳٬۸۶۸ تن', 'سایر مبادی — ۵۳۲ تن'],
+        labels: ['جوش شیرین پارس — ۱۰٬۰۰۰ تن', 'سایر صادرکنندگان ایرانی — ~۲۲٬۳۰۰ تن', 'چین — ۳٬۸۶۸ تن', 'سایر مبادی — ~۵۲۰ تن'],
         datasets: [{
-          data: [10000, 6000, 3868, 532],
+          data: [10000, 22335, 3868, 520],
           backgroundColor: [c.copper, c.copper + '66', c.petrolDark, c.petrol + '55'],
           borderColor: c.bg, borderWidth: 3
         }]
@@ -592,7 +639,7 @@
         responsive: true, maintainAspectRatio: false, cutout: '60%',
         plugins: {
           legend: { position: 'bottom', rtl: true, labels: { color: c.ink, usePointStyle: true, boxWidth: 8, font: { size: 11.5 } } },
-          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return ctx.label + ' (' + toFa(Math.round(ctx.parsed/204)/10) + '٪)'; } } }
+          tooltip: { rtl: true, textDirection: 'rtl', callbacks: { label: function(ctx){ return ctx.label + ' (' + toFa(Math.round(ctx.parsed/36.72)/10) + '٪)'; } } }
         }
       }
     }));
@@ -676,7 +723,7 @@
       data: {
         labels: ['تولید داخلی BSK (۲۰۲۴)', 'واردات شناخته‌شده (۲۰۲۵)', 'مصرف ظاهری کل (برآورد سه‌روشی)'],
         datasets: [{
-          data: [[0,193900],[0,20400],[115000,160000]],
+          data: [[0,193900],[0,36700],[115000,175000]],
           backgroundColor: [c.petrolDark, c.copper, c.petrol + 'aa'],
           borderRadius: 6
         }]

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-21T13:42:48+00:00",
+  "generated_at": "2026-11-21T17:22:42+00:00",
   "digest_version": "s1-2026-11-06",
   "config": "data/brain/scoring_config.json",
   "weights": {
@@ -74,6 +74,72 @@
       "rank": 1
     },
     {
+      "country": "روسیه",
+      "score": 70.7,
+      "tier": "A",
+      "components": {
+        "market_size": 0.9,
+        "price_room": 0.61,
+        "competition": 1.0,
+        "proximity": 0.3,
+        "growth": 0.17,
+        "tariff_and_union": 0.97
+      },
+      "notes": {
+        "market_size": "واردات حدود 36,700 تن (گزارش اختصاصی)",
+        "price_room": "ارزش واحد واردات 353 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
+        "competition": "سهم ترکیه+چین 11٪، سهم ایران 88٪ (منبع: تفکیک گزارش اختصاصی)",
+        "proximity": "فاصله نامشخص (امتیاز خنثی)",
+        "growth": "رشد ۵‌ساله‌ی حجم واردات +2٪",
+        "tariff_and_union": "تعرفه‌ی متوسط 0.42٪؛ عضو اوراسیا (EAEU)"
+      },
+      "strengths": [
+        "بازار بزرگ",
+        "رقابت کم",
+        "تعرفه/توافق تجاری مناسب"
+      ],
+      "weaknesses": [
+        "رشد کند"
+      ],
+      "flags": [
+        "dual_role",
+        "from_competitor_doc"
+      ],
+      "data_gaps": [
+        "فاصله/بندر"
+      ],
+      "raw": {
+        "import_tons": 36700,
+        "distance_km": null,
+        "unit_value_usd": 353.0
+      },
+      "pool": {
+        "companies": 122,
+        "with_email": 117,
+        "grades": [
+          [
+            "خوراکی",
+            56
+          ],
+          [
+            "خوراکی (E500ii)، صنعتی، تصفیه آب و شوینده",
+            1
+          ],
+          [
+            "خوراکی (E500ii / GOST)، صنعتی، دارویی",
+            1
+          ],
+          [
+            "خوراکی (E500)، دام و طیور، صنعتی",
+            1
+          ]
+        ],
+        "sent": 0
+      },
+      "pool_depth": 1.0,
+      "rank": 2
+    },
+    {
       "country": "ازبکستان",
       "score": 70.2,
       "tier": "A",
@@ -134,7 +200,7 @@
         "sent": 8
       },
       "pool_depth": 0.28,
-      "rank": 2
+      "rank": 3
     },
     {
       "country": "امارات",
@@ -195,7 +261,7 @@
         "sent": 0
       },
       "pool_depth": 1.0,
-      "rank": 3
+      "rank": 4
     },
     {
       "country": "عراق",
@@ -256,7 +322,7 @@
         "sent": 27
       },
       "pool_depth": 0.27,
-      "rank": 4
+      "rank": 5
     },
     {
       "country": "هند",
@@ -311,72 +377,6 @@
           [
             "Food Grade",
             3
-          ]
-        ],
-        "sent": 0
-      },
-      "pool_depth": 1.0,
-      "rank": 5
-    },
-    {
-      "country": "روسیه",
-      "score": 66.9,
-      "tier": "A",
-      "components": {
-        "market_size": 0.77,
-        "price_room": 0.61,
-        "competition": 1.0,
-        "proximity": 0.3,
-        "growth": 0.17,
-        "tariff_and_union": 0.97
-      },
-      "notes": {
-        "market_size": "واردات حدود 20,400 تن (گزارش اختصاصی)",
-        "price_room": "ارزش واحد واردات 353 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
-        "competition": "سهم ترکیه+چین 19٪، سهم ایران 78٪ (منبع: تفکیک گزارش اختصاصی)",
-        "proximity": "فاصله نامشخص (امتیاز خنثی)",
-        "growth": "رشد ۵‌ساله‌ی حجم واردات +2٪",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.42٪؛ عضو اوراسیا (EAEU)"
-      },
-      "strengths": [
-        "بازار بزرگ",
-        "رقابت کم",
-        "تعرفه/توافق تجاری مناسب"
-      ],
-      "weaknesses": [
-        "رشد کند"
-      ],
-      "flags": [
-        "dual_role",
-        "from_competitor_doc"
-      ],
-      "data_gaps": [
-        "فاصله/بندر"
-      ],
-      "raw": {
-        "import_tons": 20400,
-        "distance_km": null,
-        "unit_value_usd": 353.0
-      },
-      "pool": {
-        "companies": 122,
-        "with_email": 117,
-        "grades": [
-          [
-            "خوراکی",
-            56
-          ],
-          [
-            "خوراکی (E500ii)، صنعتی، تصفیه آب و شوینده",
-            1
-          ],
-          [
-            "خوراکی (E500ii / GOST)، صنعتی، دارویی",
-            1
-          ],
-          [
-            "خوراکی (E500)، دام و طیور، صنعتی",
-            1
           ]
         ],
         "sent": 0
