@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta name="color-scheme" content="light">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>گزارش جامع تحلیلی بازار واردات جوش شیرین کشور کویت</title>
+<link rel="stylesheet" href="/report-assets/report-fonts.css">
+<style>
+  :root{
+    color-scheme: light;
+    --bg: #F5F8FC;
+    --bg-soft: #FFFFFF;
+    --ink: #263B50;
+    --ink-soft: #52687D;
+    --muted: #52687D;
+    --line: #D2DEEB;
+    --line-soft: #E2EEFB;
+    --petrol-900: #193D5B;
+    --petrol-700: #205B8A;
+    --petrol-600: #286DA6;
+    --petrol-500: #478DCA;
+    --petrol-300: #A2C7EC;
+    --petrol-100: #E2EEFB;
+    --petrol-50: #F1F7FD;
+    --copper-700: #1D4A70;
+    --copper-600: #205B8A;
+    --copper-500: #286DA6;
+    --copper-400: #478DCA;
+    --copper-300: #77ACDE;
+    --copper-100: #E2EEFB;
+    --copper-50: #F1F7FD;
+    --good: #176C4C;
+    --good-bg: #EAF7EF;
+    --bad: #A52E4A;
+    --bad-bg: #FFF0F3;
+    --card-shadow: 0 1px 2px rgba(38,59,80,0.05), 0 10px 24px -14px rgba(38,59,80,0.35);
+    --hero-ink: #F1F7FD;
+    --hero-ink-soft: #E2EEFB;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  
+  
+
+  *{ box-sizing: border-box; }
+  html,body{ margin:0; padding:0; }
+  body{
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Vazirmatn", Tahoma, sans-serif;
+    direction: rtl;
+    text-align: right;
+    padding-inline: 0;
+    line-height: 1.85;
+    font-size: 16px;
+  }
+  .num{ font-family:"Fira Code","Vazirmatn",monospace; font-variant-numeric: tabular-nums; }
+  img{ max-width:100%; }
+  [hidden]{ display:none !important; }
+
+  .wrap{ max-width: 1040px; margin: 0 auto; padding-inline: 20px; }
+
+  .hero{
+    background:
+      radial-gradient(1100px 420px at 85% -10%, rgba(40,109,166,0.16), transparent 60%),
+      linear-gradient(160deg, var(--petrol-900) 0%, var(--petrol-700) 100%);
+    color: var(--hero-ink);
+    padding-block: 52px 40px;
+    border-bottom: 4px solid var(--copper-500);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size: 13px; letter-spacing: .04em; font-weight:600;
+    color: var(--copper-300);
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    padding: 5px 14px; border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1{
+    font-family:"Vazirmatn"; font-weight:800; font-size: clamp(24px,3.6vw,36px);
+    margin: 0 0 12px; text-wrap: balance; letter-spacing: -0.01em;
+  }
+  .hero p.lead{
+    color: var(--hero-ink-soft); font-size: 17px; max-width: 66ch; margin: 0 0 22px;
+  }
+  .hero .meta{ color: var(--petrol-300); font-size: 13.5px; display:flex; gap:18px; flex-wrap:wrap; }
+
+  .kpi-row{
+    display:grid; grid-template-columns: repeat(4, 1fr); gap:10px;
+    margin-top: 30px;
+  }
+  @media (max-width:700px){ .kpi-row{ grid-template-columns: repeat(2, 1fr); } }
+  .kpi{
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.10);
+    border-radius: 12px;
+    padding: 14px 12px;
+  }
+  .kpi .v{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; font-weight:600; font-size: 20px; color:#fff; }
+  .kpi .v small{ font-size:12px; font-weight:500; color:var(--petrol-200,#E2EEFB); }
+  .kpi .l{ font-size: 12px; color: var(--petrol-300); margin-top: 4px; }
+
+  main{ padding-block: 44px 30px; }
+  section{ margin-bottom: 46px; }
+  .sec-head{
+    display:flex; align-items:baseline; gap:12px;
+    border-bottom: 2px solid var(--line);
+    padding-bottom: 10px; margin-bottom: 18px;
+  }
+  .sec-num{
+    font-family:"Fira Code"; font-weight:600; font-size:13px;
+    color: var(--bg-soft); background: var(--copper-500);
+    border-radius: 7px; padding: 3px 9px; flex-shrink:0;
+  }
+  h2{ font-size: 21px; font-weight:800; margin:0; color: var(--petrol-700); }
+  h3{ font-size: 16.5px; font-weight:700; margin: 26px 0 10px; color: var(--petrol-600); }
+  p{ margin: 0 0 12px; color: var(--ink-soft); max-width: 76ch; }
+  strong{ color: var(--ink); font-weight:700; }
+  ul.plain{ margin:0 0 12px; padding-inline-start:0; list-style:none; }
+  ul.plain li{ position:relative; padding-inline-end:18px; margin-bottom:8px; color:var(--ink-soft); max-width:76ch; }
+  ul.plain li::before{ content:'•'; position:absolute; right:0; top:0; color:var(--copper-500); font-weight:700; }
+
+  .callout{
+    background: var(--petrol-50); border: 1px solid var(--line-soft);
+    border-inline-start: 4px solid var(--petrol-500);
+    border-radius: 10px; padding: 14px 16px; margin: 16px 0;
+  }
+  .callout p{ margin:0; color: var(--ink-soft); max-width: none; }
+  .callout p + p{ margin-top:8px; }
+  .callout.copper{ border-inline-start-color: var(--copper-500); background: var(--copper-50); }
+
+  .cards{ display:grid; grid-template-columns: repeat(2,1fr); gap:14px; margin: 18px 0; }
+  @media (max-width:700px){ .cards{ grid-template-columns: 1fr; } }
+  .card{
+    background: var(--bg-soft); border:1px solid var(--line);
+    border-radius: 12px; padding: 16px 18px; box-shadow: var(--card-shadow);
+  }
+  .card .tag{
+    display:inline-block; font-size:11.5px; font-weight:700; letter-spacing:.02em;
+    padding: 3px 10px; border-radius:999px; margin-bottom:10px;
+    background: var(--petrol-50); color: var(--petrol-700);
+  }
+  .card .tag.bad{ background: var(--bad-bg); color: var(--bad); }
+  .card .tag.good{ background: var(--good-bg); color: var(--good); }
+  .card p{ margin:0; font-size: 14.5px; }
+  .card h4{ margin:0 0 6px; font-size:14.5px; color:var(--ink); }
+
+  .chart-box{
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px;
+    padding: 18px 18px 8px; margin: 18px 0; box-shadow: var(--card-shadow);
+  }
+  .chart-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:6px; padding-bottom:10px; }
+  .chart-h{ position:relative; width:100%; }
+
+  .table-wrap{ overflow-x:auto; border:1px solid var(--line); border-radius: 12px; margin: 14px 0; box-shadow: var(--card-shadow); }
+  table{ width:100%; border-collapse: collapse; font-size: 13.5px; min-width: 640px; }
+  thead th{
+    background: var(--petrol-700); color: #fff; font-weight:700; text-align:right;
+    padding: 10px 12px; white-space: nowrap; font-size: 13px;
+  }
+  tbody td{ padding: 9px 12px; border-top: 1px solid var(--line-soft); color: var(--ink-soft); vertical-align:top; }
+  tbody tr:nth-child(even){ background: var(--petrol-50); }
+  tbody tr.hl td{ background: var(--copper-50); font-weight:700; color: var(--ink); }
+  tbody td:first-child{ font-weight:700; color: var(--ink); white-space:nowrap; }
+  .num-cell{ font-family:"Fira Code"; font-variant-numeric:tabular-nums; }
+
+  figure{ margin: 16px 0; }
+  figure img{ border-radius: 12px; border: 1px solid var(--line); display:block; box-shadow: var(--card-shadow); width:100%; }
+  figcaption{ font-size: 12.5px; color: var(--muted); margin-top: 8px; }
+
+  .pill-row{ display:flex; gap:10px; flex-wrap:wrap; margin: 14px 0; }
+  .pill{
+    display:flex; flex-direction:column; align-items:center; gap:2px;
+    background: var(--bg-soft); border:1px solid var(--line); border-radius: 12px;
+    padding: 12px 20px; min-width: 120px; box-shadow: var(--card-shadow); flex:1;
+  }
+  .pill .p{ font-family:"Fira Code"; font-size:20px; font-weight:700; color:var(--petrol-700); }
+  .pill .p.bad{ color: var(--bad); }
+  .pill .p.good{ color: var(--good); }
+  .pill .n{ font-size:12.5px; color:var(--muted); margin-top:2px; text-align:center; }
+
+  footer{
+    border-top:1px solid var(--line); margin-top: 30px; padding-block: 26px 46px;
+    color: var(--muted); font-size: 13px;
+  }
+  footer p{ margin:0 0 8px; max-width:none; }
+
+  a{ color: var(--copper-600); }
+
+  p.src{ font-size:12.5px; color:var(--muted); margin-top:-4px; }
+  .tcap{ font-weight:800; font-size:15px; color:var(--petrol-700); margin:26px 0 8px; }
+  .t-wrap tbody td:first-child{ white-space:normal; min-width:150px; }
+  .t-wrap table{ min-width: 760px; }
+  .grade{ font-size:12px; color:var(--muted); font-weight:600; white-space:nowrap; }
+  sup.cite{ font-size:11px; line-height:0; margin-inline:1px; }
+  sup.cite a{ text-decoration:none; font-weight:700; color:var(--copper-600); }
+  .formula{ direction:rtl; font-size:16px; text-align:center; }
+  .formula p{ text-align:center; font-weight:700; color:var(--ink); }
+  td.st-ok{ background:var(--good-bg) !important; color:var(--good) !important; font-weight:700; }
+  td.st-unk{ background:#FFF3CF !important; color:#8A6410 !important; font-weight:700; }
+  td.st-bad{ background:var(--bad-bg) !important; color:var(--bad) !important; font-weight:700; }
+  
+  ol.srcs{ list-style:none; padding:0; margin:0; counter-reset:s; }
+  ol.srcs li{ position:relative; padding-inline-start:44px; margin-bottom:9px; font-size:14px; color:var(--ink-soft); max-width:none; }
+  ol.srcs li .n{ position:absolute; right:0; top:0; font-family:"Fira Code"; font-weight:600; font-size:12px;
+    background:var(--petrol-50); color:var(--petrol-700); border:1px solid var(--line-soft); border-radius:7px; padding:1px 8px; }
+  ol.srcs li a{ direction:ltr; unicode-bidi:embed; word-break:break-all; }
+
+  .tcap{ font-weight:800; font-size:15px; color:var(--petrol-700); margin:26px 0 8px; }
+  .t-wrap tbody td:first-child{ white-space:normal; min-width:150px; }
+  .t-wrap table{ min-width: 760px; }
+  td.neg{ background:var(--bad-bg) !important; color:var(--bad) !important; font-weight:700; }
+  td.pos{ background:var(--good-bg) !important; color:var(--good) !important; font-weight:700; }
+  ul.pts{ margin:10px 0 14px; padding-inline-start:22px; }
+  ul.pts li{ margin-bottom:8px; max-width:none; }
+  ol.srcs{ list-style:none; padding:0; margin:0; }
+  ol.srcs li{ position:relative; padding-inline-start:44px; margin-bottom:9px; font-size:14px; color:var(--ink-soft); max-width:none; }
+  ol.srcs li .n{ position:absolute; right:0; top:0; font-family:"Fira Code"; font-weight:600; font-size:12px;
+    background:var(--petrol-50); color:var(--petrol-700); border:1px solid var(--line-soft); border-radius:7px; padding:1px 8px; }
+  ol.srcs li a{ direction:ltr; unicode-bidi:embed; word-break:break-all; }
+
+  .map-box{ background: var(--bg-soft); border:1px solid var(--line); border-radius: 14px; padding: 12px; margin: 18px 0; box-shadow: var(--card-shadow); }
+  .map-box .cap{ font-size:12.5px; color:var(--muted); text-align:center; margin-top:8px; }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="wrap">
+    <span class="eyebrow">تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس</span>
+    <h1>گزارش جامع تحلیلی بازار واردات جوش شیرین کشور کویت</h1>
+    <p class="lead">ارزیابی قیمت‌های FOB مبدأ، CIF بندر شویخ و رقابت‌پذیری «جوش شیرین پارس»</p>
+    <div class="meta"><span>کد تعرفه 283630 در نظام هماهنگ شده (HS: نظام جهانی طبقه‌بندی کالا برای تجارت)</span><span>مبنای زمانی: سال میلادی</span><span>آبان ۱۴۰۵ (نوامبر ۲۰۲۶)</span></div>
+    <div class="kpi-row"><div class="kpi"><div class="v">۱٬۲۱۳ <small>تن</small></div><div class="l">واردات ثبت‌شده ۲۰۲۵ (۱٬۱۳۹ تن در ۲۰۲۳؛ کف مستند ≈ ۹۹۷ تن)</div></div><div class="kpi"><div class="v">≈ ۱٬۶۰۰ <small>تن</small></div><div class="l">برآورد مدلی مصرف سالانه (دامنه ۱٬۳۰۰ تا ۲٬۲۰۰؛ ≈ ۳۳۰ گرم برای هر نفر؛ آمار رسمی نیست)</div></div><div class="kpi"><div class="v">۲۰۴ / ۱۱۰ / ۰ <small>تن</small></div><div class="l">صادرات ایران به کویت در ۱۴۰۲ / ۱۴۰۳ / ده‌ماهه ۱۴۰۴ (گمرک ایران)</div></div><div class="kpi"><div class="v">۲۹۰–۳۰۵ <small>دلار</small></div><div class="l">هزینه رسیده‌ی پارس از خرمشهر به انبار شویخ (هر تن؛ سناریوی پیشنهاد ۲۵۵ دلار FOB)</div></div></div>
+  </div>
+</div>
+
+<main class="wrap">
+
+<section id="s1">
+<div class="sec-head"><span class="sec-num">۱</span><h2>چکیده اجرایی</h2></div>
+<ul class="pts">
+<li>واردات ثبت‌شده کویت در سال ۲۰۲۳ برابر ۱٬۱۳۹ تن به ارزش ۹۴۵ هزار دلار بود. در سال ۲۰۲۵ وزن خالص گزارش‌شده حدود ۱٬۲۱۳ تن و ارزش ۵۲۴ هزار دلار است. میانگین سال‌های دارای آمار گزارش‌شده (۲۰۱۶ تا ۲۰۲۱ و ۲۰۲۳) حدود 997 تن است. این عدد کف مستند بازار است.</li>
+<li>برآورد مدلی مصرف برابر ۱٬۶۰۰ تن در سال (دامنه ۱٬۳۰۰ تا ۲٬۲۰۰ تن) است؛ معادل حدود ۳۳۰ گرم برای هر نفر از ۴٫۸۸ میلیون نفر جمعیت. این رقم آمار رسمی نیست؛ از دو روش مستقل به دست آمده است: مقایسه سرانه با کشورهای ثروتمند خلیج فارس و برآورد از پایین به بالا با افزودن ثبت‌نشده‌های درون‌اتحادیه‌ای و بکینگ پودر به واردات ثبت‌شده. دلیل پایین‌بودن واردات ثبت‌شده کویت (سرانه حدود ۲۴۰ گرم) این است که کالا در نخستین بندر ورودی اتحادیه گمرکی خلیج فارس (امارات و عربستان) ترخیص و سپس آزادانه جابه‌جا می‌شود و در آمار واردات کویت نمی‌آید.</li>
+<li>کویت تولیدکننده داخلی بی‌کربنات سدیم ندارد و تمام نیاز را وارد می‌کند. تأمین‌کنندگان اصلی در ۲۰۲۵ بر پایه حجم چین (۵۸۹ تن)، پاکستان (۱۷۵ تن)، ترکیه (۱۶۷ تن)، هند (۱۱۴ تن) و آلمان (۷۹ تن) هستند. ایران ۵۰ تن ثبت شده است.</li>
+<li>تعرفه گمرکی واردات 5 درصد بر پایه ارزش CIF (قیمت کالا به‌علاوه بیمه و کرایه تا مقصد) است. دارو و کالاهای اساسی غذایی معاف‌اند.</li>
+<li>مصرف گرید دارویی برای همودیالیز (دیالیز خونی) بر پایه حدود ۲٬۱۵۶ بیمار و ۱۵۶ جلسه در سال، حدود ۲۲۰ تن در سال (دامنه ۱۹۰ تا ۲۴۰ تن) برآورد می‌شود. بخش بزرگی از این نیاز در قالب کارتریج و غلیظ آماده وارد می‌شود و در تعرفه 283630 ثبت نمی‌شود.</li>
+<li>مصرف گرید دامی در سناریوهای محاسباتی بین ۱۹۵ و ۵۰۰ تن است؛ تأمین آن عمدتاً از طریق پیش‌مخلوط‌ها و خوراک آماده انجام می‌شود.</li>
+<li>در خرده‌فروشی، قیمت بسته‌های پایه بین ۱٫۴۵ و ۴٫۳۳ دینار کویت برای هر کیلوگرم (حدود ۴٫۷ تا ۱۴٫۱ دلار) است و بسته‌های برندهای خارجی تا ۱۲ دینار می‌رسد.</li>
+<li>بر پایه آمار رسمی گمرک ایران، صادرات بی‌کربنات سدیم (تعرفه ۲۸۳۶۳۰) به کویت در سال شمسی ۱۴۰۲ (حدود ۲۰۲۳) برابر ۲۰۴ تن به ارزش ۳۰٫۴ هزار دلار، همگی از منطقه آزاد اروند-خرمشهر، و در ۱۴۰۳ (حدود ۲۰۲۴) برابر ۱۱۰ تن به ارزش ۲۱ هزار دلار از گمرک‌های مراغه و مشهد بوده است. در ده ماه نخست ۱۴۰۴ (حدود مارس ۲۰۲۵ تا ژانویه ۲۰۲۶) هیچ محموله‌ای به کویت ثبت نشده است. در همین دوره کل صادرات ایران ۵۳٬۶۱۷ تن به ارزش ۹٫۷۲ میلیون دلار (میانگین ۱۸۱ دلار بر تن) به ۲۰ کشور بوده است؛ بزرگ‌ترین مقصدها روسیه (۲۶٬۹۶۵ تن)، عراق (۱۲٬۱۵۷ تن) و افغانستان (۳٬۴۸۱ تن) و سهم امارات ۸۰۰ تن است.</li>
+<li>سوابق فروش شرکت در سال ۲۰۲۶ نیز هیچ فروش اجراشده‌ای به کویت ندارد. تنها یک پیشنهاد قیمت برای ۵۰۰ تن گرید صنعتی به قیمت ۲۵۵ دلار بر تن (FOB خرمشهر، پرداخت ۱۰۰٪ پیش‌پرداخت) در اکتبر ۲۰۲۶ صادر شده و هنوز پرداخت نشده است. شرکت در همین سال به همسایگان خلیج فارس فروش واقعی داشته است: امارات ۷۰۰ تن پرداخت‌شده با میانگین ۲۳۱ دلار بر تن (FCA: تحویل در کارخانه یا نقطه توافق‌شده در مبدأ)، عمان ۱۵۰ تن با ۲۵۸ دلار و قطر ۲۵ تن با ۲۳۰ دلار.</li>
+<li>قیمت‌های واقعی فروش شرکت (۲۲۰ تا ۲۸۵ دلار بر تن) ۲۲ تا ۵۷ درصد بالاتر از ارزش واحد اظهارشده در گمرک ایران (۱۸۰ تا ۱۸۳ دلار بر تن) است. ارزش واحد ثبت‌شده کویت برای کالای با منشأ ایران در ۲۰۲۳ (۲۵۹ دلار بر تن) به قیمت‌های واقعی نزدیک‌تر است. از این رو ارزش‌های صادراتی گمرک ایران کم‌اظهار تلقی می‌شود و مبنای قیمت‌گذاری این گزارش سوابق فروش شرکت است.</li>
+</ul>
+</section>
+<section id="s2">
+<div class="sec-head"><span class="sec-num">۲</span><h2>آمار واردات و سهم بازار مبادی تأمین</h2></div>
+<h3><bdi>۲٫۱</bdi> روش‌شناسی و اولویت منابع</h3>
+<p>اولویت منابع آماری به این ترتیب است: نخست سوابق فروش واقعی شرکت (سال ۲۰۲۶)، سپس آمار گمرک ملی و در آخر پایگاه‌های جهانی (Comtrade: پایگاه تجارت سازمان ملل، و Trade Map: پایگاه مرکز تجارت بین‌المللی). آمار گمرک ملی دو بخش دارد. بخش نخست آمار رسمی گمرک ایران است: صادرات به تفکیک تعرفه، کشور و گمرک خروج برای سال‌های شمسی ۱۴۰۲ و ۱۴۰۳ (سال کامل) و ده ماه نخست ۱۴۰۴. سال شمسی از ۲۱ مارس آغاز می‌شود؛  بنابراین ۱۴۰۲ به‌طور تقریبی با ۲۰۲۳، ۱۴۰۳ با ۲۰۲۴ و ده‌ماهه ۱۴۰۴ با ۲۰۲۵ مقایسه شده و این انطباق دقیق نیست. بخش دوم آمار گمرک کویت است که برای عموم منتشر نمی‌شود و از طریق Comtrade و Trade Map در دسترس است. جدول یکپارچه زیر هر سه منبع را در یک جدول گرد آورده و در سال‌هایی که چند منبع هم‌پوشانی دارند، اختلاف‌ها در همان جدول و متن زیر آن گزارش شده است. مقادیر برآوردی سازمان ملل به‌روشنی علامت‌گذاری شده‌اند. داده آینه‌ای (Mirror data) یعنی صادرات گزارش‌شده توسط کشور صادرکننده به کویت، برای سنجش صحت آمار وارداتی کویت به‌کار رفته است.</p>
+<h3><bdi>۲٫۲</bdi> جدول یکپارچه واردات کویت، ۲۰۱۶ تا ۲۰۲۶</h3>
+<div class="table-wrap t-wrap"><table><thead><tr><th>سال</th><th>واردات کویت: حجم (تن)</th><th>ارزش (دلار)</th><th>ارزش واحد (دلار/تن)</th><th>وضعیت داده (واردات کویت)</th><th>صادرات ایران به کویت (گمرک ایران)</th><th>فروش شرکت به کویت</th></tr></thead><tbody><tr><td>۲۰۱۶</td><td class="num-cell">۱٬۵۰۴</td><td class="num-cell">۱٬۴۷۰٬۰۰۰</td><td class="num-cell">۹۷۷</td><td>گزارش‌شده</td><td class="num-cell">—</td><td class="num-cell">—</td></tr><tr><td>۲۰۱۷</td><td class="num-cell">۸۱۵</td><td class="num-cell">۳۸۶٬۰۰۰</td><td class="num-cell">۴۷۳</td><td>گزارش‌شده</td><td class="num-cell">—</td><td class="num-cell">—</td></tr><tr><td>۲۰۱۸</td><td class="num-cell">۹۹۴</td><td class="num-cell">۵۳۱٬۰۰۰</td><td class="num-cell">۵۳۴</td><td>گزارش‌شده</td><td class="num-cell">—</td><td class="num-cell">—</td></tr><tr><td>۲۰۱۹</td><td class="num-cell">۸۶۲</td><td class="num-cell">۵۹۲٬۰۰۰</td><td class="num-cell">۶۸۷</td><td>گزارش‌شده</td><td class="num-cell">—</td><td class="num-cell">—</td></tr><tr><td>۲۰۲۰</td><td class="num-cell">۱٬۱۰۰</td><td class="num-cell">۶۶۷٬۹۱۴</td><td class="num-cell">۶۰۷</td><td>مجموع شرکای تجاری؛ ردیف جهان صفر ثبت شده</td><td class="num-cell">—</td><td class="num-cell">—</td></tr><tr><td>۲۰۲۱</td><td class="num-cell">۵۶۸</td><td class="num-cell">۵۲۷٬۰۰۰</td><td class="num-cell">۹۲۸</td><td>گزارش‌شده</td><td class="num-cell">—</td><td class="num-cell">—</td></tr><tr><td>۲۰۲۲</td><td class="num-cell">۳٬۴۸۳</td><td class="num-cell">۱٬۸۰۶٬۰۰۰</td><td class="num-cell">۵۱۸</td><td>برآورد سازمان ملل با ارزش واحد ثابت؛ نامعتبر برای روند</td><td class="num-cell">—</td><td class="num-cell">—</td></tr><tr><td>۲۰۲۳</td><td class="num-cell">۱٬۱۳۹</td><td class="num-cell">۹۴۴٬۸۱۶</td><td class="num-cell">۸۲۹</td><td>گزارش‌شده</td><td>۱۴۰۲: ۲۰۴ تن، ۳۰٫۴ هزار دلار (۱۴۹ دلار/تن)، از منطقه آزاد اروند-خرمشهر</td><td class="num-cell">—</td></tr><tr><td>۲۰۲۴</td><td class="num-cell">۶۶۸</td><td class="num-cell">۳۳۲٬۰۰۰</td><td class="num-cell">۴۹۷</td><td>برآورد سازمان ملل</td><td>۱۴۰۳: ۱۱۰ تن، ۲۱٫۰ هزار دلار (۱۹۱ دلار/تن)، از مراغه و مشهد</td><td class="num-cell">—</td></tr><tr><td>۲۰۲۵</td><td class="num-cell">۱٬۲۱۲</td><td class="num-cell">۵۲۴٬۰۰۰</td><td class="num-cell">۴۳۲</td><td>حجم ۱٬۲۱۳ تن برابر مجموع شرکا در Trade Map (مأخذ Comtrade)؛ سریال ۲۰۱۶ تا ۲۰۲۳ از اداره مرکزی آمار کویت</td><td>ده‌ماهه ۱۴۰۴: صفر تن</td><td class="num-cell">—</td></tr><tr><td>۲۰۲۶</td><td>هنوز منتشر نشده</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">—</td><td>هیچ فروش اجراشده‌ای ندارد؛ یک پیشنهاد قیمت ۵۰۰ تن (اکتبر ۲۰۲۶)</td></tr></tbody></table></div>
+<div class="chart-box"><div class="chart-h" style="height:360px"><canvas id="chImp"></canvas></div><div class="cap">نمودار ۱: واردات ثبت‌شده‌ی کویت، ۲۰۱۶ تا ۲۰۲۵ (تن؛ جدول بالا). ۲۰۲۲ نامعتبر برای روند و ۲۰۲۴ برآورد سازمان ملل است.</div></div>
+<p>اولویت منابع در این جدول: سوابق فروش شرکت، سپس گمرک ایران، سپس آمار واردات کویت (Comtrade و Trade Map). آمار گمرک ایران به سال شمسی است و با سال میلادی دقیقاً هم‌پوشانی ندارد.</p>
+<div class="callout copper"><p><strong>هشدار کیفیت داده</strong></p><p>در سال‌های ۲۰۲۲، ۲۰۲۴ و ۲۰۲۵ سازمان ملل مقدار را با ارزش واحد تقریباً ثابت (حدود ۵۰۰ تا ۵۲۰ دلار برای هر تن) برآورد کرده است. به همین دلیل رقم ۳٬۴۸۳ تن در ۲۰۲۲ از دید سازگاری با ارزش و روند، قابل اتکا نیست و در محاسبه میانگین کنار گذاشته شد. در ۲۰۲۰ ردیف «جهان» صفر ثبت شده و مجموع شرکا ملاک قرار گرفت. ارقام ۲۰۱۶ تا ۲۰۲۳ از اداره مرکزی آمار کویت (CSB) و ارقام ۲۰۲۴ و ۲۰۲۵ از Comtrade است. رقم ارزش ۲۰۲۲ در پایگاه OEC (۴٫۰۶ میلیون دلار؛ ایتالیا ۳ میلیون) با Trade Map (۱٫۸ میلیون دلار) نیز ناسازگار است و حل نشده است.</p></div>
+<h3><bdi>۲٫۳</bdi> کشورهای صادرکننده به کویت</h3>
+<p>جدول زیر واردات ۲۰۲۵ کویت را به تفکیک کشور صادرکننده نشان می‌دهد (مجموع ۱٬۲۱۳ تن). ارزش واحد بسیار بالا (چک، آمریکا، عربستان، ایتالیا) مربوط به بسته‌های خرده‌فروشی یا گرید دارویی است و ارزش واحد ۴۰ دلار ایران غیرمنطقی است.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>کشور</th><th>حجم ۲۰۲۵ (تن)</th><th>ارزش (هزار دلار)</th><th>ارزش واحد (دلار/تن)</th></tr></thead><tbody><tr><td>چین</td><td class="num-cell">۵۸۹</td><td class="num-cell">۱۸۶</td><td class="num-cell">۳۱۶</td></tr><tr><td>پاکستان</td><td class="num-cell">۱۷۵</td><td class="num-cell">۴۸</td><td class="num-cell">۲۷۴</td></tr><tr><td>ترکیه</td><td class="num-cell">۱۶۷</td><td class="num-cell">۸۶</td><td class="num-cell">۵۱۵</td></tr><tr><td>هند</td><td class="num-cell">۱۱۴</td><td class="num-cell">۵۲</td><td class="num-cell">۴۵۶</td></tr><tr><td>آلمان</td><td class="num-cell">۷۹</td><td class="num-cell">۶۷</td><td class="num-cell">۸۴۸</td></tr><tr><td>ایران</td><td class="num-cell">۵۰</td><td class="num-cell">۲</td><td class="num-cell">۴۰</td></tr><tr><td>امارات</td><td class="num-cell">۱۸</td><td class="num-cell">۷</td><td class="num-cell">۳۸۹</td></tr><tr><td>چک</td><td class="num-cell">۱۳</td><td class="num-cell">۲۲</td><td class="num-cell">۱٬۶۹۲</td></tr><tr><td>ایالات متحده</td><td class="num-cell">۴</td><td class="num-cell">۱۲</td><td class="num-cell">۳٬۰۰۰</td></tr><tr><td>عربستان</td><td class="num-cell">۳</td><td class="num-cell">۸</td><td class="num-cell">۲٬۶۶۷</td></tr><tr><td>ایتالیا</td><td class="num-cell">۱</td><td class="num-cell">۳۲</td><td class="num-cell">۳۲٬۰۰۰</td></tr></tbody></table></div>
+<div class="chart-box"><div class="chart-h" style="height:320px"><canvas id="chSup"></canvas></div><div class="cap">نمودار ۲: واردات ۲۰۲۵ کویت به تفکیک کشور صادرکننده (تن؛ جدول بالا)</div></div>
+<p>جدول زیر داده‌های سال ۲۰۲۳ و داده آینه‌ای (گزارش کشور صادرکننده) را می‌آورد.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>کشور</th><th>۲۰۲۳: حجم (تن)</th><th>۲۰۲۳: ارزش (هزار دلار)</th><th>ارزش واحد ۲۰۲۳ (دلار/تن)</th><th>ارزش ۲۰۲۵ (هزار دلار)</th></tr></thead><tbody><tr><td>چین</td><td class="num-cell">۵۲۴</td><td class="num-cell">۱۸۹٫۷</td><td class="num-cell">۳۶۲</td><td class="num-cell">۱۸۶</td></tr><tr><td>ایتالیا</td><td class="num-cell">۱۶۶</td><td class="num-cell">۴۲۹٫۷</td><td class="num-cell">۲٬۵۸۵</td><td class="num-cell">۳۲</td></tr><tr><td>ترکیه</td><td class="num-cell">۱۵۱</td><td class="num-cell">۹۰٫۵</td><td class="num-cell">۵۹۸</td><td class="num-cell">۸۶</td></tr><tr><td>هند</td><td class="num-cell">۱۳۱</td><td class="num-cell">۴۶٫۷</td><td class="num-cell">۳۵۶</td><td class="num-cell">۵۲</td></tr><tr><td>ایالات متحده</td><td class="num-cell">۱۲۱</td><td class="num-cell">۱۲۸٫۷</td><td class="num-cell">۱٬۰۶۸</td><td class="num-cell">۱۲</td></tr><tr><td>ایران</td><td class="num-cell">۲۵</td><td class="num-cell">۶٫۵</td><td class="num-cell">۲۵۹</td><td class="num-cell">۲</td></tr><tr><td>آلمان</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">۶۷</td></tr><tr><td>پاکستان</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">۴۸</td></tr></tbody></table></div>
+<p>داده آینه‌ای (گزارش صادرکننده) برای تأمین‌کنندگان اصلی در جدول زیر آمده است. ارزش واحد صادراتی چین در ۲۰۲۵ حدود ۱۹۲ دلار بر تن (FOB: تحویل روی کشتی در بندر مبدأ)، ترکیه ۴۹۹ و هند ۳۶۰ دلار بر تن است.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>کشور</th><th>۲۰۲۳ (تن / هزار دلار)</th><th>۲۰۲۴ (تن / هزار دلار)</th><th>۲۰۲۵ (تن / هزار دلار)</th><th>ارزش واحد ۲۰۲۵</th></tr></thead><tbody><tr><td>چین</td><td class="num-cell">۴۳۳ / ۱۱۳٫۶</td><td class="num-cell">۴۱۳ / ۹۷٫۰</td><td class="num-cell">۴۶۴ / ۸۹٫۳</td><td class="num-cell">۱۹۲</td></tr><tr><td>ترکیه</td><td class="num-cell">۵۴ / ۲۴٫۵</td><td class="num-cell">۱۷۵ / ۵۲٫۸</td><td class="num-cell">۸۱ / ۴۰٫۳</td><td class="num-cell">۴۹۹</td></tr><tr><td>هند</td><td class="num-cell">۱۳۳ / ۶۵٫۹</td><td class="num-cell">۲۱۲ / ۸۲٫۳</td><td class="num-cell">۳۱۶ / ۱۱۴٫۰</td><td class="num-cell">۳۶۰</td></tr><tr><td>ایران (گزارش خود ایران)</td><td class="num-cell">۲۲۹ / ۳۵٫۴</td><td class="num-cell">—</td><td class="num-cell">—</td><td class="num-cell">۱۵۵ (۲۰۲۳)</td></tr></tbody></table></div>
+<div class="callout copper"><p><strong>ناهمخوانی ایران</strong></p><p>سه منبع درباره صادرات ایران به کویت در حدود ۲۰۲۳ اختلاف دارند. گمرک ایران ۲۰۴ تن (۳۰٫۴ هزار دلار) از منطقه آزاد اروند-خرمشهر ثبت کرده است؛ ایران در Comtrade ۲۲۹ تن (۳۵٫۴ هزار دلار) گزارش کرده که با رقم گمرک ایران هم‌خوان است؛ اما کویت تنها ۲۵ تن (۶٫۵ هزار دلار) از ایران ثبت کرده است، یعنی حدود ۱۲ درصد. حدود ۸۸ درصد محموله‌ها در آمار کویت با منشأ دیگری (احتمالاً امارات یا کشوری که کالا از آن ترخیص شده) یا با ارزش واحد دیگر ثبت شده است. در ۱۴۰۳ نیز ۱۱۰ تن از گمرک‌های مراغه و مشهد ثبت شده که خروج زمینی است و با مسیر دریایی کویت سازگار نیست؛ مقصد ثبت‌شده احتمالاً مقصد اظهاری است و کالا از مسیر ترانزیت (عراق یا ترکیه) ترخیص شده است. در ده‌ماهه ۱۴۰۴ جریان ثبت‌شده‌ای وجود ندارد. ارزش واحد اظهارشده در ۱۴۰۲ (۱۴۹ دلار بر تن) پایین‌ترین ارزش واحد صادرات ایران در آن سال است (میانگین ملی ۲۳۰ دلار).</p></div>
+</section>
+<section id="s3">
+<div class="sec-head"><span class="sec-num">۳</span><h2>تولید داخلی</h2></div>
+<p>تولیدکننده بی‌کربنات سدیم در کویت شناسایی نشد. این به معنای نبود کف قیمتی داخلی و وابستگی کامل به واردات است؛ تأیید نهایی با پرسش از سازمان عمومی صنعت کویت در دفتر موارد باز آمده است.</p>
+</section>
+<section id="s4">
+<div class="sec-head"><span class="sec-num">۴</span><h2>حجم مصرف و بازار</h2></div>
+<p>کف مستند بازار حدود ۱٬۱۰۰ تا ۱٬۲۰۰ تن (۲۰۲۳ و ۲۰۲۵) است. برآورد مرکزی ۱٬۶۰۰ تن با دامنه ۱٬۳۰۰ تا ۲٬۲۰۰ تن (حدود ۳۳۰ گرم برای هر نفر) از دو روش مستقل به دست آمده است. روش الف (سرانه): سرانه ۲۷۰ تا ۴۵۰ گرم کشورهای ثروتمند خلیج فارس ضرب در ۴٫۸۸ میلیون نفر جمعیت، یعنی ۱٬۳۰۰ تا ۲٬۲۰۰ تن با میانه حدود ۱٬۷۰۰ تن. روش ب (پایین به بالا): واردات ثبت‌شده ۱٬۱۰۰ تا ۱٬۲۰۰ تن، به‌علاوه حدود ۱۸۰ تن ثبت‌نشده‌ی منشأ امارات، به‌علاوه حدود ۲۰۰ تن بی‌کربنات در بکینگ پودر وارداتی (با فرض ۲۵ تا ۳۰ درصد بی‌کربنات که تأیید نشده است)، یعنی ۱٬۵۰۰ تا ۱٬۶۰۰ تن. مقایسه با قزاقستان و کشورهای فاقد ساختار مصرف مشابه کنار گذاشته شد، زیرا کشور درست برای مقایسه، همسایگان خلیج فارس‌اند. این برآورد مدلی است و آمار رسمی نیست.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>بخش مصرف</th><th>سهم مرکزی</th><th>حجم مرکزی (تن)</th><th>عامل برآورد</th></tr></thead><tbody><tr><td>صنایع غذایی و نانوایی و شیرینی‌پزی</td><td>۳۵٪</td><td class="num-cell">۵۶۰</td><td>تولید نان و بیسکویت؛ نانوایی‌ها و کارخانه آرد</td></tr><tr><td>خرده‌فروشی و مصرف خانگی</td><td>۲۰٪</td><td class="num-cell">۳۲۰</td><td>بسته‌های وارداتی ۱۰۰ گرم تا ۵ کیلوگرم</td></tr><tr><td>خوراک دام و طیور</td><td>۲۰٪</td><td class="num-cell">۳۲۰</td><td>سناریو محاسباتی بخش ۷</td></tr><tr><td>دارویی و همودیالیز (بخش ثبت‌شده در این تعرفه)</td><td>۷٪</td><td class="num-cell">۱۱۲</td><td>بخش ۸؛ نیاز کل ۲۲۰ تن</td></tr><tr><td>صنعتی و سایر (شوینده‌ها، تصفیه آب، پودر اطفای حریق)</td><td>۱۸٪</td><td class="num-cell">۲۸۸</td><td>باقی‌مانده مدل</td></tr></tbody></table></div>
+<div class="chart-box"><div class="chart-h" style="height:300px"><canvas id="chSec"></canvas></div><div class="cap">نمودار ۳: تفکیک بخش‌های مصرف، برآورد مدلی (تن در سال؛ آمار رسمی نیست)</div></div>
+<div class="callout copper"><p><strong>ناهمخوانی احتمالی</strong></p><p>جمع نیاز دامی (۱۹۵ تا ۵۰۰ تن) و دیالیز (۲۲۰ تن) در بالاترین سناریو از کف مستند واردات بیشتر است. دلیل محتمل، تأمین بخشی از این دو نیاز از طریق پیش‌مخلوط‌های خوراک و کارتریج آماده (تعرفه‌های ۲۳۰۹، ۳۰۰۴ و ۳۸۲۲) است. بنابراین سهم‌های جدول بالا برآوردی‌اند.</p></div>
+<h3><bdi>۴٫۱</bdi> مقایسه سرانه با کشورهای خلیج فارس</h3>
+<p>سرانه ثبت‌شده کویت (واردات تقسیم بر جمعیت، حدود ۱۴۰ تا ۲۴۰ گرم) از همه کشورهای ثروتمند منطقه کمتر است. جدول زیر سرانه مبتنی بر واردات ثبت‌شده را برای شش عضو شورای همکاری نشان می‌دهد. ارقام برخی سال‌ها برآوردی سازمان ملل است و امارات مرکز بازصادرات است، بنابراین سرانه آن مصرف واقعی نیست.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>کشور</th><th>سرانه ۲۰۲۴ (گرم)</th><th>سرانه ۲۰۲۳ (گرم)</th><th>توضیح</th></tr></thead><tbody><tr><td>عربستان</td><td class="num-cell">۹۰۹</td><td class="num-cell">۶۳۴</td><td>۲۰۲۳ برآوردی</td></tr><tr><td>امارات</td><td>حدود ۱٬۰۰۰</td><td class="num-cell">—</td><td>مرکز بازصادرات</td></tr><tr><td>قطر</td><td class="num-cell">۶۷۰</td><td class="num-cell">۲۶۰</td><td>تفاوت دو سال نشان‌دهنده ناپایداری آمار است</td></tr><tr><td>عمان</td><td class="num-cell">۳۷۰</td><td class="num-cell">۳۴۰</td><td class="num-cell"></td></tr><tr><td>بحرین</td><td class="num-cell">۲۷۰</td><td class="num-cell">۴۵۰</td><td class="num-cell"></td></tr><tr><td>کویت</td><td>۱۴۰ (برآوردی)</td><td class="num-cell">۲۳۷</td><td class="num-cell"></td></tr></tbody></table></div>
+<p>دامنه معقول ۲۷۰ تا ۴۵۰ گرم برای کویت (جمعیت ۴٬۸۸۱٬۲۵۴ نفر در میانه ۲۰۲۴، شامل ۱٬۵۶۶٬۱۶۸ کویتی و ۳٬۳۱۵٬۰۸۶ غیرکویتی، یعنی حدود ۶۸ درصد غیرکویتی) به برآورد مصرف ۱٬۳۰۰ تا ۲٬۲۰۰ تن می‌انجامد. فاصله آن با واردات ثبت‌شده، ثبت‌نشدگی را نشان می‌دهد.</p>
+<h3><bdi>۴٫۲</bdi> چرا واردات ثبت‌شده کویت کم است؟ داده آینه‌ای و تجارت درون اتحادیه</h3>
+<p>کویت عضو اتحادیه گمرکی خلیج فارس است (تعرفه ۵ درصد بر پایه CIF). کالا در نخستین بندر ورودی ترخیص می‌شود و سپس آزادانه به سایر اعضا می‌رود؛ جابه‌جایی درون اتحادیه در آمار واردات کشور مقصد ثبت نمی‌شود. نمونه: امارات در ۲۰۲۳ حدود ۱۷۹ تن به ارزش ۱۰۳ هزار دلار به کویت گزارش کرده، اما کویت از امارات فقط ۳ هزار دلار ثبت کرده است. ایران نیز ۲۲۹ تن گزارش کرده، در حالی که کویت ۲۵ تن ثبت کرده است. آمار تجارت درون اتحادیه برای این کد تعرفه منتشر نمی‌شود؛ مرکز آمار شورای همکاری فقط ارقام کل را می‌دهد. سه راه بررسی وجود دارد: داده آینه‌ای صادرکنندگان (Comtrade)، درخواست مستقیم از گمرک و آمار عربستان و امارات برای صادرات و بازصادرات کد ۲۸۳۶۳۰ به کویت، و استعلام از واردکنندگان بزرگ کویتی. هیچ‌یک به‌تنهایی کل جریان را نشان نمی‌دهد.</p>
+<div class="callout copper"><p><strong>دسترسی به آمار رسمی کویت</strong></p><p>سایت گمرک کویت آمار تجارت منتشر نمی‌کند؛ آمار از طریق اداره مرکزی آمار (بولتن‌های فصلی تجارت خارجی) منتشر می‌شود و تبادل داده تفصیلی نیازمند ورود با حساب کاربری است. Trade Map برای کویت سال‌های ۲۰۱۶ تا ۲۰۲۳ را از اداره مرکزی آمار و سال‌های ۲۰۲۴ و ۲۰۲۵ را از Comtrade می‌گیرد. نمای حجم (تن) Trade Map برای کویت خطا می‌دهد و فقط نمای ارزش کار می‌کند.</p></div>
+<h3><bdi>۴٫۳</bdi> بکینگ پودر (پودر مایه پخت، تعرفه 210230)</h3>
+<p>بکینگ پودر مخلوطی است که حدود یک‌چهارم تا یک‌سوم آن بی‌کربنات سدیم (فرض تأییدنشده) و بقیه ماده اسیدی و نشاسته است. واردات کویت در Comtrade: ۲۰۲۲ حدود ۴۰۸ تن (۱٫۱۴ میلیون دلار)، ۲۰۲۳ حدود ۷۵۹ تن (۳٫۲۴ میلیون دلار) و ۲۰۲۴ حدود ۶۸۷ تن (۲٫۲۴ میلیون دلار). ارزش واردات در Trade Map از ۲۰۱۶ تا ۲۰۲۵ به‌ترتیب ۱٫۱، ۱٫۳، ۱٫۴، ۱٫۱، ۱٫۵، ۲٫۱، ۱٫۳، ۳٫۲، ۲٫۲ و ۲٫۶ میلیون دلار است. تأمین‌کنندگان اصلی: عربستان (۲۰۲۳ حدود ۱٫۷ و ۲۰۲۵ حدود ۱٫۳ میلیون دلار)، مالت (۲۰۲۵ حدود ۶۰۹ هزار دلار)، فرانسه (۱۶۷ هزار)، آمریکا (۱۳۹ هزار)، چین (۹۰ هزار) و امارات (۸۴ هزار دلار). بی‌کربنات نهفته در آن حدود ۲۰۰ تن در سال برآورد می‌شود و در آمار 283630 نیست. افزون بر آن مخلوط‌های آماده آرد (تعرفه ۱۹۰۱) حدود ۹٫۴ هزار تن در ۲۰۲۵ است و بی‌کربنات پنهان در آن‌ها خارج از برآورد بالاست.</p>
+<h3><bdi>۴٫۴</bdi> محدودیت داده‌های تولید و خرده‌فروشی</h3>
+<p>آمار حجم تولید نان، شیرینی و بیسکویت کویت و حجم فروش خرده‌فروشی بسته‌های جوش شیرین در منابع عمومی رایگان یافت نشد؛ این داده‌ها در گزارش‌های پولی بازار (مانند جدول‌های حجمی «مواد پخت‌وپز» کویت) یا نزد زنجیره‌های خرده‌فروشی است. شاخص‌های جانبی: مصرف نان حدود ۳۲٫۹ کیلوگرم برای هر نفر در ۲۰۲۴؛ شرکت آرد و نانوایی‌های کویت روزانه ۴٫۵ میلیون قرص نان عربی تولید می‌کند. نان عربی با خمیرمایه تهیه می‌شود و مصرف جوش شیرین آن اندک است؛ مصرف اصلی در کیک، شیرینی و بیسکویت است که آمار تولیدشان در دسترس نبود. از این‌رو برآورد بخش غذایی و خرده‌فروشی در جدول بالا مدلی است.</p>
+</section>
+<section id="s5">
+<div class="sec-head"><span class="sec-num">۵</span><h2>مصرف گرید دامی</h2></div>
+<p>کویت خوراک دام را عمدتاً وارد می‌کند و کارخانه خوراک شرکت آرد و نانوایی‌های کویت حدود ۵۰۰ تن در روز ظرفیت دارد. بی‌کربنات سدیم در جیره گاوهای شیری به‌عنوان بافر شکمبه (تنظیم‌کننده اسیدیته) با دوز حدود ۰٫۷۵ درصد ماده خشک جیره، معادل ۱۱۳ تا ۲۵۰ گرم برای هر رأس در روز، مصرف می‌شود. جمعیت دامی ثبت‌شده در سازمان جهانی سلامت حیوانات (WOAH، بدون سال مشخص): گاو ۲۸٬۰۰۰؛ گوسفند ۹۲۰٬۶۱۳؛ بز ۲۳۰٬۱۵۳؛ شتر ۹۰٬۳۴۵؛ مرغ گوشتی ۴۹٫۲۸ میلیون؛ مرغ تخم‌گذار ۳٫۰۹ میلیون.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>سناریو</th><th>فرض‌ها</th><th>حجم (تن در سال)</th></tr></thead><tbody><tr><td>گاو شیری</td><td>۱۲ تا ۱۵ هزار رأس شیرده × ۰٫۱۲ تا ۰٫۱۵ کیلوگرم × ۳۰۰ روز × پذیرش ۲۵ تا ۵۰ درصد</td><td>۱۶۰ تا ۳۱۵</td></tr><tr><td>طیور</td><td>۳۴۰ هزار تن خوراک × ۰٫۰۵ تا ۰٫۱ درصد در ماه‌های گرم</td><td>۲۵ تا ۱۴۵</td></tr><tr><td>گوسفند و شتر</td><td>دوز کم، پذیرش محدود</td><td>۱۰ تا ۴۰</td></tr><tr><td>جمع</td><td class="num-cell"></td><td>۱۹۵ تا ۵۰۰</td></tr></tbody></table></div>
+<p>تمام ضرایب بالا فرض‌های مدلی هستند و آمار رسمی مصرف بی‌کربنات در خوراک دام کویت منتشر نشده است.</p>
+</section>
+<section id="s6">
+<div class="sec-head"><span class="sec-num">۶</span><h2>گرید دارویی و همودیالیز</h2></div>
+<p>بر پایه گزارش انجمن نفرولوژی کویت (مارس ۲۰۲۵)، حدود ۲٬۴۵۰ بیمار دیالیزی وجود دارد که ۸۸ درصد آنان همودیالیز می‌شوند (حدود ۲٬۱۵۶ نفر). در سال ۲۰۱۹ تعداد بیماران ۲٬۲۳۰ نفر (۴۶۵ در هر میلیون نفر) بود. هر جلسه چهارساعته به یک کارتریج بی‌کربنات حاوی ۶۵۰ گرم نیاز دارد (۷۶۰ گرم در هموديافیلتراسیون). با ۱۵۶ جلسه در سال:</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>شاخص</th><th>مقدار</th></tr></thead><tbody><tr><td>بیماران همودیالیز</td><td class="num-cell">۲٬۱۵۶</td></tr><tr><td>مصرف هر بیمار در سال</td><td>۱۰۱ کیلوگرم</td></tr><tr><td>نیاز سالانه (۶۵۰ گرم)</td><td>۲۱۹ تن</td></tr><tr><td>نیاز با سهمی از هموديافیلتراسیون</td><td>۲۳۹ تن</td></tr><tr><td>برآورد مرکزی</td><td>۲۲۰ تن (دامنه ۱۹۰ تا ۲۴۰)</td></tr><tr><td>سرانه کل جمعیت</td><td>۴۵ گرم</td></tr></tbody></table></div>
+<p>جریان‌های ورودی با ارزش واحد بالا مانند ایتالیا (۲٬۵۸۵ دلار بر تن، ۱۶۶ تن در ۲۰۲۳) و آمریکا (۱٬۰۶۸ دلار بر تن، ۱۲۱ تن) با گرید دارویی سازگارند. مجموع این دو (۲۸۷ تن) به نیاز برآوردی همودیالیز نزدیک است؛ این یک استنباط است و اثبات نیست.</p>
+</section>
+<section id="s7">
+<div class="sec-head"><span class="sec-num">۷</span><h2>خرده‌فروشی</h2></div>
+<div class="table-wrap t-wrap"><table><thead><tr><th>محصول</th><th>وزن (کیلوگرم)</th><th>قیمت (دینار کویت)</th><th>دینار بر کیلوگرم</th><th>دلار بر کیلوگرم</th></tr></thead><tbody><tr><td>Lulu (بسته ۱۰۰ گرمی، منشأ امارات)</td><td class="num-cell">۰٫۱</td><td class="num-cell">۰٫۲۵۰</td><td class="num-cell">۲٫۵۰</td><td class="num-cell">۸٫۱</td></tr><tr><td>Riyadh Food (۱۰۰ گرم)</td><td class="num-cell">۰٫۱</td><td class="num-cell">۰٫۱۴۵</td><td class="num-cell">۱٫۴۵</td><td class="num-cell">۴٫۷</td></tr><tr><td>Al Alali (۱۵۰ گرم)</td><td class="num-cell">۰٫۱۵</td><td class="num-cell">۰٫۶۵۰</td><td class="num-cell">۴٫۳۳</td><td class="num-cell">۱۴٫۱</td></tr><tr><td>Elixir (۵ کیلوگرم)</td><td class="num-cell">۵</td><td class="num-cell">۲۳٫۱۲۰</td><td class="num-cell">۴٫۶۲</td><td class="num-cell">۱۵٫۱</td></tr><tr><td>Arm &amp; Hammer (۱۶ اونس ×۲۴ عدد)</td><td class="num-cell">۱۰٫۸۸۶</td><td class="num-cell">۴۱٫۷۱۰</td><td class="num-cell">۳٫۸۳</td><td class="num-cell">۱۲٫۵</td></tr><tr><td>Dri-Pak (۱ کیلوگرم)</td><td class="num-cell">۱</td><td class="num-cell">۵٫۶۳۰</td><td class="num-cell">۵٫۶۳</td><td class="num-cell">۱۸٫۴</td></tr><tr><td>Medley Hills (۲٫۵ پوند)</td><td class="num-cell">۱٫۱۳۴</td><td class="num-cell">۱۳٫۹۲۰</td><td class="num-cell">۱۲٫۲۸</td><td class="num-cell">۴۰٫۰</td></tr><tr><td>Wholefood Earth (۱ کیلوگرم)</td><td class="num-cell">۱</td><td class="num-cell">۱۰٫۳۰۰</td><td class="num-cell">۱۰٫۳۰</td><td class="num-cell">۳۳٫۶</td></tr><tr><td>Lab Alley درجه USP (۲۰ پوند)</td><td class="num-cell">۹٫۰۷۲</td><td class="num-cell">۱۱۱٫۰۰۰</td><td class="num-cell">۱۲٫۲۴</td><td class="num-cell">۳۹٫۹</td></tr></tbody></table></div>
+<p>تبدیل ارز با فرض ۱ دینار برابر ۳٫۲۶ دلار است (فرض). منابع: فروشگاه اینترنتی لولو کویت، طلبات (فروشگاه‌های Everest Mart و Healthy Market)، Desertcart و سایر فروشگاه‌های اینترنتی. بسته‌های وارداتی از امارات، عربستان و آمریکا بر قفسه‌ها غالب‌اند. بسته‌های خانگی ۱۰۰ تا ۱۵۰ گرمی با قیمت ۱٫۴۵ تا ۴٫۳۳ دینار بر کیلوگرم، گران‌ترین و پرمصرف‌ترین رده بازار هستند.</p>
+</section>
+<section id="s8">
+<div class="sec-head"><span class="sec-num">۸</span><h2>لجستیک و نقشه تعاملی</h2></div>
+<p>فاصله‌های جاده‌ای بر پایه مسیریابی OSRM (داده OpenStreetMap) و فاصله‌های دریایی بر پایه مسیر بزرگ‌دایره با نقاط عبوری واقعی محاسبه شده‌اند. نقشه تعاملی همراه این گزارش دروازه‌های ورودی، مراکز مصرف و مبدأ تأمین‌کنندگان را نشان می‌دهد.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>دروازه</th><th>شهر کویت</th><th>صبحان</th><th>شویخ صنعتی</th><th>الجهراء</th><th>الاحمدی</th><th>الصلیبیه (کشاورزی)</th></tr></thead><tbody><tr><td>شویخ</td><td>۵ کیلومتر / ۷ دلار</td><td>۹ کیلومتر / ۷ دلار</td><td>۲ کیلومتر / ۶ دلار</td><td>۳۴ کیلومتر / ۱۰ دلار</td><td>۴۱ کیلومتر / ۱۱ دلار</td><td>۲۰ کیلومتر / ۸ دلار</td></tr><tr><td>شعیبه</td><td>۴۴ کیلومتر / ۱۱ دلار</td><td>۴۰ کیلومتر / ۱۰ دلار</td><td>۴۶ کیلومتر / ۱۱ دلار</td><td>۷۷ کیلومتر / ۱۴ دلار</td><td>۱۰ کیلومتر / ۷ دلار</td><td>۵۸ کیلومتر / ۱۲ دلار</td></tr><tr><td>مبارک‌الکبیر</td><td>۶۹ کیلومتر / ۱۴ دلار</td><td>۷۱ کیلومتر / ۱۴ دلار</td><td>۶۷ کیلومتر / ۱۳ دلار</td><td>۷۸ کیلومتر / ۱۵ دلار</td><td>۱۰۴ کیلومتر / ۱۷ دلار</td><td>۸۶ کیلومتر / ۱۵ دلار</td></tr><tr><td>العبدلی (عراق)</td><td>۱۲۰ کیلومتر / ۱۹ دلار</td><td>۱۱۹ کیلومتر / ۱۹ دلار</td><td>۱۱۷ کیلومتر / ۱۹ دلار</td><td>۹۲ کیلومتر / ۱۶ دلار</td><td>۱۵۰ کیلومتر / ۲۳ دلار</td><td>۱۰۱ کیلومتر / ۱۷ دلار</td></tr><tr><td>النويصيب (عربستان)</td><td>۱۱۱ کیلومتر / ۱۸ دلار</td><td>۱۰۶ کیلومتر / ۱۸ دلار</td><td>۱۱۲ کیلومتر / ۱۸ دلار</td><td>۱۴۰ کیلومتر / ۲۱ دلار</td><td>۷۵ کیلومتر / ۱۴ دلار</td><td>۱۲۵ کیلومتر / ۲۰ دلار</td></tr><tr><td>السالمی (عربستان)</td><td>۱۲۰ کیلومتر / ۱۹ دلار</td><td>۱۲۰ کیلومتر / ۱۹ دلار</td><td>۱۱۷ کیلومتر / ۱۹ دلار</td><td>۸۵ کیلومتر / ۱۵ دلار</td><td>۱۴۷ کیلومتر / ۲۲ دلار</td><td>۱۰۱ کیلومتر / ۱۷ دلار</td></tr></tbody></table></div>
+<p>کرایه حمل داخلی برآوردی مقیاس‌شده با مسافت است (۶ دلار ثابت + ۰٫۱۱ دلار برای هر تن‌کیلومتر، کامیون ۲۴ تنی).</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>مبدأ</th><th>فاصله دریایی تا شویخ (مایل دریایی)</th><th>فاصله دریایی (کیلومتر)</th></tr></thead><tbody><tr><td>تیانجین (چین)</td><td class="num-cell">۶٬۶۳۵</td><td class="num-cell">۱۲٬۲۸۸</td></tr><tr><td>مرسین (ترکیه)</td><td class="num-cell">۳٬۶۱۷</td><td class="num-cell">۶٬۶۹۹</td></tr><tr><td>موندرا (هند)</td><td class="num-cell">۱٬۳۰۶</td><td class="num-cell">۲٬۴۱۹</td></tr><tr><td>جنوا (ایتالیا)</td><td class="num-cell">۴٬۷۹۵</td><td class="num-cell">۸٬۸۸۰</td></tr><tr><td>بندرعباس (ایران)</td><td class="num-cell">۵۲۳</td><td class="num-cell">۹۶۹</td></tr></tbody></table></div>
+<div class="table-wrap t-wrap"><table><thead><tr><th>مبدأ خشکی</th><th>تا شویخ (کیلومتر)</th><th>تا العبدلی (کیلومتر)</th></tr></thead><tbody><tr><td>شیراز (ایران)</td><td class="num-cell">۷۶۰</td><td class="num-cell">۶۷۱</td></tr><tr><td>بندرعباس (ایران)</td><td class="num-cell">۱۳۳۶</td><td class="num-cell">۱۲۴۷</td></tr><tr><td>مرسین (ترکیه)</td><td class="num-cell">۱۸۷۶</td><td class="num-cell">۱۷۶۹</td></tr></tbody></table></div>
+<p>مسیر خشکی از ایران از خاک عراق می‌گذرد و ریسک ترخیص و امنیت دارد؛ مسیر دریایی بندرعباس به شویخ کوتاه‌ترین و قابل‌اتکاترین گزینه است. وجود خط مستقیم کانتینری باید با کارگزار تأیید شود.</p>
+<div class="map-box"><iframe title="نقشه‌ی تعاملی گذرگاه‌های ورود کویت" loading="lazy" style="width:100%;height:680px;border:0;border-radius:12px;background:#fff" srcdoc="&lt;!DOCTYPE html&gt;&lt;html lang=&quot;fa&quot; dir=&quot;rtl&quot;&gt;&lt;head&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;
+&lt;title&gt;نقشه تعاملی بازار جوش شیرین کویت&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://unpkg.com/leaflet@1.9.4/dist/leaflet.css&quot;&gt;&lt;script src=&quot;https://unpkg.com/leaflet@1.9.4/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+&lt;style&gt;body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f6f7f9;color:#1b2430}header{padding:10px 16px;background:#1F5C8B;color:#fff}
+h1{font-size:17px;margin:0}#map{height:62vh;min-height:360px}.panel{padding:12px 16px}table{border-collapse:collapse;width:100%;font-size:13px;background:#fff}
+th,td{border:1px solid #cfd6df;padding:5px 7px;text-align:center}th{background:#e8eef5}.ctl{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:8px;font-size:13px}
+.note{font-size:12px;color:#44505f;line-height:1.9;margin-top:8px}@media(prefers-color-scheme:dark){body{background:#14181d;color:#e6eaef}table{background:#1c2229}th{background:#26303b}th,td{border-color:#38434f}.note{color:#aab4c0}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header&gt;&lt;h1&gt;نقشه تعاملی بازار جوش شیرین کویت: مسیرهای ایران (زمینی و خرمشهر) و مسیرهای دریایی رقبا&lt;/h1&gt;&lt;/header&gt;
+&lt;div class=&quot;panel&quot;&gt;&lt;div class=&quot;ctl&quot;&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;lg&quot; checked&gt; دروازه‌های ورودی (بندر و مرز)&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;lc&quot; checked&gt; مراکز مصرف&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;lo&quot; checked&gt; مبدأ تأمین‌کنندگان&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ll&quot; checked&gt; خطوط مسیر (شماتیک)&lt;/label&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div id=&quot;map&quot;&gt;&lt;/div&gt;&lt;div class=&quot;panel&quot;&gt;&lt;h3 style=&quot;font-size:14px&quot;&gt;ماتریس فاصله جاده‌ای از دروازه ورودی تا مرکز مصرف (کیلومتر) و برآورد کرایه حمل داخلی (دلار بر تن)&lt;/h3&gt;&lt;div id=&quot;mat&quot;&gt;&lt;/div&gt;
+&lt;h3 style=&quot;font-size:14px&quot;&gt;مسیرهای ایران به کویت و فاصله دریایی رقبا&lt;/h3&gt;&lt;div id=&quot;mat2&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;note&quot;&gt;منبع فاصله‌های جاده‌ای: سرویس مسیریابی OSRM بر پایه داده‌های OpenStreetMap؛ فاصله‌های دریایی در گزارش تحلیلی آمده است. کرایه حمل داخلی برآوردی مقیاس‌شده با مسافت است (مبلغ ثابت ۶ دلار به‌علاوه ۰٫۱۱ دلار برای هر تن‌کیلومتر، کامیون ۲۴ تنی) و جایگزین استعلام از شرکت حمل‌ونقل نیست. مسیرهای خشکی از ایران از خاک عراق (شلمچه، بصره، ابدلی) می‌گذرد. فاصله دریایی خرمشهر بر پایه نقاط عبوری تقریبی اروندرود و برآوردی است. روسیه در آمار کویت جریان ثبت‌شده‌ای ندارد و فقط برای مقایسه نمایش داده شده است و ریسک امنیتی و ترخیص دارد. مرزهای نمایش‌داده‌شده بر پایه داده‌های رایج نقشه است و بیانگر موضع سیاسی نیست. مسیر بندر مبارک‌الکبیر و محل دقیق گذرگاه‌ها باید پیش از تصمیم تجاری با کارگزار گمرکی تأیید شود.&lt;/div&gt;&lt;/div&gt;
+&lt;script&gt;const D={&quot;gates&quot;: [{&quot;n&quot;: &quot;شویخ&quot;, &quot;lat&quot;: 29.3547, &quot;lon&quot;: 47.9399, &quot;t&quot;: &quot;port&quot;}, {&quot;n&quot;: &quot;شعیبه&quot;, &quot;lat&quot;: 29.045, &quot;lon&quot;: 48.155, &quot;t&quot;: &quot;port&quot;}, {&quot;n&quot;: &quot;مبارک‌الکبیر&quot;, &quot;lat&quot;: 29.74, &quot;lon&quot;: 48.05, &quot;t&quot;: &quot;port&quot;}, {&quot;n&quot;: &quot;العبدلی (عراق)&quot;, &quot;lat&quot;: 30.02, &quot;lon&quot;: 47.73, &quot;t&quot;: &quot;border&quot;}, {&quot;n&quot;: &quot;النويصيب (عربستان)&quot;, &quot;lat&quot;: 28.5333, &quot;lon&quot;: 48.4167, &quot;t&quot;: &quot;border&quot;}, {&quot;n&quot;: &quot;السالمی (عربستان)&quot;, &quot;lat&quot;: 29.1, &quot;lon&quot;: 46.93, &quot;t&quot;: &quot;border&quot;}], &quot;cent&quot;: [{&quot;n&quot;: &quot;شهر کویت&quot;, &quot;lat&quot;: 29.3759, &quot;lon&quot;: 47.9774}, {&quot;n&quot;: &quot;صبحان&quot;, &quot;lat&quot;: 29.29, &quot;lon&quot;: 47.97}, {&quot;n&quot;: &quot;شویخ صنعتی&quot;, &quot;lat&quot;: 29.348, &quot;lon&quot;: 47.95}, {&quot;n&quot;: &quot;الجهراء&quot;, &quot;lat&quot;: 29.3375, &quot;lon&quot;: 47.6581}, {&quot;n&quot;: &quot;الاحمدی&quot;, &quot;lat&quot;: 29.0769, &quot;lon&quot;: 48.0838}, {&quot;n&quot;: &quot;الصلیبیه (کشاورزی)&quot;, &quot;lat&quot;: 29.3, &quot;lon&quot;: 47.79}], &quot;G&quot;: {&quot;شویخ&quot;: {&quot;شهر کویت&quot;: 5.2, &quot;صبحان&quot;: 8.8, &quot;شویخ صنعتی&quot;: 2.5, &quot;الجهراء&quot;: 34.2, &quot;الاحمدی&quot;: 41.2, &quot;الصلیبیه (کشاورزی)&quot;: 20.2}, &quot;شعیبه&quot;: {&quot;شهر کویت&quot;: 44.2, &quot;صبحان&quot;: 39.6, &quot;شویخ صنعتی&quot;: 45.5, &quot;الجهراء&quot;: 76.7, &quot;الاحمدی&quot;: 10.0, &quot;الصلیبیه (کشاورزی)&quot;: 58.4}, &quot;مبارک‌الکبیر&quot;: {&quot;شهر کویت&quot;: 69.4, &quot;صبحان&quot;: 70.7, &quot;شویخ صنعتی&quot;: 66.6, &quot;الجهراء&quot;: 77.5, &quot;الاحمدی&quot;: 104.0, &quot;الصلیبیه (کشاورزی)&quot;: 86.1}, &quot;العبدلی (عراق)&quot;: {&quot;شهر کویت&quot;: 119.9, &quot;صبحان&quot;: 118.8, &quot;شویخ صنعتی&quot;: 117.2, &quot;الجهراء&quot;: 92.3, &quot;الاحمدی&quot;: 150.5, &quot;الصلیبیه (کشاورزی)&quot;: 100.9}, &quot;النويصيب (عربستان)&quot;: {&quot;شهر کویت&quot;: 111.0, &quot;صبحان&quot;: 106.4, &quot;شویخ صنعتی&quot;: 112.4, &quot;الجهراء&quot;: 140.0, &quot;الاحمدی&quot;: 74.7, &quot;الصلیبیه (کشاورزی)&quot;: 125.3}, &quot;السالمی (عربستان)&quot;: {&quot;شهر کویت&quot;: 120.2, &quot;صبحان&quot;: 120.2, &quot;شویخ صنعتی&quot;: 117.4, &quot;الجهراء&quot;: 84.7, &quot;الاحمدی&quot;: 146.6, &quot;الصلیبیه (کشاورزی)&quot;: 101.2}}, &quot;R2&quot;: {&quot;Mashhad-Shuwaikh&quot;: 1925, &quot;Mashhad-Shalamcheh&quot;: 1798, &quot;Maragheh-Shuwaikh&quot;: 1365, &quot;Shiraz-Shuwaikh&quot;: 760, &quot;Shiraz-Shalamcheh&quot;: 634, &quot;Khr-Shuwaikh&quot;: 199, &quot;Khr-Abdali&quot;: 110, &quot;Shalamcheh-Shuwaikh&quot;: 182, &quot;Sterlitamak-Novorossiysk&quot;: 2163, &quot;Beypazari-Mersin&quot;: 589}};
+const map=L.map(&#x27;map&#x27;).setView([29.5,47.9],8);L.tileLayer(&#x27;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#x27;,{attribution:&#x27;© OpenStreetMap&#x27;}).addTo(map);
+const lg=L.layerGroup().addTo(map),lc=L.layerGroup().addTo(map),lo=L.layerGroup().addTo(map),ll=L.layerGroup().addTo(map);
+function dot(c,la,lo_,col,tip,g){L.circleMarker([la,lo_],{radius:8,color:&#x27;#fff&#x27;,weight:2,fillColor:col,fillOpacity:.95}).bindTooltip(tip,{direction:&#x27;top&#x27;}).addTo(g)}
+D.gates.forEach(g=&gt;{const r=Object.entries(D.G[g.n]).map(([c,k])=&gt;c+&#x27;: &#x27;+k+&#x27; km&#x27;).join(&#x27;&lt;br&gt;&#x27;);dot(0,g.lat,g.lon,g.t==&#x27;port&#x27;?&#x27;#1F5C8B&#x27;:&#x27;#b5651d&#x27;,&#x27;&lt;b&gt;&#x27;+g.n+&#x27;&lt;/b&gt; (&#x27;+(g.t==&#x27;port&#x27;?&#x27;بندر&#x27;:&#x27;مرز&#x27;)+&#x27;)&lt;br&gt;&#x27;+r,lg)});
+D.cent.forEach(c=&gt;dot(0,c.lat,c.lon,&#x27;#2e8b57&#x27;,&#x27;&lt;b&gt;&#x27;+c.n+&#x27;&lt;/b&gt; (مرکز مصرف)&#x27;,lc));
+D.cent.forEach(c=&gt;{const g=D.gates.find(x=&gt;x.n==&#x27;شویخ&#x27;);L.polyline([[g.lat,g.lon],[c.lat,c.lon]],{color:&#x27;#2e8b57&#x27;,weight:1,dashArray:&#x27;4 4&#x27;}).bindTooltip(&#x27;شویخ تا &#x27;+c.n+&#x27;: &#x27;+D.G[&#x27;شویخ&#x27;][c.n]+&#x27; کیلومتر&#x27;).addTo(ll)});
+
+
+const IR=[{n:&#x27;شیراز (کارخانه)&#x27;,p:[29.61,52.53],r:&#x27;شیراز تا شویخ: 760 کیلومتر (از طریق خرمشهر، شلمچه، بصره)&#x27;},{n:&#x27;مشهد (کارخانه)&#x27;,p:[36.30,59.60],r:&#x27;مشهد تا شویخ: 1925 کیلومتر&#x27;},{n:&#x27;مراغه (گمرک خروج ۱۴۰۳)&#x27;,p:[37.39,46.24],r:&#x27;مراغه تا شویخ: 1365 کیلومتر&#x27;}];
+const KHR=[30.43,48.17],SHL=[30.43,48.07],BSR=[30.5,47.8],ABD=[30.02,47.73],SHW=[29.3547,47.9399];
+IR.forEach(o=&gt;dot(0,o.p[0],o.p[1],&#x27;#8e44ad&#x27;,&#x27;&lt;b&gt;&#x27;+o.n+&#x27;&lt;/b&gt;&lt;br&gt;&#x27;+o.r,lo));
+dot(0,KHR[0],KHR[1],&#x27;#c0392b&#x27;,&#x27;&lt;b&gt;خرمشهر (منطقه آزاد اروند)&lt;/b&gt;&lt;br&gt;تا شویخ: جاده 199 کیلومتر؛ دریایی حدود 180 کیلومتر (95 مایل دریایی، برآوردی)&#x27;,lo);
+// land routes (schematic, via Shalamcheh-Basra-Abdali)
+const land=(from,lab,km)=&gt;L.polyline([from,KHR,SHL,BSR,ABD,SHW],{color:&#x27;#8e44ad&#x27;,weight:2.5}).bindTooltip(lab+&#x27;: &#x27;+km+&#x27; کیلومتر (زمینی از خاک عراق)&#x27;).addTo(ll);
+land([29.61,52.53],&#x27;شیراز تا شویخ&#x27;,760);land([36.30,59.60],&#x27;مشهد تا شویخ&#x27;,1925);land([37.39,46.24],&#x27;مراغه تا شویخ&#x27;,1365);
+// khoramshahr sea
+L.polyline([KHR,[30.10,48.45],[29.85,48.75],[29.60,48.40],[29.42,48.15],SHW],{color:&#x27;#c0392b&#x27;,weight:3,dashArray:&#x27;6 4&#x27;}).bindTooltip(&#x27;خرمشهر تا شویخ دریایی: حدود 95 مایل دریایی (برآوردی)&#x27;).addTo(ll);
+// competitors sea
+const H=[26.6,56.5],Fa=[29.5,49.5],K=[29.36,48.0];
+const RED=[[34,32.5],[31.3,32.4],[30,32.55],[27.5,34],[20,38.5],[12.6,43.4],[12.2,45],[14,52],[22,59.5],H,Fa,K];
+const SEA=[
+ {n:&#x27;مرسین (ترکیه)&#x27;,c:&#x27;#e67e22&#x27;,nm:3617,p:[[36.75,34.6]].concat(RED)},
+ {n:&#x27;موندرا (هند)&#x27;,c:&#x27;#16a085&#x27;,nm:1306,p:[[22.74,69.7],[22,64],[24,60],H,Fa,K]},
+ {n:&#x27;تیانجین (چین)&#x27;,c:&#x27;#c0392b&#x27;,nm:6635,p:[[38.98,117.8],[31,123],[22,119],[10,111],[1.3,104],[5.5,95],[6.5,80],[12,64],[24,60],H,Fa,K]},
+ {n:&#x27;نووروسیسک (روسیه)&#x27;,c:&#x27;#2c3e50&#x27;,nm:4698,p:[[44.7,37.8],[41.1,29.1],[40.8,28.0],[39.5,26.2],[36,24],[35,28]].concat(RED)},
+ {n:&#x27;جنوا (ایتالیا)&#x27;,c:&#x27;#7f8c8d&#x27;,nm:4795,p:[[44.4,8.9],[38,11],[36.5,14],[34,25]].concat(RED)}];
+SEA.forEach(s=&gt;{L.polyline(s.p,{color:s.c,weight:2,opacity:.8}).bindTooltip(s.n+&#x27; تا شویخ: &#x27;+s.nm+&#x27; مایل دریایی (&#x27;+Math.round(s.nm*1.852)+&#x27; کیلومتر)&#x27;).addTo(ll);const q=s.p[0];dot(0,q[0],q[1],s.c,&#x27;&lt;b&gt;&#x27;+s.n+&#x27;&lt;/b&gt;&lt;br&gt;&#x27;+s.nm+&#x27; مایل دریایی تا شویخ&#x27;,lo)});
+
+document.getElementById(&#x27;lg&#x27;).onchange=e=&gt;e.target.checked?lg.addTo(map):map.removeLayer(lg);
+document.getElementById(&#x27;lc&#x27;).onchange=e=&gt;e.target.checked?lc.addTo(map):map.removeLayer(lc);
+document.getElementById(&#x27;lo&#x27;).onchange=e=&gt;e.target.checked?lo.addTo(map):map.removeLayer(lo);
+document.getElementById(&#x27;ll&#x27;).onchange=e=&gt;e.target.checked?ll.addTo(map):map.removeLayer(ll);
+const fr=k=&gt;Math.round(6+0.11*k);
+let h=&#x27;&lt;table&gt;&lt;tr&gt;&lt;th&gt;دروازه ورودی&lt;/th&gt;&#x27;+D.cent.map(c=&gt;&#x27;&lt;th&gt;&#x27;+c.n+&#x27;&lt;/th&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;/tr&gt;&#x27;;
+D.gates.forEach(g=&gt;{h+=&#x27;&lt;tr&gt;&lt;th&gt;&#x27;+g.n+&#x27;&lt;/th&gt;&#x27;+D.cent.map(c=&gt;{const k=D.G[g.n][c.n];return &#x27;&lt;td&gt;&#x27;+k+&#x27; km&lt;br&gt;&#x27;+fr(k)+&#x27; $/t&lt;/td&gt;&#x27;}).join(&#x27;&#x27;)+&#x27;&lt;/tr&gt;&#x27;});document.getElementById(&#x27;mat&#x27;).innerHTML=h+&#x27;&lt;/table&gt;&#x27;;
+let h2=&#x27;&lt;table&gt;&lt;tr&gt;&lt;th&gt;مبدأ ایران&lt;/th&gt;&lt;th&gt;تا شویخ (کیلومتر)&lt;/th&gt;&lt;th&gt;مسیر&lt;/th&gt;&lt;th&gt;برآورد کرایه ($/t)&lt;/th&gt;&lt;/tr&gt;&#x27;;
+[[&#x27;شیراز&#x27;,760,&#x27;خرمشهر، شلمچه، بصره، ابدلی&#x27;],[&#x27;مشهد&#x27;,1925,&#x27;همان مسیر از خاک عراق&#x27;],[&#x27;مراغه&#x27;,1365,&#x27;همان مسیر از خاک عراق&#x27;],[&#x27;خرمشهر&#x27;,199,&#x27;شلمچه، بصره، ابدلی (جاده)&#x27;]].forEach(r=&gt;{h2+=&#x27;&lt;tr&gt;&lt;td&gt;&#x27;+r[0]+&#x27;&lt;/td&gt;&lt;td&gt;&#x27;+r[1]+&#x27;&lt;/td&gt;&lt;td&gt;&#x27;+r[2]+&#x27;&lt;/td&gt;&lt;td&gt;&#x27;+fr(r[1])+&#x27;&lt;/td&gt;&lt;/tr&gt;&#x27;});document.getElementById(&#x27;mat2&#x27;).innerHTML=h2+&#x27;&lt;/table&gt;&lt;h3 style=&quot;font-size:14px&quot;&gt;فاصله دریایی رقبا تا شویخ&lt;/h3&gt;&lt;table&gt;&lt;tr&gt;&lt;th&gt;مبدأ&lt;/th&gt;&lt;th&gt;مایل دریایی&lt;/th&gt;&lt;th&gt;کیلومتر&lt;/th&gt;&lt;/tr&gt;&#x27;+SEA.map(s=&gt;&#x27;&lt;tr&gt;&lt;td&gt;&#x27;+s.n+&#x27;&lt;/td&gt;&lt;td&gt;&#x27;+s.nm+&#x27;&lt;/td&gt;&lt;td&gt;&#x27;+Math.round(s.nm*1.852)+&#x27;&lt;/td&gt;&lt;/tr&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;tr&gt;&lt;td&gt;بندرعباس (ایران)&lt;/td&gt;&lt;td&gt;523&lt;/td&gt;&lt;td&gt;969&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;خرمشهر (ایران، برآوردی)&lt;/td&gt;&lt;td&gt;95&lt;/td&gt;&lt;td&gt;176&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#x27;;
+&lt;/script&gt;
+&lt;style&gt;body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f6f7f9;color:#1b2430}header{padding:10px 16px;background:#1F5C8B;color:#fff}
+h1{font-size:17px;margin:0}#map{height:62vh;min-height:360px}.panel{padding:12px 16px}table{border-collapse:collapse;width:100%;font-size:13px;background:#fff}
+th,td{border:1px solid #cfd6df;padding:5px 7px;text-align:center}th{background:#e8eef5}.ctl{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:8px;font-size:13px}
+.note{font-size:12px;color:#44505f;line-height:1.9;margin-top:8px}@media(prefers-color-scheme:dark){body{background:#14181d;color:#e6eaef}table{background:#1c2229}th{background:#26303b}th,td{border-color:#38434f}.note{color:#aab4c0}}
+&lt;/style&gt;&lt;/head&gt;&lt;body&gt;&lt;header&gt;&lt;h1&gt;نقشه تعاملی بازار جوش شیرین کویت: مسیرهای ایران (زمینی و خرمشهر) و مسیرهای دریایی رقبا&lt;/h1&gt;&lt;/header&gt;
+&lt;div class=&quot;panel&quot;&gt;&lt;div class=&quot;ctl&quot;&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;lg&quot; checked&gt; دروازه‌های ورودی (بندر و مرز)&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;lc&quot; checked&gt; مراکز مصرف&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;lo&quot; checked&gt; مبدأ تأمین‌کنندگان&lt;/label&gt;&lt;label&gt;&lt;input type=&quot;checkbox&quot; id=&quot;ll&quot; checked&gt; خطوط مسیر (شماتیک)&lt;/label&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;div id=&quot;map&quot;&gt;&lt;/div&gt;&lt;div class=&quot;panel&quot;&gt;&lt;h3 style=&quot;font-size:14px&quot;&gt;ماتریس فاصله جاده‌ای از دروازه ورودی تا مرکز مصرف (کیلومتر) و برآورد کرایه حمل داخلی (دلار بر تن)&lt;/h3&gt;&lt;div id=&quot;mat&quot;&gt;&lt;/div&gt;
+&lt;h3 style=&quot;font-size:14px&quot;&gt;مسیرهای ایران به کویت و فاصله دریایی رقبا&lt;/h3&gt;&lt;div id=&quot;mat2&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;note&quot;&gt;منبع فاصله‌های جاده‌ای: سرویس مسیریابی OSRM بر پایه داده‌های OpenStreetMap؛ فاصله‌های دریایی در گزارش تحلیلی آمده است. کرایه حمل داخلی برآوردی مقیاس‌شده با مسافت است (مبلغ ثابت ۶ دلار به‌علاوه ۰٫۱۱ دلار برای هر تن‌کیلومتر، کامیون ۲۴ تنی) و جایگزین استعلام از شرکت حمل‌ونقل نیست. مسیرهای خشکی از ایران از خاک عراق (شلمچه، بصره، ابدلی) می‌گذرد. فاصله دریایی خرمشهر بر پایه نقاط عبوری تقریبی اروندرود و برآوردی است. روسیه در آمار کویت جریان ثبت‌شده‌ای ندارد و فقط برای مقایسه نمایش داده شده است و ریسک امنیتی و ترخیص دارد. مرزهای نمایش‌داده‌شده بر پایه داده‌های رایج نقشه است و بیانگر موضع سیاسی نیست. مسیر بندر مبارک‌الکبیر و محل دقیق گذرگاه‌ها باید پیش از تصمیم تجاری با کارگزار گمرکی تأیید شود.&lt;/div&gt;&lt;/div&gt;
+&lt;script&gt;const D={&quot;gates&quot;: [{&quot;n&quot;: &quot;شویخ&quot;, &quot;lat&quot;: 29.3547, &quot;lon&quot;: 47.9399, &quot;t&quot;: &quot;port&quot;}, {&quot;n&quot;: &quot;شعیبه&quot;, &quot;lat&quot;: 29.045, &quot;lon&quot;: 48.155, &quot;t&quot;: &quot;port&quot;}, {&quot;n&quot;: &quot;مبارک‌الکبیر&quot;, &quot;lat&quot;: 29.74, &quot;lon&quot;: 48.05, &quot;t&quot;: &quot;port&quot;}, {&quot;n&quot;: &quot;العبدلی (عراق)&quot;, &quot;lat&quot;: 30.02, &quot;lon&quot;: 47.73, &quot;t&quot;: &quot;border&quot;}, {&quot;n&quot;: &quot;النويصيب (عربستان)&quot;, &quot;lat&quot;: 28.5333, &quot;lon&quot;: 48.4167, &quot;t&quot;: &quot;border&quot;}, {&quot;n&quot;: &quot;السالمی (عربستان)&quot;, &quot;lat&quot;: 29.1, &quot;lon&quot;: 46.93, &quot;t&quot;: &quot;border&quot;}], &quot;cent&quot;: [{&quot;n&quot;: &quot;شهر کویت&quot;, &quot;lat&quot;: 29.3759, &quot;lon&quot;: 47.9774}, {&quot;n&quot;: &quot;صبحان&quot;, &quot;lat&quot;: 29.29, &quot;lon&quot;: 47.97}, {&quot;n&quot;: &quot;شویخ صنعتی&quot;, &quot;lat&quot;: 29.348, &quot;lon&quot;: 47.95}, {&quot;n&quot;: &quot;الجهراء&quot;, &quot;lat&quot;: 29.3375, &quot;lon&quot;: 47.6581}, {&quot;n&quot;: &quot;الاحمدی&quot;, &quot;lat&quot;: 29.0769, &quot;lon&quot;: 48.0838}, {&quot;n&quot;: &quot;الصلیبیه (کشاورزی)&quot;, &quot;lat&quot;: 29.3, &quot;lon&quot;: 47.79}], &quot;G&quot;: {&quot;شویخ&quot;: {&quot;شهر کویت&quot;: 5.2, &quot;صبحان&quot;: 8.8, &quot;شویخ صنعتی&quot;: 2.5, &quot;الجهراء&quot;: 34.2, &quot;الاحمدی&quot;: 41.2, &quot;الصلیبیه (کشاورزی)&quot;: 20.2}, &quot;شعیبه&quot;: {&quot;شهر کویت&quot;: 44.2, &quot;صبحان&quot;: 39.6, &quot;شویخ صنعتی&quot;: 45.5, &quot;الجهراء&quot;: 76.7, &quot;الاحمدی&quot;: 10.0, &quot;الصلیبیه (کشاورزی)&quot;: 58.4}, &quot;مبارک‌الکبیر&quot;: {&quot;شهر کویت&quot;: 69.4, &quot;صبحان&quot;: 70.7, &quot;شویخ صنعتی&quot;: 66.6, &quot;الجهراء&quot;: 77.5, &quot;الاحمدی&quot;: 104.0, &quot;الصلیبیه (کشاورزی)&quot;: 86.1}, &quot;العبدلی (عراق)&quot;: {&quot;شهر کویت&quot;: 119.9, &quot;صبحان&quot;: 118.8, &quot;شویخ صنعتی&quot;: 117.2, &quot;الجهراء&quot;: 92.3, &quot;الاحمدی&quot;: 150.5, &quot;الصلیبیه (کشاورزی)&quot;: 100.9}, &quot;النويصيب (عربستان)&quot;: {&quot;شهر کویت&quot;: 111.0, &quot;صبحان&quot;: 106.4, &quot;شویخ صنعتی&quot;: 112.4, &quot;الجهراء&quot;: 140.0, &quot;الاحمدی&quot;: 74.7, &quot;الصلیبیه (کشاورزی)&quot;: 125.3}, &quot;السالمی (عربستان)&quot;: {&quot;شهر کویت&quot;: 120.2, &quot;صبحان&quot;: 120.2, &quot;شویخ صنعتی&quot;: 117.4, &quot;الجهراء&quot;: 84.7, &quot;الاحمدی&quot;: 146.6, &quot;الصلیبیه (کشاورزی)&quot;: 101.2}}, &quot;R2&quot;: {&quot;Mashhad-Shuwaikh&quot;: 1925, &quot;Mashhad-Shalamcheh&quot;: 1798, &quot;Maragheh-Shuwaikh&quot;: 1365, &quot;Shiraz-Shuwaikh&quot;: 760, &quot;Shiraz-Shalamcheh&quot;: 634, &quot;Khr-Shuwaikh&quot;: 199, &quot;Khr-Abdali&quot;: 110, &quot;Shalamcheh-Shuwaikh&quot;: 182, &quot;Sterlitamak-Novorossiysk&quot;: 2163, &quot;Beypazari-Mersin&quot;: 589}};
+const map=L.map(&#x27;map&#x27;).setView([29.5,47.9],8);L.tileLayer(&#x27;https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png&#x27;,{attribution:&#x27;© OpenStreetMap&#x27;}).addTo(map);
+const lg=L.layerGroup().addTo(map),lc=L.layerGroup().addTo(map),lo=L.layerGroup().addTo(map),ll=L.layerGroup().addTo(map);
+function dot(c,la,lo_,col,tip,g){L.circleMarker([la,lo_],{radius:8,color:&#x27;#fff&#x27;,weight:2,fillColor:col,fillOpacity:.95}).bindTooltip(tip,{direction:&#x27;top&#x27;}).addTo(g)}
+D.gates.forEach(g=&gt;{const r=Object.entries(D.G[g.n]).map(([c,k])=&gt;c+&#x27;: &#x27;+k+&#x27; km&#x27;).join(&#x27;&lt;br&gt;&#x27;);dot(0,g.lat,g.lon,g.t==&#x27;port&#x27;?&#x27;#1F5C8B&#x27;:&#x27;#b5651d&#x27;,&#x27;&lt;b&gt;&#x27;+g.n+&#x27;&lt;/b&gt; (&#x27;+(g.t==&#x27;port&#x27;?&#x27;بندر&#x27;:&#x27;مرز&#x27;)+&#x27;)&lt;br&gt;&#x27;+r,lg)});
+D.cent.forEach(c=&gt;dot(0,c.lat,c.lon,&#x27;#2e8b57&#x27;,&#x27;&lt;b&gt;&#x27;+c.n+&#x27;&lt;/b&gt; (مرکز مصرف)&#x27;,lc));
+D.cent.forEach(c=&gt;{const g=D.gates.find(x=&gt;x.n==&#x27;شویخ&#x27;);L.polyline([[g.lat,g.lon],[c.lat,c.lon]],{color:&#x27;#2e8b57&#x27;,weight:1,dashArray:&#x27;4 4&#x27;}).bindTooltip(&#x27;شویخ تا &#x27;+c.n+&#x27;: &#x27;+D.G[&#x27;شویخ&#x27;][c.n]+&#x27; کیلومتر&#x27;).addTo(ll)});
+
+
+const IR=[{n:&#x27;شیراز (کارخانه)&#x27;,p:[29.61,52.53],r:&#x27;شیراز تا شویخ: 760 کیلومتر (از طریق خرمشهر، شلمچه، بصره)&#x27;},{n:&#x27;مشهد (کارخانه)&#x27;,p:[36.30,59.60],r:&#x27;مشهد تا شویخ: 1925 کیلومتر&#x27;},{n:&#x27;مراغه (گمرک خروج ۱۴۰۳)&#x27;,p:[37.39,46.24],r:&#x27;مراغه تا شویخ: 1365 کیلومتر&#x27;}];
+const KHR=[30.43,48.17],SHL=[30.43,48.07],BSR=[30.5,47.8],ABD=[30.02,47.73],SHW=[29.3547,47.9399];
+IR.forEach(o=&gt;dot(0,o.p[0],o.p[1],&#x27;#8e44ad&#x27;,&#x27;&lt;b&gt;&#x27;+o.n+&#x27;&lt;/b&gt;&lt;br&gt;&#x27;+o.r,lo));
+dot(0,KHR[0],KHR[1],&#x27;#c0392b&#x27;,&#x27;&lt;b&gt;خرمشهر (منطقه آزاد اروند)&lt;/b&gt;&lt;br&gt;تا شویخ: جاده 199 کیلومتر؛ دریایی حدود 180 کیلومتر (95 مایل دریایی، برآوردی)&#x27;,lo);
+// land routes (schematic, via Shalamcheh-Basra-Abdali)
+const land=(from,lab,km)=&gt;L.polyline([from,KHR,SHL,BSR,ABD,SHW],{color:&#x27;#8e44ad&#x27;,weight:2.5}).bindTooltip(lab+&#x27;: &#x27;+km+&#x27; کیلومتر (زمینی از خاک عراق)&#x27;).addTo(ll);
+land([29.61,52.53],&#x27;شیراز تا شویخ&#x27;,760);land([36.30,59.60],&#x27;مشهد تا شویخ&#x27;,1925);land([37.39,46.24],&#x27;مراغه تا شویخ&#x27;,1365);
+// khoramshahr sea
+L.polyline([KHR,[30.10,48.45],[29.85,48.75],[29.60,48.40],[29.42,48.15],SHW],{color:&#x27;#c0392b&#x27;,weight:3,dashArray:&#x27;6 4&#x27;}).bindTooltip(&#x27;خرمشهر تا شویخ دریایی: حدود 95 مایل دریایی (برآوردی)&#x27;).addTo(ll);
+// competitors sea
+const H=[26.6,56.5],Fa=[29.5,49.5],K=[29.36,48.0];
+const RED=[[34,32.5],[31.3,32.4],[30,32.55],[27.5,34],[20,38.5],[12.6,43.4],[12.2,45],[14,52],[22,59.5],H,Fa,K];
+const SEA=[
+ {n:&#x27;مرسین (ترکیه)&#x27;,c:&#x27;#e67e22&#x27;,nm:3617,p:[[36.75,34.6]].concat(RED)},
+ {n:&#x27;موندرا (هند)&#x27;,c:&#x27;#16a085&#x27;,nm:1306,p:[[22.74,69.7],[22,64],[24,60],H,Fa,K]},
+ {n:&#x27;تیانجین (چین)&#x27;,c:&#x27;#c0392b&#x27;,nm:6635,p:[[38.98,117.8],[31,123],[22,119],[10,111],[1.3,104],[5.5,95],[6.5,80],[12,64],[24,60],H,Fa,K]},
+ {n:&#x27;نووروسیسک (روسیه)&#x27;,c:&#x27;#2c3e50&#x27;,nm:4698,p:[[44.7,37.8],[41.1,29.1],[40.8,28.0],[39.5,26.2],[36,24],[35,28]].concat(RED)},
+ {n:&#x27;جنوا (ایتالیا)&#x27;,c:&#x27;#7f8c8d&#x27;,nm:4795,p:[[44.4,8.9],[38,11],[36.5,14],[34,25]].concat(RED)}];
+SEA.forEach(s=&gt;{L.polyline(s.p,{color:s.c,weight:2,opacity:.8}).bindTooltip(s.n+&#x27; تا شویخ: &#x27;+s.nm+&#x27; مایل دریایی (&#x27;+Math.round(s.nm*1.852)+&#x27; کیلومتر)&#x27;).addTo(ll);const q=s.p[0];dot(0,q[0],q[1],s.c,&#x27;&lt;b&gt;&#x27;+s.n+&#x27;&lt;/b&gt;&lt;br&gt;&#x27;+s.nm+&#x27; مایل دریایی تا شویخ&#x27;,lo)});
+
+document.getElementById(&#x27;lg&#x27;).onchange=e=&gt;e.target.checked?lg.addTo(map):map.removeLayer(lg);
+document.getElementById(&#x27;lc&#x27;).onchange=e=&gt;e.target.checked?lc.addTo(map):map.removeLayer(lc);
+document.getElementById(&#x27;lo&#x27;).onchange=e=&gt;e.target.checked?lo.addTo(map):map.removeLayer(lo);
+document.getElementById(&#x27;ll&#x27;).onchange=e=&gt;e.target.checked?ll.addTo(map):map.removeLayer(ll);
+const fr=k=&gt;Math.round(6+0.11*k);
+let h=&#x27;&lt;table&gt;&lt;tr&gt;&lt;th&gt;دروازه ورودی&lt;/th&gt;&#x27;+D.cent.map(c=&gt;&#x27;&lt;th&gt;&#x27;+c.n+&#x27;&lt;/th&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;/tr&gt;&#x27;;
+D.gates.forEach(g=&gt;{h+=&#x27;&lt;tr&gt;&lt;th&gt;&#x27;+g.n+&#x27;&lt;/th&gt;&#x27;+D.cent.map(c=&gt;{const k=D.G[g.n][c.n];return &#x27;&lt;td&gt;&#x27;+k+&#x27; km&lt;br&gt;&#x27;+fr(k)+&#x27; $/t&lt;/td&gt;&#x27;}).join(&#x27;&#x27;)+&#x27;&lt;/tr&gt;&#x27;});document.getElementById(&#x27;mat&#x27;).innerHTML=h+&#x27;&lt;/table&gt;&#x27;;
+const gk=Object.keys(Object.values(D.O)[0]);let h2=&#x27;&lt;table&gt;&lt;tr&gt;&lt;th&gt;مبدأ&lt;/th&gt;&#x27;+gk.map(k=&gt;&#x27;&lt;th&gt;&#x27;+k+&#x27;&lt;/th&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;/tr&gt;&#x27;;
+Object.entries(D.O).forEach(([o,v])=&gt;{h2+=&#x27;&lt;tr&gt;&lt;th&gt;&#x27;+o+&#x27;&lt;/th&gt;&#x27;+gk.map(k=&gt;&#x27;&lt;td&gt;&#x27;+v[k]+&#x27;&lt;/td&gt;&#x27;).join(&#x27;&#x27;)+&#x27;&lt;/tr&gt;&#x27;});document.getElementById(&#x27;mat2&#x27;).innerHTML=h2+&#x27;&lt;/table&gt;&#x27;;
+&lt;/script&gt;&lt;/body&gt;&lt;/html&gt;"></iframe><div class="cap">نقشه‌ی تعاملی: دروازه‌ها، مراکز مصرف و مبدأ تأمین‌کنندگان (فاصله‌ها: OSRM و OpenStreetMap)</div></div>
+</section>
+<section id="s9">
+<div class="sec-head"><span class="sec-num">۹</span><h2>برآورد قیمت CIF برای جوش شیرین پارس</h2></div>
+<div class="table-wrap t-wrap"><table><thead><tr><th>مؤلفه</th><th>سناریوی عادی (دلار بر تن)</th><th>سناریوی پیک و پرریسک</th></tr></thead><tbody><tr><td>قیمت FOB پایه شرکت</td><td class="num-cell">۲۵۰</td><td class="num-cell">۲۵۰</td></tr><tr><td>کرایه دریایی بندرعباس تا شویخ (کانتینر ۲۴ تنی)</td><td>۳۸ تا ۵۸</td><td class="num-cell">۷۵</td></tr><tr><td>بیمه</td><td class="num-cell">۱</td><td class="num-cell">۲</td></tr><tr><td>CIF شویخ</td><td>۲۹۰ تا ۳۱۰</td><td>۳۳۰ تا ۳۵۰</td></tr><tr><td>حقوق ورودی ۵٪</td><td class="num-cell">۱۵</td><td class="num-cell">۱۷</td></tr><tr><td>هزینه رسیده به انبار شویخ</td><td>۳۰۵ تا ۳۲۵</td><td>۳۴۷ تا ۳۶۷</td></tr></tbody></table></div>
+<p>برای بسته خرده‌فروشی ۵۰۰ گرمی با FOB برابر ۳۵۰ دلار بر تن، CIF حدود ۳۹۰ تا ۴۱۰ دلار بر تن خواهد بود. ارزش واحد ثبت‌شده کویت در ۲۰۲۳ برای چین ۳۶۲ و هند ۳۵۶ دلار بر تن است؛ بنابراین CIF پارس در دامنه رقابت قرار دارد، با این شرط که کرایه واقعی استعلام شود. ارقام کرایه برآوردی‌اند و استعلام از شرکت حمل‌ونقل در دفتر موارد باز آمده است.</p>
+<h3><bdi>۹٫۱</bdi> سناریوی مبتنی بر پیشنهاد قیمت صادرشده (خرمشهر)</h3>
+<p>پیشنهاد قیمت اکتبر ۲۰۲۶ برای کویت بر پایه گرید صنعتی، ۵۰۰ تن، قیمت ۲۵۵ دلار بر تن با شرط FOB خرمشهر است. فاصله دریایی خرمشهر تا شویخ از طریق اروندرود و خلیج کویت حدود ۱۸۵ کیلومتر (حدود ۱۰۰ مایل دریایی) برآورد می‌شود؛ این رقم بر پایه نقاط عبوری تقریبی و برآوردی است و مسیر واقعی رودخانه طولانی‌تر است.</p>
+<div class="table-wrap t-wrap"><table><thead><tr><th>مؤلفه</th><th>دلار بر تن</th></tr></thead><tbody><tr><td>قیمت پیشنهادی FOB خرمشهر</td><td class="num-cell">۲۵۵</td></tr><tr><td>کرایه دریایی خرمشهر تا شویخ (برآورد مقیاس‌شده با مسافت)</td><td>۲۰ تا ۳۵</td></tr><tr><td>بیمه</td><td class="num-cell">۱</td></tr><tr><td>CIF شویخ</td><td>۲۷۶ تا ۲۹۱</td></tr><tr><td>حقوق ورودی 5٪ (بر پایه CIF)</td><td class="num-cell">۱۴</td></tr><tr><td>هزینه رسیده به انبار شویخ</td><td>۲۹۰ تا ۳۰۵</td></tr></tbody></table></div>
+<div class="chart-box"><div class="chart-h" style="height:360px"><canvas id="chCif"></canvas></div><div class="cap">نمودار ۴: هزینه رسیده‌ی برآوردی پارس به شویخ در برابر ارزش واحد ثبت‌شده‌ی کویت برای هر مبدأ در ۲۰۲۵ (دلار بر تن؛ مقایسه‌ی تقریبی، نه همه‌جا CIF)</div></div>
+<p>هزینه رسیده ۲۹۰ تا ۳۰۵ دلار بر تن از سناریوی بندرعباس با FOB پایه ۲۵۰ دلار (۳۰۵ تا ۳۲۵) پایین‌تر است، زیرا مسیر خرمشهر کوتاه‌تر است. ارزش واحد صادراتی چین در ۲۰۲۵ حدود ۱۹۲ دلار بر تن (FOB) است؛ با کرایه دریایی بلندمسافت، قیمت رسیده چین به شویخ زیر قیمت پارس خواهد بود. در مقابل، ارزش واحد هند (۳۶۰) و ترکیه (۴۹۹ دلار بر تن) بالاتر از CIF پارس است. بنابراین پارس در برابر هند و ترکیه رقابتی و در برابر چین گران‌تر است. محدودیت‌های آبخور اروندرود، ظرفیت کانتینری و خدمات خط مستقیم باید با کارگزار تأیید شود.</p>
+</section>
+<section id="s10">
+<div class="sec-head"><span class="sec-num">۱۰</span><h2>تعرفه و مقررات</h2></div>
+<p>کویت عضو اتحادیه گمرکی شورای همکاری خلیج فارس است و تعرفه 5 درصد بر پایه CIF اعمال می‌شود. تعرفه یکپارچه ۱۲ رقمی شورا از اول ژانویه ۲۰۲۵ اجرا شده است. برای ایران موافقتنامه ترجیحی مؤثر شناسایی نشد. مقررات برچسب غذایی و ثبت خوراک دام در دفتر موارد باز آمده است.</p>
+</section>
+<section id="s11">
+<div class="sec-head"><span class="sec-num">۱۱</span><h2>جمع‌بندی ورود به بازار</h2></div>
+<ul class="pts">
+<li>بازار کوچک و پرحاشیه است: قیمت قفسه خانگی چندین برابر هزینه رسیده کالاست.</li>
+<li>بخش دارویی با ارزش واحد حدود شش‌برابر گرید معمولی، جذاب‌ترین بخش است؛ شرط آن ثبت مجوز در وزارت بهداشت کویت و دریافت گواهی‌های دارویی است.</li>
+<li>خوراک دام و صنایع غذایی از طریق خریداران بزرگ فهرست شرکت‌ها قابل پیگیری است.</li>
+<li>صادرات ایران به کویت کوچک و نامنظم بوده است (۲۰۴ تن در ۱۴۰۲، ۱۱۰ تن در ۱۴۰۳ و صفر در ده‌ماهه ۱۴۰۴)؛ بنابراین ورود شرکت عملاً ایجاد یک جریان پایدار است. مسیر خرمشهر به شویخ با کالاهای دیگر ایران عملیاتی است و کوتاه‌ترین مسیر دریایی را فراهم می‌کند.</li>
+<li>شرط پرداخت ۱۰۰٪ پیش‌پرداخت که در همه فروش‌های شرکت به‌کار رفته، ممکن است برای خریداران سازمانی کویت محدودکننده باشد؛ لازم است شرایط پرداخت پیشنهادی با واحد بازرگانی بازبینی شود.</li>
+<li>امکان پرداخت و رعایت تحریم‌ها پیش از هر اقدام تجاری باید بررسی شود.</li>
+</ul>
+</section>
+<section id="s12">
+<div class="sec-head"><span class="sec-num">۱۲</span><h2>فهرست شرکت‌ها و نمایشگاه‌ها</h2></div>
+<p>فهرست شرکت‌های هدف با اطلاعات تماس راستی‌آزمایی‌شده از سایت رسمی هر شرکت و فهرست نمایشگاه‌های تجاری در دو فایل اکسل جداگانه ارائه شده است.</p>
+</section>
+<section id="s13">
+<div class="sec-head"><span class="sec-num">۱۳</span><h2>دفتر موارد باز</h2></div>
+<div class="table-wrap t-wrap"><table><thead><tr><th>مورد</th><th>اهمیت</th><th>راه بستن</th></tr></thead><tbody><tr><td>اطلاعات رسمی گمرک کویت (واردات به تفکیک شریک، بدون برآورد)</td><td>حذف برآوردهای سازمان ملل برای ۲۰۲۲، ۲۰۲۴ و ۲۰۲۵</td><td>درخواست از اداره مرکزی آمار کویت</td></tr><tr><td>اختلاف ۲۰۴ تن (گمرک ایران) با ۲۵ تن (گمرک کویت) در حدود ۲۰۲۳</td><td>حدود ۸۸ درصد صادرات ایران در آمار کویت با منشأ دیگر ثبت شده یا ثبت نشده است</td><td>سوابق گمرکی داخلی شرکت؛ درخواست آمار کویت به تفکیک منشأ</td></tr><tr><td>مقصد ثبت‌شده کویت با خروج زمینی از مراغه و مشهد در ۱۴۰۳ (۱۱۰ تن)</td><td>تعیین مسیر واقعی و مقصد نهایی</td><td>بررسی اسناد حمل با شرکت‌های صادرکننده</td></tr><tr><td>کم‌اظهاری ارزش در گمرک ایران (۱۸۰ دلار در برابر ۲۲۰ تا ۲۸۵ دلار)</td><td>ریسک برداشت نادرست از قیمت رقابتی ایران</td><td>مقایسه اظهارنامه‌های صادراتی شرکت با فاکتورها</td></tr><tr><td>آمار دو ماه پایانی ۱۴۰۴ و سال کامل ۱۴۰۴</td><td>ده‌ماهه ناقص است و بر پایه شمسی است نه میلادی</td><td>انتشار آمار نهایی گمرک ایران</td></tr><tr><td>نتیجه پیشنهاد قیمت ۵۰۰ تن صنعتی برای کویت</td><td>تنها سابقه تجاری مستقیم با کویت</td><td>پیگیری مشتری؛ بازنگری شرط پرداخت</td></tr><tr><td>کرایه واقعی خرمشهر و بندرعباس تا شویخ و وضعیت آبخور اروندرود</td><td>اساس CIF هر دو سناریو</td><td>استعلام از کارگزار حمل</td></tr><tr><td>ارزش ۲۰۲۲ کویت: OEC ۴٫۰۶ میلیون دلار در برابر Trade Map ۱٫۸ میلیون</td><td>دقت سریال</td><td>مقایسه با بولتن اداره مرکزی آمار کویت</td></tr><tr><td>ارزش واحد ۴۰ دلار بر تن برای ایران در ۲۰۲۵ (۵۰ تن)</td><td>داده غیرمنطقی</td><td>تأیید با اسناد حمل</td></tr><tr><td>درخواست آمار صادرات و بازصادرات ۲۸۳۶۳۰ به کویت از گمرک عربستان و امارات</td><td>اندازه‌گیری تجارت درون اتحادیه</td><td>مکاتبه رسمی</td></tr><tr><td>درصد بی‌کربنات در بکینگ پودر وارداتی (فرض ۲۵ تا ۳۰ درصد)</td><td>برآورد ۲۰۰ تن</td><td>آزمایش برچسب محصولات خرده‌فروشی</td></tr><tr><td>آمار تولید نان، شیرینی و بیسکویت و حجم خرده‌فروشی بسته‌های جوش شیرین</td><td>برآورد بخش غذایی و خانگی</td><td>خرید داده پولی بازار یا پرسش از واردکنندگان بزرگ</td></tr><tr><td>وجود یا نبود تولید داخلی</td><td>تعیین کف قیمت</td><td>استعلام از سازمان عمومی صنعت کویت</td></tr><tr><td>کرایه واقعی بندرعباس تا شویخ</td><td>برآورد CIF</td><td>استعلام از شرکت حمل‌ونقل</td></tr><tr><td>مقررات ثبت گرید غذایی، دامی و دارویی</td><td>شرط ورود</td><td>وزارت بازرگانی و وزارت بهداشت کویت</td></tr><tr><td>تماس شرکت‌هایی که ایمیل رسمی منتشر نکرده‌اند (شرکت متحد طیور کویت و چند شرکت دیگر)</td><td>تکمیل فهرست خریداران</td><td>تماس تلفنی</td></tr><tr><td>درج تصویر نقشه تعاملی در گزارش</td><td>مصور بودن گزارش</td><td>نقشه تعاملی به‌صورت فایل مجزا ارائه شده است</td></tr><tr><td>سرانه‌های مقایسه و ضرایب سناریوی دامی</td><td>دقت برآورد بازار</td><td>داده‌های رسمی خوراک و دام کویت</td></tr></tbody></table></div>
+</section>
+<section id="s14">
+<div class="sec-head"><span class="sec-num">۱۴</span><h2>منابع</h2></div>
+<ol class="srcs">
+<li><span class="n">۱</span>Trade Map (International Trade Centre): واردات کویت با کد 283630 به تفکیک شریک تجاری، ۲۰۱۶ تا ۲۰۲۵.</li>
+<li><span class="n">۲</span>UN Comtrade: داده‌های وزن و ارزش واردات و صادرات (واردات کویت و صادرات چین، ترکیه، هند، ایران).</li>
+<li><span class="n">۳</span>اداره مرکزی آمار کویت (CSB): جمعیت ابتدای ۲۰۲۵.</li>
+<li><span class="n">۴</span>انجمن نفرولوژی کویت (مارس ۲۰۲۵) و کارتریج‌های بی‌کربنات سازندگان تجهیزات دیالیز.</li>
+<li><span class="n">۵</span>سازمان جهانی سلامت حیوانات (WOAH): جمعیت دامی کویت.</li>
+<li><span class="n">۶</span>شورای همکاری خلیج فارس: تعرفه گمرکی یکپارچه.</li>
+<li><span class="n">۷</span>فروشگاه اینترنتی لولو کویت، طلبات، Desertcart و سایت رسمی هر شرکت برای اطلاعات تماس.</li>
+<li><span class="n">۸</span>گمرک جمهوری اسلامی ایران: آمار صادرات به تفکیک تعرفه (۱۴۰۲ و ۱۴۰۳) و به تفکیک کشور و گمرک (ده‌ماهه ۱۴۰۴).</li>
+<li><span class="n">۹</span>سوابق فروش و پیشنهادهای قیمت شرکت، سال ۲۰۲۶.</li>
+<li><span class="n">۱۰</span>سرویس مسیریابی OSRM و OpenStreetMap برای فاصله‌های جاده‌ای.</li>
+</ol>
+</section>
+</main>
+
+<footer class="wrap">
+  <p>تحقیق و توسعه بازرگانی &middot; جوش شیرین پارس &middot; آبان ۱۴۰۵ (نوامبر ۲۰۲۶)</p>
+</footer>
+
+<script src="/report-assets/chart.umd.min.js"></script>
+<script>
+(function(){
+  "use strict";
+  var D = {"imp": {"years": [2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025], "tons": [1504.0, 815.0, 994.0, 862.0, 1100.0, 568.0, 3483.0, 1139.0, 668.0, 1212.0], "flag": ["ok", "ok", "ok", "ok", "ok", "ok", "bad", "ok", "est", "ok"]}, "sup": [{"name": "چین", "tons": 589.0, "unit": 316.0}, {"name": "پاکستان", "tons": 175.0, "unit": 274.0}, {"name": "ترکیه", "tons": 167.0, "unit": 515.0}, {"name": "هند", "tons": 114.0, "unit": 456.0}, {"name": "آلمان", "tons": 79.0, "unit": 848.0}, {"name": "ایران", "tons": 50.0, "unit": 40.0}, {"name": "امارات", "tons": 18.0, "unit": 389.0}, {"name": "چک", "tons": 13.0, "unit": 1692.0}, {"name": "ایالات متحده", "tons": 4.0, "unit": 3000.0}, {"name": "عربستان", "tons": 3.0, "unit": 2667.0}], "sec": [{"name": "صنایع غذایی و نانوایی و شیرینی‌پزی", "share": 35, "tons": 560.0}, {"name": "خرده‌فروشی و مصرف خانگی", "share": 20, "tons": 320.0}, {"name": "خوراک دام و طیور", "share": 20, "tons": 320.0}, {"name": "دارویی و همودیالیز (بخش ثبت‌شده در این تعرفه)", "share": 7, "tons": 112.0}, {"name": "صنعتی و سایر (شوینده‌ها، تصفیه آب، پودر اطفای حریق)", "share": 18, "tons": 288.0}], "cif": [{"name": "پاکستان (ارزش واحد ثبت‌شده ۲۰۲۵)", "lo": 274.0, "hi": 274.0, "kind": "cmp"}, {"name": "پارس از خرمشهر (پیشنهاد ۲۵۵ دلار FOB)", "lo": 276, "hi": 291, "kind": "pars"}, {"name": "پارس از بندرعباس (عادی)", "lo": 290, "hi": 310, "kind": "pars"}, {"name": "چین (ارزش واحد ثبت‌شده ۲۰۲۵)", "lo": 316.0, "hi": 316.0, "kind": "cmp"}, {"name": "پارس از بندرعباس (پیک و پرریسک)", "lo": 330, "hi": 350, "kind": "war"}, {"name": "هند (ارزش واحد ثبت‌شده ۲۰۲۵)", "lo": 456.0, "hi": 456.0, "kind": "cmp"}, {"name": "ترکیه (ارزش واحد ثبت‌شده ۲۰۲۵)", "lo": 515.0, "hi": 515.0, "kind": "cmp"}]};
+  var FA = "۰۱۲۳۴۵۶۷۸۹";
+  function toFa(n){ return String(n).replace(/[0-9]/g, function(d){ return FA[+d]; }); }
+  function fmt(n){ return toFa(Number(n).toLocaleString("en-US").replace(/,/g, "٬")); }
+  function cssVar(name){ return getComputedStyle(document.documentElement).getPropertyValue(name).trim(); }
+  var charts = [];
+  function colors(){
+    return { ink: cssVar('--ink-soft'), grid: cssVar('--line-soft'), petrol: '#536779', petrolDark: '#193D5B',
+             copper: cssVar('--copper-500'), copperLight: cssVar('--copper-300'), bad: cssVar('--bad'), good: cssVar('--good'), bg: cssVar('--bg-soft') };
+  }
+  function tip(fn){ return { rtl: true, textDirection: 'rtl', callbacks: { label: fn } }; }
+  function el(id){ return document.getElementById(id); }
+  function mk(id, cfg){ if (el(id)) charts.push(new Chart(el(id), cfg)); }
+
+  function build(){
+    var c = colors();
+    Chart.defaults.font.family = "Vazirmatn, Tahoma, sans-serif"; Chart.defaults.color = c.ink; Chart.defaults.borderColor = c.grid;
+    charts.forEach(function(ch){ ch.destroy(); }); charts = [];
+
+    // ۱) واردات ثبت‌شده ۲۰۱۶ تا ۲۰۲۵؛ سال‌های نامعتبر/برآوردی کم‌رنگ
+    var I = D.imp, fill = { ok: c.petrolDark, est: c.copper, bad: c.bad + '88' };
+    mk('chImp', { type: 'bar',
+      data: { labels: I.years.map(toFa), datasets: [{ label: 'تن', data: I.tons, backgroundColor: I.flag.map(function(f){ return fill[f]; }), borderRadius: 4 }] },
+      options: { responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: tip(function(x){ var f = I.flag[x.dataIndex]; return fmt(x.parsed.y) + ' تن' + (f === 'bad' ? ' (نامعتبر برای روند)' : f === 'est' ? ' (برآورد سازمان ملل)' : ''); }) },
+        scales: { x: { grid: { display: false }, ticks: { color: c.ink } },
+                  y: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } }, title: { display: true, text: 'تن', color: c.ink } } } } });
+
+    // ۲) تأمین‌کنندگان ۲۰۲۵ (تن)
+    var S = D.sup;
+    mk('chSup', { type: 'bar',
+      data: { labels: S.map(function(s){ return s.name; }), datasets: [{ label: 'تن', data: S.map(function(s){ return s.tons; }), backgroundColor: S.map(function(s){ return s.name === 'ایران' ? c.copper : c.petrol; }), borderRadius: 4 }] },
+      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: tip(function(x){ return fmt(x.parsed.x) + ' تن؛ ارزش واحد ' + fmt(S[x.dataIndex].unit) + ' دلار بر تن'; }) },
+        scales: { x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } }, title: { display: true, text: 'تن (۲۰۲۵)', color: c.ink } },
+                  y: { grid: { display: false }, ticks: { color: c.ink } } } } });
+
+    // ۳) تفکیک بخش‌های مصرف (تن، برآورد مدلی)
+    var T = D.sec;
+    mk('chSec', { type: 'bar',
+      data: { labels: T.map(function(s){ return s.name; }), datasets: [{ label: 'تن (برآورد)', data: T.map(function(s){ return s.tons; }), backgroundColor: c.petrol, borderRadius: 4 }] },
+      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: tip(function(x){ return fmt(x.parsed.x) + ' تن (' + toFa(T[x.dataIndex].share) + '٪)'; }) },
+        scales: { x: { grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return fmt(v); } }, title: { display: true, text: 'تن در سال', color: c.ink } },
+                  y: { grid: { display: false }, ticks: { color: c.ink } } } } });
+
+    // ۴) هزینه رسیده‌ی پارس در برابر ارزش واحد ثبت‌شده‌ی رقبا (بازه)
+    var P = D.cif, col = { cmp: c.petrolDark, pars: c.good, war: c.bad };
+    var labels = { id: 'cifLabels', afterDatasetsDraw: function(chart){
+      var ctx = chart.ctx, meta = chart.getDatasetMeta(1), xs = chart.scales.x;
+      ctx.save(); ctx.font = '600 12px Vazirmatn, Tahoma'; ctx.textBaseline = 'middle'; ctx.textAlign = 'left'; ctx.direction = 'ltr'; ctx.fillStyle = c.ink;
+      meta.data.forEach(function(bar, i){ var p = P[i]; ctx.fillText(p.lo === p.hi ? fmt(p.lo) : fmt(p.lo) + ' – ' + fmt(p.hi), xs.getPixelForValue(p.hi) + 8, bar.y); });
+      ctx.restore(); } };
+    mk('chCif', { type: 'bar', plugins: [labels],
+      data: { labels: P.map(function(p){ return p.name; }), datasets: [
+        { label: 'کران پایین', data: P.map(function(p){ return p.lo; }), backgroundColor: P.map(function(p){ return col[p.kind]; }), borderRadius: 3 },
+        { label: 'دامنه', data: P.map(function(p){ return p.hi - p.lo; }), backgroundColor: P.map(function(p){ return col[p.kind] + '55'; }), borderRadius: 3 } ] },
+      options: { indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: tip(function(x){ var p = P[x.dataIndex]; return p.lo === p.hi ? fmt(p.lo) + ' دلار بر تن' : fmt(p.lo) + ' تا ' + fmt(p.hi) + ' دلار بر تن'; }) },
+        scales: { x: { stacked: true, suggestedMax: 640, grid: { color: c.grid }, ticks: { color: c.ink, callback: function(v){ return toFa(v); } }, title: { display: true, text: 'دلار بر تن', color: c.ink } },
+                  y: { stacked: true, grid: { display: false }, ticks: { color: c.ink } } } } });
+  }
+  build();
+  if (window.matchMedia){ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', build); }
+})();
+</script>
+
+</body>
+</html>

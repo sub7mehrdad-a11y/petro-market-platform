@@ -137,15 +137,15 @@ const fwGen = async ({ input }) => {
     iran_share_pct: { point: 10, lo: 2, hi: 25, reason: "x" }, domestic_production: { p: 0.1, reason: "x" }, tariff_pct: { point: 5, lo: 0, hi: 5, reason: "x" },
   } });
 };
-const kw = await BT.predictNewCountry("کویت", { generate: fwGen, model: "fake-model", now: new Date("2026-11-25T00:00:00Z") });
+const kw = await BT.predictNewCountry("قطر", { generate: fwGen, model: "fake-model", now: new Date("2026-11-25T00:00:00Z") });
 assert.equal(kw.ok, true);
 assert.equal(kw.rows.length, 7);
 assert.ok(kw.rows.every((r) => r.forecast && r.baseline !== undefined));
-assert.ok(!/^کویت \|/m.test(fwInputs[0]), "کشور تازه در جدول مقایسه‌ای نیست");
-assert.match(fwInputs[0], /کشور هدف: کویت/);
-assert.match(fwInputs[0], /جمعیت: 4865298|جمعیت: 4,865,298|جمعیت: 4865298/);
-assert.equal((await BT.predictNewCountry("کویت", { generate: fwGen, model: "fake-model" })).ok, false, "پیش‌ثبت تغییرناپذیر است");
-assert.match((await BT.predictNewCountry("کویت", { generate: fwGen })).error, /پیش‌ثبت/);
+assert.ok(!/^قطر \|/m.test(fwInputs[0]), "کشور تازه در جدول مقایسه‌ای نیست");
+assert.match(fwInputs[0], /کشور هدف: قطر/);
+assert.match(fwInputs[0], /جمعیت: 2972215|جمعیت: 2,972,215/);
+assert.equal((await BT.predictNewCountry("قطر", { generate: fwGen, model: "fake-model" })).ok, false, "پیش‌ثبت تغییرناپذیر است");
+assert.match((await BT.predictNewCountry("قطر", { generate: fwGen })).error, /پیش‌ثبت/);
 assert.match((await BT.predictNewCountry("امارات", { generate: fwGen })).error, /قبلاً پژوهش شده/);
 assert.match((await BT.predictNewCountry("جزیره‌ی ناشناخته", { generate: fwGen })).error, /شاخص/);
 let sf = BT.summarizeBacktests();
@@ -153,19 +153,19 @@ assert.equal(sf.forward.pending, 7);
 assert.equal(sf.forward.n, 0);
 assert.ok(sf.rows.every((r) => !r.forward), "پیش‌ثبت‌ها در آمار آزمون بازپخش نمی‌آیند");
 assert.equal(BT.resolveForwardPredictions({ now: new Date("2026-11-26T00:00:00Z") }), 0, "تا پژوهش نیاید چیزی سنجیده نمی‌شود");
-// پژوهش کویت وارد پروفایل‌ها می‌شود ← سنجش
+// پژوهش قطر وارد پروفایل‌ها می‌شود ← سنجش
 const profFile = path.join(dataDir, "country_profiles.json");
 const profs = JSON.parse(fs.readFileSync(profFile, "utf-8"));
-profs["کویت"] = { country: "کویت", total_import_volume: { value: 4000, unit: "تن" }, supply_stats: { production_tons: 0, apparent_consumption_tons: 3500, per_capita_kg: 0.72 },
+profs["قطر"] = { country: "قطر", total_import_volume: { value: 4000, unit: "تن" }, supply_stats: { production_tons: 0, apparent_consumption_tons: 3500, per_capita_kg: 0.72 },
   report_import_breakdown: { year: 2025, total_tons: 4000, suppliers: [{ country: "چین", tons: 1800 }, { country: "هند", tons: 1200 }, { country: "ایران", tons: 400 }, { country: "سایر", tons: 600 }] } };
 fs.writeFileSync(profFile, JSON.stringify(profs));
 const nRes = BT.resolveForwardPredictions({ now: new Date("2026-12-10T00:00:00Z") });
 assert.ok(nRes >= 6, `سنجیده‌شده: ${nRes}`);
 sf = BT.summarizeBacktests();
-assert.equal(sf.forward.pending, 1, "تعرفه برای کویت واقعی ندارد (Trade Map نیامده) ← هنوز منتظر");
+assert.equal(sf.forward.pending, 1, "تعرفه برای قطر واقعی ندارد (Trade Map نیامده) ← هنوز منتظر");
 assert.ok(sf.forward.n >= 6);
 const imp = sf.rows.length; void imp;
-const fw = BT.latestBacktestRows().filter((r) => r.forward && r.country === "کویت");
+const fw = BT.latestBacktestRows().filter((r) => r.forward && r.country === "قطر");
 const impRow = fw.find((r) => r.target === "imports_tons");
 assert.equal(impRow.truth, 4000);
 assert.equal(impRow.result.inside, true);

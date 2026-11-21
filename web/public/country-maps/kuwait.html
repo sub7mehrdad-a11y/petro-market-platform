@@ -1,0 +1,99 @@
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>نقشه تعاملی بازار جوش شیرین کویت</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f6f7f9;color:#1b2430}header{padding:10px 16px;background:#1F5C8B;color:#fff}
+h1{font-size:17px;margin:0}#map{height:62vh;min-height:360px}.panel{padding:12px 16px}table{border-collapse:collapse;width:100%;font-size:13px;background:#fff}
+th,td{border:1px solid #cfd6df;padding:5px 7px;text-align:center}th{background:#e8eef5}.ctl{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:8px;font-size:13px}
+.note{font-size:12px;color:#44505f;line-height:1.9;margin-top:8px}@media(prefers-color-scheme:dark){body{background:#14181d;color:#e6eaef}table{background:#1c2229}th{background:#26303b}th,td{border-color:#38434f}.note{color:#aab4c0}}
+</style></head><body><header><h1>نقشه تعاملی بازار جوش شیرین کویت: مسیرهای ایران (زمینی و خرمشهر) و مسیرهای دریایی رقبا</h1></header>
+<div class="panel"><div class="ctl"><label><input type="checkbox" id="lg" checked> دروازه‌های ورودی (بندر و مرز)</label><label><input type="checkbox" id="lc" checked> مراکز مصرف</label><label><input type="checkbox" id="lo" checked> مبدأ تأمین‌کنندگان</label><label><input type="checkbox" id="ll" checked> خطوط مسیر (شماتیک)</label></div></div>
+<div id="map"></div><div class="panel"><h3 style="font-size:14px">ماتریس فاصله جاده‌ای از دروازه ورودی تا مرکز مصرف (کیلومتر) و برآورد کرایه حمل داخلی (دلار بر تن)</h3><div id="mat"></div>
+<h3 style="font-size:14px">مسیرهای ایران به کویت و فاصله دریایی رقبا</h3><div id="mat2"></div>
+<div class="note">منبع فاصله‌های جاده‌ای: سرویس مسیریابی OSRM بر پایه داده‌های OpenStreetMap؛ فاصله‌های دریایی در گزارش تحلیلی آمده است. کرایه حمل داخلی برآوردی مقیاس‌شده با مسافت است (مبلغ ثابت ۶ دلار به‌علاوه ۰٫۱۱ دلار برای هر تن‌کیلومتر، کامیون ۲۴ تنی) و جایگزین استعلام از شرکت حمل‌ونقل نیست. مسیرهای خشکی از ایران از خاک عراق (شلمچه، بصره، ابدلی) می‌گذرد. فاصله دریایی خرمشهر بر پایه نقاط عبوری تقریبی اروندرود و برآوردی است. روسیه در آمار کویت جریان ثبت‌شده‌ای ندارد و فقط برای مقایسه نمایش داده شده است و ریسک امنیتی و ترخیص دارد. مرزهای نمایش‌داده‌شده بر پایه داده‌های رایج نقشه است و بیانگر موضع سیاسی نیست. مسیر بندر مبارک‌الکبیر و محل دقیق گذرگاه‌ها باید پیش از تصمیم تجاری با کارگزار گمرکی تأیید شود.</div></div>
+<script>const D={"gates": [{"n": "شویخ", "lat": 29.3547, "lon": 47.9399, "t": "port"}, {"n": "شعیبه", "lat": 29.045, "lon": 48.155, "t": "port"}, {"n": "مبارک‌الکبیر", "lat": 29.74, "lon": 48.05, "t": "port"}, {"n": "العبدلی (عراق)", "lat": 30.02, "lon": 47.73, "t": "border"}, {"n": "النويصيب (عربستان)", "lat": 28.5333, "lon": 48.4167, "t": "border"}, {"n": "السالمی (عربستان)", "lat": 29.1, "lon": 46.93, "t": "border"}], "cent": [{"n": "شهر کویت", "lat": 29.3759, "lon": 47.9774}, {"n": "صبحان", "lat": 29.29, "lon": 47.97}, {"n": "شویخ صنعتی", "lat": 29.348, "lon": 47.95}, {"n": "الجهراء", "lat": 29.3375, "lon": 47.6581}, {"n": "الاحمدی", "lat": 29.0769, "lon": 48.0838}, {"n": "الصلیبیه (کشاورزی)", "lat": 29.3, "lon": 47.79}], "G": {"شویخ": {"شهر کویت": 5.2, "صبحان": 8.8, "شویخ صنعتی": 2.5, "الجهراء": 34.2, "الاحمدی": 41.2, "الصلیبیه (کشاورزی)": 20.2}, "شعیبه": {"شهر کویت": 44.2, "صبحان": 39.6, "شویخ صنعتی": 45.5, "الجهراء": 76.7, "الاحمدی": 10.0, "الصلیبیه (کشاورزی)": 58.4}, "مبارک‌الکبیر": {"شهر کویت": 69.4, "صبحان": 70.7, "شویخ صنعتی": 66.6, "الجهراء": 77.5, "الاحمدی": 104.0, "الصلیبیه (کشاورزی)": 86.1}, "العبدلی (عراق)": {"شهر کویت": 119.9, "صبحان": 118.8, "شویخ صنعتی": 117.2, "الجهراء": 92.3, "الاحمدی": 150.5, "الصلیبیه (کشاورزی)": 100.9}, "النويصيب (عربستان)": {"شهر کویت": 111.0, "صبحان": 106.4, "شویخ صنعتی": 112.4, "الجهراء": 140.0, "الاحمدی": 74.7, "الصلیبیه (کشاورزی)": 125.3}, "السالمی (عربستان)": {"شهر کویت": 120.2, "صبحان": 120.2, "شویخ صنعتی": 117.4, "الجهراء": 84.7, "الاحمدی": 146.6, "الصلیبیه (کشاورزی)": 101.2}}, "R2": {"Mashhad-Shuwaikh": 1925, "Mashhad-Shalamcheh": 1798, "Maragheh-Shuwaikh": 1365, "Shiraz-Shuwaikh": 760, "Shiraz-Shalamcheh": 634, "Khr-Shuwaikh": 199, "Khr-Abdali": 110, "Shalamcheh-Shuwaikh": 182, "Sterlitamak-Novorossiysk": 2163, "Beypazari-Mersin": 589}};
+const map=L.map('map').setView([29.5,47.9],8);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap'}).addTo(map);
+const lg=L.layerGroup().addTo(map),lc=L.layerGroup().addTo(map),lo=L.layerGroup().addTo(map),ll=L.layerGroup().addTo(map);
+function dot(c,la,lo_,col,tip,g){L.circleMarker([la,lo_],{radius:8,color:'#fff',weight:2,fillColor:col,fillOpacity:.95}).bindTooltip(tip,{direction:'top'}).addTo(g)}
+D.gates.forEach(g=>{const r=Object.entries(D.G[g.n]).map(([c,k])=>c+': '+k+' km').join('<br>');dot(0,g.lat,g.lon,g.t=='port'?'#1F5C8B':'#b5651d','<b>'+g.n+'</b> ('+(g.t=='port'?'بندر':'مرز')+')<br>'+r,lg)});
+D.cent.forEach(c=>dot(0,c.lat,c.lon,'#2e8b57','<b>'+c.n+'</b> (مرکز مصرف)',lc));
+D.cent.forEach(c=>{const g=D.gates.find(x=>x.n=='شویخ');L.polyline([[g.lat,g.lon],[c.lat,c.lon]],{color:'#2e8b57',weight:1,dashArray:'4 4'}).bindTooltip('شویخ تا '+c.n+': '+D.G['شویخ'][c.n]+' کیلومتر').addTo(ll)});
+
+
+const IR=[{n:'شیراز (کارخانه)',p:[29.61,52.53],r:'شیراز تا شویخ: 760 کیلومتر (از طریق خرمشهر، شلمچه، بصره)'},{n:'مشهد (کارخانه)',p:[36.30,59.60],r:'مشهد تا شویخ: 1925 کیلومتر'},{n:'مراغه (گمرک خروج ۱۴۰۳)',p:[37.39,46.24],r:'مراغه تا شویخ: 1365 کیلومتر'}];
+const KHR=[30.43,48.17],SHL=[30.43,48.07],BSR=[30.5,47.8],ABD=[30.02,47.73],SHW=[29.3547,47.9399];
+IR.forEach(o=>dot(0,o.p[0],o.p[1],'#8e44ad','<b>'+o.n+'</b><br>'+o.r,lo));
+dot(0,KHR[0],KHR[1],'#c0392b','<b>خرمشهر (منطقه آزاد اروند)</b><br>تا شویخ: جاده 199 کیلومتر؛ دریایی حدود 180 کیلومتر (95 مایل دریایی، برآوردی)',lo);
+// land routes (schematic, via Shalamcheh-Basra-Abdali)
+const land=(from,lab,km)=>L.polyline([from,KHR,SHL,BSR,ABD,SHW],{color:'#8e44ad',weight:2.5}).bindTooltip(lab+': '+km+' کیلومتر (زمینی از خاک عراق)').addTo(ll);
+land([29.61,52.53],'شیراز تا شویخ',760);land([36.30,59.60],'مشهد تا شویخ',1925);land([37.39,46.24],'مراغه تا شویخ',1365);
+// khoramshahr sea
+L.polyline([KHR,[30.10,48.45],[29.85,48.75],[29.60,48.40],[29.42,48.15],SHW],{color:'#c0392b',weight:3,dashArray:'6 4'}).bindTooltip('خرمشهر تا شویخ دریایی: حدود 95 مایل دریایی (برآوردی)').addTo(ll);
+// competitors sea
+const H=[26.6,56.5],Fa=[29.5,49.5],K=[29.36,48.0];
+const RED=[[34,32.5],[31.3,32.4],[30,32.55],[27.5,34],[20,38.5],[12.6,43.4],[12.2,45],[14,52],[22,59.5],H,Fa,K];
+const SEA=[
+ {n:'مرسین (ترکیه)',c:'#e67e22',nm:3617,p:[[36.75,34.6]].concat(RED)},
+ {n:'موندرا (هند)',c:'#16a085',nm:1306,p:[[22.74,69.7],[22,64],[24,60],H,Fa,K]},
+ {n:'تیانجین (چین)',c:'#c0392b',nm:6635,p:[[38.98,117.8],[31,123],[22,119],[10,111],[1.3,104],[5.5,95],[6.5,80],[12,64],[24,60],H,Fa,K]},
+ {n:'نووروسیسک (روسیه)',c:'#2c3e50',nm:4698,p:[[44.7,37.8],[41.1,29.1],[40.8,28.0],[39.5,26.2],[36,24],[35,28]].concat(RED)},
+ {n:'جنوا (ایتالیا)',c:'#7f8c8d',nm:4795,p:[[44.4,8.9],[38,11],[36.5,14],[34,25]].concat(RED)}];
+SEA.forEach(s=>{L.polyline(s.p,{color:s.c,weight:2,opacity:.8}).bindTooltip(s.n+' تا شویخ: '+s.nm+' مایل دریایی ('+Math.round(s.nm*1.852)+' کیلومتر)').addTo(ll);const q=s.p[0];dot(0,q[0],q[1],s.c,'<b>'+s.n+'</b><br>'+s.nm+' مایل دریایی تا شویخ',lo)});
+
+document.getElementById('lg').onchange=e=>e.target.checked?lg.addTo(map):map.removeLayer(lg);
+document.getElementById('lc').onchange=e=>e.target.checked?lc.addTo(map):map.removeLayer(lc);
+document.getElementById('lo').onchange=e=>e.target.checked?lo.addTo(map):map.removeLayer(lo);
+document.getElementById('ll').onchange=e=>e.target.checked?ll.addTo(map):map.removeLayer(ll);
+const fr=k=>Math.round(6+0.11*k);
+let h='<table><tr><th>دروازه ورودی</th>'+D.cent.map(c=>'<th>'+c.n+'</th>').join('')+'</tr>';
+D.gates.forEach(g=>{h+='<tr><th>'+g.n+'</th>'+D.cent.map(c=>{const k=D.G[g.n][c.n];return '<td>'+k+' km<br>'+fr(k)+' $/t</td>'}).join('')+'</tr>'});document.getElementById('mat').innerHTML=h+'</table>';
+let h2='<table><tr><th>مبدأ ایران</th><th>تا شویخ (کیلومتر)</th><th>مسیر</th><th>برآورد کرایه ($/t)</th></tr>';
+[['شیراز',760,'خرمشهر، شلمچه، بصره، ابدلی'],['مشهد',1925,'همان مسیر از خاک عراق'],['مراغه',1365,'همان مسیر از خاک عراق'],['خرمشهر',199,'شلمچه، بصره، ابدلی (جاده)']].forEach(r=>{h2+='<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+r[2]+'</td><td>'+fr(r[1])+'</td></tr>'});document.getElementById('mat2').innerHTML=h2+'</table><h3 style="font-size:14px">فاصله دریایی رقبا تا شویخ</h3><table><tr><th>مبدأ</th><th>مایل دریایی</th><th>کیلومتر</th></tr>'+SEA.map(s=>'<tr><td>'+s.n+'</td><td>'+s.nm+'</td><td>'+Math.round(s.nm*1.852)+'</td></tr>').join('')+'<tr><td>بندرعباس (ایران)</td><td>523</td><td>969</td></tr><tr><td>خرمشهر (ایران، برآوردی)</td><td>95</td><td>176</td></tr></table>';
+</script>
+<style>body{margin:0;font-family:Tahoma,Arial,sans-serif;background:#f6f7f9;color:#1b2430}header{padding:10px 16px;background:#1F5C8B;color:#fff}
+h1{font-size:17px;margin:0}#map{height:62vh;min-height:360px}.panel{padding:12px 16px}table{border-collapse:collapse;width:100%;font-size:13px;background:#fff}
+th,td{border:1px solid #cfd6df;padding:5px 7px;text-align:center}th{background:#e8eef5}.ctl{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:8px;font-size:13px}
+.note{font-size:12px;color:#44505f;line-height:1.9;margin-top:8px}@media(prefers-color-scheme:dark){body{background:#14181d;color:#e6eaef}table{background:#1c2229}th{background:#26303b}th,td{border-color:#38434f}.note{color:#aab4c0}}
+</style></head><body><header><h1>نقشه تعاملی بازار جوش شیرین کویت: مسیرهای ایران (زمینی و خرمشهر) و مسیرهای دریایی رقبا</h1></header>
+<div class="panel"><div class="ctl"><label><input type="checkbox" id="lg" checked> دروازه‌های ورودی (بندر و مرز)</label><label><input type="checkbox" id="lc" checked> مراکز مصرف</label><label><input type="checkbox" id="lo" checked> مبدأ تأمین‌کنندگان</label><label><input type="checkbox" id="ll" checked> خطوط مسیر (شماتیک)</label></div></div>
+<div id="map"></div><div class="panel"><h3 style="font-size:14px">ماتریس فاصله جاده‌ای از دروازه ورودی تا مرکز مصرف (کیلومتر) و برآورد کرایه حمل داخلی (دلار بر تن)</h3><div id="mat"></div>
+<h3 style="font-size:14px">مسیرهای ایران به کویت و فاصله دریایی رقبا</h3><div id="mat2"></div>
+<div class="note">منبع فاصله‌های جاده‌ای: سرویس مسیریابی OSRM بر پایه داده‌های OpenStreetMap؛ فاصله‌های دریایی در گزارش تحلیلی آمده است. کرایه حمل داخلی برآوردی مقیاس‌شده با مسافت است (مبلغ ثابت ۶ دلار به‌علاوه ۰٫۱۱ دلار برای هر تن‌کیلومتر، کامیون ۲۴ تنی) و جایگزین استعلام از شرکت حمل‌ونقل نیست. مسیرهای خشکی از ایران از خاک عراق (شلمچه، بصره، ابدلی) می‌گذرد. فاصله دریایی خرمشهر بر پایه نقاط عبوری تقریبی اروندرود و برآوردی است. روسیه در آمار کویت جریان ثبت‌شده‌ای ندارد و فقط برای مقایسه نمایش داده شده است و ریسک امنیتی و ترخیص دارد. مرزهای نمایش‌داده‌شده بر پایه داده‌های رایج نقشه است و بیانگر موضع سیاسی نیست. مسیر بندر مبارک‌الکبیر و محل دقیق گذرگاه‌ها باید پیش از تصمیم تجاری با کارگزار گمرکی تأیید شود.</div></div>
+<script>const D={"gates": [{"n": "شویخ", "lat": 29.3547, "lon": 47.9399, "t": "port"}, {"n": "شعیبه", "lat": 29.045, "lon": 48.155, "t": "port"}, {"n": "مبارک‌الکبیر", "lat": 29.74, "lon": 48.05, "t": "port"}, {"n": "العبدلی (عراق)", "lat": 30.02, "lon": 47.73, "t": "border"}, {"n": "النويصيب (عربستان)", "lat": 28.5333, "lon": 48.4167, "t": "border"}, {"n": "السالمی (عربستان)", "lat": 29.1, "lon": 46.93, "t": "border"}], "cent": [{"n": "شهر کویت", "lat": 29.3759, "lon": 47.9774}, {"n": "صبحان", "lat": 29.29, "lon": 47.97}, {"n": "شویخ صنعتی", "lat": 29.348, "lon": 47.95}, {"n": "الجهراء", "lat": 29.3375, "lon": 47.6581}, {"n": "الاحمدی", "lat": 29.0769, "lon": 48.0838}, {"n": "الصلیبیه (کشاورزی)", "lat": 29.3, "lon": 47.79}], "G": {"شویخ": {"شهر کویت": 5.2, "صبحان": 8.8, "شویخ صنعتی": 2.5, "الجهراء": 34.2, "الاحمدی": 41.2, "الصلیبیه (کشاورزی)": 20.2}, "شعیبه": {"شهر کویت": 44.2, "صبحان": 39.6, "شویخ صنعتی": 45.5, "الجهراء": 76.7, "الاحمدی": 10.0, "الصلیبیه (کشاورزی)": 58.4}, "مبارک‌الکبیر": {"شهر کویت": 69.4, "صبحان": 70.7, "شویخ صنعتی": 66.6, "الجهراء": 77.5, "الاحمدی": 104.0, "الصلیبیه (کشاورزی)": 86.1}, "العبدلی (عراق)": {"شهر کویت": 119.9, "صبحان": 118.8, "شویخ صنعتی": 117.2, "الجهراء": 92.3, "الاحمدی": 150.5, "الصلیبیه (کشاورزی)": 100.9}, "النويصيب (عربستان)": {"شهر کویت": 111.0, "صبحان": 106.4, "شویخ صنعتی": 112.4, "الجهراء": 140.0, "الاحمدی": 74.7, "الصلیبیه (کشاورزی)": 125.3}, "السالمی (عربستان)": {"شهر کویت": 120.2, "صبحان": 120.2, "شویخ صنعتی": 117.4, "الجهراء": 84.7, "الاحمدی": 146.6, "الصلیبیه (کشاورزی)": 101.2}}, "R2": {"Mashhad-Shuwaikh": 1925, "Mashhad-Shalamcheh": 1798, "Maragheh-Shuwaikh": 1365, "Shiraz-Shuwaikh": 760, "Shiraz-Shalamcheh": 634, "Khr-Shuwaikh": 199, "Khr-Abdali": 110, "Shalamcheh-Shuwaikh": 182, "Sterlitamak-Novorossiysk": 2163, "Beypazari-Mersin": 589}};
+const map=L.map('map').setView([29.5,47.9],8);L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{attribution:'© OpenStreetMap'}).addTo(map);
+const lg=L.layerGroup().addTo(map),lc=L.layerGroup().addTo(map),lo=L.layerGroup().addTo(map),ll=L.layerGroup().addTo(map);
+function dot(c,la,lo_,col,tip,g){L.circleMarker([la,lo_],{radius:8,color:'#fff',weight:2,fillColor:col,fillOpacity:.95}).bindTooltip(tip,{direction:'top'}).addTo(g)}
+D.gates.forEach(g=>{const r=Object.entries(D.G[g.n]).map(([c,k])=>c+': '+k+' km').join('<br>');dot(0,g.lat,g.lon,g.t=='port'?'#1F5C8B':'#b5651d','<b>'+g.n+'</b> ('+(g.t=='port'?'بندر':'مرز')+')<br>'+r,lg)});
+D.cent.forEach(c=>dot(0,c.lat,c.lon,'#2e8b57','<b>'+c.n+'</b> (مرکز مصرف)',lc));
+D.cent.forEach(c=>{const g=D.gates.find(x=>x.n=='شویخ');L.polyline([[g.lat,g.lon],[c.lat,c.lon]],{color:'#2e8b57',weight:1,dashArray:'4 4'}).bindTooltip('شویخ تا '+c.n+': '+D.G['شویخ'][c.n]+' کیلومتر').addTo(ll)});
+
+
+const IR=[{n:'شیراز (کارخانه)',p:[29.61,52.53],r:'شیراز تا شویخ: 760 کیلومتر (از طریق خرمشهر، شلمچه، بصره)'},{n:'مشهد (کارخانه)',p:[36.30,59.60],r:'مشهد تا شویخ: 1925 کیلومتر'},{n:'مراغه (گمرک خروج ۱۴۰۳)',p:[37.39,46.24],r:'مراغه تا شویخ: 1365 کیلومتر'}];
+const KHR=[30.43,48.17],SHL=[30.43,48.07],BSR=[30.5,47.8],ABD=[30.02,47.73],SHW=[29.3547,47.9399];
+IR.forEach(o=>dot(0,o.p[0],o.p[1],'#8e44ad','<b>'+o.n+'</b><br>'+o.r,lo));
+dot(0,KHR[0],KHR[1],'#c0392b','<b>خرمشهر (منطقه آزاد اروند)</b><br>تا شویخ: جاده 199 کیلومتر؛ دریایی حدود 180 کیلومتر (95 مایل دریایی، برآوردی)',lo);
+// land routes (schematic, via Shalamcheh-Basra-Abdali)
+const land=(from,lab,km)=>L.polyline([from,KHR,SHL,BSR,ABD,SHW],{color:'#8e44ad',weight:2.5}).bindTooltip(lab+': '+km+' کیلومتر (زمینی از خاک عراق)').addTo(ll);
+land([29.61,52.53],'شیراز تا شویخ',760);land([36.30,59.60],'مشهد تا شویخ',1925);land([37.39,46.24],'مراغه تا شویخ',1365);
+// khoramshahr sea
+L.polyline([KHR,[30.10,48.45],[29.85,48.75],[29.60,48.40],[29.42,48.15],SHW],{color:'#c0392b',weight:3,dashArray:'6 4'}).bindTooltip('خرمشهر تا شویخ دریایی: حدود 95 مایل دریایی (برآوردی)').addTo(ll);
+// competitors sea
+const H=[26.6,56.5],Fa=[29.5,49.5],K=[29.36,48.0];
+const RED=[[34,32.5],[31.3,32.4],[30,32.55],[27.5,34],[20,38.5],[12.6,43.4],[12.2,45],[14,52],[22,59.5],H,Fa,K];
+const SEA=[
+ {n:'مرسین (ترکیه)',c:'#e67e22',nm:3617,p:[[36.75,34.6]].concat(RED)},
+ {n:'موندرا (هند)',c:'#16a085',nm:1306,p:[[22.74,69.7],[22,64],[24,60],H,Fa,K]},
+ {n:'تیانجین (چین)',c:'#c0392b',nm:6635,p:[[38.98,117.8],[31,123],[22,119],[10,111],[1.3,104],[5.5,95],[6.5,80],[12,64],[24,60],H,Fa,K]},
+ {n:'نووروسیسک (روسیه)',c:'#2c3e50',nm:4698,p:[[44.7,37.8],[41.1,29.1],[40.8,28.0],[39.5,26.2],[36,24],[35,28]].concat(RED)},
+ {n:'جنوا (ایتالیا)',c:'#7f8c8d',nm:4795,p:[[44.4,8.9],[38,11],[36.5,14],[34,25]].concat(RED)}];
+SEA.forEach(s=>{L.polyline(s.p,{color:s.c,weight:2,opacity:.8}).bindTooltip(s.n+' تا شویخ: '+s.nm+' مایل دریایی ('+Math.round(s.nm*1.852)+' کیلومتر)').addTo(ll);const q=s.p[0];dot(0,q[0],q[1],s.c,'<b>'+s.n+'</b><br>'+s.nm+' مایل دریایی تا شویخ',lo)});
+
+document.getElementById('lg').onchange=e=>e.target.checked?lg.addTo(map):map.removeLayer(lg);
+document.getElementById('lc').onchange=e=>e.target.checked?lc.addTo(map):map.removeLayer(lc);
+document.getElementById('lo').onchange=e=>e.target.checked?lo.addTo(map):map.removeLayer(lo);
+document.getElementById('ll').onchange=e=>e.target.checked?ll.addTo(map):map.removeLayer(ll);
+const fr=k=>Math.round(6+0.11*k);
+let h='<table><tr><th>دروازه ورودی</th>'+D.cent.map(c=>'<th>'+c.n+'</th>').join('')+'</tr>';
+D.gates.forEach(g=>{h+='<tr><th>'+g.n+'</th>'+D.cent.map(c=>{const k=D.G[g.n][c.n];return '<td>'+k+' km<br>'+fr(k)+' $/t</td>'}).join('')+'</tr>'});document.getElementById('mat').innerHTML=h+'</table>';
+const gk=Object.keys(Object.values(D.O)[0]);let h2='<table><tr><th>مبدأ</th>'+gk.map(k=>'<th>'+k+'</th>').join('')+'</tr>';
+Object.entries(D.O).forEach(([o,v])=>{h2+='<tr><th>'+o+'</th>'+gk.map(k=>'<td>'+v[k]+'</td>').join('')+'</tr>'});document.getElementById('mat2').innerHTML=h2+'</table>';
+</script></body></html>
