@@ -19,7 +19,7 @@ import { usePathname, useRouter } from "next/navigation";
 
 const ROLE_LABELS = { viewer: "مشاهده‌گر", commercial: "بازرگانی" };
 
-function buildNavGroups(showOutreach, role) {
+function buildNavGroups(showOutreach, role, brainAdmin) {
   return [
     { items: [{ href: "/", label: "داشبورد", icon: IconDashboard }] },
     {
@@ -53,8 +53,12 @@ function buildNavGroups(showOutreach, role) {
             { href: "/sales", label: "پلتفرم جامع بازرگانی", icon: IconReport },
             // دفتر پیش‌بینی و بازبینی روزانه‌ی انسانی از منو برداشته شد (۱۴۰۵/۰۸/۲۳: تیم بازرگانی وقت ندارد؛ صفحه‌ها و تاریخچه می‌مانند)؛
             // مغز با آزمون بازپخش کشورها در «یادگیری مغز» سنجیده می‌شود.
-            { href: "/brain/skill", label: "مهارت‌سنجی", icon: IconSearch },
-            { href: "/brain/learning", label: "یادگیری مغز (مدیر)", icon: IconSearch },
+            ...(brainAdmin
+              ? [
+                  { href: "/brain/skill", label: "مهارت‌سنجی", icon: IconSearch },
+                  { href: "/brain/learning", label: "یادگیری مغز (مدیر)", icon: IconSearch },
+                ]
+              : []),
             ...(showOutreach ? [{ href: "/outreach", label: "ایمیل معرفی", icon: IconMail }] : []),
           ],
         }]
@@ -227,7 +231,7 @@ export default function AppShell({ children, footer }) {
   // صفحه‌ی ورود باید تنها و بدون ناوبری باشد (لینک بخش‌ها را قبل از احراز نشان نمی‌دهیم).
   if (pathname === "/login") return <>{children}</>;
 
-  const groups = buildNavGroups(session?.outreachEnabled === true, session?.role);
+  const groups = buildNavGroups(session?.outreachEnabled === true, session?.role, session?.brainAdmin === true);
   const sidebarInner = (isCollapsed, onNavigate) => (
     <>
       <Brand collapsed={isCollapsed} />

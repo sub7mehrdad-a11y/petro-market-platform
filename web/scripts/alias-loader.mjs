@@ -15,6 +15,7 @@ function withExt(p) {
   return null;
 }
 export async function resolve(specifier, context, next) {
+  if (specifier === "next/server") return next("next/server.js", context);
   if (specifier.startsWith("@/")) {
     const p = withExt(path.join(web, specifier.slice(2))) || path.join(web, specifier.slice(2));
     return next(pathToFileURL(p).href, context);
