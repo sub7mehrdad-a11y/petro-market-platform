@@ -93,7 +93,9 @@ CS.addShipment(c1.id, { tons: 70, planned_date: "2026-12-05" }, "amin"); // دو
 LS.addPayment({ contract_key: "F-3", date: "2026-10-06", amount: 7650, type: "payment" }, "amin");
 LS.addPayment({ contract_key: "F-1", date: "2026-10-20", amount: 14700, type: "payment" }, "amin");
 const acc = LS.loadAccounts().accounts;
-let list = buildLoadingList(CS.readContracts(), acc.contracts);
+let list = buildLoadingList(CS.readContracts(), acc.contracts, { today: "2026-11-15", includeOld: true });
+const fresh = buildLoadingList(CS.readContracts(), acc.contracts, { today: "2026-11-15" });
+assert.ok(!fresh.unplanned.some((u) => u.file_no === "F-2") && fresh.old_sheet.count === 1 && fresh.old_sheet.tons === 50, "قرارداد اکسل پرداخت‌شده‌ی قدیمی‌تر از ۶۰ روز پیش‌فرض در صف نیست و شمرده می‌شود");
 assert.deepEqual(list.queue.map((q) => q.file_no), ["F-3", "F-1"], "Gamma (پرداخت ۱۰-۰۶) پیش از Alpha (۱۰-۲۰)");
 assert.deepEqual(list.ordered.map((o) => `${o.rank}:${o.file_no}:${o.kind}`), ["1:F-2:unplanned", "2:F-3:shipment", "3:F-1:shipment"], "ترتیب واحد: قرارداد Done اکسل (تاریخ PI ۰۹-۱۰) پیش از Gamma (۱۰-۰۶) و Alpha (۱۰-۲۰)");
 assert.equal(list.queue[0].paid_pct, 100);

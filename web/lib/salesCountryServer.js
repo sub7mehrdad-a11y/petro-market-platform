@@ -25,7 +25,11 @@ export function loadSalesBase() {
   return { asOf: latest.as_of, firm, windowMonths };
 }
 
-const marketFor = (country) => marketOf(getCountryProfile(country), getTradeMapForCountry(country));
+const marketFor = (country) => {
+  const br = getCountryImportBreakdown(country);
+  const tons = (br?.suppliers || []).reduce((sum, x) => sum + (Number(x.tons) || 0), 0);
+  return marketOf(getCountryProfile(country), getTradeMapForCountry(country), tons || null);
+};
 
 export function countryTable() {
   const base = loadSalesBase();

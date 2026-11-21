@@ -82,7 +82,7 @@ export function scoreBacktestTarget(t, f, truth, baseline) {
 async function defaultGenerate({ system, input }) {
   const key = resolveBrainKey();
   if (!key) throw new Error("کلید مغز تنظیم نشده.");
-  return generateContent({ apiKey: key, model: BRAIN_MODEL, systemInstruction: system, input, generationConfig: { temperature: 0.2, maxOutputTokens: 4096, responseMimeType: "application/json" } });
+  return generateContent({ retries: 3, apiKey: key, model: BRAIN_MODEL, systemInstruction: system, input, generationConfig: { temperature: 0.2, maxOutputTokens: 4096, responseMimeType: "application/json" } });
 }
 
 /**

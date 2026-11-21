@@ -58,7 +58,7 @@ export function salesToCountry(firmRows, country, asOf, windowMonths) {
 }
 
 /** بازار واردات یک کشور از پروفایل/Trade Map. اولویت: گزارش اختصاصی (real_trade_stats) ← جدول واردات گزارش ← حجم کل پروفایل ← ITC. */
-export function marketOf(profile, tradeMap) {
+export function marketOf(profile, tradeMap, breakdownTons = null) {
   const itc = tradeMap?.imports_2025 || null;
   const itcTons = itc?.quantity != null && /ton/i.test(itc.quantity_unit || "") ? itc.quantity : null;
   let imports = null, source = null;
@@ -66,6 +66,8 @@ export function marketOf(profile, tradeMap) {
   else if (profile?.report_import_breakdown?.total_tons != null) { imports = profile.report_import_breakdown.total_tons; source = "گزارش تحلیلی اختصاصی"; }
   else if (profile?.total_import_volume?.value != null) { imports = profile.total_import_volume.value; source = "پروفایل کشور"; }
   else if (itcTons != null) { imports = itcTons; source = "ITC Trade Map ۲۰۲۵"; }
+  // آمار ITC برای کشورهای کم‌گزارش‌دهنده (روسیه، افغانستان…) به‌شدت ناقص است؛ اگر مجموع تناژ تأمین‌کنندگان ثبت‌شده بیشتر بود همان بازار حساب می‌شود.
+  if (source === "ITC Trade Map ۲۰۲۵" && breakdownTons > (imports || 0)) { imports = breakdownTons; source = "مجموع تأمین‌کنندگان ثبت‌شده (آمار ITC ناقص)"; }
   const unitValue = itc?.unit_value_usd ?? (itc?.value_usd_k != null && itcTons ? round((itc.value_usd_k * 1000) / itcTons) : null);
   return {
     imports_tons: imports, source, itc_imports_tons: itcTons, import_unit_value_usd: unitValue ?? null,
@@ -81,10 +83,11 @@ export function buildCountryTable(firmRows, asOf, windowMonths, countryNames, ma
     const s = salesToCountry(firmRows, country, asOf, windowMonths);
     const m = marketFor(country);
     const annualized = windowMonths > 0 ? round((s.tons / windowMonths) * 12, 0) : null;
+    const unreliable = m.imports_tons > 0 && annualized != null && annualized > m.imports_tons;
     return {
-      country, market_imports_tons: m.imports_tons, market_source: m.source, import_unit_value_usd: m.import_unit_value_usd,
+      country, market_unreliable: unreliable, market_imports_tons: m.imports_tons, market_source: m.source, import_unit_value_usd: m.import_unit_value_usd,
       tons: s.tons, deals: s.deals, monthly_avg_tons: s.monthly_avg_tons, avg_price: s.avg_price, last_date: s.last_date, trend_pct: s.trend_pct,
-      share_pct: m.imports_tons > 0 && annualized != null ? round((annualized / m.imports_tons) * 100, 1) : null, has_sales: s.deals > 0, has_report: m.has_report,
+      share_pct: m.imports_tons > 0 && annualized != null && !unreliable ? round((annualized / m.imports_tons) * 100, 1) : null, has_sales: s.deals > 0, has_report: m.has_report,
     };
   }).sort((a, b) => (b.tons || 0) - (a.tons || 0) || (b.market_imports_tons || 0) - (a.market_imports_tons || 0));
 }
@@ -98,8 +101,10 @@ export function buildCountryDetail(firmRows, asOf, country, ctx) {
   const s = salesToCountry(firmRows, country, asOf, ctx.windowMonths);
   const m = ctx.market;
   const annualized = ctx.windowMonths > 0 ? round((s.tons / ctx.windowMonths) * 12, 0) : null;
-  const share = m.imports_tons > 0 && annualized != null ? round((annualized / m.imports_tons) * 100, 1) : null;
-  const shareToDate = m.imports_tons > 0 ? round((s.tons / m.imports_tons) * 100, 1) : null;
+  // اگر صادرات سالانه‌شده‌ی ما از کل واردات ثبت‌شده‌ی کشور بیشتر است، آمار بازار ناقص است و سهم محاسبه نمی‌شود
+  const unreliable = m.imports_tons > 0 && annualized != null && annualized > m.imports_tons;
+  const share = m.imports_tons > 0 && annualized != null && !unreliable ? round((annualized / m.imports_tons) * 100, 1) : null;
+  const shareToDate = m.imports_tons > 0 && !unreliable ? round((s.tons / m.imports_tons) * 100, 1) : null;
 
   // جایگاه قیمتی: قیمت FOB/FCA ما در برابر ارزش واحد صادراتی رقبا (و قیمت متوسط واردات خود کشور)
   const ours = s.avg_fob_price ?? s.avg_price;
@@ -110,7 +115,9 @@ export function buildCountryDetail(firmRows, asOf, country, ctx) {
     ? { ours, median_competitor: round(med, 0), cheaper_than: prices.filter((p) => p > ours).length, of: prices.length, gap_pct: med ? round(((ours - med) / med) * 100, 1) : null }
     : null;
 
-  const scenarios = [5, 10, 20].map((pct) => {
+  // فقط سناریوهایی بالاتر از سهم فعلی (حداکثر سه تا)؛ با آمار ناقص بازار سناریو نمی‌آید
+  const scenarioPcts = unreliable || !(m.imports_tons > 0) ? [] : [5, 10, 20, 30, 50].filter((x) => share == null || x > share).slice(0, 3);
+  const scenarios = scenarioPcts.map((pct) => {
     const tons = m.imports_tons > 0 ? round((m.imports_tons * pct) / 100, 0) : null;
     return { share_pct: pct, tons, extra_tons: tons != null && annualized != null ? Math.max(0, round(tons - annualized, 0)) : null, revenue_usd: tons != null && ours != null ? round(tons * ours, 0) : null };
   });
@@ -118,6 +125,7 @@ export function buildCountryDetail(firmRows, asOf, country, ctx) {
   // نتیجه‌گیری قطعی (قاعده‌محور، بدون مدل): سهم، روند، قیمت، فاصله تا پتانسیل
   const notes = [];
   if (!s.deals) notes.push({ level: "info", text: "تاکنون سفارش قطعی به این کشور ثبت نشده است." });
+  if (s.deals && unreliable) notes.push({ level: "warn", text: `واردات ثبت‌شده‌ی کشور (${m.imports_tons} تن) از صادرات سالانه‌شده‌ی ما (${annualized} تن) کمتر است؛ آمار بازار ناقص و سهم قابل‌محاسبه نیست.` });
   if (s.deals && share != null) notes.push({ level: "info", text: `سهم سالانه‌شده از واردات کشور حدود ${share}٪ (${annualized} تن در برابر ${m.imports_tons} تن).` });
   if (s.trend_pct != null) notes.push({ level: s.trend_pct < -20 ? "warn" : "info", text: `تناژ ۹۰ روز اخیر ${s.trend_pct > 0 ? "+" : ""}${s.trend_pct}٪ نسبت به ۹۰ روز قبل (${s.last90_tons} در برابر ${s.prev90_tons} تن).` });
   if (s.days_since_last != null && s.days_since_last > 45) notes.push({ level: "warn", text: `${s.days_since_last} روز از آخرین سفارش گذشته است.` });
@@ -128,5 +136,5 @@ export function buildCountryDetail(firmRows, asOf, country, ctx) {
   }
   if (m.imports_tons > 0 && annualized != null && share != null && share < 5 && m.imports_tons >= 1000) notes.push({ level: "info", text: `بازار ${m.imports_tons} تن در سال است؛ رسیدن به سهم ۱۰٪ حدود ${Math.max(0, round(m.imports_tons * 0.1 - annualized, 0))} تن در سال افزایش می‌خواهد.` });
 
-  return { country, sales: s, market: m, annualized_tons: annualized, share_pct: share, share_to_date_pct: shareToDate, position, scenarios, suppliers: ctx.suppliers || [], competitors: comp, notes };
+  return { country, sales: s, market: m, market_unreliable: unreliable, annualized_tons: annualized, share_pct: share, share_to_date_pct: shareToDate, position, scenarios, suppliers: ctx.suppliers || [], competitors: comp, notes };
 }

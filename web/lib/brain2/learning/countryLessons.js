@@ -42,7 +42,7 @@ const SYSTEM = `تو بازبین خطاهای یک پیش‌بین هستی. ی
 async function defaultGenerate({ system, input }) {
   const key = resolveBrainKey();
   if (!key) throw new Error("کلید مغز تنظیم نشده.");
-  return generateContent({ apiKey: key, model: BRAIN_MODEL, systemInstruction: system, input, generationConfig: { temperature: 0.2, maxOutputTokens: 1024, responseMimeType: "application/json" } });
+  return generateContent({ retries: 3, apiKey: key, model: BRAIN_MODEL, systemInstruction: system, input, generationConfig: { temperature: 0.2, maxOutputTokens: 1024, responseMimeType: "application/json" } });
 }
 const parseJson = (t) => { const m = String(t).match(/\{[\s\S]*\}/); if (!m) return null; try { return JSON.parse(m[0]); } catch { return null; } };
 const fmtN = (v) => (typeof v === "number" ? Number(v.toLocaleString("en-US", { maximumFractionDigits: 2 }).replace(/,/g, "")) : v);
