@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import { getCompetitorForCountry, getCountryImportBreakdown, getCountryProfile, getIranExportToCountry, getTradeMap, getTradeMapForCountry } from "./data";
+import { getCompetitorForCountry, getCountryImportBreakdown, getCountryProfile, getIranExportToCountry, getIranExports, getTradeMap, getTradeMapForCountry } from "./data";
 import { readEffectiveSnapshots } from "./salesContractsStore";
 import { daysBetween } from "./salesFormat";
 import { buildCountryDetail, buildCountryTable, marketOf } from "./salesCountry";
@@ -61,9 +61,21 @@ function competitorsFor(suppliers) {
   return [...own, ...mainCompetitors().filter((c) => !seen.has(c.name))];
 }
 
+// دوره‌ی آمار گمرک ایران (iran_exports.json): سال شمسی آخرین ردیف annual_totals و تعداد ماه‌های پوشش‌داده‌شده.
+// آغاز سال شمسی ≈ ۲۱ مارس سال (شمسی+۶۲۱)؛ پایان = آغاز + ماه‌ها (تقریبی، برای تشخیص هم‌پوشانی دوره‌ها کافی است).
+function customsPeriod() {
+  const last = (getIranExports()?.annual_totals || []).slice(-1)[0];
+  const y = Number(last?.year_fa);
+  if (!Number.isFinite(y) || !last?.months_covered) return null;
+  const from = new Date(Date.UTC(y + 621, 2, 21));
+  const to = new Date(from.getTime() + last.months_covered * 30.44 * 86400000);
+  const iso = (d) => d.toISOString().slice(0, 10);
+  return { from: iso(from), to: iso(to), label: `${y} (${last.months_covered} ماه اول)` };
+}
+
 function iranCustoms(country) {
   const d = getIranExportToCountry(country);
-  return d ? { tons_10m: d.tons ?? null, unit_price: d.unit_price_usd_per_ton ?? null, value_usd: d.value_usd ?? null } : null;
+  return d ? { tons_10m: d.tons ?? null, unit_price: d.unit_price_usd_per_ton ?? null, value_usd: d.value_usd ?? null, period: customsPeriod() } : null;
 }
 
 export function countryDetail(country) {
