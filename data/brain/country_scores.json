@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-22T04:46:44+00:00",
+  "generated_at": "2026-11-22T06:18:56+00:00",
   "digest_version": "s1-2026-11-06",
   "config": "data/brain/scoring_config.json",
   "weights": {
@@ -201,6 +201,67 @@
       "rank": 3
     },
     {
+      "country": "امارات",
+      "score": 70.4,
+      "tier": "A",
+      "components": {
+        "market_size": 0.68,
+        "price_room": 0.91,
+        "competition": 0.63,
+        "proximity": 0.96,
+        "growth": 0.24,
+        "tariff_and_union": 0.71
+      },
+      "notes": {
+        "market_size": "واردات حدود 12,674 تن (گزارش اختصاصی)",
+        "price_room": "ارزش واحد واردات 427 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
+        "competition": "سهم ترکیه+چین+روسیه 41٪، سهم ایران 8٪ (منبع: تفکیک گزارش اختصاصی)",
+        "proximity": "256 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
+        "growth": "رشد ۵‌ساله‌ی حجم واردات +7٪",
+        "tariff_and_union": "تعرفه‌ی متوسط 0.22٪"
+      },
+      "strengths": [
+        "بازار بزرگ",
+        "ارزش واحد واردات بالا (نشانه‌ی سطح قیمت مقصد، نه فوب)",
+        "نزدیک به ایران"
+      ],
+      "weaknesses": [
+        "رشد کند"
+      ],
+      "flags": [],
+      "data_gaps": [],
+      "raw": {
+        "import_tons": 12674,
+        "distance_km": 256,
+        "unit_value_usd": 427.0
+      },
+      "pool": {
+        "companies": 168,
+        "with_email": 163,
+        "grades": [
+          [
+            "خوراکی",
+            132
+          ],
+          [
+            "غذایی",
+            9
+          ],
+          [
+            "فنی/استخر",
+            3
+          ],
+          [
+            "گرید مشخص نشده",
+            2
+          ]
+        ],
+        "sent": 0
+      },
+      "pool_depth": 1.0,
+      "rank": 4
+    },
+    {
       "country": "ازبکستان",
       "score": 70.2,
       "tier": "A",
@@ -261,67 +322,6 @@
         "sent": 8
       },
       "pool_depth": 0.28,
-      "rank": 4
-    },
-    {
-      "country": "امارات",
-      "score": 70.1,
-      "tier": "A",
-      "components": {
-        "market_size": 0.67,
-        "price_room": 0.91,
-        "competition": 0.62,
-        "proximity": 0.96,
-        "growth": 0.24,
-        "tariff_and_union": 0.71
-      },
-      "notes": {
-        "market_size": "واردات حدود 12,514 تن (گزارش اختصاصی)",
-        "price_room": "ارزش واحد واردات 427 دلار/تن (CIF-محور؛ با قیمت فوب مقایسه نمی‌شود)",
-        "competition": "سهم ترکیه+چین+روسیه 41٪، سهم ایران 6٪ (منبع: تفکیک گزارش اختصاصی)",
-        "proximity": "256 کیلومتر از ایران (فاصله‌ی ثبت‌شده)",
-        "growth": "رشد ۵‌ساله‌ی حجم واردات +7٪",
-        "tariff_and_union": "تعرفه‌ی متوسط 0.22٪"
-      },
-      "strengths": [
-        "بازار بزرگ",
-        "ارزش واحد واردات بالا (نشانه‌ی سطح قیمت مقصد، نه فوب)",
-        "نزدیک به ایران"
-      ],
-      "weaknesses": [
-        "رشد کند"
-      ],
-      "flags": [],
-      "data_gaps": [],
-      "raw": {
-        "import_tons": 12514,
-        "distance_km": 256,
-        "unit_value_usd": 427.0
-      },
-      "pool": {
-        "companies": 168,
-        "with_email": 163,
-        "grades": [
-          [
-            "خوراکی",
-            132
-          ],
-          [
-            "غذایی",
-            9
-          ],
-          [
-            "فنی/استخر",
-            3
-          ],
-          [
-            "گرید مشخص نشده",
-            2
-          ]
-        ],
-        "sent": 0
-      },
-      "pool_depth": 1.0,
       "rank": 5
     },
     {

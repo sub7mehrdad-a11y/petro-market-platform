@@ -30,11 +30,11 @@ const by = Object.fromEntries(table.map((r) => [r.country, r]));
 assert.ok(by["امارات"] && by["عربستان سعودی"] && by["ازبکستان"]);
 assert.ok(!by["ترکیه"], "رقیب صادرکننده (بدون مقدار قابل‌سنجش) در جدول نیست");
 const uae = by["امارات"].truth;
-assert.equal(uae.imports_tons, 12514);
+assert.equal(uae.imports_tons, 12674);
 assert.equal(uae.consumption_tons, 9000);
 assert.equal(uae.per_capita_kg, 0.8);
-near(uae.top_supplier_share_pct, 34.2);
-near(uae.iran_share_pct, 6.4);
+near(uae.top_supplier_share_pct, 33.7);
+near(uae.iran_share_pct, 7.6);
 assert.equal(uae.domestic_production, 0);
 assert.equal(uae.tariff_pct, 5);
 assert.equal(by["عربستان سعودی"].truth.domestic_production, 0);
@@ -81,7 +81,7 @@ const input = inputs[0];
 assert.ok(!/^امارات \|/m.test(input), "ردیف کشور هدف در جدول کشورهای مشابه نیست");
 assert.ok(/^عربستان سعودی \|/m.test(input) && /^ازبکستان \|/m.test(input), "کشورهای دیگر هستند");
 assert.match(input, /کشور هدف: امارات/);
-assert.ok(!input.includes("12514") && !input.includes("۱۲۵۱۴"), "واردات ثبت‌شده‌ی خود کشور در ورودی نیست");
+assert.ok(!input.includes("12674") && !input.includes("۱۲۶۷۴"), "واردات ثبت‌شده‌ی خود کشور در ورودی نیست");
 assert.ok(!/gdp_per_capita|تفکیک مبدأ|گزارش/.test(input.split("=====")[0]), "سربرگ فقط شاخص‌های عمومی است");
 
 // خطای بزرگ: بازه‌ی دور از واقعیت ← خارج از بازه و مهارت منفی؛ پیش‌بینی نامعتبر ← سنجیده نمی‌شود
