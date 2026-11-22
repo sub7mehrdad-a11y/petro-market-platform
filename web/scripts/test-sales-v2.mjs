@@ -181,6 +181,19 @@ assert.deepEqual(cmp.composition.map((x) => x.label).slice(0, 2), ["ما", "سا
 assert.equal(cmp.rivals.find((r) => r.name === "چین").ours_vs_tons, 0.78);
 assert.ok(cmp.price_refs.some((r) => r.label.includes("گمرک ایران") && r.value === 180));
 assert.ok(cmp.price_refs.some((r) => r.label === "چین در این بازار" && r.value === 190) && cmp.price_refs.some((r) => r.label.startsWith("هند") && r.value === 381));
+// اصلاح بازار با گمرک ایران
+{
+  const mk = { imports_tons: 10000, source: "گزارش" };
+  const a = SC.adjustMarketByCustoms(mk, [{ name: "ایران", tons: 2000 }, { name: "چین", tons: 8000 }], 3000);
+  assert.equal(a.market.imports_tons, 11000, "تناژ ایران با گمرک جایگزین و کل بازار بزرگ می‌شود");
+  assert.equal(a.market.customs_adjusted, "iran_row");
+  assert.equal(a.suppliers.find((x) => x.name === "ایران").tons, 3000);
+  assert.equal(SC.adjustMarketByCustoms(mk, [{ name: "ایران", tons: 2800 }, { name: "چین", tons: 7200 }], 3000).market.customs_adjusted, undefined, "اختلاف زیر ۱۵٪ دست‌نمی‌خورد");
+  const f = SC.adjustMarketByCustoms({ imports_tons: 1000, source: "ITC" }, [], 4000);
+  assert.equal(f.market.imports_tons, 4000, "بدون ردیف ایران، بازار دست‌کم برابر گمرک است");
+  assert.equal(f.market.customs_adjusted, "floor");
+  assert.equal(SC.adjustMarketByCustoms({ imports_tons: 9000, source: "ITC" }, [], 4000).market.customs_adjusted, undefined);
+}
 // دوره‌ی گمرک با دوره‌ی فروش هم‌پوشانی ندارد (گمرک ۱۴۰۴ تا ژانویه ۲۰۲۶؛ قراردادها از میانه‌ی ۲۰۲۶) ⇒ «کم‌اظهاری» اعلام نمی‌شود
 {
   const cust = { tons_10m: 800, unit_price: 180, period: { from: "2025-03-21", to: "2026-01-20" } };

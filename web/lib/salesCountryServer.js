@@ -3,7 +3,7 @@ import path from "path";
 import { getCompetitorForCountry, getCountryImportBreakdown, getCountryProfile, getIranExportToCountry, getIranExports, getTradeMap, getTradeMapForCountry } from "./data";
 import { readEffectiveSnapshots } from "./salesContractsStore";
 import { daysBetween } from "./salesFormat";
-import { buildCountryDetail, buildCountryTable, marketOf } from "./salesCountry";
+import { adjustMarketByCustoms, buildCountryDetail, buildCountryTable, marketOf } from "./salesCountry";
 
 // بارگذاری داده برای بررسی عملکرد صادرات به کشورها: ردیف‌های فروش + بازار هر کشور از پروفایل/Trade Map.
 
@@ -25,14 +25,22 @@ export function loadSalesBase() {
   return { asOf: latest.as_of, firm, windowMonths };
 }
 
-const marketFor = (country) => {
+// بازار + تأمین‌کنندگان یک کشور، با اصلاح بر پایه‌ی صادرات گمرک ایران (سالانه‌شده؛ ۱۰ ماه ← ×۱۲/۱۰)
+export const marketBundle = (country) => {
   const br = getCountryImportBreakdown(country);
+  const suppliers = (br?.suppliers || []).map((s) => ({
+    name: s.country, tons: s.tons ?? null, share_pct: s.share_pct ?? null,
+    unit_value: s.tons && s.value_usd_k != null ? Math.round((s.value_usd_k * 1000) / s.tons) : null,
+  }));
   const tons = (br?.suppliers || []).reduce((sum, x) => sum + (Number(x.tons) || 0), 0);
   // برای روسیه و مانند آن، گزارش در competitors.json است نه country_profiles.json
   const comp = getCompetitorForCountry(country);
   const profile = { ...(comp ? { real_trade_stats: comp.real_trade_stats, report_import_breakdown: comp.report_import_breakdown } : {}), ...(getCountryProfile(country) || {}) };
-  return marketOf(profile, getTradeMapForCountry(country), tons || null);
+  const c = iranCustoms(country);
+  const annual = c?.tons_10m != null ? Math.round((c.tons_10m * 12) / 10) : null;
+  return { ...adjustMarketByCustoms(marketOf(profile, getTradeMapForCountry(country), tons || null), suppliers, annual), br };
 };
+const marketFor = (country) => marketBundle(country).market;
 
 export function countryTable() {
   const base = loadSalesBase();
@@ -81,12 +89,8 @@ function iranCustoms(country) {
 export function countryDetail(country) {
   const base = loadSalesBase();
   if (!base) return null;
-  const br = getCountryImportBreakdown(country);
-  const suppliers = (br?.suppliers || []).map((s) => ({
-    name: s.country, tons: s.tons ?? null, share_pct: s.share_pct ?? null,
-    unit_value: s.tons && s.value_usd_k != null ? Math.round((s.value_usd_k * 1000) / s.tons) : null,
-  }));
-  const d = buildCountryDetail(base.firm, base.asOf, country, { windowMonths: base.windowMonths, market: marketFor(country), suppliers, competitors: competitorsFor(suppliers), rivalGlobal: Object.fromEntries(mainCompetitors().map((c) => [c.name, c.unit_value])), customs: iranCustoms(country) });
+  const { market, suppliers, br } = marketBundle(country);
+  const d = buildCountryDetail(base.firm, base.asOf, country, { windowMonths: base.windowMonths, market, suppliers, competitors: competitorsFor(suppliers), rivalGlobal: Object.fromEntries(mainCompetitors().map((c) => [c.name, c.unit_value])), customs: iranCustoms(country) });
   const profile = getCountryProfile(country);
   return { ...d, as_of: base.asOf, window_months: base.windowMonths, breakdown_year: br?.year ?? null, port: profile?.port?.name || null, report_note: profile?.supply_stats?.note || null };
 }

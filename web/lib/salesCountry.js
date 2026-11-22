@@ -77,6 +77,26 @@ export function marketOf(profile, tradeMap, breakdownTons = null) {
   };
 }
 
+/**
+ * اصلاح اندازه‌ی بازار با آمار صادرات گمرک ایران (سالانه‌شده). گمرک ایران صادرات واقعی ایران را می‌دهد؛ جدول تأمین‌کنندگان بازار گاهی کمتر می‌گیرد (آمار ناقص کشور مقصد، برآورد میدانی).
+ *  - ردیف «ایران» با تناژ هست و گمرک بیش از ۱۵٪ بزرگ‌تر است ⇒ تناژ ایران = گمرک و کل بازار به‌اندازه‌ی اختلاف بزرگ‌تر می‌شود؛
+ *  - ردیف ایران نیست و کل بازار از گمرک کوچک‌تر است ⇒ بازار دست‌کم برابر گمرک (کف).
+ * خروجی: { market, suppliers } جدید؛ market.customs_adjusted = "iran_row" | "floor" | undefined.
+ */
+export function adjustMarketByCustoms(market, suppliers, customsAnnual) {
+  if (!(customsAnnual > 0) || !(market?.imports_tons > 0)) return { market, suppliers };
+  const iran = (suppliers || []).find((s) => s.name === "ایران");
+  const iranTons = Number(iran?.tons) || 0;
+  const tag = (m, kind, total) => ({ ...m, imports_tons: total, customs_adjusted: kind, customs_iran_annual: customsAnnual, source: `${m.source || "آمار بازار"} · اصلاح با گمرک ایران` });
+  if (iranTons > 0 && customsAnnual > iranTons * 1.15) {
+    const total = round(market.imports_tons - iranTons + customsAnnual, 0);
+    const sup = suppliers.map((s) => (s.name === "ایران" ? { ...s, tons: customsAnnual } : s)).map((s) => ({ ...s, share_pct: s.tons != null ? round((s.tons / total) * 100, 1) : s.share_pct }));
+    return { market: tag(market, "iran_row", total), suppliers: sup };
+  }
+  if (!iranTons && customsAnnual > market.imports_tons) return { market: tag(market, "floor", customsAnnual), suppliers };
+  return { market, suppliers };
+}
+
 /** جدول خلاصه‌ی کشورها (صفحه‌ی اول پلتفرم). countryNames: کشورهای دارای فروش + کشورهای دارای پروفایل. */
 export function buildCountryTable(firmRows, asOf, windowMonths, countryNames, marketFor) {
   return countryNames.map((country) => {
