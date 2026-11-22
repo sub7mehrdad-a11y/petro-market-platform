@@ -98,17 +98,28 @@ export const MAIN_RIVALS = ["ترکیه", "چین", "روسیه", "هند"];
  * گزارش مقایسه‌ای یک کشور: سهم ما از صادرات ایران، ترکیب بازار، صادرات ما در برابر رقبا، قیمت ما در برابر رقبا.
  * in: { ours (تن سالانه‌شده), ourPrice, market:{imports_tons,import_unit_value_usd}, suppliers:[{name,tons,unit_value}], rivalGlobal:{[name]:unit_value}, customs:{tons_10m,unit_price}|null }
  */
-export function buildComparison({ ours, ourPrice, market, suppliers, rivalGlobal = {}, customs = null }) {
+export function buildComparison({ ours, ourPrice, market, suppliers, rivalGlobal = {}, customs = null, ourPeriod = null }) {
   const find = (name) => (suppliers || []).find((x) => x.name === name) || null;
   const iranRow = find("ایران");
   const iranMarket = iranRow?.tons ?? null;
   const customsAnnual = customs?.tons_10m != null ? round((customs.tons_10m * 12) / 10, 0) : null;
   const share = (a, b) => (a != null && b > 0 ? round((a / b) * 100, 1) : null);
+  // دوره‌ی آمار گمرک (مثلاً ۱۰ ماهه‌ی ۱۴۰۴ = مارس ۲۰۲۵ تا ژانویه ۲۰۲۶) با دوره‌ی فروش ما (از اولین قرارداد این کشور تا تاریخ گزارش) هم‌پوشانی دارد؟
+  // بدون هم‌پوشانی، «فروش ما > گمرک» کم‌اظهاری ثابت نمی‌کند (تغییر مسیر/بازار، قرارداد در برابر ارسال، خریدار در برابر مقصد).
+  const cp = customs?.period || null;
+  let overlapDays = null;
+  if (cp && ourPeriod?.from && ourPeriod?.to) {
+    const ms = (d) => Date.parse(`${d}T00:00:00Z`);
+    overlapDays = Math.max(0, Math.round((Math.min(ms(cp.to), ms(ourPeriod.to)) - Math.max(ms(cp.from), ms(ourPeriod.from))) / 86400000));
+  }
+  const periodsDiffer = overlapDays != null && overlapDays < 30;
+  const exceeds = (iranMarket != null && ours > iranMarket) || (customsAnnual != null && ours > customsAnnual);
   const iran = {
+    customs_period: cp, our_period: ourPeriod, period_overlap_days: overlapDays, periods_differ: periodsDiffer, exceeds,
     market_tons: iranMarket, customs_tons_10m: customs?.tons_10m ?? null, customs_tons_annual: customsAnnual, customs_unit_price: customs?.unit_price ?? null,
     our_share_of_market_iran_pct: share(ours, iranMarket), our_share_of_customs_pct: share(ours, customsAnnual),
     iran_share_of_market_pct: share(iranMarket, market?.imports_tons),
-    understated: (iranMarket != null && ours > iranMarket) || (customsAnnual != null && ours > customsAnnual),
+    understated: exceeds && !periodsDiffer,
   };
   const rivals = MAIN_RIVALS.map((name) => {
     const r = find(name);
@@ -185,6 +196,6 @@ export function buildCountryDetail(firmRows, asOf, country, ctx) {
   }
   if (m.imports_tons > 0 && annualized != null && share != null && share < 5 && m.imports_tons >= 1000) notes.push({ level: "info", text: `بازار ${m.imports_tons} تن در سال است؛ رسیدن به سهم ۱۰٪ حدود ${Math.max(0, round(m.imports_tons * 0.1 - annualized, 0))} تن در سال افزایش می‌خواهد.` });
 
-  const comparison = buildComparison({ ours: annualized, ourPrice: ours, market: m, suppliers: ctx.suppliers || [], rivalGlobal: ctx.rivalGlobal || {}, customs: ctx.customs || null });
+  const comparison = buildComparison({ ours: annualized, ourPrice: ours, market: m, suppliers: ctx.suppliers || [], rivalGlobal: ctx.rivalGlobal || {}, customs: ctx.customs || null, ourPeriod: s.first_date ? { from: s.first_date, to: asOf } : null });
   return { country, comparison, sales: s, market: m, market_unreliable: unreliable, annualized_tons: annualized, share_pct: share, share_to_date_pct: shareToDate, position, scenarios, suppliers: ctx.suppliers || [], competitors: comp, notes };
 }

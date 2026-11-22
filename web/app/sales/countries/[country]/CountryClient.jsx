@@ -74,6 +74,12 @@ export default function CountryClient({ country }) {
                 <Kpi label="سهم ایران از کل واردات کشور" value={cmp.iran.iran_share_of_market_pct != null ? `${fa(cmp.iran.iran_share_of_market_pct, 1)}٪` : "—"} />
                 <Kpi label="سهم ما از کل واردات کشور" value={d.share_pct != null ? `${fa(d.share_pct, 1)}٪` : "—"} tone={d.market_unreliable ? "text-warning" : undefined} sub={d.market_unreliable ? "آمار بازار ناقص" : undefined} />
               </div>
+              {cmp.iran.periods_differ && cmp.iran.customs_period && cmp.iran.our_period && (
+                <p className="text-xs leading-6 text-warning">
+                  دوره‌ی آمار گمرک ایران ({faDigits(cmp.iran.customs_period.label)}؛ {fdate(cmp.iran.customs_period.from)} تا {fdate(cmp.iran.customs_period.to)}) با دوره‌ی فروش ما در این کشور ({fdate(cmp.iran.our_period.from)} تا {fdate(cmp.iran.our_period.to)}) هم‌پوشانی ندارد؛ مقایسه‌ی مستقیم این دو معتبر نیست
+                  {cmp.iran.exceeds ? " و بیشتر بودن فروش ما از رقم گمرک لزوماً کم‌اظهاری نیست (تغییر مسیر یا بازار، قرارداد در برابر محموله‌ی ارسال‌شده، کشور خریدار در برابر مقصد اظهارشده)." : "."}
+                </p>
+              )}
               {cmp.iran.understated && <p className="text-xs text-warning">صادرات سالانه‌شده‌ی ما از رقم ثبت‌شده‌ی ایران بیشتر است؛ آمار گمرک یا بازار این کشور کم‌اظهار است.</p>}
               {cmp.composition.length > 0 && (
                 <div>

@@ -181,6 +181,18 @@ assert.deepEqual(cmp.composition.map((x) => x.label).slice(0, 2), ["ما", "سا
 assert.equal(cmp.rivals.find((r) => r.name === "چین").ours_vs_tons, 0.78);
 assert.ok(cmp.price_refs.some((r) => r.label.includes("گمرک ایران") && r.value === 180));
 assert.ok(cmp.price_refs.some((r) => r.label === "چین در این بازار" && r.value === 190) && cmp.price_refs.some((r) => r.label.startsWith("هند") && r.value === 381));
+// دوره‌ی گمرک با دوره‌ی فروش هم‌پوشانی ندارد (گمرک ۱۴۰۴ تا ژانویه ۲۰۲۶؛ قراردادها از میانه‌ی ۲۰۲۶) ⇒ «کم‌اظهاری» اعلام نمی‌شود
+{
+  const cust = { tons_10m: 800, unit_price: 180, period: { from: "2025-03-21", to: "2026-01-20" } };
+  const noOverlap = SC.buildComparison({ ours: 900, ourPrice: 230, market: { imports_tons: 12514 }, suppliers: [{ name: "ایران", tons: 800 }], customs: cust, ourPeriod: { from: "2026-06-01", to: "2026-11-08" } });
+  assert.equal(noOverlap.iran.periods_differ, true);
+  assert.equal(noOverlap.iran.period_overlap_days, 0);
+  assert.equal(noOverlap.iran.exceeds, true);
+  assert.equal(noOverlap.iran.understated, false, "بدون هم‌پوشانی دوره‌ها، کم‌اظهاری اعلام نمی‌شود");
+  const overlap = SC.buildComparison({ ours: 900, ourPrice: 230, market: { imports_tons: 12514 }, suppliers: [{ name: "ایران", tons: 800 }], customs: cust, ourPeriod: { from: "2025-06-01", to: "2025-12-31" } });
+  assert.equal(overlap.iran.periods_differ, false);
+  assert.equal(overlap.iran.understated, true, "با هم‌پوشانی دوره‌ها هشدار کم‌اظهاری باقی می‌ماند");
+}
 assert.equal(SC.buildComparison({ ours: 5000, ourPrice: 240, market: { imports_tons: 4000 }, suppliers: [{ name: "ایران", tons: 3000 }], customs: null }).iran.understated, true, "صادرات ما بیش از رقم ایران ← کم‌اظهار");
 
 // ------------------------------------------------------------------ داده‌ی عملکرد شرکت برای مغز
