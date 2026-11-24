@@ -6,6 +6,7 @@
 // بدون هیچ اتصال واقعی تست شود. IO در outreachFollowup.js است.
 
 import { FREE_MAIL, AUTO_SUBJECT_RE, DSN_SUBJECT_RE, domainOf } from "./outreachReport.js";
+import { renderReminderBody } from "./outreachReminderText.js";
 
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -64,8 +65,13 @@ export function selectReminderCandidates({
  * ⚠ متن تازه است و نیاز به تأیید مسئول بازرگانی/هیئت‌مدیره دارد؛ تا آن موقع OUTREACH_REMINDER_ENABLED روشن نشود.
  * امضا عیناً همان امضای ایمیل معرفی است.
  */
-export function buildReminderEmail({ originalSubject, companyName }) {
+export function buildReminderEmail({ originalSubject, companyName, country = "", localLanguage = true, englishCopy = true }) {
   const subject = /^re:/i.test(originalSubject) ? originalSubject : `Re: ${originalSubject}`;
+  // تصمیم مدیران (۱۴۰۵/۰۹/۰۲): یادآوری به زبان محلی کشور شرکت (outreachReminderText.js)؛ کشور ناشناخته/بدون ترجمه ⇒ انگلیسی.
+  if (localLanguage && country) {
+    const r = renderReminderBody({ companyName, country, localLanguage, englishCopy });
+    if (r.lang !== "en") return { subject, body: r.body, lang: r.lang };
+  }
   const body = [
     `Dear ${companyName || "Sir/Madam"},`,
     "",
@@ -80,7 +86,7 @@ export function buildReminderEmail({ originalSubject, companyName }) {
     "Export Marketing",
     "Pars Baking Soda Group",
   ].join("\n");
-  return { subject, body };
+  return { subject, body, lang: "en" };
 }
 
 // ---------------------------------------------------------------- ۲) پاسخ مشتری

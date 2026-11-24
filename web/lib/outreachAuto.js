@@ -49,6 +49,9 @@ export function loadAutoConfig() {
       ...(Array.isArray(cfg.countries) ? cfg.countries : []),
     ].filter((c, i, a) => a.indexOf(c) === i && !(cfg.paused_countries || []).includes(c)),
     paused_countries: Array.isArray(cfg.paused_countries) ? cfg.paused_countries : [],
+    // یادآوری به زبان محلی کشور (تصمیم مدیران ۱۴۰۵/۰۹/۰۲)؛ reminder_english_copy: نسخه‌ی انگلیسی هم زیر متن محلی بیاید.
+    reminder_local_language: cfg.reminder_local_language !== false,
+    reminder_english_copy: cfg.reminder_english_copy !== false,
     exclude_company_ids: new Set(Array.isArray(cfg.exclude_company_ids) ? cfg.exclude_company_ids : []),
     report: {
       weekday: cfg.report?.weekday && WEEKDAYS.includes(cfg.report.weekday) ? cfg.report.weekday : "Saturday",

@@ -4,6 +4,7 @@ import assert from "node:assert/strict";
 import {
   selectReminderCandidates, buildReminderEmail, classifyIncoming, matchIncomingToSent, buildForwardEmail, parseRecipients,
 } from "./outreachFollowupCore.js";
+import { REMINDER_TEXT, COUNTRY_LANG, reminderLanguageFor, reminderSamples, renderReminderBody } from "./outreachReminderText.js";
 
 const DAY = 86400000;
 const NOW = Date.parse("2026-11-01T10:00:00Z");
@@ -81,4 +82,35 @@ test("فوروارد: Reply-To مشتری، متن و .eml ضمیمه؛ eml بز
 test("گیرنده‌ها: فقط آدرس معتبر و یکتا", () => {
   assert.deepEqual(parseRecipients("A@b.com, bad, a@b.com; c@d.ir"), ["a@b.com", "c@d.ir"]);
   assert.deepEqual(parseRecipients(""), []);
+});
+
+test("یادآوری به زبان محلی: روسی/عربی/ارمنی + نسخه‌ی انگلیسی زیرش؛ کشور بدون ترجمه ⇒ انگلیسی", () => {
+  const subj = "Stable supply of food-grade sodium bicarbonate, direct from the producer";
+  const kz = buildReminderEmail({ originalSubject: subj, companyName: "Acme KZ", country: "قزاقستان" });
+  assert.equal(kz.lang, "ru");
+  assert.match(kz.body, /^Здравствуйте, команда Acme KZ!/);
+  assert.match(kz.body, /\n———\n\nDear Acme KZ,/);
+  assert.match(kz.subject, /^Re: Stable supply/);
+  assert.equal(buildReminderEmail({ originalSubject: subj, companyName: "X", country: "امارات" }).lang, "ar");
+  assert.equal(buildReminderEmail({ originalSubject: subj, companyName: "X", country: "ارمنستان" }).lang, "hy");
+  const ind = buildReminderEmail({ originalSubject: subj, companyName: "X", country: "هند" });
+  assert.equal(ind.lang, "en");
+  assert.match(ind.body, /^Dear X,/);
+  assert.equal(buildReminderEmail({ originalSubject: subj, companyName: "X", country: "قزاقستان", localLanguage: false }).lang, "en");
+  assert.doesNotMatch(buildReminderEmail({ originalSubject: subj, companyName: "X", country: "عراق", englishCopy: false }).body, /Dear X/);
+});
+
+test("جدول زبان‌ها: هر زبان کامل است، هر کشور به زبان موجود می‌رسد، نمونه‌ها نشتی/undefined ندارند", () => {
+  for (const [lang, T] of Object.entries(REMINDER_TEXT)) {
+    for (const k of ["p1", "p2", "p3"]) assert.ok(String(T[k] || "").length > 20, `${lang}.${k}`);
+    assert.ok(T.label_fa, `${lang}.label_fa`);
+    assert.equal(T.bye.length, 4, `${lang}.bye`);
+    assert.ok(T.hello("Co").includes("Co") && T.hello("") !== T.hello("Co"), `${lang}.hello`);
+  }
+  for (const [country, lang] of Object.entries(COUNTRY_LANG)) assert.ok(REMINDER_TEXT[lang], `${country}→${lang}`);
+  assert.equal(reminderLanguageFor("ژاپن"), "en");
+  const samples = reminderSamples();
+  assert.equal(samples.length, Object.keys(REMINDER_TEXT).length);
+  for (const sm of samples) assert.ok(!/undefined|\[object/.test(sm.body), sm.lang);
+  assert.equal(renderReminderBody({ companyName: "A", country: "ترکیه" }).lang, "tr");
 });
