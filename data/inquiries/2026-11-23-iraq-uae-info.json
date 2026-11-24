@@ -1,25 +1,33 @@
 {
   "batch": "2026-11-23 استعلام اطلاعات: اتاق اربیل، اتاق دبی، برگزارکنندگان Agro Pack Iraq",
-  "approved": false,
+  "approved": true,
   "note": "approved را فقط وقتی true کن که کاربر در چت همین دسته را صریحاً تأیید کرده باشد. آدرس‌ها از صفحه‌ی تماسِ رسمی خود سایت‌ها برداشته شده.",
   "items": [
     {
-      "to": ["info@erbilchamber.org"],
-      "approved": false,
+      "to": [
+        "info@erbilchamber.org"
+      ],
+      "approved": true,
       "subject": "Request for information: directory of member companies (food manufacturing, bakery, chemicals)",
       "body": "Dear Sir or Madam,\n\nMy name is Mehrdad Abutalebi, Export Marketing at Pars Baking Soda Group, a producer of sodium bicarbonate in Iran. We are studying the market in Iraq and the Kurdistan Region for food-grade and industrial-grade sodium bicarbonate.\n\nCould you kindly let us know:\n\n1. Whether the Erbil Chamber of Commerce and Industry publishes a directory of its member companies, and how we can obtain it, or a list limited to food manufacturers, bakeries, animal-feed producers and food-ingredient or chemical importers.\n2. Whether the Chamber can introduce foreign suppliers to its members, and what the procedure and any fees are.\n\nThank you for your time and help.\n\nBest regards,\nMehrdad Abutalebi\nExport Marketing, Pars Baking Soda Group"
     },
     {
-      "to": ["customercare@dubaichamber.com"],
-      "approved": false,
+      "to": [
+        "customercare@dubaichamber.com"
+      ],
+      "approved": true,
       "subject": "How can we access the Dubai Chambers Commercial Directory?",
       "body": "Dear Sir or Madam,\n\nMy name is Mehrdad Abutalebi, Export Marketing at Pars Baking Soda Group, a producer of sodium bicarbonate in Iran. We would like to find member companies in Dubai active in food-ingredient trading, bakery supplies and chemical trading.\n\nWhen we open the Commercial Directory link from the Dubai Chambers website, our browser receives a security block page (\"Sorry, you have been blocked\"), so we cannot search the directory.\n\nCould you kindly advise:\n\n1. How we can access the Commercial Directory, or whether another channel is available (for example a request form or an authorised contact).\n2. Whether a list of member companies in the activities above can be provided on request, and what the conditions are.\n\nThank you for your help.\n\nBest regards,\nMehrdad Abutalebi\nExport Marketing, Pars Baking Soda Group"
     },
     {
-      "to": ["neriman@sofuar.com", "c.schatz@fairtrade-messe.de"],
-      "approved": false,
+      "to": [
+        "neriman@sofuar.com",
+        "c.schatz@fairtrade-messe.de"
+      ],
+      "approved": true,
       "subject": "Agro Pack & Food Iraq: information on visitor / trade-buyer lists and participation",
       "body": "Dear Sir or Madam,\n\nMy name is Mehrdad Abutalebi, Export Marketing at Pars Baking Soda Group, a producer of sodium bicarbonate in Iran. We follow Agro Pack & Food Iraq (Erbil) and are interested in meeting food-industry buyers in Iraq.\n\nCould you kindly let us know:\n\n1. Whether a list of registered trade visitors or buyers (or a hosted-buyer / matchmaking programme) is available to exhibitors or partners, and under what conditions.\n2. What the options and deadlines are for participating in the next edition, either as an exhibitor or as a visitor.\n\nThank you for your time.\n\nBest regards,\nMehrdad Abutalebi\nExport Marketing, Pars Baking Soda Group"
     }
-  ]
+  ],
+  "approved_note": "تأیید صریح کاربر در چت (۲۰۲۶-۱۱-۲۳): «خوبه ایول بفرست» بعد از دیدن متن هر سه ایمیل"
 }
