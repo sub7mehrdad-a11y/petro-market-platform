@@ -52,6 +52,8 @@ export function loadAutoConfig() {
     // یادآوری به زبان محلی کشور (تصمیم مدیران ۱۴۰۵/۰۹/۰۲)؛ reminder_english_copy: نسخه‌ی انگلیسی هم زیر متن محلی بیاید.
     reminder_local_language: cfg.reminder_local_language !== false,
     reminder_english_copy: cfg.reminder_english_copy !== false,
+    // یادآوری محلی جبرانی برای شرکت‌هایی که قبلاً فقط یادآوری انگلیسی گرفته‌اند (دور دوم، یک‌بار).
+    reminder_local_catchup: cfg.reminder_local_catchup !== false,
     exclude_company_ids: new Set(Array.isArray(cfg.exclude_company_ids) ? cfg.exclude_company_ids : []),
     report: {
       weekday: cfg.report?.weekday && WEEKDAYS.includes(cfg.report.weekday) ? cfg.report.weekday : "Saturday",

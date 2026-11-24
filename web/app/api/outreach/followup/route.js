@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { getFollowupStatus, pollReplies, runReminders, startOutreachFollowup } from "@/lib/outreachFollowup";
+import { auditReplies, getFollowupStatus, pollReplies, runReminders, startOutreachFollowup } from "@/lib/outreachFollowup";
 import { reminderSamples } from "@/lib/outreachReminderText.js";
 import { loadAutoConfig } from "@/lib/outreachAuto";
 
@@ -25,6 +25,12 @@ export async function POST(request) {
     // خواندن صندوق ورودی و فوروارد پاسخ‌های جدید همین الان (اگر OUTREACH_FORWARD_ENABLED روشن باشد).
     const r = await pollReplies();
     if (r.error) return NextResponse.json({ error: r.error }, { status: 502 });
+    return NextResponse.json(r);
+  }
+  if (body.action === "audit_replies") {
+    // ممیزی پاسخ‌های فوروارد‌نشده؛ forward:true پاسخ‌های مطابق و فوروارد‌نشده را برای همکار می‌فرستد.
+    const r = await auditReplies({ forward: body.forward === true });
+    if (r.error && !r.scanned) return NextResponse.json({ error: r.error }, { status: 502 });
     return NextResponse.json(r);
   }
   if (body.action === "run_reminders") {

@@ -61,6 +61,45 @@ export function selectReminderCandidates({
 }
 
 /**
+ * یادآوری محلی «جبرانی» (دور دوم) برای شرکت‌هایی که قبلاً یادآوری انگلیسی گرفته‌اند (تصمیم مدیران ۱۴۰۵/۰۹/۰۳).
+ *
+ * شرط‌ها:
+ *  - یادآوری انگلیسی قبلاً با موفقیت رفته (reminders[email].status = "sent") و حداقل minGapDays روز پیش بوده (پشت‌سرهم نرود)؛
+ *  - هنوز یادآوری محلی نگرفته (localReminders)؛ زبان محلی کشورش انگلیسی نیست (وگرنه تکرار بی‌معنی است)؛
+ *  - پاسخ واقعی نداده، برگشتی (bounce) نیست، استثنا نیست؛ وضعیت پاسخ‌ها باید معلوم باشد.
+ * قدیمی‌ترین یادآوری انگلیسی اول؛ حداکثر `limit`.
+ * langOf(countryFa) → کد زبان (مثل reminderLanguageFor).
+ */
+export function selectLocalCatchUpCandidates({
+  sentRecords, rowsByEmail, reminders = {}, localReminders = {}, langOf, now = Date.now(),
+  minGapDays = 7, limit = REMINDER_DEFAULTS.perDay, excludeEmails = new Set(),
+}) {
+  const skipped = { no_english_reminder: 0, too_soon: 0, already_local: 0, english_country: 0, replied: 0, bounced: 0, excluded: 0, unknown_status: 0 };
+  if (!rowsByEmail) return { candidates: [], skipped: { ...skipped, unknown_status: (sentRecords || []).length } };
+  const candidates = [];
+  const seen = new Set();
+  for (const r of sentRecords || []) {
+    const email = clean(r.email);
+    if (!email || seen.has(email) || r.source !== "outreach-queue" || !r.message_id) continue;
+    seen.add(email);
+    const eng = reminders[email];
+    if (!eng || eng.status !== "sent") { skipped.no_english_reminder += 1; continue; }
+    if (localReminders[email]) { skipped.already_local += 1; continue; }
+    const engAt = Date.parse(eng.sent_at);
+    if (Number.isFinite(engAt) && now - engAt < minGapDays * DAY_MS) { skipped.too_soon += 1; continue; }
+    if (langOf(r.country) === "en") { skipped.english_country += 1; continue; }
+    if (excludeEmails.has(email)) { skipped.excluded += 1; continue; }
+    const row = rowsByEmail.get(email);
+    if (!row) { skipped.unknown_status += 1; continue; }
+    if (row.replied) { skipped.replied += 1; continue; }
+    if (row.status === "failed") { skipped.bounced += 1; continue; }
+    candidates.push({ ...r, _english_reminder_at: eng.sent_at || null });
+  }
+  candidates.sort((a, b) => Date.parse(a._english_reminder_at || 0) - Date.parse(b._english_reminder_at || 0));
+  return { candidates: candidates.slice(0, Math.max(0, limit)), skipped };
+}
+
+/**
  * متن ایمیل یادآوری — کوتاه، بدون ادعای جدید، در همان رشته‌ی ایمیل اول (Re: + In-Reply-To).
  * ⚠ متن تازه است و نیاز به تأیید مسئول بازرگانی/هیئت‌مدیره دارد؛ تا آن موقع OUTREACH_REMINDER_ENABLED روشن نشود.
  * امضا عیناً همان امضای ایمیل معرفی است.
