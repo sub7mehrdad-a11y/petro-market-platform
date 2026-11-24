@@ -176,7 +176,9 @@ const { simpleParser } = await import("mailparser");
 const parsedMail = await simpleParser(mail.body);
 assert.match(parsedMail.subject, /^\[TEST .*Re: Stable supply/);
 assert.ok(!/Content-Disposition: attachment/i.test(mail.body), "یادآوری پیوست ندارد");
-assert.match(mail.body, /follow up on my previous email/i);
+// متن (ممکن است برای کشورهای غیرانگلیسی کدگذاری‌شده باشد) باید از روی ایمیل پارس‌شده بررسی شود؛ نسخه‌ی انگلیسی همیشه هست
+assert.match(parsedMail.text, /follow up on my previous email/i);
+assert.match(parsedMail.text, /Pars Baking Soda Group/);
 
 console.log("✔ همه‌ی تست‌های یکپارچه گذشت");
 server.close();

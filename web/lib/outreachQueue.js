@@ -20,6 +20,7 @@ import { getCompanies, getCountryEnglishName, getOutreachSentStatePath, getOutre
 import { renderOutreachEmail, FIXED_ATTACHMENTS, isValidEmail } from "@/lib/outreachTemplate";
 import { checkEmailDeliverable } from "@/lib/outreachEmailCheck";
 import { buildReminderEmail } from "@/lib/outreachFollowupCore.js";
+import { loadAutoConfig } from "@/lib/outreachAuto";
 import { recordReminderResult } from "@/lib/outreachFollowupState";
 
 const ROOT = path.join(process.cwd(), "..");
@@ -288,7 +289,8 @@ export async function sendItem(item) {
   // یادآوری: همان رشته‌ی ایمیل اول (Re: + In-Reply-To/References)، بدون پیوست و بدون CC
   // (به درخواست کاربر: اینباکس همکاران شلوغ نشود).
   if (item.kind === "reminder") {
-    const reminder = buildReminderEmail({ originalSubject: rendered.subject, companyName: company.english_name });
+    const auto = loadAutoConfig();
+    const reminder = buildReminderEmail({ originalSubject: rendered.subject, companyName: company.english_name, country: company.country, localLanguage: auto.reminder_local_language, englishCopy: auto.reminder_english_copy });
     const fromAddress = process.env.SMTP_FROM || process.env.SMTP_USER;
     const fromName = process.env.SMTP_FROM_NAME || "Pars Baking Soda Group";
     const redirect = settings.testRedirect;

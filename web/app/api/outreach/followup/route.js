@@ -1,10 +1,17 @@
 import { NextResponse } from "next/server";
 import { getFollowupStatus, pollReplies, runReminders, startOutreachFollowup } from "@/lib/outreachFollowup";
+import { reminderSamples } from "@/lib/outreachReminderText.js";
+import { loadAutoConfig } from "@/lib/outreachAuto";
 
 // وضعیت یادآوری و فوروارد پاسخ مشتری. فقط نقش «بازرگانی» (proxy.js روی /api/outreach).
 export const dynamic = "force-dynamic";
 
-export async function GET() {
+export async function GET(request) {
+  // نمونه‌ی متن یادآوری به‌تفکیک زبان برای بازبینی: ?preview=1
+  if (new URL(request.url).searchParams.get("preview")) {
+    const auto = loadAutoConfig();
+    return NextResponse.json({ local_language: auto.reminder_local_language, english_copy: auto.reminder_english_copy, samples: reminderSamples({ englishCopy: auto.reminder_english_copy }) });
+  }
   startOutreachFollowup();
   return NextResponse.json(getFollowupStatus());
 }
