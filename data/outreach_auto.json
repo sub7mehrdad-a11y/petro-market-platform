@@ -4,6 +4,7 @@
   "_reminder_note": "یادآوری به زبان محلی کشور هر شرکت (تصمیم مدیران ۱۴۰۵/۰۹/۰۲). reminder_local_language=false یعنی فقط انگلیسی؛ reminder_english_copy=false یعنی نسخه‌ی انگلیسی زیر متن محلی نیاید. نمونه‌ی زبان‌ها: GET /api/outreach/followup?preview=1",
   "reminder_local_language": true,
   "reminder_english_copy": true,
+  "reminder_local_catchup": true,
   "send_hour_tehran": 10,
   "priority_countries": [
     "قزاقستان",

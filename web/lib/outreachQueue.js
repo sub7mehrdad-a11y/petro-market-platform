@@ -176,7 +176,7 @@ export function enqueueCompanies(companyIds) {
 
 // یادآوری‌ها (کوتاه، در رشته‌ی همان ایمیل اول): وارد «همین صف» می‌شوند تا فاصله‌ی زمانی، سقف روزانه،
 // توقف موقت/اضطراری و حالت تست دقیقاً مثل ایمیل معرفی اعمال شود. در لاگ ارسال (و گزارش عملکرد) ثبت نمی‌شوند.
-export function enqueueReminders(records) {
+export function enqueueReminders(records, round = null) {
   return mutateQueue((state) => {
     const active = new Set(state.items.filter((i) => i.status === "queued").map((i) => i.email));
     let queued = 0;
@@ -187,6 +187,7 @@ export function enqueueReminders(records) {
       state.items.push({
         id: `r-${Date.now().toString(36)}-${state.items.length}`,
         kind: "reminder",
+        ...(round ? { round } : {}),
         company_id: r.company_id,
         email,
         name: r.name || null,
@@ -301,7 +302,7 @@ export async function sendItem(item) {
       text: reminder.body,
       ...(item.orig_message_id ? { inReplyTo: item.orig_message_id, references: item.orig_message_id } : {}),
     });
-    return { info, grade: rendered.grade, company, test: !!redirect };
+    return { info, grade: rendered.grade, company, test: !!redirect, lang: reminder.lang };
   }
 
   const attachments = FIXED_ATTACHMENTS.map((a) => ({ filename: a.filename, path: path.join(ROOT, a.relativePath) }));
@@ -352,7 +353,7 @@ async function processOne() {
           else it.retry_after = new Date(Date.now() + RETRY_DELAY_MS).toISOString();
         }
       });
-      if (chk.permanent && item.kind === "reminder") recordReminderResult(item.email, { status: "failed", failed_at: new Date().toISOString(), error: `پیش‌ازارسال: ${chk.reason}` });
+      if (chk.permanent && item.kind === "reminder") recordReminderResult(item.email, { status: "failed", failed_at: new Date().toISOString(), error: `پیش‌ازارسال: ${chk.reason}` }, item.round || null);
       return { delayMs: 1000, idle: false };
     }
   }
@@ -393,10 +394,10 @@ async function processOne() {
   // یادآوری در لاگ ارسال/گزارش ثبت نمی‌شود؛ فقط در وضعیت پیگیری (تا دوباره یادآوری نگیرد).
   if (item.kind === "reminder") {
     if (outcome.ok && !outcome.test) {
-      recordReminderResult(item.email, { status: "sent", sent_at: new Date().toISOString(), message_id: outcome.info?.messageId || null });
+      recordReminderResult(item.email, { status: "sent", sent_at: new Date().toISOString(), message_id: outcome.info?.messageId || null, ...(outcome.lang ? { lang: outcome.lang } : {}) }, item.round || null);
     } else if (!outcome.ok) {
       const after = readQueue().items.find((x) => x.id === item.id);
-      if (after?.status === "failed") recordReminderResult(item.email, { status: "failed", failed_at: new Date().toISOString(), error: outcome.error });
+      if (after?.status === "failed") recordReminderResult(item.email, { status: "failed", failed_at: new Date().toISOString(), error: outcome.error }, item.round || null);
     }
   } else if (outcome.ok && !outcome.test) {
     appendToSentLog({

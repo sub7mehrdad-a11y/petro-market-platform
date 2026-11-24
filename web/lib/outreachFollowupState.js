@@ -1,5 +1,8 @@
 // وضعیت پایدار پیگیری ایمیل (یادآوری‌ها + پیشرفت خواندن پاسخ‌ها) — کنار لاگ ارسال، پس روی لیارا روی
 // دیسک دائم (OUTREACH_STATE_DIR) می‌نشیند. نوشتن اتمیک (tmp + rename)؛ همه‌ی تغییرها هم‌زمان (بدون await بینشان).
+//
+// reminders: یادآوری دور اول (انگلیسی یا زبان محلی اگر از ابتدا محلی رفته)؛
+// local_reminders: دور دوم «جبرانی» به زبان محلی برای شرکت‌هایی که قبلاً یادآوری انگلیسی گرفته بودند (تصمیم مدیران ۱۴۰۵/۰۹/۰۳).
 import fs from "fs";
 import path from "path";
 import { getOutreachSentStatePath } from "@/lib/data";
@@ -8,12 +11,12 @@ export function followupStatePath() {
   return path.join(path.dirname(getOutreachSentStatePath()), "outreach_followup_state.json");
 }
 
-const empty = () => ({ reminders: {}, reply_forward: {}, last_reminder_run: null });
+const empty = () => ({ reminders: {}, local_reminders: {}, reply_forward: {}, last_reminder_run: null, last_local_catchup_run: null });
 
 export function readFollowupState() {
   try {
     const p = JSON.parse(fs.readFileSync(followupStatePath(), "utf-8"));
-    return { ...empty(), ...p, reminders: p.reminders || {}, reply_forward: p.reply_forward || {} };
+    return { ...empty(), ...p, reminders: p.reminders || {}, local_reminders: p.local_reminders || {}, reply_forward: p.reply_forward || {} };
   } catch {
     return empty();
   }
@@ -30,10 +33,11 @@ export function mutateFollowupState(fn) {
   return result;
 }
 
-// نتیجه‌ی ارسال یک ایمیل یادآوری (از کارگر صف صدا زده می‌شود)
-export function recordReminderResult(email, patch) {
+// نتیجه‌ی ارسال یک ایمیل یادآوری (از کارگر صف صدا زده می‌شود). round = "local" برای دور دوم جبرانی.
+export function recordReminderResult(email, patch, round = null) {
   const key = String(email).trim().toLowerCase();
+  const bucket = round === "local" ? "local_reminders" : "reminders";
   mutateFollowupState((s) => {
-    s.reminders[key] = { ...(s.reminders[key] || {}), ...patch };
+    s[bucket][key] = { ...(s[bucket][key] || {}), ...patch };
   });
 }

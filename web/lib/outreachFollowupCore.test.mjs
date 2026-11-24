@@ -2,7 +2,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
 import {
-  selectReminderCandidates, buildReminderEmail, classifyIncoming, matchIncomingToSent, buildForwardEmail, parseRecipients,
+  selectReminderCandidates, selectLocalCatchUpCandidates, buildReminderEmail, classifyIncoming, matchIncomingToSent, buildForwardEmail, parseRecipients,
 } from "./outreachFollowupCore.js";
 import { REMINDER_TEXT, COUNTRY_LANG, reminderLanguageFor, reminderSamples, renderReminderBody } from "./outreachReminderText.js";
 
@@ -113,4 +113,33 @@ test("جدول زبان‌ها: هر زبان کامل است، هر کشور ب
   assert.equal(samples.length, Object.keys(REMINDER_TEXT).length);
   for (const sm of samples) assert.ok(!/undefined|\[object/.test(sm.body), sm.lang);
   assert.equal(renderReminderBody({ companyName: "A", country: "ترکیه" }).lang, "tr");
+});
+
+test("یادآوری محلی جبرانی: فقط بعد از یادآوری انگلیسی موفق، با فاصله، کشور غیرانگلیسی، بدون پاسخ/برگشتی، یک‌بار", () => {
+  const sent = [
+    rec("a@kz.kz", 40, { country: "قزاقستان" }),   // مستحق
+    rec("b@ae.ae", 40, { country: "امارات" }),      // یادآوری انگلیسی خیلی تازه ⇒ too_soon
+    rec("c@in.in", 40, { country: "هند" }),         // کشور انگلیسی ⇒ رد
+    rec("d@am.am", 40, { country: "ارمنستان" }),    // پاسخ داده
+    rec("e@tr.tr", 40, { country: "ترکیه" }),       // برگشتی
+    rec("f@ru.ru", 40, { country: "روسیه" }),       // یادآوری محلی قبلاً گرفته
+    rec("g@ru.ru", 40, { country: "روسیه" }),       // یادآوری انگلیسی نگرفته
+    rec("h@iq.iq", 40, { country: "عراق" }),        // یادآوری انگلیسی ناموفق
+  ];
+  const reminders = {
+    "a@kz.kz": { status: "sent", sent_at: iso(20) }, "b@ae.ae": { status: "sent", sent_at: iso(2) }, "c@in.in": { status: "sent", sent_at: iso(20) },
+    "d@am.am": { status: "sent", sent_at: iso(20) }, "e@tr.tr": { status: "sent", sent_at: iso(20) }, "f@ru.ru": { status: "sent", sent_at: iso(20) },
+    "h@iq.iq": { status: "failed", sent_at: iso(20) },
+  };
+  const rowsByEmail = rows({ "a@kz.kz": {}, "b@ae.ae": {}, "c@in.in": {}, "d@am.am": { replied: true }, "e@tr.tr": { status: "failed" }, "f@ru.ru": {}, "g@ru.ru": {}, "h@iq.iq": {} });
+  const r = selectLocalCatchUpCandidates({ sentRecords: sent, rowsByEmail, reminders, localReminders: { "f@ru.ru": { status: "sent" } }, langOf: reminderLanguageFor, now: NOW, limit: 10 });
+  assert.deepEqual(r.candidates.map((x) => x.email), ["a@kz.kz"]);
+  assert.deepEqual(r.skipped, { no_english_reminder: 2, too_soon: 1, already_local: 1, english_country: 1, replied: 1, bounced: 1, excluded: 0, unknown_status: 0 });
+  // وضعیت پاسخ‌ها نامعلوم (IMAP ناموفق) ⇒ هیچ‌کس
+  assert.equal(selectLocalCatchUpCandidates({ sentRecords: sent, rowsByEmail: null, reminders, langOf: reminderLanguageFor, now: NOW }).candidates.length, 0);
+  // سقف روزانه و ترتیب (قدیمی‌ترین یادآوری انگلیسی اول)
+  const many = [rec("p@kz.kz", 40, { country: "قزاقستان" }), rec("q@kz.kz", 40, { country: "قزاقستان" })];
+  const rem2 = { "p@kz.kz": { status: "sent", sent_at: iso(10) }, "q@kz.kz": { status: "sent", sent_at: iso(30) } };
+  const lim = selectLocalCatchUpCandidates({ sentRecords: many, rowsByEmail: rows({ "p@kz.kz": {}, "q@kz.kz": {} }), reminders: rem2, langOf: reminderLanguageFor, now: NOW, limit: 1 });
+  assert.deepEqual(lim.candidates.map((x) => x.email), ["q@kz.kz"]);
 });

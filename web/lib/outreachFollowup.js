@@ -23,8 +23,9 @@ import { checkOutreachReady, enqueueReminders, readQueue, getHaltReason } from "
 import { buildOutreachReport, parseHeaders, domainOf } from "@/lib/outreachReport";
 import { tehranNow, loadAutoConfig } from "@/lib/outreachAuto";
 import {
-  selectReminderCandidates, classifyIncoming, matchIncomingToSent, buildForwardEmail, parseRecipients, REMINDER_DEFAULTS,
+  selectReminderCandidates, selectLocalCatchUpCandidates, classifyIncoming, matchIncomingToSent, buildForwardEmail, parseRecipients, REMINDER_DEFAULTS,
 } from "@/lib/outreachFollowupCore.js";
+import { reminderLanguageFor } from "@/lib/outreachReminderText.js";
 import { readFollowupState, mutateFollowupState } from "@/lib/outreachFollowupState";
 
 const MAX_PER_POLL = 30;
@@ -105,6 +106,87 @@ export async function runReminders({ force = false } = {}) {
 }
 
 // ---------------------------------------------------------------- ۲) فوروارد پاسخ مشتری
+// ارسال یک پاسخ مشتری به همکار (خواندن متن/پیوست از صندوق + ساخت ایمیل فوروارد)؛ مشترک بین پیمایش خودکار و ممیزی دستی.
+async function forwardOne({ client, uid, msg, from, subject, match, transport, to, redirect, companies }) {
+  const full = await client.fetchOne(uid, { uid: true, source: true }, { uid: true });
+  const raw = full?.source || null;
+  const parsed = raw ? await simpleParser(raw) : null;
+  const company = companies.find((c) => c.id === match.record.company_id) || companies.find((c) => (c.email || "").toLowerCase() === match.record.email?.toLowerCase());
+  const fwd = buildForwardEmail({
+    record: match.record, company, via: match.via, customerFrom: from,
+    customerName: parsed?.from?.value?.[0]?.name || null,
+    customerSubject: subject, customerDate: msg.internalDate || msg.envelope?.date || null,
+    customerText: parsed?.text || "", rawEml: raw,
+  });
+  const fromAddress = process.env.SMTP_FROM || process.env.SMTP_USER;
+  const fromName = process.env.SMTP_FROM_NAME || "Pars Baking Soda Group";
+  await transport.sendMail({
+    from: `"${fromName}" <${fromAddress}>`,
+    to,
+    subject: redirect ? `[TEST] ${fwd.subject}` : fwd.subject,
+    text: fwd.text,
+    replyTo: fwd.replyTo,
+    attachments: fwd.attachments,
+  });
+}
+
+// ---------------------------------------------------------------- ۱-ب) یادآوری محلی جبرانی (دور دوم)
+// تصمیم مدیران (۱۴۰۵/۰۹/۰۳): شرکت‌هایی که قبلاً فقط یادآوری انگلیسی گرفته‌اند، یک‌بار هم یادآوری به زبان محلی کشورشان بگیرند.
+// مستقل از runReminders (دروازه‌ی تاریخ خودش را دارد) و با همان سقف روزانه (perDay) و سقف صف؛ پشت‌سرهم نمی‌رود (≥ ۷ روز بعد از یادآوری انگلیسی).
+export async function runLocalCatchUp({ force = false } = {}) {
+  const cfg = followupConfig().reminder;
+  if (!cfg.enabled) return { skipped: "disabled" };
+  if (loadAutoConfig().reminder_local_catchup === false || loadAutoConfig().reminder_local_language === false) return { skipped: "catchup-off" };
+  const halt = getHaltReason();
+  if (halt) return { skipped: "halted", reason: halt };
+  const t = tehranNow();
+  const st = readFollowupState();
+  if (!force) {
+    if (t.hour < loadAutoConfig().send_hour_tehran) return { skipped: "before-hour" };
+    if (st.last_local_catchup_run?.date === t.date) return { skipped: "already-ran" };
+  }
+  if (process.env.OUTREACH_SENDING_ENABLED !== "true") return { skipped: "sending-disabled" };
+  const problem = checkOutreachReady();
+  if (problem) return { error: problem };
+
+  // آشتی با صف: دور دومی که در صف لغو شده/گم شده دوباره قابل‌انتخاب است.
+  const queued = new Map(readQueue().items.filter((i) => i.kind === "reminder" && i.round === "local").map((i) => [i.id, i]));
+  mutateFollowupState((s) => {
+    for (const [email, r] of Object.entries(s.local_reminders)) {
+      if (r.status === "queued" && (!queued.has(r.item_id) || queued.get(r.item_id).status === "cancelled")) delete s.local_reminders[email];
+    }
+  });
+
+  const sent = platformSent(getEmailOutreachSent());
+  let report;
+  try {
+    report = await buildOutreachReport({ sentRecords: sent, companies: getCompanies(), days: null });
+  } catch (err) {
+    const msg = `خواندن وضعیت پاسخ‌ها از صندوق ورودی ناموفق بود؛ یادآوری محلی ارسال نشد: ${String(err?.message || err)}`;
+    mutateFollowupState((s) => { s.last_local_catchup_run = { date: t.date, at: new Date().toISOString(), error: msg }; });
+    console.error(`[outreach-followup] ${msg}`);
+    return { error: msg };
+  }
+  const rowsByEmail = new Map(report.rows.map((r) => [String(r.email).toLowerCase(), r]));
+  const state = readFollowupState();
+  const { candidates, skipped } = selectLocalCatchUpCandidates({
+    sentRecords: sent, rowsByEmail, reminders: state.reminders, localReminders: state.local_reminders,
+    langOf: reminderLanguageFor, limit: cfg.perDay,
+  });
+  const res = enqueueReminders(candidates, "local");
+  const items = readQueue().items.filter((i) => i.kind === "reminder" && i.round === "local" && i.status === "queued");
+  mutateFollowupState((s) => {
+    for (const c of candidates) {
+      const email = String(c.email).toLowerCase();
+      const item = items.find((i) => i.email === email);
+      if (item) s.local_reminders[email] = { status: "queued", item_id: item.id, queued_at: new Date().toISOString(), lang: reminderLanguageFor(c.country) };
+    }
+    s.last_local_catchup_run = { date: t.date, at: new Date().toISOString(), picked: candidates.length, queued: res.queued, skipped };
+  });
+  console.log(`[outreach-followup] یادآوری محلی جبرانی: ${res.queued} شرکت وارد صف شد`, skipped);
+  return { picked: candidates.length, queued: res.queued, skipped };
+}
+
 function internalDomains() {
   const out = new Set();
   for (const v of [process.env.SMTP_USER, process.env.SMTP_FROM, process.env.OUTREACH_REPORT_TO]) if (v) out.add(domainOf(v.replace(/^.*</, "").replace(/>.*$/, "")));
@@ -202,27 +284,7 @@ export async function pollReplies({ deps = {} } = {}) {  // deps: فقط برا�
         if (readFollowupState().reply_forward?.forwarded?.[key]) { advance(); continue; }
 
         try {
-          const full = await client.fetchOne(uid, { uid: true, source: true }, { uid: true });
-          const raw = full?.source || null;
-          const parsed = raw ? await simpleParser(raw) : null;
-          const company = companies.find((c) => c.id === match.record.company_id) || companies.find((c) => (c.email || "").toLowerCase() === match.record.email?.toLowerCase());
-          const fwd = buildForwardEmail({
-            record: match.record, company, via: match.via, customerFrom: from,
-            customerName: parsed?.from?.value?.[0]?.name || null,
-            customerSubject: subject, customerDate: msg.internalDate || msg.envelope?.date || null,
-            customerText: parsed?.text || "", rawEml: raw,
-          });
-          const fromAddress = process.env.SMTP_FROM || process.env.SMTP_USER;
-          const fromName = process.env.SMTP_FROM_NAME || "Pars Baking Soda Group";
-          const to = redirect ? [redirect] : cfg.to;
-          await transport.sendMail({
-            from: `"${fromName}" <${fromAddress}>`,
-            to,
-            subject: redirect ? `[TEST] ${fwd.subject}` : fwd.subject,
-            text: fwd.text,
-            replyTo: fwd.replyTo,
-            attachments: fwd.attachments,
-          });
+          await forwardOne({ client, uid, msg, from, subject, match, transport, to: redirect ? [redirect] : cfg.to, redirect, companies });
           patch((r) => {
             r.forwarded = r.forwarded || {};
             r.forwarded[key] = { at: nowIso(), uid, company: match.record.name || match.record.email, from, via: match.via, test: !!redirect };
@@ -264,6 +326,77 @@ export async function pollReplies({ deps = {} } = {}) {  // deps: فقط برا�
 }
 
 // ---------------------------------------------------------------- وضعیت برای پنل
+/**
+ * ممیزی پاسخ‌های فوروارد‌نشده. صندوق ورودی (فقط‌خواندنی) را از شروع کمپین می‌خواند و برای هر پیام «واقعی» که به یکی از
+ * ایمیل‌های ما می‌خورد می‌گوید فوروارد شده یا نه (پاسخ‌های قبل از «خط پایه» و پیام‌هایی که بعد از خطای اتصال جا مانده‌اند).
+ * forward=true: پاسخ‌های مطابق و فوروارد‌نشده را همین حالا برای همکار می‌فرستد و در وضعیت ثبت می‌کند (دوباره نمی‌رود؛ last_uid دست‌نمی‌خورد).
+ * بی‌ارتباط‌ها (unmatched) فقط فهرست می‌شوند، فوروارد نمی‌شوند.
+ */
+export async function auditReplies({ forward = false, sinceDays = 120, maxMessages = 2500, maxForward = 25 } = {}) {
+  const cfg = followupConfig().forward;
+  if (!process.env.SMTP_HOST || !process.env.SMTP_USER || !process.env.SMTP_PASSWORD) return { error: "تنظیمات SMTP/IMAP کامل نیست." };
+  if (forward && cfg.to.length === 0) return { error: "گیرنده‌ی فوروارد (OUTREACH_FORWARD_TO) تنظیم نشده." };
+  const redirect = (process.env.OUTREACH_TEST_REDIRECT || "").trim() || null;
+  const sentRecords = getEmailOutreachSent();
+  const platformTimes = platformSent(sentRecords).map((r) => Date.parse(r.sent_at)).filter(Number.isFinite);
+  const since = new Date(Math.max(Date.now() - sinceDays * 86400000, platformTimes.length ? Math.min(...platformTimes) - 86400000 : 0));
+  const st0 = readFollowupState().reply_forward || {};
+  const baselineAt = st0.baseline_at ? Date.parse(st0.baseline_at) : null;
+  const internalDom = internalDomains();
+  const internalAddr = internalAddresses();
+  const companies = getCompanies();
+  const out = { since: since.toISOString(), scanned: 0, internal: 0, auto_or_dsn: 0, forwarded_ok: 0, missed: [], unmatched: [], forwarded_now: 0, errors: [] };
+  const client = imapClient();
+  try {
+    await client.connect();
+    const lock = await client.getMailboxLock("INBOX", { readOnly: true });
+    try {
+      const found = ((await client.search({ since }, { uid: true })) || []).sort((a, b) => a - b).slice(-maxMessages);
+      const transport = forward ? buildTransport() : null;
+      const metas = [];
+      for await (const msg of client.fetch(found.join(","), { uid: true, envelope: true, internalDate: true, headers: ["in-reply-to", "references", "auto-submitted", "content-type", "precedence", "message-id"] }, { uid: true })) metas.push(msg);
+      for (const msg of metas) {
+        out.scanned += 1;
+        const uid = msg.uid;
+        const h = parseHeaders(msg?.headers);
+        const from = (msg?.envelope?.from?.[0]?.address || "").toLowerCase();
+        const subject = msg?.envelope?.subject || "";
+        const date = msg.internalDate ? new Date(msg.internalDate).toISOString() : null;
+        if (classifyIncoming({ from, subject, headers: h }) !== "normal") { out.auto_or_dsn += 1; continue; }
+        if (!from || internalAddr.has(from) || internalDom.has(domainOf(from)) || /^\[پاسخ مشتری\]/.test(subject)) { out.internal += 1; continue; }
+        const match = matchIncomingToSent({ from, inReplyTo: h["in-reply-to"] || "", references: h["references"] || "" }, sentRecords);
+        const key = (h["message-id"] || `uid-${uid}`).replace(/[<>\s]/g, "");
+        if (!match) { if (out.unmatched.length < 80) out.unmatched.push({ uid, from, subject: subject.slice(0, 90), date }); continue; }
+        if (readFollowupState().reply_forward?.forwarded?.[key]) { out.forwarded_ok += 1; continue; }
+        const row = { uid, key, company: match.record.name || match.record.email, country: match.record.country || null, from, subject: subject.slice(0, 90), date, via: match.via, before_baseline: baselineAt != null && date != null && Date.parse(date) < baselineAt };
+        out.missed.push(row);
+        if (forward && out.forwarded_now < maxForward) {
+          try {
+            await forwardOne({ client, uid, msg, from, subject, match, transport, to: redirect ? [redirect] : cfg.to, redirect, companies });
+            mutateFollowupState((s) => {
+              s.reply_forward = s.reply_forward || {};
+              s.reply_forward.forwarded = s.reply_forward.forwarded || {};
+              s.reply_forward.forwarded[key] = { at: new Date().toISOString(), uid, company: row.company, from, via: match.via, test: !!redirect, audit: true };
+              s.reply_forward.forwarded_count = (s.reply_forward.forwarded_count || 0) + 1;
+            });
+            out.forwarded_now += 1;
+            row.forwarded_now = true;
+          } catch (err) {
+            out.errors.push(`UID ${uid}: ${String(err?.message || err)}`);
+          }
+        }
+      }
+    } finally {
+      lock.release();
+    }
+  } catch (err) {
+    return { ...out, error: `اتصال/خواندن صندوق ورودی ناموفق: ${String(err?.message || err)}` };
+  } finally {
+    await client.logout().catch(() => {});
+  }
+  return out;
+}
+
 export function getFollowupStatus() {
   const cfg = followupConfig();
   const st = readFollowupState();
@@ -279,6 +412,10 @@ export function getFollowupStatus() {
       per_day: cfg.reminder.perDay,
       counts: { queued: rem.filter((r) => r.status === "queued").length, sent: rem.filter((r) => r.status === "sent").length, failed: rem.filter((r) => r.status === "failed").length },
       last_run: st.last_reminder_run,
+      local_catchup: {
+        counts: { queued: Object.values(st.local_reminders).filter((r) => r.status === "queued").length, sent: Object.values(st.local_reminders).filter((r) => r.status === "sent").length, failed: Object.values(st.local_reminders).filter((r) => r.status === "failed").length },
+        last_run: st.last_local_catchup_run,
+      },
     },
     forward: {
       enabled: cfg.forward.enabled,
@@ -303,7 +440,8 @@ export function startOutreachFollowup() {
   const tickReminders = async () => {
     if (busyReminders) return;
     busyReminders = true;
-    try { await runReminders(); } catch (err) { console.error("[outreach-followup] reminders", err); } finally { busyReminders = false; }
+    try { await runReminders(); } catch (err) { console.error("[outreach-followup] reminders", err); }
+    try { await runLocalCatchUp(); } catch (err) { console.error("[outreach-followup] local-catchup", err); } finally { busyReminders = false; }
   };
   const tickReplies = async () => {
     try { await pollReplies(); } catch (err) { console.error("[outreach-followup] replies", err); }
