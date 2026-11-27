@@ -63,9 +63,14 @@ export default async function CountryPage({ params }) {
   // واقعی کشور محاسبه بشه، نه برآورد عمومی. نمونه: تاجیکستان با برآورد عمومی
   // ~۴۸ کیلوگرم/نفر (بر پایه‌ی میانگین تیر درآمدی) در برابر رقم واقعی محاسبه‌شده
   // از گزارش که به‌مراتب پایین‌تره.
+  // اگر گزارش مصرف ظاهری (min/max) دارد (کشورهای دارای تولید داخلی مثل روسیه و ازبکستان)، سرانه از میانه‌ی همان بازه
+  // محاسبه می‌شود — نه از واردات (برای روسیه واردات ≈ ۲۵۰ گرم/نفر و مصرف ≈ ۱ کیلوگرم/نفر است)؛ وگرنه از واردات.
+  const appMin = realTrade?.apparent_consumption_min_tons;
+  const appMax = realTrade?.apparent_consumption_max_tons;
+  const consumptionBasisTons = appMin != null && appMax != null ? (appMin + appMax) / 2 : realTrade?.imports_tons;
   const realPerCapitaKg =
-    realTrade?.imports_tons != null && econProfile?.population
-      ? (realTrade.imports_tons * 1000) / econProfile.population
+    consumptionBasisTons != null && econProfile?.population
+      ? (consumptionBasisTons * 1000) / econProfile.population
       : null;
   // کشورهای تولیدکننده‌ای که آمار ITC‌شان صحیح است (مثل هند): تولید/ظرفیت/مصرف ظاهری از گزارش، بدون
   // «اصلاح» واردات. مصرف سرانه از مصرف ظاهری (نه واردات) محاسبه می‌شه.
@@ -90,7 +95,7 @@ export default async function CountryPage({ params }) {
           { label: country },
         ]}
         title={country}
-        actions={<PrintButton />}
+        actions={<PrintButton />}
       />
 
       {/* شناسنامه‌ی کشور — نوار تیره با مهم‌ترین اعداد، طبق طرح مرجع */}
